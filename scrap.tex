@@ -1,0 +1,113 @@
+% m-acp
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article}
+\addtolength{\parskip}{.5\baselineskip}
+\usepackage[a4paper]{geometry}
+%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}
+\usepackage{amssymb,amsmath}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}%\usepackage[latin1]{inputenc}
+%\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{datetime}
+%\pagestyle{empty}
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition} 
+\theoremstyle{remark}
+\newtheorem{cm}[thm]{Comment} 
+%\theoremstyle{definition}\newtheorem{defn}{Definition}
+\newcommand{\bu}{\bullet}
+\newcommand{\n}{\noindent} 
+%
+\newcommand{\cc}{\mathcal} 
+\newcommand{\bb}{\mathbb} 
+\newcommand{\A}{\mathcal A}
+\newcommand{\B}{\mathcal B}
+\newcommand{\C}{\mathcal C}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\J}{\mathcal J}
+\newcommand{\M}{\mathcal M} 
+\newcommand{\SSS}{\mathcal S}
+\newcommand{\U}{\mathcal U}
+\newcommand{\V}{\mathcal V}
+\newcommand{\Set}{\textbf{Set}}
+\newcommand{\Cat}{\textbf{Cat}}
+\newcommand{\CCat}{\textbf{CCat}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\mono}{\rightarrowtail}
+\newcommand{\m}{\rightarrowtail}
+\newcommand{\op}{\text{op}}
+\newcommand{\p}{\varphi} 
+\newcommand{\pa}{\rightrightarrows} 
+\newcommand{\pt}{\{\text{pt}\}} 
+\newcommand{\xl}{\xleftarrow} 
+\newcommand{\xr}{\xrightarrow} 
+\newcommand{\be}{\begin{equation}} 
+\newcommand{\ee}{\end{equation}} 
+\newcommand{\cd}{commutative diagram} 
+\newcommand{\ccd}{the comment containing Display} 
+\newcommand{\nm}{natural morphism}
+\newcommand{\pr}{Proposition} 
+\newcommand{\sts}{t suffices to show} 
+\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
+\newcommand{\cn}{(See (\ref{convnot}) p. \pageref{convnot} for an explanation of the notation.) }
+%
+% LIMITS
+% old
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
+\newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
+\newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}} 
+% new
+\DeclareMathOperator*{\coli}{colim}
+\DeclareMathOperator*{\co}{colim}
+\DeclareMathOperator*{\icolim}{``\coli"}
+\DeclareMathOperator*{\ic}{``\coli"}
+% 
+\DeclareMathOperator{\Ad}{Add} 
+\DeclareMathOperator{\Coim}{Coim}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Ima}{Im} 
+\DeclareMathOperator{\IM}{IM} 
+\DeclareMathOperator{\hy}{h} 
+\DeclareMathOperator{\ky}{k} 
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Fct}{Fct}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\h}{Hom}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Mod}{Mod} 
+\DeclareMathOperator{\Mor}{Mor} 
+\DeclareMathOperator{\Ob}{Ob}
+%\DeclareMathOperator{\Set}{Set}
+%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+\begin{document} 
+%
+% \newcommand{\cc}{\mathcal} \newcommand{\bb}{\mathbb} \DeclareMathOperator{\Ad}{Add} 
+% 
+\n$\bu$ P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$. 
+
+\n$\bu$ P. 194, \pr\ 8.6.6 (c). It seems to me that one must assume that $\cc J$ is an abelian subcategory of $\cc C$. (?)
+% 
+\end{document}
+% 
+It suffices to prove the first statement, that is, to show that, if $C:=\Coim f$ exists in $\C$, and if $c:X\to C$ is the natural morphism, then the formula $s\mapsto s\circ c$ defines a bijection from $b:\h_\C(C,Z)\to A(Z)$. Let $s$ be in $\h_\C(C,Z)$ and let us check that $s\circ c$ is in $A(Z)$. So, let $w,w'$ be as above (in particular $f\circ w=f\circ w'$), and let us prove $s\circ c\circ w=s\circ c\circ w'$. Set $P:=X\times_YX$ and let $p$ and $p'$ denote the projections $P\pa X$. There is a morphism $t:W\to P$ such that $p\circ t=w,p'\circ t=w'$, yielding $s\circ c\circ w=s\circ c\circ p\circ t=s\circ c\circ p'\circ t=s\circ c\circ w'$. Thus the map $b:\h_\C(C,Z)\to A(Z)$ mentioned above exists. The injectivity of $b$ follows from the fact that $c$ is an epimorphism. Finally, we see that $b$ is surjective, that is, that any $z$ in $A(Z)$ factors through $C$ by applying the definition of $A(Z)$ to $p,p':P\pa X$. 
+%
+\end{document}
+% 
+$$
+\begin{tikzcd}
+\Ind(\C_1\times\C_2)\ar[yshift=0.7ex]{r}{\theta}&\Ind(\C_1)\times\Ind(\C_2).\ar[yshift=-0.7ex]{l}{\mu}
+\end{tikzcd}
+$$ 
