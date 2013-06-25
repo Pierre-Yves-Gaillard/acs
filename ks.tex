@@ -1,4 +1,4 @@
-% acj
+% acl
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -16,26 +16,29 @@
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem{cor}[thm]{Corollary} 
-\newtheorem{defn}[thm]{Definition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition} 
 \theoremstyle{remark}
-\newtheorem{cm}[thm]{Comment}
+\newtheorem{cm}[thm]{Comment} 
 %\theoremstyle{definition}\newtheorem{defn}{Definition}
 \newcommand{\bu}{\bullet}
-\newcommand{\n}{\noindent}
+\newcommand{\n}{\noindent} 
+%
+\newcommand{\cc}{\mathcal} 
+\newcommand{\bb}{\mathbb} 
 \newcommand{\A}{\mathcal A}
 \newcommand{\B}{\mathcal B}
 \newcommand{\C}{\mathcal C}
-\newcommand{\F}{\mathcal F} 
-\newcommand{\G}{\mathcal G} 
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
 \newcommand{\J}{\mathcal J}
 \newcommand{\M}{\mathcal M} 
 \newcommand{\SSS}{\mathcal S}
 \newcommand{\U}{\mathcal U}
 \newcommand{\V}{\mathcal V}
-\newcommand{\Set}{\textbf{Set}} 
-\newcommand{\be}{\begin{equation}} 
-\newcommand{\ee}{\end{equation}} 
+\newcommand{\Set}{\textbf{Set}}
+\newcommand{\Cat}{\textbf{Cat}}
+\newcommand{\CCat}{\textbf{CCat}}
 \newcommand{\e}{\varepsilon}
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\mono}{\rightarrowtail}
@@ -46,15 +49,15 @@
 \newcommand{\pt}{\{\text{pt}\}} 
 \newcommand{\xl}{\xleftarrow} 
 \newcommand{\xr}{\xrightarrow} 
+\newcommand{\be}{\begin{equation}} 
+\newcommand{\ee}{\end{equation}} 
 \newcommand{\cd}{commutative diagram} 
 \newcommand{\ccd}{the comment containing Display} 
 \newcommand{\nm}{natural morphism}
-\newcommand{\pr}{Proposition}
-%\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
-\newcommand{\cn}{(See \eqref{convnot} p.~\pageref{convnot} for an explanation of the notation.) } 
+\newcommand{\pr}{Proposition} 
 \newcommand{\sts}{t suffices to show} 
-%
-%\newcommand{\so}{\bigskip} 
+\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
+\newcommand{\cn}{(See (\ref{convnot}) p. \pageref{convnot} for an explanation of the notation.) }
 %
 % LIMITS
 % old
@@ -66,7 +69,8 @@
 \DeclareMathOperator*{\co}{colim}
 \DeclareMathOperator*{\icolim}{``\coli"}
 \DeclareMathOperator*{\ic}{``\coli"}
-%
+% 
+\DeclareMathOperator{\Ad}{Add} 
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\Ima}{Im} 
@@ -83,6 +87,10 @@
 \DeclareMathOperator{\Mor}{Mor} 
 \DeclareMathOperator{\Ob}{Ob}
 %\DeclareMathOperator{\Set}{Set}
+%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
 \title{About \em{Categories and Sheaves}}
 \author{Pierre-Yves Gaillard}
 \date{\today, \currenttime}
@@ -1292,7 +1300,7 @@ $$
 
 %% 
 
-\n$\bu$ P. 196, Proposition 8.6.9, proof of (i) $\implies$ (ii). I would add ``by Proposition 6.1.13'' after ``The morphism $Y\to B$ factors through $Y\to\beta(i)$ for some $i\in I$''. (There might be a simpler argument, but I don't see it.) Here are some more details for the last sentence of the proof of (i) $\implies$ (ii): By Lemma 8.3.10 p. 180 there is a commutative square 
+\n$\bu$ P. 196, Proposition 8.6.9, proof of (i) $\implies$ (ii). I would add ``by Proposition 6.1.13'' after ``The morphism $Y\to B$ factors through $Y\to\beta(i)$ for some $i\in I$''. (There might be a simpler argument, but I don't see it.) Here are some more details for the last sentence of the proof of (i) $\implies$ (ii): By Lemma 8.3.12 p. 180 there is a commutative square 
 $$
 \begin{tikzcd}
 Z\ar[two heads]{r}\ar{d}&\beta(i)\ar{d}\\
