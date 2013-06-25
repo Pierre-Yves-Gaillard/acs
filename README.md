@@ -7,4 +7,6 @@ This is text about the book "Categories and Sheaves" by Masaki Kashiwara and Pie
 
 This is a work in progress.
 
-There is a single .tex file (written in LaTeX).
+There are three .tex files (written in LaTeX). 
+
+Each file can be compiled separately. 
