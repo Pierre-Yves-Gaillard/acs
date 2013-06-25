@@ -1,0 +1,126 @@
+% ab-ae
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article}
+\addtolength{\parskip}{.5\baselineskip}
+\usepackage[a4paper]{geometry}
+%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}
+\usepackage{amssymb,amsmath}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}%\usepackage[latin1]{inputenc}
+%\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{datetime}
+%\pagestyle{empty}
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition} 
+\theoremstyle{remark}
+\newtheorem{cm}[thm]{Comment} 
+%\theoremstyle{definition}\newtheorem{defn}{Definition}
+\newcommand{\bu}{\bullet}
+\newcommand{\n}{\noindent} 
+%
+\newcommand{\cc}{\mathcal} 
+\newcommand{\bb}{\mathbb} 
+\newcommand{\A}{\mathcal A}
+\newcommand{\B}{\mathcal B}
+\newcommand{\C}{\mathcal C}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\J}{\mathcal J}
+\newcommand{\M}{\mathcal M} 
+\newcommand{\SSS}{\mathcal S}
+\newcommand{\U}{\mathcal U}
+\newcommand{\V}{\mathcal V}
+\newcommand{\Set}{\textbf{Set}}
+\newcommand{\Cat}{\textbf{Cat}}
+\newcommand{\CCat}{\textbf{CCat}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\mono}{\rightarrowtail}
+\newcommand{\m}{\rightarrowtail}
+\newcommand{\op}{\text{op}}
+\newcommand{\p}{\varphi} 
+\newcommand{\pa}{\rightrightarrows} 
+\newcommand{\pt}{\{\text{pt}\}} 
+\newcommand{\xl}{\xleftarrow} 
+\newcommand{\xr}{\xrightarrow} 
+\newcommand{\be}{\begin{equation}} 
+\newcommand{\ee}{\end{equation}} 
+\newcommand{\cd}{commutative diagram} 
+\newcommand{\ccd}{the comment containing Display} 
+\newcommand{\nm}{natural morphism}
+\newcommand{\pr}{Proposition} 
+\newcommand{\sts}{t suffices to show} 
+\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
+\newcommand{\cn}{(See (\ref{convnot}) p. \pageref{convnot} for an explanation of the notation.) }
+%
+% LIMITS
+% old
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
+\newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
+\newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}} 
+% new
+\DeclareMathOperator*{\coli}{colim}
+\DeclareMathOperator*{\co}{colim}
+\DeclareMathOperator*{\icolim}{``\coli"}
+\DeclareMathOperator*{\ic}{``\coli"}
+% 
+\DeclareMathOperator{\Ad}{Add} 
+\DeclareMathOperator{\Coim}{Coim}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Ima}{Im} 
+\DeclareMathOperator{\IM}{IM} 
+\DeclareMathOperator{\hy}{h} 
+\DeclareMathOperator{\ky}{k} 
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Fct}{Fct}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\h}{Hom}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Mod}{Mod} 
+\DeclareMathOperator{\Mor}{Mor} 
+\DeclareMathOperator{\Ob}{Ob}
+%\DeclareMathOperator{\Set}{Set}
+%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  
+%
+\title{Next addition to \em{About ``Categories and Sheaves''}} 
+\author{Pierre-Yves Gaillard} 
+\date{\today, \currenttime} 
+% 
+\begin{document} 
+% 
+\maketitle  
+%
+\section{Typos and Details} 
+% 
+\n P. 188, after the second diagram: ``the set of isomorphisms classes of $\Delta$'' should be ``the set of isomorphisms classes of objects of $\Delta$''. 
+% 
+\section{Brief comments} 
+% 
+\n$\bu$ P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$. 
+
+% 
+
+\n$\bu$ P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a\in U$ and 0 otherwise, and, for each $n\in\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n\in\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a\in U\subset U_n$ and 0 otherwise. This family of morphisms define, when $U$ varies, an epimorphism $\p_n:F_n\epi G$. Put 
+$$
+F:=\prod_{n\in\mathbb N}F_n,\quad H:=\prod_{n\in\mathbb N}G,\quad\p:=\prod_{n\in\mathbb N}\p_n:F\to H.
+$$ 
+It suffices to show that the morphism $\p(a):F(a)\to H(a)$ between the stalks at $a$ induced by $\p$ is not an epimorphism. This is clear because $\p(a)$ is the natural morphism 
+$$
+\bigoplus_{n\in\mathbb N}\mathbb Z\to\prod_{n\in\mathbb N}\mathbb Z.
+$$ 
+
+%
+
+%\n$\bu$ P. 194, \pr\ 8.6.6 (c). It seems to me that one must assume that $\cc J$ is an abelian subcategory of $\cc C$. (?)
+% 
+\end{document}
