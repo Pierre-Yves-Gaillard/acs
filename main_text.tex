@@ -1,17 +1,18 @@
-% acm
+% acn
 % !TEX encoding = UTF-8 Unicode
-\documentclass[12pt]{article}
+\documentclass[12pt]{article} 
+%\pagestyle{empty} 
 \addtolength{\parskip}{.5\baselineskip}
 \usepackage[a4paper]{geometry}
 %\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}
 \usepackage{amssymb,amsmath}
 \usepackage[T1]{fontenc} 
-\usepackage[utf8]{inputenc}%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc} 
 %\usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{hyperref}
-\usepackage{datetime}
-%\pagestyle{empty}
+\usepackage{datetime} 
+\usepackage{comment} 
 \usepackage{amsthm}
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
@@ -711,6 +712,8 @@ It suffices to set $A(X):=\h_{\C'}(F(X),X')$.
 
 %% 
 
+\begin{comment}
+
 \n$\bu$ Pp 63 and 133. Notation 2.7.2 p. 63: The formula 
 $$
 (\widehat F(A))(V)=\coli_{U\in\C_A}\Hom_{\C'}(V,F(U))
@@ -741,6 +744,8 @@ $$
 the last isomorphism following from Proposition 2.6.3 (i) p. 61. 
 
 In view of Proposition 6.1.9 p. 133, this implies (still assuming $F$ is fully faithful) that a given $B$ in $\Ind(\C')$ is isomorphic to $IF(A)$ for some $A$ in $\Ind(\C)$ if and only if $B\circ F$ is in $\Ind(\C)$ (in which case we have of course $A\simeq B\circ F$). (Here we view $\Ind(\C')$ as a subcategory of $\C'^\wedge$.) 
+
+\end{comment}
 
 %%  
 
@@ -1837,6 +1842,8 @@ A_i(X_i)\simeq\co_y\ \h_{\C_i}(X_i,Y_i).
 $$ 
 Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection. The categories $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made above. 
 
+\begin{comment}
+
 %
 \section{Exercise 6.11 (p. 147)}%%%%%%%%%%%%%%
 %
@@ -1893,6 +1900,8 @@ Y_0\ar{rr}{a}\ar{dr}{c}\ar{ddr}[swap]{y_0}&&X\ar{dl}[swap]{b}\ar{ddl}{x}\\
 \end{tikzcd}
 $$
 As the three small triangle commute, so does the big one, contradicting the choice of $Y_0\overset{y_0\ }{\to}A$. 
+
+\end{comment}
 %
 \section{Proof of (7.4.3) (p. 162)}%%%%%%%%%%
 %
