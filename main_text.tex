@@ -1,4 +1,4 @@
-% acn
+% acp
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -12,7 +12,7 @@
 \usepackage{tikz-cd}
 \usepackage{hyperref}
 \usepackage{datetime} 
-\usepackage{comment} 
+%\usepackage{comment} 
 \usepackage{amsthm}
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
@@ -21,6 +21,7 @@
 \newtheorem{defn}[thm]{Definition} 
 \theoremstyle{remark}
 \newtheorem{cm}[thm]{Comment} 
+\newtheorem{rk}[thm]{Remark} 
 %\theoremstyle{definition}\newtheorem{defn}{Definition}
 \newcommand{\bu}{\bullet}
 \newcommand{\n}{\noindent} 
@@ -176,6 +177,8 @@ P. 11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$.
 \end{equation}
 % 
 There is a similar remark for projective limits. 
+
+%% 
 
 \n P. 20, Remark 1.3.5: ``the category $\U$-\textbf{Cat} whose objects are the small $\U$-categories ...'' If one adheres to the definitions given in [KS], the set of all small $\U$-categories does not exist. If one uses (as we do) the definitions given in Section \ref{ucat} p. \pageref{ucat}, such a set does exist. 
 
@@ -657,7 +660,7 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is an
 
 \n\cn Clearly, (\ref{263b}) implies (\ref{263a}) and (\ref{263}), and the proof of (\ref{263b}) is straightforward. (See the comment containing Display (\ref{38}) p. \pageref{38} for the relationship between (\ref{263a}), (\ref{263b}), and (\ref{263}).) 
 
-%%
+%% 
 
 \n$\bu$ P. 61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p. 61 of [KS]: 
 
@@ -712,9 +715,9 @@ It suffices to set $A(X):=\h_{\C'}(F(X),X')$.
 
 %% 
 
-\begin{comment}
+%\begin{comment}
 
-\n$\bu$ Pp 63 and 133. Notation 2.7.2 p. 63: The formula 
+\n$\bu$ P. 63, Notation 2.7.2. The formula 
 $$
 (\widehat F(A))(V)=\coli_{U\in\C_A}\Hom_{\C'}(V,F(U))
 $$
@@ -724,30 +727,26 @@ $$
 $$
 \cn It might be worth stating explicitly the isomorphism 
 $$
-\widehat F\circ\hy_\C\simeq\hy_{\C'}\circ F,
+\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
 as well as the following fact. 
 
-If $F$ is fully faithful, then $\widehat F(A)\circ F\simeq A$ for $A$ in $\C^\wedge$, or in other words
-$$
-(\circ F)\circ\widehat F\simeq\id_{\C^\wedge}.
-$$
-Indeed, we have 
+If $F$ is fully faithful, then there an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$. Indeed, we have 
 $$
 \widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
 $$
 $$
-\simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)
-=\left(\icolim_{Y\in\C_A}Y\right)(X)
-\simeq A(X),
+\simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
 $$
-the last isomorphism following from Proposition 2.6.3 (i) p. 61. 
+the last isomorphism following from \eqref{263b} p. \pageref{263b}. 
 
-In view of Proposition 6.1.9 p. 133, this implies (still assuming $F$ is fully faithful) that a given $B$ in $\Ind(\C')$ is isomorphic to $IF(A)$ for some $A$ in $\Ind(\C)$ if and only if $B\circ F$ is in $\Ind(\C)$ (in which case we have of course $A\simeq B\circ F$). (Here we view $\Ind(\C')$ as a subcategory of $\C'^\wedge$.) 
+\begin{rk}\label{cof}
+If $A'$ is in $\cc C'^\wedge$, then the natural functor $\p:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $\psi:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\p$ is cofinal, then $\psi$ is an isomorphism. 
+\end{rk} 
 
-\end{comment}
+%\end{comment}
 
-%%  
+%% 
 
 \n$\bu$ P. 74, Theorem 3.1.6. Here is an immediate corollary: 
 
@@ -812,6 +811,16 @@ $$
 \coli\ \alpha.
 $$
 Indeed, the first and fifth bijections follow from Corollary 2.3.4 p. 53, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\p_k$. In view of Proposition 2.5.2 p. 57, this proves the claim.  
+
+%% 
+
+\n$\bu$ P. 80. \pr\ 3.2.4 and 3.2.6 can be combined as follows. 
+
+\begin{prop}\label{comb} 
+Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally small, and that for each $i$ in $I$ there is a morphism $i\to\p(j)$ for some $j$ in $J$. Then $\p$ is cofinal and $J$ is filtrant and cofinally small. 
+\end{prop} 
+
+\n{\em Proof.} In view of \pr\ 3.2.4 it suffices to show that $J$ is cofinally small. By \pr\ 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\p(j_s)$ with $j_s\in J$. Then, for each $j$ in $J$ there are morphisms $\p(j)\to s\to\p(j_s)$ with $s$ in $S$. As $\p$ is full there is a morphism $j\to j_s$, and we conclude by using again \pr\ 3.2.6. 
 
 %% 
 
@@ -1068,13 +1077,39 @@ $$
 $$
 follows from Proposition 6.1.9 p. 133 and Corollary 6.3.2 p. 140. 
 
-% 
+%% 
+
+\n$\bu$ P. 147, Exercise 6.11. Recall the setting: $\cc J$ is a full subcategory of a category $\cc C$, and $A$ is in $\Ind(\cc C)$. Let $F:\cc J\to\cc C$ be the inclusion, let $A$ be in $\Ind(\cc I)$, and consider the conditions 
+
+\n(a) $A\simeq IF(B)$ for some $B$ in $\Ind(\cc J)$, 
+
+\n(b) all morphism $X\to A$ in $\Ind(\cc C)$ with $X$ in $\cc C$ factorizes through some object of $\cc J$. 
+
+\n Then (a) $\iff$ (b). 
+
+\n{\em Proof of} $\implies$. Assume that we have $A\simeq IF(B)$ and $f:X\to IF(B)$ as above. Let $\gamma:I\to\cc J$ a functor such that $I$ is small and filtrant and $\co\gamma\simeq B$. Then $\co F\circ\gamma\simeq IF(B)$. By \pr\ 6.1.13 p. 134 there are functors $\alpha,\beta:J\pa\cc C$ and a functorial morphism $\p:\alpha\to\beta$ such that 
+
+$J$ is small and filtrant, 
+
+$\alpha$ is constant equal to $X$, 
+
+$\beta(j)\in\cc J$ for all $j$, 
+
+$\co\beta\simeq IF(B)$, 
+
+$\co\p\simeq f$. 
+
+\n Then $f$ factorizes as $X=\alpha(j)\xr{\p_j}\beta(j)\xr{c_j}IF(B)$, where $c_j$ is the coprojection. 
+
+\n{\em Proof of} $\Longleftarrow$. The statement follows from Remark \ref{cof} p.~\pageref{cof} and \pr\ \ref{comb} p.~\pageref{comb}. 
+
+%% 
 
 \n$\bu$ P. 154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader.
 
 Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_{\mathcal S}$, and to check the equalities $f\circ\id_X=f$, $\id_X\circ g=g$ for $f\in\Hom_{\C^r_{\mathcal S}}(X,Y)$ and $g\in\Hom_{\C^r_{\mathcal S}}(Y,X)$. 
 
-%
+%% 
 
 \n$\bu$ P. 155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\mathcal S$ is given by 
 $$
@@ -1841,67 +1876,6 @@ $$
 A_i(X_i)\simeq\co_y\ \h_{\C_i}(X_i,Y_i). 
 $$ 
 Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection. The categories $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made above. 
-
-\begin{comment}
-
-%
-\section{Exercise 6.11 (p. 147)}%%%%%%%%%%%%%%
-%
-(This exercise is used on p. 197 in the proof of Proposition 8.6.12.) Write $F$ for the inclusion of $\J$ in $\C$. As observed at the end of the comment about pages 63 and 133, $A$ is isomorphic to $IF(B)$ for some $B$ in $\Ind(\J)$ if and only if $A\circ F$ is in $\Ind(\J)$. Proposition 6.1.5 p. 132 implies that $\C_A$ is filtrant and cofinally small, and that $A\circ F$ is in $\Ind(\J)$ if and only if $\J_{A\circ F}$ is filtrant and cofinally small. As $\J_{A\circ F}$ is canonically isomorphic to $\J_A$ by the Yoneda Lemma, we may identify these two categories. 
-
-Assume that the factorization condition in Exercise 6.11 holds. We must check that $\J_A$ is filtrant and cofinally small. Proposition 3.2.4 p. 79 implies that $\J_A$ is filtrant. Let $J$ be a small full subcategory of $\C_A$ cofinal to $\C_A$, and define the full subcategory $I$ of $\J_A$ as follows. For each $j$ in $J$ pick a morphism $j\to i_j$ with $i_j\in I$, and let the objects of $I$ be the $i_j$. Then $I$ is small and cofinal to $I$. 
-
-\n Conversely, let $\J_A$ be filtrant and cofinally small. (Recall that $\J_A$ and $\J_{A\circ F}$ are identified.) Proposition 2.7.2 p. 62 implies that the diagram
-$$
-\begin{tikzcd}
-\J_A\ar{r}{\p}\ar{d}[swap]{k_{A\circ F}}&
-\C_A\ar{d}{k_A}
-\\
-\J^\wedge\ar{r}[swap]{\widehat F}&\C^\wedge,
-\end{tikzcd}
-$$
-where the functors are the obvious ones, commutes up to isomorphism, and that the canonical morphism 
-$$
-\coli\ k_A\circ\p\to\coli k_A
-$$
-is an isomorphism. Assume by contradiction that there is an object $Y_0$ of $\C$ and a morphism $Y_0\overset{y_0}{\to}A$ in $\C^\wedge$ which does \emph{not} factor through any object of $\J$. Put 
-$$
-P:=\left(\coli\ k_A\circ\p\right)(Y_0)=\coli_{(X\overset{x}{\to}A)\in\J_A}\Hom_\C(Y_0,X),
-$$
-$$
-Q:=\left(\coli\ k_A\right)(Y_0)=\coli_{(Y\overset{y}{\to}A)\in\C_A}\Hom_\C(Y_0,Y),
-$$
-let $\phi:P\to Q$ be the natural map, which is bijective by hypothesis, and let 
-$$
-p(X\overset{x}{\to}A):\Hom_\C(Y_0,X)\to P,\quad q(Y\overset{y}{\to}A):\Hom_\C(Y_0,Y)\to Q
-$$
-be the canonical maps. Then $\phi$ is characterized by 
-$$
-\phi(p(X\overset{x}{\to}A)(Y_0\overset{a}{\to}X))=q(Y\overset{y}{\to}A)(Y_0\overset{a}{\to}X)
-$$
-for all object $X\overset{x}{\to}A$ of $\J_A$ and all $\C$-morphism $Y_0\overset{a}{\to}X$. As $\phi$ is surjective, there is an $X\overset{x}{\to}A$ in $\J_A$ and a $\C$-morphism $Y_0\overset{a}{\to}X$ such that 
-$$
-q(X\overset{x}{\to}A)(Y_0\overset{a}{\to}X)=q(Y_0\overset{y_0\ }{\to}A)(\id_{Y_0}).
-$$
-By Proposition 3.1.3 p. 73, we can find an object $Z\overset{z}{\to}A$ of $\C_A$ and $\C_A$-morphisms 
-$$
-(X\overset{x}{\to}A)\to(Z\overset{z}{\to}A)\leftarrow(Y_0\overset{y_0\ }{\to}A)
-$$
-induced by $\C$-morphisms 
-$$
-X\overset{b}{\to}Z\overset{c}{\leftarrow}Y_0
-$$
-such that $b\circ a=c$. We get the diagram 
-$$
-\begin{tikzcd}
-Y_0\ar{rr}{a}\ar{dr}{c}\ar{ddr}[swap]{y_0}&&X\ar{dl}[swap]{b}\ar{ddl}{x}\\
-&Z\ar{d}[swap]{z}&\\
-&A.
-\end{tikzcd}
-$$
-As the three small triangle commute, so does the big one, contradicting the choice of $Y_0\overset{y_0\ }{\to}A$. 
-
-\end{comment}
 %
 \section{Proof of (7.4.3) (p. 162)}%%%%%%%%%%
 %
