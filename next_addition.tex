@@ -1,4 +1,4 @@
-% ab-ae
+% ab-ag
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -20,6 +20,7 @@
 \newtheorem{defn}[thm]{Definition} 
 \theoremstyle{remark}
 \newtheorem{cm}[thm]{Comment} 
+\newtheorem{rk}[thm]{Remark} 
 %\theoremstyle{definition}\newtheorem{defn}{Definition}
 \newcommand{\bu}{\bullet}
 \newcommand{\n}{\noindent} 
@@ -102,10 +103,105 @@
 %
 \section{Typos and Details} 
 % 
+\n P. 18, Definition 1.2.16. [This is an old comment inserted here only because of the reference it contains.] The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
+%
+\begin{equation}\label{convnot}
+\coli_{X\in\C_{X'}}G(X).  
+\end{equation}
+% 
+There is a similar remark for projective limits. 
+
+%%
+
 \n P. 188, after the second diagram: ``the set of isomorphisms classes of $\Delta$'' should be ``the set of isomorphisms classes of objects of $\Delta$''. 
 % 
-\section{Brief comments} 
+\section{Brief comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%
+%% 
+
+\n$\bu$ P. 61, \pr\ 2.6.3 (i). [This is an old comment inserted here only because of the reference it contains.] Let $\C$ be a category and $A$ be in $\C^\wedge$. Consider the statements  
 % 
+\begin{equation}\label{263a}
+\ic_{X\in\C_A}X\xrightarrow\sim A, 
+\end{equation} 
+
+\begin{equation}\label{263b}
+\co_{X\in\C_A}\h_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
+\end{equation}
+
+\begin{equation}\label{263} 
+\h_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{X\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
+\end{equation} 
+
+\n\cn Clearly, (\ref{263b}) implies (\ref{263a}) and (\ref{263}), and the proof of (\ref{263b}) is straightforward. %(See the comment containing Display (\ref{38}) p. \pageref{38} for the relationship between (\ref{263a}), (\ref{263b}), and (\ref{263}).) 
+
+%% 
+
+\n$\bu$ P. 63, Notation 2.7.2. \rw\ The formula 
+$$
+(\widehat F(A))(V)=\coli_{U\in\C_A}\Hom_{\C'}(V,F(U))
+$$
+may also be written as 
+$$
+\widehat F(A)=\icolim_{U\in\C_A}F(U).
+$$
+\cn It might be worth stating explicitly the isomorphism 
+$$
+\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
+$$
+as well as the following fact. 
+
+If $F$ is fully faithful, then there an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$. Indeed, we have 
+$$
+\widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
+$$
+$$
+\simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
+$$
+the last isomorphism following from \eqref{263b} p. \pageref{263b}. 
+
+\begin{rk}\label{cof}
+If $A'$ is in $\cc C'^\wedge$, then the natural functor $\p:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $\psi:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\p$ is cofinal, then $\psi$ is an isomorphism. 
+\end{rk} 
+
+%% 
+
+\n$\bu$ P. 80. \pr\ 3.2.4 and 3.2.6 can be combined as follows. 
+
+\begin{prop}\label{comb} 
+Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally small, and that for each $i$ in $I$ there is a morphism $i\to\p(j)$ for some $j$ in $J$. Then $\p$ is cofinal and $J$ is filtrant and cofinally small. 
+\end{prop} 
+
+\n{\em Proof.} In view of \pr\ 3.2.4 it suffices to show that $J$ is cofinally small. By \pr\ 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\p(j_s)$ with $j_s\in J$. Then, for each $j$ in $J$ there are morphisms $\p(j)\to s\to\p(j_s)$ with $s$ in $S$. As $\p$ is full there is a morphism $j\to j_s$, and we conclude by using again \pr\ 3.2.6. 
+
+%% 
+
+\n$\bu$ P. 147, Exercise 6.11. \rw\ Recall the setting: $\cc J$ is a full subcategory of a category $\cc C$, and $A$ is in $\Ind(\cc C)$. Let $F:\cc J\to\cc C$ be the inclusion, let $A$ be in $\Ind(\cc I)$, and consider the conditions 
+
+\n(a) $A\simeq IF(B)$ for some $B$ in $\Ind(\cc J)$, 
+
+\n(b) all morphism $X\to A$ in $\Ind(\cc C)$ with $X$ in $\cc C$ factorizes through some object of $\cc J$. 
+
+\n Then (a) $\iff$ (b). 
+
+\n{\em Proof of} $\implies$. Assume that we have $A\simeq IF(B)$ and $f:X\to IF(B)$ as above. Let $\gamma:I\to\cc J$ a functor such that $I$ is small and filtrant and $\co\gamma\simeq B$. Then $\co F\circ\gamma\simeq IF(B)$. By \pr\ 6.1.13 p. 134 there are functors $\alpha,\beta:J\pa\cc C$ and a functorial morphism $\p:\alpha\to\beta$ such that 
+
+$J$ is small and filtrant, 
+
+$\alpha$ is constant equal to $X$, 
+
+$\beta(j)\in\cc J$ for all $j$, 
+
+$\co\beta\simeq IF(B)$, 
+
+$\co\p\simeq f$. 
+
+\n Then $f$ factorizes as $X=\alpha(j)\xr{\p_j}\beta(j)\xr{c_j}IF(B)$, where $c_j$ is the coprojection. 
+
+\n{\em Proof of} $\Longleftarrow$. The statement follows from Remark \ref{cof} p.~\pageref{cof} and \pr\ \ref{comb} p.~\pageref{comb}. 
+
+%% 
+
 \n$\bu$ P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$. 
 
 % 
