@@ -1,4 +1,4 @@
-% acp
+% acq
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -715,8 +715,6 @@ It suffices to set $A(X):=\h_{\C'}(F(X),X')$.
 
 %% 
 
-%\begin{comment}
-
 \n$\bu$ P. 63, Notation 2.7.2. The formula 
 $$
 (\widehat F(A))(V)=\coli_{U\in\C_A}\Hom_{\C'}(V,F(U))
@@ -729,8 +727,13 @@ $$
 $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
-as well as the following fact. 
+as well as the following facts. 
 
+\begin{rk}\label{cof}
+If $A'$ is in $\cc C'^\wedge$, then the natural functor $\p:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\p$ is cofinal, then $f$ is an isomorphism. 
+\end{rk} 
+
+\begin{rk}
 If $F$ is fully faithful, then there an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$. Indeed, we have 
 $$
 \widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
@@ -739,12 +742,7 @@ $$
 \simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
 $$
 the last isomorphism following from \eqref{263b} p. \pageref{263b}. 
-
-\begin{rk}\label{cof}
-If $A'$ is in $\cc C'^\wedge$, then the natural functor $\p:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $\psi:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\p$ is cofinal, then $\psi$ is an isomorphism. 
-\end{rk} 
-
-%\end{comment}
+\end{rk}
 
 %% 
 
@@ -814,7 +812,7 @@ Indeed, the first and fifth bijections follow from Corollary 2.3.4 p. 53, the se
 
 %% 
 
-\n$\bu$ P. 80. \pr\ 3.2.4 and 3.2.6 can be combined as follows. 
+\n$\bu$ P. 80. \pr s 3.2.4 and 3.2.6 can be combined as follows. 
 
 \begin{prop}\label{comb} 
 Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally small, and that for each $i$ in $I$ there is a morphism $i\to\p(j)$ for some $j$ in $J$. Then $\p$ is cofinal and $J$ is filtrant and cofinally small. 
@@ -1079,29 +1077,29 @@ follows from Proposition 6.1.9 p. 133 and Corollary 6.3.2 p. 140.
 
 %% 
 
-\n$\bu$ P. 147, Exercise 6.11. Recall the setting: $\cc J$ is a full subcategory of a category $\cc C$, and $A$ is in $\Ind(\cc C)$. Let $F:\cc J\to\cc C$ be the inclusion, let $A$ be in $\Ind(\cc I)$, and consider the conditions 
+\n$\bu$ P. 147, Exercise 6.11. \rw\ We prove the following slightly more general statement: 
 
-\n(a) $A\simeq IF(B)$ for some $B$ in $\Ind(\cc J)$, 
+If $F:\cc C\to\cc C'$ is a functor and $A'$ is in $\Ind(\cc C')$, then the following conditions are equivalent:
 
-\n(b) all morphism $X\to A$ in $\Ind(\cc C)$ with $X$ in $\cc C$ factorizes through some object of $\cc J$. 
+\n(a) $A'\simeq IF(A)$ for some $A$ in $\Ind(\cc C)$, 
 
-\n Then (a) $\iff$ (b). 
+\n(b) all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$. 
 
-\n{\em Proof of} $\implies$. Assume that we have $A\simeq IF(B)$ and $f:X\to IF(B)$ as above. Let $\gamma:I\to\cc J$ a functor such that $I$ is small and filtrant and $\co\gamma\simeq B$. Then $\co F\circ\gamma\simeq IF(B)$. By \pr\ 6.1.13 p. 134 there are functors $\alpha,\beta:J\pa\cc C$ and a functorial morphism $\p:\alpha\to\beta$ such that 
+\n{\em Proof.} 
+
+\n(a) $\implies$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta':I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta'\simeq A$; in particular $\ic F\circ\beta'\simeq IF(A)$. By \pr\ 6.1.13 p. 134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a functorial morphism $\p:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
-$\alpha$ is constant equal to $X$, 
+$\alpha$ is constant equal to $X'$, 
 
-$\beta(j)\in\cc J$ for all $j$, 
+$\ic F\circ\beta\simeq IF(A)$, 
 
-$\co\beta\simeq IF(B)$, 
+$\ic\p\simeq f$. 
 
-$\co\p\simeq f$. 
+\n Then $f$ factorizes as $X'=\alpha(j)\xr{\p_j}F(\beta(j))\xr{c_j}IF(A)$, where $c_j$ is the coprojection. 
 
-\n Then $f$ factorizes as $X=\alpha(j)\xr{\p_j}\beta(j)\xr{c_j}IF(B)$, where $c_j$ is the coprojection. 
-
-\n{\em Proof of} $\Longleftarrow$. The statement follows from Remark \ref{cof} p.~\pageref{cof} and \pr\ \ref{comb} p.~\pageref{comb}. 
+\n(b) $\implies$ (a). The statement follows from Remark \ref{cof} p.~\pageref{cof} and \pr\ \ref{comb} p.~\pageref{comb}. 
 
 %% 
 
