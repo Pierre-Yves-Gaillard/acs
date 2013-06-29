@@ -1,4 +1,4 @@
-% m-acp
+% m-acr
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -21,7 +21,8 @@
 \theoremstyle{remark}
 \newtheorem{cm}[thm]{Comment} 
 %\theoremstyle{definition}\newtheorem{defn}{Definition}
-\newcommand{\bu}{\bullet}
+%\newcommand{\bu}{\bullet} 
+\newcommand{\bu}{\cdot} 
 \newcommand{\n}{\noindent} 
 %
 \newcommand{\cc}{\mathcal} 
@@ -96,9 +97,27 @@
 %
 % \newcommand{\cc}{\mathcal} \newcommand{\bb}{\mathbb} \DeclareMathOperator{\Ad}{Add} 
 % 
-\n$\bu$ P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$. 
+\n$\bu$ P. 147, Exercise 6.11. \rw\ We prove the following slightly more general statement: 
 
-\n$\bu$ P. 194, \pr\ 8.6.6 (c). It seems to me that one must assume that $\cc J$ is an abelian subcategory of $\cc C$. (?)
+If $F:\cc C\to\cc C'$ is a functor and $A'$ is in $\Ind(\cc C')$, then the following conditions are equivalent:
+
+\n(a) $A'\simeq IF(A)$ for some $A$ in $\Ind(\cc C)$, 
+
+\n(b) all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$. 
+
+\n{\em Proof.} 
+
+\n(a) $\implies$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta':I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta'\simeq A$; in particular $\ic F\circ\beta'\simeq IF(A)$. By \pr\ 6.1.13 p. 134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a functorial morphism $\p:\alpha\to F\circ\beta$ such that 
+
+$J$ is small and filtrant, 
+
+$\alpha$ is constant equal to $X'$, 
+
+$\ic F\circ\beta\simeq IF(A)$, 
+
+$\ic\p\simeq f$. 
+
+\n Then $f$ factorizes as $X'=\alpha(j)\xr{\p_j}F(\beta(j))\xr{c_j}IF(A)$, where $c_j$ is the coprojection. 
 % 
 \end{document}
 % 
