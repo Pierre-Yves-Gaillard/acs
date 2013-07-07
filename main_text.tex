@@ -1,4 +1,4 @@
-% aff
+% afg
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -56,7 +56,7 @@
 \newcommand{\nm}{natural morphism}
 \newcommand{\pr}{Proposition} 
 \newcommand{\sts}{t suffices to show} 
-\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
+%\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
 \newcommand{\cn}{(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) }
 %
 % LIMITS
@@ -1028,6 +1028,18 @@ Let $\C$ be a category closed by finite inductive limit, and let $\A$ be a small
 
 %% 
 
+\n$\bu$ P. 133, Step (i) of the proof of Theorem 6.1.8. Here is a minor variant. Recall the statement: 
+
+If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
+
+To prove this, let $M$ be the category attached to the functors 
+$$
+\C\xrightarrow h\C^\wedge\xleftarrow\alpha I,
+$$ 
+where $h$ is the Yoneda embedding. \pr\ \ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant. Let $M\to\C_A$ be the obvious functor. One easily checks that Condition (iii) of \pr\ 3.2.2 p. 78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from \pr\ 3.2.2. 
+
+%% 
+
 \n$\bu$ P. 133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' (See Section \ref{619} p.~\pageref{619}.) 
 
 %% 
@@ -1096,7 +1108,7 @@ follows from Proposition 6.1.9 p. 133 and Corollary 6.3.2 p. 140.
 
 %% 
 
-\n$\bu$ P. 147, Exercise 6.11. \rw\ We prove the following slightly more general statement: 
+\n$\bu$ P. 147, Exercise 6.11. We prove the following slightly more general statement: 
 
 Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of the objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
 
@@ -1855,13 +1867,13 @@ is a functor by Lemma \ref{r52} p.~\pageref{r52}.
 
 The isomorphism 
 % 
-\be
-\label{coco2}\co\alpha\simeq\co_j\ \co_{i,u}\alpha(i,j,u),
+\be\label{coco2}
+\co\alpha\simeq\co_j\ \co_{i,u}\alpha(i,j,u),
 \ee 
 % 
 where $(i,u)$ runs over $I_{\psi(j)}$, with $u:\p(i)\to\psi(j)$, will result from 
 % 
-\begin{lem}%\label{cocol} 
+\begin{prop}%\label{cocol} 
 % 
 Assume $I,J$, and $K$ are small categories, and $\beta:M^{\op}\to\textbf{\em Set}$ is a functor. Then 
 $$
@@ -1875,7 +1887,7 @@ is a functor from $J^{\op}$ to $\textbf{\em Set}$, and we have
 % 
 as an equality between subsets of the product $P$ of the $\beta(i,j,u)$. 
 % 
-\end{lem} 
+\end{prop} 
 %
 \n{\em Proof.} The first claim follows from Lemma~\ref{r52} p.~\pageref{r52}. To prove the second claim, let $L$ and $R$ denote respectively the left and right-hand side of \eqref{lili}, let $x=(x(i,j,u))$ be in $P$, and let us denote generic morphisms in $I$ and $J$ by $v:i\to i'$ and $w:j\to j'$. Then $x$ is in $L$ if and only if 
 % 
@@ -1888,6 +1900,13 @@ $$
 (v,w):(i,j,u)\to(i',j',u')
 $$ 
 in $M$ satisfies $(v,w)=(v,j')\circ(i,w)$. q.e.d. 
+
+In view of Theorem 3.1.6 p.~74 of the book, isomorphism \eqref{coco2} p.~\pageref{coco2} implies 
+% 
+\begin{prop}\label{cocop} 
+If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.  
+\end{prop}  
+% 
 % 
 \subsection{Part 2}\label{2111} 
 % 
@@ -1903,7 +1922,7 @@ $$
 $$
 \co_{i,j,u}\alpha(i)\simeq\co_i\alpha(i),
 $$ 
-or, on other words, that 
+or, in other words, that 
 %
 \be\label{coco3} 
 \text{the projection $M\to I$ is cofinal.} 
