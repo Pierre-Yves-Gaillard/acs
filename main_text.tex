@@ -1,4 +1,4 @@
-% afg
+% afi
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2150,6 +2150,29 @@ $$
 \Hom_{\C^\wedge}\left(\icolim_{X\in\C_A}X,B\right)\simeq
 \Hom_{\C^\wedge}(j(A),B).
 $$ 
+q.e.d. 
+
+One more comment about \pr\ 6.1.9: I think the authors intended to write 
+% 
+\begin{equation}\label{133ii}
+``\colim"(IF\circ\alpha)\xrightarrow\sim IF(``\colim"\circ\alpha)
+\end{equation} 
+% 
+instead of 
+$$
+IF(``\colim"\circ\alpha)\xrightarrow\sim``\colim"(IF\circ\alpha). 
+$$ 
+For future reference, let us state Part (i) of the \pr\ as 
+% 
+\begin{equation}\label{133i}
+IF\circ\iota_\C\simeq\iota_{\C'}\circ F, 
+\end{equation} 
+%
+and recall that we have, in the setting of Corollary 6.3.2 p. 140, 
+%
+\begin{equation}\label{140}
+(JF)(``\coli"\ \alpha)\simeq\coli\ F\circ\alpha.
+\end{equation} 
 %
 % 
 \section{\pr\ 6.1.12 (p. 134)}%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2167,7 +2190,7 @@ A\in\Ind(\C_1\times\C_2);\quad A_i,B_i\in\Ind(\C_i),
 $$ 
 objects $X_i,Y_i,\dots\in\C_i$, and elements 
 $$
-x\in A(X_1,X_2),y\in A(Y_1,Y_2),\dots,\quad x_i\in A_i(X_i),y_i\in A_i(Y_i),\dots
+x\in A(X_1,X_2),\ y\in A(Y_1,Y_2),\dots,\quad x_i\in A_i(X_i),\ y_i\in A_i(Y_i),\dots
 $$ 
 When we write 
 $$
@@ -2194,13 +2217,13 @@ which suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$.
 
 Let $A_i$ be in $\Ind(\C_i)$ for $i=1,2$, let $A$ be $A_1\times A_2$, and let $(B_1,B_2)$ be $\theta(A)$. Then we have 
 $$ 
-B_1\simeq\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
+B_1=\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
 $$ 
-Indeed, the third isomorphism follows from the fact that the projection 
+Indeed, the first isomorphism follows from the definition of $B_1$, the second one from the definition of $A$, the third one from the fact that the projection 
 $$
 (\C_1)_{A_1}\times (\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
-is cofinal because $(\C_1)_{A_1}$ is nonempty and $(\C_2)_{A_2}$ is connected. 
+is cofinal because $(\C_1)_{A_1}$ is nonempty and $(\C_2)_{A_2}$ is connected, and the fourth one from our old friend \eqref{263a} p.~\pageref{263a}. (By the way, in this proof we are using \eqref{263a} a lot without explicit reference.) 
 
 Let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse functorial isomorphisms. 
 
@@ -2208,7 +2231,7 @@ Definition of the morphism $A\to A_1\times A_2$: Recall
 $$
 A\simeq\ic_y\ (Y_1,Y_2), 
 $$ 
-and let $y$ be in $A(Y_1,Y_2)$. We must define $y_i\in A_i(Y_1),i=1,2$. Recall 
+and let $y$ be in $A(Y_1,Y_2)$. We must define $y_i\in A_i(Y_i),i=1,2$. Recall 
 $$
 A_i(Y_i)\simeq\co_x\ \h_{\C_i}(Y_i,X_i), 
 $$ 
@@ -2225,7 +2248,7 @@ Let $x_i$ be in $A_i(X_i)$. We must define $x\in A(X_1,X_2)$. We have
 $$
 A_i(X_i)\simeq\co_y\ \h_{\C_i}(X_i,Y_i). 
 $$ 
-Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection. The categories $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made above. 
+Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection. The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made to define it. 
 %
 \section{Proof of (7.4.3) (p. 162)}%%%%%%%%%%
 %
