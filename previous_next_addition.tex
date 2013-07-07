@@ -1,26 +1,32 @@
-% aa-bv
-% !TEX encoding = UTF-8 Unicode
-\documentclass[12pt]{article}
+% aa-cd
+\documentclass[12pt]{article} 
+%\pagestyle{empty} 
 \addtolength{\parskip}{.5\baselineskip}
 \usepackage[a4paper]{geometry}
 %\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}
 \usepackage{amssymb,amsmath}
 \usepackage[T1]{fontenc} 
-\usepackage[utf8]{inputenc}%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc} 
 %\usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{hyperref}
-\usepackage{datetime}
-%\pagestyle{empty}
+\usepackage{datetime} 
+%\usepackage{comment} 
 \usepackage{amsthm}
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
-\newtheorem{defn}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition} 
+\theoremstyle{remark}
+\newtheorem{cm}[thm]{Comment} 
+\newtheorem{rk}[thm]{Remark} 
 %\theoremstyle{definition}\newtheorem{defn}{Definition}
 \newcommand{\bu}{\bullet}
-\newcommand{\n}{\noindent}
+\newcommand{\n}{\noindent} 
+%
+\newcommand{\cc}{\mathcal} 
+\newcommand{\bb}{\mathbb} 
 \newcommand{\A}{\mathcal A}
 \newcommand{\B}{\mathcal B}
 \newcommand{\C}{\mathcal C}
@@ -54,8 +60,6 @@
 \newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
 \newcommand{\cn}{(See (\ref{convnot}) p. \pageref{convnot} for an explanation of the notation.) }
 %
-%\newcommand{\so}{\bigskip} 
-%
 % LIMITS
 % old
 \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
@@ -66,7 +70,8 @@
 \DeclareMathOperator*{\co}{colim}
 \DeclareMathOperator*{\icolim}{``\coli"}
 \DeclareMathOperator*{\ic}{``\coli"}
-%
+% 
+\DeclareMathOperator{\Ad}{Add} 
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\Ima}{Im} 
@@ -79,10 +84,14 @@
 \DeclareMathOperator{\h}{Hom}
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Ker}{Ker}
-\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\Mod}{Mod} 
+\DeclareMathOperator{\Mor}{Mor} 
 \DeclareMathOperator{\Ob}{Ob}
 %\DeclareMathOperator{\Set}{Set}
-%\arrow[yshift=0.7ex]{r} \arrow[yshift=-0.7ex]{r} 
+%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \title{Next addition to \em{About ``Categories and Sheaves''}} 
 \author{Pierre-Yves Gaillard} 
 \date{\today, \currenttime} 
@@ -95,40 +104,12 @@
 % 
 % \newcommand{\cn}{(See (\ref{convnot}) for an explanation about the notation.) } 
 % 
-\section{Brief comments}
+\section{Brief comments} 
 % 
-\n$\bu$ P. 42, Step (a) of the proof of Theorem 2.3.3 (i). As pointed out in the book, this step can also be achieved by using Lemma 2.1.15 p. 42. Here is a sketch of the argument. We must prove that there is a natural isomorphism (in the category of sets) 
-$$
-\lim_{\p(j)\to i\to i'}\h_\C(\beta(j),\alpha(i'))\simeq
-\lim_{j\to j'}\h_\C(\beta(j),\alpha(\p(j'))). 
-$$
-Write $L$ and $R$ for the left and right-hand sides. The projective limits should be interpreted in the obvious way. For instance, in $L$, $j$ varies in $J$, $i$ and $i'$ vary in $I$, the unnamed morphism $\p(j)\to i$ varies in $\h_I(\p(j),i)$, and so on. We want to define a map $L\to R$. To this end we attach to a family 
-$$
-(\beta(j)\to\alpha(i'))_{\p(j)\to i\to i'}
-$$ 
-and a morphism $j\to j'$ a morphism $\beta(j)\to\alpha(\p(j'))$ by setting 
-$$
-i=i'=\p(j'),\quad(i\to i')=\id_{\p(j)},
-$$ 
-and by taking as $\beta(j)\to\alpha(\p(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $L\to R$. 
+\n$\bu$ P. 52, Step (a) in the proof of Theorem 2.3.3 (i). [This comment has already been incorporated into the main text.] Here is a variant. 
 
-Next we want to define a map $R\to L$. To this end we attach to a family 
-$$
-\big(\beta(j)\to\alpha(\p(j'))\big)_{j\to j'}
-$$ 
-and a chain of morphisms $\p(j)\to i\to i'$ a morphism $\beta(j)\to\alpha(i')$ by setting 
-$$
-j'=j,\quad(j\to j')=\id_{j},
-$$ 
-and by taking as $\beta(j)\to\alpha(i')$ the composition 
-$$
-\beta(j)\to\alpha(\p(j))\to\alpha(i)\to\alpha(i'). 
-$$ 
-We leave it to the reader to check that this defines indeed a map $R\to L$, and that this map is inverse to the map constructed above. 
-
-%% 
-
-\n$\bu$ Observation. Let $I$ and $J$ be in the category $\Cat$ of small categories, let $\Phi:I\to\Cat$ be a functor, let $J$ be a small category viewed as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a functorial morphism. Assume 
+\begin{lem}\label{r52} 
+Let $I$ and $J$ be in the category $\Cat$ of small categories, let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a functorial morphism. Assume 
 %
 \be\label{52} 
 (\co\theta)(i):=\co(\theta_i)\in J\quad\forall\ i\in I. 
@@ -137,21 +118,75 @@ We leave it to the reader to check that this defines indeed a map $R\to L$, and 
 For any morphism $s:i\to i'$ in $I$, let $(\co\theta)(s)$ be the natural morphism 
 $$
 (\co\theta)(i):=\co(\theta_{i'}\circ\Phi(s))\to
-\co\theta_{i'}=(\co\theta)(i'). 
+\co\theta_{i'}=:(\co\theta)(i'). 
 $$  
 Then $\co\theta$ is a functor from $I$ to $J$. 
+\end{lem} 
 
-%% 
-
-\n$\bu$ P. 52, Step (a) in the proof of Theorem 2.3.3 (i). Here is a variant. Recall that we have functors 
+Recall that we have functors 
 % 
 \be\label{cji} 
 \C\xleftarrow\beta J\xrightarrow\p I. 
 \ee 
 % 
-In the setting of the above observation we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the functorial morphism $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\beta$ is nothing but $\p^\dagger\beta$. In particular $\p^\dagger\beta$ is a functor. 
+In the setting of Lemma \ref{r52} p. \pageref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the functorial morphism $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\beta$ is nothing but $\p^\dagger\beta$. In particular $\p^\dagger\beta$ is a functor. 
 
-\n$\bu$ Corollary 2.3.4 p. 53. In the setting of the comment containing Display \eqref{cji}, one can prove $\co\beta\simeq\co\p^\dagger\beta$, that is 
+%% 
+
+\n$\bu$ P. 52, Step (b) of the proof of Theorem 2.3.3 (i). [This comment has already been incorporated into the main text.] As pointed out in the book, this step can also be achieved by using Lemma 2.1.15 p. 42. Here is a sketch of the argument. Recall the statement: Given the functors 
+$$
+\begin{tikzcd}
+J\ar{rr}{\p}\ar{dr}[swap]{\beta}&&I\ar{dl}{\alpha}\\ 
+&\C,
+\end{tikzcd}
+$$ 
+we define the categories $M$ and $N$ as follows: an object of $M$ is a pair 
+$$
+(j,\p(j)\to i\to i')
+$$ 
+with $j\in J$ and $i,i'\in I$. A morphism 
+$$
+(j_1,\p(j_1)\to i_1\to i'_1)\to(j_2,\p(j_2)\to i_2\to i'_2)
+$$ 
+is given by a pair of morphisms $j_1\to j_2,i'_2\to i'_1$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(I)$ defined in Definition 2.1.14 p. 42 of the book. Consider the functors 
+$$
+\gamma:M^{\op}\to\C,\quad(j,\p(j)\to i\to i')\mapsto\h_\C(\beta(j),\alpha(i')), 
+$$ 
+$$
+\delta:N^{\op}\to\C,\quad(j\to j')\mapsto\h_\C(\beta(j),\alpha(\p(j'))). 
+$$ 
+%
+\begin{lem} 
+%
+There is a natural bijection $\lim\gamma\simeq\lim\delta$. 
+%
+\end{lem} 
+%
+\n{\em Proof.} Write $L$ and $R$ for the left and right-hand sides. To define a map $\lim\gamma\to\lim\delta$, we attach, to a family 
+$$
+(\beta(j)\to\alpha(i'))_{\p(j)\to i\to i'}
+$$ 
+and to a morphism $j\to j'$, a morphism $\beta(j)\to\alpha(\p(j'))$ by setting 
+$$
+i=i'=\p(j'),\quad(i\to i')=\id_{\p(j)},
+$$ 
+and by taking as $\beta(j)\to\alpha(\p(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $\lim\gamma\to\lim\delta$. To define a map $\lim\delta\to\lim\gamma$, we attach, to a family 
+$$
+\big(\beta(j)\to\alpha(\p(j'))\big)_{j\to j'}
+$$ 
+and to a chain of morphisms $\p(j)\to i\to i'$, a morphism $\beta(j)\to\alpha(i')$ by setting 
+$$
+j'=j,\quad(j\to j')=\id_{j},
+$$ 
+and by taking as $\beta(j)\to\alpha(i')$ the composition 
+$$
+\beta(j)\to\alpha(\p(j))\to\alpha(i)\to\alpha(i'). 
+$$ 
+We leave it to the reader to check that this defines indeed a map $\lim\delta\to\lim\gamma$, and that this map is inverse to the map constructed above. 
+
+%% 
+
+\n$\bu$ P. 53, Corollary 2.3.4. [This comment has already been incorporated into the main text.] In the setting of the comment containing Display \eqref{cji}, one can prove $\co\beta\simeq\co\p^\dagger\beta$, that is 
 %
 \be\label{coco} 
 \co_j\beta(j)\simeq\co_i\ \co_{j,u}\beta(j) 
@@ -190,7 +225,7 @@ It suffices to set $A(X):=\h_{\C'}(F(X),X')$.
 
 %%
 
-\n$\bu$ P. 72, proof of Lemma 3.1.2. Here is a minor variant of the proof of one of the implications. We assume that $\p:J\to I$ is a functor with $I$ filtrant and $J$ finite, and we want to prove $\lim\h_I(\p,i)\neq\varnothing$ for some $i$ in $I$. Let $S$ be a set of morphisms in $J$. It is easy to prove 
+\n$\bu$ P. 72, proof of Lemma 3.1.2. [This comment has already been incorporated into the main text.] Here is a minor variant of the proof of one of the implications. We assume that $\p:J\to I$ is a functor with $I$ filtrant and $J$ finite, and we want to prove $\lim\h_I(\p,i)\neq\varnothing$ for some $i$ in $I$. Let $S$ be a set of morphisms in $J$. It is easy to prove 
 $$
 (\exists\ i\in I)\left(\exists\ a\in\prod_{j\in J}\h_I(\p(j),i)\right)\ (\forall\ (s:j\to j')\in S)\ (a_{j'}\circ\p(s)=a_j) 
 $$ 
@@ -198,15 +233,17 @@ by induction on the cardinal of $S$, and to see that this implies the claim.
 
 %% 
 
-\n$\bu$ P. 78, \pr\ 3.2.2. It is easy to see that Condition (iii) is equivalent to: 
+\n$\bu$ P. 78, \pr\ 3.2.2. [This comment has already been incorporated into the main text.] It is easy to see that Condition (iii) is equivalent to: 
 %
 \begin{equation}\label{78} 
-\co\ \h_I(i,\p)\simeq\pt\quad\text{for all }i\in I.
+\co\ \h_I(i,\p)\simeq\pt\quad\text{for all }i\in I, 
 \end{equation} 
+% 
+which is Condition (vi) in \pr\ 2.5.2 p. 57 of the book. (\pr\ 2.5.2 states, among other things, that \eqref{78} is equivalent to the cofinality of $\p$.) 
 
 %% 
 
-\n$\bu$ P. 88, \pr\ 3.4.3 (i). The statement is phrased as follows: ``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\co\alpha\simeq\co_{j\in J}\co_{i\in I_{\psi(j)}}\alpha(i,j,\p(i)\to\psi(j))$.'' One needs some assumption ensuring the existence of the indicated inductive limits. Here are a few remarks. 
+\n$\bu$ P. 88, \pr\ 3.4.3 (i). [This comment has already been incorporated into the main text.] The statement is phrased as follows: ``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\co\alpha\simeq\co_{j\in J}\co_{i\in I_{\psi(j)}}\alpha(i,j,\p(i)\to\psi(j))$.'' One needs some assumption ensuring the existence of the indicated inductive limits. Here are a few remarks. 
 
 Let $I\xrightarrow\p K\xleftarrow\psi J$ be functors between small categories, and let 
 % 
@@ -214,16 +251,18 @@ Let $I\xrightarrow\p K\xleftarrow\psi J$ be functors between small categories, a
 M:=M[I\xrightarrow\p K\xleftarrow\psi J] 
 \ee 
 % 
-be the category defined in Definition 3.4.1 p. 87 of the book. Recall the we have a functor $\alpha:M\to\C$. In the setting of the comment containing Display \eqref{52} p. \pageref{52}, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, and let $\theta:\Phi\to\C$ be the functorial morphism such that $\theta_i:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
+be the category defined in Definition 3.4.1 p. 87 of the book. Recall the we have a functor $\alpha:M\to\C$. In the setting of Lemma \ref{r52} p. \pageref{r52}, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, and let $\theta:\Phi\to\C$ be the functorial morphism such that $\theta_i:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
 $$
 j\mapsto\co_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
 $$ 
-is a functor by the comment containing Display \eqref{52}. (Again, we assume that the inductive limits in question exist in $\C$.) 
+is a functor by Lemma \ref{r52} p. \pageref{r52}. (Again, we assume that the inductive limits in question exist in $\C$.) 
 
-The isomorphism  
-$$  
-\co\alpha\simeq\co_j\ \co_{i,u}\alpha(i,j,u), 
-$$ 
+The isomorphism 
+% 
+\be
+\label{coco2}\co\alpha\simeq\co_j\ \co_{i,u}\alpha(i,j,u),
+\ee 
+% 
 where $(i,u)$ runs over $I_{\psi(j)}$, with $u:\p(i)\to\psi(j)$, will result from the following statement. If $\beta:M^\op\to\Set$ is a functor, then we have 
 %
 \be\label{lili} 
@@ -238,15 +277,37 @@ as an equality between subsets of the product $P$ of the $\beta(i,j,u)$. Let $L$
 % 
 whereas $x$ is in $R$ if and only if \eqref{fe} holds when $v$ or $w$ is an identity morphism, so that the equality $L=R$ follows from the fact that any morphism $(v,w):(i,j,u)\to(i',j',u')$ in $M$ satisfies $(v,w)=(v,j')\circ(i,w)$. 
 
-Here is another proof of \eqref{coco} p. \pageref{coco}: In view of \eqref{lili} it suffices to check that the projection $M\to I$ is cofinal, which is straightforward. 
+Here is another proof of \eqref{coco} p. \pageref{coco}: In the above setting, let us assume 
+$$
+K=J,\quad\psi=\id_J,
+$$ 
+and let $\alpha:I\to\C$ be a functor. We must prove 
+$$
+\co_i\alpha(i)\simeq\co_j\ \co_{i,u}\alpha(i). 
+$$ 
+(Recall: $u:\p(i)\to j$.) In view of \eqref{coco2}, it suffices to prove that we have 
+$$
+\co_{i,j,u}\alpha(i)\simeq\co_i\alpha(i),
+$$ 
+or, on other words, that 
+%
+\be\label{coco3} 
+\text{the projection $M\to I$ is cofinal.} 
+\ee 
+% 
+If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\p(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\p(i_0)\xr\id\p(i_0))$ is an initial object of $M^{i_0}$, and \eqref{coco3} follows. 
  
 %% 
 
-\n$\bu$ P. 133, Step (i) of the proof of Theorem 6.1.8. Here is a minor variant. In the setting of Theorem 6.1.8 let $M$ be the category attached to the functors 
+\n$\bu$ P. 133, Step (i) of the proof of Theorem 6.1.8. [This comment has already been incorporated into the main text.] Here is a minor variant. Recall the statement: 
+
+If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
+
+To prove this, let $M$ be the category attached to the functors 
 $$
 \C\xrightarrow h\C^\wedge\xleftarrow\alpha I,
 $$ 
-where $h$ is the Yoneda embedding. Statement (c) in the comment containing Display \eqref{lalb} p. \pageref{lalb} implies that $M$ is filtrant. Let $M\to\C_A$ be the obvious functor. One easily checks that Condition (iii) of \pr\ 3.2.2 p. 78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from \pr\ 3.2.2. 
+where $h$ is the Yoneda embedding. Isomorphism \eqref{coco2} p. \pageref{coco2} implies that $M$ is filtrant. Let $M\to\C_A$ be the obvious functor. One easily checks that Condition (iii) of \pr\ 3.2.2 p. 78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from \pr\ 3.2.2. 
 
 %% 
 
