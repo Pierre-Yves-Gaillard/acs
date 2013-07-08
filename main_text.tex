@@ -1,4 +1,4 @@
-% afi
+% afk
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -288,7 +288,9 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \n P. 133, line 2, proof of Proposition 6.1.8: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xrightarrow{\alpha}\C\xrightarrow{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\simeq\coli F(\alpha)$. Then $X\simeq\coli\alpha$. The proof is obvious. 
 
-\n P. 133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' %See Subsection~\ref{su271} p.~\pageref{su271}. 
+\n P. 133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' 
+
+\n P. 133, Proposition 6.1.9 (ii). See the paragraph containing Display \eqref{133ii} p.~\pageref{133ii}. 
 
 \n P. 134, proof of Proposition 6.1.12: ``$\C_A\times\C_{A'}$'' should be ``$\C_A\times\C'_{A'}$'' (twice). 
 
@@ -1096,15 +1098,18 @@ except perhaps inclusion $i$, commute with finite projective limits. Thus inclus
 
 %% 
 
-%\n$\bu$ P. 140, Corollary 6.3.2. For the uniqueness up to unique isomorphism, see Subsection~\ref{su271} p.~\pageref{su271}. One could mention explicitly the formula \begin{equation}\label{140}(JF)(``\coli"\ \alpha)\simeq\coli\ F\circ\alpha.\end{equation}
-
-%% 
-
-\n$\bu$ P. 142, line 4. With the hope of helping the reader: The isomorphism 
+\n$\bu$ P. 142, proof of Corollary 6.3.7. Let us check the isomorphism 
 $$
-\kappa(X)\simeq``\coli"\ \xi
+\kappa(X)\simeq\ic\rho\circ\xi. 
+$$ 
+We have 
 $$
-follows from Proposition 6.1.9 p. 133 and Corollary 6.3.2 p. 140. 
+\kappa(X)=I\rho(\kappa'(\co\rho\circ\xi))\simeq I\rho(\ic\xi)
+$$
+$$
+\simeq\co I\rho\circ\iota_\C\circ\xi\simeq\ic\rho\circ\xi, 
+$$ 
+the three isomorphisms being respectively justified by \eqref{140} p.~\pageref{140}, \eqref{133ii} p.~\pageref{133ii}, and \eqref{133i} p.~\pageref{133i}. 
 
 %% 
 
@@ -2162,6 +2167,7 @@ instead of
 $$
 IF(``\colim"\circ\alpha)\xrightarrow\sim``\colim"(IF\circ\alpha). 
 $$ 
+
 For future reference, let us state Part (i) of the \pr\ as 
 % 
 \begin{equation}\label{133i}
