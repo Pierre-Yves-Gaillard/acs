@@ -1,10 +1,10 @@
-% afp
+% afq
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
 \addtolength{\parskip}{.3\baselineskip} 
 \usepackage[a4paper]{geometry} 
-%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{comment}%\usepackage{bm}
+%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{bm}
 \usepackage{amssymb,amsmath} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc} 
@@ -319,6 +319,8 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 \n P.~169, Lemma 8.1.2 (ii). The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the axiom of universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that $\mu_X$ is a group multiplication for all $X$ in $\C$, and the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
 
 \n P.~169. Lemma 8.2.3 might be stated as follows. Part (i) would remain unchanged. Part (ii) would become part (iii), and part (ii) would be replaced by the following. ``Assume that $X_1\sqcup X_2$ exists in $\C$ and denote by $i_k:X_k\to X_1\sqcup X_2$ the coprojection ($k=1,2$). Then the morphisms $p_1$ and $p_2$ defined by (8.2.1) satisfy (8.2.2).'' One could also replace, in the statement of Corollary 8.2.4, the sentence ``If $X_2\times X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists'' by ``If $X_2\times X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists, and conversely''. 
+
+\n P.~170, Corollary 8.2.4. The final period is missing. 
 
 \n P.~171, Definition 8.2.7. It would be better (I think) to give this definition just before Proposition 8.2.15 p.~173. 
 
@@ -967,7 +969,7 @@ X\ar[two heads]{d}\ar[two heads]{r}{u}&C_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
 C_{a\circ u}\ar{ur}{c}\ar[two heads]{r}[swap]{b}&C_v.\ar{ru}
 \end{tikzcd}
 $$ 
-%(The existence of $c$ is a very particular case of \pr\ \ref{fun} p.~\pageref{fun}.) 
+(The existence of $c$ is a very particular case of \pr\ \ref{fun} p.~\pageref{fun}.) 
 By (the dual of) \pr\ 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, \pr\ 5.1.5 (i), (a) $\iff$ (b), p.~115, implies that $b$ is an isomorphism. Clearly, $c\circ b^{-1}$ is inverse to $a$.  
 
 %% 
@@ -1120,13 +1122,13 @@ $$
 %
 Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
 
-\n(a) $S\neq\varnothing$, 
+\n{\em(a)} $S\neq\varnothing$, 
 
-\n(b) all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$, 
+\n{\em(b)} all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$, 
 
-\n(c) the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
+\n{\em(c)} the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
 
-\n(d) $A'\circ F\in S$.
+\n{\em(d)} $A'\circ F\in S$.
 %
 \end{prop}
 %
@@ -1189,7 +1191,8 @@ $$
 
 %% 
 
-\n$\bu$ P.~173, \pr\ 8.2.15. (See also Section \ref{169} p.~\pageref{169}.) Recall the setting: $F:\C\to\C'$ is a functor between additive categories, and the claim is: $F$ is additive $\iff$ $F$ commutes with finite products. I think the authors forgot to prove the implication $\implies$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
+\n$\bu$ P.~173, \pr\ 8.2.15. %(See also Section \ref{169} p.~\pageref{169}.) 
+Recall the setting: $F:\C\to\C'$ is a functor between additive categories, and the claim is: $F$ is additive $\iff$ $F$ commutes with finite products. I think the authors forgot to prove the implication $\implies$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
 
 Case $n=0$: Put $X:=F(0)$. We must prove $X\simeq 0$. The equality $0=1$ holds in the ring $\Hom_\C(X,X)$ because it holds in the ring $\Hom_\C(0,0)$. As a result, the morphisms $0\to X$ and $X\to 0$ are inverse isomorphisms. 
 
@@ -1931,8 +1934,6 @@ or, in other words, that
 \ee 
 % 
 If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\p(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\p(i_0)\xr\id\p(i_0))$ is an initial object of $M^{i_0}$, and \eqref{coco3} follows. 
-%
-\begin{comment}
 % 
 \section{Beginning of Section 5.1 (p.~113)}%%%%%%%%%%%%%%
 % 
@@ -1989,8 +1990,6 @@ $f\mapsto\Ima\hy(f)$ and $\Ima$ are functors from $\Mor(\C)$ to $\C^\wedge$,
 $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$. 
 % 
 \end{prop} 
-% 
-\end{comment}
 %
 \section{Theorem 5.3.6 (p.~124)}%%%%%%%%%%%%%%%%%%%%%%%
 % 
@@ -2416,6 +2415,8 @@ $\begin{tikzcd}
 We define it as the canonical morphism attached to the identity of $U$ viewed as an object of $\SSS^X$.
 
 We leave it to the reader to check that these two morphisms are mutually inverse. 
+%
+\begin{comment}
 % 
 \section{Beginning of Section 8.2 (p.~169)} \label{169}%%%%%%%
 % 
@@ -2462,6 +2463,8 @@ $$
 \circ h:\h_\C(X,\cdot)\to\h_\C(W,\cdot). 
 $$ 
 (The only difference with the book is that, in \pr\ 8.2.13 p.~173, instead of defining $\widetilde F$ by a property which makes it unique up to unique isomorphism, we define it explicitly.) 
+%
+\end{comment}
 %
 \section{The complex (8.3.3) (p.~178)}%%%%%%%%%%
 %
