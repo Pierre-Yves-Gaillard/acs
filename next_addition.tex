@@ -1,4 +1,4 @@
-% ab-ak
+% ab-al
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -103,75 +103,21 @@
 %
 \section{Typos and Details} 
 % 
-\n P. 18, Definition 1.2.16. [This is an old comment inserted here only because of the reference it contains.] The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
-%
-\begin{equation}\label{convnot}
-\coli_{X\in\C_{X'}}G(X).  
-\end{equation}
-% 
-There is a similar remark for projective limits. 
 
-%% 
+%
 
 \n P. 141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$. 
 
-%%
+% 
+
+\n P.~170, Corollary 8.2.4. The final period is missing. 
+
+% 
 
 \n P. 188, after the second diagram: ``the set of isomorphisms classes of $\Delta$'' should be ``the set of isomorphisms classes of objects of $\Delta$''. 
 % 
 \section{Brief comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %
-%% 
-
-\n$\bu$ P. 61, \pr\ 2.6.3 (i). [This is an old comment inserted here only because of the reference it contains.] Let $\C$ be a category and $A$ be in $\C^\wedge$. Consider the statements  
-% 
-\begin{equation}\label{263a}
-\ic_{X\in\C_A}X\xrightarrow\sim A, 
-\end{equation} 
-
-\begin{equation}\label{263b}
-\co_{X\in\C_A}\h_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
-\end{equation}
-
-\begin{equation}\label{263} 
-\h_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{X\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
-\end{equation} 
-
-\n\cn Clearly, (\ref{263b}) implies (\ref{263a}) and (\ref{263}), and the proof of (\ref{263b}) is straightforward. 
-
-%% 
-
-\n$\bu$ P. 63, Notation 2.7.2. \rw\ The formula 
-$$
-(\widehat F(A))(V)=\coli_{U\in\C_A}\Hom_{\C'}(V,F(U))
-$$
-may also be written as 
-$$
-\widehat F(A)=\icolim_{U\in\C_A}F(U).
-$$
-\cn It might be worth stating explicitly the isomorphism 
-$$
-\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
-$$
-as well as the following facts. 
-
-\begin{rk}\label{cof}
-If $A'$ is in $\cc C'^\wedge$, then the natural functor $\p:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\p$ is cofinal, then $f$ is an isomorphism. 
-\end{rk} 
-
-\begin{rk}
-If $F$ is fully faithful, then there an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$. Indeed, we have 
-$$
-\widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
-$$
-$$
-\simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
-$$
-the last isomorphism following from \eqref{263b} p. \pageref{263b}. 
-\end{rk}
-
-%% 
-
 \n$\bu$ P. 80. [This comment has already been incorporated into the main text.] \pr s 3.2.4 and 3.2.6 can be combined as follows. 
 
 \begin{prop}\label{comb} 
@@ -183,36 +129,22 @@ Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally sma
 %% 
 
 \n$\bu$ P. 147, Exercise 6.11. \rw\ We prove the following slightly more general statement: 
+% 
+\begin{prop}
+%
+Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
 
-Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of the objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
+\n{\em(a)} $S\neq\varnothing$, 
 
-\n(a) $S\neq\varnothing$, 
+\n{\em(b)} all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$, 
 
-\n(b) all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$, 
+\n{\em(c)} the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
 
-\n(c) the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
-
-\n(d) $A'\circ F\in S$. 
-
-\n{\em Proof.} 
-
-\n(a) $\implies$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta':I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta'\simeq A$; in particular $\ic F\circ\beta'\simeq IF(A)$. By \pr\ 6.1.13 p. 134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a functorial morphism $\p:\alpha\to F\circ\beta$ such that 
-
-$J$ is small and filtrant, 
-
-$\alpha$ is constant equal to $X'$, 
-
-$\ic F\circ\beta\simeq IF(A)$, 
-
-$\ic\p\simeq f$. 
-
-\n Then $f$ factorizes as $X'=\alpha(j)\xr{\p_j}F(\beta(j))\xr{c_j}IF(A)$, where $c_j$ is the coprojection. 
-
-\n(b) $\implies$ (c). This follows from \pr\ \ref{comb} p. \pageref{comb}. 
-
-\n(c) $\implies$ (d). This follows from Remark \ref{cof} p.~\pageref{cof}. 
-
-\n(d) $\implies$ (a). This is obvious. 
+\n{\em(d)} $A'\circ F\in S$.
+%
+\end{prop}
+%
+[The proof (given in the main text) is not reproduced here.] 
 
 %% 
 
