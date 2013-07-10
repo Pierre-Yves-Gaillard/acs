@@ -1,4 +1,4 @@
-% aa-cf
+% aa-cg
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
 \addtolength{\parskip}{.5\baselineskip}
@@ -363,9 +363,8 @@ are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\opl
 
 \n$\bu$ P. 180, proof of Lemma 8.3.11: The notation $\h$ for $\h_\C$ occurs eight times. 
 
-%%% 
 % 
-\section{Beginning of Section 5.1 (p. 113)} 
+\section{Beginning of Section 5.1 (p. 113)}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 \rw 
 
@@ -425,15 +424,35 @@ is exact in $\Set$ for all $Z$ in $\C$. For all $x$ in $\ky(X)(Z)$, that is $x:X
 
 In view of Lemma \ref{imset} and \pr\ \ref{coimim} we can replace the notation $\IM$ with $\Ima$ (or $\Coim$). 
 % 
-\section{Theorem 6.4.3 (p. 144)}%%% 
+\section{Theorem 6.4.3 (p. 144)}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
-Recall the statement: If $\C$ is a category and $K$ is a finite category such that $\h_K(k,k)=\{\id_k\}$ for all $k$ in $K$, then the natural functor $\Phi:\Ind(\C^K)\to\Ind(\C)^K$ is an equivalence. The key point is to check that 
+[This section has already been incorporated into the main text.]
+
+Notational convention for this section (and for this section only): Superscripts will never be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only one category of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will considered in this section. As a lot of subscripts will be used, we shall denote this category by 
+%
+\be\label{slice}
+\C/G(a)
+\ee
+%
+instead of $\C_{G(a)}$, to avoid confusion. Superscripts will always be used to designate categories of functors, like the category $\B^\A$ of functors $\A\to\B$. 
+
+Recall the statement: 
+
+If $\C$ is a category and $K$ is a finite category such that $\h_K(k,k)=\{\id_k\}$ for all $k$ in $K$, then the natural functor 
+$$
+\Phi:\Ind(\C^K)\to\Ind(\C)^K
+$$ 
+is an equivalence. 
+
+The key point is to check that 
 %
 \be\label{es} 
 \Phi\text{ is essentially surjective.} 
 \ee 
 %
-(The fact that $\Phi$ is fully faithful is proved as \pr\ 6.4.1 p. 142.) In the book \eqref{es} is proved by an inductive argument. The limited purpose of this comment is to attach, in an ``explicit'' way (in the spirit of the proof of \pr\ 6.1.13 p. 134), to an object $G$ of $\Ind(\C)^K$ a small filtrant category $N$ and a functor $F:N\to\C^K$ such that 
+(The fact that $\Phi$ is fully faithful is proved as \pr\ 6.4.1 p. 142.) 
+
+In the book \eqref{es} is proved by an inductive argument. The limited purpose of this section is to attach, in an ``explicit'' way (in the spirit of the proof of \pr\ 6.1.13 p. 134), to an object $G$ of $\Ind(\C)^K$ a small filtrant category $N$ and a functor $F:N\to\C^K$ such that 
 $$ 
 \Phi(\ic F)\simeq G. 
 $$ 
@@ -446,35 +465,73 @@ N:=N\{K,G,(\alpha_k)\}
 $$ 
 as follows. 
 
-An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the condition $\alpha_k(i_k)=P(k)$ for all $k$, and the coprojections $\alpha_k(i_k)\to G(k)$ induce a functorial morphism from $P$ to $G$. (We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p. 135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative diagram 
+An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
+
+\n$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
+
+\n$\bu$ the coprojections $c_k(i_k):\alpha_k(i_k)\to G(k)$ induce a functorial morphism from $P$ to $G$. 
+
+\n(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p. 135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square  
 $$ 
 \begin{tikzcd} 
-\alpha_k(i_k)\ar{r}{P(f)}\ar{d}&\alpha_\ell(i_\ell)\ar{d}\\ 
+\alpha_k(i_k)=P(k)\ar{r}{P(f)}\ar{d}[swap]{c_k(i_k)}&Q(k)=\alpha_\ell(i_\ell)\ar{d}{c_\ell(i_\ell)}\\ 
 G(k)\ar{r}[swap]{G(f)}&G(\ell) 
 \end{tikzcd} 
 $$ 
-in $\Ind(\C)$, the vertical arrows being the coprojections. 
+in $\Ind(\C)$. 
 
-A morphism from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a functorial morphism, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$. 
+A morphism from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a functorial morphism, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$: 
+$$ 
+\begin{tikzcd} 
+\alpha_k(i_k)\ar{r}{\alpha_k(f_k)}\ar[equal]{d}&\alpha_k(j_k)\ar[equal]{d}\\ 
+P(k)\ar{r}[swap]{\theta_k}&Q(k).
+\end{tikzcd} 
+$$ 
 
 Then the functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by $F'(k)=\alpha_k\circ p_k$, where $p_k:N\to I_k$ is the natural projection. 
 
 It suffices to check that $N$ is small and filtrant, and that $p_k$ is cofinal. 
 
-We start as in the proof of Theorem 6.4.3 p. 144 of the book:  We order $\Ob(K)$ be decreeing $a\le b$ if and only if $\h_K(a,b)\neq\varnothing$, and argue by induction on the cardinal $n$ of $\Ob(K)$. If $n=0$ the result is clear. Otherwise, let $a$ be a maximal object $a$ of $K$, let $L$ be the full subcategory of $K$ such that $\Ob(L)=\Ob(K)\setminus\{a\}$, let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$, let $\widetilde{\alpha_a}:I_a\to\C_{G(a)}$ be the natural functor, define  
-$$ 
-\p:N\{L,G_L,(\alpha_\ell)\}\to(\C_{G(a)})^{L_a} 
-$$ 
-by letting $\p((i_\ell),P)_{f:b\to a}$ be the composition $P(b)\to G(b)\xr{G(f)}G(a)$, where the first arrow is the coprojection, let $\Delta:\C_{G(a)}\to(\C_{G(a)})^{L_a}$ be the diagonal functor, and observe the equivalence 
-$$ 
-N\{K,G,(\alpha_k)\}\sim M\left[N\{L,G_L,(\alpha_\ell)\}\xrightarrow{\p}(\C_{G(a)})^{L_a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
-$$ 
-By induction hypothesis, $N':=N\{L,G_L,(\alpha_\ell)\}$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. We must verify that $\Delta\circ\widetilde{\alpha_a}$ is cofinal. It follows from \pr\ 2.6.3 (ii) p. 61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C_{G(a)}$ is filtrant, and it is easy to see that this implies that $\Delta$ is cofinal. From this point we can argue as in the proof of \pr\ 6.1.13 p. 134. 
+We start as in the proof of Theorem 6.4.3 p. 144 of the book: 
 
-%%% 
+We order $\Ob(K)$ be decreeing $a\le b$ if and only if $\h_K(a,b)\neq\varnothing$, and argue by induction on the cardinal $n$ of $\Ob(K)$. 
 
+If $n=0$ the result is clear. 
+
+Otherwise, let $a$ be a maximal object $a$ of $K$; let $L$ be the full subcategory of $K$ such that 
+$$
+\Ob(L)=\Ob(K)\setminus\{a\};
+$$ 
+let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$; let 
+$$
+\widetilde{\alpha_a}:I_a\to\C/G(a)
+$$ 
+be the natural functor (see \eqref{slice} for the definition of $\C/G(a)$); define  
+$$ 
+\p:N\{L,G_L,(\alpha_\ell)\}\to(\C/G(a))^{L_a} 
+$$ 
+by 
+$$
+\p((i_\ell),P)\left(b\xr f a\right):=\left(P(b)\to G(b)\xr{G(f)}G(a)\right),
+$$
+where the first arrow is the coprojection; let 
+$$
+\Delta:\C/G(a)\to(\C/G(a))^{L_a}
+$$ 
+be the diagonal functor; and observe the equivalence 
+$$ 
+N\{K,G,(\alpha_k)\}\sim M\left[N\{L,G_L,(\alpha_\ell)\}\xrightarrow{\p}(\C/G(a))^{L_a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
+$$ 
+
+By induction hypothesis, $N':=N\{L,G_L,(\alpha_\ell)\}$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
+
+We must still verify that $\Delta\circ\widetilde{\alpha_a}$ is cofinal. 
+
+It follows from \pr\ 2.6.3 (ii) p. 61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and it is easy to see that this implies that $\Delta$ is cofinal. 
+
+From this point we can argue as in the proof of \pr\ 6.1.13 p. 134. 
 % 
-\section{Beginning of Section 8.2 (p. 169)} \label{169}
+\section{Beginning of Section 8.2 (p. 169)}\label{169}%%%%%%%%%%%%%%%%%%%%%
 % 
 \rw\ Here is a minor variant. (As usual, I am not claiming that it is better.) (See also \ccd\ \eqref{173} p. \pageref{173}.) 
 
