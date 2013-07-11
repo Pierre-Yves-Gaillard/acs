@@ -1,4 +1,4 @@
-% afs
+% afx
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -1366,24 +1366,46 @@ where, we hope, the notation is self-explanatory.
 
 %% 
 
-\n$\bu$ P.~191, third sentence of the proof of Theorem 8.5.8 (iii). Here is a slight rewording. Set $\M:=\Mod(R)$. Let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and $\M_0$ the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\p$ and $\psi$ quasi-induce quasi-inverse equivalences 
+%\begin{comment}
+
+\n$\bu$ P.~191, proof of Theorem 8.5.8 (iii). Recall the statement: 
+%
+\begin{lem}\label{858iii}
+%
+Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring $\operatorname{End}_\C(G)^{\op}$, put $\M:=\Mod(R)$, let $\p:\C\to\M$ be defined by $\p(X)=\h_\C(G,X)$. Then $\p$ is fully faithful. 
+%
+\end{lem}
+%
+Here is a slight rewording of the proof. 
+
+Let $\psi:\M\to\C$ be defined by $\psi(M)=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\p$ and $\psi$ quasi-induce quasi-inverse equivalences 
 $$
 \begin{tikzcd}
 \C_0\ar[yshift=.7ex]{r}{\p_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
 \end{tikzcd}
 $$ 
-If $\p_{{}_1}:(\C_0)^\wedge\to(\M_0)^\wedge$ is the functor induced by $\psi_{{}_0}$, and if $\lambda:\C\to(\C_0)^\wedge$ and $\lambda':\M\to(\M_0)^\wedge$ are the obvious functors, then the diagram 
+We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{small}). If $\lambda:\C\to(\C_0)^\wedge$ and $\lambda':\M\to(\M_0)^\wedge$ are the obvious functors, then the diagram 
 $$
 \begin{tikzcd}
 \C\ar{r}{\p}\ar{d}[swap]{\lambda}&\M\ar{d}{\lambda'}\\
-(\C_0)^\wedge\ar{r}[swap]{\p_{{}_1}}&(\M_0)^\wedge
+(\C_0)^\wedge\ar{r}[swap]{\widehat\p_{{}_0}}&(\M_0)^\wedge
 \end{tikzcd}
 $$ 
-quasi-commutes, and $\lambda$ and $\lambda'$ are fully faithful by Theorem 5.3.6 p.~124 and Lemma 3.3.9 p.~83. 
+quasi-commutes. As $\lambda$ and $\lambda'$ are fully faithful by Theorem 5.3.6 p.~124 and Remark 1.4.13 p.~27, and $\widehat\p_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete. 
 
 %% 
 
-\n$\bu$ P.~191, Step (a) of the proof of Theorem 8.5.8 (iv). Here is a slightly different wording of the argument. Assume that there is a finite set $F$, an epimorphism $R^F\epi M$, a small set $S$, and a monomorphism $M\m R^{\oplus S}$. We must show that $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. There is a finite subset $F'$ of $S$ such that $M\m R^{\oplus S}$ factors as $M\m R^{F'}\m R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$, or more explicitly $\psi(M)\to G^{F'}$, is a monomorphism. Applying the right exact functor $\psi$ to 
+\n$\bu$ P.~191, Step (a) of the proof of Theorem 8.5.8 (iv). Recall the statement: 
+%
+\begin{lem}%\label{858iv}
+%
+In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\m R^{\oplus S}$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
+%
+\end{lem}
+%
+Here is a slightly different wording of the argument. 
+
+Assume that there is a finite set $F$, an epimorphism $R^F\epi M$, a small set $S$, and a monomorphism $M\m R^{\oplus S}$. We must show that $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. There is a finite subset $F'$ of $S$ such that $M\m R^{\oplus S}$ factors as $M\m R^{F'}\m R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
 $$
 R^F\epi M\m R^{F'},
 $$
@@ -1410,6 +1432,8 @@ $$
 
 %% 
 
+\begin{comment}
+
 \n$\bu$ P.~196, Proposition 8.6.9, proof of (i) $\implies$ (ii). I would add ``by Proposition 6.1.13'' after ``The morphism $Y\to B$ factors through $Y\to\beta(i)$ for some $i\in I$''. (There might be a simpler argument, but I don't see it.) Here are some more details for the last sentence of the proof of (i) $\implies$ (ii): By Lemma 8.3.12 p.~180 there is a commutative square 
 $$
 \begin{tikzcd}
@@ -1425,6 +1449,9 @@ Z\ar[two heads]{r}&\beta(i)
 \end{tikzcd}
 $$
 is an epimorphism. 
+
+\end{comment}
+
 %
 \section{Universes (p.~9)}%%%%%%%%%%%%%%%%%%%
 %
