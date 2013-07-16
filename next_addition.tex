@@ -144,7 +144,7 @@ Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ 
 
 %% 
 
-\n$\bu$ P.~149, Definition 7.1.1 p.~149. The proof of the following lemma is obvious. 
+\n$\bu$ P.~149, Definition 7.1.1. The proof of the following lemma is obvious. 
 %
 \begin{lem}\label{711}
 %
@@ -271,6 +271,12 @@ $$
 
 %% 
 
-\n$\bu$ P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Theorem 7.1.16 p.~155, to check that $Q:\cc D'\to\C$ is a localization of $\cc D'$ by $\cc S$. To prove this, one can argue as follows. Recall that $\cc D'$ is a category whose objects are the morphisms in $\C$ (see the book for the precise definition of $\cc D'$), and that $Q$ maps $f$ to $\Coker f$. Then we can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$. 
+\n$\bu$ P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of \pr\ 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155, to check that 
+%
+\be\label{l}
+Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
+\ee
+%
+To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$. 
 % 
 \end{document}
