@@ -1,4 +1,4 @@
-% ab-ap
+% ab-aq
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -144,6 +144,14 @@ Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ 
 
 %% 
 
+\n$\bu$ P.~149, Definition 7.1.1 p.~149. The proof of the following lemma is obvious. 
+%
+\begin{lem}\label{711}
+Let $\begin{tikzcd}\C\ar[yshift=.4ex]{r}{Q}&\C'\ar[yshift=-.4ex]{l}{R}\end{tikzcd}$ be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a set of morphisms in $\C$, let $\theta:\id_\C\to R\circ Q$ satisfy $\theta_X\in\cc S$ for all $X$ in $\C$. Then $Q$ is a localization of $\C$ by $\cc S$. 
+\end{lem}
+
+%% 
+
 \n$\bu$ P.~169, Lemma 8.2.3. Here is a statement contained in Lemma 8.2.3:
 %
 \begin{cor}\label{823}
@@ -240,7 +248,7 @@ Let $X$ and $Y$ be in $\C$. We define the addition on $\h_\C(X,Y)$ by letting $k
 
 \n$\bu$ P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$. 
 
-% 
+%% 
 
 \n$\bu$ P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a\in U$ and 0 otherwise, and, for each $n\in\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n\in\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a\in U\subset U_n$ and 0 otherwise. This family of morphisms define, when $U$ varies, an epimorphism $\p_n:F_n\epi G$. Put 
 $$
@@ -253,6 +261,6 @@ $$
 
 %% 
 
-\n$\bu$ P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Theorem 7.1.16 p.~155, to check that the functor $Q:\cc D'\to\C$ and the set $\cc S$ satisfy Conditions (a), (b), and (c) in Definition 7.1.1 p.~149. 
+\n$\bu$ P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Theorem 7.1.16 p.~155, to check that the functor $Q:\cc D'\to\C$ is a localization of $\cc D'$ by $\cc S$. To prove this, one can argue as follows. Recall that $\cc D'$ is a category whose objects are the morphisms in $\C$ (see the book for the precise definition of $\cc D'$), and that $Q$ maps $f$ to $\Coker f$. Then we can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$. 
 % 
 \end{document}
