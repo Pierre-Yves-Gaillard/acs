@@ -1,4 +1,4 @@
-% afy
+% agi
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -321,9 +321,9 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \n P.~168, line 9: ``$f:X\to Y$'' should be ``$f:Y\to X$''. 
 
-%\n P.~169, Lemma 8.1.2 (ii). The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the axiom of universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that $\mu_X$ is a group multiplication for all $X$ in $\C$, and the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
+\n P.~169, Lemma 8.1.2 (ii). The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the axiom of universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that $\mu_X$ is a group multiplication for all $X$ in $\C$, and the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
 
-\n P.~169. Lemma 8.2.3 might be stated as follows. Part (i) would remain unchanged. Part (ii) would become part (iii), and part (ii) would be replaced by the following. ``Assume that $X_1\sqcup X_2$ exists in $\C$ and denote by $i_k:X_k\to X_1\sqcup X_2$ the coprojection ($k=1,2$). Then the morphisms $p_1$ and $p_2$ defined by (8.2.1) satisfy (8.2.2).'' One could also replace, in the statement of Corollary 8.2.4, the sentence ``If $X_2\times X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists'' by ``If $X_2\times X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists, and conversely''. 
+\n P.~169. Lemma 8.2.3 might be stated as follows. Part (i) would remain unchanged. Part (ii) would become part (iii), and part (ii) would be replaced by the following. ``Assume that $X_1\sqcup X_2$ exists in $\C$ and denote by $i_k:X_k\to X_1\sqcup X_2$ the coprojection ($k=1,2$) (see Definition \ref{c} p.~\pageref{c}). Then the morphisms $p_1$ and $p_2$ defined by (8.2.1) satisfy (8.2.2).'' One could also replace, in the statement of Corollary 8.2.4, the sentence ``If $X_2\times X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists'' by ``If $X_2\times X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists, and conversely''. 
 
 \n P.~170, Corollary 8.2.4. The final period is missing. 
 
@@ -370,7 +370,9 @@ should be ``a sequence
 
 \n P.~237: ``Proposition 9.6.3'' should be ``Theorem 9.6.3'' (twice). Proof of Corollary 9.6.6, first display: ``$\psi:\C\to\C$'' should be ``$\psi:\C\to\mathcal I_{inj}$''. (By the way, I find the notation $\mathcal I_{inj}$ surprising: I would have expected either $\mathcal I$ or $\C_{inj}$.) End of proof of Corollary 9.6.6: it might be slightly more precise to write ``$X\to\iota(\psi(X))=K^{\Hom_\C(X,K)}$'' instead of ``$X\to\psi(X)=K^{\Hom_\C(X,K)}$''. 
 
-\n P.~250, line 1: ``TR3'' should be ``TR2''.
+\n P.~250, line 1: ``TR3'' should be ``TR2''. 
+
+\n P. 266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes. 
 %
 \section{Brief comments}\label{bc}%%%%%%%%%%%%%%%%%%%
 %
@@ -404,6 +406,24 @@ This shows that $h$ is fully faithful.
 
 %% 
 
+\n$\bu$ P.~24, \pr\ 1.4.3 (Yoneda Lemma). Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$.  
+%
+\begin{df}\label{ue} 
+An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\h_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+\end{df}
+
+The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$. 
+
+Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$.  
+%
+\begin{df}\label{ue2} 
+An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+\end{df}
+
+The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$. 
+
+%% 
+
 \n$\bu$ P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
 % 
 \bp
@@ -415,6 +435,20 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 \ep
 %
 \n{\em Proof.} By (i) there a $g:B\to A$ satisfying $f\circ g=\id_B$, yielding $f\circ g\circ f=f$, and (ii) implies $g\circ f=\id_A$. 
+
+%% 
+
+\n$\bu$ P.~36, Definition 2.1.2. Let $\alpha:I^{\op}\to\C$ be a functor, let $\Delta:\C\to\C^{I^{\op}}$ be the diagonal functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^{I^{\op}}}(\Delta(X),\alpha)$ be an $(\h_{\C^{I^{\op}}}(\Delta(-),\alpha),X)$-universal element (see Definition~\ref{ue}). 
+%
+\begin{df}\label{p}
+For each $i$ in $I$ the morphism $u_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$.
+\end{df}
+
+Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^I}(\alpha,\Delta(X))$ be an $(\h_{\C^I}(\alpha,\Delta(-)),X)$-universal element (see Definition~\ref{ue2}). 
+%
+\begin{df}\label{c}
+For each $i$ in $I$ the morphism $u_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$.
+\end{df}
 
 %% 
 
@@ -438,7 +472,7 @@ in $\C^J$ is an epimorphism, and that this implies that the coproduct
 $$
 g\sqcup_fg,
 $$ 
-taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$. 
+taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$; see Definition \ref{c} p.~\pageref{c}). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$. 
 
 %% 
 
@@ -493,7 +527,7 @@ $$
 If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an object of $\C$ representing $\coli\alpha$, then $S$ is terminal. 
 \el
 %
-\pf Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $i\in\h_{\C^\C}(\id_\C,\Delta(S))$ be such that, for all $X\in\C$, the morphism $i_X:X\to S$ is the coprojection, and let $T$ be in $\C$. By assumption the map 
+\pf Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $i\in\h_{\C^\C}(\id_\C,\Delta(S))$ be such that, for all $X\in\C$, the morphism $i_X:X\to S$ is the coprojection (see Definition \ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By assumption the map 
 $$
 \h_\C(S,T)\to\h_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ i 
 $$ 
@@ -517,7 +551,7 @@ Let
 $$ 
 \beta(j)\xrightarrow{p_{i,j,u}}\co_{j,u}\beta(j)\xrightarrow{q_i}\co_i\ \co_{j,u}\beta(j)
 $$ 
-be the coprojections. It suffices to check that the compositions 
+be the coprojections (see Definition \ref{c} p.~\pageref{c}). It suffices to check that the compositions 
 $$
 \beta(j)\xrightarrow{p_{\p(j),j,\id_{\p(j)}}}\co_{j,u}\beta(j)\xrightarrow{q_{\p(j)}}\co_i\ \co_{j,u}\beta(j)
 $$ 
@@ -530,7 +564,7 @@ induce an isomorphism from the left-hand side of \eqref{coco} to the right-hand 
 \bp 
 If $\Delta:\textbf{\em Set}\to\textbf{\em Set}^I$ is the diagonal functor, then there is a canonical bijection
 $$
-\coli\Delta S\simeq\pi_0(I)\times S.
+\coli\Delta(S)\simeq\pi_0(I)\times S.
 $$
 \ep 
 %
@@ -540,7 +574,7 @@ $$
 $$
 where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand  we have by Proposition 2.4.1 p.~54
 $$
-\coli\Delta S\simeq(\Ob(I)\times S)/\!\!\approx\ ,
+\coli\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
 $$
 where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we have 
 $$
@@ -575,7 +609,7 @@ $$
 $$
 \alpha_{X,b}:\Hom_{\C'}(A,F(X))\to L,\quad\beta_{X,a}:\Hom_{\C''}(G(X),B)\to M
 $$
-be the coprojections, and define 
+be the coprojections (see Definition \ref{c} p.~\pageref{c}), and define 
 $$
 f_{X,b}:\Hom_{\C'}(A,F(X))\to M,\quad g_{X,a}:\Hom_{\C''}(G(X),B)\to L
 $$
@@ -615,7 +649,7 @@ If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda
 % 
 \pf For $X\in\Set$ we have (with self-explanatory notation)
 $$
-\Hom_{\Set}\left(\coli k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta X)\simeq X,
+\Hom_{\Set}\left(\coli k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
 $$
 the first isomorphism following from Exercise 2.8 p.~66, and the second one from the Yoneda Lemma. 
 
@@ -635,7 +669,7 @@ is bijective.
 $$
 c_j:\Hom_I(i,\p(j))\to L_i
 $$
-be the coprojection. It is easy to check that the map 
+be the coprojection (see Definition \ref{c} p.~\pageref{c}). It is easy to check that the map 
 $$
 \Ob(J^i)\to L_i,\quad (j,i\overset{s}{\to}\p(j))\mapsto c_j(s)
 $$
@@ -676,20 +710,20 @@ $$
 be a ``generic'' object of $\A_A$. We must check that there is a canonical bijection
 %
 \begin{equation}\label{1}
-\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\beta,\Delta b).
+\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\beta,\Delta(b)).
 \end{equation}
 %
 We have a canonical bijection  
 %
 \begin{equation}\label{2}
-\Hom_\A(A,B)\simeq\Hom_{\A^I}(\alpha,\Delta B)
+\Hom_\A(A,B)\simeq\Hom_{\A^I}(\alpha,\Delta(B))
 \end{equation}
 %
 and inclusions  
 $$
 \Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
 %
-\Hom_{(\A_A)^I}(\beta,\Delta b)\subset\Hom_{\A^I}(\alpha,\Delta B).
+\Hom_{(\A_A)^I}(\beta,\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
 $$
 It is straightforward to check that (\ref{2}) induces (\ref{1}). 
 
@@ -705,7 +739,7 @@ I\ar{r}{\alpha}&\C\ar{d}{h}\ar{r}{F}&\C'\\
 &\C^\wedge
 \end{tikzcd}
 $$ 
-be functors, and let $X$ be an object of $\C$. Assume that $I$ is a small category, $\C$ is a $\U$-category, $\C'$ is a big category, $h$ is the Yoneda embedding, and we have an isomorphism $\co\ (h\circ\alpha)\simeq h(X)$. Let $p_i:h(\alpha(i))\to h(X)$ be the $i$-th coprojection, let $q_i:\alpha(i)\to X$ be the morphism $p_i(\alpha(i))(\id_{\alpha(i)})$. Then the morphisms $F(q_i):F(\alpha(i))\to F(X)$ induce an isomorphism $\co\ (F\circ\alpha)\xrightarrow\sim F(X)$.  
+be functors, and let $X$ be an object of $\C$. Assume that $I$ is a small category, $\C$ is a $\U$-category, $\C'$ is a big category, $h$ is the Yoneda embedding, and we have an isomorphism $\co\ (h\circ\alpha)\simeq h(X)$. Let $p_i:h(\alpha(i))\to h(X)$ be the $i$ coprojection (see Definition \ref{c} p.~\pageref{c}), let $q_i:\alpha(i)\to X$ be the morphism $p_i(\alpha(i))(\id_{\alpha(i)})$. Then the morphisms $F(q_i):F(\alpha(i))\to F(X)$ induce an isomorphism $\co\ (F\circ\alpha)\xrightarrow\sim F(X)$.  
 \ep
 % 
 \n{\em Proof}. By enlarging $\U$ we can assume that $\C'$ is a $\U$-category. Let $X'$ be in $\C'$. We know 
@@ -828,7 +862,7 @@ a_i:\alpha(i)\to X:=\coli\alpha,\quad
 b_i:\beta(i)\to Y:=\coli\beta,\quad 
 c_i:\gamma(i)\to Z:=\coli\gamma
 $$ 
-be the coprojections; let $F,G:X\to Y$ be the obvious maps; and let $U\subset X$ be the kernel of $(F,G)$. Then the natural map $\lambda:Z\to U$ is bijective.
+be the coprojections (see Definition \ref{c} p.~\pageref{c}); let $F,G:X\to Y$ be the obvious maps; and let $U\subset X$ be the kernel of $(F,G)$. Then the natural map $\lambda:Z\to U$ is bijective.
 \end{lem}
 % 
 \n{\em Proof.} For each $u\in U$ put 
@@ -920,7 +954,7 @@ c_i:\alpha_i\to L_1,\quad
 c_{i,J}:\alpha_i\to\beta_J,\quad 
 c_J:\beta_J\to L_2
 $$
-be the coprojections ($c_{i,J}$ being defined only for $i\in J$). We easily check that 
+be the coprojections (see Definition \ref{c} p.~\pageref{c}). Note that $c_{i,J}$ is defined only for $i\in J$. We easily check that 
 
 \n$*$ the morphisms$f_i:=c_{\{i\}}\circ c_{i,\{i\}}:\alpha_i\to L_2$ induce a morphism $f:L_1\to L_2$, 
 
@@ -1206,7 +1240,7 @@ $\ic F\circ\beta\simeq IF(A)$,
 
 $\ic\p\simeq f$. 
 
-\n Then $f$ factorizes as $X'=\alpha(j)\xr{\p_j}F(\beta(j))\xr{c_j}IF(A)$, where $c_j$ is the coprojection. 
+\n Then $f$ factorizes as $X'=\alpha(j)\xr{\p_j}F(\beta(j))\xr{c_j}IF(A)$, where $c_j$ is the coprojection (see Definition \ref{c} p.~\pageref{c}). 
 
 \n(b) $\implies$ (c). This follows from \pr\ \ref{comb} p.~\pageref{comb}. 
 
@@ -1253,6 +1287,58 @@ $$
 \end{tikzcd}
 $$ 
 
+%%
+
+\n$\bu$ P.~162, proof of (7.4.3). Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-commutative) diagram
+$$
+\begin{tikzcd}
+\C\ar{rr}{F}\ar{d}[swap]{Q}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
+\C_\SSS\ar{r}[swap]{\alpha_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
+\end{tikzcd}
+$$
+Let $X$ be in $\C$. We must prove 
+$$
+R_\SSS(\iota_\A\circ F)(Q(X))\simeq IF(\alpha_\SSS(Q(X))).
+$$
+
+Recall the following facts: 
+
+\n$*$ Proposition 7.4.1 p.~162 implies
+$$
+A:=\alpha_\SSS(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
+$$ 
+$*$ Display (7.3.7) p.~161 implies
+$$
+B:=R_\SSS(\iota_\A\circ F)(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
+$$
+$*$ The definition of $IF$ p.~133 implies
+$$
+C:=IF(A)=\coli_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
+$$ 
+\cn 
+
+We want to prove $B\simeq C$.  
+
+\n{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $c(B,i):\alpha(i)\to X$ for the $i$-th coprojection (see Definition \ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
+
+For $(X',x')\in\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by 
+$$
+f(X',x'):=c(C,X',c(A,X',x')),
+$$ 
+and we claim that the $f(X',x')$ induce a morphism $f:B\to C$. 
+
+Let $(U,u)$ be in $\C_A$. In particular, 
+$$
+u\in A(U)=\co_{(X',x')\in\SSS^X}\h_\C(U,X').
+$$ 
+Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=c(A(U),X',x')(f)$, and put  
+$$
+g(U,u):=c(B,X',x')\circ\iota_\A(F(f)).
+$$ 
+We claim that this formula defines a morphism $g(U,u):\iota_\A(F(U))\to B$, that the $g(U,u)$ induce a morphism $g:C\to B$, and that $f$ and $g$ are mutually inverse. 
+
+We leave the verification of these claims to the reader. 
+
 %% 
 
 \n$\bu$ P. 172, Lemma 8.2.9. Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
@@ -1276,7 +1362,7 @@ Case $n=2$: Let $X_1,X_2$ be in $\C$. To check that the natural morphisms
 F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 \ee 
 % 
-are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections, and apply Lemma 8.2.3 p.~169 to the morphisms $p_j,i_j,F(p_j),F(i_j)$. 
+are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions \ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 to the morphisms $p_j,i_j,F(p_j),F(i_j)$. 
 
 %% 
 
@@ -2308,7 +2394,7 @@ B_1=\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
 $$ 
 Indeed, the first isomorphism follows from the definition of $B_1$, the second one from the definition of $A$, the third one from the fact that the projection 
 $$
-(\C_1)_{A_1}\times (\C_2)_{A_2}\to(\C_1)_{A_1}
+(\C_1)_{A_1}\times(\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
 is cofinal because $(\C_1)_{A_1}$ is nonempty and $(\C_2)_{A_2}$ is connected, and the fourth one from our old friend \eqref{263a} p.~\pageref{263a}. (By the way, in this proof we are using \eqref{263a} a lot without explicit reference.) 
 
@@ -2322,7 +2408,7 @@ and let $y$ be in $A(Y_1,Y_2)$. We must define $y_i\in A_i(Y_i),i=1,2$. Recall
 $$
 A_i(Y_i)\simeq\co_x\ \h_{\C_i}(Y_i,X_i), 
 $$ 
-let $a_i(x):\h_{\C_i}(Y_i,X_i)\to A_i(Y_i)$ be the coprojection, and put 
+let $a_i(x):\h_{\C_i}(Y_i,X_i)\to A_i(Y_i)$ be the coprojection (see Definition \ref{c} p.~\pageref{c}), and put 
 $$
 y_i:=a_i(y)(\id_{Y_i}). 
 $$ 
@@ -2335,7 +2421,7 @@ Let $x_i$ be in $A_i(X_i)$. We must define $x\in A(X_1,X_2)$. We have
 $$
 A_i(X_i)\simeq\co_y\ \h_{\C_i}(X_i,Y_i). 
 $$ 
-Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection. The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made to define it. 
+Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection (see Definition \ref{c} p.~\pageref{c}). The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made to define it. 
 %
 \section{Theorem 6.4.3 (p.~144)}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
@@ -2383,7 +2469,7 @@ An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to
 
 \n$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
 
-\n$\bu$ the coprojections $c_k(i_k):\alpha_k(i_k)\to G(k)$ induce a functorial morphism from $P$ to $G$. 
+\n$\bu$ the coprojections $c_k(i_k):\alpha_k(i_k)\to G(k)$ (see Definition \ref{c} p.~\pageref{c}) induce a functorial morphism from $P$ to $G$. 
 
 \n(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square  
 $$ 
@@ -2428,7 +2514,7 @@ by
 $$
 \p((i_\ell),P)\left(b\xr f a\right):=\left(P(b)\to G(b)\xr{G(f)}G(a)\right),
 $$
-where the first arrow is the coprojection; let 
+where the first arrow is the coprojection (see Definition \ref{c} p.~\pageref{c}); let 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L_a}
 $$ 
@@ -2444,45 +2530,6 @@ We must still verify that $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
 It follows from \pr\ 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and it is easy to see that this implies that $\Delta$ is cofinal. 
 
 From this point we can argue as in the proof of \pr\ 6.1.13 p.~134. 
-%
-\section{Proof of (7.4.3) (p.~162)}%%%%%%%%%%
-%
-(I think it is fine to leave such a proof to the reader, but since I wrote it for myself, I thought I might paste it here.)
-
-Let us abbreviate $\text{Ind}(\C)$ and $\text{Ind}(\A)$ by $I\C$ and $I\A$. We have the (non-commutative) diagram
-$$
-\begin{tikzcd}
-\C\ar{rr}{F}\ar{d}[swap]{s}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
-\C_\SSS\ar{r}[swap]{\alpha_\SSS}&I\C\ar{r}[swap]{IF}&I\A.
-\end{tikzcd}
-$$
-Reminders:
-
-\n$*$ The definition of $IF$ p.~133 implies
-$$
-IF(A)=\coli_{U\in\C_A}\iota_\A(F(U))\in I\A.
-$$ 
-\cn
-
-\n $*$ Display (7.3.7) p.~161 implies
-$$
-B:=R_\SSS(\iota_\A\circ F)(Q(X))=\coli_{(X\to X')\in\SSS^X}\iota_\A(F(X'))\in I\A.
-$$
-$*$ Proposition 7.4.1 p.~162 implies
-$$
-A:=\alpha_\SSS(Q(X))=\coli_{(X\to X')\in\SSS^X}\iota_\C(X')\in I\C.
-$$
-We want to prove 
-$$
-B\simeq IF(A).
-$$
-
-Definition of a morphism $B\to IF(A)$: Let $(X\to X')\in\SSS^X$ be given. It suffices to define 
-$\iota_\A(F(X'))\to IF(A)$. To do this, form the canonical morphism $\iota_\C(X')\to A$ attached to $(X\to X')\in\SSS^X$, and then the canonical morphism $\iota_\A(F(X'))\to IF(A)$ attached to $\iota_\C(X')\to A$. 
-
-Definition of a morphism $IF(A)\to B$: Let $(\iota_\C(U)\to A)\in\C_A$ be given. It suffices to define $\iota_\A(F(U))\to B$. We define it as the canonical morphism attached to the identity of $U$ viewed as an object of $\SSS^X$.
-
-We leave it to the reader to check that these two morphisms are mutually inverse. 
 %
 \section{The complex (8.3.3) (p.~178)}%%%%%%%%%%
 %
@@ -2611,32 +2658,32 @@ implies that of $F(X')\to F(X)\to F(X'')$.
 %
 \section{Exercise 10.6 (p.~266)}%%%%%%%%%%%%%%%%%%
 %
-This exercise is used at the top of p.~251 within the proof of Theorem 10.2.3 p.~249. Various related links are given in the document\smallskip
+This exercise is used at the top of p.~251 within the proof of Theorem 10.2.3 p.~249. Various related links are given in the document\bigskip 
 
-\centerline{\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}}
+\centerline{\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}}\bigskip 
 
-\n The lines below are just a transcription in the notation of the book of part of Section~1 of \emph{The axioms for triangulated categories} by J. P. May:\smallskip
+\n The lines below are just a transcription in the notation of the book of part of Section~1 of \emph{The axioms for triangulated categories} by J. P. May:\bigskip 
 
-\centerline{\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf}}
+\centerline{\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf}}\bigskip 
 
-Recall Axiom TR5: If the diagram
+Recall Axiom TR5: If the diagram 
 $$
 \begin{tikzcd}
-X\ar[equal]{dd}\ar{r}&Y\ar[equal]{d}\ar{r}&Z\ar{r}&TX\\
-&Y\ar{r}&Z\ar[equal]{d}\ar{r}&X'\ar{r}&TY\\
-X\ar{rr}&&Z\ar{rr}&&Y'\ar{rr}&&TX
+U\ar[equal]{dd}\ar{r}&V\ar[equal]{d}\ar{r}&W'\ar{r}&TU\\
+&V\ar{r}&W\ar[equal]{d}\ar{r}&U'\ar{r}&TV\\
+U\ar{rr}&&W\ar{rr}&&V'\ar{rr}&&TU
 \end{tikzcd}
 $$
-commutes, and if the rows are distinguished triangles, then there is a distinguished triangle $Z'\to Y'\to X'\to TZ'$ such that the diagram below commutes:
+commutes, and if the rows are distinguished triangles, then there is a distinguished triangle $W'\to V'\to U'\to TW'$ such that the diagram below commutes:
 $$
 \begin{tikzcd}
-X\ar{r}\ar[equal]{d}&Y\ar{d}\ar{r}&Z'\ar{d}\ar{r}&TX\ar[equal]{d}\\
-X\ar{d}\ar{r}&Z\ar{r}\ar[equal]{d}&Y'\ar{d}\ar{r}&TX\ar{d}\\
-Y\ar{d}\ar{r}&Z\ar{d}\ar{r}&X'\ar{r}\ar[equal]{d}&TY\ar{d}\\
-Z'\ar{r}&Y'\ar{r}&X'\ar{r}&TZ'.
+U\ar{r}\ar[equal]{d}&V\ar{d}\ar{r}&W'\ar{d}\ar{r}&TU\ar[equal]{d}\\
+U\ar{d}\ar{r}&W\ar{r}\ar[equal]{d}&V'\ar{d}\ar{r}&TU\ar{d}\\
+V\ar{d}\ar{r}&W\ar{d}\ar{r}&U'\ar{r}\ar[equal]{d}&TV\ar{d}\\
+W'\ar{r}&V'\ar{r}&U'\ar{r}&TW'.
 \end{tikzcd}
 $$
-\textbf{Exercise 10.6.} We are given a diagram of solid arrows 
+\textbf{Exercise 10.6.} Let  
 $$
 \begin{tikzcd}
 X^0\ar{r}{u}\ar{d}[swap]{f}&X^1\ar{d}\ar{r}{v}&X^2\ar[dashed]{d}\ar{r}{w}&TX^0\ar{d}{Tf}\\ 
@@ -2644,8 +2691,16 @@ Y^0\ar{r}\ar{d}[swap]{g}&Y^1\ar{d}\ar{r}&Y^2\ar[dashed]{d}\ar{r}&TY^0\ar{d}{Tg}\
 Z^0\ar[dashed]{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar[dashed]{r}&Z^2\ar[dashed]{d}\ar[dashed]{r}&TZ^0\ar{d}{-Th}\\ 
 TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0,
 \end{tikzcd}
-$$
-where the first two rows and columns are distinguished triangles, and we must prove that the dotted arrows may be completed in order that the bottom right small square anti-commutes, the eight other small squares commute, and all rows and columns are distinguished triangles.
+$$ 
+be a diagram of solid arrows. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that 
+
+(a) the bottom right small square anti-commutes, 
+
+(b) the eight other small squares commute, 
+
+(c) all rows and columns are distinguished triangles. 
+
+\n{\em Partial solution.} I shall complete the diagram in such a way that (b) and (c) hold, but I'm unable to prove (a). 
 
 From 
 $$
@@ -2658,8 +2713,8 @@ $$
 where the last row is obtained by TR2, we get by TR5
 \begin{equation}\label{v1}
 \begin{tikzcd}
-X^0\ar{r}\ar[equal]{d}&X^1\ar{d}\ar{r}&X^2\ar{d}{a}\ar{r}&TX^0\ar[equal]{d}\\
-X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}{b}\ar{r}&TX^0\ar{d}\\
+X^0\ar{r}\ar[equal]{d}&X^1\ar{d}\ar{r}&X^2\ar{d}{a}\ar{r}[swap]{w}&TX^0\ar[equal]{d}\\
+X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}{b}\ar{r}{d}&TX^0\ar{d}\\
 X^1\ar{d}\ar{r}&Y^1\ar{d}\ar{r}&Z^1\ar{r}\ar[equal]{d}&TX^1\ar{d}\\
 X^2\ar{r}[swap]{a}&W\ar{r}[swap]{b}&Z^1\ar{r}[swap]{c}&TX^2.
 \end{tikzcd}
@@ -2676,19 +2731,19 @@ $$
 we get by TR5
 \begin{equation}\label{v2}
 \begin{tikzcd}
-X^0\ar{r}\ar[equal]{d}&Y^0\ar{d}\ar{r}&Z^0\ar{d}\ar{r}&TX^0\ar[equal]{d}\\
-X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}\ar{r}&TX^0\ar{d}\\
+X^0\ar{r}\ar[equal]{d}&Y^0\ar{d}\ar{r}&Z^0\ar{d}{e}\ar{r}[swap]{h}&TX^0\ar[equal]{d}\\
+X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}\ar{r}{d}&TX^0\ar{d}\\
 Y^0\ar{d}\ar{r}&Y^1\ar{d}\ar{r}&Y^2\ar{r}\ar[equal]{d}&TY^0\ar{d}\\
-Z^0\ar{r}&W\ar{r}&Y^2\ar{r}&TZ^0.
+Z^0\ar{r}[swap]{d}&W\ar{r}&Y^2\ar{r}&TZ^0.
 \end{tikzcd}
 \end{equation}
 %
-We define $X^2\to Y^2$ as the composition $X^2\to W\to Y^2$, and $Z^0\to Z^1$ as the composition $Z^0\to W\to Z^1$. From 
+We define $Z^0\to Z^1$ as the composition $Z^0\to W\to Z^1$. From 
 $$
 \begin{tikzcd}
-Z^0\ar[equal]{dd}\ar{r}&W\ar[equal]{d}\ar{r}&Y^2\ar{r}&TZ^0\\
+Z^0\ar[equal]{dd}\ar{r}{d}&W\ar[equal]{d}\ar{r}&Y^2\ar{r}&TZ^0\\
 &W\ar{r}{b}&Z^1\ar[equal]{d}\ar{r}{c}&TX^2\ar{r}{-Ta}&TW\\
-Z^0\ar{rr}&&Z^1\ar{rr}&&Z^2\ar{rr}&&TZ^0,
+Z^0\ar{rr}&&Z^1\ar{rr}&&Z^2\ar{rr}{e}&&TZ^0,
 \end{tikzcd}
 $$
 where the second row is obtained from 
@@ -2700,7 +2755,7 @@ by TR3 and TR0, and the last row is obtained by TR2, we get by TR5, TR3 and TR0
 \begin{equation}\label{v3}
 \begin{tikzcd}
 Z^0\ar{r}\ar[equal]{d}&W\ar{d}{b}\ar{r}&Y^2\ar{d}{j}\ar{r}&TZ^0\ar[equal]{d}\\
-Z^0\ar{d}\ar{r}&Z^1\ar{r}\ar[equal]{d}&Z^2\ar{d}{k}\ar{r}&TZ^0\ar{d}\\
+Z^0\ar{d}\ar{r}&Z^1\ar{r}\ar[equal]{d}&Z^2\ar{d}{k}\ar{r}[swap]{\ell}&TZ^0\ar{d}[swap]{Te}\\
 W\ar{d}\ar{r}{b}&Z^1\ar{d}\ar{r}{c}&TX^2\ar{r}{-Ta}\ar[equal]{d}&TW\ar{d}\\
 Y^2\ar{r}[swap]{j}&Z^2\ar{r}[swap]{k}&TX^2\ar{r}[swap]{-Ti}&TY^2,
 \end{tikzcd}
@@ -2712,7 +2767,7 @@ where $X^2\overset{i}{\to}Y^2\overset{j}{\to}Z^2\overset{k}{\to}TX^2$ is a disti
 \begin{tikzcd}
 X^0\ar{r}{u}\ar{d}[swap]{f}&X^1\ar{d}\ar{r}{v}&X^2\ar{d}{i}\ar{r}{w}&TX^0\ar{d}{Tf}\\ 
 Y^0\ar{r}\ar{d}[swap]{g}&Y^1\ar{d}\ar{r}&Y^2\ar{d}{j}\ar{r}&TY^0\ar{d}{Tg}\\ 
-Z^0\ar{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar{r}&Z^2\ar{d}{k}\ar{r}&TZ^0\ar{d}{-Th}\\ 
+Z^0\ar{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar{r}&Z^2\ar{d}{k}\ar{r}{e}&TZ^0\ar{d}{-Th}\\ 
 TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0
 \end{tikzcd}
 \end{equation}
@@ -2740,12 +2795,10 @@ The commutativity of (\ref{v2})3 and (\ref{v1})6 implies that of (\ref{v4})7.
 
 The commutativity of (\ref{v1})9 and (\ref{v3})8 implies that of (\ref{v4})8. 
 
-The commutativity of (\ref{v3})6 and (\ref{v1})3 implies the anti-commutativity of (\ref{v4})9. 
+The commutativity of (\ref{v3})6, (\ref{v1})3, and (\ref{v2})3 implies the anti-commutativity of (\ref{v4})9. 
 
 It is easy to check that all rows and columns are distinguished triangles.
 
-As observed by Peter May in \emph{The axioms for triangulated categories}, the above proof shows that TR4 follows from the other axioms.
-%
-%\vfill\hfill\footnotesize name of this file: ks-08-version-1
+As observed by Peter May in \emph{The axioms for triangulated categories}, the above proof shows that TR4 follows from the other axioms. 
 %
 \end{document}
