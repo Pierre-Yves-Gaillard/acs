@@ -1,4 +1,4 @@
-% ab-ax
+% ab-ba
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -116,6 +116,8 @@
 
 \n P. 221, Lemma 9.2.15. ``Let $A\in\C$'' should be ``Let $A\in\C^\wedge$''. 
 
+\n P. 227. The second sentence uses Exercise 3.4 (i) p. 90 (see ???). 
+
 \n P. 266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes. 
 % 
 \section{Brief comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -167,6 +169,20 @@ Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally sma
 \end{prop} 
 
 \n{\em Proof.} In view of \pr\ 3.2.4 it suffices to show that $J$ is cofinally small. By \pr\ 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\p(j_s)$ with $j_s\in J$. Then, for each $j$ in $J$ there are morphisms $\p(j)\to s\to\p(j_s)$ with $s$ in $S$. As $\p$ is full there is a morphism $j\to j_s$, and we conclude by using again \pr\ 3.2.6. 
+
+%% 
+
+\n$\bu$ P. 90, Exercise 3.4 (i). (This exercise is used in the second sentence of p.~227). Recall the statement: 
+%
+\begin{prop}\label{34i}
+If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
+\end{prop}
+%
+\n{\em Proof.} Assume by contradiction that there are distinct morphisms $\begin{tikzcd}F(Y)\ar[yshift=.7ex]{r}{f'_1}\ar[yshift=-.7ex]{r}[swap]{f'_2}&X'\end{tikzcd}$ in $\C'$ which satisfy 
+$
+f'_1\circ F(f)=f'_2\circ F(f)=:f'.
+$ 
+For $i=1,2$ let $f_i$ be the morphism $f$ viewed as a morphism from $(X,f')$ to $(Y,f'_i)$ in $\C_{X'}$. As $\C_{X'}$ is filtrant, there are morphisms $\gamma_i:(Y,f'_i)\to(Z,g')$, such that $\gamma_1\circ f_1=\gamma_2\circ f_2$. If $g_i:Y\to Z$ is the morphism in $\C$ defining $\gamma_i$, then we have $g_1\circ f=g_2\circ f$. As $f$ is an epimorphism, this implies $g_1=g_2=:g$, and thus $f'_1=g'\circ F(g)=f'_2$, contradiction. q.e.d.
 
 %% 
 
@@ -324,5 +340,42 @@ Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
 \ee
 %
 To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$. 
+
+%% 
+
+\n$\bu$ P.~218, Definition 9.2.2. 
+%
+\begin{lem}\label{922}
+If $I$ admits inductive limits indexed by categories $J$ such that 
+$$
+\operatorname{card}(\Mor(J))<\pi,
+$$ 
+then $I$ is $\pi$-filtrant. 
+\end{lem}
+%
+\n{\em Proof.} For $\p:J\to I$ we have
+$$
+\lim\h_\C(\p,\co\p)\xleftarrow\sim\h_\C(\co\p,\co\p)\neq\varnothing.\text{ q.e.d.}
+$$ 
+
+%% 
+
+\n$\bu$ P.~220, proof of Corollary 9.2.11: Use Lemma~\ref{922}.
+
+%%
+
+\n$\bu$ P.~222, \pr\ 9.2.17, proof of the implication (ii) $\implies$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. It suffices to prove the following statement. 
+
+Let $\C$ be a category, let $A$ be in $\C^\wedge$, let $\p:J\to\C_A$ be a functor, let $\psi:J\to\C$ be the composition of $\p$ with the natural functor $\C_A\to\C$, write 
+$$
+\p(j)=(\psi(j),\psi(j)\xr{y_j}A),
+$$ 
+assume that $\co\psi$ exists in $\C$, let $c_j:\psi(j)\to\co\psi$ be the coprojection, let 
+$$
+\xi=(\co\psi,\co\psi\xr x A)\in\C_A
+$$ 
+be such that $x\circ c_j=y_j$ for all $j$, and let $f_j:\p(j)\to\xi$ be the obvious morphism. Then $(f_j)\in\lim\h_{\C_A}(\p,\xi)$. 
+
+The proof is obvious. 
 % 
 \end{document}
