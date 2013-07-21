@@ -72,7 +72,9 @@
 \DeclareMathOperator*{\icolim}{``\coli"}
 \DeclareMathOperator*{\ic}{``\coli"}
 % 
-\DeclareMathOperator{\Ad}{Add} 
+\DeclareMathOperator{\Ad}{Add}
+\DeclareMathOperator{\ca}{card}
+\DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\Ima}{Im} 
@@ -100,7 +102,9 @@
 % 
 \begin{document} 
 % 
-\maketitle  
+\maketitle 
+
+\n Warning: This is a first draft!
 %
 \section{Typos and Details} 
 %
@@ -377,5 +381,50 @@ $$
 be such that $x\circ c_j=y_j$ for all $j$, and let $f_j:\p(j)\to\xi$ be the obvious morphism. Then $(f_j)\in\lim\h_{\C_A}(\p,\xi)$. 
 
 The proof is obvious. 
+
+%% 
+
+%\DeclareMathOperator{\ca}{card}\DeclareMathOperator{\card}{card}
+
+\n$\bu$ P. 227, Theorem 9.3.4. Firstly I think it would be better to state the result as follows:
+
+Assume (9.3.1) and (9.3.4), and let $X$ be in $\C$. Then 
+\be\label{934}
+X\in\C_\pi\iff\ca(X(G))<\pi.
+\ee 
+
+Secondly I don't understand the proof of the implication $\Leftarrow$. Here are some possible changes. 
+
+In the second paragraph of page 226, one could change the sentence 
+
+``Now choose a cardinal $\pi_1\ge\pi_0$ such that if $X$ is a quotient of $G^{\coprod A}$ for a set $A$ with $\ca(A)<\pi_0$, then $\ca(X(G))<\pi_1$''
+
+\n to 
+
+``Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\ca(A)<\pi_0$: 
+
+$\bu$ $\ca(G^{\coprod A}(G))<\pi_1$, 
+
+$\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\ca(X(G))<\pi_1$.'' 
+
+One could also add to (9.3.4) p. 226 the condition 
+\be\label{934e}
+\text{(e) if }A\text{ is a set with }\ca(A)<\pi_0,\text{ then }\ca(G^{\coprod A}(G))<\pi.
+\ee
+
+Finally, one could change the proof of the implication $\Leftarrow$ in \eqref{934} to: 
+
+We claim  
+\be\label{934b}
+\ca(G^{\coprod X(G)}(G))<\pi.
+\ee 
+
+To prove this, we argue as in the proof of Lemma 9.3.3 p. 226: 
+
+Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant and $G^{\coprod X(G)}\simeq\co_{B\in I}G^{\coprod B}$. As $G$ is $\pi_0$-accessible, we get 
+$$
+G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
+$$ 
+Since $\ca(I)<\pi$ and $\ca(G^{\coprod B}(G))<\pi$ for all $B$ by (9.3.4) (e) (see \eqref{934e}), this implies \eqref{934b}. Now Proposition~9.3.2 p. 224 entails \eqref{934}. 
 % 
 \end{document}
