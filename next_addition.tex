@@ -1,4 +1,4 @@
-% next addition to "categories and sheaves" (tex, version ab-be)
+% next addition to "categories and sheaves" (tex, version ab-bf)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -45,6 +45,7 @@
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\mono}{\rightarrowtail}
 \newcommand{\m}{\rightarrowtail}
+\newcommand{\incl}{\hookrightarrow}
 \newcommand{\op}{\text{op}}
 \newcommand{\p}{\varphi} 
 \newcommand{\pa}{\rightrightarrows} 
@@ -427,6 +428,13 @@ G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
 $$ 
 Since $\ca(I)<\pi$ and $\ca(G^{\coprod B}(G))<\pi$ for all $B$ by (9.3.4) (e) (see \eqref{934e}), this implies \eqref{934b}. Now Proposition~9.3.2 p. 224 entails \eqref{934}. 
 
+%%
+
+\n$\bu$ P. 232, Theorem 9.5.4, minor variant: 
+\begin{rk}\label{954}
+The conclusion of Theorem 9.5.4 still holds if we weaken the assumption that $\cc F\subset\Mor(\C_0)$ is a small set to the assumption that it is just an {\em essentially} small full subcategory. Indeed, for the proof we can clearly assume that $\cc F$ is small. 
+\end{rk}
+
 %% 
 
 \n$\bu$ P. 233, Theorem 9.5.5. I suggest two changes: 
@@ -454,5 +462,9 @@ If $I$ and $\C$ is categories such that $\C$ admits inductive limits indexed by 
 \end{df}
 
 The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits). 
+
+%%
+
+\n$\bu$ P. 236, line 4 of the proof of Theorem 9.6.2. One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4. 
 % 
 \end{document}
