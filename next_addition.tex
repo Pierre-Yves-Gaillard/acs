@@ -1,4 +1,4 @@
-% next addition to "categories and sheaves" (tex, version ab-bd)
+% next addition to "categories and sheaves" (tex, version ab-be)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -17,7 +17,7 @@
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
-\newtheorem{defn}[thm]{Definition} 
+\newtheorem{df}[thm]{Definition} 
 \newtheorem{nota}[thm]{Notation}
 \theoremstyle{remark}
 \newtheorem{cm}[thm]{Comment} 
@@ -384,24 +384,6 @@ The proof is obvious.
 
 %% 
 
-\n$\bu$ P. 233, Theorem 9.5.5. I suggest two changes: 
-
-\n(a) Add the following assumption (called ``Assumption (a)'' below): 
-
-Each morphism $X\to Y$ in $\C_0$ can be inserted into a cartesian square
-$$
-\begin{tikzcd}
-U\ar{r}\ar{d}&V\ar{d}\\ X\ar{r}&Y
-\end{tikzcd}
-$$ 
-with $U\to V$ in $\cc F$. 
-
-\n(b) In the last paragraph of p. 234, change ``Consider a Cartesian square \dots'' to ``By Assumption (a), there is a Cartesian square \dots'' 
-
-[I think that the main motivation for Theorem 9.5.5 is the proof of Theorem 14.1.7, stated on p.~350. I have not yet studied this part of the book, but I feel that Assumption (a) is checked in the proof of Lemma 14.1.11 p. 352.] 
-
-%% 
-
 %\DeclareMathOperator{\ca}{card}\DeclareMathOperator{\card}{card}
 
 \n$\bu$ P. 227, Theorem 9.3.4. Firstly I think it would be better to state the result as follows:
@@ -421,9 +403,9 @@ In the second paragraph of page 226, one could change the sentence
 
 ``Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\ca(A)<\pi_0$: 
 
-$\bu$ $\ca(G^{\coprod A}(G))<\pi_1$, 
+$*\ \ca(G^{\coprod A}(G))<\pi_1$, 
 
-$\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\ca(X(G))<\pi_1$.'' 
+$*$ if $X$ is a quotient of $G^{\coprod A}$, then $\ca(X(G))<\pi_1$.'' 
 
 One could also add to (9.3.4) p. 226 the condition 
 \be\label{934e}
@@ -444,5 +426,33 @@ $$
 G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
 $$ 
 Since $\ca(I)<\pi$ and $\ca(G^{\coprod B}(G))<\pi$ for all $B$ by (9.3.4) (e) (see \eqref{934e}), this implies \eqref{934b}. Now Proposition~9.3.2 p. 224 entails \eqref{934}. 
+
+%% 
+
+\n$\bu$ P. 233, Theorem 9.5.5. I suggest two changes: 
+
+\n(a) Add the following assumption (called ``Assumption (a)'' below): 
+
+Each morphism $X\to Y$ in $\C_0$ can be inserted into a cartesian square
+$$
+\begin{tikzcd}
+U\ar{r}\ar{d}&V\ar{d}\\ X\ar{r}&Y
+\end{tikzcd}
+$$ 
+with $U\to V$ in $\cc F$. 
+
+\n(b) In the last paragraph of p. 234, change ``Consider a Cartesian square \dots'' to ``By Assumption (a), there is a Cartesian square \dots'' 
+
+[I think that the main motivation for Theorem 9.5.5 is the proof of Theorem 14.1.7, stated on p.~350. I have not yet studied this part of the book, but I feel that Assumption (a) is checked in the proof of Lemma 14.1.11 p. 352.] 
+
+%%
+
+\n$\bu$ P. 235, Theorem 9.6.1. Here are a few details. 
+%
+\begin{df}\label{cb}
+If $I$ and $\C$ is categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\co\alpha\in\C$ belongs to $\C_0$. There is an obvious analog for projective limits.
+\end{df}
+
+The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits). 
 % 
 \end{document}
