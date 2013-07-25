@@ -1,4 +1,4 @@
-% agj
+% about "categories and sheaves" (tex, version agh)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -43,6 +43,7 @@
 \newcommand{\epi}{\twoheadrightarrow} 
 \newcommand{\mono}{\rightarrowtail}
 \newcommand{\m}{\rightarrowtail} 
+\newcommand{\incl}{\hookrightarrow}
 %\newcommand{\op}{\text{op}}
 \newcommand{\p}{\varphi} 
 \newcommand{\pa}{\rightrightarrows} 
@@ -76,6 +77,7 @@
 \DeclareMathOperator*{\ic}{``\coli"}
 % 
 \DeclareMathOperator{\Ad}{Add} 
+\DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\Ima}{Im} 
@@ -1287,58 +1289,6 @@ $$
 \end{tikzcd}
 $$ 
 
-%%
-
-\n$\bu$ P.~162, proof of (7.4.3). Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-commutative) diagram
-$$
-\begin{tikzcd}
-\C\ar{rr}{F}\ar{d}[swap]{Q}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
-\C_\SSS\ar{r}[swap]{\alpha_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
-\end{tikzcd}
-$$
-Let $X$ be in $\C$. We must prove 
-$$
-R_\SSS(\iota_\A\circ F)(Q(X))\simeq IF(\alpha_\SSS(Q(X))).
-$$
-
-Recall the following facts: 
-
-\n$*$ Proposition 7.4.1 p.~162 implies
-$$
-A:=\alpha_\SSS(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
-$$ 
-$*$ Display (7.3.7) p.~161 implies
-$$
-B:=R_\SSS(\iota_\A\circ F)(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
-$$
-$*$ The definition of $IF$ p.~133 implies
-$$
-C:=IF(A)=\coli_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
-$$ 
-\cn 
-
-We want to prove $B\simeq C$.  
-
-\n{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $c(B,i):\alpha(i)\to X$ for the $i$-th coprojection (see Definition \ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
-
-For $(X',x')\in\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by 
-$$
-f(X',x'):=c(C,X',c(A,X',x')),
-$$ 
-and we claim that the $f(X',x')$ induce a morphism $f:B\to C$. 
-
-Let $(U,u)$ be in $\C_A$. In particular, 
-$$
-u\in A(U)=\co_{(X',x')\in\SSS^X}\h_\C(U,X').
-$$ 
-Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=c(A(U),X',x')(f)$, and put  
-$$
-g(U,u):=c(B,X',x')\circ\iota_\A(F(f)).
-$$ 
-We claim that this formula defines a morphism $g(U,u):\iota_\A(F(U))\to B$, that the $g(U,u)$ induce a morphism $g:C\to B$, and that $f$ and $g$ are mutually inverse. 
-
-We leave the verification of these claims to the reader. 
-
 %% 
 
 \n$\bu$ P. 172, Lemma 8.2.9. Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
@@ -2531,7 +2481,59 @@ It follows from \pr\ 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By
 
 From this point we can argue as in the proof of \pr\ 6.1.13 p.~134. 
 %
-\section{The complex (8.3.3) (p.~178)}%%%%%%%%%%
+\section{Proof of (7.4.3) (p.~162)}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-commutative) diagram
+$$
+\begin{tikzcd}
+\C\ar{rr}{F}\ar{d}[swap]{Q}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
+\C_\SSS\ar{r}[swap]{\alpha_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
+\end{tikzcd}
+$$
+Let $X$ be in $\C$. We must prove 
+$$
+R_\SSS(\iota_\A\circ F)(Q(X))\simeq IF(\alpha_\SSS(Q(X))).
+$$
+
+Recall the following facts: 
+
+\n$\bu$ Proposition 7.4.1 p.~162 implies
+$$
+A:=\alpha_\SSS(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
+$$ 
+$\bu$ Display (7.3.7) p.~161 implies
+$$
+B:=R_\SSS(\iota_\A\circ F)(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
+$$
+$\bu$ The definition of $IF$ p.~133 implies
+$$
+C:=IF(A)=\coli_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
+$$ 
+\cn 
+
+We want to prove $B\simeq C$.  
+
+\n{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $c(B,i):\alpha(i)\to X$ for the $i$-th coprojection (see Definition \ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
+
+For $(X',x')\in\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by 
+$$
+f(X',x'):=c(C,X',c(A,X',x')),
+$$ 
+and we claim that the $f(X',x')$ induce a morphism $f:B\to C$. 
+
+Let $(U,u)$ be in $\C_A$. In particular, 
+$$
+u\in A(U)=\co_{(X',x')\in\SSS^X}\h_\C(U,X').
+$$ 
+Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=c(A(U),X',x')(f)$, and put  
+$$
+g(U,u):=c(B,X',x')\circ\iota_\A(F(f)).
+$$ 
+We claim that this formula defines a morphism $g(U,u):\iota_\A(F(U))\to B$, that the $g(U,u)$ induce a morphism $g:C\to B$, and that $f$ and $g$ are mutually inverse. 
+
+We leave the verification of these claims to the reader. 
+%
+\section{The complex (8.3.3) (p.~178)}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 Let me just add a few more details about the proof of the isomorphisms
 \begin{equation}\label{834}
