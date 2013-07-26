@@ -1,4 +1,4 @@
-% next addition to "categories and sheaves" (version ab-bi)
+% next addition to "categories and sheaves" (version ab-bj)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -262,11 +262,30 @@ X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
 $$ 
 for the projections and coprojections. We have $q_a\circ(f_1\times f_2)=f_a\circ p_a$, and we must show $q_b\circ (f_1\times f_2)\circ i_a=q_b\circ j_a\circ f_a$ for all $b$. This follows immediately from Corollary~\ref{823}. q.e.d. 
 
-Note also the following corollary of Lemma 8.2.3 (ii) p.~169. 
+Note also the following corollary of Lemma 8.2.3 (ii) p.~169 (see Lemma~\ref{823ii} below). 
 %
 \begin{cor}\label{823b}
-Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $p_a:X\to X_a,i_a:X_a\to X$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
+Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
 \end{cor}
+
+For the reader's convenience we state and prove Lemma 8.2.3 (ii):
+%
+\begin{lem}\label{823ii}
+Let $\C$ be a pre-additive category; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms satisfying 
+$$
+p_a\circ i_b=\delta_{ab}\ \id_{X_a},\quad i_1\circ p_1+i_2\circ p_2=\id_X.
+$$
+Then $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. 
+\end{lem}
+%
+\n{\em Proof.} For any $Y$ in $\C$ we have 
+$$
+\h_\C(Y,p_a)\circ\h_\C(Y,i_b)=\delta_{ab}\ \id_{\h_\C(Y,X_a)},
+$$ 
+$$
+\h_\C(Y,i_1)\circ\h_\C(Y,p_1)+\h_\C(Y,i_2)\circ\h_\C(Y,p_2)=\id_{\h_\C(Y,X)}.
+$$ 
+This implies that $\h_\C(Y,X)$ is a product of $\h_\C(Y,X_1)$ and $\h_\C(Y,X_2)$ by $\h_\C(Y,p_1),\h_\C(Y,p_2)$, and thus, $Y$ being arbitrary, that $X$ is a product of $X_1$ and $X_2$, and we conclude by applying this observation to the opposite category. 
 
 %% 
 
