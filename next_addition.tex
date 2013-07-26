@@ -1,4 +1,4 @@
-% next addition to "categories and sheaves" (tex, version ab-bh)
+% next addition to "categories and sheaves" (tex, version ab-bi)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -110,6 +110,8 @@
 \section{Typos and Details} 
 %
 \n P. 141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$. 
+
+\n P. 156, first line after the first display: $\C_{\cc S}$ should be $\C_{\cc S}^r$. 
 
 \n P.~170, Corollary 8.2.4. The final period is missing. 
 
@@ -236,7 +238,6 @@ are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by 
 \n$\bu$ P.~169, Lemma 8.2.3. Here is a statement contained in Lemma 8.2.3:
 %
 \begin{cor}\label{823}
-%
 Let $\C$ be a pre-additive category, let $X_1$ and $X_2$ be two objects of $\C$ such that the product $X=X_1\times X_2$ exists in $\C$, let $p_a:X\to X_a$ be the projection, define $i_a:X_a\to X$ by 
 $$
 p_a\circ i_b=\begin{cases}\id_{X_a}&\text{if }a=b\\0&\text{if }a\not=b.\end{cases}
@@ -250,7 +251,7 @@ $$
 Let us denote the object $X$ above by $X_1\oplus X_2$. The following lemma is implicit in the book. 
 
 \begin{lem}
-For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have $f_1\times f_2=f_1\sqcup f_2$ (equality in $\h_\C(X_1\oplus X_2,Y_1\oplus Y_2)$. 
+For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have $f_1\times f_2=f_1\sqcup f_2$ (equality in $\h_\C(X_1\oplus X_2,Y_1\oplus Y_2)$. 
 \end{lem} 
 
 We denote this morphism by $f_1\oplus f_2$.\medskip 
@@ -260,6 +261,12 @@ $$
 X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
 $$ 
 for the projections and coprojections. We have $q_a\circ(f_1\times f_2)=f_a\circ p_a$, and we must show $q_b\circ (f_1\times f_2)\circ i_a=q_b\circ j_a\circ f_a$ for all $b$. This follows immediately from Corollary~\ref{823}. q.e.d. 
+
+Note also the following corollary of Lemma 8.2.3 (ii) p.~169. 
+%
+\begin{cor}\label{823b}
+Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $p_a:X\to X_a,i_a:X_a\to X$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
+\end{cor}
 
 %% 
 
@@ -349,6 +356,18 @@ Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
 \ee
 %
 To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$. 
+
+%%
+
+\n$\bu$ P.~202, Exercise 8.4. Recall the statement: 
+
+Let $\C$ be an additive category and $\cc S$ a right multiplicative system. Prove that the localization $\C_{\cc S}$ is an additive category and $Q:\C\to\C_{\cc S}$ is an additive functor. 
+
+It is easy to equip $\C_{\cc S}$ with a pre-additive structure making $Q$ additive. Then the result follows from Lemma~\ref{823b} p.~\pageref{823b}. 
+
+The description of the pre-additive structure on $\C_{\cc S}$ is described in a very detailed way at the beginning of the following text of Dragan Mili\v{c}i\'c:\bigskip 
+
+\centerline{\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf}}\bigskip 
 
 %% 
 
