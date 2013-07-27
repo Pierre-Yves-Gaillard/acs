@@ -1,4 +1,4 @@
-% next addition to "categories and sheaves" (version ab-bm)
+% next addition to "categories and sheaves" (version ab-bn)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -128,6 +128,18 @@
 \n P. 245, beginning of the proof of \pr\ 10.1.13: The letters $f$ and $g$ being used in the sequel, it would be better to write $X\xr fY\xr gZ\to TX$ instead of $X\to Y\to Z\to TX$. Also, in the first display, the subscript $\cc D$ is missing (three times) in $\h_{\cc D}$. 
 
 \n P. 250. After the second diagram, the $s\circ f$ should be an $f\circ s$. 
+
+\n P. 252, last three lines: 
+
+$*$ ``$u$ is represented by morphisms $u':\oplus_i\ X_i\xr{u'}Y'\xleftarrow sY$'' should be ``$u$ is represented by morphisms $\oplus_i\ X_i\xr{u'}Y'\xleftarrow sY$'', 
+
+$*$ ``Exercise 10.11'' might be ``Exercise 10.11 (i)'',
+
+$*$ $v'_i$ should (I believe) be $u'_i$, 
+
+$*$ ``Then $\oplus_i\ X_i\to Y'$'' should be ``Then $u':\oplus_i\ X_i\to Y'$'', 
+
+$*$ $Q(u)$ should be $Q(u')$. 
 
 \n P. 266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes. 
 % 
@@ -519,5 +531,13 @@ Axiom TR4 results from the other axioms.
 %%
 
 \n$\bu$ P. 250, proof of Theorem 10.2.3 (iii). In view of Remark~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4. 
+
+%%
+
+\n$\bu$ P. 266, Exercise 10.11 (i), used to prove \pr\ 10.2.8 p.~252. Recall the statement: 
+
+Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to\cc D/\cc N$ be the localization functor, and let $f:X\to Y$ be a morphism in $\cc D$ satisfying $Q(f)=0$. Then $f$ factors through some object of $\cc N$. 
+
+\n{\em Proof.} The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$, and thus, in view of the definition of $\cc NQ$, the existence of a triangle $W\to Y\to Z\to TW$ with $W\in\cc N$, and the conclusion follows from the fact that $\h_{\cc D}(X,\cdot)$ is cohomological. 
 % 
 \end{document}
