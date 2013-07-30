@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version agl)
+% about "categories and sheaves" (version agm)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -19,7 +19,8 @@
 \newtheorem{cor}[thm]{Corollary} 
 \newtheorem{df}[thm]{Definition}%\newtheorem{defn}[thm]{Definition} 
 \theoremstyle{remark}%\newtheorem{cm}[thm]{Comment} 
-\newtheorem{rk}[thm]{Remark}%\theoremstyle{definition}\newtheorem{defn}{Definition}
+\newtheorem{rk}[thm]{Remark}
+\newtheorem{conv}[thm]{Convention}%\theoremstyle{definition}\newtheorem{defn}{Definition}
 \newcommand{\bu}{\bullet} 
 \newcommand{\n}{\noindent} 
 %
@@ -146,7 +147,7 @@ More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
 I have rewritten some of the proofs in the book. Of course, I'm not suggesting that my wording is better than that of Kashiwara and Schapira! I just tried to make explicit a few points which are implicit in the book. 
 
-This is a work in progress. So far, there are comments only about the first ten chapters. I'm planning to read the whole book, but I'm progressing very slowly.
+This is a work in progress. So far, there are comments only about the first ten chapters. I'm planning to read the whole book, but I'm progressing very slowly. The most recent additions are indicated by a [new! added on \dots].
 
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. 
 
@@ -1290,6 +1291,29 @@ $$
 \C_{\SSS}\ar{rr}[swap]{(K\circ F)_{\SSS}}\ar{rru}[swap]{F_{\SSS}}&&\A'.
 \end{tikzcd}
 $$ 
+
+%%
+
+\n$\bu$ P. 169, Definition 8.2.1. [new! added on July 29] The proofs of the Propositions and Lemma below are obvious. 
+\begin{prop}\label{payp}
+Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\h_\C(Y,X)$, let $X$ be in $\C$ and $A$ in $\A$, and let 
+$$
+\begin{tikzcd}
+\h_\A(h(X),A)\ar[yshift=.7ex]{r}{\Phi}&A(X)\ar[yshift=-.7ex]{l}{\Psi}
+\end{tikzcd}
+$$
+be defined by 
+$$
+\Phi(\theta)=\theta_X(\id_X),\quad\psi(x)(f)=A(f)(x).
+$$
+Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
+\end{prop}
+\begin{conv}\label{payc}
+In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context. 
+\end{conv} 
+\begin{lem}\label{payl}
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category af additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. 
+\end{lem}
 
 %% 
 
