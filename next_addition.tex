@@ -1,4 +1,4 @@
-% next addition to "categories and sheaves" (version ab-bo)
+% next addition to "categories and sheaves" (version ab-bp)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -107,7 +107,7 @@
 
 \n Warning: This is a first draft!
 %
-\section{Typos and Details} 
+\section{Typos and Details}%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \n P. 141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$. 
 
@@ -535,6 +535,25 @@ Axiom TR4 results from the other axioms.
 %%
 
 \n$\bu$ P. 250, proof of Theorem 10.2.3 (iii). In view of Remark~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4. 
+
+%%
+
+\n$\bu$ P. 263, last sentence of the proof of Lemma 10.5.8. We already know that the bottom row of the diagram 
+$$
+\begin{tikzcd}
+\oplus_i\,\p(Z_i)\ar[equal]{d}\ar{r}&\oplus_i\,\p(Y_i)\ar[equal]{d}\ar{r}&\oplus_i\,\widetilde\p(X_i)\ar{d}\ar{r}&0\\ 
+\oplus_i\,\p(Z_i)\ar{r}&\oplus_i\,\p(Y_i)\ar{r}&\widetilde\p(\oplus_i\,X_i)\ar{r}&0,
+\end{tikzcd}
+$$ 
+is exact. To see that the top row is also exact, it suffices to observe that the exact sequence 
+$$
+\p(Z_i)\to\p(Y_i)\to\widetilde\p(X_i)\to0
+$$ 
+can play the role of the exact sequence 
+$$
+\p(X_i)\to\p(Y_i)\to F_i\to0
+$$ 
+in the proof (p.~262) of Lemma 10.5.7 (ii). In other words, the exactness of the top row follows from the construction of the direct sum $\oplus_i\,\widetilde\p(X_i)$ in $\cc S^{\wedge,\text{prod}}$. 
 
 %%
 
