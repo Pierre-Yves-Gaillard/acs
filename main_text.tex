@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version agq)
+% about "categories and sheaves" (version agr)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2806,30 +2806,6 @@ $*$ $Q(u)$ should be $Q(u')$.
 %
 \subsection{Brief Comments}%%%
 %
-\n$\bu$ P. 169, Definition 8.2.1. The proofs of the Proposition and Lemma below are obvious. 
-\begin{prop}\label{payp}
-Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C^{\op}$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\h_\C(Y,X)$, let $X$ be in $\C$ and $A$ in $\A$, and let 
-$$
-\begin{tikzcd}
-\h_\A(h(X),A)\ar[yshift=.7ex]{r}{\Phi}&A(X)\ar[yshift=-.7ex]{l}{\Psi}
-\end{tikzcd}
-$$
-be defined by 
-$$
-\Phi(\theta)=\theta_X(\id_X),\quad\psi(x)(f)=A(f)(x).
-$$
-Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
-\end{prop}
-\begin{conv}\label{payc}
-In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context. 
-\end{conv} 
-\begin{lem}\label{payl}
-Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category af additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
-\end{lem}
-
-%% 
-
-%
 \n$\bu$ P. 14, Definition 1.2.5.
 %
 \begin{nota}\label{c*}%\newtheorem{nota}[thm]{Notation}
@@ -2949,6 +2925,29 @@ are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by 
 \end{lem}
 
 %% 
+
+\n$\bu$ P. 169, Definition 8.2.1. The proofs of the Proposition and Lemma below are obvious. 
+\begin{prop}\label{payp}
+Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C^{\op}$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\h_\C(Y,X)$, let $X$ be in $\C$ and $A$ in $\A$, and let 
+$$
+\begin{tikzcd}
+\h_\A(h(X),A)\ar[yshift=.7ex]{r}{\Phi}&A(X)\ar[yshift=-.7ex]{l}{\Psi}
+\end{tikzcd}
+$$
+be defined by 
+$$
+\Phi(\theta)=\theta_X(\id_X),\quad\psi(x)(f)=A(f)(x).
+$$
+Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
+\end{prop}
+\begin{conv}\label{payc}
+In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context. 
+\end{conv} 
+\begin{lem}\label{payl}
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category af additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
+\end{lem}
+
+%%
 
 \n$\bu$ P.~169, Lemma 8.2.3. Here is a statement contained in Lemma 8.2.3:
 %
@@ -3141,8 +3140,6 @@ be such that $x\circ c_j=y_j$ for all $j$, and let $f_j:\p(j)\to\xi$ be the obvi
 The proof is obvious. 
 
 %% 
-
-%\DeclareMathOperator{\ca}{card}\DeclareMathOperator{\card}{card}
 
 \n$\bu$ P. 227, Theorem 9.3.4. Firstly I think it would be better to state the result as follows:
 
