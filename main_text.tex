@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ags)
+% about "categories and sheaves" (version agt)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -113,8 +113,8 @@
 
 \n\href{http://www.iecn.u-nancy.fr/~gaillapy/DIVERS/KS/}{http://www.iecn.u-nancy.fr/$\sim$gaillapy/DIVERS/KS/}
 
-\tableofcontents%\newpage%\vskip2em\hrule
-\bigskip%\vskip1em
+\tableofcontents\newpage%\vskip2em\hrule
+%\bigskip%\vskip1em
 
 \n The purpose of this text is to make a few comments about the book%\bigskip 
 
@@ -2618,15 +2618,40 @@ F(X')\to F(K_g)\to0,\quad 0\to F(I_g)\to F(X''),\quad F(K_g)\to F(X)\to F(I_g)
 $$
 implies that of $F(X')\to F(X)\to F(X'')$. 
 %
-\section{Exercise 10.6 (p.~266)}%%%%%%%%%%%%%%%%%%
+\section{Definition of a Triangulated Category (Definition 10.1.6 p.~243)}%%%%%%%%%%%%%%%%%%
 %
-This exercise is used at the top of p.~251 within the proof of Theorem 10.2.3 p.~249. Various related links are given in the document\bigskip 
+The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:\bigskip 
+
+\centerline{\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf}}\bigskip 
+
+\n Various related links are given in the document\bigskip 
 
 \centerline{\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}}\bigskip 
 
-\n The lines below are just a transcription in the notation of the book of part of Section~1 of \emph{The axioms for triangulated categories} by J. P. May:\bigskip 
-
-\centerline{\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf}}\bigskip 
+To make things as clear as possible, we remove TR4 from the definition of a triangulated category, and prove that any triangulated category satisfies TR4. 
+%
+\begin{df}
+A {\em triangulated category} is an additive category $(\cc D,T)$ with translation endowed with a set of triangles satisfying  the axioms {\em TR0, TR1, TR2, TR3}, and {\em TR5} on p.~243 of the book.
+\end{df}
+%
+Let $(\cc D,T)$ be a triangulated category. In the book the theorem below is stated as Exercise 10.6 p.~266 and is used at the top of p.~251 within the proof of Theorem 10.2.3 p.~249.
+%
+\begin{thm}\label{mayt}
+Let  
+$$
+\begin{tikzcd}
+X^0\ar{r}{u}\ar{d}[swap]{f}&X^1\ar{d}\ar{r}{v}&X^2\ar[dashed]{d}\ar{r}{w}&TX^0\ar{d}{Tf}\\ 
+Y^0\ar{r}\ar{d}[swap]{g}&Y^1\ar{d}\ar{r}&Y^2\ar[dashed]{d}\ar{r}&TY^0\ar{d}{Tg}\\ 
+Z^0\ar[dashed]{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar[dashed]{r}&Z^2\ar[dashed]{d}\ar[dashed]{r}&TZ^0\ar{d}{-Th}\\ 
+TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0,
+\end{tikzcd}
+$$ 
+be a diagram of solid arrows in $\cc D$. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that the bottom right small square anti-commutes, the eight other small squares commute, and all rows and columns are distinguished triangles. 
+\end{thm}
+%
+\begin{cor}\label{may}
+Any triangulated category satisfies {\em TR4}.
+\end{cor} 
 
 Recall Axiom TR5: If the diagram 
 $$
@@ -2645,26 +2670,7 @@ V\ar{d}\ar{r}&W\ar{d}\ar{r}&U'\ar{r}\ar[equal]{d}&TV\ar{d}\\
 W'\ar{r}&V'\ar{r}&U'\ar{r}&TW'.
 \end{tikzcd}
 $$
-\textbf{Exercise 10.6.} Let  
-$$
-\begin{tikzcd}
-X^0\ar{r}{u}\ar{d}[swap]{f}&X^1\ar{d}\ar{r}{v}&X^2\ar[dashed]{d}\ar{r}{w}&TX^0\ar{d}{Tf}\\ 
-Y^0\ar{r}\ar{d}[swap]{g}&Y^1\ar{d}\ar{r}&Y^2\ar[dashed]{d}\ar{r}&TY^0\ar{d}{Tg}\\ 
-Z^0\ar[dashed]{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar[dashed]{r}&Z^2\ar[dashed]{d}\ar[dashed]{r}&TZ^0\ar{d}{-Th}\\ 
-TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0,
-\end{tikzcd}
-$$ 
-be a diagram of solid arrows. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that 
-
-(a) the bottom right small square anti-commutes, 
-
-(b) the eight other small squares commute, 
-
-(c) all rows and columns are distinguished triangles. 
-
-\n{\em Partial solution.} I shall complete the diagram in such a way that (b) and (c) hold, but I'm unable to prove (a). 
-
-From 
+\n{\em Proof of Theorem \ref{mayt}.} From 
 $$
 \begin{tikzcd}
 X^0\ar[equal]{dd}\ar{r}&X^1\ar[equal]{d}\ar{r}&X^2\ar{r}&TX^0\\
@@ -2759,9 +2765,7 @@ The commutativity of (\ref{v1})9 and (\ref{v3})8 implies that of (\ref{v4})8.
 
 The commutativity of (\ref{v1})3, (\ref{v3})6, and (\ref{v2})3 implies the anti-commutativity of (\ref{v4})9. 
 
-It is easy to check that all rows and columns are distinguished triangles.
-
-As observed by Peter May in \emph{The axioms for triangulated categories}, the above proof shows that TR4 follows from the other axioms. 
+It is easy to check that all rows and columns are distinguished triangles. 
 
 \newpage
 
@@ -3229,14 +3233,7 @@ The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228
 
 %%
 
-\n$\bu$ Comment to be added at the end of the section titled ``Exercise 10.6 (p.~266)'' (currently the last section): As observed by Peter May in {\em The axioms for triangulated categories}, the above proof shows the following:
-\begin{rk}\label{may}
-Axiom TR4 results from the other axioms.
-\end{rk}
-
-%%
-
-\n$\bu$ P. 250, proof of Theorem 10.2.3 (iii). In view of Remark~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4. 
+\n$\bu$ P. 250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4. 
 
 %%
 
