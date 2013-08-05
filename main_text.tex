@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version agv)
+% about "categories and sheaves" (version agw)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -93,6 +93,7 @@
 \DeclareMathOperator{\h}{Hom}
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Mc}{Mc}
 \DeclareMathOperator{\Mod}{Mod} 
 \DeclareMathOperator{\Mor}{Mor} 
 \DeclareMathOperator{\Ob}{Ob} 
@@ -3269,17 +3270,82 @@ $$
 \h_{\cc S^{\wedge,\text{prod}}}(\p(X),H_0)\simeq H(X)\simeq\h_{\cc D}(X,H)
 $$ 
 for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied. 
+%
+\subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+This is about Sections 12.1 and 12.2 of the book. I think the Snake Lemma can be avoided as follows: 
 
-%%
+Let $\A$ be an abelian category. 
+%
+\begin{lem}\label{sl1}
+Let  
+$$
+\begin{tikzcd}
+{}&X'\ar{d}{u}\ar{r}{f}&X\ar{d}{v}\ar{r}{g}&X''\ar{d}{w}\ar{r}&0\\ 
+0\ar{r}&Y'\ar{r}[swap]{f'}&Y\ar{r}[swap]{g'}&Y''.
+\end{tikzcd}
+$$ 
+be a commutative diagram in $\A$ with exact rows. If $w$ is a monomorphism or $u$ is an epimorphism, then the sequence  
+$$
+\Ker u\to\Ker v\to\Ker w\xr0\Coker u\to\Coker v\to\Coker w
+$$
+is exact.
+\end{lem}
+%
+The proof is straightforward (and much easier than that of the Snake Lemma). 
 
-%\n$\bu$ P. 301, Corollary 12.2.5. I think one can avoid the Snake Lemma altogether. Indeed, Corollary 12.2.5 reads 
+Let $(\A,T)$ be an abelian category with translation. 
 %
-%\begin{cor}Let $(\cc A,T)$ be an abelian category with translation. Then the functor $$H:\text K_c(\cc A)\to\cc A$$ is cohomological.\end{cor}
+\begin{lem}\label{sl2}
+If $0\xr f X\to Y\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively  $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively  $T^nX\to YT^n$) is a qis for all $n$. 
+\end{lem}
+% 
+\n{\em Proof.} Apply Lemma \ref{sl1} to the diagram 
+$$
+\begin{tikzcd}
+{}&\Coker T^{-1}d_X\ar{d}{d_X}\ar{r}{f}&\Coker T^{-1}d_Y\ar{d}{d_Y}\ar{r}{g}&\Coker T^{-1}d_Z\ar{d}{d_Z}\ar{r}&0\\ 
+0\ar{r}&\Ker Td_X\ar{r}[swap]{f}&\Ker Td_Y\ar{r}[swap]{g}&\Ker Td_Z.
+\end{tikzcd}
+$$ 
+q.e.d. 
 %
-%For the reader's convenience, here is a copy and paste of the proof: 
+\begin{prop}\label{sl3}
+The functor 
+$$
+H:\text K_c(\A)\to\A
+$$ 
+is cohomological. 
+\end{prop}
 %
-%\n{\em Proof.} Let $X\to Y\to Z\to T(X)$ be a d.t. in $K_c(\cc A)$. It is isomorphic to $V\xr{\alpha(u)}\text{Mc}(u)\xr{\beta(u)}T(U)\to T(V)$ for some morphism $u:U\to V$. Since the sequence in $\cc A_c$: $$0\to V\to\text{Mc}(u)\to T(U)\to0$$ is exact, it follows from Theorem 12.2.4 that the sequence $$H(V)\to H(\text{Mc}(u))\to H(T(U))$$ is exact. q.e.d. 
+\n{\em Proof.} Let $X\to Y\to Z\to TX$ be a d.t. in $K_c(\A)$. It is isomorphic to $V\xr{\alpha(u)}\Mc(u)\xr{\beta(u)}TU\to TV$ for some morphism $u:U\to V$. Since the sequence  
+$$
+0\to V\to\Mc(u)\to TU\to0
+$$ 
+in $\A_c$ is exact, it follows from Lemma~\ref{sl2} that the sequence 
+$$ 
+H(V)\to H(\Mc(u))\to H(TU)
+$$ 
+is exact. q.e.d.
 %
-%I think once can replace ``it follows from Theorem 12.2.4 that'' with ``it is clear that''. (Indeed, the Snake Lemma is not needed to prove that an exact sequence $0\to X'\to X\to X''\to0$ in $\cc A_c$ gives rise to an exact sequence $H(X')\to H(X)\to H(X'')$ in $\A$.) 
+\begin{prop}\label{sl4}
+Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\p:\Mc(f)\to Z$ by $\p:=(0,g)$. Then $\p$ is a morphism in $\A_c$ and is a qis. In particular, the sequence 
+$$
+\cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
+$$
+is exact.
+\end{prop}
+%
+\n{\em Proof.} The commutative diagram in $\A_c$ with exact rows 
+$$
+\begin{tikzcd}
+0\ar{r}&X\ar{d}{\id_X}\ar{r}{\id_X}&X\ar{d}{f}\ar{r}&0\ar{d}\ar{r}&0\\ 
+0\ar{r}&X\ar{r}[swap]{f}&Y\ar{r}[swap]{g}&Z\ar{r}&0
+\end{tikzcd}
+$$ 
+yields the exact sequence 
+$$
+0\to\Mc(\id_X)\to\Mc(f)\xr\p\Mc(0\to Z)\to0
+$$
+in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\p$ is a qis by Lemma~\ref{sl2}. q.e.d.
 %
 \end{document}
