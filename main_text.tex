@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version agt)
+% about "categories and sheaves" (version agu)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -149,7 +149,7 @@ More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
 I have rewritten some of the proofs in the book. Of course, I'm not suggesting that my wording is better than that of Kashiwara and Schapira! I just tried to make explicit a few points which are implicit in the book. 
 
-This is a work in progress. So far, there are comments only about the first ten chapters. I'm planning to read the whole book, but I'm progressing very slowly. 
+This is a work in progress. So far, there are comments only about the first twelve chapters. I'm planning to read the whole book, but I'm progressing very slowly. 
 %
 \begin{rk}\label{next}
 The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages (say, between ten and fifteen), I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
@@ -2813,6 +2813,7 @@ $*$ $Q(u)$ should be $Q(u')$.
 
 \n P. 266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes. 
 
+\n P. 271. The first entry of the first matrix reads $T(d_{T(X)})$. It would be more consistent with the rest of the book to write $T(d_{TX})$ instead. 
 %
 \subsection{Brief Comments} %%%
 %
@@ -3268,5 +3269,31 @@ $$
 \h_{\cc S^{\wedge,\text{prod}}}(\p(X),H_0)\simeq H(X)\simeq\h_{\cc D}(X,H)
 $$ 
 for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied. 
+
+%%
+
+\n$\bu$ P. 301, Corollary 12.2.5. I think one can avoid the Snake Lemma altogether. Indeed, Corollary 12.2.5 reads 
+%
+\begin{cor}
+Let $(\cc A,T)$ be an abelian category with translation. Then the functor 
+$$
+H:\text K_c(\cc A)\to\cc A
+$$ 
+is cohomological. 
+\end{cor}
+% 
+For the reader's convenience, here is a copy and paste of the proof: 
+
+\n{\em Proof.} Let $X\to Y\to Z\to T(X)$ be a d.t. in $K_c(\cc A)$. It is isomorphic to $V\xr{\alpha(u)}\text{Mc}(u)\xr{\beta(u)}T(U)\to T(V)$ for some morphism $u:U\to V$. Since the sequence in $\cc A_c$: 
+$$
+0\to V\to\text{Mc}(u)\to T(U)\to0
+$$ 
+is exact, it follows from Theorem 12.2.4 that the sequence 
+$$
+H(V)\to H(\text{Mc}(u))\to H(T(U))
+$$ 
+is exact. q.e.d. 
+
+I think once can replace ``it follows from Theorem 12.2.4 that'' with ``it is clear that''. (Indeed, the Snake Lemma is not needed to prove that an exact sequence $0\to X'\to X\to X''\to0$ in $\cc A_c$ gives rise to an exact sequence $H(X')\to H(X)\to H(X'')$ in $\A$.) 
 %
 \end{document}
