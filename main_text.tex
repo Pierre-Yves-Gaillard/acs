@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version agz)
+% about "categories and sheaves" (version aha)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -42,7 +42,8 @@
 \newcommand{\Cat}{\textbf{Cat}} 
 \newcommand{\CCat}{\textbf{CCat}} 
 \newcommand{\e}{\varepsilon} 
-\newcommand{\epi}{\twoheadrightarrow} 
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\mc}{\mathcal}
 \newcommand{\mono}{\rightarrowtail}
 \newcommand{\m}{\rightarrowtail} 
 \newcommand{\incl}{\hookrightarrow}
@@ -3279,13 +3280,63 @@ for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be a
 
 For any set $T$ let $Q_T$ be the set of those sets $U$ for which there is an equivalence relation $R$ on $T$ such that $U$ is the set of $R$-equivalence classes in $T$. 
 
-Let $A$ be in $\C^\wedge$, and let $\Set(A)$ be the full subcategory of $\Set$ whose set of objects is 
+Let $A$ be in $\C^\wedge$, and let $\Set(A)$ be the full subcategory of $\Set$ whose (small) set of objects is 
 $$
 \bigcup_{X\in\C}Q_{A(X)}.
 $$ 
 Then $\C^\wedge(A):=\Set(A)^{\C^{\op}}$ is a small full subcategory of $\C^\wedge$ containing $A$, and the sets of quotients of $A$ in $\C^\wedge(A)$ and in $\C^\wedge$ are in bijection. In particular, these sets are small. 
 
 Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism in $\C^\wedge(C_J)$, and $w:S\to A$ is a local isomorphism. Then $\cc S$ is small. 
+
+%%
+
+\n$\bu$ P. 400, proof of Lemma 16.3.1. Here are more details: 
+
+For $(B\xr s U)\in\mc{LI}_U$ let 
+$$
+i(s):\h_{\C^\wedge}(B,A)\to A^a(U)
+$$ 
+be the coprojection. We start with the diagram 
+$$
+\begin{tikzcd}
+%
+V\ar{r}{t}&B\ar{d}[swap]{u}\ar{r}{s}&U\ar{d}{i(s)(u)}\\ 
+{}&A&A^a,
+%
+\end{tikzcd}
+$$ 
+and we claim that the diagram 
+\be\label{1631a}
+\begin{tikzcd}
+%
+B(V)\ar{d}[swap]{u\circ}\ar{r}{s\circ}&U(V)\ar{d}{i(s)(u)\circ}\\ 
+A(V)\ar{r}[swap]{i(\id_V)}&A^a(V)
+%
+\end{tikzcd}
+\ee 
+commutes. There is a commutative diagram 
+$$
+\begin{tikzcd}
+%
+V\ar{d}[swap]{w}\ar{r}{\id_V}&V\ar[equal]{d}\\ 
+B'\ar{d}[swap]{a}\ar{r}{s'}&V\ar{d}{s\circ t}\\ 
+B\ar{r}{s}&U,
+%
+\end{tikzcd}
+$$ 
+such that $w\circ v=t$ and the bottom square is cartesian. Consider the diagram 
+%
+\be\label{1631b}
+\begin{tikzcd}
+%
+\h_{\C^\wedge}(V,A)\ar{r}{i(\id_V)}&A^a(V)\ar[equal]{d}\\ 
+\h_{\C^\wedge}(B',A)\ar{u}{\circ w}\ar{r}{i(s')}&A^a(V)\\ 
+\h_{\C^\wedge}(B,A)\ar{u}{\circ a}\ar{r}{i(s)}&A^a(U)\ar{u}[swap]{A^a(s\circ t)=\circ s\circ t}.
+%
+\end{tikzcd}
+\ee
+% 
+The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the bottom square commutes by definition of $A^a(s\circ t)$, and the top square commutes because $w$ can be viewed as a morphism $\id_V\to s'$ in $\mc{LI}_U$. The commutativity of \eqref{1631b} for all $t$ implies the commutativity of \eqref{1631a} for all $u$. 
 %
 \subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
