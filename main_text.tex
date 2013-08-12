@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahb)
+% about "categories and sheaves" (version ahc)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2818,6 +2818,8 @@ $*$ $Q(u)$ should be $Q(u')$.
 \n P. 271. The first entry of the first matrix reads $T(d_{T(X)})$. It would be more consistent with the rest of the book to write $T(d_{TX})$ instead. 
 
 \n P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$. 
+
+\n P. 401, line 6: $B''\to B$ should be $B''\to B'$.
 %
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -3276,6 +3278,24 @@ for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be a
 
 %%
 
+\n$\bu$ P. 395, Lemma 16.2.3 (iii). Consider the condition 
+
+\n(*) for any diagram $Z\pa A\to B$ with $Z\in\diamondsuit$, there exists a local $\heartsuit$ $S\to Z$ such that the two compositions $S\to Z\pa A$ coincide, 
+
+\n and let (b), (c), (d), (e) be the four conditions obtained by replacing $\diamondsuit$ with $\C$ or $\C^\wedge$, and $\heartsuit$ with the word ``epimorphism'' or ``isomorphism''. Recall that (a) is the condition that $A\to B$ is a local monomorphism. Parts (ii) and (iii) of Lemma 16.2.3 imply 
+%
+\be\label{1623}
+\text{Conditions (a), (b), (c), (d), (e) are equivalent.}
+\ee
+
+\n$\bu$ P. 397, Notation 16.2.5 (ii). The fact that 
+\be\label{1625}
+\text{such a $w$ is necessarily a local isomorphism}
+\ee
+follows from Lemma 16.2.4 (vii) p. 396. 
+
+%%
+
 \n$\bu$ P. 398, proof of Lemma 16.2.8. Recall that $\C$ is a small category. Here is a variant of the two sentences ``Let us consider the set $\cc S$ of $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism and $w:S\to A$ is a local isomorphism. By Proposition 5.2.9 and the result of Exercise 5.1, the set of quotients of any object of $\C^\wedge$ is small, and hence $\cc S$ is a small set.'' 
 
 For any set $T$ let $Q_T$ be the set of those sets $U$ for which there is an equivalence relation $R$ on $T$ such that $U$ is the set of $R$-equivalence classes in $T$. 
@@ -3342,7 +3362,13 @@ The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the botto
 
 \n$\bu$ P. 400, Step (ii) in the proof of Lemma 16.3.2. Here are a few more details: 
 
-For each $(B\xr sU)\in(\cc{LI}_U)^{\op}$ put $\alpha(B\xr sU):=\h_{\C^\wedge}(B,A)$. Let $f_1,f_2:U\pa A$ be two morphisms such that the compositions $U\pa A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By the definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by \pr\ 3.1.3 p.~73, there is a morphism $\p:(B\xr sU)\to(U\xr{\id_U}U)$ in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395. 
+For each $(B\xr sU)\in(\cc{LI}_U)^{\op}$ put $\alpha(B\xr sU):=\h_{\C^\wedge}(B,A)$. Let $f_1,f_2:U\pa A$ be two morphisms such that the compositions $U\pa A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By the definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by \pr\ 3.1.3 p.~73, there is a morphism 
+$$
+\p:(B\xr sU)\to(U\xr{\id_U}U)
+$$ 
+in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395. 
+
+\n$\bu$ P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
 %
 \subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
