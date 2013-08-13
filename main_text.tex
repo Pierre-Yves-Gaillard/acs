@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahc)
+% about "categories and sheaves" (version ahd)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2820,8 +2820,17 @@ $*$ $Q(u)$ should be $Q(u')$.
 \n P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$. 
 
 \n P. 401, line 6: $B''\to B$ should be $B''\to B'$.
+
+\n P. 406. I don't understand the isomorphism 
+$$
+\left((f^t)\,\hat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A^\wedge}\h_{(\C_Y)^\wedge}(f^t(V),U).
+$$ 
+I would have written 
+$$
+\left((f^t)\,\hat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A}\h_{\C_X}(U,f^t(V)).
+$$
 %
-\subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \n$\bu$ P. 14, Definition 1.2.5.
 %
@@ -3368,7 +3377,46 @@ $$
 $$ 
 in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395. 
 
-\n$\bu$ P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
+\n$\bu$ P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.) 
+
+\n$\bu$ P. 409, proof of (17.1.12). The isomorphism is first proved in the particular case $B\in\C_X$, and then in the general case $B\in\C_X^\wedge$. It seems to me that the argument given in the particular case also works in the general case. Here the way I understand this argument. 
+
+It suffices to prove 
+$$
+\lim_{V\xr{(b,a)}B\times A}G(V\xr b A)\xr\sim G(B\times A\to A),
+$$
+that is, it suffices to prove that we have an isomorphism 
+$$
+\ic_{V\xr{(b,a)}B\times A}(V\xr b A)\xr\sim(B\times A\to A)
+$$ 
+in $\C_A^\wedge$. Here $A$ and $B$ are in $\C_X^\wedge$, and $V\xr{(b,a)}B\times A$ runs over $\C_{B\times A}$. Let $U\xr u A$ be in $\C_A$, put 
+$$
+S:=\displaystyle\co_{V\xr{(b,a)}B\times A}\h_{\C_A}(U\xr u A,V\xr a A),
+$$ 
+$$
+T:=\h_{\C_A^\wedge}(U\xr u A,B\times A\to A),
+$$ 
+let 
+$$
+i(V\xr{(b,a)}B\times A):\h_{\C_A}(U\xr u A,V\xr a A)\to S,
+$$ 
+be the coprojection, and consider the diagram 
+$$
+\begin{tikzcd}
+%
+S\ar[yshift=.7ex]{r}{\p}&T,\ar[yshift=-.7ex,dashed]{l}{\psi}
+%
+\end{tikzcd}
+$$ 
+where $\p$ is defined by 
+$$
+\p(V\xr{(b,a)}B\times A)(U\xr fV):=(U\xr fV\xr{(b,a)}B\times A).
+$$
+It suffices to prove that $\p$ is bijective. We define $\psi$ by 
+$$
+\psi(U\xr{(b,u)}B\times A):=i(U\xr{(b,u)}B\times A)(\id_{U\xr uA}),
+$$ 
+and leave it to the reader to verify that $\p$ and $\psi$ are mutually inverse bijections. 
 %
 \subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
