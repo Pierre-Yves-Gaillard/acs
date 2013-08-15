@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahe)
+% about "categories and sheaves" (version ahf)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2872,11 +2872,19 @@ satisfying certain conditions.
 
 %%
 
+\n$\bu$ P.~64. It might be worth displaying the formula 
+\be\label{275}
+(\widehat FA)(X')\simeq\co_{(X'\to F(X))\in\C^{X'}}A(X)
+\ee
+contained in the proof of \pr\ 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
+
+%%
+
 \n$\bu$ P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a category, if $A$ and $B$ are in $\C^\wedge$, if $B(X)=\{\text{pt}\}$ for all $X$ in $\C$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
 \be\label{1725}
 (\widehat FB)(X)\simeq A(X).
 \ee
-Indeed, the proof of \pr\ 2.7.5 p.~64 implies $(\widehat FB)(X)\simeq\co\alpha_X$ where $\alpha_X:\C^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0(\C^X)$, and the isomorphism $\pi_0(\C^X)\simeq A(X)$ is easily checked. 
+Indeed, \eqref{275} implies $(\widehat FB)(X)\simeq\co\alpha_X$ where $\alpha_X:\C^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0(\C^X)$, and the isomorphism $\pi_0(\C^X)\simeq A(X)$ is easily checked. 
 
 %%
 
@@ -3388,6 +3396,14 @@ in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen 
 %%
 
 \n$\bu$ P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
+
+%%
+
+\n$\bu$ P. 406. The isomorphism 
+$$
+\big((f^t)\,\hat{}\,(A)\big)(U)\simeq\co_{(U\to f^t(V))\in(\C_Y)^U}A(V)
+$$
+follows from \eqref{275} p.~\pageref{275}.
 
 %%
 
