@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahd)
+% about "categories and sheaves" (version ahe)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -139,9 +139,9 @@ The tex and pdf files for this text are available at
  
 \n\href{http://www.iecn.u-nancy.fr/~gaillapy/DIVERS/KS/}{http://www.iecn.u-nancy.fr/$\sim$gaillapy/DIVERS/KS/} 
  
-\n\href{http://dx.doi.org/10.6084/m9.figshare.678328}{http://dx.doi.org/10.6084/m9.figshare.678328} 
+%\n\href{http://dx.doi.org/10.6084/m9.figshare.678328}{http://dx.doi.org/10.6084/m9.figshare.678328} 
  
-\n\href{http://dx.doi.org/10.6084/m9.figshare.678329}{http://dx.doi.org/10.6084/m9.figshare.678329} 
+%\n\href{http://dx.doi.org/10.6084/m9.figshare.678329}{http://dx.doi.org/10.6084/m9.figshare.678329} 
 
 \n\href{https://github.com/Pierre-Yves-Gaillard/acs}{https://github.com/Pierre-Yves-Gaillard/acs} 
 
@@ -231,14 +231,7 @@ There is a similar remark for projective limits.
 
 \n P.~54, second display: we should have $i\to\varphi(j)$ instead of $\varphi(j)\to i$. 
 
-\n P.~56, Corollary 2.4.6. It would be better, I think, to write the right-hand side of (2.4.1) as 
-$$
-\lim_{\substack{\longrightarrow\\ (A\to F(X))\in(\C^A)^{\op}}}\h_{\C'}(G(X),B)
-$$ 
-instead of 
-$$ 
-\lim_{\substack{\longrightarrow\\ (A\to F(X))\in\C^A}}\h_{\C'}(G(X),B). 
-$$
+%\n P.~56, Corollary 2.4.6. It would be better, I think, to write the right-hand side of (2.4.1) as $$\lim_{\substack{\longrightarrow\\ (A\to F(X))\in(\C^A)^{\op}}}\h_{\C'}(G(X),B)$$ instead of $$\lim_{\substack{\longrightarrow\\ (A\to F(X))\in\C^A}}\h_{\C'}(G(X),B).$$
 
 \n P.~58: The abbreviation $j\in J^i$ for $(i\to\varphi(j))\in J^i$ is used for the first time. This abbreviation is used a lot throughout the book (and will be systematically used in this text: see \eqref{convnot} p.~\pageref{convnot}). Of course, it is easy for the reader to guess the meaning of this notation, but it might be nice to add a couple of words explaining it. 
 
@@ -548,7 +541,7 @@ is bijective. Let $\theta\mapsto\theta'$ be the inverse bijection. We have $\Del
 $$
 g=i_S\circ g=i_X,
 $$
-the first equality following from the fact that $\id_S=i_S$, and the second one from the definition of $\h_{\C^\C}(\id_\C,\Delta(S))$. q.e.d. 
+the first equality following from the fact that $\id_S=i_S$, and the second one from the definition of $\h_{\C^\C}(\id_\C,\Delta(S))$. q.e.d.
 
 %% 
 
@@ -574,7 +567,7 @@ induce an isomorphism from the left-hand side of \eqref{coco} to the right-hand 
 
 \n$\bu$ P.~55, Corollary 2.4.4 (iii). Here is a slightly different proof. 
 %
-\bp 
+\bp\label{244}
 If $\Delta:\textbf{\em Set}\to\textbf{\em Set}^I$ is the diagonal functor, then there is a canonical bijection
 $$
 \coli\Delta(S)\simeq\pi_0(I)\times S.
@@ -2872,6 +2865,21 @@ satisfying certain conditions.
 
 %%
 
+\n$\bu$ P.~43, end of Section~2.1. One could add the following observation: If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\text j_X$ the forgetful functor from $\C_X$ to $\C$, then we have 
+\be\label{17115}
+\h_{\A^\C}(F,G)\simeq\lim_{X\in\C}\h_{\A^{\C_X}}(F\circ\text j_X,G\circ\text j_X).
+\ee
+
+%%
+
+\n$\bu$ P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a category, if $A$ and $B$ are in $\C^\wedge$, if $B(X)=\{\text{pt}\}$ for all $X$ in $\C$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
+\be\label{1725}
+(\widehat FB)(X)\simeq A(X).
+\ee
+Indeed, the proof of \pr\ 2.7.5 p.~64 implies $(\widehat FB)(X)\simeq\co\alpha_X$ where $\alpha_X:\C^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0(\C^X)$, and the isomorphism $\pi_0(\C^X)\simeq A(X)$ is easily checked. 
+
+%%
+
 \n$\bu$ P.~80. \pr s 3.2.4 and 3.2.6 can be combined as follows. 
 
 \begin{prop}\label{comb} 
@@ -3375,9 +3383,13 @@ For each $(B\xr sU)\in(\cc{LI}_U)^{\op}$ put $\alpha(B\xr sU):=\h_{\C^\wedge}(B,
 $$
 \p:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
-in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395. 
+in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395.
 
-\n$\bu$ P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.) 
+%%
+
+\n$\bu$ P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
+
+%%
 
 \n$\bu$ P. 409, proof of (17.1.12). The isomorphism is first proved in the particular case $B\in\C_X$, and then in the general case $B\in\C_X^\wedge$. It seems to me that the argument given in the particular case also works in the general case. Here the way I understand this argument. 
 
@@ -3416,7 +3428,16 @@ It suffices to prove that $\p$ is bijective. We define $\psi$ by
 $$
 \psi(U\xr{(b,u)}B\times A):=i(U\xr{(b,u)}B\times A)(\id_{U\xr uA}),
 $$ 
-and leave it to the reader to verify that $\p$ and $\psi$ are mutually inverse bijections. 
+and leave it to the reader to verify that $\p$ and $\psi$ are mutually inverse bijections.
+
+%%
+
+\n$\bu$ P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
+
+%%
+
+\n$\bu$ P. 413, proof of Lemma 17.2.5 (iii). See \eqref{1725} p.~\pageref{1725}.
+
 %
 \subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
