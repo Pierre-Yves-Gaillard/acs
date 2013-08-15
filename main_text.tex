@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahf)
+% about "categories and sheaves" (version ahg)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2904,7 +2904,11 @@ Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally sma
 If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
 \end{prop}
 %
-\n{\em Proof.} Assume by contradiction that there are distinct morphisms $\begin{tikzcd}F(Y)\ar[yshift=.7ex]{r}{f'_1}\ar[yshift=-.7ex]{r}[swap]{f'_2}&X'\end{tikzcd}$ in $\C'$ which satisfy 
+\n{\em Proof.} Assume by contradiction that there are distinct morphisms 
+$$
+\begin{tikzcd}F(Y)\ar[yshift=.7ex]{r}{f'_1}\ar[yshift=-.7ex]{r}[swap]{f'_2}&X'\end{tikzcd}
+$$ 
+in $\C'$ which satisfy 
 $
 f'_1\circ F(f)=f'_2\circ F(f)=:f'.
 $ 
@@ -3299,7 +3303,17 @@ Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to
 $$
 \h_{\cc S^{\wedge,\text{prod}}}(\p(X),H_0)\simeq H(X)\simeq\h_{\cc D}(X,H)
 $$ 
-for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied. 
+for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
+
+%%
+
+\n$\bu$ P. 390, Axioms LE1-LE4. I think that the set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
+
+Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$ where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
+$$
+U=\bigcup_{V\in\Sigma(U,b)}V
+$$ 
+for all $(U,b)$ as above.
 
 %%
 
