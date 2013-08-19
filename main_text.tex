@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahn)
+% about "categories and sheaves" (version ahp)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -99,6 +99,7 @@
 \DeclareMathOperator{\Mor}{Mor} 
 \DeclareMathOperator{\Ob}{Ob} 
 \DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\PSh}{PSh}
 %\DeclareMathOperator{\Set}{Set}
 %\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
 %
@@ -2815,13 +2816,15 @@ $*$ $Q(u)$ should be $Q(u')$.
 \n P. 401, line 6: $B''\to B$ should be $B''\to B'$.
 
 \n P. 406. I don't understand the isomorphism 
-$$
+\be\label{406}
 \left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A^\wedge}\h_{(\C_Y)^\wedge}(f^t(V),U).
-$$ 
+\ee 
 I would have written 
 $$
 \left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A}\h_{\C_X}(U,f^t(V)).
 $$
+
+\n P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. 
 %
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -3413,11 +3416,47 @@ in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen 
 
 %%
 
-\n$\bu$ P. 406. The isomorphism 
+\n$\bu$ P. 406, Notation 17.1.2 (ii). Firstly note that the isomorphism 
 $$
 \big((f^t)\ \widehat{}A\big)(U)\simeq\co_{(U\to f^t(V))\in(\C_Y)^U}A(V)
 $$
-follows from \eqref{275} p.~\pageref{275}.
+follows from \eqref{275} p.~\pageref{275}. (See the comment containing Display \eqref{406} p.~\pageref{406}.) Secondly, for the sake of emphasis, we state: 
+%
+\begin{prop}\label{p406}
+The functor $(f^t)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
+\end{prop}
+
+%%
+
+\n$\bu$ P. 407. Instead of:
+
+One has the functors 
+$$
+f^t{}_*:\PSh(X,\A)\to\PSh(Y,\A),
+$$
+$$
+f^t{}^\dagger:\PSh(X,\A)\to\PSh(Y,\A),
+$$
+$$
+f^t{}^\ddagger:\PSh(X,\A)\to\PSh(Y,\A).
+$$ 
+it would be better (I think) to write:
+
+One has the functors 
+$$
+f^{t\op}{}_*:\PSh(X,\A)\to\PSh(Y,\A),
+$$
+$$
+f^{t\op}{}^\dagger:\PSh(X,\A)\to\PSh(Y,\A),
+$$
+$$
+f^{t\op}{}^\ddagger:\PSh(X,\A)\to\PSh(Y,\A).
+$$ 
+
+We write for short 
+\be\label{407}
+f_*:=f^{t\op}{}_*,\quad f^\dagger:=f^{t\op}{}^\dagger,\quad f^\ddagger:=f^{t\op}{}^\ddagger.
+\ee
 
 %%
 
@@ -3466,7 +3505,7 @@ and leave it to the reader to verify that $\p$ and $\psi$ are mutually inverse b
 
 %%
 
-\n$\bu$ P. 413, proof of Lemma 17.2.5 (iii). See \eqref{1725} p.~\pageref{1725}.
+\n$\bu$ P. 413, Proof of Lemma 17.2.5. Part~(i): see Proposition~\ref{p406} p.~\pageref{p406}. Part~(iii): see \eqref{1725} p.~\pageref{1725}.
 
 %%
 
@@ -3490,13 +3529,23 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 
 %%
 
-%\n$\bu$ P. 421. I don't understand the proof of Lemma 17.4.6 (i) p. 421. 
-%(9:37 AM, Sunday, August 18, 2013 (CEST). Unsolved.)
-
+\n$\bu$ P. 421. I don't understand the proof of Lemma 17.4.6 (i). So far I haven't seen this statement used in the sequel.
 
 %%
 
 \n$\bu$ P. 422, proof of Theorem 17.4.9 (iv). The exactness $(\cdot)^a$ (Theorem 17.4.7 (iv) p.~421) is an important ingredient.
+
+%%
+
+\n$\bu$ P. 424, proof of Theorem 17.5.2 (iv). Firstly, as already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. Secondly, to be slightly more explicit, one could replace ``The functor $f^\dagger$ is exact by Theorem 3.3.18'' with ``The functor $f^\dagger$ is exact by Theorem 3.3.18 and Display~\eqref{407} p.~\pageref{407}''.
+
+%%
+
+\n$\bu$ P. 426, proof of Proposition 17.6.7 (i). The isomorphism 
+$$
+(f^t)\ \widehat{}\ (V\times B)\simeq f^t(V)\times(f^t)\ \widehat{}\ (B)
+$$ 
+follows from Proposition~\ref{p406} p.~\pageref{p406}.
 %
 \subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
