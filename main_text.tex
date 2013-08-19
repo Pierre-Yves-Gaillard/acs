@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahp)
+% about "categories and sheaves" (version ahq)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -3454,10 +3454,15 @@ f^{t\op}{}^\ddagger:\PSh(X,\A)\to\PSh(Y,\A).
 $$ 
 
 We write for short 
-\be\label{407}
+$$
 f_*:=f^{t\op}{}_*,\quad f^\dagger:=f^{t\op}{}^\dagger,\quad f^\ddagger:=f^{t\op}{}^\ddagger.
-\ee
+$$
 
+In particular Theorem 3.3.18 (b) p.~86 implies 
+%
+\begin{prop}\label{407}
+Assume that $\A$ satisfies the same conditions as the category $\C$ of Theorem 3.3.18 (b). If $f$ is left exact, then $f^\dagger$ is exact. If $f$ is right exact, then $f^\ddagger$ is exact. 
+\end{prop}
 %%
 
 \n$\bu$ P. 409, proof of (17.1.12). The isomorphism is first proved in the particular case $B\in\C_X$, and then in the general case $B\in\C_X^\wedge$. It seems to me that the argument given in the particular case also works in the general case. Here the way I understand this argument. 
@@ -3537,7 +3542,7 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 
 %%
 
-\n$\bu$ P. 424, proof of Theorem 17.5.2 (iv). Firstly, as already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. Secondly, to be slightly more explicit, one could replace ``The functor $f^\dagger$ is exact by Theorem 3.3.18'' with ``The functor $f^\dagger$ is exact by Theorem 3.3.18 and Display~\eqref{407} p.~\pageref{407}''.
+\n$\bu$ P. 424, proof of Theorem 17.5.2 (iv). Firstly, as already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. Secondly, the exactness of $f^\dagger$ follows from Proposition~\ref{407} p.~\pageref{407}.
 
 %%
 
