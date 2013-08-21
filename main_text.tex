@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahq)
+% about "categories and sheaves" (version ahs)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -2787,6 +2787,10 @@ For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
 
 \n P. 227. The second sentence uses Exercise 3.4 (i) p. 90 (see Proposition~\ref{34i} p.~\pageref{34i}). 
 
+\n P. 244, second diagram: the arrow from $X'$ to $Z'$ should be dotted. (For a nice picture of the octahedral diagram see p.~49 of Mili\v{c}i\'c's text 
+
+\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}
+
 \n P. 245, beginning of the proof of \pr\ 10.1.13: The letters $f$ and $g$ being used in the sequel, it would be better to write $X\xr fY\xr gZ\to TX$ instead of $X\to Y\to Z\to TX$. Also, in the first display, the subscript $\cc D$ is missing (three times) in $\h_{\cc D}$. 
 
 \n P. 250. After the second diagram, the $s\circ f$ should be an $f\circ s$. 
@@ -2824,7 +2828,11 @@ $$
 \left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A}\h_{\C_X}(U,f^t(V)).
 $$
 
-\n P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. 
+\n P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''.
+
+\n P. 426, line 5: ``morphism of sites by'' should be ``morphism of sites''.
+
+\n P. 428, Notation 17.6.12 (i): $\C_X\ni U\mapsto M$ should be $\C_A\ni(U\to A)\mapsto M$.
 %
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -3294,11 +3302,43 @@ $$
 
 %%
 
-\n$\bu$ P. 266, Exercise 10.11 (i), used to prove \pr\ 10.2.8 p.~252. Recall the statement: 
+\n$\bu$ P. 266, Exercise 10.11. Recall the statement: 
 
-Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to\cc D/\cc N$ be the localization functor, and let $f:X\to Y$ be a morphism in $\cc D$ satisfying $Q(f)=0$. Then $f$ factors through some object of $\cc N$. 
+\n(i) Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to\cc D/\cc N$ be the localization functor, and let $f:X\to Y$ be a morphism in $\cc D$ satisfying $Q(f)=0$. Then $f$ factors through some object of $\cc N$. 
 
-\n{\em Proof.} The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$, and thus, in view of the definition of $\cc NQ$, the existence of a triangle $W\to Y\to Z\to TW$ with $W\in\cc N$, and the conclusion follows from the fact that $\h_{\cc D}(X,\cdot)$ is cohomological.
+\n(ii) The following conditions on $X\in\cc D$ are equivalent: 
+
+\n(a) $Q(X)\simeq0$,\quad(b) $X\oplus Y\in\cc N$ for some $Y\in\cc D$,\quad(c) $X\oplus TX\in\cc N$.
+
+\n{\em Proof.} 
+
+\n(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$, and thus, in view of the definition of $\cc NQ$, the existence of a triangle $W\to Y\to Z\to TW$ with $W\in\cc N$, and the conclusion follows from the fact that $\h_{\cc D}(X,\cdot)$ is cohomological. 
+
+\n(ii)
+
+\n(a) $\implies$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$. By TR2 there is a d.t. 
+$$
+X\xr fZ\xr hZ\xr kTX.
+$$ 
+Since $g\circ f=\id_X$, the morphism $f$ is a monomorphism, and so is $Tf$. As $Tf\circ k=0$ by Proposition 10.1.11 p.~245, this implies $k=0$. Hence we have a morphism of d.t.  
+$$
+\begin{tikzcd}
+X\ar[equal]{d}\ar{r}{f}&Z\ar{d}{(g,h)}\ar{r}{h}&Y\ar[equal]{d}\ar{r}{0}&TX\ar[equal]{d}\\ 
+X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX,
+\end{tikzcd}
+$$
+and Proposition 10.1.15 p.~246 implies that $(g,h)$ is an isomorphism.\bigskip 
+
+\n(b) $\implies$ (c): It suffices to take the direct sum of the d.t. 
+$$
+\begin{tikzcd} 
+X\oplus Y\ar{r}&Y\ar{r}&TX\ar{r}&TX\oplus TY\\ 
+0\ar{r}&X\ar{r}{=}&X\ar{r}&0
+\end{tikzcd}
+$$
+and to invoke Condition N'3 of Lemma 10.2.1 (b) p.~249. 
+
+\n(c) $\implies$ (a): Straightforward.
 
 %% 
 
