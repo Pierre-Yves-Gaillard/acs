@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aht)
+% about "categories and sheaves" (version ahu)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -49,6 +49,7 @@
 \newcommand{\m}{\rightarrowtail} 
 \newcommand{\incl}{\hookrightarrow}
 %\newcommand{\op}{\text{op}}
+\newcommand{\oo}{\operatorname}
 \newcommand{\p}{\varphi} 
 \newcommand{\pa}{\rightrightarrows} 
 \newcommand{\pf}{\n{\em Proof. }}
@@ -3352,6 +3353,52 @@ $$
 \h_{\cc S^{\wedge,\text{prod}}}(\p(X),H_0)\simeq H(X)\simeq\h_{\cc D}(X,H)
 $$ 
 for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
+
+%%
+
+\n$\bu$ P. 342, Exercise 13.15. Here is a partial solution. Let $\C$ be an abelian category. We begin with a lemma:
+
+\begin{lem}\label{738}
+Let $Z\to Y\to X\to W\to0$ be an exact sequence in $\C$, let $Y\to V$ be a morphism, let $U$ be the fiber coproduct $V\oplus_YX$, and let $U\to W$ be the morphism which makes 
+$$
+\begin{tikzcd}
+Z\ar{d}\ar{r}&Y\ar{d}\ar{r}&X\ar{d}\ar{r}&W\ar[equal]{d}\ar{r}&0\\ 
+0\ar{r}&V\ar{r}&U\ar{r}&W\ar{r}&0
+\end{tikzcd}
+$$ 
+a commutative diagram of complexes. Then the bottom row is exact.
+\end{lem}
+
+It is easy to prove the lemma using the Freyd-Mitchell Theorem (p.~238 of [KS]). Although it is not fully satisfactory, we shall be content with that argument. (In the sequel of this comment, we shall leave to the reader several statements to which the same remark applies.)
+
+Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences $0\to Y\to Z\to X\to0$, and let $\sim$ be the following equivalence relation on $E$: the exact sequences $0\to Y\to Z\to X\to0$ and $0\to Y\to W\to X\to0$ are equivalent if and only if there is a commutative diagram 
+$$
+\begin{tikzcd}
+0\ar{r}&Y\ar[equal]{d}\ar{r}&Z\ar{d}\ar{r}&X\ar[equal]{d}\ar{r}&0\\ 
+0\ar{r}&Y\ar{r}&W\ar{r}&X\ar{r}&0.
+\end{tikzcd}
+$$ 
+To the element $0\to Y\to Z\to X\to0$ in $E$ we attach the morphism in 
+$$
+\h_{\oo D(\C)}(X,Y[1])=\oo{Ext}^1_\C(X,Y)
+$$ 
+suggested by the diagram 
+$$
+\begin{tikzcd}
+{}&X\\ 
+Y\ar[equal]{d}\ar{r}&Z\ar{u}\\ 
+Y,
+\end{tikzcd}
+$$ 
+where each row is a complex (viewed as an object of $\oo D(\C)$), with the convention that only the possibly nonzero terms are indicated (the top morphism being a qis). 
+
+We claim: 
+
+(a) this process induces a map from $E/\!\!\sim$ to $\oo{Ext}^1_\C(X,Y)$, 
+
+(b) this map (a) is bijective. 
+
+Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. 
 
 %%
 
