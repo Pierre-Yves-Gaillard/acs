@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ahu)
+% about "categories and sheaves" (version ahv)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -157,7 +157,8 @@ I have rewritten some of the proofs in the book. Of course, I'm not suggesting t
 This is a work in progress. %So far, there are comments only about the first twelve chapters. I'm planning to read the whole book, but I'm progressing very slowly. 
 %
 \begin{rk}\label{next}
-The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages (say, between ten and fifteen), I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
+The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, %(say, between ten and fifteen), 
+I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
 \end{rk}
 %
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. 
@@ -1235,6 +1236,10 @@ $$
 \icolim_{(X\to Y)\in\SSS^X}\ F(Y) 
 $$
 is represented by some object of $\A$. 
+
+Also, the following fact is implicit:
+
+If $F(s)$ is an isomorphism for all $s$ in $\cc S$, then $F$ is universally right localizable and the functors $R_{\cc S}F$ and $F_{\cc S}$ are canonically isomorphic.
 
 %% 
 
@@ -2817,6 +2822,8 @@ $*$ $Q(u)$ should be $Q(u')$.
 
 \n P. 271. The first entry of the first matrix reads $T(d_{T(X)})$. It would be more consistent with the rest of the book to write $T(d_{TX})$ instead. 
 
+\n P. 328, line 8: I think the authors meant ``$X^i\to Z^i$ is an isomorphism for $i>n+d\,$'' instead of ``$I\ge n+d\,$''. 
+
 \n P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$. 
 
 \n P. 401, line 6: $B''\to B$ should be $B''\to B'$.
@@ -3131,6 +3138,21 @@ Let $X$ and $Y$ be in $\C$. We define the addition on $\h_\C(X,Y)$ by letting $k
 %% 
 
 \n$\bu$ P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$. 
+
+%%
+
+\n$\bu$ P. 180, Lemma 8.3.12. We also have:
+
+A given complex $X'\to X\to X''$ in some abelian category is exact if and only if the condition below holds:
+
+Any commutative diagram of solid arrows
+$$
+\begin{tikzcd}
+X'\ar{dr}[swap]{0}\ar{r}&X\ar{d}\ar{r}&X''\ar[dashed]{d}\\ 
+{}&S\ar[tail,dashed]{r}&S'
+\end{tikzcd}
+$$ 
+can be completed as indicated ($S\to S'$ being a monomorphism).
 
 %% 
 
