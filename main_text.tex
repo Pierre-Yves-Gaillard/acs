@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aie)
+% about "categories and sheaves" (version aif)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -3000,6 +3000,14 @@ are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by 
 
 %% 
 
+\n$\bu$ P.~159, Definition 7.3.1 (ii). 
+%
+\begin{rk}\label{731ii}
+If $\id_\C$ is universally right localizable, then any functor $F:\C\to\A$ is universally right localizable and satisfies $R_{\cc S}F\simeq F\circ R_{\cc S}\id_\C$. 
+\end{rk}
+
+%%
+
 \n$\bu$ P. 169, Definition 8.2.1. The proofs of the Proposition and Lemma below are obvious. 
 \begin{prop}\label{payp}
 Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C^{\op}$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\h_\C(Y,X)$, let $X$ be in $\C$ and $A$ in $\A$, and let 
@@ -3450,7 +3458,17 @@ We claim:
 
 (b) this map (a) is bijective. 
 
-Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. 
+Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before.
+
+%%
+
+\n$\bu$ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements. 
+
+\n(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
+
+\n(iv) any functor $F:\oo K_c(\C)\to\cc D$ is universally right localizable and admits $F\circ R_q$ as a right localization (of course, $F\circ R_q$ is triangulated if $\cc D$ and $F$ are).
+
+(See Remark \ref{731ii}.)
 
 %%
 
