@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ail)
+% about "categories and sheaves" (version aim)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -3486,6 +3486,35 @@ We claim:
 (b) this map (a) is bijective. 
 
 Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before.
+
+%%
+
+\n$\bu$ P.~349, proof of \pr\ 14.1.6, Step~(ii). Here are some more details about the verification that $\widetilde\psi:Y\to I$ is a morphism in $\A_c$. 
+
+We must check $T\widetilde\psi\circ d_Y=d_I\circ\widetilde\psi$. We have 
+$$
+T\widetilde\psi\circ d_Y-d_I\circ\widetilde\psi=\alpha+\beta
+$$
+with
+$$
+\alpha:=T\psi\circ d_Y-d_I\circ\psi,\quad\beta :=d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y.
+$$ 
+We get 
+$$
+-T^{-1}\alpha=T^{-1}d_I\circ T^{-1}\psi-\psi\circ T^{-1}d_Y=h,
+$$ 
+and 
+$$
+\beta=\gamma\circ g
+$$ 
+with 
+$$
+\gamma:=d_I\circ\xi-T\xi\circ d_Z=T\widetilde h,
+$$ 
+which implies  
+$$
+T^{-1}(\alpha+\beta)=-h+\widetilde h\circ T^{-1}g=-h+h=0.
+$$
 
 %%
 
