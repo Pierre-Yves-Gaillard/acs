@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aim)
+% about "categories and sheaves" (version ain)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -19,9 +19,11 @@
 \newtheorem{cor}[thm]{Corollary} 
 \newtheorem{df}[thm]{Definition}%\newtheorem{defn}[thm]{Definition}
 \newtheorem{nota}[thm]{Notation} 
-\theoremstyle{remark}%\newtheorem{cm}[thm]{Comment} 
+\theoremstyle{remark}
+\newtheorem{conv}[thm]{Convention}
 \newtheorem{rk}[thm]{Remark}
-\newtheorem{conv}[thm]{Convention}%\theoremstyle{definition}\newtheorem{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
 \hyphenation{Grothen-dieck}
 \newcommand{\bu}{\bullet} 
 \newcommand{\n}{\noindent} 
@@ -3413,7 +3415,18 @@ and to invoke Condition N'3 of Lemma 10.2.1 (b) p.~249.
 $$
 \h_{\cc S^{\wedge,\text{prod}}}(\p(X),H_0)\simeq H(X)\simeq\h_{\cc D}(X,H)
 $$ 
-for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
+for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be applied.\bigskip 
+
+%%
+
+\begin{cm}\label{pg270}\footnote{Typographical detail: I'm contemplating replacing (for easier referencing) the ``$\bu$ P.~\dots'' with ``\textbf{C n.} P.~\dots'', where n is an automatically generated positive integer, and ``\textbf{C}'' stands for ``Comment''. I'm starting by testing this new system. So, for the time being, the reader is invited to consider that ``$\bu$ P.~\dots'' and ``\textbf{C n.} P.~\dots'' are synonymous.} 
+%
+P. 270. Recall that $(\A,T)$ is an additive category with translation. Let 
+\be\label{iliad}
+(d_{X,i}:X_i\to TX_i)_{i\in I}
+\ee 
+be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then the natural morphism $\co_id_{X,i}:X\to TX$ is an inductive limit of \eqref{iliad} in $\A_d$. There are analogous statements with ``projective'' instead of ``inductive'' and $\A_c$ instead of $\A_d$.
+\end{cm}
 
 %%
 
