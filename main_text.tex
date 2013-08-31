@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ain)
+% about "categories and sheaves" (version aio)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -25,7 +25,8 @@
 \theoremstyle{definition}
 \newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
 \hyphenation{Grothen-dieck}
-\newcommand{\bu}{\bullet} 
+\newcommand{\bc}{\begin{cm}}\newcommand{\ec}{\end{cm}}
+\newcommand{\bu}{\bullet}
 \newcommand{\n}{\noindent} 
 %
 \newcommand{\cc}{\mathcal} 
@@ -3317,7 +3318,9 @@ The conclusion of Theorem 9.5.4 still holds if we weaken the assumption that $\c
 
 %% 
 
-\n$\bu$ P. 233, Theorem 9.5.5. I suggest two changes: 
+\bc\label{t955}\footnote{Typographical detail: I'm contemplating replacing (for easier referencing) the ``$\bu$ P.~\dots'' with ``\textbf{C n.} P.~\dots'', where n is an automatically generated positive integer, and ``\textbf{C}'' stands for ``Comment''. I'm starting by testing this new system. So, for the time being, the reader is invited to consider that ``$\bu$ P.~\dots'' and ``\textbf{C n.} P.~\dots'' are synonymous.}
+%
+P. 233, Theorem 9.5.5. I suggest two changes: 
 
 \n(a) Add the following assumption (called ``Assumption (a)'' below): 
 
@@ -3331,7 +3334,8 @@ with $U\to V$ in $\cc F$.
 
 \n(b) In the last paragraph of p. 234, change ``Consider a Cartesian square \dots'' to ``By Assumption (a), there is a Cartesian square \dots'' 
 
-[I think that the main motivation for Theorem 9.5.5 is the proof of Theorem 14.1.7, stated on p.~350. I have not yet studied this part of the book, but I feel that Assumption (a) is checked in the proof of Lemma 14.1.11 p. 352.] 
+[I think that the main motivation for Theorem 9.5.5 is the proof of Theorem 14.1.7, stated on p.~350, and Assumption (a) is obvious in the setting of Theorem 14.1.7.] 
+\ec
 
 %%
 
@@ -3419,7 +3423,7 @@ for $X\in\cc S$. Also note that Convention~\ref{payc} p.~\pageref{payc} can be a
 
 %%
 
-\begin{cm}\label{pg270}\footnote{Typographical detail: I'm contemplating replacing (for easier referencing) the ``$\bu$ P.~\dots'' with ``\textbf{C n.} P.~\dots'', where n is an automatically generated positive integer, and ``\textbf{C}'' stands for ``Comment''. I'm starting by testing this new system. So, for the time being, the reader is invited to consider that ``$\bu$ P.~\dots'' and ``\textbf{C n.} P.~\dots'' are synonymous.} 
+\begin{cm}\label{pg270}\footnote{See footnote to Comment \ref{t955} p. \pageref{t955}} 
 %
 P. 270. Recall that $(\A,T)$ is an additive category with translation. Let 
 \be\label{iliad}
@@ -3528,6 +3532,12 @@ which implies
 $$
 T^{-1}(\alpha+\beta)=-h+\widetilde h\circ T^{-1}g=-h+h=0.
 $$
+
+%%
+
+\bc\footnote{See footnote to Comment \ref{t955} p. \pageref{t955}} 
+P. 350, proof of Theorem 14.1.7. See Comment \ref{t955} p. \pageref{t955}.
+\ec
 
 %%
 
