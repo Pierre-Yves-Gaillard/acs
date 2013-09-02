@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aiq)
+% about "categories and sheaves" (version air)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -60,8 +60,8 @@
 \newcommand{\pt}{\{\text{pt}\}} 
 \newcommand{\xl}{\xleftarrow} 
 \newcommand{\xr}{\xrightarrow} 
-\newcommand{\be}{\begin{equation}} 
-\newcommand{\ee}{\end{equation}} 
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
 \newcommand{\bl}{\begin{lem}} 
 \newcommand{\el}{\end{lem}} 
 \newcommand{\bp}{\begin{prop}} 
@@ -106,6 +106,7 @@
 \DeclareMathOperator{\Ob}{Ob} 
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\PSh}{PSh}
+\DeclareMathOperator{\Qis}{Qis}
 %\DeclareMathOperator{\Set}{Set}
 %\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
 %
@@ -3544,6 +3545,22 @@ $$
 \ec 
 
 \end{comment}
+
+%%
+
+\begin{cm}
+P. 337. Theorem 13.4.1 suggests the following question: 
+
+Let $\C$ be an abelian category. Is the natural morphism 
+\be\label{spalt}
+\co_{(X'\to X),(Y\to Y')\in\oo{Qis}}\Hom_{\oo K(\C)}(X',Y')\to\Hom_{\oo D(\C)}(X,Y)
+\ee 
+an isomorphism?
+
+Theorem 13.4.1 implies that the answer is yes if $\C$ is a Grothendieck category. 
+
+(Note that the axiom of universes is not necessary to define the morphism~\eqref{spalt}.)
+\end{cm}
 
 %%
 
