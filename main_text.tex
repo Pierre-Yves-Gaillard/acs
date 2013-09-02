@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version air)
+% about "categories and sheaves" (version ais)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article} 
 %\pagestyle{empty} 
@@ -3094,10 +3094,7 @@ Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if t
 
 %%
 
-\bc P.~160, \pr\ 7.3.2. 
-\begin{rk}\label{732}
-If, in the setting of \pr\ 7.3.2, any $t$ in $\cc T$ is an isomorphism, then the right localization $(\C_{\cc S},Q)$ of $\C$ is universal in the sense of Definition~\ref{url}.
-\end{rk}
+\bc\label{732} P.~160, \pr\ 7.3.2. If, in the setting of \pr\ 7.3.2, any $t$ in $\cc T$ is an isomorphism, then the right localization $(\C_{\cc S},Q)$ of $\C$ is universal in the sense of Definition~\ref{url}.
 \ec 
 
 %%
@@ -3424,7 +3421,7 @@ with $U\to V$ in $\cc F$.
 \bc P. 235, Theorem 9.6.1. Here are a few details. 
 %
 \begin{df}\label{cb}
-If $I$ and $\C$ is categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\co\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.
+If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\co\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.
 \end{df}
 
 The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits).
@@ -3646,16 +3643,12 @@ $$
 
 %%
 
-%\begin{comment}
-
 \bc P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements. 
 
 \n(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
 
-\n(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See Remark~\ref{732} p.~\pageref{732}.)
+\n(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S~\ref{732} p.~\pageref{732}.)
 \ec 
-
-%\end{comment}
 
 %%
 
@@ -3946,7 +3939,7 @@ The proof is straightforward (and much easier than that of the Snake Lemma).
 Let $(\A,T)$ be an abelian category with translation. 
 %
 \begin{lem}\label{sl2}
-If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively  $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively  $T^nX\to YT^n$) is a qis for all $n$. 
+If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively  $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively  $T^nX\to YT^n$) is a qis for all $n$. (See Theorem 12.2.4 p.~301.)
 \end{lem}
 % 
 \n{\em Proof.} Apply Lemma \ref{sl1} to the diagram 
@@ -3963,7 +3956,7 @@ The functor
 $$
 H:\text K_c(\A)\to\A
 $$ 
-is cohomological. 
+is cohomological. (See Corollary 12.2.5 p.~301.) 
 \end{prop}
 %
 \n{\em Proof.} Let $X\to Y\to Z\to TX$ be a d.t. in $K_c(\A)$. It is isomorphic to $V\xr{\alpha(u)}\Mc(u)\xr{\beta(u)}TU\to TV$ for some morphism $u:U\to V$. Since the sequence  
@@ -3981,7 +3974,7 @@ Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\p:\Mc
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$
-is exact.
+is exact. (See Corollary 12.2.6 p.~302.)
 \end{prop}
 %
 \n{\em Proof.} The commutative diagram in $\A_c$ with exact rows 
