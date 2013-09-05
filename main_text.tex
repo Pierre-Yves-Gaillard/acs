@@ -1,24 +1,24 @@
-% about "categories and sheaves" (version aiz)
+% about "categories and sheaves" (version aja)
 % !TEX encoding = UTF-8 Unicode
-\documentclass[12pt]{article} 
-%\pagestyle{empty} 
+\documentclass[12pt]{article}
+%\pagestyle{empty}
 \addtolength{\parskip}{.5\baselineskip}
-\usepackage[a4paper]{geometry} 
+\usepackage[a4paper]{geometry}
 %\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{bm}
-\usepackage{amssymb,amsmath} 
-\usepackage[T1]{fontenc} 
-\usepackage[utf8]{inputenc} 
-\usepackage{tikz-cd}%\usepackage{tikz} 
-\usepackage{hyperref} 
-\usepackage{datetime} 
+\usepackage{amssymb,amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz-cd}%\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{datetime}
 \usepackage{comment}
-\usepackage{amsthm} 
-\newtheorem{thm}{Theorem} 
-\newtheorem{lem}[thm]{Lemma} 
-\newtheorem{prop}[thm]{Proposition} 
-\newtheorem{cor}[thm]{Corollary} 
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
 \newtheorem{df}[thm]{Definition}%\newtheorem{defn}[thm]{Definition}
-\newtheorem{nota}[thm]{Notation} 
+\newtheorem{nota}[thm]{Notation}
 \theoremstyle{remark}
 \newtheorem{conv}[thm]{Convention}
 \newtheorem{rk}[thm]{Remark}
@@ -28,72 +28,72 @@
 \hyphenation{Grothen-dieck}
 \newcommand{\bc}{\begin{cm}}\newcommand{\ec}{\end{cm}}
 \newcommand{\bu}{\bullet}
-\newcommand{\n}{\noindent} 
+\newcommand{\n}{\noindent}
 %
-\newcommand{\cc}{\mathcal} 
-\newcommand{\bb}{\mathbb} 
+\newcommand{\cc}{\mathcal}
+\newcommand{\bb}{\mathbb}
 \newcommand{\A}{\mathcal A}
 \newcommand{\B}{\mathcal B}
 \newcommand{\C}{\mathcal C}
 \newcommand{\F}{\mathcal F}
 \newcommand{\G}{\mathcal G}
 \newcommand{\J}{\mathcal J}
-\newcommand{\M}{\mathcal M} 
+\newcommand{\M}{\mathcal M}
 \newcommand{\SSS}{\mathcal S}
 \newcommand{\U}{\mathcal U}
 \newcommand{\V}{\mathcal V}
-\newcommand{\Set}{\textbf{Set}} 
-%\newcommand{\Set}{\boldmath{\mathrm{Set}}}%\newcommand{\Set}{\pmb{Set}} 
-\newcommand{\Cat}{\textbf{Cat}} 
-\newcommand{\CCat}{\textbf{CCat}} 
-\newcommand{\e}{\varepsilon} 
+\newcommand{\Set}{\textbf{Set}}
+%\newcommand{\Set}{\boldmath{\mathrm{Set}}}%\newcommand{\Set}{\pmb{Set}}
+\newcommand{\Cat}{\textbf{Cat}}
+\newcommand{\CCat}{\textbf{CCat}}
+\newcommand{\e}{\varepsilon}
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\mc}{\mathcal}
 \newcommand{\mono}{\rightarrowtail}
-\newcommand{\m}{\rightarrowtail} 
+\newcommand{\m}{\rightarrowtail}
 \newcommand{\incl}{\hookrightarrow}
 %\newcommand{\op}{\text{op}}
 \newcommand{\oo}{\operatorname}
-\newcommand{\p}{\varphi} 
-\newcommand{\pa}{\rightrightarrows} 
+\newcommand{\p}{\varphi}
+\newcommand{\pa}{\rightrightarrows}
 \newcommand{\pf}{\n{\em Proof. }}
-\newcommand{\pt}{\{\text{pt}\}} 
-\newcommand{\xl}{\xleftarrow} 
-\newcommand{\xr}{\xrightarrow} 
+\newcommand{\pt}{\{\text{pt}\}}
+\newcommand{\xl}{\xleftarrow}
+\newcommand{\xr}{\xrightarrow}
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
-\newcommand{\bl}{\begin{lem}} 
-\newcommand{\el}{\end{lem}} 
-\newcommand{\bp}{\begin{prop}} 
-\newcommand{\ep}{\end{prop}} 
-\newcommand{\cd}{commutative diagram} 
-\newcommand{\ccd}{the comment containing Display} 
+\newcommand{\bl}{\begin{lem}}
+\newcommand{\el}{\end{lem}}
+\newcommand{\bp}{\begin{prop}}
+\newcommand{\ep}{\end{prop}}
+\newcommand{\cd}{commutative diagram}
+\newcommand{\ccd}{the comment containing Display}
 \newcommand{\nm}{natural morphism}
-\newcommand{\pr}{Proposition} 
-\newcommand{\sts}{t suffices to show} 
-%\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]} 
+\newcommand{\pr}{Proposition}
+\newcommand{\sts}{t suffices to show}
+%\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]}
 \newcommand{\cn}{(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) }
 %
 % LIMITS
 % old
-\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
-\newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}} 
-\newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}} 
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}}
+\newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}}
+\newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}}
 % new
 \DeclareMathOperator*{\coli}{colim}
 \DeclareMathOperator*{\co}{colim}
 \DeclareMathOperator*{\icolim}{``\coli"}
 \DeclareMathOperator*{\ic}{``\coli"}
 % 
-\DeclareMathOperator{\Ad}{Add} 
+\DeclareMathOperator{\Ad}{Add}
 \DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\ca}{card}
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
-\DeclareMathOperator{\Ima}{Im} 
-\DeclareMathOperator{\IM}{IM} 
-\DeclareMathOperator{\hy}{h} 
-\DeclareMathOperator{\ky}{k} 
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\IM}{IM}
+\DeclareMathOperator{\hy}{h}
+\DeclareMathOperator{\ky}{k}
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Fct}{Fct}
 \DeclareMathOperator{\Hom}{Hom}
@@ -101,14 +101,14 @@
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Mc}{Mc}
-\DeclareMathOperator{\Mod}{Mod} 
-\DeclareMathOperator{\Mor}{Mor} 
-\DeclareMathOperator{\Ob}{Ob} 
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\PSh}{PSh}
 \DeclareMathOperator{\Qis}{Qis}
 %\DeclareMathOperator{\Set}{Set}
-%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r} 
+%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
@@ -411,7 +411,7 @@ should be ``a sequence
 
 \n P. 251, right after Remark 10.2.5: ``Lemma 7.1.10'' should be ``\pr\ 7.1.10''.
 
-\n P. 252, last three lines: 
+\n P. 252, last three lines:
 
 $\bu$ ``$u$ is represented by morphisms $u':\oplus_i\ X_i\xr{u'}Y'\xleftarrow sY$'' should be ``$u$ is represented by morphisms $\oplus_i\ X_i\xr{u'}Y'\xleftarrow sY$'', 
 
@@ -685,9 +685,9 @@ P.~43, end of Section~2.1. One could add the following observation: If $\A$ and 
 %%
 %
 %\n$\bu$ P. 52, Theorem 2.3.3 (i). Let us observe:\begin{rk}\label{233ib}In the setting of Theorem 2.3.3 (i), assume that $\p$ induces a bijection $\Ob(J)\to\Ob(I)$ and that there is a functor $\beta':I\to\C$ such that $\beta'\circ\p\simeq\beta$. Then $\p^\dagger\beta$ exists and is canonically isomorphic to $\beta'$.\end{rk}
-
+%
 %% 
-
+%
 \bc P.~53, Corollary 2.3.4. (Another proof will be given in Subsection~\ref{2111} p.~\pageref{2111}.) In the setting of Subsection~\ref{scji}, p.~\pageref{scji} one can prove $\co\beta\simeq\co\p^\dagger\beta$, that is 
 %
 \be\label{coco} 
@@ -1063,16 +1063,16 @@ A_u:=\{(i,z)\ |\ i\in I,\ z\in\gamma(i),\ a_i(z)=u\}.
 $$ 
 One easily checks 
 
-\n$*\ A_u\ne\varnothing$ for all $u\in U$,
+\n$\bu\ A_u\ne\varnothing$ for all $u\in U$,
 
-\n$*\ (i,z),(j,w)\in A_u\ \implies\ c_i(z)=c_j(w)$, 
+\n$\bu\ (i,z),(j,w)\in A_u\ \implies\ c_i(z)=c_j(w)$, 
 
-\n$*$ there is a unique map $\mu:U\to Z$ such that $\mu(u)=c_i(z)$ whenever $(i,z)\in A_u$,
+\n$\bu$ there is a unique map $\mu:U\to Z$ such that $\mu(u)=c_i(z)$ whenever $(i,z)\in A_u$,
 
-\n$*\ \lambda$ and $\mu$ are inverse bijections.
+\n$\bu\ \lambda$ and $\mu$ are inverse bijections.
 \ec 
 %
-%% 
+%%
 %
 \bc 
 P.~75, Proposition 3.1.8 (i). In the proof of Proposition 3.3.15 p.~85, a slightly stronger result is needed (see Remark \ref{3315} p.~\pageref{3315}). We state and prove this stronger result. 
@@ -1158,16 +1158,16 @@ c_J:\beta_J\to L_2
 $$
 be the coprojections (see Definition \ref{c} p.~\pageref{c}). Note that $c_{i,J}$ is defined only for $i\in J$. We easily check that 
 
-\n$*$ the morphisms$f_i:=c_{\{i\}}\circ c_{i,\{i\}}:\alpha_i\to L_2$ induce a morphism $f:L_1\to L_2$, 
+\n$\bu$ the morphisms$f_i:=c_{\{i\}}\circ c_{i,\{i\}}:\alpha_i\to L_2$ induce a morphism $f:L_1\to L_2$, 
 
-\n$*$ the morphisms $g_{i,J}:=c_i:\alpha_i\to L_1$ (with $i\in J$) induce a morphism $g_J:\beta_J\to L_1$, 
+\n$\bu$ the morphisms $g_{i,J}:=c_i:\alpha_i\to L_1$ (with $i\in J$) induce a morphism $g_J:\beta_J\to L_1$, 
 
-\n$*$ the morphisms $g_J$ induce a morphism $g:L_2\to L_1$, 
+\n$\bu$ the morphisms $g_J$ induce a morphism $g:L_2\to L_1$, 
 
-\n$*$ $f$ and $g$ are inverse isomorphisms.
+\n$\bu$ $f$ and $g$ are inverse isomorphisms.
 \ec 
 %
-%% 
+%%
 %
 \bc P.~81, proof of \pr\ 3.3.2. Here is a minor variation of the proof. Recall the statement: 
 % 
@@ -4071,6 +4071,8 @@ For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
 \subsection{Typos and Details} %%%%%%%%%%%%%%%%%%%%%%%%
 %
 \n P. 359, line 3: $\sigma$ should be sh.
+
+\n P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
 %
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
