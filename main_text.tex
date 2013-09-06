@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aja)
+% about "categories and sheaves" (version ajb)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -2270,7 +2270,7 @@ $$
 %
 %%
 %
-\begin{cm}
+\begin{cm}\label{q337}
 P. 337. Theorem 13.4.1 suggests the following question: 
 
 Let $\C$ be an abelian category. Is the natural morphism 
@@ -4070,6 +4070,12 @@ For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
 %
 \subsection{Typos and Details} %%%%%%%%%%%%%%%%%%%%%%%%
 %
+\n P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
+
+\begin{cm}\label{1341}
+P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and  ``right localizable'' should be ``universally right localizable, and let $\oo R\Hom_\C(X,Y)$ denote its right localization at $(X,Y)$''.
+\end{cm}
+
 \n P. 359, line 3: $\sigma$ should be sh.
 
 \n P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
@@ -4081,6 +4087,31 @@ P. 183. Here is an example showing that filtrant and cofiltrant small projective
 $$
 \lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
 $$
+\end{cm}
+%
+%%
+%
+\begin{cm}%\label{1341b}
+P. 337, Theorem 13.4.1. (See \S \ref{1341} p. \pageref{1341} and \S \ref{q337} p. \pageref{q337}.) One could add:
+
+Moreover, if $X\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
+$$
+\oo R_1\Hom_\C(\cdot,Y),
+$$ 
+then 
+$$
+H^0\oo R_1\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+$$ 
+Similarly, if $Y\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
+$$
+\oo R_2\Hom_\C(X,\cdot),
+$$ 
+then 
+$$
+H^0\oo R_2\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+$$
+
+This follows from the proof given in the book. 
 \end{cm}
 %
 %\bc\label{837iii}P. 211, Exercise 8.37 (iii). I am unable to solve this part of the exercise.\ec
