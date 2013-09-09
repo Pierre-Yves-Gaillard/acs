@@ -84,7 +84,7 @@
 \DeclareMathOperator*{\co}{colim}
 \DeclareMathOperator*{\icolim}{``\coli"}
 \DeclareMathOperator*{\ic}{``\coli"}
-% 
+%
 \DeclareMathOperator{\Ad}{Add}
 \DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\ca}{card}
@@ -111,7 +111,7 @@
 %\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 \title{About \em{Categories and Sheaves}}
 \author{Pierre-Yves Gaillard}
 \date{\today, \currenttime}
@@ -173,27 +173,27 @@ Following a suggestion of Pierre Schapira's, we shall denote projective limits b
 Thank you to Pierre Schapira for his interest!%%%%%%%%%%%%%%%%%%%%
 %
 \section{U-categories and U-small Categories}\label{ucat}
-% 
+%
 Here are a few comments about the definition of a $\U$-category on p.~11. Let $\U$ be a universe. Say that an element of $\U$ is a $\U$-set. The following definitions are used in the book: 
 %
 \begin{df} 
 A $\U$-category is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set. 
 \end{df} 
-% 
+%
 \begin{df}
 The category $\C$ is $\U$-small if in addition the set of objects of $\C$ is equipotent to some $\U$-set. 
 \end{df} 
-% 
+%
 One could also consider the following variant: 
-% 
+%
 \begin{df}\label{ducat}
 A $\U$-category is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ is a $\U$-set. 
 \end{df} 
-% 
+%
 \begin{df}\label{small}
 The category $\C$ is $\U$-small if in addition the set of objects of $\C$ is a $\U$-set. 
 \end{df} 
-% 
+%
 Note that a category $\C$ is a $\U$-category in the sense of Definition 1 if and only if there is a $\U$-category in the sense of Definition 3 which is isomorphic to $\C$, and similarly for $\U$-small categories.\bigskip
 
 \centerline{\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}}
@@ -204,17 +204,17 @@ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$.
 
 \n P.~14, definition of $\text{Mor}(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\text{Mor}(\C)$ as a category of functors. 
 
-%% 
+%%
 
 \n P.~18, Definition 1.2.16. The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
 %
 \begin{equation}\label{convnot}
 \coli_{X\in\C_{X'}}G(X).  
 \end{equation}
-% 
+%
 There is a similar remark for projective limits. 
 
-%% 
+%%
 
 \n P.~20, Remark 1.3.5: ``the category $\U$-\textbf{Cat} whose objects are the small $\U$-categories ...'' If one adheres to the definitions given in the book, the set of all small $\U$-categories does not exist. If one uses (as we do) the definitions given in Section \ref{ucat} p.~\pageref{ucat}, such a set does exist. 
 
@@ -494,15 +494,15 @@ $$
 \Ob(\A)\to\Ob(\B),\quad\Ob(\Mor(\A))\to\Ob(\Mor(\B))
 $$ 
 satisfying certain conditions.
-\ec 
+\ec
 %
 %%
 %
 \bc\label{cou} 
 P.~24, change of universe. The following crucial fact is implicit in the book: If $\C$ is a $\U$-category and $\mathcal V$ a universe containing $\U$, then $\C^\wedge_\U$ is a full subcategory of $\C^\wedge_\mathcal{V}$. More generally, if $\A$ is a full subcategory of $\B$, and $\C$ is a category, then $\A^\C$ is a full subcategory of $\B^\C$. Say that the \textbf{graph} of a functor $F$ from $\A$ to $\B$ is the functor induced by $F$ from $\A$ to the full subcategory of $\B$ whose objects are the $F(X),X\in\A$. If $G$ is another functor from $\A$ to $\B$, then the morphisms from $F$ to $G$, and the condition that such a morphism is an isomorphism, depend only on the graphs of $F$ and $G$. Important particular case: $\B$ is the category of $\U$-sets.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~24, the Yoneda Lemma. Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
@@ -524,9 +524,9 @@ $$
 \phi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~24, \pr\ 1.4.3 (Yoneda Lemma). Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$.  
@@ -544,13 +544,13 @@ An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all 
 \end{df}
 
 The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
-% 
+%
 \bp
 A morphism $f:A\to B$ in a category $\C$ is an isomorphisms if and only if 
 $$
@@ -560,9 +560,9 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 \ep
 %
 \n{\em Proof.} By (i) there a $g:B\to A$ satisfying $f\circ g=\id_B$, yielding $f\circ g\circ f=f$, and (ii) implies $g\circ f=\id_A$.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~36, Definition 2.1.2. Let $\alpha:I^{\op}\to\C$ be a functor, let $\Delta:\C\to\C^{I^{\op}}$ be the diagonal functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^{I^{\op}}}(\Delta(X),\alpha)$ be an $(\h_{\C^{I^{\op}}}(\Delta(-),\alpha),X)$-universal element (see Definition~\ref{ue}). 
@@ -576,9 +576,9 @@ Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $u\in\h_
 \begin{df}\label{c}
 For each $i$ in $I$ the morphism $u_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$.
 \end{df}
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~38, \pr\ 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\co\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\co\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly:\medskip 
@@ -602,9 +602,9 @@ $$
 g\sqcup_fg,
 $$ 
 taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$; see Definition \ref{c} p.~\pageref{c}). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~39, Proposition 2.1.7. The following slightly stronger statement holds, statement independent of the Universes Axiom. Let $I, J, \C$ be categories and let 
@@ -616,9 +616,9 @@ be an inductive system in $\C$. Assume that $\coli_jX_{ij}$ exists in $\C$ for a
 \coli_i\coli_jX_{ij}
 \end{equation}
 exists in $\C$. Then $\coli_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\ref{limlim}).
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~40, Proposition 2.1.10. Here is a slightly more general statement. 
@@ -651,9 +651,9 @@ $$
 $$
 \overset{\sim}{\to}\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y).
 $$
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~40, Lemma 2.1.11. Here is another wording of the proof. 
@@ -671,7 +671,7 @@ $$
 g=i_S\circ g=i_X,
 $$
 the first equality following from the fact that $\id_S=i_S$, and the second one from the definition of $\h_{\C^\C}(\id_\C,\Delta(S))$. q.e.d.
-\ec 
+\ec
 %
 %%
 %
@@ -680,20 +680,20 @@ P.~43, end of Section~2.1. One could add the following observation: If $\A$ and 
 \be\label{17115}
 \h_{\A^\C}(F,G)\simeq\lim_{X\in\C}\h_{\A^{\C_X}}(F\circ\text j_X,G\circ\text j_X).
 \ee
-\ec 
+\ec
 %
 %%
 %
 %\n$\bu$ P. 52, Theorem 2.3.3 (i). Let us observe:\begin{rk}\label{233ib}In the setting of Theorem 2.3.3 (i), assume that $\p$ induces a bijection $\Ob(J)\to\Ob(I)$ and that there is a functor $\beta':I\to\C$ such that $\beta'\circ\p\simeq\beta$. Then $\p^\dagger\beta$ exists and is canonically isomorphic to $\beta'$.\end{rk}
 %
-%% 
+%%
 %
 \bc P.~53, Corollary 2.3.4. (Another proof will be given in Subsection~\ref{2111} p.~\pageref{2111}.) In the setting of Subsection~\ref{scji}, p.~\pageref{scji} one can prove $\co\beta\simeq\co\p^\dagger\beta$, that is 
 %
 \be\label{coco} 
 \co_j\beta(j)\simeq\co_i\ \co_{j,u}\beta(j),  
 \ee 
-% 
+%
 where $(j,u)$ runs over $J_i$, with $u:\p(j)\to i$, as follows. 
 
 Let 
@@ -705,9 +705,9 @@ $$
 \beta(j)\xrightarrow{p_{\p(j),j,\id_{\p(j)}}}\co_{j,u}\beta(j)\xrightarrow{q_{\p(j)}}\co_i\ \co_{j,u}\beta(j)
 $$ 
 induce an isomorphism from the left-hand side of \eqref{coco} to the right-hand side of \eqref{coco}, which is straightforward.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~55, Corollary 2.4.4 (iii). Here is a slightly different proof. 
@@ -731,33 +731,33 @@ where $\approx$ is the equivalence relation described in the proposition. In vie
 $$
 (i,s)\approx(j,t)\ \iff\ [i\sim j\text{ and }s=t].
 $$
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~56, proof of Corollary 2.4.6. We shall give two other proofs. Recall the statement: 
 %
 \bp 
 In the setting 
-% 
+%
 \begin{equation}\label{241s}
 A\in\C'\xleftarrow{F}\C\xrightarrow{G}\C''\ni B, 
 \end{equation} 
-% 
+%
 we have 
-% 
+%
 \begin{equation}\label{241} 
 \coli_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq 
 \coli_{(X,a)\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B). 
 \end{equation} 
-% 
+%
 Here  
 $$
 a\in\Hom_{\C'}(A,F(X)),\quad b\in\Hom_{\C''}(G(X),B). 
 $$ 
 \ep
-% 
+%
 \n{\em First proof.} Denote respectively by $L$ and $M$ the left and right-hand side of (\ref{241}), let 
 $$
 \alpha_{X,b}:\Hom_{\C'}(A,F(X))\to L,\quad\beta_{X,a}:\Hom_{\C''}(G(X),B)\to M
@@ -773,11 +773,11 @@ $$
 One easily checks that these maps define inverse bijections between $L$ and $M$. q.e.d. 
 
 \n{\em Second proof.} For $X$ in $\C$ put 
-% 
+%
 \be\label{p2}
 U(X):=\h_{\C'}(A,F(X)),\quad V(X):=\h_{\C''}(G(X),B). 
 \ee
-% 
+%
 We must show 
 $$
 \co_{X\in\C_B}U(X)\simeq\co_{X\in(\C^A)^{\op}}V(X). 
@@ -791,9 +791,9 @@ $$
 (u,V(f)(v))\sim(U(f)(u),v). 
 $$ 
 q.e.d.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~56, Lemma 2.4.7. Slightly different wording of the proof. Recall the statement: 
@@ -801,15 +801,15 @@ P.~56, Lemma 2.4.7. Slightly different wording of the proof. Recall the statemen
 \bl 
 If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\coli k(i_0)$ is a terminal object of $\Set$. 
 \el
-% 
+%
 \pf For $X\in\Set$ we have (with self-explanatory notation)
 $$
 \Hom_{\Set}\left(\coli k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
 $$
 the first isomorphism following from Exercise 2.8 p.~66, and the second one from the Yoneda Lemma.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~58, proof of implication (vi) $\implies$ (i) of Proposition 2.5.2. 
@@ -821,7 +821,7 @@ L_i:=\coli\Hom_I(i,\p)\to\pi_0(J^i)
 \end{equation}
 is bijective. 
 \ep
-%  
+% 
 \pf For $j\in J$ let 
 $$
 c_j:\Hom_I(i,\p(j))\to L_i
@@ -831,13 +831,13 @@ $$
 \Ob(J^i)\to L_i,\quad (j,i\overset{s}{\to}\p(j))\mapsto c_j(s)
 $$
 factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is an inverse to (\ref{om}).
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~61, \pr\ 2.6.3 (i). Let $\C$ be a category and $A$ be in $\C^\wedge$. Consider the statements  
-% 
+%
 \begin{equation}\label{263a}
 \ic_{X\in\C_A}X\xrightarrow\sim A, 
 \end{equation} 
@@ -851,13 +851,13 @@ P.~61, \pr\ 2.6.3 (i). Let $\C$ be a category and $A$ be in $\C^\wedge$. Conside
 \end{equation} 
 
 \n\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263}, and the proof of \eqref{263b} is straightforward. (See the comment containing Display \eqref{38} p.~\pageref{38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263}.)
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
-% 
+%
 \begin{lem} 
 Let $\alpha:I\to\A$ be a functor, let $A\in\A$ be the inductive limit of $\alpha$, let $\beta:I\to\A_A$ be the obvious functor, and let $a\in\A_A$ be the identity of $A$. Then the inductive limit of $\beta$ is $a$. 
 \end{lem} 
@@ -887,9 +887,9 @@ $$
 \Hom_{(\A_A)^I}(\beta,\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
 $$
 It is straightforward to check that (\ref{2}) induces (\ref{1}).
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~61, \pr\ 2.6.4. Here is a minor variant. 
@@ -904,7 +904,7 @@ I\ar{r}{\alpha}&\C\ar{d}{h}\ar{r}{F}&\C'\\
 $$ 
 be functors, and let $X$ be an object of $\C$. Assume that $I$ is a small category, $\C$ is a $\U$-category, $\C'$ is a big category, $h$ is the Yoneda embedding, and we have an isomorphism $\co\ (h\circ\alpha)\simeq h(X)$. Let $p_i:h(\alpha(i))\to h(X)$ be the $i$ coprojection (see Definition \ref{c} p.~\pageref{c}), let $q_i:\alpha(i)\to X$ be the morphism $p_i(\alpha(i))(\id_{\alpha(i)})$. Then the morphisms $F(q_i):F(\alpha(i))\to F(X)$ induce an isomorphism $\co\ (F\circ\alpha)\xrightarrow\sim F(X)$.  
 \ep
-% 
+%
 \n{\em Proof}. By enlarging $\U$ we can assume that $\C'$ is a $\U$-category. Let $X'$ be in $\C'$. We know 
 $$
 A(X)\xrightarrow\sim\lim A(\alpha)\quad\forall\ A\in\C^\wedge 
@@ -914,9 +914,9 @@ $$
 \h_{\C'}(F(X),X')\xrightarrow\sim\lim\h_{\C'}(F(\alpha),X'). 
 $$ 
 It suffices to set $A(X):=\h_{\C'}(F(X),X')$.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~62, \pr\ 2.7.1. Consider the diagram 
@@ -927,7 +927,7 @@ P.~62, \pr\ 2.7.1. Consider the diagram
 &\A,
 \end{tikzcd}
 \end{equation} 
-% 
+%
 where $I$ is a small category and $\widetilde F$ is defined by 
 $$
 \widetilde F(A):=\coli_{X\in\C_A}F(X). 
@@ -938,7 +938,7 @@ $$
 \coli\widetilde F(\alpha)\to
 \widetilde F\left(\coli\alpha\right) 
 $$ 
-% 
+%
 is an isomorphism. 
 
 It suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
@@ -955,9 +955,9 @@ $$
 =\lim_{X\in\C_A}G(X')(X)\simeq\Hom_{\C^\wedge}(A,G(X')), 
 $$ 
 the last isomorphism following from (\ref{263}) p.~\pageref{263}.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~63, Notation 2.7.2. The formula 
@@ -988,7 +988,7 @@ $$
 $$
 the last isomorphism following from \eqref{263b} p.~\pageref{263b}. 
 \end{rk}
-\ec 
+\ec
 %%
 %
 \bc 
@@ -997,7 +997,7 @@ P.~64. It might be worth displaying the formula
 (\widehat FA)(X')\simeq\co_{(X'\to F(X))\in\C^{X'}}A(X)
 \ee
 contained in the proof of \pr\ 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
-\ec 
+\ec
 %
 %%
 %
@@ -1007,7 +1007,7 @@ P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a c
 (\widehat FB)(X)\simeq A(X).
 \ee
 Indeed, \eqref{275} implies $(\widehat FB)(X)\simeq\co\alpha_X$ where $\alpha_X:\C^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0(\C^X)$, and the isomorphism $\pi_0(\C^X)\simeq A(X)$ is easily checked.
-\ec 
+\ec
 %
 %%
 %
@@ -1023,9 +1023,9 @@ $$
 (\exists\ i\in I)\left(\exists\ a\in\prod_{j\in J}\h_I(\p(j),i)\right)\ (\forall\ (s:j\to j')\in S)\ (a_{j'}\circ\p(s)=a_j) 
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the claim.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
@@ -1040,9 +1040,9 @@ is bijective.
 \end{cor}
 %
 This corollary is implicitly used in the proof of Proposition 3.3.13 p.~84.
-\ec 
+\ec
 %
-%%  
+%%
 %
 \bc 
 P.~74, Theorem 3.1.6. Here is a minor variant of part (i) of the proof of the implication (a)$\implies$(b).\smallskip 
@@ -1056,7 +1056,7 @@ c_i:\gamma(i)\to Z:=\coli\gamma
 $$ 
 be the coprojections (see Definition \ref{c} p.~\pageref{c}); let $F,G:X\to Y$ be the obvious maps; and let $U\subset X$ be the kernel of $(F,G)$. Then the natural map $\lambda:Z\to U$ is bijective.
 \end{lem}
-% 
+%
 \n{\em Proof.} For each $u\in U$ put 
 $$
 A_u:=\{(i,z)\ |\ i\in I,\ z\in\gamma(i),\ a_i(z)=u\}.
@@ -1070,7 +1070,7 @@ One easily checks
 \n$\bu$ there is a unique map $\mu:U\to Z$ such that $\mu(u)=c_i(z)$ whenever $(i,z)\in A_u$,
 
 \n$\bu\ \lambda$ and $\mu$ are inverse bijections.
-\ec 
+\ec
 %
 %%
 %
@@ -1078,7 +1078,7 @@ One easily checks
 P.~75, Proposition 3.1.8 (i). In the proof of Proposition 3.3.15 p.~85, a slightly stronger result is needed (see Remark \ref{3315} p.~\pageref{3315}). We state and prove this stronger result. 
 %
 \begin{prop}\label{318i} 
-% 
+%
 Let 
 $$
 \begin{tikzcd}
@@ -1086,9 +1086,9 @@ J\ar{r}{\p}&I\ar{r}{\theta}&L&K\ar{l}[swap]{\psi}
 \end{tikzcd}
 $$
 be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious functor $\p_k:J_{\psi(k)}\to I_{\psi(k)}$ is cofinal for all $k$ in $K$. Then $\p$ is cofinal. 
-% 
+%
 \end{prop} 
-% 
+%
 \n{\em Proof.} Pick a universe making $I,J,K$, and $L$ small, and let $\alpha:I\to\Set$ be a functor. We have the following five bijections:
 $$
 \coli\ \alpha\circ\p\ \simeq\ 
@@ -1105,19 +1105,19 @@ $$
 \coli\ \alpha.
 $$
 Indeed, the first and fifth bijections follow from Corollary 2.3.4 p.~53, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\p_k$. In view of Proposition 2.5.2 p.~57, this proves the claim.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~75. Here is a remark about the IPC Property: 
-% 
+%
 \begin{rk}\label{ipc} 
 Throughout the subsection about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136. 
 \end{rk}
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~78, \pr\ 3.2.2. It is easy to see that Condition (iii) is equivalent to: 
@@ -1125,9 +1125,9 @@ P.~78, \pr\ 3.2.2. It is easy to see that Condition (iii) is equivalent to:
 \begin{equation}\label{78} 
 \co\ \h_I(i,\p)\simeq\pt\quad\text{for all }i\in I, 
 \end{equation} 
-% 
+%
 which is Condition (vi) in \pr\ 2.5.2 p.~57 of the book. (\pr\ 2.5.2 states, among other things, that \eqref{78} is equivalent to the cofinality of $\p$.)
-\ec 
+\ec
 %
 %%%%
 %
@@ -1139,7 +1139,7 @@ Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally sma
 \end{prop} 
 
 \n{\em Proof.} In view of \pr\ 3.2.4 it suffices to show that $J$ is cofinally small. By \pr\ 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\p(j_s)$ with $j_s\in J$. Then, for each $j$ in $J$ there are morphisms $\p(j)\to s\to\p(j_s)$ with $s$ in $S$. As $\p$ is full there is a morphism $j\to j_s$, and we conclude by using again \pr\ 3.2.6.
-\ec 
+\ec
 %
 %%
 %
@@ -1165,33 +1165,33 @@ be the coprojections (see Definition \ref{c} p.~\pageref{c}). Note that $c_{i,J}
 \n$\bu$ the morphisms $g_J$ induce a morphism $g:L_2\to L_1$, 
 
 \n$\bu$ $f$ and $g$ are inverse isomorphisms.
-\ec 
+\ec
 %
 %%
 %
 \bc P.~81, proof of \pr\ 3.3.2. Here is a minor variation of the proof. Recall the statement: 
-% 
+%
 \begin{prop} 
-% 
+%
 Consider the functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\co\alpha$ exists in $\C$. Then $\co(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\co(F\circ\alpha)\to\co\alpha$ is an isomorphism. 
 %
 \end{prop} 
-% 
+%
 \n{\em Proof.} Let $X'$ be in $\C'$. It suffices to show that the natural map  
 $$
 \h_{\C'}(F(\co\alpha),X')\to\lim\h_{\C'}(F(\alpha),X')
 $$ 
-% 
+%
 is bijective. Replacing Setting (\ref{241s}) p.~\pageref{241s} with 
 $$
 Y\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X', 
 $$ 
 Statement (\ref{241}) p.~\pageref{241} gives 
-% 
+%
 \be\label{332} 
 \co_{X\in\C_{X'}}\h_\C(Y,X)\simeq\h_{\C'}(F(Y),X').  
 \ee 
-% 
+%
 We have the bijections 
 $$ 
 \h_{\C'}(F(\co\alpha),X')\simeq\co_{X\in\C_{X'}}\h_\C(\co\alpha,X)\xr\sim\co_{X\in\C_{X'}}\lim\h_\C(\alpha,X) 
@@ -1200,21 +1200,21 @@ $$
 \xr\sim\lim\co_{X\in\C_{X'}}\h_\C(\alpha,X)\simeq\lim\h_{\C'}(F(\alpha),X'). 
 $$ 
 Indeed, the first and last bijections follow from \eqref{332}, the second one is clear, and the third one results from the assumption that $F$ is right exact.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~85, proof of Proposition 3.3.15. 
 %
 \begin{rk}\label{3315}  
-% 
+%
 To prove that $\A\to\C$ is cofinal, one can apply \pr\ \ref{318i} p.~\pageref{318i} with $J=\A,I=\C,L=\C',K=\cc S$. 
 %
 \end{rk}
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~89, Proposition 3.4.5 (iii). The proof uses implicitly the following fact: 
@@ -1224,7 +1224,7 @@ If $F$ is a cofinally small filtrant category, then there is a small {\em filtra
 \end{prop}
 
 This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79. This fact also justifies the sentence ``We may replace ``filtrant and small'' by ``filtrant and cofinally small'' in the above definition'' p.~132, lines 4 and 5 of the book.
-\ec 
+\ec
 %
 %%
 %
@@ -1244,7 +1244,7 @@ $
 f'_1\circ F(f)=f'_2\circ F(f)=:f'.
 $ 
 For $i=1,2$ let $f_i$ be the morphism $f$ viewed as a morphism from $(X,f')$ to $(Y,f'_i)$ in $\C_{X'}$. As $\C_{X'}$ is filtrant, there are morphisms $\gamma_i:(Y,f'_i)\to(Z,g')$, such that $\gamma_1\circ f_1=\gamma_2\circ f_2$. If $g_i:Y\to Z$ is the morphism in $\C$ defining $\gamma_i$, then we have $g_1\circ f=g_2\circ f$. As $f$ is an epimorphism, this implies $g_1=g_2=:g$, and thus $f'_1=g'\circ F(g)=f'_2$, contradiction. q.e.d.
-\ec 
+\ec
 %
 %%
 %
@@ -1257,9 +1257,9 @@ $$
 \end{tikzcd}
 $$ 
 the vertical arrows are bijective by (a), and the bottom arrows is bijective by (i).
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~95, proof of Proposition 4.1.4 (i). Some more details: Let us denote vertical composition by $\circ$ and horizontal composition by $*$. Equality $(R*\eta*L)\circ(\e*P)=P$, that is $(R*\eta*L)\circ(\e*R*L)=R*L$, can be written as 
@@ -1271,9 +1271,9 @@ $$
 R*\Big((\eta*L)\circ(L*\e)\Big)*L=R*L,
 $$ 
 and thus follows from (1.5.8) p.~29 in the book (stated as \eqref{158} p.~\pageref{158} in this text).
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~116, proof of \pr\ 5.1.7 (i). Here is a very slightly different wording. Recall the statement: 
@@ -1291,9 +1291,9 @@ C_{a\circ u}\ar{ur}{c}\ar[two heads]{r}[swap]{b}&C_v.\ar{ru}
 $$ 
 (The existence of $c$ is a very particular case of \pr\ \ref{fun} p.~\pageref{fun}.) 
 By (the dual of) \pr\ 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, \pr\ 5.1.5 (i), (a) $\iff$ (b), p.~115, implies that $b$ is an isomorphism. Clearly, $c\circ b^{-1}$ is inverse to $a$.
-\ec  
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~122, proof of Lemma 5.3.2. Here is a minor variant. 
@@ -1322,20 +1322,20 @@ $$
 =f\circ z\circ w, 
 $$ 
 the first equality following from the functoriality of $\xi$.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~122, proof of Lemma 5.3.3. The difference with the wording of the book is almost nil. Recall the statement: 
-% 
+%
 \bl
 If $\C$ is a category admitting small inductive limits and $\F$ a small full subcategory of $\C$, then the functor $\p:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F\in\F^\wedge$ we have 
 $$
 \psi(F)\simeq\co_{Y\in\F_F}Y. 
 $$ 
 \el 
-% 
+%
 \pf We have, for $X\in\C$ and $F\in\F^\wedge$, 
 $$
 \h_\C(\psi(F),X)\simeq\h_\C\left(\co_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\h_\C(Y,X)
@@ -1344,15 +1344,15 @@ $$
 \simeq\lim_{Y\in\F_F}\p(X)(Y)\simeq\h_{\F^\wedge}(F,\p(X)),
 $$ 
 the last isomorphism following from \eqref{263} p.~\pageref{263}.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as follows. 
-% 
+%
 \begin{lem} 
-% 
+%
 Let $\C$ be a category closed by finite inductive limit, and let $\A$ be a small full subcategory of $\C$. Then 
 
 \n{\em(a)} there is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\A$ is closed by finite inductive limit, 
@@ -1360,9 +1360,9 @@ Let $\C$ be a category closed by finite inductive limit, and let $\A$ be a small
 \n{\em(b)} there is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
 %
 \end{lem} 
-% 
+%
 \n{\em Proof.} Since there are only countably many finite categories up to isomorphism, (b) is clear. To prove (a), let $\A\subset\A'\subset\A''\subset\cdots$ be a tower of full subcategories obtained by iterating the argument used to prove (b), and let $\B$ be the union of the $\A^{(n)}$.
-\ec 
+\ec
 %
 %%
 %
@@ -1372,21 +1372,21 @@ P.~133, Step (i) of the proof of Theorem 6.1.8. Here is a minor variant. Recall 
 \bl 
 If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
 \el 
-% 
+%
 \pf To prove this, let $M$ be the category attached to the functors 
 $$
 \C\xrightarrow h\C^\wedge\xleftarrow\alpha I,
 $$ 
 where $h$ is the Yoneda embedding. \pr\ \ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant. Let $M\to\C_A$ be the obvious functor. One easily checks that Condition (iii) of \pr\ 3.2.2 p.~78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from \pr\ 3.2.2. 
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' (See Section \ref{619} p.~\pageref{619}.)
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~136, proof of \pr\ 6.1.18 (i). Here is a minor variant: If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\p_i,\psi_i:\alpha_i\pa\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\pa B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
@@ -1406,9 +1406,9 @@ $$
 \co_j\co_i\iota(\alpha(i,j))\to\co_i\iota\left(\co_j\alpha(i,j)\right) 
 $$ 
 is an isomorphism. Indeed, $\co_j$ commutes with $\co_i$ for obvious reasons, and with $\iota$ because $\iota$ is right exact.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the table:\bigskip 
@@ -1426,7 +1426,7 @@ P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the 
 \end{tabular}
 \end{center}%\bigskip 
 \n (In Line 6 we assume that $\C$ admits finite projective limits, whereas in Line 7 we assume that $\C$ admits small projective limits.)%\bigskip 
-\ec 
+\ec
 %
 %%
 %
@@ -1459,13 +1459,13 @@ $$
 $$ 
 
 \n the three isomorphisms being respectively justified by \eqref{140} p.~\pageref{140}, \eqref{133ii} p.~\pageref{133ii}, and \eqref{133i} p.~\pageref{133i}.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P.~147, Exercise 6.11. We prove the following slightly more general statement: 
-% 
+%
 \begin{prop}
 %
 Let $F:\cc C\to\cc C'$ be a functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
@@ -1519,7 +1519,7 @@ $$
 are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$.
 %
 \end{lem}
-\ec 
+\ec
 %
 %%
 %
@@ -1529,7 +1529,7 @@ P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is
 Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_{\mathcal S}$, and to check the equalities $f\circ\id_X=f$, $\id_X\circ g=g$ for $f\in\Hom_{\C^r_{\mathcal S}}(X,Y)$ and $g\in\Hom_{\C^r_{\mathcal S}}(Y,X)$.
 \ec
 %
-%% 
+%%
 %
 \bc 
 P.~155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\mathcal S$ is given by 
@@ -1571,17 +1571,17 @@ P.~159, Definition 7.3.1 (ii). The following conditions on the right localizatio
 $$
 R_{\cc S}F\simeq F\circ R_{\cc S}\id_\C.
 $$
-% 
+%
 \begin{df}\label{url}
 Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if the above conditions are satisfied.
 \end{df}
-\ec 
+\ec
 %
 %%
 %
 \bc\label{732} 
 P.~160, \pr\ 7.3.2. If, in the setting of \pr\ 7.3.2, any $t$ in $\cc T$ is an isomorphism, then the right localization $(\C_{\cc S},Q)$ of $\C$ is universal in the sense of Definition~\ref{url}.
-\ec 
+\ec
 %
 %%
 %
@@ -1606,9 +1606,9 @@ In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This ab
 \begin{lem}\label{payl}
 Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category af additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~172, proof of Lemma 8.2.10. Recall the statement: $\C$ is an additive category, $X$ is in $\C$. The claim is that $X$ is an abelian group object. The addition is given by the codiagonal morphism $\sigma:X\oplus X\to X$. This comment is only about the associativity of the addition. This associativity can also be proved as follows. 
@@ -1626,9 +1626,9 @@ $$
 b=\begin{cases}1&\text{if }a=1,2\\2&\text{if }a=3.\end{cases}
 $$ 
 q.e.d.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~172, Lemma 8.2.11. Here is a minor variant of the statement: 
@@ -1642,11 +1642,11 @@ F(X\oplus X)\ar[yshift=.7ex]{r}{f}&F(X)\oplus F(X)\ar[yshift=-.7ex]{l}{g}
 $$ 
 be the natural morphisms. (More precisely, $f$ and $g$ are respectively obtained by regarding $\oplus$ as a product and as a coproduct.) If $f$ or $g$ is an isomorphism, then the other is its inverse. 
 \end{lem}
-% 
+%
 This follows from Lemma 8.2.3 p.~169 of the book.
 \ec
 %
-%% 
+%%
 %
 \bc 
 P.~173. \pr s 8.2.12 and 8.2.13 can be stated as follows. 
@@ -1672,7 +1672,7 @@ $$
 be the natural functor. Then $\Phi$ and $\Psi$ are inverse isomorphisms. 
 %
 \end{prop}
-\ec 
+\ec
 %
 %%
 %
@@ -1684,13 +1684,13 @@ Let $\C$ be an additive category. Then $\C$ has a unique structure of pre-additi
 Here is a minor variant of the proof of the existence of such a structure. 
 
 Let $X$ and $Y$ be in $\C$. We define the addition on $\h_\C(X,Y)$ by letting $k:\C\to\C^\vee$ be the Yoneda embedding and observing that, in the notation of \pr\ \ref{8212}, $\h_\C(X,Y)$ is the set underlying the abelian group $\Phi(k(X))(Y)$. In particular, we have $g\circ(f_1+f_2)$ for $X\xr{f_i}Y\xr gZ$. It is easy to conclude from this that the above construction endows $\C$ with a structure of pre-additive category.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
-\ec 
+\ec
 %
 %%
 %
@@ -1707,9 +1707,9 @@ X'\ar{dr}[swap]{0}\ar{r}&X\ar{d}\ar{r}&X''\ar[dashed]{d}\\
 \end{tikzcd}
 $$ 
 can be completed as indicated ($S\to S'$ being a monomorphism).
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a\in U$ and 0 otherwise, and, for each $n\in\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n\in\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a\in U\subset U_n$ and 0 otherwise. This family of morphisms define, when $U$ varies, an epimorphism $\p_n:F_n\epi G$. Put 
@@ -1760,7 +1760,7 @@ Case $n=2$: Let $X_1,X_2$ be in $\C$. To check that the natural morphisms
 \be\label{173} 
 F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 \ee 
-% 
+%
 are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions \ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 to the morphisms $p_j,i_j,F(p_j),F(i_j)$.
 \ec
 %
@@ -1778,7 +1778,7 @@ $$
 \Ima f\simeq\Ker k,\text{ where }k:Y\to\Coker f.  
 $$ 
 \ep
-% 
+%
 \pf Let us use the abbreviations 
 $$
 P:=X\times_YX,\quad p:=p_1-p_2:P\to X,\quad K:=\Ker f.
@@ -1837,7 +1837,7 @@ Y^3,
 $$
 where $f^0$ is an epimorphism, $f^1$ and $f^3$ are monomorphisms, and $X^1\to X^2\to X^3$ and $Y^0\to Y^1\to Y^2$ are exact. Then $f^2$ is a monomorphism. 
 \el 
-% 
+%
 \pf Note that Lemma 8.3.12 can be stated as follows: $f:X\to Y$ is an epimorphism if and only if any subobject of $Y$ is the image of some subobject of $X$. 
 
 We write $fx$ for the image of a subobject $x$ of $X$, and $fg$ for $f\circ g$.
@@ -1931,10 +1931,10 @@ $$
 \end{tikzcd}
 $$
 where, we hope, the notation is self-explanatory.
-\ec 
-
-%% 
-
+\ec
+%
+%%
+%
 \bc P.~191, slight rewording of the proof of Theorem 8.5.8 (iii). Recall the statement: 
 %
 \begin{lem}\label{858iii}
@@ -2006,7 +2006,7 @@ Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
 \ee
 %
 To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$.
-\ec 
+\ec
 %
 %%
 %
@@ -2020,9 +2020,9 @@ It is easy to equip $\C_{\cc S}$ with a pre-additive structure making $Q$ additi
 The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way at the beginning of the following text of Dragan Mili\v{c}i\'c:\bigskip 
 
 \centerline{\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf}}
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc\label{922}
 P.~218, Definition 9.2.2. If $I$ admits inductive limits indexed by categories $J$ such that 
@@ -2035,13 +2035,13 @@ then $I$ is $\pi$-filtrant.
 $$
 \lim\h_\C(\p,\co\p)\xleftarrow\sim\h_\C(\co\p,\co\p)\neq\varnothing.\text{ q.e.d.}
 $$
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P.~220, proof of Corollary 9.2.11: Use \S~\ref{922}.
-\ec 
+\ec
 %
 %%
 %
@@ -2059,9 +2059,9 @@ $$
 be such that $x\circ c_j=y_j$ for all $j$, and let $f_j:\p(j)\to\xi$ be the obvious morphism. Then $(f_j)\in\lim\h_{\C_A}(\p,\xi)$. 
 
 The proof is obvious.
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc 
 P. 227, Theorem 9.3.4. Firstly I think it would be better to state the result as follows:
@@ -2104,7 +2104,7 @@ $$
 G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
 $$ 
 Since $\ca(I)<\pi$ and $\ca(G^{\coprod B}(G))<\pi$ for all $B$ by (9.3.4) (e) (see \eqref{934e}), this implies \eqref{934b}. Now Proposition~9.3.2 p. 224 entails \eqref{934}.
-\ec 
+\ec
 %
 %%
 %
@@ -2113,9 +2113,9 @@ P. 232, Theorem 9.5.4, minor variant:
 \begin{rk}\label{954}
 The conclusion of Theorem 9.5.4 still holds if we weaken the assumption that $\cc F\subset\Mor(\C_0)$ is a small set to the assumption that it is just an {\em essentially} small full subcategory. Indeed, for the proof we can clearly assume that $\cc F$ is small. 
 \end{rk}
-\ec 
+\ec
 %
-%% 
+%%
 %
 \bc\label{t955} 
 P. 233, Theorem 9.5.5. I suggest two changes: 
@@ -2145,19 +2145,19 @@ If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by
 \end{df}
 
 The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits).
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 236, line 4 of the proof of Theorem 9.6.2. One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4.
-\ec 
+\ec
 %
 %%
 %
@@ -2172,7 +2172,7 @@ is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 
 $$
 \Coker(\oplus_i\,\p(Z_i)\to\oplus_i\,\p(Y_i))\simeq\oplus_i\,\Coker(\p(Z_i)\to\p(Y_i))\simeq\oplus_i\,\widetilde\p(X_i).
 $$
-\ec 
+\ec
 %
 %%
 %
@@ -2228,7 +2228,7 @@ $$
 and to invoke Condition N'3 of Lemma 10.2.1 (b) p.~249. 
 
 \n(c) $\implies$ (a): Straightforward.
-\ec 
+\ec
 %
 %%
 %
@@ -2264,7 +2264,7 @@ $$
 (see \S\ 11.7) exists in $\oo D(\Mod(\bb Z))$. Then\bigskip 
 
 \n$(13.4.1)\hskip6em H^0\oo R\Hom_\C(X,Y)\simeq\Hom_{D(\C)}(X,Y).$
-\ec 
+\ec
 %
 \end{comment}
 %
@@ -2330,7 +2330,7 @@ We claim:
 (b) this map (a) is bijective. 
 
 Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before.
-\ec 
+\ec
 %
 %%
 %
@@ -2361,7 +2361,7 @@ which implies
 $$
 T^{-1}(\alpha+\beta)=-h+\widetilde h\circ T^{-1}g=-h+h=0.
 $$
-\ec 
+\ec
 %
 %%
 %
@@ -2377,19 +2377,19 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements.
 \n(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
 
 \n(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S~\ref{732} p.~\pageref{732}.)
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 390, Axioms LE1-LE4. I think that the set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
 
-Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$ where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
+Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$, where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
 $$
 U=\bigcup_{V\in\Sigma(U,b)}V
 $$ 
 for all $(U,b)$ as above.
-\ec 
+\ec
 %
 %%
 %
@@ -2403,7 +2403,7 @@ P. 395, Lemma 16.2.3 (iii). Consider the condition
 \be\label{1623}
 \text{Conditions (a), (b), (c), (d), (e) are equivalent.}
 \ee
-\ec 
+\ec
 %
 %%
 %
@@ -2413,7 +2413,7 @@ P. 397, Notation 16.2.5 (ii). The fact that
 \text{such a $w$ is necessarily a local isomorphism}
 \ee
 follows from Lemma 16.2.4 (vii) p. 396.
-\ec 
+\ec
 %
 %%
 %
@@ -2429,7 +2429,7 @@ $$
 Then $\C^\wedge(A):=\Set(A)^{\C^{\op}}$ is a small full subcategory of $\C^\wedge$ containing $A$, and the sets of quotients of $A$ in $\C^\wedge(A)$ and in $\C^\wedge$ are in bijection. In particular, these sets are small. 
 
 Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism in $\C^\wedge(C_J)$, and $w:S\to A$ is a local isomorphism. Then $\cc S$ is small.
-\ec 
+\ec
 %
 %%
 %
@@ -2479,9 +2479,9 @@ such that $w\circ v=t$ and the bottom square is cartesian. Consider the diagram
 %
 \end{tikzcd}
 \ee
-% 
+%
 The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the bottom square commutes by definition of $A^a(s\circ t)$, and the top square commutes because $w$ can be viewed as a morphism $\id_V\to s'$ in $\mc{LI}_U$. The commutativity of \eqref{1631b} for all $t$ implies the commutativity of \eqref{1631a} for all $u$.
-\ec 
+\ec
 %
 %%
 %
@@ -2493,12 +2493,12 @@ $$
 \p:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
 in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395.
-\ec 
+\ec
 %
 %%
 %
 \bc P. 401, Step (i) of the proof of \pr\ 16.3.3. See \eqref{1623} p.~\pageref{1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
-\ec 
+\ec
 %
 %%
 %
@@ -2511,7 +2511,7 @@ follows from \eqref{275} p.~\pageref{275}. (See the comment containing Display \
 \begin{prop}\label{p406}
 The functor $(f^t)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
-\ec 
+\ec
 %
 %%
 %
@@ -2550,7 +2550,7 @@ In particular Theorem 3.3.18 (b) p.~86 implies
 \begin{prop}\label{407}
 Assume that $\A$ satisfies the same conditions as the category $\C$ of Theorem 3.3.18 (b). If $f$ is left exact, then $f^\dagger$ is exact. If $f$ is right exact, then $f^\ddagger$ is exact. 
 \end{prop}
-\ec 
+\ec
 %
 %%
 %
@@ -2593,19 +2593,19 @@ $$
 \psi(U\xr{(b,u)}B\times A):=i(U\xr{(b,u)}B\times A)(\id_{U\xr uA}),
 $$ 
 and leave it to the reader to verify that $\p$ and $\psi$ are mutually inverse bijections.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 413, Proof of Lemma 17.2.5. Part~(i): see Proposition~\ref{p406} p.~\pageref{p406}. Part~(iii): see \eqref{1725} p.~\pageref{1725}.
-\ec 
+\ec
 %
 %%
 %
@@ -2617,7 +2617,7 @@ Let $X$ be a small presite. We assume, as we may, the the hom-sets of $\C_X$ are
 \end{df}
 %
 Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\cc T_i$ is a Grothendieck topology, and we denote by $\bigvee\cc T_i$ the intersection of all the Grothendieck topologies containing $\bigcup\cc T_i$.
-\ec 
+\ec
 %
 %%
 %
@@ -2629,25 +2629,25 @@ $$
 \co\alpha\xr f\co\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\co\alpha\circ\mu_u^{\op}\xr h\co\alpha.
 $$
 We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\id_{\co\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal, and $h$ is an isomorphism.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 421. I don't understand the proof of Lemma 17.4.6 (i). So far I haven't seen this statement used in the sequel.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 422, proof of Theorem 17.4.9 (iv). The exactness $(\cdot)^a$ (Theorem 17.4.7 (iv) p.~421) is an important ingredient.
-\ec 
+\ec
 %
 %%
 %
 \bc 
 P. 424, proof of Theorem 17.5.2 (iv). Firstly, as already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. Secondly, the exactness of $f^\dagger$ follows from Proposition~\ref{407} p.~\pageref{407}.
-\ec 
+\ec
 %
 %%
 %
@@ -2807,13 +2807,13 @@ Denoting vertical composition by $\circ$ and horizontal composition by $*$, Equa
 \be\label{158} 
 (\eta*L)\circ(L*\e)=L
 \ee 
-% 
+%
 and 
 %
 \be\label{159} 
 (R*\eta)\circ(\e*R)=R.
 \ee 
-% 
+%
 
 Here is a picture of \eqref{158}, that is $(\eta*L)\circ(L*\e)=L$: 
 $$
@@ -2862,24 +2862,24 @@ For the reader's convenience we prove these equalities. Let us denote by
 \begin{equation}\label{bij1}
 \theta_{X,X'}:\Hom_\C(X,RX')\overset\sim\to\Hom_{\C'}(LX,X')
 \end{equation} 
-% 
+%
 and 
-% 
+%
 \begin{equation}\label{bij2}
 \lambda_{X,X'}=(\theta_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
 \end{equation} 
-% 
+%
 the functorial bijections defining the adjunction. Recall 
 $$
 \e_X:=\lambda_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\theta_{RX',X'}(\id_{RX'}).
 $$ 
 
 To prove Equality (1.5.8), which can be written as 
-% 
+%
 \begin{equation}\label{158b} 
 \eta_{LX}\circ L(\e_X)=\id_{LX}, 
 \end{equation}
-% 
+%
 we view (\ref{bij1}) as a bijection functorial in $X\in\C$ (with $X'\in\C'$ fixed), we apply it to the morphism 
 $$
 \e_X:X\to RLX
@@ -2895,7 +2895,7 @@ To prove Equality (1.5.9), which can be written as
 \begin{equation}\label{159b} 
 R(\eta_{X'})\circ\e_{RX'}=\id_{RX'},
 \end{equation}
-% 
+%
 we view (\ref{bij2}) as a bijection functorial in $X'\in\C'$, (with $X\in\C$ fixed), we apply it to the morphism 
 $$
 \eta_{X'}:LRX'\to X'
@@ -2907,7 +2907,7 @@ $$
 for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}, that is, (1.5.9) (stated as \eqref{159} p.~\pageref{159} in this text). 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 \section{Theorem 2.3.3 (i) (p.~52)}\label{233i} %%%%%%%%%%%%%%%%%%%%%%%
 %
 Recall the statement: 
@@ -2917,20 +2917,20 @@ $$
 \co_{(\p(j)\to i)\in J_i}\beta_j
 $$ 
 exists in $\C$ for all $i$ in $I$. Then $\p^\dagger(\beta)$ exists and we have 
-% 
+%
 \be\label{236} 
 \p^\dagger(\beta)(i)\simeq\co_{(\p(j)\to i)\in J_i}\beta_j
 \ee 
-% 
+%
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
 $\p^\dagger$ exists. If moreover $\p$ is fully faithful, then $\p^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\p_*\circ\p^\dagger$. 
 
 The proof in the book is divided into three Steps, called (a), (b), and (c). 
-% 
-\subsection{Step (a)}\label{scji} %%%%%%%%%%%%%%%%%% 
-% 
+%
+\subsection{Step (a)}\label{scji} %%%%%%%%%%%%%%%%%%
+%
 We define $\p^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to show that $\p^\dagger(\beta)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
-% 
+%
 \begin{lem}\label{r52} 
 %
 Let $I$ and $J$ be in the category $\textbf{\em Cat}$ of small categories, let $\Phi:I\to\textbf{\em Cat}$ be a functor, view $J$ as a constant functor from $I$ to $\textbf{\em Cat}$, and let $\theta:\Phi\to J$ be a functorial morphism. Assume 
@@ -2938,7 +2938,7 @@ Let $I$ and $J$ be in the category $\textbf{\em Cat}$ of small categories, let $
 \be\label{52} 
 (\co\theta)(i):=\co(\theta_i)\in J\quad\forall\ i\in I. 
 \ee 
-% 
+%
 For any morphism $s:i\to i'$ in $I$, let $(\co\theta)(s)$ be the natural morphism 
 $$
 (\co\theta)(i)=\co(\theta_{i'}\circ\Phi(s))\to
@@ -2953,15 +2953,15 @@ $$
 \C\xleftarrow\beta J\xrightarrow\p I. 
 $$ 
 In the setting of Lemma \ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the functorial morphism $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\p^\dagger(\beta)$. In particular $\p^\dagger(\beta)$ is a functor. 
-% 
+%
 \subsection{Step (b)} %%%%%%%%%%%%%%%
-% 
+%
 The purpose of Step (b) is to prove 
-% 
+%
 \be\label{stepb}
 \h_{\C^I}(\p^\dagger(\beta),\alpha)\simeq\h_{\C^J}(\beta,\p_*\alpha) 
 \ee 
-%  
+% 
 for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
 
 To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f:X\to Y$ is a morphism in $\C$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$. Then Lemma 2.1.15 can be stated as follows: 
@@ -2971,11 +2971,11 @@ $$
 (i,i\to j,j)\mapsto\h_\A(a(i),b(j))
 $$ 
 is a functor from $\Mor_0(\A)^{\op}$ to $\Set$, and there is a natural isomorphism 
-% 
+%
 \be\label{2115} 
 \h_{\C^I}(a,b)\xr\sim\lim_{(i\to j)\in\Mor_0(\A)}\h_\A(a(i),b(j)).
 \ee
-% 
+%
 
 Returning to \eqref{stepb}, we have functors 
 $$
@@ -3033,11 +3033,11 @@ $$
 \beta(j)\to\alpha(\p(j))\to\alpha(i)\to\alpha(i'). 
 $$ 
 We leave it to the reader to check that this defines indeed a map $\lim\delta\to\lim\gamma$, and that this map is inverse to the map constructed above. 
-% 
-\subsection{Step (c)} %% 
-% 
+%
+\subsection{Step (c)} %%
+%
 In (b), the authors define a map 
-% 
+%
 \be\label{e233i} 
 %
 \Psi_{\alpha,\beta}:
@@ -3045,7 +3045,7 @@ In (b), the authors define a map
 \Hom_{\C^J}(\alpha,\varphi_*(\beta)),
 %
 \ee 
-% 
+%
 and show that it is bijective. In particular, we have a bijection 
 $$
 f:=\Psi_{\alpha,\varphi^\dagger(\alpha)}:
@@ -3065,9 +3065,9 @@ $$
 u(\varphi(j')\to\varphi(j)):\alpha(j')\to\alpha(j),
 $$
 that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\varphi$ is fully faithful by assumption, there is an obvious way to do it. 
-% 
-\subsection{A Remark}\label{s236} %% 
-% 
+%
+\subsection{A Remark}\label{s236} %%
+%
 Remark~\ref{r236} below will give rise to another proof of Corollary 2.4.6 p.~56 (see Display~\eqref{p2} p.~\pageref{p2} and the lines following it). Recall that Corollary 2.4.6 states that the isomorphism \eqref{241} p.~\pageref{241} holds in Setting \eqref{241s} p.~\pageref{241s}, and that, if $\C\xleftarrow{\,\beta}J\xrightarrow{\p}I$ are functors, then $\p^\dagger(\beta):I\to\C$ is given by \eqref{236} p.\n~\pageref{236}. Then \eqref{241} p.~\pageref{241} can be written as 
 $$
 G^\dagger\Big(\h_{\C'}\big(A,F(\ )\big)\Big)(B)\simeq
@@ -3084,13 +3084,13 @@ $$
 (x,u'\circ\p(s))\sim(\beta(s)(x),u'). 
 $$ 
 \end{rk} 
-% 
-\section{\pr\ 3.4.3 (i) (p.~88)} %%%%%%%%%%%%%%%%%%%%%%%%%% 
+%
+\section{\pr\ 3.4.3 (i) (p.~88)} %%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 This section is divided into two parts. In Part 1 we give a proof of \pr\ 3.4.3 (i) which is slightly different from the one in the book. In Part 2 we derive from \pr\ 3.4.3 (i) another proof of \eqref{coco} p.~\pageref{coco}. 
 %
 \subsection{Part 1} 
-% 
+%
 The statement is phrased as follows: 
 
 ``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\co\alpha\simeq\co_{j\in J}\co_{i\in I_{\psi(j)}}\alpha(i,j,\p(i)\to\psi(j))$.'' 
@@ -3110,35 +3110,35 @@ $$
 is a functor by Lemma \ref{r52} p.~\pageref{r52}. 
 
 The isomorphism 
-% 
+%
 \be\label{coco2}
 \co\alpha\simeq\co_j\ \co_{i,u}\alpha(i,j,u),
 \ee 
-% 
+%
 where $(i,u)$ runs over $I_{\psi(j)}$, with $u:\p(i)\to\psi(j)$, will result from 
-% 
+%
 \begin{prop}
-% 
+%
 Assume $I,J$, and $K$ are small categories, and $\beta:M^{\op}\to\textbf{\em Set}$ is a functor. Then 
 $$
 j\mapsto\lim_{(i,u)\in I_{\psi(j)}}\beta(i,j,u)
 $$ 
 is a functor from $J^{\op}$ to $\textbf{\em Set}$, and we have  
-% 
+%
 \be\label{lili} 
 \lim\beta=\lim_j\ \lim_{(i,u)\in I_{\psi(j)}}\beta(i,j,u) 
 \ee 
-% 
+%
 as an equality between subsets of the product $P$ of the $\beta(i,j,u)$. 
-% 
+%
 \end{prop} 
 %
 \n{\em Proof.} The first claim follows from Lemma~\ref{r52} p.~\pageref{r52}. To prove the second claim, let $L$ and $R$ denote respectively the left and right-hand side of \eqref{lili}, let $x=(x(i,j,u))$ be in $P$, and let us denote generic morphisms in $I$ and $J$ by $v:i\to i'$ and $w:j\to j'$. Then $x$ is in $L$ if and only if 
-% 
+%
 \be\label{fe} 
 (v,w)\in\h_M((i,j,u),(i',j',u'))\implies x(i,j,u)=\beta(v,w)(x(i',j',u',)), 
 \ee 
-% 
+%
 whereas $x$ is in $R$ if and only if \eqref{fe} holds when $v$ or $w$ is an identity morphism, so that the equality $L=R$ follows from the fact that any morphism 
 $$
 (v,w):(i,j,u)\to(i',j',u')
@@ -3146,14 +3146,14 @@ $$
 in $M$ satisfies $(v,w)=(v,j')\circ(i,w)$. q.e.d. 
 
 In view of Theorem 3.1.6 p.~74 of the book, isomorphism \eqref{coco2} p.~\pageref{coco2} implies 
-% 
+%
 \begin{prop}\label{cocop} 
 If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.  
 \end{prop}  
-% 
-% 
+%
+%
 \subsection{Part 2}\label{2111} 
-% 
+%
 Here is another proof of \eqref{coco} p.~\pageref{coco}: In the above setting, let us assume 
 $$
 K=J,\quad\psi=\id_J,
@@ -3171,11 +3171,11 @@ or, in other words, that
 \be\label{coco3} 
 \text{the projection $M\to I$ is cofinal.} 
 \ee 
-% 
+%
 If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\p(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\p(i_0)\xr\id\p(i_0))$ is an initial object of $M^{i_0}$, and \eqref{coco3} follows. 
-% 
+%
 \section{Beginning of Section 5.1 (p.~113)} %%%%%%%%%%%%%%
-% 
+%
 We want to define the notions of coimage (denoted by $\Coim$) and image (denoted by $\Ima$) in a slightly more general way than in the book. To this end we start by defining these notions in a particular context in which they coincide. To avoid confusions we (temporarily) use the notation $\IM$ for these particular cases. The proof of the following lemma is obvious. 
 %
 \begin{lem}\label{imset} 
@@ -3213,25 +3213,25 @@ $$
 (\Ima f)(Z)\simeq\Ker\Big(\h_\C(Z,Y)\pa\h_{\C^\vee}\big(\ky(Z),\ky(Y)\sqcup_{\ky(X)}\ky(Y)\big)\Big). 
 $$ 
 This implies 
-% 
+%
 \begin{prop}\label{coimim}
 If $P:=X\times_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\pa X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\pa S)\in\C^\wedge$. 
 \end{prop} 
-%  
+% 
 
 In view of Lemma \ref{imset} and \pr\ \ref{coimim} we can replace the notation $\IM$ with $\Ima$ (or $\Coim$). The proof of the following proposition is obvious. 
-% 
+%
 \begin{prop}\label{fun}
 We have: 
 
 $f\mapsto\Ima\hy(f)$ and $\Ima$ are functors from $\Mor(\C)$ to $\C^\wedge$, 
 
 $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$. 
-% 
+%
 \end{prop} 
 %
 \section{Theorem 5.3.6 (p.~124)} %%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem:\bigskip
 
 \centerline *
@@ -3292,7 +3292,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 \Hom_\C(X,Y)&\simeq\Hom_\C\left(\coli_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
 %
 &\simeq\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
-% 
+%
 &\simeq\lim_{A\in I}\Hom_{\F^\wedge}\Big(\Coim\p\xi(A),\p(Y)\Big)&\text{by Step 4}\\ \\ 
 %
 &\simeq\Hom_{\F^\wedge}\left(\coli_{A\in I}\Coim\p\xi(A),\p(Y)\right)\\ \\ 
@@ -3364,7 +3364,7 @@ The following point is implicit in the book, and we give additional details for 
 \bp 
 Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural functors. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
 \ep 
-% 
+%
 \pf The proof is essentially the same that that of Proposition 2.7.1 on p.~62 of the book. (See also the comment containing Display~(\ref{271b}) p.~\pageref{271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
 
 Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y\in\A$. To apply Observation (\ref{2.1.10}) p.~\pageref{2.1.10} to the diagram 
@@ -3399,18 +3399,18 @@ $$
 q.e.d. 
 
 One more comment about \pr\ 6.1.9: I think the authors intended to write 
-% 
+%
 \begin{equation}\label{133ii}
 ``\colim"(IF\circ\alpha)\xrightarrow\sim IF(``\colim"\circ\alpha)
 \end{equation} 
-% 
+%
 instead of 
 $$
 IF(``\colim"\circ\alpha)\xrightarrow\sim``\colim"(IF\circ\alpha). 
 $$ 
 
 Let us record Part (i) of the \pr\ as 
-% 
+%
 \begin{equation}\label{133i}
 IF\circ\iota_\C\simeq\iota_{\C'}\circ F, 
 \end{equation} 
@@ -3421,7 +3421,7 @@ and recall that we have, in the setting of Corollary 6.3.2 p.~140,
 (JF)(``\coli"\ \alpha)\simeq\coli\ F\circ\alpha.
 \end{equation} 
 %
-% 
+%
 \section{\pr\ 6.1.12 (p.~134)} %%%%%%%%%%%%%%%%%%%%%%%%
 %
 We give some more details about the proof. Recall the setting: 
@@ -3498,7 +3498,7 @@ $$
 Let $b_i(y):\h_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection (see Definition \ref{c} p.~\pageref{c}). The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\h_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made to define it. 
 %
 \section{Theorem 6.4.3 (p.~144)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 Notational convention for this section (and for this section only): Superscripts will never be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only one category of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will considered in this section. As a lot of subscripts will be used, we shall denote this category by 
 %
 \be\label{slice}
@@ -3738,7 +3738,7 @@ K_f\ar[tail]{rr}{h}&&X\ar{rr}{f}\ar[two heads]{dl}\ar[two heads]{dr}&&Y\ar[two h
 $$ 
 Then the bottom arrows are isomorphisms.
 \ep
-% 
+%
 Going back to our complex $X'\overset{f}{\to}X\overset{g}{\to}X''$, let us introduce the notation 
 $$
 \begin{tikzcd}
@@ -4013,7 +4013,7 @@ Let $(\A,T)$ be an abelian category with translation.
 \begin{lem}\label{sl2}
 If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively  $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively  $T^nX\to YT^n$) is a qis for all $n$. (See Theorem 12.2.4 p.~301.)
 \end{lem}
-% 
+%
 \n{\em Proof.} Apply Lemma \ref{sl1} to the diagram 
 $$
 \begin{tikzcd}
