@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ajj)
+% about "categories and sheaves" (version ajk)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -67,7 +67,7 @@
 \newcommand{\bp}{\begin{prop}}
 \newcommand{\ep}{\end{prop}}
 \newcommand{\cd}{commutative diagram}
-\newcommand{\ccd}{the comment containing Display}
+%\newcommand{\ccd}{the comment containing Display}
 \newcommand{\nm}{natural morphism}
 \newcommand{\pr}{Proposition}
 \newcommand{\sts}{t suffices to show}
@@ -226,7 +226,7 @@ There is a similar remark for projective limits.
 
 \n P.~33, Exercise 1.19: the arrow from $L_1\circ R_1\circ L_2$ to $L_1$ should be $\eta_1\circ L_2$ instead of $\varepsilon_1\circ L_2$. 
 
-\n Pp 36-43, Section 2.1. Let $\alpha:I\to\C,\beta:I^{\op}\to\C$ be as in the book. Then the graphs (see \S~\ref{cou} p.~\pageref{cou}) of $\coli\alpha\in\C^\vee$ and $\lim\beta\in\C^\wedge$, and the condition that these functors are representable, depend only on the graphs of $\alpha$ and $\beta$. 
+\n Pp 36-43, Section 2.1. Let $\alpha:I\to\C,\beta:I^{\op}\to\C$ be as in the book. Then the graphs (see \S\ref{cou} p.~\pageref{cou}) of $\coli\alpha\in\C^\vee$ and $\lim\beta\in\C^\wedge$, and the condition that these functors are representable, depend only on the graphs of $\alpha$ and $\beta$. 
 
 \n P.~37, Remark 2.1.5: ``Let $I$ be a small set'' should be ``Let $I$ be a small category''.  
 
@@ -438,16 +438,18 @@ $\bu$ $Q(u)$ should be $Q(u')$.
 \n P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$. 
 
 \n P. 401, line 6: $B''\to B$ should be $B''\to B'$.
-
-\n P. 406. I don't understand the isomorphism 
-\be\label{406}
+%
+\bc\label{c406}
+P. 406. I don't understand the isomorphism 
+$$
 \left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A^\wedge}\h_{(\C_Y)^\wedge}(f^t(V),U).
-\ee 
+$$ 
 I would have written 
 $$
 \left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A}\h_{\C_X}(U,f^t(V)).
 $$
-
+\ec
+%
 \n P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''.
 
 \n P. 426, line 5: ``morphism of sites by'' should be ``morphism of sites''.
@@ -580,7 +582,7 @@ For each $i$ in $I$ the morphism $u_i:\alpha(i)\to X$ is called the $i$-{\em cop
 %
 %%
 %
-\bc 
+\bc\label{c38}
 P.~38, \pr\ 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\co\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\co\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly:\medskip 
 
 \centerline{\href{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}}
@@ -850,7 +852,7 @@ P.~61, \pr\ 2.6.3 (i). Let $\C$ be a category and $A$ be in $\C^\wedge$. Conside
 \h_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{X\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
 \end{equation} 
 
-\n\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263}, and the proof of \eqref{263b} is straightforward. (See the comment containing Display \eqref{38} p.~\pageref{38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263}.)
+\n\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263}.)
 \ec
 %
 %%
@@ -918,16 +920,14 @@ It suffices to set $A(X):=\h_{\C'}(F(X),X')$.
 %
 %%
 %
-\bc 
+\bc\label{c271b}
 P.~62, \pr\ 2.7.1. Consider the diagram 
-%
-\begin{equation}\label{271b}
+$$
 \begin{tikzcd}
 \C\ar{r}{\hy_\C}\ar{dr}[swap]{F}&\C^\wedge\ar{d}{\widetilde F}&I\ar{l}[swap]{\alpha}\\
 &\A,
 \end{tikzcd}
-\end{equation} 
-%
+$$
 where $I$ is a small category and $\widetilde F$ is defined by 
 $$
 \widetilde F(A):=\coli_{X\in\C_A}F(X). 
@@ -1766,7 +1766,7 @@ are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\opl
 %
 %%
 %
-\bc 
+\bc\label{c176a}
 P.~176, Proposition 8.3.4. Here is a slightly different way of writing the proof of the isomorphism $\Coim f\simeq\Coker h$. Recall the statement: 
 %
 \bp 
@@ -2040,7 +2040,7 @@ $$
 %%
 %
 \bc 
-P.~220, proof of Corollary 9.2.11: Use \S~\ref{922}.
+P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 \ec
 %
 %%
@@ -2366,7 +2366,7 @@ $$
 %%
 %
 \bc 
-P. 350, proof of Theorem 14.1.7. See \S~\ref{t955} p.~\pageref{t955}.
+P. 350, proof of Theorem 14.1.7. See \S\ref{t955} p.~\pageref{t955}.
 \ec
 %
 %%
@@ -2376,7 +2376,7 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements.
 
 \n(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
 
-\n(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S~\ref{732} p.~\pageref{732}.)
+\n(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S\ref{732} p.~\pageref{732}.)
 \ec
 %
 %%
@@ -2506,7 +2506,7 @@ in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen 
 $$
 \big((f^t)\ \widehat{}A\big)(U)\simeq\co_{(U\to f^t(V))\in(\C_Y)^U}A(V)
 $$
-follows from \eqref{275} p.~\pageref{275}. (See the comment containing Display \eqref{406} p.~\pageref{406}.) Secondly, for the sake of emphasis, we state: 
+follows from \eqref{275} p.~\pageref{275}. (See \S\ref{c406} p.~\pageref{c406}.) Secondly, for the sake of emphasis, we state: 
 %
 \begin{prop}\label{p406}
 The functor $(f^t)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
@@ -3365,7 +3365,7 @@ The following point is implicit in the book, and we give additional details for 
 Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural functors. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
 \ep 
 %
-\pf The proof is essentially the same that that of Proposition 2.7.1 on p.~62 of the book. (See also the comment containing Display~(\ref{271b}) p.~\pageref{271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
+\pf The proof is essentially the same that that of Proposition 2.7.1 on p.~62 of the book. (See also \S\ref{c271b} p.~\pageref{c271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
 
 Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y\in\A$. To apply Observation (\ref{2.1.10}) p.~\pageref{2.1.10} to the diagram 
 $$
@@ -3756,7 +3756,7 @@ $$
 C_{\p\circ a}\ar{r}{k}[swap]{\sim}&C_\p\ar{r}{\ell}[swap]{\sim}&C_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
 \end{tikzcd}
 $$
-This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. As observed in \ccd\ \eqref{176a} p.~\pageref{176a}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $C_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
+This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. As observed in \S\ref{c176a} p.~\pageref{c176a}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $C_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
