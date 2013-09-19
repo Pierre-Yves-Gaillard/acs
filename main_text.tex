@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ajl)
+% about "categories and sheaves" (version ajm)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -4101,6 +4101,8 @@ $$
 
 \n P. 442, line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$.
 
+\n Pp 447-8, proof of Lemma 18.5.3: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.
+
 \n P. 494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
 %
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4150,6 +4152,117 @@ P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.
 
 There are analog observations for the other statements of Section 14.4.
 \ec
+%
+\subsection{Proof of Lemma 18.5.3 (p. 447)}
+%
+The only purpose of the following rewriting is to give additional details to help the reader. We start with a technical lemma.
+
+Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let $(a_i)_{i=1}^\ell$, $(b_i)_{i=1}^\ell$, and $(b'_j)_{j=1}^m$ be tuples in $A$, $B$ and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let $a:S^\ell\to A$, $b:R^\ell\to B$, and $b':R^m\to B$ be defined by 
+$$
+a(\nu)=\sum_{i=1}^\ell\ a_i\,\nu_i,\quad b(\nu)=\sum_{i=1}^n\ \nu_i\,b_i,\quad b'(\mu)=\sum_{j=1}^m\ \mu_j\,b'_j;
+$$ 
+let $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ be a family of elements of $R$; and let $\lambda^*:R^\ell\to R^m$ and $\lambda:S^m\to S^\ell$ be defined by 
+$$
+\lambda^*(\nu)_j=\sum_{i=1}^\ell\ \nu_i\,\lambda_{ij},\quad
+\lambda(\mu)_i=\sum_{j=1}^m\ \lambda_{ij}\,\mu_j.
+$$
+%
+\begin{lem}\label{techlem}
+Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^\ell$ as above, we have $\sum_{i=1}^n\ a_i\otimes b_i=0$ in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families $(a_i)_{i=n+1}^\ell$, $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above in such a way that we have $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
+\end{lem}
+%
+
+Before proving the lemma we make a few simple remarks. The equalities $b'\circ\lambda=b$ and $a\circ\lambda=0$ can be expressed by the formulas
+$$
+\sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),\quad
+\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m)
+$$
+or by the commutative diagrams
+$$
+\begin{tikzcd}
+R^\ell\ar{r}{\lambda^*}\ar{rd}[swap]{b}&R^m\ar{d}{b'}&
+S^m\ar{r}{\lambda}\ar{rd}[swap]{0}&S^\ell\ar{d}{a}
+\\ 
+{}&B&{}&A.
+\end{tikzcd}
+$$ 
+The situation can be summarized by the following commutative diagram of complexes which resembles Diagram (18.5.3) p. 447 of the book:
+$$
+\begin{tikzcd}
+{}&S^m\ar{d}{\lambda}\\ 
+S^n\ar[hook]{r}\ar{d}&S^\ell\ar{d}{a}\\ 
+A\ar[equal]{r}&A.
+\end{tikzcd}
+$$ 
+On applying $-\otimes_RB$ we get 
+$$
+\begin{tikzcd}
+{}&B^m\ar{d}{\lambda}\\ 
+B^n\ar[hook]{r}\ar{d}&B^\ell\ar{d}{a}\\ 
+A\otimes_RB\ar[equal]{r}&A\otimes_RB
+\end{tikzcd}
+$$ 
+(we keep the notation $\lambda$ and $a$), and ``elementwise'':
+\be\label{eltwise}
+\begin{tikzcd}
+{}&(b'_j)_{j=1}^m\ar[mapsto]{d}{\lambda}\\ 
+(b_i)_{i=1}^n\ar[mapsto]{r}\ar[mapsto]{d}&(b_i)_{i=1}^\ell\ar[mapsto]{d}{a}\\ 
+0\ar[equal]{r}&0.
+\end{tikzcd}
+\ee
+{\em Proof.} The {\em if} \ part is obvious. To prove the {\em only if} \ part, we assume $\sum_{i=1}^n\ a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
+$$
+C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
+$$ 
+Put $b_i:=0$ for $i\in I\setminus\{1,\dots,\ell\}$. Then the family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that our integer $\ell\ge n$ can be chosen so that there exist families $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above such that 
+$$
+b_i=\sum_{j=1}^m\ \lambda_{ij}\,b'_j
+$$ 
+for $1\le i\le\ell$. q.e.d.
+
+Let us go back to the proof of Lemma 18.5.3 p. 447.
+
+[As already pointed out, there two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
+
+Let us change nothing up to the sentence ``Let $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$'' (line~6 of the proof). So, we have an element $s$ in the kernel of  
+$$
+\p_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
+$$ 
+and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ and $a_i:=\p_1(a_i)$. Let
+%
+\be\label{d447}
+\begin{tikzcd}
+{}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
+\cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}{q}\\ 
+M'(U)\ar{r}[swap]{\p}&M(U)
+\end{tikzcd}
+\ee
+%
+be the commutative diagram of complexes given by Lemma \ref{techlem}, $\p$ being a monomorphism. Diagram \eqref{d447} induces
+$$
+\begin{tikzcd}
+{}&P(U)^m\ar{d}{g_1}\\ 
+P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
+M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\p_1}&M(U)\otimes_{\cc R(U)}P(U).
+\end{tikzcd}
+$$ 
+By Lemma \ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise}). Diagram \eqref{d447} also induces
+$$
+\begin{tikzcd}
+N\ar{r}\ar{d}&(\cc R^{\op}|_U)^m\ar{d}{g_2}\\ 
+(\cc R^{\op}|_U)^n\ar{r}{h_2}\ar{d}[swap]{f_2}&(\cc R^{\op}|_U)^\ell\ar{d}{q_2}\\ 
+M'|_U\ar{r}[swap]{\p_2}&M|_U,
+\end{tikzcd}
+$$ 
+the top square being cartesian. This is a commutative diagram of complexes, and the bottom row is exact. We get yet another commutative diagram of complexes:
+$$
+\begin{tikzcd}
+(N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{r_1}&P(U)^m\ar{d}{g_1}\\ 
+P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
+M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\p_1}&M(U)\otimes_{\cc R(U)}P(U).
+\end{tikzcd}
+$$ 
+As explained in the book, there is a $t$ in $(N\otimes_{\cc R|_U}P|_U)(U)$ such that $r_1(t)=(b_i)$. This implies $s=f_1((b_i))=f_1(r_1(t))=0$, as required. q.e.d.
 %
 %\section{Future Next Additions} %%%%%%%%%%%%%%%%%%%%%%%%%%
 %
