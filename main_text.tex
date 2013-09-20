@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ajm)
+% about "categories and sheaves" (version ajn)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -25,7 +25,7 @@
 \theoremstyle{definition}
 \newtheorem{cm}[thm]{\S}
 %\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
-\hyphenation{Grothen-dieck}
+\hyphenation{Grothen-dieck mono-mor-phism}
 \newcommand{\bc}{\begin{cm}}\newcommand{\ec}{\end{cm}}
 \newcommand{\bu}{\bullet}
 \newcommand{\n}{\noindent}
@@ -2503,6 +2503,12 @@ in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen 
 %
 %%
 %
+\bc\label{revol}
+In this text we adopt the following convention: If $f:X\to Y$ is a morphism of presites, then $f^t$ denotes the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$.
+\ec
+%
+%%
+%
 \bc P. 406, Notation 17.1.2 (ii). Firstly note that the isomorphism 
 $$
 \big((f^t)\ \widehat{}A\big)(U)\simeq\co_{(U\to f^t(V))\in(\C_Y)^U}A(V)
@@ -2516,7 +2522,11 @@ The functor $(f^t)\ \widehat{}$ commutes with small inductive limits (Propositio
 %
 %%
 %
-\bc P. 407. Instead of:
+\bc\label{revol2} P. 407. Thanks to the convention in \S\ref{revol}, Formula (17.1.3) follows from (2.3.6) p.~52 of the book. 
+%
+\begin{comment}
+
+Instead of:
 
 One has the functors 
 $$
@@ -2545,8 +2555,10 @@ We write for short
 $$
 f_*:=f^{t\op}{}_*,\quad f^\dagger:=f^{t\op}{}^\dagger,\quad f^\ddagger:=f^{t\op}{}^\ddagger.
 $$
-
-In particular Theorem 3.3.18 (b) p.~86 implies 
+%
+\end{comment}
+%
+Also note that Theorem 3.3.18 (b) p.~86 implies 
 %
 \begin{prop}\label{407}
 Assume that $\A$ satisfies the same conditions as the category $\C$ of Theorem 3.3.18 (b). If $f$ is left exact, then $f^\dagger$ is exact. If $f$ is right exact, then $f^\ddagger$ is exact. 
@@ -4103,6 +4115,10 @@ $$
 
 \n Pp 447-8, proof of Lemma 18.5.3: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.
 
+\n P. 448, Proposition 18.5.4, line 3 of the proof: $G^{\oplus I}\epi M$ should be $\cc G^{\oplus I}\epi M$.
+
+\n P. 452, Part (i) (a) of the proof of Lemma 18.6.7. I think that $\cc O_U$ and $\cc O_V$ stand for $\cc O_X|_U$ and $\cc O_Y|_V$. (If this is so, it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$.) Also, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$.
+
 \n P. 494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
 %
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4151,6 +4167,17 @@ P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.
 \n(c) In Lemma 14.4.2 p. 359, replace ``full triangulated'' with ``full saturated triangulated'', and ``closed by small direct sums'' with ``closed by direct sums (in the sense of the above definition)''. 
 
 There are analog observations for the other statements of Section 14.4.
+\ec
+%
+%%
+%
+\bc
+P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
+
+Also, one may refer to \S\ref{revol} p.~\pageref{revol} and \S\ref{revol2} p.~\pageref{revol2} to describe the morphism of sites $f_W:W\to V$. More precisely, to define $f_W$ it is simpler to view the morphism $W\to f^t(V)$ in $\C_X$ as a morphism $f^t(V)\to W$ in $(\C_X)^{\op}$. Indeed, if we adhere to \S\ref{revol}, $f_W^t$ must be a functor from $((\C_Y)_V)^{\op}$ to $((\C_X)_W)^{\op}$, and we can define it by 
+$$
+f_W^t(V'\to V):=(f_W^t(V')\to f_W^t(V)\to W).
+$$
 \ec
 %
 \subsection{Proof of Lemma 18.5.3 (p. 447)}
