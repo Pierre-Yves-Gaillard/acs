@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ajr)
+% about "categories and sheaves" (version ajs)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -227,7 +227,7 @@ There is a similar remark for projective limits.
 
 \n P.~33, Exercise 1.19: the arrow from $L_1\circ R_1\circ L_2$ to $L_1$ should be $\eta_1\circ L_2$ instead of $\varepsilon_1\circ L_2$. 
 
-%\n Pp 36-43, Section 2.1. Let $\alpha:I\to\C,\beta:I^{\op}\to\C$ be as in the book. Then the graphs (see \S\ref{cou} p.~\pageref{cou}) of $\coli\alpha\in\C^\vee$ and $\lim\beta\in\C^\wedge$, and the condition that these functors are representable, depend only on the graphs of $\alpha$ and $\beta$.???
+%\n Pp 36-43, Section 2.1. Let $\alpha:I\to\C,\beta:I^{\op}\to\C$ be as in the book. Then the graphs (see \S\ref{cou} p.~\pageref{cou}) of $\coli\alpha\in\C^\vee$ and $\lim\beta\in\C^\wedge$, and the condition that these functors are representable, depend only on the graphs of $\alpha$ and $\beta$.
 
 \n P.~37, Remark 2.1.5: ``Let $I$ be a small set'' should be ``Let $I$ be a small category''.  
 
@@ -243,7 +243,7 @@ There is a similar remark for projective limits.
 
 %\n P.~56, Corollary 2.4.6. It would be better, I think, to write the right-hand side of (2.4.1) as $$\lim_{\substack{\longrightarrow\\ (A\to F(X))\in(\C^A)^{\op}}}\h_{\C'}(G(X),B)$$ instead of $$\lim_{\substack{\longrightarrow\\ (A\to F(X))\in\C^A}}\h_{\C'}(G(X),B).$$
 
-\n P.~58: The abbreviation $j\in J^i$ for $(i\to\varphi(j))\in J^i$ is used for the first time. This abbreviation is used a lot throughout the book (and will be systematically used in this text: see \eqref{convnot} p.~\pageref{convnot}). Of course, it is easy for the reader to guess the meaning of this notation, but it might be nice to add a couple of words explaining it. 
+%\n P.~58: The abbreviation $j\in J^i$ for $(i\to\varphi(j))\in J^i$ is used for the first time. This abbreviation is used a lot throughout the book (and will be systematically used in this text: see \eqref{convnot} p.~\pageref{convnot}). Of course, it is easy for the reader to guess the meaning of this notation, but it might be nice to add a couple of words explaining it. 
 
 \n P.~58: Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the universes axiom.) 
 
@@ -267,35 +267,37 @@ L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b).
 $$ 
 Then $(L,R)$ is a pair of adjoint functors. 
 
-\n P.~74, last four lines: $\alpha$ should be replaced by $\varphi$. 
+\n P.~74, last four lines: $\alpha$ should be replaced with $\varphi$. 
 
 \n P.~80, last display: a ``$\displaystyle\colim$'' is missing.
 
-\n Pp 83 and 85: Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced by $R$. (The statement (I think) applies to rings, not only to fields.) Proof of Proposition 3.3.7(iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, line 6. 
+\n Pp 83 and 85: Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. %(The statement (I think) applies to rings, not only to fields.) 
+Proof of Proposition 3.3.7(iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, line 6. 
 
-\n P.~84, Proposition 3.3.13. It is clear from the proof (I think) that the intended statement was the following one. If $\C$ is a category admitting finite inductive limits and if $A:\C^{\op}\to\Set$ is a functor, then we have 
+\n P.~84, Proposition 3.3.13. It is clear from the proof (I think) that the intended statement was the following one: If $\C$ is a category admitting finite inductive limits and if $A:\C^{\op}\to\Set$ is a functor, then we have 
 $$
 \C\text{ small and }\C_A\text{ filtrant }\implies A\text{ left exact }\implies\C_A\text{ filtrant}.
 $$
 
-\n P.~85, proof of Proposition 3.3.13, proof of the implication ``$\C_A$ filtrant $\implies$ $A$ commutes with finite projective limits''. One can either use Corollary \ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.) 
+\n P.~85, proof of Proposition 3.3.13, proof of the implication ``$\C_A$ filtrant $\implies$ $A$ commutes with finite projective limits''. One can either use Corollary \ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
 
-\n P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits. 
+\n P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
 
 \n P.~89, last sentence of the proof of Proposition 3.4.4. The argument is slightly easier to follow if $\psi'$ is factorized as 
 $$
 (J_1)^{j_2}\to(J_1)^{\psi_2(j_2)}\to(K_1)^{\psi_2(j_2)}\to(K_1)^{\p_2(i_2)}.
 $$ 
+Then $(J_1)^{j_2}\to(J_1)$, $(J_1)^{\psi_2(j_2)}\to(K_1)^{\psi_2(j_2)}$, and $(K_1)^{\psi_2(j_2)}\to(K_1)^{\p_2(i_2)}$ are respectively cofinal by Parts (ii), (iii), and (iv) of Proposition 3.2.5 p.~79 of the book.
 
 \n P.~90, Exercise 3.2: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''.
 
-\n P.~115, just before the ``q.e.d.'': $i_1\circ g=i_2\circ g$ should be $g\circ i_1=g\circ i_2$. 
+\n P.~115, just before the ``q.e.d.'': $i_1\circ g=i_2\circ g$ should be $g\circ i_1=g\circ i_2$.
 
-\n P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to $(u,u_0)\in F(X)\times_{F(X_1)}F(Z_0)$ under the natural bijection. 
+\n P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to $(u,u_0)\in F(X)\times_{F(X_1)}F(Z_0)$ under the natural bijection.
 
-\n P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118, only part (iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book. 
+\n P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118, only part (iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book.
 
-\n P.~128, proof of Theorem 5.3.9. Last display: $\sqcup$ should be $\cup$. The simplest in fact would be to put 
+\n P.~128, proof of Theorem 5.3.9. Last display: $\sqcup$ should be $\cup$. It would be simpler in fact to put 
 $$
 \Ob(\F_n):=\{Y_1\sqcup_XY_2\ |\ X\to Y_1\text{ and }X\to Y_2\text{ are morphisms in }\F_{n-1}\}.
 $$ 
