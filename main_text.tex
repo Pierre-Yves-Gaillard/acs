@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ajo)
+% about "categories and sheaves" (version ajp)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -175,7 +175,7 @@ Thank you to Pierre Schapira for his interest!%%%%%%%%%%%%%%%%%%%%
 %
 \section{U-categories and U-small Categories}\label{ucat}
 %
-Here are a few comments about the definition of a $\U$-category on p.~11. Let $\U$ be a universe. Say that an element of $\U$ is a $\U$-set. The following definitions are used in the book: 
+Here are a few comments about the definition of a $\U$-category on p.~11. Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set. The following definitions are used in the book: 
 %
 \begin{df} 
 A $\U$-category is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set. 
@@ -203,7 +203,7 @@ Note that a category $\C$ is a $\U$-category in the sense of Definition 1 if and
 %
 P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
 
-\n P.~14, definition of $\text{Mor}(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\text{Mor}(\C)$ as a category of functors. 
+\n P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \ref{d125} p.~\pageref{d125}.
 
 %%
 
@@ -497,6 +497,8 @@ $$
 \Ob(\A)\to\Ob(\B),\quad\Ob(\Mor(\A))\to\Ob(\Mor(\B))
 $$ 
 satisfying certain conditions.
+
+When $\C$ is a small category (see Section \ref{ucat} p. \pageref{ucat}), we assume that the hom-sets of $\C$ are disjoint.
 \ec
 %
 %%
