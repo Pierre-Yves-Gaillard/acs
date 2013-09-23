@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ajy)
+% about "categories and sheaves" (version ajz)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -1753,10 +1753,10 @@ P. 177, Definition 8.3.5. The following definitions and observations are implici
 %
 %%
 %
-\bc 
+\bc\label{8312}
 P. 180, Lemma 8.3.12. We also have:
 
-A given complex $X'\to X\to X''$ in some abelian category is exact if and only if the condition below holds:
+The complex $X'\to X\to X''$ is exact if and only if the condition below holds:
 
 Any commutative diagram of solid arrows
 $$
@@ -2250,7 +2250,7 @@ Theorem 13.4.1 implies that the answer is yes if $\C$ is a Grothendieck category
 %%
 %
 \bc 
-P. 342, Exercise 13.15. Here is a partial solution. Let $\C$ be an abelian category. We begin with a lemma:
+P. 342, Exercise 13.15. Here is a partial solution. Let $\C$ be an abelian category. Using \S\ref{8312} p.~\pageref{8312} one easily proves:
 
 \begin{lem}\label{738}
 Let $Z\to Y\to X\to W\to0$ be an exact sequence in $\C$, let $Y\to V$ be a morphism, let $U$ be the fiber coproduct $V\oplus_YX$, and let $U\to W$ be the morphism which makes 
@@ -2262,8 +2262,6 @@ Z\ar{d}\ar{r}&Y\ar{d}\ar{r}&X\ar{d}\ar{r}&W\ar[equal]{d}\ar{r}&0\\
 $$ 
 a commutative diagram of complexes. Then the bottom row is exact.
 \end{lem}
-
-It is easy to prove the lemma using the Freyd-Mitchell Theorem (p.~238 of the book). Although it is not fully satisfactory, we shall be content with that argument. (In the sequel of this comment, we shall leave to the reader several statements to which the same remark applies.)
 
 Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences $0\to Y\to Z\to X\to0$, and let $\sim$ be the following equivalence relation on $E$: the exact sequences $0\to Y\to Z\to X\to0$ and $0\to Y\to W\to X\to0$ are equivalent if and only if there is a commutative diagram 
 $$
@@ -4056,6 +4054,8 @@ For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
 \subsection{Typos and Details} %%%%%%%%%%%%%%%%%%%%%%%%
 %
 \n P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
+
+\n P. 180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$.
 
 \begin{cm}\label{1341}
 P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and  ``right localizable'' should be ``universally right localizable, and let $\oo R\Hom_\C$ denote its right localization''.
