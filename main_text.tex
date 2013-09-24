@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aka)
+% about "categories and sheaves" (version akb)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -466,10 +466,7 @@ Let $\C$ be a category. Define the category $\Mor(\C)$ as follows. The objects o
 
 $\hfill\displaystyle\{(a,b)\in\h_\C(X,U)\times\h_\C(Y,V)\ | \ g\circ a=b\circ f\},$\bigskip 
 
-\n and the composition is defined by 
-$$
-(Z,g,Y)\circ(Y,f,X):=(Z,g\circ f,X).
-$$
+\n and the composition is defined in the obvious way.
 %
 \end{nota}
 %
@@ -492,20 +489,20 @@ When $\C$ is a small category (see Section \ref{ucat} p. \pageref{ucat}), we ass
 P.~24, the Yoneda Lemma. Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
-F(A)\ar[yshift=0.7ex]{r}{\phi}&\Hom_{\C^\wedge}(h(A),F)\ar[yshift=-0.7ex]{l}{\psi}
+F(A)\ar[yshift=0.7ex]{r}{\p}&\Hom_{\C^\wedge}(h(A),F)\ar[yshift=-0.7ex]{l}{\psi}
 \end{tikzcd}
 $$
 by 
 $$
-\phi(a)_X(f):=F(f)(a),\quad\psi(\theta):=\theta_A(\id_A)
+\p(a)_X(f):=F(f)(a),\quad\psi(\theta):=\theta_A(\id_A)
 $$
 for 
 $$
 a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(X,A),\quad\theta\in\Hom_{\C^\wedge}(h(A),F).
 $$ 
-Then $\phi$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
+Then $\p$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
 $$
-\phi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
+\p(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
 \ec
@@ -549,13 +546,13 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 %%
 %
 \bc 
-P.~36, Definition 2.1.2. Let $\alpha:I^{\op}\to\C$ be a functor, let $\Delta:\C\to\C^{I^{\op}}$ be the diagonal functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^{I^{\op}}}(\Delta(X),\alpha)$ be an $(\h_{\C^{I^{\op}}}(\Delta(-),\alpha),X)$-universal element (see Definition~\ref{ue}). 
+P.~36, Definition 2.1.2. Let $\alpha:I^{\op}\to\C$ be a functor, let $\Delta:\C\to\C^{I^{\op}}$ be the diagonal functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^{I^{\op}}}(\Delta(X),\alpha)$ be an $(\h_{\C^{I^{\op}}}(\Delta(-),\alpha),X)$-universal element (see Definition~\ref{ue} p.~\pageref{ue}). 
 %
 \begin{df}\label{p}
 For each $i$ in $I$ the morphism $u_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$.
 \end{df}
 
-Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^I}(\alpha,\Delta(X))$ be an $(\h_{\C^I}(\alpha,\Delta(-)),X)$-universal element (see Definition~\ref{ue2}). 
+Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $u\in\h_{\C^I}(\alpha,\Delta(X))$ be an $(\h_{\C^I}(\alpha,\Delta(-)),X)$-universal element (see Definition~\ref{ue2} p.~\pageref{ue2}). 
 %
 \begin{df}\label{c}
 For each $i$ in $I$ the morphism $u_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$.
@@ -711,7 +708,7 @@ where $\sim$ is the equivalence relation defined on p.~18 of the book. On the ot
 $$
 \coli\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
 $$
-where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we have 
+where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
 $$
 (i,s)\approx(j,t)\ \iff\ [i\sim j\text{ and }s=t].
 $$
