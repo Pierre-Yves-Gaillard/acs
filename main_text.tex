@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version akb)
+% about "categories and sheaves" (version akc)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -604,7 +604,7 @@ exists in $\C$. Then $\coli_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\r
 \bc 
 P.~40, Proposition 2.1.10. Here is a slightly more general statement. 
 %
-\bp 
+\bp\label{2.1.10}
 Let 
 $$
 \begin{tikzcd}
@@ -617,7 +617,7 @@ $$
 \Hom_\B(F(\ ),Y)\simeq\Hom_\C(G(\ ),Z). 
 $$
 Then 
-\begin{equation}\label{2.1.10}
+\begin{equation}
 F\text{ commutes with inductive limits indexed by }I.
 \end{equation}
 \ep
@@ -626,11 +626,11 @@ F\text{ commutes with inductive limits indexed by }I.
 $$ 
 \Hom_\B\left(F\left(\coli\alpha\right),Y\right)\simeq
 \Hom_\C\left(G\left(\coli\alpha\right),Z\right)
-\overset{\sim}{\to}
+\xr\sim
 \Hom_\C\left(\coli G(\alpha),Z\right)
 $$
 $$
-\overset{\sim}{\to}\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y).
+\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\co F(\alpha),Y).
 $$
 \ec
 %
@@ -3347,7 +3347,7 @@ Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to
 %
 \pf The proof is essentially the same that that of Proposition 2.7.1 on p.~62 of the book. (See also \S\ref{c271b} p.~\pageref{c271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
 
-Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y\in\A$. To apply Observation (\ref{2.1.10}) p.~\pageref{2.1.10} to the diagram 
+Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y\in\A$. To apply Proposition~\ref{2.1.10} p.~\pageref{2.1.10} to the diagram 
 $$
 \begin{tikzcd}
 I\ar{r}{\alpha}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
