@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ake)
+% about "categories and sheaves" (version akf)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -693,7 +693,7 @@ induce an isomorphism from the left-hand side of \eqref{coco} to the right-hand 
 P.~55, Corollary 2.4.4 (iii). Here is a slightly different proof. 
 %
 \bp\label{244}
-If $\Delta:\textbf{\em Set}\to\textbf{\em Set}^I$ is the diagonal functor, then there is a canonical bijection
+If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
 $$
 \coli\Delta(S)\simeq\pi_0(I)\times S.
 $$
@@ -1009,7 +1009,7 @@ by induction on the cardinal of $S$, and to see that this implies the claim.
 P.~74, Theorem 3.1.6. Here is a minor variant of part (i) of the proof of the implication (a)$\implies$(b).\smallskip 
 
 \begin{lem} 
-Let $\alpha$ and $\beta$ be functor from $I$ to $\textbf{\em Set}$ (where $I$ is a small category); let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
+Let $\alpha$ and $\beta$ be functor from $I$ to $\Set$ (where $I$ is a small category); let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
 $$
 a_i:\alpha(i)\to X:=\coli\alpha,\quad 
 b_i:\beta(i)\to Y:=\coli\beta,\quad 
@@ -1039,7 +1039,7 @@ One easily checks
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
 %
 \begin{cor}\label{316}
-Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\alpha:I\times J^{\op}\to\textbf{\em Set}$ a functor such that $\coli_i\alpha(i,j)$ exists in $\textbf{\em Set}$ for all $j$. Then $\coli_i\lim_j\alpha(i,j)$ exists in $\textbf{\em Set}$, and the natural map 
+Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\alpha:I\times J^{\op}\to\Set$ a functor such that $\coli_i\alpha(i,j)$ exists in $\Set$ for all $j$. Then $\coli_i\lim_j\alpha(i,j)$ exists in $\Set$, and the natural map 
 $$
 \coli_i\lim_j\alpha(i,j)\to
 \lim_j\coli_i\alpha(i,j)
@@ -1637,19 +1637,19 @@ P.~173. Propositions 8.2.12 and 8.2.13 can be stated as follows.
 %
 Let $\C$ be an additive category, let 
 $$
-\operatorname{Add}(\C,\Mod(\mathbb Z))\text{ and }\operatorname{Prod}(\C,\textbf{\em Set})
+\operatorname{Add}(\C,\Mod(\mathbb Z))\text{ and }\operatorname{Prod}(\C,\Set)
 $$ 
-be respectively the category of additive functors from $\C$ to $\Mod(\mathbb Z)$ and the category of finite products preserving functors from $\C$ to $\textbf{\em Set}$, and let $F$ be in $\operatorname{Prod}(\C,\textbf{\em Set})$. Then the composition 
+be respectively the category of additive functors from $\C$ to $\Mod(\mathbb Z)$ and the category of finite products preserving functors from $\C$ to $\Set$, and let $F$ be in $\operatorname{Prod}(\C,\Set)$. Then the composition 
 $$
 F(X)\times F(X)\xleftarrow\sim F(X\oplus X)\xr{\sigma_X}F(X)
 $$ 
 defines a structure of abelian group on $F(X)$. This construction defines a functor 
 $$
-\Phi:\operatorname{Prod}(\C,\textbf{\em Set})\to\operatorname{Add}(\C,\Mod(\mathbb Z)).
+\Phi:\operatorname{Prod}(\C,\Set)\to\operatorname{Add}(\C,\Mod(\mathbb Z)).
 $$ 
 Let 
 $$
-\Psi:\operatorname{Add}(\C,\Mod(\mathbb Z))\to\operatorname{Prod}(\C,\textbf{\em Set})
+\Psi:\operatorname{Add}(\C,\Mod(\mathbb Z))\to\operatorname{Prod}(\C,\Set)
 $$ 
 be the natural functor. Then $\Phi$ and $\Psi$ are inverse isomorphisms. 
 %
@@ -2910,9 +2910,9 @@ The proof in the book is divided into three Steps, called (a), (b), and (c).
 %
 We define $\p^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to show that $\p^\dagger(\beta)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
 %
-\begin{lem}\label{r52} 
+\begin{lem}\label{r52}
 %
-Let $I$ and $J$ be in the category $\textbf{\em Cat}$ of small categories, let $\Phi:I\to\textbf{\em Cat}$ be a functor, view $J$ as a constant functor from $I$ to $\textbf{\em Cat}$, and let $\theta:\Phi\to J$ be a functorial morphism. Assume 
+Let $I$ and $J$ be in the category $\Cat$ of small categories, let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a functorial morphism. Assume 
 %
 \be\label{52} 
 (\co\theta)(i):=\co(\theta_i)\in J\quad\forall\ i\in I. 
@@ -3098,11 +3098,11 @@ where $(i,u)$ runs over $I_{\psi(j)}$, with $u:\p(i)\to\psi(j)$, will result fro
 %
 \begin{prop}
 %
-Assume $I,J$, and $K$ are small categories, and $\beta:M^{\op}\to\textbf{\em Set}$ is a functor. Then 
+Assume $I,J$, and $K$ are small categories, and $\beta:M^{\op}\to\Set$ is a functor. Then 
 $$
 j\mapsto\lim_{(i,u)\in I_{\psi(j)}}\beta(i,j,u)
 $$ 
-is a functor from $J^{\op}$ to $\textbf{\em Set}$, and we have
+is a functor from $J^{\op}$ to $\Set$, and we have
 %
 \be\label{lili} 
 \lim\beta=\lim_j\ \lim_{(i,u)\in I_{\psi(j)}}\beta(i,j,u) 
