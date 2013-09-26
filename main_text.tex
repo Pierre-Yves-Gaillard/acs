@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aki)
+% about "categories and sheaves" (version akj)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -651,7 +651,7 @@ the first equality following from the fact that $\id_S=i_S$, and the second one 
 %%
 %
 \begin{s} 
-P.~43, end of Section~2.1. One could add the following observation: If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\text j_X$ the forgetful functor from $\C_X$ to $\C$, then we have 
+P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115b} p.~\pageref{17115b}: If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\text j_X$ the forgetful functor from $\C_X$ to $\C$, then we have 
 \begin{equation}\label{17115}
 \h_{\A^\C}(F,G)\simeq\lim_{X\in\C}\h_{\A^{\C_X}}(F\circ\text j_X,G\circ\text j_X).
 \end{equation}
@@ -669,9 +669,7 @@ P.~43, end of Section~2.1. One could add the following observation: If $\A$ and 
 \co_j\beta(j)\simeq\co_i\ \co_{j,u}\beta(j),
 \end{equation} 
 %
-where $(j,u)$ runs over $J_i$, with $u:\p(j)\to i$, as follows. 
-
-Let 
+where $(j,u)$ runs over $J_i$, with $u:\p(j)\to i$, as follows: Let 
 $$ 
 \beta(j)\xrightarrow{p_{i,j,u}}\co_{j,u}\beta(j)\xrightarrow{q_i}\co_i\ \co_{j,u}\beta(j)
 $$ 
@@ -761,7 +759,7 @@ $$
 $$
 \bigsqcup_{X\in\C}\ U(X)\times V(X) 
 $$ 
-by the smallest equivalence relation $\sim$ satisfying the following condition. If $X\xr fY$ is a morphism in $\C$, if $u$ is in $U(X)$, and if $v$ is in $V(Y)$, then 
+by the smallest equivalence relation $\sim$ satisfying the following condition. If $f:X\to Y$ is a morphism in $\C$, if $u$ is in $U(X)$, and if $v$ is in $V(Y)$, then 
 $$
 (u,V(f)(v))\sim(U(f)(u),v). 
 $$ 
@@ -803,7 +801,7 @@ c_j:\Hom_I(i,\p(j))\to L_i
 $$
 be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
 $$
-\Ob(J^i)\to L_i,\quad (j,i\overset{s}{\to}\p(j))\mapsto c_j(s)
+\Ob(J^i)\to L_i,\quad\left(j,i\overset{s}{\to}\p(j)\right)\mapsto c_j(s)
 $$
 factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is an inverse to (\ref{om}).
 \end{s}
@@ -834,19 +832,15 @@ P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and $A$ be in $\C^\wedge$. 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
 %
 \begin{lem} 
-Let $\alpha:I\to\A$ be a functor, let $A\in\A$ be the inductive limit of $\alpha$, let $\beta:I\to\A_A$ be the obvious functor, and let $a\in\A_A$ be the identity of $A$. Then the inductive limit of $\beta$ is $a$. 
+Let $\alpha:I\to\A$ be a functor, let $A\in\A$ be the inductive limit of $\alpha$, let $\alpha':I\to\A_A$ be the obvious functor, and let $a\in\A_A$ be the identity of $A$. Then the inductive limit of $\alpha'$ is $a$. 
 \end{lem} 
 %
-\n{\em Proof.} Notation: if $I$ and $\C$ are categories, write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
+\n{\em Proof.} Notation: if $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
 
-Let
-$$
-b=(b:B\to A)
-$$
-be a ``generic'' object of $\A_A$. We must check that there is a canonical bijection
+Let $b=(b:B\to A)$ be a ``generic'' object of $\A_A$. We must check that there is a canonical bijection
 %
 \begin{equation}\label{1}
-\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\beta,\Delta(b)).
+\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\alpha',\Delta(b)).
 \end{equation}
 %
 We have a canonical bijection
@@ -859,7 +853,7 @@ and inclusions
 $$
 \Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
 %
-\Hom_{(\A_A)^I}(\beta,\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
+\Hom_{(\A_A)^I}(\alpha',\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
 $$
 It is straightforward to check that (\ref{2}) induces (\ref{1}).
 \end{s}
@@ -2571,7 +2565,7 @@ and leave it to the reader to verify that $\p$ and $\psi$ are mutually inverse b
 %
 %%
 %
-\begin{s} 
+\begin{s}\label{17115b}
 P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 \end{s}
 %
@@ -3042,7 +3036,7 @@ that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism
 %
 \subsection{A Remark}\label{s236} %%
 %
-Remark~\ref{r236} below will give rise to another proof of Corollary 2.4.6 p.~56 (see Display~\eqref{p2} p.~\pageref{p2} and the lines following it). Recall that Corollary 2.4.6 states that the isomorphism \eqref{241} p.~\pageref{241} holds in Setting \eqref{241s} p.~\pageref{241s}, and that, if $\C\xleftarrow{\,\beta}J\xrightarrow{\p}I$ are functors, then $\p^\dagger(\beta):I\to\C$ is given by \eqref{236} p.\n~\pageref{236}. Then \eqref{241} p.~\pageref{241} can be written as 
+Remark~\ref{r236} below will give rise to another proof of Corollary 2.4.6 p.~56 (see Display~\eqref{p2} p.~\pageref{p2} and the lines following it). Recall that Corollary 2.4.6 states that the isomorphism \eqref{241} p.~\pageref{241} holds in Setting \eqref{241s} p.~\pageref{241s}, and that, if $\C\xleftarrow{\,\beta}J\xrightarrow{\p}I$ are functors, then $\p^\dagger(\beta):I\to\C$ is given by \eqref{236} p.\n~\pageref{236}. Isomorphism~\eqref{241} p.~\pageref{241} can be written as 
 $$
 G^\dagger\Big(\h_{\C'}\big(A,F(\ )\big)\Big)(B)\simeq
 (F^{\op})^\dagger\Big(\h_{\C''}\big(G(\ ),B\big)\Big)(A).
@@ -3053,7 +3047,7 @@ If $\C=\Set$ (and $I$ and $J$ are small), then $\p^\dagger(\beta)(i)$ is (in nat
 $$
 \bigsqcup_j\ \beta(j)\times\h_I(\p(j),i) 
 $$ 
-by the smallest equivalence relation $\sim$ satisfying the following condition. If $j\xr s j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\h_I(\p(j'),i)$, then 
+by the smallest equivalence relation $\sim$ satisfying the following condition. If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\h_I(\p(j'),i)$, then 
 $$
 (x,u'\circ\p(s))\sim(\beta(s)(x),u'). 
 $$ 
