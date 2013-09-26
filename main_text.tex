@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version akj)
+% about "categories and sheaves" (version akk)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -899,7 +899,7 @@ where $I$ is a small category and $\widetilde F$ is defined by
 $$
 \widetilde F(A):=\coli_{X\in\C_A}F(X). 
 $$
-\cn I'll rewrite the proof of the fact that the natural morphism 
+\cn Let us rewrite the proof of the fact that the natural morphism 
 %
 $$
 \coli\widetilde F(\alpha)\to
@@ -908,7 +908,7 @@ $$
 %
 is an isomorphism. 
 
-It suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
+By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
 G(X')(X):=\Hom_{\A}(F(X),X').
 $$ 
@@ -939,7 +939,7 @@ $$
 $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
-as well as the following facts. 
+as well as the two following remarks:
 
 \begin{rk}\label{cof}
 If $A'$ is in $\cc C'^\wedge$, then the natural functor $\p:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\p$ is cofinal, then $f$ is an isomorphism. 
@@ -961,7 +961,7 @@ the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \begin{s} 
 P.~64. It might be worth displaying the formula 
 \begin{equation}\label{275}
-(\widehat FA)(X')\simeq\co_{(X'\to F(X))\in\C^{X'}}A(X)
+\widehat F(A)(X')\simeq\co_{(X'\to F(X))\in\C^{X'}}A(X)
 \end{equation}
 contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
 \end{s}
@@ -971,9 +971,9 @@ contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functo
 \begin{s} 
 P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a category, if $A$ and $B$ are in $\C^\wedge$, if $B(X)=\{\text{pt}\}$ for all $X$ in $\C$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
 \begin{equation}\label{1725}
-(\widehat FB)(X)\simeq A(X).
+\widehat F(B)(X)\simeq A(X).
 \end{equation}
-Indeed, \eqref{275} implies $(\widehat FB)(X)\simeq\co\alpha_X$ where $\alpha_X:\C^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0(\C^X)$, and the isomorphism $\pi_0(\C^X)\simeq A(X)$ is easily checked.
+Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:\C^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0(\C^X)$, and the isomorphism $\pi_0(\C^X)\simeq A(X)$ is easily checked.
 \end{s}
 %
 %%
@@ -998,7 +998,7 @@ by induction on the cardinal of $S$, and to see that this implies the claim.
 P.~74, Theorem 3.1.6. Here is a minor variant of part (i) of the proof of the implication (a)$\implies$(b).\smallskip 
 
 \begin{lem} 
-Let $\alpha$ and $\beta$ be functor from $I$ to $\Set$ (where $I$ is a small category); let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
+Let $\alpha$ and $\beta$ be functors from $I$ to $\Set$ (where $I$ is a small category); let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
 $$
 a_i:\alpha(i)\to X:=\coli\alpha,\quad 
 b_i:\beta(i)\to Y:=\coli\beta,\quad 
@@ -1083,7 +1083,7 @@ P.~75. Throughout the subsection about the IPC Property, one can assume that $\A
 %%
 %
 \begin{s} 
-P.~78, Proposition 3.2.2. It is easy to see that Condition (iii) is equivalent to: 
+P.~78, Proposition 3.2.2. It is easy to see that Condition (iii) is equivalent to
 %
 \begin{equation}\label{78} 
 \co\ \h_I(i,\p)\simeq\pt\quad\text{for all }i\in I, 
@@ -1107,7 +1107,7 @@ Let $\p:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally sma
 %%
 %
 \begin{s} 
-P.~80, Lemma 3.2.8. As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Also, we have functors $\xi_J:J\to K_J$ and $\varphi:K\to I$, so the composition $\varphi\circ\xi_J$ doesn't make sense at first sight. I don't understand the proof in the book, and I'll suggest another argument. I think it is implicitly assumed that $\C$ admits small inductive limits. At any rate, I'll make this assumption. In the notation of the lemma as stated in the book, put 
+P.~80, Lemma 3.2.8. As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Also, we have functors $\xi_J:J\to K_J$ and $\varphi:K\to I$, so the composition $\varphi\circ\xi_J$ does not make sense at first sight. I don't understand the proof in the book, and I'll suggest another argument. I think it is implicitly assumed that $\C$ admits small inductive limits; at any rate, I'll make this assumption. In the notation of the lemma as stated in the book, put 
 $$
 L_1:=\coli\alpha,\quad
 \beta_J:=\coli\alpha_J,\quad
@@ -1219,11 +1219,11 @@ the vertical arrows are bijective by (a), and the bottom arrows is bijective by 
 %%
 %
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i). Some more details: Let us denote vertical composition by $\circ$ and horizontal composition by $*$. Equality $(R*\eta*L)\circ(\e*P)=P$, that is $(R*\eta*L)\circ(\e*R*L)=R*L$, can be written as 
+P.~95, proof of Proposition 4.1.4 (i). Here are some more details: Let us denote vertical composition by $\circ$ and horizontal composition by $*$. Equality $(R*\eta*L)\circ(\e*P)=P$, that is $(R*\eta*L)\circ(\e*R*L)=R*L$, can be written as 
 $$
 \Big((R*\eta)\circ(\e*R)\Big)*L=R*L,
 $$ 
-and thus follows from (1.5.9) p.~29 in the book (stated as \eqref{158} p.~\pageref{158} in this text). Equality $(R*\eta*L)\circ(P*\e)=P$, that is $(R*\eta*L)\circ(R*L*\e)=R*L$, can be written as 
+and thus follows from (1.5.9) p.~29 in the book (stated as \eqref{159} p.~\pageref{159} in this text). Equality $(R*\eta*L)\circ(P*\e)=P$, that is $(R*\eta*L)\circ(R*L*\e)=R*L$, can be written as 
 $$
 R*\Big((\eta*L)\circ(L*\e)\Big)*L=R*L,
 $$ 
