@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aks)
+% about "categories and sheaves" (version akt)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -1276,12 +1276,36 @@ $$
 &\h_{\F^\wedge}(\p(X),\p(Y)). 
 \end{tikzcd}
 $$ 
-We want to prove that the horizontal arrow is bijective. The slanted arrow being bijective, it suffices to show that the horizontal arrow is surjective. Let $\xi$ be in $\h_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\h_\C(X,Y)$ such that $\rho(\xi)=\p(f)$ and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\h_\C(Z,X)$. It suffices to show $\xi_Z(z)=f\circ z$. Let $W$ be in $\F$ and $w$ be in $\h_\C(W,Z)$. As $\F$ is strictly generating, it suffices to show $\xi_Z(z)\circ w=f\circ z\circ w$. We have 
+We want to prove that the horizontal arrow is bijective. The slanted arrow being bijective, it suffices to show that the horizontal arrow is surjective. Let $\xi$ be in $\h_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\h_\C(X,Y)$ such that $\rho(\xi)=\p(f)$ and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\h_\C(Z,X)$. It suffices to show that the morphisms 
+$$
+\begin{tikzcd}
+Z\arrow[yshift=0.7ex]{r}{\xi_Z(z)}\arrow[yshift=-0.7ex]{r}[swap]{f\circ z}&Y
+\end{tikzcd}
+$$ 
+coincide. As $\F$ is strictly generating, it suffices to show that the morphisms 
+$$
+\begin{tikzcd}
+\p(Z)\arrow[yshift=0.7ex]{rr}{\p(\xi_Z(z))}\arrow[yshift=-0.7ex]{rr}[swap]{\p(f\circ z)}&&\p(Y)
+\end{tikzcd}
+$$ 
+coincide. Let $W$ be in $\F$. It suffices to show that the maps 
+$$
+\begin{tikzcd}
+\p(Z)(W)\arrow[yshift=0.7ex]{rr}{\p(\xi_Z(z))_W}\arrow[yshift=-0.7ex]{rr}[swap]{\p(f\circ z)_W}&&\p(Y)(W)
+\end{tikzcd}
+$$ 
+coincide, that is, it suffices to show that the maps 
+$$
+\begin{tikzcd}
+\Hom_\C(W,Z)\arrow[yshift=0.7ex]{rr}{\xi_Z(z)\circ}\arrow[yshift=-0.7ex]{rr}[swap]{f\circ z\circ}&&\Hom_\C(W,Y)
+\end{tikzcd}
+$$ 
+coincide. We have, for $w$ in $\h_\C(W,Z)$,
 $$
 \xi_Z(z)\circ w=\xi_W(z\circ w)=\rho(\xi)_W(z\circ w)=\p(f)_W(z\circ w)
 =f\circ z\circ w, 
 $$ 
-the first equality following from the functoriality of $\xi$. q.e.d.
+the first equality following from the functoriality of $\xi$, the second one from the definition of $\rho$, the third one from the equality $\rho(\xi)=\p(f)$, and the fourth one from the definition of $\p$. q.e.d.
 \end{s}
 %
 %%
