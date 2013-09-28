@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version akr)
+% about "categories and sheaves" (version aks)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -1158,7 +1158,7 @@ Isomorphism (\ref{241}) p.~\pageref{241} gives
 \co_{X\in\C_{X'}}\h_\C(Y,X)\simeq\h_{\C'}(F(Y),X').
 \end{equation} 
 %
-We have the bijections 
+We have bijections 
 $$ 
 \h_{\C'}(F(\co\alpha),X')\simeq\co_{X\in\C_{X'}}\h_\C(\co\alpha,X)\xr\sim\co_{X\in\C_{X'}}\lim\h_\C(\alpha,X) 
 $$ 
@@ -1213,16 +1213,16 @@ P.~94, proof of (a) $\implies$ (b) in Proposition 4.1.3 (ii) (additional details
 $$
 \begin{tikzcd}
 \h_\C(P(Y),X)\ar{d}{\sim}[swap]{\e_X\circ}\ar{r}{\circ\e_Y}&\h_\C(Y,X)\ar{d}{\e_X\circ}[swap]{\sim}\\ 
-\h_\C(P(Y),P(X))\ar{r}[swap]{\circ\e_Y}{\sim}&\h_\C(Y,P(X))
+\h_\C(P(Y),P(X))\ar{r}[swap]{\circ\e_Y}{\sim}&\h_\C(Y,P(X)),
 \end{tikzcd}
 $$ 
-the vertical arrows are bijective by (a), and the bottom arrows is bijective by (i).
+the vertical arrows are bijective by (a), and the bottom arrow is bijective by (i).
 \end{s}
 %
 %%
 %
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$. Equality $(R*\eta*L)\circ(\e*P)=P$, that is $(R*\eta*L)\circ(\e*R*L)=R*L$, can be written as 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$. By \eqref{intlaw} p.~\pageref{intlaw} Equality $(R*\eta*L)\circ(\e*P)=P$, that is $(R*\eta*L)\circ(\e*R*L)=R*L$, can be written as 
 $$
 \Big((R*\eta)\circ(\e*R)\Big)*L=R*L,
 $$ 
@@ -1712,7 +1712,7 @@ Let $W$ be in $\C$, and consider the conditions
 \Big[W\overset{a}{\to}K\implies z\circ h\circ a=0\Big]\iff\Big[W\overset{b}{\to}P\implies z\circ p\circ b=0\Big],
 \end{equation}
 %
-\begin{equation}\label{176c}
+\begin{equation}\label{176c}%numbering
 \left.
 \begin{matrix}
 \Big[W\overset{c}{\to}X,f\circ c=0\implies z\circ c=0\Big]\\ 
@@ -2701,13 +2701,16 @@ $$
 $$ 
 
 We shall define vertical composition of functorial morphisms, denoted by $\circ$, and horizontal composition of functorial morphisms, denoted by $*$, and prove 
-$$
-(\theta_{m-1,n}*\cdots*\theta_{m-1,1})\circ\cdots\circ(\theta_{1,n}*\cdots*\theta_{1,1})
-$$ 
-$$=$$
-$$
+%
+\begin{equation}\label{intlaw}%numbering
+\left.
+\begin{matrix}
+(\theta_{m-1,n}*\cdots*\theta_{m-1,1})\circ\cdots\circ(\theta_{1,n}*\cdots*\theta_{1,1})\\ 
+=\\ 
 (\theta_{m-1,n}\circ\cdots\circ\theta_{1,n})*\cdots*(\theta_{m-1,1}\circ\cdots\circ\theta_{1,1})
-$$
+\end{matrix}
+\right\}
+\end{equation}
 
 Let $X$ be an object of $\C_1$, and, for $i\in M^n$, where $M:=\{1,2,\dots,m\}$, put 
 $$
