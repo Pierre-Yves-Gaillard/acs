@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version akq)
+% about "categories and sheaves" (version akr)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -974,7 +974,7 @@ contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functo
 %%
 %
 \begin{s}
-P.~64, end of Chapter 2. One could add the following observation (which will be used in \S\ref{1725b} p.~\pageref{1725b}): If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a final object of $(\C_A)^\wedge$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
+P.~64, end of Chapter 2. One could add the following observation (which will be used in \S\ref{1725b} p.~\pageref{1725b}): If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a terminal object of $(\C_A)^\wedge$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
 \begin{equation}\label{1725}
 \widehat F(B)(X)\simeq A(X).
 \end{equation}
@@ -984,13 +984,11 @@ Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:
 %%
 %
 \begin{s} 
-P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of one of the implications. We assume that $\p:J\to I$ is a functor with $I$ filtrant and $J$ finite, and we want to prove 
-$$
-\lim\h_I(\p,i)\neq\varnothing
-$$ 
-for some $i$ in $I$. 
+P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of one of the implications. 
 
-Let $S$ be a set of morphisms in $J$. It is easy to prove 
+If $\p:J\to I$ is a functor with $I$ filtrant and $J$ finite, then $\lim\h_I(\p,i)\neq\varnothing$ for some $i$ in $I$. 
+
+Indeed, let $S$ be a set of morphisms in $J$. It is easy to prove 
 $$
 (\exists\ i\in I)\left(\exists\ a\in\prod_{j\in J}\h_I(\p(j),i)\right)\ (\forall\ (s:j\to j')\in S)\ (a_{j'}\circ\p(s)=a_j) 
 $$ 
@@ -1154,7 +1152,7 @@ is bijective. Replacing Setting (\ref{241s}) p.~\pageref{241s} with
 $$
 Y\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X', 
 $$ 
-Statement (\ref{241}) p.~\pageref{241} gives 
+Isomorphism (\ref{241}) p.~\pageref{241} gives 
 %
 \begin{equation}\label{332} 
 \co_{X\in\C_{X'}}\h_\C(Y,X)\simeq\h_{\C'}(F(Y),X').
