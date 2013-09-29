@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version akt)
+% about "categories and sheaves" (version aku)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -300,6 +300,8 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 \n P.~132. Line 2: It would be slightly better to replace ``for small and filtrant categories $I$ and $J$'' with ``for small and filtrant categories $I$ and $J$, and functors $\alpha:I\to\C,\beta:J\to\C$''. Line 3: $\Hom_\C(A,B)$ should be $\Hom_{\Ind(\C)}(A,B)$. Lines 4 and 5: \guillemotleft We may replace ``filtrant and small'' by ``filtrant and cofinally small'' in the above definition\guillemotright. See Proposition~\ref{355} p.~\pageref{355}. Corollary 6.1.6: The following fact is implicit. Let $\C\xrightarrow{F}\C'\xrightarrow{G}\C''$ be functors, let $X'$ be in $\C'$, and assume that $G$ is fully faithful. Then the functor $\C_{X'}\to\C_{G(X')}$ induced by $G$ is an isomorphism.
 
 \n P.~133, line 2, proof of Proposition 6.1.8: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xrightarrow{\alpha}\C\xrightarrow{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\simeq\coli F(\alpha)$. Then $X\simeq\coli\alpha$. The proof is obvious. Proposition 6.1.9: ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' Proposition 6.1.9 (ii): See Section~\ref{619} p.~\pageref{619}.
+
+\n P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' (See Section~\ref{619} p.~\pageref{619}.)
 
 \n P.~134, proof of Proposition 6.1.12: ``$\C_A\times\C_{A'}$'' should be ``$\C_A\times\C'_{A'}$'' (twice).
 
@@ -1314,7 +1316,7 @@ the first equality following from the functoriality of $\xi$, the second one fro
 P.~122, proof of Lemma 5.3.3\mv. Recall the statement: 
 %
 \begin{lem}
-If $\C$ is a category admitting small inductive limits and $\F$ a small full subcategory of $\C$, then the functor $\p:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F\in\F^\wedge$ we have 
+If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\p:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F\in\F^\wedge$ we have 
 $$
 \psi(F)\simeq\co_{Y\in\F_F}Y. 
 $$ 
@@ -1361,13 +1363,7 @@ If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alp
 $$
 \C\xrightarrow h\C^\wedge\xleftarrow\alpha I,
 $$ 
-where $h$ is the Yoneda embedding. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant. Let $M\to\C_A$ be the obvious functor. One easily checks that Condition (iii) of Proposition 3.2.2 p.~78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from Proposition 3.2.2. q.e.d.
-\end{s}
-%
-%%
-%
-\begin{s} 
-P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.'' (See Section~\ref{619} p.~\pageref{619}.)
+where $h$ is the Yoneda embedding. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant. One easily checks that Condition (iii) of Proposition 3.2.2 p.~78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from Proposition 3.2.2. q.e.d.
 \end{s}
 %
 %%
