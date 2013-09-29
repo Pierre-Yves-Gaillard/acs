@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version akw)
+% about "categories and sheaves" (version akx)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -1484,17 +1484,17 @@ $\ic\p\simeq f$.
 %%
 %
 \begin{s} 
-P.~149, Definition 7.1.1. The set $\cc S$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pageref{mor}). The proof of the following lemma is obvious. 
+P.~149, Definition 7.1.1. The set $\cc S$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pageref{mor}). The proof of the following lemma (which will be used to prove \eqref{l} p.~\pageref{l}) is obvious. 
 %
 \begin{lem}\label{711}
-%
+%???
 Let 
 $$
 \begin{tikzcd}\C\ar[yshift=.5ex]{r}{Q}&\C'\ar[yshift=-.4ex]{l}{R}\end{tikzcd}
 $$ 
-be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a set of morphisms in $\C$, let $\theta:\id_\C\to R\circ Q$ satisfy $\theta_X\in\cc S$ for all $X$ in $\C$, let $\A$ be a category, and let $\B$ be the full subcategory of $\A^\C$ whose objects are the functors turning the elements of $\cc S$ into isomorphisms. Then the functors 
+be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a set of morphisms in $\C$ such that $Q(s)$ is an isomorphism for all $s$ in $\cc S$, let $\theta:\id_\C\to R\circ Q$ satisfy $\theta_X\in\cc S$ for all $X$ in $\C$, and let $\A$ be a category. Then the functors 
 $$
-\begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\B\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
+\begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\A^\C\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
 $$ 
 are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$.
 %
@@ -1974,7 +1974,7 @@ q.e.d.
 %
 %%
 %
-\begin{s} 
+\begin{s}
 P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155, to check that
 %
 \begin{equation}\label{l}
