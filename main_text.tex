@@ -1587,16 +1587,22 @@ Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
 In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context.
 \end{conv} 
 \begin{lem}\label{payl}
-Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category af additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
 \end{s}
 %
 %%
 %
 \begin{s} 
-P. 172, Lemma 8.2.9. Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
+P. 172, Lemma 8.2.9. Recall the statement:
+%
+\begin{lem}
+Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is additive.
+\end{lem}
+%
+Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
 
-Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p. 169, $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T\in\C$ be terminal. We have natural isomorphisms $X\oplus T\simeq X$ for any $X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\h_\C(T,X)=0$ for any $X$, and $T$ is a zero object.
+Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p. 169, $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T\in\C$ be terminal. For any $X\in\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\h_\C(T,X)=0$ for any $X$, and $T$ is a zero object. q.e.d.
 \end{s}
 %
 %%
