@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ala)
+% about "categories and sheaves" (version alb)
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 %\pagestyle{empty}
@@ -1675,15 +1675,19 @@ be the natural functor. Then $\Phi$ and $\Psi$ are inverse isomorphisms.
 %
 %\begin{comment} %%%%%%%%%%%%%%
 %
-%\begin{s} 
-%P.~173, Theorem 8.2.14. Recall the statement: 
+\begin{s} 
+P.~173, Theorem 8.2.14. Recall the statement: 
+
+Let $\C$ be an additive category. Then $\C$ has a unique structure of pre-additive category. 
+
+Here is a minor variant of the proof of the existence of such a structure. 
 %
-%Let $\C$ be an additive category. Then $\C$ has a unique structure of pre-additive category. 
-%
-%Here is a minor variant of the proof of the existence of such a structure. 
-%
-%Let $X$ and $Y$ be in $\C$. We define the addition on $\h_\C(X,Y)$ by letting $k:\C\to\C^\vee$ be the Yoneda embedding and observing that, in the notation of Proposition~\ref{8212}, $\h_\C(X,Y)$ is the set underlying the abelian group $\Phi(k(X))(Y)$. In particular, we have $g\circ(f_1+f_2)=g\circ f_1+g\circ f_2$ for $X\xr{f_i}Y\xr gZ$. It is easy to conclude from this that the above construction endows $\C$ with a structure of pre-additive category. q.e.d.
-%\end{s}
+Let $X$ and $Y$ be in $\C$. We define the addition on $\h_\C(X,Y)$ as follows. For all $Z$ in $\C$ put $k(X)(Z):=\Hom_\C(X,Z)$. Then $k(X)\in\operatorname{Prod}(\C,\Set)$ and $\Phi(k(X))\in\operatorname{Add}(\C,\Mod(\mathbb Z))$ (see Proposition~\ref{8212}). In particular $\h_\C(X,Y)$ is the set underlying the abelian group $\Phi(k(X))(Y)$. Moreover 
+$$
+f\circ:\h_\C(X,Y)\to\h_\C(X,Z)
+$$ 
+is an abelian group morphism for any $f:Y\to Z$. Thus we have the left distributivity formula $f\circ(g_1+g_2)=f\circ g_1+f\circ g_2$ for any $g_i:X\to Y$, $(i=1,2)$. Reversing arrows, we get the right distributivity. q.e.d.
+\end{s}
 %
 %\end{comment} %%%%%%%%%%%%%%
 %
