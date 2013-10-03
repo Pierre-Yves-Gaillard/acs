@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ald)
+% about "categories and sheaves" (version ale)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -341,7 +341,7 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \n P.~172, proof of Lemma 8.2.10, first line: ``composition morphism'' should be ``addition morphism''. 
 
-\n P. 173, proof of Theorem 8.2.14: ``by Proposition 8.2.13'' should be (I think) ``by Proposition 8.2.13''.
+%\n P. 173, proof of Theorem 8.2.14: ``by Proposition 8.2.13'' should be (I think) ``by Proposition 8.2.13''.
 
 \n P.~179, about one third of the page: ``a complex 
 \begin{tikzcd}X\ar{r}{u}&Y\ar[yshift=0.7ex]{r}{v}\ar[yshift=-0.7ex]{r}[swap]{w}&Z\end{tikzcd}'' 
@@ -4134,26 +4134,24 @@ $$
 %%
 %
 \begin{s} 
-P.~173, Proposition 8.2.12 and Theorem 8.2.14 \mv. 
+P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14 \mv. 
 \begin{nota}
 If $\C$ and $\C'$ are categories admitting finite products, we denote be $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
 \end{nota}
-
-Here is a slightly different way of stating Proposition 8.2.12:
 %
 \begin{prop}\label{8.2.12}
 If $\C$ is an additive category, then the obvious functor 
 $$
 \Phi:\oo P(\C,\Mod(\mathbb Z))\to\oo P(\C,\Set)
 $$ 
-is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11 p.~172.
+is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11.
 \end{prop}
 %
-\n{\em Proof.} The functor $\Phi$ being fully faithful by Proposition 8.2.12 p. 173, it suffices to prove that 
+\n{\em Proof.} The functor $\Phi$ being fully faithful by Proposition 8.2.12, it suffices to prove that 
 $$
 \oo{Ob}(\Phi):\oo{Ob}(\oo P(\C,\Mod(\mathbb Z)))\to\oo{Ob}(\oo P(\C,\Set))
 $$ 
-is bijective. The map is surjective by Proposition 8.2.13 p. 173, and it is injective by Proposition~\ref{8.2.12}. q.e.d.
+is bijective. The map is surjective by Proposition 8.2.13, and it is injective by Lemma 8.2.11. q.e.d.
 
 Recall the statement of Theorem 8.2.14:
 %
