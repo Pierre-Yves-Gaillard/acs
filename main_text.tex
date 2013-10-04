@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alf)
+% about "categories and sheaves" (version alg)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4159,27 +4159,11 @@ Recall the statement of Theorem 8.2.14:
 Any additive category has a unique structure of a pre-additive category.
 \end{thm}
 %
-\n{\em Proof.} Let $\C$ be our additive category, and let 
+\n{\em Proof.} Let $\C$ be our additive category. Thanks to Proposition~\ref{8.2.12} we identify $\oo P(\C,\Set)$ and $\oo P(\C,\Mod(\mathbb Z))$. For $X$ and $Y$ in $\C$ we define the addition of $\Hom_\C(X,Y)$ by evaluating the functor $\Hom_\C(X,\ )\in\oo P(\C,\Mod(\mathbb Z))$ on $Y$. The uniqueness is clear. If $f:Y\to Z$ is morphism in $\C$, then 
 $$
-\begin{tikzcd}
-X\ar[yshift=0.7ex]{r}{f_1}\ar[yshift=-0.7ex]{r}[swap]{f_2}&
-Y\ar[yshift=0.7ex]{r}{g_1}\ar[yshift=-0.7ex]{r}[swap]{g_2}&Z
-\end{tikzcd}
+\Hom_\C(X,f)=f\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
 $$ 
-be morphisms in $\C$. By Proposition~\ref{8.2.12} there is one and only one way to turn the functor $\Hom_\C(X,\ ):\C\to\Set$ into a functor $\Hom_\C(X,\ ):\C\to\Mod(\mathbb Z)$. In particular 
-$$
-\Hom_\C(X,g_1)=g_1\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
-$$ 
-is a morphism in $\Mod(\mathbb Z)$, and we have $g_1\circ(f_1+f_2)=g_1\circ f_1+g_1\circ f_2$. By Proposition~\ref{8.2.12} again, 
-$$
-\circ f_1:\Hom_\C(\ ,Z)\to\Hom_\C(\ ,Y),
-$$ 
-being a morphism in $\oo P(\C,\Mod(\mathbb Z))$, the map 
-$$
-\circ f_1:\Hom_\C(X,Z)\to\Hom_\C(X,Y)
-$$ 
-is a morphism in $\Mod(\mathbb Z)$, and we have $(g_1+g_2)\circ f_1=g_1\circ f_1+g_2\circ f_1$. q.e.d.
-%
+is a morphism in $\Mod(\mathbb Z)$. If $g:W\to X$ is morphism in $\C$, then $\circ g:\Hom_\C(X,\ )\to\Hom_\C(W,\ )$ is a morphism in $\oo P(\C,\Mod(\mathbb Z))$, and $\circ g:\Hom_\C(X,Y)\to\Hom_\C(W,Y)$ is a morphism in $\Mod(\mathbb Z)$. q.e.d.
 \end{s}
 %
 %%
