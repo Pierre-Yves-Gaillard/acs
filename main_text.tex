@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ale)
+% about "categories and sheaves" (version alf)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4136,7 +4136,7 @@ $$
 \begin{s} 
 P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14 \mv. 
 \begin{nota}
-If $\C$ and $\C'$ are categories admitting finite products, we denote be $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
+If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
 \end{nota}
 %
 \begin{prop}\label{8.2.12}
@@ -4151,7 +4151,7 @@ is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11.
 $$
 \oo{Ob}(\Phi):\oo{Ob}(\oo P(\C,\Mod(\mathbb Z)))\to\oo{Ob}(\oo P(\C,\Set))
 $$ 
-is bijective. The map is surjective by Proposition 8.2.13, and it is injective by Lemma 8.2.11. q.e.d.
+is bijective. The injectivity and the surjectivity follow respectively from Lemma 8.2.11 and Proposition 8.2.13. q.e.d.
 
 Recall the statement of Theorem 8.2.14:
 %
@@ -4159,7 +4159,26 @@ Recall the statement of Theorem 8.2.14:
 Any additive category has a unique structure of a pre-additive category.
 \end{thm}
 %
-\n{\em Proof.} Let $\C$ be our additive category, and let $X$ be in $\C$. Applying Proposition~\ref{8.2.12} to the functor $\Hom_\C(X,\ ):\C\to\Set$, we see that there is one and only one way to turn this functor into a functor from $\C$ to $\Mod(\mathbb Z)$. In particular, we get a structure of abelian group on each of the set $\Hom_\C(X,Y)$ for $Y\in\C$, and, for $g_i:Y\to Z$ ($i=1,2$), we have $(g_1+g_2)\circ f=g_1\circ f+g_2\circ f$. Let us consider now a morphism $h:W\to X$. As the morphism of functors $\circ h:\Hom_\C(X,\ )\to\Hom_\C(W,\ )$ in $\oo P(\C,\Set)$ can be viewed, in a unique way, as a morphism of functors in $\oo P(\C,\Mod(\mathbb Z))$, we have $(f_1+f_2)\circ h=f_1\circ h+f_2\circ h$ for $f_i:X\to Y$. q.e.d.
+\n{\em Proof.} Let $\C$ be our additive category, and let 
+$$
+\begin{tikzcd}
+X\ar[yshift=0.7ex]{r}{f_1}\ar[yshift=-0.7ex]{r}[swap]{f_2}&
+Y\ar[yshift=0.7ex]{r}{g_1}\ar[yshift=-0.7ex]{r}[swap]{g_2}&Z
+\end{tikzcd}
+$$ 
+be morphisms in $\C$. By Proposition~\ref{8.2.12} there is one and only one way to turn the functor $\Hom_\C(X,\ ):\C\to\Set$ into a functor $\Hom_\C(X,\ ):\C\to\Mod(\mathbb Z)$. In particular 
+$$
+\Hom_\C(X,g_1)=g_1\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
+$$ 
+is a morphism in $\Mod(\mathbb Z)$, and we have $g_1\circ(f_1+f_2)=g_1\circ f_1+g_1\circ f_2$. By Proposition~\ref{8.2.12} again, 
+$$
+\circ f_1:\Hom_\C(\ ,Z)\to\Hom_\C(\ ,Y),
+$$ 
+being a morphism in $\oo P(\C,\Mod(\mathbb Z))$, the map 
+$$
+\circ f_1:\Hom_\C(X,Z)\to\Hom_\C(X,Y)
+$$ 
+is a morphism in $\Mod(\mathbb Z)$, and we have $(g_1+g_2)\circ f_1=g_1\circ f_1+g_2\circ f_1$. q.e.d.
 %
 \end{s}
 %
