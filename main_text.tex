@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version all)
+% about "categories and sheaves" (version alm)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1489,18 +1489,19 @@ $\ic\p\simeq f$.
 P.~149, Definition 7.1.1. The set $\cc S$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pageref{mor}). The proof of the following lemma (which will be used to prove \eqref{l} p.~\pageref{l}) is obvious. 
 %
 \begin{lem}\label{711}
-%???
+%
 Let 
 $$
 \begin{tikzcd}\C\ar[yshift=.5ex]{r}{Q}&\C'\ar[yshift=-.4ex]{l}{R}\end{tikzcd}
 $$ 
-be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a set of morphisms in $\C$ such that $Q(s)$ is an isomorphism for all $s$ in $\cc S$, let $\theta:\id_\C\to R\circ Q$ satisfy $\theta_X\in\cc S$ for all $X$ in $\C$, and let $\A$ be a category. Then the functors 
+be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a set of morphisms in $\C$ such that $Q(s)$ is an isomorphism for all $s$ in $\cc S$, let $\theta:\id_\C\to R\circ Q$ satisfy $\theta_X\in\cc S$ for all $X$ in $\C$, and let $\B$ be the full subcategory of $\A^\C$ whose objects are the functors turning the elements of $\cc S$ into isomorphisms. Then the functors
 $$
-\begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\A^\C\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
-$$ 
+\begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\B\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
+$$
 are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$.
 %
 \end{lem}
+
 \end{s}
 %
 %%
@@ -1989,7 +1990,7 @@ In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an 
 %
 \end{lem}
 %
-\n{\em Proof.} There is a finite subset $F'$ of $S$ such that $M\m R^{\oplus S}$ factors as $M\m R^{F'}\m R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
+\n{\em Proof.} There is a finite subset $F'$ of $S$ such that $M\m R^{\oplus S}$ factors as $M\m R^{F'}\m R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $f:\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
 $$
 R^F\epi M\m R^{F'},
 $$
