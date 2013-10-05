@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ali)
+% about "categories and sheaves" (version alj)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1871,7 +1871,14 @@ q.e.d.
 \begin{s} 
 P.~188, proof of Proposition 8.4.7. Let us just rewrite in a slightly less concise way the part of the proof which starts with the sentence ``Define $Y:=Y_0\times_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
-It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\circ a_0=\p$. Form the cartesian square 
+It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\circ a_0=\p$:
+$$
+\begin{tikzcd}
+X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}{g_0}\ar[tail]{r}{l_0}&X\\ 
+Z&&G_i.\ar[dashed]{ul}{a_0}\ar{u}[swap]{\p}
+\end{tikzcd}
+$$ 
+Form the cartesian square 
 $$
 \begin{tikzcd}
 Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar[tail]{d}{l_0}\\
