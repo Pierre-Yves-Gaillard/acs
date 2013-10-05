@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alj)
+% about "categories and sheaves" (version alk)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1899,7 +1899,29 @@ $$
 &Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0.
 \end{tikzcd}
 $$ 
-By the Five Lemma, $l_1$ is a monomorphism. We have $l_1\circ a_1=\p$ and $l_1\circ\lambda=l_0$; in particular $\lambda$ is a monomorphism. It suffices to show that $\lambda$ is an isomorphism: indeed, once we know that, we can set $a_0:=\lambda^{-1}\circ a_1$. As $(Y_0,g_0,l_0)$ is maximal, it is enough to prove that there is a morphism $g_1:Y_1\to Z$ such that $g_1\circ\lambda=g_0$. As $Z$ is injective and $c$ is a monomorphism by Lemma 8.3.11 (a) (i) p.~180, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$. Now the existence of $g_1$ follows from the definition of $Y_1$. q.e.d.
+By the Five Lemma, $l_1$ is a monomorphism. We have $l_1\circ a_1=\p$ and $l_1\circ\lambda=l_0$; in particular $\lambda$ is a monomorphism. Lemma 8.3.11 (a) (i) p.~180 implies that $c$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$:
+$$
+\begin{tikzcd}
+Y\ar{d}[swap]{b}\ar[tail]{r}{c}&G_i\ar{d}{d}\\ 
+Y_0\ar{r}[swap]{g_0}&Z.
+\end{tikzcd}
+$$ 
+By the definition of $Y_1$ there is a morphism $g_1:Y_1\to Z$ such that 
+$$
+\begin{tikzcd}
+Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar{d}[swap]{\lambda}\ar[bend left]{ddr}{g_0}\\
+G_i\ar{r}{a_1}\ar[bend right]{rrd}[swap]{d}&Y_1\ar{dr}{g_1}\\ 
+{}&{}&Z
+\end{tikzcd}
+$$ 
+commutes. We get 
+$$
+\begin{tikzcd}
+X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}[swap]{g_0}\ar[tail]{r}{\lambda}&Y_1\ar{dll}{g_1}\ar[tail]{r}{l_1}&X\\ 
+Z&&&G_i.\ar{u}[swap]{\p}\ar{lll}{d}\ar{ul}{a_1}
+\end{tikzcd}
+$$ 
+As $\lambda$ is an isomorphism by maximality of $(Y_0,g_0,l_0)$, we can set $a_0:=\lambda^{-1}\circ a_1$. q.e.d.
 \end{s}
 %
 %%
