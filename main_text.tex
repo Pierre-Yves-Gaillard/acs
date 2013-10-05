@@ -54,7 +54,7 @@
 \newcommand{\oo}{\operatorname}
 \newcommand{\p}{\varphi}
 \newcommand{\pa}{\rightrightarrows}
-\newcommand{\pf}{\n{\em Proof. }}
+%\newcommand{\pf}{\n{\em Proof. }}
 \newcommand{\pt}{\{\text{pt}\}}
 \newcommand{\Set}{\mathbf{Set}}
 \newcommand{\xl}{\xleftarrow}
@@ -622,7 +622,7 @@ $$
 Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 %
-\pf We have for any $Y\in\B$ 
+\n{\em Proof.} We have for any $Y\in\B$ 
 $$ 
 \Hom_\B\left(F\left(\coli\alpha\right),Y\right)\simeq
 \Hom_\C\left(G\left(\coli\alpha\right),Z\right)
@@ -644,7 +644,7 @@ P.~40, proof of Lemma 2.1.11\mv.
 If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an object of $\C$ representing $\coli\alpha$, then $S$ is terminal. 
 \end{lem}
 %
-\pf Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $i\in\h_{\C^\C}(\id_\C,\Delta(S))$ be such that, for all $X\in\C$, the morphism $i_X:X\to S$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By assumption the map 
+\n{\em Proof.} Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $i\in\h_{\C^\C}(\id_\C,\Delta(S))$ be such that, for all $X\in\C$, the morphism $i_X:X\to S$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By assumption the map 
 $$
 \h_\C(S,T)\to\h_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ i 
 $$ 
@@ -699,7 +699,7 @@ $$
 $$
 \end{prop} 
 %
-\pf On the one hand we have 
+\n{\em Proof.} On the one hand we have 
 $$
 \pi_0(I):=\Ob(I)/\!\!\sim\ , 
 $$
@@ -783,7 +783,7 @@ P.~56, proof of Lemma 2.4.7\mv.
 If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\coli k(i_0)$ is a terminal object of $\Set$. 
 \end{lem}
 %
-\pf For $X\in\Set$ we have (with self-explanatory notation)
+\n{\em Proof.} For $X\in\Set$ we have (with self-explanatory notation)
 $$
 \Hom_{\Set}\left(\coli k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
 $$
@@ -803,7 +803,7 @@ L_i:=\coli\Hom_I(i,\p)\to\pi_0(J^i)
 is bijective. 
 \end{prop}
 % 
-\pf For $j\in J$ let 
+\n{\em Proof.} For $j\in J$ let 
 $$
 c_j:\Hom_I(i,\p(j))\to L_i
 $$
@@ -1246,7 +1246,7 @@ P.~116, proof of Proposition 5.1.7 (i)\mv. Recall the statement:
 Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $C_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u C_f\xr v Y$ its factorization through $C_f$. Then $v$ is a monomorphism. 
 \end{prop}
 %
-\pf To prove this, consider the commutative diagram
+\n{\em Proof.} To prove this, consider the commutative diagram
 $$
 \begin{tikzcd}
 X\ar[two heads]{d}\ar[two heads]{r}{u}&C_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
@@ -1266,7 +1266,7 @@ P.~122, proof of Lemma 5.3.2\mv.
 If $\F\subset\G$ are full subcategories of $\C$ and $\F$ is strictly generating, then $\G$ is strictly generating. 
 \end{lem} 
 %
-\pf Let 
+\n{\em Proof.} Let 
 $$
 \begin{tikzcd}
 \C\ar{r}{\gamma}\ar{dr}[swap]{\p}&\G^\wedge\ar{d}{\rho}\\
@@ -1324,7 +1324,7 @@ $$
 $$ 
 \end{lem} 
 %
-\pf We have, for $X\in\C$ and $F\in\F^\wedge$, 
+\n{\em Proof.} We have, for $X\in\C$ and $F\in\F^\wedge$, 
 $$
 \h_\C(\psi(F),X)\simeq\h_\C\left(\co_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\h_\C(Y,X)
 $$ 
@@ -1361,7 +1361,7 @@ P.~133, Step (i) of the proof of Theorem 6.1.8\mv. Recall the statement:
 If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
 \end{lem} 
 %
-\pf To prove this, let $M$ be the category attached to the functors 
+\n{\em Proof.} To prove this, let $M$ be the category attached to the functors 
 $$
 \C\xrightarrow h\C^\wedge\xleftarrow\alpha I,
 $$ 
@@ -1731,7 +1731,7 @@ $$
 $$ 
 \end{prop}
 %
-\pf Let us use the abbreviations 
+\n{\em Proof.} It suffices to prove the first isomorphism. Let us use the abbreviations 
 $$
 P:=X\times_YX,\quad p:=p_1-p_2:P\to X,\quad K:=\Ker f.
 $$
@@ -1813,7 +1813,7 @@ $$
 where $f^0$ is an epimorphism, $f^1$ and $f^3$ are monomorphisms, and $X^1\to X^2\to X^3$ and $Y^0\to Y^1\to Y^2$ are exact. Then $f^2$ is a monomorphism. 
 \end{lem} 
 %
-\pf Note that Lemma 8.3.12 can be stated as follows: $f:X\to Y$ is an epimorphism if and only if any subobject of $Y$ is the image of some subobject of $X$. 
+\n{\em Proof.} Note that Lemma 8.3.12 can be stated as follows: $f:X\to Y$ is an epimorphism if and only if any subobject of $Y$ is the image of some subobject of $X$. 
 
 We write $fx$ for the image of a subobject $x$ of $X$, and $fg$ for $f\circ g$.
 
@@ -1933,7 +1933,7 @@ Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring
 %
 \end{lem}
 %
-\pf Let $\psi:\M\to\C$ be defined by $\psi(M)=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\p$ and $\psi$ quasi-induce quasi-inverse equivalences 
+\n{\em Proof.} Let $\psi:\M\to\C$ be defined by $\psi(M)=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\p$ and $\psi$ quasi-induce quasi-inverse equivalences 
 $$
 \begin{tikzcd}
 \C_0\ar[yshift=.7ex]{r}{\p_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
@@ -1960,7 +1960,7 @@ In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an 
 %
 \end{lem}
 %
-\pf Assume that there is a finite set $F$, an epimorphism $R^F\epi M$, a small set $S$, and a monomorphism $M\m R^{\oplus S}$. We must show that $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. There is a finite subset $F'$ of $S$ such that $M\m R^{\oplus S}$ factors as $M\m R^{F'}\m R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
+\n{\em Proof.} Assume that there is a finite set $F$, an epimorphism $R^F\epi M$, a small set $S$, and a monomorphism $M\m R^{\oplus S}$. We must show that $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. There is a finite subset $F'$ of $S$ such that $M\m R^{\oplus S}$ factors as $M\m R^{F'}\m R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
 $$
 R^F\epi M\m R^{F'},
 $$
@@ -3369,7 +3369,7 @@ The following point is implicit in the book, and we give additional details for 
 Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural functors. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
 \end{prop} 
 %
-\pf The proof is essentially the same that that of Proposition 2.7.1 on p.~62 of the book. (See also \S\ref{c271b} p.~\pageref{c271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
+\n{\em Proof.} The proof is essentially the same that that of Proposition 2.7.1 on p.~62 of the book. (See also \S\ref{c271b} p.~\pageref{c271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
 
 Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y\in\A$. To apply Proposition~\ref{2.1.10} p.~\pageref{2.1.10} to the diagram 
 $$
