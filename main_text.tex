@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alq)
+% about "categories and sheaves" (version alr)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -53,7 +53,7 @@
 %\newcommand{\op}{\text{op}}
 \newcommand{\oo}{\operatorname}
 \newcommand{\p}{\varphi}
-\newcommand{\pa}{\rightrightarrows}
+\newcommand{\parar}{\rightrightarrows}\newcommand{\paralelarrows}{\rightrightarrows}% parallel
 %\newcommand{\pf}{\n{\em Proof. }}
 \newcommand{\pt}{\{\text{pt}\}}
 \newcommand{\Set}{\mathbf{Set}}
@@ -1402,7 +1402,7 @@ where $h$ is the Yoneda embedding. Proposition~\ref{cocop} p.~\pageref{cocop} im
 %%
 %
 \begin{s} 
-P.~136, proof of Proposition 6.1.18 (i)\mv: If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\p_i,\psi_i:\alpha_i\pa\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\pa B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
+P.~136, proof of Proposition 6.1.18 (i)\mv: If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\p_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
 $$
 \co_i\ \iota(\Coker(\p_i,\psi_i))\simeq
 \co_i\ \Coker(\iota(\p_i),\iota(\psi_i))
@@ -2458,7 +2458,7 @@ for all $(U,b)$ as above.
 \begin{s} 
 P. 395, Lemma 16.2.3 (iii). Consider the condition 
 
-\n(*) for any diagram $Z\pa A\to B$ with $Z\in\diamondsuit$, there exists a local $\heartsuit$ $S\to Z$ such that the two compositions $S\to Z\pa A$ coincide, 
+\n(*) for any diagram $Z\parar A\to B$ with $Z\in\diamondsuit$, there exists a local $\heartsuit$ $S\to Z$ such that the two compositions $S\to Z\parar A$ coincide, 
 
 \n and let (b), (c), (d), (e) be the four conditions obtained by replacing $\diamondsuit$ with $\C$ or $\C^\wedge$, and $\heartsuit$ with the word ``epimorphism'' or ``isomorphism''. Recall that (a) is the condition that $A\to B$ is a local monomorphism. Parts (ii) and (iii) of Lemma 16.2.3 imply 
 %
@@ -2550,11 +2550,11 @@ The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the botto
 \begin{s} 
 P. 400, Step (ii) in the proof of Lemma 16.3.2\ad:
 
-For each $(B\xr sU)\in(\cc{LI}_U)^{\op}$ put $\alpha(B\xr sU):=\h_{\C^\wedge}(B,A)$. Let $f_1,f_2:U\pa A$ be two morphisms such that the compositions $U\pa A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By the definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73, there is a morphism 
+For each $(B\xr sU)\in(\cc{LI}_U)^{\op}$ put $\alpha(B\xr sU):=\h_{\C^\wedge}(B,A)$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By the definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73, there is a morphism 
 $$
 \p:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
-in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\pa A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395. q.e.d.
+in $\cc{LI}_U$ such that $\alpha(\p)(f_1)=\alpha(\p)(f_2)$. This is easily seen to mean that the compositions $B\to U\parar A$ coincide, and we conclude by Lemma 16.2.3 (iii), (b) implies (a) p. 395. q.e.d.
 \end{s}
 %
 %%
@@ -3043,7 +3043,7 @@ for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved b
 
 To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f:X\to Y$ is a morphism in $\C$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$. Then Lemma 2.1.15 can be stated as follows: 
 
-Let $I$ and $\A$ be categories, and let $a,b:I\pa\A$ be functors. Then 
+Let $I$ and $\A$ be categories, and let $a,b:I\parar\A$ be functors. Then 
 $$
 (i,i\to j,j)\mapsto\h_\A(a(i),b(j))
 $$ 
@@ -3261,7 +3261,7 @@ We want to define the notions of coimage (denoted by $\Coim$) and image (denoted
 \begin{lem}\label{imset} 
 For any set theoretical map $g:U\to V$ we have natural bijections 
 $$ 
-\Coker(U\times_VU\pa U)\simeq\IM g\simeq\Ker(V\pa V\sqcup_UV),
+\Coker(U\times_VU\parar U)\simeq\IM g\simeq\Ker(V\parar V\sqcup_UV),
 $$ 
 where $\IM g$ denotes the image of $g$. 
 \end{lem} 
@@ -3287,15 +3287,15 @@ for all $Z$ in $\C$.
 
 In view of Lemma~\ref{imset} we have 
 $$ 
-(\Coim f)(Z)\simeq\Ker\Big(\h_\C(X,Z)\pa\h_{\C^\wedge}\big(\hy(X)\times_{\hy(Y)}\hy(X),\hy(Z)\big)\Big), 
+(\Coim f)(Z)\simeq\Ker\Big(\h_\C(X,Z)\parar\h_{\C^\wedge}\big(\hy(X)\times_{\hy(Y)}\hy(X),\hy(Z)\big)\Big), 
 $$ 
 $$ 
-(\Ima f)(Z)\simeq\Ker\Big(\h_\C(Z,Y)\pa\h_{\C^\vee}\big(\ky(Z),\ky(Y)\sqcup_{\ky(X)}\ky(Y)\big)\Big). 
+(\Ima f)(Z)\simeq\Ker\Big(\h_\C(Z,Y)\parar\h_{\C^\vee}\big(\ky(Z),\ky(Y)\sqcup_{\ky(X)}\ky(Y)\big)\Big). 
 $$ 
 This implies 
 %
 \begin{prop}\label{coimim}
-If $P:=X\times_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\pa X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\pa S)\in\C^\wedge$. 
+If $P:=X\times_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\parar X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\parar S)\in\C^\wedge$. 
 \end{prop} 
 % 
 
@@ -3331,12 +3331,14 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 \n (b) $\F$ is closed by finite coproducts in $\C$. 
 
 \n Then $\F$ is strictly generating.
+
+(Recall that the functor $\p:\C\to\F^\wedge$ is defined by $\p(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\p$ is fully faithful.)
 %
 \begin{center}*\end{center}
 %
-Proof. We may assume from the beginning that $\F$ is small.
+Proof. We may assume from the beginning that $\F$ is small. (Recall that the functor $\p:\C\to\F^\wedge$ is defined by $\p(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\p$ is fully faithful.)
 
-\n Step 1. By Proposition 5.2.3 (i) p.~118, the functor $\p$ in (5.3.1) p.~121 is conservative and faithful.
+\n Step 1. By Proposition 5.2.3 (i) p.~118, the functor $\p$ is conservative and faithful.
 
 \n Step 2. By Proposition 1.2.12 p.~16, a morphism $f$ in $\C$ is an epimorphism as soon as $\p(f)$ is an epimorphism.
 
