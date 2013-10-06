@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version als)
+% about "categories and sheaves" (version alt)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -618,9 +618,9 @@ I\ar{r}{\alpha}&\A\ar{d}[swap]{G}\ar{r}{F}&\B\\
 $$
 be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y\in\B$ there is a $Z\in\C$ and an isomorphism 
 $$
-\Hom_\B(F(\ ),Y)\simeq\Hom_\C(G(\ ),Z). 
+\Hom_\B(F(\ ),Y)\simeq\Hom_\C(G(\ ),Z)
 $$
-Then $F$ commutes with inductive limits indexed by $I$.
+in $\A^\wedge$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 %
 \begin{proof}
@@ -3353,7 +3353,7 @@ $$
 \zeta(z)\times_X\zeta(z)\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&\zeta(z)\ar{r}&\Coim z.
 \end{tikzcd}
 $$ 
-Then \eqref{step3} is an isomorphism.
+We claim that \eqref{step3} is an isomorphism.
 
 \n Step 3'. Let $A$ be in $\F^\wedge$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wedge)_A$. We claim 
 $$
@@ -3462,10 +3462,10 @@ Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y\in\
 $$
 \begin{tikzcd}
 I\ar{r}{\alpha}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
-&\C^\wedge,
+&\C^\wedge
 \end{tikzcd}
 $$
-it suffices to check that there is an isomorphism 
+(where $I$ is a small filtrant category), it suffices to check that there is an isomorphism 
 $$
 \Hom_\A\left(\widetilde F(\ ),Y\right)\simeq
 \Hom_{\C^\wedge}(\ \ ,B)
@@ -3474,7 +3474,7 @@ in $\Ind(\C)^\wedge_\V$, where $\V$ is a universe containing $\U$ such that $\C^
 $$
 \widetilde F(A):=\coli_{X\in\C_A}F(X),
 $$ 
-as well as the following isomorphisms functorial in $A\in\C^\wedge$:
+as well as the following isomorphisms functorial in $A\in\Ind(\C)$:
 $$
 \Hom_\A\left(\widetilde F(A),Y\right)=
 \Hom_\A\left(\coli_{X\in\C_A}F(X),Y\right)\simeq
