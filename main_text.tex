@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alp)
+% about "categories and sheaves" (version alq)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1495,7 +1495,7 @@ Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')
 %
 \begin{proof}\ 
 
-\n(a) $\implies$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a functorial morphism $\p:\alpha\to F\circ\beta$ such that 
+\n(a) $\implies$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a morphism of functors $\p:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
@@ -2796,7 +2796,7 @@ be functors, let
 $$
 \theta_{i,j}:F_{i,j}\to F_{i+1,j},\quad1\le i\le m-1,\ 1\le j\le n
 $$
-be functorial morphisms. For instance, if $m=3,n=4$, then we have 
+be morphisms of functors. For instance, if $m=3,n=4$, then we have 
 $$
 \begin{tikzcd}
 %
@@ -2808,7 +2808,7 @@ $$
 \end{tikzcd}
 $$ 
 
-We shall define vertical composition of functorial morphisms, denoted by $\circ$, and horizontal composition of functorial morphisms, denoted by $*$, and prove 
+We shall define vertical composition of morphisms of functors, denoted by $\circ$, and horizontal composition of morphisms of functors, denoted by $*$, and prove 
 %
 \begin{equation}\label{intlaw}%numbering
 \left.
@@ -2850,7 +2850,7 @@ $$
 
 We also claim: 
 
-\n(b) This process defines a functorial morphism 
+\n(b) This process defines a morphism of functors 
 $$
 F_{1,n}\cdots F_{1,1}\to F_{m,n}\cdots F_{m,1}.
 $$
@@ -3010,7 +3010,7 @@ We define $\p^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to show
 %
 \begin{lem}\label{r52}
 %
-Let $I$ and $J$ be in the category $\Cat$ of small categories, let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a functorial morphism. Assume 
+Let $I$ and $J$ be in the category $\Cat$ of small categories (see Definition~\ref{small} p.~\pageref{small}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
 %
 \begin{equation}\label{52} 
 (\co\theta)(i):=\co(\theta_i)\in J\quad\forall\ i\in I. 
@@ -3029,7 +3029,7 @@ Recall that we have functors
 $$
 \C\xleftarrow\beta J\xrightarrow\p I. 
 $$ 
-In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the functorial morphism $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\p^\dagger(\beta)$. In particular $\p^\dagger(\beta)$ is a functor. 
+In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\p^\dagger(\beta)$. In particular $\p^\dagger(\beta)$ is a functor. 
 %
 \subsection{Step (b)} %%%%%%%%%%%%%%%
 %
@@ -3182,7 +3182,7 @@ M:=M[I\xrightarrow\p K\xleftarrow\psi J]
 $$ 
 is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\alpha:M\to\C$. 
 
-Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the functorial morphism such that $\theta_i:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
+Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_i:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
 $$
 j\mapsto\co_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
 $$ 
@@ -3624,7 +3624,7 @@ An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to
 
 \n$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
 
-\n$\bu$ the coprojections $c_k(i_k):\alpha_k(i_k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a functorial morphism from $P$ to $G$. 
+\n$\bu$ the coprojections $c_k(i_k):\alpha_k(i_k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors from $P$ to $G$. 
 
 \n(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square 
 $$ 
@@ -3635,7 +3635,7 @@ G(k)\ar{r}[swap]{G(f)}&G(\ell)
 $$ 
 in $\Ind(\C)$. 
 
-A morphism from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a functorial morphism, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$: 
+A morphism from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a morphism of functors, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$: 
 $$ 
 \begin{tikzcd} 
 \alpha_k(i_k)\ar{r}{\alpha_k(f_k)}\ar[equal]{d}&\alpha_k(j_k)\ar[equal]{d}\\ 
@@ -4186,7 +4186,7 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 &\simeq\Hom_{\oo D(R)}(M,\oo{RHom}_k(N,L)).
 \end{align*}
 
-\n P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a functorial morphism 
+\n P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
 $$
 \begin{tikzcd}
 %
