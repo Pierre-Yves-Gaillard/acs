@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alr)
+% about "categories and sheaves" (version als)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3342,11 +3342,19 @@ Proof. We may assume from the beginning that $\F$ is small. (Recall that the fun
 
 \n Step 2. By Proposition 1.2.12 p.~16, a morphism $f$ in $\C$ is an epimorphism as soon as $\p(f)$ is an epimorphism.
 
-\n Step 3. Let us fix $X\in\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. We claim 
+\n Step 3. Let us fix $X\in\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism 
+\begin{equation}\label{step3}
+\coli_i\Coim z_i\xrightarrow{\sim}\Coim\left(\coli_i\zeta(z_i)\to X\right)
+\end{equation}
+as follows: If $z:\zeta(z)\to X$ is the inductive limit if $(\zeta(z_i)\to X)$, then \eqref{step3} is induced by the morphisms $\Coim z_{i_0}\to\Coim z$ defined by the commutative diagram 
 $$
-\coli_i\Coim z_i\xrightarrow{\sim}
-\Coim\left(\coli_i\zeta(z_i)\to X\right).
-$$
+\begin{tikzcd}
+\zeta(z_{i_0})\times_X\zeta(z_{i_0})\ar{d}\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&\zeta(z_{i_0})\ar{d}\ar{r}&\Coim z_{i_0}\ar{d}\\ 
+\zeta(z)\times_X\zeta(z)\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&\zeta(z)\ar{r}&\Coim z.
+\end{tikzcd}
+$$ 
+Then \eqref{step3} is an isomorphism.
+
 \n Step 3'. Let $A$ be in $\F^\wedge$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wedge)_A$. We claim 
 $$
 \coli_i\Coim(B_i\to A)\xrightarrow{\sim}
