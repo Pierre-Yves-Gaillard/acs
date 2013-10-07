@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alv)
+% about "categories and sheaves" (version alw)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3533,10 +3533,12 @@ $$
 $$ 
 we mean, in the first case, not only that $x$ runs over the elements of $A(X_1,X_2)$, but also that $X_1$ and $X_2$ themselves run over the objects of $\C_1$ and $\C_2$, so that we are taking the inductive limit of some functor defined over $(\C_1\times\C_2)_A$. In the other cases, the interpretation is similar. 
 
-Now recall the definition of $\theta$ and $\mu$: The functor $\theta$ is defined by $\theta(A)=(A_1,A_2)$ with 
-$$
+Recall the definition of $\theta$ and $\mu$: The functor $\theta$ is defined by $\theta(A)=(A_1,A_2)$ with
+%
+\begin{equation}\label{ai}
 A_i:=\ic_x\ X_i. 
-$$ 
+\end{equation}
+%
 The functor $\mu$ is defined by 
 $$
 \mu(A_1,A_2):=\ic_{x_1,x_2}\ (X_1,X_2). 
@@ -3544,23 +3546,25 @@ $$
 
 Now we prove that $\theta$ and $\mu$ are mutually quasi-inverse. 
 
-By the IPC Property (see pp 75-77 of the book), we have 
-$$
+By the IPC Property (see pp 75-77 of the book), we have
+%
+\begin{equation}\label{ipc}
 \mu(A_1,A_2)(X_1,X_2)\simeq A_1(X_1)\times A_2(X_2), 
-$$ 
+\end{equation}
+%
 which suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$. 
 
-Let $A_i$ be in $\Ind(\C_i)$ for $i=1,2$, let $A$ be $A_1\times A_2$, and let $(B_1,B_2)$ be $\theta(A)$. Then we have 
+If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\times A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
-B_1=\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
+B_1\simeq\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
 $$ 
-Indeed, the first isomorphism follows from the definition of $B_1$, the second one from the definition of $A$, the third one from the fact that the projection 
+Indeed, the first isomorphism follows \eqref{ai}, the second one from \eqref{ipc}, the third one from the fact that the projection 
 $$
 (\C_1)_{A_1}\times(\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
 is cofinal because $(\C_1)_{A_1}$ is nonempty and $(\C_2)_{A_2}$ is connected, and the fourth one from our old friend \eqref{263a} p.~\pageref{263a}. (By the way, in this proof we are using \eqref{263a} a lot without explicit reference.) 
 
-Let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse functorial isomorphisms. 
+Let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
 
 Definition of the morphism $A\to A_1\times A_2$: Recall 
 $$
