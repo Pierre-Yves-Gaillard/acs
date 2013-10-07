@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alw)
+% about "categories and sheaves" (version alx)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3570,7 +3570,7 @@ Definition of the morphism $A\to A_1\times A_2$: Recall
 $$
 A\simeq\ic_y\ (Y_1,Y_2), 
 $$ 
-and let $y$ be in $A(Y_1,Y_2)$. We must define $y_i\in A_i(Y_i),i=1,2$. Recall 
+and let $y$ be in $A(Y_1,Y_2)$. We shall define $y_i\in A_i(Y_i),i=1,2$. Recall 
 $$
 A_i(Y_i)\simeq\co_x\ \Hom_{\C_i}(Y_i,X_i), 
 $$ 
@@ -3578,16 +3578,33 @@ let $a_i(x):\Hom_{\C_i}(Y_i,X_i)\to A_i(Y_i)$ be the coprojection (see Definitio
 $$
 y_i:=a_i(y)(\id_{Y_i}). 
 $$ 
+To define our morphism $A_1\times A_2\to A$ we consider the commutative diagram
+$$
+\begin{tikzcd}
+\displaystyle\ic_y(Y_1,Y_2)\ar{r}&\displaystyle\ic_{x_1,x_2}(X_1,X_2)\\ 
+(Y_1,Y_2)\ar{u}{p(y)}\ar[equal]{r}&(Y_1,Y_2),\ar{u}[swap]{q(y_1,y_2)}
+\end{tikzcd}
+$$ 
+where the notation is, we hope, self-explanatory, and we leave it to the reader to check that this diagram does define the indicated morphism.
 
 Definition of the morphism $A_1\times A_2\to A$: Recall 
 $$
 A_1\times A_2\simeq\ic_{x_1,x_2}\ (X_1,X_2). 
 $$ 
-Let $x_i$ be in $A_i(X_i)$. We must define $x\in A(X_1,X_2)$. We have 
+Let $x_i$ be in $A_i(X_i)$. We shall define $x\in A(X_1,X_2)$. We have 
 $$
 A_i(X_i)\simeq\co_y\ \Hom_{\C_i}(X_i,Y_i). 
+$$
+Let $b_i(y):\Hom_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection (see Definition~\ref{c} p.~\pageref{c}). The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made to define it.
+
+To define our morphism $A_1\times A_2\to A$ we consider the commutative diagram
+$$
+\begin{tikzcd}
+\displaystyle\ic_{x_1,x_2}(X_1,X_2)\ar{r}&\displaystyle\ic_y(Y_1,Y_2)\\ 
+(X_1,X_2)\ar{u}{r(x_1,x_2)}\ar[equal]{r}&(Y_1,Y_2),\ar{u}[swap]{s(x)}
+\end{tikzcd}
 $$ 
-Let $b_i(y):\Hom_{\C_i}(X_i,Y_i)\to A_i(X_i)$ be the coprojection (see Definition~\ref{c} p.~\pageref{c}). The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Y_1,Y_2,y,f_1,f_2)$ with $Y_i$ in $\C_i$, $y$ in $A(Y_1,Y_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$ such that $x_i=b_i(y)(f_i)$ for $i=1,2$. We put $x:=A(f_1,f_2)(y)$, and leave it to the reader to check that $x$ does not depend on the choices made to define it. 
+where the notation is, we hope, self-explanatory, and we leave it to the reader to check that this diagram does define the indicated morphism.
 %
 \section{Theorem 6.4.3 (p.~144)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
