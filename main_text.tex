@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alz)
+% about "categories and sheaves" (version ama)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3608,13 +3608,13 @@ where the notation is, we hope, self-explanatory, and we leave it to the reader 
 %
 \section{Theorem 6.4.3 (p.~144)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-Notational convention for this section (and for this section only): Superscripts will never be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only one category of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will considered in this section. As a lot of subscripts will be used, we shall denote this category by 
+Notational convention for this section (and for this section only): Superscripts will never be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only two categories of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will considered in this section. As a lot of subscripts will be used, we shall denote these categories by 
 %
 \begin{equation}\label{slice}
-\C/G(a)
+\C/G(a)\text{ and }L/a
 \end{equation}
 %
-instead of $\C_{G(a)}$, to avoid confusion. Superscripts will always be used to designate categories of functors, like the category $\B^\A$ of functors $\A\to\B$. 
+instead of $\C_{G(a)}$ and $L_a$, to avoid confusion. Superscripts will always be used to designate categories of functors, like the category $\B^\A$ of functors $\A\to\B$. 
 
 Recall the statement: 
 %
@@ -3679,7 +3679,7 @@ We start as in the proof of Theorem 6.4.3 p.~144 of the book:
 
 We order $\Ob(K)$ be decreeing $a\le b$ if and only if $\Hom_K(a,b)\neq\varnothing$, and argue by induction on the cardinal $n$ of $\Ob(K)$. 
 
-If $n=0$ the result is clear. 
+If $n=0$ the result is clear.
 
 Otherwise, let $a$ be a maximal object $a$ of $K$; let $L$ be the full subcategory of $K$ such that 
 $$
@@ -3691,24 +3691,24 @@ $$
 $$ 
 be the natural functor (see \eqref{slice} for the definition of $\C/G(a)$); define 
 $$ 
-\varphi:N\{L,G_L,(\alpha_\ell)\}\to(\C/G(a))^{L_a} 
+\varphi:N\{L,G_L,(\alpha_\ell)\}\to(\C/G(a))^{L/a} 
 $$ 
-by 
+(see \eqref{slice} for the definition of $L/a$) by 
 $$
 \varphi((i_\ell),P)\left(b\xr f a\right):=\left(P(b)\to G(b)\xr{G(f)}G(a)\right),
 $$
 where the $P(b)\to G(b)$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}); let 
 $$
-\Delta:\C/G(a)\to(\C/G(a))^{L_a}
+\Delta:\C/G(a)\to(\C/G(a))^{L/a}
 $$ 
 be the diagonal functor; and observe the equivalence 
 $$ 
-N\{K,G,(\alpha_k)\}\sim M\left[N\{L,G_L,(\alpha_\ell)\}\xrightarrow{\varphi}(\C/G(a))^{L_a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
+N\{K,G,(\alpha_k)\}\sim M\left[N\{L,G_L,(\alpha_\ell)\}\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$ 
 
 By induction hypothesis, $N':=N\{L,G_L,(\alpha_\ell)\}$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
 
-It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and it is easy to see that this implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
+It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and it is easy to see, using Proposition 3.2.2 p.~78, that this implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
 
 From this point we can argue as in the proof of Proposition 6.1.13 p.~134. 
 %
