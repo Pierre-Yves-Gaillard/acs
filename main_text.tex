@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version alx)
+% about "categories and sheaves" (version aly)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3642,11 +3642,11 @@ $$
 
 As in the book we assume, as we may, that any two isomorphic objects of $K$ are equal. 
 
-Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and $\alpha_k:I_k\to\C$ be a functor such that $G(k)=\ic\alpha_k$. We define the category 
+Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let $\alpha_k:I_k\to\C$ be a functor such that $G(k)=\ic\alpha_k$. We define the category 
 $$
 N:=N\{K,G,(\alpha_k)\}
 $$ 
-as follows. 
+as follows:
 
 An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
 
@@ -3657,7 +3657,7 @@ An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to
 \noindent(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square 
 $$ 
 \begin{tikzcd} 
-\alpha_k(i_k)=P(k)\ar{r}{P(f)}\ar{d}[swap]{c_k(i_k)}&Q(k)=\alpha_\ell(i_\ell)\ar{d}{c_\ell(i_\ell)}\\ 
+\alpha_k(i_k)=P(k)\ar{r}{P(f)}\ar{d}[swap]{c_k(i_k)}&P(k)=\alpha_\ell(i_\ell)\ar{d}{c_\ell(i_\ell)}\\ 
 G(k)\ar{r}[swap]{G(f)}&G(\ell) 
 \end{tikzcd} 
 $$ 
@@ -3697,7 +3697,7 @@ by
 $$
 \varphi((i_\ell),P)\left(b\xr f a\right):=\left(P(b)\to G(b)\xr{G(f)}G(a)\right),
 $$
-where the first arrow is the coprojection (see Definition~\ref{c} p.~\pageref{c}); let 
+where the $P(b)\to G(b)$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}); let 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L_a}
 $$ 
