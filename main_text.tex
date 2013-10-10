@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aml)
+% about "categories and sheaves" (version amm)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4409,16 +4409,24 @@ $$
 0\ar[equal]{r}&0.
 \end{tikzcd}
 \end{equation}
-{\em Proof.} The {\em if} \ part is obvious. To prove the {\em only if} \ part, we assume $\sum_{i=1}^n\ a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
+\begin{proof}
+The {\em if} \ part is obvious. To prove the {\em only if} \ part, we assume $\sum_{i=1}^n\ a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
 $$
 C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
 $$ 
-Put $b_i:=0$ for $i\in I\setminus\{1,\dots,\ell\}$. Then the family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that our integer $\ell\ge n$ can be chosen so that there exist families $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above such that 
+Put $b_i:=0$ for $i\in I\setminus\{1,\dots,\ell\}$. Then the family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$ and a family $(\lambda_{ij})_{i\in I,1\le j\le m}$ such that $(\lambda_{ij})_i\in S^{\oplus I}$ for all $j$ and 
+$$
+(b_i)_i=g'
+\left(\left(\sum_{j=1}^m\lambda_{ij}\otimes b'_j\right)_i\right)=
+\left(\left(\sum_{j=1}^m\lambda_{ij}\,b'_j\right)_i\right).
+$$ 
+As $(\lambda_{ij})_i\in S^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange notation so that this set is equal to $\{1,\dots,\ell\}$ with $\ell\ge n$. We get in particular  
 $$
 b_i=\sum_{j=1}^m\ \lambda_{ij}\,b'_j
 $$ 
-for $1\le i\le\ell$. q.e.d.
-
+for $1\le i\le\ell$.
+\end{proof}
+%
 Let us go back to the proof of Lemma 18.5.3 p. 447.
 
 [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
