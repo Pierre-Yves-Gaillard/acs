@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ame)
+% about "categories and sheaves" (version amf)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4105,18 +4105,18 @@ This is about Sections 12.1 and 12.2 of the book. I think the Snake Lemma can be
 Let $\A$ be an abelian category. 
 %
 \begin{lem}\label{sl1}
-Let 
+If 
 $$
 \begin{tikzcd}
 {}&X'\ar{d}{u}\ar{r}{f}&X\ar{d}{v}\ar{r}{g}&X''\ar{d}{w}\ar{r}&0\\ 
 0\ar{r}&Y'\ar{r}[swap]{f'}&Y\ar{r}[swap]{g'}&Y''.
 \end{tikzcd}
 $$ 
-be a commutative diagram in $\A$ with exact rows. If $w$ is a monomorphism or $u$ is an epimorphism, then the sequence 
+is a commutative diagram in $\A$ with exact rows, then the sequence 
 $$
 \Ker u\to\Ker v\to\Ker w\xr0\Coker u\to\Coker v\to\Coker w
 $$
-is exact.
+is exact at $\Ker v$ and $\Coker v$. If in addition $w$ is a monomorphism or $u$ is an epimorphism, then the whole sequence is exact.
 \end{lem}
 %
 The proof is straightforward (and much easier than that of the Snake Lemma). 
