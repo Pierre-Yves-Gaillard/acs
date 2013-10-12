@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version amq)
+% about "categories and sheaves" (version amr)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4342,22 +4342,41 @@ There are analog observations for the other statements of Section 14.4.
 %
 %%
 %
-\begin{comment}
 \begin{s}
-Theorem 14.4.8 p.~361. Here is a remark that could be inserted between the statement and the proof of Theorem 14.4.8. We write $G$ and $F_i$ for $\oo K(G)$ and $\oo K(F_i)$.
-\begin{rk}\label{1448}
-Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and $X_3\to I$ be qis with $X_i\in\widetilde{\mc P}_i$ and $I\in\oo K_{\oo{hi}}(\C_3)$ (such exist). Then we have 
-$$
-LG(X_1,X_2)\simeq G(P_1,P_2),
-$$
-$$
-RF_1(X_2,X_3)\simeq F_1(P_2,I),\quad 
-RF_2(X_1,X_3)\simeq F_2(P_1,I).
-$$
-\end{rk}
-Note that (14.4.6) follows from Corollary~\ref{1432} p.~\pageref{1432}, Remark \ref{1448} and (14.4.7), and (14.4.5) follows from (14.4.6) by Theorem 13.4.1 p.~337.
+Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
+
+Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and $X_3\to I$ be qis with $X_i\in\widetilde{\mc P}_i$ and $I\in\oo K_{\oo{hi}}(\C_3)$ (such exist). Consider the functorial morphisms of abelian groups
+\begin{equation}\label{1448}
+\begin{split}
+\Hom_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\xr a\Hom_{\oo D(\C_3)}(G(P_1,P_2),I)\xleftarrow b\\ 
+\Hom_{\oo K(\C_3)}(G(P_1,P_2),I)&\simeq\Hom_{\oo K(\C_1)}(P_1,F_1(P_2,I))\xr c\\ 
+\Hom_{\oo D(\C_1)}(P_1,F_1(P_2,I))&\xleftarrow d\Hom_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)),
+\end{split}
+\end{equation}
+where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
 \end{s}
-\end{comment}
+%
+%%
+%
+\begin{s}
+Step (f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \eqref{1448} are isomorphisms. As explained in the book, we have morphisms  
+\begin{equation}\label{f1}
+\begin{split}
+\oo{RHom}_{\C_3}(LG(X_1,X_2),X_3)&\to\\ 
+\oo{RHom}_{\C_1}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
+\oo{RHom}_{\C_1}(X_1,RF_1(X_2,X_3)).
+\end{split}
+\end{equation}
+Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphisms 
+\begin{equation}\label{f2}
+\begin{split}
+\oo{Hom}_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\to\\ 
+\oo{Hom}_{\oo D(\C_1)}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
+\oo{Hom}_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)).
+\end{split}
+\end{equation}
+By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~\eqref{1448}, and is, thus, an isomorphism. This implies that Composition~\eqref{f1} is also an isomorphism.
+\end{s}
 %
 %%
 %
