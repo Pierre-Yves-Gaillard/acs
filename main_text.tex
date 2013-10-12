@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version amn)
+% about "categories and sheaves" (version amo)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4314,7 +4314,21 @@ This follows from the proof given in the book.
 %
 %%
 %
-\begin{s} 
+\begin{s}
+Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
+%
+\begin{cor}
+Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor $\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k)$. If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I\in\oo K_{\oo{hi}}(\C)$ (such exist) we have 
+$$
+\oo{RHom}_\C(X,Y)\xr\sim\Hom_{\oo K(\C)}(X,I)\xr\sim\Hom_{\oo D(\C)}(X,I).
+$$ 
+Moreover, $H^0(\oo{RHom}_\C(X,Y))\simeq\Hom_{\oo D(\C)}(X,Y)$ for $X,Y\in\oo D(\C)$.
+\end{cor}
+\end{s} 
+%
+%%
+%
+\begin{s}
 P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
 
 \noindent(a) Replace Assumption (14.4.1) p.~358 with: ``$\C$ admits inductive limits indexed by the ordered set $\bb N$, and such limits are exact''.
