@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version amo)
+% about "categories and sheaves" (version amp)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4317,7 +4317,7 @@ This follows from the proof given in the book.
 \begin{s}
 Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
 %
-\begin{cor}
+\begin{cor}\label{1432}
 Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor $\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k)$. If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I\in\oo K_{\oo{hi}}(\C)$ (such exist) we have 
 $$
 \oo{RHom}_\C(X,Y)\xr\sim\Hom_{\oo K(\C)}(X,I)\xr\sim\Hom_{\oo D(\C)}(X,I).
@@ -4339,6 +4339,24 @@ P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.
 
 There are analog observations for the other statements of Section 14.4.
 \end{s}
+%
+%%
+%
+\begin{s}
+Theorem 14.4.8 p.~361. Here is a remark that could be inserted between the statement and the proof of Theorem 14.4.8. We write $G$ and $F_i$ for $\oo K(G)$ and $\oo K(F_i)$.
+\begin{rk}\label{1448}
+Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and $X_3\to I$ be qis with $X_i\in\widetilde{\mc P}_i$ and $I\in\oo K_{\oo{hi}}(\C_3)$ (such exist). Then we have 
+$$
+LG(X_1,X_2)\simeq G(P_1,P_2),
+$$
+$$
+RF_1(X_2,X_3)\simeq F_1(P_2,I),\quad 
+RF_2(X_1,X_3)\simeq F_2(P_1,I).
+$$
+\end{rk}
+Note that (14.4.6) follows from Corollary~\ref{1432} p.~\pageref{1432} and Remark \ref{1448}, and (14.4.5) follows from (14.4.6) by Theorem 13.4.1 p.~337.
+\end{s}
+
 %
 %%
 %
