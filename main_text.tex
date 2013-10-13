@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ams)
+% about "categories and sheaves" (version amt)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -461,9 +461,11 @@ Note that there are natural inverse isomorphisms $\C\rightleftarrows\C^*$.
 %
 \begin{nota}\label{mor}
 %
-Let $\C$ be a category. Define the category $\Mor(\C)$ as follows. The objects of $\Mor(\C)$ are the objects of $\C^*$, we have for $(Y,f,X)$ and $(V,g,U)$ in $\C^*$\bigskip 
-
-\noindent$\displaystyle \Hom_{\Mor(\C)}((Y,f,X),(V,g,U)):=$\bigskip 
+Let $\C$ be a category. Define the category $\Mor(\C)$ by 
+$$
+\Ob(\Mor(\C)):=\bigcup_{X,Y\in\Ob(\C)}\Hom_{\C^*}(X,Y),
+$$
+$\displaystyle \Hom_{\Mor(\C)}((Y,f,X),(V,g,U)):=$\bigskip 
 
 $\hfill\displaystyle\{(a,b)\in\Hom_\C(X,U)\times\Hom_\C(Y,V)\ | \ g\circ a=b\circ f\},$\bigskip 
 
