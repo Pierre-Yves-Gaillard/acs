@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version amu)
+% about "categories and sheaves" (version amv)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -258,7 +258,26 @@ by
 $$
 L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b). 
 $$ 
-Then $(L,R)$ is a pair of adjoint functors. 
+Then $(L,R)$ is a pair of adjoint functors.
+
+More precisely, the bijection between maps
+$$
+\begin{tikzcd}
+C\times_BX\ar{dr}\ar{rr}{f}&&Y\ar{dl}\\ 
+{}&C
+\end{tikzcd}
+$$
+over $C$ and maps
+$$
+\begin{tikzcd}
+X\ar{dr}\ar{rr}{g}&&\displaystyle\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b)\ar{dl}\\ 
+{}&B
+\end{tikzcd}
+$$
+over $B$ is given by 
+$$
+b\in B,\ (c,x)\in C_b\times X_b\ \implies\ f(c,x)=g(x)(c).
+$$
 
 \noindent P.~74, last four lines: $\alpha$ should be replaced with $\varphi$. 
 
