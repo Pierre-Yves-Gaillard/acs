@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ang)
+% about "categories and sheaves" (version anh)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -524,8 +524,11 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 %
 %%
 %
-\begin{s} 
-P.~24, the Yoneda Lemma. For the sake of completeness, one could add the following statements: 
+\begin{s}
+%
+\begin{comment}
+%
+For the sake of completeness, one could add the following statements: 
 
 \noindent(a) Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
 $$
@@ -546,8 +549,10 @@ $$
 \varphi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
-
-\noindent(b) Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$.
+%
+\end{comment}
+%
+P.~24, the Yoneda Lemma. Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$.
 %
 \begin{df}\label{ue} 
 An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
