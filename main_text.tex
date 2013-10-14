@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ane)
+% about "categories and sheaves" (version anf)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -420,7 +420,7 @@ should be ``a sequence
 
 \noindent $*$ P. 244, second diagram: the arrow from $X'$ to $Z'$ should be dotted. (For a nice picture of the octahedral diagram see p.~49 of Mili\v{c}i\'c's text 
 
-\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf})
+\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf}.)
 
 \noindent $*$ P. 245, beginning of the proof of Proposition 10.1.13: The letters $f$ and $g$ being used in the sequel, it would be better to write $X\xr fY\xr gZ\to TX$ instead of $X\to Y\to Z\to TX$. Also, in the first display, the subscript $\cc D$ is missing (three times) in $\Hom_{\cc D}$.
 
@@ -456,6 +456,7 @@ $\bu$ $Q(u)$ should be $Q(u')$.
 
 \noindent $*$ P. 401, Line 6: $B''\to B$ should be $B''\to B'$.
 %
+\begin{comment}
 \begin{s}\label{c406}
 P. 406. I don't understand the isomorphism 
 $$
@@ -466,8 +467,9 @@ $$
 \left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A}\Hom_{\C_X}(U,f^t(V)).
 $$
 \end{s}
+\end{comment}
 %
-\noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. [Here we are {\em not} following the convention of \S\ref{revol} p.~\pageref{revol}.]
+\noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. %[Here we are {\em not} following the convention of \eqref{ttau} p.~\pageref{ttau}.]
 
 \noindent $*$ P. 426, Line 5: ``morphism of sites by'' should be ``morphism of sites''.
 
@@ -1014,7 +1016,8 @@ the last isomorphism following from \eqref{263b} p.~\pageref{263b}. q.e.d.
 \begin{s} 
 P.~64. It might be worth displaying the formula 
 \begin{equation}\label{275}
-\widehat F(A)(X')\simeq\co_{(X'\to F(X))\in\C^{X'}}A(X)
+\widehat F(A)(X')\simeq\co_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\simeq
+\co_{(X'\to F(X))\in\C^{X'}}A(X)
 \end{equation}
 contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
 \end{s}
@@ -2597,7 +2600,8 @@ in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This is ea
 %
 %%
 %
-\begin{s} P. 406, Notation 17.1.2 (ii). [In this \S\ we are {\em not} following the convention of \S\ref{revol} p.~\pageref{revol}.] Firstly note that the isomorphism 
+\begin{comment}
+\begin{s} P. 406, Notation 17.1.2 (ii). [See \eqref{ttau} p.~\pageref{ttau}.] Firstly note that the isomorphism 
 $$
 \big((f^t)\ \widehat{}A\big)(U)\simeq\co_{(U\to f^t(V))\in(\C_Y)^U}A(V)
 $$
@@ -2607,18 +2611,21 @@ follows from \eqref{275} p.~\pageref{275}. (See \S\ref{c406} p.~\pageref{c406}.)
 The functor $(f^t)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
 \end{s}
+\end{comment}
 %
 %%
 %
-\begin{s}\label{revol2} P. 407. Thanks to the convention in \S\ref{revol}, Formula (17.1.3) follows from (2.3.6) p.~52 of the book. For the sake of completeness, let us rewrite Formulas (17.1.3) and (17.1.4):
+\begin{s}\label{revol2} P. 407. Thanks to the convention in \eqref{ttau}, Formula (17.1.3) follows from (2.3.6) p.~52 of the book. For the sake of completeness, let us rewrite Formulas (17.1.3) and (17.1.4) (in the notation of \eqref{ttau}):
 \begin{equation}\label{17.1.3}
-f^\dagger(G)(U)=\co_{(f^t(V)\to U)\in((\C_Y)^{\op})_U}G(V),
+f^\dagger(G)(U)=\co_{(f^\tau(V)\to U)\in((\C_Y)^{\op})_U}G(V),
 \end{equation} 
-where $f^t(V)\to U$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $U\to f^t(V)$ in $\C_X$),
+where $f^\tau(V)\to U$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $U\to f^t(V)$ in $\C_X$),
 \begin{equation}\label{17.1.4}
-f^\ddagger(G)(U)=\lim_{(U\to f^t(V))\in((\C_Y)^{\op})^U}G(V),
+f^\ddagger(G)(U)=\lim_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}G(V),
 \end{equation} 
-where $U\to f^t(V)$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $f^t(V)\to U$ in $\C_X$).
+where $U\to f^\tau(V)$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $f^t(V)\to U$ in $\C_X$). 
+
+(We implicitly set $f^\dagger:=(f^\tau)^\dagger$ and $f^\ddagger:=(f^\tau)^\ddagger$.) 
 %
 \begin{comment}
 
@@ -2654,6 +2661,8 @@ $$
 %
 \end{comment}
 %
+
+
 Also note that Theorem 3.3.18 (b) p.~86 implies 
 %
 \begin{prop}\label{407}
@@ -2761,9 +2770,13 @@ P. 424, proof of Theorem 17.5.2 (iv). Firstly, as already mentioned, there is a 
 \begin{s} 
 P. 426, proof of Proposition 17.6.7 (i). The isomorphism 
 $$
-(f^t)\ \widehat{}\ (V\times B)\simeq f^t(V)\times(f^t)\ \widehat{}\ (B)
+(f^t)\ \widehat{}\ (V\times B)\simeq f^t(V)\times(f^t)\ \widehat{}\ (B),
 $$ 
-follows from Proposition~\ref{p406} p.~\pageref{p406}. [Here we are {\em not} following the convention of \S\ref{revol} p.~\pageref{revol}.]
+or, in the notation of \eqref{ttau} p.~\pageref{ttau}, 
+$$
+(f^\tau)\ \widehat{}\ (V\times B)\simeq f^\tau(V)\times(f^\tau)\ \widehat{}\ (B),
+$$
+follows from Proposition~\ref{p406} p.~\pageref{p406}. %[Here we are {\em not} following the convention of \S\ref{revol} p.~\pageref{revol}.]
 \end{s}
 %
 \section{Universes (p.~9)} %%%%%%%%%%%%%%%%%%%
@@ -4256,6 +4269,8 @@ $$
 \end{tikzcd}
 $$
 
+\nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{406} p.~\pageref{406}.)
+
 %\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
 
 \noindent $*$ P. 442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$.
@@ -4271,12 +4286,28 @@ $$
 \subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \begin{s}\label{231}
-P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \S\ref{revol} p.~\pageref{revol}). So, there is a big number of pages (with a high contents density) between the notation and its justification. A (perhaps silly) alternative would be to denote $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ by $\varphi^*,\varphi_\dagger$, and $\varphi_\ddagger$. Then $f_*,f^\dagger$, and $f^\ddagger$ would be defined by 
-$$
-f_*:=(f^t)^*,\quad f^\dagger:=(f^t)_\dagger,\quad f^\ddagger:=(f^t)_\ddagger.
-$$
+P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). So, there is a big number of pages (with a high contents density) between the notation and its justification. %A (perhaps silly) alternative would be to denote $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ by $\varphi^*,\varphi_\dagger$, and $\varphi_\ddagger$. Then $f_*,f^\dagger$, and $f^\ddagger$ would be defined by $$f_*:=(f^t)^*,\quad f^\dagger:=(f^t)_\dagger,\quad f^\ddagger:=(f^t)_\ddagger.$$
 \end{s}
 %
+%%
+%
+\begin{comment}
+\nn $*$ P.~63, Notation 2.7.2. Recall the setting: The diagram
+$$
+\begin{tikzcd}
+\C\ar{d}[swap]{\hy_\C}\ar{r}{F}&\C'\ar{d}{\hy_{\C'}}\\ 
+\C^\wedge\ar{r}[swap]{\widehat F}&\C'^\wedge
+\end{tikzcd}
+$$ 
+commutes up to isomorphism, $\C$ and $\C'$ are small, and we have 
+$$
+\widehat F(A)(V)\simeq\co_{(U\to A)\in\C_A}\Hom_{\C'}(V,F(U)).
+$$ 
+The purpose of this comment is just to note that we also have by Corollary 2.4.6 p.~56 
+\begin{equation}\label{272}
+\widehat F(A)(V)\simeq\co_{(U\to F(V))\in\C^U}A(U).
+\end{equation}
+\end{comment}
 %%
 %
 \begin{s} 
@@ -4419,11 +4450,36 @@ By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~
 %%
 %
 \begin{s}\label{revol}
-P. 405. We adopt the following convention: 
+P. 405. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
 
-If $f:X\to Y$ is a morphism of presites, then $f^t$ denotes the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$.
+If $f:X\to Y$ is a morphism of presites, then we keep the notation $f^t$ for the functor from $\C_Y$ to $\C_X$, and we designate by $f^\tau$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$:
+\begin{equation}\label{ttau}
+f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
+\end{equation}
+In other words, we set $f^\tau:=(f^t)^{\op}$.
 
-But we keep the same definition of left exactness of $f:X\to Y$ as in the book.
+We keep the same definition of left exactness (based on $f^t$) of $f:X\to Y$ as in the book.
+\end{s}
+%
+%%
+%
+\begin{s}\label{406}
+P. 406. Recall that, in the first line of second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
+%
+\begin{equation*}%\label{}
+\begin{split}
+(f^\tau)\ \widehat{}\ (B)(U)&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X^{\op}}(U,f^\tau(V))
+\\ \\ 
+{}&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^t(V),U)\\ \\ 
+{}&\simeq\co_{(U\to f^\tau(V))\in(\C_Y^{\op})^U}B(V).
+\end{split}
+\end{equation*}
+%
+For the sake of emphasis, we state: 
+%
+\begin{prop}\label{p406}
+The functor $(f^\tau)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^\tau)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
+\end{prop}
 \end{s}
 %
 %%
@@ -4431,15 +4487,16 @@ But we keep the same definition of left exactness of $f:X\to Y$ as in the book.
 \begin{s} 
 P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
 
-Also, one may refer to \S\ref{revol} p.~\pageref{revol} and \S\ref{revol2} p.~\pageref{revol2} to describe the morphism of sites $f_W:W\to V$. More precisely, to define $f_W$ it is simpler to view the morphism $W\to f^t(V)$ in $\C_X$ as a morphism $f^t(V)\to W$ in $(\C_X)^{\op}$. Indeed, if we adhere to \S\ref{revol}, $f_W^t$ must be a functor from $((\C_Y)_V)^{\op}$ to $((\C_X)_W)^{\op}$, and we can define it by 
+Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{revol2} p.~\pageref{revol2} to describe the morphism of sites $f_W:W\to V$. %More precisely, to define $f_W$ it is simpler to view the morphism $W\to f^t(V)$ in $\C_X$ as a morphism $f^t(V)\to W$ in $(\C_X)^{\op}$. Indeed, if we adhere to \eqref{ttau}, $f_W^t$ must be a functor from $((\C_Y)_V)^{\op}$ to $((\C_X)_W)^{\op}$, and we can define it by 
+More precisely, we define, in the notation \eqref{ttau}, the functor $f^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
 $$
-f_W^t(V'\to V):=(f^t(V')\to f^t(V)\to W).
+f_W^\tau(V'\to V):=(f^\tau(V')\to f^\tau(V)\to W).
 $$
 Finally, let us rewrite explicitly one of the key equalities (see \eqref{17.1.3} p.~\pageref{17.1.3}): 
 $$
-f^\dagger(\cc O_Y^{\oplus nm})(W)=\co_{(f^t(V)\to W)\in((\C_Y)^{\op})_W}\cc O_Y^{\oplus nm}(V),
+f^\dagger(\cc O_Y^{\oplus nm})(W)=\co_{(f^\tau(V)\to W)\in((\C_Y)^{\op})_W}\cc O_Y^{\oplus nm}(V),
 $$ 
-where $f^t(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $W\to f^t(V)$ in $\C_X$).
+where $f^\tau(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $W\to f^t(V)$ in $\C_X$).
 \end{s}
 %
 \subsection{Proof of Lemma 18.5.3 (p. 447)}
