@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version anj)
+% about "categories and sheaves" (version ank)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -558,7 +558,7 @@ P.~24, the Yoneda Lemma. Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object 
 An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$. 
+The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
 Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$.
 %
@@ -566,7 +566,7 @@ Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$.
 An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$.
+The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 \end{s}
 %
 %%
@@ -589,17 +589,27 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 %%
 %
 \begin{s} 
-P.~36, Definition 2.1.2. Let $\alpha:I^{\op}\to\C$ be a functor, let $\Delta:\C\to\C^{I^{\op}}$ be the diagonal functor, let $X$ be an object of $\C$, and let $u\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ be an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element (see Definition~\ref{ue} p.~\pageref{ue}). 
+P.~36, Definition 2.1.2. 
 %
 \begin{df}\label{p}
-For each $i$ in $I$ the morphism $u_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$.
+If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$.
 \end{df}
-
-Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $u\in\Hom_{\C^I}(\alpha,\Delta(X))$ be an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element (see Definition~\ref{ue2} p.~\pageref{ue2}). 
+%
+Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element means that for each $Y$ in $\C$ the map 
+$$
+\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\alpha),\quad f\mapsto p\circ\Delta(f)
+$$ 
+is bijective.
 %
 \begin{df}\label{c}
-For each $i$ in $I$ the morphism $u_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$.
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$.
 \end{df}
+%
+Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element means that for each $Y$ in $\C$ the map 
+$$
+\Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
+$$ 
+is bijective.
 \end{s}
 %
 %%
@@ -687,15 +697,15 @@ If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an o
 \end{lem}
 %
 \begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $i\in\Hom_{\C^\C}(\id_\C,\Delta(S))$ be such that, for all $X\in\C$, the morphism $i_X:X\to S$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By assumption the map 
+Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p\in\Hom_{\C^\C}(\id_\C,\Delta(S))$ be an $\Hom_{\C^\C}(\id_\C,\Delta(\ )$-universal element (see Definition~\ref{ue} p.~\pageref{ue}), so that, by , $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
 $$
-\Hom_\C(S,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ i 
+\Hom_\C(S,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
-is bijective. Let $\theta\mapsto\theta'$ be the inverse bijection. We have $\Delta(\theta_S)\circ i=\theta$ by definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$. This implies $\theta'=\theta_S$. Let $f$ be in $\Hom_\C(S,T)$. Using the fact that $f$ is of the form $\theta_S$ and the definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$, we obtain $f=f\circ i_S$; in particular $\id_S=i_S$. For $g$ in $\Hom_\C(X,S)$ we get 
+is bijective. Let $\theta\mapsto\theta'$ be the inverse bijection. We have $\Delta(\theta_S)\circ p=\theta$ by definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$. This implies $\theta'=\theta_S$. Let $f$ be in $\Hom_\C(S,T)$. Using the fact that $f$ is of the form $\theta_S$ and the definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$, we obtain $f=f\circ p_S$; in particular $\id_S=p_S$. For $g$ in $\Hom_\C(X,S)$ we get 
 $$
-g=i_S\circ g=i_X,
+g=p_S\circ g=p_X,
 $$
-the first equality following from the fact that $\id_S=i_S$, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\Delta(S))$.
+the first equality following from the fact that $\id_S=p_S$, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\Delta(S))$.
 \end{proof}
 \end{s}
 %
