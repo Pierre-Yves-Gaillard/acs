@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ank)
+% about "categories and sheaves" (version anl)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -525,12 +525,10 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 %%
 %
 \begin{s}
+P.~24. We state the Yoneda Lemma for the sake of completeness:
 %
-\begin{comment}
-%
-For the sake of completeness, one could add the following statements: 
-
-\noindent(a) Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
+\begin{thm}[Yoneda's Lemma] 
+Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
 F(A)\ar[yshift=0.7ex]{r}{\varphi}&\Hom_{\C^\wedge}(h(A),F)\ar[yshift=-0.7ex]{l}{\psi}
@@ -549,13 +547,12 @@ $$
 \varphi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
+\end{thm}
 %
-\end{comment}
-%
-P.~24, the Yoneda Lemma. Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$.
+The proof is straightforward.
 %
 \begin{df}\label{ue} 
-An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
 The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
