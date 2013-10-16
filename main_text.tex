@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version anl)
+% about "categories and sheaves" (version anm)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -230,9 +230,9 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~42, sixth line: ``belong to $\Mor(\C)$'' should be ``belong to $\Mor_0(\C)$''.
 
-\noindent $*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\text{Fct}(I,\C)$. 
+\noindent $*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\oo{Fct}(I,\C)$. 
 
-\noindent $*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\text{Fct}(J,\A)$'' should be ``$\beta\in\text{Fct}(J,\C)$''.
+\noindent $*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
 
 \noindent $*$ P.~54, second display: we should have $i\to\varphi(j)$ instead of $\varphi(j)\to i$. 
 
@@ -709,10 +709,25 @@ the first equality following from the fact that $\id_S=p_S$, and the second one 
 %%
 %
 \begin{s} 
-P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115b} p.~\pageref{17115b}: If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\text j_X$ the forgetful functor from $\C_X$ to $\C$, then we have 
+P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115b} p.~\pageref{17115b}: If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j_X$ the forgetful functor from $\C_X$ to $\C$, then we have
+%
 \begin{equation}\label{17115}
-\Hom_{\A^\C}(F,G)\simeq\lim_{X\in\C}\Hom_{\A^{\C_X}}(F\circ\text j_X,G\circ\text j_X).
+\Hom_{\A^\C}(F,G)\simeq\lim_{X\in\C}\Hom_{\A^{\C_X}}(F\circ\oo j_X,G\circ\oo j_X).
 \end{equation}
+
+Let us spell out the above statement: 
+
+Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
+
+The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition, induce a map $f:L\to R$. To an element  
+$$
+r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
+$$ 
+we attach the family
+$$
+\ell=\big(\mu_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
+$$ 
+We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are inverse bijections.
 \end{s}
 %
 %%
@@ -1041,7 +1056,7 @@ P.~64, end of Chapter 2. One could add the following observation (which will be 
 \begin{equation}\label{1725}
 \widehat F(B)(X)\simeq A(X).
 \end{equation}
-Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\{\text{pt}\}$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
+Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
 \end{s}
 %
 %%
