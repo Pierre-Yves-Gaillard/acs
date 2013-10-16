@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version anm)
+% about "categories and sheaves" (version ann)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -736,21 +736,21 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 %
 %%
 %
-\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Subsection~\ref{2111} p.~\pageref{2111}.) In the setting of Subsection~\ref{scji}, p.~\pageref{scji} one can prove $\co\beta\simeq\co\varphi^\dagger\beta$, that is 
+\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Subsection~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$, where $I$ and $J$ are small. One can prove $\co\beta\simeq\co\varphi^\dagger\beta$, that is 
 %
 \begin{equation}\label{coco} 
 \co_j\beta(j)\simeq\co_i\ \co_{j,u}\beta(j),
 \end{equation} 
 %
-where $(j,u)$ runs over $J_i$, with $u:\varphi(j)\to i$, as follows: Let 
+where $(j,u)$ runs over $J_i$, with $u:\varphi(j)\to i$, as follows: Let $L$ and $R$ be the left and right-hand sides of \eqref{coco}, let $f:R\to L$ be the obvious map, and let
 $$ 
 \beta(j)\xrightarrow{p_{i,j,u}}\co_{j,u}\beta(j)\xrightarrow{q_i}\co_i\ \co_{j,u}\beta(j)
 $$ 
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}). It suffices to check that the compositions 
+be the coprojections (see Definition~\ref{c} p.~\pageref{c}). We easily check that the compositions 
 $$
 \beta(j)\xrightarrow{p_{\varphi(j),j,\id_{\varphi(j)}}}\co_{j,u}\beta(j)\xrightarrow{q_{\varphi(j)}}\co_i\ \co_{j,u}\beta(j)
 $$ 
-induce an isomorphism from the left-hand side of \eqref{coco} to the right-hand side of \eqref{coco}, which is straightforward. q.e.d.
+induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 \end{s}
 %
 %%
