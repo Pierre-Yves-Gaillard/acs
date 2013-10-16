@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ano)
+% about "categories and sheaves" (version anp)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -527,7 +527,7 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 \begin{s}
 P.~24. We state the Yoneda Lemma for the sake of completeness:
 %
-\begin{thm}[Yoneda's Lemma] 
+\begin{thm}[Yoneda's Lemma]\label{yol}
 Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
@@ -535,9 +535,9 @@ F(A)\ar[yshift=0.7ex]{r}{\varphi}&\Hom_{\C^\wedge}(h(A),F)\ar[yshift=-0.7ex]{l}{
 \end{tikzcd}
 $$
 by 
-$$
+\begin{equation}\label{yo}
 \varphi(a)_X(f):=F(f)(a),\quad\psi(\theta):=\theta_A(\id_A)
-$$
+\end{equation}
 for 
 $$
 a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(X,A),\quad\theta\in\Hom_{\C^\wedge}(h(A),F).
@@ -547,6 +547,22 @@ $$
 \varphi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
+
+Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $F$ be in $\C^\vee$, let $A$ be in $\C$, and define 
+$$
+\begin{tikzcd} 
+F(A)\ar[yshift=0.7ex]{r}{\varphi}&\Hom_{\C^\vee}(F,k(A))=\Hom_{\Set^\C}(k(A),F)\ar[yshift=-0.7ex]{l}{\psi}
+\end{tikzcd}
+$$
+by \eqref{yo} for 
+$$
+a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(A,X),\quad\theta\in\Hom_{\Set^\C}(k(A),F).
+$$ 
+Then $\varphi$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
+$$
+\varphi(a)=k(a)\in\Hom_{\C^\wedge}(k(B),k(A)).
+$$
+This shows that $k$ is fully faithful.
 \end{thm}
 %
 The proof is straightforward.
@@ -589,7 +605,7 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 P.~36, Definition 2.1.2. 
 %
 \begin{df}\label{p}
-If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$.
+If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 %
 Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element means that for each $Y$ in $\C$ the map 
@@ -599,13 +615,13 @@ $$
 is bijective.
 %
 \begin{df}\label{c}
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$.
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 %
 Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element means that for each $Y$ in $\C$ the map 
-$$
+\begin{equation}\label{cue}
 \Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
-$$ 
+\end{equation}
 is bijective.
 \end{s}
 %
@@ -855,7 +871,7 @@ For $X\in\Set$ we have (with self-explanatory notation)
 $$
 \Hom_{\Set}\left(\coli k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
 $$
-the first isomorphism following from Exercise 2.8 p.~66, and the second one from the Yoneda Lemma.
+the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pageref{yol}).
 \end{proof}
 \end{s}
 %
