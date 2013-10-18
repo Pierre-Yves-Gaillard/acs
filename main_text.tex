@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version anv)
+% about "categories and sheaves" (version anw)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1106,19 +1106,19 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}); let $F,G:X\to Y$ b
 \end{lem}
 %
 \begin{proof}
-For each $u\in U$ put 
+Put 
 $$
-A_u:=\{(i,z)\ |\ i\in I,\ z\in\gamma(i),\ a_i(z)=u\}.
+A:=\coprod_{i\in I}\alpha(i).
+$$
+We shall define maps $\mu'$ and $\mu$ such that the diagram
+$$
+\begin{tikzcd}
+A\ar[two heads]{r}{a}&X\\ 
+a^{-1}(U)\ar[hook]{u}\ar{d}[swap]{\mu'}\ar[two heads]{r}&U\ar[hook]{u}\ar[dashed]{dl}{\mu}\\ 
+Z
+\end{tikzcd}
 $$ 
-One easily checks 
-
-\noindent$\bu\ A_u\ne\varnothing$ for all $u\in U$,
-
-\noindent$\bu\ (i,z),(j,w)\in A_u\ \implies\ c_i(z)=c_j(w)$, 
-
-\noindent$\bu$ there is a unique map $\mu:U\to Z$ such that $\mu(u)=c_i(z)$ whenever $(i,z)\in A_u$,
-
-\noindent$\bu\ \lambda$ and $\mu$ are inverse bijections.
+commutes. Here $a$ is the natural map. Let $(i,x)$, with $x$ in $\alpha(i)$, be in $a^{-1}(U)$, choose a morphism $s:i\to j$ in $I$ such that $\alpha(s)(x)\in\gamma(j)$ (such exists because $I$ is filtrant), and put $\mu'(i,x):=c_j(\alpha(s)(x))$. One easily checks that there is exactly one map $\mu$ which makes the diagram commutative, and that $\lambda$ and $\mu$ are inverse bijections.
 \end{proof}
 \end{s}
 %
