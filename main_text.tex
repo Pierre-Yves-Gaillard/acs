@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ant)
+% about "categories and sheaves" (version anu)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1227,15 +1227,15 @@ B:=\coli\beta.
 $$
 Let 
 $$
-c_i:\alpha_i\to A,\quad 
-c_{i,J}:\alpha_i\to\beta_J,\quad 
-c_J:\beta_J\to B
+p_i:\alpha_i\to A,\quad 
+p_{i,J}:\alpha_i\to\beta_J,\quad 
+p_J:\beta_J\to B
 $$
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $c_{i,J}$ is defined only for $i\in J$. We easily check that 
+be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}$ is defined only for $i\in J$. We easily check that 
 
-\noindent$\bu$ the morphisms$f_i:=c_{\{i\}}\circ c_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
+\noindent$\bu$ the morphisms$f_i:=p_{\{i\}}\circ p_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
 
-\noindent$\bu$ the morphisms $g_{i,J}:=c_i:\alpha_i\to A$ (with $i\in J$) induce a morphism $g_J:\beta_J\to A$, 
+\noindent$\bu$ the morphisms $g_{i,J}:=p_i:\alpha_i\to A$ (with $i\in J$) induce a morphism $g_J:\beta_J\to A$, 
 
 \noindent$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
 
@@ -1249,7 +1249,7 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $c_{i,J}
 %
 \begin{prop} 
 %
-Consider the functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\co\alpha$ exists in $\C$. Then $\co(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\co(F\circ\alpha)\to\co\alpha$ is an isomorphism. 
+Consider functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\co\alpha$ exists in $\C$. Then $\co(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\co(F\circ\alpha)\to\co\alpha$ is an isomorphism. 
 %
 \end{prop} 
 %
@@ -1301,7 +1301,7 @@ This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79.
 %%
 %
 \begin{s} 
-P. 90, Exercise 3.4 (i). (This exercise is used in the second sentence of p.~227). Recall the statement: 
+P. 90, Exercise 3.4 (i). (This exercise is used in the second sentence of p.~227 of the book.) Recall the statement: 
 %
 \begin{prop}\label{34i}
 If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
@@ -1594,7 +1594,7 @@ $\ic F\circ\beta\simeq IF(A)$,
 
 $\ic\varphi\simeq f$. 
 
-\noindent Then $f$ factorizes as $X'=\alpha(j)\xr{\varphi_j}F(\beta(j))\xr{c_j}IF(A)$, where $c_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
+\noindent Then $f$ factorizes as $X'=\alpha(j)\xr{\varphi_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
 
 \noindent(b) $\implies$ (c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
 
@@ -2203,11 +2203,11 @@ Let $\C$ be a category, let $A$ be in $\C^\wedge$, let $\varphi:J\to\C_A$ be a f
 $$
 \varphi(j)=(\psi(j),\psi(j)\xr{y_j}A),
 $$ 
-assume that $\co\psi$ exists in $\C$, let $c_j:\psi(j)\to\co\psi$ be the coprojection, let 
+assume that $\co\psi$ exists in $\C$, let $p_j:\psi(j)\to\co\psi$ be the coprojection, let 
 $$
 \xi=(\co\psi,\co\psi\xr x A)\in\C_A
 $$ 
-be such that $x\circ c_j=y_j$ for all $j$, and let $f_j:\varphi(j)\to\xi$ be the obvious morphism. Then $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. 
+be such that $x\circ p_j=y_j$ for all $j$, and let $f_j:\varphi(j)\to\xi$ be the obvious morphism. Then $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. 
 
 The proof is obvious.
 \end{s}
