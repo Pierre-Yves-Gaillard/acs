@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version anp)
+% about "categories and sheaves" (version ant)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -891,11 +891,11 @@ is bijective.
 \begin{proof}
 For $j\in J$ let 
 $$
-c_j:\Hom_I(i,\varphi(j))\to L_i
+p_j:\Hom_I(i,\varphi(j))\to L_i
 $$
 be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
 $$
-\Ob(J^i)\to L_i,\quad\big(j,s:i\to\varphi(j)\big)\mapsto c_j(s)
+\Ob(J^i)\to L_i,\quad\big(j,s:i\to\varphi(j)\big)\mapsto p_j(s)
 $$
 factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is an inverse to (\ref{om}).
 \end{proof}
@@ -904,7 +904,7 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is an
 %%
 %
 \begin{s} 
-P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and $A$ be in $\C^\wedge$. Consider the statements
+P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
 \ic_{X\in\C_A}X\xrightarrow\sim A,
@@ -1037,15 +1037,16 @@ $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
 as well as the following two remarks:
-
+%
 \begin{rk}\label{cof}
 If $A'$ is in $\cc C'^\wedge$, then by \eqref{263a} p~\pageref{263a} the natural functor $\varphi:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
 \end{rk}
-
+%
 \begin{rk}
 If $F$ is fully faithful, then there is an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$.
 \end{rk} 
-\noindent Indeed, we have 
+%
+Indeed, we have 
 $$
 \widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
 $$
@@ -1210,27 +1211,36 @@ In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By
 %%
 %
 \begin{s} 
-P.~80, Lemma 3.2.8. As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Also, we have functors $\xi_J:J\to K_J$ and $\varphi:K\to I$, so the composition $\varphi\circ\xi_J$ does not make sense at first sight. I don't understand the proof in the book, and I'll suggest another argument. I think it is implicitly assumed that $\C$ admits small inductive limits; at any rate, I'll make this assumption. In the notation of the lemma as stated in the book, put 
+P.~80, proof of Lemma 3.2.8\mv. As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Recall the statement:
+\begin{lem}
+Let $I$ be a small ordered set, $\alpha:I\to\C$ a functor. Let $\cc J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J\in\cc J$, associate the restriction $\alpha_J:\cc J\to\C$ of $\alpha$ to $\cc J$. Then $\cc J$ is small and filtrant and moreover
 $$
-L_1:=\coli\alpha,\quad
+\co\alpha\simeq\co_{J\in\cc J}\co\alpha_J.
+$$
+\end{lem}
+\begin{proof}
+Put
+$$
+A:=\coli\alpha,\quad
 \beta_J:=\coli\alpha_J,\quad
-L_2:=\coli\beta.
+B:=\coli\beta.
 $$
 Let 
 $$
-c_i:\alpha_i\to L_1,\quad 
+c_i:\alpha_i\to A,\quad 
 c_{i,J}:\alpha_i\to\beta_J,\quad 
-c_J:\beta_J\to L_2
+c_J:\beta_J\to B
 $$
 be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $c_{i,J}$ is defined only for $i\in J$. We easily check that 
 
-\noindent$\bu$ the morphisms$f_i:=c_{\{i\}}\circ c_{i,\{i\}}:\alpha_i\to L_2$ induce a morphism $f:L_1\to L_2$, 
+\noindent$\bu$ the morphisms$f_i:=c_{\{i\}}\circ c_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
 
-\noindent$\bu$ the morphisms $g_{i,J}:=c_i:\alpha_i\to L_1$ (with $i\in J$) induce a morphism $g_J:\beta_J\to L_1$, 
+\noindent$\bu$ the morphisms $g_{i,J}:=c_i:\alpha_i\to A$ (with $i\in J$) induce a morphism $g_J:\beta_J\to A$, 
 
-\noindent$\bu$ the morphisms $g_J$ induce a morphism $g:L_2\to L_1$, 
+\noindent$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
 
-\noindent$\bu$ $f$ and $g$ are inverse isomorphisms. q.e.d.
+\noindent$\bu$ $f$ and $g$ are inverse isomorphisms.
+\end{proof}
 \end{s}
 %
 %%
