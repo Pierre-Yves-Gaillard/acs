@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aoa)
+% about "categories and sheaves" (version aoc)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1405,7 +1405,7 @@ Let $\C$ be a category admitting finite inductive and projective limits in which
 \end{prop}
 %
 \begin{proof}
-To prove this, consider the commutative diagram
+Consider the commutative diagram
 $$
 \begin{tikzcd}
 X\ar[two heads]{d}\ar[two heads]{r}{u}&C_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
@@ -1413,7 +1413,7 @@ C_{a\circ u}\ar{ur}{c}\ar[two heads]{r}[swap]{b}&C_v.\ar{ru}
 \end{tikzcd}
 $$ 
 (The existence of $c$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) 
-By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\iff$ (b), p.~115, implies that $b$ is an isomorphism. Clearly, $c\circ b^{-1}$ is inverse to $a$.
+By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\implies$ (b), p.~115, implies that $b$ is an isomorphism. Clearly, $c\circ b^{-1}$ is inverse to $a$.
 \end{proof}
 \end{s}
 %
@@ -1431,17 +1431,21 @@ Let
 $$
 \begin{tikzcd}
 \C\ar{r}{\gamma}\ar{dr}[swap]{\varphi}&\G^\wedge\ar{d}{\rho}\\
-&\F^\wedge,
+&\F^\wedge
 \end{tikzcd}
 $$ 
-be the natural functors ($\rho$ being the restriction). Let $X$ and $Y$ be in $\C$. We have 
+be the natural functors ($\rho$ being the restriction), and let $X$ and $Y$ be in $\C$. We have 
 $$
 \begin{tikzcd}
 \Hom_\C(X,Y)\ar{r}\ar{dr}[swap]{\sim}&\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))\ar{d}\\
 &\Hom_{\F^\wedge}(\varphi(X),\varphi(Y)). 
 \end{tikzcd}
 $$ 
-We want to prove that the horizontal arrow is bijective. The slanted arrow being bijective, it suffices to show that the horizontal arrow is surjective. Let $\xi$ be in $\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\Hom_\C(X,Y)$ such that $\rho(\xi)=\varphi(f)$ and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\Hom_\C(Z,X)$. It suffices to show that the morphisms 
+We want to prove that the horizontal arrow is bijective. The slanted arrow being bijective, it suffices to show that the horizontal arrow is surjective. Let $\xi$ be in $\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\Hom_\C(X,Y)$ such that %$\rho(\xi)=\varphi(f)$ 
+\begin{equation}\label{rhoxi}
+\rho(\xi)=\varphi(f)
+\end{equation}
+and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\Hom_\C(Z,X)$. It suffices to show that the morphisms 
 $$
 \begin{tikzcd}
 Z\arrow[yshift=0.7ex]{r}{\xi_Z(z)}\arrow[yshift=-0.7ex]{r}[swap]{f\circ z}&Y
@@ -1470,7 +1474,7 @@ $$
 \xi_Z(z)\circ w=\xi_W(z\circ w)=\rho(\xi)_W(z\circ w)=\varphi(f)_W(z\circ w)
 =f\circ z\circ w, 
 $$ 
-the first equality following from the functoriality of $\xi$, the second one from the definition of $\rho$, the third one from the equality $\rho(\xi)=\varphi(f)$, and the fourth one from the definition of $\varphi$.
+the first equality following from the functoriality of $\xi$, the second one from the definition of $\rho$, the third one from \eqref{rhoxi}, and the fourth one from the definition of $\varphi$.
 \end{proof}
 \end{s}
 %
@@ -1489,11 +1493,9 @@ $$
 \begin{proof}
 We have, for $X\in\C$ and $F\in\F^\wedge$, 
 $$
-\Hom_\C(\psi(F),X)\simeq\Hom_\C\left(\co_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\Hom_\C(Y,X)
-$$ 
-$$
+\Hom_\C\left(\co_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\Hom_\C(Y,X)
 \simeq\lim_{Y\in\F_F}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(F,\varphi(X)),
-$$ 
+$$  
 the last isomorphism following from \eqref{263} p.~\pageref{263}.
 \end{proof}
 \end{s}
@@ -1505,11 +1507,11 @@ P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as fol
 %
 \begin{lem} 
 %
-Let $\C$ be a category closed by finite inductive limit, and let $\A$ be a small full subcategory of $\C$. Then 
+Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
 
-\noindent{\em(a)} there is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\A$ is closed by finite inductive limit, 
+\noindent{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
 
-\noindent{\em(b)} there is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
+\noindent{\em(b)} There is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
 %
 \end{lem} 
 %
