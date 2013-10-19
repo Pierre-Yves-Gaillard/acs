@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version anz)
+% about "categories and sheaves" (version aoa)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -710,7 +710,7 @@ If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an o
 \end{lem}
 %
 \begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p\in\Hom_{\C^\C}(\id_\C,\Delta(S))$ be an $\Hom_{\C^\C}(\id_\C,\Delta(\ )$-universal element (see Definition~\ref{ue} p.~\pageref{ue}), so that, by , $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
+Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(S))$ be an $\Hom_{\C^\C}(\id_\C,\Delta(\ )$-universal element (see Definition~\ref{ue} p.~\pageref{ue}), so that, by , $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
 $$
 \Hom_\C(S,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
@@ -1348,15 +1348,51 @@ the vertical arrows are bijective by (a), and the bottom arrow is bijective by (
 %%
 %
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$. By \eqref{intlaw} p.~\pageref{intlaw} Equality $(R*\eta*L)\circ(\varepsilon*P)=P$, that is $(R*\eta*L)\circ(\varepsilon*R*L)=R*L$, can be written as 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$. In view of \eqref{intlaw} p.~\pageref{intlaw}, Equality 
+%
+\begin{equation}\label{414i}
+(R*\eta*L)\circ(\varepsilon*P)=P,
+\end{equation}
+%
+that is $(R*\eta*L)\circ(\varepsilon*R*L)=R*L$, can be written as 
 $$
-\Big((R*\eta)\circ(\varepsilon*R)\Big)*L=R*L,
+\Big((R*\eta)\circ(\varepsilon*R)\Big)*L=R*L.
 $$ 
-and thus follows from (1.5.9) p.~29 in the book (stated as \eqref{159} p.~\pageref{159} in this text). Equality $(R*\eta*L)\circ(P*\varepsilon)=P$, that is $(R*\eta*L)\circ(R*L*\varepsilon)=R*L$, can be written as 
+More precisely, Equality 
 $$
-R*\Big((\eta*L)\circ(L*\varepsilon)\Big)*L=R*L,
+(R*\eta*L)\circ(\varepsilon*R*L)=\Big((R*\eta)\circ(\varepsilon*R)\Big)*L
 $$ 
-and thus follows from (1.5.8) p.~29 in the book (stated as \eqref{158} p.~\pageref{158} in this text).
+is attached to Array
+\begin{equation}%\label{intlaw2}
+\begin{matrix}
+L&R&\varepsilon\\ 
+L&\eta&R
+\end{matrix}
+\end{equation}
+in the same way as Equality \eqref{intlaw} p.~\pageref{intlaw} is attached to Array \eqref{intlaw2} p.~\pageref{intlaw2}. Thus \eqref{414i} follows from (1.5.9) p.~29 in the book (stated as \eqref{159} p.~\pageref{159} in this text).
+
+Similarly, by \eqref{intlaw} p.~\pageref{intlaw}, Equality 
+%
+\begin{equation}\label{414ib}
+(R*\eta*L)\circ(P*\varepsilon)=P,
+\end{equation}
+%
+that is $(R*\eta*L)\circ(R*L*\varepsilon)=R*L$, can be written as 
+$$
+\Big((R*\eta)\circ(\varepsilon*R)\Big)*L=R*L.
+$$ 
+More precisely, Equality 
+$$
+(R*\eta*L)\circ(R*L*\varepsilon)=\Big((R*\eta)\circ(\varepsilon*R)\Big)*L
+$$ 
+is attached to Array
+\begin{equation}%\label{intlaw2}
+\begin{matrix}
+\varepsilon&L&R\\ 
+L&\eta&R
+\end{matrix}
+\end{equation}
+in the same way as Equality \eqref{intlaw} p.~\pageref{intlaw} is attached to Array \eqref{intlaw2} p.~\pageref{intlaw2}. Thus \eqref{414i} follows from (1.5.9) p.~29 in the book (stated as \eqref{159} p.~\pageref{159} in this text). 
 \end{s}
 %
 %%
@@ -2929,6 +2965,15 @@ We shall define vertical composition of morphisms of functors, denoted by $\circ
 (\theta_{m-1,n}\circ\cdots\circ\theta_{1,n})*\cdots*(\theta_{m-1,1}\circ\cdots\circ\theta_{1,1})
 \end{matrix}
 \right\}
+\end{equation}
+
+We shall say that Equality \eqref{intlaw} is attached to Array
+\begin{equation}\label{intlaw2}
+\begin{matrix}
+\theta_{1,1}&\cdots&\theta_{1,n}\\
+\vdots&\vdots&\vdots\\ 
+\theta_{m-1,1}&\cdots&\theta_{m-1,n}.
+\end{matrix}
 \end{equation}
 
 Let $X$ be an object of $\C_1$, and, for $i\in M^n$, where $M:=\{1,2,\dots,m\}$, put 
