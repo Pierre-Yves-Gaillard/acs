@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aoc)
+% about "categories and sheaves" (version aod)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -105,7 +105,7 @@
 \DeclareMathOperator{\PSh}{PSh}
 \DeclareMathOperator{\Qis}{Qis}
 %\DeclareMathOperator{\Set}{Set}
-%\arrow[yshift=0.7ex]{r}\arrow[yshift=-0.7ex]{r}
+%\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -1530,11 +1530,30 @@ If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alp
 \end{lem} 
 %
 \begin{proof}
-To prove this, let $M$ be the category attached to the functors 
+Let $M$ be the category attached to the functors 
 $$
-\C\xrightarrow h\C^\wedge\xleftarrow\alpha I,
+\C\xrightarrow h\C^\wedge\xleftarrow{h\circ\alpha}I,
 $$ 
-where $h$ is the Yoneda embedding. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant. One easily checks that Condition (iii) of Proposition 3.2.2 p.~78 holds for the obvious functor $M\to\C_A$. Thus, the result follows from Proposition 3.2.2.
+where $h$ is the Yoneda embedding. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. For all $i$ in $I$ and all $X$ in $\C$ let 
+$$
+p_i:\alpha(i)\to A\quad\text{and}\quad p_i(X):\Hom_\C(X,\alpha(i))\to A(X)
+$$
+be the coprojections. Consider a commutative diagram 
+$$
+\begin{tikzcd}
+X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\\ 
+{}&\alpha(i)\ar{d}{p_i}\\ 
+A\ar[equal]{r}&A.
+\end{tikzcd}
+$$ 
+As $p_i(X)(y\circ s)$ equals $p_i(X)(y\circ s')$ in $A(X)\simeq\co\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\circ y\circ s=\alpha(t)\circ y\circ s'$:
+$$
+\begin{tikzcd}
+X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\ar{r}&\alpha(j)\ar[equal]{d}\\ 
+{}&\alpha(i)\ar{d}{p_i}\ar{r}{\alpha(t)}&\alpha(j)\ar{d}{p_j}\\ 
+A\ar[equal]{r}&A\ar[equal]{r}&A.
+\end{tikzcd}
+$$
 \end{proof}
 \end{s}
 %
