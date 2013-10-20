@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aoe)
+% about "categories and sheaves" (version aoh)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -968,10 +968,11 @@ I\ar{r}{\alpha}&\C\ar{d}{h}\ar{r}{F}&\C'\\
 &\C^\wedge
 \end{tikzcd}
 $$ 
-be functors, and let $X$ be an object of $\C$. Assume that $I$ is a small category, $\C$ is a $\U$-category, $\C'$ is a big category, $h$ is the Yoneda embedding, and we have an isomorphism $\co\ (h\circ\alpha)\simeq h(X)$. Let $p_i:h(\alpha(i))\to h(X)$ be the $i$ coprojection (see Definition~\ref{c} p.~\pageref{c}), let $q_i:\alpha(i)\to X$ be the morphism $p_i(\alpha(i))(\id_{\alpha(i)})$. Then the morphisms $F(q_i):F(\alpha(i))\to F(X)$ induce an isomorphism $\co\ (F\circ\alpha)\xrightarrow\sim F(X)$.
+be functors, and let $X$ be an object of $\C$. Assume that $I$ is a small category, $\C$ is a $\U$-category, $\C'$ is a big category, $h$ is the Yoneda embedding, and we have an isomorphism $\co\ (h\circ\alpha)\simeq h(X)$. Let $p_i:h(\alpha(i))\to h(X)$ be the $i$ coprojection (see Definition~\ref{c} p.~\pageref{c}), let $q_i:\alpha(i)\to X$ be the morphism $p_i(\alpha(i))(\id_{\alpha(i)})$. Then the morphisms $F(q_i):F(\alpha(i))\to F(X)$ induce an isomorphism $\co\ F(\alpha)\xrightarrow\sim F(X)$.
 \end{prop}
 %
-\noindent{\em Proof}. By enlarging $\U$ we can assume that $\C'$ is a $\U$-category. Let $X'$ be in $\C'$. We know 
+\begin{proof}
+By enlarging $\U$ we can assume that $\C'$ is a $\U$-category. Let $X'$ be in $\C'$. We know 
 $$
 A(X)\xrightarrow\sim\lim A(\alpha)\quad\forall\ A\in\C^\wedge 
 $$ 
@@ -979,7 +980,13 @@ and we want to prove
 $$
 \Hom_{\C'}(F(X),X')\xrightarrow\sim\lim\Hom_{\C'}(F(\alpha),X'). 
 $$ 
-It suffices to set $A(X):=\Hom_{\C'}(F(X),X')$. q.e.d.
+It suffices to set $A(X):=\Hom_{\C'}(F(X),X')$.
+\end{proof}
+
+Here is a slightly less precise reformulation of the above proposition, which state (somewhat inappropriately) as a corollary:
+\begin{cor}\label{264b}
+If $\alpha:I\to\C$ is a functor, then $\ic\alpha$ is represented by some object $X$ of $\C$ if and only if for all functor $F:\C\to\C'$ the natural morphism $\co\ F(\alpha)\xrightarrow\sim F(X)$ is an isomorphism.
+\end{cor}
 \end{s}
 %
 %%
@@ -1720,7 +1727,11 @@ $$
 %%
 %
 \begin{s} 
-P.~159, Definition 7.3.1 (ii). By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ 
+P.~159, Definition 7.3.1. Recall the definition: 
+
+Let $\C$ be a category and let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that the localization $Q:\C\to\C_{\cc S}$ exists. Then a functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which call $Q^\dagger F$ a {\em right localiation} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
+
+By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Corollary~\ref{264b} p.~\pageref{264b}), $F$ is universally right localizable if and only if for all $X$ in $\C$ 
 $$
 \icolim_{(X\to Y)\in\SSS^X}\ F(Y) 
 $$
