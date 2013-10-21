@@ -1,9 +1,11 @@
-% about "categories and sheaves" (version aol)
+% about "categories and sheaves" (version aon)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
+\pagestyle{headings}
 %\pagestyle{empty}
 \addtolength{\parskip}{.5\baselineskip}
+\addtocounter{section}{-2}
 \usepackage[a4paper]{geometry}
 %\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{bm}
 \usepackage{amssymb,amsmath}
@@ -167,7 +169,9 @@ The notation of the book will be freely used. We will sometimes write $\B^\A$ fo
 
 Following a suggestion of Pierre Schapira's, we shall denote projective limits by $\lim$ instead of $\plim$, and inductive limits by $\coli$ instead of $\ilim$. 
 
-Thank you to Pierre Schapira for his interest!%%%%%%%%%%%%%%%%%%%%
+Thank you to Pierre Schapira for his interest!
+%
+%%%%%
 %
 \section{U-categories and U-small Categories}\label{ucat}
 %
@@ -477,7 +481,63 @@ $$
 %
 \section{About Chapter 1}
 %
-\subsection{Brief Comments}%\label{bc} %%%%%%%%%%%%%%%%%%%
+%
+\subsection{Universes (p.~9)}
+%
+The book starts with a few statements which are not proved, a reference being given instead. Here are the proofs.
+
+A \textbf{universe} is a set $\mathcal U$ satisfying 
+
+(i) $\varnothing\in\mathcal U$,
+
+(ii) $u\in U\in\mathcal U\implies u\in \mathcal U$,
+
+(iii) $U\in\mathcal U\implies\{U\}\in\mathcal U$,
+
+(iv) $U\in\mathcal U\implies\mathcal P(U)\in\mathcal U$,
+
+(v) $I\in\mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\implies$ $\bigcup_{i\in I}U_i\in\mathcal U$,
+
+(vi) $\mathbb N\in\mathcal U$.
+
+\noindent We want to prove:
+
+(vii) $U\in\mathcal U\implies\bigcup_{u\in U}u\in\mathcal U$,
+
+(viii) $U,V\in\mathcal U\implies U\times V\in\mathcal U$,
+
+(ix) $U\subset V\in\mathcal U\implies U\in\mathcal U$,
+
+(x) $I\in \mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\implies$ $\prod_{i\in I}U_i\in\mathcal U$.
+
+\noindent(We have kept Kashiwara and Schapira's numbering of Conditions (i) to (x).) 
+
+\noindent Obviously, (ii) and (v) imply (vii), whereas (iv) and (ii) imply (ix). Axioms (iii), (vi), and (v) imply
+
+(a) $U,V\in\mathcal U\implies\{U,V\}\in\mathcal U$,
+
+\noindent and thus
+
+(b) $U,V\in\mathcal U\implies(U,V):=\{\{U\},\{U,V\}\}\in\mathcal U$.
+
+\noindent\textbf{Proof of (viii).} If $u\in U$ and $v\in V$, then $\{(u,v)\}\in\mathcal U$ by (ii), (b), and (iii). Now (v) yields 
+$$
+U\times V=\bigcup_{u\in U}\ \bigcup_{v\in V}\ \{(u,v)\}\in\mathcal U.\text{ q.e.d.} 
+$$ 
+
+Assume $U,V\in\mathcal U$, and let $V^U$ be the set of all maps from $U$ to $V$. As $V^U\in\mathcal P(U\times V)$, Statements (viii), (iv), and (ii) give
+
+(c) $U,V\in\mathcal U\implies V^U\in\mathcal U$. q.e.d.
+
+\noindent\textbf{Proof of (x).} As 
+$$
+\prod_{i\in I}\ U_i\in\mathcal P\left(\left(\bigcup_{i\in I}U_i\right)^I\right),
+$$
+(x) follows from (v), (c), and (iv). q.e.d.
+%
+%%%%
+%
+\subsection{Brief Comments}
 %
 \begin{s}\label{d125} 
 P. 14, Definition 1.2.5.
@@ -625,60 +685,7 @@ is bijective.
 %
 %%%
 %
-\subsection{Universes (p.~9)} %%%%%%%%%%%%%%%%%%%
-%
-The book starts with a few statements which are not proved, a reference being given instead. Here are the proofs.
-
-A \textbf{universe} is a set $\mathcal U$ satisfying 
-
-(i) $\varnothing\in\mathcal U$,
-
-(ii) $u\in U\in\mathcal U\implies u\in \mathcal U$,
-
-(iii) $U\in\mathcal U\implies\{U\}\in\mathcal U$,
-
-(iv) $U\in\mathcal U\implies\mathcal P(U)\in\mathcal U$,
-
-(v) $I\in\mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\implies$ $\bigcup_{i\in I}U_i\in\mathcal U$,
-
-(vi) $\mathbb N\in\mathcal U$.
-
-\noindent We want to prove:
-
-(vii) $U\in\mathcal U\implies\bigcup_{u\in U}u\in\mathcal U$,
-
-(viii) $U,V\in\mathcal U\implies U\times V\in\mathcal U$,
-
-(ix) $U\subset V\in\mathcal U\implies U\in\mathcal U$,
-
-(x) $I\in \mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\implies$ $\prod_{i\in I}U_i\in\mathcal U$.
-
-\noindent(We have kept Kashiwara and Schapira's numbering of Conditions (i) to (x).) 
-
-\noindent Obviously, (ii) and (v) imply (vii), whereas (iv) and (ii) imply (ix). Axioms (iii), (vi), and (v) imply
-
-(a) $U,V\in\mathcal U\implies\{U,V\}\in\mathcal U$,
-
-\noindent and thus
-
-(b) $U,V\in\mathcal U\implies(U,V):=\{\{U\},\{U,V\}\}\in\mathcal U$.
-
-\noindent\textbf{Proof of (viii).} If $u\in U$ and $v\in V$, then $\{(u,v)\}\in\mathcal U$ by (ii), (b), and (iii). Now (v) yields 
-$$
-U\times V=\bigcup_{u\in U}\ \bigcup_{v\in V}\ \{(u,v)\}\in\mathcal U.\text{ q.e.d.} 
-$$ 
-
-Assume $U,V\in\mathcal U$, and let $V^U$ be the set of all maps from $U$ to $V$. As $V^U\in\mathcal P(U\times V)$, Statements (viii), (iv), and (ii) give
-
-(c) $U,V\in\mathcal U\implies V^U\in\mathcal U$. q.e.d.
-
-\noindent\textbf{Proof of (x).} As 
-$$
-\prod_{i\in I}\ U_i\in\mathcal P\left(\left(\bigcup_{i\in I}U_i\right)^I\right),
-$$
-(x) follows from (v), (c), and (iv). q.e.d.
-%
-\subsection{Horizontal and Vertical Compositions (p.~19)} %%%%%%%
+\subsection{Horizontal and Vertical Compositions (p.~19)}
 %
 Let $m\ge2$ and $n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
 $$
@@ -998,7 +1005,7 @@ Let us spell out the above statement:
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
-The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition, induce a map $f:L\to R$. To an element  
+The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition, induce a map $f:L\to R$. Conversely, to an element  
 $$
 r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
 $$ 
@@ -1382,12 +1389,18 @@ $$
 $$ 
 Then $\co\theta$ is a functor from $I$ to $J$. 
 %
-\end{lem} 
+\end{lem}
 %
-Recall that we have functors 
+Here is a picture:
 $$
-\C\xleftarrow\beta J\xrightarrow\varphi I. 
-$$ 
+\begin{tikzcd}
+I\ar{rr}{\Phi}&\ar{d}[swap]{\theta}&\Cat&\Phi(i)\ar{d}{\theta_i}\\ 
+I\ar{rr}[swap]{J}&{}&J&J.
+\end{tikzcd}
+$$
+
+Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$.  
+
 In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor. 
 %
 \subsubsection{Step (b)} %%%%%%%%%%%%%%%
@@ -4131,7 +4144,14 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements.
 \noindent(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S\ref{732} p.~\pageref{732}.)
 \end{s}
 %
-%%%
+%%%%%
+%
+%
+\section{About Chapter 15}
+%
+This section is empty for the time being. It has been added only to make the section numbers coincide with the chapter numbers.
+%
+%%%%%
 %
 \section{About Chapter 16}
 %
