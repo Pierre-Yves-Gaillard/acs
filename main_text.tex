@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aok)
+% about "categories and sheaves" (version aol)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -248,17 +248,17 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~65, Exercise 2.7 (i). I think the statement of the exercise is not exactly the intended one. Here is a possible formulation.
 
-``Map'' shall mean ``morphism in $\Set$''. For any map $X\to Y$ and any $y\in Y$ we denote by $X_y$ the fiber above $y$. Let $C\to B$ be a map. Define the functors 
+``Map'' shall mean ``morphism in $\Set$''. For any map $X\to Y$ and any $y\in Y$ we denote by $X_y$ the fiber above $y$. If $C\to B$ is a map and if the functors 
 $$
 \begin{tikzcd}
 \Set_B\ar[yshift=.7ex]{r}{L}&\Set_C\ar[yshift=-.7ex]{l}{R}
 \end{tikzcd}
 $$ 
-by 
+are defined by 
 $$
-L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b). 
+L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b),
 $$ 
-Then $(L,R)$ is a pair of adjoint functors.
+then $(L,R)$ is a pair of adjoint functors.
 
 More precisely, the bijection between maps
 $$
