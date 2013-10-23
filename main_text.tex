@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aot)
+% about "categories and sheaves" (version aou)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -567,9 +567,16 @@ $$
 $$
 $\displaystyle \Hom_{\Mor(\C)}((Y,f,X),(V,g,U)):=$\bigskip 
 
-$\hfill\displaystyle\{(a,b)\in\Hom_\C(X,U)\times\Hom_\C(Y,V)\ | \ g\circ a=b\circ f\},$\bigskip 
+$\hfill\displaystyle\{(a,b)\in\Hom_\C(X,U)\times\Hom_\C(Y,V)\ | \ g\circ a=b\circ f\},$\bigskip
 
-\noindent and the composition is defined in the obvious way.
+\nn{\em i.e.} 
+$$
+\begin{tikzcd}
+X\ar{d}[swap]{f}\ar{r}{a}&U\ar{d}{g}\\ 
+Y\ar{r}[swap]{b}&V,
+\end{tikzcd}
+$$ 
+and the composition is defined in the obvious way.
 %
 \end{nota}
 %
