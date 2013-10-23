@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aos)
+% about "categories and sheaves" (version aot)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -200,7 +200,9 @@ Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{uca
 \begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
 \end{center}
 %
-\section{Typos and Details} %%%%%%%%%%%%%%%%%%%
+%%%%%
+%
+\section{Typos and Details}
 %
 $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
 
@@ -4506,7 +4508,7 @@ $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``uni
 \noindent $*$ P. 180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$.
 
 \begin{s}\label{1341}
-P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable'' should be ``universally right localizable, and let $\oo{RHom}_\C$ denote its right localization''.
+P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
 \end{s}
 
 \noindent $*$ P. 359, Line 3: $\sigma$ should be sh.
@@ -4532,6 +4534,19 @@ $$
 %
 \end{tikzcd}
 $$
+If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
+$$
+\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
+$$ 
+and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
+$$
+\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A)).
+$$ 
+This implies that the set 
+$$
+\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
+$$ 
+depends functorially on $U\in\C$.
 
 \nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
