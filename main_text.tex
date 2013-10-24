@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apd)
+% about "categories and sheaves" (version ape)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -992,7 +992,7 @@ If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an o
 \end{lem}
 %
 \begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(S))$ be an $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$-universal element (see Definition~\ref{ue} p.~\pageref{ue}), so that, by , $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
+Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(S))$ be auniversal element for the functor $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$ (see Definition~\ref{ue} p.~\pageref{ue}), so that, by , $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
 $$
 \Hom_\C(S,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
@@ -3113,66 +3113,37 @@ are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\opl
 %
 %%
 %
-\begin{s}\label{c176a}
-P.~176, Proposition 8.3.4. Here is a slightly different way of writing the proof of the isomorphism $\Coim f\simeq\Coker h$. Recall the statement: 
+\begin{s}%\label{c176a}
+P.~176, Proposition 8.3.4\mv. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the $a$-th projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$,  let $i_a:Y\to S$ be the $a$-th coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
 %
-\begin{prop} 
-Let $\C$ be an additive category which admits kernels and cokernels. Let $f:X\to Y$ be a morphism in $\C$. We have 
-$$ 
-\Coim f\simeq\Coker h,\text{ where }h:\Ker f\to X, 
-$$ 
-$$ 
-\Ima f\simeq\Ker k,\text{ where }k:Y\to\Coker f.
-$$ 
-\end{prop}
-%
-\begin{proof}
-It suffices to prove the first isomorphism. Write $p_i:X\times_YX\to X$ for the $i$-th projection, use the abbreviations 
-$$
-P:=X\times_YX,\quad p:=p_1-p_2:P\to X,
-$$
-and recall that $h:\Ker f\mono X$ is the canonical monomorphism. Let $Z$ be in $\C$, let $Z_p\subset\Hom_\C(X,Z)$ be the image of the injection 
-$$
-\Hom_\C(\Coim f,Z)\mono\Hom_\C(X,Z)
-$$ 
-induced by the natural epimorphism $X\epi\Coim f$, and let $Z_h\subset\Hom_\C(X,Z)$ be the image of the injection 
-$$
-\Hom_\C(\Coker h,Z)\mono\Hom_\C(X,Z)
-$$ 
-induced by the natural epimorphism $X\epi\Coker h$. It suffices to show $Z_p=Z_h$. Let $z$ be in $\Hom_\C(X,Z)$. The following conditions are equivalent: 
-$$
-z\in Z_p,
-$$
-$$
-z\circ p=0,
-$$
-$$
-z\circ p_1=z\circ p_2,
-$$
-\begin{equation}\label{zp1}
-w_1,w_2:W\parar X\ \implies\ f\circ w_1=f\circ w_2.
-\end{equation}
-The following conditions are also equivalent: 
-$$
-z\in Z_h,
-$$
-$$
-z\circ h=0,
-$$
-\begin{equation}\label{fw}
-w:W\to X\ \implies\ f\circ w=0.
-\end{equation}
-As \eqref{zp1} and \eqref{fw} are clearly equivalent, the proof is complete.
-\end{proof}
-
-The proof shows the following: There is a natural isomorphism $\Coker h\xrightarrow{\sim}\Coim f$ whose composition with the natural morphism $\Coim f\to\Ima f$ is the obvious morphism $\text{obv}:\Coker h\to\Ima f$, and a natural isomorphism $\Ima f\xrightarrow{\sim}\Ker k$ whose composition with the natural morphism $\Coim f\to\Ima f$ is the obvious morphism $\text{obv}:\Coim f\to\Ker k$: 
 $$
 \begin{tikzcd}
-\Coker h\ar{d}[swap]{\sim}\ar{dr}{\text{obv}}\\
-\Coim f\ar{r}\ar{dr}[swap]{\text{obv}}&\Ima f\ar{d}{\sim}\\
-&\Ker k.
+\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
+P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f,
 \end{tikzcd}
+$$ 
+where $h,a,$ and $b$ are the natural morphisms. We claim $b\circ h=0$. Indeed, we define $c:\Ker f\to P$ by the condition $p_1\circ c=h,p_2\circ c=0$, and we get $b\circ h=b\circ p\circ c=0$. This gives a natural morphism $d:\Coker h\to\Coim f$ satisfying $d\circ a=b$. We claim $a\circ p=0$. Indeed, $p$ factors through $h$. This gives a natural morphism $e:\Coim f\to\Coker h$ satisfying $e\circ b=a$. It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram 
+\begin{equation}\label{834a}
+\begin{tikzcd}
+\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
+P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f
+\end{tikzcd}
+\end{equation}
+commute. Dually, there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
+\begin{equation}\label{834b}
+\begin{tikzcd}
+\Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
+\Ker k\ar{r}[swap]{p}&Y\ar{r}[swap]{b}&\Coker f
+\end{tikzcd}
+\end{equation}
+commute. Let us record these observations:
+\begin{prop}\label{p834}
+In the above setting there are natural isomorphisms 
 $$
+\Coker h\simeq\Coim f,\quad\Ima f\simeq\Ker k
+$$ 
+which make Diagrams \eqref{834a} and \eqref{834b} commute.
+\end{prop}
 \end{s}
 %
 %%
@@ -3196,9 +3167,9 @@ K_v:=\Ker v,\quad C_v:=\Coker v,\quad I_v:=\Ima v.
 $$ 
 Let us also write ``$A\overset{\sim}{\to}B$'' for ``the natural morphism $A\to B$ is an isomorphism''. 
 
-Proposition 8.3.4 p.~176 can be stated as follows. 
+Proposition \ref{p834} p.~\pageref{p834} can be stated as follows. 
 %
-\begin{prop}\label{p834}
+\begin{prop}\label{p834b}
 Let $f:X\to Y$ be a morphism, and consider the commutative diagram 
 $$
 \begin{tikzcd}
@@ -3226,7 +3197,7 @@ $$
 C_{\varphi\circ a}\ar{r}{k}[swap]{\sim}&C_\varphi\ar{r}{\ell}[swap]{\sim}&C_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
 \end{tikzcd}
 $$
-This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. As observed in \S\ref{c176a} p.~\pageref{c176a}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $C_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
+This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $C_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
