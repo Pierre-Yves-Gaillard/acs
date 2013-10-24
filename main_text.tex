@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aou)
+% about "categories and sheaves" (version apb)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -728,7 +728,7 @@ We shall define vertical composition of morphisms of functors, denoted by $\circ
 \right\}
 \end{equation}
 
-We shall say that Equality \eqref{intlaw} is attached to Array
+We shall say that Equality \eqref{intlaw} is {\em attached} to Array
 \begin{equation}\label{intlaw2}
 \begin{matrix}
 \theta_{1,1}&\cdots&\theta_{1,n}\\
@@ -2909,13 +2909,13 @@ Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is a
 %
 Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
 
-Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p. 169, $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T\in\C$ be terminal. For any $X\in\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
+Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p. 169, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T\in\C$ be terminal. For any $X\in\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
 \end{s}
 %
 %%
 %
 \begin{s} 
-P.~172, proof of Lemma 8.2.10. Recall the statement: $\C$ is an additive category, $X$ is in $\C$. The claim is that $X$ is an abelian group object. The addition is given by the codiagonal morphism $\sigma:X\oplus X\to X$. This comment is only about the associativity of the addition. This associativity can also be proved as follows:
+P.~172, proof of Lemma 8.2.10. Recall the statement: $\C$ is an additive category and $X$ is in $\C$. The claim is that $X$ is an abelian group object. The addition is given by the codiagonal morphism $\sigma:X\oplus X\to X$. This comment is only about the associativity of the addition. This associativity can also be proved as follows:
 
 Put $X^n:=X\oplus\cdots\oplus X$ ($n$ factors), and let $X\xr{i_a}X^n\xr{\sigma_n}X$ be respectively the $a$-th coprojection and the codiagonal morphism. It clearly suffices to show that the composition 
 $$
@@ -3040,32 +3040,42 @@ $$
 \end{prop}
 %
 \begin{proof}
-It suffices to prove the first isomorphism. Let us use the abbreviations 
+It suffices to prove the first isomorphism. Write $p_i:X\times_YX\to X$ for the $i$-th projection, use the abbreviations 
 $$
-P:=X\times_YX,\quad p:=p_1-p_2:P\to X,\quad K:=\Ker f.
+P:=X\times_YX,\quad p:=p_1-p_2:P\to X,
 $$
-We must show that $h:K\to X$ and $p:P\to X$ have ``same'' cokernel. Let $z:X\to Z$. We must check 
-%
-\begin{equation}\label{176a}
-z\circ h=0\iff z\circ p=0.
+and recall that $h:\Ker f\mono X$ is the canonical monomorphism. Let $Z$ be in $\C$, let $Z_p\subset\Hom_\C(X,Z)$ be the image of the injection 
+$$
+\Hom_\C(\Coim f,Z)\mono\Hom_\C(X,Z)
+$$ 
+induced by the natural epimorphism $X\epi\Coim f$, and let $Z_h\subset\Hom_\C(X,Z)$ be the image of the injection 
+$$
+\Hom_\C(\Coker h,Z)\mono\Hom_\C(X,Z)
+$$ 
+induced by the natural epimorphism $X\epi\Coker h$. It suffices to show $Z_p=Z_h$. Let $z$ be in $\Hom_\C(X,Z)$. The following conditions are equivalent: 
+$$
+z\in Z_p,
+$$
+$$
+z\circ p=0,
+$$
+$$
+z\circ p_1=z\circ p_2,
+$$
+\begin{equation}\label{zp1}
+w_1,w_2:W\parar X\ \implies\ f\circ w_1=f\circ w_2.
 \end{equation}
-%
-Let $W$ be in $\C$, and consider the conditions 
-%
-\begin{equation}\label{176b}
-\Big[W\overset{a}{\to}K\implies z\circ h\circ a=0\Big]\iff\Big[W\overset{b}{\to}P\implies z\circ p\circ b=0\Big],
+The following conditions are also equivalent: 
+$$
+z\in Z_h,
+$$
+$$
+z\circ h=0,
+$$
+\begin{equation}\label{fw}
+w:W\to X\ \implies\ f\circ w=0.
 \end{equation}
-%
-\begin{equation}\label{176c}%numbering
-\left.
-\begin{matrix}
-\Big[W\overset{c}{\to}X,f\circ c=0\implies z\circ c=0\Big]\\ 
-\iff\\ 
-\Big[W\overset{b_i\ }{\to}X,(i=1,2),f\circ b_1=f\circ b_2\implies z\circ b_1=z\circ b_2\Big]
-\end{matrix}
-\right\}
-\end{equation}
-It is clear that (\ref{176c}) holds, and that (\ref{176c})$\implies$(\ref{176b})$\implies$(\ref{176a}).
+As \eqref{zp1} and \eqref{fw} are clearly equivalent, the proof is complete.
 \end{proof}
 
 The proof shows the following: There is a natural isomorphism $\Coker h\xrightarrow{\sim}\Coim f$ whose composition with the natural morphism $\Coim f\to\Ima f$ is the obvious morphism $\text{obv}:\Coker h\to\Ima f$, and a natural isomorphism $\Ima f\xrightarrow{\sim}\Ker k$ whose composition with the natural morphism $\Coim f\to\Ima f$ is the obvious morphism $\text{obv}:\Coim f\to\Ker k$: 
@@ -4607,7 +4617,7 @@ If $\C$ is an additive category, then the obvious functor
 $$
 \Phi:\oo P(\C,\Mod(\mathbb Z))\to\oo P(\C,\Set)
 $$ 
-is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11.
+is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11 p.~172 of the book.
 \end{prop}
 %
 \begin{proof}
@@ -4615,7 +4625,7 @@ The functor $\Phi$ being fully faithful by Proposition 8.2.12, it suffices to pr
 $$
 \oo{Ob}(\Phi):\oo{Ob}(\oo P(\C,\Mod(\mathbb Z)))\to\oo{Ob}(\oo P(\C,\Set))
 $$ 
-is bijective. The injectivity is obvious and the surjectivity follows from Proposition 8.2.13.
+is bijective. The injectivity is obvious and the surjectivity follows from the proof of Proposition 8.2.13.
 \end{proof}
 
 Recall the statement of Theorem 8.2.14:
@@ -4647,21 +4657,21 @@ $$
 \begin{s}\label{1341b}
 P. 337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
 
-Moreover, if $X\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
+Moreover, if $\Hom_\C^\bu(\ ,Y)$ admits a right derived functor, denoted 
 $$
-\oo R_1\Hom_\C(\ ,Y),
+\oo R_1\!\Hom_\C(\ ,Y),
 $$ 
 then 
 $$
-H^0\oo R_1\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+H^0\oo R_1\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
 $$ 
 Similarly, if $Y\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
 $$
-\oo R_2\Hom_\C(X,\ ),
+\oo R_2\!\Hom_\C(X,\ ),
 $$ 
 then 
 $$
-H^0\oo R_2\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+H^0\oo R_2\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
 $$
 
 This follows from the proof given in the book. 
