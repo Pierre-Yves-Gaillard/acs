@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apg)
+% about "categories and sheaves" (version aph)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1035,10 +1035,10 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 %
 %%%
 %
-\subsection{Theorem 2.3.3 (i) (p.~52)}\label{233i}
+\subsection{Theorem 2.3.3 (i) (p.~52)}%\label{233i}
 %
 Recall the statement: 
-
+\begin{thm}\label{233i}
 Let $I\xleftarrow\varphi J\xr\beta\C$ be functors. Assume that 
 $$
 \co_{(\varphi(j)\to i)\in J_i}\beta(j)
@@ -1051,7 +1051,7 @@ exists in $\C$ for all $i$ in $I$. Then $\varphi^\dagger(\beta)$ exists and we h
 %
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
 $\varphi^\dagger$ exists. If moreover $\varphi$ is fully faithful, then $\varphi^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\varphi_*\circ\varphi^\dagger$. 
-
+\end{thm}
 The proof in the book is divided into three Steps, called (a), (b), and (c). 
 %
 \subsubsection{Step (a)}\label{scji}
@@ -1087,7 +1087,7 @@ Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$.
 
 In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor. 
 %
-\subsubsection{Step (b)} %%%%%%%%%%%%%%%
+\subsubsection{Step (b)}
 %
 The purpose of Step (b) is to prove 
 %
@@ -1169,7 +1169,7 @@ $$
 We leave it to the reader to check that this defines indeed a map $\lim\delta\to\lim\gamma$, and that this map is inverse to the map constructed above.
 \end{proof}
 %
-\subsubsection{Step (c)} %%
+\subsubsection{Step (c)}
 %
 In (b), the authors define a map 
 %
@@ -1200,6 +1200,22 @@ $$
 u(\varphi(j')\to\varphi(j)):\alpha(j')\to\alpha(j),
 $$
 that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\varphi$ is fully faithful by assumption, there is an obvious way to do it.
+%
+%%
+%
+\subsubsection{A Corollary}
+%
+Here is a corollary to Theorem \ref{233i} p.~\pageref{233i}:
+\begin{cor}\label{c233i}
+If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\varphi^\dagger(\beta)(i)$ is (in natural bijection with) the quotient of 
+$$
+\bigsqcup_j\ \beta(j)\times\Hom_I(\varphi(j),i) 
+$$ 
+by the smallest equivalence relation $\sim$ satisfying the following condition. If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\varphi(j'),i)$, then 
+$$
+(x,u'\circ\varphi(s))\sim(\beta(s)(x),u'). 
+$$
+\end{cor}
 %
 %%%
 %
@@ -1307,7 +1323,7 @@ We must show
 $$
 \co_{X\in\C_B}U(X)\simeq\co_{X\in(\C^A)^{\op}}V(X). 
 $$ 
-\cn By Remark~\ref{r236} p.~\pageref{r236}, both sets are in natural bijection with the quotient of 
+\cn By Corollary~\ref{c233i} p.~\pageref{c233i}, both sets are in natural bijection with the quotient of 
 $$
 \bigsqcup_{X\in\C}\ U(X)\times V(X) 
 $$ 
@@ -1327,18 +1343,7 @@ $$
 G^\dagger\Big(\Hom_{\C'}\big(A,F(\ )\big)\Big)(B)\simeq
 (F^{\op})^\dagger\Big(\Hom_{\C''}\big(G(\ ),B\big)\Big)(A).
 $$ 
-Corollary 2.4.6 p. 56 results immediately from the following remark:
-%
-\begin{rk}\label{r236}
-If $\C=\Set$ (and $I$ and $J$ are small), then $\varphi^\dagger(\beta)(i)$ is (in natural bijection with) the quotient of 
-$$
-\bigsqcup_j\ \beta(j)\times\Hom_I(\varphi(j),i) 
-$$ 
-by the smallest equivalence relation $\sim$ satisfying the following condition. If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\varphi(j'),i)$, then 
-$$
-(x,u'\circ\varphi(s))\sim(\beta(s)(x),u'). 
-$$ 
-\end{rk}
+Now Corollary 2.4.6 p. 56 results immediately from Corollary~\ref{c233i} p.~\pageref{c233i}.
 %
 %%%%
 %
