@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aph)
+% about "categories and sheaves" (version api)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1045,7 +1045,7 @@ $$
 $$ 
 exists in $\C$ for all $i$ in $I$. Then $\varphi^\dagger(\beta)$ exists and we have 
 %
-\begin{equation}\label{236} 
+\begin{equation}\label{236}
 \varphi^\dagger(\beta)(i)\simeq\co_{(\varphi(j)\to i)\in J_i}\beta(j)
 \end{equation} 
 %
@@ -1083,9 +1083,7 @@ I\ar{rr}[swap]{J}&{}&\Cat&J.
 \end{tikzcd}
 $$
 
-Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$.  
-
-In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor. 
+We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
 %
 \subsubsection{Step (b)}
 %
