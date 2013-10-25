@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apm)
+% about "categories and sheaves" (version apn)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1107,7 +1107,7 @@ We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a
 The purpose of Step (b) is to prove 
 %
 \begin{equation}\label{stepb}
-\Hom_{\C^I}(\varphi^\dagger(\beta),\alpha)\simeq\Hom_{\C^J}(\beta,\varphi_*\alpha) 
+\Hom_{\C^I}(\varphi^\dagger(\beta),\alpha)\simeq\Hom_{\C^J}(\beta,\varphi_*(\alpha)) 
 \end{equation} 
 % 
 for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
@@ -1142,19 +1142,19 @@ $$
 $$ 
 is given by a pair of morphisms $j_1\to j_2,i'_2\to i'_1$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(I)$ defined in Definition 2.1.14 p.~42 of the book. Consider the functors 
 $$
-\gamma:M^{\op}\to\C,\quad(j,\varphi(j)\to i\to i')\mapsto\Hom_\C(\beta(j),\alpha(i')), 
+\gamma:M^{\op}\to\Set,\quad(j,\varphi(j)\to i\to i')\mapsto\Hom_\C(\beta(j),\alpha(i')), 
 $$ 
 $$
-\delta:N^{\op}\to\C,\quad(j\to j')\mapsto\Hom_\C(\beta(j),\alpha(\varphi(j'))). 
+\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C(\beta(j),\alpha(\varphi(j'))). 
 $$ 
 As we have 
 $$
 \Hom_{\C^I}(\varphi^\dagger(\beta),\alpha)\xr\sim\lim\gamma,\quad
-\Hom_{\C^J}(\beta,\varphi_*\alpha)\xr\sim\lim\delta. 
+\Hom_{\C^J}(\beta,\varphi_*(\alpha))\xr\sim\lim\delta. 
 $$ 
 by \eqref{2115}, it suffices to show 
 %
-\begin{lem} 
+\begin{lem}
 %
 There is a natural bijection $\lim\gamma\simeq\lim\delta$. 
 %
