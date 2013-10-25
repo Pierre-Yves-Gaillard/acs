@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apl)
+% about "categories and sheaves" (version apm)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -616,23 +616,6 @@ $$
 \varphi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
-\begin{proof}
-We have 
-$$
-\psi(\pp(a))=\pp(a)_A(\id_A)=F(\id_A)(a)=a
-$$ 
-and
-$$
-\pp(\psi(\theta))_X(f)=F(f)(\psi(\theta))=F(f)(\theta_A(\id_A))=\theta_X(f),
-$$ 
-the last equality following from the commutativity of 
-$$
-\begin{tikzcd}
-h(A)(X)\ar{r}{\theta_X}&F(X)\\ 
-h(A)(A)\ar{u}{h(A)(f)}\ar{r}[swap]{\theta_X}&F(A).\ar{u}[swap]{F(f)}
-\end{tikzcd}
-$$
-\end{proof}
 
 Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $F$ be in $\C^\vee$, let $A$ be in $\C$, and define 
 $$
@@ -651,7 +634,23 @@ $$
 This shows that $k$ is fully faithful.
 \end{thm}
 %
-The proof is straightforward.
+\begin{proof}
+It suffices to prove the first statement: We have 
+$$
+\psi(\pp(a))=\pp(a)_A(\id_A)=F(\id_A)(a)=a
+$$ 
+and
+$$
+\pp(\psi(\theta))_X(f)=F(f)(\psi(\theta))=F(f)(\theta_A(\id_A))=\theta_X(f),
+$$ 
+the last equality following from the commutativity of 
+$$
+\begin{tikzcd}
+h(A)(X)\ar{r}{\theta_X}&F(X)\\ 
+h(A)(A)\ar{u}{h(A)(f)}\ar{r}[swap]{\theta_X}&F(A).\ar{u}[swap]{F(f)}
+\end{tikzcd}
+$$
+\end{proof}
 %
 \begin{df}\label{ue} 
 Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
