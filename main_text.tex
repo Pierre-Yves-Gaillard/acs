@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aps)
+% about "categories and sheaves" (version apt)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -806,7 +806,7 @@ Again, this is easy to prove. Statements (a) and (b) yield
 
 \noindent$\bu$ the so-called \emph{Interchange Law}, for $m=3,\ n=2$.
 %
-\subsection{Equalities (1.5.8) and (1.5.9) (p.~29)} %%%%%%%%%%%%
+\subsection{Equalities (1.5.8) and (1.5.9) (p.~29)}
 %
 Warning: many authors designate $\varepsilon$ by $\eta$ and $\eta$ by $\varepsilon$. 
 
@@ -820,15 +820,15 @@ $$
 
 Denoting vertical composition by $\circ$ and horizontal composition by $*$, Equalities (1.5.8) and (1.5.9) become respectively 
 %
-\begin{equation}\label{158} 
+\begin{equation}\label{158}
 (\eta*L)\circ(L*\varepsilon)=L
-\end{equation} 
+\end{equation}
 %
 and 
 %
-\begin{equation}\label{159} 
+\begin{equation}\label{159}
 (R*\eta)\circ(\varepsilon*R)=R.
-\end{equation} 
+\end{equation}
 %
 
 Here is a picture of \eqref{158}, that is $(\eta*L)\circ(L*\varepsilon)=L$: 
@@ -890,7 +890,7 @@ $$
 \varepsilon_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
 $$ 
 
-To prove Equality (1.5.8), which can be written as 
+To prove Equality \eqref{158} p.~\pageref{158}, which can be written as 
 %
 \begin{equation}\label{158b} 
 \eta_{LX}\circ L(\varepsilon_X)=\id_{LX}, 
@@ -904,9 +904,9 @@ in $\C$, and then we replace $X'$ with $LX$. We get
 $$
 \lambda_{RLX,LX}(f)\circ L(\varepsilon_X)=\lambda_{X,LX}(f\circ\varepsilon_X)
 $$
-for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}, that is, (1.5.8).
+for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}.
 
-To prove Equality (1.5.9), which can be written as 
+To prove Equality \eqref{159} p.~\pageref{159}, which can be written as 
 %
 \begin{equation}\label{159b} 
 R(\eta_{X'})\circ\varepsilon_{RX'}=\id_{RX'},
@@ -920,7 +920,7 @@ in $\C'$, and then we replace $X$ with $RX'$. We get
 $$
 R(\eta_{X'})\circ(\mu_{RX',LRX'}(f))=\mu_{RX',X'}(\eta_{X'}\circ f)
 $$
-for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}, that is, (1.5.9) (stated as \eqref{159} p.~\pageref{159} in this text).
+for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}.
 %
 \section{About Chapter 2}
 %
@@ -4945,10 +4945,10 @@ M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
 $$ 
 As explained in the book, there is a $t$ in $(N\otimes_{\cc R|_U}P|_U)(U)$ such that $r_1(t)=(b_i)$. This implies $s=f_1((b_i))=f_1(r_1(t))=0$, as required. q.e.d.
 %
-%\section{Future Next Additions} %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Future Next Additions}
 %
-%\subsection{Typos and Details} %%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Typos and Details}
 %
-%\subsection{Brief Comments} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Brief Comments}
 %
 \end{document}
