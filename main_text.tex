@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apu)
+% about "categories and sheaves" (version apv)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1553,19 +1553,23 @@ as well as the following two remarks:
 \begin{rk}\label{cof}
 If $A'$ is in $\cc C'^\wedge$, then by \eqref{263a} p~\pageref{263a} the natural functor $\varphi:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
 \end{rk}
+
+The proof is obvious.
 %
 \begin{rk}
 If $F$ is fully faithful, then there is an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$.
 \end{rk} 
 %
-Indeed, we have 
+\begin{proof}
+We have 
 $$
 \widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
 $$
 $$
 \simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
 $$
-the last isomorphism following from \eqref{263b} p.~\pageref{263b}. q.e.d.
+the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
+\end{proof}
 \end{s}
 %%
 %
