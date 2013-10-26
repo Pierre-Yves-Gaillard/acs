@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aqa)
+% about "categories and sheaves" (version aqb)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2089,15 +2089,15 @@ $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$.
 P.~116, proof of Proposition 5.1.7 (i)\mv. Recall the statement: 
 %
 \begin{prop} 
-Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $C_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u C_f\xr v Y$ its factorization through $C_f$. Then $v$ is a monomorphism. 
+Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $I'_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u I'_f\xr v Y$ its factorization through $I'_f$. Then $v$ is a monomorphism. 
 \end{prop}
 %
 \begin{proof}
 Consider the commutative diagram
 $$
 \begin{tikzcd}
-X\ar[two heads]{d}\ar[two heads]{r}{u}&C_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
-C_{a\circ u}\ar{ur}{c}\ar[two heads]{r}[swap]{b}&C_v.\ar{ru}
+X\ar[two heads]{d}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
+I'_{a\circ u}\ar{ur}{c}\ar[two heads]{r}[swap]{b}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
 (The existence of $c$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) 
@@ -3197,7 +3197,7 @@ Let us just add a few more details about the proof of the isomorphisms
 \end{equation}
 labeled (8.3.4) in the book. Recall that the underlying category $\C$ is abelian, and that the complex in question is denoted $X'\xrightarrow{f}X\xrightarrow{g}X''$. We shall freely use the isomorphism between image and coimage, as well as the abbreviations 
 $$
-K_v:=\Ker v,\quad C_v:=\Coker v,\quad I_v:=\Ima v.
+K_v:=\Ker v,\quad K'_v:=\Coker v,\quad I_v:=\Ima v.
 $$ 
 Let us also write ``$A\overset{\sim}{\to}B$'' for ``the natural morphism $A\to B$ is an isomorphism''. 
 
@@ -3207,8 +3207,8 @@ Proposition \ref{p834} p.~\pageref{p834} can be stated as follows.
 Let $f:X\to Y$ be a morphism, and consider the commutative diagram 
 $$
 \begin{tikzcd}
-K_f\ar[tail]{rr}{h}&&X\ar{rr}{f}\ar[two heads]{dl}\ar[two heads]{dr}&&Y\ar[two heads]{rr}{k}&&C_f\\ 
-&C_h\ar{rr}&&I_f\ar[tail]{ur}\ar{rr}&&K_k.\ar[tail]{ul}
+K_f\ar[tail]{rr}{h}&&X\ar{rr}{f}\ar[two heads]{dl}\ar[two heads]{dr}&&Y\ar[two heads]{rr}{k}&&K'_f\\ 
+&K'_h\ar{rr}&&I_f\ar[tail]{ur}\ar{rr}&&K_k.\ar[tail]{ul}
 \end{tikzcd}
 $$ 
 Then the bottom arrows are isomorphisms.
@@ -3218,9 +3218,9 @@ Going back to our complex $X'\overset{f}{\to}X\overset{g}{\to}X''$, let us intro
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
-X'\ar[two heads]{r}{a}&I_f\ar[tail]{r}{\varphi}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&C_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
-K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&C_f\ar[two heads]{rr}{h}&&C_u\\ 
-&C_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
+X'\ar[two heads]{r}{a}&I_f\ar[tail]{r}{\varphi}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&K'_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
+K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[two heads]{rr}{h}&&K'_u\\ 
+&K'_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
 \end{tikzcd}
 $$ 
 The fact that $i$ and $j$ are isomorphisms follows from Proposition~\ref{p834}. 
@@ -3228,16 +3228,16 @@ The fact that $i$ and $j$ are isomorphisms follows from Proposition~\ref{p834}.
 We shall prove 
 $$
 \begin{tikzcd}
-C_{\varphi\circ a}\ar{r}{k}[swap]{\sim}&C_\varphi\ar{r}{\ell}[swap]{\sim}&C_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
+K'_{\varphi\circ a}\ar{r}{k}[swap]{\sim}&K'_\varphi\ar{r}{\ell}[swap]{\sim}&K'_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
 \end{tikzcd}
 $$
-This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $C_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
+This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
-X'\ar[two heads]{r}{a}&I_f\ar[dashed]{dl}[swap]{\sim}\ar[tail]{r}{\varphi}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&C_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
-K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&C_f\ar[two heads]{rr}{h}&&C_u\ar[dashed]{ul}[swap]{\sim}\\ 
-&C_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
+X'\ar[two heads]{r}{a}&I_f\ar[dashed]{dl}[swap]{\sim}\ar[tail]{r}{\varphi}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&K'_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
+K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[two heads]{rr}{h}&&K'_u\ar[dashed]{ul}[swap]{\sim}\\ 
+&K'_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
 \end{tikzcd}
 $$ 
 (The two dashed arrows have been added.) Now the fact that $\ell$ and $m$ are isomorphisms is clear.
@@ -4819,8 +4819,7 @@ The functor $(f^\tau)\ \widehat{}$ commutes with small inductive limits (Proposi
 \begin{s}\label{1867}
 P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
 
-Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. %More precisely, to define $f_W$ it is simpler to view the morphism $W\to f^t(V)$ in $\C_X$ as a morphism $f^t(V)\to W$ in $(\C_X)^{\op}$. Indeed, if we adhere to \eqref{ttau}, $f_W^t$ must be a functor from $((\C_Y)_V)^{\op}$ to $((\C_X)_W)^{\op}$, and we can define it by 
-More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
+Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
 $$
 (f_W)^\tau(V'\to V):=(f^\tau(V')\to f^\tau(V)\to W).
 $$
