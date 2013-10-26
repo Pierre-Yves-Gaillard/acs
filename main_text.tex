@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apz)
+% about "categories and sheaves" (version aqa)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2029,11 +2029,18 @@ $$
 where $\IM g$ denotes the image of $g$. 
 \end{lem} 
 
-Let $\C$ be a $\U$-small category, and let us denote by $\hy:\C\to\C^\wedge$ and $\ky:\C\to\C^\vee$ the Yoneda embeddings. For any morphism $f:X\to Y$ in $\C$ define $\IM\hy(f)\in\C^\wedge$ and $\IM\ky(f)\in\C^\vee$ by 
-$$ 
+Let $\C$ be a $\U$-small category, and let us denote by $\hy:\C\to\C^\wedge$ and $\ky:\C\to\C^\vee$ the Yoneda embeddings. For any morphism $f:X\to Y$ in $\C$ define $\IM\hy(f)\in\C^\wedge$ and $\IM\ky(f)\in\C^\vee$ by
+$$
 (\IM\hy(f))(Z):=\IM\,\hy(f)_Z,\quad(\IM\ky(f))(Z):=\IM\,\ky(f)_Z 
-$$ 
-for any $Z$ in $\C$. 
+$$
+for any $Z$ in $\C$. Lemma \ref{imset} implies
+%
+\begin{equation}\label{IM2}
+\begin{split}
+\IM\hy(f)\simeq\Coker(\hy(X)\times_{\hy(Y)}\hy(X)\parar\hy(X)),\\ \\ 
+\IM\ky(f)\simeq\Ker(\ky(Y)\parar\ky(Y)\sqcup_{\ky(X)}\ky(Y)).
+\end{split}
+\end{equation}
 %
 \begin{df} 
 In the above setting, the {\em coimage} of $f$ is the object $\Coim f\in\C^\vee$ defined by 
@@ -2048,13 +2055,14 @@ for all $Z$ in $\C$.
 \end{df} 
 %
 
-In view of Lemma~\ref{imset} we have 
+By \eqref{IM2} we have 
 $$ 
 (\Coim f)(Z)\simeq\Ker\Big(\Hom_\C(X,Z)\parar\Hom_{\C^\wedge}\big(\hy(X)\times_{\hy(Y)}\hy(X),\hy(Z)\big)\Big), 
 $$ 
 $$ 
 (\Ima f)(Z)\simeq\Ker\Big(\Hom_\C(Z,Y)\parar\Hom_{\C^\vee}\big(\ky(Z),\ky(Y)\sqcup_{\ky(X)}\ky(Y)\big)\Big). 
-$$ 
+$$
+ 
 This implies 
 %
 \begin{prop}\label{coimim}
