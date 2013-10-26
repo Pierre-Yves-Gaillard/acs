@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version apr)
+% about "categories and sheaves" (version aps)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -873,21 +873,21 @@ $$
 \end{tikzcd}
 $$ 
 
-For the reader's convenience we prove these equalities. Let us denote by 
+For the reader's convenience we prove these equalities. Let us denote by
 %
 \begin{equation}\label{bij1}
-\theta_{X,X'}:\Hom_\C(X,RX')\overset\sim\to\Hom_{\C'}(LX,X')
+\lambda_{X,X'}:\Hom_\C(X,RX')\overset\sim\to\Hom_{\C'}(LX,X')
 \end{equation} 
 %
 and 
 %
 \begin{equation}\label{bij2}
-\lambda_{X,X'}=(\theta_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
+\mu_{X,X'}=(\lambda_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
 \end{equation} 
 %
 the functorial bijections defining the adjunction. Recall 
 $$
-\varepsilon_X:=\lambda_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\theta_{RX',X'}(\id_{RX'}).
+\varepsilon_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
 $$ 
 
 To prove Equality (1.5.8), which can be written as 
@@ -902,7 +902,7 @@ $$
 $$ 
 in $\C$, and then we replace $X'$ with $LX$. We get 
 $$
-\theta_{RLX,LX}(f)\circ L(\varepsilon_X)=\theta_{X,LX}(f\circ\varepsilon_X)
+\lambda_{RLX,LX}(f)\circ L(\varepsilon_X)=\lambda_{X,LX}(f\circ\varepsilon_X)
 $$
 for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}, that is, (1.5.8).
 
@@ -918,9 +918,9 @@ $$
 $$ 
 in $\C'$, and then we replace $X$ with $RX'$. We get 
 $$
-R(\eta_{X'})\circ(\lambda_{RX',LRX'}(f))=\lambda_{RX',X'}(\eta_{X'}\circ f)
+R(\eta_{X'})\circ(\mu_{RX',LRX'}(f))=\mu_{RX',X'}(\eta_{X'}\circ f)
 $$
-for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}, that is, (1.5.9) (stated as \eqref{159} p.~\pageref{159} in this text). 
+for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}, that is, (1.5.9) (stated as \eqref{159} p.~\pageref{159} in this text).
 %
 \section{About Chapter 2}
 %
