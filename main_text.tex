@@ -1,6 +1,6 @@
-% about "categories and sheaves" (version aqb)
+% about "categories and sheaves" (version aqc)
 % !TEX encoding = UTF-8 Unicode
-%\RequirePackage[l2tabu,orthodox]{nag}
+\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
 %\pagestyle{headings}
 %\pagestyle{empty}
@@ -119,6 +119,7 @@
 \date{\today, \currenttime}
 %
 \begin{document}
+\fancyhf{}
 \maketitle
 
 \noindent The last version of this text is available at
@@ -2096,12 +2097,16 @@ Let $\C$ be a category admitting finite inductive and projective limits in which
 Consider the commutative diagram
 $$
 \begin{tikzcd}
-X\ar[two heads]{d}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
-I'_{a\circ u}\ar{ur}{c}\ar[two heads]{r}[swap]{b}&I'_v.\ar{ru}
+X\ar[two heads]{d}[swap]{b}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v}&Y\\
+I'_{a\circ u}\ar{ur}{d}\ar[two heads]{r}[swap]{c}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
-(The existence of $c$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) 
-By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\implies$ (b), p.~115, implies that $b$ is an isomorphism. Clearly, $c\circ b^{-1}$ is inverse to $a$.
+(The existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) 
+By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\implies$ (b), p.~115, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have $a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}$ and 
+$$
+d\circ c^{-1}\circ a\circ u=d\circ c^{-1}\circ c\circ b=d\circ b=u=\id_{I'_f}\circ u,
+$$ 
+and the conclusion follows from the fact that $u$ is an epimorphism.
 \end{proof}
 \end{s}
 %
