@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aql)
+% about "categories and sheaves" (version aqm)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1414,9 +1414,10 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 \end{proof}
 \end{s}
 %
-%%
+%%%
 %
-\begin{s} 
+\subsection{Three Versions of an Important Formula}
+%
 P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
@@ -1427,14 +1428,15 @@ P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedg
 \co_{X\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
 \end{equation}
 
-\begin{equation}\label{263} 
+\begin{equation}\label{263c}
 \Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{X\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
-\end{equation} 
+\end{equation}
 
-\noindent\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263}.)
-\end{s}
+\noindent\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
 %
-%%
+%%%
+%
+\subsection{Brief Comments}
 %
 \begin{s} 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
@@ -1531,7 +1533,7 @@ $$
 $$
 =\lim_{X\in\C_A}G(X')(X)\simeq\Hom_{\C^\wedge}(A,G(X')), 
 $$ 
-the last isomorphism following from (\ref{263}) p.~\pageref{263}. q.e.d.
+the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \end{s}
 %
 %%
@@ -2189,7 +2191,7 @@ $$
 \Hom_\C\left(\co_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\Hom_\C(Y,X)
 \simeq\lim_{Y\in\F_F}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(F,\varphi(X)),
 $$  
-the last isomorphism following from \eqref{263} p.~\pageref{263}.
+the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 \end{proof}
 \end{s}
 %
@@ -2504,15 +2506,22 @@ $$
 \mu(A_1,A_2):=\ic_{x_1,x_2}\ (X_1,X_2). 
 $$ 
 
-Now we prove that $\theta$ and $\mu$ are mutually quasi-inverse. 
+Now we prove that $\theta$ and $\mu$ are mutually quasi-inverse.
 
-By the IPC Property (see pp 75-77 of the book), we have
+We have 
+$$
+\mu(A_1,A_2)(X_1,X_2)\simeq\co_{y_1,y_2}\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2)
+$$
+$$
+\simeq\co_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\co_{y_2}\Hom_{\C_2}(X_2,Y_2)\simeq A_1(X_1)\times A_2(X_2),
+$$ 
+the first isomorphism following from the IPC Property (see pp 75-77 of the book), the second isomorphism following from \eqref{263b} p.~\pageref{263b}. We record this as
 %
 \begin{equation}\label{ipc}
-\mu(A_1,A_2)(X_1,X_2)\simeq A_1(X_1)\times A_2(X_2), 
+\mu(A_1,A_2)(X_1,X_2)\simeq A_1(X_1)\times A_2(X_2).
 \end{equation}
 %
-which suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$. 
+This suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$, notation which we shall use.
 
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\times A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
