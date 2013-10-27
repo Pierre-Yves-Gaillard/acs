@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aqe)
+% about "categories and sheaves" (version aqf)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2268,7 +2268,8 @@ $$
 \Coim\left(\coli_iB_i\to A\right).
 $$
 Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$, a natural isomorphism 
-$$\Hom_\C(\Coim z,Y)\simeq\Hom_{\F^\wedge}\Big(\Coim\varphi(z),\varphi(Y)\Big).
+$$
+\Hom_\C(\Coim z,Y)\simeq\Hom_{\F^\wedge}(\Coim\varphi(z),\varphi(Y)).
 $$ 
 
 \noindent Step 5. Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
@@ -2340,19 +2341,27 @@ $$
 $$
 which is obvious. 
 
-\noindent Proof of Step 6. Let 
+\noindent Proof of Step 6. As Step 3 implies 
+$$
+\coli_{A\in I}\Coim\xi(A)\simeq\Coim\left(\coli_{A\in I}\zeta\xi(A)\to X\right),
+$$ 
+it suffices to prove 
+%
+\begin{equation}\label{step6a}
+\Coim\left(\coli_{A\in I}\zeta\xi(A)\to X\right)\simeq X.
+\end{equation}
+% 
+Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\implies$(b), p.~115 to check that 
+%
+\begin{equation}\label{step6b}
+\coli_{A\in I}\zeta\xi(A)\to X
+\end{equation}
+% 
+is an epimorphism. Let 
 $$
 \coli_{A\in I}\varphi\zeta\xi(A)\xrightarrow{b}\varphi\left(\coli_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\varphi(X)
 $$
-be the natural morphisms. As $a\circ b$ is an epimorphism by Step 5, $a$ is an epimorphism. By Step 2, 
-$$
-\coli_{A\in I}\zeta\xi(A)\to X
-$$ 
-is also an epimorphism, hence a strict epimorphism. We have 
-$$
-\coli_{A\in I}\Coim\xi(A)\simeq\Coim\left(\coli_{A\in I}\zeta\xi(A)\to X\right)\simeq X.
-$$ 
-Indeed, the first isomorphism follows from Step 3, and the second one from Proposition 5.1.5 (i) p.~115.
+be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \eqref{step6b} is also an epimorphism.
 %
 %%%
 %
