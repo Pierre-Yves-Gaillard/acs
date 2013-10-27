@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aqf)
+% about "categories and sheaves" (version aqj)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2367,20 +2367,20 @@ be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an e
 %
 \section{About Chapter 6}
 %
-\subsection{Theorem 6.1.8 (p. 133)}
+\subsection{Theorem 6.1.8 (p. 132)}
 %
 Here is a minor variant of Step (i) of the proof of Theorem 6.1.8. Recall the statement: 
 %
 \begin{lem} 
-If $\alpha:I\to\C$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
+If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
 \end{lem} 
 %
 \begin{proof}
 Let $M$ be the category attached to the functors 
 $$
-\C\xrightarrow h\C^\wedge\xleftarrow{h\circ\alpha}I,
+\C\xrightarrow h\C^\wedge\xleftarrow{\iota\circ\alpha}I,
 $$ 
-where $h$ is the Yoneda embedding. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. For all $i$ in $I$ and all $X$ in $\C$ let 
+where $h$ and $\iota$ are the natural embeddings. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. For all $i$ in $I$ and all $X$ in $\C$ let 
 $$
 p_i:\alpha(i)\to A\quad\text{and}\quad p_i(X):\Hom_\C(X,\alpha(i))\to A(X)
 $$
@@ -2409,7 +2409,7 @@ $$
 The following point is implicit in the book, and we give additional details for the reader's convenience. Proposition 6.1.9 results immediately from the statement below:
 %
 \begin{prop} 
-Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural functors. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
+Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural embeddings. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
 \end{prop} 
 %
 \begin{proof}
@@ -2484,13 +2484,13 @@ We shall define $\theta$ and $\mu$ and prove that they are quasi-inverse equival
 $$
 A\in\Ind(\C_1\times\C_2);\quad A_i,B_i\in\Ind(\C_i);
 $$ 
-objects $X_i,Y_i,\dots\in\C_i$; and elements 
+objects $X_i,Y_i,...\in\C_i$; and elements 
 $$
 x\in A(X_1,X_2),\ y\in A(Y_1,Y_2),\dots,\quad x_i\in A_i(X_i),\ y_i\in A_i(Y_i),\dots
 $$ 
 When we write 
 $$
-\co_x\ \cdots,\quad \co_{x_i}\ \cdots,\quad \co_{x_1,x_2}\ \cdots,
+\co_x\ \cdots,\quad\co_{x_i}\ \cdots,\quad\co_{x_1,x_2}\ \cdots,
 $$ 
 we mean, in the first case, not only that $x$ runs over the elements of $A(X_1,X_2)$, but also that $X_1$ and $X_2$ themselves run over the objects of $\C_1$ and $\C_2$, so that we are taking the inductive limit of some functor defined over $(\C_1\times\C_2)_A$. In the other cases, the interpretation is similar. 
 
