@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ara)
+% about "categories and sheaves" (version arb)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2734,12 +2734,16 @@ An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to
 
 \noindent$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
 
-\noindent$\bu$ the coprojections $a_k(i_k):\alpha_k(i_k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors from $P$ to $G$. 
+\noindent$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors 
+%
+\begin{equation}\label{u'}
+u':P\to G.
+\end{equation}
 
 \noindent(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square 
 $$ 
 \begin{tikzcd} 
-\alpha_k(i_k)\ar[equal]{r}&P(k)\ar{r}{P(f)}\ar{d}[swap]{a_k(i_k)}&P(\ell)\ar{d}{a_\ell(i_\ell)}\ar[equal]{r}&\alpha_\ell(i_\ell)\\ 
+\alpha_k(i_k)\ar[equal]{r}&P(k)\ar{r}{P(f)}\ar{d}[swap]{u_k(i_k)}&P(\ell)\ar{d}{u_\ell(i_\ell)}\ar[equal]{r}&\alpha_\ell(i_\ell)\\ 
 {}&G(k)\ar{r}[swap]{G(f)}&G(\ell) 
 \end{tikzcd} 
 $$ 
@@ -2779,15 +2783,15 @@ let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$; let
 $$
 \widetilde{\alpha_a}:I_a\to\C/G(a)
 $$ 
-be the natural functor (see \eqref{slice} for the definition of $\C/G(a)$); define 
+be the natural functor (see \eqref{slice} for the definition of $\C/G(a)$ and recall that $\ic\alpha_k=G(k)$); define 
 $$ 
 \varphi:N\{L,G_L,(\alpha_\ell)\}\to(\C/G(a))^{L/a} 
 $$ 
 (see \eqref{slice} for the definition of $L/a$) by 
 $$
-\varphi((i_\ell),P)\left(b\xr f a\right):=\left(P(b)\to G(b)\xr{G(f)}G(a)\right),
+\varphi((i_\ell),P)\left(b\xr f a\right):=\left(P(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right),
 $$
-where the $P(b)\to G(b)$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}); let 
+where $u'(b)$ is defined in \eqref{u'}; let 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L/a}
 $$ 
