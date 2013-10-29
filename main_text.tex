@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aqy)
+% about "categories and sheaves" (version aqz)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2756,7 +2756,16 @@ $$
 Then the functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by $F'(k)=\alpha_k\circ p_k$, where $p_k:N\to I_k$ is the natural projection: 
 $$
 N\xr{p_k}I_k\xr{\alpha_k}\C.
+$$ 
+In other words, we set
 $$
+F((i_k),P)(k_0):=\alpha_{k_0}(i_{k_0}),
+$$ 
+so that we have 
+$$
+G(k_0)=\ic F((i_k),P)
+$$ 
+for all $k_0$ in $K$.
 
 It suffices to check that $N$ is small and filtrant, and that $p_k$ is cofinal. 
 
