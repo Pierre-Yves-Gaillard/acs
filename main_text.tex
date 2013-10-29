@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aqt)
+% about "categories and sheaves" (version aqu)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2521,6 +2521,12 @@ $$
 $$
 This suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$, notation which we shall use henceforth.
 
+Let us prove
+%
+\begin{equation}\label{6112a}
+\theta\circ\mu\simeq\id_{\Ind(\C_1\times\C_2)}.
+\end{equation}
+%
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\times A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
 B_1\simeq\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
@@ -2539,7 +2545,15 @@ If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\ti
 Let $i_0$ be in $I$. We must check that $(I\times J)^{i_0}$ is connected. An object of $(I\times J)^{i_0}$ consists of a triple $(i,j,i_0\to i)$, and a morphism from $(i,j,i_0\to i)$ to $(i',j',i_0\to i')$ consists of a pair of morphisms $(i\to i',j\to j')$ such that $(i_0\to i\to i')$ equals $(i_0\to i')$. In particular, two objects which differ only by their $J$-coordinate are in the same connected component. Moreover, any object $(i,j,i_0\to i)$ is the target of an obvious morphism from $(i_0,j,i_0\xr{\id}i_0)$. This shows that $(I\times J)^{i_0}$ is connected.
 \end{proof}
 
-Going back to our business, let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
+This ends the proof of \eqref{6112a}.
+
+Let us prove
+%
+\begin{equation}\label{6112b}
+\mu\circ\theta\simeq\id_{\Ind(\C_1)\times\Ind(\C_2)}.
+\end{equation}
+
+Let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
 
 \nn$\bu$ Definition of the morphism $A\to A_1\times A_2$: Recall 
 $$
@@ -2578,14 +2592,15 @@ where $b(x_1,x_2)$ and $c(x)$ are the coprojections. Let $x_i\in A_i(X_i)$ be gi
 $$
 d_i(z):\Hom_{\C_i}(X_i,Z_i)\to A_i(X_i)
 $$
-be the coprojections. The categories $(\C_1\times\C_2)_A$ and $(\C_i)_{A_i}$ being filtrant, there is a 5-tuple $(Z_1,Z_2,z,f_1,f_2)$ with $Z_i$ in $\C_i$, $z$ in $A(Y_1,Y_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$, such that $x_i=d_i(z)(f_i)$ for $i=1,2$. Put $x:=A(f_1,f_2)(z)$:
+be the coprojections. The category $(\C_1\times\C_2)_A$ being filtrant, there is a 5-tuple $(Z_1,Z_2,z,f_1,f_2)$ with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$, such that $x_i=d_i(z)(f_i)$ for $i=1,2$. Put $x:=A(f_1,f_2)(z)$:
 $$
 \begin{tikzcd}
-(X_1,X_2)\ar{d}{x}\ar{r}{(f_1,f_2)}&(Z_1,Z_2)\ar{d}{z}\\ 
+(X_1,X_2)\ar{d}[swap]{x}\ar{r}{(f_1,f_2)}&(Z_1,Z_2)\ar{d}{z}\\ 
 A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
-One checks that the map $c(x)$ does not depend on the choices made above, that this process defines a morphism from $A_1\times A_2$ to $A$, and that this morphism satisfies the wished-for conditions.
+One checks that the map $c(x)$ does not depend on the choices made above, and that this process defines a morphism from $A_1\times A_2$ to $A$. %, and that this morphism satisfies the wished-for conditions. 
+This ends the proof of \eqref{6112b}.%, and the proof of Proposition 6.1.12 p.~134 of the book is complete.
 %
 %%%%
 %
@@ -2652,7 +2667,14 @@ except perhaps inclusion $i$, commute with finite projective limits. Thus inclus
 $$
 \kappa(X)\simeq\ic\rho\circ\xi. 
 $$ 
-We have 
+Recall the setting:
+$$
+\begin{tikzcd}
+I\ar{r}{\xi}&\C^{\text fp}\ar{d}[swap]{\iota_\C}\ar{r}{\rho}&\C\ar[yshift=-.9ex]{dl}{\kappa'}\ar{d}{\iota_\C}\\ 
+{}&\Ind(\C^{\text fp})\ar{ur}{J\rho}\ar{r}[swap]{I\rho}&\Ind(\C),
+\end{tikzcd}
+$$ 
+$\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book). We have 
 $$
 \kappa(X)=I\rho(\kappa'(\co\rho\circ\xi))\simeq I\rho(\ic\xi)
 $$
@@ -2668,7 +2690,7 @@ $$
 %
 \subsection{Theorem 6.4.3 (p.~144)}
 %
-Notational convention for this section (and for this section only): Superscripts will never be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only two categories of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will considered in this section. As a lot of subscripts will be used, we shall denote these categories by 
+Notational convention for this section (and for this section only): Superscripts will {\em never} be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only two categories of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will considered in this section. As a lot of subscripts will be used, we shall denote these categories by 
 %
 \begin{equation}\label{slice}
 \C/G(a)\text{ and }L/a
