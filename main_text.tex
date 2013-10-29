@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arb)
+% about "categories and sheaves" (version arc)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2576,30 +2576,28 @@ A\simeq\displaystyle\ic_y(Y_1,Y_2)\ar{r}&\displaystyle\ic_{x_1,x_2}(X_1,X_2)\sim
 $$ 
 and we leave it to the reader to check that this diagram does define the indicated morphism.
 
-\nn$\bu$ Definition of the morphism $A_1\times A_2\to A$. Let $Y_i$ be in $\C_i$ for $i=1,2$, and put 
-$$
-S(X_1,X_2):=\Hom_{\C_1}(Y_1,X_1)\times\Hom_{\C_2}(Y_2,X_2)
-$$ 
-for all $(X_1,X_2)$ in $\C_1\times\C_2$. We must define the map represented by the dashed arrows in the diagram
+\nn$\bu$ Definition of the morphism $A_1\times A_2\to A$. %Let $Y_i$ be in $\C_i$ for $i=1,2$, and put $$S(X_1,X_2):=\Hom_{\C_1}(Y_1,X_1)\times\Hom_{\C_2}(Y_2,X_2)$$ for all $(X_1,X_2)$ in $\C_1\times\C_2$. 
+We must define the map represented by the dashed arrow in the diagram %$$\begin{tikzcd}(A_1\times A_2)(Y_1,Y_2)\ar[equal]{d}\ar[dashed]{r}&A(Y_1,Y_2)\ar[equal]{d}\\ \displaystyle\co_{x_1,x_2}S(X_1,X_2)\ar[dashed]{r}&\displaystyle\co_xS(X_1,X_2)\\ S(X_1,X_2)\ar{u}{b(x_1,x_2)}\ar[equal]{r}&S(X_1,X_2),\ar{u}[swap]{c(x)}\end{tikzcd}$$ where $b(x_1,x_2)$ and $c(x)$ are the coprojections. Let $x_i\in A_i(X_i)$ be given for $i=1,2$ and let 
 $$
 \begin{tikzcd}
-(A_1\times A_2)(Y_1,Y_2)\ar[equal]{d}\ar[dashed]{r}&A(Y_1,Y_2)\ar[equal]{d}\\ 
-\displaystyle\co_{x_1,x_2}S(X_1,X_2)\ar[dashed]{r}&\displaystyle\co_xS(X_1,X_2)\\ 
-S(X_1,X_2)\ar{u}{b(x_1,x_2)}\ar[equal]{r}&S(X_1,X_2),\ar{u}[swap]{c(x)}
+%A_1\times A_2\ar[equal]{d}\ar[dashed]{r}&A\ar[equal]{d}\\ 
+A_1\times A_2\simeq\displaystyle\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\displaystyle\ic_x(X_1,X_2)\simeq A\\ 
+(X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2),\ar{u}[swap]{x}
 \end{tikzcd}
 $$ 
-where $b(x_1,x_2)$ and $c(x)$ are the coprojections. Let $x_i\in A_i(X_i)$ be given for $i=1,2$ and let 
+%$$d_i(z):\Hom_{\C_i}(X_i,Z_i)\to A_i(X_i)$$ be the coprojections. 
+The category $(\C_1\times\C_2)_A$ being filtrant, there is a 5-tuple 
 $$
-d_i(z):\Hom_{\C_i}(X_i,Z_i)\to A_i(X_i)
-$$
-be the coprojections. The category $(\C_1\times\C_2)_A$ being filtrant, there is a 5-tuple $(Z_1,Z_2,z,f_1,f_2)$ with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$, such that $x_i=d_i(z)(f_i)$ for $i=1,2$. Put $x:=A(f_1,f_2)(z)$:
+\zeta:=(Z_1,Z_2,z,f_1,f_2)
+$$ 
+with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$, such that $x_i=d_i(z)(f_i)$ for $i=1,2$. We choose such a 5-tuple $\zeta$ and put $x:=A(f_1,f_2)(z)$:
 $$
 \begin{tikzcd}
 (X_1,X_2)\ar{d}[swap]{x}\ar{r}{(f_1,f_2)}&(Z_1,Z_2)\ar{d}{z}\\ 
 A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
-One checks that the map $c(x)$ does not depend on the choices made above, and that this process defines a morphism from $A_1\times A_2$ to $A$. %, and that this morphism satisfies the wished-for conditions. 
+One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. %, and that this morphism satisfies the wished-for conditions. 
 This ends the proof of \eqref{6112b}.%, and the proof of Proposition 6.1.12 p.~134 of the book is complete.
 %
 %%%%
