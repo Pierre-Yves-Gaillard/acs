@@ -2481,7 +2481,7 @@ $$
 \Ind(\C_1\times\C_2)\ar[yshift=0.7ex]{r}{\theta}&\Ind(\C_1)\times\Ind(\C_2),\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
-and prove that they are quasi-inverse equivalences. But first let us introduce some notation. We shall consider functors 
+and prove that they are quasi-inverse equivalences. (In fact, we shall only define the effect of $\theta$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.) But first let us introduce some notation. We shall consider functors 
 $$
 A\in\Ind(\C_1\times\C_2);\quad A_i,B_i\in\Ind(\C_i);
 $$ 
@@ -2576,16 +2576,13 @@ A\simeq\displaystyle\ic_y(Y_1,Y_2)\ar{r}&\displaystyle\ic_{x_1,x_2}(X_1,X_2)\sim
 $$ 
 and we leave it to the reader to check that this diagram does define the indicated morphism.
 
-\nn$\bu$ Definition of the morphism $A_1\times A_2\to A$. %Let $Y_i$ be in $\C_i$ for $i=1,2$, and put $$S(X_1,X_2):=\Hom_{\C_1}(Y_1,X_1)\times\Hom_{\C_2}(Y_2,X_2)$$ for all $(X_1,X_2)$ in $\C_1\times\C_2$. 
-We must define the map represented by the dashed arrow in the diagram %$$\begin{tikzcd}(A_1\times A_2)(Y_1,Y_2)\ar[equal]{d}\ar[dashed]{r}&A(Y_1,Y_2)\ar[equal]{d}\\ \displaystyle\co_{x_1,x_2}S(X_1,X_2)\ar[dashed]{r}&\displaystyle\co_xS(X_1,X_2)\\ S(X_1,X_2)\ar{u}{b(x_1,x_2)}\ar[equal]{r}&S(X_1,X_2),\ar{u}[swap]{c(x)}\end{tikzcd}$$ where $b(x_1,x_2)$ and $c(x)$ are the coprojections. Let $x_i\in A_i(X_i)$ be given for $i=1,2$ and let 
+\nn$\bu$ Definition of the morphism $A_1\times A_2\to A$. We must define the map represented by the dashed arrow in the diagram  
 $$
 \begin{tikzcd}
-%A_1\times A_2\ar[equal]{d}\ar[dashed]{r}&A\ar[equal]{d}\\ 
 A_1\times A_2\simeq\displaystyle\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\displaystyle\ic_x(X_1,X_2)\simeq A\\ 
 (X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2),\ar{u}[swap]{x}
 \end{tikzcd}
 $$ 
-%$$d_i(z):\Hom_{\C_i}(X_i,Z_i)\to A_i(X_i)$$ be the coprojections. 
 The category $(\C_1\times\C_2)_A$ being filtrant, there is a 5-tuple 
 $$
 \zeta:=(Z_1,Z_2,z,f_1,f_2)
@@ -2597,8 +2594,7 @@ $$
 A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
-One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. %, and that this morphism satisfies the wished-for conditions. 
-This ends the proof of \eqref{6112b}.%, and the proof of Proposition 6.1.12 p.~134 of the book is complete.
+One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. This ends the proof of \eqref{6112b}.
 %
 %%%%
 %
@@ -2763,7 +2759,6 @@ In other words, we set
 $$
 F((i_k),P)(k_0):=\alpha_{k_0}(i_{k_0}).
 $$ 
-%so that we have $$G(k_0)=\ic F((i_k),P)$$ for all $k_0$ in $K$.
 
 It suffices to check that $N$ is small and filtrant, and that $p_k$ is cofinal. 
 
@@ -2793,14 +2788,46 @@ $$
 $$
 \varphi((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right),
 $$
-where $u'(b)$ is defined in \eqref{u'}; let 
+where $u'(b)$ is defined in \eqref{u'}; and let 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L/a}
 $$ 
-be the diagonal functor; and observe the equivalence 
+be the diagonal functor. We shall define functors 
+$$
+\begin{tikzcd}
+N\ar[yshift=0.7ex]{r}{\lambda}&M:=M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]\ar[yshift=-0.7ex]{l}{\mu}
+\end{tikzcd}
+$$ 
+and leave it to the reader to check that they are quasi-inverse. (In fact, we shall only define the effect of $\lambda$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
+
+To define $\lambda$ let $((i_k),P)$ be in $M$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
+$$
+\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big),
+$$ 
+so that we must define 
+$$
+\pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a)).
+$$ 
+We do that by attaching to the object $b\xr f a$ in $L/a$ the morphism 
+$$
+\alpha_b(i_b)=Q(b)=P(b)\xr{P(f))}P(a)=\alpha_a(i_a).
+$$
+
+To define $\mu$ let 
+$$
+\nu:=\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
+$$ 
+be in $N$. Then $\lambda(\nu)$ will be of the form $((i_k),P)$, so that we must define $P:K\to\C$. We define $P(k)$ by putting $P(b):=Q(b)$ for $b$ in $L$, and $P(a):=\alpha_a(i_a)$. To a morphism $f:b\to c$ in $L$ we attach the morphism $Q(f):P(b)\to P(c)$. Let $b$ be in $L$. There is at most one morphism $b\to a$. Assume that this morphism does exist. Then we attach to it the morphism form $P(b)=Q(b)=\alpha_b(i_b)$ to $P(a)=\alpha_a(i_a)$ given by the morphism of functors 
+$$
+\pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a)).
+$$
+
+
+
+equivalence 
 $$ 
 N\sim M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
-$$ 
+$$
 
 By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
 
