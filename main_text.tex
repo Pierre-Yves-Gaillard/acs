@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arc)
+% about "categories and sheaves" (version ard)
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2781,9 +2781,13 @@ let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$; let
 $$
 \widetilde{\alpha_a}:I_a\to\C/G(a)
 $$ 
-be the natural functor (see \eqref{slice} for the definition of $\C/G(a)$ and recall that $\ic\alpha_k=G(k)$); define 
+be the natural functor (see \eqref{slice} for the definition of $\C/G(a)$ and recall that $\ic\alpha_k=G(k)$); put define 
+$$
+N':=N\{L,G_L,(\alpha_\ell)\};
+$$
+define 
 $$ 
-\varphi:N\{L,G_L,(\alpha_\ell)\}\to(\C/G(a))^{L/a} 
+\varphi:N'\to(\C/G(a))^{L/a} 
 $$ 
 (see \eqref{slice} for the definition of $L/a$) by 
 $$
@@ -2795,10 +2799,10 @@ $$
 $$ 
 be the diagonal functor; and observe the equivalence 
 $$ 
-N\{K,G,(\alpha_k)\}\sim M\left[N\{L,G_L,(\alpha_\ell)\}\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
+N\sim M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$ 
 
-By induction hypothesis, $N':=N\{L,G_L,(\alpha_\ell)\}$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
+By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
 
 It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and it is easy to see, using Proposition 3.2.2 p.~78, that this implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
 
