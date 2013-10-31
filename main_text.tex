@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arf)
+% about "categories and sheaves" (version arg)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1602,7 +1602,7 @@ Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:
 \subsection{Brief Comments}
 %
 \begin{s} 
-P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of one of the implications. 
+P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of the following statement: 
 
 If $\varphi:J\to I$ is a functor with $I$ filtrant and $J$ finite, then $\lim\Hom_I(\varphi,i)\neq\varnothing$ for some $i$ in $I$. 
 
@@ -2831,9 +2831,21 @@ $$
 
 By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
 
-It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and it is easy to see, using Proposition 3.2.2 p.~78, that this implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
+It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
 
 From this point we can argue as in the proof of Proposition 6.1.13 p.~134.
+
+\begin{lem}\label{delta}
+If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^i$ is cofinal.
+\end{lem}
+%
+\begin{proof}
+It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 p.~78. Condition (b) is clear. To check Condition (a), let $\alpha$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\alpha$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
+$$
+(\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\alpha(i),Y)\right)\ (\forall\ (s:i\to j)\in S)\ (\mu_{j}\circ\alpha(s)=\mu_i) 
+$$ 
+by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\theta)$.
+\end{proof}
 %
 %%%%
 %
