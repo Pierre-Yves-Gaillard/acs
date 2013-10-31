@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arg)
+% about "categories and sheaves" (version arh)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2580,14 +2580,18 @@ and we leave it to the reader to check that this diagram does define the indicat
 $$
 \begin{tikzcd}
 A_1\times A_2\simeq\displaystyle\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\displaystyle\ic_x(X_1,X_2)\simeq A\\ 
-(X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2),\ar{u}[swap]{x}
+(X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2).\ar{u}[swap]{x}
 \end{tikzcd}
 $$ 
-The category $(\C_1\times\C_2)_A$ being filtrant, there is a 5-tuple 
+Let $x_i\in A_i(X_i)$ be given for $i=1,2$ and let
+$$
+d_i(z):\Hom_{\C_i}(X_i,Z_i)\to A_i(X_i)
+$$
+be the coprojections. The category $(\C_1\times\C_2)_A$ being filtrant, there is a 5-tuple 
 $$
 \zeta:=(Z_1,Z_2,z,f_1,f_2)
 $$ 
-with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Y_i)$, such that $x_i=d_i(z)(f_i)$ for $i=1,2$. We choose such a 5-tuple $\zeta$ and put $x:=A(f_1,f_2)(z)$:
+with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Z_i)$, such that $x_i=d_i(z)(f_i)$ for $i=1,2$. We choose such a 5-tuple $\zeta$ and put $x:=A(f_1,f_2)(z)$:
 $$
 \begin{tikzcd}
 (X_1,X_2)\ar{d}[swap]{x}\ar{r}{(f_1,f_2)}&(Z_1,Z_2)\ar{d}{z}\\ 
