@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arh)
+% about "categories and sheaves" (version ari)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1554,7 +1554,7 @@ $$
 as well as the following two remarks:
 %
 \begin{rk}\label{cof}
-If $A'$ is in $\cc C'^\wedge$, then by \eqref{263a} p~\pageref{263a} the natural functor $\varphi:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
+If $A'$ is in $\cc C'^\wedge$, then by \eqref{263a} p.~\pageref{263a} the natural functor $\varphi:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
 \end{rk}
 
 The proof is obvious.
@@ -2991,7 +2991,7 @@ $$
 %
 %%%
 %
-\subsection{Proof of (7.4.3) (p.~162)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Proof of (7.4.3) (p.~162)}
 %
 Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-commutative) diagram
 $$
@@ -3023,23 +3023,23 @@ $$
 
 We want to prove $B\simeq C$.
 
-\noindent{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $c(B,i):\alpha(i)\to X$ for the $i$-th coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
+\noindent{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
 
 For $(X',x')\in\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by 
 $$
-f(X',x'):=c(C,X',c(A,X',x')),
+f(X',x'):=p(C,X',p(A,X',x')),
 $$ 
-and we claim that the $f(X',x')$ induce a morphism $f:B\to C$. 
+and we claim that the morphisms $f(X',x')$ induce a morphism $f:B\to C$. 
 
-Let $(U,u)$ be in $\C_A$. In particular, 
+Let $(U,u)$ be in $\C_A$, that is
 $$
 u\in A(U)=\co_{(X',x')\in\SSS^X}\Hom_\C(U,X').
 $$ 
-Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=c(A(U),X',x')(f)$, and put 
+Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=p(A(U),X',x')(f)$, and put 
 $$
-g(U,u):=c(B,X',x')\circ\iota_\A(F(f)).
+g(U,u):=p(B,X',x')\circ\iota_\A(F(f)):\iota_\A(F(U))\to B.
 $$ 
-We claim that this formula defines a morphism $g(U,u):\iota_\A(F(U))\to B$, that the $g(U,u)$ induce a morphism $g:C\to B$, and that $f$ and $g$ are mutually inverse. 
+We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
 
 We leave the verification of these claims to the reader. 
 %
