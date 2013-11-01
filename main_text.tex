@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arj)
+% about "categories and sheaves" (version ark)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3263,7 +3263,7 @@ are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\opl
 %%
 %
 \begin{s}%\label{c176a}
-P.~176, Proposition 8.3.4\mv. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the $a$-th projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$,  let $i_a:Y\to S$ be the $a$-th coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
+P.~176, Proposition 8.3.4\mv. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 %
 $$
 \begin{tikzcd}
@@ -3283,22 +3283,34 @@ $$
 $$
 and we get $b\circ h=b\circ p\circ c=0\circ c=0$. This gives a natural morphism $d:\Coker h\to\Coim f$ satisfying $d\circ a=b$. 
 
-We claim $a\circ p=0$. Indeed, $p$ factors through $h$. This gives a natural morphism $e:\Coim f\to\Coker h$ satisfying $e\circ b=a$. It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram 
+We claim $a\circ p=0$. Indeed, $p$ factors through $h$. This gives a natural morphism $e:\Coim f\to\Coker h$ satisfying $e\circ b=a$. It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram
+%
 \begin{equation}\label{834a}
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
 P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f
 \end{tikzcd}
 \end{equation}
+%
 commute. 
 
-Dually, there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
+Dually, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to S$ be the coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
+%
+$$
+\begin{tikzcd}
+\Ima f\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
+\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f
+\end{tikzcd}
+$$ 
+where $h,a,$ and $b$ are the natural morphisms. Then there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
+%
 \begin{equation}\label{834b}
 \begin{tikzcd}
 \Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
-\Ker k\ar{r}[swap]{p}&Y\ar{r}[swap]{b}&\Coker f
+\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f
 \end{tikzcd}
 \end{equation}
+%
 commute. Let us record these observations:
 \begin{prop}\label{p834}
 In the above setting there are natural isomorphisms 
@@ -3308,6 +3320,16 @@ $$
 which make Diagrams \eqref{834a} and \eqref{834b} commute.
 \end{prop}
 \end{s}
+
+Note that we can splice Diagrams \eqref{834a} and \eqref{834b}:
+$$
+\begin{tikzcd}
+\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
+P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar{d}\\ 
+{}&{}&\Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
+{}&{}&\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f.
+\end{tikzcd}
+$$
 %
 %%
 %
@@ -3360,7 +3382,14 @@ $$
 K'_{\varphi\circ a}\ar{r}{k}[swap]{\sim}&K'_\varphi\ar{r}{\ell}[swap]{\sim}&K'_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
 \end{tikzcd}
 $$
-This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. It is easy to see that there are natural morphisms $I_f\mono K_u\mono K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
+This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. There is a natural monomorphism from $I_f\mono K_u$. Indeed, we have $u\circ\pp\circ a=c\circ f=0$. As $a$ is an epimorphism, this implies $u\circ\pp=0$: 
+$$
+\begin{tikzcd}
+X'\ar[two heads]{d}[swap]{a}\ar{r}{f}&X\ar[two heads]{d}{c}\ar{r}{g}&X''\\ 
+I_f\ar[tail]{ru}\ar{r}[swap]{u\circ\pp}&C_f\ar[two heads]{r}&I_g.\ar[tail]{u}
+\end{tikzcd}
+$$
+It is easy to see that there is a natural monomorphisms $K_u\mono K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
