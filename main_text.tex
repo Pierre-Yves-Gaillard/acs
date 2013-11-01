@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ari)
+% about "categories and sheaves" (version arj)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3271,14 +3271,28 @@ $$
 P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f,
 \end{tikzcd}
 $$ 
-where $h,a,$ and $b$ are the natural morphisms. We claim $b\circ h=0$. Indeed, we define $c:\Ker f\to P$ by the condition $p_1\circ c=h,p_2\circ c=0$, and we get $b\circ h=b\circ p\circ c=0$. This gives a natural morphism $d:\Coker h\to\Coim f$ satisfying $d\circ a=b$. We claim $a\circ p=0$. Indeed, $p$ factors through $h$. This gives a natural morphism $e:\Coim f\to\Coker h$ satisfying $e\circ b=a$. It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram 
+where $h,a,$ and $b$ are the natural morphisms. 
+
+We claim $b\circ h=0$. Indeed, we define $c:\Ker f\to P$ by the condition $p_1\circ c=h,p_2\circ c=0$: 
+$$
+\begin{tikzcd}
+{}&X\ar{dr}{f}\\ 
+\Ker f\ar{ur}{h}\ar{dr}[swap]{0}\ar[dashed]{r}{c}&P\ar{u}{p_1}\ar{d}{p_2}&Y\\ 
+{}&X\ar{ur}[swap]{f},
+\end{tikzcd}
+$$
+and we get $b\circ h=b\circ p\circ c=0\circ c=0$. This gives a natural morphism $d:\Coker h\to\Coim f$ satisfying $d\circ a=b$. 
+
+We claim $a\circ p=0$. Indeed, $p$ factors through $h$. This gives a natural morphism $e:\Coim f\to\Coker h$ satisfying $e\circ b=a$. It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram 
 \begin{equation}\label{834a}
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
 P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f
 \end{tikzcd}
 \end{equation}
-commute. Dually, there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
+commute. 
+
+Dually, there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
 \begin{equation}\label{834b}
 \begin{tikzcd}
 \Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
