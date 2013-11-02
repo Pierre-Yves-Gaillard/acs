@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arm)
+% about "categories and sheaves" (version arn)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3538,17 +3538,25 @@ Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar{d}{\lambda}\\
 G_i\ar[swap]{r}{a_1}&Y_1.
 \end{tikzcd}
 $$ 
-There is a morphism $l_1:Y_1\to X$ such that the following diagram commutes and has exact rows: 
+Let $l_1:Y_1\to X$ be the morphism which makes the diagram 
+$$
+\begin{tikzcd}
+{}&Y_0\ar{d}{\lambda}\ar{dr}{l_0}\\ 
+Y\ar{ur}{b}\ar{dr}[swap]{d}&Y_1\ar[dashed]{r}{l_1}&X\\ 
+{}&G_i\ar{u}{a_1}\ar{ru}[swap]{\pp}
+\end{tikzcd}
+$$ 
+commutative. Then the diagram 
 $$
 \begin{tikzcd}
 0\ar{r}&Y\ar[equal]{d}\ar{r}{(b,-c)}&Y_0\oplus G_i\ar[equal]{d}\ar{r}{(l_0,\varphi)}&X\\
-&Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0.
+&Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
 \end{tikzcd}
 $$ 
-By the Five Lemma, $l_1$ is a monomorphism. We have $l_1\circ a_1=\varphi$ and $l_1\circ\lambda=l_0$; in particular $\lambda$ is a monomorphism. Lemma 8.3.11 (a) (i) p.~180 implies that $c$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$:
+commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 implies that $c$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$:
 $$
 \begin{tikzcd}
-Y\ar{d}[swap]{b}\ar[tail]{r}{c}&G_i\ar{d}{d}\\ 
+Y\ar{d}[swap]{b}\ar[tail]{r}{c}&G_i\ar[dashed]{d}{d}\\ 
 Y_0\ar{r}[swap]{g_0}&Z.
 \end{tikzcd}
 $$ 
@@ -3560,14 +3568,19 @@ G_i\ar{r}{a_1}\ar[bend right]{rrd}[swap]{d}&Y_1\ar{dr}{g_1}\\
 {}&{}&Z
 \end{tikzcd}
 $$ 
-commutes. We get 
+commutes. We get the commutative diagram
 $$
 \begin{tikzcd}
+{}&Y_0\ar[equal]{d}\ar{rr}{l_0}&&X\ar[equal]{d}\\ 
 X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}[swap]{g_0}\ar[tail]{r}{\lambda}&Y_1\ar{dll}{g_1}\ar[tail]{r}{l_1}&X\\ 
 Z&&&G_i.\ar{u}[swap]{\varphi}\ar{lll}{d}\ar{ul}{a_1}
 \end{tikzcd}
 $$ 
-As $\lambda$ is an isomorphism by maximality of $(Y_0,g_0,l_0)$, we can set $a_0:=\lambda^{-1}\circ a_1$. q.e.d.
+As $\lambda$ is an isomorphism by maximality of $(Y_0,g_0,l_0)$, we can set $a_0:=\lambda^{-1}\circ a_1$, and we get 
+$$
+l_0\circ a_0=l_0\circ\lambda^{-1}\circ a_1=l_1\circ\lambda\circ\lambda^{-1}\circ a_1=l_1\circ a_1=\pp.
+$$ 
+q.e.d.
 %
 %%%
 %
