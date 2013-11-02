@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arp)
+% about "categories and sheaves" (version arq)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3710,9 +3710,8 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 %
 \subsection{Exercise 8.17 (p.~204)}\label{817} 
 %
-Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by $Z/\Ima h$. 
-
-(i) By Proposition 8.3.18 p.~183, an additive functor between abelian categories $F:\C\to\C'$ is left exact if and only if 
+Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by $Z/\Ima h$. Recall that, by Proposition 8.3.18 p.~183, an additive functor between abelian categories $F:\C\to\C'$ is left exact if and only if
+%
 \begin{equation}\label{sex1}
 \left.
 \begin{matrix}
@@ -3721,8 +3720,10 @@ Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
-\end{equation} 
-Consider the condition 
+\end{equation}
+% 
+Consider the condition
+%
 \begin{equation}\label{sex2}
 \left.
 \begin{matrix}
@@ -3732,13 +3733,33 @@ Consider the condition
 \end{matrix}
 \right\}
 \end{equation}
-We must show (\ref{sex1}) $\iff$ (\ref{sex2}). The implication $\implies$ is clear. To prove $\Longleftarrow$, let 
+%
+\begin{lem}
+We have (\ref{sex1}) $\iff$ (\ref{sex2}). 
+\end{lem}
+%
+\begin{proof}
+The implication $\implies$ is clear. To prove $\Longleftarrow$, let 
 $$
 0\to X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
-be exact, let $I$ be the image of $g$, and observe that $0\to I\to X''\to X''/I\to0$ and $0\to X'\to X\to I\to0$ are exact. Now the exactness of $0\to F(I)\to F(X'')$ and $0\to F(X')\to F(X)\to F(I)$ implies that of $0\to F(X')\to F(X)\to F(X'')$. 
+be exact, let $I$ be the image of $g$, and observe that 
+$$
+0\to I\to X''\to X''/I\to0\quad\text{and}\quad0\to X'\to X\to I\to0
+$$ 
+are exact, and so are, by our assumption, 
+$$
+0\to F(I)\to F(X'')\quad\text{and}\quad0\to F(X')\to F(X)\to F(I).
+$$ 
+We claim that $0\to F(X')\to F(X)\to F(X'')$ is exact. The exactness at $F(X')$ is clear. To check the exactness at $F(X)$, note that we have 
+$$
+\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I))\simeq\Ima(F(X')\to F(X)),
+$$ 
+the isomorphisms following respectively from the exactness of $0\to F(I)\to F(X'')$ and $F(X')\to F(X)\to F(I)$.
+\end{proof}
 
-(ii) The only nontrivial statement is the following one. Consider the conditions below on our additive functor $F:\C\to\C'$: 
+Consider the conditions below on our additive functor $F:\C\to\C'$:
+%
 \begin{equation}\label{ex1}
 \left.
 \begin{matrix}
@@ -3748,6 +3769,7 @@ be exact, let $I$ be the image of $g$, and observe that $0\to I\to X''\to X''/I\
 \end{matrix}
 \right\}
 \end{equation}
+%
 \begin{equation}\label{ex2}
 \left.
 \begin{matrix}
@@ -3756,8 +3778,14 @@ X'\overset{f}{\to}X\overset{g}{\to}X''\text{ exact }\\
 F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
-\end{equation} 
-Then (\ref{ex1}) implies (\ref{ex2}). To prove this, let 
+\end{equation}
+%
+\begin{lem}
+We have (\ref{ex1}) $\implies$ (\ref{ex2}).
+\end{lem}
+%
+\begin{proof}
+To prove this, let 
 $$
 X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
@@ -3771,11 +3799,18 @@ $$
 $$
 0\to I_g\to X''\to X''/I_g\to 0
 $$
-are exact. Now the exactness of 
+are exact. We must show that $F(X')\to F(X)\to F(X'')$ is exact. We have
 $$
-F(X')\to F(K_g)\to0,\quad 0\to F(I_g)\to F(X''),\quad F(K_g)\to F(X)\to F(I_g)
+\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I_g))
 $$
-implies that of $F(X')\to F(X)\to F(X'')$.
+$$
+\simeq\Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X)),
+$$ 
+the isomorphisms following respectively from the exactness of 
+$$
+0\to F(I_g)\to F(X''),\quad F(K_g)\to F(X)\to F(I_g),\quad F(X')\to F(K_g)\to0.
+$$
+\end{proof}
 %
 %%%
 %
