@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ark)
+% about "categories and sheaves" (version arl)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3460,7 +3460,21 @@ $$
 %%
 %
 \begin{s} 
-P.~182, proof of the equivalence (iii) $\iff$ (iv) in Proposition 8.3.14. The authors say that the equivalence is obvious. I agree, but here are a few more details. The implication (iv) $\implies$ (iii) is indeed obvious in the strongest sense of the word. The implication (iii) $\implies$ (iv) can be proved as follows. 
+P.~182, proof of the equivalence (iii) $\iff$ (iv) in Proposition 8.3.14. Here is the statement of the proposition:
+%
+\begin{prop}
+Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category $\C$. Then the conditions below are equivalent:
+\begin{itemize}
+\item[\em(i)] there exits $h:X''\to X$ such that $g\circ h=\id_{X''}$,
+\item[\em(ii)] there exits $k:X\to X'$ such that $k\circ f=\id_{X'}$,
+\item[\em(iii)] there exits $h:X''\to X$ and $k:X\to X'$ such that $\id_X=f\circ k+h\circ g$,
+\item[\em(iv)] there exits $\pp=(k,g)$ and $\psi=(f,h)$ such that $X\xr\pp X'\oplus X''$ and $X'\oplus X''\xr\psi X$ are inverse isomorphisms,
+\item[\em(v)] for any $Y\in\C$, the map $\Hom_\C(Y,X)\xr{g\circ}\Hom_\C(Y,X'')$ is surjective,
+\item[\em(vi)] for any $Y\in\C$, the map $\Hom_\C(X,Y)\xr{\circ f}\Hom_\C(X',Y)$ is surjective.
+\end{itemize}
+\end{prop}
+
+The authors say that the equivalence is obvious. I agree, but here are a few more details. The implication (iv) $\implies$ (iii) is indeed obvious in the strongest sense of the word. The implication (iii) $\implies$ (iv) can be proved as follows. 
 
 Assume (iii), that is, we have morphisms $h:X''\to X$ and $k:X\to X'$ such that 
 \begin{equation}\label{fk+hg} 
