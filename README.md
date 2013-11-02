@@ -7,6 +7,12 @@ This is text about the book "Categories and Sheaves" by Masaki Kashiwara and Pie
 
 This is a work in progress.
 
-There are three .tex files (written in LaTeX). 
+Everything is contained in the file called ``main_text.tex''. Please ignore the other files.
 
-Each file can be compiled separately. 
+The pdf file is available at
+
+http://www.iecn.u-nancy.fr/~gaillapy/DIVERS/KS/
+
+and
+
+https://docs.google.com/document/d/1BO1GhSlBhITVH_jecwzRdte0CELR-lJmNK96BK5me3g/edit
