@@ -7,8 +7,6 @@ This is text about the book "Categories and Sheaves" by Masaki Kashiwara and Pie
 
 This is a work in progress.
 
-Everything is contained in the file called ``main_text.tex''. Please ignore the other files.
-
 The pdf file is available at
 
 http://www.iecn.u-nancy.fr/~gaillapy/DIVERS/KS/
