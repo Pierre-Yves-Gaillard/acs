@@ -11,6 +11,8 @@ Everything is contained in the file called ``main_text.tex''. Please ignore the 
 
 The pdf file is available at
 
+https://drive.google.com/folderview?id=0BzbJLwZkWgt8RzlXdWNoWXNsdkk&usp=sharing#list 
+
 http://www.iecn.u-nancy.fr/~gaillapy/DIVERS/KS/
 
 and
