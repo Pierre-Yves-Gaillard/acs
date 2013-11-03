@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arr)
+% about "categories and sheaves" (version ars)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3710,9 +3710,47 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 %
 \subsection{Exercise 8.17 (p.~204)}\label{817} 
 %
+\subsubsection{Preliminaries}\label{preli}
+%
+The following statements are easy to prove.
+
+\nn(a) Let $X\xr fY\xr gZ$ be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
+$$
+\begin{tikzcd}
+\Ker(g\circ f)\ar{r}&X\ar{d}\ar{r}&\Ima(g\circ f)\ar[dashed]{dl}\ar{d}\ar{r}&0\\ 
+0\ar{r}&\Ima g\ar{r}&Z\ar{r}&\Coker g
+\end{tikzcd}
+$$ 
+of solid arrows, whose rows are exact sequences, can be completed as indicated. The situation can also be represented as follows: 
+$$
+\begin{tikzcd}
+X\ar[two heads]{dd}\ar{rr}{f}&&Y\ar[two heads]{dl}\ar{dd}{g}\\ 
+{}&\Ima g\ar[tail]{dr}\\ 
+\Ima(g\circ f)\ar[dashed,tail]{ur}\ar[tail]{rr}&&Z.
+\end{tikzcd}
+$$ 
+In particular $\Ima(g\circ f)\to\Ima g$ is a monomorphism.
+
+\nn(b) If in addition that $f$ is an epimorphism, then $\Ima(g\circ f)\to\Ima g$ is an isomorphism. 
+
+It suffices to prove that that $\Ima(g\circ f)\to\Ima g$ is an epimorphism. Let $\Ima g\to W$ be a morphism whose composition with $\Ima(g\circ f)\to\Ima g$ vanishes, and let us check that $\Ima g\to W$ vanishes. This follows immediately form the commutative diagram 
+$$
+\begin{tikzcd}
+X\ar{d}\ar[two heads]{r}&Y\ar[two heads]{d}\\ 
+\Ima(g\circ f)\ar{dr}[swap]{0}\ar{r}&\Ima g\ar{d}\\ 
+{}&W.
+\end{tikzcd}
+$$
+%
+%%
+%
+\subsubsection{Exercise 8.17}
+%
 The exercise follows easily from the Lemmas \ref{817a} and \ref{817b} below.
 
-Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by $Z/\Ima h$. Recall that, by Proposition 8.3.18 p.~183, an additive functor between abelian categories $F:\C\to\C'$ is left exact if and only if
+Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by $Z/\Ima h$. 
+
+Recall that, by Proposition 8.3.18 p.~183, an additive functor between abelian categories $F:\C\to\C'$ is left exact if and only if
 %
 \begin{equation}\label{sex1}
 \left.
@@ -3801,17 +3839,21 @@ $$
 $$
 0\to I_g\to X''\to X''/I_g\to 0
 $$
-are exact. We must show that $F(X')\to F(X)\to F(X'')$ is exact. We have
+are exact. We must show that $F(X')\to F(X)\to F(X'')$ is exact. As
 $$
-\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I_g))
-$$
-$$
-\simeq\Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X)),
-$$ 
+\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I_g))\simeq\Ima(F(K_g)\to F(X)),$$ 
 the isomorphisms following respectively from the exactness of 
 $$
-0\to F(I_g)\to F(X''),\quad F(K_g)\to F(X)\to F(I_g),\quad F(X')\to F(K_g)\to0.
-$$
+0\to F(I_g)\to F(X'')\quad\text{and}\quad F(K_g)\to F(X)\to F(I_g),
+$$ 
+it suffices to observe that the isomorpphism
+%
+\begin{equation}\label{kg}
+\Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X))
+\end{equation}
+%
+results from Subsubsection~\ref{preli} above and the exactness of $F(X')\to F(K_g)\to0$.
+%We have $$\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I_g))$$ $$\simeq\Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X)),$$ the isomorphisms following respectively from the exactness of $$0\to F(I_g)\to F(X''),\quad F(K_g)\to F(X)\to F(I_g),\quad F(X')\to F(K_g)\to0.$$
 \end{proof}
 %
 %%%
