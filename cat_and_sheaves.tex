@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version art)
+% about "categories and sheaves" (version aru)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -17,6 +17,7 @@
 \usepackage{amsthm}
 \usepackage{comment}
 \usepackage{fancyhdr}
+%\usepackage[shortlabels]{enumitem}
 \pagestyle{fancy}
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
@@ -31,11 +32,14 @@
 \newtheorem{s}[thm]{\S}
 %\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
 \hyphenation{Grothen-dieck mono-mor-phism}
+%
 \newcommand{\bu}{\bullet}
 \newcommand{\nn}{\noindent}
-%
 \newcommand{\cc}{\mathcal}
+\newcommand{\mc}{\mathcal}
 \newcommand{\bb}{\mathbb}
+\newcommand{\oo}{\operatorname}
+%
 \newcommand{\A}{\mathcal A}
 \newcommand{\B}{\mathcal B}
 \newcommand{\C}{\mathcal C}
@@ -48,20 +52,13 @@
 \newcommand{\V}{\mathcal V}
 %\newcommand{\Set}{\boldmath{\mathrm{Set}}}%\newcommand{\Set}{\pmb{Set}}
 \newcommand{\Cat}{\mathbf{Cat}}%\newcommand{\CCat}{\mathbf{CCat}}
-\newcommand{\ee}{\varepsilon}
-\newcommand{\epi}{\twoheadrightarrow}
-\newcommand{\mc}{\mathcal}
-\newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
-\newcommand{\incl}{\hookrightarrow}
-%\newcommand{\op}{\text{op}}
-\newcommand{\oo}{\operatorname}
-\newcommand{\pp}{\varphi}
-\newcommand{\parar}{\rightrightarrows}\newcommand{\paralelarrows}{\rightrightarrows}% parallel
-%\newcommand{\pf}{\n{\em Proof. }}
-\newcommand{\pt}{\{\text{pt}\}}
 \newcommand{\Set}{\mathbf{Set}}
-\newcommand{\xl}{\xleftarrow}
-\newcommand{\xr}{\xrightarrow}
+\newcommand{\pt}{\{\text{pt}\}}
+%
+\newcommand{\ee}{\varepsilon}
+\newcommand{\pp}{\varphi}
+%\newcommand{\op}{\text{op}}
+%\newcommand{\pf}{\n{\em Proof. }}
 %\newcommand{\bs}{\begin{s}}\newcommand{\es}{\end{s}}
 %\newcommand{\beq}{\begin{equation}}\newcommand{\eeq}{\end{equation}}
 %\newcommand{\blm}{\begin{lem}}\newcommand{\elm}{\end{lem}}
@@ -76,6 +73,17 @@
 %\newcommand{\sts}{t suffices to show}
 \newcommand{\cn}{(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) }%\subsection{Brief Comments}
 \newcommand{\bc}{\subsection{Brief Comments}}
+%
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
+\newcommand{\incl}{\hookrightarrow}
+\newcommand{\parar}{\rightrightarrows}
+\newcommand{\paralelarrows}{\rightrightarrows}% parallel
+\newcommand{\then}{\Rightarrow}
+\newcommand{\si}{\Leftarrow}
+\newcommand{\ssi}{\Leftrightarrow}%\Leftrightarrow\Rightarrow
+\newcommand{\xl}{\xleftarrow}
+\newcommand{\xr}{\xrightarrow}
 %
 % LIMITS
 % old
@@ -286,7 +294,7 @@ X\ar{dr}\ar{rr}{g}&&\displaystyle\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b)\ar{dl}\\
 $$
 over $B$ is given by 
 $$
-b\in B,\ (c,x)\in C_b\times X_b\ \implies\ f(c,x)=g(x)(c).
+b\in B,\ (c,x)\in C_b\times X_b\ \then\ f(c,x)=g(x)(c).
 $$
 
 \noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\varphi$.
@@ -298,10 +306,10 @@ Proof of Proposition 3.3.7 (iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem
 
 \noindent $*$ P.~84, Proposition 3.3.13. It is clear from the proof (I think) that the intended statement was the following one: If $\C$ is a category admitting finite inductive limits and if $A:\C^{\op}\to\Set$ is a functor, then we have 
 $$
-\C\text{ small and }\C_A\text{ filtrant }\implies A\text{ left exact }\implies\C_A\text{ filtrant}.
+\C\text{ small and }\C_A\text{ filtrant }\then A\text{ left exact }\then\C_A\text{ filtrant}.
 $$
 
-\noindent $*$ P.~85, proof of Proposition 3.3.13, proof of the implication ``$\C_A$ filtrant $\implies$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
+\noindent $*$ P.~85, proof of Proposition 3.3.13, proof of the implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
 
 \noindent $*$ P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
 
@@ -398,7 +406,7 @@ should be ``a sequence
 
 \noindent $*$ P.~191: The equality $\psi(M)=G\otimes_RM$ is used in the second display, whereas $\psi(M)=M\otimes_RG$ is used in the third display. It might be better to use $\psi(M)=M\otimes_{R^{\op}}G$ both times. Proof of Theorem 8.5.8 (iii): ``the product of finite copies of $R$'' should be ``the product of finitely many copies of $R$''.
 
-\noindent $*$ P.~196, Proposition 8.6.9, last sentence of the proof of (i) $\implies$ (ii): ``Proposition 8.3.12'' should be ``Lemma 8.3.12''.
+\noindent $*$ P.~196, Proposition 8.6.9, last sentence of the proof of (i) $\then$ (ii): ``Proposition 8.3.12'' should be ``Lemma 8.3.12''.
 
 %\noindent $*$ P. 199, middle of the page: I think that ``Condition S'4'' would be more common English than ``The condition S'4''.
 
@@ -496,35 +504,35 @@ A \textbf{universe} is a set $\mathcal U$ satisfying
 
 (i) $\varnothing\in\mathcal U$,
 
-(ii) $u\in U\in\mathcal U\implies u\in \mathcal U$,
+(ii) $u\in U\in\mathcal U\then u\in \mathcal U$,
 
-(iii) $U\in\mathcal U\implies\{U\}\in\mathcal U$,
+(iii) $U\in\mathcal U\then\{U\}\in\mathcal U$,
 
-(iv) $U\in\mathcal U\implies\mathcal P(U)\in\mathcal U$,
+(iv) $U\in\mathcal U\then\mathcal P(U)\in\mathcal U$,
 
-(v) $I\in\mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\implies$ $\bigcup_{i\in I}U_i\in\mathcal U$,
+(v) $I\in\mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\then$ $\bigcup_{i\in I}U_i\in\mathcal U$,
 
 (vi) $\mathbb N\in\mathcal U$.
 
 \noindent We want to prove:
 
-(vii) $U\in\mathcal U\implies\bigcup_{u\in U}u\in\mathcal U$,
+(vii) $U\in\mathcal U\then\bigcup_{u\in U}u\in\mathcal U$,
 
-(viii) $U,V\in\mathcal U\implies U\times V\in\mathcal U$,
+(viii) $U,V\in\mathcal U\then U\times V\in\mathcal U$,
 
-(ix) $U\subset V\in\mathcal U\implies U\in\mathcal U$,
+(ix) $U\subset V\in\mathcal U\then U\in\mathcal U$,
 
-(x) $I\in \mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\implies$ $\prod_{i\in I}U_i\in\mathcal U$.
+(x) $I\in \mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\then$ $\prod_{i\in I}U_i\in\mathcal U$.
 
 \noindent(We have kept Kashiwara and Schapira's numbering of Conditions (i) to (x).) 
 
 \noindent Obviously, (ii) and (v) imply (vii), whereas (iv) and (ii) imply (ix). Axioms (iii), (vi), and (v) imply
 
-(a) $U,V\in\mathcal U\implies\{U,V\}\in\mathcal U$,
+(a) $U,V\in\mathcal U\then\{U,V\}\in\mathcal U$,
 
 \noindent and thus
 
-(b) $U,V\in\mathcal U\implies(U,V):=\{\{U\},\{U,V\}\}\in\mathcal U$.
+(b) $U,V\in\mathcal U\then(U,V):=\{\{U\},\{U,V\}\}\in\mathcal U$.
 
 \noindent\textbf{Proof of (viii).} If $u\in U$ and $v\in V$, then $\{(u,v)\}\in\mathcal U$ by (ii), (b), and (iii). Now (v) yields 
 $$
@@ -533,7 +541,7 @@ $$
 
 Assume $U,V\in\mathcal U$, and let $V^U$ be the set of all maps from $U$ to $V$. As $V^U\in\mathcal P(U\times V)$, Statements (viii), (iv), and (ii) give
 
-(c) $U,V\in\mathcal U\implies V^U\in\mathcal U$.
+(c) $U,V\in\mathcal U\then V^U\in\mathcal U$.
 
 \noindent\textbf{Proof of (x).} As 
 $$
@@ -1284,7 +1292,7 @@ $$
 $$
 where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
 $$
-(i,s)\approx(j,t)\ \iff\ [i\sim j\text{ and }s=t].
+(i,s)\approx(j,t)\ \ssi\ [i\sim j\text{ and }s=t].
 $$ 
 \end{proof}
 \end{s}
@@ -1391,7 +1399,7 @@ the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and
 %%
 %
 \begin{s} 
-P.~58, implication (vi) $\implies$ (i) of Proposition 2.5.2. Here is a slightly stronger statement:
+P.~58, implication (vi) $\then$ (i) of Proposition 2.5.2. Here is a slightly stronger statement:
 %
 \begin{prop} 
 If $\varphi:J\to I$ is a functor, then the obvious map
@@ -1616,7 +1624,7 @@ by induction on the cardinal of $S$, and to see that this implies the claim. q.e
 %%
 %
 \begin{s} 
-P.~74, Theorem 3.1.6, Part (i) of the proof of the implication (a)$\implies$(b)\mv. 
+P.~74, Theorem 3.1.6, Part (i) of the proof of the implication (a)$\then$(b)\mv. 
 %
 \begin{lem} 
 Let $\alpha$ and $\beta$ be functors from $I$ to $\Set$, where $I$ is a small filtrant category; let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
@@ -1863,7 +1871,7 @@ as an equality between subsets of the product $P$ of the $\beta(i,j,u)$.
 The first claim follows from Lemma~\ref{r52} p.~\pageref{r52}. To prove the second claim, let $L$ and $R$ denote respectively the left and right-hand side of \eqref{lili}, let $x=(x(i,j,u))$ be in $P$, and let us denote generic morphisms in $I$ and $J$ by $v:i\to i'$ and $w:j\to j'$. Then $x$ is in $L$ if and only if 
 %
 \begin{equation}\label{fe} 
-(v,w)\in\Hom_M((i,j,u),(i',j',u'))\implies x(i,j,u)=\beta(v,w)(x(i',j',u',)), 
+(v,w)\in\Hom_M((i,j,u),(i',j',u'))\then x(i,j,u)=\beta(v,w)(x(i',j',u',)), 
 \end{equation} 
 %
 whereas $x$ is in $R$ if and only if \eqref{fe} holds when $v$ or $w$ is an identity morphism, so that the equality $L=R$ follows from the fact that any morphism 
@@ -1956,7 +1964,7 @@ As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=
 %\subsection{Brief Comments}
 %
 \begin{s} 
-P.~94, proof of (a) $\implies$ (b) in Proposition 4.1.3 (ii) (additional details): In the commutative diagram 
+P.~94, proof of (a) $\then$ (b) in Proposition 4.1.3 (ii) (additional details): In the commutative diagram 
 $$
 \begin{tikzcd}
 \Hom_\C(P(Y),X)\ar{d}{\sim}[swap]{\varepsilon_X\circ}\ar{r}{\circ\varepsilon_Y}&\Hom_\C(Y,X)\ar{d}{\varepsilon_X\circ}[swap]{\sim}\\ 
@@ -2104,7 +2112,7 @@ I'_{a\circ u}\ar{ur}{d}\ar[two heads]{r}[swap]{c}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
 (The existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) 
-By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\implies$ (b), p.~115, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have $a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}$ and 
+By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\then$ (b), p.~115, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have $a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}$ and 
 $$
 d\circ c^{-1}\circ a\circ u=d\circ c^{-1}\circ c\circ b=d\circ b=u=\id_{I'_f}\circ u,
 $$ 
@@ -2353,7 +2361,7 @@ it suffices to prove
 \Coim\left(\coli_{A\in I}\zeta\xi(A)\to X\right)\simeq X.
 \end{equation}
 % 
-Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\implies$(b), p.~115 to check that 
+Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\then$(b), p.~115 to check that 
 %
 \begin{equation}\label{step6b}
 \coli_{A\in I}\zeta\xi(A)\to X
@@ -2873,7 +2881,7 @@ Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')
 %
 \begin{proof}\ 
 
-\noindent(a) $\implies$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a morphism of functors $\varphi:\alpha\to F\circ\beta$ such that 
+\noindent(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a morphism of functors $\varphi:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
@@ -2885,11 +2893,11 @@ $\ic\varphi\simeq f$.
 
 \noindent Then $f$ factorizes as $X'=\alpha(j)\xr{\varphi_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
 
-\noindent(b) $\implies$ (c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
+\noindent(b) $\then$ (c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
 
-\noindent(c) $\implies$ (d). This follows from Remark~\ref{cof} p.~\pageref{cof}. 
+\noindent(c) $\then$ (d). This follows from Remark~\ref{cof} p.~\pageref{cof}. 
 
-\noindent(d) $\implies$ (a). This is obvious.
+\noindent(d) $\then$ (a). This is obvious.
 \end{proof}
 %
 %%%%%
@@ -3244,10 +3252,10 @@ is an abelian group morphism for any $f:Y\to Z$. Thus we have the left distribut
 \begin{s} 
 P.~173, Proposition 8.2.15. Recall the setting: $F:\C\to\C'$ is a functor between additive categories, and the claim is: 
 $$
-F\text{ is additive }\iff\ F\text{ commutes with finite products}.
+F\text{ is additive }\ssi\ F\text{ commutes with finite products}.
 $$ 
 
-I think the authors forgot to prove the implication $\implies$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
+I think the authors forgot to prove the implication $\then$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
 
 Case $n=0$: Put $X:=F(0)$. We must prove $X\simeq 0$. The equality $0=1$ holds in the ring $\Hom_\C(X,X)$ because it holds in the ring $\Hom_\C(0,0)$. As a result, the morphisms $0\to X$ and $X\to 0$ are inverse isomorphisms. 
 
@@ -3460,7 +3468,7 @@ $$
 %%
 %
 \begin{s} 
-P.~182, proof of the equivalence (iii) $\iff$ (iv) in Proposition 8.3.14. Here is the statement of the proposition:
+P.~182, proof of the equivalence (iii) $\ssi$ (iv) in Proposition 8.3.14. Here is the statement of the proposition:
 %
 \begin{prop}
 Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category $\C$. Then the conditions below are equivalent:
@@ -3474,13 +3482,13 @@ Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category
 \end{itemize}
 \end{prop}
 
-The authors say that the equivalence is obvious. I agree, but here are a few more details. The implication (iv) $\implies$ (iii) is indeed obvious in the strongest sense of the word. The implication (iii) $\implies$ (iv) can be proved as follows. 
+The authors say that the equivalence is obvious. I agree, but here are a few more details. The implication (iv) $\then$ (iii) is indeed obvious in the strongest sense of the word. The implication (iii) $\then$ (iv) can be proved as follows. 
 
 Assume (iii), that is, we have morphisms $h:X''\to X$ and $k:X\to X'$ such that 
 \begin{equation}\label{fk+hg} 
 f\circ k+h\circ g=\id_X.
 \end{equation} 
-The proofs of (iii) $\implies$ (i) and (iii) $\implies$ (ii) show that we also have 
+The proofs of (iii) $\then$ (i) and (iii) $\then$ (ii) show that we also have 
 \begin{equation}\label{gh,kf} 
 g\circ h=\id_{X''},\quad k\circ f=\id_{X'}.
 \end{equation} 
@@ -3756,7 +3764,7 @@ Recall that, by Proposition 8.3.18 p.~183, an additive functor between abelian c
 \left.
 \begin{matrix}
 0\to X'\overset{f}{\to}X\overset{g}{\to}X''\text{ exact }\\ 
-\implies\\ 
+\then\\ 
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
@@ -3768,18 +3776,18 @@ Consider the condition
 \left.
 \begin{matrix}
 0\to X'\overset{f}{\to}X\overset{g}{\to}X''\to0\text{ exact }\\ 
-\implies\\ 
+\then\\ 
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
 \end{equation}
 %
 \begin{lem}\label{817a}
-We have (\ref{sex1}) $\iff$ (\ref{sex2}). 
+We have (\ref{sex1}) $\ssi$ (\ref{sex2}). 
 \end{lem}
 %
 \begin{proof}
-The implication $\implies$ is clear. To prove $\Longleftarrow$, let 
+The implication $\then$ is clear. To prove $\Longleftarrow$, let 
 $$
 0\to X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
@@ -3804,7 +3812,7 @@ Consider the conditions below on our additive functor $F:\C\to\C'$:
 \left.
 \begin{matrix}
 0\to X'\overset{f}{\to}X\overset{g}{\to}X''\to0\text{ exact }\\ 
-\implies\\ 
+\then\\ 
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\to0\text{ exact}
 \end{matrix}
 \right\}
@@ -3814,18 +3822,18 @@ Consider the conditions below on our additive functor $F:\C\to\C'$:
 \left.
 \begin{matrix}
 X'\overset{f}{\to}X\overset{g}{\to}X''\text{ exact }\\ 
-\implies\\ 
+\then\\ 
 F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
 \end{equation}
 %
 \begin{lem}\label{817b}
-We have (\ref{ex1}) $\iff$ (\ref{ex2}).
+We have (\ref{ex1}) $\ssi$ (\ref{ex2}).
 \end{lem}
 %
 \begin{proof}
-The implication $\Longleftarrow$ is clear. To prove $\implies$, let 
+The implication $\Longleftarrow$ is clear. To prove $\then$, let 
 $$
 X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
@@ -3886,7 +3894,7 @@ P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 %%
 %
 \begin{s} 
-P.~222, Proposition 9.2.17, proof of the implication (ii) $\implies$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
+P.~222, Proposition 9.2.17, proof of the implication (ii) $\then$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
 
 It suffices to show that $\C_A$ is $\pi$-filtrant. Let $J$ be a category satisfying 
 $$
@@ -3914,10 +3922,10 @@ P. 227, Theorem 9.3.4. Firstly I think it would be better to state the result as
 
 Assume (9.3.1) and (9.3.4), and let $X$ be in $\C$. Then 
 \begin{equation}\label{934}
-X\in\C_\pi\iff\card(X(G))<\pi.
+X\in\C_\pi\ssi\card(X(G))<\pi.
 \end{equation} 
 
-Secondly I don't understand the proof of the implication $\Leftarrow$. Here are some possible changes. 
+Secondly I don't understand the proof of the implication $\si$. Here are some possible changes. 
 
 In the second paragraph of page 226, one could change the sentence 
 
@@ -3936,7 +3944,7 @@ One could also add to (9.3.4) p. 226 the condition
 \text{(e) if }A\text{ is a set with }\card(A)<\pi_0,\text{ then }\card(G^{\coprod A}(G))<\pi.
 \end{equation}
 
-Finally, one could change the proof of the implication $\Leftarrow$ in \eqref{934} to: 
+Finally, one could change the proof of the implication $\si$ in \eqref{934} to: 
 
 We claim
 \begin{equation}\label{934b}
@@ -4206,7 +4214,7 @@ Note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
 
 \noindent(ii)
 
-\noindent(a) $\implies$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$. By TR2 there is a d.t. 
+\noindent(a) $\then$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$. By TR2 there is a d.t. 
 $$
 X\xr fZ\xr hZ\xr kTX.
 $$ 
@@ -4219,7 +4227,7 @@ X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX,
 $$
 and Proposition 10.1.15 p.~246 implies that $(g,h)$ is an isomorphism.\bigskip 
 
-\noindent(b) $\implies$ (c): It suffices to take the direct sum of the d.t. 
+\noindent(b) $\then$ (c): It suffices to take the direct sum of the d.t. 
 $$
 \begin{tikzcd} 
 X\oplus Y\ar{r}&Y\ar{r}&TX\ar{r}&TX\oplus TY\\ 
@@ -4228,7 +4236,7 @@ X\oplus Y\ar{r}&Y\ar{r}&TX\ar{r}&TX\oplus TY\\
 $$
 and to invoke Condition N'3 of Lemma 10.2.1 (b) p.~249. 
 
-\noindent(c) $\implies$ (a): Straightforward.
+\noindent(c) $\then$ (a): Straightforward.
 \end{proof}
 \end{s}
 %
