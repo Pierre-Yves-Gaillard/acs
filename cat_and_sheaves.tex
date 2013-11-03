@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ars)
+% about "categories and sheaves" (version art)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3886,19 +3886,25 @@ P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 %%
 %
 \begin{s} 
-P.~222, Proposition 9.2.17, proof of the implication (ii) $\implies$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. It suffices to prove the following statement. 
+P.~222, Proposition 9.2.17, proof of the implication (ii) $\implies$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
 
-Let $\C$ be a category, let $A$ be in $\C^\wedge$, let $\varphi:J\to\C_A$ be a functor, let $\psi:J\to\C$ be the composition of $\varphi$ with the natural functor $\C_A\to\C$, write 
+It suffices to show that $\C_A$ is $\pi$-filtrant. Let $J$ be a category satisfying 
 $$
-\varphi(j)=(\psi(j),\psi(j)\xr{y_j}A),
+\card(\Mor(J))<\pi,
 $$ 
-assume that $\co\psi$ exists in $\C$, let $p_j:\psi(j)\to\co\psi$ be the coprojection, let 
+and let $\pp:J\to\C_A$ be a functor. By Proposition 9.2.1 p.~217 of the book, it is enough to prove 
+$$
+\lim\Hom_{\C_A}(\pp,\xi)\neq\varnothing
+$$ 
+for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\varphi$ with the natural functor $\C_A\to\C$, and write 
+$$
+\varphi(j)=(\psi(j),\psi(j)\xr{y_j}A).
+$$ 
+In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\co\psi$ exists in $\C$. Let $p_j:\psi(j)\to\co\psi$ be the coprojection. By surjectivity of (9.2.2) p.~222 of the book, there is an $x:\co\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Putting 
 $$
 \xi=(\co\psi,\co\psi\xr x A)\in\C_A
 $$ 
-be such that $x\circ p_j=y_j$ for all $j$, and let $f_j:\varphi(j)\to\xi$ be the obvious morphism. Then $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. 
-
-The proof is obvious.
+be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be the obvious morphism we have that $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. q.e.d.
 \end{s}
 %
 %%
