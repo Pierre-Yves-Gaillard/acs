@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arq)
+% about "categories and sheaves" (version arr)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3710,6 +3710,8 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 %
 \subsection{Exercise 8.17 (p.~204)}\label{817} 
 %
+The exercise follows easily from the Lemmas \ref{817a} and \ref{817b} below.
+
 Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by $Z/\Ima h$. Recall that, by Proposition 8.3.18 p.~183, an additive functor between abelian categories $F:\C\to\C'$ is left exact if and only if
 %
 \begin{equation}\label{sex1}
@@ -3721,7 +3723,7 @@ Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by
 \end{matrix}
 \right\}
 \end{equation}
-% 
+
 Consider the condition
 %
 \begin{equation}\label{sex2}
@@ -3734,7 +3736,7 @@ Consider the condition
 \right\}
 \end{equation}
 %
-\begin{lem}
+\begin{lem}\label{817a}
 We have (\ref{sex1}) $\iff$ (\ref{sex2}). 
 \end{lem}
 %
@@ -3780,12 +3782,12 @@ F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X''
 \right\}
 \end{equation}
 %
-\begin{lem}
-We have (\ref{ex1}) $\implies$ (\ref{ex2}).
+\begin{lem}\label{817b}
+We have (\ref{ex1}) $\iff$ (\ref{ex2}).
 \end{lem}
 %
 \begin{proof}
-To prove this, let 
+The implication $\Longleftarrow$ is clear. To prove $\implies$, let 
 $$
 X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
