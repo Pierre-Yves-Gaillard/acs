@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version arx)
+% about "categories and sheaves" (version ary)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4217,9 +4217,9 @@ Note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
 
 \noindent(ii)
 
-\noindent(a) $\then$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$. By TR2 there is a d.t. 
+\noindent(a) $\then$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$ with $Z\in\cc N$. By TR2 there is a d.t. 
 $$
-X\xr fZ\xr hZ\xr kTX.
+X\xr fZ\xr hY\xr kTX.
 $$ 
 Since $g\circ f=\id_X$, the morphism $f$ is a monomorphism, and so is $Tf$. As $Tf\circ k=0$ by Proposition 10.1.11 p.~245, this implies $k=0$. Hence we have a morphism of d.t. 
 $$
@@ -4233,7 +4233,7 @@ and Proposition 10.1.15 p.~246 implies that $(g,h)$ is an isomorphism.\bigskip
 \noindent(b) $\then$ (c): It suffices to take the direct sum of the d.t. 
 $$
 \begin{tikzcd} 
-X\oplus Y\ar{r}&Y\ar{r}&TX\ar{r}&TX\oplus TY\\ 
+X\oplus Y\ar{r}{(0,1)}&Y\ar{r}{0}&TX\ar{r}{(1,0)}&TX\oplus TY\\ 
 0\ar{r}&X\ar{r}{=}&X\ar{r}&0
 \end{tikzcd}
 $$
