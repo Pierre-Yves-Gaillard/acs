@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ary)
+% about "categories and sheaves" (version arz)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4230,14 +4230,17 @@ X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX,
 $$
 and Proposition 10.1.15 p.~246 implies that $(g,h)$ is an isomorphism.\bigskip 
 
-\noindent(b) $\then$ (c): It suffices to take the direct sum of the d.t. 
+\noindent(b) $\then$ (c): Let $\Delta_1,\dots,\Delta_5$ be the triangles
 $$
-\begin{tikzcd} 
-X\oplus Y\ar{r}{(0,1)}&Y\ar{r}{0}&TX\ar{r}{(1,0)}&TX\oplus TY\\ 
-0\ar{r}&X\ar{r}{=}&X\ar{r}&0
+\begin{tikzcd}
+X\ar{r}&0\ar{r}&TX\ar{r}{=}&TX\\ 
+Y\ar{r}{=}&Y\ar{r}&0\ar{r}&TY\\ 
+X\oplus Y\ar{r}&Y\ar{r}&TX\ar{r}&TX\oplus TY\\ 
+0\ar{r}&X\ar{r}&X\ar{r}&0\\ 
+X\oplus Y\ar{r}&X\oplus Y\ar{r}&X\oplus TX\ar{r}&TX\oplus TY.
 \end{tikzcd}
-$$
-and to invoke Condition N'3 of Lemma 10.2.1 (b) p.~249. 
+$$ 
+As $\Delta_3=\Delta_1\oplus\Delta_2$ and $\Delta_5=\Delta_3\oplus\Delta_4$, the triangle $\Delta_5$ is distinguished. As $X\oplus Y\in\cc N$, Condition N'3 of Lemma 10.2.1 (b) p.~249 implies $X\oplus TX\in\cc N$.
 
 \noindent(c) $\then$ (a): Straightforward.
 \end{proof}
