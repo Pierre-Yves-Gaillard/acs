@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ase)
+% about "categories and sheaves" (version asf)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4415,8 +4415,7 @@ Z\ar{d}\ar{r}&Y\ar{d}\ar{r}&X\ar{d}\ar{r}&W\ar[equal]{d}\ar{r}&0\\
 $$ 
 a commutative diagram of complexes. Then the bottom row is exact.
 \end{lem}
-%
-\begin{proof}
+
 Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences $0\to Y\to Z\to X\to0$, and let $\sim$ be the following equivalence relation on $E$: the exact sequences $0\to Y\to Z\to X\to0$ and $0\to Y\to W\to X\to0$ are equivalent if and only if there is a commutative diagram 
 $$
 \begin{tikzcd}
@@ -4444,8 +4443,7 @@ We claim:
 
 (b) this map (a) is bijective. 
 
-Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before.
-\end{proof}
+Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
 \end{s}
 %
 %%%
