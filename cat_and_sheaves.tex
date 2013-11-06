@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asb)
+% about "categories and sheaves" (version asd)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4335,7 +4335,7 @@ is exact. (See Corollary 12.2.6 p.~302.)
 The commutative diagram in $\A_c$ with exact rows 
 $$
 \begin{tikzcd}
-0\ar{r}&X\ar{d}{\id_X}\ar{r}{\id_X}&X\ar{d}{f}\ar{r}&0\ar{d}\ar{r}&0\\ 
+0\ar{r}&X\ar{d}[swap]{\id_X}\ar{r}{\id_X}&X\ar{d}{f}\ar{r}&0\ar{d}\ar{r}&0\\ 
 0\ar{r}&X\ar{r}[swap]{f}&Y\ar{r}[swap]{g}&Z\ar{r}&0
 \end{tikzcd}
 $$ 
@@ -4383,10 +4383,12 @@ $$
 \begin{s}\label{q337}
 P. 337. Theorem 13.4.1 suggests the following question: 
 
-Let $\C$ be an abelian category. Is the natural morphism 
+Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
+%
 \begin{equation}\label{spalt}
 \co_{(X'\to X),(Y\to Y')\in\oo{Qis}}\Hom_{\oo K(\C)}(X',Y')\to\Hom_{\oo D(\C)}(X,Y)
-\end{equation} 
+\end{equation}
+%
 an isomorphism?
 
 Theorem 13.4.1 implies that the answer is yes if $\C$ is a Grothendieck category. 
