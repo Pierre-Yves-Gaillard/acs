@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asj)
+% about "categories and sheaves" (version ask)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1057,6 +1057,7 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 \end{s}
 %
 %%
+%
 \nn[\S\ref{231} p.~\pageref{231} about Definition 2.3.1 p.~50 will be inserted here.]
 %
 %%%
@@ -4576,6 +4577,10 @@ Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of 
 %
 %%
 %
+\nn[\S\ref{399} p.~\pageref{399} about the beginning of Section 16.3 on p~399 will be inserted here.]
+%
+%%
+%
 \begin{s} 
 P. 400, proof of Lemma 16.3.1 (additional details): 
 
@@ -4871,29 +4876,6 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 %\noindent $*$ P. 365. I think the authors forgot to write down the beautiful formula \begin{align*}\Hom_{\oo D(k)}(N\otimes_R^{\oo L}M,L)&\simeq\Hom_{\oo D(R^{\op})}(N,\oo{RHom}_k(M,L))\\ &\simeq\Hom_{\oo D(R)}(M,\oo{RHom}_k(N,L)).\end{align*}
 
-\noindent $*$ P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
-$$
-\begin{tikzcd}
-%
-\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
-\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
-%
-\end{tikzcd}
-$$
-If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
-$$
-\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
-$$ 
-and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
-$$
-\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A)).
-$$ 
-This implies that the set 
-$$
-\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
-$$ 
-depends functorially on $U\in\C$.
-
 \nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
 %\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
@@ -5084,6 +5066,33 @@ f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
 In other words, we set $f^\tau:=(f^t)^{\op}$. (The motivation for this notation appears in \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
 
 We keep the same definition of left exactness (based on $f^t$) of $f:X\to Y$ as in the book.
+\end{s}
+%
+%%
+%
+\begin{s}\label{399}
+P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
+$$
+\begin{tikzcd}
+%
+\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
+\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
+%
+\end{tikzcd}
+$$
+If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
+$$
+\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
+$$ 
+and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
+$$
+\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A)).
+$$ 
+This implies that the set 
+$$
+\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
+$$ 
+depends functorially on $U\in\C$.
 \end{s}
 %
 %%
