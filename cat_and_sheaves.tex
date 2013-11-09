@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asp)
+% about "categories and sheaves" (version asq)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5051,9 +5051,25 @@ If $f:X\to Y$ is a morphism of presites, then we keep the notation $f^t$ for the
 \begin{equation}\label{ttau}
 f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
 \end{equation}
-In other words, we set $f^\tau:=(f^t)^{\op}$. (The motivation for this notation appears in \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
+In other words, we set $f^\tau:=(f^t)^{\op}$. 
 
 We keep the same definition of left exactness (based on $f^t$) of $f:X\to Y$ as in the book.
+
+Here is the motivation for introducing the functor $f^\tau$ can be described as follows: The diagram 
+$$
+\begin{tikzcd}
+J\ar{dr}\ar{rr}{\pp}&&I\ar{dl}\\ 
+{}&\C,
+\end{tikzcd}
+$$ 
+representing the general setting of Section 2.3 p.~50 of the book is now replaced by the diagram 
+$$
+\begin{tikzcd}
+(\C_Y)^{\op}\ar{dr}\ar{rr}{f^\tau}&&(\C_A)^{\op}\ar{dl}\\ 
+{}&\A.
+\end{tikzcd}
+$$ 
+(See also \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
 \end{s}
 %
 %%
