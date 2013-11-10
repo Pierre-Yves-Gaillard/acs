@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asq)
+% about "categories and sheaves" (version asr)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4700,6 +4700,49 @@ Also note that Theorem 3.3.18 (b) p.~86 implies
 \begin{prop}\label{407}
 Assume that $\A$ satisfies the same conditions as the category $\C$ of Theorem 3.3.18 (b). If $f$ is left exact, then $f^\dagger$ is exact. If $f$ is right exact, then $f^\ddagger$ is exact. 
 \end{prop}
+\end{s}
+%
+%%
+%
+\begin{s}%\label{17115b}
+P. 409, proof of Proposition 17.1.9. Here more details: Part (i): 
+$$
+\oo j_{A\to X*}(F)(B\to A)\simeq
+\lim_{((U\to A)\to(B\to A))\in(\C_A)_{B\to A}}\oo j_{A\to X*}(F)(U\to A)
+$$
+$$
+\simeq\lim_{(U\to B)\in\C_B}\oo j_{A\to X*}(F)(U\to A)\simeq
+\lim_{(U\to B)\in\C_B}F(U)\simeq F(B).
+$$
+
+Part (iii), case $B\in\C_X$: 
+$$
+(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{((V\to A)\to(B\times A\to A))\in(\C_A)_{B\times A\to A}}G(V\to A)
+$$ 
+$$
+\simeq\lim_{(V\to B\times A)\in\C_{B\times A}}G(V\to A)\simeq 
+G\left(\ic_{(V\to B\times A)\in\C_{B\times A}}(V\to A)\right)
+$$
+
+$$
+\simeq G\left(\left(\ic_{(V\to B\times A)\in\C_{B\times A}}V\right)\to A\right)\simeq 
+G(B\times A\to A).
+$$
+
+Part (iii), case $B\in\C_X^\wedge$:
+$$
+(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{(U\to B)\in\C_B}\oo j^\ddagger_{A\to X} G)(U)
+\simeq\lim_{(U\to B)\in\C_B}G(U\times A\to A)
+$$ 
+$$
+\simeq G\left(\ic_{(U\to B)\in\C_B}(U\times A\to A)\right)\simeq 
+G\left(\left(\ic_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)
+$$
+
+$$
+\simeq G\left(\left(\ic_{(U\to B)\in\C_B}U\right)\times A\to A\right)
+\simeq G(B\times A\to A).
+$$
 \end{s}
 %
 %%
