@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ass)
+% about "categories and sheaves" (version ast)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5208,7 +5208,22 @@ Let us go back to the proof of Lemma 18.5.3 p. 447.
 
 [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
 
-Let us change nothing up to the sentence ``Let $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$'' (Line~6 of the proof). So, we have an element $s$ in the kernel of 
+For the reader's convenience we state Lemma 18.5.3: 
+%
+\begin{lem}
+Let $P$ be an $\cc R$-module. Assume that for any $U\in\C_X$ and any morphism $u:(\cc R|_U)^m\to(\cc R|_U)^n$, the sequence 
+$$
+0\to\Ker(u)\otimes_{\cc R|_U}(P|_U)\to(\cc R|_U)^m\otimes_{\cc R(U)}(P|_U)\to(\cc R|_U)^n\otimes_{\cc R|_U}(P|_U)
+$$ 
+is exact. Then $P$ is a flat $\cc R$-module.
+\end{lem}
+%
+\begin{proof}
+Let $0\to M'\to M\to M''\to0$ be an exact sequence in $\Mod(\cc R^{\op})$. Let us show that $M'\otimes_{\cc R}P\to M\otimes_{\cc R}P$ is a monomorphism. For $U\in\C_X$ set 
+$$
+K(U):=\Ker\left(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\right).
+$$ 
+Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U\in\C_X$. Let $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken word for word from the book.) So, we have an element $s$ in the kernel of 
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
@@ -5246,7 +5261,8 @@ P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\
 M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
-As explained in the book, there is a $t$ in $(N\otimes_{\cc R|_U}P|_U)(U)$ such that $r_1(t)=(b_i)$. This implies $s=f_1((b_i))=f_1(r_1(t))=0$, as required. q.e.d.
+As explained in the book, there is a $t$ in $(N\otimes_{\cc R|_U}P|_U)(U)$ such that $r_1(t)=(b_i)$. This implies $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
+\end{proof}
 %
 %\section{Next Additions}
 %
