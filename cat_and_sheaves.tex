@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asr)
+% about "categories and sheaves" (version ass)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -264,38 +264,7 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~64, proof of Proposition 2.7.5: $(\C')^\wedge$ should be $\C^\wedge$.
 
-\noindent $*$ P.~65, Exercise 2.7 (i). I think the statement of the exercise is not exactly the intended one. Here is a possible formulation.
-
-``Map'' shall mean ``morphism in $\Set$''. For any map $X\to Y$ and any $y\in Y$ we denote by $X_y$ the fiber above $y$. If $C\to B$ is a map and if the functors 
-$$
-\begin{tikzcd}
-\Set_B\ar[yshift=.7ex]{r}{L}&\Set_C\ar[yshift=-.7ex]{l}{R}
-\end{tikzcd}
-$$ 
-are defined by 
-$$
-L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b),
-$$ 
-then $(L,R)$ is a pair of adjoint functors.
-
-More precisely, the bijection between maps
-$$
-\begin{tikzcd}
-C\times_BX\ar{dr}\ar{rr}{f}&&Y\ar{dl}\\ 
-{}&C
-\end{tikzcd}
-$$
-over $C$ and maps
-$$
-\begin{tikzcd}
-X\ar{dr}\ar{rr}{g}&&\displaystyle\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b)\ar{dl}\\ 
-{}&B
-\end{tikzcd}
-$$
-over $B$ is given by 
-$$
-b\in B,\ (c,x)\in C_b\times X_b\ \then\ f(c,x)=g(x)(c).
-$$
+\noindent $*$ P.~65: see \S\ref{bc} p.~\pageref{bc}.
 
 \noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\varphi$.
 
@@ -1425,9 +1394,9 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 %
 %%%
 %
-\subsection{Three Versions of an Important Formula}
+\subsection{Three Versions of an Important Formula (p. 61)}
 %
-P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
+This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
 \ic_{X\in\C_A}X\xrightarrow\sim A,
@@ -1602,6 +1571,42 @@ P.~64, end of Chapter 2. One could add the following observation (which will be 
 \widehat F(B)(X)\simeq A(X).
 \end{equation}
 Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
+\end{s}
+%
+%%
+\begin{s}\label{bc}
+I think the statement of Exercise 2.7 (i) p.~65 is not exactly the intended one. Here is a possible formulation.
+
+``Map'' shall mean ``morphism in $\Set$''. For any map $X\to Y$ and any $y\in Y$ we denote by $X_y$ the fiber above $y$. If $C\to B$ is a map and if the functors 
+$$
+\begin{tikzcd}
+\Set_B\ar[yshift=.7ex]{r}{L}&\Set_C\ar[yshift=-.7ex]{l}{R}
+\end{tikzcd}
+$$ 
+are defined by 
+$$
+L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b),
+$$ 
+then $(L,R)$ is a pair of adjoint functors.
+
+More precisely, the bijection between maps
+$$
+\begin{tikzcd}
+C\times_BX\ar{dr}\ar{rr}{f}&&Y\ar{dl}\\ 
+{}&C
+\end{tikzcd}
+$$
+over $C$ and maps
+$$
+\begin{tikzcd}
+X\ar{dr}\ar{rr}{g}&&\displaystyle\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b)\ar{dl}\\ 
+{}&B
+\end{tikzcd}
+$$
+over $B$ is given by 
+$$
+b\in B,\ (c,x)\in C_b\times X_b\ \then\ f(c,x)=g(x)(c).
+$$
 \end{s}
 %
 %%%
@@ -4741,65 +4746,10 @@ $$
 
 $$
 \simeq G\left(\left(\ic_{(U\to B)\in\C_B}U\right)\times A\to A\right)
-\simeq G(B\times A\to A).
-$$
+\simeq G(B\times A\to A),
+$$ 
+the penultimate isomorphism following from the fact that small inductive limits in the category of sets exist and are stable by base change (see \S\ref{bc} p.~\pageref{bc}).
 \end{s}
-%
-%%
-%
-\begin{comment}
-%
-% Remember: You're working on this! Don't delete!!!
-%
-\begin{s} 
-P. 409, proof of (17.1.12). The isomorphism is first proved in the particular case $B\in\C_X$, and then in the general case $B\in\C_X^\wedge$. It seems to me that the argument given in the particular case also works in the general case. Here is the way I understand this argument. Recall the setting: Let $X$ be a presite, let $A$ be in $\C_X^\wedge$, let $G$ be in $\PSh(A,\A)$, and let $B$ be in $\C_X^\wedge$. We must show 
-%
-\begin{equation}
-\oo j_{A\to X}^\ddagger(G)(B)\simeq G(B\times A).
-\end{equation}
-% 
-Recall also the following. If $f:X\to Y$ is a morphism of presites, if $\A$ is a category $\A$ admitting small inductive and projective limits, if $G$ is in $\PSh(Y,\A)$ and if $U$ is in $\C_X$, then we have
-$$
-f^\ddagger(G)(U)=\lim_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}G(V),
-$$
-where $U\to f^\tau(V)$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $f^t(V)\to U$ in $\C_X$). (See \eqref{1714} p.~\pageref{1714}.) It suffices to prove 
-$$
-\lim_{V\xr{(b,a)}B\times A}G(V\xr a A)\xr\sim G(B\times A\to A),
-$$
-that is, it suffices to prove that we have an isomorphism 
-$$
-\ic_{V\xr{(b,a)}B\times A}(V\xr a A)\xr\sim(B\times A\to A)
-$$ 
-in $\C_A^\wedge$. Here $A$ and $B$ are in $\C_X^\wedge$, and $V\xr{(b,a)}B\times A$ runs over $\C_{B\times A}$. Let $U\xr u A$ be in $\C_A$, put 
-$$
-S:=\displaystyle\co_{V\xr{(b,a)}B\times A}\Hom_{\C_A}(U\xr u A,V\xr a A),
-$$ 
-$$
-T:=\Hom_{\C_A^\wedge}(U\xr u A,B\times A\to A),
-$$ 
-let 
-$$
-i(V\xr{(b,a)}B\times A):\Hom_{\C_A}(U\xr u A,V\xr a A)\to S,
-$$ 
-be the coprojection, and consider the diagram 
-$$
-\begin{tikzcd}
-%
-S\ar[yshift=.7ex]{r}{\varphi}&T,\ar[yshift=-.7ex,dashed]{l}{\psi}
-%
-\end{tikzcd}
-$$ 
-where $\varphi$ is defined by 
-$$
-\varphi(V\xr{(b,a)}B\times A)(U\xr fV):=(U\xr fV\xr{(b,a)}B\times A).
-$$
-It suffices to prove that $\varphi$ is bijective. We define $\psi$ by 
-$$
-\psi(U\xr{(b,u)}B\times A):=i(U\xr{(b,u)}B\times A)(\id_{U\xr uA}),
-$$ 
-and leave it to the reader to verify that $\varphi$ and $\psi$ are mutually inverse bijections. q.e.d.
-\end{s}
-\end{comment}
 %
 %%
 %
