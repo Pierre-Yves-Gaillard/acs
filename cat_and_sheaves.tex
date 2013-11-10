@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asv)
+% about "categories and sheaves" (version asw)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4821,7 +4821,7 @@ follows from Proposition~\ref{p406} p.~\pageref{p406}. %[Here we are {\em not} f
 %
 \section{About Chapter 18}
 %
-[Subsection~\ref{1853} p.~\pageref{1853} and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
+[Subsection~\ref{s1853} p.~\pageref{s1853} and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
 %
 %\subsection{Brief Comments}
 %
@@ -5129,7 +5129,7 @@ $$
 where $f^\tau(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $W\to f^t(V)$ in $\C_X$).
 \end{s}
 %
-\subsection{Proof of Lemma 18.5.3 (p. 447)}\label{1853}
+\subsection{Proof of Lemma 18.5.3 (p. 447)}\label{s1853}
 %
 The only purpose of the following rewriting is to give additional details to help the reader. We start with a technical lemma.
 
@@ -5234,7 +5234,7 @@ Let us go back to the proof of Lemma 18.5.3 p. 447.
 
 For the reader's convenience we state Lemma 18.5.3: 
 %
-\begin{lem}
+\begin{lem}\label{l1853}
 Let $P$ be an $\cc R$-module. Assume that for any $U\in\C_X$ and any morphism $u:(\cc R|_U)^m\to(\cc R|_U)^n$, the sequence 
 $$
 0\to\Ker(u)\otimes_{\cc R|_U}(P|_U)\to(\cc R|_U)^m\otimes_{\cc R(U)}(P|_U)\to(\cc R|_U)^n\otimes_{\cc R|_U}(P|_U)
@@ -5274,26 +5274,38 @@ $$
 \begin{tikzcd}
 {}&P(U)^m\ar{d}{g_1}\\ 
 P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
-M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
+s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
-By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise}). Diagram \eqref{d447} also induces
+By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise}). Diagram \eqref{d447} also induces Diagram 
 $$
+\Delta:=\left\{
 \begin{tikzcd}
 N\ar{r}\ar{d}&(\cc R^{\op}|_U)^m\ar{d}{g_2}\\ 
 (\cc R^{\op}|_U)^n\ar{r}{h_2}\ar{d}[swap]{f_2}&(\cc R^{\op}|_U)^\ell\ar{d}{q_2}\\ 
 M'|_U\ar{r}[swap]{\varphi_2}&M|_U,
 \end{tikzcd}
-$$ 
-the top square being cartesian. This is a commutative diagram of complexes, and $\varphi_2$ is a monomorphism. We get yet another commutative diagram of complexes:
+\right.
+$$
+the top square being cartesian. Then $\Delta$ is a commutative diagram of complexes, and $\varphi_2$ is a monomorphism. The condition that the top square is cartesian is equivalent to the exactness of 
+%
+\begin{equation}\label{tsc2}
+\Sigma:=(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell).
+\end{equation}
+% 
+The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U,-)$, the commutative diagram of complexes $\Gamma(U,\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
 $$
 \begin{tikzcd}
-(N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{r_1}&P(U)^m\ar{d}{g_1}\\ 
-P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
-M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
+(N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{r_1}&P(U)^m\ar{d}{g_1}\ni(b'_j)\\ 
+(b_i)\in P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
+s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U),
 \end{tikzcd}
 $$ 
-As explained in the book, there is a $t$ in $(N\otimes_{\cc R|_U}P|_U)(U)$ such that $r_1(t)=(b_i)$. This implies $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
+has also a cartesian top square. In other words, we have 
+$$
+(N\otimes_{\cc R|_U}P|_U)(U)\simeq P(U)^m\times_{P(U)^\ell}P(U)^n\ni((b'_j),(b_i)).
+$$ 
+If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $((b'_j),(b_i))$, then we get $r_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
 \end{proof}
 %
 %\section{Next Additions}
