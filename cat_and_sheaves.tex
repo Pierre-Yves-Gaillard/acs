@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asu)
+% about "categories and sheaves" (version asv)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5144,7 +5144,13 @@ $$
 $$
 %
 \begin{lem}\label{techlem}
-Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, we have $\sum_{i=1}^n\ a_i\otimes b_i=0$ in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families $(a_i)_{i=n+1}^\ell$, $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above in such a way that we have in the above notation $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
+Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, we have 
+%
+\begin{equation}\label{et=0}
+\sum_{i=1}^n\ a_i\otimes b_i=0
+\end{equation}
+%
+in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families $(a_i)_{i=n+1}^\ell$, $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above in such a way that we have in the above notation $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
 \end{lem}
 %
 
@@ -5163,13 +5169,19 @@ S^m\ar{r}{\lambda}\ar{rd}[swap]{0}&S^\ell\ar{d}{a}
 \end{tikzcd}
 $$ 
 The situation can be summarized by the following commutative diagram of complexes which resembles Diagram (18.5.3) p. 447 of the book:
-$$
+%
+\begin{equation}\label{dt=0}
 \begin{tikzcd}
 {}&S^m\ar{d}{\lambda}\\ 
 S^n\ar[hook]{r}\ar{d}&S^\ell\ar{d}{a}\\ 
 A\ar[equal]{r}&A.
 \end{tikzcd}
-$$ 
+\end{equation}
+%
+\begin{conv}\label{ct=0}
+Say that the commutative diagram \eqref{dt=0} is attached to Equality \eqref{et=0} by Lemma \ref{techlem}.
+\end{conv}
+%
 For the reader's convenience we reproduce Diagram (18.5.3): 
 $$
 \begin{tikzcd}
@@ -5178,15 +5190,18 @@ $$
 0\ar{r}&M'(U)\ar{r}&M(U).
 \end{tikzcd}
 $$
-On applying $-\otimes_RB$ we get 
-$$
+On applying $-\otimes_RB$ to \eqref{dt=0} we get 
+%
+\begin{equation*}
 \begin{tikzcd}
 {}&B^m\ar{d}{\lambda}\\ 
 B^n\ar[hook]{r}\ar{d}&B^\ell\ar{d}{a}\\ 
 A\otimes_RB\ar[equal]{r}&A\otimes_RB
 \end{tikzcd}
-$$ 
+\end{equation*}
+%
 (we keep the notation $\lambda$ and $a$), and ``elementwise'':
+%
 \begin{equation}\label{eltwise}
 \begin{tikzcd}
 {}&(b'_j)_{j=1}^m\ar[mapsto]{d}{\lambda}\\ 
@@ -5194,8 +5209,9 @@ $$
 0\ar[equal]{r}&0.
 \end{tikzcd}
 \end{equation}
+%
 \begin{proof}
-The {\em if} \ part is obvious. To prove the {\em only if} \ part, we assume $\sum_{i=1}^n\ a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
+The {\em if} \ part is obvious. To prove the {\em only if}\ part, we assume $\sum_{i=1}^n\ a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
 $$
 C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
 $$ 
@@ -5235,17 +5251,25 @@ Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
-and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ and $a_i:=\varphi(a_i')$. Let
+and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that \eqref{et=0} holds. The commutative diagram 
+$$
+\begin{tikzcd}
+{}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
+\cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}\\ 
+M'(U)\ar[equal]{r}&M'(U)
+\end{tikzcd}
+$$ 
+attached to Equality~\eqref{et=0} by Lemma~\ref{techlem} in the sense of Convention~\ref{ct=0} gives rise to the commutative diagram 
 %
 \begin{equation}\label{d447}
 \begin{tikzcd}
 {}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
 \cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}{q}\\ 
-M'(U)\ar{r}[swap]{\varphi}&M(U)
+M'(U)\ar{r}[swap]{\varphi}&M(U).
 \end{tikzcd}
 \end{equation}
 %
-be the commutative diagram of complexes given by Lemma~\ref{techlem}, $\varphi$ being a monomorphism. Diagram \eqref{d447} induces
+Applying $-\otimes_{\cc R(U)}P(U)$, we get 
 $$
 \begin{tikzcd}
 {}&P(U)^m\ar{d}{g_1}\\ 
