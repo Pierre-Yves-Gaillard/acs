@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asy)
+% about "categories and sheaves" (version asz)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4659,24 +4659,26 @@ in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This means
 %
 \section{About Chapter 17}
 %
-
-\nn[\S\ref{revol} p.~\pageref{revol} and \S\ref{fhat} p.~\pageref{fhat} will be inserted here.]
-
+[\S\ref{revol} p.~\pageref{revol} will be inserted here.]
 %
-%\subsection{Brief Comments}
+\begin{s}\label{fhat}
+P. 406, Chapter 17. Recall that, in the first line of second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
 %
-\begin{comment}
-\begin{s} P. 406, Notation 17.1.2 (ii). [See \eqref{ttau} p.~\pageref{ttau}.] Firstly note that the isomorphism 
-$$
-\big((f^t)\ \widehat{}A\big)(U)\simeq\co_{(U\to f^t(V))\in(\C_Y)^U}A(V)
-$$
-follows from \eqref{275} p.~\pageref{275}. (See \S\ref{c406} p.~\pageref{c406}.) Secondly, for the sake of emphasis, we state: 
+\begin{equation*}
+\begin{split}
+(f^\tau)\ \widehat{}\ (B)(U)&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X^{\op}}(U,f^\tau(V))
+\\ \\ 
+{}&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^t(V),U)\\ \\ 
+{}&\simeq\co_{(U\to f^\tau(V))\in(\C_Y^{\op})^U}B(V).
+\end{split}
+\end{equation*}
+%
+For the sake of emphasis, we state: 
 %
 \begin{prop}\label{p406}
-The functor $(f^t)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
+The functor $(f^\tau)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^\tau)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
 \end{s}
-\end{comment}
 %
 %%
 %
@@ -4814,9 +4816,20 @@ or, in the notation of \eqref{ttau} p.~\pageref{ttau},
 $$
 (f^\tau)\ \widehat{}\ (V\times B)\simeq f^\tau(V)\times(f^\tau)\ \widehat{}\ (B),
 $$
-follows from Proposition~\ref{p406} p.~\pageref{p406}. %[Here we are {\em not} following the convention of \S\ref{fdagger} p.~\pageref{fdagger}.]
+follows from Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 %
+%%
+%
+\begin{s}\label{a428}
+P. 428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
+\end{s}
+%
+%%
+%
+\begin{s}\label{a438}
+P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
+\end{s}
 %%%
 %
 \section{About Chapter 18}
@@ -5092,39 +5105,6 @@ $$
 A^a(U):=\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
 $$ 
 depends functorially on $U\in\C$.
-\end{s}
-%
-%%
-%
-\begin{s}\label{fhat}
-P. 406, Chapter 17. Recall that, in the first line of second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
-%
-\begin{equation*}
-\begin{split}
-(f^\tau)\ \widehat{}\ (B)(U)&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X^{\op}}(U,f^\tau(V))
-\\ \\ 
-{}&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^t(V),U)\\ \\ 
-{}&\simeq\co_{(U\to f^\tau(V))\in(\C_Y^{\op})^U}B(V).
-\end{split}
-\end{equation*}
-%
-For the sake of emphasis, we state: 
-%
-\begin{prop}\label{p406}
-The functor $(f^\tau)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^\tau)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
-\end{prop}
-\end{s}
-%
-%%
-%
-\begin{s}\label{a428}
-P. 428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
-\end{s}
-%
-%%
-%
-\begin{s}\label{a438}
-P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
 \end{s}
 %
 %%
