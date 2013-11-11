@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asz)
+% about "categories and sheaves" (version ata)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -1607,6 +1607,14 @@ over $B$ is given by
 $$
 b\in B,\ (c,x)\in C_b\times X_b\ \then\ f(c,x)=g(x)(c).
 $$
+
+Clearly, this implies
+%
+\begin{prop}\label{sbc}
+Small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6 p.~47 of the book).
+\end{prop}
+%
+Note that Proposition~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
 \end{s}
 %
 %%%
@@ -2241,7 +2249,7 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 
 \noindent (i) $\C$ admits small inductive limits and finite projective limits, 
 
-\noindent (ii) small filtrant inductive limits are stable by base change (see Definition 2.2.6 p.~47), 
+\noindent (ii) small filtrant inductive limits are stable by base change (see Definition 2.2.6 p.~47 of the book), 
 
 \noindent (iii) any epimorphism is strict.
 
@@ -2318,7 +2326,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 \end{align*} 
 %
 
-It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change.) 
+It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and Proposition~\ref{sbc} p.~\pageref{sbc}.) 
 
 \noindent Proof of Step 4. We have 
 $$
@@ -4750,7 +4758,7 @@ $$
 \simeq G\left(\left(\ic_{(U\to B)\in\C_B}U\right)\times A\to A\right)
 \simeq G(B\times A\to A),
 $$ 
-the penultimate isomorphism following from the fact that small inductive limits in the category of sets exist and are stable by base change (see \S\ref{bc} p.~\pageref{bc}).
+the penultimate isomorphism following from the fact that small inductive limits in the category of sets exist and are stable by base change (see Definition 2.2.6 p.~47 of the book and Proposition~\ref{sbc} p.~\pageref{sbc}).
 \end{s}
 %
 %%
@@ -4867,8 +4875,6 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \noindent $*$ P. 364, Step (g) of the proof of Theorem 14.4.8: $\mc P_1=\oo K^-(\C_1)$ should be $\mc P_1=\C_1$.
 
 \noindent $*$ P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
-
-%\noindent $*$ P. 365. I think the authors forgot to write down the beautiful formula \begin{align*}\Hom_{\oo D(k)}(N\otimes_R^{\oo L}M,L)&\simeq\Hom_{\oo D(R^{\op})}(N,\oo{RHom}_k(M,L))\\ &\simeq\Hom_{\oo D(R)}(M,\oo{RHom}_k(N,L)).\end{align*}
 
 \nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
