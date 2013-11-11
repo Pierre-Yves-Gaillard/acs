@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version asx)
+% about "categories and sheaves" (version asy)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5117,6 +5117,18 @@ The functor $(f^\tau)\ \widehat{}$ commutes with small inductive limits (Proposi
 %
 %%
 %
+\begin{s}\label{a428}
+P. 428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
+\end{s}
+%
+%%
+%
+\begin{s}\label{a438}
+P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
+\end{s}
+%
+%%
+%
 \begin{s}\label{1867}
 P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
 
@@ -5295,7 +5307,7 @@ the top square being cartesian. Then $\Delta$ is a commutative diagram of comple
 \Sigma:=(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell).
 \end{equation}
 % 
-The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U,-)$, the commutative diagram of complexes $\Gamma(U,\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
+The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
 $$
 \begin{tikzcd}
 (N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{r_1}&P(U)^m\ar{d}{g_1}\ni(b'_j)\\ 
