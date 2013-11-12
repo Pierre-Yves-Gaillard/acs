@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atd)
+% about "categories and sheaves" (version ate)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -26,6 +26,7 @@
 \newtheorem{df}[thm]{Definition}%\newtheorem{defn}[thm]{Definition}
 \newtheorem{nota}[thm]{Notation}
 \theoremstyle{remark}
+\newtheorem{cond}[thm]{Condition}
 \newtheorem{conv}[thm]{Convention}
 \newtheorem{rk}[thm]{Remark}
 \theoremstyle{definition}
@@ -278,7 +279,7 @@ $$
 \C\text{ small and }\C_A\text{ filtrant }\then A\text{ left exact }\then\C_A\text{ filtrant}.
 $$
 
-\noindent $*$ P.~85, proof of Proposition 3.3.13, proof of the implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
+\noindent $*$ P.~85, proof of Proposition 3.3.13, proof of implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
 
 \noindent $*$ P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
 
@@ -1392,8 +1393,9 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 %
 %%%
 %
-\subsection{Three Versions of an Important Formula (p. 61)}
+%\subsection{Three Versions of an Important Formula (p. 61)}
 %
+\begin{s}
 This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
@@ -1409,10 +1411,11 @@ This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\
 \end{equation}
 
 \noindent\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
+\end{s}
 %
 %%%
 %
-\subsection{Brief Comments}
+%\subsection{Brief Comments}
 %
 \begin{s} 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
@@ -1636,7 +1639,7 @@ by induction on the cardinal of $S$, and to see that this implies the claim. q.e
 %%
 %
 \begin{s} 
-P.~74, Theorem 3.1.6, Part (i) of the proof of the implication (a)$\then$(b)\mv. 
+P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b)\mv. 
 %
 \begin{lem} 
 Let $\alpha$ and $\beta$ be functors from $I$ to $\Set$, where $I$ is a small filtrant category; let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
@@ -3267,7 +3270,7 @@ $$
 F\text{ is additive }\ssi\ F\text{ commutes with finite products}.
 $$ 
 
-I think the authors forgot to prove the implication $\then$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
+I think the authors forgot to prove implication $\then$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
 
 Case $n=0$: Put $X:=F(0)$. We must prove $X\simeq 0$. The equality $0=1$ holds in the ring $\Hom_\C(X,X)$ because it holds in the ring $\Hom_\C(0,0)$. As a result, the morphisms $0\to X$ and $X\to 0$ are inverse isomorphisms. 
 
@@ -3494,7 +3497,7 @@ Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category
 \end{itemize}
 \end{prop}
 
-The authors say that the equivalence is obvious. I agree, but here are a few more details. The implication (iv) $\then$ (iii) is indeed obvious in the strongest sense of the word. The implication (iii) $\then$ (iv) can be proved as follows. 
+The authors say that the equivalence is obvious. I agree, but here are a few more details. implication (iv) $\then$ (iii) is indeed obvious in the strongest sense of the word. Implication (iii) $\then$ (iv) can be proved as follows. 
 
 Assume (iii), that is, we have morphisms $h:X''\to X$ and $k:X\to X'$ such that 
 \begin{equation}\label{fk+hg} 
@@ -3799,7 +3802,7 @@ We have (\ref{sex1}) $\ssi$ (\ref{sex2}).
 \end{lem}
 %
 \begin{proof}
-The implication $\then$ is clear. To prove $\si$, let 
+Implication $\then$ is clear. To prove $\si$, let 
 $$
 0\to X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
@@ -3845,7 +3848,7 @@ We have (\ref{ex1}) $\ssi$ (\ref{ex2}).
 \end{lem}
 %
 \begin{proof}
-The implication $\si$ is clear. To prove $\then$, let 
+Implication $\si$ is clear. To prove $\then$, let 
 $$
 X'\overset{f}{\to}X\overset{g}{\to}X''
 $$
@@ -3867,12 +3870,9 @@ $$
 0\to F(I_g)\to F(X'')\quad\text{and}\quad F(K_g)\to F(X)\to F(I_g),
 $$ 
 it suffices to observe that the isomorphism
-%
-%\begin{equation}\label{kg}
 $$
 \Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X))
-$$%\end{equation}
-%
+$$
 results from Subsubsection~\ref{preli} above and the exactness of $F(X')\to F(K_g)\to0$.
 \end{proof}
 %
@@ -3880,7 +3880,7 @@ results from Subsubsection~\ref{preli} above and the exactness of $F(X')\to F(K_
 %
 \section{About Chapter 9}
 %
-%\subsection{Brief Comments}
+\subsection{Brief Comments}
 %
 \begin{s}\label{922}
 P.~218, Definition 9.2.2. If $I$ admits inductive limits indexed by categories $J$ such that 
@@ -3906,7 +3906,7 @@ P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 %%
 %
 \begin{s} 
-P.~222, Proposition 9.2.17, proof of the implication (ii) $\then$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
+P.~222, Proposition 9.2.17, proof of implication (ii) $\then$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
 
 It suffices to show that $\C_A$ is $\pi$-filtrant. Let $J$ be a category satisfying 
 $$
@@ -3929,50 +3929,94 @@ be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be 
 %
 %%
 %
-\begin{s} 
-P. 227, Theorem 9.3.4. Firstly I think it would be better to state the result as follows:
+%
+\subsection{Theorem 9.3.4 (p. 227)}
+%
+Here is a slightly different wording: Let $\C$ be a category satisfying  
 
-Assume (9.3.1) and (9.3.4), and let $X$ be in $\C$. Then 
-\begin{equation}\label{934}
-X\in\C_\pi\ssi\card(X(G))<\pi.
-\end{equation} 
+(i) $\C$ admits small inductive limits,
 
-Secondly I don't understand the proof of the implication $\si$. Here are some possible changes. 
+(ii) $\C$ admits finite projective limits,
 
-In the second paragraph of page 226, one could change the sentence 
+(iii) small filtrant inductive limits are exact, 
 
-``Now choose a cardinal $\pi_1\ge\pi_0$ such that if $X$ is a quotient of $G^{\coprod A}$ for a set $A$ with $\card(A)<\pi_0$, then $\card(X(G))<\pi_1$''
+(iv) there exists a generator $G$,
 
-\noindent to 
+(v) epimorphisms are strict.
+%
+\begin{prop}[Proposition 9.3.2 p.~224]\label{932}
+If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
+$$
+\card(X(G))<\pi,\quad\card(G^{\coprod X(G)}(G))<\pi,
+$$ 
+then $X$ is in $\C_\pi$.
+\end{prop}
 
-``Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
+Let $\pi_0$ be an infinite regular cardinal such that 
+$$
+\card(G(G))<\pi_0,\quad\card(G^{\coprod G(G)}(G))<\pi_0.
+$$ 
+Proposition \ref{932} implies $G\in\C_{\pi_0}$. Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
 
 $\bu\ \card(G^{\coprod A}(G))<\pi_1$, 
 
-$\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi_1$.'' 
+$\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi_1$. 
 
-One could also add to (9.3.4) p. 226 the condition 
-\begin{equation}\label{934e}
-\text{(e) if }A\text{ is a set with }\card(A)<\pi_0,\text{ then }\card(G^{\coprod A}(G))<\pi.
-\end{equation}
+\nn(Since the set of quotients of $G^{\coprod A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of this subsection we assume 
+%
+\begin{cond}\label{ass}
+Conditions (i)--(v) hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
+\end{cond}
+%
+\nn The cardinals $\pi$ and $\pi_0$ satisfy 
 
-Finally, one could change the proof of the implication $\si$ in \eqref{934} to: 
+(a) $\pi$ and $\pi_0$ are infinite regular cardinals,
 
-We claim
+(b) $G\in\C_{\pi_0}$,
+
+(c) $\pi'^{\pi_0}<\pi$ for any $\pi'<\pi$, 
+
+(d) if $X$ is a quotient of $G^{\coprod A}$ with $\card(A)<\pi_0$, then $\card(X(G))<\pi$, 
+
+(e) if $A$ is a set with $\card(A)<\pi_0$, then $\card(G^{\coprod A}(G))<\pi$.
+
+\nn Indeed (c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and $\pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi$.
+
+\begin{lem}[Lemma 9.3.3 p.~226]\label{933}
+If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi$.
+\end{lem}
+%
+\begin{thm}[Theorem 9.3.4 p.~227]\label{934}
+If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(G))<\pi$.
+\end{thm}
+%
+\begin{proof}[Proof of Theorem \ref{934}]
+We prove implication $\then$ as in the book. Let us prove implication $\si$. We claim
+%
 \begin{equation}\label{934b}
 \card(G^{\coprod X(G)}(G))<\pi.
 \end{equation} 
 
-To prove this, we argue as in the proof of Lemma 9.3.3 p. 226: 
+To prove this, we argue as in the proof of Lemma 9.3.3 p. 226 of the book (which is Lemma~\ref{933} above): 
 
-Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant and $G^{\coprod X(G)}\simeq\co_{B\in I}G^{\coprod B}$. As $G$ is $\pi_0$-accessible, we get 
+Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
+$$
+G^{\coprod X(G)}\simeq\co_{B\in I}G^{\coprod B}.
+$$ 
+As $G$ is $\pi_0$-accessible by (b), we get 
 $$
 G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
 $$ 
-Since $\card(I)<\pi$ and $\card(G^{\coprod B}(G))<\pi$ for all $B$ by (9.3.4) (e) (see \eqref{934e}), this implies \eqref{934b}. Now Proposition~9.3.2 p. 224 entails $X\in\C_\pi$.
-\end{s}
+By Lemma \ref{933} and (c) we have 
+$$
+\card(I)\le\card(X(G))^{\pi_0}<\pi.
+$$
+Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} entails $X\in\C_\pi$.
+\end{proof}
 %
-%%
+%%%
+%
+\subsection{Brief Comments}
 %
 \begin{s} 
 P. 232, Theorem 9.5.4: 
@@ -4276,7 +4320,7 @@ be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then
 %
 \section{About Chapter 12}
 %
-\subsection{Avoiding the Snake Lemma (p. 297)} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Avoiding the Snake Lemma (p. 297)}
 %
 This is about Sections 12.1 and 12.2 of the book. I think the Snake Lemma can be avoided as follows: 
 
@@ -4301,8 +4345,8 @@ The proof is straightforward (and much easier than that of the Snake Lemma).
 
 Let $(\A,T)$ be an abelian category with translation. 
 %
-\begin{lem}\label{sl2}
-If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively $T^nX\to T^nY$) is a qis for all $n$. (See Theorem 12.2.4 p.~301.)
+\begin{lem}[Theorem 12.2.4 p.~301]\label{sl2}
+If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively $T^nX\to T^nY$) is a qis for all $n$. %(See Theorem 12.2.4 p.~301.)
 \end{lem}
 %
 \begin{proof}
@@ -4315,16 +4359,20 @@ $$
 $$ 
 \end{proof}
 %
-\begin{prop}\label{sl3}
+\begin{prop}[Corollary 12.2.5 p.~301]\label{sl3}
 The functor 
 $$
 H:\text K_c(\A)\to\A
 $$ 
-is cohomological. (See Corollary 12.2.5 p.~301.) 
+is cohomological. %(See Corollary 12.2.5 p.~301.) 
 \end{prop}
 %
 \begin{proof}
-Let $X\to Y\to Z\to TX$ be a d.t. in $K_c(\A)$. It is isomorphic to $V\xr{\alpha(u)}\Mc(u)\xr{\beta(u)}TU\to TV$ for some morphism $u:U\to V$. Since the sequence 
+Let $X\to Y\to Z\to TX$ be a d.t. in $K_c(\A)$. It is isomorphic to 
+$$
+V\xr{\alpha(u)}\Mc(u)\xr{\beta(u)}TU\to TV
+$$ 
+for some morphism $u:U\to V$. Since the sequence 
 $$
 0\to V\to\Mc(u)\to TU\to0
 $$ 
@@ -4335,12 +4383,12 @@ $$
 is exact.
 \end{proof}
 %
-\begin{prop}\label{sl4}
+\begin{prop}[Corollary 12.2.6 p.~302]\label{sl4}
 Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\varphi:\Mc(f)\to Z$ by $\varphi:=(0,g)$. Then $\varphi$ is a morphism in $\A_c$ and is a qis. In particular, the sequence 
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$
-is exact. (See Corollary 12.2.6 p.~302.)
+is exact. %(See Corollary 12.2.6 p.~302.)
 \end{prop}
 %
 \begin{proof}
