@@ -3946,8 +3946,45 @@ be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be 
 %
 %%
 %
-\begin{s} 
-P.~225, second isomorphism of the first display: The isomorphism $$\co_{s\in I^{i_0}}X_i\xr\sim X_\infty$$ follows from Corollary 3.2.3 (i) p.~79 of the book.
+\begin{s}
+Proposition 9.3.2 p.~224. Recall the statement:
+%
+\begin{prop}[Proposition 9.3.2 p.~224]\label{932}
+If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
+$$
+\card(X(G))<\pi,\quad\card(G^{\coprod X(G)}(G))<\pi,
+$$ 
+then $X$ is in $\C_\pi$.
+\end{prop}
+%
+Here are more details about the proof: 
+
+The isomorphism 
+$$
+\co_{s\in I^{i_0}}X_i\xr\sim X_\infty, 
+$$ 
+used to justify the second isomorphism of the first display on p.~225, follows from Corollary 3.2.3 (i) p.~79 of the book.
+
+Inequality $\card(G^{\coprod K}(G))<\pi$ on the first line after the last display of p.~225 of the book, follows from Statement  
+$$
+S\subset A(G)\then\card(G^{\coprod S}(G))<\pi
+$$
+in the second line of the proof. 
+
+The sentence 
+
+\nn``Since the two compositions $B\times_AB\parar B\to X_{i_0}\to X_\infty$ are equal, there exists an arrow $i_0\to i$ such that the two compositions $B\times_AB\parar B\to X_{i_0}\to X_i$ are equal''
+
+\nn after the diagram on p.~226, is justified by the fact that the map in the first display in p.~226 of the book is injective.
+
+We spell out the last sentence of the proof: The notation in the diagram 
+$$
+\begin{tikzcd}
+B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap]{b}\ar{rr}{r}&&A\ar{dl}[swap]{a}\ar{d}{f}\\ 
+{}&X_{i_0}\ar{r}[swap]{X_s}&X_i\ar{r}[swap]{p_i}&X_\infty
+\end{tikzcd}
+$$ 
+is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
 \end{s}
 %
 %%
@@ -3965,14 +4002,8 @@ Here is a slightly different wording: Let $\C$ be a category satisfying
 (iv) there exists a generator $G$,
 
 (v) epimorphisms are strict.
-%
-\begin{prop}[Proposition 9.3.2 p.~224]\label{932}
-If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
-$$
-\card(X(G))<\pi,\quad\card(G^{\coprod X(G)}(G))<\pi,
-$$ 
-then $X$ is in $\C_\pi$.
-\end{prop}
+
+Recall that Proposition 9.3.2 p.~224 of the book is stated above as Proposition~\ref{932} p.~\pageref{932}. 
 
 Let $\pi_0$ be an infinite regular cardinal such that 
 $$
