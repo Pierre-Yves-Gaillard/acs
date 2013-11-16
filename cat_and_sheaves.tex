@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atl)
+% about "categories and sheaves" (version atm)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4043,8 +4043,19 @@ If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is 
 If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(G))<\pi$.
 \end{thm}
 %
-\begin{proof}[Proof of Theorem \ref{934}]
-We prove implication $\then$ as in the book. Let us prove implication $\si$. We claim
+\begin{proof}[Proof of Theorem \ref{934}]${}$
+
+\nn$\then:$ We prove this implication as in the book. For the reader's convenience we reproduce the argument: Set $I:=\{A\subset X(G)\ |\ \card(A)<\pi\}$. By Example 9.2.4 p.~218 of the book, $I$ is $\pi$-filtrant. We get the morphisms 
+$$
+G^{\coprod A}\to G^{\coprod X(G)}\to X
+$$ 
+for $A$ in $I$, and 
+$$
+\co_{A\in I}G^{\coprod A}\xr\sim G^{\coprod X(G)}\to X.
+$$ 
+Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma 9.3.3 p.~226.
+
+\nn$\si:$ We claim
 %
 \begin{equation}\label{934b}
 \card(G^{\coprod X(G)}(G))<\pi.
