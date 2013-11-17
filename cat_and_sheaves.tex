@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atm)
+% about "categories and sheaves" (version atn)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3946,6 +3946,7 @@ be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be 
 %
 %%
 %
+\begin{comment}
 \begin{s}
 Proposition 9.3.2 p.~224. Recall the statement:
 %
@@ -3986,6 +3987,7 @@ B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap
 $$ 
 is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
 \end{s}
+\end{comment}
 %
 %%
 %
@@ -4003,7 +4005,44 @@ Here is a slightly different wording: Let $\C$ be a category satisfying
 
 (v) epimorphisms are strict.
 
-Recall that Proposition 9.3.2 p.~224 of the book is stated above as Proposition~\ref{932} p.~\pageref{932}. 
+%Recall that Proposition 9.3.2 p.~224 of the book is stated above as Proposition~\ref{932} p.~\pageref{932}.
+
+\begin{prop}[Proposition 9.3.2 p.~224]\label{932}
+If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
+$$
+\card(X(G))<\pi,\quad\card(G^{\coprod X(G)}(G))<\pi,
+$$ 
+then $X$ is in $\C_\pi$.
+\end{prop}
+%
+We make a few comments about the proof of Proposition~\ref{932}: 
+
+The isomorphism 
+$$
+\co_{s\in I^{i_0}}X_i\xr\sim X_\infty, 
+$$ 
+used to justify the second isomorphism of the first display on p.~225, follows from Corollary 3.2.3 (i) p.~79 of the book.
+
+Inequality $\card(G^{\coprod K}(G))<\pi$ on the first line after the last display of p.~225 of the book, follows from Statement  
+$$
+S\subset A(G)\then\card(G^{\coprod S}(G))<\pi
+$$
+in the second line of the proof. 
+
+The sentence 
+
+\nn``Since the two compositions $B\times_AB\parar B\to X_{i_0}\to X_\infty$ are equal, there exists an arrow $i_0\to i$ such that the two compositions $B\times_AB\parar B\to X_{i_0}\to X_i$ are equal''
+
+\nn after the diagram on p.~226, is justified by the fact that the map in the first display in p.~226 of the book is injective.
+
+We spell out the last sentence of the proof: The notation in the diagram 
+$$
+\begin{tikzcd}
+B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap]{b}\ar{rr}{r}&&A\ar{dl}[swap]{a}\ar{d}{f}\\ 
+{}&X_{i_0}\ar{r}[swap]{X_s}&X_i\ar{r}[swap]{p_i}&X_\infty
+\end{tikzcd}
+$$ 
+is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. This ends the comments about the proof of Proposition~\ref{932}
 
 Let $\pi_0$ be an infinite regular cardinal such that 
 $$
@@ -4038,6 +4077,36 @@ Conditions (i)--(v) hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the suc
 \begin{lem}[Lemma 9.3.3 p.~226]\label{933}
 If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi$.
 \end{lem}
+
+The inequality 
+%
+\begin{equation}\label{cardipi}
+\card(I)<\pi
+\end{equation}
+%
+in the first display of the proof can be justified as follows:
+%
+\begin{prop}\label{ord}
+If $\alpha$ is a cardinal, then the cardinal of the set of those cardinals $\beta$ such that $\beta<\alpha$ does not exceed $\alpha$.
+\end{prop}
+%
+\begin{proof}
+Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ with $x\in X$ implies $x\in S$. In particular $X_{<x}$ (obvious notation) is a segment of $X$ for any $x$ in $X$. We take for granted the following well-known facts:
+
+\nn$\bu$ every set can be well-ordered,
+
+\nn$\bu$ if $T$ is a set of two non-isomorphic well-ordered sets, then there is a unique triple $(W_1,W_2,S)$ such that $T=\{W_1,W_2\}$ and $S$ is a proper segment of $W_2$ isomorphic to $W_1$,
+
+\nn$\bu$ if $W$ is a well-ordered set, then the assignment $w\mapsto W_{<w}$ is an isomorphism of well-ordered sets from $W$ onto the set of proper segments of $W$.
+
+To prove the Proposition, let $A$ be a well-ordered set of cardinal $\alpha$, and, for each cardinal $\beta$ with $\beta<\alpha$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
+\end{proof}
+
+Now we prove \eqref{cardipi} as follows: Putting $\alpha:=\card(A)$ we have
+$$
+\card(I)=\sum_{\pi'<\pi_0}\ \binom{\alpha}{\pi'}\le\sum_{\pi'<\pi_0}\ \alpha^{\pi_0}<\pi,
+$$ 
+the last inequality following from Proposition~\ref{ord}, (c), and (a).
 %
 \begin{thm}[Theorem 9.3.4 p.~227]\label{934}
 If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(G))<\pi$.
