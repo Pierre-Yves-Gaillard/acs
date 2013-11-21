@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atr)
+% about "categories and sheaves" (version ats)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4278,6 +4278,38 @@ $$
 \end{tikzcd}
 $$
 \end{proof}
+\end{s}
+%
+%%
+%
+\begin{s}
+Pp 237-239. For the reader's convenience we first reproduce (with minor changes) two corollaries with their proof. 
+%
+\begin{cor}[Corollary 9.6.5]
+If $\C$ is a small abelian category, then $\Ind(\C)$ admits an injective cogenerator.
+\end{cor}
+%
+\begin{proof}
+Apply Theorem 8.6.5 (vi) p.~194 and Theorem 9.6.3 p.~236.
+\end{proof}
+%
+\begin{cor}[Corollary 9.6.6]
+Let $\C$ be a Grothendieck category. Denote by $\cc I$ the full additive subcategory of $\C$ consisting of injective objects and by $\iota:\oo I\to\C$ the inclusion functor. Then there exist a (not necessarily additive) functor $\Psi:\C\to\cc I$ and a morphism of functors $\id_\C\to\iota\circ\Psi$ such that $X\to\Psi(X)$ is a monomorphism for any $X\in\C$.
+\end{cor}
+%
+\begin{proof}
+The category $\C$ admits an injective cogenerator $K$ by Theorem 9.6.3 p.~236, and admits small products by Proposition 8.3.27 p.~186. Consider the (non additive) functor 
+$$
+\Psi:\C\to\cc I,\quad X\mapsto K^{\Hom_\C(X,K)}.
+$$ 
+The identity of 
+$$
+\Hom_{\Set}(\Hom_\C(X,K),\Hom_\C(X,K))\simeq\Hom_\C(X,K^{\Hom_\C(X,K)})
+$$ 
+defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a monomorphism by Proposition 5.2.3 (iv) p.~118.
+\end{proof}
+
+We now add three parenthetical points: The first sentence of the proof of Lemma 9.6.8 follows from Proposition 5.2.3 (iv) p.~118. The second sentence of the proof of Lemma 9.6.9 follows from Part (i) of the same proposition. In the proof of Theorem 9.6.10, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p. 194.
 \end{s}
 %
 %%%
