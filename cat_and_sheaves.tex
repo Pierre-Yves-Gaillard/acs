@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atw)
+% about "categories and sheaves" (version atx)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4177,15 +4177,13 @@ P. 228. Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118
 P. 231, proof of Lemma 9.5.3. Here are more details:
 
 Let us represent Condition (9.5.2) (ii) by the diagram 
-%
-\begin{equation}\label{952ii}
+$$
 \begin{tikzcd}
 X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y'.
 \end{tikzcd}
-\end{equation}
-
-\nn We can assume that $I$ is nonempty and well-ordered. We shall construct by transfinite induction (letting $i$ and $j$ run over $I$):
+$$
+We can assume that $I$ is nonempty and well-ordered. We shall construct by transfinite induction (letting $i$ and $j$ run over $I$):
 
 \nn$\bu$ an inductive system $(u_{ij}:Y'_j\to Y'_i)_{j<i}$ in $\C_0$,
 
@@ -4193,7 +4191,7 @@ X'\ar[dashed]{r}[swap]{u'}&Y'.
 
 \nn$\bu$ a family of morphisms $(h_i:Y_i\to Y'_i)_i$ in $\C$.
 
-\nn Let $i=0$ be the least element of $I$. We define $v_0$ and $h_0$ via Condition (9.5.2) (ii) (see \eqref{952ii}): 
+\nn If $i=0$ is the least element of $I$, we define $v_0$ and $h_0$ via Condition (9.5.2) (ii): 
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\ 
@@ -4212,7 +4210,7 @@ Put $v_i:=w_i\circ p_{i0}\circ v_0$ for all $i$, and $u_{ij}:=w_i\circ p_{ij}$ f
 %
 %%%
 %
-\subsection{Theorems 9.5.4 and 9.5.5 (pp 232-234)}
+\subsection{Theorems 9.5.4 and 9.5.5 (pp 232-234)}\label{954955}
 %
 The purpose of this subsection is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
 
@@ -4220,14 +4218,14 @@ Let $\C$ be $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such 
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
 
-\nn(9.5.2) (ii) For any $X,Y,X'\in\C_0$, any $u:X\to Y$ in $\Mor(\C_0)$, and any $f:X\to X'$ in $\Mor(\C)$, there exists a commutative diagram 
+\nn(9.5.2) (ii) Any diagram of solid arrows
 $$
 \begin{tikzcd}
-X\ar{d}[swap]{f}\ar{r}{u}&Y\ar{d}{g}\\ 
-X'\ar{r}[swap]{u'}&Y'
+X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
+X'\ar[dashed]{r}[swap]{u'}&Y',
 \end{tikzcd}
 $$ 
-with $u'$ in $\Mor(\C_0)$ and any $g$ in $\Mor(\C)$. 
+with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$. 
 
 \nn(9.5.6) For any $X\in\C_0$, the category $(\C_0)_X$ is essentially small.
 
@@ -4285,7 +4283,7 @@ P. 236, proof of Theorem 9.6.2.
 
 Line 3: One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
 
-Line 6: Condition (9.5.2) (i) follows from 
+Line 6: Condition (9.5.2) (i) (see Subsection~\ref{954955} p.~\pageref{954955}) follows from 
 %
 \begin{lem}\label{952i}
 Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C$ and are exact. Let $\alpha:I\to\C$ be a functor such that $I$ is small and filtrant, and $\alpha(s):\alpha(i)\to\alpha(j)$ is a monomorphism for all morphism $s:i\to j$ in $I$. Then the coprojection $p_i:\alpha(i)\to\co\alpha$ is a monomorphism.
