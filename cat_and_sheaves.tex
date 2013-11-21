@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atu)
+% about "categories and sheaves" (version atw)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4097,7 +4097,7 @@ Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ 
 
 \nn$\bu$ if $W$ is a well-ordered set, then the assignment $w\mapsto W_{<w}$ is an isomorphism of well-ordered sets from $W$ onto the set of proper segments of $W$.
 
-To prove the Proposition, let $A$ be a well-ordered set of cardinal $\alpha$, and, for each cardinal $\beta$ with $\beta<\alpha$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
+To prove the proposition, let $A$ be a well-ordered set of cardinal $\alpha$, and, for each cardinal $\beta$ with $\beta<\alpha$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
 \end{proof}
 
 Now we prove \eqref{cardipi} as follows: Putting $\alpha:=\card(A)$ we have
@@ -4177,22 +4177,23 @@ P. 228. Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118
 P. 231, proof of Lemma 9.5.3. Here are more details:
 
 Let us represent Condition (9.5.2) (ii) by the diagram 
-$$
+%
+\begin{equation}\label{952ii}
 \begin{tikzcd}
 X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y'.
 \end{tikzcd}
-$$
+\end{equation}
 
 \nn We can assume that $I$ is nonempty and well-ordered. We shall construct by transfinite induction (letting $i$ and $j$ run over $I$):
 
 \nn$\bu$ an inductive system $(u_{ij}:Y'_j\to Y'_i)_{j<i}$ in $\C_0$,
 
-\nn$\bu$ an inductive system of morphisms $(v_i:X'\to Y'_i)_i$ in $\C_0$, 
+\nn$\bu$ an inductive system $(v_i:X'\to Y'_i)_i$ in $(\C_0)^{X'}$, 
 
 \nn$\bu$ a family of morphisms $(h_i:Y_i\to Y'_i)_i$ in $\C$.
 
-\nn Let $i=0$ be the least element of $I$. We define $v_0$ and $h_0$ via Condition (9.5.2) (ii): 
+\nn Let $i=0$ be the least element of $I$. We define $v_0$ and $h_0$ via Condition (9.5.2) (ii) (see \eqref{952ii}): 
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\ 
@@ -4209,38 +4210,63 @@ $$
 Put $v_i:=w_i\circ p_{i0}\circ v_0$ for all $i$, and $u_{ij}:=w_i\circ p_{ij}$ for all $j<i$. One checks that $(u_{ij})$ and $(v_i)$ are indeed inductive systems. Set $Y':=\co_iY_i'$, let $p_i:Y_i'\to Y'$ be the coprojection, and put $g_i:=p_i\circ h_i$, $u':=p_1\circ w_1\circ p_{10}\circ v_0$. Finally we verify that we have indeed $g_i\circ u_i=u'\circ f_i$.
 \end{s}
 %
-%%
+%%%
 %
-\begin{s} 
-P. 232, Theorem 9.5.4: 
-\begin{rk}\label{954}
-The conclusion of Theorem 9.5.4 still holds if we weaken the assumption that $\cc F\subset\Mor(\C_0)$ is a small set to the assumption that it is just an {\em essentially} small full subcategory. Indeed, for the proof we can clearly assume that $\cc F$ is small. 
-\end{rk}
-\end{s}
+\subsection{Theorems 9.5.4 and 9.5.5 (pp 232-234)}
 %
-%%
-%
-\begin{comment}
-\begin{s}\label{t955} 
-P. 233, Theorem 9.5.5. I suggest two changes: 
+The purpose of this subsection is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
 
-\noindent(a) Add the following assumption (called ``Assumption (a)'' below): 
+Let $\C$ be $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such that $\cc F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X\in\C_\pi$ for any $X\to Z$ in $\cc F$, and assume 
 
-Each morphism $X\to Y$ in $\C_0$ can be inserted into a cartesian square
+\nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
+
+\nn(9.5.2) (ii) For any $X,Y,X'\in\C_0$, any $u:X\to Y$ in $\Mor(\C_0)$, and any $f:X\to X'$ in $\Mor(\C)$, there exists a commutative diagram 
 $$
 \begin{tikzcd}
-U\ar{r}\ar{d}&V\ar{d}\\ X\ar{r}&Y
+X\ar{d}[swap]{f}\ar{r}{u}&Y\ar{d}{g}\\ 
+X'\ar{r}[swap]{u'}&Y'
 \end{tikzcd}
 $$ 
-with $U\to V$ in $\cc F$. 
+with $u'$ in $\Mor(\C_0)$ and any $g$ in $\Mor(\C)$. 
 
-\noindent(b) In the last paragraph of p. 234, change ``Consider a Cartesian square \dots'' to ``By Assumption (a), there is a Cartesian square \dots'' 
+\nn(9.5.6) For any $X\in\C_0$, the category $(\C_0)_X$ is essentially small.
 
-I think that the main motivation for Theorem 9.5.5 is the proof of Theorem 14.1.7, stated on p.~350. Note that Assumption (a) is obvious in the setting of Theorem 14.1.7 (take $(U\to V):=(0\to0)$).
-\end{s}
-\end{comment}
+\nn(9.5.7) Any cartesian square 
+$$
+\begin{tikzcd}
+X'\ar{d}[swap]{u}\ar{r}{f'}&Y'\ar{d}{v}\\ 
+X\ar{r}[swap]{f}&Y
+\end{tikzcd}
+$$ 
+in $\C$ with $f,f'\in\Mor(\C_0)$ decomposes into a commutative diagram 
+$$
+\begin{tikzcd}
+X'\ar{d}[swap]{u}\ar{r}{f'}&Y'\ar{d}\ar{rd}{v}\\ 
+X\ar{r}[swap]{g}&Z\ar{r}[swap]{h}&Y
+\end{tikzcd}
+$$ 
+such that the square $(X',Y',Z,X)$ is cocartesian, $g$ and $h$ are in $\Mor(\C_0)$, and $f=h\circ g$. 
+
+\nn(9.5.8) If a morphism $f:X\to Y$ in $\C_0$ is such that any cartesian square of solid arrows
+$$
+\begin{tikzcd}
+U\ar{d}[swap]{u}\ar{r}{s}&V\ar{d}{v}\ar[dashed]{ld}[swap]{\xi}\\ 
+X\ar{r}[swap]{f}&Y
+\end{tikzcd}
+$$ 
+can be completed to a commutative diagram in $\C$ with the dashed arrow $\xi$, then $f$ is an isomorphism. 
 %
-%%
+\begin{thm}%\label{9545}
+In the above setting, for any $X$ in $\C_0$ there is a $\Mor(\C_0)$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$.
+\end{thm}
+%
+\begin{rk}\label{954}
+In the book $\cc F$ is supposed to be small, but the proof clearly works if $\cc F$ is essentially small. (See \S\ref{962} below.)
+\end{rk}
+%
+%%%
+%
+\subsection{Brief Comments}
 %
 \begin{s} 
 P. 235, Theorem 9.6.1 (additional details).
@@ -4254,7 +4280,7 @@ The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228
 %
 %%
 %
-\begin{s} 
+\begin{s}\label{962}
 P. 236, proof of Theorem 9.6.2. 
 
 Line 3: One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
