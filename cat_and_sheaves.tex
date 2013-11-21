@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version att)
+% about "categories and sheaves" (version atu)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3896,11 +3896,13 @@ $$
 %%
 %
 \begin{s}
-Here are more details about Step~(b) of the proof of Lemma 9.2.5 p.~218: Let $i_1,i_2\in I$ and let $B\subset\Hom_I(i_1,i_2)$ with $\card(B)<\pi$. There exist $j_1,j_2\in J$ and morphisms $i_1\to\pp(j_1)$, $i_2\to\pp(j_2)$. As $I$ is filtrant, there are morphisms $i_2\to i_3\leftarrow\pp(j_1)$. As $\pp$ is cofinal, there is a morphism $i_3\to\pp(j_2)$. As $J$ is filtrant, there are morphisms $j_1\to j_3\leftarrow j_2$. Let $s\in B$. By Proposition 3.2.2, (i) $\then$ (iii) (b), p.~78 of the book, there is a morphism $j_3\to j(s)$ making the diagram 
+Here are more details about Step~(b) of the proof of Lemma 9.2.5 p.~218: Let $i_1,i_2\in I$ and let $B\subset\Hom_I(i_1,i_2)$ with $\card(B)<\pi$. There exist $j_1\in J$ and a morphism $i_1\to\pp(j_1)$. As $I$ is filtrant, there are morphisms $i_2\to i_3\leftarrow\pp(j_1)$. As $\pp$ is cofinal, there is a morphism $i_3\to\pp(j_2)$. As $J$ is filtrant, there are morphisms $j_1\to j_3\leftarrow j_2$. Let $s\in B$. By Proposition 3.2.2, (i) $\then$ (iii) (b), p.~78 of the book, there is a morphism $j_3\to j(s)$ making the diagram 
 $$
 \begin{tikzcd}
-i_1\ar[equal]{d}\ar{r}{s}&i_2\ar{r}&\pp(j_2)\ar{rr}{\pp(j_2\to j_3)}&&\pp(j_3)\ar[equal]{d}\ar{rr}{\pp(j_3\to j(s))}&&\pp(j(s))\ar[equal]{d}\\ 
-i_1\ar{rr}&&\pp(j_1)\ar{rr}[swap]{\pp(j_1\to j_3)}&&\pp(j_3)\ar{rr}[swap]{\pp(j_3\to j(s))}&&\pp(j(s))
+i_1\ar[equal]{d}\ar{r}{s}&i_2\ar{r}&i_3\ar{r}&\pp(j_2)\ar{rr}{\pp(j_2\to j_3)}&&\pp(j_3)\ar[equal]{d}\ar{rr}{\pp(j_3\to j(s))}&&\pp(j(s))\ar[equal]{d}
+\\ 
+%
+i_1\ar{rrr}&&&\pp(j_1)\ar{rr}[swap]{\pp(j_1\to j_3)}&&\pp(j_3)\ar{rr}[swap]{\pp(j_3\to j(s))}&&\pp(j(s))
 \end{tikzcd}
 $$
 commute. Putting $t(s):=(j_1\to j_3\to j(s))$, we get a commutative diagram 
