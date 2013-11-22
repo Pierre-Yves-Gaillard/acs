@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atx)
+% about "categories and sheaves" (version aty)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4169,6 +4169,20 @@ P. 228. Corollary 9.3.7. As $\{\card(X(G))\ |\ X\in S\}$ is a small set of cardi
 %
 \begin{s} 
 P. 228. Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 and Example 9.2.4 p.~224.
+\end{s}
+%
+%%
+%
+\begin{s}
+P. 230, Theorem 9.4.2. Here is a diagrammatic illustration of the computation at the end of the proof:
+$$
+\begin{tikzcd}
+X_{i_0}\ar[equal]{d}\ar{rr}{a_{i_0}}&&X\ar[equal]{d}\ar{r}{u}&Y\ar[equal]{d}\ar{rr}{v}&&X\ar[equal]{d}\\ 
+X_{i_0}\ar[equal]{d}\ar{r}[swap]{u_{i_0+1,i_0}}&X_{i_0+1}\ar{r}[swap]{a_{i_0+1}}&X\ar{r}[swap]{u}&Y\ar{r}[swap]{w}&X_{i_0+1}\ar[equal]{d}\ar{r}[swap]{a_{i_0+1}}&X\ar[equal]{d}\\ 
+X_{i_0}\ar[equal]{d}\ar{rrrr}[swap]{u_{i_0+1,i_0}}&&&&X_{i_0+1}\ar{r}[swap]{a_{i_0+1}}&X\ar[equal]{d}\\ 
+X_{i_0}\ar{rrrrr}[swap]{a_{i_0}}&&&&&X.
+\end{tikzcd}
+$$ 
 \end{s}
 %
 %%
