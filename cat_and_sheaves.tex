@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auc)
+% about "categories and sheaves" (version aud)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4226,18 +4226,22 @@ We can assume that $I$ is nonempty and well-ordered. We shall construct by trans
 \nn$\bu$ an inductive system $(u_{ij}:Y'_j\to Y'_i)_{i>j}$ in $\C_0$, {\em i.e.}
 %
 \begin{equation}\label{uij}
-u_{ij}\circ u_{jk}=u_{ik}\quad\forall\quad i>j>k,
+(U_{ijk})\qquad u_{ij}\circ u_{jk}=u_{ik}
 \end{equation}
+%
+for all $i>j>k$.
 
 \nn$\bu$ a family $(v_i:X'\to Y'_i)_i$ of morphisms in $\C_0$ such that 
 %
 \begin{equation}\label{vi}
-u_{ij}\circ v_j=v_i\quad\forall\quad i>j,
+(V_{ij})\qquad u_{ij}\circ v_j=v_i
 \end{equation}
+%
+for all $i>j$.
 
 \nn$\bu$ a family $(h_i:Y_i\to Y'_i)_i$ of morphisms in $\C$.
 
-\nn If $i=0$ is the least element of $I$, we define $v_0$ and $h_0$ via Condition (9.5.2) (ii): 
+\nn If $i=0$ is the least element of $I$, we define $v_0$ and $h_0$ via Condition (9.5.2) (ii)  (see \eqref{952ii} p.~\pageref{952ii}): 
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\ 
@@ -4245,7 +4249,7 @@ X'\ar[dashed]{r}[swap]{v_0}&Y_0'.
 \end{tikzcd}
 $$ 
 
-Assume that $i>0$, and that we have an inductive system 
+Assume that $i$ is a fixed element of $I$ satisfying $i>0$, and that we have an inductive system 
 $$
 (u_{jk}:Y'_j\to Y'_i)_{k<j<i}
 $$ 
@@ -4253,7 +4257,7 @@ in $\C_0$ and a family
 $$
 (v_j:X'\to Y'_j)_{j<i}
 $$ 
-of morphisms in $\C_0$ such that $u_{jk}\circ v_k=v_j$ for all $k<j<i$. By (9.5.2) (i) (see beginning of this subsection), the object 
+of morphisms in $\C_0$ which satisfy respectively $(U_{jk\ell})$ and $(V_{jk})$ (see \eqref{uij} and \eqref{vi}) for all $\ell<k<j<i$. By (9.5.2) (i) (see beginning of this subsection), the object 
 $$
 Y'_{<i}:=\co_{j<i}Y'_i
 $$ 
@@ -4290,13 +4294,13 @@ We claim
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i>j>k.
 \end{equation}
 %
-This will imply that the families $(u_{ij})$ and $(v_i)$ satisfy \eqref{uij} and \eqref{vi}. We prove \eqref{pij} as follows:
+This will imply that the families $(u_{ij})$ and $(v_i)$ satisfy respectively $(U_{ijk})$ and $(V_{ij})$ (see \eqref{uij} and \eqref{vi}) for all $k<j<i$. We prove \eqref{pij} as follows:
 
-Let $i$ be a fixed element of $I$. The statement
+The statement
 $$
 (S_i)\qquad p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j<i
 $$ 
-implies $u_{jk}\circ u_{k\ell}=u_{j\ell}$ and $u_{jk}\circ v_k=v_j$ for all $\ell<k<j<i$. Using this fact, one easily proves 
+implies $(U_{kj\ell})$ and $(V_{kj})$ for all $\ell<k<j<i$. Using this fact, one easily proves 
 $$
 (S_j)\ \forall\ j<i\quad\then\quad(S_i).
 $$ 
