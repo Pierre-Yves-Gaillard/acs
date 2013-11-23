@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version atz)
+% about "categories and sheaves" (version aua)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4196,12 +4196,14 @@ Let $\C$ be $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
 
 \nn(9.5.2) (ii) Any diagram of solid arrows
-$$
+%
+\begin{equation}\label{952ii}
 \begin{tikzcd}
 X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y',
 \end{tikzcd}
-$$ 
+\end{equation}
+%
 with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$.
 %
 \begin{lem}[Lemma 9.5.3 p. 231]
@@ -4243,7 +4245,7 @@ in $\C_0$ and a family of morphisms
 $$
 (v_j:X'\to Y'_j)_{j<i}
 $$ 
-in $\C_0$ such that $v_j\circ u_{jk}=v_j$ for all $k<j<i$. By (9.5.2) (i), the object 
+in $\C_0$ such that $v_j\circ u_{jk}=v_j$ for all $k<j<i$. By (9.5.2) (i) (see \eqref{952ii} p.~\pageref{952ii}), the object 
 $$
 Y'_{<i}:=\co_{j<i}Y'_i
 $$ 
