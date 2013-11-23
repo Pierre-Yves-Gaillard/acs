@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aud)
+% about "categories and sheaves" (version auf)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4221,96 +4221,49 @@ $$
 \end{lem}
 %
 \begin{proof}
-We can assume that $I$ is nonempty and well-ordered. We shall construct by transfinite induction (letting $i$ and $j$ run over $I$):
+We can assume that $I$ is well-ordered. We start with the case when $I$ has at least two elements, and we write $0<1$ for the smallest two elements of $I$. 
 
-\nn$\bu$ an inductive system $(u_{ij}:Y'_j\to Y'_i)_{i>j}$ in $\C_0$, {\em i.e.}
-%
-\begin{equation}\label{uij}
-(U_{ijk})\qquad u_{ij}\circ u_{jk}=u_{ik}
-\end{equation}
-%
-for all $i>j>k$.
+For all $i\in I$ we call $(S_i)$ the following statement:
 
-\nn$\bu$ a family $(v_i:X'\to Y'_i)_i$ of morphisms in $\C_0$ such that 
-%
-\begin{equation}\label{vi}
-(V_{ij})\qquad u_{ij}\circ v_j=v_i
-\end{equation}
-%
-for all $i>j$.
+\nn[Beginning of Statement $(S_i)$] There are families 
 
-\nn$\bu$ a family $(h_i:Y_i\to Y'_i)_i$ of morphisms in $\C$.
+$$
+(u_{jk}:Y'_j\to Y'_i)_{k<j<i},\ (v_j:X'\to Y'_j)_{j<i},
+$$
 
-\nn If $i=0$ is the least element of $I$, we define $v_0$ and $h_0$ via Condition (9.5.2) (ii)  (see \eqref{952ii} p.~\pageref{952ii}): 
 $$
-\begin{tikzcd}
-X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\ 
-X'\ar[dashed]{r}[swap]{v_0}&Y_0'.
-\end{tikzcd}
-$$ 
+(p_{jk}:Y'_k\to Y'_{<j})_{k<j\le i},\ (w_j:Y'_{<j}\to Y'_j)_{j<i}
+$$
 
-Assume that $i$ is a fixed element of $I$ satisfying $i>0$, and that we have an inductive system 
+\nn in $\Mor(\C_0)$, and there is a family 
 $$
-(u_{jk}:Y'_j\to Y'_i)_{k<j<i}
+(h_j:Y_j\to Y'_j)_{j<i}
 $$ 
-in $\C_0$ and a family 
+in $\Mor(\C)$, such that the conditions below are satisfied for all $\ell<k<j<i$:
 $$
-(v_j:X'\to Y'_j)_{j<i}
+u_{jk}\circ u_{k\ell}=u_{j\ell},\ u_{jk}\circ v_k=v_j,\ Y'_{<j}=\co_{k<j}Y'_k,
 $$ 
-of morphisms in $\C_0$ which satisfy respectively $(U_{jk\ell})$ and $(V_{jk})$ (see \eqref{uij} and \eqref{vi}) for all $\ell<k<j<i$. By (9.5.2) (i) (see beginning of this subsection), the object 
+the inductive limit being taken over the $u_{jk}$, and $p_{jk}$ being the coprojection (note that $Y'_{<j}$ exists in $\C_0$ thanks to (9.5.2) (i) --- see the beginning of this subsection) 
 $$
-Y'_{<i}:=\co_{j<i}Y'_i
-$$ 
-exists in $\C_0$. Let $p_{ij}:Y_j'\to Y'_{<i}$ be the coprojection, and define $w_i$ and $h_i$ via Condition (9.5.2) (ii) (see \eqref{952ii} p.~\pageref{952ii}): 
+u_{jk}=w_j\circ p_{jk},\ v_j=w_j\circ p_{j0}\circ v_0,\ p_{jk}\circ w_k\circ p_{k\ell}=p_{j\ell},\ h_j\circ u_j=v_j\circ f_j.
 $$
-\begin{tikzcd}
-X_i\ar{d}[swap]{f_i}\ar{r}{u_i}&Y_i\ar[dashed]{ddd}{h_i}\\ 
-X'\ar{d}[swap]{v_0}&{}\\ 
-Y'_0\ar{d}[swap]{p_{i0}}&{}\\ 
-Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y_i'.
-\end{tikzcd}
-$$ 
-Put $v_i:=w_i\circ p_{i0}\circ v_0$ for all $i$, and $u_{ij}:=w_i\circ p_{ij}$ for all $j<i$.
-%
-\begin{comment}
-$$
-\begin{tikzcd}
-X_i\ar{d}[swap]{f_i}\ar{rrr}{u_i}&&&Y_i\ar{d}{h_i}\\ 
-X'\ar[equal]{d}\ar{r}[swap]{v_0}&Y_0'\ar{r}[swap]{p_{i0}}&Y'_{<i}\ar{r}[swap]{w_i}&Y_i'\ar[equal]{d}\\ 
-X'\ar{rrr}[swap]{v_i}&&&Y_i',
-\end{tikzcd}
-$$ 
-$$
-\begin{tikzcd}
-Y_j'\ar[equal]{d}\ar{r}{p_{ij}}&Y'_{<i}\ar{r}{w_i}&Y_i'\ar[equal]{d}\\ 
-Y_j'\ar{rr}[swap]{u_{ij}}&&Y_i'.
-\end{tikzcd}
-$$ 
-\end{comment}
-%
-We claim 
-%
-\begin{equation}\label{pij}
-p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i>j>k.
-\end{equation}
-%
-This will imply that the families $(u_{ij})$ and $(v_i)$ satisfy respectively $(U_{ijk})$ and $(V_{ij})$ (see \eqref{uij} and \eqref{vi}) for all $k<j<i$. We prove \eqref{pij} as follows:
+\nn[End of Statement $(S_i)$]
 
-The statement
+We prove $(S_i)$ by transfinite induction over $i\in I$. Statement $(S_0)$ is vacuously true. To prove $(S_1)$, we define $v_0$ and $h_0$ by applying (9.2.5) (ii) (see \eqref{952ii} p.~\pageref{952ii}) to 
 $$
-(S_i)\qquad p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j<i
+X'\xleftarrow{\ f_0}X_0\xr{u_0}Y_0,
 $$ 
-implies $(U_{kj\ell})$ and $(V_{kj})$ for all $\ell<k<j<i$. Using this fact, one easily proves 
+and by putting $Y'_{<0}:=X',w_0:=v_0$. Then $(S_1)$ is clear. Let us prove $(S_i)$ for $i>1$. We may assume that $(S_j)$ holds for all $j<i$. We define $w_i$ and $h_i$ by applying (9.2.5) (ii) (see \eqref{952ii} p.~\pageref{952ii}) to 
 $$
-(S_j)\ \forall\ j<i\quad\then\quad(S_i).
+Y'_{<i}\xleftarrow{\ p_{i0}}Y'_0\xleftarrow{v_0}X'\xleftarrow{\ f_i}X_i\xr{u_i}Y_i,
 $$ 
-This implies that $(S_i)$ holds for all $i$ in $I$.
+and we put $u_{ij}:=w_i\circ p_{ij}$, $v_i:=w_i\circ p_{i0}\circ v_0$. From this point, the verification of $(S_i)$ is straightforward. As a result, $(S_i)$ holds for all $i$. 
 
-Set $Y':=\co_iY_i'$, let $p_i:Y_i'\to Y'$ be the coprojection, put 
+To prove the lemma we set $Y':=\co_iY_i'$ (the inductive limit being again taken over the $u_{ij}$), we let $p_i:Y_i'\to Y'$ be the coprojection, we put 
 $$
 g_i:=p_i\circ h_i,\quad u':=p_1\circ w_1\circ p_{10}\circ v_0,
 $$ 
-and observe:
+and we observe:
 $$
 g_i\circ u_i=p_i\circ h_i\circ u_i=p_i\circ w_i\circ p_{i0}\circ v_0\circ f_i
 $$
@@ -4320,6 +4273,8 @@ $$
 $$
 =p_1\circ u_{10}\circ v_0\circ f_i=p_1\circ w_1\circ p_{10}\circ v_0\circ f_i=u'\circ f_i.
 $$
+
+Remember that we have assumed $\card(I)\ge2$. We leave the case $\card(I)\le1$ to the reader. 
 \end{proof}
 %
 %%%
