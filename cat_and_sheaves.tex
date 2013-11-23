@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aty)
+% about "categories and sheaves" (version atz)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4187,21 +4187,43 @@ $$
 %
 %%
 %
-\begin{s}
-P. 231, proof of Lemma 9.5.3. Here are more details:
+\subsection{Lemma 9.5.3 (p. 231)}
+%
+We give more details about the proof, but first let us recall the setting:
 
-Let us represent Condition (9.5.2) (ii) by the diagram 
+Let $\C$ be $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume 
+
+\nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
+
+\nn(9.5.2) (ii) Any diagram of solid arrows
 $$
 \begin{tikzcd}
 X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
+X'\ar[dashed]{r}[swap]{u'}&Y',
+\end{tikzcd}
+$$ 
+with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$.
+%
+\begin{lem}[Lemma 9.5.3 p. 231]
+If $X'$ is in $\C_0$, if $I$ is a small set, and if  
+$$
+(u_i:X_i\to Y_i)_{i\in I},\quad(f_i:X_i\to X')_{i\in I}
+$$ 
+are families of morphisms in $\C_0$ and $\C$ respectively, then there is a morphism $u'$ in $\C_0$ and a family $(g_i)_{i\in I}$ of morphisms in $\C$ such that $g_i\circ u_i=u'\circ f_i$ for all $i$:
+$$
+\begin{tikzcd}
+X_i\ar{d}[swap]{f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{g_i}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y'.
 \end{tikzcd}
-$$
+$$ 
+\end{lem}
+%
+\begin{proof}
 We can assume that $I$ is nonempty and well-ordered. We shall construct by transfinite induction (letting $i$ and $j$ run over $I$):
 
-\nn$\bu$ an inductive system $(u_{ij}:Y'_j\to Y'_i)_{j<i}$ in $\C_0$,
+\nn$\bu$ an inductive system $(u_{ij}:Y'_j\to Y'_i)_{i>j}$ in $\C_0$,
 
-\nn$\bu$ an inductive system $(v_i:X'\to Y'_i)_i$ in $(\C_0)^{X'}$, 
+\nn$\bu$ a family of morphisms $(v_i:X'\to Y'_i)_i$ in $\C_0$ such that $u_{ij}\circ v_j=v_i$ for all $i>j>k$, 
 
 \nn$\bu$ a family of morphisms $(h_i:Y_i\to Y'_i)_i$ in $\C$.
 
@@ -4212,15 +4234,79 @@ X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
 X'\ar[dashed]{r}[swap]{v_0}&Y_0'.
 \end{tikzcd}
 $$ 
-Let $i>0$. By (9.5.2) (i), $Y'_{<i}:=\co_{j<i}Y'_i$ exists in $\C_0$. Let $p_{ij}:Y_j'\to Y'_{<i}$ be the coprojection. In particular we have a morphism $X'\xr{v_0}Y_0'\xr{p_{i0}}Y'_{<i}$ in $\C_0$, and we can define $w_i$ and $h_i$ via Condition (9.5.2) (ii): 
+
+Assume that $i>0$, and that we have an inductive system 
+$$
+(u_{jk}:Y'_j\to Y'_i)_{k<j<i}
+$$ 
+in $\C_0$ and a family of morphisms 
+$$
+(v_j:X'\to Y'_j)_{j<i}
+$$ 
+in $\C_0$ such that $v_j\circ u_{jk}=v_j$ for all $k<j<i$. By (9.5.2) (i), the object 
+$$
+Y'_{<i}:=\co_{j<i}Y'_i
+$$ 
+exists in $\C_0$. Let $p_{ij}:Y_j'\to Y'_{<i}$ be the coprojection, and define $w_i$ and $h_i$ via Condition (9.5.2) (ii): 
 $$
 \begin{tikzcd}
-X_i\ar{d}[swap]{p_{i0}\circ v_0\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\ 
+X_i\ar{d}[swap]{f_i}\ar{r}{u_i}&Y_i\ar[dashed]{ddd}{h_i}\\ 
+X'\ar{d}[swap]{v_0}&{}\\ 
+Y'_0\ar{d}[swap]{p_{i0}}&{}\\ 
 Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y_i'.
 \end{tikzcd}
 $$ 
-Put $v_i:=w_i\circ p_{i0}\circ v_0$ for all $i$, and $u_{ij}:=w_i\circ p_{ij}$ for all $j<i$. One checks that $(u_{ij})$ and $(v_i)$ are indeed inductive systems. Set $Y':=\co_iY_i'$, let $p_i:Y_i'\to Y'$ be the coprojection, and put $g_i:=p_i\circ h_i$, $u':=p_1\circ w_1\circ p_{10}\circ v_0$. Finally we verify that we have indeed $g_i\circ u_i=u'\circ f_i$.
-\end{s}
+Put $v_i:=w_i\circ p_{i0}\circ v_0$ for all $i$, and $u_{ij}:=w_i\circ p_{ij}$ for all $j<i$.
+%
+\begin{comment}
+$$
+\begin{tikzcd}
+X_i\ar{d}[swap]{f_i}\ar{rrr}{u_i}&&&Y_i\ar{d}{h_i}\\ 
+X'\ar[equal]{d}\ar{r}[swap]{v_0}&Y_0'\ar{r}[swap]{p_{i0}}&Y'_{<i}\ar{r}[swap]{w_i}&Y_i'\ar[equal]{d}\\ 
+X'\ar{rrr}[swap]{v_i}&&&Y_i',
+\end{tikzcd}
+$$ 
+$$
+\begin{tikzcd}
+Y_j'\ar[equal]{d}\ar{r}{p_{ij}}&Y'_{<i}\ar{r}{w_i}&Y_i'\ar[equal]{d}\\ 
+Y_j'\ar{rr}[swap]{u_{ij}}&&Y_i'.
+\end{tikzcd}
+$$ 
+\end{comment}
+%
+We claim 
+%
+\begin{equation}\label{pij}
+p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i>j>k.
+\end{equation}
+%
+This will imply that $(u_{ij})$ and $(v_i)$ satisfy the required conditions. We prove \eqref{pij} as follows:
+
+Let $i$ be a fixed element of $I$. The statement
+$$
+(S_i)\qquad p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j<i
+$$ 
+implies $u_{jk}\circ u_{k\ell}=u_{j\ell}$ and $v_j\circ u_{jk}=v_k$ for all $\ell<k<j<i$. Using this fact, one easily proves 
+$$
+(S_j)\ \forall\ j<i\quad\then\quad(S_i).
+$$ 
+This implies that $(S_i)$ holds for all $i$ in $I$.
+
+Set $Y':=\co_iY_i'$, let $p_i:Y_i'\to Y'$ be the coprojection, put 
+$$
+g_i:=p_i\circ h_i,\quad u':=p_1\circ w_1\circ p_{10}\circ v_0,
+$$ 
+and observe:
+$$
+g_i\circ u_i=p_i\circ h_i\circ u_i=p_i\circ w_i\circ p_{i0}\circ v_0\circ f_i
+$$
+$$
+=p_i\circ u_{i0}\circ v_0\circ f_i=p_i\circ u_{i1}\circ u_{10}\circ v_0\circ f_i
+$$
+$$
+=p_1\circ u_{10}\circ v_0\circ f_i=p_1\circ w_1\circ p_{10}\circ v_0\circ f_i=u'\circ f_i.
+$$
+\end{proof}
 %
 %%%
 %
