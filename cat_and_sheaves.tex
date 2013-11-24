@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aug)
+% about "categories and sheaves" (version auh)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4822,6 +4822,49 @@ Z\ar{d}\ar{r}&Y\ar{d}\ar{r}&X\ar{d}\ar{r}&W\ar[equal]{d}\ar{r}&0\\
 $$ 
 a commutative diagram of complexes. Then the bottom row is exact.
 \end{lem}
+%
+\begin{proof}
+Exactness at $V$: Let $V\to T$ be a morphism. By \S\ref{8312} p.~\pageref{8312} it suffices to show that the diagram of solid arrows 
+$$
+\begin{tikzcd}
+V\ar{r}\ar{d}&U\ar[dashed]{d}\\ 
+T\ar[dashed,tail]{r}&S
+\end{tikzcd}
+$$ 
+can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book.
+
+\nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By \S\ref{8312} p.~\pageref{8312} it suffices to show that the commutative the diagram of solid arrows 
+$$
+\begin{tikzcd}
+V\ar{r}\ar{dr}[swap]{0}&U\ar{r}\ar{d}&W\ar[dashed]{d}\\ 
+{}&T\ar[dashed,tail]{r}&S
+\end{tikzcd}
+$$ 
+can be completed as indicated. This follows from the fact that, again by \S\ref{8312} p.~\pageref{8312}, the commutative diagram of solid arrows 
+$$
+\begin{tikzcd}
+Y\ar{r}\ar{dr}[swap]{0}&X\ar{r}\ar{d}&W\ar[dashed]{d}\\ 
+{}&T\ar[dashed,tail]{r}&S
+\end{tikzcd}
+$$ 
+can itself be completed as indicated.
+
+\nn Exactness at $W$: Let $T\to W$ be a morphism. By Lemma 8.3.12 p.~180 of the book, it suffices to show that the diagram of solid arrows 
+$$
+\begin{tikzcd}
+S\ar[dashed,two heads]{r}\ar[dashed]{d}&T\ar{d}\\ 
+U\ar{r}&W
+\end{tikzcd}
+$$ 
+can be completed to a commutative diagram as indicated. This follows from the fact that, again by Lemma 8.3.12 p.~180 of the book, the commutative diagram of solid arrows 
+$$
+\begin{tikzcd}
+S\ar[dashed,two heads]{r}\ar[dashed]{d}&T\ar{d}\\ 
+X\ar{r}&W
+\end{tikzcd}
+$$ 
+can itself be completed to a commutative diagram as indicated.
+\end{proof}
 
 Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences $0\to Y\to Z\to X\to0$, and let $\sim$ be the following equivalence relation on $E$: the exact sequences $0\to Y\to Z\to X\to0$ and $0\to Y\to W\to X\to0$ are equivalent if and only if there is a commutative diagram 
 $$
