@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auf)
+% about "categories and sheaves" (version aug)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4253,13 +4253,17 @@ We prove $(S_i)$ by transfinite induction over $i\in I$. Statement $(S_0)$ is va
 $$
 X'\xleftarrow{\ f_0}X_0\xr{u_0}Y_0,
 $$ 
-and by putting $Y'_{<0}:=X',w_0:=v_0$. Then $(S_1)$ is clear. Let us prove $(S_i)$ for $i>1$. We may assume that $(S_j)$ holds for all $j<i$. We define $w_i$ and $h_i$ by applying (9.2.5) (ii) (see \eqref{952ii} p.~\pageref{952ii}) to 
+and by putting $Y'_{<0}:=X',w_0:=v_0$. Then $(S_1)$ is clear. 
+
+Let $i$ be $>1$ and let us prove $(S_i)$. We may (and do) assume that $(S_j)$ holds for all $j<i$. We put $Y'_{<i}=\co_{j<i}Y'_j$, we let $p_{ij}$ be the $j$ coprojection, we define $w_i$ and $h_i$ by applying (9.2.5) (ii) (see \eqref{952ii} p.~\pageref{952ii}) to 
 $$
 Y'_{<i}\xleftarrow{\ p_{i0}}Y'_0\xleftarrow{v_0}X'\xleftarrow{\ f_i}X_i\xr{u_i}Y_i,
 $$ 
-and we put $u_{ij}:=w_i\circ p_{ij}$, $v_i:=w_i\circ p_{i0}\circ v_0$. From this point, the verification of $(S_i)$ is straightforward. As a result, $(S_i)$ holds for all $i$. 
+and we put $u_{ij}:=w_i\circ p_{ij}$, $v_i:=w_i\circ p_{i0}\circ v_0$. From this point, the verification of $(S_i)$ is straightforward. 
 
-To prove the lemma we set $Y':=\co_iY_i'$ (the inductive limit being again taken over the $u_{ij}$), we let $p_i:Y_i'\to Y'$ be the coprojection, we put 
+We have proved that $(S_i)$ holds for all $i$. 
+
+To prove the lemma, we set $Y':=\co_iY_i'$ (the inductive limit being again taken over the $u_{ij}$), we let $p_i:Y_i'\to Y'$ be the coprojection, we put 
 $$
 g_i:=p_i\circ h_i,\quad u':=p_1\circ w_1\circ p_{10}\circ v_0,
 $$ 
