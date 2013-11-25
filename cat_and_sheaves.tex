@@ -3453,6 +3453,10 @@ Z\ar{dr}[swap]{0}\ar{r}&Y\ar{d}\ar{r}&X\ar[dashed]{d}\\
 $$ 
 can be completed as indicated ($W\to V$ being a monomorphism).
 \end{lem}
+%
+\begin{proof}
+Equivalence (a)$\ssi$(b) is proved in the book, and equivalence (a)$\ssi$(c) follows by reversing arrows.
+\end{proof}
 \end{s}
 %
 %%
@@ -4667,13 +4671,13 @@ with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. 
 %
 %\subsection{Brief Comments}
 %
-\begin{s}\label{pg270} 
+%\begin{s}\label{pg270} 
 P. 270. Recall that $(\A,T)$ is an additive category with translation. Let 
 \begin{equation}\label{iliad}
 (d_{X,i}:X_i\to TX_i)_{i\in I}
 \end{equation} 
 be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then the natural morphism $\co_id_{X,i}:X\to TX$ is an inductive limit of \eqref{iliad} in $\A_d$. There are analogous statements with ``projective'' instead of ``inductive'' and $\A_c$ instead of $\A_d$.
-\end{s}
+%\end{s}
 %
 %%%
 %
@@ -4769,35 +4773,7 @@ in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\varphi$ is a qis by Lemma~\ref{sl2}.
 %
 \section{About Chapter 13}
 %
-%\subsection{Brief Comments}
-%
-\begin{comment}
-%
-\begin{s} 
-P. 337. I would state Theorem 13.4.1 as follows:
-
-Let $\C$ be an abelian category. Assume that the functor 
-$$
-\Hom_\C^\bullet:\oo K(\C)\times\oo K(\C)^{\op}\to\oo D(\Mod(\bb Z))
-$$ 
-given by $(X',Y')\mapsto\oo{tot}_\pi\Hom_\C^{\bullet,\bullet}(X',Y')$ (see \S\ 11.7) is universally right localizable, and denote its right localization by $\oo{RHom}_\C$. Then we have for $X,Y\in\oo D(\C)$\bigskip 
-
-\noindent$(13.4.1)\hskip6em H^0\oo{RHom}_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).$\bigskip
-
-Here is variant (slightly stronger and closer to the original):
-
-Let $\C$ be an abelian category, let $X,Y\in\oo D(\C)$. Assume that the inductive limit 
-$$
-\oo{RHom}_\C(X,Y):=\ic_{(X'\to X),(Y\to Y')\in\oo{Qis}}\oo{tot}_\pi\Hom_\C^{\bullet,\bullet}(X',Y')
-$$ 
-(see \S\ 11.7) exists in $\oo D(\Mod(\bb Z))$. Then\bigskip 
-
-\noindent$(13.4.1)\hskip6em H^0\oo{RHom}_\C(X,Y)\simeq\Hom_{D(\C)}(X,Y).$
-\end{s}
-%
-\end{comment}
-%
-%%
+\subsection{Brief Comments}
 %
 \begin{s}\label{q337}
 P. 337. Theorem 13.4.1 suggests the following question: 
