@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auh)
+% about "categories and sheaves" (version aui)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -645,7 +645,7 @@ The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijectio
 %
 %%%
 %
-\bc
+\subsection{Brief Comments}
 %
 %%
 %
@@ -1219,7 +1219,7 @@ $$
 %
 %%%
 %
-\bc
+\subsection{Brief Comments}
 %
 \begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Subsection~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$, where $I$ and $J$ are small. One can prove $\co\beta\simeq\co\varphi^\dagger\beta$, that is 
 %
@@ -1347,7 +1347,7 @@ Now Corollary 2.4.6 p. 56 results immediately from Corollary~\ref{c233i} p.~\pag
 %
 %%%%
 %
-\bc
+\subsection{Brief Comments}
 %
 \begin{s} 
 P.~56, proof of Lemma 2.4.7\mv.
@@ -1926,7 +1926,7 @@ If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to 
 %
 %%%%
 %
-\bc
+\subsection{Brief Comments}
 %
 \begin{s} 
 P.~89, Proposition 3.4.5 (iii). The proof uses implicitly the following fact: 
@@ -2625,7 +2625,7 @@ One checks that $x$ does not depend on the choice of $\zeta$, and that this proc
 %
 %%%%
 %
-\bc
+\subsection{Brief Comments}
 %
 \begin{s} 
 P.~136, proof of Proposition 6.1.18 (i)\mv: If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
@@ -3155,7 +3155,7 @@ This implies that $\Hom_\C(Y,X)$ is a product of $\Hom_\C(Y,X_1)$ and $\Hom_\C(Y
 %
 %%%%
 %
-\bc
+\subsection{Brief Comments}
 %
 %%
 %
@@ -3425,21 +3425,34 @@ $$
 %
 %%%%
 %
-\bc
+\subsection{Brief Comments}
 %
-\begin{s}\label{8312}
-P. 180, Lemma 8.3.12. We also have:
+\begin{s}
+P. 180, Lemma 8.3.12. Here is a minor variant:
+%
+\begin{lem}\label{8312}
+For a complex $Z\to Y\to X$ in some abelian category, the following conditions are equivalent:
 
-The complex $X'\to X\to X''$ is exact if and only if the condition below holds:
+\nn{\em(a)} the complex is exact,
 
-Any commutative diagram of solid arrows
+\nn{\em(b)} any commutative diagram of solid arrows
 $$
 \begin{tikzcd}
-X'\ar{dr}[swap]{0}\ar{r}&X\ar{d}\ar{r}&X''\ar[dashed]{d}\\ 
-{}&S\ar[tail,dashed]{r}&S'
+V\ar[dashed]{d}\ar[dashed]{r}&W\ar{dr}{0}\ar{d}\\ 
+Z\ar{r}&Y\ar{r}&X
 \end{tikzcd}
 $$ 
-can be completed as indicated ($S\to S'$ being a monomorphism).
+can be completed as indicated ($W\to V$ being an epimorphism),
+
+\nn{\em(c)} any commutative diagram of solid arrows
+$$
+\begin{tikzcd}
+Z\ar{dr}[swap]{0}\ar{r}&Y\ar{d}\ar{r}&X\ar[dashed]{d}\\ 
+{}&W\ar[tail,dashed]{r}&V
+\end{tikzcd}
+$$ 
+can be completed as indicated ($W\to V$ being a monomorphism).
+\end{lem}
 \end{s}
 %
 %%
@@ -4809,8 +4822,9 @@ imply that the answer is yes if $\C$ is a Grothendieck category.
 
 %%
 %
-\begin{s} 
-P. 342, Exercise 13.15. Here is a partial solution. Let $\C$ be an abelian category. Using \S\ref{8312} p.~\pageref{8312} one easily proves:
+\subsection{Exercise 13.15 (p. 342)}
+%
+P. 342, Exercise 13.15. Here is a partial solution. Let $\C$ be an abelian category. Using Lemma~\ref{8312} p.~\pageref{8312} one easily proves:
 
 \begin{lem}\label{738}
 Let $Z\to Y\to X\to W\to0$ be an exact sequence in $\C$, let $Y\to V$ be a morphism, let $U$ be the fiber coproduct $V\oplus_YX$, and let $U\to W$ be the morphism which makes 
@@ -4824,7 +4838,9 @@ a commutative diagram of complexes. Then the bottom row is exact.
 \end{lem}
 %
 \begin{proof}
-Exactness at $V$: Let $V\to T$ be a morphism. By \S\ref{8312} p.~\pageref{8312} it suffices to show that the diagram of solid arrows 
+We shall use Lemma~\ref{8312} p.~\pageref{8312}.
+
+\nn Exactness at $V$: Let $V\to T$ be a morphism. By Lemma~\ref{8312}, (c)$\then$(a), it suffices to show that the diagram of solid arrows 
 $$
 \begin{tikzcd}
 V\ar{r}\ar{d}&U\ar[dashed]{d}\\ 
@@ -4833,14 +4849,14 @@ T\ar[dashed,tail]{r}&S
 $$ 
 can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book.
 
-\nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By \S\ref{8312} p.~\pageref{8312} it suffices to show that the commutative the diagram of solid arrows 
+\nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By Lemma~\ref{8312}, (a)$\then$(c), it suffices to show that the commutative the diagram of solid arrows 
 $$
 \begin{tikzcd}
 V\ar{r}\ar{dr}[swap]{0}&U\ar{r}\ar{d}&W\ar[dashed]{d}\\ 
 {}&T\ar[dashed,tail]{r}&S
 \end{tikzcd}
 $$ 
-can be completed as indicated. This follows from the fact that, again by \S\ref{8312} p.~\pageref{8312}, the commutative diagram of solid arrows 
+can be completed as indicated. This follows from the fact that, by Lemma~\ref{8312}, (c)$\then$(a), the commutative diagram of solid arrows 
 $$
 \begin{tikzcd}
 Y\ar{r}\ar{dr}[swap]{0}&X\ar{r}\ar{d}&W\ar[dashed]{d}\\ 
@@ -4849,14 +4865,14 @@ Y\ar{r}\ar{dr}[swap]{0}&X\ar{r}\ar{d}&W\ar[dashed]{d}\\
 $$ 
 can itself be completed as indicated.
 
-\nn Exactness at $W$: Let $T\to W$ be a morphism. By Lemma 8.3.12 p.~180 of the book, it suffices to show that the diagram of solid arrows 
+\nn Exactness at $W$: Let $T\to W$ be a morphism. By Lemma~\ref{8312}, (b)$\then$(a), it suffices to show that the diagram of solid arrows 
 $$
 \begin{tikzcd}
 S\ar[dashed,two heads]{r}\ar[dashed]{d}&T\ar{d}\\ 
 U\ar{r}&W
 \end{tikzcd}
 $$ 
-can be completed to a commutative diagram as indicated. This follows from the fact that, again by Lemma 8.3.12 p.~180 of the book, the commutative diagram of solid arrows 
+can be completed to a commutative diagram as indicated. This follows from the fact that, by Lemma~\ref{8312}, (a)$\then$(b), the commutative diagram of solid arrows 
 $$
 \begin{tikzcd}
 S\ar[dashed,two heads]{r}\ar[dashed]{d}&T\ar{d}\\ 
@@ -4894,7 +4910,6 @@ We claim:
 (b) this map (a) is bijective. 
 
 Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
-\end{s}
 %
 %%%
 %
