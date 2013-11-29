@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auk)
+% about "categories and sheaves" (version aul)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5668,11 +5668,11 @@ is exact. Then $P$ is a flat $\cc R$-module.
 \end{lem}
 %
 \begin{proof}
-Let $0\to M'\to M\to M''\to0$ be an exact sequence in $\Mod(\cc R^{\op})$. Let us show that $M'\otimes_{\cc R}P\to M\otimes_{\cc R}P$ is a monomorphism. For $U\in\C_X$ set 
+Let $M'\to M$ be a monomorphism in $\Mod(\cc R^{\op})$. Let us show that $M'\otimes_{\cc R}P\to M\otimes_{\cc R}P$ is a monomorphism. For $U\in\C_X$ set 
 $$
 K(U):=\Ker\left(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\right).
 $$ 
-Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U\in\C_X$. Let $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken word for word from the book.) So, we have an element $s$ in the kernel of 
+Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U\in\C_X$. Let $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of 
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
@@ -5712,7 +5712,7 @@ M'|_U\ar{r}[swap]{\varphi_2}&M|_U,
 \end{tikzcd}
 \right.
 $$
-the top square being cartesian. Then $\varphi_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $0\to M'\to M\to M''\to0$ is exact by assumption), and $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
+the top square being cartesian. Then $\varphi_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption), and $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
