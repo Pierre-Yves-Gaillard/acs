@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aui)
+% about "categories and sheaves" (version auj)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5606,10 +5606,8 @@ A\ar[equal]{r}&A.
 \end{tikzcd}
 \end{equation}
 %
-\begin{conv}\label{ct=0}
-Say that the commutative diagram \eqref{dt=0} is attached to Equality \eqref{et=0} by Lemma \ref{techlem}.
-\end{conv}
-%
+%\begin{conv}\label{ct=0}Say that the commutative diagram \eqref{dt=0} is attached to Equality \eqref{et=0} by Lemma \ref{techlem}.\end{conv}
+
 For the reader's convenience we reproduce Diagram (18.5.3): 
 $$
 \begin{tikzcd}
@@ -5618,6 +5616,7 @@ $$
 0\ar{r}&M'(U)\ar{r}&M(U).
 \end{tikzcd}
 $$
+
 On applying $-\otimes_RB$ to \eqref{dt=0} we get 
 %
 \begin{equation*}
@@ -5679,15 +5678,17 @@ Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
-and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that \eqref{et=0} holds. The commutative diagram 
+and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that \eqref{et=0} holds, and \eqref{dt=0} becomes 
+%The commutative diagram 
 $$
 \begin{tikzcd}
 {}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
 \cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}\\ 
-M'(U)\ar[equal]{r}&M'(U)
+M'(U)\ar[equal]{r}&M'(U).
 \end{tikzcd}
 $$ 
-attached to Equality~\eqref{et=0} by Lemma~\ref{techlem} in the sense of Convention~\ref{ct=0} gives rise to the commutative diagram 
+%attached to Equality~\eqref{et=0} by Lemma~\ref{techlem} in the sense of Convention~\ref{ct=0} 
+The above commutative diagram gives rise to the commutative diagram 
 %
 \begin{equation}\label{d447}
 \begin{tikzcd}
@@ -5718,7 +5719,7 @@ $$
 the top square being cartesian. Then $\Delta$ is a commutative diagram of complexes, and $\varphi_2$ is a monomorphism. The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
-\Sigma:=(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell).
+\Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
 \end{equation}
 % 
 The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
