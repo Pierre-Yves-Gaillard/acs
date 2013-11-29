@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aun)
+% about "categories and sheaves" (version auo)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4260,10 +4260,11 @@ in $\Mor(\C)$, such that the conditions below are satisfied for all $\ell<k<j<i$
 $$
 u_{jk}\circ u_{k\ell}=u_{j\ell},\ u_{jk}\circ v_k=v_j,\ Y'_{<j}=\co_{k<j}Y'_k,
 $$ 
-the inductive limit being taken over the $u_{jk}$, and $p_{jk}$ being the coprojection (note that $Y'_{<j}$ exists in $\C_0$ thanks to (9.5.2) (i) --- see the beginning of this subsection) 
+%the inductive limit being taken over the $u_{jk}$, and $p_{jk}$ being the coprojection (note that $Y'_{<j}$ exists in $\C_0$ thanks to (9.5.2) (i) --- see the beginning of this subsection) 
 $$
-u_{jk}=w_j\circ p_{jk},\ v_j=w_j\circ p_{j0}\circ v_0,\ p_{jk}\circ w_k\circ p_{k\ell}=p_{j\ell},\ h_j\circ u_j=v_j\circ f_j.
-$$
+u_{jk}=w_j\circ p_{jk},\ v_j=w_j\circ p_{j0}\circ v_0,\ p_{jk}\circ w_k\circ p_{k\ell}=p_{j\ell},\ h_j\circ u_j=v_j\circ f_j,
+$$ 
+the inductive limit defining $Y'_{<j}$ being taken over the $u_{jk}$, and $p_{jk}$ being the coprojection (note that $Y'_{<j}$ exists in $\C_0$ thanks to (9.5.2) (i) --- see the beginning of this subsection). 
 \nn[End of Statement $(S_i)$]
 
 We prove $(S_i)$ by transfinite induction over $i\in I$. Statement $(S_0)$ is vacuously true. To prove $(S_1)$, we define $v_0$ and $h_0$ by applying (9.2.5) (ii) (see \eqref{952ii} p.~\pageref{952ii}) to 
@@ -4825,14 +4826,14 @@ T\ar[dashed,tail]{r}&S
 $$ 
 can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book.
 
-\nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By Lemma~\ref{8312}, (a)$\then$(c), it suffices to show that the commutative the diagram of solid arrows 
+\nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By Lemma~\ref{8312}, (c)$\then$(a), it suffices to show that the commutative diagram of solid arrows 
 $$
 \begin{tikzcd}
 V\ar{r}\ar{dr}[swap]{0}&U\ar{r}\ar{d}&W\ar[dashed]{d}\\ 
 {}&T\ar[dashed,tail]{r}&S
 \end{tikzcd}
 $$ 
-can be completed as indicated. This follows from the fact that, by Lemma~\ref{8312}, (c)$\then$(a), the commutative diagram of solid arrows 
+can be completed as indicated. This follows from the fact that, by Lemma~\ref{8312}, (a)$\then$(c), the commutative diagram of solid arrows 
 $$
 \begin{tikzcd}
 Y\ar{r}\ar{dr}[swap]{0}&X\ar{r}\ar{d}&W\ar[dashed]{d}\\ 
@@ -5612,7 +5613,7 @@ $$
 \end{tikzcd}
 $$
 
-On applying $-\otimes_RB$ to \eqref{dt=0} we get the commutative diagram of complexes
+Applying $-\otimes_RB$ to \eqref{dt=0} we get the commutative diagram of complexes
 %
 \begin{equation*}
 \begin{tikzcd}
@@ -5665,15 +5666,19 @@ is exact. Then $P$ is a flat $\cc R$-module.
 \end{lem}
 %
 \begin{proof}
-Let $M'\to M$ be a monomorphism in $\Mod(\cc R^{\op})$. Let us show that $M'\otimes_{\cc R}P\to M\otimes_{\cc R}P$ is a monomorphism. For $U\in\C_X$ set 
+Let $\psi:M'\mono M$ be a monomorphism in $\Mod(\cc R^{\op})$. Let us show that 
+$$
+M'\otimes_{\cc R}P\to M\otimes_{\cc R}P
+$$ 
+is a monomorphism. For $U\in\C_X$ set 
 $$
 K(U):=\Ker\left(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\right).
 $$ 
-Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$ by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U\in\C_X$. Let $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of 
+Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$ by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U\in\C_X$. Let $U$ be in $\C_X$, let $\pp:M'(U)\to M(U)$ be the morphism given by $\psi$, and $s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of the morphism 
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
-and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that we have $\sum_{i=1}^n\,a_i\otimes b_i=0$, and the commutative diagram of complexes \eqref{dt=0} becomes 
+induced by $\pp$, and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')\in M(U)$, so that we have $\sum_{i=1}^n\,a_i\otimes b_i=0$, and the commutative diagram of complexes \eqref{dt=0} p.~\pageref{dt=0} becomes 
 $$
 \begin{tikzcd}
 {}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
@@ -5699,7 +5704,7 @@ P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\
 s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
-By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
+By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
