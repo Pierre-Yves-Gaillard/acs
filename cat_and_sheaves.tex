@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auj)
+% about "categories and sheaves" (version auk)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5605,8 +5605,6 @@ S^n\ar[hook]{r}\ar{d}&S^\ell\ar{d}{a}\\
 A\ar[equal]{r}&A.
 \end{tikzcd}
 \end{equation}
-%
-%\begin{conv}\label{ct=0}Say that the commutative diagram \eqref{dt=0} is attached to Equality \eqref{et=0} by Lemma \ref{techlem}.\end{conv}
 
 For the reader's convenience we reproduce Diagram (18.5.3): 
 $$
@@ -5617,7 +5615,7 @@ $$
 \end{tikzcd}
 $$
 
-On applying $-\otimes_RB$ to \eqref{dt=0} we get 
+On applying $-\otimes_RB$ to \eqref{dt=0} we get the commutative diagram of complexes
 %
 \begin{equation*}
 \begin{tikzcd}
@@ -5678,8 +5676,7 @@ Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
-and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that \eqref{et=0} holds, and \eqref{dt=0} becomes 
-%The commutative diagram 
+and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that \eqref{et=0} holds, and the commutative diagram of complexes \eqref{dt=0} becomes 
 $$
 \begin{tikzcd}
 {}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
@@ -5687,8 +5684,7 @@ $$
 M'(U)\ar[equal]{r}&M'(U).
 \end{tikzcd}
 $$ 
-%attached to Equality~\eqref{et=0} by Lemma~\ref{techlem} in the sense of Convention~\ref{ct=0} 
-The above commutative diagram gives rise to the commutative diagram 
+The above commutative diagram of complexes gives rise to the commutative diagram of complexes
 %
 \begin{equation}\label{d447}
 \begin{tikzcd}
@@ -5698,7 +5694,7 @@ M'(U)\ar{r}[swap]{\varphi}&M(U).
 \end{tikzcd}
 \end{equation}
 %
-Applying $-\otimes_{\cc R(U)}P(U)$, we get 
+Applying $-\otimes_{\cc R(U)}P(U)$, we get the commutative diagram of complexes
 $$
 \begin{tikzcd}
 {}&P(U)^m\ar{d}{g_1}\\ 
@@ -5706,7 +5702,7 @@ P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\
 s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
-By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise}). Diagram \eqref{d447} also induces Diagram 
+By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
@@ -5716,7 +5712,7 @@ M'|_U\ar{r}[swap]{\varphi_2}&M|_U,
 \end{tikzcd}
 \right.
 $$
-the top square being cartesian. Then $\Delta$ is a commutative diagram of complexes, and $\varphi_2$ is a monomorphism. The condition that the top square is cartesian is equivalent to the exactness of 
+the top square being cartesian. Then $\varphi_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $0\to M'\to M\to M''\to0$ is exact by assumption), and $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
