@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aul)
+% about "categories and sheaves" (version aum)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5572,11 +5572,8 @@ $$
 $$
 %
 \begin{lem}\label{techlem}
-Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, we have 
-%
-\begin{equation}\label{et=0}
-\sum_{i=1}^n\ a_i\otimes b_i=0
-\end{equation}
+Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, we have $\sum_{i=1}^n\,a_i\otimes b_i=0$ 
+%\begin{equation}\label{et=0}\sum_{i=1}^n\ a_i\otimes b_i=0\end{equation}
 %
 in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families $(a_i)_{i=n+1}^\ell$, $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above in such a way that we have in the above notation $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
 \end{lem}
@@ -5636,7 +5633,7 @@ A\otimes_RB\ar[equal]{r}&A\otimes_RB
 \end{equation}
 %
 \begin{proof}
-The {\em if} \ part is obvious. To prove the {\em only if}\ part, we assume $\sum_{i=1}^n\ a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
+The {\em if} \ part is obvious. To prove the {\em only if}\ part, we assume $\sum_{i=1}^n\,a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
 $$
 C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
 $$ 
@@ -5676,7 +5673,7 @@ Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}
 $$
 \varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
-and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that \eqref{et=0} holds, and the commutative diagram of complexes \eqref{dt=0} becomes 
+and it suffices to prove $s=0$. Write $s=\sum_{i=1}^na'_i\otimes b_i$ with $a'_i\in M'(U),b_i\in P(U)$, and put $a_i:=\varphi(a_i')$, so that we have $\sum_{i=1}^n\,a_i\otimes b_i=0$, and the commutative diagram of complexes \eqref{dt=0} becomes 
 $$
 \begin{tikzcd}
 {}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
