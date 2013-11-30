@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auo)
+% about "categories and sheaves" (version auq)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5562,7 +5562,7 @@ where $f^\tau(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morph
 %
 The only purpose of the following rewriting is to give additional details to help the reader. We start with a technical lemma.
 
-Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let $(a_i)_{i=1}^\ell$, $(b_i)_{i=1}^\ell$, and $(b'_j)_{j=1}^m$ be tuples in $A$, $B$ and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let $a:S^\ell\to A$, $b:R^\ell\to B$, and $b':R^m\to B$ be defined by 
+Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let $(a_i)_{i=1}^\ell$, $(b_i)_{i=1}^\ell$, and $(b'_j)_{j=1}^m$ be tuples in $A$, $B$, and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let $a:S^\ell\to A$, $b:R^\ell\to B$, and $b':R^m\to B$ be defined by 
 $$
 a(\nu)=\sum_{i=1}^\ell\ a_i\,\nu_i,\quad b(\nu)=\sum_{i=1}^n\ \nu_i\,b_i,\quad b'(\mu)=\sum_{j=1}^m\ \mu_j\,b'_j;
 $$ 
@@ -5574,9 +5574,8 @@ $$
 %
 \begin{lem}\label{techlem}
 Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, we have $\sum_{i=1}^n\,a_i\otimes b_i=0$ 
-%\begin{equation}\label{et=0}\sum_{i=1}^n\ a_i\otimes b_i=0\end{equation}
 %
-in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families $(a_i)_{i=n+1}^\ell$, $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ and $(b'_j)_{j=1}^m$ as above in such a way that we have in the above notation $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
+in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families $(a_i)_{i=n+1}^\ell$, $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$, and $(b'_j)_{j=1}^m$ as above in such a way that we have in the above notation $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
 \end{lem}
 %
 
@@ -5704,7 +5703,7 @@ P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\
 s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
-By Lemma~\ref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
+By Lemma~\ref{techlem} p.~~\pageref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$ and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
