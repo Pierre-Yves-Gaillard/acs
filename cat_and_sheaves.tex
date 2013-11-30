@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auq)
+% about "categories and sheaves" (version aur)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -5580,10 +5580,12 @@ in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three f
 %
 
 Before proving the lemma we make a few simple remarks. The equalities $b'\circ\lambda=b$ and $a\circ\lambda=0$ can be expressed by the formulas
-$$
+%
+\begin{equation}\label{lij}
 \sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),\quad
 \sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m)
-$$
+\end{equation}
+%
 or by the commutative diagrams
 $$
 \begin{tikzcd}
@@ -5633,7 +5635,7 @@ A\otimes_RB\ar[equal]{r}&A\otimes_RB
 \end{equation}
 %
 \begin{proof}
-The {\em if} \ part is obvious. To prove the {\em only if}\ part, we assume $\sum_{i=1}^n\,a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
+The {\em if}\ part follows from \eqref{lij} p.~\pageref{lij}. To prove the {\em only if}\ part, we assume $\sum_{i=1}^n\,a_i\otimes b_i=0$, we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
 $$
 C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
 $$ 
