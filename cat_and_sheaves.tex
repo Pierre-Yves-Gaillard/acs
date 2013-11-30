@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auu)
+% about "categories and sheaves" (version auv)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4010,7 +4010,11 @@ is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\ci
 %
 \subsection{Theorem 9.3.4 (p. 227)}\label{s934}
 %
-Here is a slightly different wording: Let $\C$ be a category satisfying  
+Here is a slightly different wording. 
+%
+\subsubsection{Conditions (9.3.1) (p. 223)}
+%
+Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying  
 
 (i) $\C$ admits small inductive limits,
 
@@ -4021,6 +4025,10 @@ Here is a slightly different wording: Let $\C$ be a category satisfying
 (iv) there exists a generator $G$,
 
 (v) epimorphisms are strict.
+%
+\subsubsection{Proposition 9.3.2 (p. 224)}
+%
+We state the proposition and make a few comments about its proof.
 
 \begin{prop}[Proposition 9.3.2 p.~224]\label{932}
 If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
@@ -4030,8 +4038,6 @@ $$
 then $X$ is in $\C_\pi$.
 \end{prop}
 %
-We make a few comments about the proof of Proposition~\ref{932}: 
-
 The isomorphism 
 $$
 \co_{s\in I^{i_0}}X_i\xr\sim X_\infty, 
@@ -4057,9 +4063,11 @@ B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap
 {}&X_{i_0}\ar{r}[swap]{X_s}&X_i\ar{r}[swap]{p_i}&X_\infty
 \end{tikzcd}
 $$ 
-is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. This ends the comments about the proof of Proposition~\ref{932}
-
-Let $\pi_0$ be an infinite regular cardinal such that 
+is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
+%
+\subsubsection{Definition of two infinite regular cardinals}
+%
+(See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\pi_0$ be an infinite regular cardinal such that 
 $$
 \card(G(G))<\pi_0,\quad\card(G^{\coprod G(G)}(G))<\pi_0.
 $$ 
@@ -4069,7 +4077,7 @@ $\bu\ \card(G^{\coprod A}(G))<\pi_1$,
 
 $\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi_1$. 
 
-\nn(Since the set of quotients of $G^{\coprod A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of this subsection we assume 
+\nn(Since the set of quotients of $G^{\coprod A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of Subsection~\ref{s934} we assume 
 %
 \begin{cond}\label{ass}
 Conditions (i)--(v) hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
@@ -4088,7 +4096,9 @@ Conditions (i)--(v) hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the suc
 (e) if $A$ is a set with $\card(A)<\pi_0$, then $\card(G^{\coprod A}(G))<\pi$.
 
 \nn Indeed (c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and $\pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi$.
-
+%
+\subsubsection{Lemma 9.3.3 (p. 226)}
+%
 \begin{lem}[Lemma 9.3.3 p.~226]\label{933}
 If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi$.
 \end{lem}
@@ -4099,7 +4109,7 @@ The inequality
 \card(I)<\pi
 \end{equation}
 %
-in the first display of the proof can be justified as follows:
+in the first display of the proof of Lemma 9.3.3 p.~226 of the book can be justified as follows:
 %
 \begin{prop}\label{ord}
 If $\alpha$ is a cardinal, then the cardinal of the set of those cardinals $\beta$ such that $\beta<\alpha$ does not exceed $\alpha$.
@@ -4122,6 +4132,8 @@ $$
 \card(I)=\sum_{\pi'<\pi_0}\ \binom{\alpha}{\pi'}\le\sum_{\pi'<\pi_0}\ \alpha^{\pi_0}<\pi,
 $$ 
 the last inequality following from Proposition~\ref{ord}, (c), and (a).
+%
+\subsubsection{Theorem 9.3.4 (p. 227)}
 %
 \begin{thm}[Theorem 9.3.4 p.~227]\label{934}
 If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(G))<\pi$.
