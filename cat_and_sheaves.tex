@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version aux)
+% about "categories and sheaves" (version auy)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4200,6 +4200,34 @@ P. 228. Corollary 9.3.7. As $\{\card(X(G))\ |\ X\in S\}$ is a small set of cardi
 %
 \begin{s} 
 P. 228. Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 and Example 9.2.4 p.~224.
+\end{s}
+%
+%%
+%
+\begin{s}
+P. 230, proof of Sublemma 9.4.5. For the reader's convenience we prove the last sentence of the first paragraph (of the proof of Sublemma 9.4.5). Let us quote the last two sentences of the first paragraph: 
+
+``Hence $\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for any $Y\in\C$. In particular, for any $i\in I$, there exists a morphism $h_i:X_i\to X_{i_0}$ such that $a_{i_0}\circ h_i=a_i$.'' 
+
+We spell out the ``In particular'':
+
+Let $i$ be in $I$. As $a_i=\pp(b_i(\id_{X_i}))$, where 
+$$
+\pp:\co_j\Hom_\C(X_i,X_j)\to\Hom_\C(X_i,X)
+$$ 
+is the natural map and 
+$$
+b_i:\Hom_\C(X_i,X_i)\to\co_j\Hom_\C(X_i,X_j)
+$$ 
+is the coprojection, the morphism $a_i:X_i\to X$ is in 
+$$
+F(X_i):=\Ima\pp\subset\Hom_\C(X_i,X).
+$$ 
+The map 
+$$
+a_{i_0}\circ:\Hom_\C(X_i,X_{i_0})\to F(X_i)\ni a_i
+$$ 
+being surjective by the first sentence quoted above, we can take as $h_i$ any pre-image of $a_i$ in $\Hom_\C(X_i,X_{i_0})$.
 \end{s}
 %
 %%
