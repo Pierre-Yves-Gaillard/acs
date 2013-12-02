@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version auz)
+% about "categories and sheaves" (version ava)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4280,36 +4280,74 @@ $$
 \end{lem}
 %
 \begin{proof}
-We can assume that $I$ is well-ordered. We shall construct by transfinite induction a family $(D_{ij})_{i\ge j}$ of commutative diagrams 
+We assume, as we may, that $I$ is nonempty and well-ordered. We shall achieve the following Task $(T_i)$ by transfinite induction over $i\in I$: 
+
+\nn[Beginning of the description of Task $(T_i)$.] Construct a family of commutative diagrams 
 $$
 \begin{tikzcd}
-{}&Y'_j\ar{dd}{u_{ij}}&Y_j\ar{l}[swap]{h_j}\\ 
-X'\ar{ru}{v_j}\ar{rd}[swap]{v_i}\\ 
-{}&Y'_i&Y_i\ar{l}{h_i}
+X_i\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_i\ar{d}{h_i}\\ 
+X'\ar{r}{s_i}\ar[equal]{d}&Y'_{<i}\ar{r}{t_i}&Y'_i\\ 
+X'\ar{r}[swap]{s_j}&Y'_{<j}\ar{r}[swap]{t_j}&Y'_j,\ar{ul}[swap]{p_{ij}}
 \end{tikzcd}
 $$ 
-such that $u_{ii}=\id_{Y'_i}$ and $u_{ij}\circ u_{jk}=u_{ik}$ for all $i\ge j\ge k$. In particular $(Y'_i)_{i\in I}$ will be an inductive system. We assume (as we may) that the set $I$ is nonempty, we let $0$ be its least element, and we define $v_0$ and $h_0$ by (9.5.2) (ii): 
+indexed by couples $(i,j)\in I^2$ with $i>j$, such that 
+$$
+s_i,s_j,t_i,t_j,p_{ij}\in\Mor(\C_0),
+$$ 
+$$
+p_{ik}=p_{ij}\circ t_j\circ p_{jk}\quad\forall\quad k<j<i.
+$$ 
+[End of the description of Task $(T_i)$.]
+
+We first assume that $i=0$, where $0$ is the least element of $I$. We define $s_0$ and $h_0$ by (9.5.2) (ii): 
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\ 
-X'\ar[dashed]{r}[swap]{v_0}&Y'_0.
+X'\ar[dashed]{r}[swap]{s_0}&Y'_0,
 \end{tikzcd}
 $$ 
-Now assume that $i>0$ and that the $(D_{jk})$ have been constructed for $k\le j<i$. In particular $(Y'_j)_{j<i}$ is an inductive system. We set $Y'_{<i}:=\co_{j<i}Y'_i$, and define $v_i,h_i$, and $u_{ij}$ for $j<i$ by the commutative diagram 
+and define $t_0$ by the commutative diagram 
 $$
 \begin{tikzcd}
-X_i\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_i\ar[dashed]{d}{h_i}\\
-X'\ar{r}\ar[equal]{dd}&Y'_{<i}\ar[dashed]{r}&Y'_i\ar[equal]{dd}\\ 
-{}&Y'_j\ar{u}\ar{ur}[swap]{u_{ij}}\\ 
-X'\ar{rr}[swap]{v_i}&&Y'_i,
+X_0\ar{rr}{u_0}\ar{d}[swap]{f_0}&&Y_0\ar{d}{h_0}\\ 
+X'\ar{r}{s_0}\ar[equal]{d}&Y'_{<0}\ar{r}{t_0}\ar[equal]{d}&Y'_0\ar[equal]{d}\\ 
+X'\ar{r}[swap]{s_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
 $$ 
-where $h_i$ and $Y'_{<i}\to Y'_i$ are furnished by (9.5.2) (ii), and $Y'_j\to Y'_{<i}$ is the coprojection. The construction of $(D_{ij})$ for all $i\ge j$ is now complete. 
+Then Task $(T_0)$ is completed.
 
-Put $Y':=\co Y'_i$, let $p_i:Y'_i\to Y'$ be the coprojection, and set $g_i:=p_i\circ h_i$, $u':=p_0\circ v_0$. We have 
+Now assume that $i>0$ and that Task $(T_j)$ has been achieved for all $j<i$. For $k<j<i$ we define $
+u_{jk}:Y'_k\to Y'_j$ by 
 $$
-g_i\circ u_i=p_i\circ h_i\circ u_i=p_i\circ v_i\circ f_i=p_i\circ u_{i0}\circ v_0\circ f_i=p_0\circ v_0\circ f_i=u'\circ f_i.
+u_{jk}:=t_j\circ p_{jk},
 $$ 
+and we leave it to the reader to check by induction over $j$ that we have $u_{j\ell}=u_{jk}\circ u_{k\ell}$ for all $\ell<k<j<i$. In particular, $(Y'_j)_{j<i}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<j}$. We also put 
+$$
+s_i:=p_{i0}\circ s_0,
+$$ 
+and we define 
+$$
+Y'_{<i}\xr{t_i}Y'_i\xleftarrow{h_i}Y_i
+$$ 
+by (9.5.2) (ii):
+$$
+\begin{tikzcd}
+X_i\ar{d}[swap]{s_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\ 
+Y'_{<i}\ar[dashed]{r}[swap]{t_i}&Y'_i.
+\end{tikzcd}
+$$ 
+
+Then Task $(T_i)$ has been achieved for all $i$. In particular $(Y'_i)_{i\in I}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'$, and write $p_i$ for the coprojection $Y'_i\to Y'$. Putting 
+$$
+g_i:=p_i\circ h_i,\quad u':=p_0\circ s_0, 
+$$ 
+we get 
+$$
+g_i\circ u_i=p_i\circ h_i\circ u_i=p_i\circ t_i\circ s_i\circ f_i=p_i\circ t_i\circ p_{i0}\circ s_0\circ f_i
+$$
+$$
+=p_i\circ u_{i0}\circ s_0\circ f_i=p_0\circ s_0\circ f_i=u'\circ f_i.
+$$
 \end{proof}
 %
 %%%
