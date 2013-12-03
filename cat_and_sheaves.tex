@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avd)
+% about "categories and sheaves" (version ave)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4280,80 +4280,73 @@ $$
 \end{lem}
 %
 \begin{proof}
-We assume, as we may, that $I$ is nonempty and well-ordered. For all $i$ in $I$ we consider the following statement, which we call $(S_i)$: 
+We assume, as we may, that $I$ is nonempty and well-ordered. We shall achieve the following task by transfinite induction: 
 
-\nn[Beginning of Statement $(S_i)$.] 
-
-\nn(a) For each $j\le i$ There is a commutative diagram
+\nn[Beginning of the description of the task.] Construct, for each $i$ in $I$, a commutative diagram 
 $$
 \begin{tikzcd}
-X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar{d}{h_j}\\ 
-X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j
+X_j\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_j\ar{d}{h_i}\\
+X'\ar{r}[swap]{v_i}&Y'_{<i}\ar{r}[swap]{w_i}&Y'_i
 \end{tikzcd}
-$$ 
-with $v_j,w_j\in\Mor(\C_0)$. 
-
-\nn(b) For each $k<j\le i$ there is a commutative diagram
+$$
+with $v_j,w_j\in\Mor(\C_0)$, and, for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram 
 $$
 \begin{tikzcd}
-X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_i\\ 
-X'\ar{r}[swap]{v_k}&Y'_{<k}\ar{r}[swap]{w_k}&Y'_k\ar{ul}[swap]{p_{jk}}
+X'\ar{r}{v_i}\ar[equal]{d}&Y'_{<i}\ar{r}{w_i}&Y'_i\\
+X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_k\ar{ul}[swap]{p_{ij}}
 \end{tikzcd}
-$$ 
-with $p_{jk}\in\Mor(\C_0)$. 
-
-\nn(c) We have
+$$
+with $p_{ij}\in\Mor(\C_0)$ in such a way that we have
 %
 \begin{equation}\label{pijk}
-p_{jk}\circ w_k\circ p_{k\ell}=p_{j\ell}\quad\forall\quad\ell<k<j\le i.
+p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j\le i.
 \end{equation}
-% 
-[End of Statement $(S_i)$.]
+%
+\nn[End of the description of the task.]
 
-Let $0$ be the least element of $I$ and let us prove $(S_0)$. We define $v_0$ and $h_0$ by (9.5.2) (ii): 
+Let $0$ be the least element of $I$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
 $$
 \begin{tikzcd}
-X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\ 
+X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
 X'\ar[dashed]{r}[swap]{v_0}&Y'_0,
 \end{tikzcd}
-$$ 
-and we define $w_0$ by the commutative diagram 
+$$
+and let us define $Y'_{<0}$ and $w_0$ by the commutative diagram
 $$
 \begin{tikzcd}
-X_0\ar{rr}{u_0}\ar{d}[swap]{f_0}&&Y_0\ar{d}{h_0}\\ 
-X'\ar{r}{v_0}\ar[equal]{d}&Y'_{<0}\ar{r}{w_0}\ar[equal]{d}&Y'_0\ar[equal]{d}\\ 
+X_0\ar{rr}{u_0}\ar{d}[swap]{f_0}&&Y_0\ar{d}{h_0}\\
+X'\ar{r}{v_0}\ar[equal]{d}&Y'_{<0}\ar{r}{w_0}\ar[equal]{d}&Y'_0\ar[equal]{d}\\
 X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
-$$ 
-Then $(S_0)$ is proved.
+$$
 
-Now assume that $i>0$ and that $(S_j)$ holds for all $j<i$. For $k<j<i$ we define $
-u_{jk}:Y'_k\to Y'_j$ by 
+Now assume that $i>0$ and that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. For $k<j<i$ we define $
+u_{jk}:Y'_k\to Y'_j$ by
 $$
 u_{jk}:=w_j\circ p_{jk}.
-$$ 
-By \eqref{pijk} we have $u_{jk}\circ u_{k\ell}=u_{j\ell}$ for all $\ell<k<j<i$. In particular, $(Y'_j)_{j<i}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<i}$. We also put 
+$$
+By \eqref{pijk} we have $u_{jk}\circ u_{k\ell}=u_{j\ell}$ for all $\ell<k<j<i$. In particular, $(Y'_j)_{j<i}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<i}$. We also put
 $$
 v_i:=p_{i0}\circ v_0,
-$$ 
-and we define 
+$$
+and we define
 $$
 Y'_{<i}\xr{w_i}Y'_i\xleftarrow{h_i}Y_i
-$$ 
+$$
 by (9.5.2) (ii):
 $$
 \begin{tikzcd}
-X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\ 
+X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\
 Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 \end{tikzcd}
-$$ 
-From this point, the proof of $(S_i)$ is straightforward. 
-
-The fact that $(S_i)$ holds for all $i$ implies that $(Y'_i)_{i\in I}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'$, and we write $p_i$ for the coprojection $Y'_i\to Y'$. Putting 
 $$
-g_i:=p_i\circ h_i,\quad u':=p_0\circ v_0, 
-$$ 
-we get 
+From this point, it is straightforward to prove that the task has indeed been achieved. 
+
+In particular, $(Y'_i)_{i\in I}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'$, and we write $p_i$ for the coprojection $Y'_i\to Y'$. Putting
+$$
+g_i:=p_i\circ h_i,\quad u':=p_0\circ v_0,
+$$
+we get
 $$
 g_i\circ u_i=p_i\circ h_i\circ u_i=p_i\circ w_i\circ v_i\circ f_i=p_i\circ w_i\circ p_{i0}\circ v_0\circ f_i
 $$
