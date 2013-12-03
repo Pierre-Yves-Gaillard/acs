@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version ave)
+% about "categories and sheaves" (version avf)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4320,8 +4320,7 @@ X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
 $$
 
-Now assume that $i>0$ and that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. For $k<j<i$ we define $
-u_{jk}:Y'_k\to Y'_j$ by
+Now assume that $i$ is $>0$ and that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 $$
 u_{jk}:=w_j\circ p_{jk}.
 $$
@@ -4340,7 +4339,7 @@ X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\
 Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 \end{tikzcd}
 $$
-From this point, it is straightforward to prove that the task has indeed been achieved. 
+From this point, it is straightforward to verify that the required conditions are still satisfied. Our task has been achieved. 
 
 In particular, $(Y'_i)_{i\in I}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'$, and we write $p_i$ for the coprojection $Y'_i\to Y'$. Putting
 $$
