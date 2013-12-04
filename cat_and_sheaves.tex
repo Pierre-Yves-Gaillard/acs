@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avf)
+% about "categories and sheaves" (version avg)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4280,12 +4280,12 @@ $$
 \end{lem}
 %
 \begin{proof}
-We assume, as we may, that $I$ is nonempty and well-ordered. We shall achieve the following task by transfinite induction: 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall achieve the following task by transfinite induction: 
 
 \nn[Beginning of the description of the task.] Construct, for each $i$ in $I$, a commutative diagram 
 $$
 \begin{tikzcd}
-X_j\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_j\ar{d}{h_i}\\
+X_i\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_i\ar{d}{h_i}\\
 X'\ar{r}[swap]{v_i}&Y'_{<i}\ar{r}[swap]{w_i}&Y'_i
 \end{tikzcd}
 $$
@@ -4341,16 +4341,16 @@ Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 $$
 From this point, it is straightforward to verify that the required conditions are still satisfied. Our task has been achieved. 
 
-In particular, $(Y'_i)_{i\in I}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'$, and we write $p_i$ for the coprojection $Y'_i\to Y'$. Putting
+Recall that $m$ is the maximum of $I$. Putting
 $$
-g_i:=p_i\circ h_i,\quad u':=p_0\circ v_0,
+g_i:=u_{mi}\circ h_i,\quad u':=w_m\circ v_m,
 $$
 we get
 $$
-g_i\circ u_i=p_i\circ h_i\circ u_i=p_i\circ w_i\circ v_i\circ f_i=p_i\circ w_i\circ p_{i0}\circ v_0\circ f_i
+g_i\circ u_i=u_{mi}\circ h_i\circ u_i=u_{mi}\circ w_i\circ v_i\circ f_i
 $$
 $$
-=p_i\circ u_{i0}\circ v_0\circ f_i=p_0\circ v_0\circ f_i=u'\circ f_i.
+=w_m\circ p_{mi}\circ w_i\circ v_i\circ f_i=w_m\circ v_m\circ f_i=u'\circ f_i.
 $$
 \end{proof}
 %
