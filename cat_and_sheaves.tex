@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avg)
+% about "categories and sheaves" (version avh)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4280,31 +4280,31 @@ $$
 \end{lem}
 %
 \begin{proof}
-We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall achieve the following task by transfinite induction: 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall achieve the following Task $(T_i)$ by transfinite induction on $i\in I$: 
 
-\nn[Beginning of the description of the task.] Construct, for each $i$ in $I$, a commutative diagram 
+\nn[Beginning of the description of Task $(T_i)$.] Construct, for each $i$ in $I$, a commutative diagram 
 $$
 \begin{tikzcd}
 X_i\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_i\ar{d}{h_i}\\
-X'\ar{r}[swap]{v_i}&Y'_{<i}\ar{r}[swap]{w_i}&Y'_i
+X'\ar{r}[swap]{v_i}&Y'_{<i}\ar{r}[swap]{w_i}&Y'_i,
 \end{tikzcd}
 $$
-with $v_j,w_j\in\Mor(\C_0)$, and, for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram 
+with $v_i,w_i\in\Mor(\C_0)$, and, for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram 
 $$
 \begin{tikzcd}
 X'\ar{r}{v_i}\ar[equal]{d}&Y'_{<i}\ar{r}{w_i}&Y'_i\\
-X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_k\ar{ul}[swap]{p_{ij}}
+X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_k,\ar{ul}[swap]{p_{ij}}
 \end{tikzcd}
 $$
-with $p_{ij}\in\Mor(\C_0)$ in such a way that we have
+with $p_{ij}\in\Mor(\C_0)$, in such a way that we have
 %
 \begin{equation}\label{pijk}
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j\le i.
 \end{equation}
 %
-\nn[End of the description of the task.]
+\nn[End of the description of Task $(T_i)$.]
 
-Let $0$ be the least element of $I$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
+Let $0$ be the least element of $I$. To achieve Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
@@ -4320,7 +4320,7 @@ X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
 $$
 
-Now assume that $i$ is $>0$ and that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
+Let $i\in I$ be $>0$, and let us achieve Task $(T_i)$. We assume (as we may) that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 $$
 u_{jk}:=w_j\circ p_{jk}.
 $$
@@ -4339,9 +4339,9 @@ X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\
 Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 \end{tikzcd}
 $$
-From this point, it is straightforward to verify that the required conditions are still satisfied. Our task has been achieved. 
+From this point, it is straightforward to verify that the required conditions are still satisfied. 
 
-Recall that $m$ is the maximum of $I$. Putting
+Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been achieved for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting
 $$
 g_i:=u_{mi}\circ h_i,\quad u':=w_m\circ v_m,
 $$
