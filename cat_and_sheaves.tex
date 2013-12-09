@@ -4400,19 +4400,26 @@ X_i\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_i\ar{d}{h_i}\\
 X'\ar{r}[swap]{v_i}&Y'_{<i}\ar{r}[swap]{w_i}&Y'_i,
 \end{tikzcd}
 $$
-with $v_i,w_i\in\Mor(\C_0)$, and, for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram 
+with $v_i,w_i\in\Mor(\C_0)$, for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram 
 $$
 \begin{tikzcd}
 X'\ar{r}{v_i}\ar[equal]{d}&Y'_{<i}\ar{r}{w_i}&Y'_i\\
 X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,\ar{ul}[swap]{p_{ij}}
 \end{tikzcd}
 $$
-with $p_{ij}\in\Mor(\C_0)$, in such a way that we have
-%
+with $p_{ij}\in\Mor(\C_0)$, and for each $(i,j,k)$ in $I^3$ with $i>j>k$, construct a commutative diagram 
+$$
+\begin{tikzcd}
+X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_j\\
+X'\ar{r}[swap]{v_k}&Y'_{<k}\ar{r}[swap]{w_k}&Y'_k,\ar{ul}[swap]{p_{jk}}
+\end{tikzcd}
+$$
+with $p_{jk}\in\Mor(\C_0)$, in such a way that we have
+
 \begin{equation}\label{pijk}
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j\le i.
 \end{equation}
-%
+
 \nn[End of the description of Task $(T_i)$.]
 
 Let $0$ be the least element of $I$. To handle Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
