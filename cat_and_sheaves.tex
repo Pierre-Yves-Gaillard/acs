@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avk)
+% about "categories and sheaves" (version avn)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -171,43 +171,44 @@ More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
 I have rewritten some of the proofs in the book. Of course, I'm not suggesting that my wording is better than that of Kashiwara and Schapira! I just tried to make explicit a few points which are implicit in the book. 
 
-This is a work in progress. %So far, there are comments only about the first twelve chapters. I'm planning to read the whole book, but I'm progressing very slowly. 
-%
+This is a work in progress. 
+
 \begin{rk}\label{next}
-The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, %(say, between ten and fifteen), 
-I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
+The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
 \end{rk}
-%
+
+We adhere to Bourbaki's set theory.
+
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. 
 
 Following a suggestion of Pierre Schapira's, we shall denote projective limits by $\lim$ instead of $\plim$, and inductive limits by $\coli$ instead of $\ilim$. 
 
 Thank you to Pierre Schapira for his interest!
-%
+
 %%%%%
-%
+
 \section{U-categories and U-small Categories}\label{ucat}
-%
+
 Here are a few comments about the definition of a $\U$-category on p.~11. Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set. The following definitions are used in the book: 
-%
+
 \begin{df}\label{ucatg}
 A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set. 
 \end{df} 
-%
+
 \begin{df}
 The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ is equipotent to some $\U$-set. 
 \end{df} 
-%
+
 One could also consider the following variant: 
-%
+
 \begin{df}\label{ducat}
 A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ is a $\U$-set. 
 \end{df} 
-%
+
 \begin{df}\label{small}
 The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ is a $\U$-set. 
 \end{df} 
-%
+
 Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{ducat} which is isomorphic to $\C$, and similarly for $\U$-small categories.%\bigskip
 %
 \begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
@@ -4201,51 +4202,161 @@ P. 228. Corollary 9.3.7. As $\{\card(X(G))\ |\ X\in S\}$ is a small set of cardi
 \begin{s} 
 P. 228. Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 and Example 9.2.4 p.~224.
 \end{s}
-%
-%%
-%
-\begin{s}
-P. 230, proof of Sublemma 9.4.5. For the reader's convenience we prove the last sentence of the first paragraph (of the proof of Sublemma 9.4.5). Let us quote the last two sentences of the first paragraph: 
 
-``Hence $\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for any $Y\in\C$. In particular, for any $i\in I$, there exists a morphism $h_i:X_i\to X_{i_0}$ such that $a_{i_0}\circ h_i=a_i$.'' 
+%%%
 
-We spell out the ``In particular'':
+\subsection{Quasi-Terminal Object Theorem}
 
-Let $i$ be in $I$. As $a_i=\pp(b_i(\id_{X_i}))$, where 
+Recall the following result:
+
+\begin{thm}[Zorn's Lemma]\label{zorn}
+If $X$ is an ordered set such that each well-ordered subset of $X$ has an upper bound, then $X$ has a maximal element.
+\end{thm}
+
+The purpose of this section is to prove a common generalization of Theorem~\ref{zorn} above and of Theorem 9.4.2 p.~229 of the book, stated below as Theorem~\ref{942}. We start with a reminder:
+
+\begin{df}
+An object $X$ of a category $\C$ is {\em quasi-terminal} if any morphism $u:X\to Y$ admits a left inverse.
+\end{df}
+
+\begin{thm}[Theorem 9.4.2 p.~229]\label{942}
+Any essentially small nonempty category admitting small filtrant inductive limits has a quasi-terminal object.
+\end{thm}
+
+Here is a weakening of the notion of inductive limit:
+
+\begin{df}
+Let $I$ be a well-ordered nonempty small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a family of morphisms $(a_i:\alpha(i)\to X)_{i\in I}$. If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}.
+\end{df}
+
+\begin{df}
+Let $\C$ be a category. A well-ordered set $I$ is $\C$-{\em special} if it is small, has no largest element, and for any functor $\alpha:I\to\C$ and there is some upper bound $(a_i:\alpha(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
+\end{df}
+
+Our goal is to prove:
+
+\begin{thm}[Quasi-Terminal Object Theorem]\label{qtot}
+Let $\C$ be an essentially small nonempty category admitting small well-ordered upper bounds. Assume that there exists a $\C$-special well-ordered set. Then $\C$ has a quasi-terminal object.
+\end{thm}
+
+Theorem~\ref{qtot} clearly implies Theorem~\ref{zorn}. Lemma~\ref{945} below will shows that Theorem~\ref{942} follows also from Theorem~\ref{qtot}. 
+
+The proof of Theorem~\ref{qtot} is essentially the same as the proof of Theorem~\ref{942} given in the book. For the reader's convenience, we spell out the details. 
+
+\begin{lem}\label{943}
+If $\C$ is a small nonempty category admitting small well-ordered upper bounds, then there is an $X$ in $\C$ such that, for all morphism $X\to Y$, there is a morphism $Y\to X$.
+\end{lem}
+
+\begin{proof}
+Let $\cc F$ be the set of well-ordered subcategories of $\C$. For $I$ and $J$ in $\cc F$ we decree that $I\le J$ if and only if $I$ is an initial segment of $J$. This order is clearly inductive. Let $\cc S$ be a maximal element of $\cc F$. As $\cc S$ is small, it admits an upper bound $(a_S:S\to X)_{S\in\cc S}$. 
+
+We shall prove that $X$ satisfies the conditions in the statement. Let $u:X\to Y$ be a morphism in $\C$. 
+
+\nn(i) The object $Y$ is in $\cc S$. Otherwise, define the well ordered subcategory $\widetilde{\cc S}$ of $\C$ by appending the element $Y$ to $\cc S$ and making it the largest element of $\widetilde{\cc S}$, the morphism $S\to Y$ being $u\circ a_S$. We have $\widetilde{\cc S}\in \cc F$ and $\cc S<\widetilde{\cc S}$, contradicting the maximality of $\cc S$. 
+
+\nn(ii) As $Y$ is in $\cc S$, there is a morphism $Y\to X$, namely $a_Y$.
+\end{proof}
+
+\begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
+If $\C$ is a small nonempty category admitting small well-ordered upper bounds and if $X$ is in $\C$, then there is a morphism $f:X\to Y$ satisfying Property 
+
+\nn $P(f):$ for any morphism $u:Y\to Z$, there is a morphism $v:Z\to Y$ such that $v\circ u\circ f=f$.
+\end{lem}
+
+\begin{proof}
+The category $\C^X$ is again small, nonempty, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
+\end{proof}
+
+We recall the notion of {\em construction by transfinite induction} in the setting of Bourbaki's set theory, to which, as already mentioned, we adhere.
+
+\nn{\bf Metatheorem.} Let $T$ be a term, let $x$ be a letter, and, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$. Let $I$ be a well-ordered set, and, for each $i$ in $I$, write $I_{<i}$ for the set $\{j\in I\,|\,j<i\}$. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f|_{I_{<i}})$ for all $i$ in $I$. (Here $f|_{I_{<i}}$ denotes the restriction of $f$ to $I_{<i}$.)
+
+\begin{proof}[Proof of Theorem \ref{qtot}]
+Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose an $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
+
+\nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property $P(u_{ij})$ of Lemma~\ref{944}, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$.
+
+\nn(b) If $i=\sup\,\{j\,|\,j<i\}$, let $(a_j:X_j\to X_i)_{j<i}$ be some upper bound for $(X_j)_{j<i}$ and put $u_{ij}:=a_j$. 
+
+Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. Let $(b_i:X_i\to X)_{i\in I}$ be some upper bound, and let $i_0$ in $I$ be such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $u:X\to Y$ be a morphism. By Property $P(u_{i_0+1,i_0})$ applied to $u\circ b_{i_0+1}:X_{i_0+1}\to Y$, we find a morphism $w:Y\to X_{i_0+1}$ such that $w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}$. Putting $v:=b_{i_0+1}\circ w:Y\to X$, we get 
 $$
-\pp:\co_j\Hom_\C(X_i,X_j)\to\Hom_\C(X_i,X)
-$$ 
-is the natural map and 
+(v\circ u)\circ b_{i_0}=(b_{i_0+1}\circ w)\circ u\circ(b_{i_0+1}\circ u_{i_0+1,i_0})
 $$
-b_i:\Hom_\C(X_i,X_i)\to\co_j\Hom_\C(X_i,X_j)
-$$ 
-is the coprojection, the morphism $a_i:X_i\to X$ is in 
 $$
-F(X_i):=\Ima\pp\subset\Hom_\C(X_i,X).
+=b_{i_0+1}\circ u_{i_0+1,i_0}=b_{i_0}=\id_X\circ b_{i_0}.
 $$ 
-The map 
-$$
-a_{i_0}\circ:\Hom_\C(X_i,X_{i_0})\to F(X_i)\ni a_i
-$$ 
-being surjective by the first sentence quoted above, we can take as $h_i$ any pre-image of $a_i$ in $\Hom_\C(X_i,X_{i_0})$.
-\end{s}
-%
-%%
-%
-\begin{s}
-P. 230, Theorem 9.4.2. Here is a diagrammatic illustration of the computation at the end of the proof:
+As $b_{i_0}$ is an epimorphism, we conclude that $v\circ u=\id_X$.
+\end{proof}
+
+Here is a diagrammatic illustration of the above computation:
 $$
 \begin{tikzcd}
-X_{i_0}\ar[equal]{d}\ar{rr}{a_{i_0}}&&X\ar[equal]{d}\ar{r}{u}&Y\ar[equal]{d}\ar{rr}{v}&&X\ar[equal]{d}\\ 
-X_{i_0}\ar[equal]{d}\ar{r}[swap]{u_{i_0+1,i_0}}&X_{i_0+1}\ar{r}[swap]{a_{i_0+1}}&X\ar{r}[swap]{u}&Y\ar{r}[swap]{w}&X_{i_0+1}\ar[equal]{d}\ar{r}[swap]{a_{i_0+1}}&X\ar[equal]{d}\\ 
-X_{i_0}\ar[equal]{d}\ar{rrrr}[swap]{u_{i_0+1,i_0}}&&&&X_{i_0+1}\ar{r}[swap]{a_{i_0+1}}&X\ar[equal]{d}\\ 
-X_{i_0}\ar{rrrrr}[swap]{a_{i_0}}&&&&&X.
+X_{i_0}\ar[equal]{d}\ar{rr}{b_{i_0}}&&X\ar[equal]{d}\ar{r}{u}&Y\ar[equal]{d}\ar{rr}{v}&&X\ar[equal]{d}\\ 
+X_{i_0}\ar[equal]{d}\ar{r}[swap]{u_{i_0+1,i_0}}&X_{i_0+1}\ar{r}[swap]{b_{i_0+1}}&X\ar{r}[swap]{u}&Y\ar{r}[swap]{w}&X_{i_0+1}\ar[equal]{d}\ar{r}[swap]{b_{i_0+1}}&X\ar[equal]{d}\\ 
+X_{i_0}\ar[equal]{d}\ar{rrrr}[swap]{u_{i_0+1,i_0}}&&&&X_{i_0+1}\ar{r}[swap]{b_{i_0+1}}&X\ar[equal]{d}\\ 
+X_{i_0}\ar{rrrrr}[swap]{b_{i_0}}&&&&&X.
 \end{tikzcd}
 $$ 
-\end{s}
-%
-%%
-%
+
+For the reader's convenience we state and prove Sublemma 9.4.5 p.~229 of the book.
+
+\begin{lem}[Sublemma 9.4.5 p.~229]\label{945}
+If $\C$ is a small nonempty category admitting small filtrant inductive limits, if $\pi$ is an infinite regular cardinal such that $\card(\Mor(\C))<\pi$, if $I$ is a $\pi$-filtrant small category, and if $(X_i)_{i\in I}$ is an inductive system in $\C$ indexed by $I$, then there is an $i_0$ in $I$ such that the coprojection $X_{i_0}\to\co_iX_i$ is an epimorphism. 
+\end{lem}
+
+\begin{proof}
+Set $X:=\co_iX_i$ and let $a_i:X_i\to X$ be the coprojection. For any $Y$ in $\C$ let 
+$$
+b^Y_i:\Hom_\C(Y,X_i)\to\co_j\Hom_\C(Y,X_j)
+$$ 
+be the coprojection, let $F(Y)$ be the image of the natural map 
+$$
+\co_j\Hom_\C(Y,X_j)\to\Hom_\C(Y,X),
+$$ 
+and define $\pp^Y$ by the commutative diagram 
+$$
+\begin{tikzcd}
+\co_j\Hom_\C(Y,X_j)\ar[two heads]{r}{\pp^Y}&F(Y)\ar[hook]{r}&\Hom_\C(Y,X)\\ 
+\Hom_\C(Y,X_i).\ar{u}{b^Y_i}\ar{ur}[swap]{\pp^Y_i:=a_i\circ}
+\end{tikzcd}
+$$ 
+
+Claim: There is an $i_0$ in $I$ such that $a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
+
+As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book, there is an $i_Y$ in $I$ such that $a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)$ is surjective. As $\card(\{i_Y\,|\,Y\in\Ob(\C)\})<\pi$ and $I$ is $\pi$-filtrant, there is an $i_0$ in $I$ such that, for any $Y$ in $\C$, there is a morphism $i_Y\to i_0$. This implies the claim. 
+
+For any $i$ in $I$ there is a morphism $h_i:X_i\to X_{i_0}$ such that $a_{i_0}\circ h_i=a_i$. Indeed, this follows from the commutativity of 
+$$
+\begin{tikzcd}
+\Hom_\C(X_i,X_i)\ar{d}[swap]{b_i^{X_i}}\ar{rr}{\pp_i^{X_i}:=a_i\circ}&&F(X_i)\ar[equal]{d}\\ 
+\co_j\Hom_\C(X_i,X_j)\ar[two heads]{rr}{\pp^{X_i}}&&F(X_i)\ar[equal]{d}\\ 
+\Hom_\C(X_i,X_{i_0})\ar{u}{b^{X_i}_{i_0}}\ar[two heads]{rr}[swap]{\pp^{X_i}_{i_0}:=a_{i_0}\circ}&&F(X_i)
+\end{tikzcd}
+$$
+and the equality 
+$$
+a_i=\pp^{X_i}_i(\id_{X_i}).
+$$
+
+Let us show that $a_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $f_1,f_2:X\parar Y$ be a pair of parallel arrows such that $f_1\circ a_{i_0}=f_2\circ a_{i_0}$. Then, for any $i$ in $I$, we have 
+$$
+f_1\circ a_i=f_1\circ a_{i_0}\circ h_i=f_2\circ a_{i_0}\circ h_i=f_2\circ a_i.
+$$ 
+This implies $f_1=f_2$.
+\end{proof}
+
+We give again a diagrammatic illustration of the above computation:
+$$
+\begin{tikzcd}
+X_i\ar[equal]{d}\ar{rr}{a_i}&&X\ar[equal]{d}\ar{r}{f_1}&Y\ar[equal]{d}\\ 
+X_i\ar[equal]{d}\ar{r}{h_i}&X_{i_0}\ar[equal]{d}\ar{r}{a_{i_0}}&X\ar{r}{f_1}&Y\ar[equal]{d}\\ 
+X_i\ar[equal]{d}\ar{r}{h_i}&X_{i_0}\ar{r}{a_{i_0}}&X\ar[equal]{d}\ar{r}{f_2}&Y\ar[equal]{d}\\ 
+X_i\ar{rr}[swap]{a_i}&&X\ar{r}[swap]{f_2}&Y.
+\end{tikzcd}
+$$ 
+
+%%%
+
 \subsection{Lemma 9.5.3 (p. 231)}
 %
 We give more details about the proof, but first let us recall the setting:
@@ -4280,7 +4391,7 @@ $$
 \end{lem}
 %
 \begin{proof}
-We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall achieve the following Task $(T_i)$ by transfinite induction on $i\in I$: 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$: 
 
 \nn[Beginning of the description of Task $(T_i)$.] Construct, for each $i$ in $I$, a commutative diagram 
 $$
@@ -4304,7 +4415,7 @@ p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j\le i.
 %
 \nn[End of the description of Task $(T_i)$.]
 
-Let $0$ be the least element of $I$. To achieve Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
+Let $0$ be the least element of $I$. To handle Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
@@ -4341,7 +4452,7 @@ Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 $$
 From this point, it is straightforward to verify that the required conditions are still satisfied. 
 
-Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been achieved for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
+Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
 $$
 g_i:=u_{mi}\circ h_i,\quad u':=w_m\circ v_m,
 $$
