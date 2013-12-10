@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avu)
+% about "categories and sheaves" (version avv)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -20,7 +20,7 @@
 %\usepackage[shortlabels]{enumitem}
 \pagestyle{fancy}
 \newtheorem{thm}{Theorem}
-\newtheorem{mt}[thm]{Metatheorem}
+%\newtheorem{mt}[thm]{Metatheorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
@@ -4271,11 +4271,11 @@ The category $\C^X$ is again small, nonempty, and admits small well-ordered uppe
 We recall the notion of {\em construction by transfinite induction}. %We recall it first in the setting of Bourbaki's set theory, to which, as already mentioned, we adhere. Then we shall phrase this concept in a way which does not involve explicitly Bourbaki's set theory (see Metatheorem~\ref{meta2} below). 
 For any element $i$ of any ordered set $I$ we freely use the self-explanatory pieces of notation $I_{<i}$ and $I_{\le i}$. 
 
-\begin{mt}[Construction by Transfinite Induction]\label{meta} 
+\begin{thm}[Construction by Transfinite Induction]\label{meta} 
 Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=F(f(j)_{j<i})$ for all $i$ in $I$. (In particular, $S$ is a $\U$-set.)
-\end{mt}
+\end{thm}
 
-%\begin{mt}[Construction by Transfinite Induction]\label{meta}Let $T$ be a term, let $x$ be a letter, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$, and let $I$ be a well-ordered set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f(j)_{j<i})$ for all $i$ in $I$.\end{mt}
+%\begin{thm}[Construction by Transfinite Induction]\label{meta}Let $T$ be a term, let $x$ be a letter, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$, and let $I$ be a well-ordered set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f(j)_{j<i})$ for all $i$ in $I$.\end{thm}
 
 \begin{proof}
 Uniqueness: Assume that $(S,f)$ and $(U,g)$ have the indicated properties. It suffices to prove $f(i)=g(i)$ for all $i$ in $I$. Suppose this is false, and let $i$ be the least element such that $f(i)\neq g(i)$. We have 
@@ -4284,7 +4284,7 @@ f(i)=F(f(j)_{j<i})=F(g(j)_{j<i})=g(i),
 $$ 
 a contradiction. 
 
-Existence: We may assume that $I$ is nonempty. Let $i$ be in $I$. We first prove that the metatheorem holds with $I_{\le i}$ instead of $I$, {\em i.e.}, we prove that there is a pair $(S_i,f_i)$ such that $S_i$ is a set, $f_i:I_{\le i}\to S_i$ is a surjection, and we have $f_i(j)=F(f_i(k)_{k<j})$ for all $j\le i$. This is clear if $i=0$, where $0$ is the minimum of $I$. So, suppose $i>0$. We assume, as we may, that the statement holds for $I_{\le j}$ when $j<i$. For $j<i$ set $f_i(j):=f_j(j)$, put $f_i(i):=F(f_i(j)_{j<i})$, and set $S_i:=\{\,f_i(j)|\,j\le i\}$. As we have $f_j(\ell)=f_k(\ell)$ for all $\ell\le k<j<i$ by the uniqueness part, the pair $(S_i,f_i)$ satisfies the required conditions. Observing that $i$ is an arbitrary element of $I$, we can set $S:=\{\,f_i(i)|\,i\in I\}$ and $f(i):=f_i(i)$ for all $i$. It follows again from the uniqueness part that the pair $(S,f)$ satisfies the required conditions. 
+Existence: We may assume that $I$ is nonempty. Let $i$ be in $I$. We first prove that the theorem holds with $I_{\le i}$ instead of $I$, {\em i.e.}, we prove that there is a pair $(S_i,f_i)$ such that $S_i$ is a set, $f_i:I_{\le i}\to S_i$ is a surjection, and we have $f_i(j)=F(f_i(k)_{k<j})$ for all $j\le i$. This is clear if $i=0$, where $0$ is the minimum of $I$. So, suppose $i>0$. We assume, as we may, that the statement holds for $I_{\le j}$ when $j<i$. For $j<i$ set $f_i(j):=f_j(j)$, put $f_i(i):=F(f_i(j)_{j<i})$, and set $S_i:=\{\,f_i(j)|\,j\le i\}$. As we have $f_j(\ell)=f_k(\ell)$ for all $\ell\le k<j<i$ by the uniqueness part, the pair $(S_i,f_i)$ satisfies the required conditions. Observing that $i$ is an arbitrary element of $I$, we can set $S:=\{\,f_i(i)|\,i\in I\}$ and $f(i):=f_i(i)$ for all $i$. It follows again from the uniqueness part that the pair $(S,f)$ satisfies the required conditions. 
 \end{proof}
 
 %We now give, as promised, the second wording of the notion of construction by transfinite induction (the proof is the same).
@@ -4409,7 +4409,7 @@ $$
 \end{lem}
 %
 \begin{proof}
-We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Metatheorem~\ref{meta} p.~\pageref{meta}): 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Theorem~\ref{meta} p.~\pageref{meta}): 
 
 \nn[Beginning of the description of Task $(T_i)$.] Construct, for each $j\le i$ in $I$, a commutative diagram 
 $$
