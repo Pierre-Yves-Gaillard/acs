@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avr)
+% about "categories and sheaves" (version avs)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4268,10 +4268,10 @@ If $\C$ is a small nonempty category admitting small well-ordered upper bounds a
 The category $\C^X$ is again small, nonempty, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
 \end{proof}
 
-We recall the notion of {\em construction by transfinite induction} in the setting of Bourbaki's set theory, to which, as already mentioned, we adhere.
+We recall the notion of {\em construction by transfinite induction}. We recall it first in the setting of Bourbaki's set theory, to which, as already mentioned, we adhere. Then we shall phrase this concept in a way which does not involve explicitly Bourbaki's set theory (see Metatheorem~\ref{meta2} below.)
 
 \begin{mt}[Construction by Transfinite Induction]\label{meta}
-Let $T$ be a term, let $x$ be a letter, and, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$. Let $I$ be a well-ordered set, and, for each $i$ in $I$, write $I_{<i}$ for the set $\{j\in I\,|\,j<i\}$. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f(j)_{j<i})$ for all $i$ in $I$. 
+Let $T$ be a term, let $x$ be a letter, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$, and let $I$ be a well-ordered set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f(j)_{j<i})$ for all $i$ in $I$. 
 \end{mt}
 
 \begin{proof}
@@ -4283,6 +4283,12 @@ a contradiction.
 
 Existence: We may assume that $I$ is nonempty. Let $i$ be in $I$. We first prove that the metatheorem holds with $I_{\le i}$ (obvious notation) instead of $I$, {\em i.e.}, we prove that there is a pair $(S_i,f_i)$ such that $S_i$ is a set, $f_i:I_{\le i}\to S_i$ is a surjection, and we have $f_i(j)=T(f_i(k)_{k<j})$ for all $j\le i$. This is clear if $i=0$, where $0$ is the minimum of $I$. So, suppose $i>0$. We assume, as we may, that the statement holds for $I_{\le j}$ when $j<i$. For $j<i$ set $f_i(j):=f_j(j)$, put $f_i(i):=T(f_i(j)_{j<i})$, and set $S_i:=\{\,f_i(j)|\,j\le i\}$. As we have $f_j(\ell)=f_k(\ell)$ for all $\ell\le k<j<i$ by the uniqueness part, the pair $(S_i,f_i)$ satisfies the required conditions. Observing that $i$ is an arbitrary element of $I$, we can set $S:=\{\,f_i(i)|\,i\in I\}$ and $f(i):=f_i(i)$. It follows again from the uniqueness part that the pair $(S,f)$ satisfies the required conditions. 
 \end{proof}
+
+We now give, as promised, the second wording of the notion of construction by transfinite induction (the proof is the same).
+
+\begin{mt}[Construction by Transfinite Induction]\label{meta2} 
+Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=F(f(j)_{j<i})$ for all $i$ in $I$.  
+\end{mt}
 
 \begin{proof}[Proof of Theorem \ref{qtot}]
 Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose an $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
