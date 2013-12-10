@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avo)
+% about "categories and sheaves" (version avr)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -20,6 +20,7 @@
 %\usepackage[shortlabels]{enumitem}
 \pagestyle{fancy}
 \newtheorem{thm}{Theorem}
+\newtheorem{mt}[thm]{Metatheorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
@@ -4239,7 +4240,7 @@ Our goal is to prove:
 Let $\C$ be an essentially small nonempty category admitting small well-ordered upper bounds. Assume that there exists a $\C$-special well-ordered set. Then $\C$ has a quasi-terminal object.
 \end{thm}
 
-Theorem~\ref{qtot} clearly implies Theorem~\ref{zorn}. Lemma~\ref{945} below will shows that Theorem~\ref{942} follows also from Theorem~\ref{qtot}. 
+Theorem~\ref{qtot} clearly implies Theorem~\ref{zorn}. Lemma~\ref{945} below will shows that Theorem~\ref{942} follows also from Theorem~\ref{qtot}. Theorem~\ref{qtot} will be used in the book to prove Theorem 9.5.5 p.~133.
 
 The proof of Theorem~\ref{qtot} is essentially the same as the proof of Theorem~\ref{942} given in the book. For the reader's convenience, we spell out the details. 
 
@@ -4269,7 +4270,19 @@ The category $\C^X$ is again small, nonempty, and admits small well-ordered uppe
 
 We recall the notion of {\em construction by transfinite induction} in the setting of Bourbaki's set theory, to which, as already mentioned, we adhere.
 
-\nn{\bf Metatheorem.} Let $T$ be a term, let $x$ be a letter, and, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$. Let $I$ be a well-ordered set, and, for each $i$ in $I$, write $I_{<i}$ for the set $\{j\in I\,|\,j<i\}$. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f|_{I_{<i}})$ for all $i$ in $I$. (Here $f|_{I_{<i}}$ denotes the restriction of $f$ to $I_{<i}$.)
+\begin{mt}[Construction by Transfinite Induction]\label{meta}
+Let $T$ be a term, let $x$ be a letter, and, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$. Let $I$ be a well-ordered set, and, for each $i$ in $I$, write $I_{<i}$ for the set $\{j\in I\,|\,j<i\}$. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f(j)_{j<i})$ for all $i$ in $I$. 
+\end{mt}
+
+\begin{proof}
+Uniqueness: Assume that $(S,f)$ and $(U,g)$ have the indicated properties. It suffices to prove $f(i)=g(i)$ for all $i$ in $I$. Suppose this is false, and let $i$ be the least element for such that $f(i)\neq g(i)$. We have 
+$$
+f(i)=T(f(j)_{j<i})=T(g(j)_{j<i})=g(i),
+$$ 
+a contradiction. 
+
+Existence: We may assume that $I$ is nonempty. Let $i$ be in $I$. We first prove that the metatheorem holds with $I_{\le i}$ (obvious notation) instead of $I$, {\em i.e.}, we prove that there is a pair $(S_i,f_i)$ such that $S_i$ is a set, $f_i:I_{\le i}\to S_i$ is a surjection, and we have $f_i(j)=T(f_i(k)_{k<j})$ for all $j\le i$. This is clear if $i=0$, where $0$ is the minimum of $I$. So, suppose $i>0$. We assume, as we may, that the statement holds for $I_{\le j}$ when $j<i$. For $j<i$ set $f_i(j):=f_j(j)$, put $f_i(i):=T(f_i(j)_{j<i})$, and set $S_i:=\{\,f_i(j)|\,j\le i\}$. As we have $f_j(\ell)=f_k(\ell)$ for all $\ell\le k<j<i$ by the uniqueness part, the pair $(S_i,f_i)$ satisfies the required conditions. Observing that $i$ is an arbitrary element of $I$, we can set $S:=\{\,f_i(i)|\,i\in I\}$ and $f(i):=f_i(i)$. It follows again from the uniqueness part that the pair $(S,f)$ satisfies the required conditions. 
+\end{proof}
 
 \begin{proof}[Proof of Theorem \ref{qtot}]
 Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose an $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
@@ -4391,23 +4404,17 @@ $$
 \end{lem}
 %
 \begin{proof}
-We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$: 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Metatheorem~\ref{meta} p.~\pageref{meta}): 
 
-\nn[Beginning of the description of Task $(T_i)$.] Construct, for each $i$ in $I$, a commutative diagram 
+\nn[Beginning of the description of Task $(T_i)$.] Construct, for each $j\le i$ in $I$, a commutative diagram 
 $$
 \begin{tikzcd}
-X_i\ar{rr}{u_i}\ar{d}[swap]{f_i}&&Y_i\ar{d}{h_i}\\
-X'\ar{r}[swap]{v_i}&Y'_{<i}\ar{r}[swap]{w_i}&Y'_i,
+X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar{d}{h_j}\\
+X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,
 \end{tikzcd}
 $$
-with $v_i,w_i\in\Mor(\C_0)$, for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram 
-$$
-\begin{tikzcd}
-X'\ar{r}{v_i}\ar[equal]{d}&Y'_{<i}\ar{r}{w_i}&Y'_i\\
-X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,\ar{ul}[swap]{p_{ij}}
-\end{tikzcd}
-$$
-with $p_{ij}\in\Mor(\C_0)$, and for each $(i,j,k)$ in $I^3$ with $i>j>k$, construct a commutative diagram 
+with $v_j,w_j\in\Mor(\C_0)$, %for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram $$\begin{tikzcd}X'\ar{r}{v_i}\ar[equal]{d}&Y'_{<i}\ar{r}{w_i}&Y'_i\\ X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,\ar{ul}[swap]{p_{ij}}\end{tikzcd}$$with $p_{ij}\in\Mor(\C_0)$, 
+and for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, construct a commutative diagram 
 $$
 \begin{tikzcd}
 X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_j\\
@@ -4417,7 +4424,7 @@ $$
 with $p_{jk}\in\Mor(\C_0)$, in such a way that we have
 
 \begin{equation}\label{pijk}
-p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad k<j\le i.
+p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i\ge j>k.
 \end{equation}
 
 \nn[End of the description of Task $(T_i)$.]
@@ -4438,7 +4445,7 @@ X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
 $$
 
-Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
+Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 $$
 u_{jk}:=w_j\circ p_{jk}.
 $$
