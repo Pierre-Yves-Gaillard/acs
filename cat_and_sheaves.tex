@@ -4272,7 +4272,10 @@ We recall the notion of {\em construction by transfinite induction}. %We recall 
 For any element $i$ of any ordered set $I$ we freely use the self-explanatory pieces of notation $I_{<i}$ and $I_{\le i}$. 
 
 \begin{thm}[Construction by Transfinite Induction]\label{meta} 
-Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=F(f(j)_{j<i})$ for all $i$ in $I$. (In particular, $S$ is a $\U$-set.)
+Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $$
+f(i)=F(f(j)_{j<i})
+$$ 
+for all $i$ in $I$, where $f(j)_{j<i}$ is viewed as a family of elements of $\{f(j)\,|\,j\in I,j<i\}$ indexed by $\{j\in I\,|\,j<i\}$. (In particular, $S$ is a $\U$-set.)
 \end{thm}
 
 %\begin{thm}[Construction by Transfinite Induction]\label{meta}Let $T$ be a term, let $x$ be a letter, for each term $X$, write $T(X)$ for the term obtained by substituting $X$ for $x$ in $T$, and let $I$ be a well-ordered set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $f(i)=T(f(j)_{j<i})$ for all $i$ in $I$.\end{thm}
