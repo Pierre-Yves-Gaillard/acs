@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avx)
+% about "categories and sheaves" (version avy)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4287,7 +4287,15 @@ f(i)=F(f(j)_{j<i})=F(g(j)_{j<i})=g(i),
 $$ 
 a contradiction. 
 
-Existence: We may assume that $I$ is nonempty. Let $i$ be in $I$. We first prove that the theorem holds with $I_{\le i}$ instead of $I$, {\em i.e.}, we prove that there is a pair $(S_i,f_i)$ such that $S_i$ is a set, $f_i:I_{\le i}\to S_i$ is a surjection, and we have $f_i(j)=F(f_i(k)_{k<j})$ for all $j\le i$. This is clear if $i=0$, where $0$ is the minimum of $I$. So, suppose $i>0$. We assume, as we may, that the statement holds for $I_{\le j}$ when $j<i$. For $j<i$ set $f_i(j):=f_j(j)$, put $f_i(i):=F(f_i(j)_{j<i})$, and set $S_i:=\{\,f_i(j)|\,j\le i\}$. As we have $f_j(\ell)=f_k(\ell)$ for all $\ell\le k<j<i$ by the uniqueness part, the pair $(S_i,f_i)$ satisfies the required conditions. Observing that $i$ is an arbitrary element of $I$, we can set $S:=\{\,f_i(i)|\,i\in I\}$ and $f(i):=f_i(i)$ for all $i$. It follows again from the uniqueness part that the pair $(S,f)$ satisfies the required conditions. 
+Existence: Recall that a subset $J$ of $I$ is called a {\em segment} if $I\ni i<j\in J$ implies $i\in J$. Let $Z$ be the set of all triples $(J,S_J,f_J)$, where $J$ is a segment of $I$, where $f:J\to S_J$ is a surjection, and where we have $f_J(j)=F(f_J(k)_{k<j})$ for all $j$ in $J$. Decree that 
+$$
+Z\ni(J,S_J,f_J)\le(K,S_K,f_K)\in Z
+$$ 
+if and only if $J$ is a segment of $K$. By the uniqueness part, $(Z,\le)$ is inductive. Let $(J,S_J,f_J)$ be a maximal element of $Z$. It suffices to assume that $J$ is a proper segment of $I$ and to derive a contradiction. Let $k$ be the minimum of $I\setminus J$, put 
+$$
+K:=J\cup\{k\},\quad f_K(j):=f_J(j)\ \forall\ j\in J,\quad f_K(k):=F(f_K(j)_{j<k}).
+$$ 
+Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$. 
 \end{proof}
 
 %We now give, as promised, the second wording of the notion of construction by transfinite induction (the proof is the same).
