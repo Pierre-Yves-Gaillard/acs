@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version avz)
+% about "categories and sheaves" (version awa)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4501,20 +4501,20 @@ The purpose of this subsection is to give a combined statement of Theorems 9.5.4
 
 Let $\C$ be $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such that $\cc F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X\in\C_\pi$ for any $X\to Z$ in $\cc F$, and assume 
 
-\nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
+\nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them;
 
-\nn(9.5.2) (ii) Any diagram of solid arrows
+\nn(9.5.2) (ii) any diagram of solid arrows
 $$
 \begin{tikzcd}
 X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y',
 \end{tikzcd}
 $$ 
-with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$. 
+with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$; 
 
-\nn(9.5.6) For any $X\in\C_0$, the category $(\C_0)_X$ is essentially small.
+\nn(9.5.6) for any $X\in\C_0$, the category $(\C_0)_X$ is essentially small;
 
-\nn(9.5.7) Any cartesian square 
+\nn(9.5.7) any cartesian square 
 $$
 \begin{tikzcd}
 X'\ar{d}[swap]{u}\ar{r}{f'}&Y'\ar{d}{v}\\ 
@@ -4528,9 +4528,9 @@ X'\ar{d}[swap]{u}\ar{r}{f'}&Y'\ar{d}\ar{rd}{v}\\
 X\ar{r}[swap]{g}&Z\ar{r}[swap]{h}&Y
 \end{tikzcd}
 $$ 
-such that the square $(X',Y',Z,X)$ is cocartesian, $g$ and $h$ are in $\Mor(\C_0)$, and $f=h\circ g$. 
+such that the square $(X',Y',Z,X)$ is cocartesian, $g$ and $h$ are in $\Mor(\C_0)$, and $f=h\circ g$; 
 
-\nn(9.5.8) If a morphism $f:X\to Y$ in $\C_0$ is such that any cartesian square of solid arrows
+\nn(9.5.8) if a morphism $f:X\to Y$ in $\C_0$ is such that any cartesian square of solid arrows
 $$
 \begin{tikzcd}
 U\ar{d}[swap]{u}\ar{r}{s}&V\ar{d}{v}\ar[dashed]{ld}[swap]{\xi}\\ 
@@ -4540,7 +4540,7 @@ $$
 can be completed to a commutative diagram in $\C$ with the dashed arrow $\xi$, then $f$ is an isomorphism. 
 %
 \begin{thm}%\label{9545}
-In the above setting, for any $X$ in $\C_0$ there is a $\Mor(\C_0)$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$.
+If the above conditions hold, then, for any $X$ in $\C_0$, there is a $\Mor(\C_0)$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$. If (9.5.2) holds, but (9.5.6), (9.5.7), and (9.5.8) do not necessarily hold, then there is an $\F$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$.
 \end{thm}
 %
 \begin{rk}\label{954}
