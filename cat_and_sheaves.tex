@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awb)
+% about "categories and sheaves" (version awd)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3964,60 +3964,15 @@ $$
 $$ 
 be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be the obvious morphism we have that $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. q.e.d.
 \end{s}
-%
+
 %%
-%
-\begin{comment}
-\begin{s}
-Proposition 9.3.2 p.~224. Recall the statement:
-%
-\begin{prop}[Proposition 9.3.2 p.~224]\label{932}
-If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
-$$
-\card(X(G))<\pi,\quad\card(G^{\coprod X(G)}(G))<\pi,
-$$ 
-then $X$ is in $\C_\pi$.
-\end{prop}
-%
-Here are more details about the proof: 
 
-The isomorphism 
-$$
-\co_{s\in I^{i_0}}X_i\xr\sim X_\infty, 
-$$ 
-used to justify the second isomorphism of the first display on p.~225, follows from Corollary 3.2.3 (i) p.~79 of the book.
-
-Inequality $\card(G^{\coprod K}(G))<\pi$ on the first line after the last display of p.~225 of the book, follows from Statement  
-$$
-S\subset A(G)\then\card(G^{\coprod S}(G))<\pi
-$$
-in the second line of the proof. 
-
-The sentence 
-
-\nn``Since the two compositions $B\times_AB\parar B\to X_{i_0}\to X_\infty$ are equal, there exists an arrow $i_0\to i$ such that the two compositions $B\times_AB\parar B\to X_{i_0}\to X_i$ are equal''
-
-\nn after the diagram on p.~226, is justified by the fact that the map in the first display in p.~226 of the book is injective.
-
-We spell out the last sentence of the proof: The notation in the diagram 
-$$
-\begin{tikzcd}
-B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap]{b}\ar{rr}{r}&&A\ar{dl}[swap]{a}\ar{d}{f}\\ 
-{}&X_{i_0}\ar{r}[swap]{X_s}&X_i\ar{r}[swap]{p_i}&X_\infty
-\end{tikzcd}
-$$ 
-is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
-\end{s}
-\end{comment}
-%
-%%
-%
 \subsection{Theorem 9.3.4 (p. 227)}\label{s934}
-%
+
 Here is a slightly different wording. 
-%
+
 \subsubsection{Conditions (9.3.1) (p. 223)}\label{931}
-%
+
 Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying  
 
 (i) $\C$ admits small inductive limits,
@@ -4029,10 +3984,12 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 (iv) there exists a generator $G$,
 
 (v) epimorphisms are strict.
-%
+
 \subsubsection{Proposition 9.3.2 (p. 224)}
-%
-We state the proposition and make a few comments about its proof.
+
+In Step (a) of the proof of Lemma 9.3.1 p.~224 of the book the injectivity of the coprojection $Y_{i_0}(G)\to S$ is used. This injectivity follows from the fact that the coprojection $Y_{i_0}\to Y$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1, coupled with Proposition 5.2.3 (ii) p. 118 of the book.
+
+We state Proposition 9.3.2 p.~224 of the book, and make a few comments about its proof.
 
 \begin{prop}[Proposition 9.3.2 p.~224]\label{932}
 If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
@@ -4175,7 +4132,7 @@ By Lemma \ref{933} and (c) we have
 $$
 \card(I)\le\card(X(G))^{\pi_0}<\pi.
 $$
-Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} entails $X\in\C_\pi$.
+Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} p.~\pageref{932} entails $X\in\C_\pi$.
 \end{proof}
 %
 %%%
