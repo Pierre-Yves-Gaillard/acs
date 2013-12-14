@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awd)
+% about "categories and sheaves" (version awe)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3987,7 +3987,14 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 
 \subsubsection{Proposition 9.3.2 (p. 224)}
 
-In Step (a) of the proof of Lemma 9.3.1 p.~224 of the book the injectivity of the coprojection $Y_{i_0}(G)\to S$ is used. This injectivity follows from the fact that the coprojection $Y_{i_0}\to Y$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1, coupled with Proposition 5.2.3 (ii) p. 118 of the book.
+In Step (a) of the proof of Lemma 9.3.1 p.~224 of the book the injectivity of the coprojection $Y_{i_0}(G)\to S$ is used. This injectivity can be justified as follows. In the diagram 
+$$
+\begin{tikzcd}
+\co_iY_i\ar{rr}{\sim}&&Y\\ 
+{}&Y_{i_0},\ar{ul}{p_{i_0}}\ar[hook]{ur}
+\end{tikzcd}
+$$ 
+let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1 p.~224 of the book, and let $p_{i_0}$ be the coprojection. As the diagram commutes, $p_{i_0}$ is a monomorphism, and Proposition 5.2.3 (ii) p. 118 of the book furnishes the sought-for injectivity. %from the fact that the coprojection $Y_{i_0}\to Y$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1, coupled with Proposition 5.2.3 (ii) p. 118 of the book.
 
 We state Proposition 9.3.2 p.~224 of the book, and make a few comments about its proof.
 
