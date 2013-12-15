@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awf)
+% about "categories and sheaves" (version awh)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -33,7 +33,7 @@
 \theoremstyle{definition}
 \newtheorem{s}[thm]{\S}
 %\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
-\hyphenation{Grothen-dieck mono-mor-phism}
+\hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
 %
 \newcommand{\bu}{\bullet}
 \newcommand{\nn}{\noindent}
@@ -3894,15 +3894,42 @@ $$
 $$
 results from Section~\ref{preli} above and the exactness of $F(X')\to F(K_g)\to0$.
 \end{proof}
-%
+
 %%%
-%
+
 \section{About Chapter 9}
-%
+
 I find Chapter 9 especially beautiful!
-%
+
 \subsection{Brief Comments}
+
+\begin{s}
+P. 217, beginning of Section 9.2. 
+\begin{prop}
+Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
+
+\nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
+$$
+\co_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\co_{i\in I}\alpha(i,j)
+$$ 
+is bijective.
+
+\nn{\em(b)} The following conditions hold:
+
+{\em(b1)} for any $A\subset\Ob(I)$ such that $\card(A)<\pi$ there is a $j$ in $J$ such that for any $a$ in $A$ there is a morphism $a\to j$ in $I$,
+
+{\em(b2)} for any $i$ and $j$ in $I$ and for any $B\subset\Hom_I(i,j)$ such that $\card(B)<\pi$ there is a morphism $j\to k$ in $I$ such that the composition $i\xr sj\to k$ does not depend on $s\in B$.
+
+\nn{\em(c)} For any small category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim_{j\in J}\Hom_I(\pp(j),i)\neq\varnothing$. 
+\end{prop}
+
+\begin{proof}
+Implications (b) $\ssi$ (c) $\then$ (a) are proved in Proposition 9.2.1 p.~217 and Proposition 9.2.9 p.~219 of the book. The proof of Implication (a) $\then$ (c) is the same as the proof of Implication (b) $\then$ (a) in Theorem 3.1.6 p.~74 of the book.
+\end{proof}
+\end{s}
+
 %
+
 \begin{s}\label{922}
 P.~218, Definition 9.2.2. If $I$ admits inductive limits indexed by categories $J$ such that $\operatorname{card}(\Mor(J))<\pi$, then $I$ is $\pi$-filtrant.
 
@@ -3913,9 +3940,9 @@ $$
 $$
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s}
 Here are more details about Step~(b) of the proof of Lemma 9.2.5 p.~218: Let $i_1,i_2\in I$ and let $B\subset\Hom_I(i_1,i_2)$ with $\card(B)<\pi$. There exist $j_1\in J$ and a morphism $i_1\to\pp(j_1)$. As $I$ is filtrant, there are morphisms $i_2\to i_3\leftarrow\pp(j_1)$. As $\pp$ is cofinal, there is a morphism $i_3\to\pp(j_2)$. As $J$ is filtrant, there are morphisms $j_1\to j_3\leftarrow j_2$. Let $s\in B$. By Proposition 3.2.2, (i) $\then$ (iii) (b), p.~78 of the book, there is a morphism $j_3\to j(s)$ making the diagram 
 $$
@@ -3934,15 +3961,15 @@ i_1\ar{d}\ar{r}{s}&i_2\ar{d}\\
 \end{tikzcd}
 $$ 
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~222, Proposition 9.2.17, proof of implication (ii) $\then$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
 
@@ -3985,6 +4012,16 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 
 (v) epimorphisms are strict.
 
+\subsubsection{Statement of Theorem 9.3.4 p.~227}
+
+\begin{thm}[Theorem 9.3.4 p.~227]\label{934a}
+Assume Conditions {\em(i)--(v)} above. Then there is a regular infinite $\U$-cardinal $\pi$ such that, for any $X$ in $\C$, we have 
+$$
+X\in\C_\pi\ssi\card(X(G))<\pi.
+$$ 
+Moreover, $\pi$ can be chosen arbitrarily large (among the regular infinite $\U$-car\-di\-nals).
+\end{thm}
+
 \subsubsection{Proposition 9.3.2 (p. 224)}
 
 In Step (a) of the proof of Lemma 9.3.1 p.~224 of the book the injectivity of the coprojection $Y_{i_0}(G)\to S$ is used. This injectivity can be justified as follows. In the diagram 
@@ -3994,7 +4031,7 @@ $$
 {}&Y_{i_0},\ar{ul}{p_{i_0}}\ar{ur}[swap]{q_{i_0}}
 \end{tikzcd}
 $$ 
-let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1 p.~224 of the book, let $p_{i_0}$ be the coprojection, and let $q_{i_0}$ be the canonical morphism. Then $q_{i_0}$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_{i_0}$ is also a monomorphism, and Proposition 5.2.3 (ii) p. 118 of the book furnishes the sought-for injectivity. %from the fact that the coprojection $Y_{i_0}\to Y$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1, coupled with Proposition 5.2.3 (ii) p. 118 of the book.
+let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1 p.~224 of the book, let $p_{i_0}$ be the coprojection, and let $q_{i_0}$ be the canonical morphism. Then $q_{i_0}$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_{i_0}$ is also a monomorphism, and Proposition 5.2.3 (ii) p. 118 of the book furnishes the sought-for injectivity. 
 
 We state Proposition 9.3.2 p.~224 of the book, and make a few comments about its proof.
 
@@ -4032,9 +4069,9 @@ B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap
 \end{tikzcd}
 $$ 
 is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
-%
+
 \subsubsection{Definition of two infinite regular cardinals}\label{tirg}
-%
+
 (See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\pi_0$ be an infinite regular cardinal such that 
 $$
 \card(G(G))<\pi_0,\quad\card(G^{\coprod G(G)}(G))<\pi_0.
@@ -4046,11 +4083,11 @@ $\bu\ \card(G^{\coprod A}(G))<\pi_1$,
 $\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi_1$. 
 
 \nn(Since the set of quotients of $G^{\coprod A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
-%
+
 \begin{cond}\label{ass}
 Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
 \end{cond}
-%
+
 \nn The cardinals $\pi$ and $\pi_0$ satisfy 
 
 (a) $\pi$ and $\pi_0$ are infinite regular cardinals,
@@ -4064,25 +4101,25 @@ Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi
 (e) if $A$ is a set with $\card(A)<\pi_0$, then $\card(G^{\coprod A}(G))<\pi$.
 
 \nn Indeed (c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and $\pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi$.
-%
+
 \subsubsection{Lemma 9.3.3 (p. 226)}
-%
+
 \begin{lem}[Lemma 9.3.3 p.~226]\label{933}
 If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi$.
 \end{lem}
 
 The inequality 
-%
+
 \begin{equation}\label{cardipi}
 \card(I)<\pi
 \end{equation}
 %
 in the first display of the proof of Lemma 9.3.3 p.~226 of the book can be justified as follows:
-%
+
 \begin{prop}\label{ord}
 If $\alpha$ is a cardinal, then the cardinal of the set of those cardinals $\beta$ such that $\beta<\alpha$ does not exceed $\alpha$.
 \end{prop}
-%
+
 \begin{proof}
 Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ with $x\in X$ implies $x\in S$. In particular $X_{<x}$ (obvious notation) is a segment of $X$ for any $x$ in $X$. We take for granted the following well-known facts:
 
@@ -4100,13 +4137,15 @@ $$
 \card(I)=\sum_{\pi'<\pi_0}\ \binom{\alpha}{\pi'}\le\sum_{\pi'<\pi_0}\ \alpha^{\pi_0}<\pi,
 $$ 
 the last inequality following from Proposition~\ref{ord}, (c), and (a).
-%
+
 \subsubsection{Theorem 9.3.4 (p. 227)}
-%
+
 \begin{thm}[Theorem 9.3.4 p.~227]\label{934}
 If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(G))<\pi$.
 \end{thm}
 %
+Clearly Theorem~\ref{934} implies Theorem~\ref{934a}.
+
 \begin{proof}[Proof of Theorem \ref{934}]${}$
 
 \nn$\then:$ We prove this implication as in the book. For the reader's convenience we reproduce the argument: Set $I:=\{A\subset X(G)\ |\ \card(A)<\pi\}$. By Example 9.2.4 p.~218 of the book, $I$ is $\pi$-filtrant. We get the morphisms 
@@ -4120,7 +4159,7 @@ $$
 Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma 9.3.3 p.~226.
 
 \nn$\si:$ We claim
-%
+
 \begin{equation}\label{934b}
 \card(G^{\coprod X(G)}(G))<\pi.
 \end{equation} 
@@ -4141,11 +4180,11 @@ $$
 $$
 Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} p.~\pageref{932} entails $X\in\C_\pi$.
 \end{proof}
-%
-%%%
-%
+
+%%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P. 227. Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$.
 \end{s}
