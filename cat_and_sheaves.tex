@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awj)
+% about "categories and sheaves" (version awk)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4047,14 +4047,20 @@ Moreover, $\pi$ can be chosen arbitrarily large (among the regular infinite $\U$
 
 \subsubsection{Lemma 9.3.1 (p. 224)}
 
-In Step (a) of the proof of Lemma 9.3.1 the injectivity of the coprojection $Y_{i_0}(G)\to S$ is used. This injectivity can be justified as follows. In the diagram 
+We give a slightly more detailed rewriting of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\co_iY_i(G)\subset Y(G)$.'' Here is the rewriting:
+
+Claim: the coprojection $p_i:Y_i\to Y$ is injective.
+
+In the diagram 
 $$
 \begin{tikzcd}
-\co_iY_i\ar{rr}{\sim}&&Y\\ 
-{}&Y_{i_0},\ar{ul}{p_{i_0}}\ar{ur}[swap]{q_{i_0}}
+\co_jY_j\ar{rr}{\sim}&&Y\\ 
+{}&Y_i,\ar{ul}{p_i}\ar{ur}[swap]{q_i}
 \end{tikzcd}
 $$ 
-let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1 p.~224 of the book, let $p_{i_0}$ be the coprojection, and let $q_{i_0}$ be the canonical morphism. Then $q_{i_0}$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_{i_0}$ is also a monomorphism, and Proposition 5.2.3 (ii) p. 118 of the book furnishes the sought-for injectivity. 
+let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1, and let $q_i$ be the canonical morphism. Then $q_i$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_i$ is also a monomorphism, and Proposition 5.2.3 (ii) p. 118 of the book yields the claim. 
+
+As $Y_i\to Y$ is a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact, $S:=\co_iY_i(G)\to Y(G)$ is also a monomorphism.
 
 \subsubsection{Proposition 9.3.2 (p. 224)}
 
