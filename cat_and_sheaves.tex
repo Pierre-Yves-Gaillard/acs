@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awm)
+% about "categories and sheaves" (version awn)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4097,11 +4097,16 @@ The sentence
 We spell out the last sentence of the proof: The notation in the diagram 
 $$
 \begin{tikzcd}
-B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap]{b}\ar{rr}{r}&&A\ar{dl}[swap]{a}\ar{d}{f}\\ 
-{}&X_{i_0}\ar{r}[swap]{X_s}&X_i\ar{r}[swap]{p_i}&X_\infty
+B\times_AB\ar[yshift=0.7ex]{r}{q_1}\ar[yshift=-0.7ex]{r}[swap]{q_2}&B\ar{d}[swap]{b}\ar[two heads]{rr}{r}&&A\ar{dl}[swap]{a}\ar{d}{f}\\ 
+{}&X_{i_0}\ar{r}[swap]{X_s}\ar[equal]{d}&X_i\ar{r}[swap]{p_i}&X_\infty\ar[equal]{d}\\ 
+{}&X_{i_0}\ar{rr}[swap]{p_{i_0}}&&X_\infty
 \end{tikzcd}
 $$ 
-is, we hope, self-explanatory. Then we have $f\circ r=p_i\circ X_s\circ b=p_i\circ a\circ r$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
+is, we hope, self-explanatory. Then we have 
+$$
+f\circ r=p_{i_0}\circ b=p_i\circ X_s\circ b=p_i\circ a\circ r,
+$$ 
+the first equality following from the penultimate display of p.~225 of the book, the second equality begin obvious, and the third equality following from the definition of $a$. As $r$ is an epimorphism, this forces $f=p_i\circ a$. 
 
 \subsubsection{Definition of two infinite regular cardinals}\label{tirg}
 
