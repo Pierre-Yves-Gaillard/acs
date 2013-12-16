@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awh)
+% about "categories and sheaves" (version awi)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2136,9 +2136,32 @@ $$
 and the conclusion follows from the fact that $u$ is an epimorphism.
 \end{proof}
 \end{s}
+
 %
-%%
+
+\begin{s}
+P. 118, proof of Prop. 5.2.3 (v). We add a few details to the last four lines of the proof.
+
+Put $\pp:=\pp_G$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $\pp(f_1)$ and $\pp(f_2)$ have same image. We have a cartesian square
+$$
+\begin{tikzcd}
+Y_1\times_XY_2\ar{r}{p_1}\ar{d}[swap]{p_2}&Y_1\ar[tail]{d}{f_1}\\ 
+Y_2\ar[tail]{r}[swap]{f_2}&X.
+\end{tikzcd}
+$$ 
+It suffices to show that $p_1$ and $p_2$ are isomorphisms. Applying $\pp$ we get the commutative diagram 
+$$
+\begin{tikzcd}
+\pp(Y_1\times_XY_2)\ar{rd}{\sim}\ar[bend left]{rrd}{\pp(p_1)}\ar[bend right]{rdd}[swap]{\pp(p_2)}\\ 
+{}&\pp(Y_1)\times_{\pp(X)}\pp(Y_2)\ar{r}{q_1}\ar{d}[swap]{q_2}&\pp(Y_1)\ar[tail]{d}{\pp(f_1)}\\ 
+{}&\pp(Y_2)\ar[tail]{r}[swap]{\pp(f_2)}&\pp(X),
+\end{tikzcd}
+$$ 
+the morphism $\pp(Y_1\times_XY_2)\to\pp(Y_1)\times_{\pp(X)}\pp(Y_2)$ being an isomorphism by left-exactness of $\pp$. As $\pp(f_1)$ and $\pp(f_2)$ have same image, $q_1$ and $q_2$ are bijective. The diagram being commutative, $\pp(p_1)$ and $\pp(p_2)$ are also bijective. As $\pp$ is conservative,  $p_1$ and $p_2$ are indeed isomorphisms.
+\end{s}
+
 %
+
 \begin{s} 
 P.~122, proof of Lemma 5.3.2\mv. 
 %
@@ -5469,19 +5492,15 @@ P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gam
 \section{About Chapter 18}
 %
 [Section~\ref{s1853} p.~\pageref{s1853} and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
-%
-%\subsection{Brief Comments}
-%
-%%%%
-%
+
 \newpage
 
 \section{Next Additions}
-%
+
 For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
-%
+
 \subsection{Typos and Details}
-%
+
 $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
 
 \noindent $*$ P. 180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$.
