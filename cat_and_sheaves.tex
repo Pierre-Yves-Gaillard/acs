@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awn)
+% about "categories and sheaves" (version awo)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4017,7 +4017,7 @@ be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be 
 
 %%
 
-\subsection{Theorem 9.3.4 (p. 227)}\label{s934}
+\subsection{Section 9.3 (pp 223--228)}\label{s934}
 
 Here is a slightly different wording. 
 
@@ -4035,15 +4035,37 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 
 (v) epimorphisms are strict.
 
-\subsubsection{Statement of Theorem 9.3.4 p.~227}
+\subsubsection{Summary of Section 9.3}
 
-\begin{thm}[Theorem 9.3.4 p.~227]\label{934a}
-Assume Conditions {\em(i)--(v)} above. Then there is a regular infinite $\U$-cardinal $\pi$ such that, for any $X$ in $\C$, we have 
-$$
-X\in\C_\pi\ssi\card(X(G))<\pi.
-$$ 
-Moreover, $\pi$ can be chosen arbitrarily large (among the regular infinite $\U$-car\-di\-nals).
-\end{thm}
+The main purpose of Section 9.3 of the book is to prove Corollaries 9.3.7 and 9.3.8 p.~228 of the book, and these corollaries could be stated immediately after Conditions (9.3.1) above. For the reader's convenience we state Corollary 9.3.7:
+
+\begin{cor}
+Assume (9.3.1). Then for any small subset of $\Ob(\C)$ there exists an infinite cardinal $\pi$ such that $S\subset\Ob(\C_\pi)$.
+\end{cor}
+
+We make a few comments about Corollary 9.3.8. Firstly, it would be simpler (I think) to replace $\cc S$ with $\C_\pi$ in the statement, since in the first sentence of the proof one sets $\cc S:=\C_\pi$. Secondly, in view of the way Theorem 9.6.1 p.~235 of the book is phrased, it would be better, even if it is a repetition, to incorporate Part~(iv) of Corollary 9.3.5 (which says that $\C_\pi$ is closed by finite projective limits) into Corollary 9.3.8. Then, Corollary 9.3.8 would read as follows:
+
+\begin{cor}[Corollary 9.3.8 p.~227]\label{938}
+Assume (9.3.1) and let $\kappa$ be a cardinal. Then there exists an infinite regular cardinal $\pi>\kappa$ such that 
+
+\nn{\em(i)} $\C_\pi$ is essentially small,
+
+\nn{\em(ii)} if $X\epi Y$ is an epimorphism and $X\in\C_\pi$, then $Y\in\C_\pi$,
+
+\nn{\em(iii)} if $X\mono Y$ is an monomorphism and $Y\in\C_\pi$, then $X\in\C_\pi$,
+
+\nn{\em(iv)} $G\in\C_\pi$,
+
+\nn{\em(v)} for any epimorphism $f:X\epi Y$ in $\C$ with $Y\in\C_\pi$, there exists $Z\in\C_\pi$ and a monomorphism $g:Z\mono X$ such that $f\circ g:Z\to Y$ is an epimorphism,
+
+\nn{\em(vi)} $\C_\pi$ is closed by inductive limits indexed by categories $J$ which satisfy $$\card(\Mor(J))<\pi,$$
+
+\nn{\em(vii)} $\C_\pi$ is closed by finite projective limits.
+\end{cor}
+
+See also Theorem \ref{961} p. \pageref{961} below.
+
+%\begin{thm}[Theorem 9.3.4 p.~227]\label{934a}Assume Conditions {\em(i)--(v)} above. Then there is a regular infinite $\U$-cardinal $\pi$ such that, for any $X$ in $\C$, we have $$X\in\C_\pi\ssi\card(X(G))<\pi.$$ Moreover, $\pi$ can be chosen arbitrarily large (among the regular infinite $\U$-car\-di\-nals).\end{thm}
 
 \subsubsection{Lemma 9.3.1 (p. 224)}
 
@@ -4142,23 +4164,23 @@ Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi
 
 \subsubsection{Lemma 9.3.3 (p. 226)}
 
+We state Lemma 9.3.3 for the reader's convenience:
+
 \begin{lem}[Lemma 9.3.3 p.~226]\label{933}
 If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi$.
 \end{lem}
 
-The inequality 
+The beginning of the proof of Lemma 9.3.3 in the book uses the following lemma:
 
-\begin{equation}\label{cardipi}
-\card(I)<\pi
-\end{equation}
-%
-in the first display of the proof of Lemma 9.3.3 p.~226 of the book can be justified as follows:
+\begin{lem}\label{cardipi}
+If $A$ and $\pi$ are as above, and if $I:=\{B\subset A\,|\,\card(B)<\pi\}$, then we have $\card(I)<\pi$. 
+\end{lem}
 
-\begin{prop}\label{ord}
+\begin{lem}\label{ord}
 If $\alpha$ is a cardinal, then the cardinal of the set of those cardinals $\beta$ such that $\beta<\alpha$ does not exceed $\alpha$.
-\end{prop}
+\end{lem}
 
-\begin{proof}
+\begin{proof}[Proof of Lemma~\ref{ord}]
 Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ with $x\in X$ implies $x\in S$. In particular $X_{<x}$ (obvious notation) is a segment of $X$ for any $x$ in $X$. We take for granted the following well-known facts:
 
 \nn$\bu$ every set can be well-ordered,
@@ -4167,14 +4189,16 @@ Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ 
 
 \nn$\bu$ if $W$ is a well-ordered set, then the assignment $w\mapsto W_{<w}$ is an isomorphism of well-ordered sets from $W$ onto the set of proper segments of $W$.
 
-To prove the proposition, let $A$ be a well-ordered set of cardinal $\alpha$, and, for each cardinal $\beta$ with $\beta<\alpha$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
+Let $A$ be a well-ordered set of cardinal $\alpha$, and, for each cardinal $\beta$ with $\beta<\alpha$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
 \end{proof}
 
-Now we prove \eqref{cardipi} as follows: Putting $\alpha:=\card(A)$ we have
+\begin{proof}[Proof of Lemma~\ref{cardipi}] 
+Putting $\alpha:=\card(A)$ we have
 $$
 \card(I)=\sum_{\pi'<\pi_0}\ \binom{\alpha}{\pi'}\le\sum_{\pi'<\pi_0}\ \alpha^{\pi_0}<\pi,
 $$ 
-the last inequality following from Proposition~\ref{ord}, (c), and (a).
+the last inequality following from Lemma~\ref{ord}, (c), and (a). 
+\end{proof}
 
 \subsubsection{Theorem 9.3.4 (p. 227)}
 
@@ -4182,7 +4206,7 @@ the last inequality following from Proposition~\ref{ord}, (c), and (a).
 If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(G))<\pi$.
 \end{thm}
 %
-Clearly Theorem~\ref{934} implies Theorem~\ref{934a}.
+%Clearly Theorem~\ref{934} implies Theorem~\ref{934a}.
 
 \begin{proof}[Proof of Theorem \ref{934}]${}$
 
@@ -4194,7 +4218,7 @@ for $A$ in $I$, and
 $$
 \co_{A\in I}G^{\coprod A}\xr\sim G^{\coprod X(G)}\to X.
 $$ 
-Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma 9.3.3 p.~226.
+Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma 9.3.3 p.~226 (which is Lemma~\ref{933} above).
 
 \nn$\si:$ We claim
 
@@ -4212,11 +4236,7 @@ As $G$ is $\pi_0$-accessible by (b), we get
 $$
 G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
 $$ 
-By Lemma \ref{933} and (c) we have 
-$$
-\card(I)\le\card(X(G))^{\pi_0}<\pi.
-$$
-Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} p.~\pageref{932} entails $X\in\C_\pi$.
+By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} p.~\pageref{932} entails $X\in\C_\pi$.
 \end{proof}
 
 %%
@@ -4226,9 +4246,9 @@ Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqr
 \begin{s} 
 P. 227. Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P. 228. Corollary 9.3.6. As already pointed out, $\ilim$ in the statement should be $\sigma_\pi$. As for the proof, Conditions (i), (ii), and (iii) of Proposition 9.2.19 p.~223 of the book follow respectively from (9.3.1) (i) (see (i) at the beginning of Section~\ref{s934} p.~\pageref{s934}), (9.3.4) (b) (see (b) right after Condition~\ref{ass} p.~\pageref{ass}), and Corollary 9.3.5 (i) p.~227.
 \end{s}
@@ -4236,7 +4256,7 @@ P. 228. Corollary 9.3.6. As already pointed out, $\ilim$ in the statement should
 %%
 %
 \begin{s} 
-P. 228. Corollary 9.3.7. As $\{\card(X(G))\ |\ X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X\in S$, and apply Theorem~\ref{934} p.~\pageref{934}.
+P. 228. Corollary 9.3.7. As $\{\card(X(G))\,|\,X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X\in S$, and apply Theorem~\ref{934} p.~\pageref{934}.
 \end{s}
 %
 %%
@@ -4587,23 +4607,41 @@ If the above conditions hold, then, for any $X$ in $\C_0$, there is a $\Mor(\C_0
 \begin{rk}\label{954}
 In the book $\cc F$ is supposed to be small, but the proof clearly works if $\cc F$ is essentially small. (See \S\ref{962} below.)
 \end{rk}
-%
-%%%
-%
-\subsection{Brief Comments}
-%
-\begin{s} 
-P. 235, Theorem 9.6.1 (additional details).
-%
-\begin{df}\label{cb}
-If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\co\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.
-\end{df}
 
-The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits).
-\end{s}
-%
 %%
+
+\subsection{Brief Comments}
+
+\begin{s} 
+%(additional details).
+
+%\begin{df}\label{cb}If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\co\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.\end{df}
+
+%The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits).
+
+P. 235, Theorem 9.6.1. In view of the comments made about Corollary~\ref{938} p.~\pageref{938}, Theorem 9.6.1 could be stated as follows:
+
+\begin{thm}[Theorem 9.6.1 p. 235]\label{961}
+Let $\C$ be a Grothendieck category. Then, for any small subset $E$ of $\Ob(\C)$, there exists an infinite cardinal $\pi$ such that
+
+\nn{\em(i)} $\Ob(\C_\pi)$ contains $E$,
+
+\nn{\em(ii)} $\C_\pi$ is a fully abelian subcategory of $\C$,
+
+\nn{\em(iii)} $\C_\pi$ is essentially small,
+
+\nn{\em(iv)} $\C_\pi$ contains a generator of $\C$,
+
+\nn{\em(v)} $\C_\pi$ is closed by subobjects and quotients in $\C$,
+
+\nn{\em(vi)} for any epimorphism $f:X\epi Y$ in $\C$ with $Y\in\C_\pi$, there exists $Z\in\C_\pi$ and a monomorphism $g:Z\mono X$ such that $f\circ g:Z\to Y$ is an epimorphism,
+
+\nn{\em(vii)} $\C_\pi$ is closed by countable direct sums.
+\end{thm}
+\end{s}
+
 %
+
 \begin{s}\label{962}
 P. 236, proof of Theorem 9.6.2. 
 
@@ -5158,17 +5196,15 @@ T^{-1}(\alpha+\beta)=-h+\widetilde h\circ T^{-1}g=-h+h=0.
 $$
 q.e.d.
 \end{s}
+
 %
-%%
-%
-\begin{comment}
+
 \begin{s} 
-P. 350, proof of Theorem 14.1.7. See \S\ref{t955} p.~\pageref{t955} and Lemma~\ref{952i} p.~\pageref{952i}.
+P. 350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pageref{938} and Theorem~\ref{961} p.~\pageref{961}, one could replace ``there exists an essentially small full subcategory $\cc S$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\cc S$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
 \end{s}
-\end{comment}
+
 %
-%%
-%
+
 \begin{s} 
 P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
@@ -5524,6 +5560,12 @@ $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``uni
 
 \begin{s}\label{225}
 P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
+\end{s}
+
+\noindent $*$ P. 228, line~3: $\C$ should be $\C_\pi$.
+
+\begin{s}\label{228}
+P. 228. It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G\in\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
 \end{s}
 
 \begin{s}\label{1341}
