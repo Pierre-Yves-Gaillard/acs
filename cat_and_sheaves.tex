@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awo)
+% about "categories and sheaves" (version awp)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3926,8 +3926,9 @@ I find Chapter 9 especially beautiful!
 
 \subsection{Brief Comments}
 
-\begin{s}
+\begin{s}\label{ppifil}
 P. 217, beginning of Section 9.2. 
+
 \begin{prop}
 Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
 
@@ -3949,12 +3950,16 @@ is bijective.
 \begin{proof}
 Implications (b) $\ssi$ (c) $\then$ (a) are proved in Proposition 9.2.1 p.~217 and Proposition 9.2.9 p.~219 of the book. The proof of Implication (a) $\then$ (c) is the same as the proof of Implication (b) $\then$ (a) in Theorem 3.1.6 p.~74 of the book.
 \end{proof}
+
+\begin{df}%\label{dpifil}
+Let $\pi$ be an infinite cardinal and $I$ a small category. Then $I$ is $\pi$-{\em filtrant} if (and only if) the equivalent conditions of Proposition~\ref{ppifil} are satisfied.
+\end{df}
 \end{s}
 
 %
 
 \begin{s}\label{922}
-P.~218, Definition 9.2.2. If $I$ admits inductive limits indexed by categories $J$ such that $\operatorname{card}(\Mor(J))<\pi$, then $I$ is $\pi$-filtrant.
+P.~218. One can make the following observation after Definition 9.2.2: If $I$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$, then $I$ is $\pi$-filtrant.
 
 \begin{proof}
 For $\varphi:J\to I$ we have
@@ -4039,7 +4044,7 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 
 The main purpose of Section 9.3 of the book is to prove Corollaries 9.3.7 and 9.3.8 p.~228 of the book, and these corollaries could be stated immediately after Conditions (9.3.1) above. For the reader's convenience we state Corollary 9.3.7:
 
-\begin{cor}
+\begin{cor}[Corollary 9.3.7 p. 228]
 Assume (9.3.1). Then for any small subset of $\Ob(\C)$ there exists an infinite cardinal $\pi$ such that $S\subset\Ob(\C_\pi)$.
 \end{cor}
 
