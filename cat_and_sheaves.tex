@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awv)
+% about "categories and sheaves" (version aww)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4074,20 +4074,30 @@ See also Theorem \ref{961} p. \pageref{961} below.
 
 \subsubsection{Lemma 9.3.1 (p. 224)}
 
-We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\co_iY_i(G)\subset Y(G)$.'' Here is the rewriting:
+The proof of Lemma 9.3.1 uses twice the following lemma:
 
-Claim: the coprojection $p_i:Y_i\to Y$ is a monomorphism.
+\begin{lem}\label{ppi}
+Let $\pi$ be an infinite cardinal, and $\alpha:I\to\C$ a functor admitting an inductive limit $X$ in $\C$. Assume that the coprojections $p_i:\alpha(i)\to X$ are monomorphisms, and consider the conditions below:
 
-In the diagram 
-$$
-\begin{tikzcd}
-\co_jY_j\ar{rr}{\sim}&&Y\\ 
-{}&Y_i,\ar{ul}{p_i}\ar{ur}[swap]{q_i}
-\end{tikzcd}
-$$ 
-let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1, and let $q_i$ be the canonical morphism. Then $q_i$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_i$ is also a monomorphism, and the claimed is proved.% Proposition 5.2.3 (ii) p. 118 of the book yields the claim. 
+\nn{\em(a)} $I$ is $\pi$-filtrant and $X$ is $\pi$-accessible,
 
-As $Y_i\to Y$ is a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\co_iY_i(G)\to Y(G)$ is also a monomorphism.
+\nn{\em(b)} the identity of $X$ factors through the coprojection $p_i$ for some $i$,
+
+\nn{\em(c)} the coprojection $p_i$ is an isomorphism for some $i$.
+
+\nn Then we have {\em(a)} $\then$ {\em(b)} $\ssi$ {\em(c)}. Moreover, if {\em(c)} holds, then $\alpha(s):\alpha(i)\to\alpha(j)$ is an isomorphism for all morphism $s:i\to j$ in $I$.
+\end{lem}
+
+\begin{proof}
+This follows immediately from Exercise 1.7 p. 31 of the book.
+\end{proof}
+
+We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\co_iY_i(G)\subset Y(G)$.'' Here is the rewriting: 
+%Claim: the coprojection $p_i:Y_i\to Y$ is a monomorphism.
+%
+%In the diagram $$\begin{tikzcd}\co_jY_j\ar{rr}{\sim}&&Y\\ {}&Y_i,\ar{ul}{p_i}\ar{ur}[swap]{q_i}\end{tikzcd}$$ 
+%let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1, and let $q_i$ be the canonical morphism. Then $q_i$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_i$ is also a monomorphism, and the claimed is proved.% Proposition 5.2.3 (ii) p. 118 of the book yields the claim. 
+The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\co_iY_i(G)\to Y(G)$ is also a monomorphism.
 
 \subsubsection{Proposition 9.3.2 (p. 224)}
 
