@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awx)
+% about "categories and sheaves" (version awy)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -4119,7 +4119,7 @@ $$
 $$ 
 used to justify the second isomorphism of the first display on p.~225, follow both from Corollary 3.2.3 (i) p.~79 of the book. 
 
-As mentioned in \S\ref{225} p.~\pageref{225}, line~4 of p.~225 should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism'' instead of ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism''.
+As mentioned in \S\ref{225} p.~\pageref{225}, on line 3 of p.~225 ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$'', and on line~4 of p.~225 ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
 
 Inequality $\card(G^{\coprod K}(G))<\pi$ on the first line after the last display of p.~225 of the book, follows from Statement  
 $$
@@ -4235,13 +4235,13 @@ $$
 $$ 
 Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma 9.3.3 p.~226 (which is Lemma~\ref{933} above).
 
-\nn$\si:$ We claim
+\nn$\si:$ In view of Proposition~\ref{932} p.~\pageref{932}, it suffices to prove  
 
 \begin{equation}\label{934b}
 \card(G^{\coprod X(G)}(G))<\pi.
 \end{equation} 
 
-To prove this, we argue as in the proof of Lemma 9.3.3 p. 226 of the book (which is Lemma~\ref{933} above). (Conditions (b), (c), and (e) referred to below are stated in Section~\ref{tirg} p.~\pageref{tirg}.)
+To verify this inequality, we argue as in the proof of Lemma 9.3.3 p. 226 of the book (which is Lemma~\ref{933} above). (Conditions (b), (c), and (e) referred to below are stated in Section~\ref{tirg} p.~\pageref{tirg}.)
 
 Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
 $$
@@ -4251,7 +4251,7 @@ As $G$ is $\pi_0$-accessible by (b), we get
 $$
 G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
 $$ 
-By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}, and Proposition~\ref{932} p.~\pageref{932} entails $X\in\C_\pi$.
+By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}.
 \end{proof}
 
 \subsubsection{Brief Comments}
@@ -5566,7 +5566,9 @@ $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``uni
 \noindent $*$ P. 224, proof of Proposition 9.3.2, line 2: ``there exist maps $S\to A(G)\to S$ whose composition is the identity'' should be ``there exist maps $A(G)\to S$ such that the composition $S\to A(G)\to S$ is the identity of $S$''.
 
 \begin{s}\label{225}
-P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
+P. 225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$''.
+
+\nn P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
 \end{s}
 
 \noindent $*$ P. 228, line~3: $\C$ should be $\C_\pi$.
