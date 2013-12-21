@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version awy)
+% about "categories and sheaves" (version awz)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -3938,17 +3938,23 @@ $$
 $$ 
 is bijective.
 
-\nn{\em(b)} The following conditions hold:
+\nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
+$$
+\co_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\co_{i\in I}\alpha(i,j)
+$$ 
+is surjective.
+
+\nn{\em(c)} The following conditions hold:
 
 {\em(b1)} for any $A\subset\Ob(I)$ such that $\card(A)<\pi$ there is a $j$ in $J$ such that for any $a$ in $A$ there is a morphism $a\to j$ in $I$,
 
 {\em(b2)} for any $i$ and $j$ in $I$ and for any $B\subset\Hom_I(i,j)$ such that $\card(B)<\pi$ there is a morphism $j\to k$ in $I$ such that the composition $i\xr sj\to k$ does not depend on $s\in B$.
 
-\nn{\em(c)} For any small category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim_{j\in J}\Hom_I(\pp(j),i)\neq\varnothing$. 
+\nn{\em(d)} For any small category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim_{j\in J}\Hom_I(\pp(j),i)\neq\varnothing$. 
 \end{prop}
 
 \begin{proof}
-Implications (b) $\ssi$ (c) $\then$ (a) are proved in Proposition 9.2.1 p.~217 and Proposition 9.2.9 p.~219 of the book. The proof of Implication (a) $\then$ (c) is the same as the proof of Implication (b) $\then$ (a) in Theorem 3.1.6 p.~74 of the book.
+Implications (c) $\ssi$ (d) $\then$ (a) are proved in Proposition 9.2.1 p.~217 and Proposition 9.2.9 p.~219 of the book. Implication (a) $\then$ (b) is obvious. The proof of Implication (b) $\then$ (d) is the same as the proof of Implication (b) $\then$ (a) in Theorem 3.1.6 p.~74 of the book.
 \end{proof}
 
 \begin{df}%\label{dpifil}
