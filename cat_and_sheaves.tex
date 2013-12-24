@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0001)
+% about "categories and sheaves" (version 0002)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}
@@ -2050,11 +2050,15 @@ in the same way as Equality \eqref{intlaw} p.~\pageref{intlaw} is attached to Ar
 %%%
 %
 \section{About Chapter 5}
-%
-\subsection{Beginning of Section 5.1 (p.~113)} %%%%%%%%%%%%%%
-%
+
+\subsection{Brief Comments}
+
+Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 and Theorem 5.2.6.
+
+\subsection{Beginning of Section 5.1 (p.~113)}
+
 We want to define the notions of coimage (denoted by $\Coim$) and image (denoted by $\Ima$) in a slightly more general way than in the book. To this end we start by defining these notions in a particular context in which they coincide. To avoid confusions we (temporarily) use the notation $\IM$ for these particular cases. The proof of the following lemma is obvious. 
-%
+
 \begin{lem}\label{imset} 
 For any set theoretical map $g:U\to V$ we have natural bijections 
 $$ 
@@ -2068,14 +2072,14 @@ $$
 (\IM\hy(f))(Z):=\IM\,\hy(f)_Z,\quad(\IM\ky(f))(Z):=\IM\,\ky(f)_Z 
 $$
 for any $Z$ in $\C$. Lemma \ref{imset} implies
-%
+
 \begin{equation}\label{IM2}
 \begin{split}
 \IM\hy(f)\simeq\Coker(\hy(X)\times_{\hy(Y)}\hy(X)\parar\hy(X)),\\ \\ 
 \IM\ky(f)\simeq\Ker(\ky(Y)\parar\ky(Y)\sqcup_{\ky(X)}\ky(Y)).
 \end{split}
 \end{equation}
-%
+
 \begin{df} 
 In the above setting, the {\em coimage} of $f$ is the object $\Coim f\in\C^\vee$ defined by 
 $$ 
@@ -2087,7 +2091,6 @@ $$
 $$ 
 for all $Z$ in $\C$. 
 \end{df} 
-%
 
 By \eqref{IM2} we have 
 $$ 
@@ -2098,34 +2101,33 @@ $$
 $$
  
 This implies 
-%
+
 \begin{prop}\label{coimim}
 If $P:=X\times_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\parar X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\parar S)\in\C^\wedge$. 
 \end{prop} 
-% 
 
 In view of Lemma~\ref{imset} and Proposition~\ref{coimim} we can replace the notation $\IM$ with $\Ima$ (or $\Coim$). The proof of the following proposition is obvious. 
-%
+
 \begin{prop}\label{fun}
 We have: 
 
 $f\mapsto\Ima\hy(f)$ and $\Ima$ are functors from $\Mor(\C)$ to $\C^\wedge$, 
 
 $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$. 
-%
+
 \end{prop}
-%
-%%%%
-%
+
+%%%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~116, proof of Proposition 5.1.7 (i)\mv. Recall the statement: 
-%
+
 \begin{prop} 
 Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $I'_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u I'_f\xr v Y$ its factorization through $I'_f$. Then $v$ is a monomorphism. 
 \end{prop}
-%
+
 \begin{proof}
 Consider the commutative diagram
 $$
