@@ -1,11 +1,8 @@
-% about "categories and sheaves" (version 0008)
+% about "categories and sheaves" (version 0009)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
-\documentclass[12pt]{article}
-%\pagestyle{headings}
-%\pagestyle{empty}
-\addtolength{\parskip}{.5\baselineskip}
-%\addtocounter{section}{-2}
+\documentclass[12pt]{article}%\pagestyle{headings}
+\addtolength{\parskip}{.5\baselineskip}%\addtocounter{section}{-2}
 \usepackage[a4paper,headheight=14.5pt]{geometry}
 %\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{bm}
 \usepackage[T1]{fontenc}
@@ -17,12 +14,10 @@
 \usepackage{datetime}
 \usepackage{amsthm}
 \usepackage{comment}
-\usepackage{fancyhdr}
-%\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 \makeindex
 \pagestyle{fancy}
-\newtheorem{thm}{Theorem}
-%\newtheorem{mt}[thm]{Metatheorem}
+\newtheorem{thm}{Theorem}%\newtheorem{mt}[thm]{Metatheorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
@@ -33,8 +28,7 @@
 \newtheorem{conv}[thm]{Convention}
 \newtheorem{rk}[thm]{Remark}
 \theoremstyle{definition}
-\newtheorem{s}[thm]{\S}
-%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
+\newtheorem{s}[thm]{\S}%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
 %
 \newcommand{\bu}{\bullet}
@@ -69,14 +63,14 @@
 %\newcommand{\bpr}{\begin{prop}}\newcommand{\epr}{\end{prop}}
 %\newcommand{\ad}{ (additional details)}
 %\newcommand{\ccd}{the comment containing Display}
-\newcommand{\mv}{ (minor variant)}
+%\newcommand{\mv}{ (minor variant)}
 %\newcommand{\cdm}{commutative diagram}
 %\newcommand{\nm}{natural morphism}
 %\newcommand{\pr}{Proposition}
 %\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]}
 %\newcommand{\sts}{t suffices to show}
-\newcommand{\cn}{(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) }%\subsection{Brief Comments}
-\newcommand{\bc}{\subsection{Brief Comments}}
+%\newcommand{\cn}{(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) }%\subsection{Brief Comments}
+%\newcommand{\bc}{\subsection{Brief Comments}}
 %
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
@@ -991,7 +985,7 @@ $$
 %%
 %
 \begin{s} 
-P.~40, proof of Lemma 2.1.11\mv.
+P.~40, proof of Lemma 2.1.11 (minor variant).
 %
 \begin{lem} 
 If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an object of $\C$ representing $\coli\alpha$, then $S$ is terminal. 
@@ -1251,7 +1245,7 @@ induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 %%
 %
 \begin{s} 
-P.~55, proof of Corollary 2.4.4 (iii)\mv.
+P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 %
 \begin{prop}\label{244}
 If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
@@ -1333,7 +1327,7 @@ We must show
 $$
 \co_{X\in\C_B}U(X)\simeq\co_{X\in(\C^A)^{\op}}V(X). 
 $$ 
-\cn By Corollary~\ref{c233i} p.~\pageref{c233i}, both sets are in natural bijection with the quotient of 
+(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) By Corollary~\ref{c233i} p.~\pageref{c233i}, both sets are in natural bijection with the quotient of 
 $$
 \bigsqcup_{X\in\C}\ U(X)\times V(X) 
 $$ 
@@ -1360,7 +1354,7 @@ Now Corollary 2.4.6 p. 56 results immediately from Corollary~\ref{c233i} p.~\pag
 \subsection{Brief Comments}
 %
 \begin{s} 
-P.~56, proof of Lemma 2.4.7\mv.
+P.~56, proof of Lemma 2.4.7 (minor variant).
 %
 \begin{lem} 
 If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\coli k(i_0)$ is a terminal object of $\Set$. 
@@ -1420,13 +1414,11 @@ This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\
 \Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{X\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
 \end{equation}
 
-\noindent\cn Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
+\noindent(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
 \end{s}
-%
+
 %%%
-%
-%\subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
 %
@@ -1462,7 +1454,7 @@ It is straightforward to check that (\ref{2}) induces (\ref{1}).
 %%
 %
 \begin{s} 
-P.~61, Proposition 2.6.4\mv.
+P.~61, Proposition 2.6.4 (minor variant).
 %
 \begin{prop}\label{264}
 Let $\U$ be a universe, let 
@@ -1507,7 +1499,7 @@ where $I$ is a small category and $\widetilde F$ is defined by
 $$
 \widetilde F(A):=\coli_{X\in\C_A}F(X). 
 $$
-\cn Let us rewrite the proof of the fact that the natural morphism $\coli\widetilde F(\alpha)\to\widetilde F\left(\coli\alpha\right)$ is an isomorphism. 
+(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Let us rewrite the proof of the fact that the natural morphism $\coli\widetilde F(\alpha)\to\widetilde F\left(\coli\alpha\right)$ is an isomorphism. 
 
 By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
@@ -1536,7 +1528,7 @@ may also be written as
 $$
 \widehat F(A)=\icolim_{U\in\C_A}F(U).
 $$
-\cn It might be worth stating explicitly the isomorphism 
+(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) It might be worth stating explicitly the isomorphism 
 $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
@@ -1649,7 +1641,7 @@ by induction on the cardinal of $S$, and to see that this implies the claim. q.e
 %%
 %
 \begin{s} 
-P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b)\mv. 
+P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor variant). 
 %
 \begin{lem} 
 Let $\alpha$ and $\beta$ be functors from $I$ to $\Set$, where $I$ is a small filtrant category; let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
@@ -1767,7 +1759,7 @@ In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By
 %%
 %
 \begin{s} 
-P.~80, proof of Lemma 3.2.8\mv. As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Recall the statement:
+P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Recall the statement:
 \begin{lem}
 Let $I$ be a small ordered set, $\alpha:I\to\C$ a functor. Let $\cc J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J\in\cc J$, associate the restriction $\alpha_J:\cc J\to\C$ of $\alpha$ to $\cc J$. Then $\cc J$ is small and filtrant and moreover
 $$
@@ -1801,7 +1793,7 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}
 %
 %%
 %
-\begin{s} P.~81, proof of Proposition 3.3.2\mv. Recall the statement:
+\begin{s} P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
 %
 \begin{prop} 
 %
@@ -2048,11 +2040,11 @@ L&\eta&R
 \end{equation}
 in the same way as Equality \eqref{intlaw} p.~\pageref{intlaw} is attached to Array \eqref{intlaw2} p.~\pageref{intlaw2}. Thus \eqref{414i} follows from (1.5.8) p.~29 in the book (stated as \eqref{158} p.~\pageref{158} in this text). 
 \end{s}
-%
-%%%
-%
-\section{About Chapter 5}
 
+%%%
+
+\section{About Chapter 5}
+%sophie
 \subsection{Beginning of Section 5.1 (p.~113)}
 
 We want to define the notions of coimage (denoted by $\Coim$) and image (denoted by $\Ima$) in a slightly more general way than in the book. To this end we start by defining these notions in a particular context in which they coincide. To avoid confusions we (temporarily) use the notation $\IM$ for these particular cases. The proof of the following lemma is obvious. 
@@ -2087,13 +2079,28 @@ for all $Z$ in $\C$, and the {\em image} \index{image} of $f$ is the object $\Im
 $$ 
 (\Ima f)(Z):=\Hom_{\C^\vee}(\ky(Z),\IM\ky(f)) 
 $$ 
-for all $Z$ in $\C$. 
+for all $Z$ in $\C$. Moreover, we regard $(\Coim f)(Z)$ as a subset of $\Hom_\C(X,Z)$, and $(\Ima f)(Z)$ as a subset of $\Hom_\C(Z,Y)$.
 \end{df} 
+
+\begin{conv}\label{bra}
+If $A\parar B\to C$ is a diagram in a given category, then the notation $[A\parar B\to C]$ shall mean that the two compositions coincide.
+\end{conv}
 
 The following proposition is obvious:
 
 \begin{prop}\label{epimono}
-In the above setting, there are natural morphisms $$\ky(X)\to\Coim f\to\ky(Y)$$ in $\C^\vee$, and $\ky(X)\to\Coim f$ is an epimorphism. There are also a natural morphisms $$\hy(X)\to\Ima f\to\hy(Y)$$ in $\C^\wedge$, and $\Ima f\to\hy(Y)$ is a monomorphism.
+If $f:X\to Y$ is a morphism in a category $\C$, and if $Z$ is an object of $\C$, then we have 
+$$
+(\Coim f)(Z)=\left\{x:X\to Z\ \bigg|\ \left[W\parar X\xr fY\right]\then\left[W\parar X\xr xZ\right]\ \forall\ W\in\C\right\},
+$$
+$$
+(\Ima f)(Z)=\left\{y:Z\to Y\ \bigg|\ \left[X\xr fY\parar W\right]\then\left[Z\xr yY\parar W\right]\ \forall\ W\in\C\right\}.
+$$ 
+In particular, these two sets do not depend on the universe $\U$ making $\C$ a $\U$-category. There are natural morphisms 
+$$
+\ky(X)\to\Coim f\to\ky(Y),\quad\hy(X)\to\Ima f\to\hy(Y)
+$$ 
+in $\C^\vee$ and $\C^\wedge$ respectively. Moreover, $\ky(X)\to\Coim f$ is an epimorphism, and $\Ima f\to\hy(Y)$ is a monomorphism. 
 \end{prop} 
 
 For the sake of emphasis we write
@@ -2115,7 +2122,7 @@ This implies
 If $P:=X\times_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\parar X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\parar S)\in\C^\wedge$. 
 \end{prop} 
 
-In view of Lemma~\ref{imset} and Proposition~\ref{coimim} we can replace the notation $\IM$ with $\Ima$ (or $\Coim$). The proof of the following proposition is obvious. 
+In view of Lemma~\ref{imset} and Proposition~\ref{coimim} we can replace the notation $\IM$ with $\Ima$ (or $\Coim$). The following proposition is obvious: 
 
 \begin{prop}\label{fun}
 We have: 
@@ -2125,21 +2132,19 @@ $f\mapsto\Ima\hy(f)$ and $\Ima$ are functors from $\Mor(\C)$ to $\C^\wedge$,
 $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$. 
 \end{prop}
 
-%
-
-\subsection{Strict Epimorphisms}
-
-We give a definition of strict epimorphism which, although slightly different, will turn out to be equivalent to that of the book:
+%We give a definition of strict epimorphism which, although slightly different, will turn out to be equivalent to that of the book:
 
 \begin{df}
 A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism} \index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ is an isomorphism.
 \end{df} 
 
-The following lemma is obvious
+By Proposition \ref{epimono} p.~\pageref{epimono} this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. The following lemma is obvious:
 
-\begin{lem}
-A strict epimorphism is an epimorphism. Also, $f$ is a strict epimorphism if and only if the natural map $\Hom_\C(Y,Z)\to(\Coim f)(Z)$ is bijective for all $Z$ in $\C$. 
+\begin{lem}\label{strepi}
+A strict epimorphism is an epimorphism. Also, $f$ is a strict epimorphism if and only if, for all $Z$ in $\C$, the map $\circ f:\Hom_\C(Y,Z)\to\Hom_\C(X,Z)$ induces a bijection $\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z)$.
 \end{lem} 
+
+\begin{comment}
 
 Let us try to express the condition ``$f$ is a strict epimorphism'' in a more elementary form. We start with the sequence 
 $$
@@ -2170,10 +2175,6 @@ $$
 $$ 
 can be completed to a commutative diagram as indicated.
 
-\begin{conv}\label{bra}
-If $A\parar B\to C$ is a diagram in a given category, then the notation $[A\parar B\to C]$ shall mean that the two compositions coincide.
-\end{conv}
-
 \nn We see that the dashed arrow in the above diagram exists if and only if 
 %
 \begin{equation}\label{sz}
@@ -2188,6 +2189,8 @@ The morphism $f$ is a strict epimorphism if and only if the map $\Hom_\C(Y,Z)\to
 
 In the book, the above condition is taken as the definition of a strict epimorphism.
 
+\end{comment}
+
 %%
 
 \subsection{Brief Comments}
@@ -2197,11 +2200,11 @@ P. 115, Proposition 5.1.5 (i). For the sake of completeness we spell out some de
 
 \nn(b) $\then$ (a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
-\nn(c) $\ssi$ (e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. Let $Z$ be an object of $\C$, and recall that (e) is the condition in Proposition~\ref{elem} p.~\pageref{elem}, so that we must show that $P\parar X\to Y$ is exact if and only if, for all $Z$ in $\C$, the map $u\mapsto u\circ f$ is a bijection $\Hom_\C(Y,Z)\to S_Z$.
+\nn(c) $\ssi$ (e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. Let $Z$ be an object of $\C$, and that (e) is the condition in Lemma~\ref{strepi} p.~\pageref{strepi}, so that we must show that $P\parar X\to Y$ is exact if and only if, for all $Z$ in $\C$, the map $u\mapsto u\circ f$ is a bijection $\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z)$. Recall also that the set $(\Coim f)(Z)$ has been ``computed'' in Proposition~\ref{epimono} p.~\pageref{epimono}.
 
-Let $T_Z$ be the set of those morphisms $v:X\to Z$ such that $[P\parar X\xr vZ]$ (see Convention \ref{bra} p.~\pageref{bra}). It is enough to show $S_Z=T_Z$.
+Let $T_Z$ be the set of those morphisms $v:X\to Z$ such that $[P\parar X\xr vZ]$ (see Convention \ref{bra} p.~\pageref{bra}). It is enough to show $(\Coim f)(Z)=T_Z$.
 
-Let $u$ be in $S_Z$. As $[P\parar X\xr fY]$ by definition of $P$, we have $[P\parar X\xr uZ]$ by definition of $S_Z$, so that $u$ is in $T_Z$. Let $v$ be in $T_Z$, and let $v_1,v_2:W\parar X$ satisfy $[W\parar X\to Y]$. It suffices to prove $v\circ v_1=v\circ v_2$. The commutative diagram  
+Let $u$ be in $(\Coim f)(Z)$. As $[P\parar X\xr fY]$ by definition of $P$, we have $[P\parar X\xr uZ]$ by Proposition~\ref{epimono} p.~\pageref{epimono}, so that $u$ is in $T_Z$. Let $v$ be in $T_Z$, and let $v_1,v_2:W\parar X$ satisfy $[W\parar X\to Y]$. It suffices to prove $v\circ v_1=v\circ v_2$. The commutative diagram  
 $$
 \begin{tikzcd}
 W\ar[yshift=0.7ex]{r}{v_1}\ar[yshift=-0.7ex]{r}[swap]{v_2}\ar{d}[swap]{w}&X\ar{r}{f}\ar[equal]{d}&Y\ar[equal]{d}\\ 
@@ -2213,13 +2216,13 @@ yields
 $$
 v\circ v_1=v\circ p_1\circ w=v\circ p_2\circ w=v\circ v_2.
 $$
-(Note that the equivalence (c) $\ssi$ (e) also follows from Proposition~\ref{coimim} p.~\pageref{coimim} and Proposition~\ref{elem} p.~\pageref{elem}.)
+(Note that the equivalence (c) $\ssi$ (e) also follows from Proposition~\ref{coimim} p.~\pageref{coimim} and Proposition~\ref{strepi} p.~\pageref{strepi}.)
 \end{s}
-
+%sophie
 %
 
 \begin{s} 
-P.~116, proof of Proposition 5.1.7 (i)\mv. Recall the statement: 
+P.~116, proof of Proposition 5.1.7 (i) (minor variant). Recall the statement: 
 
 \begin{prop} 
 Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $I'_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u I'_f\xr v Y$ its factorization through $I'_f$. Then $v$ is a monomorphism. 
@@ -2272,7 +2275,7 @@ Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 and Theorem 5.2.6.
 \end{s}
 
 \begin{s} 
-P.~122, proof of Lemma 5.3.2\mv. 
+P.~122, proof of Lemma 5.3.2 (minor variant). 
 
 \begin{lem} 
 If $\F\subset\G$ are full subcategories of $\C$ and $\F$ is strictly generating, then $\G$ is strictly generating. 
@@ -2333,7 +2336,7 @@ the first equality following from the functoriality of $\xi$, the second one fro
 %%
 %
 \begin{s} 
-P.~122, proof of Lemma 5.3.3\mv. Recall the statement: 
+P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
 %
 \begin{lem}
 If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F\in\F^\wedge$ we have 
@@ -2762,7 +2765,7 @@ One checks that $x$ does not depend on the choice of $\zeta$, and that this proc
 \subsection{Brief Comments}
 %
 \begin{s} 
-P.~136, proof of Proposition 6.1.18 (i)\mv: If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
+P.~136, proof of Proposition 6.1.18 (i) (minor variant): If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
 $$
 \co_i\ \iota(\Coker(\varphi_i,\psi_i))\simeq
 \co_i\ \Coker(\iota(\varphi_i),\iota(\psi_i))
@@ -3175,8 +3178,7 @@ $$
 $\bu$ The definition of $IF$ p.~133 implies
 $$
 C:=IF(A)=\coli_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
-$$ 
-%\cn 
+$$
 
 We want to prove $B\simeq C$.
 
@@ -3420,7 +3422,7 @@ are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\opl
 %%
 %
 \begin{s}%\label{c176a}
-P.~176, Proposition 8.3.4\mv. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
+P.~176, Proposition 8.3.4 (minor variant). Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 %
 $$
 \begin{tikzcd}
@@ -3596,7 +3598,7 @@ Equivalence (a)$\ssi$(b) is proved in the book, and equivalence (a)$\ssi$(c) fol
 %%
 %
 \begin{s} 
-Page 181, the Five Lemma\mv. 
+Page 181, the Five Lemma (minor variant). 
 %
 \begin{lem} 
 Consider the commutative diagram of complexes 
@@ -3788,7 +3790,7 @@ where, we hope, the notation is self-explanatory.
 %
 %%
 %
-\begin{s} P.~191, proof of Theorem 8.5.8 (iii)\mv. Recall the statement: 
+\begin{s} P.~191, proof of Theorem 8.5.8 (iii) (minor variant). Recall the statement: 
 %
 \begin{lem}\label{858iii}
 %
@@ -3817,7 +3819,7 @@ quasi-commutes. As $\lambda$ and $\lambda'$ are fully faithful by Theorem 5.3.6 
 %%
 %
 \begin{s} 
-P.~191, Step (a) of the proof of Theorem 8.5.8 (iv)\mv. Recall the statement: 
+P.~191, Step (a) of the proof of Theorem 8.5.8 (iv) (minor variant). Recall the statement: 
 %
 \begin{lem}
 %
@@ -4521,7 +4523,7 @@ If $\C$ is a small nonempty category admitting small well-ordered upper bounds a
 The category $\C^X$ is again small, nonempty, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
 \end{proof}
 
-We recall the notion of {\em construction by transfinite induction}. %For any element $i$ of any ordered set $I$ we freely use the self-explanatory pieces of notation $I_{<i}$ and $I_{\le i}$. 
+We recall the notion of {\em construction by transfinite induction}. \index{construction by transfinite induction} \index{transfinite induction}
 
 \begin{thm}[Construction by Transfinite Induction]\label{meta} 
 Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $$
@@ -5668,7 +5670,7 @@ P. 413, Proof of Lemma 17.2.5. Part~(i): see Proposition~\ref{p406} p.~\pageref{
 %%
 %
 \begin{s} 
-P. 414, Definition 17.7.8\mv:
+P. 414, Definition 17.7.8 (minor variant):
 %
 \begin{df}\label{1778}
 Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology} on $X$ is a set $\cc T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\cc T'$ and $\cc T$ be Grothendieck topologies. We say that $\cc T$ is {\em stronger than} $\cc T'$, or that $\cc T'$ is {\em weaker than} $\cc T$, if $\cc T'\subset\cc T$. 
@@ -5680,7 +5682,7 @@ Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap
 %%
 %
 \begin{s} 
-P. 418, proof of Lemma 17.4.2\mv: Consider the natural morphisms 
+P. 418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms 
 $$
 \co\alpha\xr f\co\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\co\alpha\circ\mu_u^{\op}\xr h\co\alpha.
 $$
@@ -5822,7 +5824,7 @@ The purpose of this comment is just to note that we also have by Corollary 2.4.6
 %%
 %
 \begin{s}\label{8212}
-P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14 \mv. 
+P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
 \begin{nota}
 If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
 \end{nota}
