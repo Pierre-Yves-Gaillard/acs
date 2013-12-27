@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0014)
+% about "categories and sheaves" (version 0015)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1045,36 +1045,37 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 %%
 %
 \nn[\S\ref{231} p.~\pageref{231} about Definition 2.3.1 p.~50 will be inserted here.]
-%
+
 %%%
-%
-\subsection{Theorem 2.3.3 (i) (p.~52)}%\label{233i}
-%
+
+\subsection{Theorem 2.3.3 (i) (p.~52)}
+
 Recall the statement: 
-\begin{thm}\label{233i}
+
+\begin{thm}[Theorem 2.3.3 (i) p.~52]\label{233i}
 Let $I\xleftarrow\varphi J\xr\beta\C$ be functors. Assume that 
 $$
 \co_{(\varphi(j)\to i)\in J_i}\beta(j)
 $$ 
 exists in $\C$ for all $i$ in $I$. Then $\varphi^\dagger(\beta)$ exists and we have 
-%
+
 \begin{equation}\label{236}
 \varphi^\dagger(\beta)(i)\simeq\co_{(\varphi(j)\to i)\in J_i}\beta(j)
 \end{equation} 
-%
+
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
 $\varphi^\dagger$ exists. If moreover $\varphi$ is fully faithful, then $\varphi^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\varphi_*\circ\varphi^\dagger$. 
 \end{thm}
 The proof in the book is divided into three Steps, called (a), (b), and (c). 
-%
+
 \subsubsection{Step (a)}\label{scji}
-%
+
 We define $\varphi^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to show that $\varphi^\dagger(\beta)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
-%
+
 \begin{lem}\label{r52}
-%
+
 Let $I$ and $J$ be in the category $\Cat$ of small categories (see Definition~\ref{small} p.~\pageref{small}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
-%
+
 \begin{equation}\label{52} 
 (\co\theta)(i):=\co(\theta_i)\in J\quad\forall\ i\in I. 
 \end{equation} 
@@ -1218,27 +1219,44 @@ $$
 u(\varphi(j')\to\varphi(j)):\alpha(j')\to\alpha(j),
 $$
 that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\varphi$ is fully faithful by assumption, there is an obvious way to do it.
-%
+
 %%
-%
+
 \subsubsection{A Corollary}
-%
-Here is a corollary to Theorem \ref{233i} p.~\pageref{233i}:
+
+Here is a corollary to Theorem \ref{233i} p.~\pageref{233i} (which is Theorem 2.3.3 (i) p.~52):
+
 \begin{cor}\label{c233i}
 If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\varphi^\dagger(\beta)(i)$ is (in natural bijection with) the quotient of 
 $$
-\bigsqcup_j\ \beta(j)\times\Hom_I(\varphi(j),i) 
+\bigsqcup_{j\in J}\ \beta(j)\times\Hom_I(\varphi(j),i) 
 $$ 
-by the smallest equivalence relation $\sim$ satisfying the following condition. If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\varphi(j'),i)$, then 
+by the smallest equivalence relation $\sim$ satisfying the following condition: If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\varphi(j'),i)$, then 
 $$
 (x,u'\circ\varphi(s))\sim(\beta(s)(x),u'). 
 $$
 \end{cor}
-%
-%%%
-%
+
+\begin{proof}
+Recall that Theorem~\ref{233i} states the existence of an isomorphism 
+$$
+\varphi^\dagger(\beta)(i)\simeq\co_{(\varphi(j)\to i)\in J_i}\beta(j).
+$$
+By Proposition 2.4.1 p.~54 of the book, the right-hand side is, in a natural way, the quotient of 
+$$
+\bigsqcup_{(\pp(j)\to i)\in J_i}\ \beta(j)
+$$ 
+modulo a certain equivalence relation. We have 
+$$
+\bigsqcup_{(\pp(j)\to i)\in J_i}\beta(j)=\bigsqcup_{j\in J}\ \bigsqcup_{u\in\Hom_I(\varphi(j),i)}\ \beta(j)\simeq\bigsqcup_{j\in J}\beta(j)\times\Hom_I(\varphi(j),i),
+$$ 
+and it easy to see that the three data of the above bijection, of the equivalence relation in Proposition 2.4.1 of the book, and of the equivalence relation in Corollary~\ref{c233i} above are compatible.
+\end{proof}
+
+%%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Section~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$, where $I$ and $J$ are small. One can prove $\co\beta\simeq\co\varphi^\dagger\beta$, that is 
 %
 \begin{equation}\label{coco}
