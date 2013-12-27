@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0013)
+% about "categories and sheaves" (version 0014)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -31,6 +31,7 @@
 \newtheorem{s}[thm]{\S}%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
 %
+\newcommand{\dis}{\displaystyle}
 \newcommand{\bu}{\bullet}
 \newcommand{\nn}{\noindent}
 \newcommand{\cc}{\mathcal}
@@ -275,8 +276,7 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~80, last display: a ``$\displaystyle\colim$'' is missing.
 
-\noindent $*$ Pp 83 and 85: Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. %(The statement (I think) applies to rings, not only to fields.) 
-Proof of Proposition 3.3.7 (iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
+\noindent $*$ Pp 83 and 85: Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. Proof of Proposition 3.3.7 (iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
 
 \noindent $*$ P.~84, Proposition 3.3.13. It is clear from the proof (I think) that the intended statement was the following one: If $\C$ is a category admitting finite inductive limits and if $A:\C^{\op}\to\Set$ is a functor, then we have 
 $$
@@ -1841,21 +1841,43 @@ $$
 The first and last bijections follow from \eqref{332}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
 \end{proof}
 \end{s}
-%
+
 %%
-%
+
+\begin{s}
+P. 84, Proposition 3.3.13. Recall the statement:
+
+\begin{prop}[Proposition 3.3.13]
+Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^\wedge$. Then $A$ is left exact if and only if $\C_A$ is filtrant.
+\end{prop}
+
+We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
+
+By Proposition 3.3.3 p.~82 of the book, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\co_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
+$$
+\begin{tikzcd}
+\co_Y\Hom_\C(\co_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\co_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
+{}&\lim_i\co_Y\Hom_\C(X_i,Y)\ar{d}{c}\\ 
+A(\co_iX_i)\ar{r}[swap]{e}&\lim_iA(X_i).
+\end{tikzcd}
+$$ 
+The maps $a,b,c,$ and $d$ are bijective for the following reasons: obviously for $a$, because of \eqref{263b} p.~\pageref{263b} for $c$ and $d$, and by Theorem 3.1.6 p.~74 of the book for $b$. Thus $e$ is also bijective.
+\end{s}
+
+%%
+
 \begin{s}\label{3315}
 P.~85, proof of Proposition 3.3.15. To prove that $\A\to\C$ is cofinal, one can apply Proposition~\ref{318i} p.~\pageref{318i} with $J=\A,I=\C,L=\C',K=\cc S$. 
 \end{s}
-%
+
 %%%
-%
+
 \subsection{Proposition 3.4.3 (i) (p.~88)}
-%
+
 This section is divided into two parts. In Part 1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part 2 we derive from Proposition 3.4.3 (i) another proof of \eqref{coco} p.~\pageref{coco}. 
-%
+
 \subsubsection{Part 1} 
-%
+
 The statement is phrased as follows: 
 
 ``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\co\alpha\simeq\co_{j\in J}\co_{i\in I_{\psi(j)}}\alpha(i,j,\varphi(i)\to\psi(j))$.'' 
