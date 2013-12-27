@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0010)
+% about "categories and sheaves" (version 0011)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2200,9 +2200,9 @@ P. 115, Proposition 5.1.5 (i). For the sake of completeness we spell out some de
 
 \nn(c) $\ssi$ (e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. Let $Z$ be an object of $\C$, and that (e) is the condition in Lemma~\ref{strepi} p.~\pageref{strepi}, so that we must show that $P\parar X\to Y$ is exact if and only if, for all $Z$ in $\C$, the map $u\mapsto u\circ f$ is a bijection $\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z)$. Recall also that the set $(\Coim f)(Z)$ has been ``computed'' in Proposition~\ref{epimono} p.~\pageref{epimono}.
 
-Let $T_Z$ be the set of those morphisms $v:X\to Z$ such that $[P\parar X\xr vZ]$ (see Convention \ref{bra} p.~\pageref{bra}). It is enough to show $(\Coim f)(Z)=T_Z$.
+Let $T$ be the set of those morphisms $v:X\to Z$ such that $[P\parar X\xr vZ]$ (see Convention \ref{bra} p.~\pageref{bra}). It is enough to show $(\Coim f)(Z)=T$.
 
-Let $u$ be in $(\Coim f)(Z)$. As $[P\parar X\xr fY]$ by definition of $P$, we have $[P\parar X\xr uZ]$ by Proposition~\ref{epimono} p.~\pageref{epimono}, so that $u$ is in $T_Z$. Let $v$ be in $T_Z$, and let $v_1,v_2:W\parar X$ satisfy $[W\parar X\to Y]$. It suffices to prove $v\circ v_1=v\circ v_2$. The commutative diagram  
+Let $u$ be in $(\Coim f)(Z)$. As $[P\parar X\xr fY]$ by definition of $P$, we have $[P\parar X\xr uZ]$ by Proposition~\ref{epimono} p.~\pageref{epimono}, so that $u$ is in $T$. Let $v$ be in $T$, and let $v_1,v_2:W\parar X$ satisfy $[W\parar X\to Y]$. It suffices to prove $v\circ v_1=v\circ v_2$. The commutative diagram  
 $$
 \begin{tikzcd}
 W\ar[yshift=0.7ex]{r}{v_1}\ar[yshift=-0.7ex]{r}[swap]{v_2}\ar{d}[swap]{w}&X\ar{r}{f}\ar[equal]{d}&Y\ar[equal]{d}\\ 
@@ -2222,7 +2222,7 @@ $$
 \begin{s} 
 P.~116, proof of Proposition 5.1.7 (i) (minor variant). Recall the statement: 
 
-\begin{prop} 
+\begin{prop}[Proposition 5.1.7 (i)]
 Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $I'_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u I'_f\xr v Y$ its factorization through $I'_f$. Then $v$ is a monomorphism. 
 \end{prop}
 
@@ -2234,13 +2234,25 @@ X\ar[two heads]{d}[swap]{b}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v
 I'_{a\circ u}\ar{ur}{d}\ar[two heads]{r}[swap]{c}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
-(The existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) 
-By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\then$ (b), p.~115, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have $a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}$ and 
+(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) By (the dual of) Proposition 5.1.2 (iv) p.~114, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a) $\then$ (b), p.~115, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have $a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}$ and 
 $$
 d\circ c^{-1}\circ a\circ u=d\circ c^{-1}\circ c\circ b=d\circ b=u=\id_{I'_f}\circ u,
 $$ 
 and the conclusion follows from the fact that $u$ is an epimorphism.
 \end{proof}
+\end{s}
+
+%
+
+\begin{s}
+P. 118, second display: Isomorphism 
+$$
+\Hom_{\Set}(\Hom_\C(G,X),\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\coprod\Hom_\C(G,X)},X)
+$$ 
+is a particular case of the following isomorphism, which holds for any $\U$-set $S$ and any objects $G$ and $X$ of $\C$: 
+$$
+\Hom_{\Set}(S,\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\coprod S},X).
+$$ 
 \end{s}
 
 %
