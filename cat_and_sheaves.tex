@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0017)
+% about "categories and sheaves" (version 0018)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -573,7 +573,7 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 %
 
 \begin{s}\label{ffc}
-P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative.
+P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative. \index{conservative}
 \end{s}
 
 %%
@@ -2294,6 +2294,20 @@ and the conclusion follows from the fact that $u$ is an epimorphism.
 %
 
 \begin{s}
+P. 117, Definition 5.2.1 (definition of a system of generators). There is a comment about this in Pierre Schapira's Errata 
+
+\href{http://people.math.jussieu.fr/~schapira/books/Errata.pdf}{http://people.math.jussieu.fr/$\sim$schapira/books/Errata.pdf}.
+
+As observed at the bottom of p.~121 of the book, the definition can be stated as follows:
+
+\begin{df}
+Let $S$ be a set of objects of a category $\C$ and $\cc S$ the corresponding subcategory. We say that $S$ is a {\em system of generators} \index{generator} \index{system of generators} if the functor $\pp:\C\to\cc S^\wedge$, $X\mapsto\Hom_\C(\ ,X)$ is conservative.
+\end{df}
+\end{s}
+
+%
+
+\begin{s}
 P. 118, second display: Isomorphism 
 $$
 \Hom_{\Set}(\Hom_\C(G,X),\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\coprod\Hom_\C(G,X)},X)
@@ -2344,7 +2358,7 @@ Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 and Theorem 5.2.6.
 %
 
 \begin{s}
-P. 122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating, then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
+P. 122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating \index{strictly generating subcategory}, then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
 \end{s}
 
 %
