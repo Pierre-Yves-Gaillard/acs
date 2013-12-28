@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0018)
+% about "categories and sheaves" (version 0019)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2381,13 +2381,13 @@ $$
 be the natural functors ($\rho$ being the restriction), and let $X$ and $Y$ be in $\C$. We have 
 $$
 \begin{tikzcd}
-\Hom_\C(X,Y)\ar{r}\ar{dr}[swap]{\sim}&\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))\ar{d}\\
-&\Hom_{\F^\wedge}(\varphi(X),\varphi(Y)). 
+\Hom_\C(X,Y)\ar{r}{\gamma'}\ar{dr}{\sim}[swap]{\pp'}&\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))\ar{d}{\rho'}\\ 
+{}&\Hom_{\F^\wedge}(\varphi(X),\varphi(Y)). 
 \end{tikzcd}
 $$ 
-We want to prove that the horizontal arrow is bijective. The slanted arrow being bijective, it suffices to show that the horizontal arrow is surjective. Let $\xi$ be in $\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\Hom_\C(X,Y)$ such that %$\rho(\xi)=\varphi(f)$ 
+We want to prove that $\gamma'$ is bijective. As $\pp'$ is bijective, it suffices to show that $\gamma'$ is surjective. Let $\xi$ be in $\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\Hom_\C(X,Y)$ such that  
 \begin{equation}\label{rhoxi}
-\rho(\xi)=\varphi(f)
+\rho(\xi)=\varphi(f),
 \end{equation}
 and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\Hom_\C(Z,X)$. It suffices to show that the morphisms 
 $$
@@ -2418,22 +2418,29 @@ $$
 \xi_Z(z)\circ w=\xi_W(z\circ w)=\rho(\xi)_W(z\circ w)=\varphi(f)_W(z\circ w)
 =f\circ z\circ w, 
 $$ 
-the first equality following from the functoriality of $\xi$, the second one from the definition of $\rho$, the third one from \eqref{rhoxi}, and the fourth one from the definition of $\varphi$.
+the first equality following from the functoriality of $\xi$ (see diagram below), the second one from the definition of $\rho$, the third one from \eqref{rhoxi}, and the fourth one from the definition of $\varphi$.
 \end{proof}
+For the reader's convenience, we add the following diagram:
+$$
+\begin{tikzcd}
+Z&z\in\Hom_\C(Z,X)\ar{r}{\xi_Z}\ar{d}[swap]{\circ w}&\Hom_\C(Z,Y)\ar{d}{\circ w}\\ 
+W\ar{u}{w}&\Hom_\C(W,X)\ar{r}[swap]{\xi_W}&\Hom_\C(W,X).
+\end{tikzcd}
+$$
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
-%
+
 \begin{lem}
 If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F\in\F^\wedge$ we have 
 $$
 \psi(F)\simeq\co_{Y\in\F_F}Y. 
 $$ 
 \end{lem} 
-%
+
 \begin{proof}
 We have, for $X\in\C$ and $F\in\F^\wedge$, 
 $$
