@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0016)
+% about "categories and sheaves" (version 0017)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -224,7 +224,7 @@ Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{uca
 %
 $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
 
-\noindent $*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See Section~\ref{d125} p.~\pageref{d125}.
+\noindent $*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pageref{d125}.
 
 %%
 
@@ -520,15 +520,15 @@ $$
 \prod_{i\in I}\ U_i\in\mathcal P\left(\left(\bigcup_{i\in I}U_i\right)^I\right),
 $$
 (x) follows from (v), (c), and (iv). q.e.d.
-%
-%%%%
-%
-\subsection{Category of Morphisms (p. 14)}\label{d125}
-%
-Here are some comments about Definition 1.2.5 p.~14.
-%
+
+%%
+
+\subsection{Brief comments}
+
+\begin{s}\label{d125}
+P. 14, category of morphisms. Here are some comments about Definition 1.2.5 p.~14:
+
 \begin{nota}\label{c*}
-%
 For any category $\C$ define the category $\C^*$ as follows. The objects of $\C^*$ are the objects of $\C$, the set $\Hom_{\C^*}(X,Y)$ is defined by 
 $$
 \Hom_{\C^*}(X,Y):=\{Y\}\times\Hom_{\C}(X,Y)\times\{X\},
@@ -537,11 +537,10 @@ and the composition is defined by
 $$
 (Z,g,Y)\circ(Y,f,X):=(Z,g\circ f,X).
 $$ 
-%
 \end{nota}
-%
+
 Note that there are natural inverse isomorphisms $\C\rightleftarrows\C^*$. 
-%
+
 \begin{nota}\label{mor}
 %
 Let $\C$ be a category. Define the category $\Mor(\C)$ \index{$\Mor$} by 
@@ -560,9 +559,8 @@ Y\ar{r}[swap]{b}&V,
 \end{tikzcd}
 $$ 
 and the composition is defined in the obvious way.
-%
 \end{nota}
-%
+
 Observe that a functor $\A\to\B$ is given by two maps 
 $$
 \Ob(\A)\to\Ob(\B),\quad\Ob(\Mor(\A))\to\Ob(\Mor(\B))
@@ -570,13 +568,20 @@ $$
 satisfying certain conditions.
 
 When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we assume that the hom-sets of $\C$ are disjoint.
+\end{s}
+
 %
-%%%
-%
+
+\begin{s}\label{ffc}
+P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative.
+\end{s}
+
+%%
+
 \subsection{The Yoneda Lemma (p. 24)\index{Yoneda Lemma}}
-%
+
 We state the Yoneda Lemma for the sake of completeness:
-%
+
 \begin{thm}[Yoneda's Lemma]\label{yol}
 Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
 $$
@@ -2335,6 +2340,14 @@ P. 119, Theorem 5.2.3: see Corollary~\ref{c2111} p.~\pageref{c2111}.
 \begin{s}
 Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 and Theorem 5.2.6.
 \end{s}
+
+%
+
+\begin{s}
+P. 122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating, then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
+\end{s}
+
+%
 
 \begin{s} 
 P.~122, proof of Lemma 5.3.2 (minor variant). 
