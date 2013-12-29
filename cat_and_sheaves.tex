@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0020)
+% about "categories and sheaves" (version 0021)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3727,12 +3727,12 @@ $$
 $$
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~182, proof of the equivalence (iii) $\ssi$ (iv) in Proposition 8.3.14. Here is the statement of the proposition:
-%
+
 \begin{prop}
 Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category $\C$. Then the conditions below are equivalent:
 \begin{itemize}
@@ -3765,11 +3765,19 @@ k\circ h=0,
 \end{equation} 
 and (iv) follows from \eqref{fk+hg},\eqref{gh,kf}, and \eqref{kh}. q.e.d.
 \end{s}
+
 %
-%%
 
 \nn[\S\ref{adic} p.~\pageref{adic} will be inserted here.]
+
 %
+
+\begin{s}\label{gcsbc}
+P. 186, Definition 8.3.24 (definition of a Grothendieck category). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change. \index{Grothendieck category}
+\end{s}
+
+%
+
 \begin{s} 
 P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a\in U$ and 0 otherwise, and, for each $n\in\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n\in\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a\in U\subset U_n$ and 0 otherwise. This family of morphisms defines, when $U$ varies, an epimorphism $\varphi_n:F_n\epi G$. Put 
 $$
@@ -3781,11 +3789,11 @@ $$
 $$
 q.e.d.
 \end{s}
-%
-%%%
-%
+
+%%
+
 \subsection{Proposition 8.4.7 (p. 187)}
-%
+
 Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\times_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
 It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\circ a_0=\varphi$:
@@ -3907,21 +3915,19 @@ $$
 (\C_0)^\wedge\ar{r}[swap]{\widehat\varphi_{{}_0}}&(\M_0)^\wedge
 \end{tikzcd}
 $$ 
-quasi-commutes. As $\lambda$ and $\lambda'$ are fully faithful by Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}) and Remark 1.4.13 p.~27, and $\widehat\varphi_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
+quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pageref{gcsbc}, Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}), and Remark 1.4.13 p.~27 of the book. As $\widehat\varphi_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~191, Step (a) of the proof of Theorem 8.5.8 (iv) (minor variant). Recall the statement: 
-%
+
 \begin{lem}
-%
 In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\rightarrowtail R^{\oplus S}$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
-%
 \end{lem}
-%
+
 \begin{proof}
 There is a finite subset $F'$ of $S$ such that $M\rightarrowtail R^{\oplus S}$ factors as $M\rightarrowtail R^{F'}\rightarrowtail R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $f:\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
 $$
