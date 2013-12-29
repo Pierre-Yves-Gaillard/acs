@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0019)
+% about "categories and sheaves" (version 0020)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2450,32 +2450,12 @@ $$
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 \end{proof}
 \end{s}
-%
+
 %%
-%
-\begin{s} 
-P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as follows. 
-%
-\begin{lem} 
-%
-Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
 
-\noindent{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
-
-\noindent{\em(b)} There is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
-%
-\end{lem} 
-%
-\begin{proof}
-Since there are only countably many finite categories up to isomorphism, (b) is clear. To prove (a), let $\A\subset\A'\subset\A''\subset\cdots$ be a tower of full subcategories obtained by iterating the argument used to prove (b), and let $\B$ be the union of the $\A^{(n)}$.
-\end{proof}
-\end{s}
-%
-%%%
-%
 \subsection{Theorem 5.3.6 (p.~124)}\label{536}
-%
-As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem:%\bigskip
+
+As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem:
 %
 \begin{center}*\end{center}
 %
@@ -2620,19 +2600,38 @@ $$
 \coli_{A\in I}\varphi\zeta\xi(A)\xrightarrow{b}\varphi\left(\coli_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\varphi(X)
 $$
 be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \eqref{step6b} is also an epimorphism.
+
+%%
+
+\subsection{Brief Comment}
+
+P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as follows. 
+
+\begin{lem} 
+Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
+
+\noindent{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
+
+\noindent{\em(b)} There is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
 %
+\end{lem} 
+
+\begin{proof}
+Since there are only countably many finite categories up to isomorphism, (b) is clear. To prove (a), let $\A\subset\A'\subset\A''\subset\cdots$ be a tower of full subcategories obtained by iterating the argument used to prove (b), and let $\B$ be the union of the $\A^{(n)}$.
+\end{proof}
+
 %%%
-%
+
 \section{About Chapter 6}
-%
+
 \subsection{Theorem 6.1.8 (p. 132)}
-%
+
 Here is a minor variant of Step (i) of the proof of Theorem 6.1.8. Recall the statement: 
-%
+
 \begin{lem} 
 If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha\in\C^\wedge$, then $\C_A$ is filtrant. 
 \end{lem} 
-%
+
 \begin{proof}
 Let $M$ be the category attached to the functors 
 $$
