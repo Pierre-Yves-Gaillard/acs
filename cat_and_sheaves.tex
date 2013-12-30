@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0021)
+% about "categories and sheaves" (version 0022)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -698,10 +698,10 @@ Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-un
 \end{equation}
 is bijective.
 \end{s}
-%
-%%%
-%
-\subsection{Horizontal and Vertical Compositions (p.~19)}
+
+%%
+
+\subsection{Horizontal and Vertical Compositions (p.~19)} \label{hove} %\index{horizontal composition} \index{vertical composition}
 %
 Let $m\ge2$ and $n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
 $$
@@ -723,7 +723,7 @@ $$
 \end{tikzcd}
 $$ 
 
-We shall define vertical composition \index{vertical composition} of morphisms of functors, denoted by $\circ$, and horizontal composition \index{horizontal composition} of morphisms of functors, denoted by $*$, and prove 
+We shall define vertical composition \index{vertical composition} of morphisms of functors, denoted by $\circ$, and horizontal composition \index{horizontal composition} of morphisms of functors, denoted by $*$\index{$*$}, and prove 
 %
 \begin{equation}\label{intlaw}
 \left.
@@ -791,9 +791,11 @@ Again, this is easy to prove. Statements (a) and (b) yield
 \noindent$\bu$ the associativity of the the horizontal composition, for $m=2,\ n=3$,
 
 \noindent$\bu$ the so-called \emph{Interchange Law}, for $m=3,\ n=2$.
+
 %
+
 \subsection{Equalities (1.5.8) and (1.5.9) (p.~29)}
-%
+
 Warning: many authors designate $\varepsilon$ by $\eta$ and $\eta$ by $\varepsilon$. 
 
 We have a pair $(L,R)$ of adjoint functors: 
@@ -804,7 +806,7 @@ $$
 \end{tikzcd}
 $$
 
-Denoting vertical composition by $\circ$ and horizontal composition by $*$, Equalities (1.5.8) and (1.5.9) become respectively 
+Denoting vertical composition by $\circ$ and horizontal composition by $*$ (see Section~\ref{hove} p.~\pageref{hove}), Equalities (1.5.8) and (1.5.9) become respectively 
 %
 \begin{equation}\label{158}
 (\eta*L)\circ(L*\varepsilon)=L
@@ -1036,7 +1038,7 @@ Let us spell out the above statement:
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
-The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition, induce a map $f:L\to R$. Conversely, to an element  
+The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Section~\ref{hove} p.~\pageref{hove}), induce a map $f:L\to R$. Conversely, to an element  
 $$
 r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
 $$ 
@@ -2022,13 +2024,27 @@ $$
 As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=:g$, and thus $f'_1=g'\circ F(g)=f'_2$, contradiction.
 \end{proof}
 \end{s}
-%
-%%%%
-%
+
+%%%
+
 \section{About Chapter 4}
+
+\begin{s}
+P. 93, Definition 4.1.1 and Lemma 4.1.2. For the reader's convenience, we reproduce the statements:
+
+\begin{df}
+Let $\C$ be a category. A {\em projector} \index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that the horizontal compositions (see Section~\ref{hove} p.~\pageref{hove}) $\ee*P$ and $P*\ee$ are isomorphisms. 
+\end{df}
+
+\begin{lem}[Lemma 4.1.2]
+If $(P,\ee)$ is a projector, then $\ee*P=P*\ee$.
+\end{lem}
+
+The proof shows the following: if $\ee*P$ is an isomorphism and $P*\ee$ is an epimorphism, then $(P,\ee)$ is a projector.
+\end{s}
+
 %
-%\subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~94, proof of (a) $\then$ (b) in Proposition 4.1.3 (ii) (additional details): In the commutative diagram 
 $$
@@ -2043,7 +2059,7 @@ the vertical arrows are bijective by (a), and the bottom arrow is bijective by (
 %%
 %
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$. In view of \eqref{intlaw} p.~\pageref{intlaw}, Equality 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$ (see Section~\ref{hove} p.~\pageref{hove}). In view of \eqref{intlaw} p.~\pageref{intlaw}, Equality 
 %
 \begin{equation}\label{414i}
 (R*\eta*L)\circ(\varepsilon*P)=P,
