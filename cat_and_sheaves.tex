@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version 0022)
+% about "categories and sheaves" (version_0023)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -701,8 +701,8 @@ is bijective.
 
 %%
 
-\subsection{Horizontal and Vertical Compositions (p.~19)} \label{hove} %\index{horizontal composition} \index{vertical composition}
-%
+\subsection{Horizontal and Vertical Compositions (p.~19)}%\label{hove}
+
 Let $m\ge2$ and $n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
 $$
 F_{i,j}:\C_j\to\C_{j+1},\quad1\le i\le m,\ 1\le j\le n
@@ -723,26 +723,7 @@ $$
 \end{tikzcd}
 $$ 
 
-We shall define vertical composition \index{vertical composition} of morphisms of functors, denoted by $\circ$, and horizontal composition \index{horizontal composition} of morphisms of functors, denoted by $*$\index{$*$}, and prove 
-%
-\begin{equation}\label{intlaw}
-\left.
-\begin{matrix}
-(\theta_{m-1,n}*\cdots*\theta_{m-1,1})\circ\cdots\circ(\theta_{1,n}*\cdots*\theta_{1,1})\\ 
-=\\ 
-(\theta_{m-1,n}\circ\cdots\circ\theta_{1,n})*\cdots*(\theta_{m-1,1}\circ\cdots\circ\theta_{1,1})
-\end{matrix}
-\right\}
-\end{equation}
-
-We shall say that Equality \eqref{intlaw} is {\em attached} to Array
-\begin{equation}\label{intlaw2}
-\begin{matrix}
-\theta_{1,1}&\cdots&\theta_{1,n}\\
-\vdots&\vdots&\vdots\\ 
-\theta_{m-1,1}&\cdots&\theta_{m-1,n}.
-\end{matrix}
-\end{equation}
+We shall define a morphism from $F_{1,n}\cdots F_{1,1}$ to $F_{m,n}\cdots F_{m,1}$.
 
 Let $X$ be an object of $\C_1$, and, for $i\in M^n$, where $M:=\{1,2,\dots,m\}$, put 
 $$
@@ -763,34 +744,75 @@ $$
 
 This gives rise to a diagram in $\C_{n+1}$ whose vertices are the $X_i$ with $i\in M^n$, and whose arrows are the $f_{i,p}$ with $i,i+e_p\in M^n$. 
 
-We claim: 
-
-\noindent(a) All the squares in this diagram commute. 
-
-The claim is easy to prove and implies that the whole diagram commutes. In particular, all the paths from $X_{(1,\dots,1)}$ to $X_{(m,\dots,m)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
+Clearly, all the squares in this diagram commute, and, thus, the whole diagram commutes. In particular, all the paths from $X_{(1,\dots,1)}$ to $X_{(m,\dots,m)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
 $$
 X_{(1,\dots,1)}=F_{1,n}\cdots F_{1,1}X\to F_{m,n}\cdots F_{m,1}X=X_{(m,\dots,m)}.
 $$
-This proves \eqref{intlaw} p.~\pageref{intlaw}.
+When $X$ varies in $\C$, this family of morphisms in $\C$ defines the sought-for morphism of functors from $F_{1,n}\cdots F_{1,1}$ to $F_{m,n}\cdots F_{m,1}$. 
 
-We also claim: 
-
-\noindent(b) This process defines a morphism of functors 
+\begin{nota}\label{nil}
+We denote this morphism of functors by
 $$
-F_{1,n}\cdots F_{1,1}\to F_{m,n}\cdots F_{m,1}.
+\begin{pmatrix}
+\theta_{m-1,n}&\cdots&\theta_{m-1,1}\\
+\vdots&&\vdots\\ 
+\theta_{1,n}&\cdots&\theta_{1,1}
+\end{pmatrix}:F_{1,n}\cdots F_{1,1}\to F_{m,n}\cdots F_{m,1}, 
+$$ 
+and we put 
+$$
+\theta_{1,n}*\cdots*\theta_{1,1}:=(\theta_{1,n}\ \cdots\ \theta_{1,1})
+$$
+for $m=2$, and 
+$$
+\theta_{m-1,1}\circ\cdots\circ\theta_{1,1}:=
+\begin{pmatrix}
+\theta_{m-1,1}\\
+\vdots\\ 
+\theta_{1,1}
+\end{pmatrix}
 $$
 
-Again, this is easy to prove. Statements (a) and (b) yield 
+\nn for $n=1$.
+\end{nota}
 
-\noindent$\bu$ the definition of the vertical composition, for $m=3,\ n=1$,
+The following proposition is clear
 
-\noindent$\bu$ the definition of the horizontal composition, for $m=n=2$,
+\begin{prop}%\label{pil}
+The operations $*$ and $\circ$ are associative, and even ``jointly associative'' in the sense that we have, with self-explanatory notation
 
-\noindent$\bu$ the associativity of the vertical composition, for $m=4,\ n=1$,
+\begin{equation}\label{ja}
+\begin{pmatrix}(A)&(B)\\ (C)&(D)\end{pmatrix}=\begin{pmatrix}A&B\\ C&D.\end{pmatrix}
+\end{equation}
 
-\noindent$\bu$ the associativity of the the horizontal composition, for $m=2,\ n=3$,
+%$$\left(\begin{array}{c|c}A&B\\ \hline C&D\end{array}\right)=\left(\begin{array}{cc}A&B\\ C&D\end{array}\right)$$
 
-\noindent$\bu$ the so-called \emph{Interchange Law}, for $m=3,\ n=2$.
+\nn Moreover, the three morphisms of functors 
+
+\begin{equation}\label{ilmat}
+\begin{pmatrix}
+\theta_{m-1,n}&\cdots&\theta_{m-1,1}\\
+\vdots&&\vdots\\ 
+\theta_{1,n}&\cdots&\theta_{1,1}
+\end{pmatrix},
+\end{equation}
+
+\begin{equation}\label{ilsc}
+(\theta_{m-1,n}*\cdots*\theta_{m-1,1})\circ\cdots\circ(\theta_{1,n}*\cdots*\theta_{1,1}),
+\end{equation}
+
+\nn and 
+
+\begin{equation}\label{ilcs}
+(\theta_{m-1,n}\circ\cdots\circ\theta_{1,n})*\cdots*(\theta_{m-1,1}\circ\cdots\circ\theta_{1,1})
+\end{equation}
+
+\nn coincide.
+\end{prop}
+
+\begin{df}\label{dil} 
+We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equality between \eqref{ilmat}, \eqref{ilsc}, and \eqref{ilcs} the {\em Interchange Law}. \index{Interchange Law}
+\end{df}
 
 %
 
@@ -806,20 +828,27 @@ $$
 \end{tikzcd}
 $$
 
-Denoting vertical composition by $\circ$ and horizontal composition by $*$ (see Section~\ref{hove} p.~\pageref{hove}), Equalities (1.5.8) and (1.5.9) become respectively 
-%
-\begin{equation}\label{158}
-(\eta*L)\circ(L*\varepsilon)=L
-\end{equation}
-%
-and 
-%
-\begin{equation}\label{159}
-(R*\eta)\circ(\varepsilon*R)=R.
-\end{equation}
-%
+%Denoting vertical composition by $\circ$ and horizontal composition by $*$ (see Definition~\ref{dil} p.~\pageref{dil})
 
-Here is a picture of \eqref{158}, that is $(\eta*L)\circ(L*\varepsilon)=L$: 
+Using Notation~\ref{nil} p.~\pageref{nil}, Equalities (1.5.8) and (1.5.9) become respectively 
+
+\begin{equation}\label{158}
+\begin{pmatrix}
+\eta&L\\
+L&\ee
+\end{pmatrix}=L
+\end{equation}
+
+\nn and 
+
+\begin{equation}\label{159}
+\begin{pmatrix}
+R&\eta\\
+\eta&R
+\end{pmatrix}=R.
+\end{equation}
+
+Here is a picture of \eqref{158}: 
 $$
 \begin{tikzcd}
 %
@@ -840,7 +869,8 @@ $$
 \end{tikzcd}
 $$ 
 
-Here is a picture of \eqref{159}, that is $(R*\eta)\circ(\varepsilon*R)=R$: 
+Here is a picture of \eqref{159}, that is $\begin{pmatrix}R&\eta\\ \eta&R\end{pmatrix}=R$:
+
 $$
 \begin{tikzcd}
 %
@@ -872,8 +902,8 @@ and
 \begin{equation}\label{bij2}
 \mu_{X,X'}=(\lambda_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
 \end{equation} 
-%
-the functorial bijections defining the adjunction. Recall 
+
+\nn the functorial bijections defining the adjunction. Recall 
 $$
 \varepsilon_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
 $$ 
@@ -892,30 +922,33 @@ in $\C$, and then we replace $X'$ with $LX$. We get
 $$
 \lambda_{RLX,LX}(f)\circ L(\varepsilon_X)=\lambda_{X,LX}(f\circ\varepsilon_X)
 $$
-for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}.
+
+\nn for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}.
 
 To prove Equality \eqref{159} p.~\pageref{159}, which can be written as 
 %
 \begin{equation}\label{159b} 
 R(\eta_{X'})\circ\varepsilon_{RX'}=\id_{RX'},
 \end{equation}
-%
-we view (\ref{bij2}) as a bijection functorial in $X'\in\C'$, (with $X\in\C$ fixed), we apply it to the morphism 
+
+\nn we view (\ref{bij2}) as a bijection functorial in $X'\in\C'$, (with $X\in\C$ fixed), we apply it to the morphism 
 $$
 \eta_{X'}:LRX'\to X'
 $$ 
-in $\C'$, and then we replace $X$ with $RX'$. We get 
+
+\nn in $\C'$, and then we replace $X$ with $RX'$. We get 
 $$
 R(\eta_{X'})\circ(\mu_{RX',LRX'}(f))=\mu_{RX',X'}(\eta_{X'}\circ f)
 $$
-for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}.
-%
+
+\nn for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}.
+
+%%%
+
 \section{About Chapter 2}
-%
+
 \subsection{Brief Comments}
-%
-%%
-%
+
 \begin{s}\label{c38}
 P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\co\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\co\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly:%\medskip 
 %
@@ -1038,7 +1071,7 @@ Let us spell out the above statement:
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
-The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Section~\ref{hove} p.~\pageref{hove}), induce a map $f:L\to R$. Conversely, to an element  
+The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Definition~\ref{dil} p.~\pageref{dil}), induce a map $f:L\to R$. Conversely, to an element  
 $$
 r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
 $$ 
@@ -1048,9 +1081,9 @@ $$
 $$ 
 We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are inverse bijections.
 \end{s}
+
 %
-%%
-%
+
 \nn[\S\ref{231} p.~\pageref{231} about Definition 2.3.1 p.~50 will be inserted here.]
 
 %%%
@@ -2033,7 +2066,7 @@ As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=
 P. 93, Definition 4.1.1 and Lemma 4.1.2. For the reader's convenience, we reproduce the statements:
 
 \begin{df}
-Let $\C$ be a category. A {\em projector} \index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that the horizontal compositions (see Section~\ref{hove} p.~\pageref{hove}) $\ee*P$ and $P*\ee$ are isomorphisms. 
+Let $\C$ be a category. A {\em projector} \index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that the horizontal compositions (see Definition~\ref{dil} p.~\pageref{dil}) $\ee*P$ and $P*\ee$ are isomorphisms. 
 \end{df}
 
 \begin{lem}[Lemma 4.1.2]
@@ -2055,61 +2088,32 @@ $$
 $$ 
 the vertical arrows are bijective by (a), and the bottom arrow is bijective by (i).
 \end{s}
-%
-%%
-%
-\begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): Let us denote vertical composition by $\circ$ and horizontal composition by $*$ (see Section~\ref{hove} p.~\pageref{hove}). In view of \eqref{intlaw} p.~\pageref{intlaw}, Equality 
-%
-\begin{equation}\label{414i}
-(R*\eta*L)\circ(\varepsilon*P)=P,
-\end{equation}
-%
-that is $(R*\eta*L)\circ(\varepsilon*R*L)=R*L$, can be written as 
-$$
-\Big((R*\eta)\circ(\varepsilon*R)\Big)*L=R*L.
-$$ 
-More precisely, Equality 
-$$
-(R*\eta*L)\circ(\varepsilon*R*L)=\Big((R*\eta)\circ(\varepsilon*R)\Big)*L
-$$ 
-is attached to Array
-\begin{equation}%\label{intlaw2}
-\begin{matrix}
-L&R&\varepsilon\\ 
-L&\eta&R
-\end{matrix}
-\end{equation}
-in the same way as Equality \eqref{intlaw} p.~\pageref{intlaw} is attached to Array \eqref{intlaw2} p.~\pageref{intlaw2}. Thus \eqref{414i} follows from (1.5.9) p.~29 in the book (stated as \eqref{159} p.~\pageref{159} in this text).
 
-Similarly, by \eqref{intlaw} p.~\pageref{intlaw}, Equality 
-%
-\begin{equation}\label{414ib}
-(R*\eta*L)\circ(P*\varepsilon)=P,
-\end{equation}
-%
-that is $(R*\eta*L)\circ(R*L*\varepsilon)=R*L$, can be written as 
+%%
+
+\begin{s} 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): The sentence ``The two compositions 
 $$
-\Big((R*\eta)\circ(\varepsilon*R)\Big)*L=R*L.
+\begin{tikzcd}
+P\ar[yshift=0.7ex]{r}{\ee\circ P}\ar[yshift=-0.7ex]{r}[swap]{P\circ\ee}&P^2\ar{r}{R\eta L}&P
+\end{tikzcd}
 $$ 
-More precisely, Equality 
+
+\nn are equal to $\id_P$'' in the book means, in Notation~\ref{nil} p.~\pageref{nil}, %the notation of Section~\ref{hove} p.~\pageref{hove}, 
+that we have 
+
 $$
-(R*\eta*L)\circ(R*L*\varepsilon)=\Big((R*\eta)\circ(\varepsilon*R)\Big)*L
+\begin{pmatrix}R&\eta&L\\ \ee&R&L\end{pmatrix}=R*L=
+\begin{pmatrix}R&\eta&L\\ R&L&\ee.\end{pmatrix}
 $$ 
-is attached to Array
-\begin{equation}%\label{intlaw2}
-\begin{matrix}
-\varepsilon&L&R\\ 
-L&\eta&R
-\end{matrix}
-\end{equation}
-in the same way as Equality \eqref{intlaw} p.~\pageref{intlaw} is attached to Array \eqref{intlaw2} p.~\pageref{intlaw2}. Thus \eqref{414i} follows from (1.5.8) p.~29 in the book (stated as \eqref{158} p.~\pageref{158} in this text). 
+
+\nn This follows immediately from \eqref{ja} p.~\pageref{ja}, \eqref{158} p.~\pageref{158}, and \eqref{159} p.~\pageref{159}.
 \end{s}
 
-%%%
+%%
 
 \section{About Chapter 5}
-%sophie
+
 \subsection{Beginning of Section 5.1 (p.~113)}
 
 We want to define the notions of coimage (denoted by $\Coim$) and image (denoted by $\Ima$) in a slightly more general way than in the book. To this end we start by defining these notions in a particular context in which they coincide. To avoid confusions we (temporarily) use the notation $\IM$ for these particular cases. The proof of the following lemma is obvious. 
