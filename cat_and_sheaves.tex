@@ -703,31 +703,31 @@ is bijective.
 
 \subsection{Horizontal and Vertical Compositions (p.~19)}%\label{hove}
 
-Let $m\ge2$ and $n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
+Let $m,n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
 $$
-F_{i,j}:\C_j\to\C_{j+1},\quad1\le i\le m,\ 1\le j\le n
+F_{i,j}:\C_{j+1}\to\C_j,\quad1\le i\le m+1,\ 1\le j\le n
 $$
 be functors, let 
 $$
-\theta_{i,j}:F_{i,j}\to F_{i+1,j},\quad1\le i\le m-1,\ 1\le j\le n
+\theta_{i,j}:F_{i+1,j}\to F_{i,j},\quad1\le i\le m,\ 1\le j\le n
 $$
-be morphisms of functors. For instance, if $m=3,n=4$, then we have 
+be morphisms of functors. For instance, if $m=2,n=4$, then we have 
 $$
 \begin{tikzcd}
 %
-\C_1\ar{rr}{}[near end]{F_{11}}&\ar{d}[swap]{\theta_{11}}&\C_2\ar{rr}{}[near end]{F_{12}}&\ar{d}[swap]{\theta_{12}}&\C_3\ar{rr}{}[near end]{F_{13}}&\ar{d}[swap]{\theta_{13}}&\C_4\ar{rr}{}[near end]{F_{14}}&\ar{d}[swap]{\theta_{14}}&\C_5\\ 
+\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}&{}&\C_4\ar{ll}{}[near start,swap]{F_{13}}&{}&\C_5\ar{ll}{}[near start,swap]{F_{14}}\\ 
 %
-\C_1\ar{rr}{}[near end]{F_{21}}&{}\ar{d}[swap]{\theta_{21}}&\C_2\ar{rr}{}[near end]{F_{22}}&{}\ar{d}[swap]{\theta_{22}}&\C_3\ar{rr}{}[near end]{F_{23}}&{}\ar{d}[swap]{\theta_{23}}&\C_4\ar{rr}{}[near end]{F_{24}}&{}\ar{d}[swap]{\theta_{24}}&\C_5\\ 
+\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}&\ar{u}{\theta_{13}}&\C_4\ar{ll}{}[near start,swap]{F_{23}}&\ar{u}{\theta_{14}}&\C_5\ar{ll}{}[near start,swap]{F_{24}}\\ 
 %
-\C_1\ar{rr}{}[near end]{F_{31}}&{}&\C_2\ar{rr}{}[near end]{F_{32}}&{}&\C_3\ar{rr}{}[near end]{F_{33}}&{}&\C_4\ar{rr}{}[near end]{F_{34}}&{}&\C_5.
+\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start,swap]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start,swap]{F_{32}}&\ar{u}{\theta_{23}}&\C_4\ar{ll}{}[near start,swap]{F_{33}}&\ar{u}{\theta_{24}}&\C_5\ar{ll}{}[near start,swap]{F_{34}}.
 \end{tikzcd}
 $$ 
 
-We shall define a morphism from $F_{1,n}\cdots F_{1,1}$ to $F_{m,n}\cdots F_{m,1}$.
+We shall define a morphism from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
 
-Let $X$ be an object of $\C_1$, and, for $i\in M^n$, where $M:=\{1,2,\dots,m\}$, put 
+Let $X$ be an object of $\C_{n+1}$, and, for $i\in M^n$, where $M:=\{1,2,\dots,m+1\}$, put 
 $$
-X_i:=F_{i_n,n}\cdots F_{i_1,1}X\in\C_{n+1},
+X_i:=F_{i_1,1}\cdots F_{i_n,n}X\in\C_1,
 $$
 for $1\le p\le n$ set 
 $$
@@ -735,86 +735,79 @@ e_p:=(0,\dots,0,1,0,\dots,0)\in M^n,
 $$
 the one being in the $p$-th position. Assuming $i,i+e_p\in M^n$, define the morphism 
 $$
-f_{i,p}:X_i\to X_{i+e_p}
+f_{i,p}:X_{i+e_p}\to X_i
 $$
-in $\C_{n+1}$ by 
+in $\C_1$ by 
 $$
-f_{i,p}:=(F_{i_n,n}\cdots F_{i_{p+1},p+1})(\theta_{i_p,p}(F_{i_{p-1},p-1}\cdots F_{i_1,1}X)).
+f_{i,p}:=(F_{i_1,1}\cdots F_{i_{p-1},p-1})(\theta_{i_p,p}(F_{i_{p+1},p+1}\cdots F_{i_n,n}X)).
 $$
 
-This gives rise to a diagram in $\C_{n+1}$ whose vertices are the $X_i$ with $i\in M^n$, and whose arrows are the $f_{i,p}$ with $i,i+e_p\in M^n$. 
+This gives rise to a diagram in $\C_1$ whose vertices are the $X_i$ with $i\in M^n$, and whose arrows are the $f_{i,p}$ with $i,i+e_p\in M^n$. 
 
-Clearly, all the squares in this diagram commute, and, thus, the whole diagram commutes. In particular, all the paths from $X_{(1,\dots,1)}$ to $X_{(m,\dots,m)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
+Clearly, all the squares in this diagram commute, and, thus, the whole diagram commutes. In particular, all the paths from $X_{(m+1,\dots,m+1)}$ to $X_{(1,\dots,1)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
 $$
-X_{(1,\dots,1)}=F_{1,n}\cdots F_{1,1}X\to F_{m,n}\cdots F_{m,1}X=X_{(m,\dots,m)}.
+X_{(m+1,\dots,m+1)}=F_{m+1,1}\cdots F_{m+1,n}X\to F_{1,1}\cdots F_{1,n}X=X_{(1,\dots,1)}.
 $$
-When $X$ varies in $\C$, this family of morphisms in $\C$ defines the sought-for morphism of functors from $F_{1,n}\cdots F_{1,1}$ to $F_{m,n}\cdots F_{m,1}$. 
+When $X$ varies in $\C$, this family of morphisms in $\C$ defines the sought-for morphism of functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$. 
 
 \begin{nota}\label{nil}
 We denote this morphism of functors by
 $$
 \begin{pmatrix}
-\theta_{m-1,n}&\cdots&\theta_{m-1,1}\\
+\theta_{1,1}&\cdots&\theta_{1,n}\\
 \vdots&&\vdots\\ 
-\theta_{1,n}&\cdots&\theta_{1,1}
-\end{pmatrix}:F_{1,n}\cdots F_{1,1}\to F_{m,n}\cdots F_{m,1}, 
+\theta_{m,1}&\cdots&\theta_{m,n}
+\end{pmatrix}:F_{m+1,1}\cdots F_{m+1,n}\to F_{1,1}\cdots F_{1,n}, 
 $$ 
 and we put 
 $$
-\theta_{1,n}*\cdots*\theta_{1,1}:=(\theta_{1,n}\ \cdots\ \theta_{1,1})
+\theta_{1,1}*\cdots*\theta_{1,n}:=(\theta_{1,1}\ \cdots\ \theta_{1,n})
 $$
-for $m=2$, and 
+for $m=1$, and 
 $$
-\theta_{m-1,1}\circ\cdots\circ\theta_{1,1}:=
+\theta_{1,1}\circ\cdots\circ\theta_{m,1}:=
 \begin{pmatrix}
-\theta_{m-1,1}\\
+\theta_{1,1}\\
 \vdots\\ 
-\theta_{1,1}
+\theta_{m,1}
 \end{pmatrix}
 $$
 
 \nn for $n=1$.
 \end{nota}
 
-The following proposition is clear
+The following proposition is clear 
 
-\begin{prop}%\label{pil}
-The operations $*$ and $\circ$ are associative, and even ``jointly associative'' in the sense that we have, with self-explanatory notation
+\begin{prop}\label{pil}
+The operations $*$ and $\circ$ are associative, and we have$$
+(\theta_{1,1}*\cdots*\theta_{1,n})\circ\cdots\circ(\theta_{m,1}*\cdots*\theta_{m,n})
+=\begin{pmatrix}
+\theta_{1,1}*\cdots*\theta_{1,n}\\
+\vdots\\ 
+\theta_{m,1}*\cdots*\theta_{m,n}
+\end{pmatrix}
+$$ 
 
-\begin{equation}\label{ja}
-\begin{pmatrix}(A)&(B)\\ (C)&(D)\end{pmatrix}=\begin{pmatrix}A&B\\ C&D.\end{pmatrix}
-\end{equation}
-
-%$$\left(\begin{array}{c|c}A&B\\ \hline C&D\end{array}\right)=\left(\begin{array}{cc}A&B\\ C&D\end{array}\right)$$
-
-\nn Moreover, the three morphisms of functors 
-
-\begin{equation}\label{ilmat}
-\begin{pmatrix}
-\theta_{m-1,n}&\cdots&\theta_{m-1,1}\\
+$$
+=\begin{pmatrix}
+\theta_{1,1}&\cdots&\theta_{1,n}\\
 \vdots&&\vdots\\ 
-\theta_{1,n}&\cdots&\theta_{1,1}
-\end{pmatrix},
-\end{equation}
+\theta_{m,1}&\cdots&\theta_{m,n}
+\end{pmatrix}
+$$
 
-\begin{equation}\label{ilsc}
-(\theta_{m-1,n}*\cdots*\theta_{m-1,1})\circ\cdots\circ(\theta_{1,n}*\cdots*\theta_{1,1}),
-\end{equation}
-
-\nn and 
-
-\begin{equation}\label{ilcs}
-(\theta_{m-1,n}\circ\cdots\circ\theta_{1,n})*\cdots*(\theta_{m-1,1}\circ\cdots\circ\theta_{1,1})
-\end{equation}
-
-\nn coincide.
+$$
+=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}*\cdots*
+\begin{pmatrix}\theta_{1,n}\\ \vdots\\ \theta_{m,n}\end{pmatrix}
+=(\theta_{1,1}\circ\cdots\circ\theta_{m,1})*\cdots*(\theta_{1,n}\circ\cdots\circ\theta_{m,n}).
+$$
 \end{prop}
 
 \begin{df}\label{dil} 
-We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equality between \eqref{ilmat}, \eqref{ilsc}, and \eqref{ilcs} the {\em Interchange Law}. \index{Interchange Law}
+We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil} the {\em Interchange Law}. \index{Interchange Law}
 \end{df}
 
-%
+%%
 
 \subsection{Equalities (1.5.8) and (1.5.9) (p.~29)}
 
@@ -833,115 +826,128 @@ $$
 Using Notation~\ref{nil} p.~\pageref{nil}, Equalities (1.5.8) and (1.5.9) become respectively 
 
 \begin{equation}\label{158}
-\begin{pmatrix}
-\eta&L\\
-L&\ee
-\end{pmatrix}=L
+(\eta*L)\circ(L*\ee)=L
 \end{equation}
 
 \nn and 
 
 \begin{equation}\label{159}
-\begin{pmatrix}
-R&\eta\\
-\eta&R
-\end{pmatrix}=R.
+(R*\eta)\circ(\eta*R)=R.
 \end{equation}
 
-Here is a picture of \eqref{158}: 
+Let us try to illustrate these two equalities by diagrams:
+
+Picture of $L\xleftarrow{\eta*L}LRL$:
+ 
 $$
 \begin{tikzcd}
 %
-\C\ar{rr}{}[near end]{1}&\ar{d}[swap]{\varepsilon}&\C\ar{rr}{}[near end]{L}&\ar{d}[swap]{L}&\C'\ar{rr}{}[near end]{1}&\ar{d}[swap]{1}&\C'\\ 
+\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}\ar{rr}{}{1}&{}&\C\\ 
 %
-\C\ar{rr}{}[near end]{RL}&{}&\C\ar{rr}{}[near end]{L}&{}&\C'\ar{rr}{}[near end]{1}&{}&\C'\\ 
-%
-\C\ar{rr}{}[near end]{1}&\ar{d}[swap]{1}&\C\ar{rr}{}[near end]{L}&\ar{d}[swap]{L}&\C'\ar{rr}{}[near end]{LR}&\ar{d}[swap]{\eta}&\C'\\ 
-%
-\C\ar{rr}{}[near end]{1}&{}&\C\ar{rr}{}[near end]{L}&{}&\C'\ar{rr}{}[near end]{1}&{}&\C'\\ 
+\C'&\ar{u}{\eta}&\C'\ar{ll}{}{LR}&\ar{u}{L}&\C\ar{ll}{}{L}&\ar{u}{1}&\C\ar{ll}{}{1}\\ 
 %
 &&&=\\ 
 %
-\C\ar{rrrrrr}[near end]{L}&&&{}\ar{d}[swap]{L}&&&\C'\\
+\C'&&&{}&&&\C\ar{llllll}[swap]{L}\\
 %
-\C\ar{rrrrrr}[near end]{L}&&&{}&&&\C'.
+\C'&&&\ar{u}{\eta*L}&&&\C\ar{llllll}{LRL}.
 %
 \end{tikzcd}
 $$ 
 
-Here is a picture of \eqref{159}, that is $\begin{pmatrix}R&\eta\\ \eta&R\end{pmatrix}=R$:
-
+Picture of $LRL\xleftarrow{L*\ee}L$:
+ 
 $$
 \begin{tikzcd}
 %
-\C'\ar{rr}{}[near end]{1}&\ar{d}[swap]{1}&\C'\ar{rr}{}[near end]{R}&\ar{d}[swap]{R}&\C\ar{rr}{}[near end]{1}&\ar{d}[swap]{\varepsilon}&\C\\ 
+\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}\ar{rr}{}{RL}&{}&\C\\ 
 %
-\C'\ar{rr}{}[near end]{1}&{}&\C'\ar{rr}{}[near end]{R}&{}&\C\ar{rr}{}[near end]{RL}&{}&\C\\ 
-%
-\C'\ar{rr}{}[near end]{LR}&\ar{d}[swap]{\eta}&\C'\ar{rr}{}[near end]{R}&\ar{d}[swap]{R}&\C\ar{rr}{}[near end]{1}&\ar{d}[swap]{1}&\C\\ 
-%
-\C'\ar{rr}{}[near end]{1}&{}&\C'\ar{rr}{}[near end]{R}&{}&\C\ar{rr}{}[near end]{1}&{}&\C\\ 
+\C'&\ar{u}{1}&\C'\ar{ll}{}{1}&\ar{u}{L}&\C\ar{ll}{}{L}&\ar{u}{\ee}&\C\ar{ll}{}{1}\\ 
 %
 &&&=\\ 
 %
-\C'\ar{rrrrrr}[near end]{R}&&&{}\ar{d}[swap]{R}&&&\C\\
+\C'&&&{}&&&\C\ar{llllll}[swap]{LRL}\\
 %
-\C'\ar{rrrrrr}[near end]{R}&&&{}&&&\C.
+\C'&&&\ar{u}{L*\ee}&&&\C\ar{llllll}{L}.
 %
 \end{tikzcd}
 $$ 
 
-For the reader's convenience we prove these equalities. Let us denote by
-%
-\begin{equation}\label{bij1}
-\lambda_{X,X'}:\Hom_\C(X,RX')\overset\sim\to\Hom_{\C'}(LX,X')
-\end{equation} 
-%
-and 
-%
-\begin{equation}\label{bij2}
-\mu_{X,X'}=(\lambda_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
-\end{equation} 
+Picture of \eqref{158}, that is, $(\eta*L)\circ(L*\ee)=L$:
 
-\nn the functorial bijections defining the adjunction. Recall 
 $$
-\varepsilon_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
+\begin{tikzcd}
+%
+\C'&&&{}&&&\C\ar{llllll}[near start,swap]{L}\\
+%
+\C'&&&\ar{u}{\eta*L}&&&\C\ar{llllll}[near start,swap]{LRL}\\
+%
+\C'&&&\ar{u}{L*\ee}&&&\C\ar{llllll}[near start]{L}\\ 
+%
+&&&=\\ 
+%
+\C'&&&{}&&&\C\ar{llllll}[swap]{L}\\ 
+%
+\C'&&&\ar{u}{L}&&&\C.\ar{llllll}{L}
+%
+\end{tikzcd}
 $$ 
 
-To prove Equality \eqref{158} p.~\pageref{158}, which can be written as 
+Picture of $R\xleftarrow{R*\eta}RLR$:
+ 
+$$
+\begin{tikzcd}
 %
-\begin{equation}\label{158b} 
-\eta_{LX}\circ L(\varepsilon_X)=\id_{LX}, 
-\end{equation}
+\C&{}&\C\ar{ll}{}[swap]{1}&{}&\C'\ar{ll}{}[swap]{R}\ar{rr}{}{1}&{}&\C'\\ 
 %
-we view (\ref{bij1}) as a bijection functorial in $X\in\C$ (with $X'\in\C'$ fixed), we apply it to the morphism 
-$$
-\varepsilon_X:X\to RLX
-$$ 
-in $\C$, and then we replace $X'$ with $LX$. We get 
-$$
-\lambda_{RLX,LX}(f)\circ L(\varepsilon_X)=\lambda_{X,LX}(f\circ\varepsilon_X)
-$$
-
-\nn for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}.
-
-To prove Equality \eqref{159} p.~\pageref{159}, which can be written as 
+\C&\ar{u}{1}&\C\ar{ll}{}{1}&\ar{u}{R}&\C'\ar{ll}{}{R}&\ar{u}{\eta}&\C'\ar{ll}{}{LR}\\ 
 %
-\begin{equation}\label{159b} 
-R(\eta_{X'})\circ\varepsilon_{RX'}=\id_{RX'},
-\end{equation}
-
-\nn we view (\ref{bij2}) as a bijection functorial in $X'\in\C'$, (with $X\in\C$ fixed), we apply it to the morphism 
-$$
-\eta_{X'}:LRX'\to X'
+&&&=\\ 
+%
+\C&&&{}&&&\C'\ar{llllll}[swap]{R}\\
+%
+\C&&&\ar{u}{R*\eta}&&&\C'\ar{llllll}{RLR}.
+%
+\end{tikzcd}
 $$ 
 
-\nn in $\C'$, and then we replace $X$ with $RX'$. We get 
-$$
-R(\eta_{X'})\circ(\mu_{RX',LRX'}(f))=\mu_{RX',X'}(\eta_{X'}\circ f)
-$$
+Picture of $RLR\xleftarrow{\ee*R}R$:
 
-\nn for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}.
+$$
+\begin{tikzcd}
+%
+\C&{}&\C\ar{ll}{}[swap]{RL}&{}&\C'\ar{ll}{}[swap]{R}\ar{rr}{}{1}&{}&\C'\\ 
+%
+\C&\ar{u}{\ee}&\C\ar{ll}{}{1}&\ar{u}{R}&\C'\ar{ll}{}{R}&\ar{u}{1}&\C'\ar{ll}{}{1}\\ 
+%
+&&&=\\ 
+%
+\C&&&{}&&&\C'\ar{llllll}[swap]{RLR}\\
+%
+\C&&&\ar{u}{\ee*R}&&&\C'\ar{llllll}{R}.
+%
+\end{tikzcd}
+$$ 
+
+Picture of \eqref{159}, that is, $(R*\eta)\circ(\ee*R)=R$:
+
+$$
+\begin{tikzcd}
+%
+\C&&&{}&&&\C'\ar{llllll}[near start,swap]{R}\\
+%
+\C&&&\ar{u}{R*\eta}&&&\C'\ar{llllll}[near start,swap]{RLR}\\
+%
+\C&&&\ar{u}{\ee*R}&&&\C'\ar{llllll}[near start]{R}\\ 
+%
+&&&=\\ 
+%
+\C&&&{}&&&\C'\ar{llllll}[swap]{R}\\ 
+%
+\C&&&\ar{u}{R}&&&\C'.\ar{llllll}{R}
+%
+\end{tikzcd}
+$$
 
 %%%
 
@@ -2092,22 +2098,36 @@ the vertical arrows are bijective by (a), and the bottom arrow is bijective by (
 %%
 
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): The sentence ``The two compositions 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): In Notation~\ref{nil} p.~\pageref{nil}, the sentence of the book ``The two compositions 
 $$
 \begin{tikzcd}
 P\ar[yshift=0.7ex]{r}{\ee\circ P}\ar[yshift=-0.7ex]{r}[swap]{P\circ\ee}&P^2\ar{r}{R\eta L}&P
 \end{tikzcd}
 $$ 
 
-\nn are equal to $\id_P$'' in the book means, in Notation~\ref{nil} p.~\pageref{nil}, %the notation of Section~\ref{hove} p.~\pageref{hove}, 
-that we have 
+\nn are equal to $\id_P$'' means 
 
 $$
-\begin{pmatrix}R&\eta&L\\ \ee&R&L\end{pmatrix}=R*L=
-\begin{pmatrix}R&\eta&L\\ R&L&\ee.\end{pmatrix}
+\begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
+=RL=\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix}.
 $$ 
 
-\nn This follows immediately from \eqref{ja} p.~\pageref{ja}, \eqref{158} p.~\pageref{158}, and \eqref{159} p.~\pageref{159}.
+\nn Indeed, we have
+
+$$
+\begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
+=\begin{pmatrix}R*\eta&L\\ \ee*R&L\end{pmatrix}
+=\begin{pmatrix}R*\eta\\ \ee*R\end{pmatrix}\circ\begin{pmatrix}L\\ L\end{pmatrix}
+=RL
+$$
+
+$$
+=\begin{pmatrix}R\\ R\end{pmatrix}\circ\begin{pmatrix}\eta*L\\ L*\ee\end{pmatrix}
+=\begin{pmatrix}R&\eta*L\\ R&L*\ee\end{pmatrix}
+=\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix},
+$$ 
+
+\nn the third and fourth equalities resulting respectively from \eqref{159} p.~\pageref{159} and \eqref{158} p.~\pageref{158}, and the other equalities following from Proposition~\ref{pil} p.~\pageref{pil}.
 \end{s}
 
 %%
@@ -5253,27 +5273,23 @@ with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. 
 \noindent(c) $\then$ (a): Straightforward.
 \end{proof}
 \end{s}
-%
-%%%%%
-%
+
+%%%%
+
 \section{About Chapter 11}
-%
-%\subsection{Brief Comments}
-%
-%\begin{s}\label{pg270} 
+ 
 P. 270. Recall that $(\A,T)$ is an additive category with translation. Let 
 \begin{equation}\label{iliad}
 (d_{X,i}:X_i\to TX_i)_{i\in I}
 \end{equation} 
 be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then the natural morphism $\co_id_{X,i}:X\to TX$ is an inductive limit of \eqref{iliad} in $\A_d$. There are analogous statements with ``projective'' instead of ``inductive'' and $\A_c$ instead of $\A_d$.
-%\end{s}
-%
+
 %%%
-%
+
 \section{About Chapter 12}
-%
-\subsection{Avoiding the Snake Lemma (p. 297)}
-%
+
+\subsection{Avoiding the Snake Lemma (p. 297)} \index{Snake Lemma} \index{avoiding the Snake Lemma}
+
 This is about Sections 12.1 and 12.2 of the book. I think the Snake Lemma can be avoided as follows: 
 
 Let $\A$ be an abelian category. 
