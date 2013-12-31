@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0024)
+% about "categories and sheaves" (version_0025)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2069,17 +2069,62 @@ As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=
 \section{About Chapter 4}
 
 \begin{s}
-P. 93, Definition 4.1.1 and Lemma 4.1.2. For the reader's convenience, we reproduce the statements:
+P. 93, Lemma 4.1.2. Here is a slightly more general statement:
 
-\begin{df}
-Let $\C$ be a category. A {\em projector} \index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that the horizontal compositions (see Definition~\ref{dil} p.~\pageref{dil}) $\ee*P$ and $P*\ee$ are isomorphisms. 
-\end{df}
+\begin{lem}\label{proj3}
+Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a morphism of functors, and let $X$ be an object of $\C$. Then the following conditions are equivalent:
 
-\begin{lem}[Lemma 4.1.2]
-If $(P,\ee)$ is a projector, then $\ee*P=P*\ee$.
+\nn{\em(a)} $\ee_{P(X)}$ is an isomorphism and $P(\ee_X)$ is an epimorphism,
+
+\nn{\em(b)} $P(\ee_X)$ is an isomorphism and $\ee_{P(X)}$ is an monomorphism,
+
+\nn{\em(c)} $\ee_{P(X)}$ and $P(\ee_X)$ are equal isomorphisms.
 \end{lem}
 
-The proof shows the following: if $\ee*P$ is an isomorphism and $P*\ee$ is an epimorphism, then $(P,\ee)$ is a projector.
+\begin{proof}
+(a) $\then$ (c): Put $u:=(\ee_{P(X)})^{-1}\circ P(\ee_X)$. It suffices to show $u=\id_{P(X)}$. We have $\ee_{P(X)}\circ u=P(\ee_X)$, 
+$$
+u\circ\ee_X=(\ee_{P(X)})^{-1}\circ P(\ee_X)\circ\ee_X=(\ee_{P(X)})^{-1}\circ\ee_{P(X)}\circ\ee_X=\ee_X,
+$$
+$$
+P(u)\circ P(\ee_X)=P(\ee_X)=\id_{P^2(u)}\circ P(\ee_X).
+$$
+As $P(\ee_X)$ is an epimorphism, this implies $P(u)=\id_{P^2(u)}$, and thus 
+$$
+\ee_{P(X)}\circ u=P(u)\circ \ee_{P(X)}=\ee_{P(X)}.
+$$ 
+As $\ee_{P(X)}$ is an isomorphism, this implies $u=\id_{P(X)}$, as required.
+
+\nn(b) $\then$ (c): We shall use several times the fact that $P(\ee_X)$ is an isomorphism. Put $v:=P(\ee_X)^{-1}\circ\ee_{P(X)}$. It suffices to show $v=\id_{P(X)}$. We have 
+
+$$
+P(\ee_X)\circ v\circ\ee_X=P(\ee_X)\circ P(\ee_X)^{-1}\circ\ee_{P(X)}\circ\ee_X=P(\ee_X)\circ\ee_X,
+$$ 
+
+$$
+v\circ\ee_X=\ee_X,
+$$
+
+$$
+P(v)\circ P(\ee_X)=P(\ee_X),
+$$
+
+$$
+P(v)=\id_{P^2(X)},
+$$
+
+$$
+\ee_{P(X)}\circ v=P(v)\circ\ee_{P(X)}=\ee_{P(X)}=\ee_{P(X)}\circ\id_{P(X)}.
+$$ 
+
+\nn As $\ee_{P(X)}$ is an monomorphism, this implies $v=\id_{P(X)}$, as required.
+\end{proof}
+
+Definition 4.1.1 p.~93 of the book can be stated as follows:
+
+\begin{df}
+Let $\C$ be a category. A {\em projector} \index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that each object $X$ of $\C$ satisfies the equivalent conditions of Lemma~\ref{proj3}. 
+\end{df}
 \end{s}
 
 %
@@ -4664,7 +4709,7 @@ If $\C$ is a small nonempty category admitting small well-ordered upper bounds a
 The category $\C^X$ is again small, nonempty, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
 \end{proof}
 
-We recall the notion of {\em construction by transfinite induction}. \index{construction by transfinite induction} \index{transfinite induction}
+We recall the notion of {\em construction by transfinite induction}. \index{transfinite induction} %\index{con\-struc\-tion by trans\-fi\-nite in\-duc\–tion}
 
 \begin{thm}[Construction by Transfinite Induction]\label{meta} 
 Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $$
