@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0026)
+% about "categories and sheaves" (version_0027)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -701,7 +701,150 @@ is bijective.
 
 %%
 
-\subsection{Horizontal and Vertical Compositions (p.~19)}%\label{hove}
+\subsection{Horizontal and Vertical Compositions (p. 19) 1}\label{hove1}
+
+This Section and Section~\ref{hove2} p.~\pageref{hove2} serve exactly the same purpose. The reader should read at most one of them.
+
+The diagram 
+
+$$
+\begin{tikzcd}
+%
+\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}\\ 
+%
+\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}\\ 
+%
+\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start]{F_{32}}
+%
+\end{tikzcd}
+$$ 
+
+\nn yields the commutative diagram 
+
+$$
+\begin{tikzcd}
+%
+F_{11}F_{12}X&&F_{21}F_{12}X\ar{ll}[swap]{\theta_{11}F_{12}X}&&F_{31}F_{12}X\ar{ll}[swap]{\theta_{21}F_{12}X}\\ 
+%
+F_{11}F_{22}X\ar{u}{F_{11}\theta_{12}X}&&F_{21}F_{22}X\ar{ll}[swap]{\theta_{11}F_{22}X}\ar{u}{F_{21}\theta_{12}X}&&F_{31}F_{22}X\ar{ll}[swap]{\theta_{21}F_{22}X}\ar{u}[swap]{F_{31}\theta_{12}X}\\ 
+%
+F_{11}F_{32}X\ar{u}{F_{11}\theta_{22}X}&&F_{21}F_{32}X\ar{ll}{\theta_{11}F_{32}X}\ar{u}{F_{21}\theta_{22}X}&&F_{31}F_{32}X\ar{ll}{\theta_{21}F_{32}X}\ar{u}[swap]{F_{31}\theta_{22}X}
+%
+\end{tikzcd}
+$$ 
+
+\nn in $\C_1$. (Here $X$ is in $\C_3$, and it is understood that the $\C_i$ are categories, the $F_{ij}$ are functors, and the $\theta_{ij}$ are morphisms of functors.) We get a well-defined morphism in $\C_1$ from $F_{31}F_{32}X$ to $F_{11}F_{12}X$, which is easily seen to define a morphism of functors from $F_{31}F_{32}$ to $F_{11}F_{12}$. 
+
+\begin{nota}
+We denote this morphism of functors by
+$$
+\begin{pmatrix}
+\theta_{11}&\theta_{12}\\ 
+\theta_{21}&\theta_{22}
+\end{pmatrix}:F_{31}F_{32}\to F_{11}F_{12}.
+$$ 
+If $\theta_{21}$ and $\theta_{22}$ are identity morphisms, we put 
+$$
+\theta_{11}*\theta_{12}:=
+\begin{pmatrix}
+\theta_{11}&\theta_{12}\\ 
+\theta_{21}&\theta_{22}
+\end{pmatrix}.
+$$ 
+If $\theta_{12}$ and $\theta_{22}$ are identity morphisms, we put 
+$$
+\theta_{11}\circ\theta_{21}:=
+\begin{pmatrix}
+\theta_{11}&\theta_{12}\\ 
+\theta_{21}&\theta_{22}
+\end{pmatrix}.
+$$ 
+\end{nota}
+
+Let $m,n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
+$$
+F_{i,j}:\C_{j+1}\to\C_j,\quad1\le i\le m+1,\ 1\le j\le n
+$$
+be functors, let 
+$$
+\theta_{i,j}:F_{i+1,j}\to F_{i,j},\quad1\le i\le m,\ 1\le j\le n
+$$
+be morphisms of functors. For instance, if $m=2,n=4$, then we have 
+$$
+\begin{tikzcd}
+%
+\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}&{}&\C_4\ar{ll}{}[near start,swap]{F_{13}}&{}&\C_5\ar{ll}{}[near start,swap]{F_{14}}\\ 
+%
+\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}&\ar{u}{\theta_{13}}&\C_4\ar{ll}{}[near start,swap]{F_{23}}&\ar{u}{\theta_{14}}&\C_5\ar{ll}{}[near start,swap]{F_{24}}\\ 
+%
+\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start,swap]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start,swap]{F_{32}}&\ar{u}{\theta_{23}}&\C_4\ar{ll}{}[near start,swap]{F_{33}}&\ar{u}{\theta_{24}}&\C_5\ar{ll}{}[near start,swap]{F_{34}}.
+\end{tikzcd}
+$$ 
+
+The following proposition is clear 
+
+\begin{prop}
+The operations $*$ and $\circ$ are associative, and, in the above setting, we have the equality 
+
+$$
+(\theta_{1,1}*\cdots*\theta_{1,n})\circ\cdots\circ(\theta_{m,1}*\cdots*\theta_{m,n})
+$$ 
+
+$$
+=(\theta_{1,1}\circ\cdots\circ\theta_{m,1})*\cdots*(\theta_{1,n}\circ\cdots\circ\theta_{m,n}).
+$$
+
+\nn between functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
+\end{prop}
+
+\begin{nota}\label{nil1}
+We denote this morphism of functors by
+
+$$
+\begin{pmatrix}
+\theta_{1,1}&\cdots&\theta_{1,n}\\
+\vdots&&\vdots\\ 
+\theta_{m,1}&\cdots&\theta_{m,n}
+\end{pmatrix}:F_{m+1,1}\cdots F_{m+1,n}\to F_{1,1}\cdots F_{1,n}.
+$$ 
+\end{nota}
+
+\begin{prop}\label{pil1}
+We have, in the above setting,
+
+$$
+(\theta_{1,1}*\cdots*\theta_{1,n})\circ\cdots\circ(\theta_{m,1}*\cdots*\theta_{m,n})
+=\begin{pmatrix}
+\theta_{1,1}*\cdots*\theta_{1,n}\\
+\vdots\\ 
+\theta_{m,1}*\cdots*\theta_{m,n}
+\end{pmatrix}
+$$ 
+
+$$
+=\begin{pmatrix}
+\theta_{1,1}&\cdots&\theta_{1,n}\\
+\vdots&&\vdots\\ 
+\theta_{m,1}&\cdots&\theta_{m,n}
+\end{pmatrix}
+$$
+
+$$
+=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}*\cdots*
+\begin{pmatrix}\theta_{1,n}\\ \vdots\\ \theta_{m,n}\end{pmatrix}
+=(\theta_{1,1}\circ\cdots\circ\theta_{m,1})*\cdots*(\theta_{1,n}\circ\cdots\circ\theta_{m,n}).
+$$
+\end{prop}
+
+\begin{df}\label{dil1} 
+We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil2} the {\em Interchange Law}. \index{Interchange Law}
+\end{df}
+
+%%
+
+\subsection{Horizontal and Vertical Compositions (p.~19) 2}\label{hove2}
+
+This Section and Section~\ref{hove1} p.~\pageref{hove1} serve exactly the same purpose. The reader should read at most one of them.
 
 Let $m,n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
 $$
@@ -778,7 +921,7 @@ X_{(m+1,\dots,m+1)}=F_{m+1,1}\cdots F_{m+1,n}X\to F_{1,1}\cdots F_{1,n}X=X_{(1,\
 $$
 When $X$ varies in $\C_{n+1}$, this family of morphisms in $\C_1$ defines the sought-for morphism of functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$. 
 
-\begin{nota}\label{nil}
+\begin{nota}\label{nil2}
 We denote this morphism of functors by
 $$
 \begin{pmatrix}
@@ -806,7 +949,7 @@ $$
 
 The following proposition is clear 
 
-\begin{prop}\label{pil}
+\begin{prop}\label{pil2}
 The operations $*$ and $\circ$ are associative, and we have$$
 (\theta_{1,1}*\cdots*\theta_{1,n})\circ\cdots\circ(\theta_{m,1}*\cdots*\theta_{m,n})
 =\begin{pmatrix}
@@ -831,8 +974,8 @@ $$
 $$
 \end{prop}
 
-\begin{df}\label{dil} 
-We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil} the {\em Interchange Law}. \index{Interchange Law}
+\begin{df}\label{dil2} 
+We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil2} the {\em Interchange Law}. \index{Interchange Law}
 \end{df}
 
 %%
@@ -849,9 +992,7 @@ $$
 \end{tikzcd}
 $$
 
-%Denoting vertical composition by $\circ$ and horizontal composition by $*$ (see Definition~\ref{dil} p.~\pageref{dil})
-
-Using Notation~\ref{nil} p.~\pageref{nil}, Equalities (1.5.8) and (1.5.9) become respectively 
+Using Notation~\ref{nil1} p.~\pageref{nil1} or Notation~\ref{nil2} p.~\pageref{nil2}, Equalities (1.5.8) and (1.5.9) become respectively 
 
 \begin{equation}\label{158}
 (\eta*L)\circ(L*\ee)=L
@@ -1105,7 +1246,7 @@ Let us spell out the above statement:
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
-The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Definition~\ref{dil} p.~\pageref{dil}), induce a map $f:L\to R$. Conversely, to an element  
+The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1} or Definition~\ref{dil2} p.~\pageref{dil2}), induce a map $f:L\to R$. Conversely, to an element  
 $$
 r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
 $$ 
@@ -2171,7 +2312,7 @@ the vertical arrows are bijective by (a), and the bottom arrow is bijective by (
 %%
 
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): In Notation~\ref{nil} p.~\pageref{nil}, the sentence of the book ``The two compositions 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): In Notation~\ref{nil1} p.~\pageref{nil1} or Notation~\ref{nil2} p.~\pageref{nil2}, the sentence of the book ``The two compositions 
 $$
 \begin{tikzcd}
 P\ar[yshift=0.7ex]{r}{\ee\circ P}\ar[yshift=-0.7ex]{r}[swap]{P\circ\ee}&P^2\ar{r}{R\eta L}&P
@@ -2200,7 +2341,7 @@ $$
 =\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix},
 $$ 
 
-\nn the third and fourth equalities resulting respectively from \eqref{159} p.~\pageref{159} and \eqref{158} p.~\pageref{158}, and the other equalities following from Proposition~\ref{pil} p.~\pageref{pil}.
+\nn the third and fourth equalities resulting respectively from \eqref{159} p.~\pageref{159} and \eqref{158} p.~\pageref{158}, and the other equalities following from Proposition~\ref{pil1} p.~\pageref{pil1} or Proposition~\ref{pil2} p.~\pageref{pil2}.
 \end{s}
 
 %%
