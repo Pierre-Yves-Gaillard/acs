@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0025)
+% about "categories and sheaves" (version_0026)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -742,13 +742,41 @@ $$
 f_{i,p}:=(F_{i_1,1}\cdots F_{i_{p-1},p-1})(\theta_{i_p,p}(F_{i_{p+1},p+1}\cdots F_{i_n,n}X)).
 $$
 
-This gives rise to a diagram in $\C_1$ whose vertices are the $X_i$ with $i\in M^n$, and whose arrows are the $f_{i,p}$ with $i,i+e_p\in M^n$. 
+This yields a diagram $\Delta$ in $\C_1$ whose vertices are the $X_i$ with $i\in M^n$, and whose arrows are the $f_{i,p}$ with $i,i+e_p\in M^n$. 
 
-Clearly, all the squares in this diagram commute, and, thus, the whole diagram commutes. In particular, all the paths from $X_{(m+1,\dots,m+1)}$ to $X_{(1,\dots,1)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
+For instance, if $m=n=2$ the diagram is
+
+$$
+\begin{tikzcd}
+%
+\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}\\ 
+%
+\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}\\ 
+%
+\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start]{F_{31}}&\ar{u}{\theta_{22}}&\C_3,\ar{ll}{}[near start]{F_{32}}
+%
+\end{tikzcd}
+$$ 
+
+\nn and $\Delta$ is 
+
+$$
+\begin{tikzcd}
+%
+F_{11}F_{12}X&&F_{21}F_{12}X\ar{ll}[swap]{\theta_{11}F_{12}X}&&F_{31}F_{12}X\ar{ll}[swap]{\theta_{21}F_{12}X}\\ 
+%
+F_{11}F_{22}X\ar{u}{F_{11}\theta_{12}X}&&F_{21}F_{22}X\ar{ll}[swap]{\theta_{11}F_{22}X}\ar{u}{F_{21}\theta_{12}X}&&F_{31}F_{22}X\ar{ll}[swap]{\theta_{21}F_{22}X}\ar{u}[swap]{F_{31}\theta_{12}X}\\ 
+%
+F_{11}F_{32}X\ar{u}{F_{11}\theta_{22}X}&&F_{21}F_{32}X\ar{ll}{\theta_{11}F_{32}X}\ar{u}{F_{21}\theta_{22}X}&&F_{31}F_{32}X.\ar{ll}{\theta_{21}F_{32}X}\ar{u}[swap]{F_{31}\theta_{22}X}
+%
+\end{tikzcd}
+$$
+
+Clearly $\Delta$ commutes. In particular, all the paths from $X_{(m+1,\dots,m+1)}$ to $X_{(1,\dots,1)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
 $$
 X_{(m+1,\dots,m+1)}=F_{m+1,1}\cdots F_{m+1,n}X\to F_{1,1}\cdots F_{1,n}X=X_{(1,\dots,1)}.
 $$
-When $X$ varies in $\C$, this family of morphisms in $\C$ defines the sought-for morphism of functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$. 
+When $X$ varies in $\C_{n+1}$, this family of morphisms in $\C_1$ defines the sought-for morphism of functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$. 
 
 \begin{nota}\label{nil}
 We denote this morphism of functors by
