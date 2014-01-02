@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0029)
+% about "categories and sheaves" (version_0030)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1723,7 +1723,20 @@ $$
 $$ 
 It suffices to set $A:=\Hom_{\C'}(F(\ ),X')$.
 \end{proof}
-%Here is a slightly less precise reformulation of the above proposition, which we state (somewhat inappropriately) as a corollary: \begin{cor}\label{264b}If $\alpha:I\to\C$ is a functor, then $\ic\alpha$ is represented by some object $X$ of $\C$ if and only if for all functor $F:\C\to\C'$ the natural morphism $\co\ F(\alpha)\xrightarrow\sim F(X)$ is an isomorphism.\end{cor}
+
+\begin{rk}\label{url}
+Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, let $\Delta(X)\in\C^I$ be the constant functor attached to $X$, let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$, let $\U$ be a universe such that 
+%
+\begin{equation}\label{eurl}
+\text{$\C$ is a $\U$-category and $I$ is $\U$-small,}
+\end{equation}
+% 
+and let $h_\U:\C\to\C^\wedge_\U$ be the corresponding Yoneda embedding. I do not know if the condition 
+$$
+(h_\U(p_i)\to h_\U(X))_{i\in I}\simeq\co h_\U(\alpha),
+$$ 
+depends on $\U$ subject to \eqref{eurl}.
+\end{rk}
 \end{s}
 
 %
@@ -3405,16 +3418,16 @@ $\ic\varphi\simeq f$.
 
 \noindent(d) $\then$ (a). This is obvious.
 \end{proof}
-%
-%%%%%
-%
+
+%%%%
+
 \section{About Chapter 7}
-%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~149, Definition 7.1.1. The set $\cc S$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pageref{mor}). The proof of the following lemma (which will be used to prove \eqref{l} p.~\pageref{l}) is obvious. 
-%
+
 \begin{lem}\label{711}
 %
 Let 
@@ -3430,17 +3443,21 @@ are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by 
 \end{lem}
 
 \end{s}
+
 %
-%%
+
+\nn[\S\ref{loc} p.~\pageref{loc} will be inserted here.]
+
 %
+
 \begin{s} 
 P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader.
 
 Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_{\mathcal S}$, and to check the equalities $f\circ\id_X=f$, $\id_X\circ g=g$ for $f\in\Hom_{\C^r_{\mathcal S}}(X,Y)$ and $g\in\Hom_{\C^r_{\mathcal S}}(Y,X)$.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\mathcal S$ is given by 
 $$
@@ -3453,19 +3470,17 @@ X\ar{r}{\id_X}\ar{d}[swap]{s}&X\ar[dashed]{d}{t}\\ X'\ar[dashed]{r}[swap]{g}&Y'.
 \end{tikzcd}
 $$
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
-Let $\C$ be a category and let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that the localization $Q:\C\to\C_{\cc S}$ exists. Then a functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which call $Q^\dagger F$ a {\em right localiation} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
+Let $\C$ be a category and let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that the localization $Q:\C\to\C_{\cc S}$ exists. Then a functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
 
-By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ 
-$$
-\icolim_{(X\to Y)\in\SSS^X}\ F(Y) 
-$$
-is represented by some object of $\A$. 
+It seems more prudent to assume that $\C$ is a $\U$-small category, and that $\A$ and $\A'$ are big categories (see Remark~\ref{url} p.~\pageref{url}).
+
+%By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ $$\icolim_{(X\to Y)\in\SSS^X}\ F(Y)$$ is represented by some object of $\A$. 
 
 Also, the following fact is implicit:
 
@@ -3482,15 +3497,19 @@ $$
 R_{\cc S}F\simeq F\circ R_{\cc S}\id_\C.
 $$
 
-\begin{df}\label{url}
+\begin{df}\label{url2}
 Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if the above conditions are satisfied.
 \end{df}
 \end{s}
 
 %
 
+%\nn[\S\ref{durl} p.~\pageref{durl} will be inserted here.]% already taken into account!!!
+
+%
+
 \begin{s}\label{732} 
-P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $\cc T$ is an isomorphism, then the right localization $(\C_{\cc S},Q)$ of $\C$ is universal in the sense of Definition~\ref{url}.
+P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $\cc T$ is an isomorphism, then the right localization $(\C_{\cc S},Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
 
 The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
 
@@ -5409,19 +5428,22 @@ The commutativity of (\ref{v1})9 and (\ref{v3})8 implies that of (\ref{v4})8.
 The commutativity of (\ref{v1})3, (\ref{v3})6, and (\ref{v2})3 implies the anti-commutativity of (\ref{v4})9. 
 
 It is easy to check that all rows and columns are distinguished triangles.
-%
 \end{proof}
-%
-%%%
-%
+
+%%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P. 250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4.
 \end{s}
+
 %
-%%
+
+\nn[\S\ref{ltf} p.~\pageref{ltf} will be inserted here.]
+
 %
+
 \begin{s} P. 263, last sentence of the proof of Lemma 10.5.8. We already know that the bottom row of the diagram 
 $$
 \begin{tikzcd}
@@ -5615,7 +5637,7 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 (Note that the axiom of universes is not necessary to define the morphism~\eqref{spalt}.)
 \end{s}
 
-%%
+%
 
 \nn[\S\ref{1341b} p.~\pageref{1341b} will be inserted here.]
 
@@ -5757,7 +5779,7 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
 \noindent(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
 
-\noindent(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S\ref{732} p.~\pageref{732}.)
+\noindent(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url2} p.~\pageref{url2}. (See \S\ref{732} p.~\pageref{732}.)
 \end{s}
 
 %
@@ -6139,15 +6161,33 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \noindent $*$ P. 452, Part (i) (a) of the proof of Lemma 18.6.7. I think that $\cc O_U$ and $\cc O_V$ stand for $\cc O_X|_U$ and $\cc O_Y|_V$. (If this is so, it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$.) Also, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$.
 
 \noindent $*$ P. 494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
+
 %
+
 \subsection{Brief Comments}
-%
+
 \begin{s}\label{231}
 P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). So, there is a big number of pages (with a high contents density) between the notation and its justification.
 \end{s}
+
 %
-%%
+
+\begin{s}\label{loc}
+P. 153, Definition 7.1.11. The set $\Hom_{\C^r_{\cc S}}(X,Y)$ is defined by 
+$$
+\Hom_{\C^r_{\cc S}}(X,Y):=\co_{(Y\to Y')\in\cc S^Y}\Hom_\C(X,Y').%=\co\Hom_\C(X,\alpha^Y).
+$$ 
+I find this formulation puzzling because we are taking the inductive limit of a functor form the category $\cc S^Y$, which is not $\U$-small in general, to the category of $\U$-sets. Moreover, it is indicated in Remark 7.1.14 p.~154 of the book, that this inductive limit in not a $\U$-set in general. My understanding is that we assume implicitly that the inductive limit is taken in the category of $\V$-sets for a universe $\V$ containing $\U$ and making $\C$ a $\V$-small category. But in this case would it not be simpler to assume from the beginning that $\C$ is $\U$-small? 
+\end{s}
+
 %
+
+\begin{s}\label{durl}
+P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)). Here is how I understand the definition (see Remark~\ref{url} p.~\pageref{url}): $\C$ is a $\U$-small category, $\A$ and $\A'$ are big categories.
+\end{s}
+
+%
+
 \begin{comment}
 \nn $*$ P.~63, Notation 2.7.2. Recall the setting: The diagram
 $$
@@ -6165,8 +6205,9 @@ The purpose of this comment is just to note that we also have by Corollary 2.4.6
 \widehat F(A)(V)\simeq\co_{(U\to F(V))\in\C^U}A(U).
 \end{equation}
 \end{comment}
+
 %%
-%
+
 \begin{s}\label{8212}
 P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
 \begin{nota}
@@ -6212,9 +6253,15 @@ $$
 \lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
 $$
 \end{s}
+
 %
-%%
+
+\begin{s}\label{ltf}
+P. 253, Definition of right localizable functor with respect to $(\cc N,\cc N')$ (Definition 10.3.1). I think it is simpler to define the notion of universally right localizable functor as in \S\ref{durl} p.~\pageref{durl} (see Remark~\ref{url} p.~\pageref{url}).
+\end{s}
+
 %
+
 \begin{s}\label{1341b}
 P. 337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
 
