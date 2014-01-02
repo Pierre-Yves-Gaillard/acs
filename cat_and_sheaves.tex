@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0027)
+% about "categories and sheaves" (version_0028)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -701,11 +701,11 @@ is bijective.
 
 %%
 
-\subsection{Horizontal and Vertical Compositions (p. 19) 1}\label{hove1}
+\subsection{Horizontal and Vertical Compositions (p. 19)}\label{hove1}
 
-This Section and Section~\ref{hove2} p.~\pageref{hove2} serve exactly the same purpose. The reader should read at most one of them.
+%This Section and Section~\ref{hove2} p.~\pageref{hove2} serve exactly the same purpose. The reader should read at most one of them.
 
-The diagram 
+For each object $X$ of $\C_3$ the diagram 
 
 $$
 \begin{tikzcd}
@@ -719,7 +719,7 @@ $$
 \end{tikzcd}
 $$ 
 
-\nn yields the commutative diagram 
+\nn of categories, functors, and morphisms of functors yields the commutative diagram 
 
 $$
 \begin{tikzcd}
@@ -733,9 +733,9 @@ F_{11}F_{32}X\ar{u}{F_{11}\theta_{22}X}&&F_{21}F_{32}X\ar{ll}{\theta_{11}F_{32}X
 \end{tikzcd}
 $$ 
 
-\nn in $\C_1$. (Here $X$ is in $\C_3$, and it is understood that the $\C_i$ are categories, the $F_{ij}$ are functors, and the $\theta_{ij}$ are morphisms of functors.) We get a well-defined morphism in $\C_1$ from $F_{31}F_{32}X$ to $F_{11}F_{12}X$, which is easily seen to define a morphism of functors from $F_{31}F_{32}$ to $F_{11}F_{12}$. 
+\nn in $\C_1$. So, we get a well-defined morphism in $\C_1$ from $F_{31}F_{32}X$ to $F_{11}F_{12}X$, which is easily seen to define a morphism of functors from $F_{31}F_{32}$ to $F_{11}F_{12}$. 
 
-\begin{nota}
+\begin{nota}\label{nhove}
 We denote this morphism of functors by
 $$
 \begin{pmatrix}
@@ -797,7 +797,7 @@ $$
 \nn between functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
 \end{prop}
 
-\begin{nota}\label{nil1}
+\begin{nota}\label{nmat}%\label{nil1}
 We denote this morphism of functors by
 
 $$
@@ -837,10 +837,12 @@ $$
 \end{prop}
 
 \begin{df}\label{dil1} 
-We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil2} the {\em Interchange Law}. \index{Interchange Law}
+We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}. \index{Interchange Law}
 \end{df}
 
 %%
+
+\begin{comment}
 
 \subsection{Horizontal and Vertical Compositions (p.~19) 2}\label{hove2}
 
@@ -978,6 +980,8 @@ $$
 We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil2} the {\em Interchange Law}. \index{Interchange Law}
 \end{df}
 
+\end{comment}
+
 %%
 
 \subsection{Equalities (1.5.8) and (1.5.9) (p.~29)}
@@ -992,7 +996,8 @@ $$
 \end{tikzcd}
 $$
 
-Using Notation~\ref{nil1} p.~\pageref{nil1} or Notation~\ref{nil2} p.~\pageref{nil2}, Equalities (1.5.8) and (1.5.9) become respectively 
+Using Notation~\ref{nhove} p.~\pageref{nhove}, %or Notation~\ref{nil2} p.~\pageref{nil2}, 
+Equalities (1.5.8) and (1.5.9) become respectively 
 
 \begin{equation}\label{158}
 (\eta*L)\circ(L*\ee)=L
@@ -1246,7 +1251,8 @@ Let us spell out the above statement:
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
-The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1} or Definition~\ref{dil2} p.~\pageref{dil2}), induce a map $f:L\to R$. Conversely, to an element  
+The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}, %or Definition~\ref{dil2} p.~\pageref{dil2}), 
+induce a map $f:L\to R$. Conversely, to an element  
 $$
 r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
 $$ 
@@ -2312,7 +2318,8 @@ the vertical arrows are bijective by (a), and the bottom arrow is bijective by (
 %%
 
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details): In Notation~\ref{nil1} p.~\pageref{nil1} or Notation~\ref{nil2} p.~\pageref{nil2}, the sentence of the book ``The two compositions 
+P.~95, proof of Proposition 4.1.4 (i) (additional details): In Notation~\ref{nhove} p.~\pageref{nhove} and Notation~\ref{nmat} p.~\pageref{nmat}, %or Notation~\ref{nil2} p.~\pageref{nil2}, 
+the sentence of the book ``The two compositions 
 $$
 \begin{tikzcd}
 P\ar[yshift=0.7ex]{r}{\ee\circ P}\ar[yshift=-0.7ex]{r}[swap]{P\circ\ee}&P^2\ar{r}{R\eta L}&P
@@ -2341,7 +2348,7 @@ $$
 =\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix},
 $$ 
 
-\nn the third and fourth equalities resulting respectively from \eqref{159} p.~\pageref{159} and \eqref{158} p.~\pageref{158}, and the other equalities following from Proposition~\ref{pil1} p.~\pageref{pil1} or Proposition~\ref{pil2} p.~\pageref{pil2}.
+\nn the third and fourth equalities resulting respectively from \eqref{159} p.~\pageref{159} and \eqref{158} p.~\pageref{158}, and the other equalities following from Proposition~\ref{pil1} p.~\pageref{pil1}.%or Proposition~\ref{pil2} p.~\pageref{pil2}.
 \end{s}
 
 %%
