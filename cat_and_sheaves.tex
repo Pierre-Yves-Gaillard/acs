@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0028)
+% about "categories and sheaves" (version_0029)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1693,43 +1693,41 @@ $$
 It is straightforward to check that (\ref{2}) induces (\ref{1}).
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~61, Proposition 2.6.4 (minor variant).
-%
+
 \begin{prop}\label{264}
-Let $\U$ be a universe, let 
+Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, let $\Delta(X)\in\C^I$ be the constant functor attached to $X$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$. For all universe $\U$ such that $\C$ is a $\U$-category, let $h_\U:\C\to\C^\wedge_\U$ be the Yoneda embedding. Then the following conditions are equivalent:
+
+{\em\nn(a)} for all universe $\U$ such that $\C$ is a $\U$-category and $I$ is $\U$-small we have 
 $$
-\begin{tikzcd}
-I\ar{r}{\alpha}&\C\ar{d}{h}\ar{r}{F}&\C'\\
-&\C^\wedge
-\end{tikzcd}
-$$ 
-be functors, and let $X$ be an object of $\C$. Assume that $I$ is a small category, $\C$ is a $\U$-category, $\C'$ is a big category, $h$ is the Yoneda embedding, and we have an isomorphism $\co\ (h\circ\alpha)\simeq h(X)$. Let $p_i:h(\alpha(i))\to h(X)$ be the $i$ coprojection (see Definition~\ref{c} p.~\pageref{c}), let $q_i:\alpha(i)\to X$ be the morphism $p_i(\alpha(i))(\id_{\alpha(i)})$. Then the morphisms $F(q_i):F(\alpha(i))\to F(X)$ induce an isomorphism $\co\ F(\alpha)\xrightarrow\sim F(X)$.
+(h_\U(p_i)\to h_\U(X))_{i\in I}\simeq\co h_\U(\alpha),
+$$
+{\em\nn(b)} for all functor $F:\C\to\C'$ we have 
+$$
+(F(p_i)\to F(X))_{i\in I}\simeq\co F(\alpha).
+$$
 \end{prop}
-%
+
 \begin{proof}
-By enlarging $\U$ we can assume that $\C'$ is a $\U$-category. Let $X'$ be in $\C'$. We know 
+It is clear that (b) implies (a). Let us assume (a), and let us prove (b). Let $F:\C\to\C'$ be as in (b), let $\U$ be a universe such that $\C$ and $\C'$ are $\U$-categories and $I$ is $\U$-small, and let $X'$ be in $\C'$. We know 
 $$
-A(X)\xrightarrow\sim\lim A(\alpha)\quad\forall\ A\in\C^\wedge 
+A(X)\xrightarrow\sim\lim A(\alpha)\quad\forall\ A\in\C^\wedge_\U 
 $$ 
 and we want to prove 
 $$
 \Hom_{\C'}(F(X),X')\xrightarrow\sim\lim\Hom_{\C'}(F(\alpha),X'). 
 $$ 
-It suffices to set $A(X):=\Hom_{\C'}(F(X),X')$.
+It suffices to set $A:=\Hom_{\C'}(F(\ ),X')$.
 \end{proof}
-
-Here is a slightly less precise reformulation of the above proposition, which we state (somewhat inappropriately) as a corollary:
-\begin{cor}\label{264b}
-If $\alpha:I\to\C$ is a functor, then $\ic\alpha$ is represented by some object $X$ of $\C$ if and only if for all functor $F:\C\to\C'$ the natural morphism $\co\ F(\alpha)\xrightarrow\sim F(X)$ is an isomorphism.
-\end{cor}
+%Here is a slightly less precise reformulation of the above proposition, which we state (somewhat inappropriately) as a corollary: \begin{cor}\label{264b}If $\alpha:I\to\C$ is a functor, then $\ic\alpha$ is represented by some object $X$ of $\C$ if and only if for all functor $F:\C\to\C'$ the natural morphism $\co\ F(\alpha)\xrightarrow\sim F(X)$ is an isomorphism.\end{cor}
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{c271b}
 P.~62, Proposition 2.7.1. Consider the diagram 
 $$
@@ -1759,9 +1757,9 @@ $$
 $$ 
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~63, Notation 2.7.2. Recall the $F:\C\to\C'$ is a functor of small categories. The formula 
 $$
@@ -3463,7 +3461,7 @@ P.~159, Definition 7.3.1. Recall the definition:
 
 Let $\C$ be a category and let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that the localization $Q:\C\to\C_{\cc S}$ exists. Then a functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which call $Q^\dagger F$ a {\em right localiation} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
 
-By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Corollary~\ref{264b} p.~\pageref{264b}), $F$ is universally right localizable if and only if for all $X$ in $\C$ 
+By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ 
 $$
 \icolim_{(X\to Y)\in\SSS^X}\ F(Y) 
 $$
@@ -3483,14 +3481,14 @@ The following conditions on the right localization $(\C_{\cc S},Q)$ of $\C$ are 
 $$
 R_{\cc S}F\simeq F\circ R_{\cc S}\id_\C.
 $$
-%
+
 \begin{df}\label{url}
 Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if the above conditions are satisfied.
 \end{df}
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{732} 
 P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $\cc T$ is an isomorphism, then the right localization $(\C_{\cc S},Q)$ of $\C$ is universal in the sense of Definition~\ref{url}.
 
@@ -5495,7 +5493,7 @@ with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. 
 \end{proof}
 \end{s}
 
-%%%%
+%%%
 
 \section{About Chapter 11}
  
@@ -5514,7 +5512,7 @@ be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then
 This is about Sections 12.1 and 12.2 of the book. I think the Snake Lemma can be avoided as follows: 
 
 Let $\A$ be an abelian category. 
-%
+
 \begin{lem}\label{sl1}
 If 
 $$
@@ -5533,11 +5531,11 @@ is exact at $\Ker v$ and $\Coker v$. If in addition $w$ is a monomorphism or $u$
 The proof is straightforward (and much easier than that of the Snake Lemma). 
 
 Let $(\A,T)$ be an abelian category with translation. 
-%
+
 \begin{lem}[Theorem 12.2.4 p.~301]\label{sl2}
-If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively $T^nX\to T^nY$) is a qis for all $n$. %(See Theorem 12.2.4 p.~301.)
+If $0\to X\xr fY\xr g Z\to0$ is an exact sequence in $\A_c$, then the sequence $H(X)\to H(Y)\to H(Z)$ is exact. If, in addition, $H(T^nX)\simeq0$ (respectively $H(T^nZ)\simeq0$) for all $n$, then $T^nY\to T^nZ$ (respectively $T^nX\to T^nY$) is a qis for all $n$. 
 \end{lem}
-%
+
 \begin{proof}
 Taking into account Display (12.2.1) p.~300 of the book, apply Lemma~\ref{sl1} to the diagram 
 $$
@@ -5547,15 +5545,15 @@ $$
 \end{tikzcd}
 $$ 
 \end{proof}
-%
+
 \begin{prop}[Corollary 12.2.5 p.~301]\label{sl3}
 The functor 
 $$
 H:\text K_c(\A)\to\A
 $$ 
-is cohomological. %(See Corollary 12.2.5 p.~301.) 
+is cohomological.  
 \end{prop}
-%
+
 \begin{proof}
 Let $X\to Y\to Z\to TX$ be a d.t. in $K_c(\A)$. It is isomorphic to 
 $$
@@ -5577,9 +5575,9 @@ Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\varph
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$
-is exact. %(See Corollary 12.2.6 p.~302.)
+is exact. 
 \end{prop}
-%
+
 \begin{proof}
 The commutative diagram in $\A_c$ with exact rows 
 $$
@@ -5594,13 +5592,13 @@ $$
 $$
 in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\varphi$ is a qis by Lemma~\ref{sl2}.
 \end{proof}
-%
-%%%%
-%
+
+%%%
+
 \section{About Chapter 13}
-%
+
 \subsection{Brief Comments}
-%
+
 \begin{s}\label{q337}
 P. 337. Theorem 13.4.1 suggests the following question: 
 
@@ -5612,20 +5610,19 @@ Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the na
 %
 an isomorphism?
 
-Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} %the proof of Theorem 14.4.8 (ii) p.~361 
-imply that the answer is yes if $\C$ is a Grothendieck category. 
+Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer is yes if $\C$ is a Grothendieck category. 
 
 (Note that the axiom of universes is not necessary to define the morphism~\eqref{spalt}.)
 \end{s}
-%
+
 %%
 
 \nn[\S\ref{1341b} p.~\pageref{1341b} will be inserted here.]
 
 %%
-%
+
 \subsection{Exercise 13.15 (p. 342)}
-%
+
 P. 342, Exercise 13.15. Here is a partial solution. Let $\C$ be an abelian category. Using Lemma~\ref{8312} p.~\pageref{8312} one easily proves:
 
 \begin{lem}\label{738}
@@ -5638,7 +5635,7 @@ Z\ar{d}\ar{r}&Y\ar{d}\ar{r}&X\ar{d}\ar{r}&W\ar[equal]{d}\ar{r}&0\\
 $$ 
 a commutative diagram of complexes. Then the bottom row is exact.
 \end{lem}
-%
+
 \begin{proof}
 We shall use Lemma~\ref{8312} p.~\pageref{8312}.
 
@@ -5712,13 +5709,11 @@ We claim:
 (b) this map (a) is bijective. 
 
 Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
-%
+
 %%%
-%
+
 \section{About Chapter 14}
-%
-%\subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~349, proof of Proposition 14.1.6, Step~(ii). Here are some more details about the verification that $\widetilde\psi:Y\to I$ is a morphism in $\A_c$. 
 
@@ -5764,24 +5759,15 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
 \noindent(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url} p.~\pageref{url}. (See \S\ref{732} p.~\pageref{732}.)
 \end{s}
+
 %
-%%
 
 \nn[\S\ref{1432b} p.~\pageref{1432b}, \S\ref{s144} p.~\pageref{s144}, \S\ref{s1448} p.~\pageref{s1448}, and \S\ref{1448f} p.~\pageref{1448f} will be inserted here.]
 
-%%%%%
-%
-%
-%\section{About Chapter 15}
-%
-%This section is empty for the time being. It has been added only to make the section numbers coincide with the chapter numbers.
-%
-%%%%%
-%
+%%%
+
 \section{About Chapter 16}
-%
-%\subsection{Brief Comments}
-%
+
 \begin{s} 
 P. 390, Axioms LE1-LE4. I think that the set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
 
@@ -5791,9 +5777,9 @@ U=\bigcup_{V\in\Sigma(U,b)}V
 $$ 
 for all $(U,b)$ as above.
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{s1623}
 P.~395, Lemma 16.2.3 (iii). Consider the conditions
 
