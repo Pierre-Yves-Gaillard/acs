@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0031)
+% about "categories and sheaves" (version_0032)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -26,6 +26,7 @@
 \theoremstyle{remark}
 \newtheorem{cond}[thm]{Condition}
 \newtheorem{conv}[thm]{Convention}
+\newtheorem{q}[thm]{Question}
 \newtheorem{rk}[thm]{Remark}
 \theoremstyle{definition}
 \newtheorem{s}[thm]{\S}%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
@@ -1737,6 +1738,12 @@ $$
 $$ 
 depends on $\U$ subject to \eqref{eurl}.
 \end{rk}
+
+Note that the question can be stated without the condition that $\C$ is a $\U$-category:
+
+\begin{q}
+Let $\U\subset\V$ be universes, let $\alpha:I\to\C$ be a functor such that $I$ is $\U$-small, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism of functors, where $\Delta(X)$ is the constant functor attached to $X$. Assume that, for all contravariant functor $A$ from $\C$ to $\U\text-\Set$, the natural map $A(X)\to\lim A(\alpha)$ is bijective. Does this imply that, for all contravariant functor $B$ from $\C$ to $\V\text-\Set$, the natural map $B(X)\to\lim B(\alpha)$ is bijective.
+\end{q}
 \end{s}
 
 %
