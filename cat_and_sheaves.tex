@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0030)
+% about "categories and sheaves" (version_0031)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1267,7 +1267,7 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 
 \nn[\S\ref{231} p.~\pageref{231} about Definition 2.3.1 p.~50 will be inserted here.]
 
-%%%
+%%
 
 \subsection{Theorem 2.3.3 (i) (p.~52)}
 
@@ -1724,7 +1724,7 @@ $$
 It suffices to set $A:=\Hom_{\C'}(F(\ ),X')$.
 \end{proof}
 
-\begin{rk}\label{url}
+\begin{rk}\label{rurl}
 Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, let $\Delta(X)\in\C^I$ be the constant functor attached to $X$, let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$, let $\U$ be a universe such that 
 %
 \begin{equation}\label{eurl}
@@ -3429,7 +3429,6 @@ $\ic\varphi\simeq f$.
 P.~149, Definition 7.1.1. The set $\cc S$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pageref{mor}). The proof of the following lemma (which will be used to prove \eqref{l} p.~\pageref{l}) is obvious. 
 
 \begin{lem}\label{711}
-%
 Let 
 $$
 \begin{tikzcd}\C\ar[yshift=.5ex]{r}{Q}&\C'\ar[yshift=-.4ex]{l}{R}\end{tikzcd}
@@ -3438,10 +3437,8 @@ be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a subset of $\Ob
 $$
 \begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\B\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
 $$
-are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$.
-%
+are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$ (see Definition~\ref{dloc} p.~\pageref{dloc}).
 \end{lem}
-
 \end{s}
 
 %
@@ -3476,9 +3473,13 @@ $$
 \begin{s} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
-Let $\C$ be a category and let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that the localization $Q:\C\to\C_{\cc S}$ exists. Then a functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
+Let $\C$ be a category and let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
 
-It seems more prudent to assume that $\C$ is a $\U$-small category, and that $\A$ and $\A'$ are big categories (see Remark~\ref{url} p.~\pageref{url}).
+It seems more prudent to assume that $\C$ is a $\U$-small category, and that $\A$ and $\A'$ are big categories (see Remark~\ref{rurl} p.~\pageref{rurl}). For the sake of emphasis, let us state formally the definition used here:
+
+\begin{df}\label{durl}
+Let $\C$ be a $\U$-category, let $\cc S$ be a right multiplicative system, and let $\A$ be a big category. A functor $F:\C\to\A$ is {\em universally right localizable} \index{universally right localizable} if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
+\end{df}
 
 %By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ $$\icolim_{(X\to Y)\in\SSS^X}\ F(Y)$$ is represented by some object of $\A$. 
 
@@ -3513,7 +3514,7 @@ P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $
 
 The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
 
-Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable, $R_{\SSS}F\simeq F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see Definition~\ref{durl} p.~\pageref{durl}), $R_{\SSS}F\simeq F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
@@ -3521,11 +3522,11 @@ $$
 \end{tikzcd}
 $$
 \end{s}
-%
-%%%
-%
+
+%%
+
 \subsection{Proof of (7.4.3) (p.~162)}
-%
+
 Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-commutative) diagram
 $$
 \begin{tikzcd}
@@ -3764,15 +3765,15 @@ f\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
 $$ 
 is an abelian group morphism for any $f:Y\to Z$. Thus we have the left distributivity formula $f\circ(g_1+g_2)=f\circ g_1+f\circ g_2$ for any $g_i:X\to Y$, $(i=1,2)$. Reversing arrows, we get the right distributivity. q.e.d.
 \end{s}
-%
+
 \end{comment}
+
 %
-%%
-%
+
 \nn[\S\ref{8212} p.~\pageref{8212} will be inserted here.]
 
-%%
 %
+
 \begin{s} 
 P.~173, Proposition 8.2.15. Recall the setting: $F:\C\to\C'$ is a functor between additive categories, and the claim is: 
 $$
@@ -5847,13 +5848,13 @@ Then $\C^\wedge(A):=\Set(A)^{\C^{\op}}$ is a small full subcategory of $\C^\wedg
 
 Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism in $\C^\wedge(C_J)$, and $w:S\to A$ is a local isomorphism. Then $\cc S$ is small.
 \end{s}
-%
+
 %%
-%
+
 \nn[\S\ref{399} p.~\pageref{399} about the beginning of Section 16.3 on p~399 will be inserted here.]
-%
+
 %%
-%
+
 \begin{s} 
 P. 400, proof of Lemma 16.3.1 (additional details): 
 
@@ -5917,18 +5918,18 @@ $$
 $$ 
 in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This means that the compositions $B\to U\parar A$ coincide. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} P. 401, Step (i) of the proof of Proposition 16.3.3. See \eqref{e1623} p.~\pageref{e1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
 \end{s}
-%
+
 %%%
-%
+
 \section{About Chapter 17}
-%
+
 [\S\ref{revol} p.~\pageref{revol} will be inserted here.]
-%
+
 \begin{s}\label{fhat}
 P. 406, Chapter 17. Recall that, in the first line of second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
 %
@@ -6086,22 +6087,23 @@ $$
 $$
 follows from Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{a428}
 P. 428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{a438}
 P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
 \end{s}
+
 %%%
-%
+
 \section{About Chapter 18}
-%
+
 [Section~\ref{s1853} p.~\pageref{s1853} and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
 
 \newpage
@@ -6178,12 +6180,18 @@ $$
 \Hom_{\C^r_{\cc S}}(X,Y):=\co_{(Y\to Y')\in\cc S^Y}\Hom_\C(X,Y').%=\co\Hom_\C(X,\alpha^Y).
 $$ 
 I find this formulation puzzling because we are taking the inductive limit of a functor form the category $\cc S^Y$, which is not $\U$-small in general, to the category of $\U$-sets. Moreover, it is indicated in Remark 7.1.14 p.~154 of the book, that this inductive limit in not a $\U$-set in general. My understanding is that we assume implicitly that the inductive limit is taken in the category of $\V$-sets for a universe $\V$ containing $\U$ and making $\C$ a $\V$-small category. But in this case would it not be simpler to assume from the beginning that $\C$ is $\U$-small? 
+
+For the sake of emphasis, let us state formally the definition used here:
+
+\begin{df}[localization of a category]\label{dloc}
+Let $\C$ be a $\U$-small category, and let $\cc S$ be a right multiplicative system. The {\em right localization} \index{localization of a category} of $\C$ by $\cc S$ is the $\U$-small category $\C^r_{\cc S}$ mentioned after Lemma 7.1.13 on p.~154 of the book.
+\end{df}
 \end{s}
 
 %
 
-\begin{s}\label{durl}
-P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)). Here is how I understand the definition (see Remark~\ref{url} p.~\pageref{url}): $\C$ is a $\U$-small category, $\A$ and $\A'$ are big categories.
+\begin{s}\label{durl2}
+P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see Definition~\ref{durl} p.~\pageref{durl}. %Here is how I understand the definition (see Remark~\ref{rurl} p.~\pageref{rurl}): $\C$ is a $\U$-small category, $\A$ and $\A'$ are big categories.
 \end{s}
 
 %
@@ -6257,7 +6265,7 @@ $$
 %
 
 \begin{s}\label{ltf}
-P. 253, Definition of right localizable functor with respect to $(\cc N,\cc N')$ (Definition 10.3.1). I think it is simpler to define the notion of universally right localizable functor as in \S\ref{durl} p.~\pageref{durl} (see Remark~\ref{url} p.~\pageref{url}).
+P. 253, Definition of right localizable functor with respect to $(\cc N,\cc N')$ (Definition 10.3.1). I think it is simpler to define the notion of universally right localizable functor as in \S\ref{durl2} p.~\pageref{durl2} (see Remark~\ref{rurl} p.~\pageref{rurl}).
 \end{s}
 
 %
