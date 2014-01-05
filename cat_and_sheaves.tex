@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0034)
+% about "categories and sheaves" (version_0036)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1732,11 +1732,11 @@ Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, let $\Delta(X)\i
 \text{$\C$ is a $\U$-category and $I$ is $\U$-small,}
 \end{equation}
 % 
-and let $h_\U:\C\to\C^\wedge_\U$ be the corresponding Yoneda embedding. I do not know if the condition 
+and let $h_\U:\C\to\C^\wedge_\U$ be the corresponding Yoneda embedding. I do not know the answer to the following question: Does the condition 
 $$
-(h_\U(p_i)\to h_\U(X))_{i\in I}\simeq\co h_\U(\alpha),
+(h_\U(p_i)\to h_\U(X))_{i\in I}\simeq\co h_\U(\alpha)
 $$ 
-depends on $\U$ subject to \eqref{eurl}.
+depend on $\U$ subject to \eqref{eurl}? By Proposition~\ref{621} p.~\pageref{621}, the answer is ``no'' if $I$ is filtrant.% and $\C$ is a $\U$-category. 
 \end{rk}
 
 Note that the question can be stated without the condition that $\C$ is a $\U$-category:
@@ -1744,9 +1744,9 @@ Note that the question can be stated without the condition that $\C$ is a $\U$-c
 \begin{q}% Jan. 3, 2014
 Let $\U\subset\V$ be universes, let $\alpha:I\to\C$ be a functor such that $I$ is $\U$-small, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism of functors, where $\Delta(X)$ is the constant functor attached to $X$. Assume that, for all contravariant functor $A$ from $\C$ to $\U\text-\Set$, the natural map $A(X)\to\lim A(\alpha)$ is bijective. Does this imply that, for all contravariant functor $B$ from $\C$ to $\V\text-\Set$, the natural map $B(X)\to\lim B(\alpha)$ is bijective.
 \end{q}
-\end{s}
 
-By Proposition 6.2.1 p.~138 of the book, the answer is ``yes'' if $I$ is filtrant and $\C$ is a $\U$-category. 
+%By Proposition~\ref{621} p.~\pageref{621}, the answer is ``yes'' if $I$ is filtrant and $\C$ is a $\U$-category. 
+\end{s}
 
 %
 
@@ -1818,8 +1818,9 @@ $$
 the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \end{proof}
 \end{s}
-%%
+
 %
+
 \begin{s} 
 P.~64. It might be worth displaying the formula 
 \begin{equation}\label{275}
@@ -1828,9 +1829,9 @@ P.~64. It might be worth displaying the formula
 \end{equation}
 contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
 \end{s}
+
 %
-%%
-%
+
 \begin{s}
 P.~64, end of Chapter 2. One could add the following observation (which will be used in \S\ref{1725b} p.~\pageref{1725b}): If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a terminal object of $(\C_A)^\wedge$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
 \begin{equation}\label{1725}
@@ -1838,8 +1839,9 @@ P.~64, end of Chapter 2. One could add the following observation (which will be 
 \end{equation}
 Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
 \end{s}
+
 %
-%%
+
 \begin{s}\label{bc}
 As already mentioned, ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. We recall the statement (with a slight change of notation):
 
@@ -1882,13 +1884,13 @@ Small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6
 %
 Note that Proposition~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
 \end{s}
-%
-%%%
-%
+
+%%
+
 \section{About Chapter 3}
-%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of the following statement: 
 
@@ -1900,9 +1902,9 @@ $$
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the claim. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor variant). 
 %
@@ -1932,9 +1934,9 @@ $$
 commutes, $a$ being the natural map. Let $(i,x)$ be in $a^{-1}(U)$, with $x$ in $\alpha(i)$. This means that we have $F(a_i(x))=G(a_i(x))$. As $I$ is filtrant, there is a morphism $s:i\to j$ in $I$ such that $f_j(\alpha(s)(x))=g_j(\alpha(s)(x))$, that is $\alpha(s)(x)$ is in $\gamma(j)$. Put $\mu'(i,x):=c_j(\alpha(s)(x))$. One easily checks that there is exactly one map $\mu$ which makes the above diagram commutative, and that $\lambda$ and $\mu$ are inverse bijections.
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
 %
@@ -2210,11 +2212,11 @@ or, in other words, that
 \end{equation} 
 %
 If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\varphi(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\varphi(i_0)\xr\id\varphi(i_0))$ is an initial object of $M^{i_0}$, and \eqref{coco3} follows.
-%
-%%%%
-%
+
+%%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~89, Proposition 3.4.5 (iii). The proof uses implicitly the following fact: 
 
@@ -2546,7 +2548,7 @@ v\circ v_1=v\circ p_1\circ w=v\circ p_2\circ w=v\circ v_2.
 $$
 (Note that the equivalence (c) $\ssi$ (e) also follows from Proposition~\ref{coimim} p.~\pageref{coimim} and Proposition~\ref{strepi} p.~\pageref{strepi}.)
 \end{s}
-%sophie
+
 %
 
 \begin{s} 
@@ -2939,13 +2941,13 @@ A\ar[equal]{r}&A\ar[equal]{r}&A.
 \end{tikzcd}
 $$
 \end{proof}
-%
-%%%%
-%
+
+%%
+
 \subsection{Proposition 6.1.9 (p.~133)}\label{619}
-%
+
 The following point is implicit in the book, and we give additional details for the reader's convenience. Proposition 6.1.9 results immediately from the statement below:
-%
+
 \begin{prop} 
 Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural embeddings. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
 \end{prop} 
@@ -3006,11 +3008,11 @@ and recall that we have, in the setting of Corollary 6.3.2 p.~140,
 \begin{equation}\label{140}
 (JF)(``\coli"\ \alpha)\simeq\coli\ F\circ\alpha.
 \end{equation}
-%
-%%%%
-%
+
+%%
+
 \subsection{Proposition 6.1.12 (p.~134)}\label{6112}
-%
+
 We give some more details about the proof. Recall the setting: We have two categories $\C_1$ and $\C_2$, and we shall define functors
 $$
 \begin{tikzcd}
@@ -3135,11 +3137,11 @@ A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
 One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. This ends the proof of \eqref{6112b}.
-%
-%%%%
-%
+
+%%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} 
 P.~136, proof of Proposition 6.1.18 (i) (minor variant): If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
 $$
@@ -3159,9 +3161,9 @@ $$
 $$ 
 is an isomorphism. Indeed, $\co_j$ commutes with $\co_i$ for obvious reasons, and with $\iota$ because $\iota$ is right exact.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the table:\bigskip 
 
@@ -3179,9 +3181,9 @@ P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the 
 \end{center}%\bigskip 
 \noindent(In Line 6 we assume that $\C$ admits finite projective limits, whereas in Line 7 we assume that $\C$ admits small projective limits.)%\bigskip 
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ admits finite projective limits. By Remark 2.6.5 p.~62 and Corollary 6.1.17 p.~136, all the inclusions represented in the diagram 
 \[
@@ -3194,9 +3196,38 @@ P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ 
 \]
 except perhaps inclusion $i$, commute with finite projective limits. Thus inclusion $i$ commutes with finite projective limits. The argument for $\U$-small projective limits is the same. q.e.d.
 \end{s}
+
 %
-%%
+
+\begin{s}
+Proposition 6.2.1 p. 138. Let $\alpha:I\to\C$ be a functor, and let $Z$ be an object of $\C$. Consider the following condition:
+
+There is an $i_0$ in $I$ and a morphism $\tau:Z\to\alpha(i_0)$ in $\C$ such that for all morphism $s_0:i_0\to i$ there is a morphism $g:\alpha(i)\to Z$ and a morphism $t:i\to j$ satisfying 
+$$
+g\circ\alpha(s)\circ\tau=\id_Z,\quad\alpha(t\circ s)\circ\tau\circ g=\alpha(t).
+$$
 %
+\begin{nota}\label{sic}
+Given two categories $I$ and $\C$, we write $S(I,\C)$ for the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and the above condition holds.
+\end{nota}
+
+Let $I$ and $\C$ be two categories, let $\U$ be a universe such that 
+%
+\begin{equation}\label{icz}
+\text{$I$ is $\U$-small and $\C$ is a $\U$-category,}
+\end{equation}
+%
+and let $T(I,\C,\U)$ be the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and $``\co"\alpha$ is representable by $Z$.
+%
+\begin{prop}[Proposition 6.2.1 p. 138]\label{621}
+For $I,\C$ and $\U$ as above, we have $S(I,\C)=T(I,\C,\U)$. In particular $T(I,\C,\U)$ does not depend on $\U$ subject to \eqref{icz}.
+\end{prop}
+\end{s}
+
+See also Proposition~\ref{264} p.~\pageref{264}.
+
+%
+
 \begin{s} P.~142, proof of Corollary 6.3.7. Let us check the isomorphism 
 $$
 \kappa(X)\simeq\ic\rho\circ\xi. 
@@ -3219,11 +3250,11 @@ $$
 
 \noindent the three isomorphisms being respectively justified by \eqref{140} p.~\pageref{140}, \eqref{133ii} p.~\pageref{133ii}, and \eqref{133i} p.~\pageref{133i}. q.e.d.
 \end{s}
-%
-%%%%
-%
+
+%%
+
 \subsection{Theorem 6.4.3 (p.~144)}
-%
+
 Notational convention for this section, {\em and for this section only!} Superscripts will {\em never} be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'\in\C'$. Only two categories of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'\in\C'$) will be considered in this section. As a lot of subscripts will be used, we shall denote these categories by 
 %
 \begin{equation}\label{slice}
@@ -3234,14 +3265,13 @@ instead of $\C_{G(a)}$ and $L_a$, to avoid confusion. Superscripts will {\em alw
 
 Recall the statement: 
 %
-\begin{thm}
+\begin{thm}\label{643}
 If $\C$ is a category and $K$ is a finite category such that $\Hom_K(k,k)$ $=\{\id_k\}$ for all $k$ in $K$, then the natural functor 
 $$
 \Phi:\Ind(\C^K)\to\Ind(\C)^K
 $$ 
 is an equivalence.
 \end{thm}
-%
 
 The key point is to check that 
 %
@@ -3357,26 +3387,20 @@ To define $\mu$ let
 $$
 \nu:=\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
 $$ 
-be in $N$. Then $\lambda(\nu)$ will be of the form $((i_k),P)$, so that we must define $P:K\to\C$. We define $P(k)$ by putting $P(b):=Q(b)$ for $b$ in $L$, and $P(a):=\alpha_a(i_a)$. To a morphism $f:b\to c$ in $L$ we attach the morphism $Q(f):P(b)\to P(c)$. Let $b$ be in $L$. There is at most one morphism $b\to a$. Assume that this morphism does exist. Then we attach to it the morphism form $P(b)=Q(b)=\alpha_b(i_b)$ to $P(a)=\alpha_a(i_a)$ given by the morphism of functors 
+be in $N$. Then $\lambda(\nu)$ will be of the form $((i_k),P)$, so that we must define $P:K\to\C$. We define $P(k)$ by putting $P(b):=Q(b)$ for $b$ in $L$, and $P(a):=\alpha_a(i_a)$. To a morphism $f:b\to c$ in $L$ we attach the morphism $Q(f):P(b)\to P(c)$. Let $b$ be in $L$. There is at most one morphism $b\to a$. Assume that this morphism does exist. Then we attach to it the morphism from $P(b)=Q(b)=\alpha_b(i_b)$ to $P(a)=\alpha_a(i_a)$ given by the morphism of functors 
 $$
 \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a)).
 $$
 
-
-
-equivalence 
+As a result, we have an equivalence 
 $$ 
 N\sim M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$
 
-By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. 
-
-It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal.
-
-From this point we can argue as in the proof of Proposition 6.1.13 p.~134.
+By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134. The only remaining task is to prove the lemma below.
 
 \begin{lem}\label{delta}
-If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^i$ is cofinal.
+If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^I$ is cofinal.
 \end{lem}
 %
 \begin{proof}
@@ -3386,11 +3410,11 @@ $$
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\theta)$.
 \end{proof}
-%
-%%%%
-%
+
+%%
+
 \subsection{Exercise 6.11 (p. 147)} 
-%
+
 We prove the following slightly more precise statement:
 %
 \begin{prop}\label{myprop1}
@@ -3428,7 +3452,7 @@ $\ic\varphi\simeq f$.
 \noindent(d) $\then$ (a). This is obvious.
 \end{proof}
 
-%%%%
+%%%
 
 \section{About Chapter 7}
 
@@ -3477,18 +3501,27 @@ X\ar{r}{\id_X}\ar{d}[swap]{s}&X\ar[dashed]{d}{t}\\ X'\ar[dashed]{r}[swap]{g}&Y'.
 $$
 \end{s}
 
-%
+%\begin{s}Definition 7.3.1 p.~159. It might be worth displaying the formula $$(R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).$$ Define $\beta^X:\cc S^X\to\A$ by $\beta^X(X\to Y):=F(Y)$. One can say that $F$ is {\em universally right localizable} at $Q(X)$ if we have $$\Big(\beta^X,(R_{\cc S}F)(Q(X))\Big)\in S(\cc S^X,\A)$$ (see Notation~\ref{sic} p.~\pageref{sic}, and see Proposition~\ref{621} p.~\pageref{621} for the signification of this condition), and that $F$ is {\em universally right localizable} if it is universally right localizable at $Q(X)$ for any $X$ in $\C$.\end{s}
 
-\begin{s} 
+\begin{s}\label{durl} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
-Let $\C$ be a category and let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
+Let $\C$ be a category and let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
+$$
+(R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).
+$$ 
 
-It seems more prudent to assume that $\C$ is a $\U$-small category, and that $\A$ and $\A'$ are big categories (see Remark~\ref{rurl} p.~\pageref{rurl}). For the sake of emphasis, let us state formally the definition used here:
+Define $\beta^X:\cc S^X\to\A$ by $\beta^X(X\to Y):=F(Y)$. One can say that $F$ is {\em universally right localizable} \index{universally right localizable} at $Q(X)$ if we have 
+$$
+\Big(\beta^X,(R_{\cc S}F)(Q(X))\Big)\in S(\cc S^X,\A)
+$$ 
+(see Notation~\ref{sic} p.~\pageref{sic} for the definition of $S(\cc S^X,\A)$, and see Proposition~\ref{621} p.~\pageref{621} for the signification of this condition), and that $F$ is {\em universally right localizable} if it is universally right localizable at $Q(X)$ for any $X$ in $\C$. By Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{621} p.~\pageref{621}, $F$ is universally right localizable if and only if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
 
-\begin{df}\label{durl}
-Let $\C$ be a $\U$-category, let $\cc S$ be a right multiplicative system, and let $\A$ be a big category. A functor $F:\C\to\A$ is {\em universally right localizable} \index{universally right localizable} if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
-\end{df}
+%Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
+
+%It seems more prudent to assume that $\C$ is a $\U$-small category, and that $\A$ and $\A'$ are big categories (see Remark~\ref{rurl} p.~\pageref{rurl}). For the sake of emphasis, let us state formally the definition used here:
+
+%\begin{df}\label{durl}Let $\C$ be a $\U$-category, let $\cc S$ be a right multiplicative system, and let $\A$ be a big category. A functor $F:\C\to\A$ is {\em universally right localizable} \index{universally right localizable} if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.\end{df}
 
 %By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ $$\icolim_{(X\to Y)\in\SSS^X}\ F(Y)$$ is represented by some object of $\A$. 
 
@@ -3523,7 +3556,7 @@ P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $
 
 The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
 
-Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see Definition~\ref{durl} p.~\pageref{durl}), $R_{\SSS}F\simeq F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S~\ref{durl} p.~\pageref{durl}), $R_{\SSS}F\simeq F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
@@ -6200,7 +6233,7 @@ Let $\C$ be a $\U$-small category, and let $\cc S$ be a right multiplicative sys
 %
 
 \begin{s}\label{durl2}
-P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see Definition~\ref{durl} p.~\pageref{durl}. %Here is how I understand the definition (see Remark~\ref{rurl} p.~\pageref{rurl}): $\C$ is a $\U$-small category, $\A$ and $\A'$ are big categories.
+P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. %Here is how I understand the definition (see Remark~\ref{rurl} p.~\pageref{rurl}): $\C$ is a $\U$-small category, $\A$ and $\A'$ are big categories.
 \end{s}
 
 %
