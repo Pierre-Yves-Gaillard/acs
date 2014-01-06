@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0038)
+% about "categories and sheaves" (version_0039)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3208,32 +3208,17 @@ except perhaps inclusion $i$, commute with finite projective limits. Thus inclus
 
 %
 
-\begin{s}
-Proposition 6.2.1 p. 138. Let $\alpha:I\to\C$ be a functor, and let $Z$ be an object of $\C$. Consider the following condition:
+%\begin{s}Proposition 6.2.1 p. 138. Let $\alpha:I\to\C$ be a functor, and let $Z$ be an object of $\C$. Consider the following condition:
 
-There is an $i_0$ in $I$ and a morphism $\tau:Z\to\alpha(i_0)$ in $\C$ such that for all morphism $s_0:i_0\to i$ there is a morphism $g:\alpha(i)\to Z$ and a morphism $t:i\to j$ satisfying 
-$$
-g\circ\alpha(s)\circ\tau=\id_Z,\quad\alpha(t\circ s)\circ\tau\circ g=\alpha(t).
-$$
-%
-\begin{nota}\label{sic}
-Given two categories $I$ and $\C$, we write $S(I,\C)$ for the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and the above condition holds.
-\end{nota}
+%There is an $i_0$ in $I$ and a morphism $\tau:Z\to\alpha(i_0)$ in $\C$ such that for all morphism $s_0:i_0\to i$ there is a morphism $g:\alpha(i)\to Z$ and a morphism $t:i\to j$ satisfying $$g\circ\alpha(s)\circ\tau=\id_Z,\quad\alpha(t\circ s)\circ\tau\circ g=\alpha(t).$$
+%\begin{nota}\label{sic}Given two categories $I$ and $\C$, we write $S(I,\C)$ for the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and the above condition holds.\end{nota}
 
-Let $I$ and $\C$ be two categories, let $\U$ be a universe such that 
+%Let $I$ and $\C$ be two categories, let $\U$ be a universe such that %\begin{equation}\label{icz}\text{$I$ is $\U$-small and $\C$ is a $\U$-category,}\end{equation}
+%and let $T(I,\C,\U)$ be the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and $``\co"\alpha$ is representable by $Z$.
 %
-\begin{equation}\label{icz}
-\text{$I$ is $\U$-small and $\C$ is a $\U$-category,}
-\end{equation}
-%
-and let $T(I,\C,\U)$ be the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and $``\co"\alpha$ is representable by $Z$.
-%
-\begin{prop}[Proposition 6.2.1 p. 138]\label{621}
-For $I,\C$ and $\U$ as above, we have $S(I,\C)=T(I,\C,\U)$. In particular $T(I,\C,\U)$ does not depend on $\U$ subject to \eqref{icz}.
-\end{prop}
-\end{s}
+%\begin{prop}[Proposition 6.2.1 p. 138]\label{621}For $I,\C$ and $\U$ as above, we have $S(I,\C)=T(I,\C,\U)$. In particular $T(I,\C,\U)$ does not depend on $\U$ subject to \eqref{icz}.\end{prop}
 
-See also Proposition~\ref{264} p.~\pageref{264}.
+%See also Proposition~\ref{264} p.~\pageref{264}.\end{s}
 
 %
 
@@ -3520,11 +3505,7 @@ $$
 (R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).
 $$ 
 
-Define $\beta^X:\cc S^X\to\A$ by $\beta^X(X\to Y):=F(Y)$. One can say that $F$ is {\em universally right localizable} \index{universally right localizable} at $Q(X)$ if we have 
-$$
-\Big(\beta^X,(R_{\cc S}F)(Q(X))\Big)\in S(\cc S^X,\A)
-$$ 
-(see Notation~\ref{sic} p.~\pageref{sic} for the definition of $S(\cc S^X,\A)$, and see Proposition~\ref{621} p.~\pageref{621} for the signification of this condition), and that $F$ is {\em universally right localizable} if it is universally right localizable at $Q(X)$ for any $X$ in $\C$. By Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{621} p.~\pageref{621}, $F$ is universally right localizable if and only if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
+%Define $\beta^X:\cc S^X\to\A$ by $\beta^X(X\to Y):=F(Y)$. One can say that $F$ is {\em universally right localizable} \index{universally right localizable} at $Q(X)$ if we have $$\Big(\beta^X,(R_{\cc S}F)(Q(X))\Big)\in S(\cc S^X,\A)$$ (see Notation~\ref{sic} p.~\pageref{sic} for the definition of $S(\cc S^X,\A)$, and see Proposition~\ref{621} p.~\pageref{621} for the signification of this condition), and that $F$ is {\em universally right localizable} if it is universally right localizable at $Q(X)$ for any $X$ in $\C$. By Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{621} p.~\pageref{621}, $F$ is universally right localizable if and only if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
 
 %Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
 
