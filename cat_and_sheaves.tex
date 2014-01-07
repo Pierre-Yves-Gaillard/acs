@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0040)
+% about "categories and sheaves" (version_0041)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1532,8 +1532,8 @@ It is straightforward to check that (\ref{2}) induces (\ref{1}).
 \begin{s} 
 P.~61, Proposition 2.6.4 (minor variant).
 
-\begin{prop}
-Let $\alpha:I\to\C$ be a functor, and let $\Gamma(\U)$ be the condition ``$\U$ is a universe, $I$ is $\U$-small, and $\C$ is a $\U$-category''. If $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$. Let $X$ be an object of $\C$ and $F:\C\to\C'$ a functor. Then we have:
+\begin{prop}[Proposition 2.6.4 p. 61]
+Let $\alpha:I\to\C$ be a functor, and let $\Gamma(\U)$ be the condition ``$\U$ is a universe, $I$ is $\U$-small, and $\C$ is a $\U$-category''. If $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$. Let $X$ be an object of $\C$ and $F:\C\to\C'$ a functor. Then we have for all universe $\U$:
 
 \nn{\em(a)} $\Gamma(\U)$ and $\co h_\U\circ\alpha\simeq h_\U(X)$ imply $\co\alpha\simeq X$,
 
@@ -1554,8 +1554,18 @@ $$
 $$
 \end{proof}
 
+\begin{cor}\label{cuil}
+If $\alpha:I\to\C$ is a functor and $X$ an object of $\C$, then the following conditions are equivalent:
+
+\nn{\em(a)} $\co h_\U\circ\alpha\simeq h_\U(X)$ for some universe $\U$ such that $\Gamma(\U)$,
+
+\nn{\em(b)} $\co h_\U\circ\alpha\simeq h_\U(X)$ for all universe $\U$ such that $\Gamma(\U)$, 
+
+\nn{\em(c)} $\co F\circ\alpha\simeq F(X)$ for all functor $F:\C\to\C'$.
+\end{cor}
+
 \begin{df}\label{uil}
-If, in the above setting, the assumptions in {\em(c)} above hold, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$.
+If the equivalent conditions in Corollary~\ref{cuil} hold, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$.
 \end{df}
 \end{s}
 
