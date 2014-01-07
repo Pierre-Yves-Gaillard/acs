@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0039)
+% about "categories and sheaves" (version_0040)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -13,7 +13,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 \makeindex
 \pagestyle{fancy}
@@ -57,28 +57,11 @@
 %
 \newcommand{\ee}{\varepsilon}
 \newcommand{\pp}{\varphi}
-%\newcommand{\op}{\text{op}}
-%\newcommand{\pf}{\n{\em Proof. }}
-%\newcommand{\bs}{\begin{s}}\newcommand{\es}{\end{s}}
-%\newcommand{\beq}{\begin{equation}}\newcommand{\eeq}{\end{equation}}
-%\newcommand{\blm}{\begin{lem}}\newcommand{\elm}{\end{lem}}
-%\newcommand{\bpr}{\begin{prop}}\newcommand{\epr}{\end{prop}}
-%\newcommand{\ad}{ (additional details)}
-%\newcommand{\ccd}{the comment containing Display}
-%\newcommand{\mv}{ (minor variant)}
-%\newcommand{\cdm}{commutative diagram}
-%\newcommand{\nm}{natural morphism}
-%\newcommand{\pr}{Proposition}
-%\newcommand{\rw}{[This is a rewriting of a previous comment. The new version below has already been incorporated into the main text.]}
-%\newcommand{\sts}{t suffices to show}
-%\newcommand{\cn}{(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) }%\subsection{Brief Comments}
-%\newcommand{\bc}{\subsection{Brief Comments}}
-%
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
 \newcommand{\incl}{\hookrightarrow}
 \newcommand{\parar}{\rightrightarrows}
-\newcommand{\paralelarrows}{\rightrightarrows}% parallel
+%\newcommand{\paralelarrows}{\rightrightarrows}% parallel
 \newcommand{\then}{\Rightarrow}
 \newcommand{\si}{\Leftarrow}
 \newcommand{\ssi}{\Leftrightarrow}%\Leftrightarrow\Rightarrow
@@ -450,31 +433,19 @@ $\bu$ $Q(u)$ should be $Q(u')$.
 \noindent $*$ P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$.
 
 \noindent $*$ P. 401, Line 6: $B''\to B$ should be $B''\to B'$.
-%
-\begin{comment}
-\begin{s}\label{c406}
-P. 406. I don't understand the isomorphism 
-$$
-\left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A^\wedge}\Hom_{(\C_Y)^\wedge}(f^t(V),U).
-$$ 
-I would have written 
-$$
-\left((f^t)\ \widehat{}A\right)(U)\simeq\co_{(V\to A)\in(\C_Y)_A}\Hom_{\C_X}(U,f^t(V)).
-$$
-\end{s}
-\end{comment}
-%
-\noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) %[Here we are {\em not} following the convention of \eqref{ttau} p.~\pageref{ttau}.]
+
+\noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) 
 
 \noindent $*$ P. 426, Line 5: ``morphism of sites by'' should be ``morphism of sites''.
 
 \noindent $*$ P. 428, Notation 17.6.12 (i): $\C_X\ni U\mapsto M$ should be $\C_A\ni(U\to A)\mapsto M$.
-%
+
+%%%
+
 \section{About Chapter 1}
-%
-%
+
 \subsection{Universes (p.~9)}
-%
+
 The book starts with a few statements which are not proved, a reference being given instead. Here are the proofs.
 
 A \textbf{universe} \index{universe} is a set $\mathcal U$ satisfying 
@@ -847,148 +818,6 @@ We call $*$ the {\em horizontal composition}. \index{horizontal composition} We 
 
 %%
 
-\begin{comment}
-
-\subsection{Horizontal and Vertical Compositions (p.~19) 2}\label{hove2}
-
-This Section and Section~\ref{hove1} p.~\pageref{hove1} serve exactly the same purpose. The reader should read at most one of them.
-
-Let $m,n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
-$$
-F_{i,j}:\C_{j+1}\to\C_j,\quad1\le i\le m+1,\ 1\le j\le n
-$$
-be functors, let 
-$$
-\theta_{i,j}:F_{i+1,j}\to F_{i,j},\quad1\le i\le m,\ 1\le j\le n
-$$
-be morphisms of functors. For instance, if $m=2,n=4$, then we have 
-$$
-\begin{tikzcd}
-%
-\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}&{}&\C_4\ar{ll}{}[near start,swap]{F_{13}}&{}&\C_5\ar{ll}{}[near start,swap]{F_{14}}\\ 
-%
-\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}&\ar{u}{\theta_{13}}&\C_4\ar{ll}{}[near start,swap]{F_{23}}&\ar{u}{\theta_{14}}&\C_5\ar{ll}{}[near start,swap]{F_{24}}\\ 
-%
-\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start,swap]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start,swap]{F_{32}}&\ar{u}{\theta_{23}}&\C_4\ar{ll}{}[near start,swap]{F_{33}}&\ar{u}{\theta_{24}}&\C_5\ar{ll}{}[near start,swap]{F_{34}}.
-\end{tikzcd}
-$$ 
-
-We shall define a morphism from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
-
-Let $X$ be an object of $\C_{n+1}$, and, for $i\in M^n$, where $M:=\{1,2,\dots,m+1\}$, put 
-$$
-X_i:=F_{i_1,1}\cdots F_{i_n,n}X\in\C_1,
-$$
-for $1\le p\le n$ set 
-$$
-e_p:=(0,\dots,0,1,0,\dots,0)\in M^n,
-$$
-the one being in the $p$-th position. Assuming $i,i+e_p\in M^n$, define the morphism 
-$$
-f_{i,p}:X_{i+e_p}\to X_i
-$$
-in $\C_1$ by 
-$$
-f_{i,p}:=(F_{i_1,1}\cdots F_{i_{p-1},p-1})(\theta_{i_p,p}(F_{i_{p+1},p+1}\cdots F_{i_n,n}X)).
-$$
-
-This yields a diagram $\Delta$ in $\C_1$ whose vertices are the $X_i$ with $i\in M^n$, and whose arrows are the $f_{i,p}$ with $i,i+e_p\in M^n$. 
-
-For instance, if $m=n=2$ the diagram is
-
-$$
-\begin{tikzcd}
-%
-\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}\\ 
-%
-\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}\\ 
-%
-\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start]{F_{31}}&\ar{u}{\theta_{22}}&\C_3,\ar{ll}{}[near start]{F_{32}}
-%
-\end{tikzcd}
-$$ 
-
-\nn and $\Delta$ is 
-
-$$
-\begin{tikzcd}
-%
-F_{11}F_{12}X&&F_{21}F_{12}X\ar{ll}[swap]{\theta_{11}F_{12}X}&&F_{31}F_{12}X\ar{ll}[swap]{\theta_{21}F_{12}X}\\ 
-%
-F_{11}F_{22}X\ar{u}{F_{11}\theta_{12}X}&&F_{21}F_{22}X\ar{ll}[swap]{\theta_{11}F_{22}X}\ar{u}{F_{21}\theta_{12}X}&&F_{31}F_{22}X\ar{ll}[swap]{\theta_{21}F_{22}X}\ar{u}[swap]{F_{31}\theta_{12}X}\\ 
-%
-F_{11}F_{32}X\ar{u}{F_{11}\theta_{22}X}&&F_{21}F_{32}X\ar{ll}{\theta_{11}F_{32}X}\ar{u}{F_{21}\theta_{22}X}&&F_{31}F_{32}X.\ar{ll}{\theta_{21}F_{32}X}\ar{u}[swap]{F_{31}\theta_{22}X}
-%
-\end{tikzcd}
-$$
-
-Clearly $\Delta$ commutes. In particular, all the paths from $X_{(m+1,\dots,m+1)}$ to $X_{(1,\dots,1)}$ coincide. (Such paths obviously exist.) So, we get a well-defined morphism in $\C_{n+1}$
-$$
-X_{(m+1,\dots,m+1)}=F_{m+1,1}\cdots F_{m+1,n}X\to F_{1,1}\cdots F_{1,n}X=X_{(1,\dots,1)}.
-$$
-When $X$ varies in $\C_{n+1}$, this family of morphisms in $\C_1$ defines the sought-for morphism of functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$. 
-
-\begin{nota}\label{nil2}
-We denote this morphism of functors by
-$$
-\begin{pmatrix}
-\theta_{1,1}&\cdots&\theta_{1,n}\\
-\vdots&&\vdots\\ 
-\theta_{m,1}&\cdots&\theta_{m,n}
-\end{pmatrix}:F_{m+1,1}\cdots F_{m+1,n}\to F_{1,1}\cdots F_{1,n}, 
-$$ 
-and we put 
-$$
-\theta_{1,1}*\cdots*\theta_{1,n}:=(\theta_{1,1}\ \cdots\ \theta_{1,n})
-$$
-for $m=1$, and 
-$$
-\theta_{1,1}\circ\cdots\circ\theta_{m,1}:=
-\begin{pmatrix}
-\theta_{1,1}\\
-\vdots\\ 
-\theta_{m,1}
-\end{pmatrix}
-$$
-
-\nn for $n=1$.
-\end{nota}
-
-The following proposition is clear 
-
-\begin{prop}\label{pil2}
-The operations $*$ and $\circ$ are associative, and we have$$
-(\theta_{1,1}*\cdots*\theta_{1,n})\circ\cdots\circ(\theta_{m,1}*\cdots*\theta_{m,n})
-=\begin{pmatrix}
-\theta_{1,1}*\cdots*\theta_{1,n}\\
-\vdots\\ 
-\theta_{m,1}*\cdots*\theta_{m,n}
-\end{pmatrix}
-$$ 
-
-$$
-=\begin{pmatrix}
-\theta_{1,1}&\cdots&\theta_{1,n}\\
-\vdots&&\vdots\\ 
-\theta_{m,1}&\cdots&\theta_{m,n}
-\end{pmatrix}
-$$
-
-$$
-=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}*\cdots*
-\begin{pmatrix}\theta_{1,n}\\ \vdots\\ \theta_{m,n}\end{pmatrix}
-=(\theta_{1,1}\circ\cdots\circ\theta_{m,1})*\cdots*(\theta_{1,n}\circ\cdots\circ\theta_{m,n}).
-$$
-\end{prop}
-
-\begin{df}\label{dil2} 
-We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil2} the {\em Interchange Law}. \index{Interchange Law}
-\end{df}
-
-\end{comment}
-
-%%
-
 \subsection{Equalities (1.5.8) and (1.5.9) (p.~29)}
 
 Warning: many authors designate $\varepsilon$ by $\eta$ and $\eta$ by $\varepsilon$. 
@@ -1001,8 +830,7 @@ $$
 \end{tikzcd}
 $$
 
-Using Notation~\ref{nhove} p.~\pageref{nhove}, %or Notation~\ref{nil2} p.~\pageref{nil2}, 
-Equalities (1.5.8) and (1.5.9) become respectively 
+Using Notation~\ref{nhove} p.~\pageref{nhove}, Equalities (1.5.8) and (1.5.9) become respectively 
 
 \begin{equation}\label{158}
 (\eta*L)\circ(L*\ee)=L
@@ -1704,57 +1532,31 @@ It is straightforward to check that (\ref{2}) induces (\ref{1}).
 \begin{s} 
 P.~61, Proposition 2.6.4 (minor variant).
 
-\begin{prop}\label{264}
-Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, let $\Delta(X)\in\C^I$ be the constant functor attached to $X$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$. For all universe $\U$ such that $\C$ is a $\U$-category, let $h_\U:\C\to\C^\wedge_\U$ be the Yoneda embedding. Then the following conditions are equivalent:
+\begin{prop}
+Let $\alpha:I\to\C$ be a functor, and let $\Gamma(\U)$ be the condition ``$\U$ is a universe, $I$ is $\U$-small, and $\C$ is a $\U$-category''. If $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$. Let $X$ be an object of $\C$ and $F:\C\to\C'$ a functor. Then we have:
 
-{\em\nn(a)} for all universe $\U$ such that $\C$ is a $\U$-category and $I$ is $\U$-small we have 
-$$
-(h_\U(p_i)\to h_\U(X))_{i\in I}\simeq\co h_\U(\alpha),
-$$
-{\em\nn(b)} for all functor $F:\C\to\C'$ we have 
-$$
-(F(p_i)\to F(X))_{i\in I}\simeq\co F(\alpha).
-$$
+\nn{\em(a)} $\Gamma(\U)$ and $\co h_\U\circ\alpha\simeq h_\U(X)$ imply $\co\alpha\simeq X$,
+
+\nn{\em(b)} $\Gamma(\U),\Gamma(\V)$ and $\co h_\U\circ\alpha\simeq h_\U(X)$ imply $\co h_\V\circ\alpha\simeq h_\V(X)$,
+
+\nn{\em(c)} $\Gamma(\U)$ and $\co h_\U\circ\alpha\simeq h_\U(X)$ imply $\co F\circ\alpha\simeq F(X)$. 
 \end{prop}
+\begin{proof} (a) This is clear. 
 
-\begin{proof}
-It is clear that (b) implies (a). Let us assume (a), and let us prove (b). Let $F:\C\to\C'$ be as in (b), let $\U$ be a universe such that $\C$ and $\C'$ are $\U$-categories and $I$ is $\U$-small, and let $X'$ be in $\C'$. We know 
+\nn(b) We can assume $\U\subset\V$. Put $A:=\co h_\U\circ\alpha$, and define $B\in\C^\wedge_\V$ by setting $B(Y):=A(Y)$ for all $Y$ in $\Ob(\C)$ and $B(f):=A(f)$ for all $f$ in $\Mor(\C)$. This yields $\co h_\V\circ\alpha\simeq B$, and any isomorphism $\pp:h_\U(X)\to A$ induces, by the Yoneda Lemma, an isomorphism $\pp:h_\V(X)\to B$. 
+
+\nn(c) In view of (b) we can assume that $\C'$ is a $\U$-category, and we have, for any $X'$ in $\C'$, 
 $$
-A(X)\xrightarrow\sim\lim A(\alpha)\quad\forall\ A\in\C^\wedge_\U 
-$$ 
-and we want to prove 
+\Hom_{\C'}(F(X),X')\simeq\Hom_{\C^\wedge_\U}\big(h_\U(X),\Hom_{\C'}(F(\ ),X')\big)
 $$
-\Hom_{\C'}(F(X),X')\xrightarrow\sim\lim\Hom_{\C'}(F(\alpha),X'). 
-$$ 
-It suffices to set $A:=\Hom_{\C'}(F(\ ),X')$.
+$$
+\simeq\lim\Hom_{\C^\wedge_\U}\big(h_\U\circ\alpha,\Hom_{\C'}(F(\ ),X')\big)\simeq\lim\Hom_{\C'}(F\circ\alpha,X').
+$$
 \end{proof}
 
-\begin{comment}
-
-\begin{rk}\label{rurl}
-Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, let $\Delta(X)\in\C^I$ be the constant functor attached to $X$, let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$, let $\U$ be a universe such that 
-%
-\begin{equation}\label{eurl}
-\text{$\C$ is a $\U$-category and $I$ is $\U$-small,}
-\end{equation}
-% 
-and let $h_\U:\C\to\C^\wedge_\U$ be the corresponding Yoneda embedding. I do not know the answer to the following question: Does the condition 
-$$
-(h_\U(p_i)\to h_\U(X))_{i\in I}\simeq\co h_\U(\alpha)
-$$ 
-depend on $\U$ subject to \eqref{eurl}? By Proposition~\ref{621} p.~\pageref{621}, the answer is ``no'' if $I$ is filtrant.% and $\C$ is a $\U$-category. 
-\end{rk}
-
-Note that the question can be stated without the condition that $\C$ is a $\U$-category:
-
-\begin{q}% Jan. 3, 2014
-Let $\U\subset\V$ be universes, let $\alpha:I\to\C$ be a functor such that $I$ is $\U$-small, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism of functors, where $\Delta(X)$ is the constant functor attached to $X$. Assume that, for all contravariant functor $A$ from $\C$ to $\U\text-\Set$, the natural map $A(X)\to\lim A(\alpha)$ is bijective. Does this imply that, for all contravariant functor $B$ from $\C$ to $\V\text-\Set$, the natural map $B(X)\to\lim B(\alpha)$ is bijective.
-\end{q}
-
-%By Proposition~\ref{621} p.~\pageref{621}, the answer is ``yes'' if $I$ is filtrant and $\C$ is a $\U$-category. 
-
-\end{comment}
-
+\begin{df}\label{uil}
+If, in the above setting, the assumptions in {\em(c)} above hold, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$.
+\end{df}
 \end{s}
 
 %
@@ -2482,53 +2284,6 @@ The lemma below obvious:
 \begin{lem}\label{strepi}
 A morphism $f:X\to Y$ in a category $\C$ is a strict epimorphism if and only if, for all $Z$ in $\C$, the map $\circ f:\Hom_\C(Y,Z)\to\Hom_\C(X,Z)$ induces a bijection $\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z)$. By Proposition~\ref{epimono} p.~\pageref{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. Moreover, a strict epimorphism is an epimorphism. 
 \end{lem} 
-
-\begin{comment}
-
-Let us try to express the condition ``$f$ is a strict epimorphism'' in a more elementary form. We start with the sequence 
-$$
-\begin{tikzcd}
-\ky(X)\ar[two heads]{r}{\lambda}&\Coim f\ar{r}{\mu}&\ky(Y).
-\end{tikzcd}
-$$ 
-Our condition becomes ``$\mu$ is an isomorphism''. Evaluating the above sequence on $Z\in\C$ yields
-$$
-\begin{tikzcd}
-\Hom_\C(X,Z)&(\Coim f)(Z)\ar[tail]{l}[swap]{\lambda_Z}\ar[equal]{d}&\Hom_\C(Y,Z)\ar{l}[swap]{\mu_Z}\\ 
-{}&\Hom_{\C^\wedge}(\Ima\hy(f),\hy(Z)),
-\end{tikzcd}
-$$ 
-and the condition becomes ``$\mu_Z$ is an isomorphism for all $Z$''. We need to describe the subset $\Ima\lambda_Z$ of $\Hom_\C(X,Z)$ in elementary terms. Let $x$ be in $\Hom_\C(X,Z)$. Then $x$ is in $\Ima\lambda_Z$ if and only if the diagram of solid arrows 
-$$
-\begin{tikzcd}
-\hy(X)\ar[two heads]{r}\ar{rd}[swap]{\hy(x)}&\Ima\hy(X)\ar[dashed]{d}\\ 
-{}&\hy(Z).
-\end{tikzcd}
-$$ 
-can be completed to a commutative diagram as indicated. This is the case if and only if, for all $W$ in $\C$, the diagram of solid arrows 
-$$
-\begin{tikzcd}
-\Hom_\C(W,X)\ar[two heads]{r}\ar{rd}[swap]{x\circ}&f\circ\Hom_\C(W,X)\ar[dashed]{d}\\ 
-{}&\Hom_\C(W,Z).
-\end{tikzcd}
-$$ 
-can be completed to a commutative diagram as indicated.
-
-\nn We see that the dashed arrow in the above diagram exists if and only if 
-%
-\begin{equation}\label{sz}
-\left[W\parar X\xr fY\right]\then\left[W\parar X\xr xZ\right].
-\end{equation}
-%
-Let $S_Z$ be set of all those $x$ in $\Hom_\C(X,Z)$ which satisfy \eqref{sz} for all $W$ in $\C$. Then we have $\Ima\lambda_Z=S_Z$ and 
-
-\begin{prop}\label{elem}
-The morphism $f$ is a strict epimorphism if and only if the map $\Hom_\C(Y,Z)\to S_Z$ given by $y\mapsto y\circ f$ is bijective for all $Z$ in $\C$.
-\end{prop}
-
-In the book, the above condition is taken as the definition of a strict epimorphism.
-
-\end{comment}
 
 %%
 
@@ -3495,8 +3250,6 @@ X\ar{r}{\id_X}\ar{d}[swap]{s}&X\ar[dashed]{d}{t}\\ X'\ar[dashed]{r}[swap]{g}&Y'.
 $$
 \end{s}
 
-%\begin{s}Definition 7.3.1 p.~159. It might be worth displaying the formula $$(R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).$$ Define $\beta^X:\cc S^X\to\A$ by $\beta^X(X\to Y):=F(Y)$. One can say that $F$ is {\em universally right localizable} at $Q(X)$ if we have $$\Big(\beta^X,(R_{\cc S}F)(Q(X))\Big)\in S(\cc S^X,\A)$$ (see Notation~\ref{sic} p.~\pageref{sic}, and see Proposition~\ref{621} p.~\pageref{621} for the signification of this condition), and that $F$ is {\em universally right localizable} if it is universally right localizable at $Q(X)$ for any $X$ in $\C$.\end{s}
-
 \begin{s}\label{durl} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
@@ -3504,16 +3257,7 @@ Let $\C$ be a $\U$-small category (see \S~\ref{loc} p.~\pageref{loc}), let $\cc 
 $$
 (R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).
 $$ 
-
-%Define $\beta^X:\cc S^X\to\A$ by $\beta^X(X\to Y):=F(Y)$. One can say that $F$ is {\em universally right localizable} \index{universally right localizable} at $Q(X)$ if we have $$\Big(\beta^X,(R_{\cc S}F)(Q(X))\Big)\in S(\cc S^X,\A)$$ (see Notation~\ref{sic} p.~\pageref{sic} for the definition of $S(\cc S^X,\A)$, and see Proposition~\ref{621} p.~\pageref{621} for the signification of this condition), and that $F$ is {\em universally right localizable} if it is universally right localizable at $Q(X)$ for any $X$ in $\C$. By Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{621} p.~\pageref{621}, $F$ is universally right localizable if and only if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.
-
-%Moreover, $F$ is said to be {\em universally right localizable} if for any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$. 
-
-%It seems more prudent to assume that $\C$ is a $\U$-small category, and that $\A$ and $\A'$ are big categories (see Remark~\ref{rurl} p.~\pageref{rurl}). For the sake of emphasis, let us state formally the definition used here:
-
-%\begin{df}\label{durl}Let $\C$ be a $\U$-category, let $\cc S$ be a right multiplicative system, and let $\A$ be a big category. A functor $F:\C\to\A$ is {\em universally right localizable} \index{universally right localizable} if for any big category $\A'$ and any functor $K:\A\to\A'$, the functor $K\circ F$ is localizable and $R_{\cc S}(K\circ F)\xr\sim K\circ R_{\cc S}F$.\end{df}
-
-%By Lemma 7.1.21 p.~157, Theorem 2.3.3 p.~52, and Proposition 2.6.4 p.~61 (see Proposition~\ref{264} p.~\pageref{264} and Proposition~\ref{264} p.~\pageref{264}), $F$ is universally right localizable if and only if for all $X$ in $\C$ $$\icolim_{(X\to Y)\in\SSS^X}\ F(Y)$$ is represented by some object of $\A$. 
+If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pageref{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable}
 
 Also, the following fact is implicit:
 
@@ -3732,73 +3476,6 @@ b=\begin{cases}1&\text{if }a=1,2\\2&\text{if }a=3.\end{cases}
 $$ 
 q.e.d.
 \end{s}
-%
-%%
-%
-\begin{comment}
-\begin{s}
-P.~172, Lemma 8.2.11. Here is a minor variant of the statement: 
-%
-\begin{lem}
-Let $F:\C\to\C'$ be a functor between additive categories, let $X$ be in $\C$, and let 
-$$
-\begin{tikzcd}
-F(X\oplus X)\ar[yshift=.7ex]{r}{f}&F(X)\oplus F(X)\ar[yshift=-.7ex]{l}{g}
-\end{tikzcd}
-$$ 
-be the natural morphisms. (More precisely, $f$ and $g$ are respectively obtained by regarding $\oplus$ as a product and as a coproduct.) If $f$ or $g$ is an isomorphism, then the other is its inverse. 
-\end{lem}
-%
-This follows from Lemma 8.2.3 p.~169 of the book.
-\end{s}
-\end{comment}
-%
-%%
-%
-\begin{comment}
-\begin{s} 
-P.~173. Propositions 8.2.12 and 8.2.13 can be stated as follows. 
-%
-\begin{prop}\label{8212}
-%
-Let $\C$ be an additive category, let 
-$$
-\operatorname{Add}(\C,\Mod(\mathbb Z))\text{ and }\operatorname{Prod}(\C,\Set)
-$$ 
-be respectively the category of additive functors from $\C$ to $\Mod(\mathbb Z)$ and the category of finite products preserving functors from $\C$ to $\Set$, and let $F$ be in $\operatorname{Prod}(\C,\Set)$. Then the composition 
-$$
-F(X)\times F(X)\xleftarrow\sim F(X\oplus X)\xr{\sigma_X}F(X)
-$$ 
-defines a structure of abelian group on $F(X)$. This construction defines a functor 
-$$
-\Phi:\operatorname{Prod}(\C,\Set)\to\operatorname{Add}(\C,\Mod(\mathbb Z)).
-$$ 
-Let 
-$$
-\Psi:\operatorname{Add}(\C,\Mod(\mathbb Z))\to\operatorname{Prod}(\C,\Set)
-$$ 
-be the natural functor. Then $\Phi$ and $\Psi$ are inverse isomorphisms. 
-%
-\end{prop}
-\end{s}
-%
-%%
-%
-\begin{s} 
-P.~173, Theorem 8.2.14. Recall the statement: 
-
-Let $\C$ be an additive category. Then $\C$ has a unique structure of pre-additive category. 
-
-Here is a minor variant of the proof of the existence of such a structure. 
-%
-Let $X$ and $Y$ be in $\C$. We define the addition on $\Hom_\C(X,Y)$ as follows. For all $Z$ in $\C$ put $k(X)(Z):=\Hom_\C(X,Z)$. Then $k(X)\in\operatorname{Prod}(\C,\Set)$ and $\Phi(k(X))\in\operatorname{Add}(\C,\Mod(\mathbb Z))$ (see Proposition~\ref{8212}). In particular $\Hom_\C(X,Y)$ is the set underlying the abelian group $\Phi(k(X))(Y)$. Moreover 
-$$
-f\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
-$$ 
-is an abelian group morphism for any $f:Y\to Z$. Thus we have the left distributivity formula $f\circ(g_1+g_2)=f\circ g_1+f\circ g_2$ for any $g_i:X\to Y$, $(i=1,2)$. Reversing arrows, we get the right distributivity. q.e.d.
-\end{s}
-
-\end{comment}
 
 %
 
@@ -6223,37 +5900,17 @@ Let $\C$ be a $\U$-small category, and let $\cc S$ be a right multiplicative sys
 %
 
 \begin{s}\label{durl2}
-P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. %Here is how I understand the definition (see Remark~\ref{rurl} p.~\pageref{rurl}): $\C$ is a $\U$-small category, $\A$ and $\A'$ are big categories.
+P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. 
 \end{s}
 
 %
-
-\begin{comment}
-\nn $*$ P.~63, Notation 2.7.2. Recall the setting: The diagram
-$$
-\begin{tikzcd}
-\C\ar{d}[swap]{\hy_\C}\ar{r}{F}&\C'\ar{d}{\hy_{\C'}}\\ 
-\C^\wedge\ar{r}[swap]{\widehat F}&\C'^\wedge
-\end{tikzcd}
-$$ 
-commutes up to isomorphism, $\C$ and $\C'$ are small, and we have 
-$$
-\widehat F(A)(V)\simeq\co_{(U\to A)\in\C_A}\Hom_{\C'}(V,F(U)).
-$$ 
-The purpose of this comment is just to note that we also have by Corollary 2.4.6 p.~56 
-\begin{equation}\label{272}
-\widehat F(A)(V)\simeq\co_{(U\to F(V))\in\C^U}A(U).
-\end{equation}
-\end{comment}
-
-%%
 
 \begin{s}\label{8212}
 P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
 \begin{nota}
 If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
 \end{nota}
-%
+
 \begin{prop}\label{8.2.12}
 If $\C$ is an additive category, then the obvious functor 
 $$
@@ -6261,7 +5918,7 @@ $$
 $$ 
 is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11 p.~172 of the book.
 \end{prop}
-%
+
 \begin{proof}
 The functor $\Phi$ being fully faithful by Proposition 8.2.12, it suffices to prove that the map 
 $$
