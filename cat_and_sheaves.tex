@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0043)
+% about "categories and sheaves" (version_0044)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -13,7 +13,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 \makeindex
 \pagestyle{fancy}
@@ -3216,13 +3216,13 @@ be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a subset of $\Ob
 $$
 \begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\B\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
 $$
-are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$ (see Definition~\ref{dloc} p.~\pageref{dloc}).
+are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$. %(see Definition~\ref{dloc} p.~\pageref{dloc}).
 \end{lem}
 \end{s}
 
 %
 
-\nn[\S\ref{loc} p.~\pageref{loc} will be inserted here.]
+%\nn[\S\ref{loc} p.~\pageref{loc} will be inserted here.]
 
 %
 
@@ -3250,7 +3250,8 @@ $$
 \begin{s}\label{durl} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
-Let $\C$ be a $\U$-small category (see \S~\ref{loc} p.~\pageref{loc}), let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
+Let $\C$ be a $\U$-small category, %(see \S~\ref{loc} p.~\pageref{loc}), 
+let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
 $$
 (R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).
 $$ 
@@ -5880,6 +5881,8 @@ P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger
 
 %
 
+\begin{comment}
+
 \begin{s}\label{loc}
 P. 153, Definition 7.1.11. The set $\Hom_{\C^r_{\cc S}}(X,Y)$ is defined by 
 $$
@@ -5893,6 +5896,8 @@ For the sake of emphasis, let us state formally the definition used here:
 Let $\C$ be a $\U$-small category, and let $\cc S$ be a right multiplicative system. The {\em right localization} \index{localization of a category} of $\C$ by $\cc S$ is the $\U$-small category $\C^r_{\cc S}$ mentioned after Lemma 7.1.13 on p.~154 of the book.
 \end{df}
 \end{s}
+
+\end{comment}
 
 %
 
