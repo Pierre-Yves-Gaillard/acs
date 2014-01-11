@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0046)
+% about "categories and sheaves" (version_0047)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4156,10 +4156,10 @@ I find Chapter 9 especially beautiful!
 
 \subsection{Brief Comments}
 
-\begin{s}\label{ppifil}
+\begin{s}
 P. 217, beginning of Section 9.2. 
 
-\begin{prop}
+\begin{prop}\label{ppifil}
 Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
 
 \nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
@@ -4208,22 +4208,7 @@ $$
 %
 
 \begin{s}
-Here are more details about Step~(b) of the proof of Lemma 9.2.5 p.~218: Let $i_1,i_2\in I$ and let $B\subset\Hom_I(i_1,i_2)$ with $\card(B)<\pi$. There exist $j_1\in J$ and a morphism $i_1\to\pp(j_1)$. As $I$ is filtrant, there are morphisms $i_2\to i_3\leftarrow\pp(j_1)$. As $\pp$ is cofinal, there is a morphism $i_3\to\pp(j_2)$. As $J$ is filtrant, there are morphisms $j_1\to j_3\leftarrow j_2$. Let $s\in B$. By Proposition 3.2.2, (i) $\then$ (iii) (b), p.~78 of the book, there is a morphism $j_3\to j(s)$ making the diagram 
-$$
-\begin{tikzcd}
-i_1\ar[equal]{d}\ar{r}{s}&i_2\ar{r}&i_3\ar{r}&\pp(j_2)\ar{rr}{\pp(j_2\to j_3)}&&\pp(j_3)\ar[equal]{d}\ar{rr}{\pp(j_3\to j(s))}&&\pp(j(s))\ar[equal]{d}
-\\ 
-%
-i_1\ar{rrr}&&&\pp(j_1)\ar{rr}[swap]{\pp(j_1\to j_3)}&&\pp(j_3)\ar{rr}[swap]{\pp(j_3\to j(s))}&&\pp(j(s))
-\end{tikzcd}
-$$
-commute. Putting $t(s):=(j_1\to j_3\to j(s))$, we get a commutative diagram 
-$$
-\begin{tikzcd}
-i_1\ar{d}\ar{r}{s}&i_2\ar{d}\\ 
-\pp(j_1)\ar{r}[swap]{\pp(t(s))}&\pp(j(s)).
-\end{tikzcd}
-$$ 
+P.~218, Lemma 9.2.5. Clearly, $I$ satisfies condition (a) in Proposition~\ref{ppifil} p.~\pageref{ppifil}. 
 \end{s}
 
 %
@@ -4306,7 +4291,7 @@ Assume (9.3.1) and let $\kappa$ be a cardinal. Then there exists an infinite reg
 
 See also Theorem \ref{961} p. \pageref{961} below.
 
-%\begin{thm}[Theorem 9.3.4 p.~227]\label{934a}Assume Conditions {\em(i)--(v)} above. Then there is a regular infinite $\U$-cardinal $\pi$ such that, for any $X$ in $\C$, we have $$X\in\C_\pi\ssi\card(X(G))<\pi.$$ Moreover, $\pi$ can be chosen arbitrarily large (among the regular infinite $\U$-car\-di\-nals).\end{thm}
+%
 
 \subsubsection{Lemma 9.3.1 (p. 224)}
 
@@ -4330,16 +4315,11 @@ Let $\pi$ be an infinite cardinal, and $\alpha:I\to\C$ a functor admitting an in
 This follows immediately from Exercise 1.7 p. 31 of the book.
 \end{proof}
 
-We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\co_iY_i(G)\subset Y(G)$.'' Here is the rewriting: 
-%Claim: the coprojection $p_i:Y_i\to Y$ is a monomorphism.
+We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\co_iY_i(G)\subset Y(G)$.'' Here is the rewriting: The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\co_iY_i(G)\to Y(G)$ is also a monomorphism.
+
 %
-%In the diagram $$\begin{tikzcd}\co_jY_j\ar{rr}{\sim}&&Y\\ {}&Y_i,\ar{ul}{p_i}\ar{ur}[swap]{q_i}\end{tikzcd}$$ 
-%let the horizontal arrow be the isomorphism of the first display of the proof of Lemma 9.3.1, and let $q_i$ be the canonical morphism. Then $q_i$ is a monomorphism by the observation made on p.~114 of the book, right after Definition 5.1.1. As the diagram commutes, $p_i$ is also a monomorphism, and the claimed is proved.% Proposition 5.2.3 (ii) p. 118 of the book yields the claim. 
-The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\co_iY_i(G)\to Y(G)$ is also a monomorphism.
 
 \subsubsection{Proposition 9.3.2 (p. 224)}
-
-%We state Proposition 9.3.2 p.~224 of the book, and make a few comments about its proof.
 
 \begin{prop}[Proposition 9.3.2 p.~224]\label{932}
 If $\pi$ is an infinite regular cardinal, if $X$ is in $\C$, and if 
@@ -4352,13 +4332,13 @@ then $X$ is in $\C_\pi$.
 Here is a rewriting of the proof with a few more details:
 
 \begin{proof}
-Step 1. Note that $\Set\ni Y\mapsto G^{\coprod S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\coprod S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
+$*$ Step 1. Note that $\Set\ni Y\mapsto G^{\coprod S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\coprod S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
 $$S\to A(G)\to S$$ 
 whose composition is the identity. Hence, the composition 
 $$G^{\coprod S}(G)\to G^{\coprod A(G)}(G)\to G^{\coprod S}(G)$$ 
 is the identity.
 
-\nn Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map $\lambda$ below is bijective: 
+\nn $*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map $\lambda$ below is bijective: 
 $$
 \lambda:\co_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
 $$
@@ -4373,7 +4353,7 @@ As $\card(A(G))<\pi$, we may apply Lemma 9.3.1 p.~224 and conclude that there is
 
 It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to define a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection. 
 
-\nn Step 3. Consider the following conditions:
+\nn $*$ Step 3. Consider the following conditions:
 
 \nn(a) the diagram of solid arrows 
 $$
@@ -4395,9 +4375,9 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies the surjectivity of $\lambda$.
 
-\nn Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\co_i$ is exact in $\C$, we have $\co_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\co_i$ is exact in $\C$, we have $\co_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\coprod S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+\nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\coprod S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 $$
 \begin{tikzcd}
 G^{\coprod B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\coprod A(G)}\ar{d}\\ 
@@ -4422,7 +4402,7 @@ C\ar{r}\ar{rdd}[swap]{x}&G^{\coprod B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 $$ 
 This proves (b).
 
-\nn Step 6: (b) implies the surjectivity of $\lambda$. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
+\nn $*$ Step 6: (b) implies the surjectivity of $\lambda$. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
 $$
 \mu:\co_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
@@ -4433,7 +4413,6 @@ P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{f}\
 {}&X_{i_0}\ar{r}[swap]{p_{i_0}}&X.
 \end{tikzcd}
 $$ 
-%As the category $I^{i_0}$ is filtrant and the natural functor $I^{i_0}\to I$ is cofinal by Corollary 3.2.3 (i) p.~79 of the book, a
 As $\mu$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is, by Step~2, a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal. The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that $X_s\circ x=g\circ a$. As indicated at the end of Step~2, we only need to verify the equality $p_i\circ g=f$.
 
 Consider the diagram 
