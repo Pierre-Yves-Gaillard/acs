@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0044)
+% about "categories and sheaves" (version_0045)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1096,6 +1096,36 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 
 \nn[\S\ref{231} p.~\pageref{231} about Definition 2.3.1 p.~50 will be inserted here.]
 
+%
+
+\begin{s} 
+P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe has been given. Let $I\xleftarrow\pp J\xr\beta\C$ be functors, let $\beta$ be in $\C^J$, and let $\pp^\dagger\beta$ be in $\C^I$. The following conditions are equivalent:
+
+\nn(a) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for some universe $\U$ such that $\C^J$ is a $\U$-category,
+
+\nn(b) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for any universe $\U$ such that $\C^J$ is a $\U$-category. 
+
+\begin{df}[Definition 2.3.2 p. 51]\label{232}
+If the above equivalent conditions hold, we say that $\pp^\dagger\beta$ {\em exists}. If $\pp^\dagger(F\circ\beta)$ exists for all functor $F:\C\to\C'$, we say that $\pp^\dagger\beta$ exists {\em universally}.
+\end{df}
+\end{s}
+
+%
+
+\begin{s} 
+P.~52, Theorem 2.3.3 (i) (minor variant). Let $I\xleftarrow\pp J\xr\beta\C$ be functors and let $\beta$ be in $\C^J$. 
+
+\begin{thm}[Theorem 2.3.3 (i) p. 52]\label{233}
+If 
+%
+\begin{equation}\label{e233}
+\co_{(\pp(j)\to i))\in J_i}\beta(j)
+\end{equation}
+%
+exists in $\C$ for all $i$ in $I$, then $\pp^\dagger\beta$ exists and is isomorphic to \eqref{e233}. If, in addition, \eqref{e233} exists universally in the sense of Definition~\ref{uil} p.~\pageref{uil}, then $\pp^\dagger\beta$ exists universally in the sense of Definition~\ref{232}. 
+\end{thm}
+\end{s}
+
 %%
 
 \subsection{Theorem 2.3.3 (i) (p.~52)}
@@ -1531,7 +1561,7 @@ P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a u
 Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$.
 
 \begin{df}\label{uil}
-If the natural map $\co\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$.
+If the natural map $\co\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\co\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
 \end{df}
 
 \begin{prop}[Proposition 2.6.4 p. 61]%\label{puil}
@@ -3255,7 +3285,7 @@ let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the
 $$
 (R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).
 $$ 
-If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pageref{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable}
+If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pageref{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable} By Theorem~\ref{233} p.~\pageref{233}, this is equivalent to saying that $Q^\dagger F$ exists universally in the sense of Definition~\ref{232} p.~\pageref{232}. 
 
 Also, the following fact is implicit:
 
