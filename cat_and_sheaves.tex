@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0047)
+% about "categories and sheaves" (version_0048)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4209,6 +4209,27 @@ $$
 
 \begin{s}
 P.~218, Lemma 9.2.5. Clearly, $I$ satisfies condition (a) in Proposition~\ref{ppifil} p.~\pageref{ppifil}. 
+\end{s}
+
+%
+
+\begin{s}
+For the reader's convenience we state and prove Proposition 9.2.10 p. 220. 
+
+\begin{prop}[Proposition 9.2.10 p. 220]
+If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satisfying $\card(\Mor(\C))<\pi$, if $\beta:J\to\C_\pi$ is a functor, and if $\co\beta$ exists in $\C$, then it belongs to $\C_\pi$. 
+\end{prop}
+
+\begin{proof}
+Consider the commutative diagram
+$$
+\begin{tikzcd}
+\co_i\Hom_\C(\co_j\beta(j),\alpha(i))\ar{r}\ar{d}[swap]{\sim}&\Hom_\C(\co_j\beta(j),\co_i\alpha(i))\ar{dd}{\sim}\\ 
+\co_i\lim_j\Hom_\C(\beta(j),\alpha(i))\ar{d}[swap]{\sim}\\ 
+\lim_j\co_i\Hom_\C(\beta(j),\alpha(i))\ar{r}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\co_i\alpha(i)).
+\end{tikzcd}
+$$
+\end{proof}
 \end{s}
 
 %
