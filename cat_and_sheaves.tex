@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0050)
+% about "categories and sheaves" (version_0051)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4601,7 +4601,7 @@ Any essentially small nonempty category admitting small filtrant inductive limit
 Here is a weakening of the notion of inductive limit:
 
 \begin{df}
-Let $I$ be a well-ordered nonempty small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a family of morphisms $(a_i:\alpha(i)\to X)_{i\in I}$. If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}.
+Let $I$ be a well-ordered nonempty small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a morphism of functors $a:\alpha\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}.
 \end{df}
 
 \begin{df}
@@ -4673,7 +4673,7 @@ Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem \ref{qtot}]
-Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose an $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
+Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
 
 \nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property $P(u_{ij})$ of Lemma~\ref{944}, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$.
 
