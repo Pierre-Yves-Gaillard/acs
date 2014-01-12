@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0051)
+% about "categories and sheaves" (version_0052)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4722,22 +4722,15 @@ $$
 \end{tikzcd}
 $$ 
 
-Claim: There is an $i_0$ in $I$ such that $a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
+Claim: There is an $i_0$ in $I$ such that $\pp^Y_{i_0}:=a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
 
 As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book, there is an $i_Y$ in $I$ such that $a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)$ is surjective. As $\card(\{i_Y\,|\,Y\in\Ob(\C)\})<\pi$ and $I$ is $\pi$-filtrant, there is an $i_0$ in $I$ such that, for any $Y$ in $\C$, there is a morphism $i_Y\to i_0$. This implies the claim. 
 
-For any $i$ in $I$ there is a morphism $h_i:X_i\to X_{i_0}$ such that $a_{i_0}\circ h_i=a_i$. Indeed, this follows from the commutativity of 
+Let $i$ be in $I$. In particular, $a_i=\pp^{X_i}_i(\id_{X_i})$ is in $F(X_i)$. As 
 $$
-\begin{tikzcd}
-\Hom_\C(X_i,X_i)\ar{d}[swap]{b_i^{X_i}}\ar{rr}{\pp_i^{X_i}:=a_i\circ}&&F(X_i)\ar[equal]{d}\\ 
-\co_j\Hom_\C(X_i,X_j)\ar[two heads]{rr}{\pp^{X_i}}&&F(X_i)\ar[equal]{d}\\ 
-\Hom_\C(X_i,X_{i_0})\ar{u}{b^{X_i}_{i_0}}\ar[two heads]{rr}[swap]{\pp^{X_i}_{i_0}:=a_{i_0}\circ}&&F(X_i)
-\end{tikzcd}
-$$
-and the equality 
-$$
-a_i=\pp^{X_i}_i(\id_{X_i}).
-$$
+\pp^{X_i}_{i_0}:=a_{i_0}\circ:\Hom_\C(X_i,X_{i_0})\to F(X_i)
+$$ 
+is surjective by the claim, there is a morphism $h_i:X_i\to X_{i_0}$ such that $a_{i_0}\circ h_i=a_i$. 
 
 Let us show that $a_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $f_1,f_2:X\parar Y$ be a pair of parallel arrows such that $f_1\circ a_{i_0}=f_2\circ a_{i_0}$. Then, for any $i$ in $I$, we have 
 $$
