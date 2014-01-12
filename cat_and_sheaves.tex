@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0052)
+% about "categories and sheaves" (version_0053)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4839,13 +4839,34 @@ $$
 Y'_{<i}\xr{w_i}Y'_i\xleftarrow{h_i}Y_i
 $$
 by (9.5.2) (ii):
-$$
+\begin{equation}\label{hiui1}
 \begin{tikzcd}
 X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\
 Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 \end{tikzcd}
+\end{equation} 
+We must check 
+\begin{equation}\label{hiui2}
+h_i\circ u_i=w_i\circ v_i\circ f_i,
+\end{equation}
+\begin{equation}\label{pikwk}
+p_{ik}\circ w_k\circ v_k=v_i,
+\end{equation}
+\begin{equation}\label{pijwj}
+p_{ij}\circ w_j\circ p_{jk}=p_{ik}.
+\end{equation} 
+The commutativity of \eqref{hiui1} implies \eqref{hiui2}. We have 
 $$
-From this point, it is straightforward to verify that the required conditions are still satisfied. 
+v_k=p_{k0}\circ w_0\circ v_0=p_{k0}\circ v_0,
+$$
+$$
+p_{ik}\circ w_k\circ v_k=p_{ik}\circ w_k\circ p_{k0}\circ v_0=p_{i0}\circ v_0=v_i.
+$$ 
+This proves \eqref{pikwk}. We have 
+$$
+p_{ij}\circ w_j\circ p_{jk}=p_{ij}\circ u_{jk}=p_{ik}.
+$$ 
+This proves \eqref{pijwj}. 
 
 Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
 $$
