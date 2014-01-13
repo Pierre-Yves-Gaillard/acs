@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0056)
+% about "categories and sheaves" (version_0057)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4818,35 +4818,44 @@ $$
 \end{lem}
 
 \begin{proof}
-We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Theorem~\ref{meta} p.~\pageref{meta}): 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. Let $0$ be the least element of $I$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Theorem~\ref{meta} p.~\pageref{meta}): 
 
 \nn[Beginning of the description of Task $(T_i)$.] Construct, for each $j\le i$ in $I$, a commutative diagram 
-%
-$$%\begin{equation}%\label{ti1}
+$$
 \begin{tikzcd}
 X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar{d}{h_j}\\
 X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,
 \end{tikzcd}
-$$%\end{equation} 
-%
+$$ 
 with $v_j,w_j\in\Mor(\C_0)$, and for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, construct a commutative diagram 
-%
-$$%\begin{equation}%\label{ti2}
+$$
 \begin{tikzcd}
 X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_j\\
 X'\ar{r}[swap]{v_k}&Y'_{<k}\ar{r}[swap]{w_k}&Y'_k,\ar{ul}[swap]{p_{jk}}
 \end{tikzcd}
-$$%\end{equation} 
-%
+$$
 with $p_{jk}\in\Mor(\C_0)$, in such a way that we have
 %
 \begin{equation}\label{pijk}
-p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i>j>k.
+p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i>j>k,
 \end{equation}
+%
+\begin{equation}\label{w0}
+w_0=\id_{Y'_0}.
+\end{equation}
+%
+Here is a diagrammatic illustration of \eqref{pijk}: 
+$$
+\begin{tikzcd}
+Y'_{<i}\ar[equal]{rr}&&Y'_{<i}\\
+Y'_{<j}\ar{r}{w_j}&Y'_j\ar{ul}[swap]{p_{ij}}\\ 
+{}&Y'_k.\ar{ul}{p_{jk}}\ar{uur}[swap]{p_{ik}}
+\end{tikzcd}
+$$
 
 \nn[End of the description of Task $(T_i)$.]
 
-Let $0$ be the least element of $I$. To handle Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
+To handle Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
@@ -4854,16 +4863,14 @@ X'\ar[dashed]{r}[swap]{v_0}&Y'_0,
 \end{tikzcd}
 $$ 
 and let us define $Y'_{<0}$ and $w_0$ by the commutative diagram
-%
-\begin{equation}\label{t0}
+$$
 \begin{tikzcd}
 X_0\ar{rr}{u_0}\ar{d}[swap]{f_0}&&Y_0\ar{d}{h_0}\\
 X'\ar{r}{v_0}\ar[equal]{d}&Y'_{<0}\ar{r}{w_0}\ar[equal]{d}&Y'_0\ar[equal]{d}\\
 X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
-\end{equation}
-%
-Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
+$$
+Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 %
 \begin{equation}\label{ujk}
 u_{jk}:=w_j\circ p_{jk}.
@@ -4901,19 +4908,26 @@ h_i\circ u_i=w_i\circ v_i\circ f_i,
 \end{equation}
 %
 \begin{equation}\label{pikwk}
-p_{ik}\circ w_k\circ v_k=v_i,
+p_{ik}\circ w_k\circ v_k=v_i\ \forall\ k<i,
 \end{equation}
 %
 \begin{equation}\label{pijwj}
-p_{ij}\circ w_j\circ p_{jk}=p_{ik}.
+p_{ij}\circ w_j\circ p_{jk}=p_{ik}\ \forall\ k<j<i.
 \end{equation} 
 %
-The commutativity of \eqref{hiui1} implies \eqref{hiui2}. We have 
+The commutativity of \eqref{hiui1} implies \eqref{hiui2}. To prove \eqref{pijwj}, first note that we have 
+$$v_k=p_{k0}\circ w_0\circ v_0
+$$ 
+by induction hypothesis, $w_0=\id_{Y'_0}$ by \eqref{w0}, and thus 
 %
-%\begin{align*}v_k&=p_{k0}\circ w_0\circ v_0&\text{by \eqref{ti2}}\\ &=p_{k0}\circ v_0&\text{by \eqref{t0}},\end{align*}
+\begin{equation}\label{vk}
+v_k=p_{k0}\circ v_0.
+\end{equation}
+%
+This implies
 % 
 \begin{align*}
-p_{ik}\circ w_k\circ v_k&=p_{ik}\circ w_k\circ p_{k0}\circ v_0&\text{by \eqref{vi}}\\ 
+p_{ik}\circ w_k\circ v_k&=p_{ik}\circ w_k\circ p_{k0}\circ v_0&\text{by \eqref{vk}}\\ 
 &=p_{i0}\circ v_0&\text{by \eqref{pijk}}\\ 
 &=v_i&\text{by \eqref{vi}}.
 \end{align*}
@@ -4930,7 +4944,11 @@ This proves \eqref{pijwj}.
 Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
 %
 \begin{equation}\label{gi}
-g_i:=u_{mi}\circ h_i,
+g_i:=u_{mi}\circ h_i\ \forall\ i<m,
+\end{equation}
+%
+\begin{equation}\label{gm}
+g_m:=h_m,
 \end{equation}
 %
 \begin{equation}\label{u'}
@@ -4944,7 +4962,15 @@ g_i\circ u_i&=u_{mi}\circ h_i\circ u_i&\text{by \eqref{gi}}\\
 &=u_{mi}\circ w_i\circ v_i\circ f_i&\text{by \eqref{hiui2}}\\ 
 &=w_m\circ p_{mi}\circ w_i\circ v_i\circ f_i&\text{by \eqref{ujk}}\\ 
 &=w_m\circ v_m\circ f_i&\text{by \eqref{pikwk}}\\ 
-&=u'\circ f_i&\text{by \eqref{u'}}.
+&=u'\circ f_i&\text{by \eqref{u'}}
+\end{align*}
+%
+for $i<m$, and 
+% 
+\begin{align*}
+g_m\circ u_m&=h_m\circ u_m&\text{by \eqref{gm}}\\ 
+&=w_m\circ v_m\circ f_m&\text{by \eqref{hiui2}}\\ 
+&=u'\circ f_m&\text{by \eqref{u'}}.
 \end{align*}
 %
 \end{proof}
