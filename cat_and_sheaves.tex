@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0055)
+% about "categories and sheaves" (version_0056)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4695,13 +4695,30 @@ Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let u
 
 \nn(b) If $i=\sup\,\{j\,|\,j<i\}$, let $(a_j:X_j\to X_i)_{j<i}$ be some upper bound for $(X_j)_{j<i}$ and put $u_{ij}:=a_j$. 
 
-Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. Let $(b_i:X_i\to X)_{i\in I}$ be some upper bound, and let $i_0$ in $I$ be such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $u:X\to Y$ be a morphism. By Property $P(u_{i_0+1,i_0})$ applied to $u\circ b_{i_0+1}:X_{i_0+1}\to Y$, we find a morphism $w:Y\to X_{i_0+1}$ such that $w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}$. Putting $v:=b_{i_0+1}\circ w:Y\to X$, we get 
-$$
-(v\circ u)\circ b_{i_0}=(b_{i_0+1}\circ w)\circ u\circ(b_{i_0+1}\circ u_{i_0+1,i_0})
-$$
-$$
-=b_{i_0+1}\circ u_{i_0+1,i_0}=b_{i_0}=\id_X\circ b_{i_0}.
-$$ 
+Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. Let $(b_i:X_i\to X)_{i\in I}$ be some upper bound, and let $i_0$ in $I$ be such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $u:X\to Y$ be a morphism. By Property $P(u_{i_0+1,i_0})$ applied to $u\circ b_{i_0+1}:X_{i_0+1}\to Y$, we find a morphism $w:Y\to X_{i_0+1}$ such that 
+%
+\begin{equation}\label{wu}
+w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}.
+\end{equation}
+%
+Putting 
+%
+\begin{equation}\label{vb}
+v:=b_{i_0+1}\circ w:Y\to X,
+\end{equation}
+%
+we get 
+%
+\begin{align*}
+v\circ u\circ b_{i_0}&=b_{i_0+1}\circ w\circ u\circ b_{i_0}&\text{by \eqref{vb}}\\ 
+&=b_{i_0+1}\circ w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}\\ 
+&=b_{i_0+1}\circ u_{i_0+1,i_0}&\text{by \eqref{wu}}\\ 
+&=b_{i_0}\\ 
+&=\id_X\circ b_{i_0}
+\end{align*}
+%
+%$$(v\circ u)\circ b_{i_0}=(b_{i_0+1}\circ w)\circ u\circ(b_{i_0+1}\circ u_{i_0+1,i_0})$$ 
+%$$=b_{i_0+1}\circ u_{i_0+1,i_0}=b_{i_0}=\id_X\circ b_{i_0}.$$ 
 As $b_{i_0}$ is an epimorphism, we conclude that $v\circ u=\id_X$.
 \end{proof}
 
