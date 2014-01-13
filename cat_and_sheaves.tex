@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0053)
+% about "categories and sheaves" (version_0054)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -15,6 +15,8 @@
 \usepackage{amsthm}
 \usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
+%%\usepackage{showlabels}
+%\usepackage{showkeys}
 \makeindex
 \pagestyle{fancy}
 \newtheorem{thm}{Theorem}%\newtheorem{mt}[thm]{Metatheorem}
@@ -3078,7 +3080,7 @@ An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to
 
 \noindent$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors 
 %
-\begin{equation}\label{u'}
+\begin{equation}\label{u':}
 u':P\to G.
 \end{equation}
 
@@ -3136,7 +3138,7 @@ $$
 $$
 \varphi((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right),
 $$
-where $u'(b)$ is defined in \eqref{u'}; and let 
+where $u'(b)$ is defined in \eqref{u':}; and let 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L/a}
 $$ 
@@ -4752,7 +4754,7 @@ $$
 %%%
 
 \subsection{Lemma 9.5.3 (p. 231)}
-%
+
 We give more details about the proof, but first let us recall the setting:
 
 Let $\C$ be $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume 
@@ -4769,7 +4771,7 @@ X'\ar[dashed]{r}[swap]{u'}&Y',
 \end{equation}
 %
 with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$.
-%
+
 \begin{lem}[Lemma 9.5.3 p. 231]
 If $X'$ is in $\C_0$, if $I$ is a small set, and if  
 $$
@@ -4783,27 +4785,30 @@ X'\ar[dashed]{r}[swap]{u'}&Y'.
 \end{tikzcd}
 $$ 
 \end{lem}
-%
+
 \begin{proof}
 We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Theorem~\ref{meta} p.~\pageref{meta}): 
 
 \nn[Beginning of the description of Task $(T_i)$.] Construct, for each $j\le i$ in $I$, a commutative diagram 
-$$
+%
+$$%\begin{equation}%\label{ti1}
 \begin{tikzcd}
 X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar{d}{h_j}\\
 X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,
 \end{tikzcd}
-$$
-with $v_j,w_j\in\Mor(\C_0)$, %for each $(i,j)$ in $I^2$ with $i>j$, construct a commutative diagram $$\begin{tikzcd}X'\ar{r}{v_i}\ar[equal]{d}&Y'_{<i}\ar{r}{w_i}&Y'_i\\ X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,\ar{ul}[swap]{p_{ij}}\end{tikzcd}$$with $p_{ij}\in\Mor(\C_0)$, 
-and for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, construct a commutative diagram 
-$$
+$$%\end{equation} 
+%
+with $v_j,w_j\in\Mor(\C_0)$, and for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, construct a commutative diagram 
+%
+$$%\begin{equation}%\label{ti2}
 \begin{tikzcd}
 X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_j\\
 X'\ar{r}[swap]{v_k}&Y'_{<k}\ar{r}[swap]{w_k}&Y'_k,\ar{ul}[swap]{p_{jk}}
 \end{tikzcd}
-$$
+$$%\end{equation} 
+%
 with $p_{jk}\in\Mor(\C_0)$, in such a way that we have
-
+%
 \begin{equation}\label{pijk}
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}\quad\forall\quad i>j>k.
 \end{equation}
@@ -4816,75 +4821,107 @@ $$
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
 X'\ar[dashed]{r}[swap]{v_0}&Y'_0,
 \end{tikzcd}
-$$
+$$ 
 and let us define $Y'_{<0}$ and $w_0$ by the commutative diagram
-$$
+%
+\begin{equation}\label{t0}
 \begin{tikzcd}
 X_0\ar{rr}{u_0}\ar{d}[swap]{f_0}&&Y_0\ar{d}{h_0}\\
 X'\ar{r}{v_0}\ar[equal]{d}&Y'_{<0}\ar{r}{w_0}\ar[equal]{d}&Y'_0\ar[equal]{d}\\
 X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
-$$
-
+\end{equation}
+%
 Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
-$$
+%
+\begin{equation}\label{ujk}
 u_{jk}:=w_j\circ p_{jk}.
-$$
-By \eqref{pijk} we have $u_{jk}\circ u_{k\ell}=u_{j\ell}$ for all $\ell<k<j<i$. In particular, $(Y'_j)_{j<i}$ is an inductive system in $\C_0$. We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<i}$. We also put
-$$
+\end{equation}
+%
+By \eqref{pijk} we have $u_{jk}\circ u_{k\ell}=u_{j\ell}$ for all $\ell<k<j<i$. In particular, 
+%
+\begin{equation}\label{y'j}
+(Y'_j)_{j<i}\text{ is an inductive system in }\C_0.
+\end{equation}
+%
+We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<i}$. We also put
+%
+\begin{equation}\label{vi}
 v_i:=p_{i0}\circ v_0,
-$$
+\end{equation}
+%
 and we define
 $$
 Y'_{<i}\xr{w_i}Y'_i\xleftarrow{h_i}Y_i
 $$
 by (9.5.2) (ii):
+%
 \begin{equation}\label{hiui1}
 \begin{tikzcd}
 X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\
 Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
 \end{tikzcd}
 \end{equation} 
+%
 We must check 
+%
 \begin{equation}\label{hiui2}
 h_i\circ u_i=w_i\circ v_i\circ f_i,
 \end{equation}
+%
 \begin{equation}\label{pikwk}
 p_{ik}\circ w_k\circ v_k=v_i,
 \end{equation}
+%
 \begin{equation}\label{pijwj}
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}.
 \end{equation} 
+%
 The commutativity of \eqref{hiui1} implies \eqref{hiui2}. We have 
-$$
-v_k=p_{k0}\circ w_0\circ v_0=p_{k0}\circ v_0,
-$$
-$$
-p_{ik}\circ w_k\circ v_k=p_{ik}\circ w_k\circ p_{k0}\circ v_0=p_{i0}\circ v_0=v_i.
-$$ 
+%
+%\begin{align*}v_k&=p_{k0}\circ w_0\circ v_0&\text{by \eqref{ti2}}\\ &=p_{k0}\circ v_0&\text{by \eqref{t0}},\end{align*}
+% 
+\begin{align*}
+p_{ik}\circ w_k\circ v_k&=p_{ik}\circ w_k\circ p_{k0}\circ v_0&\text{by \eqref{vi}}\\ 
+&=p_{i0}\circ v_0&\text{by \eqref{pijk}}\\ 
+&=v_i&\text{by \eqref{vi}}.
+\end{align*}
+%
 This proves \eqref{pikwk}. We have 
-$$
-p_{ij}\circ w_j\circ p_{jk}=p_{ij}\circ u_{jk}=p_{ik}.
-$$ 
+% 
+\begin{align*}
+p_{ij}\circ w_j\circ p_{jk}&=p_{ij}\circ u_{jk}&\text{by \eqref{ujk}}\\ 
+&=p_{ik}&\text{by \eqref{y'j}}.
+\end{align*}
+%
 This proves \eqref{pijwj}. 
 
 Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
-$$
-g_i:=u_{mi}\circ h_i,\quad u':=w_m\circ v_m,
-$$
+%
+\begin{equation}\label{gi}
+g_i:=u_{mi}\circ h_i,
+\end{equation}
+%
+\begin{equation}\label{u'}
+u':=w_m\circ v_m,
+\end{equation}
+%
 we get
-$$
-g_i\circ u_i=u_{mi}\circ h_i\circ u_i=u_{mi}\circ w_i\circ v_i\circ f_i
-$$
-$$
-=w_m\circ p_{mi}\circ w_i\circ v_i\circ f_i=w_m\circ v_m\circ f_i=u'\circ f_i.
-$$
+% 
+\begin{align*}
+g_i\circ u_i&=u_{mi}\circ h_i\circ u_i&\text{by \eqref{gi}}\\ 
+&=u_{mi}\circ w_i\circ v_i\circ f_i&\text{by \eqref{hiui2}}\\ 
+&=w_m\circ p_{mi}\circ w_i\circ v_i\circ f_i&\text{by \eqref{ujk}}\\ 
+&=w_m\circ v_m\circ f_i&\text{by \eqref{pikwk}}\\ 
+&=u'\circ f_i&\text{by \eqref{u'}}.
+\end{align*}
+%
 \end{proof}
-%
-%%%
-%
+
+%%
+
 \subsection{Theorems 9.5.4 and 9.5.5 (pp 232-234)}\label{954955}
-%
+
 The purpose of this subsection is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
 
 Let $\C$ be $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such that $\cc F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X\in\C_\pi$ for any $X\to Z$ in $\cc F$, and assume 
@@ -5026,13 +5063,13 @@ defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a
 
 We now add three parenthetical points: The first sentence of the proof of Lemma 9.6.8 follows from Proposition 5.2.3 (iv) p.~118. The second sentence of the proof of Lemma 9.6.9 follows from Part (i) of the same proposition. In the proof of Theorem 9.6.10, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p. 194.
 \end{s}
-%
-%%%
-%
+
+%%
+
 \section{About Chapter 10}
-%
+
 \subsection{May's Definition of a Triangulated Category (p.~243)\index{definition of a triangulated category}\index{May (Peter May)}}
-%
+
 The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:%\bigskip 
 %
 \begin{center}\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf}%\bigskip
