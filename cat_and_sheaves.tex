@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0061)
+% about "categories and sheaves" (version_0062)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -86,6 +86,7 @@
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Ima}{Im}
 \DeclareMathOperator{\IM}{IM}
 \DeclareMathOperator{\hy}{h}
@@ -5623,7 +5624,7 @@ P. 350, last paragraph. In view of the comments made about Corollary~\ref{938} p
 
 %
 
-\begin{s}%\label{14112}
+\begin{s}\label{14112}
 P. 352, Corollary 14.1.12. We also have the following corollary: 
 
 Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.
@@ -5786,7 +5787,9 @@ in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This means
 
 \section{About Chapter 17}
 
-[\S\ref{revol} p.~\pageref{revol} will be inserted here.]
+[\S\ref{revol} p.~\pageref{revol} and \S\ref{421} p.~\pageref{421} will be inserted here.]
+
+%
 
 \begin{s}\label{fhat}
 P. 406, Chapter 17. Recall that, in the first line of second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
@@ -6256,6 +6259,36 @@ $$
 \end{tikzcd}
 $$ 
 (See also \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
+\end{s}
+
+%
+
+\begin{s}\label{421}
+P. 421, first display. 
+
+Let $X$ be a site, let $k$ be a commutative ring, let $R$ be a $k$-algebra, let $M$ and $N$ be $R$-modules, let $\U\subset\V$ be universes such that $X,k,R,M$ and $N$ are $\U$-small, and let $p$ be a nonnegative integer. We use the superscripts $\U$ and $\V$ to indicate the dependence on $\U$ or $\V$. In particular, we have the constant sheaves of $k$-modules $R_X^\U,M_X^\U,N_X^\U,R_X^\V,M_X^\V,N_X^\V$ over $X$. 
+
+%[If an entity $\Xi$ depends on $\U$ or $\V$, we denote it by $\Xi^\U$ or $\Xi^\V$.]
+
+\begin{thm}[Change of Universes]\index{change of universes}\label{cou}
+There is a canonical isomorphism of $k$-modules 
+$$
+\Ext^p_{R_X^\U}(M_X^\U,N_X^\U)\simeq\Ext^p_{R_X^\V}(M_X^\V,N_X^\V).
+$$
+\end{thm}
+
+\begin{proof}
+By the first display on p. 421 of the book, we have 
+$$
+M_X^\U(U)\simeq\co_{A\in\cc{LI}^\U_U}M\simeq M^{\oplus\pi_0(\cc{LI}^\U_U)},
+$$ 
+and similarly with $\V$ instead of $\U$. On the one hand, there is an obvious functor from $\cc{LI}^\U_U$ to $\cc{LI}^\V_U$. On the other hand, if $s:A\to U$ is in $\cc{LI}^\V_U$, then, by Lemma 16.2.3 (i) p.~395 of the book, $\Ima s\to U$ is in $\cc{LI}^\U_U$. This shows that we can identify the sets $\pi_0(\cc{LI}^\U_U)$ and $\pi_0(\cc{LI}^\V_U)$. %We denote symbolically this set by $\pi_0(\cc{LI}_U)$. 
+As a result, we can, with a slight abuse of notation, write 
+$$
+M_X:=M_X^\U=M_X^\V,
+$$ 
+and similarly with $R$ or $N$ instead of $M$. Note that $\Mod^\U(R_X)$ is a Grothendieck $\U$-category, that $\Mod^\V(R_X)$ is a Grothendieck $\V$-category, and that $\Mod^\U(R_X)$ is a fully abelian subcategory of $\Mod^\V(R_X)$. Hence, the conclusion follows from \S\ref{14112} p.~\pageref{14112}.
+\end{proof}
 \end{s}
 
 %
