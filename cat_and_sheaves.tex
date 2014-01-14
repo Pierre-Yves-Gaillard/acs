@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0062)
+% about "categories and sheaves" (version_0063)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -13,7 +13,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 %%\usepackage{showlabels}
 %\usepackage{showkeys}
@@ -6037,26 +6037,6 @@ P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger
 
 %
 
-\begin{comment}
-
-\begin{s}\label{loc}
-P. 153, Definition 7.1.11. The set $\Hom_{\C^r_{\cc S}}(X,Y)$ is defined by 
-$$
-\Hom_{\C^r_{\cc S}}(X,Y):=\co_{(Y\to Y')\in\cc S^Y}\Hom_\C(X,Y').%=\co\Hom_\C(X,\alpha^Y).
-$$ 
-I find this formulation puzzling because we are taking the inductive limit of a functor form the category $\cc S^Y$, which is not $\U$-small in general, to the category of $\U$-sets. Moreover, it is indicated in Remark 7.1.14 p.~154 of the book, that this inductive limit in not a $\U$-set in general. My understanding is that we assume implicitly that the inductive limit is taken in the category of $\V$-sets for a universe $\V$ containing $\U$ and making $\C$ a $\V$-small category. But in this case would it not be simpler to assume from the beginning that $\C$ is $\U$-small? 
-
-For the sake of emphasis, let us state formally the definition used here:
-
-\begin{df}[localization of a category]\label{dloc}
-Let $\C$ be a $\U$-small category, and let $\cc S$ be a right multiplicative system. The {\em right localization} \index{localization of a category} of $\C$ by $\cc S$ is the $\U$-small category $\C^r_{\cc S}$ mentioned after Lemma 7.1.13 on p.~154 of the book.
-\end{df}
-\end{s}
-
-\end{comment}
-
-%
-
 \begin{s}\label{durl2}
 P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. 
 \end{s}
@@ -6266,9 +6246,7 @@ $$
 \begin{s}\label{421}
 P. 421, first display. 
 
-Let $X$ be a site, let $k$ be a commutative ring, let $R$ be a $k$-algebra, let $M$ and $N$ be $R$-modules, let $\U\subset\V$ be universes such that $X,k,R,M$ and $N$ are $\U$-small, and let $p$ be a nonnegative integer. We use the superscripts $\U$ and $\V$ to indicate the dependence on $\U$ or $\V$. In particular, we have the constant sheaves of $k$-modules $R_X^\U,M_X^\U,N_X^\U,R_X^\V,M_X^\V,N_X^\V$ over $X$. 
-
-%[If an entity $\Xi$ depends on $\U$ or $\V$, we denote it by $\Xi^\U$ or $\Xi^\V$.]
+Let $X$ be a site, let $k$ be a commutative ring, let $R$ be a $k$-algebra, let $M$ and $N$ be $R$-modules, let $\U\subset\V$ be universes such that $X,k,R,M$ and $N$ are $\U$-small, and let $p$ be a nonnegative integer. We use the superscripts $\U$ and $\V$ to indicate the dependence on $\U$ or $\V$. In particular, we have the constant sheaves (see \S\ref{1811} p.~\pageref{1811}) of $k$-modules $R_X^\U,M_X^\U,N_X^\U,R_X^\V,M_X^\V,N_X^\V$ over $X$. 
 
 \begin{thm}[Change of Universes]\index{change of universes}\label{cou}
 There is a canonical isomorphism of $k$-modules 
@@ -6282,8 +6260,7 @@ By the first display on p. 421 of the book, we have
 $$
 M_X^\U(U)\simeq\co_{A\in\cc{LI}^\U_U}M\simeq M^{\oplus\pi_0(\cc{LI}^\U_U)},
 $$ 
-and similarly with $\V$ instead of $\U$. On the one hand, there is an obvious functor from $\cc{LI}^\U_U$ to $\cc{LI}^\V_U$. On the other hand, if $s:A\to U$ is in $\cc{LI}^\V_U$, then, by Lemma 16.2.3 (i) p.~395 of the book, $\Ima s\to U$ is in $\cc{LI}^\U_U$. This shows that we can identify the sets $\pi_0(\cc{LI}^\U_U)$ and $\pi_0(\cc{LI}^\V_U)$. %We denote symbolically this set by $\pi_0(\cc{LI}_U)$. 
-As a result, we can, with a slight abuse of notation, write 
+and similarly with $\V$ instead of $\U$. On the one hand, there is an obvious functor from $\cc{LI}^\U_U$ to $\cc{LI}^\V_U$. On the other hand, if $s:A\to U$ is in $\cc{LI}^\V_U$, then, by Lemma 16.2.3 (i) p.~395 of the book, $\Ima s\to U$ is in $\cc{LI}^\U_U$. This shows that we can identify the sets $\pi_0(\cc{LI}^\U_U)$ and $\pi_0(\cc{LI}^\V_U)$. As a result, we can, with a slight abuse of notation, write 
 $$
 M_X:=M_X^\U=M_X^\V,
 $$ 
@@ -6295,10 +6272,6 @@ and similarly with $R$ or $N$ instead of $M$. Note that $\Mod^\U(R_X)$ is a Grot
 
 \begin{s}\label{1811}
 P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X,M_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
-
-%To each pair $(X,k)$, where $X$ is a site and $k$ a commutative ring, is attached a $k$-algebra $R:=\Hom_{\D(k_X)}(k_X,k_X)$ well-defined up to isomorphism. 
-
-%Indeed, we can define $R$ by choosing a universe $\U$ such that $R\in\U$ and $\C_X$ is $\U$-small, and \S\ref{14112} p.~\pageref{14112} shows that, up to isomorphism, $R$ does not depend on the choice of $\U$.
 \end{s}
 
 %
