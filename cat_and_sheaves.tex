@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0058)
+% about "categories and sheaves" (version_0059)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5962,7 +5962,9 @@ P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gam
 
 \section{About Chapter 18}
 
-[Section~\ref{s1853} p.~\pageref{s1853} and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
+[Section~\ref{s1853} p.~\pageref{s1853}, \S\ref{1811} p.~\pageref{1811}, and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
+
+%%%
 
 \newpage
 
@@ -6176,9 +6178,9 @@ Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and 
 \end{equation}
 where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{1448f}
 Step (f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \eqref{1448} are isomorphisms. As explained in the book, we have morphisms  
 \begin{equation}\label{f1}
@@ -6197,6 +6199,33 @@ Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphis
 \end{split}
 \end{equation}
 By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~\eqref{1448}, and is, thus, an isomorphism. This implies that Composition~\eqref{f1} is also an isomorphism.
+\end{s}
+
+%
+
+\begin{s}\label{399}
+P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
+$$
+\begin{tikzcd}
+%
+\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
+\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
+%
+\end{tikzcd}
+$$
+If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
+$$
+\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
+$$ 
+and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
+$$
+\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A))=:A^a.
+$$ 
+This implies that the set 
+$$
+A^a(U):=\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
+$$ 
+depends functorially on $U\in\C$.
 \end{s}
 
 %
@@ -6228,36 +6257,15 @@ $$
 $$ 
 (See also \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
 \end{s}
+
 %
-%%
-%
-\begin{s}\label{399}
-P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
-$$
-\begin{tikzcd}
-%
-\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
-\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
-%
-\end{tikzcd}
-$$
-If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
-$$
-\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
-$$ 
-and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
-$$
-\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A))=:A^a.
-$$ 
-This implies that the set 
-$$
-A^a(U):=\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
-$$ 
-depends functorially on $U\in\C$.
+
+\begin{s}\label{1811}
+P. 436, Example 18.1.1. It seems to me the authors forget to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{1867}
 P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
 
