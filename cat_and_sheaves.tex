@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0063)
+% about "categories and sheaves" (version_0064)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -226,17 +226,11 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 %
 There is a similar remark for projective limits. 
 
-%%
-
-%\noindent $*$ P.~20, Remark 1.3.5: ``the category $\U$-\textbf{Cat} whose objects are the small $\U$-categories ...'' If one adheres to the definitions given in the book, the set of all small $\U$-categories does not exist. If one uses (as we do) the definitions given in Section~\ref{ucat} p.~\pageref{ucat}, such a set does exist. 
-
-%\noindent $*$ P.~21, after Definition 1.3.10. It might be worth mentioning the fact that a quasi-inverse to a given equivalence is unique up to unique isomorphism. 
+%% 
 
 \noindent $*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text, the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. Proof of Corollary 1.4.6 (second line): $\hy_{\C}$ should be $\hy_{\C'}$. 
 
 \noindent $*$ P.~33, Exercise 1.19: the arrow from $L_1\circ R_1\circ L_2$ to $L_2$ should be $\eta_1\circ L_2$ instead of $\varepsilon_1\circ L_2$. 
-
-%\noindent $*$ Pp 36-43, Section 2.1. Let $\alpha:I\to\C,\beta:I^{\op}\to\C$ be as in the book. Then the graphs (see \S\ref{cou} p.~\pageref{cou}) of $\coli\alpha\in\C^\vee$ and $\lim\beta\in\C^\wedge$, and the condition that these functors are representable, depend only on the graphs of $\alpha$ and $\beta$.
 
 \noindent $*$ P.~37, Remark 2.1.5: ``Let $I$ be a small set'' should be ``Let $I$ be a small category''.
 
@@ -249,10 +243,6 @@ There is a similar remark for projective limits.
 \noindent $*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
 
 \noindent $*$ P.~54, second display: we should have $i\to\varphi(j)$ instead of $\varphi(j)\to i$.
-
-%\noindent $*$ P.~56, Corollary 2.4.6. It would be better, I think, to write the right-hand side of (2.4.1) as $$\lim_{\substack{\longrightarrow\\ (A\to F(X))\in(\C^A)^{\op}}}\Hom_{\C'}(G(X),B)$$ instead of $$\lim_{\substack{\longrightarrow\\ (A\to F(X))\in\C^A}}\Hom_{\C'}(G(X),B).$$
-
-%\noindent $*$ P.~58: The abbreviation $j\in J^i$ for $(i\to\varphi(j))\in J^i$ is used for the first time. This abbreviation is used a lot throughout the book (and will be systematically used in this text: see \eqref{convnot} p.~\pageref{convnot}). Of course, it is easy for the reader to guess the meaning of this notation, but it might be nice to add a couple of words explaining it.
 
 \noindent $*$ P.~58: Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the universes axiom.) Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\varphi,\psi$ and $\varphi\circ\psi$ are cofinal, so is the third one''.
 
@@ -5625,11 +5615,11 @@ P. 350, last paragraph. In view of the comments made about Corollary~\ref{938} p
 %
 
 \begin{s}\label{14112}
-P. 352, Corollary 14.1.12. We also have the following corollary: 
+P. 352, Corollary 14.1.12. We also have the following corollary (which will be used to prove Theorem~\ref{cou} p.~\pageref{cou}): 
 
 Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.
 
-This follows immediately from Corollary 14.1.12 (i). %(See also \S~\ref{1811} p.~\pageref{1811}.)
+This follows immediately from Corollary 14.1.12 (i). 
 \end{s}
 
 %
@@ -6246,7 +6236,7 @@ $$
 \begin{s}\label{421}
 P. 421, first display. 
 
-Let $X$ be a site, let $k$ be a commutative ring, let $R$ be a $k$-algebra, let $M$ and $N$ be $R$-modules, let $\U\subset\V$ be universes such that $X,k,R,M$ and $N$ are $\U$-small, and let $p$ be a nonnegative integer. We use the superscripts $\U$ and $\V$ to indicate the dependence on $\U$ or $\V$. In particular, we have the constant sheaves (see \S\ref{1811} p.~\pageref{1811}) of $k$-modules $R_X^\U,M_X^\U,N_X^\U,R_X^\V,M_X^\V,N_X^\V$ over $X$. 
+Let $X$ be a site, let $k$ be a commutative ring, let $R$ be a $k$-algebra, let $M$ and $N$ be $R$-modules, let $\U$ and $\V$ be universes such that $X,k,R,M$ and $N$ are $\U$-small and $\V$-small, and let $p$ be a nonnegative integer. We use the superscripts $\U$ and $\V$ to indicate the dependence on $\U$ or $\V$. In particular, we have the constant sheaves (see \S\ref{1811} p.~\pageref{1811}) of $k$-modules $R_X^\U,M_X^\U,N_X^\U,R_X^\V,M_X^\V,N_X^\V$ over $X$. 
 
 \begin{thm}[Change of Universes]\index{change of universes}\label{cou}
 There is a canonical isomorphism of $k$-modules 
@@ -6256,7 +6246,7 @@ $$
 \end{thm}
 
 \begin{proof}
-By the first display on p. 421 of the book, we have 
+We may assume $\U\subset\V$. By the first display on p. 421 of the book, we have 
 $$
 M_X^\U(U)\simeq\co_{A\in\cc{LI}^\U_U}M\simeq M^{\oplus\pi_0(\cc{LI}^\U_U)},
 $$ 
