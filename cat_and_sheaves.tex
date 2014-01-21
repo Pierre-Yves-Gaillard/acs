@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0066)
+% about "categories and sheaves" (version_0067)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5650,7 +5650,7 @@ for all $(U,b)$ as above.
 
 %
 
-\nn[\S\ref{le} p.~\pageref{le} will be inserted here.]
+\nn[\S\ref{gt} p.~\pageref{gt} will be inserted here.]
 
 %
 
@@ -6179,12 +6179,15 @@ By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~
 
 %
 
-\begin{s}\label{le}% Jan 21, 2014
-P. 391, Chapter 16, notion of {\em local epimorphism}. \index{local epimorphism} I don't think GT4 follows from LE1-LE4. I suggest to replace LE1-LE4 with LE1-LE5, where LE5 is defined as follows:
+\begin{s}\label{gt}% Jan 21, 2014
+P. 390, Definition of a {\em Grothendieck topology}. \index{Grothendieck topology} 
+Being unable to derive GT4 from LE1-LE4, I suggest to replace GT4 in Definition 16.1.2 p.~390 of the book with 
 
-\nn LE5: If $A\to U$ is a morphism in $\C^\wedge$ with $U$ in $\C$, if $S$ is a covering sieve over $U$, and if $A\times_UV\to V$ is a local epimorphism for all morphism $V\to U$ in $S$, then $A\to U$ is a local epimorphism.
+\nn GT4': If $S$ is a sieve over $U\in\C$, and if $S\times_UV$ is a covering sieve over $V$ for all morphism $V\to U$ in $\C$, then $S$ is a covering sieve.
 
-I think the proofs involving the notion of local epimorphism could be easily adjusted to this new definition. 
+I think that GT1, GT2, GT3 and GT4' are equivalent with LE1-LE4, that is, the datum of a Grothendieck topology in this nonstandard sense is equivalent to the datum of a set of  morphisms satisfying LE1-LE4.
+
+This nonstandard definition of a Grothendieck topology is {\em a priori} more general than the standard one. 
 \end{s}
 
 %
