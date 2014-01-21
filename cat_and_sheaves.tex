@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0065)
+% about "categories and sheaves" (version_0066)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4447,7 +4447,6 @@ P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{d}[swap]{x}\ar[two heads]{rr}{a}
 \end{tikzcd}
 $$ 
 We have 
-%$$f\circ a=p_{i_0}\circ x=p_i\circ X_s\circ x=p_i\circ g\circ a,$$ 
 %
 \begin{align*}
 f\circ a&=p_{i_0}\circ x&\text{by \eqref{fa} p.~\pageref{fa}}\\ 
@@ -4455,7 +4454,6 @@ f\circ a&=p_{i_0}\circ x&\text{by \eqref{fa} p.~\pageref{fa}}\\
 &=p_i\circ g\circ a&\text{by \eqref{ga} p.~\pageref{ga}}.
 \end{align*}
 %
-%the first equality following from (b), the second equality being obvious, and the third equality following from the definition of $a$. 
 As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof is complete.
 \end{proof}
 
@@ -5652,6 +5650,10 @@ for all $(U,b)$ as above.
 
 %
 
+\nn[\S\ref{le} p.~\pageref{le} will be inserted here.]
+
+%
+
 \begin{s}\label{s1623}
 P.~395, Lemma 16.2.3 (iii). Consider the conditions
 
@@ -5700,7 +5702,7 @@ Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of 
 
 %%
 
-\nn[\S\ref{399} p.~\pageref{399} about the beginning of Section 16.3 on p~399 will be inserted here.]
+\nn[\S\ref{399} p.~\pageref{399} about the beginning of Section 16.3 on p.~399 will be inserted here.]
 
 %%
 
@@ -6173,6 +6175,16 @@ Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphis
 \end{split}
 \end{equation}
 By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~\eqref{1448}, and is, thus, an isomorphism. This implies that Composition~\eqref{f1} is also an isomorphism.
+\end{s}
+
+%
+
+\begin{s}\label{le}% Jan 21, 2014
+P. 391, Chapter 16, notion of {\em local epimorphism}. \index{local epimorphism} I don't think GT4 follows from LE1-LE4. I suggest to replace LE1-LE4 with LE1-LE5, where LE5 is defined as follows:
+
+\nn LE5: If $A\to U$ is a morphism in $\C^\wedge$ with $U$ in $\C$, if $S$ is a covering sieve over $U$, and if $A\times_UV\to V$ is a local epimorphism for all morphism $V\to U$ in $S$, then $A\to U$ is a local epimorphism.
+
+I think the proofs involving the notion of local epimorphism could be easily adjusted to this new definition. 
 \end{s}
 
 %
