@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0072)
+% about "categories and sheaves" (version_0073)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -95,6 +95,7 @@
 \DeclareMathOperator{\jj}{j}
 \DeclareMathOperator{\Fct}{Fct}
 \DeclareMathOperator{\Hom}{Hom}%\DeclareMathOperator{\h}{Hom}
+\DeclareMathOperator{\RHom}{RHom}
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Mc}{Mc}
@@ -5974,7 +5975,7 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 
 %
 
-\begin{s}%\label{fau}
+\begin{s}\label{fau}
 P. 421, first display: 
 $$
 F^a(U)\simeq\co_{\cc{LI}_U}F(A).
@@ -6030,7 +6031,7 @@ P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gam
 
 \section{About Chapter 18}
 
-[Section~\ref{s1853} p.~\pageref{s1853}, \S\ref{1811} p.~\pageref{1811}, and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
+[Section~\ref{s1853} p.~\pageref{s1853}, \S\ref{1811} p.~\pageref{1811}, \S\ref{1816} p.~\pageref{1816}, and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
 
 %%%
 
@@ -6308,39 +6309,14 @@ $$
 
 %
 
-\begin{comment}
-
-\begin{s}\label{421}
-P. 421, first display. 
-
-Let $X$ be a site, let $k$ be a commutative ring, let $R$ be a $k$-algebra, let $M$ and $N$ be $R$-modules, let $\U$ and $\V$ be universes such that $X,k,R,M$ and $N$ are $\U$-small and $\V$-small, and let $p$ be a nonnegative integer. We use the superscripts $\U$ and $\V$ to indicate the dependence on $\U$ or $\V$. In particular, we have the constant sheaves (see \S\ref{1811} p.~\pageref{1811}) of $k$-modules $R_X^\U,M_X^\U,N_X^\U,R_X^\V,M_X^\V,N_X^\V$ over $X$. 
-
-\begin{thm}[Change of Universes]\index{change of universes}\label{cou}
-There is a canonical isomorphism of $k$-modules 
-$$
-\Ext^p_{R_X^\U}(M_X^\U,N_X^\U)\simeq\Ext^p_{R_X^\V}(M_X^\V,N_X^\V).
-$$
-\end{thm}
-
-\begin{proof}
-We may assume $\U\subset\V$. By the first display on p. 421 of the book, we have 
-$$
-M_X^\U(U)\simeq\co_{A\in\cc{LI}^\U_U}M\simeq M^{\oplus\pi_0(\cc{LI}^\U_U)},
-$$ 
-and similarly with $\V$ instead of $\U$. On the one hand, there is an obvious functor from $\cc{LI}^\U_U$ to $\cc{LI}^\V_U$. On the other hand, if $s:A\to U$ is in $\cc{LI}^\V_U$, then, by Lemma 16.2.3 (i) p.~395 of the book, $\Ima s\to U$ is in $\cc{LI}^\U_U$. This shows that we can identify the sets $\pi_0(\cc{LI}^\U_U)$ and $\pi_0(\cc{LI}^\V_U)$. As a result, we can, with a slight abuse of notation, write 
-$$
-M_X:=M_X^\U=M_X^\V,
-$$ 
-and similarly with $R$ or $N$ instead of $M$. Note that $\Mod^\U(R_X)$ is a Grothendieck $\U$-category, that $\Mod^\V(R_X)$ is a Grothendieck $\V$-category, and that $\Mod^\U(R_X)$ is a fully abelian subcategory of $\Mod^\V(R_X)$. Hence, the conclusion follows from \S\ref{14112} p.~\pageref{14112}.
-\end{proof}
+\begin{s}\label{1811}
+P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X,M_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
 \end{s}
-
-\end{comment}
 
 %
 
-\begin{s}\label{1811}
-P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X,M_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
+\begin{s}\label{1816}
+P. 437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\ref{14112} and \S\ref{fau} p.~\ref{fau}. 
 \end{s}
 
 %
