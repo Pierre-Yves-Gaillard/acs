@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0070)
+% about "categories and sheaves" (version_0071)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5650,7 +5650,69 @@ for all $(U,b)$ as above.
 
 %
 
-%\nn[\S\ref{gt} p.~\pageref{gt} will be inserted here.]
+\begin{s}
+P. 391. I am unable to derive GT4 from LE1-LE4, but it seems to me the only fact really used in the sequel of the book is that GT1-GT4 imply LE1-LE4. Here are some details about this implication, starting with a few reminders:
+
+We assume that the hom-sets of $\C$ are disjoint. Let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a {\em sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\circ f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
+$$
+S\times_UV:=\{W\to V|(W\to V\to U)\in S\}.
+$$
+One easily checks that this is a sieve over $V$. 
+
+To a sieve $S$ over $U$ we attach a subobject $A_S$ of $U$ in $\C^\wedge$ by the formula
+$$
+A_S(V):=S\cap\Hom_\C(V,U).
+$$ 
+Conversely, to an object $A\to U$ of $(\C^\wedge)_U$ we attach the sieve $S_A$ over $U$ by putting 
+$$
+S_A:=\{V\to A\to U\}.
+$$
+
+Let $\Sigma_U$ be the set of sieves over $U$, and let $\Sigma$ be the set of all sieves in $\mathcal C$. Let $\Gamma$ be a subset of $\Sigma$, put $\Gamma_U:=\Gamma\cap\Sigma_U$, and consider the following conditions:
+
+\nn GT1: for all $U$ in $\C$ we have: $M_U\in\Gamma$,
+
+\nn GT2: for all $U$ in $\C$ we have: $\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U$,
+
+\nn GT3: for all $U$ in $\C$ we have: $S\in\Gamma_U,\ (V\to U)\in M\implies S\times_UV\in\Gamma_V$,
+
+\nn GT4: for all $U$ in $\C$ we have: 
+$$
+S\in\Sigma_U,\ S'\in\Gamma_U,\ S\times_UV\in\Gamma\ \forall\ (V\to U)\in S'\implies S\in\Gamma_U.
+$$
+
+Consider the following conditions on a set $\cc E$ of morphisms in $\C^\wedge$:
+
+\nn LE1: $\id_U\in\cc E$ for all $U$ in $\C$,
+
+\nn LE2: if the composition of two elements of $\cc E$ exists, it belongs to $\cc E$,
+
+\nn LE3: if the composition $v\circ u$ of two morphisms of $\C^\wedge$ exists and is in $\cc E$, then $v$ is in $\cc E$,
+
+\nn LE4: a morphism $A\to B$ in $\C^\wedge$ is in $\cc E$ if and only if, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the morphism $A\times_BU\to U$ is in $\cc E$.
+
+Let $\Gamma$ be a subset of $M$ satisfying GT1-GT4, and let $\cc E$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. Let us check that $\cc E$ satisfies LE1-LE4.
+
+\nn LE1 follows immediately from GT1.
+
+\nn LE2: Let $A\to B\to C$ be a diagram in $\C^\wedge$, and assume that the two arrows are in $\cc E$. Consider the commutative diagram of solid arrows with cartesian squares 
+$$
+\begin{tikzcd}
+F\ar[dashed]{r}\ar[dashed]{d}&V\ar[dashed]{d}\\ 
+D\ar{r}\ar{d}&E\ar{r}\ar{d}&U\ar{d}\\ 
+A\ar{r}&B\ar{r}&C
+\end{tikzcd}
+$$
+in $\C^\wedge$ (with $U$ in $\C$). We have $S_E\in\Gamma_U$ (because $B\to C$ is in $\cc E$) and we must prove that $S_D$ is in $\Gamma_U$. Let $V\to U$ be in $S_E$, and let us complete the commutative diagram with cartesian squares as indicated. By GT4 it suffices to check that $S_F$ is in $\Gamma_V$. But this follows from the assumption that $A\to B$ is in $\cc E$ (together with a transitivity property of cartesian squares which has already been tacitly used).
+
+\nn LE3 follows immediately from GT2.
+
+\nn LE4 results easily form the following observation: In the setting $A\to U\leftarrow V$ (obvious notation), we have the magic formula 
+$$
+S_{A\times_UV}=S_A\times_UV.
+$$
+The details are left to the reader. QED 
+\end{s}
 
 %
 
@@ -6176,34 +6238,6 @@ Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphis
 \end{equation}
 By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~\eqref{1448}, and is, thus, an isomorphism. This implies that Composition~\eqref{f1} is also an isomorphism.
 \end{s}
-
-%
-
-\begin{comment}
-
-\begin{s}\label{gt}% Jan 21, 22 2014
-P. 390, Definition of a {\em Grothendieck topology}. \index{Grothendieck topology} I suggest to replace GT4 in Definition 16.1.2 p.~390 of the book with 
-
-\nn GT4': If $S$ is a sieve over $U\in\C$, and if $S\times_UV$ is a covering sieve over $V$ for all morphism $V\to U$ in $\C$, then $S$ is a covering sieve.
-
-It seems clear to me that GT1, GT2, GT3 and GT4' are equivalent to LE1-LE4, that is, the datum of a Grothendieck topology in this nonstandard sense is equivalent to the datum of a set of morphisms in $\C^\wedge$ satisfying LE1-LE4.
-
-This nonstandard definition of a Grothendieck topology is more general than the standard one. 
-
-Indeed, here is an example of a set of sieves satisfying GT1, GT2, GT3 and GT4', but not GT4:
-
-Let $\C$ be a category with a single object, and let $M$ be the corresponding monoid of endomorphisms. For each $f$ in $M$ and each sieve $S$, write $f^*(S)$ for the fibered product of $S$ with the unique object of $\C$ along $f$. Assume that $M$ is freely generated by a single endomorphism $a$. For $i\in\bb N$ put 
-$$
-S_i:=\{a^i,a^{i+1},\dots\}.
-$$ 
-Then $S_0=M,S_1,S_2,\dots$ is a strictly decreasing sequence of sieves, and any nonempty sieve occurs in this sequence. Putting $S_i:=S_0$ for $i\in\bb Z,i<0$, we get 
-$$
-a^{i*}(S_j)=S_{j-i}
-$$ 
-for all $i,j\in\bb N$. In particular $s'^*(S_2)\in\{S_0,S_1\}$ for all $s'\in S_1$, and it is easy to see that $\{S_0,S_1\}$ satisfies GT1, GT2, GT3 and GT4', but not GT4.
-\end{s}
-
-\end{comment}
 
 %
 
