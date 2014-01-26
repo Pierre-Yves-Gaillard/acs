@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0075)
+% about "categories and sheaves" (version_0076)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5639,20 +5639,9 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
 \section{About Chapter 16}
 
-\begin{s} 
-P. 390, Axioms LE1-LE4. I think that the set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
+\subsection{Sieves and Local Epimorphisms}
 
-Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$, where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
-$$
-U=\bigcup_{V\in\Sigma(U,b)}V
-$$ 
-for all $(U,b)$ as above.
-\end{s}
-
-%
-
-\begin{s}
-P. 389, Section 16.1. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\circ f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
+This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\circ f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
 $$
 S\times_UV:=\{W\to V|(W\to V\to U)\in S\}.
 $$
@@ -5690,7 +5679,9 @@ Consider the following conditions on a set $\cc E$ of morphisms in $\C^\wedge$:
 
 \nn LE4: a morphism $A\to B$ in $\C^\wedge$ is in $\cc E$ if and only if, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the morphism $A\times_BU\to U$ is in $\cc E$.
 
-As proved in the book, $\cc E$ contains all epimorphisms.
+As proved in the book, $\cc E$ contains all epimorphisms. 
+
+The elements of $\cc E$ are called \textbf{local epimorphisms}. \index{local epimorphism}
 
 Let $\Gamma$ be a subset of $M$ satisfying GT1-GT4, and let $\cc E=\cc E(\Gamma)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
 
@@ -5757,6 +5748,19 @@ Then $B\to V$ is in $\cc E$ because $S'\times_UV$ is in $\Gamma_V$ by assumption
 We have proved that $\Gamma$ satisfies GT1-GT4. 
 
 It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent. 
+
+%%
+
+\subsection{Brief Comments}
+
+\begin{s} 
+P. 390, Axioms LE1-LE4. I think that the set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
+
+Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$, where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
+$$
+U=\bigcup_{V\in\Sigma(U,b)}V
+$$ 
+for all $(U,b)$ as above.
 \end{s}
 
 %
