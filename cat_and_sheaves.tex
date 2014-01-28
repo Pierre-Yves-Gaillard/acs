@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0076)
+% about "categories and sheaves" (version_0077)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -208,16 +208,16 @@ Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{uca
 %
 \begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
 \end{center}
-%
+
 %%%%%
-%
+
 \section{Typos and Details}
-%
+
 $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
 
 \noindent $*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pageref{d125}.
 
-%%
+%
 
 \noindent $*$ P.~18, Definition 1.2.16. The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
 %
@@ -5357,12 +5357,64 @@ with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. 
 %%%
 
 \section{About Chapter 11}
- 
+
+\begin{s}
 P. 270. Recall that $(\A,T)$ is an additive category with translation. Let 
 \begin{equation}\label{iliad}
 (d_{X,i}:X_i\to TX_i)_{i\in I}
 \end{equation} 
 be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then the natural morphism $\co_id_{X,i}:X\to TX$ is an inductive limit of \eqref{iliad} in $\A_d$. There are analogous statements with ``projective'' instead of ``inductive'' and $\A_c$ instead of $\A_d$.
+\end{s}
+
+%
+
+\begin{s}
+P. 270, Definition 11.1.3. Here is a ``picture'' of the mapping cone of $f:X\to Y$:
+$$
+\begin{tikzcd}
+TX\ar{rr}{-T(d_X)}\ar{rrdd}{T(f)}&&T^2X\\ 
+\oplus&&\oplus\\ 
+Y\ar{rr}[swap]{d_Y}&&TY.
+\end{tikzcd}
+$$
+\end{s}
+
+%
+
+\begin{s}
+P. 271, Remark 11.1.5. We have:
+$$
+d_{\Mc(T(f))}=
+\begin{pmatrix}
+d_{T^2X}&0\\ \\ 
+T^2(f)&d_{TY}
+\end{pmatrix},\quad 
+d_{T(\Mc(f))}=
+\begin{pmatrix}
+d_{T^2X}&0\\ \\ 
+-T^2(f)&d_{TY}
+\end{pmatrix},
+$$ 
+and 
+$$
+T(\Mc(f))=T^2X\oplus TY\xr{\begin{pmatrix}-1&0\\ 0&1\end{pmatrix}}T^2X\oplus TY=\Mc(T(f))
+$$ 
+is a differential isomorphism.
+\end{s}
+
+%
+
+\begin{s}
+P. 275, Proof of TR5. The following commutative diagram may help visualize things: 
+$$
+\begin{tikzcd}
+X\ar{r}{f}\ar[equal]{d}&Y\ar{r}{\alpha(f)}\ar{d}{g}&TX\oplus Y\ar{r}{\beta(f)}\ar{d}{u}&TX\ar[equal]{d}\\ 
+X\ar{r}{g\circ f}\ar{d}[swap]{f}&Z\ar{r}{\alpha(g\circ f)}\ar[equal]{d}&TX\oplus Z\ar{r}{\beta(g\circ f)}\ar{d}{v}&TX\ar{d}{T(f)}\\ 
+Y\ar{r}{g}\ar{d}[swap]{\alpha(f)}&Z\ar{r}{\alpha(g)}\ar{d}[swap]{\alpha(g\circ f)}&TY\oplus Z\ar{r}{\beta(g)}\ar[equal]{d}&TY\ar{d}{T(\alpha(f))}\\ 
+TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Y\ar{r}[swap]{w}&T^2X\oplus TY.
+\end{tikzcd}
+$$ 
+\end{s}
 
 %%%
 
@@ -6100,14 +6152,18 @@ $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``uni
 \begin{s}\label{225}
 P. 225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$''.
 
-\nn P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
+\nn $*$ P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
 \end{s}
 
 \noindent $*$ P. 228, line~3: $\C$ should be $\C_\pi$.
 
 \begin{s}\label{228}
-P. 228. It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G\in\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
+P. 228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G\in\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
 \end{s}
+
+\nn $*$ P. 278: The first display should start with $T''(s'')$ instead of $T''(s)$.
+
+\nn $*$ P. 290, line -3: ``We define the functor'' should be ``We define the isomorphisms of functors''.
 
 \begin{s}\label{1341}
 P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
