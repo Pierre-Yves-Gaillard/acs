@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0078)
+% about "categories and sheaves" (version_0080a)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -168,9 +168,9 @@ I have rewritten some of the proofs in the book. Of course, I'm not suggesting t
 
 This is a work in progress. 
 
-\begin{rk}\label{next}
-The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
-\end{rk}
+%\begin{rk}\label{next}
+%The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
+%\end{rk}
 
 We adhere to Bourbaki's set theory.
 
@@ -227,7 +227,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 %
 There is a similar remark for projective limits. 
 
-%% 
+%
 
 \noindent $*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text, the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. Proof of Corollary 1.4.6 (second line): $\hy_{\C}$ should be $\hy_{\C'}$. 
 
@@ -326,6 +326,8 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \noindent $*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_{\mathcal S}(s)$.
 
+$*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
+
 \noindent $*$ P.~168, Line 9: ``$f:X\to Y$'' should be ``$f:Y\to X$''.
 
 \noindent $*$ P.~169, Lemma 8.1.2 (ii). The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the axiom of universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that\\ 
@@ -347,7 +349,7 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 should be ``a sequence 
 \begin{tikzcd}X\ar{r}{u}&Y\ar[yshift=0.7ex]{r}{v}\ar[yshift=-0.7ex]{r}[swap]{w}&Z\end{tikzcd}''.
 
-\noindent $*$ P.~180, proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times.
+\noindent $*$ P. 180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$. Proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times.
 
 \noindent $*$ P.~181, Lemma 8.3.13, second line of the proof: $h\circ f^2$ should be $f^2\circ h$.
 
@@ -373,13 +375,27 @@ should be ``a sequence
 
 \noindent $*$ P. 221, Lemma 9.2.15. ``Let $A\in\C$'' should be ``Let $A\in\C^\wedge$''.
 
+\noindent $*$ P. 224, proof of Proposition 9.3.2, line 2: ``there exist maps $S\to A(G)\to S$ whose composition is the identity'' should be ``there exist maps $A(G)\to S$ such that the composition $S\to A(G)\to S$ is the identity of $S$''.
+
 \noindent $*$ Pp 224-228, from Proposition 9.3.2 to the end of the section. The notation $G^{\sqcup S}$, where $S$ is a set, is used twice (each time on p.~224), and the notation $G^{\coprod S}$ is used many times in the sequel of the section. I think the two pieces of notation have the same meaning. If so, it might be slightly better to uniformize the notation.
+
+\begin{s}\label{225}
+P. 225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$''.
+
+\nn $*$ P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
+\end{s}
 
 \noindent $*$ P.~226, four lines before the end: ``By 9.3.4 (c)'' should be ``By (9.3.4) (c)''.
 
 \noindent $*$ P. 227. The second sentence uses Exercise~3.4 (i) p. 90 (see Proposition~\ref{34i} p.~\pageref{34i}).
 
+\noindent $*$ P. 228, line~3: $\C$ should be $\C_\pi$.
+
 \noindent $*$ P.~228, Corollary 9.3.6: $\ilim$ should be $\sigma_\pi$.
+
+\begin{s}\label{228}
+P. 228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G\in\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
+\end{s}
 
 \noindent $*$ P.~229, proof of 9.4.3 (i): it might be better to write ``containing $\mathcal S$ strictly'' (or ``properly''), instead of just ``containing $\mathcal S$''. 
 
@@ -417,21 +433,61 @@ $\bu$ $Q(u)$ should be $Q(u')$.
 
 %\noindent $*$ P. 271. The first entry of the first matrix reads $T(d_{T(X)})$. It would be more consistent with the rest of the book to write $T(d_{TX})$ instead.
 
+\nn $*$ P. 278: The first display should start with $T''(s'')$ instead of $T''(s)$.
+
+\nn $*$ P. 287, first display after Proposition~11.5.4: $v(X^{n,m})$ should be $v(X)^{n,m}$.
+
+\nn $*$ P. 290, line -3: ``We define the functor'' should be ``We define the isomorphisms of functors''.
+
 \noindent $*$ P. 303, just after the diagram: ``the exact sequence (12.2.2) give rise'' should be ``the exact sequence (12.2.2) gives rise''.
+
+\nn $*$ P. 320, Display (13.1.2): we have $\oo{Qis}=N^{\oo{ub}}(\C)$.
 
 \noindent $*$ P. 321, Line 8: $\widetilde\tau\,{}^{\ge n}(X)\to\widetilde\tau\,{}^{\ge n}(X)$ should be $\widetilde\tau\,{}^{\ge n}(X)\to\tau^{\ge n}(X)$.
 
 \noindent $*$ P. 328, Line 8: I think the authors meant ``$X^i\to Z^i$ is an isomorphism for $i>n+d\,$'' instead of ``$i\ge n+d\,$''.
 
+\begin{s}\label{1341}
+P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
+\end{s}
+
+\noindent $*$ P. 359, Line 3: $\sigma$ should be sh.
+
+%\noindent $*$ P. 359, Theorem 14.4.5. It is better (I think) to add the assumption that $\cc P$ is generating.
+
+\noindent $*$ P. 360, Line 5 of Step (ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\cc P)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\cc C)$''.
+
+%\noindent $*$ P. 361, second sentence of the proof of Corollary 14.4.6 (ii): instead of ``Then $\cc P'$ is also $G$-projective by Lemma 13.3.12 \dots'', one could write ``Then $\cc P'$ is also $G$-projective and generating by Lemma 13.3.12 \dots''.
+
+\noindent $*$ P. 364, Step (g) of the proof of Theorem 14.4.8: $\mc P_1=\oo K^-(\C_1)$ should be $\mc P_1=\C_1$.
+
+\noindent $*$ P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
+
 \noindent $*$ P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$.
 
 \noindent $*$ P. 401, Line 6: $B''\to B$ should be $B''\to B'$.
+
+\nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
+
+%\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
 
 \noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) 
 
 \noindent $*$ P. 426, Line 5: ``morphism of sites by'' should be ``morphism of sites''.
 
 \noindent $*$ P. 428, Notation 17.6.12 (i): $\C_X\ni U\mapsto M$ should be $\C_A\ni(U\to A)\mapsto M$.
+
+\noindent $*$ P. 438, right after the ``q.e.d.'': ``Notations (17.6.13)'' should be ``Notations 17.6.13''.
+
+\noindent $*$ P. 442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$.
+
+\noindent $*$ Pp 447-8, proof of Lemma 18.5.3: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.
+
+\noindent $*$ P. 448, Proposition 18.5.4, Line 3 of the proof: $G^{\oplus I}\epi M$ should be $\cc G^{\oplus I}\epi M$.
+
+\noindent $*$ P. 452, Part (i) (a) of the proof of Lemma 18.6.7. I think that $\cc O_U$ and $\cc O_V$ stand for $\cc O_X|_U$ and $\cc O_Y|_V$. (If this is so, it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$.) Also, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$.
+
+\noindent $*$ P. 494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
 
 %%%
 
@@ -620,13 +676,11 @@ An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all 
 \end{df}
 
 The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
-%
+
 %%%
-%
+
 \subsection{Brief Comments}
-%
-%%
-%
+
 \begin{s} 
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
 %
@@ -641,9 +695,9 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 \begin{proof} By (i) there is a $g:B\to A$ satisfying $f\circ g=\id_B$, yielding $f\circ g\circ f=f$, and (ii) implies $g\circ f=\id_A$.
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~36, Definition 2.1.2. 
 %
@@ -1091,7 +1145,9 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 
 %
 
-\nn[\S\ref{231} p.~\pageref{231} about Definition 2.3.1 p.~50 will be inserted here.]
+\begin{s}%\label{231}
+P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). So, there is a big number of pages (with a high contents density) between the notation and its justification.
+\end{s}
 
 %
 
@@ -3306,6 +3362,12 @@ Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if t
 
 %
 
+\begin{s}%\label{durl2}
+P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. 
+\end{s}
+
+%
+
 %\nn[\S\ref{durl} p.~\pageref{durl} will be inserted here.]% already taken into account!!!
 
 %
@@ -3376,13 +3438,15 @@ $$
 We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
 
 We leave the verification of these claims to the reader. 
-%
+
+%\end{document}
+
 %%%%
-%
+
 \section{About Chapter 8}
-%
+
 \subsection{Definition 8.2.1 (p. 169)}
-%
+
 The proofs of the Proposition and Lemma below are obvious. 
 \begin{prop}\label{payp}
 Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C^{\op}$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\Hom_\C(Y,X)$ for all $X$ and $Y$ in $\C$, let $X$ be in $\C$ and $A$ in $\A$, and let 
@@ -3463,13 +3527,11 @@ $$
 $$ 
 This implies that $\Hom_\C(Y,X)$ is a product of $\Hom_\C(Y,X_1)$ and $\Hom_\C(Y,X_2)$ by $\Hom_\C(Y,p_1),\Hom_\C(Y,p_2)$, and thus, $Y$ being arbitrary, that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$, and we conclude by applying this observation to the opposite category.
 \end{proof}
-%
+
 %%%%
-%
+
 \subsection{Brief Comments}
-%
-%%
-%
+
 \begin{s} 
 P. 172, Lemma 8.2.9. Recall the statement:
 %
@@ -3481,9 +3543,9 @@ Let us check that $\C$ has a zero object. (This part of the proof is left to the
 
 Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p. 169, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T\in\C$ be terminal. For any $X\in\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~172, proof of Lemma 8.2.10. Recall the statement: $\C$ is an additive category and $X$ is in $\C$. The claim is that $X$ is an abelian group object. The addition is given by the codiagonal morphism $\sigma:X\oplus X\to X$. This comment is only about the associativity of the addition. This associativity can also be proved as follows:
 
@@ -3504,7 +3566,42 @@ q.e.d.
 
 %
 
-\nn[\S\ref{8212} p.~\pageref{8212} will be inserted here.]
+\begin{s}%\label{8212}
+P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
+\begin{nota}
+If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
+\end{nota}
+
+\begin{prop}\label{8.2.12}
+If $\C$ is an additive category, then the obvious functor 
+$$
+\Phi:\oo P(\C,\Mod(\mathbb Z))\to\oo P(\C,\Set)
+$$ 
+is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11 p.~172 of the book.
+\end{prop}
+
+\begin{proof}
+The functor $\Phi$ being fully faithful by Proposition 8.2.12, it suffices to prove that the map 
+$$
+\oo{Ob}(\Phi):\oo{Ob}(\oo P(\C,\Mod(\mathbb Z)))\to\oo{Ob}(\oo P(\C,\Set))
+$$ 
+is bijective. The injectivity is obvious and the surjectivity follows from the proof of Proposition 8.2.13.
+\end{proof}
+
+Recall the statement of Theorem 8.2.14:
+%
+\begin{thm}
+Any additive category has a unique structure of a pre-additive category.
+\end{thm}
+%
+\begin{proof}
+Let $\C$ be our additive category. Thanks to Proposition~\ref{8.2.12} we identify $\oo P(\C,\Set)$ and $\oo P(\C,\Mod(\mathbb Z))$. We define the addition of $\Hom_\C(X,Y)$ for $X$ and $Y$ in $\C$ by evaluating the functor $\Hom_\C(X,\ )\in\oo P(\C,\Mod(\mathbb Z))$ on $Y$. The uniqueness is clear. If $f:Y\to Z$ is morphism in $\C$, then 
+$$
+\Hom_\C(X,f)=f\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
+$$ 
+is a morphism in $\Mod(\mathbb Z)$. If $g:W\to X$ is morphism in $\C$, then $\circ g:\Hom_\C(X,\ )\to\Hom_\C(W,\ )$ is a morphism in $\oo P(\C,\Mod(\mathbb Z))$, and $\circ g:\Hom_\C(X,Y)\to\Hom_\C(W,Y)$ is a morphism in $\Mod(\mathbb Z)$.
+\end{proof}
+\end{s}
 
 %
 
@@ -3781,7 +3878,12 @@ and (iv) follows from \eqref{fk+hg},\eqref{gh,kf}, and \eqref{kh}. q.e.d.
 
 %
 
-\nn[\S\ref{adic} p.~\pageref{adic} will be inserted here.]
+\begin{s}%\label{adic}
+P. 183. Here is an example showing that filtrant and cofiltrant small projective limits of $R$-modules are not exact in general: 
+$$
+\lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
+$$
+\end{s}
 
 %
 
@@ -5416,6 +5518,50 @@ TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Y\ar{r}[swap]{w}&T^
 $$ 
 \end{s}
 
+\begin{s}
+P. 290, Example 11.6.2 (i). Let $\C,\C'$ and $\C$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, then $F$ induces a bifunctor of additive categories with translation 
+$$
+F_\oplus:\operatorname{C}(\C)\times\operatorname{C}(\C')\to\operatorname{C}(\C'').
+$$ 
+If $\C''$ admits countable products instead of direct sums, then $F$ induces a bifunctor of additive categories with translation 
+$$
+F_\pi:\operatorname{C}(\C)\times\operatorname{C}(\C')\to\operatorname{C}(\C'').
+$$ 
+The precise formulas are given in the book. If $F:\C\times\C'^\op\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable products, then $F$ induces again a bifunctor of additive categories with translation 
+$$
+F_\pi:\operatorname{C}(\C)\times\operatorname{C}(\C')^{\op}\to\operatorname{C}(\C'').
+$$ 
+The formulas defining $F_\pi$ in this setting are almost the same as in the previous setting, and we give them without further comments:
+$$
+F(Y,X)^{n,m}=F(Y^n,X^{-m}),
+$$
+$$
+d'^{n,m}=F(d_Y^n,X^{-m}),
+$$
+$$
+d''^{n,m}=(-1)^{m+1}F(Y^n,d_X^{-m-1}),
+$$
+$$
+\theta_{Y,X}:F_\pi(TY,X)\to TF_\pi(Y,X),
+$$
+$$
+\theta'_{Y,X}:F_\pi(Y,T^{-1}X)\to TF_\pi(Y,X).
+$$
+$$
+\theta_{Y,X}^{i+j}:F_\pi(TY,X)^{i+j}\to(TF_\pi(Y,X))^{i+j},
+$$
+$$
+\theta_{Y,X}^{i,j}:F_\pi((TY)^i,X^{-j})=F(Y^{i+1},X^{-j})\to F_\pi(Y,X)^{i+j+1}=(TF_\pi(Y,X))^{i+j},
+$$
+$$
+{\theta'}_{Y,X}^{i+j}:F_\pi(Y,T^{-1}X)^{i+j}\to(TF_\pi(Y,X))^{i+j},
+$$
+$$
+{\theta'}_{Y,X}^{i,j}:F_\pi(Y^i,(T^{-1}X)^{-j})=F(Y^i,X^{-j-1})\to F_\pi(Y,X)^{i+j+1}=(TF_\pi(Y,X))^{i+j},
+$$
+the morphism ${\theta'}_{Y,X}^{i,j}$ being $(-1)^i$ times the canonical embedding.
+\end{s}
+
 %%%
 
 \section{About Chapter 12}
@@ -5530,7 +5676,28 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 
 %
 
-\nn[\S\ref{1341b} p.~\pageref{1341b} will be inserted here.]
+\begin{s}%\label{1341b}
+P. 337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
+
+Moreover, if $\Hom_\C^\bu(\ ,Y)$ admits a right derived functor, denoted 
+$$
+\oo R_1\!\Hom_\C(\ ,Y),
+$$ 
+then 
+$$
+H^0\oo R_1\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+$$ 
+Similarly, if $Y\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
+$$
+\oo R_2\!\Hom_\C(X,\ ),
+$$ 
+then 
+$$
+H^0\oo R_2\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+$$
+
+This follows from the proof given in the book. 
+\end{s}
 
 %%
 
@@ -5685,7 +5852,69 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
 %
 
-\nn[\S\ref{1432b} p.~\pageref{1432b}, \S\ref{s144} p.~\pageref{s144}, \S\ref{s1448} p.~\pageref{s1448}, and \S\ref{1448f} p.~\pageref{1448f} will be inserted here.]
+\begin{s}%\label{1432b}
+Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
+%
+\begin{cor}\label{1432}
+Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor $\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k)$. If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I\in\oo K_{\oo{hi}}(\C)$ (such exist) we have 
+$$
+\oo{RHom}_\C(X,Y)\xr\sim\Hom_{\oo K(\C)}(X,I)\xr\sim\Hom_{\oo D(\C)}(X,I).
+$$ 
+Moreover, $H^0(\oo{RHom}_\C(X,Y))\simeq\Hom_{\oo D(\C)}(X,Y)$ for $X,Y\in\oo D(\C)$.
+\end{cor}
+\end{s}
+
+%
+
+\begin{s}%\label{s144}
+P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
+
+\noindent(a) Replace Assumption (14.4.1) p.~358 with: ``$\C$ admits inductive limits indexed by the ordered set $\bb N$, and such limits are exact''.
+
+\noindent(b) Say (only for the duration of this comment) that a full saturated subcategory $\A$ of a category $\B$ is {\em closed by coproducts} if the coproduct of any family of objects of $\A$ which exists in $\B$ belongs to $\A$.
+
+\noindent(c) In Lemma 14.4.2 p. 359, replace ``full triangulated'' with ``full saturated triangulated'', and ``closed by small direct sums'' with ``closed by direct sums (in the sense of the above definition)''. 
+
+There are analog observations for the other statements of Section 14.4.
+\end{s}
+
+%
+
+\begin{s}%\label{s1448}
+Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
+
+Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and $X_3\to I$ be qis with $X_i\in\widetilde{\mc P}_i$ and $I\in\oo K_{\oo{hi}}(\C_3)$ (such exist). Consider the functorial morphisms of abelian groups
+\begin{equation}\label{1448}
+\begin{split}
+\Hom_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\xr a\Hom_{\oo D(\C_3)}(G(P_1,P_2),I)\xleftarrow b\\ 
+\Hom_{\oo K(\C_3)}(G(P_1,P_2),I)&\simeq\Hom_{\oo K(\C_1)}(P_1,F_1(P_2,I))\xr c\\ 
+\Hom_{\oo D(\C_1)}(P_1,F_1(P_2,I))&\xleftarrow d\Hom_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)),
+\end{split}
+\end{equation}
+where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
+\end{s}
+
+%
+
+\begin{s}%\label{1448f}
+Step (f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \eqref{1448} are isomorphisms. As explained in the book, we have morphisms  
+\begin{equation}\label{f1}
+\begin{split}
+\oo{RHom}_{\C_3}(LG(X_1,X_2),X_3)&\to\\ 
+\oo{RHom}_{\C_1}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
+\oo{RHom}_{\C_1}(X_1,RF_1(X_2,X_3)).
+\end{split}
+\end{equation}
+Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphisms 
+\begin{equation}\label{f2}
+\begin{split}
+\oo{Hom}_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\to\\ 
+\oo{Hom}_{\oo D(\C_1)}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
+\oo{Hom}_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)).
+\end{split}
+\end{equation}
+By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~\eqref{1448}, and is, thus, an isomorphism. This implies that Composition~\eqref{f1} is also an isomorphism.
+\end{s}
 
 %%%
 
@@ -5863,9 +6092,32 @@ Then $\C^\wedge(A):=\Set(A)^{\C^{\op}}$ is a small full subcategory of $\C^\wedg
 Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism in $\C^\wedge(C_J)$, and $w:S\to A$ is a local isomorphism. Then $\cc S$ is small.
 \end{s}
 
-%%
+%
 
-\nn[\S\ref{399} p.~\pageref{399} about the beginning of Section 16.3 on p.~399 will be inserted here.]
+\begin{s}%\label{399}
+P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
+$$
+\begin{tikzcd}
+%
+\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
+\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
+%
+\end{tikzcd}
+$$
+If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
+$$
+\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
+$$ 
+and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
+$$
+\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A))=:A^a.
+$$ 
+This implies that the set 
+$$
+A^a(U):=\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
+$$ 
+depends functorially on $U\in\C$.
+\end{s}
 
 %%
 
@@ -5942,8 +6194,33 @@ in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This means
 
 \section{About Chapter 17}
 
-[\S\ref{revol} p.~\pageref{revol} %and \S\ref{421} p.~\pageref{421} 
-will be inserted here.]
+\begin{s}%\label{revol}
+P. 405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
+
+If $f:X\to Y$ is a morphism of presites \index{morphism of presites}, then we keep the notation $f^t$ for the functor from $\C_Y$ to $\C_X$, and we designate by $f^\tau$ \index{$f^\tau$} the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$:
+\begin{equation}\label{ttau}
+f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
+\end{equation}
+In other words, we set $f^\tau:=(f^t)^{\op}$. 
+
+We keep the same definition of left exactness (based on $f^t$) of $f:X\to Y$ as in the book.
+
+The motivation for introducing the functor $f^\tau$ can be described as follows: The diagram 
+$$
+\begin{tikzcd}
+J\ar{dr}\ar{rr}{\pp}&&I\ar{dl}\\ 
+{}&\C,
+\end{tikzcd}
+$$ 
+representing the general setting of Section 2.3 p.~50 of the book is now replaced by the diagram 
+$$
+\begin{tikzcd}
+(\C_Y)^{\op}\ar{dr}\ar{rr}{f^\tau}&&(\C_A)^{\op}\ar{dl}\\ 
+{}&\A.
+\end{tikzcd}
+$$ 
+(See also \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
+\end{s}
 
 %
 
@@ -6131,318 +6408,8 @@ P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gam
 
 \section{About Chapter 18}
 
-[Section~\ref{s1853} p.~\pageref{s1853}, \S\ref{1811} p.~\pageref{1811}, \S\ref{1816} p.~\pageref{1816}, and \S\ref{1867} p.~\pageref{1867} will be inserted here.]
+\subsection{Proof of Lemma 18.5.3 (p. 447)}%\label{s1853}
 
-%%%
-
-\newpage
-
-\section{Next Additions}
-
-For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
-
-\subsection{Typos and Details}
-
-$*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
-
-\noindent $*$ P. 180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$.
-
-\noindent $*$ P. 224, proof of Proposition 9.3.2, line 2: ``there exist maps $S\to A(G)\to S$ whose composition is the identity'' should be ``there exist maps $A(G)\to S$ such that the composition $S\to A(G)\to S$ is the identity of $S$''.
-
-\begin{s}\label{225}
-P. 225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$''.
-
-\nn $*$ P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
-\end{s}
-
-\noindent $*$ P. 228, line~3: $\C$ should be $\C_\pi$.
-
-\begin{s}\label{228}
-P. 228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G\in\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
-\end{s}
-
-\nn $*$ P. 278: The first display should start with $T''(s'')$ instead of $T''(s)$.
-
-\nn $*$ P. 287, first display after Proposition~11.5.4: $v(X^{n,m})$ should be $v(X)^{n,m}$.
-
-\nn $*$ P. 290, line -3: ``We define the functor'' should be ``We define the isomorphisms of functors''.
-
-\begin{s}\label{1341}
-P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
-\end{s}
-
-\noindent $*$ P. 359, Line 3: $\sigma$ should be sh.
-
-%\noindent $*$ P. 359, Theorem 14.4.5. It is better (I think) to add the assumption that $\cc P$ is generating.
-
-\noindent $*$ P. 360, Line 5 of Step (ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\cc P)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\cc C)$''.
-
-%\noindent $*$ P. 361, second sentence of the proof of Corollary 14.4.6 (ii): instead of ``Then $\cc P'$ is also $G$-projective by Lemma 13.3.12 \dots'', one could write ``Then $\cc P'$ is also $G$-projective and generating by Lemma 13.3.12 \dots''.
-
-\noindent $*$ P. 364, Step (g) of the proof of Theorem 14.4.8: $\mc P_1=\oo K^-(\C_1)$ should be $\mc P_1=\C_1$.
-
-\noindent $*$ P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
-
-\nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
-
-%\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
-
-\noindent $*$ P. 438, right after the ``q.e.d.'': ``Notations (17.6.13)'' should be ``Notations 17.6.13''.
-
-\noindent $*$ P. 442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$.
-
-\noindent $*$ Pp 447-8, proof of Lemma 18.5.3: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.
-
-\noindent $*$ P. 448, Proposition 18.5.4, Line 3 of the proof: $G^{\oplus I}\epi M$ should be $\cc G^{\oplus I}\epi M$.
-
-\noindent $*$ P. 452, Part (i) (a) of the proof of Lemma 18.6.7. I think that $\cc O_U$ and $\cc O_V$ stand for $\cc O_X|_U$ and $\cc O_Y|_V$. (If this is so, it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$.) Also, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$.
-
-\noindent $*$ P. 494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
-
-%
-
-\subsection{Brief Comments}
-
-\begin{s}\label{231}
-P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). So, there is a big number of pages (with a high contents density) between the notation and its justification.
-\end{s}
-
-%
-
-\begin{s}\label{durl2}
-P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. 
-\end{s}
-
-%
-
-\begin{s}\label{8212}
-P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
-\begin{nota}
-If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
-\end{nota}
-
-\begin{prop}\label{8.2.12}
-If $\C$ is an additive category, then the obvious functor 
-$$
-\Phi:\oo P(\C,\Mod(\mathbb Z))\to\oo P(\C,\Set)
-$$ 
-is an isomorphism, $\Phi^{-1}$ being given by Lemma 8.2.11 p.~172 of the book.
-\end{prop}
-
-\begin{proof}
-The functor $\Phi$ being fully faithful by Proposition 8.2.12, it suffices to prove that the map 
-$$
-\oo{Ob}(\Phi):\oo{Ob}(\oo P(\C,\Mod(\mathbb Z)))\to\oo{Ob}(\oo P(\C,\Set))
-$$ 
-is bijective. The injectivity is obvious and the surjectivity follows from the proof of Proposition 8.2.13.
-\end{proof}
-
-Recall the statement of Theorem 8.2.14:
-%
-\begin{thm}
-Any additive category has a unique structure of a pre-additive category.
-\end{thm}
-%
-\begin{proof}
-Let $\C$ be our additive category. Thanks to Proposition~\ref{8.2.12} we identify $\oo P(\C,\Set)$ and $\oo P(\C,\Mod(\mathbb Z))$. We define the addition of $\Hom_\C(X,Y)$ for $X$ and $Y$ in $\C$ by evaluating the functor $\Hom_\C(X,\ )\in\oo P(\C,\Mod(\mathbb Z))$ on $Y$. The uniqueness is clear. If $f:Y\to Z$ is morphism in $\C$, then 
-$$
-\Hom_\C(X,f)=f\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
-$$ 
-is a morphism in $\Mod(\mathbb Z)$. If $g:W\to X$ is morphism in $\C$, then $\circ g:\Hom_\C(X,\ )\to\Hom_\C(W,\ )$ is a morphism in $\oo P(\C,\Mod(\mathbb Z))$, and $\circ g:\Hom_\C(X,Y)\to\Hom_\C(W,Y)$ is a morphism in $\Mod(\mathbb Z)$.
-\end{proof}
-\end{s}
-%
-%%
-%
-\begin{s}\label{adic}
-P. 183. Here is an example showing that filtrant and cofiltrant small projective limits of $R$-modules are not exact in general: 
-$$
-\lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
-$$
-\end{s}
-
-%
-
-%\begin{s}\label{ltf}P. 253, Definition of right localizable functor with respect to $(\cc N,\cc N')$ (Definition 10.3.1). I think it is simpler to define the notion of universally right localizable functor as in \S\ref{durl2} p.~\pageref{durl2} (see Remark~\ref{rurl} p.~\pageref{rurl}).\end{s}
-
-%
-
-\begin{s}\label{1341b}
-P. 337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
-
-Moreover, if $\Hom_\C^\bu(\ ,Y)$ admits a right derived functor, denoted 
-$$
-\oo R_1\!\Hom_\C(\ ,Y),
-$$ 
-then 
-$$
-H^0\oo R_1\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
-$$ 
-Similarly, if $Y\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
-$$
-\oo R_2\!\Hom_\C(X,\ ),
-$$ 
-then 
-$$
-H^0\oo R_2\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
-$$
-
-This follows from the proof given in the book. 
-\end{s}
-%
-%%
-%
-\begin{s}\label{1432b}
-Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
-%
-\begin{cor}\label{1432}
-Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor $\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k)$. If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I\in\oo K_{\oo{hi}}(\C)$ (such exist) we have 
-$$
-\oo{RHom}_\C(X,Y)\xr\sim\Hom_{\oo K(\C)}(X,I)\xr\sim\Hom_{\oo D(\C)}(X,I).
-$$ 
-Moreover, $H^0(\oo{RHom}_\C(X,Y))\simeq\Hom_{\oo D(\C)}(X,Y)$ for $X,Y\in\oo D(\C)$.
-\end{cor}
-\end{s} 
-%
-%%
-%
-\begin{s}\label{s144}
-P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
-
-\noindent(a) Replace Assumption (14.4.1) p.~358 with: ``$\C$ admits inductive limits indexed by the ordered set $\bb N$, and such limits are exact''.
-
-\noindent(b) Say (only for the duration of this comment) that a full saturated subcategory $\A$ of a category $\B$ is {\em closed by coproducts} if the coproduct of any family of objects of $\A$ which exists in $\B$ belongs to $\A$.
-
-\noindent(c) In Lemma 14.4.2 p. 359, replace ``full triangulated'' with ``full saturated triangulated'', and ``closed by small direct sums'' with ``closed by direct sums (in the sense of the above definition)''. 
-
-There are analog observations for the other statements of Section 14.4.
-\end{s}
-%
-%%
-%
-\begin{s}\label{s1448}
-Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
-
-Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and $X_3\to I$ be qis with $X_i\in\widetilde{\mc P}_i$ and $I\in\oo K_{\oo{hi}}(\C_3)$ (such exist). Consider the functorial morphisms of abelian groups
-\begin{equation}\label{1448}
-\begin{split}
-\Hom_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\xr a\Hom_{\oo D(\C_3)}(G(P_1,P_2),I)\xleftarrow b\\ 
-\Hom_{\oo K(\C_3)}(G(P_1,P_2),I)&\simeq\Hom_{\oo K(\C_1)}(P_1,F_1(P_2,I))\xr c\\ 
-\Hom_{\oo D(\C_1)}(P_1,F_1(P_2,I))&\xleftarrow d\Hom_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)),
-\end{split}
-\end{equation}
-where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
-\end{s}
-
-%
-
-\begin{s}\label{1448f}
-Step (f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \eqref{1448} are isomorphisms. As explained in the book, we have morphisms  
-\begin{equation}\label{f1}
-\begin{split}
-\oo{RHom}_{\C_3}(LG(X_1,X_2),X_3)&\to\\ 
-\oo{RHom}_{\C_1}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
-\oo{RHom}_{\C_1}(X_1,RF_1(X_2,X_3)).
-\end{split}
-\end{equation}
-Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphisms 
-\begin{equation}\label{f2}
-\begin{split}
-\oo{Hom}_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\to\\ 
-\oo{Hom}_{\oo D(\C_1)}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
-\oo{Hom}_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)).
-\end{split}
-\end{equation}
-By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~\eqref{1448}, and is, thus, an isomorphism. This implies that Composition~\eqref{f1} is also an isomorphism.
-\end{s}
-
-%
-
-\begin{s}\label{399}
-P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
-$$
-\begin{tikzcd}
-%
-\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
-\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
-%
-\end{tikzcd}
-$$
-If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
-$$
-\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
-$$ 
-and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
-$$
-\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A))=:A^a.
-$$ 
-This implies that the set 
-$$
-A^a(U):=\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
-$$ 
-depends functorially on $U\in\C$.
-\end{s}
-
-%
-
-\begin{s}\label{revol}
-P. 405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
-
-If $f:X\to Y$ is a morphism of presites \index{morphism of presites}, then we keep the notation $f^t$ for the functor from $\C_Y$ to $\C_X$, and we designate by $f^\tau$ \index{$f^\tau$} the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$:
-\begin{equation}\label{ttau}
-f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
-\end{equation}
-In other words, we set $f^\tau:=(f^t)^{\op}$. 
-
-We keep the same definition of left exactness (based on $f^t$) of $f:X\to Y$ as in the book.
-
-The motivation for introducing the functor $f^\tau$ can be described as follows: The diagram 
-$$
-\begin{tikzcd}
-J\ar{dr}\ar{rr}{\pp}&&I\ar{dl}\\ 
-{}&\C,
-\end{tikzcd}
-$$ 
-representing the general setting of Section 2.3 p.~50 of the book is now replaced by the diagram 
-$$
-\begin{tikzcd}
-(\C_Y)^{\op}\ar{dr}\ar{rr}{f^\tau}&&(\C_A)^{\op}\ar{dl}\\ 
-{}&\A.
-\end{tikzcd}
-$$ 
-(See also \S\ref{fhat} p.~\pageref{fhat} and \S\ref{fdagger} p.~\pageref{fdagger}.)
-\end{s}
-
-%
-
-\begin{s}\label{1811}
-P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X,M_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
-\end{s}
-
-%
-
-\begin{s}\label{1816}
-P. 437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\ref{14112} and \S\ref{fau} p.~\ref{fau}. 
-\end{s}
-
-%
-
-\begin{s}\label{1867}
-P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
-
-Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
-$$
-(f_W)^\tau(V'\to V):=(f^\tau(V')\to f^\tau(V)\to W).
-$$
-Finally, let us rewrite explicitly one of the key equalities (see \S\ref{fdagger} p.~\pageref{fdagger}): 
-$$
-f^\dagger(\cc O_Y^{\oplus nm})(W)=\co_{(f^\tau(V)\to W)\in((\C_Y)^{\op})_W}\cc O_Y^{\oplus nm}(V),
-$$ 
-where $f^\tau(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $W\to f^t(V)$ in $\C_X$).
-\end{s}
-%
-\subsection{Proof of Lemma 18.5.3 (p. 447)}\label{s1853}
-%
 We give additional details about Lemma 18.5.3 of the book (stated below as Lemma~\ref{l1853} p.~\pageref{l1853}) with the hope of helping the reader. We start with a technical lemma.
 
 Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let $(a_i)_{i=1}^\ell$, $(b_i)_{i=1}^\ell$, and $(b'_j)_{j=1}^m$ be tuples in $A$, $B$, and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let $a:S^\ell\to A$, $b:R^\ell\to B$, and $b':R^m\to B$ be defined by 
@@ -6619,12 +6586,54 @@ $$
 If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $((b'_j),(b_i))$, then we get $r_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
 \end{proof}
 
-\printindex
 %
+
+\begin{s}%\label{1811}
+P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X,M_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
+\end{s}
+
+%
+
+\begin{s}%\label{1816}
+P. 437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\ref{14112} and \S\ref{fau} p.~\ref{fau}. 
+\end{s}
+
+%
+
+\begin{s}%\label{1867}
+P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
+
+Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
+$$
+(f_W)^\tau(V'\to V):=(f^\tau(V')\to f^\tau(V)\to W).
+$$
+Finally, let us rewrite explicitly one of the key equalities (see \S\ref{fdagger} p.~\pageref{fdagger}): 
+$$
+f^\dagger(\cc O_Y^{\oplus nm})(W)=\co_{(f^\tau(V)\to W)\in((\C_Y)^{\op})_W}\cc O_Y^{\oplus nm}(V),
+$$ 
+where $f^\tau(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $W\to f^t(V)$ in $\C_X$).
+\end{s}
+
+%%%
+
+%\newpage
+
 %\section{Next Additions}
+
+%For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
+
 %
-%\subsection{Typos and Details}
-%
+
 %\subsection{Brief Comments}
-%
+
+%\begin{s}\label{ltf}P. 253, Definition of right localizable functor with respect to $(\cc N,\cc N')$ (Definition 10.3.1). I think it is simpler to define the notion of universally right localizable functor as in \S\ref{durl2} p.~\pageref{durl2} (see Remark~\ref{rurl} p.~\pageref{rurl}).\end{s}
+
+\printindex
+
+%\section{Next Additions}
+
+%\subsection{Typos and Details}
+
+%\subsection{Brief Comments}
+
 \end{document}
