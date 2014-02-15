@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0080)
+% about "categories and sheaves" (version_0081)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -156,7 +156,7 @@ The tex and pdf files for this text are available at
 
 \nn\href{https://www.mediafire.com/folder/am7yqw1whitdg/}{https://www.mediafire.com/folder/am7yqw1whitdg/}
 
-\nn\href{https://mega.co.nz/#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}{https://mega.co.nz/\#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}
+%\nn\href{https://mega.co.nz/#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}{https://mega.co.nz/\#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}
 
 More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
@@ -464,6 +464,8 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \noindent $*$ P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
 
 \noindent $*$ P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$.
+
+\nn P. 396, Lemma 16.2.4 (ii), last sentence of the proof: It would be better (I think) write ``by LE2 and LE3'' instead of ``by Proposition 16.1.11 (ii)''.
 
 \noindent $*$ P. 401, Line 6: $B''\to B$ should be $B''\to B'$.
 
@@ -1406,9 +1408,9 @@ $$
 $$ 
 induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 %
@@ -3623,9 +3625,9 @@ F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 %
 are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions~\ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s}%\label{c176a}
 P.~176, Proposition 8.3.4 (minor variant). Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 %
@@ -3975,11 +3977,11 @@ $$
 l_0\circ a_0=l_0\circ\lambda^{-1}\circ a_1=l_1\circ\lambda\circ\lambda^{-1}\circ a_1=l_1\circ a_1=\pp.
 $$ 
 q.e.d.
-%
+
 %%%
-%
+
 \subsection{Brief Comments}
-%
+
 \begin{s} P.~190, Proposition 8.5.5. It might be worth writing explicitly the formulas (for $X\in\Mod(R,\C)$):
 $$
 \Hom_{R^{\op}}(N,\Hom_\C(X,Y))\simeq
@@ -6046,6 +6048,16 @@ for all $(U,b)$ as above.
 
 %
 
+\begin{s}\label{16111}
+P. 394, Proposition 16.1.11 (i). More generally, if $A\to D, B\to D$, and $C\to D$ are morphisms in $\C^\wedge$, and if $f:B\to C$ is a local epimorphism, then 
+$$
+A\times_Df:A\times_DB\to A\times_DC
+$$ 
+is a local epimorphism.
+\end{s}
+
+%
+
 \begin{s}\label{s1623}
 P.~395, Lemma 16.2.3 (iii). Consider the conditions
 
@@ -6063,7 +6075,13 @@ Recall that (a) is the condition that $A\to B$ is a local monomorphism. Lemma 16
 \text{Conditions (a), (b), (c), (d), (e) are equivalent.}
 \end{equation}
 %
-Indeed, Part (iii) of the lemma says that (a), (b) and (c) are equivalent. Clearly (e) implies (c) and (d), and (d) implies (b). It suffices to check that (c) implies (e). Let $C\parar A\to B$ be as in the assumption (c), let $D\to C$ be the local epimorphism furnished by (c), and let $I$ be its image. The two compositions $I\to C\parar A$ coincide because $D\to I$ is an epimorphism, and $I\to C$ is a local isomorphism by Part (ii) of the lemma. q.e.d
+Indeed, Part (iii) of the lemma says that (a), (b) and (c) are equivalent. Clearly (e) implies (c) and (d), and (d) implies (b). It suffices to check that (c) implies (e). Let $C\parar A\to B$ be as in the assumption (c), let $D\to C$ be the local epimorphism furnished by (c), and let $I$ be its image. The two compositions $I\to C\parar A$ coincide because $D\to I$ is an epimorphism, and $I\to C$ is a local isomorphism by Part (ii) of the lemma. q.e.d.
+\end{s}
+
+%
+
+\begin{s}
+P. 397, proof of Proposition 16.2.2 (vi): see \S\ref{16111} p.~\pageref{16111}.
 \end{s}
 
 %
@@ -6075,9 +6093,9 @@ P. 397, Notation 16.2.5 (ii). The fact that
 \end{equation}
 follows from Lemma 16.2.4 (vii) p. 396.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P. 398, proof of Lemma 16.2.8. Recall that $\C$ is a small category. Here is a variant of the two sentences ``Let us consider the set $\cc S$ of $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism and $w:S\to A$ is a local isomorphism. By Proposition 5.2.9 and the result of Exercise 5.1, the set of quotients of any object of $\C^\wedge$ is small, and hence $\cc S$ is a small set.'' 
 
@@ -6168,9 +6186,9 @@ such that the bottom square is cartesian. The $s'$ is a local isomorphism by Lem
 %
 The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the bottom square commutes by definition of $A^a(s\circ t)$, and the top square commutes because $w$ can be viewed as a morphism $\id_V\to s'$ in $\mc{LI}_V$. The commutativity of \eqref{1631b} for all $t$ implies the commutativity of \eqref{1631a} for all $u$. q.e.d.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P. 400, Step (ii) in the proof of Lemma 16.3.2 (additional details):
 
