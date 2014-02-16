@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0083)
+% about "categories and sheaves" (version_0084)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -156,7 +156,7 @@ The tex and pdf files for this text are available at
 
 \nn\href{https://www.mediafire.com/folder/am7yqw1whitdg/}{https://www.mediafire.com/folder/am7yqw1whitdg/}
 
-%\nn\href{https://mega.co.nz/#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}{https://mega.co.nz/\#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}
+\nn\href{https://mega.co.nz/#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}{https://mega.co.nz/\#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}
 
 More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
@@ -5980,7 +5980,7 @@ The elements of $\cc E$ are called \textbf{local epimorphisms}. \index{local epi
 
 Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and let $\cc E=\cc E(\Gamma)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
 
-As observed in the book, $A\to U$ is in $\cc E$ if and only if $S_A$ is in $\Gamma_U$, and $A\to B$ is in $\cc E$ if and only if $A\times_BV\to V$ is in $\cc E$ for all $V\to B$ with $V$ in $\C$. 
+%As observed in the book, $A\to U$ is in $\cc E$ if and only if $S_A$ is in $\Gamma_U$, and $A\to B$ is in $\cc E$ if and only if $A\times_BV\to V$ is in $\cc E$ for all $V\to B$ with $V$ in $\C$. 
 
 Let us check that $\cc E$ satisfies LE1-LE4:
 
@@ -5999,11 +5999,9 @@ in $\C^\wedge$ (with $U$ in $\C$). We have $S_E\in\Gamma_U$ (because $B\to C$ is
 \nn LE3 follows immediately from GT2.
 
 \nn LE4 results easily form the following observation: In the setting $A\to U\leftarrow V$ (obvious notation), we have 
-%
-\begin{equation}\label{mf}
+$$
 S_{A\times_UV}=S_A\times_UV.
-\end{equation}
-%
+$$
 The details are left to the reader.
 
 Conversely, given an object $U$ of $\C$ and a set $\cc E$ of morphisms in $\C^\wedge$ satisfying LE1-LE4, put
@@ -6012,7 +6010,11 @@ $$
 $$
 Let us check that $(\Gamma_U)_{U\in\C}=:\Gamma(\cc E)$ satisfies GT1-GT4.
 
-GT1 follows from LE1, GT2 follows from LE3, and GT3 follows from LE4 and \eqref{mf}. Let us prove GT4. 
+GT1 follows from LE1 and GT2 follows from LE3. If $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
+$$
+A_{S\times_UV}=A_S\times_UV.
+$$ 
+In view of LE4, this implies GT3. Let us prove GT4. 
 
 We assume 
 $$
