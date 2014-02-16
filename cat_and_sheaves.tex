@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0082)
+% about "categories and sheaves" (version_0083)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1143,6 +1143,19 @@ $$
 \ell=\big(\mu_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
 $$ 
 We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are inverse bijections.
+\end{s}
+
+%
+
+\begin{s}\label{fpl}
+P. 50, Corollary 2.2.11. We also have:
+
+\emph{A category admits finite projective limits if and only if it admits a terminal object and binary fibered products.}
+
+Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have 
+$$
+\Ker(f,g)\simeq X\times_{(Y\times Y)}Y.
+$$
 \end{s}
 
 %
@@ -6096,8 +6109,10 @@ follows from Lemma 16.2.4 (vii) p. 396.
 %
 
 \begin{s} 
-P. 398, Lemma 16.2.7. I don't understand why $\cc{LI}_A$ admits finite projective limits. The fact that $\cc{LI}_A$ is cofiltrant follows from Lemma 16.2.4 (i) p.~395 of the book and Display~\eqref{e1623} p.~\pageref{e1623}. It seems to me that only the fact that $\cc{LI}_A$ is cofiltrant is used in the sequel.
+P. 398, proof of Lemma 16.2.7: see \S\ref{fpl} p.~\pageref{fpl}.
 \end{s}
+
+%\begin{s} P. 398, Lemma 16.2.7. I don't understand why $\cc{LI}_A$ admits finite projective limits. The fact that $\cc{LI}_A$ is cofiltrant follows from Lemma 16.2.4 (i) p.~395 of the book and Display~\eqref{e1623} p.~\pageref{e1623}. It seems to me that only the fact that $\cc{LI}_A$ is cofiltrant is used in the sequel.\end{s}
 
 %
 
