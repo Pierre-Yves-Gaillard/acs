@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0085)
+% about "categories and sheaves" (version_0086)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5934,8 +5934,6 @@ By (1.5.7) p. 29 of the book, Composition~\eqref{f2} coincides with Composition~
 
 \section{About Chapter 16}
 
-\begin{comment}
-
 \subsection{Sieves and Local Epimorphisms}
 
 This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\circ f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
@@ -5980,9 +5978,7 @@ As proved in the book, $\cc E$ contains all epimorphisms.
 
 The elements of $\cc E$ are called \textbf{local epimorphisms}. \index{local epimorphism}
 
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and let $\cc E=\cc E(\Gamma)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
-
-%As observed in the book, $A\to U$ is in $\cc E$ if and only if $S_A$ is in $\Gamma_U$, and $A\to B$ is in $\cc E$ if and only if $A\times_BV\to V$ is in $\cc E$ for all $V\to B$ with $V$ in $\C$. 
+Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and let $\cc E$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
 
 Let us check that $\cc E$ satisfies LE1-LE4:
 
@@ -6006,6 +6002,8 @@ S_{A\times_UV}=S_A\times_UV.
 $$
 The details are left to the reader.
 
+\begin{comment}
+
 Conversely, given an object $U$ of $\C$ and a set $\cc E$ of morphisms in $\C^\wedge$ satisfying LE1-LE4, put
 $$
 \Gamma_U:=\{S\in\Sigma_U|(A_S\to U)\in\cc E\}.
@@ -6013,10 +6011,14 @@ $$
 Let us check that $(\Gamma_U)_{U\in\C}=:\Gamma(\cc E)$ satisfies GT1-GT4.
 
 GT1 follows from LE1 and GT2 follows from LE3. If $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
-$$
+%
+\begin{equation}\label{asuv}
 A_{S\times_UV}=A_S\times_UV.
-$$ 
+\end{equation}
+%
 In view of LE4, this implies GT3. Let us prove GT4. 
+
+%\end{comment}
 
 We assume 
 $$
@@ -6026,7 +6028,7 @@ and we must check that $S'$ is in $\Gamma_U$, or, equivalently, that $A_{S'}\to 
 
 \nn Claim: $S\subset\cc E$. 
 
-\nn Proof of the claim: Let $s$ be in $S$, let $V$ be in $\C$, and let $\pp:A_S(V)\to\Hom_{\C^\wedge}(V,A_S)$ be the bijection given by the Yoneda Lemma (see Theorem~\ref{yol} p.~\pageref{yol}). One easily checks that $\pp(s)$ is an epimorphism and that the diagram 
+\nn Proof of the claim: Let $s:V\to U$ be in $S$ and let $\pp:A_S(V)\to\Hom_{\C^\wedge}(V,A_S)$ be the bijection given by the Yoneda Lemma (see Theorem~\ref{yol} p.~\pageref{yol}). One easily checks that $\pp(s)$ is an epimorphism [???] and that the diagram 
 $$
 \begin{tikzcd}
 V\ar[two heads]{r}{\pp(s)}\ar{rd}[swap]{s}&A_S\ar[hook]{d}\\ 
@@ -6035,7 +6037,7 @@ V\ar[two heads]{r}{\pp(s)}\ar{rd}[swap]{s}&A_S\ar[hook]{d}\\
 $$ 
 commutes. Moreover, $\pp(s)$ is in $\cc E$, because, as recalled above, $\cc E$ contains all epimorphisms, and $A_S\incl U$ is in $\cc E$ by assumption. Now LE2 implies that $s$ is in $\cc E$, and the claim is proved. 
 
-If $S=\varnothing$, then $S'$ is in $\Gamma_U$ by GT2. Otherwise, let $V\to U$ be in $S$, let $B$ be the subobject $A_{S'\times_UV}=A_{S'}\times_UV$ of $V$ in $\C^\wedge$, and consider the commutative diagram 
+If $S=\varnothing$, then $S'$ is in $\Gamma_U$ by GT2. Otherwise, let $V\to U$ be in $S$, let $B$ be the subobject $A_{S'\times_UV}=A_{S'}\times_UV$ (see \eqref{asuv}) of $V$ in $\C^\wedge$, and consider the cartesian square 
 $$
 \begin{tikzcd}
 B\ar{r}\ar{d}&V\ar{d}\\ 
