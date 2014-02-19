@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0088)
+% about "categories and sheaves" (version_0089)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -18,7 +18,7 @@
 %%\usepackage{showlabels}
 %\usepackage{showkeys}
 \makeindex
-\pagestyle{fancy}
+\pagestyle{fancy}%\pagestyle{empty}
 \newtheorem{thm}{Theorem}%\newtheorem{mt}[thm]{Metatheorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
@@ -6022,7 +6022,7 @@ S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S,
 $$ 
 and we must check that $S'$ is in $\Gamma_U$, or, equivalently, that $A_{S'}\to U$ is in $\cc E$. 
 
-Claim: Let $s:V\to U$ be a morphism in $\C$. Then $s\in S$ if and only if $s$ factors through the natural morphism $A_S\to U$.
+Claim: Let $s:V\to U$ be a morphism in $\C$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $A_S\to U$.
 
 This follows from the Yoneda Lemma (the details are left to the reader). 
 
@@ -6037,14 +6037,14 @@ As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE3, to check that $B
 $$
 \begin{tikzcd}
 C\ar{r}\ar{d}&V\ar{d}\\ 
-B\ar{r}&A_S.
+B\ar{r}&A_S
 \end{tikzcd}
 $$ 
 be a cartesian square. It is enough to verify that $C\to V$ is in $\cc E$. The square 
 $$
 \begin{tikzcd}
 C\ar{r}\ar{d}&V\ar{d}\\ 
-A_{S'}\ar{r}&U.
+A_{S'}\ar{r}&U
 \end{tikzcd}
 $$ 
 being cartesian, and $V\to U$ being in $S$ by the claim, $C\to V$ is in $\cc E$ by assumption. q.e.d.
