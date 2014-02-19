@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0087)
+% about "categories and sheaves" (version_0088)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5978,7 +5978,7 @@ As proved in the book, $\cc E$ contains all epimorphisms.
 
 The elements of $\cc E$ are called \textbf{local epimorphisms}. %\index{local epimorphism}
 
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and let $\cc E$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
+Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and let $\cc E=\cc E(\Gamma)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
 
 Let us check that $\cc E$ satisfies LE1-LE4:
 
@@ -5996,19 +5996,17 @@ in $\C^\wedge$ (with $U$ in $\C$). We have $S_E\in\Gamma_U$ (because $B\to C$ is
 
 \nn LE3 follows immediately from GT2.
 
-\nn LE4 results easily form the following observation: In the setting $A\to U\leftarrow V$ (obvious notation), we have 
+\nn LE4 results easily from the following observation: In the setting $A\to U\leftarrow V$ (obvious notation), we have 
 $$
 S_{A\times_UV}=S_A\times_UV.
 $$
 The details are left to the reader.
 
-\begin{comment}
-
 Conversely, given an object $U$ of $\C$ and a set $\cc E$ of morphisms in $\C^\wedge$ satisfying LE1-LE4, put
 $$
 \Gamma_U:=\{S\in\Sigma_U|(A_S\to U)\in\cc E\}.
 $$
-Let us check that $(\Gamma_U)_{U\in\C}=:\Gamma(\cc E)$ satisfies GT1-GT4.
+Let us check that $\Gamma(\cc E):=(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
 
 GT1 follows from LE1 and GT2 follows from LE3. If $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
 %
@@ -6018,15 +6016,40 @@ A_{S\times_UV}=A_S\times_UV.
 %
 In view of LE4, this implies GT3. Let us prove GT4. 
 
-%\end{comment}
-
 We assume 
 $$
 S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S,
 $$ 
 and we must check that $S'$ is in $\Gamma_U$, or, equivalently, that $A_{S'}\to U$ is in $\cc E$. 
 
-\nn Claim: $S\subset\cc E$. 
+Claim: Let $s:V\to U$ be a morphism in $\C$. Then $s\in S$ if and only if $s$ factors through the natural morphism $A_S\to U$.
+
+This follows from the Yoneda Lemma (the details are left to the reader). 
+
+Form the cartesian square 
+$$
+\begin{tikzcd}
+B\ar{r}\ar{d}&A_S\ar{d}\\ 
+A_{S'}\ar{r}&U.
+\end{tikzcd}
+$$ 
+As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE3, to check that $B\to A_S$ is in $\cc E$. Let $V\to A_S$ be a morphism in $\C^\wedge$ with $V$ in $\C$, and let 
+$$
+\begin{tikzcd}
+C\ar{r}\ar{d}&V\ar{d}\\ 
+B\ar{r}&A_S.
+\end{tikzcd}
+$$ 
+be a cartesian square. It is enough to verify that $C\to V$ is in $\cc E$. The square 
+$$
+\begin{tikzcd}
+C\ar{r}\ar{d}&V\ar{d}\\ 
+A_{S'}\ar{r}&U.
+\end{tikzcd}
+$$ 
+being cartesian, and $V\to U$ being in $S$ by the claim, $C\to V$ is in $\cc E$ by assumption. q.e.d.
+
+\begin{comment}
 
 \nn Proof of the claim: Let $s:V\to U$ be in $S$ and let $\pp:A_S(V)\to\Hom_{\C^\wedge}(V,A_S)$ be the bijection given by the Yoneda Lemma (see Theorem~\ref{yol} p.~\pageref{yol}). One easily checks that $\pp(s)$ is an epimorphism [???] and that the diagram 
 $$
@@ -6046,11 +6069,11 @@ A_{S'}\ar{r}&U.
 $$ 
 Then $B\to V$ is in $\cc E$ because $S'\times_UV$ is in $\Gamma_V$ by assumption, $V\to U$ is in $\cc E$ by the claim, and $A_{S'}\to U$ is in $\cc E$ by LE2 and LE3. 
 
+\end{comment}
+
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
 
-It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent. 
-
-\end{comment}
+It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
 
 %%
 
