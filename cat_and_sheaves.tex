@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0090)
+% about "categories and sheaves" (version_0091)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -469,7 +469,7 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \noindent $*$ P. 401, Line 6: $B''\to B$ should be $B''\to B'$.
 
-\nn $*$ P. 406, first line of second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
+\nn $*$ P. 406, first line of the second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
 %\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
 
@@ -1094,7 +1094,7 @@ If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an o
 \end{lem}
 %
 \begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(S))$ be a universal element for the functor $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$ (see Definition~\ref{ue} p.~\pageref{ue}), so that, by , $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
+Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(S))$ be a universal element for the functor $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$ (see Definition~\ref{ue} p.~\pageref{ue}), so that $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
 $$
 \Hom_\C(S,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
@@ -6188,14 +6188,14 @@ $$
 depends functorially on $U\in\C$.
 \end{s}
 
-%%
+%
 
 \begin{s} 
 P. 400, proof of Lemma 16.3.1 (additional details): 
 
 For $(B\xr s U)\in\mc{LI}_U$ let 
 $$
-i(s):\Hom_{\C^\wedge}(B,A)\to A^a(U)
+i(s):\Hom_{\C^\wedge}(B,A)\to A^a(U)\simeq\co_{(B\to U)\in\cc{LI}_U}\Hom_{\C^\wedge}(B,A)
 $$ 
 be the coprojection. We start with the diagram 
 $$
@@ -6243,11 +6243,11 @@ The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the botto
 \begin{s} 
 P. 400, Step (ii) in the proof of Lemma 16.3.2 (additional details):
 
-We want to prove that $A\to A^a$ is a local monomorphism. In view of \eqref{e1623} p.~\pageref{e1623} it suffices to check that Condition~(b) of \S\ref{s1623} p.~\pageref{s1623} holds. Consider the functor 
+We want to prove that $A\to A^a$ is a local monomorphism. In view of \eqref{e1623} p.~\pageref{e1623} it suffices to check that Condition~(b) of \S\ref{s1623} p.~\pageref{s1623} holds. The functor 
 $$
-\alpha:(\cc{LI}_U)^{\op}\to\Set,\quad(B\xr sU)\mapsto\Hom_{\C^\wedge}(B,A),
+\alpha:(\cc{LI}_U)^{\op}\to\Set,\quad(B\xr sU)\mapsto\Hom_{\C^\wedge}(B,A)
 $$ 
-so that $A^a(U)\simeq\co\alpha$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By the definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73, there is a morphism 
+satisfies $A^a(U)\simeq\co\alpha$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of the book, there is a morphism 
 $$
 \varphi:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
@@ -6263,10 +6263,10 @@ in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This means
 
 \section{About Chapter 17}
 
-\begin{s}%\label{revol}
+\begin{s}
 P. 405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
 
-If $f:X\to Y$ is a morphism of presites \index{morphism of presites}, then we keep the notation $f^t$ for the functor from $\C_Y$ to $\C_X$, and we designate by $f^\tau$ \index{$f^\tau$} the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$:
+If $f:X\to Y$ is a morphism of presites, \index{morphism of presites} then we keep the notation $f^t$ for the functor from $\C_Y$ to $\C_X$, and we designate by $f^\tau$ \index{$f^\tau$} the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$:
 \begin{equation}\label{ttau}
 f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
 \end{equation}
@@ -6294,14 +6294,14 @@ $$
 %
 
 \begin{s}\label{fhat}
-P. 406, Chapter 17. Recall that, in the first line of second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
+P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
 %
 \begin{equation*}
 \begin{split}
-(f^\tau)\ \widehat{}\ (B)(U)&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X^{\op}}(U,f^\tau(V))
+(f^\tau)\ \widehat{}\ (B)(U)&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{(\C_X)^{\op}}(U,f^\tau(V))
 \\ \\ 
 {}&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^t(V),U)\\ \\ 
-{}&\simeq\co_{(U\to f^\tau(V))\in(\C_Y^{\op})^U}B(V).
+{}&\simeq\co_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}B(V).
 \end{split}
 \end{equation*}
 %
