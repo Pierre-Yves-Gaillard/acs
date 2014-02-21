@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0093)
+% about "categories and sheaves" (version_0094)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -72,14 +72,14 @@
 %
 % LIMITS
 % old
-\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}}
 \newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}}
 \newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}}
 % new
-\DeclareMathOperator*{\coli}{colim}
-\DeclareMathOperator*{\co}{colim}
-\DeclareMathOperator*{\icolim}{``\coli"}
-\DeclareMathOperator*{\ic}{``\coli"}
+\DeclareMathOperator*{\colim}{colim}
+%\DeclareMathOperator*{\coli}{colim}
+\DeclareMathOperator*{\col}{colim}
+\DeclareMathOperator*{\icolim}{``\colim"}
+\DeclareMathOperator*{\ic}{``\colim"}
 %
 \DeclareMathOperator{\Ad}{Add}
 \DeclareMathOperator{\card}{card}%\DeclareMathOperator{\ca}{card}
@@ -176,7 +176,7 @@ We adhere to Bourbaki's set theory.
 
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. 
 
-Following a suggestion of Pierre Schapira's, we shall denote projective limits by $\lim$ instead of $\plim$, and inductive limits by $\coli$ instead of $\ilim$. 
+Following a suggestion of Pierre Schapira's, we shall denote projective limits by $\lim$ instead of $\plim$, and inductive limits by $\colim$ instead of $\ilim$. 
 
 Thank you to Pierre Schapira for his interest!
 
@@ -222,7 +222,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 \noindent $*$ P.~18, Definition 1.2.16. The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
 %
 \begin{equation}\label{convnot}
-\coli_{X\in\C_{X'}}G(X).
+\colim_{X\in\C_{X'}}G(X).
 \end{equation}
 %
 There is a similar remark for projective limits. 
@@ -255,7 +255,7 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\varphi$.
 
-\noindent $*$ P.~80, last display: a ``$\displaystyle\colim$'' is missing.
+\noindent $*$ P.~80, last display: a ``$\displaystyle\ilim$'' is missing.
 
 \noindent $*$ Pp 83 and 85: Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. Proof of Proposition 3.3.7 (iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
 
@@ -296,7 +296,7 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \noindent $*$ P.~132, Corollary 6.1.6: The following fact is implicit. Let $\C\xrightarrow{F}\C'\xrightarrow{G}\C''$ be functors, let $X'$ be in $\C'$, and assume that $G$ is fully faithful. Then the functor $\C_{X'}\to\C_{G(X')}$ induced by $G$ is an isomorphism.
 
-\noindent $*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xrightarrow{\alpha}\C\xrightarrow{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\simeq\coli F(\alpha)$. Then $X\simeq\coli\alpha$. The proof is obvious.
+\noindent $*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xrightarrow{\alpha}\C\xrightarrow{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\simeq\colim F(\alpha)$. Then $X\simeq\colim\alpha$. The proof is obvious.
 
 \noindent $*$ P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.''
 
@@ -1012,7 +1012,7 @@ $$
 \subsection{Brief Comments}
 
 \begin{s}\label{c38}
-P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\co\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\co\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly:%\medskip 
+P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\colim\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\colim\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly:%\medskip 
 %
 \begin{center}\href{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}
 \end{center}
@@ -1035,23 +1035,23 @@ g\sqcup_fg,
 $$ 
 taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$; see Definition~\ref{c} p.~\pageref{c}). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~39, Proposition 2.1.7. The following slightly stronger statement holds, statement independent of the Universes Axiom. Let $I, J, \C$ be categories and let 
 $$
 (X_{ij})_{(i,j)\in I\times J}
 $$ 
-be an inductive system in $\C$. Assume that $\coli_jX_{ij}$ exists in $\C$ for all $i$, and that 
+be an inductive system in $\C$. Assume that $\colim_jX_{ij}$ exists in $\C$ for all $i$, and that 
 \begin{equation}\label{limlim}
-\coli_i\coli_jX_{ij}
+\colim_i\colim_jX_{ij}
 \end{equation}
-exists in $\C$. Then $\coli_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\ref{limlim}).
+exists in $\C$. Then $\colim_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\ref{limlim}).
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~40, Proposition 2.1.10. Here is a slightly more general statement. 
 %
@@ -1073,13 +1073,13 @@ in $\A^\wedge$. Then $F$ commutes with inductive limits indexed by $I$.
 \begin{proof}
 We have for any $Y\in\B$ 
 $$ 
-\Hom_\B\left(F\left(\coli\alpha\right),Y\right)\simeq
-\Hom_\C\left(G\left(\coli\alpha\right),Z\right)
+\Hom_\B\left(F\left(\colim\alpha\right),Y\right)\simeq
+\Hom_\C\left(G\left(\colim\alpha\right),Z\right)
 \xr\sim
-\Hom_\C\left(\coli G(\alpha),Z\right)
+\Hom_\C\left(\colim G(\alpha),Z\right)
 $$
 $$
-\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\co F(\alpha),Y)
+\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\colim F(\alpha),Y)
 $$
 \end{proof}
 \end{s}
@@ -1090,7 +1090,7 @@ $$
 P.~40, proof of Lemma 2.1.11 (minor variant).
 %
 \begin{lem}\label{l2111}
-If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an object of $\C$ representing $\coli\alpha$, then $S$ is terminal. Conversely, if $S$ is terminal, then it is an inductive limit of the identity functor.
+If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an object of $\C$ representing $\colim\alpha$, then $S$ is terminal. Conversely, if $S$ is terminal, then it is an inductive limit of the identity functor.
 \end{lem}
 %
 \begin{proof}
@@ -1187,7 +1187,7 @@ P.~52, Theorem 2.3.3 (i) (minor variant). Let $I\xleftarrow\pp J\xr\beta\C$ be f
 If 
 %
 \begin{equation}\label{e233}
-\co_{(\pp(j)\to i))\in J_i}\beta(j)
+\colim_{(\pp(j)\to i))\in J_i}\beta(j)
 \end{equation}
 %
 exists in $\C$ for all $i$ in $I$, then $\pp^\dagger\beta$ exists, and $(\pp^\dagger\beta)(i)$ is isomorphic to \eqref{e233}. If, in addition, \eqref{e233} exists universally in the sense of Definition~\ref{uil} p.~\pageref{uil}, then $\pp^\dagger\beta$ exists universally in the sense of Definition~\ref{232}. 
@@ -1203,12 +1203,12 @@ Recall the statement:
 \begin{thm}[Theorem 2.3.3 (i) p.~52]\label{233i}
 Let $I\xleftarrow\varphi J\xr\beta\C$ be functors. Assume that 
 $$
-\co_{(\varphi(j)\to i)\in J_i}\beta(j)
+\colim_{(\varphi(j)\to i)\in J_i}\beta(j)
 $$ 
 exists in $\C$ for all $i$ in $I$. Then $\varphi^\dagger(\beta)$ exists and we have 
 
 \begin{equation}\label{236}
-\varphi^\dagger(\beta)(i)\simeq\co_{(\varphi(j)\to i)\in J_i}\beta(j)
+\varphi^\dagger(\beta)(i)\simeq\colim_{(\varphi(j)\to i)\in J_i}\beta(j)
 \end{equation} 
 
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
@@ -1225,15 +1225,15 @@ We define $\varphi^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to
 Let $I$ and $J$ be in the category $\Cat$ of small categories (see Definition~\ref{small} p.~\pageref{small}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
 
 \begin{equation}\label{52} 
-(\co\theta)(i):=\co(\theta_i)\in J\quad\forall\ i\in I. 
+(\colim\theta)(i):=\colim(\theta_i)\in J\quad\forall\ i\in I. 
 \end{equation} 
 %
-For any morphism $s:i\to i'$ in $I$, let $(\co\theta)(s)$ be the natural morphism 
+For any morphism $s:i\to i'$ in $I$, let $(\colim\theta)(s)$ be the natural morphism 
 $$
-(\co\theta)(i)=\co(\theta_{i'}\circ\Phi(s))\to
-\co\theta_{i'}=(\co\theta)(i'). 
+(\colim\theta)(i)=\colim(\theta_{i'}\circ\Phi(s))\to
+\colim\theta_{i'}=(\colim\theta)(i'). 
 $$ 
-Then $\co\theta$ is a functor from $I$ to $J$. 
+Then $\colim\theta$ is a functor from $I$ to $J$. 
 %
 \end{lem}
 %
@@ -1245,7 +1245,7 @@ I\ar{rr}[swap]{J}&{}&\Cat&J.
 \end{tikzcd}
 $$
 
-We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\co\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
+We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\colim\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
 %
 \subsubsection{Step (b)}
 %
@@ -1360,7 +1360,7 @@ u:\varphi_*(\varphi^\dagger(\alpha))\to\alpha,
 $$
 and leave it to the reader to verify that $f(\id_{\varphi_*(\varphi^\dagger(\alpha))})$ and $u$ are inverse isomorphisms. As 
 $$ 
-(\varphi_*(\varphi^\dagger(\alpha)))(j):=\varphi^\dagger(\alpha)(\varphi(j)):=\coli_{\varphi(j')\to\varphi(j)}\alpha(j'),
+(\varphi_*(\varphi^\dagger(\alpha)))(j):=\varphi^\dagger(\alpha)(\varphi(j)):=\colim_{\varphi(j')\to\varphi(j)}\alpha(j'),
 $$
 we must define 
 $$
@@ -1388,7 +1388,7 @@ $$
 \begin{proof}
 Recall that Theorem~\ref{233i} states the existence of an isomorphism 
 $$
-\varphi^\dagger(\beta)(i)\simeq\co_{(\varphi(j)\to i)\in J_i}\beta(j).
+\varphi^\dagger(\beta)(i)\simeq\colim_{(\varphi(j)\to i)\in J_i}\beta(j).
 $$
 By Proposition 2.4.1 p.~54 of the book, the right-hand side is, in a natural way, the quotient of 
 $$
@@ -1405,19 +1405,19 @@ and it easy to see that the three data of the above bijection, of the equivalenc
 
 \subsection{Brief Comments}
 
-\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Section~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$, where $I$ and $J$ are small. One can prove $\co\beta\simeq\co\varphi^\dagger\beta$, that is 
+\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Section~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$, where $I$ and $J$ are small. One can prove $\colim\beta\simeq\colim\varphi^\dagger\beta$, that is 
 %
 \begin{equation}\label{coco}
-\co_j\beta(j)\simeq\co_i\ \co_{j,u}\beta(j),
+\colim_j\beta(j)\simeq\colim_i\ \colim_{j,u}\beta(j),
 \end{equation} 
 %
 where $(j,u)$ runs over $J_i$, with $u:\varphi(j)\to i$, as follows: Let $L$ and $R$ be the left and right-hand sides of \eqref{coco}, let $f:R\to L$ be the obvious map, and let
 $$ 
-\beta(j)\xrightarrow{p_{i,j,u}}\co_{j,u}\beta(j)\xrightarrow{q_i}\co_i\ \co_{j,u}\beta(j)
+\beta(j)\xrightarrow{p_{i,j,u}}\colim_{j,u}\beta(j)\xrightarrow{q_i}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
 be the coprojections (see Definition~\ref{c} p.~\pageref{c}). We easily check that the compositions 
 $$
-\beta(j)\xrightarrow{p_{\varphi(j),j,\id_{\varphi(j)}}}\co_{j,u}\beta(j)\xrightarrow{q_{\varphi(j)}}\co_i\ \co_{j,u}\beta(j)
+\beta(j)\xrightarrow{p_{\varphi(j),j,\id_{\varphi(j)}}}\colim_{j,u}\beta(j)\xrightarrow{q_{\varphi(j)}}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
 induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 \end{s}
@@ -1430,7 +1430,7 @@ P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 \begin{prop}\label{244}
 If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
 $$
-\coli\Delta(S)\simeq\pi_0(I)\times S.
+\colim\Delta(S)\simeq\pi_0(I)\times S.
 $$
 \end{prop} 
 %
@@ -1441,7 +1441,7 @@ $$
 $$
 where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54
 $$
-\coli\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
+\colim\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
 $$
 where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
 $$
@@ -1466,8 +1466,8 @@ A\in\C'\xleftarrow{F}\C\xrightarrow{G}\C''\ni B,
 we have 
 %
 \begin{equation}\label{241} 
-\coli_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq 
-\coli_{(X,a)\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B). 
+\colim_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq 
+\colim_{(X,a)\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B). 
 \end{equation} 
 %
 Here 
@@ -1495,7 +1495,7 @@ One easily checks that these maps define inverse bijections between $L$ and $R$.
 \begin{proof}[Second Proof]
 Put 
 $$
-Q_1:=\co_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X)),\quad Q_2:=\co_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B).
+Q_1:=\colim_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X)),\quad Q_2:=\colim_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B).
 $$ 
 We must prove that there is a natural bijection $Q_1\simeq Q_2$. Proposition 2.4.1 p.~54 of the book furnishes sets $S_1$ and $S_2$, and equivalence relations $R_1$ and $R_2$ on $S_1$ and $S_2$ respectively, such that $Q_i\simeq S_i/R_i$ for $i=1,2$. We shall prove that there is a natural bijection $S_1\simeq S_2$, and leave it to the reader to check that it induces a bijection $Q_1\simeq Q_2$. We have 
 $$
@@ -1527,13 +1527,13 @@ $$
 P.~56, proof of Lemma 2.4.7 (minor variant).
 
 \begin{lem} 
-If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\coli k(i_0)$ is a terminal object of $\Set$. 
+If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\colim k(i_0)$ is a terminal object of $\Set$. 
 \end{lem}
 
 \begin{proof}
 For $X\in\Set$ we have (with self-explanatory notation)
 $$
-\Hom_{\Set}\left(\coli k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
+\Hom_{\Set}\left(\colim k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
 $$
 the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pageref{yol}).
 \end{proof}
@@ -1547,7 +1547,7 @@ P.~58, implication (vi) $\then$ (i) of Proposition 2.5.2. Here is a slightly str
 \begin{prop} 
 If $\varphi:J\to I$ is a functor, then the obvious map
 \begin{equation}\label{om}
-L_i:=\coli\Hom_I(i,\varphi)\to\pi_0(J^i)
+L_i:=\colim\Hom_I(i,\varphi)\to\pi_0(J^i)
 \end{equation}
 is bijective. 
 \end{prop}
@@ -1577,7 +1577,7 @@ This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\
 \end{equation} 
 
 \begin{equation}\label{263b}
-\co_{X\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
+\colim_{X\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
 \end{equation}
 
 \begin{equation}\label{263c}
@@ -1629,7 +1629,7 @@ P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a u
 Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$.
 
 \begin{df}\label{uil}
-If the natural map $\co\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\co\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
+If the natural map $\colim\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\colim\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
 \end{df}
 
 \begin{prop}[Proposition 2.6.4 p. 61]%\label{puil}
@@ -1637,11 +1637,11 @@ The following conditions are equivalent (recall that no universe is given {\em a
 
 \nn{\em(a)} $X$ is a universal inductive limit of $\alpha$,
 
-\nn{\em(b)} $\co h_\U\circ\alpha\simeq h_\U(X)$ for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
+\nn{\em(b)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
 
-\nn{\em(c)} $\co h_\U\circ\alpha\simeq h_\U(X)$ for all universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
+\nn{\em(c)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for all universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
 
-\nn{\em(d)} $\co F\circ\alpha\simeq F(X)$ for all functor $F:\C\to\C'$. 
+\nn{\em(d)} $\colim F\circ\alpha\simeq F(X)$ for all functor $F:\C\to\C'$. 
 \end{prop}
 
 \begin{proof} The implications (a) $\ssi$ (b) $\ssi$ (c) $\si$ (d) are clear. To prove (c) $\then$ (d), we choose a universe $\U$ such that $I$ is $\U$-small, and $\C$ and $\C'$ are $\U$-categories, and we note
@@ -1666,9 +1666,9 @@ $$
 $$
 where $I$ is a small category and $\widetilde F$ is defined by 
 $$
-\widetilde F(A):=\coli_{X\in\C_A}F(X). 
+\widetilde F(A):=\colim_{X\in\C_A}F(X). 
 $$
-(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Let us rewrite the proof of the fact that the natural morphism $\coli\widetilde F(\alpha)\to\widetilde F\left(\coli\alpha\right)$ is an isomorphism. 
+(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
 
 By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
@@ -1677,7 +1677,7 @@ $$
 is right adjoint to $\widetilde F$. This results from the following computation: 
 $$
 \Hom_{\A}\left(\widetilde F(A),X'\right)=
-\Hom_{\A}\left(\coli_{X\in\C_A}F(X),X'\right)\simeq 
+\Hom_{\A}\left(\colim_{X\in\C_A}F(X),X'\right)\simeq 
 \lim_{X\in\C_A}\Hom_{\A}(F(X),X')
 $$
 $$
@@ -1691,7 +1691,7 @@ the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \begin{s} 
 P.~63, Notation 2.7.2. Recall the $F:\C\to\C'$ is a functor of small categories. The formula 
 $$
-\widehat F(A)(V)=\coli_{U\in\C_A}\Hom_{\C'}(V,F(U))
+\widehat F(A)(V)=\colim_{U\in\C_A}\Hom_{\C'}(V,F(U))
 $$
 may also be written as 
 $$
@@ -1716,10 +1716,10 @@ If $F$ is fully faithful, then there is an isomorphism $\widehat F(A)\circ F\xr\
 \begin{proof}
 We have 
 $$
-\widehat F(A)(F(X))=\coli_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
+\widehat F(A)(F(X))=\colim_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
 $$
 $$
-\simeq\coli_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
+\simeq\colim_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
 $$
 the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \end{proof}
@@ -1730,8 +1730,8 @@ the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \begin{s} 
 P.~64. It might be worth displaying the formula 
 \begin{equation}\label{275}
-\widehat F(A)(X')\simeq\co_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\simeq
-\co_{(X'\to F(X))\in\C^{X'}}A(X)
+\widehat F(A)(X')\simeq\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\simeq
+\colim_{(X'\to F(X))\in\C^{X'}}A(X)
 \end{equation}
 contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
 \end{s}
@@ -1743,7 +1743,7 @@ P.~64, end of Chapter 2. One could add the following observation (which will be 
 \begin{equation}\label{1725}
 \widehat F(B)(X)\simeq A(X).
 \end{equation}
-Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\co\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\co\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
+Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
 \end{s}
 
 %
@@ -1817,9 +1817,9 @@ P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor 
 \begin{lem} 
 Let $\alpha$ and $\beta$ be functors from $I$ to $\Set$, where $I$ is a small filtrant category; let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i\in I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
 $$
-a_i:\alpha(i)\to X:=\coli\alpha,\quad 
-b_i:\beta(i)\to Y:=\coli\beta,\quad 
-c_i:\gamma(i)\to Z:=\coli\gamma
+a_i:\alpha(i)\to X:=\colim\alpha,\quad 
+b_i:\beta(i)\to Y:=\colim\beta,\quad 
+c_i:\gamma(i)\to Z:=\colim\gamma
 $$ 
 be the coprojections (see Definition~\ref{c} p.~\pageref{c}); let $F,G:X\to Y$ be the obvious maps; and let $U\subset X$ be the kernel of $(F,G)$. Then the natural map $\lambda:Z\to U$ is bijective.
 \end{lem}
@@ -1847,19 +1847,19 @@ commutes, $a$ being the natural map. Let $(i,x)$ be in $a^{-1}(U)$, with $x$ in 
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
 %
 \begin{cor}\label{316}
-Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\alpha:I\times J^{\op}\to\Set$ a functor such that $\coli_i\alpha(i,j)$ exists in $\Set$ for all $j$. Then $\coli_i\lim_j\alpha(i,j)$ exists in $\Set$, and the natural map 
+Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\alpha:I\times J^{\op}\to\Set$ a functor such that $\colim_i\alpha(i,j)$ exists in $\Set$ for all $j$. Then $\colim_i\lim_j\alpha(i,j)$ exists in $\Set$, and the natural map 
 $$
-\coli_i\lim_j\alpha(i,j)\to
-\lim_j\coli_i\alpha(i,j)
+\colim_i\lim_j\alpha(i,j)\to
+\lim_j\colim_i\alpha(i,j)
 $$ 
 is bijective. 
 \end{cor}
 %
 This corollary is implicitly used in the proof of Proposition 3.3.13 p.~84.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~75, Proposition 3.1.8 (i). In the proof of Proposition 3.3.15 p.~85, a slightly stronger result is needed (see \S\ref{3315} p.~\pageref{3315}). We state and prove this stronger result. 
 %
@@ -1878,43 +1878,43 @@ be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious 
 \begin{proof}
 Pick a universe making $I,J,K$, and $L$ small, and let $\alpha:I\to\Set$ be a functor. We have the following five bijections:
 $$
-\coli\ \alpha\circ\varphi\ \simeq\ 
+\colim\ \alpha\circ\varphi\ \simeq\ 
 %
-\coli_{\ell\in L}\ \coli_{\theta(\varphi(j))\to\ell}\ \alpha(\varphi(j))\ \simeq\ 
+\colim_{\ell\in L}\ \colim_{\theta(\varphi(j))\to\ell}\ \alpha(\varphi(j))\ \simeq\ 
 %
-\coli_{k\in K}\ \coli_{\theta(\varphi(j))\to\psi(k)}\ \alpha(\varphi(j))
+\colim_{k\in K}\ \colim_{\theta(\varphi(j))\to\psi(k)}\ \alpha(\varphi(j))
 $$
 $$
-\ \simeq\ \coli_{k\in K}\ \coli_{\theta(i)\to\psi(k)}\ \alpha(i)\ \simeq\ 
+\ \simeq\ \colim_{k\in K}\ \colim_{\theta(i)\to\psi(k)}\ \alpha(i)\ \simeq\ 
 %
-\coli_{\ell\in L}\ \coli_{\theta(i)\to\ell}\ \alpha(i)\ \simeq\ 
+\colim_{\ell\in L}\ \colim_{\theta(i)\to\ell}\ \alpha(i)\ \simeq\ 
 %
-\coli\ \alpha.
+\colim\ \alpha.
 $$
 Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco}, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\varphi_k$. In view of Proposition 2.5.2 p.~57, this proves the claim.
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s}\label{cipc}
 P.~75. Throughout the subsection about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136.
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~78, Proposition 3.2.2. It is easy to see that Condition (iii) is equivalent to
 %
 \begin{equation}\label{78} 
-\co\ \Hom_I(i,\varphi)\simeq\pt\quad\text{for all }i\in I, 
+\colim\ \Hom_I(i,\varphi)\simeq\pt\quad\text{for all }i\in I, 
 \end{equation} 
 %
 which is Condition (vi) in Proposition 2.5.2 p.~57 of the book. (Proposition 2.5.2 states, among other things, that \eqref{78} is equivalent to the cofinality of $\varphi$.)
 \end{s}
+
 %
-%%%%
-%
+
 \begin{s} 
 P.~80. Propositions 3.2.4 and 3.2.6 can be combined as follows. 
 
@@ -1926,23 +1926,23 @@ Let $\varphi:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinall
 In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By Proposition 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\varphi(j_s)$ with $j_s\in J$. Then, for each $j$ in $J$ there are morphisms $\varphi(j)\to s\to\varphi(j_s)$ with $s$ in $S$. As $\varphi$ is full there is a morphism $j\to j_s$, and we conclude by using again Proposition 3.2.6.
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
-P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\displaystyle\colim$'' is missing in the last display. Recall the statement:
+P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\displaystyle\ilim$'' is missing in the last display. Recall the statement:
 \begin{lem}
 Let $I$ be a small ordered set, $\alpha:I\to\C$ a functor. Let $\cc J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J\in\cc J$, associate the restriction $\alpha_J:\cc J\to\C$ of $\alpha$ to $\cc J$. Then $\cc J$ is small and filtrant and moreover
 $$
-\co\alpha\simeq\co_{J\in\cc J}\co\alpha_J.
+\colim\alpha\simeq\colim_{J\in\cc J}\colim\alpha_J.
 $$
 \end{lem}
 \begin{proof}
 Put
 $$
-A:=\coli\alpha,\quad
-\beta_J:=\coli\alpha_J,\quad
-B:=\coli\beta.
+A:=\colim\alpha,\quad
+\beta_J:=\colim\alpha_J,\quad
+B:=\colim\beta.
 $$
 Let 
 $$
@@ -1961,21 +1961,21 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}
 \noindent$\bu$ $f$ and $g$ are inverse isomorphisms.
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
 %
 \begin{prop} 
 %
-Consider functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\co\alpha$ exists in $\C$. Then $\co(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\co(F\circ\alpha)\to\co\alpha$ is an isomorphism. 
+Consider functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\colim\alpha$ exists in $\C$. Then $\colim(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\colim(F\circ\alpha)\to\colim\alpha$ is an isomorphism. 
 %
 \end{prop} 
 %
 \begin{proof}
 Let $X'$ be in $\C'$. It suffices to show that the natural map 
 $$
-\Hom_{\C'}(F(\co\alpha),X')\to\lim\Hom_{\C'}(F(\alpha),X')
+\Hom_{\C'}(F(\colim\alpha),X')\to\lim\Hom_{\C'}(F(\alpha),X')
 $$ 
 %
 is bijective. Replacing Setting (\ref{241s}) p.~\pageref{241s} with 
@@ -1985,15 +1985,15 @@ $$
 Isomorphism (\ref{241}) p.~\pageref{241} gives 
 %
 \begin{equation}\label{332} 
-\co_{X\in\C_{X'}}\Hom_\C(Y,X)\simeq\co_{X\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X').
+\colim_{X\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{X\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X').
 \end{equation} 
 %
 We have bijections 
 $$ 
-\Hom_{\C'}(F(\co\alpha),X')\simeq\co_{X\in\C_{X'}}\Hom_\C(\co\alpha,X)\xr\sim\co_{X\in\C_{X'}}\lim\Hom_\C(\alpha,X) 
+\Hom_{\C'}(F(\colim\alpha),X')\simeq\colim_{X\in\C_{X'}}\Hom_\C(\colim\alpha,X)\xr\sim\colim_{X\in\C_{X'}}\lim\Hom_\C(\alpha,X) 
 $$ 
 $$
-\xr\sim\lim\co_{X\in\C_{X'}}\Hom_\C(\alpha,X)\simeq\lim\Hom_{\C'}(F(\alpha),X'). 
+\xr\sim\lim\colim_{X\in\C_{X'}}\Hom_\C(\alpha,X)\simeq\lim\Hom_{\C'}(F(\alpha),X'). 
 $$ 
 The first and last bijections follow from \eqref{332}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
 \end{proof}
@@ -2010,12 +2010,12 @@ Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^
 
 We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
 
-By Proposition 3.3.3 p.~82 of the book, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\co_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
+By Proposition 3.3.3 p.~82 of the book, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\colim_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
 $$
 \begin{tikzcd}
-\co_Y\Hom_\C(\co_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\co_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
-{}&\lim_i\co_Y\Hom_\C(X_i,Y)\ar{d}{c}\\ 
-A(\co_iX_i)\ar{r}[swap]{e}&\lim_iA(X_i).
+\colim_Y\Hom_\C(\colim_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\colim_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
+{}&\lim_i\colim_Y\Hom_\C(X_i,Y)\ar{d}{c}\\ 
+A(\colim_iX_i)\ar{r}[swap]{e}&\lim_iA(X_i).
 \end{tikzcd}
 $$ 
 The maps $a,b,c,$ and $d$ are bijective for the following reasons: obviously for $a$, because of \eqref{263b} p.~\pageref{263b} for $c$ and $d$, and by Theorem 3.1.6 p.~74 of the book for $b$. Thus $e$ is also bijective.
@@ -2037,7 +2037,7 @@ This section is divided into two parts. In Part 1 we give a proof of Proposition
 
 The statement is phrased as follows: 
 
-``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\co\alpha\simeq\co_{j\in J}\co_{i\in I_{\psi(j)}}\alpha(i,j,\varphi(i)\to\psi(j))$.'' 
+``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\colim\alpha\simeq\colim_{j\in J}\colim_{i\in I_{\psi(j)}}\alpha(i,j,\varphi(i)\to\psi(j))$.'' 
 
 One needs some assumption ensuring the existence of the indicated inductive limits. Here we shall assume that $\C$ admits inductive limits indexed by $J$ and $I_{\psi(j)}$ for all $j$ in $J$. 
 
@@ -2049,14 +2049,14 @@ is the category defined in Definition 3.4.1 p.~87 of the book. We also have a fu
 
 Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_i:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
 $$
-j\mapsto\co_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
+j\mapsto\colim_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
 $$ 
 is a functor by Lemma~\ref{r52} p.~\pageref{r52}. 
 
 Isomorphism 
 %
 \begin{equation}\label{coco2}
-\co\alpha\simeq\co_j\ \co_{i,u}\alpha(i,j,u),
+\colim\alpha\simeq\colim_j\ \colim_{i,u}\alpha(i,j,u),
 \end{equation} 
 %
 where $(i,u)$ runs over $I_{\psi(j)}$, with $u:\varphi(i)\to\psi(j)$, will result from 
@@ -2096,20 +2096,20 @@ In view of Theorem 3.1.6 p.~74 of the book, Isomorphism~\eqref{coco2} p.~\pagere
 \begin{prop}\label{cocop} 
 If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 \end{prop}
-%
-\subsubsection{Part 2}\label{2111} %
-%
+
+\subsubsection{Part 2}\label{2111}
+
 Here is another proof of \eqref{coco} p.~\pageref{coco}: In the above setting, let us assume 
 $$
 K=J,\quad\psi=\id_J,
 $$ 
 and let $\alpha:I\to\C$ be a functor. We must prove 
 $$
-\co_i\alpha(i)\simeq\co_j\ \co_{i,u}\alpha(i). 
+\colim_i\alpha(i)\simeq\colim_j\ \colim_{i,u}\alpha(i). 
 $$ 
 (Recall: $u:\varphi(i)\to j$.) In view of \eqref{coco2}, it suffices to prove that we have 
 $$
-\co_{i,j,u}\alpha(i)\simeq\co_i\alpha(i),
+\colim_{i,j,u}\alpha(i)\simeq\colim_i\alpha(i),
 $$ 
 or, in other words, that 
 %
@@ -2578,14 +2578,14 @@ P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement:
 \begin{lem}
 If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F\in\F^\wedge$ we have 
 $$
-\psi(F)\simeq\co_{Y\in\F_F}Y. 
+\psi(F)\simeq\colim_{Y\in\F_F}Y. 
 $$ 
 \end{lem} 
 
 \begin{proof}
 We have, for $X\in\C$ and $F\in\F^\wedge$, 
 $$
-\Hom_\C\left(\co_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\Hom_\C(Y,X)
+\Hom_\C\left(\colim_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\Hom_\C(Y,X)
 \simeq\lim_{Y\in\F_F}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(F,\varphi(X)),
 $$  
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
@@ -2629,7 +2629,7 @@ Proof. We may assume from the beginning that $\F$ is small.
 \noindent Step 3. Let us fix $X\in\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism
 % 
 \begin{equation}\label{step3}
-\coli_i\Coim z_i\to\Coim\left(\coli_i\zeta(z_i)\to X\right)
+\colim_i\Coim z_i\to\Coim\left(\colim_i\zeta(z_i)\to X\right)
 \end{equation}
 %
 as follows: If $z:\zeta(z)\to X$ is the inductive limit of $(\zeta(z_i)\to X)$, then \eqref{step3} is induced by the morphisms $\Coim z_{i_0}\to\Coim z$ defined by the commutative diagram 
@@ -2643,8 +2643,8 @@ We claim that \eqref{step3} is an isomorphism.
 
 \noindent Step 3'. Let $A$ be in $\F^\wedge$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wedge)_A$. We claim 
 $$
-\coli_i\Coim(B_i\to A)\xrightarrow{\sim}
-\Coim\left(\coli_iB_i\to A\right).
+\colim_i\Coim(B_i\to A)\xrightarrow{\sim}
+\Coim\left(\colim_iB_i\to A\right).
 $$
 Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$, a natural isomorphism 
 $$
@@ -2653,28 +2653,28 @@ $$
 
 \noindent Step 5. Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
 $$
-\coli_{A\in I}\varphi\zeta\xi(A)\to\varphi(X) 
+\colim_{A\in I}\varphi\zeta\xi(A)\to\varphi(X) 
 $$ 
 is an epimorphism.
 
 \noindent Step 6. We claim that there is a natural isomorphism 
 $$
-\coli_{A\in I}\Coim\xi(A)\simeq X. 
+\colim_{A\in I}\Coim\xi(A)\simeq X. 
 $$
 
 These steps imply the theorem: Indeed, we have, in the above setting, 
 %
 \begin{align*} 
 %
-\Hom_\C(X,Y)&\simeq\Hom_\C\left(\coli_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
+\Hom_\C(X,Y)&\simeq\Hom_\C\left(\colim_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
 %
 &\simeq\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
 %
 &\simeq\lim_{A\in I}\Hom_{\F^\wedge}\Big(\Coim\varphi\xi(A),\varphi(Y)\Big)&\text{by Step 4}\\ \\ 
 %
-&\simeq\Hom_{\F^\wedge}\left(\coli_{A\in I}\Coim\varphi\xi(A),\varphi(Y)\right)\\ \\ 
+&\simeq\Hom_{\F^\wedge}\left(\colim_{A\in I}\Coim\varphi\xi(A),\varphi(Y)\right)\\ \\ 
 %
-&\simeq\Hom_{\F^\wedge}\left(\Coim\left(\coli_{A\in I}\varphi\zeta\xi(A)\to\varphi(X)\right),\varphi(Y)\right)&\text{by Step 3'}\\ \\ 
+&\simeq\Hom_{\F^\wedge}\left(\Coim\left(\colim_{A\in I}\varphi\zeta\xi(A)\to\varphi(X)\right),\varphi(Y)\right)&\text{by Step 3'}\\ \\ 
 %
 &\simeq\Hom_{\F^\wedge}(\varphi(X),\varphi(Y))&\text{by Step 5.}
 %
@@ -2712,7 +2712,7 @@ $$
 $$
 Proof of Step 5. Let $Z$ be in $\F$. We must show that the natural map 
 $$
-\coli_{A\in I}\ (\varphi\zeta\xi(A))(Z)\to\varphi(X)(Z):=\Hom_\C(Z,X) 
+\colim_{A\in I}\ (\varphi\zeta\xi(A))(Z)\to\varphi(X)(Z):=\Hom_\C(Z,X) 
 $$
 is surjective. Let $z$ be in $\Hom_\C(Z,X)$. It suffices to check that $z$ is in the image of the natural map 
 $$
@@ -2722,23 +2722,23 @@ which is obvious.
 
 \noindent Proof of Step 6. As Step 3 implies 
 $$
-\coli_{A\in I}\Coim\xi(A)\simeq\Coim\left(\coli_{A\in I}\zeta\xi(A)\to X\right),
+\colim_{A\in I}\Coim\xi(A)\simeq\Coim\left(\colim_{A\in I}\zeta\xi(A)\to X\right),
 $$ 
 it suffices to prove 
 %
 \begin{equation}\label{step6a}
-\Coim\left(\coli_{A\in I}\zeta\xi(A)\to X\right)\simeq X.
+\Coim\left(\colim_{A\in I}\zeta\xi(A)\to X\right)\simeq X.
 \end{equation}
 % 
 Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\then$(b), p.~115 to check that 
 %
 \begin{equation}\label{step6b}
-\coli_{A\in I}\zeta\xi(A)\to X
+\colim_{A\in I}\zeta\xi(A)\to X
 \end{equation}
 % 
 is an epimorphism. Let 
 $$
-\coli_{A\in I}\varphi\zeta\xi(A)\xrightarrow{b}\varphi\left(\coli_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\varphi(X)
+\colim_{A\in I}\varphi\zeta\xi(A)\xrightarrow{b}\varphi\left(\colim_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\varphi(X)
 $$
 be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \eqref{step6b} is also an epimorphism.
 
@@ -2790,7 +2790,7 @@ X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\\
 A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
-As $p_i(X)(y\circ s)$ equals $p_i(X)(y\circ s')$ in $A(X)\simeq\co\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\circ y\circ s=\alpha(t)\circ y\circ s'$:
+As $p_i(X)(y\circ s)$ equals $p_i(X)(y\circ s')$ in $A(X)\simeq\colim\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\circ y\circ s=\alpha(t)\circ y\circ s'$:
 $$
 \begin{tikzcd}
 X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\ar{r}&\alpha(j)\ar[equal]{d}\\ 
@@ -2827,12 +2827,12 @@ $$
 $$ 
 in $\Ind(\C)^\wedge_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wedge$ is a $\V$-category. Using the notation in \eqref{convnot} p.~\pageref{convnot}, we have 
 $$
-\widetilde F(A):=\coli_{X\in\C_A}F(X),
+\widetilde F(A):=\colim_{X\in\C_A}F(X),
 $$ 
 as well as the following isomorphisms functorial in $A\in\Ind(\C)$:
 $$
 \Hom_\A\left(\widetilde F(A),Y\right)=
-\Hom_\A\left(\coli_{X\in\C_A}F(X),Y\right)\simeq
+\Hom_\A\left(\colim_{X\in\C_A}F(X),Y\right)\simeq
 \lim_{X\in\C_A}B(X)
 $$
 $$
@@ -2847,12 +2847,12 @@ $$
 One more comment about Proposition 6.1.9: I think the authors intended to write 
 %
 \begin{equation}\label{133ii}
-``\colim"(IF\circ\alpha)\xrightarrow\sim IF(``\colim"\alpha)
+``\ilim"(IF\circ\alpha)\xrightarrow\sim IF(``\ilim"\alpha)
 \end{equation} 
 %
 instead of 
 $$
-IF(``\colim"\alpha)\xrightarrow\sim``\colim"(IF\circ\alpha). 
+IF(``\ilim"\alpha)\xrightarrow\sim``\ilim"(IF\circ\alpha). 
 $$ 
 
 Let us record Part (i) of the Proposition as 
@@ -2864,7 +2864,7 @@ IF\circ\iota_\C\simeq\iota_{\C'}\circ F,
 and recall that we have, in the setting of Corollary 6.3.2 p.~140, 
 %
 \begin{equation}\label{140}
-(JF)(``\coli"\ \alpha)\simeq\coli\ F\circ\alpha.
+(JF)(``\colim"\ \alpha)\simeq\colim\ F\circ\alpha.
 \end{equation}
 
 %%
@@ -2887,7 +2887,7 @@ x\in A(X_1,X_2),\ y\in A(Y_1,Y_2),\dots,\quad x_i\in A_i(X_i),\ y_i\in A_i(Y_i),
 $$ 
 When we write 
 $$
-\co_x\ \cdots,\quad\co_{x_i}\ \cdots,\quad\co_{x_1,x_2}\ \cdots,
+\colim_x\ \cdots,\quad\colim_{x_i}\ \cdots,\quad\colim_{x_1,x_2}\ \cdots,
 $$ 
 we mean, in the first case, not only that $x$ runs over the elements of $A(X_1,X_2)$, but also that $X_1$ and $X_2$ themselves run over the objects of $\C_1$ and $\C_2$, so that we are taking the inductive limit of some functor defined over $(\C_1\times\C_2)_A$. In the other cases, the interpretation is similar. 
 
@@ -2906,10 +2906,10 @@ Now we prove that $\theta$ and $\mu$ are mutually quasi-inverse.
 
 We have 
 $$
-\mu(A_1,A_2)(X_1,X_2)\simeq\co_{y_1,y_2}\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2)
+\mu(A_1,A_2)(X_1,X_2)\simeq\colim_{y_1,y_2}\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2)
 $$
 $$
-\simeq\co_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\co_{y_2}\Hom_{\C_2}(X_2,Y_2)\simeq A_1(X_1)\times A_2(X_2),
+\simeq\colim_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\colim_{y_2}\Hom_{\C_2}(X_2,Y_2)\simeq A_1(X_1)\times A_2(X_2),
 $$ 
 the first isomorphism following from the IPC Property (see pp 75-77 of the book), the second isomorphism following from \eqref{263b} p.~\pageref{263b}. We record this as
 $$
@@ -2957,7 +2957,7 @@ A\simeq\ic_y\ (Y_1,Y_2),
 $$ 
 and let $y$ be in $A(Y_1,Y_2)$. We shall define $y_i\in A_i(Y_i),i=1,2$. Recall 
 $$
-A_i(Y_i)\simeq\co_x\ \Hom_{\C_i}(Y_i,X_i), 
+A_i(Y_i)\simeq\colim_x\ \Hom_{\C_i}(Y_i,X_i), 
 $$ 
 let $a_i(x):\Hom_{\C_i}(Y_i,X_i)\to A_i(Y_i)$ be the coprojection (see Definition~\ref{c} p.~\pageref{c}), and put 
 $$
@@ -3003,21 +3003,21 @@ One checks that $x$ does not depend on the choice of $\zeta$, and that this proc
 \begin{s} 
 P.~136, proof of Proposition 6.1.18 (i) (minor variant): If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
 $$
-\co_i\ \iota(\Coker(\varphi_i,\psi_i))\simeq
-\co_i\ \Coker(\iota(\varphi_i),\iota(\psi_i))
+\colim_i\ \iota(\Coker(\varphi_i,\psi_i))\simeq
+\colim_i\ \Coker(\iota(\varphi_i),\iota(\psi_i))
 $$
 $$
 \simeq
-\Coker(\co_i\ \iota(\varphi_i),\co_i\ \iota(\psi_i))=
+\Coker(\colim_i\ \iota(\varphi_i),\colim_i\ \iota(\psi_i))=
 \Coker(f,g),
 $$ 
 the first isomorphism following from the right exactness of $\iota$. q.e.d.
 
 More generally, if $I$ is a small filtrant category, $J$ a finite category, and $\alpha:I\times J\to\C$ a functor, then the natural morphism 
 $$
-\co_j\co_i\iota(\alpha(i,j))\to\co_i\iota\left(\co_j\alpha(i,j)\right) 
+\colim_j\colim_i\iota(\alpha(i,j))\to\colim_i\iota\left(\colim_j\alpha(i,j)\right) 
 $$ 
-is an isomorphism. Indeed, $\co_j$ commutes with $\co_i$ for obvious reasons, and with $\iota$ because $\iota$ is right exact.
+is an isomorphism. Indeed, $\colim_j$ commutes with $\colim_i$ for obvious reasons, and with $\iota$ because $\iota$ is right exact.
 \end{s}
 
 %
@@ -3063,7 +3063,7 @@ except perhaps inclusion $i$, commute with finite projective limits. Thus inclus
 %\begin{nota}\label{sic}Given two categories $I$ and $\C$, we write $S(I,\C)$ for the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and the above condition holds.\end{nota}
 
 %Let $I$ and $\C$ be two categories, let $\U$ be a universe such that %\begin{equation}\label{icz}\text{$I$ is $\U$-small and $\C$ is a $\U$-category,}\end{equation}
-%and let $T(I,\C,\U)$ be the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and $``\co"\alpha$ is representable by $Z$.
+%and let $T(I,\C,\U)$ be the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and $``\colim"\alpha$ is representable by $Z$.
 %
 %\begin{prop}[Proposition 6.2.1 p. 138]\label{621}For $I,\C$ and $\U$ as above, we have $S(I,\C)=T(I,\C,\U)$. In particular $T(I,\C,\U)$ does not depend on $\U$ subject to \eqref{icz}.\end{prop}
 
@@ -3084,7 +3084,7 @@ I\ar{r}{\xi}&\C^{\text fp}\ar{d}[swap]{\iota_\C}\ar{r}{\rho}&\C\ar[yshift=-.9ex]
 $$ 
 $\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book). We have 
 $$
-\kappa(X)=I\rho(\kappa'(\co\rho\circ\xi))\simeq I\rho(\ic\xi)
+\kappa(X)=I\rho(\kappa'(\colim\rho\circ\xi))\simeq I\rho(\ic\xi)
 $$
 
 $$
@@ -3350,7 +3350,7 @@ P.~159, Definition 7.3.1. Recall the definition:
 Let $\C$ be a $\U$-small category, %(see \S~\ref{loc} p.~\pageref{loc}), 
 let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
 $$
-(R_{\cc S}F)(Q(X))\simeq\co_{(X\to Y)\in\cc S^X}F(Y).
+(R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
 $$ 
 If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pageref{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable} By Theorem~\ref{233} p.~\pageref{233}, this is equivalent to saying that $Q^\dagger F$ exists universally in the sense of Definition~\ref{232} p.~\pageref{232}. 
 
@@ -3420,15 +3420,15 @@ Recall the following facts:
 
 \noindent$\bu$ Proposition 7.4.1 p.~162 implies
 $$
-A:=\alpha_\SSS(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
+A:=\alpha_\SSS(Q(X))=\colim_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
 $$ 
 $\bu$ Display (7.3.7) p.~161 implies
 $$
-B:=R_\SSS(\iota_\A\circ F)(Q(X))=\coli_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
+B:=R_\SSS(\iota_\A\circ F)(Q(X))=\colim_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
 $$
 $\bu$ The definition of $IF$ p.~133 implies
 $$
-C:=IF(A)=\coli_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
+C:=IF(A)=\colim_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
 $$
 
 We want to prove $B\simeq C$.
@@ -3443,7 +3443,7 @@ and we claim that the morphisms $f(X',x')$ induce a morphism $f:B\to C$.
 
 Let $(U,u)$ be in $\C_A$, that is
 $$
-u\in A(U)=\co_{(X',x')\in\SSS^X}\Hom_\C(U,X').
+u\in A(U)=\colim_{(X',x')\in\SSS^X}\Hom_\C(U,X').
 $$ 
 Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=p(A(U),X',x')(f)$, and put 
 $$
@@ -3452,8 +3452,6 @@ $$
 We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
 
 We leave the verification of these claims to the reader. 
-
-%\end{document}
 
 %%%%
 
@@ -3479,13 +3477,13 @@ Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
 In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context.
 \end{conv} 
 \begin{lem}\label{payl}
-Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\co(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\co\alpha$ exists in $\A$ and satisfies $(\co\alpha)(X)\simeq\co(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\colim(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\colim\alpha$ exists in $\A$ and satisfies $(\colim\alpha)(X)\simeq\colim(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
-%
+
 %%%
-%
+
 \subsection{Lemma 8.2.3 (p. 169)}
-%
+
 Here is a statement contained in Lemma 8.2.3:
 %
 \begin{cor}\label{823}
@@ -4275,13 +4273,13 @@ Let $\pi$ be an infinite cardinal. The following conditions on a small category 
 
 \nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
 $$
-\co_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\co_{i\in I}\alpha(i,j)
+\colim_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\colim_{i\in I}\alpha(i,j)
 $$ 
 is bijective.
 
 \nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
 $$
-\co_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\co_{i\in I}\alpha(i,j)
+\colim_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\colim_{i\in I}\alpha(i,j)
 $$ 
 is surjective.
 
@@ -4311,7 +4309,7 @@ P.~218. One can make the following observation after Definition 9.2.2: If $I$ ad
 \begin{proof}
 For $\varphi:J\to I$ we have
 $$
-\lim\Hom_\C(\varphi,\co\varphi)\xleftarrow\sim\Hom_\C(\co\varphi,\co\varphi)\neq\varnothing.
+\lim\Hom_\C(\varphi,\colim\varphi)\xleftarrow\sim\Hom_\C(\colim\varphi,\colim\varphi)\neq\varnothing.
 $$
 \end{proof}
 \end{s}
@@ -4328,16 +4326,16 @@ P.~218, Lemma 9.2.5. Clearly, $I$ satisfies condition (a) in Proposition~\ref{pp
 For the reader's convenience we state and prove Proposition 9.2.10 p. 220. 
 
 \begin{prop}[Proposition 9.2.10 p. 220]
-If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satisfying $\card(\Mor(\C))<\pi$, if $\beta:J\to\C_\pi$ is a functor, and if $\co\beta$ exists in $\C$, then it belongs to $\C_\pi$. 
+If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satisfying $\card(\Mor(\C))<\pi$, if $\beta:J\to\C_\pi$ is a functor, and if $\colim\beta$ exists in $\C$, then it belongs to $\C_\pi$. 
 \end{prop}
 
 \begin{proof}
 Consider the commutative diagram
 $$
 \begin{tikzcd}
-\co_i\Hom_\C(\co_j\beta(j),\alpha(i))\ar{r}\ar{d}[swap]{\sim}&\Hom_\C(\co_j\beta(j),\co_i\alpha(i))\ar{dd}{\sim}\\ 
-\co_i\lim_j\Hom_\C(\beta(j),\alpha(i))\ar{d}[swap]{\sim}\\ 
-\lim_j\co_i\Hom_\C(\beta(j),\alpha(i))\ar{r}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\co_i\alpha(i)).
+\colim_i\Hom_\C(\colim_j\beta(j),\alpha(i))\ar{r}\ar{d}[swap]{\sim}&\Hom_\C(\colim_j\beta(j),\colim_i\alpha(i))\ar{dd}{\sim}\\ 
+\colim_i\lim_j\Hom_\C(\beta(j),\alpha(i))\ar{d}[swap]{\sim}\\ 
+\lim_j\colim_i\Hom_\C(\beta(j),\alpha(i))\ar{r}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\colim_i\alpha(i)).
 \end{tikzcd}
 $$
 \end{proof}
@@ -4366,9 +4364,9 @@ for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\varphi$ with
 $$
 \varphi(j)=(\psi(j),\psi(j)\xr{y_j}A).
 $$ 
-In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\co\psi$ exists in $\C$. Let $p_j:\psi(j)\to\co\psi$ be the coprojection. By surjectivity of (9.2.2) p.~222 of the book, there is an $x:\co\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Letting 
+In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\colim\psi$ exists in $\C$. Let $p_j:\psi(j)\to\colim\psi$ be the coprojection. By surjectivity of (9.2.2) p.~222 of the book, there is an $x:\colim\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Letting 
 $$
-\xi=(\co\psi,\co\psi\xr x A)\in\C_A
+\xi=(\colim\psi,\colim\psi\xr x A)\in\C_A
 $$ 
 be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be the obvious morphism we have that $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. q.e.d.
 \end{s}
@@ -4447,7 +4445,7 @@ Let $\pi$ be an infinite cardinal, and let $\alpha:I\to\C$ be a functor admittin
 This follows immediately from Exercise 1.7 p. 31 of the book.
 \end{proof}
 
-We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\co_iY_i(G)\subset Y(G)$.'' Here is the rewriting: The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\co_iY_i(G)\to Y(G)$ is also a monomorphism.
+We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is ``Set $S:=\colim_iY_i(G)\subset Y(G)$.'' Here is the rewriting: The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\colim_iY_i(G)\to Y(G)$ is also a monomorphism.
 
 %
 
@@ -4472,14 +4470,14 @@ is the identity.
 
 \nn $*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map $\lambda$ below is bijective: 
 $$
-\lambda:\co_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
+\lambda:\colim_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
 $$
 
 Let us show that $\lambda$ is injective. (Here we shall only use $\card(A(G))<\pi$.)
 
-Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to X$ coincide. For each $s:i_0\to i$, set $N_s:=\Ker(A\parar X_i)$. As $\co_{s\in I^{i_0}}$ is exact in $\C$ by assumption, we get, in view of Corollary 3.2.3 (i) p.~79 of the book, 
+Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to X$ coincide. For each $s:i_0\to i$, set $N_s:=\Ker(A\parar X_i)$. As $\colim_{s\in I^{i_0}}$ is exact in $\C$ by assumption, we get, in view of Corollary 3.2.3 (i) p.~79 of the book, 
 $$
-\co_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\co_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
+\colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
 $$ 
 As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
 
@@ -4509,7 +4507,7 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies the surjectivity of $\lambda$.
 
-\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\co_i$ is exact in $\C$, we have $\co_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
 \nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\coprod S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 $$
@@ -4538,7 +4536,7 @@ This proves (b).
 
 \nn $*$ Step 6: (b) implies the surjectivity of $\lambda$. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
 $$
-\mu:\co_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
+\mu:\colim_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
 is injective. Consider the commutative diagram 
 $$
@@ -4660,7 +4658,7 @@ G^{\coprod A}\to G^{\coprod X(G)}\to X
 $$ 
 for $A$ in $I$, and 
 $$
-\co_{A\in I}G^{\coprod A}\xr\sim G^{\coprod X(G)}\to X.
+\colim_{A\in I}G^{\coprod A}\xr\sim G^{\coprod X(G)}\to X.
 $$ 
 Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
 
@@ -4674,11 +4672,11 @@ To verify this inequality, we argue as in the proof of Lemma~\ref{933} p.~\pager
 
 Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
 $$
-G^{\coprod X(G)}\simeq\co_{B\in I}G^{\coprod B}.
+G^{\coprod X(G)}\simeq\colim_{B\in I}G^{\coprod B}.
 $$ 
 As $G$ is $\pi_0$-accessible by (b), we get 
 $$
-G^{\coprod X(G)}(G)\simeq\co_{B\in I}\ G^{\coprod B}(G).
+G^{\coprod X(G)}(G)\simeq\colim_{B\in I}\ G^{\coprod B}(G).
 $$ 
 By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}.
 \end{proof}
@@ -4842,22 +4840,22 @@ $$
 For the reader's convenience we state and prove Sublemma 9.4.5 p.~229 of the book.
 
 \begin{lem}[Sublemma 9.4.5 p.~229]\label{945}
-If $\C$ is a small nonempty category admitting small filtrant inductive limits, if $\pi$ is an infinite regular cardinal such that $\card(\Mor(\C))<\pi$, if $I$ is a $\pi$-filtrant small category, and if $(X_i)_{i\in I}$ is an inductive system in $\C$ indexed by $I$, then there is an $i_0$ in $I$ such that the coprojection $X_{i_0}\to\co_iX_i$ is an epimorphism. 
+If $\C$ is a small nonempty category admitting small filtrant inductive limits, if $\pi$ is an infinite regular cardinal such that $\card(\Mor(\C))<\pi$, if $I$ is a $\pi$-filtrant small category, and if $(X_i)_{i\in I}$ is an inductive system in $\C$ indexed by $I$, then there is an $i_0$ in $I$ such that the coprojection $X_{i_0}\to\colim_iX_i$ is an epimorphism. 
 \end{lem}
 
 \begin{proof}
-Set $X:=\co_iX_i$ and let $a_i:X_i\to X$ be the coprojection. For any $Y$ in $\C$ let 
+Set $X:=\colim_iX_i$ and let $a_i:X_i\to X$ be the coprojection. For any $Y$ in $\C$ let 
 $$
-b^Y_i:\Hom_\C(Y,X_i)\to\co_j\Hom_\C(Y,X_j)
+b^Y_i:\Hom_\C(Y,X_i)\to\colim_j\Hom_\C(Y,X_j)
 $$ 
 be the coprojection, let $F(Y)$ be the image of the natural map 
 $$
-\co_j\Hom_\C(Y,X_j)\to\Hom_\C(Y,X),
+\colim_j\Hom_\C(Y,X_j)\to\Hom_\C(Y,X),
 $$ 
 and define $\pp^Y$ by the commutative diagram 
 $$
 \begin{tikzcd}
-\co_j\Hom_\C(Y,X_j)\ar[two heads]{r}{\pp^Y}&F(Y)\ar[hook]{r}&\Hom_\C(Y,X)\\ 
+\colim_j\Hom_\C(Y,X_j)\ar[two heads]{r}{\pp^Y}&F(Y)\ar[hook]{r}&\Hom_\C(Y,X)\\ 
 \Hom_\C(Y,X_i).\ar{u}{b^Y_i}\ar{ur}[swap]{\pp^Y_i:=a_i\circ}
 \end{tikzcd}
 $$ 
@@ -5143,7 +5141,7 @@ In the book $\cc F$ is supposed to be small, but the proof clearly works if $\cc
 \begin{s} 
 %(additional details).
 
-%\begin{df}\label{cb}If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\co\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.\end{df}
+%\begin{df}\label{cb}If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\colim\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.\end{df}
 
 %The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits).
 
@@ -5178,7 +5176,7 @@ Line 3: One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. T
 Line 6: Condition (9.5.2) (i) (see Section~\ref{954955} p.~\pageref{954955}) follows from 
 %
 \begin{lem}\label{952i}
-Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C$ and are exact. Let $\alpha:I\to\C$ be a functor such that $I$ is small and filtrant, and $\alpha(s):\alpha(i)\to\alpha(j)$ is a monomorphism for all morphism $s:i\to j$ in $I$. Then the coprojection $p_i:\alpha(i)\to\co\alpha$ is a monomorphism.
+Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C$ and are exact. Let $\alpha:I\to\C$ be a functor such that $I$ is small and filtrant, and $\alpha(s):\alpha(i)\to\alpha(j)$ is a monomorphism for all morphism $s:i\to j$ in $I$. Then the coprojection $p_i:\alpha(i)\to\colim\alpha$ is a monomorphism.
 \end{lem}
 %
 \begin{proof}
@@ -5189,8 +5187,8 @@ $$
 ($\Delta$ being the diagonal functor) is a monomorphism, so is its inductive limit (see Proposition~\ref{34i} p.~\pageref{34i}), and the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
-\co\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\co\theta}&&\co(\alpha\circ\oo j)\ar{d}{\sim}\\ 
-\alpha(i)\ar{rr}[swap]{p_i}&&\co\alpha.
+\colim\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\colim\theta}&&\colim(\alpha\circ\oo j)\ar{d}{\sim}\\ 
+\alpha(i)\ar{rr}[swap]{p_i}&&\colim\alpha.
 \end{tikzcd}
 $$
 \end{proof}
@@ -5479,7 +5477,7 @@ P. 270. Recall that $(\A,T)$ is an additive category with translation. Let
 \begin{equation}\label{iliad}
 (d_{X,i}:X_i\to TX_i)_{i\in I}
 \end{equation} 
-be an inductive system in $\A_d$. Assume that $X:=\co_iX_i$ exists in $\A$. Then the natural morphism $\co_id_{X,i}:X\to TX$ is an inductive limit of \eqref{iliad} in $\A_d$. There are analogous statements with ``projective'' instead of ``inductive'' and $\A_c$ instead of $\A_d$.
+be an inductive system in $\A_d$. Assume that $X:=\colim_iX_i$ exists in $\A$. Then the natural morphism $\colim_id_{X,i}:X\to TX$ is an inductive limit of \eqref{iliad} in $\A_d$. There are analogous statements with ``projective'' instead of ``inductive'' and $\A_c$ instead of $\A_d$.
 \end{s}
 
 %
@@ -5678,7 +5676,7 @@ P. 337. Theorem 13.4.1 suggests the following question:
 Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
 %
 \begin{equation}\label{spalt}
-\co_{(X'\to X),(Y\to Y')\in\oo{Qis}}\Hom_{\oo K(\C)}(X',Y')\to\Hom_{\oo D(\C)}(X,Y)
+\colim_{(X'\to X),(Y\to Y')\in\oo{Qis}}\Hom_{\oo K(\C)}(X',Y')\to\Hom_{\oo D(\C)}(X,Y)
 \end{equation}
 %
 an isomorphism?
@@ -6195,7 +6193,7 @@ P. 400, proof of Lemma 16.3.1 (additional details):
 
 For $(B\xr s U)\in\mc{LI}_U$ let 
 $$
-i(s):\Hom_{\C^\wedge}(B,A)\to A^a(U)\simeq\co_{(B\to U)\in\cc{LI}_U}\Hom_{\C^\wedge}(B,A)
+i(s):\Hom_{\C^\wedge}(B,A)\to A^a(U)\simeq\colim_{(B\to U)\in\cc{LI}_U}\Hom_{\C^\wedge}(B,A)
 $$ 
 be the coprojection. We start with the diagram 
 $$
@@ -6247,7 +6245,7 @@ We want to prove that $A\to A^a$ is a local monomorphism. In view of \eqref{e162
 $$
 \alpha:(\cc{LI}_U)^{\op}\to\Set,\quad(B\xr sU)\mapsto\Hom_{\C^\wedge}(B,A)
 $$ 
-satisfies $A^a(U)\simeq\co\alpha$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of the book, there is a morphism 
+satisfies $A^a(U)\simeq\colim\alpha$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of the book, there is a morphism 
 $$
 \varphi:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
@@ -6284,7 +6282,7 @@ $$
 representing the general setting of Section 2.3 p.~50 of the book is now replaced by the diagram 
 $$
 \begin{tikzcd}
-(\C_Y)^{\op}\ar{dr}\ar{rr}{f^\tau}&&(\C_A)^{\op}\ar{dl}\\ 
+(\C_Y)^{\op}\ar{dr}\ar{rr}{f^\tau}&&(\C_X)^{\op}\ar{dl}\\ 
 {}&\A.
 \end{tikzcd}
 $$ 
@@ -6298,10 +6296,10 @@ P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ sh
 %
 \begin{equation*}
 \begin{split}
-(f^\tau)\ \widehat{}\ (B)(U)&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{(\C_X)^{\op}}(U,f^\tau(V))
+(f^\tau)\ \widehat{}\ (B)(U)&\simeq\colim_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{(\C_X)^{\op}}(U,f^\tau(V))
 \\ \\ 
-{}&\simeq\co_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^t(V),U)\\ \\ 
-{}&\simeq\co_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}B(V).
+{}&\simeq\colim_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^t(V),U)\\ \\ 
+{}&\simeq\colim_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}B(V).
 \end{split}
 \end{equation*}
 %
@@ -6322,7 +6320,7 @@ $$
 Then (17.1.3) and (17.1.4) follow respectively from (2.3.6) and (2.3.7) p.~52 of the book. For the sake of completeness, let us rewrite (17.1.3) and (17.1.4) (in the notation of \eqref{ttau}):
 %
 \begin{equation}\label{1713}
-f^\dagger(G)(U)=\co_{(f^\tau(V)\to U)\in((\C_Y)^{\op})_U}G(V),
+f^\dagger(G)(U)=\colim_{(f^\tau(V)\to U)\in((\C_Y)^{\op})_U}G(V),
 \end{equation}
 %
 with $G\in\PSh(Y,\A),U\in\C_X$, $f^\tau(V)\to U$ being a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $U\to f^t(V)$ in $\C_X$), 
@@ -6413,9 +6411,9 @@ Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap
 \begin{s} 
 P. 418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms 
 $$
-\co\alpha\xr f\co\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\co\alpha\circ\mu_u^{\op}\xr h\co\alpha.
+\colim\alpha\xr f\colim\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\colim\alpha\circ\mu_u^{\op}\xr h\colim\alpha.
 $$
-We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\id_{\co\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal, and $h$ is an isomorphism. q.e.d.
+We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\id_{\colim\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal, and $h$ is an isomorphism. q.e.d.
 \end{s}
 
 %
@@ -6423,7 +6421,7 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 \begin{s}\label{fau}
 P. 421, first display: 
 $$
-F^a(U)\simeq\co_{\cc{LI}_U}F(A).
+F^a(U)\simeq\colim_{\cc{LI}_U}F(A).
 $$ 
 Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} depend on the universe such that $\C$ is a small category and $\A$ satisfies (17.4.1) p.~417 of the book.
 \end{s}
@@ -6662,13 +6660,13 @@ P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em con
 
 %
 
-\begin{s}%\label{1816}
+\begin{s}
 P. 437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\ref{14112} and \S\ref{fau} p.~\ref{fau}. 
 \end{s}
 
 %
 
-\begin{s}%\label{1867}
+\begin{s}
 P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
 
 Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
@@ -6677,31 +6675,9 @@ $$
 $$
 Finally, let us rewrite explicitly one of the key equalities (see \S\ref{fdagger} p.~\pageref{fdagger}): 
 $$
-f^\dagger(\cc O_Y^{\oplus nm})(W)=\co_{(f^\tau(V)\to W)\in((\C_Y)^{\op})_W}\cc O_Y^{\oplus nm}(V),
+f^\dagger(\cc O_Y^{\oplus nm})(W)=\colim_{(f^\tau(V)\to W)\in((\C_Y)^{\op})_W}\cc O_Y^{\oplus nm}(V),
 $$ 
 where $f^\tau(V)\to W$ is a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $W\to f^t(V)$ in $\C_X$).
 \end{s}
-
-%%%
-
-%\newpage
-
-%\section{Next Additions}
-
-%For the purpose of this Section, see Remark~\ref{next} p.~\pageref{next}.
-
-%
-
-%\subsection{Brief Comments}
-
-%\begin{s}\label{ltf}P. 253, Definition of right localizable functor with respect to $(\cc N,\cc N')$ (Definition 10.3.1). I think it is simpler to define the notion of universally right localizable functor as in \S\ref{durl2} p.~\pageref{durl2} (see Remark~\ref{rurl} p.~\pageref{rurl}).\end{s}
-
 \printindex
-
-%\section{Next Additions}
-
-%\subsection{Typos and Details}
-
-%\subsection{Brief Comments}
-
 \end{document}
