@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0095)
+% about "categories and sheaves" (version_0096)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -471,6 +471,8 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \nn $*$ P. 406, first line of the second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
+\nn$*$ P. 409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$.
+
 %\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
 
 \noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) 
@@ -601,6 +603,15 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 
 \begin{s}\label{ffc}
 P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative. \index{conservative}
+\end{s}
+
+%
+
+\begin{s}
+P. 18, Definition 1.1.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
+\begin{equation}\label{opslice}
+(\C^{X'})^{\op}\simeq(\C^{\op})_{X'},\quad(\C_{X'})^{\op}\simeq(\C^{\op})^{X'}.
+\end{equation}
 \end{s}
 
 %%
@@ -6337,20 +6348,35 @@ with $G\in\PSh(Y,\A),U\in\C_X$, $U\to f^\tau(V)$ being a morphism in $(\C_X)^{\o
 %
 
 \begin{s}
-P. 409, proof of Proposition 17.1.9. Here more details: Part (i): 
+P. 408, second display: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
+\begin{equation}\label{408}
+F(A):=\lim_{(U\to A)\in(\C_X)_A}F(U).
+\end{equation}
+\end{s}
+
+%
+
+\begin{s}
+P. 409, proof of Proposition 17.1.9. Here more details: Part (i): We have 
 $$
-\oo j_{A\to X*}(F)(B\to A)\simeq
-\lim_{((U\to A)\to(B\to A))\in(\C_A)_{B\to A}}\oo j_{A\to X*}(F)(U\to A)
+\oo j_{A\to X*}(F)(\lambda(B\to A))\simeq
+\lim_{((U\to A)\to\lambda(B\to A))\in(\C_A)_{\lambda(B\to A)}}\oo j_{A\to X*}(F)(U\to A)
 $$
 $$
 \simeq\lim_{(U\to B)\in\C_B}\oo j_{A\to X*}(F)(U\to A)\simeq
-\lim_{(U\to B)\in\C_B}F(U)\simeq F(B).
-$$
+\lim_{(U\to B)\in\C_B}F(U)\simeq F(B),
+$$ 
+the first isomorphism being justified by \eqref{408}, the second by the definition of $\lambda$ in the last display of p.~26 of the book, the third by the definition of $\oo j_{A\to X*}(F)$, and the fourth by \eqref{408}. 
+
+Part (ii): We use \eqref{opslice} p.~\pageref{opslice}.
 
 Part (iii), case $B\in\C_X$: 
 $$
-(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{((V\to A)\to(B\times A\to A))\in(\C_A)_{B\times A\to A}}G(V\to A)
-$$ 
+(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{(\oo j_A(V\to A)\to B)\in(\C_A)_B}G(V\to A)
+$$
+$$
+\simeq\lim_{((V\to A)\to(B\times A\to A))\in(\C_A)_{B\times A\to A}}G(V\to A)
+$$
 $$
 \simeq\lim_{(V\to B\times A)\in\C_{B\times A}}G(V\to A)\simeq 
 G\left(\ic_{(V\to B\times A)\in\C_{B\times A}}(V\to A)\right)
@@ -6363,7 +6389,7 @@ $$
 
 Part (iii), case $B\in\C_X^\wedge$:
 $$
-(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{(U\to B)\in\C_B}\oo j^\ddagger_{A\to X} G)(U)
+(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{(U\to B)\in\C_B}(\oo j^\ddagger_{A\to X} G)(U)
 \simeq\lim_{(U\to B)\in\C_B}G(U\times A\to A)
 $$ 
 $$
