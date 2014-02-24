@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0098)
+% about "categories and sheaves" (version_0099)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -13,7 +13,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 %%\usepackage{showlabels}
 %\usepackage{showkeys}
@@ -1433,7 +1433,121 @@ $$
 induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 \end{s}
 
-%
+%%
+
+\subsection{Three Formulas}
+
+Here is a complement to Section 2.3 p.~54 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$. Let $\A$ be a category admitting small inductive and projective limits. 
+
+\subsubsection{First Formula}
+
+Let $F:\C\to\A$ be a functor. We claim 
+\begin{equation}\label{prepa1}
+h(\C_A)^\ddagger(F\circ j(\C_A))\circ\lambda\simeq h(\C)^\ddagger(F)\circ j((\C^\wedge)_A).
+\end{equation}
+Proof: Recall that there is a unique functor $\lambda:(\C^\wedge)_A\to(\C_A)^\wedge$ such that 
+\begin{equation}\label{lambda}
+\lambda(A\to B)(A\to U)=\Hom_{(\C^\wedge)_A}(A\to U,A\to B)
+\end{equation} 
+for all $(A\to B)\in(\C^\wedge)_A$ and all $(A\to U)\in\C_A$. (See Lemma 1.4.12 p.~26 of the book.) Consider the quasi-commutative diagram 
+%$$\begin{tikzcd}\C_A\ar{rr}{j(\C_A)}\ar{dr}[swap]{F\circ j(\C_A)}&&\C\ar{dl}{F}\\ {}&\A,\end{tikzcd}$$
+%$$\begin{tikzcd}\C_A\ar{r}{F\circ j(\C_A)}\ar{dd}[swap]{h(\C_A)}&\A\\ {}\\ (\C_A)^\wedge\ar{uur}[swap]{h(\C_A)^\ddagger(F\circ j(\C_A))}&(\C^\wedge)_A\ar{l}{\lambda}\ar{r}[swap]{j((\C^\wedge)_A)}&\C^\wedge,\end{tikzcd}$$
+$$
+\begin{tikzcd}
+\C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\circ j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
+{}\\ 
+(\C_A)^\wedge\ar{uurr}[swap]{h(\C_A)^\ddagger(F\circ j(\C_A))}&&(\C^\wedge)_A\ar{ll}{\lambda}\ar{rr}[swap]{j((\C^\wedge)_A)}&&\C^\wedge.\ar{uull}[swap]{h(\C)^\ddagger(F)}
+\end{tikzcd}
+$$
+%$$\begin{tikzcd}\C\ar{rr}{h(\C)}\ar{dr}[swap]{F}&&\C^\wedge\ar{dl}{h(\C)^\ddagger(F)}\\ {}&\A.\end{tikzcd}$$ 
+We have 
+$$
+h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))\simeq\lim_{((U\to A)\to(B\to A))\in((\C^\wedge)_A)_{B\to A}}F(U)
+$$
+$$
+\simeq\lim_{(U\to B)\in\C_B}F(U)\simeq h(\C)^\ddagger(F)(B)
+$$ 
+$$
+\simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big).\ \square
+$$
+
+\subsubsection{Second Formula}
+
+Consider the quasi-commutative diagram 
+$$
+\begin{tikzcd}
+\C_A\ar{rr}{j(\C_A)}\ar{dr}[swap]{G}&&\C\ar{dl}{j(\C_A)^\ddagger(G)}\\ 
+{}&\A,
+\end{tikzcd}
+$$ 
+and let $U$ be in $\C$. We claim 
+\begin{equation}\label{prepa2}
+j(\C_A)^\ddagger(G)(U)\simeq\prod_{U\to A}G(U\to A).
+\end{equation} 
+Proof: We have 
+$$
+j(\C_A)^\ddagger(G)(U)\simeq\lim_{(U\to j(\C_A)(V\to A))\in(\C_A)^U}G(V\to A)
+$$
+$$
+\simeq\lim_{(U\to V\to A)\in(\C_A)^U}G(V\to A)\simeq\lim_{U\to A}G(U\to A)\simeq\prod_{U\to A}G(U\to A),
+$$
+the penultimate isomorphism following from the fact that the discrete category $A(U)$ is co-cofinal in $(\C_A)^U$. 
+
+\subsubsection{Third Formula}
+
+Put $j:=j(\C_A),\ h:=h(\C),\ h_A:=h(\C_A)$, and consider the quasi-commutative diagram 
+$$
+\begin{tikzcd}
+\C^\wedge\ar{d}[swap]{h^\dagger(j^\dagger(G))}&
+\C\ar{l}[swap]{h}\ar{d}[swap]{j^\dagger(G)}&
+\C_A\ar{l}[swap]{j}\ar{r}{h_A}\ar{d}{G}&
+(\C_A)^\wedge\ar{d}{(h_A)^\dagger(G)}&
+(\C^\wedge)_A\ar{l}[swap]{\lambda}\\ 
+\A\ar[equal]{r}&\A\ar[equal]{r}&\A\ar[equal]{r}&\A.
+\end{tikzcd}
+$$ 
+(See \eqref{lambda} for the definition of $\lambda$). Let $B$ be in $\C^\wedge$. We claim 
+\begin{equation}\label{prepa3}
+h^\dagger(j^\dagger(G))(B)\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)).
+\end{equation} 
+Proof: We have, for $U$ in $\C$, 
+$$
+j^\dagger(G)(U)\simeq\colim_{(j(V\to A)\to U)\in(\C_A)_U}G(V\to A)\simeq\colim_{(A\leftarrow V\to U)\in(\C_A)_U}G(V\to A)
+$$
+$$
+\simeq\colim_{((V\to A)\to(U\times A\to A))\in(\C_A)_{U\times A\to A}}G(V\to A)\simeq(h_A)^\dagger(G)(\lambda(U\times A\to A)),
+$$
+that is: 
+\begin{equation}\label{prepa4}
+j^\dagger(G)(U)\simeq(h_A)^\dagger(G)(\lambda(U\times A\to A)).
+\end{equation} 
+Let now $B$ be in $\C^\wedge$. We get 
+$$
+h^\dagger(j^\dagger(G))(B)
+$$
+$$
+\simeq\colim_{(U\to B)\in\C_B}j^\dagger(G)(U)
+$$ 
+\begin{equation}\label{prepa4a}
+\simeq\colim_{(U\to B)\in\C_B}(h_A)^\dagger(G)(\lambda(U\times A\to A)
+\end{equation} 
+\begin{equation}\label{prepa4b}
+\simeq(h_A)^\dagger(G)\left(\lambda\left(\icolim_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)
+\end{equation} 
+$$
+\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)\right)
+$$
+\begin{equation}\label{prepa4c}
+\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\times A\to A\right)\right)
+\end{equation} 
+$$
+\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)),
+$$ 
+where \eqref{prepa4a} follows from \eqref{prepa4}, \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.\pageref{c271b}), and \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
+
+%%
+
+\subsection{Brief Comments}
 
 \begin{s} 
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
@@ -6058,28 +6172,6 @@ A_{S'}\ar{r}&U
 $$ 
 being cartesian, and $V\to U$ being in $S$ by the claim, $C\to V$ is in $\cc E$ by assumption. q.e.d.
 
-\begin{comment}
-
-\nn Proof of the claim: Let $s:V\to U$ be in $S$ and let $\pp:A_S(V)\to\Hom_{\C^\wedge}(V,A_S)$ be the bijection given by the Yoneda Lemma (see Theorem~\ref{yol} p.~\pageref{yol}). One easily checks that $\pp(s)$ is an epimorphism [???] and that the diagram 
-$$
-\begin{tikzcd}
-V\ar[two heads]{r}{\pp(s)}\ar{rd}[swap]{s}&A_S\ar[hook]{d}\\ 
-{}&U
-\end{tikzcd}
-$$ 
-commutes. Moreover, $\pp(s)$ is in $\cc E$, because, as recalled above, $\cc E$ contains all epimorphisms, and $A_S\incl U$ is in $\cc E$ by assumption. Now LE2 implies that $s$ is in $\cc E$, and the claim is proved. 
-
-If $S=\varnothing$, then $S'$ is in $\Gamma_U$ by GT2. Otherwise, let $V\to U$ be in $S$, let $B$ be the subobject $A_{S'\times_UV}=A_{S'}\times_UV$ (see \eqref{asuv}) of $V$ in $\C^\wedge$, and consider the cartesian square 
-$$
-\begin{tikzcd}
-B\ar{r}\ar{d}&V\ar{d}\\ 
-A_{S'}\ar{r}&U.
-\end{tikzcd}
-$$ 
-Then $B\to V$ is in $\cc E$ because $S'\times_UV$ is in $\Gamma_V$ by assumption, $V\to U$ is in $\cc E$ by the claim, and $A_{S'}\to U$ is in $\cc E$ by LE2 and LE3. 
-
-\end{comment}
-
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
 
 It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
@@ -6356,57 +6448,9 @@ F(A):=\lim_{(U\to A)\in(\C_X)_A}F(U).
 
 %
 
-\begin{comment}
-
 \begin{s}
-P. 409, proof of Proposition 17.1.9. Here more details: Part (i): We have 
-$$
-\oo j_{A\to X*}(F)(\lambda(B\to A))\simeq
-\lim_{((U\to A)\to\lambda(B\to A))\in(\C_A)_{\lambda(B\to A)}}\oo j_{A\to X*}(F)(U\to A)
-$$
-$$
-\simeq\lim_{(U\to B)\in\C_B}\oo j_{A\to X*}(F)(U\to A)\simeq
-\lim_{(U\to B)\in\C_B}F(U)\simeq F(B),
-$$ 
-the first isomorphism being justified by \eqref{408}, the second by the definition of $\lambda$ in the last display of p.~26 of the book, the third by the definition of $\oo j_{A\to X*}(F)$, and the fourth by \eqref{408}. 
-
-Part (ii): We use \eqref{opslice} p.~\pageref{opslice}.
-
-Part (iii), case $B\in\C_X$: 
-$$
-(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{(\oo j_A(V\to A)\to B)\in(\C_A)_B}G(V\to A)
-$$
-$$
-\simeq\lim_{((V\to A)\to(B\times A\to A))\in(\C_A)_{B\times A\to A}}G(V\to A)
-$$
-$$
-\simeq\lim_{(V\to B\times A)\in\C_{B\times A}}G(V\to A)\simeq 
-G\left(\ic_{(V\to B\times A)\in\C_{B\times A}}(V\to A)\right)
-$$
-
-$$
-\simeq G\left(\left(\ic_{(V\to B\times A)\in\C_{B\times A}}V\right)\to A\right)\simeq 
-G(B\times A\to A).
-$$
-
-Part (iii), case $B\in\C_X^\wedge$:
-$$
-(\oo j^\ddagger_{A\to X} G)(B)\simeq\lim_{(U\to B)\in\C_B}(\oo j^\ddagger_{A\to X} G)(U)
-\simeq\lim_{(U\to B)\in\C_B}G(U\times A\to A)
-$$ 
-$$
-\simeq G\left(\ic_{(U\to B)\in\C_B}(U\times A\to A)\right)\simeq 
-G\left(\left(\ic_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)
-$$
-
-$$
-\simeq G\left(\left(\ic_{(U\to B)\in\C_B}U\right)\times A\to A\right)
-\simeq G(B\times A\to A),
-$$ 
-the penultimate isomorphism following from the fact that small inductive limits in the category of sets exist and are stable by base change (see Definition 2.2.6 p.~47 of the book and Proposition~\ref{sbc} p.~\pageref{sbc}).
+P. 409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{prepa1}, \eqref{prepa2} p.~\pageref{prepa2}, and \eqref{prepa3} p.~\pageref{prepa3}.
 \end{s}
-
-\end{comment}
 
 %
 
