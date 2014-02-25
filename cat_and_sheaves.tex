@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0100)
+% about "categories and sheaves" (version_0101)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1715,11 +1715,11 @@ This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\
 
 \begin{s} 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
-%
+
 \begin{lem} 
 Let $\alpha:I\to\A$ be a functor, let $A\in\A$ be the inductive limit of $\alpha$, let $\alpha':I\to\A_A$ be the obvious functor, and let $a\in\A_A$ be the identity of $A$. Then the inductive limit of $\alpha'$ is $a$. 
 \end{lem} 
-%
+
 \begin{proof}
 If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
 
@@ -1825,18 +1825,18 @@ $$
 $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
-as well as the following two remarks:
-%
+as well as the following three remarks:
+
 \begin{rk}\label{cof}
 If $A'$ is in $\cc C'^\wedge$, then by \eqref{263a} p.~\pageref{263a} the natural functor $\varphi:\cc C_{A'\circ F}\to\cc C'_{A'}$ gives rise to a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
 \end{rk}
 
 The proof is obvious.
-%
+
 \begin{rk}
 If $F$ is fully faithful, then there is an isomorphism $\widehat F(A)\circ F\xr\sim A$ functorial in $A\in\C^\wedge$.
 \end{rk} 
-%
+
 \begin{proof}
 We have 
 $$
@@ -1847,6 +1847,12 @@ $$
 $$
 the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \end{proof}
+
+As observed in the book:
+
+\begin{rk}\label{272}
+The functor $\widehat F$ commutes with small inductive limits.
+\end{rk}
 \end{s}
 
 %
@@ -2123,7 +2129,13 @@ The first and last bijections follow from \eqref{332}, the second one is clear, 
 \end{proof}
 \end{s}
 
-%%
+%
+
+\begin{s}\label{333} 
+By Proposition 3.3.3 p.~82 and Remark~\ref{272} p.~\pageref{272} the functor $\widehat F$ in Remark~\ref{272} is right exact.
+\end{s}
+
+%
 
 \begin{s}
 P. 84, Proposition 3.3.13. Recall the statement:
@@ -6406,9 +6418,9 @@ P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ sh
 \end{equation*}
 %
 For the sake of emphasis, we state: 
-%
+
 \begin{prop}\label{p406}
-The functor $(f^\tau)\ \widehat{}$ commutes with small inductive limits (Proposition 2.7.1 p.~62). Moreover, if $f$ is left exact, then $(f^\tau)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
+The functor $(f^\tau)\ \widehat{}$ is right exact and commutes with small inductive limits (Proposition 2.7.1 p.~62, \S\ref{333} p.~\pageref{333}). Moreover, if $f$ is left exact, then $(f^\tau)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
 \end{s}
 
@@ -6455,6 +6467,12 @@ P. 409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{p
 
 \begin{s}\label{17115b}
 P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
+\end{s}
+
+%
+
+\begin{s}
+P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $(f^t)\,\widehat{}$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 
 %
