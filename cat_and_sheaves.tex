@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0102)
+% about "categories and sheaves" (version_0103)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6189,14 +6189,24 @@ being cartesian, and $V\to U$ being in $S$ by the claim, $C\to V$ is in $\cc E$ 
 
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
 
-It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
+It is now easy to prove 
+
+\begin{thm}
+The equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
+\end{thm}
+
+\begin{cor}\label{leu}
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is a local epimorphism if and only if $u'$ is a local epimorphism.
+\end{cor}
+
+%It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
 
 %%
 
 \subsection{Brief Comments}
 
 \begin{s} 
-P. 390, Axioms LE1-LE4. I think that the set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
+P. 390, Axioms LE1-LE4. The set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
 
 Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$, where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
 $$
@@ -6213,6 +6223,14 @@ $$
 A\times_Df:A\times_DB\to A\times_DC
 $$ 
 is a local epimorphism.
+\end{s}
+
+%
+
+\begin{s}
+Corollary \ref{leu} p. \pageref{leu} implies:
+
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is a local monomorphism if and only if $u'$ is a local monomorphism, and $u$ is a local isomorphism if and only if $u'$ is a local isomorphism.
 \end{s}
 
 %
@@ -6498,7 +6516,7 @@ $$
 $$ 
 is a local monomorphism, and $(f^t)\widehat{\ \,}(s)$ is a local epimorphism by Step~(2), Lemma 16.2.4 (vi) p.~396 of the book implies that $(f^t)\widehat{\ \,}(u_V)$ is a local monomorphism. Since $(f^t)\widehat{\ \,}(u_V)$ is an epimorphism by Step~(2), we see that $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
 
-Thus in the both cases, $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+Thus in both cases, $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
 
 Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Proposition 16.3.4 p.~401 of the book that $(f^t)\widehat{\ \,}(u)$ is a local isomorphism. 
 \end{s}
