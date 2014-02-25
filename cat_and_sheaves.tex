@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0101)
+% about "categories and sheaves" (version_0102)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -471,7 +471,11 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \nn $*$ P. 406, first line of the second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
-\nn$*$ P. 409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$.
+\nn$*$ P. 409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$. 
+
+\begin{s}\label{1722}
+P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $(f^t)\widehat{\ \,}(u_V)$ is an epimorphism by (2), $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism'' should be ``Since $(f^t)\widehat{\ \,}(u_V)$ is a local epimorphism by (2), $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism''.
+\end{s}
 
 %\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
 
@@ -6473,6 +6477,30 @@ P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 
 \begin{s}
 P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $(f^t)\,\widehat{}$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
+\end{s}
+
+%
+
+\begin{s}
+P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.~\pageref{1722}. This is a copy and paste of the book; we only inserted a few line breaks.
+
+Let us show that if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or a local epimorphism, then $(f^t)\widehat{\ \,}(u)$ is a local isomorphism in $\C_X^\wedge$. 
+
+Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V\in\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism. 
+
+Let us show that $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+
+If $u_V$ is a monomorphism, this holds by assumption. 
+
+If $u_V$ is an epimorphism, then $u_V$ has a section $s:V\to A\times_BV$. Since $u_V$ is a local isomorphism, $s$ is a local isomorphism. Since 
+$$
+(f^t)\widehat{\ \,}(u_V)\circ(f^t)\widehat{\ \,}(s)\simeq\id_{f^t(V)}
+$$ 
+is a local monomorphism, and $(f^t)\widehat{\ \,}(s)$ is a local epimorphism by Step~(2), Lemma 16.2.4 (vi) p.~396 of the book implies that $(f^t)\widehat{\ \,}(u_V)$ is a local monomorphism. Since $(f^t)\widehat{\ \,}(u_V)$ is an epimorphism by Step~(2), we see that $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+
+Thus in the both cases, $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+
+Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Proposition 16.3.4 p.~401 of the book that $(f^t)\widehat{\ \,}(u)$ is a local isomorphism. 
 \end{s}
 
 %
