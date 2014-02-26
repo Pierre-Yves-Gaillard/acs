@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0103)
+% about "categories and sheaves" (version_0104)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6091,6 +6091,9 @@ $$
 
 Let $\Sigma_U$ be the set of sieves over $U$. Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ and consider the following conditions:
 
+\begin{cond}\label{gt}
+$\ $
+
 \nn GT1: for all $U$ in $\C$ we have: $M_U\in\Gamma_U$,
 
 \nn GT2: for all $U$ in $\C$ we have: $\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U$,
@@ -6101,6 +6104,7 @@ Let $\Sigma_U$ be the set of sieves over $U$. Let $(\Gamma_U)_{U\in\C}$ be a sub
 $$
 S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S\implies S'\in\Gamma_U.
 $$
+\end{cond}
 
 Consider the following conditions on a set $\cc E$ of morphisms in $\C^\wedge$:
 
@@ -6114,9 +6118,11 @@ Consider the following conditions on a set $\cc E$ of morphisms in $\C^\wedge$:
 
 As proved in the book, $\cc E$ contains all epimorphisms. 
 
-The elements of $\cc E$ are called \textbf{local epimorphisms}. %\index{local epimorphism}
+The elements of $\cc E$ are called \textbf{local epimorphisms}.
 
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and let $\cc E=\cc E(\Gamma)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
+\begin{nota}\label{cce}
+Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let $\cc E=\cc E(\Gamma,\U)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
+\end{nota}
 
 Let us check that $\cc E$ satisfies LE1-LE4:
 
@@ -6192,14 +6198,12 @@ We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
 It is now easy to prove 
 
 \begin{thm}
-The equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
+If $\C$ is a $\U$-small category, if $\Gamma$ is a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and if $\cc E$ is a set of morphisms in $\C^\wedge_\U$ satisfying LE1-LE4, then the equalities $\cc E=\cc E(\Gamma,\U)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
 \end{thm}
 
 \begin{cor}\label{leu}
-Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is a local epimorphism if and only if $u'$ is a local epimorphism.
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is in $\cc E(\Gamma,\U)$ (see Notation~\ref{cce} p.~\pageref{cce}) if and only if $u'$ is in $\cc E(\Gamma,\U')$.
 \end{cor}
-
-%It is easy to check that the equalities $\cc E=\cc E(\Gamma)$ and $\Gamma=\Gamma(\cc E)$ are equivalent.
 
 %%
 
@@ -6228,9 +6232,9 @@ is a local epimorphism.
 %
 
 \begin{s}
-Corollary \ref{leu} p. \pageref{leu} implies:
+For any universe $\U$, any $\U$-small category $\C$, and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $\cc M(\Gamma,\U)$ and $\cc I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\cc E(\Gamma,\U)$ (see Notation~\ref{cce} p.~\pageref{cce}). Corollary \ref{leu} p. \pageref{leu} implies:
 
-Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is a local monomorphism if and only if $u'$ is a local monomorphism, and $u$ is a local isomorphism if and only if $u'$ is a local isomorphism.
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is in $\cc M(\Gamma,\U)$ (resp. in $\cc I(\Gamma,\U)$) if and only if $u'$ is in $\cc M(\Gamma,\U')$ (resp. in $\cc I(\Gamma,\U')$).
 \end{s}
 
 %
