@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0105)
+% about "categories and sheaves" (version_0106)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6557,6 +6557,37 @@ Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ ar
 \end{df}
 %
 Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\cc T_i$ is a Grothendieck topology, and we denote by $\bigvee\cc T_i$ the intersection of all the Grothendieck topologies containing $\bigcup\cc T_i$.
+\end{s}
+
+%
+
+\begin{s}
+P. 415, Isomorphism (17.3.1). Recall briefly the setting. We have: 
+$$
+F\in\oo{PSh}(X,\A),\quad M\in\A,\quad U\in\C_X,
+$$ 
+and we claim 
+\begin{equation}\label{1731}
+\cc H\mathit{om}_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_\A(M,F(U)).
+\end{equation} 
+By the definition of $\cc H\mathit{om}_{\oo{PSh}(X,\A)}$, which is give in in (17.1.14), we have 
+$$
+\cc H\mathit{om}_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_{\oo{PSh}(U,\A)}(\oo j_{U\to X*}M,\oo j_{U\to X*}F)
+$$ 
+$$
+\simeq\Hom_{\oo{PSh}(U,\A)}(M,\oo j_{U\to X*}F), 
+$$ 
+so that we must show 
+$$
+\Hom_{\oo{PSh}(U,\A)}(M,\oo j_{U\to X*}F)\simeq\Hom_\A(M,F(U)).
+$$
+We define maps 
+$$
+\begin{tikzcd}
+\Hom_{\oo{PSh}(U,\A)}(M,\oo j_{U\to X*}F)\ar[yshift=0.7ex]{r}{\pp}&\Hom_\A(M,F(U))\ar[yshift=-0.7ex]{l}{\psi}
+\end{tikzcd} 
+$$ 
+as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given by morphisms $p(V\to U):M\to F(V)$ in $\A$, then we put $\pp(p):=p(U\xr{\id_U}U)$; if $a:M\to F(U)$ is a morphism in $\A$, then we put $\psi(a)(V\xr cU):=F(c)\circ a$; and we check that $\pp$ and $\psi$ are inverse bijections. 
 \end{s}
 
 %
