@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0104)
+% about "categories and sheaves" (version_0105)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6529,6 +6529,22 @@ Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Propos
 
 \begin{s}\label{1725b}
 P. 413, Proof of Lemma 17.2.5. Part~(i): see Proposition~\ref{p406} p.~\pageref{p406}. Part~(iii): see \eqref{1725} p.~\pageref{1725}.
+\end{s}
+
+%
+
+\begin{s}%\label{1722}
+P. 413, Lemma 17.2.5 (ii). It seems to me one can prove: 
+
+If $f:X\to Y$ is a weakly exact morphism of presites, then $(f^t)\ \widehat{}:\C_Y^\wedge\to\C_X^\wedge$ is left exact. 
+
+Proof: We have a quasi-commutative diagram 
+$$
+\begin{tikzcd}
+\C_Y^\wedge\ar{r}{F}\ar[bend right]{rrr}[swap]{(f^t)\,\,\widehat{}}&((\C_X)_{(f^t)\,\,\widehat{}\,\,(\oo{pt}_Y)})^\wedge\ar{r}{G}&(\C_X^\wedge)_{(f^t)\,\,\widehat{}\,\,(\oo{pt}_Y)}\ar{r}{H}&\C_X^\wedge,
+\end{tikzcd}
+$$ 
+where $G$ is the equivalence of Lemma 1.4.12 p.~26 of the book. The functor $F$ is left exact by Corollary 3.3.19 p.~87 of the book, and the functor $G$ is left exact by Lemma 2.1.13 (ii) p.~41 and Proposition 3.3.3 p. 82 of the book.
 \end{s}
 
 %
