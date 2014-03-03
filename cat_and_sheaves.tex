@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0110)
+% about "categories and sheaves" (version_0111)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -487,6 +487,8 @@ $$
 $$
 
 %\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
+
+\nn$*$ P. 421, Theorem 17.4.7 (i): $(h_X^\ddagger F)^b\simeq(h_X^\ddagger F^a)$ should be $(\oo h_X^\ddagger F)^b\simeq(\oo h_X^\ddagger F^a)$, \emph{i.e.} the h's should be straight, not slanted.
 
 \noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) 
 
@@ -6628,10 +6630,33 @@ Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} d
 %\begin{s}P. 421. I don't understand the proof of Lemma 17.4.6 (i). So far I haven't seen this statement used in the sequel.\end{s}
 
 \begin{s} 
-P. 422, proof of Theorem 17.4.9 (iv). The exactness $(\ )^a$ (Theorem 17.4.7 (iv) p.~421) is an important ingredient.
+P. 422, proof of Theorem 17.4.9 (iv). The exactness $(\ )^a$ is proved in Theorem 17.4.7 (iv) p.~421 of the book.
 \end{s}
 
-%\begin{s} P. 424, proof of Theorem 17.5.2 (iv). Firstly, as already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. Secondly, the exactness of $f^\dagger$ follows from Proposition~\ref{407} p.~\pageref{407}.\end{s}
+%
+
+\begin{s} 
+P. 424, proof of Theorem 17.5.2 (i). With the convention that a diagram of the form 
+$$
+\begin{tikzcd} 
+\C_1\ar[xshift=-0.7ex]{d}[swap]{L}\\ \C_2\ar[xshift=0.7ex]{u}[swap]{R}
+\end{tikzcd}
+$$ 
+means: ``$(L,R)$ is a pair of adjoint functors'', the proof of Theorem 17.5.2 (i) in the book can be visualized by the diagram 
+$$
+\begin{tikzcd} 
+\oo{PSh}(Y,\A)\ar[xshift=-0.7ex]{d}[swap]{f^\dagger}\\ 
+\oo{PSh}(X,\A)\ar[xshift=0.7ex]{u}[swap]{f_*}\ar[xshift=-0.7ex]{d}[swap]{(\ )^a}\\ 
+\oo{Sh}(X,\A).\ar[xshift=0.7ex]{u}[swap]{\iota}
+\end{tikzcd}
+$$ 
+\end{s}
+
+%
+
+\begin{s} 
+P. 424, proof of Theorem 17.5.2 (iv). As already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. %Secondly, the exactness of $f^\dagger$ follows from Proposition~\ref{407} p.~\pageref{407}.
+\end{s}
 
 \begin{s} 
 P. 426, proof of Proposition 17.6.7 (i). The isomorphism 
