@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0112)
+% about "categories and sheaves" (version_0113)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2144,13 +2144,7 @@ The first and last bijections follow from \eqref{332}, the second one is clear, 
 \end{proof}
 \end{s}
 
-%
-
-\begin{s}\label{333} 
-By Proposition 3.3.3 p.~82 and Remark~\ref{272} p.~\pageref{272} the functor $\widehat F$ in Remark~\ref{272} is right exact.
-\end{s}
-
-%
+%\begin{s}\label{333}By Proposition 3.3.3 p.~82 and Remark~\ref{272} p.~\pageref{272} the functor $\widehat F$ in Remark~\ref{272} is right exact.\end{s}
 
 \begin{s}
 P. 84, Proposition 3.3.13. Recall the statement:
@@ -6443,21 +6437,17 @@ $$
 %
 
 \begin{s}\label{fhat}
-P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$,
+P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$, 
+$$
+(f^t)\ \widehat{}\ (B)(U)\simeq\colim_{(V\to B)\in(\C_Y)_B}\Hom_{(\C_X)}(U,f^t(V))\simeq\colim_{(U\to f^t(V))\in(\C_Y)^U}B(V).
+$$
 %
-\begin{equation*}
-\begin{split}
-(f^\tau)\ \widehat{}\ (B)(U)&\simeq\colim_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{(\C_X)^{\op}}(U,f^\tau(V))
-\\ \\ 
-{}&\simeq\colim_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^\tau(V),U)\\ \\ 
-{}&\simeq\colim_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}B(V).
-\end{split}
-\end{equation*}
+%\begin{equation*}\begin{split}(f^\tau)\ \widehat{}\ (B)(U)&\simeq\colim_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{(\C_X)^{\op}}(U,f^\tau(V))\\ \\ {}&\simeq\colim_{(V\to B)\in((\C_Y)^{\op})_B}\Hom_{\C_X}(f^\tau(V),U)\\ \\ {}&\simeq\colim_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}B(V).\end{split}\end{equation*}
 %
 For the sake of emphasis, we state: 
 
 \begin{prop}\label{p406}
-The functor $(f^\tau)\ \widehat{}$ is right exact and commutes with small inductive limits (Proposition 2.7.1 p.~62, \S\ref{333} p.~\pageref{333}). Moreover, if $f$ is left exact, then $(f^\tau)\ \widehat{}$ is exact (Corollary 3.3.19 p.~87).
+The functor $(f^t)\ \widehat{}\ $ commutes with small inductive limits (Proposition 2.7.1 p.~62, Remark~\ref{272} p.~\pageref{272}). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}\ $ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
 \end{s}
 
@@ -6509,7 +6499,7 @@ P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 %
 
 \begin{s}
-P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $(f^t)\,\widehat{}$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
+P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $(f^t)\,\widehat{}\ $ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 
 %
