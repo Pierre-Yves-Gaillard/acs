@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0116)
+% about "categories and sheaves" (version_0117)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1726,7 +1726,7 @@ This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\
 \noindent(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
 \end{s}
 
-%%%
+%
 
 \begin{s} 
 P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
@@ -1868,6 +1868,34 @@ As observed in the book:
 \begin{rk}\label{272}
 The functor $\widehat F$ commutes with small inductive limits.
 \end{rk}
+\end{s}
+
+%
+
+\begin{s}\label{272b}
+P. 63, Notation 2.7.2. Recall that $F:\C\to\C'$ is a functor of small categories, and that its Yoneda extension $\widehat F:\C^\wedge\to\C'^\wedge$ satisfies 
+$$
+\widehat F(A)(U')\simeq\col_{(U\to A)\in\C_A}\Hom_{\C'}(U',F(U)).
+$$ 
+
+Let us assume that $A$ is a terminal object of $\C^\wedge$, and let us define a functor 
+$$
+G:\C\to\C'_{\widehat F(A)}
+$$ 
+whose composition with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
+
+We have 
+$$
+\widehat F(A)(F(U))\simeq\col_{V\in\C}\Hom_{\C'}(F(U),F(V)).
+$$ 
+Letting 
+$$
+p_V:\Hom_{\C'}(F(U),F(V))\to\widehat F(A)(F(U))
+$$ 
+be the coprojection, it suffices to define $G$ by
+$$
+G(U):=\big(p_U(\id_{F(U)}):F(U)\to\widehat F(A)\big).
+$$
 \end{s}
 
 %
@@ -6656,6 +6684,12 @@ P. 424, proof of Theorem 17.5.2 (iv). As already mentioned, there is a typo: ``T
 
 \begin{s}%\label{1725b}
 P. 424, sentence following Definition 17.6.1: ``It is easily checked that we obtain a Grothendieck topology on $\C_A$''. The verification  of LE1, LE2, and LE3 is straightforward. Axiom LE4 follows from Parts (iii) and (ii) of Lemma 17.2.5 p.~413.
+\end{s}
+
+%
+
+\begin{s}
+P. 425, proof of Proposition 17.6.3, Step~(ii), second sentence: see \S\ref{272b} p.~\pageref{272b}.
 \end{s}
 
 %
