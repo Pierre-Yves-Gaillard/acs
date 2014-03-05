@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0122)
+% about "categories and sheaves" (version_0123)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -60,13 +60,14 @@
 \newcommand{\ee}{\varepsilon}
 \newcommand{\pp}{\varphi}
 \newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\fthat}{(f^t)\ \widehat{}\ }
 \newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
 \newcommand{\incl}{\hookrightarrow}
 \newcommand{\parar}{\rightrightarrows}
 %\newcommand{\paralelarrows}{\rightrightarrows}% parallel
-\newcommand{\then}{\Rightarrow}
 \newcommand{\si}{\Leftarrow}
 \newcommand{\ssi}{\Leftrightarrow}%\Leftrightarrow\Rightarrow
+\newcommand{\then}{\Rightarrow}
 \newcommand{\xl}{\xleftarrow}
 \newcommand{\xr}{\xrightarrow}
 %
@@ -474,7 +475,7 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \nn$*$ P. 409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$. 
 
 \begin{s}\label{1722}
-P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $(f^t)\widehat{\ \,}(u_V)$ is an epimorphism by (2), $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism'' should be ``Since $(f^t)\widehat{\ \,}(u_V)$ is a local epimorphism by (2), $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism''.
+P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $\fthat(u_V)$ is an epimorphism by (2), $\fthat(u_V)$ is a local isomorphism'' should be ``Since $\fthat(u_V)$ is a local epimorphism by (2), $\fthat(u_V)$ is a local isomorphism''.
 \end{s}
 
 \nn$*$ P. 418, last display: 
@@ -6493,12 +6494,12 @@ $$
 \begin{s}\label{fhat}
 P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$, 
 $$
-(f^t)\ \widehat{}\ (B)(U)\simeq\colim_{(V\to B)\in(\C_Y)_B}\Hom_{(\C_X)}(U,f^t(V))\simeq\colim_{(U\to f^t(V))\in(\C_Y)^U}B(V).
+\fthat(B)(U)\simeq\colim_{(V\to B)\in(\C_Y)_B}\Hom_{(\C_X)}(U,f^t(V))\simeq\colim_{(U\to f^t(V))\in(\C_Y)^U}B(V).
 $$
 For the sake of emphasis, we state: 
 
 \begin{prop}\label{p406}
-The functor $(f^t)\ \widehat{}\ $ commutes with small inductive limits (Proposition 2.7.1 p.~62, Remark~\ref{272} p.~\pageref{272}). Moreover, if $f$ is left exact, then $(f^t)\ \widehat{}\ $ is exact (Corollary 3.3.19 p.~87).
+The functor $\fthat$ commutes with small inductive limits (Proposition 2.7.1 p.~62, Remark~\ref{272} p.~\pageref{272}). Moreover, if $f$ is left exact, then $\fthat$ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
 \end{s}
 
@@ -6550,7 +6551,7 @@ P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 %
 
 \begin{s}
-P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $(f^t)\,\widehat{}\ $ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
+P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 
 %
@@ -6558,23 +6559,23 @@ P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $(f^t)\,\widehat{}\
 \begin{s}
 P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.~\pageref{1722}. This is a copy and paste of the book; we only inserted a few line breaks.
 
-Let us show that if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or a local epimorphism, then $(f^t)\widehat{\ \,}(u)$ is a local isomorphism in $\C_X^\wedge$. 
+Let us show that if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or a local epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wedge$. 
 
 Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V\in\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism. 
 
-Let us show that $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+Let us show that $\fthat(u_V)$ is a local isomorphism. 
 
 If $u_V$ is a monomorphism, this holds by assumption. 
 
 If $u_V$ is an epimorphism, then $u_V$ has a section $s:V\to A\times_BV$. Since $u_V$ is a local isomorphism, $s$ is a local isomorphism. Since 
 $$
-(f^t)\widehat{\ \,}(u_V)\circ(f^t)\widehat{\ \,}(s)\simeq\id_{f^t(V)}
+\fthat(u_V)\circ\fthat(s)\simeq\id_{f^t(V)}
 $$ 
-is a local monomorphism, and $(f^t)\widehat{\ \,}(s)$ is a local epimorphism by Step~(2), Lemma 16.2.4 (vi) p.~396 of the book implies that $(f^t)\widehat{\ \,}(u_V)$ is a local monomorphism. Since $(f^t)\widehat{\ \,}(u_V)$ is an epimorphism by Step~(2), we see that $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+is a local monomorphism, and $\fthat(s)$ is a local epimorphism by Step~(2), Lemma 16.2.4 (vi) p.~396 of the book implies that $\fthat(u_V)$ is a local monomorphism. Since $\fthat(u_V)$ is an epimorphism by Step~(2), we see that $\fthat(u_V)$ is a local isomorphism. 
 
-Thus in both cases, $(f^t)\widehat{\ \,}(u_V)$ is a local isomorphism. 
+Thus in both cases, $\fthat(u_V)$ is a local isomorphism. 
 
-Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Proposition 16.3.4 p.~401 of the book that $(f^t)\widehat{\ \,}(u)$ is a local isomorphism. 
+Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Proposition 16.3.4 p.~401 of the book that $\fthat(u)$ is a local isomorphism. 
 \end{s}
 
 %
@@ -6585,15 +6586,13 @@ P. 413, Definition 17.2.4 (ii): see \S\ref{272b} p.~\pageref{272b}.
 
 %
 
-\begin{comment}
-
 \begin{s}
-P. 413, Lemma 17.2.5 (ii). \S\ref{333} p.~\pageref{333} implies: 
-
-If $f:X\to Y$ is a weakly left exact morphism of presites, then its Yoneda extension $\widehat f:\widehat X\to\widehat Y$ is left exact.
+P. 413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ commutes with projective limits indexed by small connected categories.
 \end{s}
 
 %
+
+\begin{comment}
 
 \begin{s}\label{1725b}
 P. 413, Proof of Lemma 17.2.5. Part~(ii): see Proposition~\ref{p406} p.~\pageref{p406}. Part~(iii): see \eqref{1725} p.~\pageref{1725}.
@@ -6604,7 +6603,7 @@ P. 413, Proof of Lemma 17.2.5. Part~(ii): see Proposition~\ref{p406} p.~\pageref
 \begin{s}%\label{1722}
 P. 413, Lemma 17.2.5 (ii). It seems to me one can prove: 
 
-If $f:X\to Y$ is a weakly exact morphism of presites, then $(f^t)\ \widehat{}:\C_Y^\wedge\to\C_X^\wedge$ is left exact. 
+If $f:X\to Y$ is a weakly exact morphism of presites, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ is left exact. 
 
 Proof: We have a quasi-commutative diagram 
 $$
@@ -6621,11 +6620,11 @@ where $G$ is the equivalence of Lemma 1.4.12 p.~26 of the book. The functor $F$ 
 
 \begin{s} 
 P. 414, Definition 17.7.8 (minor variant):
-%
+
 \begin{df}\label{1778}
 Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology} on $X$ is a set $\cc T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\cc T'$ and $\cc T$ be Grothendieck topologies. We say that $\cc T$ is {\em stronger than} $\cc T'$, or that $\cc T'$ is {\em weaker than} $\cc T$, if $\cc T'\subset\cc T$. 
 \end{df}
-%
+
 Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\cc T_i$ is a Grothendieck topology, and we denote by $\bigvee\cc T_i$ the intersection of all the Grothendieck topologies containing $\bigcup\cc T_i$.
 \end{s}
 
@@ -6728,7 +6727,7 @@ P. 424, sentence following Definition 17.6.1: ``It is easily checked that we obt
 \begin{s} 
 P. 426, proof of Proposition 17.6.7 (i). The isomorphism 
 $$
-(f^t)\ \widehat{}\ (V\times B)\simeq f^t(V)\times(f^t)\ \widehat{}\ (B)
+\fthat(V\times B)\simeq f^t(V)\times\fthat(B)
 $$ 
 follows from Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
