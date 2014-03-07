@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0123)
+% about "categories and sheaves" (version_0124)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -477,6 +477,8 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \begin{s}\label{1722}
 P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $\fthat(u_V)$ is an epimorphism by (2), $\fthat(u_V)$ is a local isomorphism'' should be ``Since $\fthat(u_V)$ is a local epimorphism by (2), $\fthat(u_V)$ is a local isomorphism''.
 \end{s}
+
+\nn$*$ P. 414, line before the last display: $h_X^\ddagger F$ should be $\oo h_X^\ddagger F$, \emph{i.e.} the h should be straight, not slanted.
 
 \nn$*$ P. 418, last display: 
 $$
@@ -6269,7 +6271,7 @@ Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$
 
 \subsection{Brief Comments}
 
-\begin{s} 
+\begin{s}\label{390}
 P. 390, Axioms LE1-LE4. The set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
 
 Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U\in\C$ and $b\in B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$, where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
@@ -6277,6 +6279,14 @@ $$
 U=\bigcup_{V\in\Sigma(U,b)}V
 $$ 
 for all $(U,b)$ as above.
+
+Moreover, the following conditions on a morphism $u:A\to U$ in $(\oo{Op}_X)^\wedge$ with $U$ in $\oo{Op}_X$ are equivalent:
+
+\nn(a) $u$ is a local epimorphism,
+
+\nn(b) for all $x$ in $U$ there is a $V$ in $\oo{Op}_X$ such that $A(V)\ne\varnothing$,
+
+\nn(c) for all $x$ in $U$ there is a $V$ in $\oo{Op}_X$ such that $A(V)\ne\varnothing$ and $V\subset U$.
 \end{s}
 
 %
@@ -6493,14 +6503,23 @@ $$
 
 \begin{s}\label{fhat}
 P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$, 
-$$
+%
+\begin{equation}\label{efhat1}
 \fthat(B)(U)\simeq\colim_{(V\to B)\in(\C_Y)_B}\Hom_{(\C_X)}(U,f^t(V))\simeq\colim_{(U\to f^t(V))\in(\C_Y)^U}B(V).
-$$
+\end{equation}
+%
 For the sake of emphasis, we state: 
 
 \begin{prop}\label{p406}
 The functor $\fthat$ commutes with small inductive limits (Proposition 2.7.1 p.~62, Remark~\ref{272} p.~\pageref{272}). Moreover, if $f$ is left exact, then $\fthat$ is exact (Corollary 3.3.19 p.~87).
 \end{prop}
+
+If $f:X\to Y$ is a continuous map of small topological spaces, if $B$ is in $(\oo{Op}_Y)^\wedge$ and $U$ in $\oo{Op}_X$, then \eqref{efhat1} gives 
+%
+\begin{equation}\label{efhat2}
+\fthat(B)(U)\simeq\colim_{f^{-1}(V)\supset U}B(V).
+\end{equation}
+%
 \end{s}
 
 %
@@ -6587,7 +6606,13 @@ P. 413, Definition 17.2.4 (ii): see \S\ref{272b} p.~\pageref{272b}.
 %
 
 \begin{s}
-P. 413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ commutes with projective limits indexed by small connected categories.
+P. 413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ commutes with projective limits indexed by small connected categories.
+\end{s}
+
+%
+
+\begin{s}
+P. 413. Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from the equivalence of Conditions (a), (b) and (c) in \S\ref{390} p.~\pageref{390} and \eqref{efhat2} p.~\pageref{efhat2}. 
 \end{s}
 
 %
