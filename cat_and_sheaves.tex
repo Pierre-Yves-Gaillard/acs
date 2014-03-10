@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0127)
+% about "categories and sheaves" (version_0128b)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -61,6 +61,7 @@
 \newcommand{\pp}{\varphi}
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\fthat}{(f^t)\ \widehat{}\ }
+\newcommand{\HOM}{\cc H\mathit{om}}
 \newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
 \newcommand{\incl}{\hookrightarrow}
 \newcommand{\parar}{\rightrightarrows}
@@ -220,6 +221,8 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 %
 
+\begin{comment}
+
 \noindent $*$ P.~18, Definition 1.2.16. The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
 %
 \begin{equation}\label{convnot}
@@ -227,6 +230,8 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 \end{equation}
 %
 There is a similar remark for projective limits. 
+
+\end{comment}
 
 %
 
@@ -1727,18 +1732,19 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
-\ic_{X\in\C_A}X\xrightarrow\sim A,
+\ic_{(X\to A)\in\C_A}X\xrightarrow\sim A,
 \end{equation} 
 
 \begin{equation}\label{263b}
-\colim_{X\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
+\colim_{(X\to A)\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
 \end{equation}
 
 \begin{equation}\label{263c}
-\Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{X\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
+\Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{(X\to A)\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
 \end{equation}
 
-\noindent(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
+%\noindent(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) 
+Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
 \end{s}
 
 %
@@ -1820,9 +1826,10 @@ $$
 $$
 where $I$ is a small category and $\widetilde F$ is defined by 
 $$
-\widetilde F(A):=\colim_{X\in\C_A}F(X). 
+\widetilde F(A):=\colim_{(X\to A)\in\C_A}F(X). 
 $$
-(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
+%(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) 
+Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
 
 By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
@@ -1831,11 +1838,11 @@ $$
 is right adjoint to $\widetilde F$. This results from the following computation: 
 $$
 \Hom_{\A}\left(\widetilde F(A),X'\right)=
-\Hom_{\A}\left(\colim_{X\in\C_A}F(X),X'\right)\simeq 
-\lim_{X\in\C_A}\Hom_{\A}(F(X),X')
+\Hom_{\A}\left(\colim_{(X\to A)\in\C_A}F(X),X'\right)\simeq 
+\lim_{(X\to A)\in\C_A}\Hom_{\A}(F(X),X')
 $$
 $$
-=\lim_{X\in\C_A}G(X')(X)\simeq\Hom_{\C^\wedge}(A,G(X')), 
+=\lim_{(X\to A)\in\C_A}G(X')(X)\simeq\Hom_{\C^\wedge}(A,G(X')), 
 $$ 
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \end{s}
@@ -1845,13 +1852,14 @@ the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \begin{s} 
 P.~63, Notation 2.7.2. Recall the $F:\C\to\C'$ is a functor of small categories. The formula 
 $$
-\widehat F(A)(V)=\colim_{U\in\C_A}\Hom_{\C'}(V,F(U))
+\widehat F(A)(V)=\colim_{(U\to A)\in\C_A}\Hom_{\C'}(V,F(U))
 $$
 may also be written as 
 $$
-\widehat F(A)=\icolim_{U\in\C_A}F(U).
+\widehat F(A)=\icolim_{(U\to A)\in\C_A}F(U).
 $$
-(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) It might be worth stating explicitly the isomorphism 
+%(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) 
+It might be worth stating explicitly the isomorphism 
 $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
 $$
@@ -1870,10 +1878,10 @@ If $F$ is fully faithful, then there is an isomorphism $\widehat F(A)\circ F\xr\
 \begin{proof}
 We have 
 $$
-\widehat F(A)(F(X))=\colim_{Y\in\C_A}\Hom_{\C'}(F(X),F(Y))
+\widehat F(A)(F(X))=\colim_{(Y\to A)\in\C_A}\Hom_{\C'}(F(X),F(Y))
 $$
 $$
-\simeq\colim_{Y\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
+\simeq\colim_{(Y\to A)\in\C_A}\Hom_\C(X,Y)\xr\sim A(X),
 $$
 the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \end{proof}
@@ -2175,15 +2183,18 @@ $$
 Isomorphism (\ref{241}) p.~\pageref{241} gives 
 %
 \begin{equation}\label{332} 
-\colim_{X\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{X\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X').
+\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X').
 \end{equation} 
 %
 We have bijections 
 $$ 
-\Hom_{\C'}(F(\colim\alpha),X')\simeq\colim_{X\in\C_{X'}}\Hom_\C(\colim\alpha,X)\xr\sim\colim_{X\in\C_{X'}}\lim\Hom_\C(\alpha,X) 
-$$ 
+\Hom_{\C'}(F(\colim\alpha),X')\simeq\colim_{(X\to X')\in\C_{X'}}\Hom_\C(\colim\alpha,X)
 $$
-\xr\sim\lim\colim_{X\in\C_{X'}}\Hom_\C(\alpha,X)\simeq\lim\Hom_{\C'}(F(\alpha),X'). 
+$$
+\xr\sim\colim_{(X\to X')\in\C_{X'}}\lim\Hom_\C(\alpha,X)\xr\sim\lim\colim_{(X\to X')\in\C_{X'}}\Hom_\C(\alpha,X)
+$$
+$$
+\simeq\lim\Hom_{\C'}(F(\alpha),X'). 
 $$ 
 The first and last bijections follow from \eqref{332}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
 \end{proof}
@@ -3027,21 +3038,22 @@ $$
 \Hom_\A\left(\widetilde F(\ ),Y\right)\simeq
 \Hom_{\C^\wedge}(\ \ ,B)
 $$ 
-in $\Ind(\C)^\wedge_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wedge$ is a $\V$-category. Using the notation in \eqref{convnot} p.~\pageref{convnot}, we have 
+in $\Ind(\C)^\wedge_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wedge$ is a $\V$-category. %Using the notation in \eqref{convnot} p.~\pageref{convnot}, 
+We have 
 $$
-\widetilde F(A):=\colim_{X\in\C_A}F(X),
+\widetilde F(A):=\colim_{(X\to A)\in\C_A}F(X),
 $$ 
 as well as the following isomorphisms functorial in $A\in\Ind(\C)$:
 $$
 \Hom_\A\left(\widetilde F(A),Y\right)=
-\Hom_\A\left(\colim_{X\in\C_A}F(X),Y\right)\simeq
-\lim_{X\in\C_A}B(X)
+\Hom_\A\left(\colim_{(X\to A)\in\C_A}F(X),Y\right)\simeq
+\lim_{(X\to A)\in\C_A}B(X)
 $$
 $$
 \simeq
-\lim_{X\in\C_A}\Hom_{\C^\wedge}((j\circ i)(X),B)
+\lim_{(X\to A)\in\C_A}\Hom_{\C^\wedge}((j\circ i)(X),B)
 \simeq
-\Hom_{\C^\wedge}\left(\icolim_{X\in\C_A}X,B\right)\simeq
+\Hom_{\C^\wedge}\left(\icolim_{(X\to A)\in\C_A}X,B\right)\simeq
 \Hom_{\C^\wedge}(j(A),B).
 $$
 \end{proof}
@@ -6548,11 +6560,15 @@ with $G\in\PSh(Y,\A),U\in\C_X$, $U\to f^\tau(V)$ being a morphism in $(\C_X)^{\o
 
 %
 
-\begin{s}
-P. 408, second display: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
+\begin{s}\label{s408}
+P. 408, comment preceding Convention 17.1.6. Let us recall the comment: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
 \begin{equation}\label{408}
 F(A):=\lim_{(U\to A)\in(\C_X)_A}F(U).
 \end{equation}
+(Note that the same comment is made at the beginning of Section 17.3 p.~414.) This convention of extending each presheaf $F$ over $X$ to a presheaf, still denoted by $F$, over $\widehat X$ which commutes with small projective limits implies that we have, for $A,B\in\C^\wedge$, 
+$$
+B(A)\simeq\Hom_{\C_X^\wedge}(A,B).
+$$
 \end{s}
 
 %
@@ -6660,18 +6676,22 @@ P. 415, Isomorphism (17.3.1). Recall briefly the setting. We have:
 $$
 F\in\oo{PSh}(X,\A),\quad M\in\A,\quad U\in\C_X,
 $$ 
-and we claim 
+for $F$ in $\PSh(X,\A)$ and $M$ in $\A$, and we claim 
 \begin{equation}\label{1731}
-\cc H\mathit{om}_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_\A(M,F(U)).
+\HOM_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_\A(M,F(U)).
 \end{equation} 
-Here and in the sequel, we denote again by $M$ the constant presheaves over $X$ and $U$ attached to the object $M$ of $\A$. We have 
+Here and in the sequel, we denote again by $M$ the constant presheaves over $X$ and $U$ attached to the object $M$ of $\A$. Note that, by \S\ref{s408} p.~\pageref{s408}, this isomorphism can be written 
 $$
-\cc H\mathit{om}_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_{\oo{PSh}(U,\A)}(\oo j_{U\to X*}M,\oo j_{U\to X*}F)
+\HOM_\A(M,F)\simeq\Hom_\A(M,F(\ )).
+$$ 
+To prove \eqref{1731}, observe that we have  
+$$
+\HOM_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_{\oo{PSh}(U,\A)}(\oo j_{U\to X*}M,\oo j_{U\to X*}F)
 $$ 
 $$
 \simeq\Hom_{\oo{PSh}(U,\A)}(M,\oo j_{U\to X*}F), 
 $$ 
-the two isomorphisms following respectively from the definition of $\cc H\mathit{om}_{\oo{PSh}(X,\A)}$ given in (17.1.14) p.~410 of the book, and from the definition of the functor $\oo j_{U\to X*}$, so that we must show 
+the two isomorphisms following respectively from the definition of $\HOM_{\oo{PSh}(X,\A)}$ given in (17.1.14) p.~410 of the book, and from the definition of the functor $\oo j_{U\to X*}$, so that we must show 
 $$
 \Hom_{\oo{PSh}(U,\A)}(M,\oo j_{U\to X*}F)\simeq\Hom_\A(M,F(U)).
 $$
