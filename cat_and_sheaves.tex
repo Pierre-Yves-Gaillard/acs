@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0128)
+% about "categories and sheaves" (version_0129)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -174,7 +174,7 @@ This is a work in progress.
 %The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
 %\end{rk}
 
-We adhere to Bourbaki's set theory.
+I adhere to Bourbaki's set theory as expounded in the book \textbf{Th\'eorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de r\'esultats'' in the above book because I don't understand it.) 
 
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. 
 
@@ -494,7 +494,7 @@ $$
 \ilim_{(B\to A)\in\cc{LI}_A}:\ilim_{(B\to A)\in\cc{LI}_A}F(B)\to\ilim_{(B\to A)\in\cc{LI}_A}F^b(B).
 $$
 
-%\noindent $*$ P. 415, right after Definition 17.3.1. The following obvious observation will be often used: If $f:X\to Y$ is a morphism of sites and if $F$ is in $\oo{Sh}(X,\A)$, then $f_*F$ is in $\oo{Sh}(Y,\A)$.
+\nn$*$ P. 419, second line: ``applying Corollary 2.3.4 to $\theta=\id_{\cc{LI}_A}$'' should be ``applying Corollary 2.3.4 to $\pp=\id_{\cc{LI}_A}$''.
 
 \nn$*$ P. 421, Theorem 17.4.7 (i): $(h_X^\ddagger F)^b\simeq(h_X^\ddagger F^a)$ should be $(\oo h_X^\ddagger F)^b\simeq(\oo h_X^\ddagger F^a)$, \emph{i.e.} the h's should be straight, not slanted.
 
@@ -6715,7 +6715,17 @@ P. 418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms
 $$
 \colim\alpha\xr f\colim\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\colim\alpha\circ\mu_u^{\op}\xr h\colim\alpha.
 $$
-We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\id_{\colim\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal, and $h$ is an isomorphism. q.e.d.
+We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\id_{\colim\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal (see Proposition 3.3.6 p.~83 and Lemma 3.3.10 p.~84 of the book)), and $h$ is an isomorphism. q.e.d.
+\end{s}
+
+%
+
+\begin{s}%\label{}
+P. 419, proof of Lemma 17.4.3, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
+$$
+F^b(A)\xr f\col_{(B\to A)\in\cc{LI}_A}F^b(A)\xr g\col_{(B\to A)\in\cc{LI}_A}F^b(B). 
+$$ 
+Moreover, $f$ is an isomorphism by Corollary~2.4.4 (iii) p.~55 of the book (see Proposition~\ref{244} p.~\pageref{244}), and $g$ is an isomorphism by Lemma 17.4.2 p.~418 of the book.
 \end{s}
 
 %
