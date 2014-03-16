@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0131)
+% about "categories and sheaves" (version_0132)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -257,7 +257,7 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~64, proof of Proposition 2.7.5: $(\C')^\wedge$ should be $\C^\wedge$.
 
-\noindent $*$ P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. (See \S\ref{bc} p.~\pageref{bc}.)
+\noindent $*$ P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. (See \S\ref{bc} p.~\pageref{bc}.) 
 
 \noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\varphi$.
 
@@ -483,7 +483,9 @@ P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $\fthat(u_V)$ is an epimorphism by (2), $\fthat(u_V)$ is a local isomorphism'' should be ``Since $\fthat(u_V)$ is a local epimorphism by (2), $\fthat(u_V)$ is a local isomorphism''.
 \end{s}
 
-\nn$*$ P. 414, line before the last display: $h_X^\ddagger F$ should be $\oo h_X^\ddagger F$, \emph{i.e.} the h should be straight, not slanted.
+\nn$*$ P. 414, line before the last display: $h_X^\ddagger F$ should be $\oo h_X^\ddagger F$, \emph{i.e.} the h should be straight, not slanted. 
+
+\nn$*$ P. 417, first sentence of the paragraph containing Display (17.4.2): $A,A'\in\C^\wedge$ should be $A,A'\in\C_X^\wedge$. 
 
 \nn$*$ P. 418, last display: 
 $$
@@ -1947,46 +1949,30 @@ Lemma 2.1.12 p.~41 of the book entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, an
 %
 
 \begin{s}\label{bc}
-As already mentioned, ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. We recall the statement (with a slight change of notation):
+P.~65, Exercise 2.7 (i). Here is a variant: 
 
-``Map'' shall mean ``morphism in $\Set$''. For any map $X\to Y$ and any $y\in Y$ we denote by $X_y$ the fiber above $y$. If $C\to B$ is a map and if the functors 
+Let $u:Y\to Z$ be a morphism in a category $\C$, assume that the fibered product $Y\times_ZX$ exists for all $X\to Z$ in $\C_Z$, and define the functors 
 $$
 \begin{tikzcd}
-\Set_B\ar[yshift=.7ex]{r}{L}&\Set_C\ar[yshift=-.7ex]{l}{R}
+\C_Y\ar[xshift=-0.7ex]{d}[swap]{L}\\ 
+\C_Z\ar[xshift=0.7ex]{u}[swap]{R}
 \end{tikzcd}
 $$ 
-are defined by 
+by 
 $$
-L(X):=C\times_BX,\quad R(Y):=\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b),
+L(W\to Y):=(W\to Y\xr uZ),\quad R(X\to Z):=(Y\times_ZX\to Y).
 $$ 
-then $(L,R)$ is a pair of adjoint functors.
-
-Indeed, the bijection between maps
-$$
-\begin{tikzcd}
-C\times_BX\ar{dr}\ar{rr}{f}&&Y\ar{dl}\\ 
-{}&C
-\end{tikzcd}
-$$
-over $C$ and maps
-$$
-\begin{tikzcd}
-X\ar{dr}\ar{rr}{g}&&\displaystyle\coprod_{b\in B}\ \Hom_{\Set}(C_b,Y_b)\ar{dl}\\ 
-{}&B
-\end{tikzcd}
-$$
-over $B$ is given by 
-$$
-b\in B,\ (c,x)\in C_b\times X_b\ \then\ f(c,x)=g(x)(c).
-$$
-
-Clearly, this implies
+The following statement is clear:
 %
-\begin{prop}\label{sbc}
-Small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6 p.~47 of the book).
+\begin{prop}\label{fpa}
+In the above setting, $(L,R)$ is a pair of adjoint functors. In particular, if $\C$ admits inductive limits indexed by a small category $I$, then $L$ commutes with such limits, and if $\C$ admits projective limits indexed by a small category $I$, then $R$ commutes with such limits. 
 \end{prop}
 %
-Note that Proposition~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
+\begin{cor}\label{sbc}
+Small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6 p.~47 of the book).
+\end{cor}
+%
+Note that Corollary~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
 \end{s}
 
 %%
@@ -6718,6 +6704,12 @@ as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given
 %
 
 %\begin{s}P. 415, proof of Proposition 17.3.3, Step (ii). I don't understand why the conditions that $A\times_BU\to U$ is a local epimorphism and that $F$ is a separated presheaf imply that $F(U)\to F(A\times_BU)$ is a monomorphism. %It seems to me this proposition is not used in the sequel.\end{s}
+
+%
+
+\begin{s}
+P. 417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.
+\end{s}
 
 %
 
