@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0130)
+% about "categories and sheaves" (version_0131)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6746,7 +6746,30 @@ P. 419, proof of Proposition 17.4.4:
 
 First sentence of the proof: see \eqref{kfp} p.~\ref{kfp}. 
 
-Step~(i), line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pageref{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398, and Proposition 32.1. (iii) p.~78 of the book.
+Step~(i), line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pageref{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398, and Proposition 32.1. (iii) p.~78 of the book. 
+
+Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419: The chain reads 
+$$
+\prod_i\ F^b(A_i)
+\overset{(\text a)}{\simeq}\prod_i\ \col_{(B_i\to A_i)\in\cc{LI}_{A_i}}F(B_i)
+\overset{(\text b)}{\simeq}\col_{(B_i\to A_i)_{i\in I}\in K}\ \prod_i\ F(B_i)
+$$
+$$
+\overset{(\text c)}{\simeq}\col_{(B_i\to A_i)_{i\in I}\in K}\ F\left(``\coprod_i"B_i\right)
+\overset{(\text d)}{\simeq}\col_{(B\to A)\in\cc{LI}_A}F(B)
+\overset{(\text e)}{\simeq}F^b(A), 
+$$ 
+and the isomorphisms can be justified as follows: 
+
+\nn(a) definition of $F^b$, 
+
+\nn(b) $\A$ satisfies ICP,
+
+\nn(c) $F$ commutes with small projective limits, 
+
+\nn(d) an inductive limit of local isomorphisms is a local isomorphism by Proposition 16.3.4 p.~401 of the book, 
+
+\nn(e) definition of $F^b$. 
 \end{s}
 
 %
