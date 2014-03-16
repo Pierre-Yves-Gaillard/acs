@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0132)
+% about "categories and sheaves" (version_0133)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2889,7 +2889,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 \end{align*} 
 %
 
-It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and Proposition~\ref{sbc} p.~\pageref{sbc}.) 
+It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and Corollary~\ref{sbc} p.~\pageref{sbc}.) 
 
 \noindent Proof of Step 4. We have 
 $$
@@ -6724,12 +6724,62 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 %
 
 \begin{s}%\label{}
-P. 419, proof of Lemma 17.4.3, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
+P. 419, proof of Lemma 17.4.4, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
 $$
 F^b(A)\xr f\col_{(B\to A)\in\cc{LI}_A}F^b(A)\xr g\col_{(B\to A)\in\cc{LI}_A}F^b(B). 
 $$ 
 Moreover, $f$ is an isomorphism by Lemma 2.1.12 p.~41 of the book, and $g$ is an isomorphism by Lemma 17.4.2 p.~418 of the book.
 \end{s} 
+
+%
+
+\begin{s}
+P. 420, proof of Lemma 17.4.4, Step (ii). We draw a few diagrams with the hope of helping the reader visualize the argument. 
+
+An object of the category 
+$$
+M[J\to K\leftarrow M[I\to K\leftarrow K]]
+$$ 
+can be represented by a diagram 
+$$
+\begin{tikzcd}
+B'\ar{d}[swap]{\beta}&B'\times_BA\ar{d}&A'\ar{l}[swap]{(u',\alpha)}\ar{r}{(v',\alpha)}\ar{d}{\alpha}&C'\times_CA\ar{d}&C'\ar{d}{\gamma}\\ 
+B&A\ar[equal]{r}&A\ar[equal]{r}&A&C, 
+\end{tikzcd}
+$$ 
+and it is clear that this category is equivalent to $\cc E^{\op}$. 
+
+The adjoint functors 
+$$
+\begin{tikzcd}
+\cc E\ar[xshift=-.7ex]{d}[swap]{p_D}\\ 
+\cc{LI}_D\ar[xshift=.7ex]{u}[swap]{R}
+\end{tikzcd}
+$$ 
+are defined as follows: Recall that 
+$$
+D:=B``\coprod_A"C.
+$$
+The functor $p_D$ maps the object 
+$$
+\begin{tikzcd}
+B'\ar{d}&A'\ar{l}\ar{r}\ar{d}&C'\ar{d}\\ 
+B&A\ar{r}\ar{l}&C
+\end{tikzcd}
+$$ 
+of $\cc E$ to the object 
+$$
+B'``\coprod_{A'}"C'\longrightarrow B``\coprod_A"C=D
+$$ 
+of $\cc{LI}_D$, whereas the functor $R$ maps the object $D''\to D$ of $\cc{LI}_D$ to the object 
+$$
+\begin{tikzcd}
+B\times_DD''\ar{d}&A\times_DD''\ar{l}\ar{r}\ar{d}&C\times_DD''\ar{d}\\ 
+B&A\ar{r}\ar{l}&C
+\end{tikzcd}
+$$ 
+of $\cc E$. 
+\end{s}
 
 %
 
