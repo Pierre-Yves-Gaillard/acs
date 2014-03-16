@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0129)
+% about "categories and sheaves" (version_0130)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1186,9 +1186,9 @@ P. 50, Corollary 2.2.11. We also have:
 \emph{A category admits finite projective limits if and only if it admits a terminal object and binary fibered products.}
 
 Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have 
-$$
+\begin{equation}\label{kfp}
 \Ker(f,g)\simeq X\times_{(Y\times Y)}Y.
-$$
+\end{equation}
 \end{s}
 
 %
@@ -1586,7 +1586,7 @@ where \eqref{prepa4a} follows from \eqref{prepa4}, \eqref{prepa4b} follows from 
 \begin{s} 
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 %
-\begin{prop}\label{244}
+\begin{prop}%\label{244}
 If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
 $$
 \colim\Delta(S)\simeq\pi_0(I)\times S.
@@ -1940,7 +1940,8 @@ If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a terminal obje
 \begin{equation}\label{1725}
 \widehat F(B)(X)\simeq A(X).
 \end{equation}
-Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244}) entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
+Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, %Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244})
+Lemma 2.1.12 p.~41 of the book entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
 \end{s}
 
 %
@@ -2096,6 +2097,14 @@ Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco
 
 \begin{s}\label{cipc}
 P.~75. Throughout the subsection about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136.
+\end{s}
+
+%
+
+\begin{s}\label{poc}
+P. 77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pageref{1744i}):
+
+If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, the the natural functor $$\prod I_\gamma\to\prod J_\gamma$$ is cofinal. 
 \end{s}
 
 %
@@ -6384,7 +6393,9 @@ Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of 
 %
 
 \begin{s}%\label{399}
-P. 399, beginning of Section 16.3. Any functor $F:\C\to\C'$ induces a morphism of functors 
+P. 399, beginning of Section 16.3. The category $\cc{LI}$ is a left multiplicative system by Lemma 16.2.6 p.~397 of the book. The category $\cc{LI}_A$ is co-cofinally small by Lemma 16.2.8 p.~398 of the book. 
+
+Moreover, any functor $F:\C\to\C'$ induces a morphism of functors 
 $$
 \begin{tikzcd}
 %
@@ -6725,7 +6736,17 @@ P. 419, proof of Lemma 17.4.3, Step (ii). More details: The morphism $\ee_b(F^b)
 $$
 F^b(A)\xr f\col_{(B\to A)\in\cc{LI}_A}F^b(A)\xr g\col_{(B\to A)\in\cc{LI}_A}F^b(B). 
 $$ 
-Moreover, $f$ is an isomorphism by Corollary~2.4.4 (iii) p.~55 of the book (see Proposition~\ref{244} p.~\pageref{244}), and $g$ is an isomorphism by Lemma 17.4.2 p.~418 of the book.
+Moreover, $f$ is an isomorphism by Lemma 2.1.12 p.~41 of the book, and $g$ is an isomorphism by Lemma 17.4.2 p.~418 of the book.
+\end{s} 
+
+%
+
+\begin{s}\label{1744i}
+P. 419, proof of Proposition 17.4.4: 
+
+First sentence of the proof: see \eqref{kfp} p.~\ref{kfp}. 
+
+Step~(i), line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pageref{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398, and Proposition 32.1. (iii) p.~78 of the book.
 \end{s}
 
 %
