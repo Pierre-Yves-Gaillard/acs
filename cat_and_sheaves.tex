@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0133)
+% about "categories and sheaves" (version_0134)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6719,67 +6719,7 @@ $$
 \colim\alpha\xr f\colim\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\colim\alpha\circ\mu_u^{\op}\xr h\colim\alpha.
 $$
 We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\id_{\colim\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal (see Proposition 3.3.6 p.~83 and Lemma 3.3.10 p.~84 of the book)), and $h$ is an isomorphism. q.e.d.
-\end{s}
-
-%
-
-\begin{s}%\label{}
-P. 419, proof of Lemma 17.4.4, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
-$$
-F^b(A)\xr f\col_{(B\to A)\in\cc{LI}_A}F^b(A)\xr g\col_{(B\to A)\in\cc{LI}_A}F^b(B). 
-$$ 
-Moreover, $f$ is an isomorphism by Lemma 2.1.12 p.~41 of the book, and $g$ is an isomorphism by Lemma 17.4.2 p.~418 of the book.
-\end{s} 
-
-%
-
-\begin{s}
-P. 420, proof of Lemma 17.4.4, Step (ii). We draw a few diagrams with the hope of helping the reader visualize the argument. 
-
-An object of the category 
-$$
-M[J\to K\leftarrow M[I\to K\leftarrow K]]
-$$ 
-can be represented by a diagram 
-$$
-\begin{tikzcd}
-B'\ar{d}[swap]{\beta}&B'\times_BA\ar{d}&A'\ar{l}[swap]{(u',\alpha)}\ar{r}{(v',\alpha)}\ar{d}{\alpha}&C'\times_CA\ar{d}&C'\ar{d}{\gamma}\\ 
-B&A\ar[equal]{r}&A\ar[equal]{r}&A&C, 
-\end{tikzcd}
-$$ 
-and it is clear that this category is equivalent to $\cc E^{\op}$. 
-
-The adjoint functors 
-$$
-\begin{tikzcd}
-\cc E\ar[xshift=-.7ex]{d}[swap]{p_D}\\ 
-\cc{LI}_D\ar[xshift=.7ex]{u}[swap]{R}
-\end{tikzcd}
-$$ 
-are defined as follows: Recall that 
-$$
-D:=B``\coprod_A"C.
-$$
-The functor $p_D$ maps the object 
-$$
-\begin{tikzcd}
-B'\ar{d}&A'\ar{l}\ar{r}\ar{d}&C'\ar{d}\\ 
-B&A\ar{r}\ar{l}&C
-\end{tikzcd}
-$$ 
-of $\cc E$ to the object 
-$$
-B'``\coprod_{A'}"C'\longrightarrow B``\coprod_A"C=D
-$$ 
-of $\cc{LI}_D$, whereas the functor $R$ maps the object $D''\to D$ of $\cc{LI}_D$ to the object 
-$$
-\begin{tikzcd}
-B\times_DD''\ar{d}&A\times_DD''\ar{l}\ar{r}\ar{d}&C\times_DD''\ar{d}\\ 
-B&A\ar{r}\ar{l}&C
-\end{tikzcd}
-$$ 
-of $\cc E$. 
-\end{s}
+\end{s}  
 
 %
 
@@ -6797,7 +6737,7 @@ $$
 \overset{(\text b)}{\simeq}\col_{(B_i\to A_i)_{i\in I}\in K}\ \prod_i\ F(B_i)
 $$
 $$
-\overset{(\text c)}{\simeq}\col_{(B_i\to A_i)_{i\in I}\in K}\ F\left(``\coprod_i"B_i\right)
+\overset{(\text c)}{\simeq}\col_{(B_i\to A_i)_{i\in I}\in K}\ F\left(``\bigsqcup_i\!"B_i\right)
 \overset{(\text d)}{\simeq}\col_{(B\to A)\in\cc{LI}_A}F(B)
 \overset{(\text e)}{\simeq}F^b(A), 
 $$ 
@@ -6812,6 +6752,84 @@ and the isomorphisms can be justified as follows:
 \nn(d) an inductive limit of local isomorphisms is a local isomorphism by Proposition 16.3.4 p.~401 of the book, 
 
 \nn(e) definition of $F^b$. 
+\end{s} 
+
+%
+
+\begin{s}%\label{}
+P. 419, proof of Proposition 17.4.4, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
+$$
+F^b(A)\xr f\col_{(B\to A)\in\cc{LI}_A}F^b(A)\xr g\col_{(B\to A)\in\cc{LI}_A}F^b(B). 
+$$ 
+Moreover, $f$ is an isomorphism by Lemma 2.1.12 p.~41 of the book, and $g$ is an isomorphism by Lemma 17.4.2 p.~418 of the book.
+\end{s}
+
+%
+
+\begin{s}
+P. 420, proof of Proposition 17.4.4, Step (ii). We draw a few diagrams with the hope of helping the reader visualize the argument. 
+
+An object of the category 
+$$
+M[J\to K\leftarrow M[I\to K\leftarrow K]]
+$$ 
+can be represented by a diagram 
+$$
+\begin{tikzcd}
+B'\ar{d}[swap]{\beta}&B'\times_BA\ar{d}&A'\ar{l}[swap]{(u',\alpha)}\ar{r}{(v',\alpha)}\ar{d}{\alpha}&C'\times_CA\ar{d}&C'\ar{d}{\gamma}\\ 
+B&A\ar[equal]{r}&A\ar[equal]{r}&A&C, 
+\end{tikzcd}
+$$ 
+and it is clear that this category is equivalent to $\cc E^{\op}$. 
+
+Recall that $D:=B\ ``\!\sqcup\!"\!\!_A\ C$, let $E$ be one of the objects $A,B,C,$ or $D$, and consider the ``obvious'' functors 
+$$
+\begin{tikzcd}
+\cc E\ar{r}{p_E}\ar{rd}[swap]{q_E}&\cc{LI}_E\ar{d}{j_E}\\ 
+{}&\C_X^\wedge
+\end{tikzcd}
+$$ 
+($p_E$ is defined in the book, $j_E$ is the forgetful functor, and $q_E$ is the composition). We also define $r_E:\cc{LI}_E\to\cc E$ by mapping the object $E''\to E$ of $\cc{LI}_E$ to the object 
+$$
+\begin{tikzcd}
+B\times_EE''\ar{d}&A\times_EE''\ar{l}\ar{r}\ar{d}&C\times_EE''\ar{d}\\ 
+B&A\ar{r}\ar{l}&C
+\end{tikzcd}
+$$ 
+of $\cc E$. One checks that $(p_E,r_E)$ is a pair of adjoint functors. In particular $p_E$ is co-cofinal. We have
+$$
+F^b(D)
+\overset{(\text a)}{\simeq}\col_{y\in\cc{LI}_D}F(j_D(y))
+\overset{(\text b)}{\simeq}\col_{x\in\cc E}F(q_D(x))
+$$
+$$
+\overset{(\text c)}{\simeq}\col_{x\in\cc E}F\left(q_B(x)``\!\!\!\bigsqcup_{q_A(x)}\!\!\!"q_C(x)\right)
+\overset{(\text d)}{\simeq}\col_{x\in\cc E}(F(q_B(x))\times_{F(q_A(x))}F(q_C(x)))
+$$
+$$
+\overset{(\text e)}{\simeq}\left(\col_{x\in\cc E}F(q_B(x))\right)\times_{\col_{x\in\cc E}F(q_A(x))}\left(\col_{x\in\cc E}F(q_C(x))\right)
+$$ 
+$$
+\overset{(\text f)}{\simeq}\left(\col_{y\in\cc{LI}_B}F(j_B(y))\right)\times_{\col_{y\in\cc{LI}_A}F(j_A(y))}\left(\col_{y\in\cc{LI}_C}F(j_C(y))\right)
+$$ 
+$$
+\overset{(\text g)}{\simeq}F^b(B)\times_{F^b(A)}F^b(C).
+$$ 
+Indeed, the isomorphisms can be justified as follows: 
+
+\nn(a) definition of $F^b$, 
+
+\nn(b) co-cofinality of $p_D$,
+
+\nn(c) definition of $p_E$, 
+
+\nn(d) left exactness of $F$, 
+
+\nn(e) exactness of filtrant inductive limits in $\A$, 
+
+\nn(f) left exactness of $F$, 
+
+\nn(g) definition of $F^b$.
 \end{s}
 
 %
