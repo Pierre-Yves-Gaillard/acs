@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0134)
+% about "categories and sheaves" (version_0135)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -34,7 +34,7 @@
 \newtheorem{s}[thm]{\S}%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
 %
-\newcommand{\dis}{\displaystyle}
+\newcommand{\dis}{\displaystyle}\newcommand{\ds}{\displaystyle}
 \newcommand{\bu}{\bullet}
 \newcommand{\nn}{\noindent}
 \newcommand{\cc}{\mathcal}
@@ -176,13 +176,13 @@ This is a work in progress.
 
 I adhere to Bourbaki's set theory as expounded in the book \textbf{Th\'eorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de r\'esultats'' in the above book because I don't understand it.) 
 
-The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. 
+The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. We write $\bigsqcup$ instead of $\coprod$ for the coproduct. 
 
 Following a suggestion of Pierre Schapira's, we shall denote projective limits by $\lim$ instead of $\plim$, and inductive limits by $\colim$ instead of $\ilim$. 
 
 Thank you to Pierre Schapira for his interest!
 
-%%%%%
+%%%%
 
 \section{U-categories and U-small Categories}\label{ucat}
 
@@ -261,7 +261,7 @@ There is a similar remark for projective limits.
 
 \noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\varphi$.
 
-\noindent $*$ P.~80, last display: a ``$\displaystyle\ilim$'' is missing.
+\noindent $*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
 
 \noindent $*$ Pp 83 and 85: Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. Proof of Proposition 3.3.7 (iv) p.~83: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
 
@@ -314,7 +314,7 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \noindent $*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. Last line of the page: ``the cokernel of $(\alpha(i),\beta(i))$'' should be ``the cokernel of $(\varphi(i),\psi(i))$''.
 
-\noindent $*$ P.~138, second line of Section 6.2: ``the functor $``\displaystyle\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\displaystyle\lim_{\longrightarrow}"\alpha$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
+\noindent $*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\alpha$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
 \noindent $*$ P. 141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
 
@@ -601,9 +601,9 @@ Let $\C$ be a category. Define the category $\Mor(\C)$ \index{$\Mor$} by
 $$
 \Ob(\Mor(\C)):=\bigcup_{X,Y\in\Ob(\C)}\Hom_{\C^*}(X,Y),
 $$
-$\displaystyle \Hom_{\Mor(\C)}((Y,f,X),(V,g,U)):=$\bigskip 
+$\ds\Hom_{\Mor(\C)}((Y,f,X),(V,g,U)):=$\bigskip 
 
-$\hfill\displaystyle\{(a,b)\in\Hom_\C(X,U)\times\Hom_\C(Y,V)\ | \ g\circ a=b\circ f\},$\bigskip
+$\hfill\ds\{(a,b)\in\Hom_\C(X,U)\times\Hom_\C(Y,V)\ | \ g\circ a=b\circ f\},$\bigskip
 
 \nn{\em i.e.} 
 $$
@@ -1527,7 +1527,7 @@ $$
 $$
 \simeq\lim_{(U\to V\to A)\in(\C_A)^U}G(V\to A)\simeq\lim_{U\to A}G(U\to A)\simeq\prod_{U\to A}G(U\to A),
 $$
-the penultimate isomorphism following from the fact that the discrete category $A(U)$ is co-cofinal in $(\C_A)^U$. 
+the penultimate isomorphism following from the fact that the discrete category $A(U)$ is cocofinal in $(\C_A)^U$. 
 
 \subsubsection{Third Formula}
 
@@ -2009,11 +2009,7 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}); let $F,G:X\to Y$ b
 \end{lem}
 %
 \begin{proof}
-Put 
-$$
-A:=\coprod_{i\in I}\alpha(i).
-$$
-We shall define maps $\mu'$ and $\mu$ such that the diagram
+Put $\ds A:=\bigsqcup_{i\in I}\,\alpha(i)$. We shall define maps $\mu'$ and $\mu$ such that the diagram
 $$
 \begin{tikzcd}
 A\ar[two heads]{r}{a}&X\\ 
@@ -2122,7 +2118,7 @@ In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By
 %
 
 \begin{s} 
-P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\displaystyle\ilim$'' is missing in the last display. Recall the statement:
+P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\ds\ilim$'' is missing in the last display. Recall the statement:
 \begin{lem}
 Let $I$ be a small ordered set, $\alpha:I\to\C$ a functor. Let $\cc J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J\in\cc J$, associate the restriction $\alpha_J:\cc J\to\C$ of $\alpha$ to $\cc J$. Then $\cc J$ is small and filtrant and moreover
 $$
@@ -2659,11 +2655,11 @@ Let $S$ be a set of objects of a category $\C$ and $\cc S$ the corresponding sub
 \begin{s}
 P. 118, second display: Isomorphism 
 $$
-\Hom_{\Set}(\Hom_\C(G,X),\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\coprod\Hom_\C(G,X)},X)
+\Hom_{\Set}(\Hom_\C(G,X),\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\sqcup\Hom_\C(G,X)},X)
 $$ 
 is a particular case of the following isomorphism, which holds for any $\U$-set $S$ and any objects $G$ and $X$ of $\C$: 
 $$
-\Hom_{\Set}(S,\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\coprod S},X).
+\Hom_{\Set}(S,\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\sqcup S},X).
 $$ 
 \end{s}
 
@@ -3175,7 +3171,7 @@ $$
 To define our morphism $A\to A_1\times A_2$ we consider the commutative diagram
 $$
 \begin{tikzcd}
-A\simeq\displaystyle\ic_y(Y_1,Y_2)\ar{r}&\displaystyle\ic_{x_1,x_2}(X_1,X_2)\simeq A_1\times A_2\\ 
+A\simeq\ds\ic_y(Y_1,Y_2)\ar{r}&\ds\ic_{x_1,x_2}(X_1,X_2)\simeq A_1\times A_2\\ 
 (Y_1,Y_2)\ar{u}{y}\ar[equal]{r}&(Y_1,Y_2),\ar{u}[swap]{(y_1,y_2)}
 \end{tikzcd}
 $$ 
@@ -3184,7 +3180,7 @@ and we leave it to the reader to check that this diagram does define the indicat
 \nn$\bu$ Definition of the morphism $A_1\times A_2\to A$. We must define the map represented by the dashed arrow in the diagram  
 $$
 \begin{tikzcd}
-A_1\times A_2\simeq\displaystyle\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\displaystyle\ic_x(X_1,X_2)\simeq A\\ 
+A_1\times A_2\simeq\ds\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\ds\ic_x(X_1,X_2)\simeq A\\ 
 (X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2).\ar{u}[swap]{x}
 \end{tikzcd}
 $$ 
@@ -4663,7 +4659,7 @@ We give a slightly more detailed writing of the second sentence in Step (a) of t
 \begin{prop}[Proposition 9.3.2 p.~224]\label{932}
 If $\pi$ is an infinite regular cardinal, if $A$ is in $\C$, and if 
 $$
-\card(A(G))<\pi,\quad\card(G^{\coprod A(G)}(G))<\pi,
+\card(A(G))<\pi,\quad\card(G^{\sqcup A(G)}(G))<\pi,
 $$ 
 then $A$ is in $\C_\pi$.
 \end{prop}
@@ -4671,10 +4667,10 @@ then $A$ is in $\C_\pi$.
 Here is a rewriting of the proof with a few more details:
 
 \begin{proof}
-$*$ Step 1. Note that $\Set\ni Y\mapsto G^{\coprod S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\coprod S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
+$*$ Step 1. Note that $\Set\ni Y\mapsto G^{\sqcup S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\sqcup S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
 $$S\to A(G)\to S$$ 
 whose composition is the identity. Hence, the composition 
-$$G^{\coprod S}(G)\to G^{\coprod A(G)}(G)\to G^{\coprod S}(G)$$ 
+$$G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)$$ 
 is the identity.
 
 \nn $*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map $\lambda$ below is bijective: 
@@ -4718,10 +4714,10 @@ We shall show that (a) holds, that (a) implies (b), and that (b) implies the sur
 
 \nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\coprod S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+\nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 $$
 \begin{tikzcd}
-G^{\coprod B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\coprod A(G)}\ar{d}\\ 
+G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
 B\ar[two heads]{rr}&&A
 \end{tikzcd}
 $$ 
@@ -4736,7 +4732,7 @@ and (by Step 1)
 $$
 \begin{tikzcd}
 C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
-C\ar{r}\ar{rdd}[swap]{x}&G^{\coprod B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\ 
+C\ar{r}\ar{rdd}[swap]{x}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\ 
 {}&B\ar{r}\ar{d}&A\ar{d}\\ 
 {}&X_{i_0}\ar{r}[swap]{p_{i_0}}&X.
 \end{tikzcd}
@@ -4787,15 +4783,15 @@ As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof is complete.
 
 (See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\pi_0$ be an infinite regular cardinal such that 
 $$
-\card(G(G))<\pi_0,\quad\card(G^{\coprod G(G)}(G))<\pi_0.
+\card(G(G))<\pi_0,\quad\card(G^{\sqcup G(G)}(G))<\pi_0.
 $$ 
 Proposition \ref{932} implies $G\in\C_{\pi_0}$. Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
 
-$\bu\ \card(G^{\coprod A}(G))<\pi_1$, 
+$\bu\ \card(G^{\sqcup A}(G))<\pi_1$, 
 
-$\bu$ if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi_1$. 
+$\bu$ if $X$ is a quotient of $G^{\sqcup A}$, then $\card(X(G))<\pi_1$. 
 
-\nn(Since the set of quotients of $G^{\coprod A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
+\nn(Since the set of quotients of $G^{\sqcup A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
 
 \begin{cond}\label{ass}
 Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
@@ -4809,9 +4805,9 @@ Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi
 
 (c) $\pi'^{\pi_0}<\pi$ for any $\pi'<\pi$, 
 
-(d) if $X$ is a quotient of $G^{\coprod A}$ with $\card(A)<\pi_0$, then $\card(X(G))<\pi$, 
+(d) if $X$ is a quotient of $G^{\sqcup A}$ with $\card(A)<\pi_0$, then $\card(X(G))<\pi$, 
 
-(e) if $A$ is a set with $\card(A)<\pi_0$, then $\card(G^{\coprod A}(G))<\pi$.
+(e) if $A$ is a set with $\card(A)<\pi_0$, then $\card(G^{\sqcup A}(G))<\pi$.
 
 \nn Indeed (c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and $\pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi$.
 
@@ -4820,7 +4816,7 @@ Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi
 We state Lemma 9.3.3 for the reader's convenience:
 
 \begin{lem}[Lemma 9.3.3 p.~226]\label{933}
-If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\coprod A}$, then $\card(X(G))<\pi$.
+If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\sqcup A}$, then $\card(X(G))<\pi$.
 \end{lem}
 
 The beginning of the proof of Lemma 9.3.3 in the book uses the following lemma:
@@ -4863,31 +4859,31 @@ If Condition \ref{ass} holds and if $X$ is in $\C$, then $X\in\C_\pi\ssi\card(X(
 
 \nn$\then:$ We prove this implication as in the book. For the reader's convenience we reproduce the argument: Set $I:=\{A\subset X(G)\ |\ \card(A)<\pi\}$. By Example 9.2.4 p.~218 of the book, $I$ is $\pi$-filtrant. We get the morphisms 
 $$
-G^{\coprod A}\to G^{\coprod X(G)}\to X
+G^{\sqcup A}\to G^{\sqcup X(G)}\to X
 $$ 
 for $A$ in $I$, and 
 $$
-\colim_{A\in I}G^{\coprod A}\xr\sim G^{\coprod X(G)}\to X.
+\colim_{A\in I}G^{\sqcup A}\xr\sim G^{\sqcup X(G)}\to X.
 $$ 
-Then we see that $G^{\coprod X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\coprod A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
+Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
 
 \nn$\si:$ In view of Proposition~\ref{932} p.~\pageref{932}, it suffices to prove  
 
 \begin{equation}\label{934b}
-\card(G^{\coprod X(G)}(G))<\pi.
+\card(G^{\sqcup X(G)}(G))<\pi.
 \end{equation} 
 
 To verify this inequality, we argue as in the proof of Lemma~\ref{933} p.~\pageref{933}. (Conditions (b), (c), and (e) referred to below are stated in Section~\ref{tirg} p.~\pageref{tirg}.)
 
 Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
 $$
-G^{\coprod X(G)}\simeq\colim_{B\in I}G^{\coprod B}.
+G^{\sqcup X(G)}\simeq\colim_{B\in I}G^{\sqcup B}.
 $$ 
 As $G$ is $\pi_0$-accessible by (b), we get 
 $$
-G^{\coprod X(G)}(G)\simeq\colim_{B\in I}\ G^{\coprod B}(G).
+G^{\sqcup X(G)}(G)\simeq\colim_{B\in I}\ G^{\sqcup B}(G).
 $$ 
-By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\coprod B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}.
+By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\sqcup B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}.
 \end{proof}
 
 \subsubsection{Brief Comments}
@@ -6379,7 +6375,7 @@ Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of 
 %
 
 \begin{s}%\label{399}
-P. 399, beginning of Section 16.3. The category $\cc{LI}$ is a left multiplicative system by Lemma 16.2.6 p.~397 of the book. The category $\cc{LI}_A$ is co-cofinally small by Lemma 16.2.8 p.~398 of the book. 
+P. 399, beginning of Section 16.3. The category $\cc{LI}$ is a left multiplicative system by Lemma 16.2.6 p.~397 of the book. The category $\cc{LI}_A$ is cocofinally small by Lemma 16.2.8 p.~398 of the book. 
 
 Moreover, any functor $F:\C\to\C'$ induces a morphism of functors 
 $$
@@ -6796,7 +6792,7 @@ B\times_EE''\ar{d}&A\times_EE''\ar{l}\ar{r}\ar{d}&C\times_EE''\ar{d}\\
 B&A\ar{r}\ar{l}&C
 \end{tikzcd}
 $$ 
-of $\cc E$. One checks that $(p_E,r_E)$ is a pair of adjoint functors. In particular $p_E$ is co-cofinal. We have
+of $\cc E$. One checks that $(p_E,r_E)$ is a pair of adjoint functors. In particular $p_E$ is cocofinal. We have
 $$
 F^b(D)
 \overset{(\text a)}{\simeq}\col_{y\in\cc{LI}_D}F(j_D(y))
@@ -6819,7 +6815,7 @@ Indeed, the isomorphisms can be justified as follows:
 
 \nn(a) definition of $F^b$, 
 
-\nn(b) co-cofinality of $p_D$,
+\nn(b) cocofinality of $p_D$,
 
 \nn(c) definition of $p_E$, 
 
@@ -6842,7 +6838,12 @@ $$
 Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} depend on the universe such that $\C$ is a small category and $\A$ satisfies (17.4.1) p.~417 of the book.
 \end{s}
 
-%\begin{s}P. 421. I don't understand the proof of Lemma 17.4.6 (i). So far I haven't seen this statement used in the sequel.\end{s}
+%
+
+\begin{s}P. 421, proof of Lemma 17.4.6 (i): The category $\cc{LI}_U$ is cofiltrant by Lemma 16.2.7 p.~396 of the book, small filtrant inductive limits are exact in $\A$ by Display (17.4.1) p.~417 of the book, exact functors preserve monomorphisms by Exercise~3.4 (i) p.~90 of the book (see Proposition~\ref{34i} p.~\pageref{34i}).
+\end{s}
+
+%
 
 \begin{s} 
 P. 422, proof of Theorem 17.4.9 (iv). The exactness $(\ )^a$ is proved in Theorem 17.4.7 (iv) p.~421 of the book.
