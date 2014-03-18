@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0135)
+% about "categories and sheaves" (version_0136)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -13,7 +13,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 %%\usepackage{showlabels}
 %\usepackage{showkeys}
@@ -174,22 +174,22 @@ This is a work in progress.
 %The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
 %\end{rk}
 
-I adhere to Bourbaki's set theory as expounded in the book \textbf{Th\'eorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de r\'esultats'' in the above book because I don't understand it.) 
+I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Th\'eorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de r\'esultats'' in the above book because I don't understand it.) 
 
-The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. We write $\bigsqcup$ instead of $\coprod$ for the coproduct. 
+The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. We write $\bigsqcup$\index{$\bigsqcup$} instead of $\coprod$\index{$\coprod$} for the coproduct\index{coproduct}. 
 
-Following a suggestion of Pierre Schapira's, we shall denote projective limits by $\lim$ instead of $\plim$, and inductive limits by $\colim$ instead of $\ilim$. 
+Following a suggestion of Pierre Schapira's, we shall denote projective limits\index{projective limit} by $\lim$\index{$\lim$} instead of $\plim$\index{$\plim$}, and inductive limits\index{inductive limit} by $\colim$\index{$\colim$} instead of $\ilim$\index{$\ilim$}. 
 
 Thank you to Pierre Schapira for his interest!
 
-%%%%
+%%%
 
-\section{U-categories and U-small Categories}\label{ucat}
+\section{U-categories and U-small Categories\label{ucat}\index{$\U$-category}\index{$\U$-small category}}
 
 Here are a few comments about the definition of a $\U$-category on p.~11. Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set. The following definitions are used in the book: 
 
 \begin{df}\label{ucatg}
-A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set. 
+A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set\index{$\U$-set}. 
 \end{df} 
 
 \begin{df}
@@ -203,7 +203,7 @@ A $\U$-{\em category} \index{$\U$-category} is a category $\C$ such that, for al
 \end{df} 
 
 \begin{df}\label{small}
-The category $\C$ is $\U$-{\em small} \index{$\U$-small category} \index{small category} if in addition the set of objects of $\C$ is a $\U$-set. 
+The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ is a $\U$-set. 
 \end{df} 
 
 Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{ducat} which is isomorphic to $\C$, and similarly for $\U$-small categories.%\bigskip
@@ -211,27 +211,15 @@ Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{uca
 \begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
 \end{center}
 
-%%%%%
+We often assume implicitly that a universe $\U$ has been chosen, and we say ``category'' and ``small category'' instead of ``$\U$-category'' and ``$\U$-small category''
+
+%%%
 
 \section{Typos and Details}
 
 $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
 
 \noindent $*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pageref{d125}.
-
-%
-
-\begin{comment}
-
-\noindent $*$ P.~18, Definition 1.2.16. The category $\C_{X'}$ is attached to the functor $F:\C\to\C'$ and to the object $X'\in\C'$. One often thinks of an object $(X,F(X)\to X')$ of $\C_{X'}$ as being an object of $X$ of $\C$ equipped with a morphism $F(X)\to X'$. This justifies the abusive but useful notation $X\in\C_{X'}$, which is an abbreviation for: ``firstly, $X$ is an object of $\C$, and, secondly, a morphism $F(X)\to X'$ is either supposed to be given, or obvious from the context''. For instance, if $X$ is an object of $\C$, then $X\in\C_X$ usually means $(X,\id_X)\in\C_X$. This abuse is especially useful when we have a functor $G:\C\to\C''$ and we consider an inductive limit (which may or may not exist in $\C''$) of the form 
-%
-\begin{equation}\label{convnot}
-\colim_{X\in\C_{X'}}G(X).
-\end{equation}
-%
-There is a similar remark for projective limits. 
-
-\end{comment}
 
 %
 
@@ -526,7 +514,7 @@ $$
 
 The book starts with a few statements which are not proved, a reference being given instead. Here are the proofs.
 
-A \textbf{universe} \index{universe} is a set $\mathcal U$ satisfying 
+A \textbf{universe}\index{universe} is a set $\mathcal U$ satisfying 
 
 (i) $\varnothing\in\mathcal U$,
 
@@ -580,10 +568,10 @@ $$
 \subsection{Brief comments}
 
 \begin{s}\label{d125}
-P. 14, category of morphisms. Here are some comments about Definition 1.2.5 p.~14:
+P. 14, category of morphisms\index{category of morphisms}. Here are some comments about Definition 1.2.5 p.~14:
 
 \begin{nota}\label{c*}
-For any category $\C$ define the category $\C^*$ as follows. The objects of $\C^*$ are the objects of $\C$, the set $\Hom_{\C^*}(X,Y)$ is defined by 
+For any category $\C$ define the category $\C^*$\index{$\C^*$} as follows. The objects of $\C^*$ are the objects of $\C$, the set $\Hom_{\C^*}(X,Y)$ is defined by 
 $$
 \Hom_{\C^*}(X,Y):=\{Y\}\times\Hom_{\C}(X,Y)\times\{X\},
 $$
@@ -627,7 +615,7 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 %
 
 \begin{s}\label{ffc}
-P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative. \index{conservative}
+P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative\index{conservative}. 
 \end{s}
 
 %
@@ -715,7 +703,7 @@ An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all 
 
 The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
-%%%
+%%
 
 \subsection{Brief Comments}
 
@@ -740,7 +728,7 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 P.~36, Definition 2.1.2. 
 %
 \begin{df}\label{p}
-If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 %
 Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element means that for each $Y$ in $\C$ the map 
@@ -750,7 +738,7 @@ $$
 is bijective.
 %
 \begin{df}\label{c}
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection} \index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 %
 Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element means that for each $Y$ in $\C$ the map 
@@ -762,7 +750,7 @@ is bijective.
 
 %%
 
-\subsection{Horizontal and Vertical Compositions (p. 19)}\label{hove1}
+\subsection{Horizontal\index{horizontal composition} and Vertical Compositions\index{vertical composition} (p. 19)}\label{hove1}
 
 %This Section and Section~\ref{hove2} p.~\pageref{hove2} serve exactly the same purpose. The reader should read at most one of them.
 
@@ -1048,7 +1036,7 @@ $$
 \subsection{Brief Comments}
 
 \begin{s}\label{c38}
-P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\colim\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\colim\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly:%\medskip 
+P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\colim\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\colim\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly\index{Kelly}:%\medskip 
 %
 \begin{center}\href{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}
 \end{center}
@@ -1191,19 +1179,7 @@ Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have
 \begin{equation}\label{kfp}
 \Ker(f,g)\simeq X\times_{(Y\times Y)}Y.
 \end{equation}
-\end{s}
-
-%
-
-\begin{comment}
-
-\begin{s}\label{2211}
-P. 50, Corollary 2.2.11 implies: 
-
-Let $Z$ be an object of a category $\C$. If $\C$ admits finite projective limits, so does $\C_Z$, and $\C_Z\to\C$ commutes with such limits.
-\end{s}
-
-\end{comment}
+\end{s} 
 
 %
 
@@ -1253,15 +1229,17 @@ $$
 \colim_{(\varphi(j)\to i)\in J_i}\beta(j)
 $$ 
 exists in $\C$ for all $i$ in $I$. Then $\varphi^\dagger(\beta)$ exists and we have 
-
+%
 \begin{equation}\label{236}
 \varphi^\dagger(\beta)(i)\simeq\colim_{(\varphi(j)\to i)\in J_i}\beta(j)
 \end{equation} 
-
+%
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
 $\varphi^\dagger$ exists. If moreover $\varphi$ is fully faithful, then $\varphi^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\varphi_*\circ\varphi^\dagger$. 
 \end{thm}
 The proof in the book is divided into three Steps, called (a), (b), and (c). 
+
+%
 
 \subsubsection{Step (a)}\label{scji}
 
@@ -1293,15 +1271,15 @@ I\ar{rr}[swap]{J}&{}&\Cat&J.
 $$
 
 We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\colim\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
+
 %
+
 \subsubsection{Step (b)}
-%
+
 The purpose of Step (b) is to prove 
-%
 \begin{equation}\label{stepb}
 \Hom_{\C^I}(\varphi^\dagger(\beta),\alpha)\simeq\Hom_{\C^J}(\beta,\varphi_*(\alpha)) 
 \end{equation} 
-% 
 for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
 
 To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f:X\to Y$ is a morphism in $\C$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$:
@@ -1969,7 +1947,7 @@ In the above setting, $(L,R)$ is a pair of adjoint functors. In particular, if $
 \end{prop}
 %
 \begin{cor}\label{sbc}
-Small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6 p.~47 of the book).
+Small inductive limits in $\Set$ are stable by base change\index{base change} (see Definition 2.2.6 p.~47 of the book).
 \end{cor}
 %
 Note that Corollary~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
@@ -2192,18 +2170,6 @@ The first and last bijections follow from \eqref{332}, the second one is clear, 
 \end{s}
 
 %
-
-\begin{comment}
-
-\begin{s}\label{333}
-P. 82, Proposition 3.3.3 p.~82 of the book and \S\ref{2211} p.~\pageref{2211} imply: 
-
-Let $X$ be an object of a category $\C$. If $\C$ admits finite projective limits, so does $\C_X$, and $\C_X\to\C$ is left exact.
-\end{s}
-
-\end{comment}
-
-%\begin{s}\label{333}By Proposition 3.3.3 p.~82 and Remark~\ref{272} p.~\pageref{272} the functor $\widehat F$ in Remark~\ref{272} is right exact.\end{s}
 
 \begin{s}
 P. 84, Proposition 3.3.13. Recall the statement:
@@ -6623,32 +6589,6 @@ P. 413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:
 \begin{s}
 P. 413. Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from the equivalence of Conditions (a), (b) and (c) in \S\ref{390} p.~\pageref{390} and \eqref{efhat2} p.~\pageref{efhat2}. 
 \end{s}
-
-%
-
-\begin{comment}
-
-\begin{s}\label{1725b}
-P. 413, Proof of Lemma 17.2.5. Part~(ii): see Proposition~\ref{p406} p.~\pageref{p406}. Part~(iii): see \eqref{1725} p.~\pageref{1725}.
-\end{s}
-
-%
-
-\begin{s}%\label{1722}
-P. 413, Lemma 17.2.5 (ii). It seems to me one can prove: 
-
-If $f:X\to Y$ is a weakly exact morphism of presites, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ is left exact. 
-
-Proof: We have a quasi-commutative diagram 
-$$
-\begin{tikzcd}
-\C_Y^\wedge\ar{r}{F}\ar[bend right]{rrr}[swap]{(f^t)\,\,\widehat{}}&((\C_X)_{(f^t)\,\,\widehat{}\,\,(\oo{pt}_Y)})^\wedge\ar{r}{G}&(\C_X^\wedge)_{(f^t)\,\,\widehat{}\,\,(\oo{pt}_Y)}\ar{r}{H}&\C_X^\wedge,
-\end{tikzcd}
-$$ 
-where $G$ is the equivalence of Lemma 1.4.12 p.~26 of the book. The functor $F$ is left exact by Corollary 3.3.19 p.~87 of the book, and the functor $H$ is left exact by Lemma 2.1.13 (ii) p.~41 and Proposition 3.3.3 p. 82 of the book.
-\end{s}
-
-\end{comment}
 
 %
 
