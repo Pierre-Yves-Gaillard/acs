@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0136)
+% about "categories and sheaves" (version_0137)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6519,6 +6519,23 @@ with $G\in\PSh(Y,\A),U\in\C_X$, $U\to f^\tau(V)$ being a morphism in $(\C_X)^{\o
 
 %
 
+\begin{s}
+P. 408. The sentence right after the second display says 
+
+By Corollary 2.7.4 p.~63, the functor 
+$$
+\oo h_X^\ddagger:\oo{PSh}(X,\A)\to\oo{PSh}(\widehat X,\A)
+$$ 
+induces an equivalence of categories between $\oo{PSh}(X,\A)$ and the full subcategory of $\oo{PSh}(\widehat X,\A)$ whose objects are the $\A$-valued presheaves over $\widehat X$ which commute with small projective limits. 
+
+One can add that a quasi-inverse is given by 
+$$
+\oo h_{X*}:\oo{PSh}(\widehat X,\A)\to\oo{PSh}(X,\A). 
+$$ 
+\end{s}
+
+%
+
 \begin{s}\label{s408}
 P. 408, comment preceding Convention 17.1.6. Let us recall the comment: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
 \begin{equation}\label{408}
@@ -6786,7 +6803,15 @@ Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} d
 %
 
 \begin{s} 
-P. 422, proof of Theorem 17.4.9 (iv). The exactness $(\ )^a$ is proved in Theorem 17.4.7 (iv) p.~421 of the book.
+P. 422, proof of Theorem 17.4.9 (iv). First sentence of the proof: Let $B$ be in $\C_X^\wedge$ and consider the diagram 
+$$
+\begin{tikzcd}
+\oo{PSh}(X,\A)\ar{r}{\oo h_X^\ddagger}&\oo{PSh}(\widehat X,\A)\ar{r}{e}&\A,
+\end{tikzcd}
+$$ 
+where $e$ is the evaluation on $B$. Then $\oo h_X^\ddagger$ is left exact by Proposition 3.3.6 p.~83 of the book, and $e$ is left exact by Assumption (17.4.1) p.~417 and Propositions 3.3.6 p.~83 and 2.1.6 p.~38 of the book. Now Proposition 3.3.12 p.~84 of the book implies that $e\circ\oo h_X^\ddagger$ is left exact. 
+
+Exactness $(\ )^a$: see Theorem 17.4.7 (iv) p.~421 of the book.
 \end{s}
 
 %
