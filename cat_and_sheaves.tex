@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0139)
+% about "categories and sheaves" (version_0140)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6852,18 +6852,74 @@ P. 424, sentence following Definition 17.6.1: ``It is easily checked that we obt
 %
 
 \begin{s}
-P. 425, Step (ii) of the proof of Proposition 17.6.3, ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2.4 (ii) p.~413 of the book, \S\ref{1724ii} p.~\pageref{1724ii}, and \S\ref{272b} p.~\pageref{272b}. 
+P. 425, proof of Proposition 17.6.3: 
+
+Step (i): $\oo j_{A\to X}$ is weakly left exact by Lemma 17.2.5 (iii) p.~413 of the book, and $(\,\cdot\,)^a$ is exact by Theorem 17.4.7 (iv) p.~421 of the book.
+
+Step (ii): ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2.4 (ii) p.~413 of the book, \S\ref{1724ii} p.~\pageref{1724ii}, and \S\ref{272b} p.~\pageref{272b}. The isomorphism $f^{-1}\simeq\oo j_{A\to X}^{-1}\circ g^{-1}$ follows from Proposition 17.5.3 p.~424 of the book.
+\end{s} 
+
+% 
+
+\begin{s} 
+P. 425, Display (17.6.1): Putting $j:=\oo j_{A\to X}$, we have the adjunctions 
+$$
+\begin{tikzcd}
+\oo{Sh}(A,\A)\ar[xshift=-4ex]{d}[swap]{j^{-1}}\ar[xshift=4ex]{d}{j^\ddagger}\\ 
+\oo{Sh}(X,\A).\ar{u}{j_*}
+\end{tikzcd}
+$$ 
+
+For the functor $j_*:\oo{Sh}(X,\A)\to\oo{Sh}(A,\A)$, see Proposition 17.5.1 p.~423 of the book. 
+
+For the functor $j^{-1}:\oo{Sh}(A,\A)\to\oo{Sh}(X,\A)$, see last display of p.~423 of the book. 
+
+For the functor $j^\ddagger:\oo{Sh}(A,\A)\to\oo{Sh}(X,\A)$, see Proposition 17.6.2 p.~425 of the book.
 \end{s}
 
 %
 
 \begin{s} 
 P. 426, proof of Proposition 17.6.7 (i). The isomorphism 
-$$
+\begin{equation}\label{e406}
 \fthat(V\times B)\simeq f^t(V)\times\fthat(B)
+\end{equation} 
+follows from Proposition~\ref{p406} p.~\pageref{p406}, and we have 
+\begin{align*} 
+%
+\oo j_{B\to Y}^\ddagger\big(f_{B*}(G)(V)\big)&\simeq f_{B*}(G)(V\times B\to B)&\text{by (17.1.12) p. 409}\\ \\ 
+%
+&\simeq G\big(\fthat(V\times B)\to\fthat(B)\big)&\text{by (17.1.6) p. 408}\\ \\ 
+%
+&\simeq G\big(f^t(V)\times A\to A\big)&\text{by \eqref{e406}}, 
+% 
+\end{align*} 
+as well as 
+\begin{align*} 
+%
+f_*\big(\oo j_{A\to X}^\ddagger(G)(V)\big)&\simeq\oo j_{A\to X}^\ddagger(G)(f^t(V))\\ \\ 
+%
+&\simeq G\big(f^t(V)\times A\to A\big)&\text{by (17.1.12) p. 409}. 
+% 
+\end{align*}  
+\end{s} 
+
+% 
+
+\begin{s} 
+P. 427, proof of Proposition 17.6.8. The isomorphism 
+$$
+\oo j_{A\to X}^\ddagger(\oo j_{A\to X*}(G)(U))\simeq\oo j_{A\to X*}(G)(U\times A\to A)
 $$ 
-follows from Proposition~\ref{p406} p.~\pageref{p406}.
-\end{s}
+follows from (17.1.12) p.~409 of the book. The fact that $p:A\times U\to U$ is a local isomorphism follows from a the fact that the obvious square 
+$$
+\begin{tikzcd} 
+A\times U\ar{r}\ar{d}&U\ar{d}\\ 
+A\ar{r}&\oo{pt}_X
+\end{tikzcd}
+$$ 
+is cartesian and the bottom arrow is a local isomorphism. 
+\end{s} 
 
 %
 
