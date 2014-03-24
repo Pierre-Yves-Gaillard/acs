@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0140)
+% about "categories and sheaves" (version_0141)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6845,6 +6845,19 @@ P. 424, proof of Theorem 17.5.2 (iv). As already mentioned, there is a typo: ``T
 
 %
 
+\begin{s}\label{1761}
+P. 424, Definition 17.6.1. By Lemma 17.1.8 p.~409, a morphism 
+$$
+\begin{tikzcd} 
+C\ar{rr}\ar{dr}&&B\ar{dl}\\ 
+{}&A
+\end{tikzcd}
+$$ 
+in $\C_A^\wedge$ is a local epimorphism if and only if $C\to B$ is a local epimorphism in $\C_X^\wedge$.
+\end{s}
+
+%
+
 \begin{s}
 P. 424, sentence following Definition 17.6.1: ``It is easily checked that we obtain a Grothendieck topology on $\C_A$''. The verification  of LE1, LE2, and LE3 is straightforward. Axiom LE4 follows from Parts (iii) and (ii) of Lemma 17.2.5 p.~413.
 \end{s}
@@ -6906,19 +6919,34 @@ f_*\big(\oo j_{A\to X}^\ddagger(G)(V)\big)&\simeq\oo j_{A\to X}^\ddagger(G)(f^t(
 
 % 
 
-\begin{s} 
-P. 427, proof of Proposition 17.6.8. The isomorphism 
+\begin{s}\label{1768}
+P. 427, proof of Proposition 17.6.8, Step (i). The isomorphism 
 $$
 \oo j_{A\to X}^\ddagger(\oo j_{A\to X*}(G)(U))\simeq\oo j_{A\to X*}(G)(U\times A\to A)
 $$ 
-follows from (17.1.12) p.~409 of the book. The fact that $p:A\times U\to U$ is a local isomorphism follows from a the fact that the obvious square 
+follows from (17.1.12) p.~409 of the book. The fact that $p:A\times U\to U$ is a local isomorphism follows from the fact that the obvious square 
 $$
 \begin{tikzcd} 
 A\times U\ar{r}\ar{d}&U\ar{d}\\ 
 A\ar{r}&\oo{pt}_X
 \end{tikzcd}
 $$ 
-is cartesian and the bottom arrow is a local isomorphism. 
+is cartesian and the bottom arrow is a local isomorphism by assumption. 
+\end{s} 
+
+%
+
+\begin{s}
+P. 427, proof of Proposition 17.6.8, Step (ii). Let $v:V\to A$ be a morphism in $\C_X^\wedge$. Here is a proof of the fact that 
+\begin{equation}\label{1768ii}
+\begin{tikzcd} 
+V\ar{rr}{(\id_V,v)}\ar{dr}&&V\times A\ar{dl}\\ 
+{}&A
+\end{tikzcd}
+\end{equation} 
+is a local isomorphism in $\C_A^\wedge$. 
+
+As \eqref{1768ii} is a monomorphism, it suffices, by Lemma 16.2.3 (i) p.~395 of the book, to check that \eqref{1768ii} is a local epimorphism in $\C_A^\wedge$. By \S\ref{1761} p.~\pageref{1761}, it suffices to show that $V\to V\times A$ is a local epimorphism in $\C_X^\wedge$. As $V\to V\times A\to V$ is the identity of $V$, it suffices, by Lemma 16.2.4 (vii) p.~396 of the book, to verify that $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$. But this follows from the argument given in \S\ref{1768}.
 \end{s} 
 
 %
