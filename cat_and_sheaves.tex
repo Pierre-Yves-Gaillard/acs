@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0142)
+% about "categories and sheaves" (version_0143)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6848,7 +6848,7 @@ P. 424, proof of Theorem 17.5.2 (iv). As already mentioned, there is a typo: ``T
 %
 
 \begin{s}\label{1761}
-P. 424, Definition 17.6.1. By Lemma 17.1.8 p.~409, a morphism 
+P. 424, Definition 17.6.1. By Lemma 17.1.8 p.~409 of the book, a morphism 
 $$
 \begin{tikzcd} 
 C\ar{rr}\ar{dr}&&B\ar{dl}\\ 
@@ -6955,7 +6955,27 @@ As \eqref{1768ii} is a monomorphism, it suffices, by Lemma 16.2.3 (i) p.~395 of 
 
 \begin{s}\label{a428}
 P. 428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
-\end{s}
+\end{s} 
+
+%
+
+\begin{s}%\label{}
+P. 430, first sentence of the proof of Proposition 17.7.1 (i). Let us make a general observation. 
+
+Let $X$ be a site. In this \S, for any $A$ in $\C_X^\wedge$, we denote the corresponding site by $A'$ instead of $A$. We also identify $\C_{A'}^\wedge$ to $(\C_X^\wedge)_A$ (see Lemma 17.1.8 p.~409 of the book). In particular, we get $\oo{pt}_{A'}\simeq(A\xr{\id_A}A)\in\C_{A'}^\wedge$. 
+
+Let $A\to B$ is a local isomorphism in $\C_X^\wedge$, and let us write $\omega$ for ``the'' terminal object $\oo{pt}_{B'}\simeq(B\xr{\id_B}B)$ of $\C_{B'}^\wedge$. We claim that 
+\begin{equation}\label{1771i1}
+(A\to B)\to\omega 
+\end{equation} 
+is a local isomorphism in $\C_{B'}^\wedge$.
+
+Proof: \eqref{1771i1} is a local epimorphism by \S\ref{1761} p.~\pageref{1761}. It remains to check that 
+\begin{equation}\label{1771i2}
+(A\to B)\to(A\to B)\times_\omega(A\to B)\simeq(A\times_BA\to B)
+\end{equation} 
+is a local epimorphism. But this follows again from \S\ref{1761} p.~\pageref{1761}. 
+\end{s} 
 
 %
 
