@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0149)
+% about "categories and sheaves" (version_0150)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6605,7 +6605,15 @@ P. 413, Definition 17.2.4 (ii): see \S\ref{272b} p.~\pageref{272b}.
 
 \begin{s}
 P. 413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ commutes with projective limits indexed by small connected categories.
-\end{s}
+\end{s} 
+
+%
+
+\begin{s}\label{1725ii} 
+P. 413, Lemma 17.2.5 (ii). Here is a corollary: 
+
+Let $f:X\to Y$ be a weekly left exact morphism of sites such that $\fthat(u)$ is a local epimorphism if and only if $u$ is a local epimorphism. Then $\fthat(u)$ is a local monomorphism if and only if $u$ is a local monomorphism, and $\fthat(u)$ is a local isomorphism if and only if $u$ is a local isomorphism. 
+\end{s} 
 
 %
 
@@ -6866,7 +6874,15 @@ in $\C_A^\wedge$ is a local epimorphism if and only if $C\to B$ is a local epimo
 
 \begin{s}
 P. 424, sentence following Definition 17.6.1: ``It is easily checked that we obtain a Grothendieck topology on $\C_A$''. The verification  of LE1, LE2, and LE3 is straightforward. Axiom LE4 follows from Parts (iii) and (ii) of Lemma 17.2.5 p.~413.
-\end{s}
+\end{s} 
+
+%
+
+\begin{s}\label{1761b} 
+P. 424, Definition 17.6.1. Here is an observation which follows from \S\ref{1725ii} p.~\pageref{1725ii} and Lemma 17.2.5 (iii) p.~413 of the book: 
+
+In the setting of Definition 17.6.1, let $B\to A$ be a morphism in $\C_X^\wedge$, let $u:C\to B$ be a morphism in $\C_X^\wedge$, and let $v:(C\to A)\to(B\to A)$ be the corresponding morphism in $\C_A^\wedge$. Then $u$ is a local epimorphism if and only if $v$ is a local epimorphism, $u$ is a local monomorphism if and only if $v$ is a local monomorphism, and $u$ is a local isomorphism if and only if $v$ is a local isomorphism. 
+\end{s} 
 
 %
 
@@ -7038,7 +7054,12 @@ where (a) and (c) follow from the fact that the presheaf $f_*\iota_XF$ is actual
 
 %
 
-%\begin{s} P. 431, Exercise 17.5 (ii). The statement follows from the fact, in the notation of the exercise, we have, for $U$ in $\C_X$ and $(U\to A)\in\C_A$, an isomorphism $$\cc{LI}_{U\to A}\simeq\cc{LI}_U.$$\end{s} 
+\begin{s} P. 431, Exercise 17.5 (ii). By \S\ref{1761b} p.~\pageref{1761b} we have, for $U$ in $\C_X$ and $(U\to A)\in\C_A$, an isomorphism 
+$$
+\cc{LI}_{U\to A}\simeq\cc{LI}_U.
+$$
+Exercise 17.5 (ii) follows immediately. 
+\end{s} 
 
 %%%
 
