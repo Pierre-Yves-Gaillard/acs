@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0148)
+% about "categories and sheaves" (version_0149)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2983,7 +2983,7 @@ $$
 The following point is implicit in the book, and we give additional details for the reader's convenience. Proposition 6.1.9 results immediately from the statement below:
 
 \begin{prop} 
-Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\overset{i}{\to}\Ind(\C)\overset{j}{\to}\C^\wedge$ be the natural embeddings. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
+Let $\A$ be a category which admits small filtrant inductive limit, let $F:\C\to\A$ be a functor, and let $\C\xr i\Ind(\C)\xr j\C^\wedge$ be the natural embeddings. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
 \end{prop} 
 %
 \begin{proof}
@@ -3511,7 +3511,7 @@ Hence, we get a big category ...''. One might add between the two sentences some
 \begin{s} 
 P.~155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\mathcal S$ is given by 
 $$
-X'\overset{g}{\to}Y'\overset{t}{\leftarrow}X,
+X'\xr gY'\overset{t}{\leftarrow}X,
 $$
 where $g$ and $t$ are obtained by applying S3 with $f=\id_X$:
 $$
@@ -3918,7 +3918,7 @@ $$
 Then the bottom arrows are isomorphisms.
 \end{prop}
 %
-Going back to our complex $X'\overset{f}{\to}X\overset{g}{\to}X''$, let us introduce the notation 
+Going back to our complex $X'\xr fX\xr gX''$, let us introduce the notation 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
@@ -4016,7 +4016,7 @@ Note that Lemma 8.3.12 can be stated as follows: $f:X\to Y$ is an epimorphism if
 
 We write $fx$ for the image of a subobject $x$ of $X$, and $fg$ for $f\circ g$.
 
-Put $x^2:=\Ker f^2$. Using the Lemma we see that there is a subobject $x^1$ of $X^1$ such that $x^2=a^1x^1$ (because $f^3$ is a monomorphism, $f^3a^2x^2=0$, and $X^1\overset{a^1}{\to}X^2\overset{a^2}{\to}X^3$ is exact), a subobject $y^0$ of $Y^0$ such that $f^1x^1=b^0y^0$ (because $b^1f^1x^1=0$ and $Y^0\overset{b^0}{\to}Y^1\overset{b^1}{\to}Y$ is exact), and a subobject $y^0$ of $Y^0$ such that $y^0=f^0x^0$ (because $f^0$ is an epimorphism). This yields 
+Put $x^2:=\Ker f^2$. Using the Lemma we see that there is a subobject $x^1$ of $X^1$ such that $x^2=a^1x^1$ (because $f^3$ is a monomorphism, $f^3a^2x^2=0$, and $X^1\xr{a^1}X^2\xr{a^2}X^3$ is exact), a subobject $y^0$ of $Y^0$ such that $f^1x^1=b^0y^0$ (because $b^1f^1x^1=0$ and $Y^0\xr{b^0}Y^1\xr{b^1}Y$ is exact), and a subobject $y^0$ of $Y^0$ such that $y^0=f^0x^0$ (because $f^0$ is an epimorphism). This yields 
 $$
 f^1a^0x^0=b^0f^0x^0=b^0y^0=f^1x^1,
 $$
@@ -4336,7 +4336,7 @@ Recall that, by Proposition 8.3.18 p.~183, an additive functor between abelian c
 \begin{equation}\label{sex1}
 \left.
 \begin{matrix}
-0\to X'\overset{f}{\to}X\overset{g}{\to}X''\text{ exact }\\ 
+0\to X'\xr fX\xr gX''\text{ exact }\\ 
 \then\\ 
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
@@ -4348,7 +4348,7 @@ Consider the condition
 \begin{equation}\label{sex2}
 \left.
 \begin{matrix}
-0\to X'\overset{f}{\to}X\overset{g}{\to}X''\to0\text{ exact }\\ 
+0\to X'\xr fX\xr gX''\to0\text{ exact }\\ 
 \then\\ 
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
@@ -4362,7 +4362,7 @@ We have (\ref{sex1}) $\ssi$ (\ref{sex2}).
 \begin{proof}
 Implication $\then$ is clear. To prove $\si$, let 
 $$
-0\to X'\overset{f}{\to}X\overset{g}{\to}X''
+0\to X'\xr fX\xr gX''
 $$
 be exact, let $I$ be the image of $g$, and observe that 
 $$
@@ -4384,7 +4384,7 @@ Consider the conditions below on our additive functor $F:\C\to\C'$:
 \begin{equation}\label{ex1}
 \left.
 \begin{matrix}
-0\to X'\overset{f}{\to}X\overset{g}{\to}X''\to0\text{ exact }\\ 
+0\to X'\xr fX\xr gX''\to0\text{ exact }\\ 
 \then\\ 
 0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\to0\text{ exact}
 \end{matrix}
@@ -4394,7 +4394,7 @@ Consider the conditions below on our additive functor $F:\C\to\C'$:
 \begin{equation}\label{ex2}
 \left.
 \begin{matrix}
-X'\overset{f}{\to}X\overset{g}{\to}X''\text{ exact }\\ 
+X'\xr fX\xr gX''\text{ exact }\\ 
 \then\\ 
 F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
@@ -4408,7 +4408,7 @@ We have (\ref{ex1}) $\ssi$ (\ref{ex2}).
 \begin{proof}
 Implication $\si$ is clear. To prove $\then$, let 
 $$
-X'\overset{f}{\to}X\overset{g}{\to}X''
+X'\xr fX\xr gX''
 $$
 be exact; let $K_g,K_f$ and $I_g$ denote the indicated kernels and image; and observe that the sequences 
 $$
@@ -5508,7 +5508,7 @@ Z^0\ar{rr}&&Z^1\ar{rr}&&Z^2\ar{rr}{\ell}&&TZ^0,
 $$
 where the second row is obtained from 
 $$
-X^2\overset{a}{\to}W\overset{b}{\to}Z^1\overset{c}{\to}TX^2
+X^2\xr aW\xr bZ^1\xr cTX^2
 $$
 by TR3 and TR0, and the last row is obtained by TR2, we get by TR5, TR3 and TR0
 %
@@ -5521,7 +5521,7 @@ Y^2\ar{r}[swap]{j}&Z^2\ar{r}[swap]{k}&TX^2\ar{r}[swap]{-Ti}&TY^2,
 \end{tikzcd}
 \end{equation}
 %
-where $X^2\overset{i}{\to}Y^2\overset{j}{\to}Z^2\overset{k}{\to}TX^2$ is a distinguished triangle. We want to prove that the bottom right small square of 
+where $X^2\xr iY^2\xr jZ^2\xr kTX^2$ is a distinguished triangle. We want to prove that the bottom right small square of 
 %
 \begin{equation}\label{v4}
 \begin{tikzcd}
@@ -6993,7 +6993,52 @@ $$
 
 \begin{s}%\label{}
 P. 430, proof of Proposition 17.7.3. The third isomorphism follows, as indicated, from Proposition 17.6.7 (ii) p.~426 of the book. The fifth isomorphism follows from (17.6.2) (ii) p.~426 of the book. 
-\end{s}
+\end{s} 
+
+%
+
+\begin{s} 
+P. 431, Exercise 17.5 (i). Put $PX:=\oo{PSh}(X,\A),\ SX:=\oo{Sh}(X,\A)$, and define $PY$ and $SY$ similarly. Let
+$$
+\begin{tikzcd} 
+SY\ar[xshift=0.7ex]{d}{\iota_Y}\\ 
+PY\ar[xshift=-0.7ex]{u}{a_Y}\ar[xshift=-0.7ex]{d}[swap]{f^\dagger}\\ 
+PX\ar[xshift=0.7ex]{u}[swap]{f_*}\ar[xshift=-0.7ex]{d}[swap]{a_X}\\ 
+SX\ar[xshift=0.7ex]{u}[swap]{\iota_X}
+\end{tikzcd}
+$$ 
+be the obvious diagram of adjoint functors. We must show 
+$$
+a_X\circ f^\dagger\circ \iota_Y\circ a_Y\simeq a_X\circ f^\dagger. 
+$$ 
+Let $F$ be in $SX$ and $G$ be in $PY$. We have (omitting most of the parenthesis) 
+$$
+\Hom_{SX}(a_Xf^\dagger\iota_Ya_YG,F)\simeq
+\Hom_{PX}(f^\dagger\iota_Ya_YG,\iota_XF)\simeq
+\Hom_{PY}(\iota_Ya_YG,f_*\iota_XF)
+$$
+$$
+\overset{(\text a)}{\simeq}
+\Hom_{PY}(\iota_Ya_YG,\iota_Ya_Yf_*\iota_XF)\simeq
+\Hom_{SY}(a_Y\iota_Ya_YG,a_Yf_*\iota_XF)
+$$
+$$
+\overset{(\text b)}{\simeq}
+\Hom_{SY}(a_YG,a_Yf_*\iota_XF)\simeq
+\Hom_{PY}(G,\iota_Ya_Yf_*\iota_XF)\overset{(\text c)}{\simeq}
+\Hom_{PY}(G,f_*\iota_XF)
+$$ 
+$$ 
+\simeq 
+\Hom_{PX}(f^\dagger G,\iota_XF)\simeq 
+\Hom_{SX}(a_Xf^\dagger G,F)
+$$ 
+where (a) and (c) follow from the fact that the presheaf $f_*\iota_XF$ is actually a sheaf (Proposition 17.5.1 p.~423 of the book), (b) follows from the isomorphism $a_Y\circ \iota_Y\circ a_Y\simeq a_Y$, and the other isomorphisms hold by adjunction. 
+\end{s} 
+
+%
+
+%\begin{s} P. 431, Exercise 17.5 (ii). The statement follows from the fact, in the notation of the exercise, we have, for $U$ in $\C_X$ and $(U\to A)\in\C_A$, an isomorphism $$\cc{LI}_{U\to A}\simeq\cc{LI}_U.$$\end{s} 
 
 %%%
 
@@ -7006,6 +7051,35 @@ P. 430, proof of Proposition 17.7.3. The third isomorphism follows, as indicated
 \begin{s}
 P. 437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\pageref{14112} and \S\ref{fau} p.~\pageref{fau}. 
 \end{s} 
+
+%
+
+\begin{s} 
+P. 437, proof of Theorem 18.1.6 (v). We prove 
+$$
+\Hom_{\cc R}(\cc R_U,F)\simeq F(U).
+$$ 
+As 
+$$
+\Hom_{\cc R}(\cc R_U,F)\simeq\Hom_{\cc R}(\oo j_{U\to X*}^{-1}(\cc R|U),F)\simeq
+\Hom_{\cc R|U}(\cc R|U,F|U), 
+$$ 
+we only need to verify 
+$$
+\Hom_{\cc R|U}(\cc R|U,F|U)\simeq F(U).
+$$ 
+We shall define maps 
+$$
+\begin{tikzcd}
+\Hom_{\cc R|U}(\cc R|U,F|U)\ar[yshift=0.7ex]{r}{\pp}&F(U)\ar[yshift=-0.7ex]{l}{\psi}
+\end{tikzcd}
+$$ 
+and leave it to the reader to check that they are mutually inverse. 
+
+Definition of $\pp$: Let $\theta$ be in $\Hom_{\cc R|U}(\cc R|U,F|U)$. In particular, for each morphism $f:V\to U$ in $\C_X$ we have a map $\theta(f):\cc R(V)\to F(V)$, and we put $\pp(\theta):=\theta(\id_U)(1)$. 
+
+Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_X$ we define $\psi(x)(f):\cc R(V)\to F(V)$ by $\psi(x)(f)(\lambda):=\lambda\,F(f)(x)$.
+\end{s}
 
 %
 
