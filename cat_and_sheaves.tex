@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0150)
+% about "categories and sheaves" (version_0151)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -61,7 +61,7 @@
 \newcommand{\pp}{\varphi}
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\fthat}{(f^t)\ \widehat{}\ }
-\newcommand{\HOM}{\cc H\mathit{om}}
+\newcommand{\HOM}{\cc H\!\mathit{om}}
 \newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
 \newcommand{\incl}{\hookrightarrow}
 \newcommand{\parar}{\rightrightarrows}
@@ -500,9 +500,29 @@ It might also be worth mentioning that $M_A$ is called the \emph{constant sheaf 
 
 \nn$*$ P. 437, line 3 of step (ii) of the proof of Lemma 18.1.5: It might be better to write $``\bigoplus_{s\in A(U)}G(U\xr sA)"$ instead of $``\coprod_{s\in A(U)}G(U\xr sA)"$; indeed $\bigoplus$ is more usual that $\coprod$ to denote the coproduct of $k$-modules. 
 
-\noindent $*$ P. 438, right after the ``q.e.d.'': ``Notations (17.6.13)'' should be ``Notations 17.6.13''.
+\noindent $*$ P. 438, right after ``q.e.d.'': ``Notations (17.6.13)'' should be ``Notations 17.6.13''. 
 
-\noindent $*$ P. 442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$.
+\nn$*$ P. 438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all $F$ in $\oo{PSh}(\cc R)$. 
+
+\nn$*$ P. 439, after Definition 18.2.2: One can add that we have $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F\in\oo{PSh}(\cc R)$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F\in\Mod(\cc R)$. 
+
+\nn$*$ P. 439, Proposition 18.2.3 (ii). If $\cc{R,S,T}$ are $k_X$-algebras, if $F$ is a $(\cc T\otimes_{k_X}\cc R^{\op})$-module, if $G$ is an $(\cc R\otimes_{k_X}\cc S)$-module, and if $H$ is an $(\cc S\otimes_{k_X}\cc T)$-module, then we have 
+$$
+\Hom_{\cc S\otimes_{k_X}\cc T}(F\otimes_{\cc R}G,H)\simeq
+\Hom_{\cc R\otimes_{k_X}\cc S}(G,\HOM_{\cc T}(F,H)), 
+$$ 
+$$
+\HOM_{\cc S\otimes_{k_X}\cc T}(F\otimes_{\cc R}G,H)\simeq
+\HOM_{\cc R\otimes_{k_X}\cc S}(G,\HOM_{\cc T}(F,H)). 
+$$ 
+
+\nn$*$ P. 440. On the last line of second display, $\Hom_{\cc R(U)}(G(U)\otimes_kF(U),H(U))$ should be $\Hom_k(F(U)\otimes_{\cc R(U)}G(U),H(U))$. On the first line of the fourth display, $\overset{\text{\tiny psh}}{\otimes}_{\cc R(V)}$ should be $\otimes_{\cc R(V)}$. 
+
+\nn$*$ P. 441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}).  
+
+\nn$*$ P. 442, first line of Step (ii) of the proof of Proposition 18.2.7: $\HOM_{\cc R}(\cc R\otimes k_{XA},F)$ should be $\HOM_{\cc R}(\cc R\otimes_{k_X}k_{XA},F)$. 
+
+\noindent $*$ P. 442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$. 
 
 \noindent $*$ Pp 447-8, proof of Lemma 18.5.3: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.
 
@@ -7013,7 +7033,7 @@ P. 430, proof of Proposition 17.7.3. The third isomorphism follows, as indicated
 
 %
 
-\begin{s} 
+\begin{s}\label{175i}
 P. 431, Exercise 17.5 (i). Put $PX:=\oo{PSh}(X,\A),\ SX:=\oo{Sh}(X,\A)$, and define $PY$ and $SY$ similarly. Let
 $$
 \begin{tikzcd} 
@@ -7106,7 +7126,114 @@ Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_
 
 \begin{s}\label{a438}
 P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
-\end{s}
+\end{s} 
+
+% 
+
+\begin{s}\label{homrr}
+P. 438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all $F$ in $\oo{PSh}(\cc R)$. 
+\end{s} 
+
+% 
+
+\begin{s}\label{neutral}
+P. 439, after Definition 18.2.2: One can add that we have $\cc R\overset{\text{\tiny psh}}{\otimes}_{\cc R}F\simeq F$ for $F\in\oo{PSh}(\cc R)$ and $\cc R\otimes_{\cc R}F\simeq F$ for $F\in\Mod(\cc R^{\op})$, as well as $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F\in\oo{PSh}(\cc R^{\op})$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F\in\Mod(\cc R^{\op})$. 
+\end{s} 
+
+% 
+
+\begin{s}
+P. 441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}). 
+\end{s} 
+
+% 
+
+\begin{s}%\label{?}
+P. 441. In the notation of Remark 18.2.6 we have 
+%\begin{equation}\label{?1}
+$$
+\Hom_{\cc R_3}({}_3M_2\otimes_{\cc R_2}{}_2M_1,{}_3M_4)\simeq
+\Hom_{\cc R_2}({}_2M_1,\HOM_{\cc R_3}({}_3M_2,{}_3M_4)),
+$$%\end{equation}%\begin{equation}\label{?2}
+$$
+\HOM_{\cc R_3}({}_3M_2\otimes_{\cc R_2}{}_2M_1,{}_3M_4)\simeq
+\HOM_{\cc R_2}({}_2M_1,\HOM_{\cc R_3}({}_3M_2,{}_3M_4)),
+$$%\end{equation}%\begin{equation}\label{?3}
+$$
+\Hom_{\cc R_3^{\op}}({}_1M_2\otimes_{\cc R_2}{}_2M_3,{}_4M_3)\simeq
+\Hom_{\cc R_2^{\op}}({}_1M_2,\HOM_{\cc R_3^{\op}}({}_2M_3,{}_4M_3)),
+$$%\end{equation}%\begin{equation}\label{?4}
+$$
+\HOM_{\cc R_3^{\op}}({}_1M_2\otimes_{\cc R_2}{}_2M_3,{}_4M_3)\simeq
+\HOM_{\cc R_2^{\op}}({}_1M_2,\HOM_{\cc R_3^{\op}}({}_2M_3,{}_4M_3)).
+$$%\end{equation}
+More generally, if $\cc{R,S,T}$ are $\cc O_X$-algebras, if $F$ is a $(\cc T\otimes_{\cc O_X}\cc R^{\op})$-module, if $G$ is an $(\cc R\otimes_{\cc O_X}\cc S)$-module, and if $H$ is an $(\cc S\otimes_{\cc O_X}\cc T)$-module, then we have 
+$$%\begin{equation}\label{Hom}
+\Hom_{\cc S\otimes_{\cc O_X}\cc T}(F\otimes_{\cc R}G,H)\simeq
+\Hom_{\cc R\otimes_{\cc O_X}\cc S}(G,\HOM_{\cc T}(F,H)), 
+$$%\end{equation}
+\begin{equation}\label{HOM}
+\HOM_{\cc S\otimes_{\cc O_X}\cc T}(F\otimes_{\cc R}G,H)\simeq
+\HOM_{\cc R\otimes_{\cc O_X}\cc S}(G,\HOM_{\cc T}(F,H)). 
+\end{equation}
+\end{s} 
+
+%
+
+\begin{s}
+P. 442, proof of Proposition 18.2.7. Here are additional details. Proof of (18.2.12): We must show 
+\begin{equation}\label{18212}
+F_A\simeq\cc R_A\otimes_{\cc R}F\simeq k_{XA}\otimes_{k_X}F. 
+\end{equation} 
+We have 
+$$
+F_A\overset{(\text a)}{\simeq}
+\oo j_{A\to X}^{-1}(F|_A)\overset{(\text b)}{\simeq}
+\oo j_{A\to X}^{-1}(\cc R|_A\otimes_{\cc R|_A}F|_A)\overset{(\text c)}{\simeq}
+(\oo j_{A\to X}^{-1}(\cc R|_A))\otimes_{\cc R}F\overset{(\text d)}{\simeq} 
+\cc R_A\otimes_{\cc R}F.
+$$ 
+Indeed, (a) holds by Definition 17.6.10 (i) and Display (17.6.5) p.~428 of the book, (b) follows from \S\ref{neutral}, (c) follows from (18.2.6) p.~441 of the book. The isomorphism $F_A\simeq k_{XA}\otimes_{k_X}F$ is a particular case of the isomorphism $F_A\simeq\cc R_A\otimes_{\cc R}F$ just proved. 
+
+Proof of (18.2.13): We must show 
+\begin{equation}\label{18213} 
+\Gamma_A(F)\simeq\HOM_{\cc R}(\cc R_A,F)\simeq\HOM_{k_X}(k_{XA},F). 
+\end{equation}
+We have 
+$$
+\HOM_{\cc R}(\cc R_A,F)\overset{(\text a)}{\simeq}
+\HOM_{\cc R}(\cc R\otimes_{k_X}k_{XA},F)
+$$
+$$
+\overset{(\text b)}{\simeq}
+\HOM_{k_X}(k_{XA},\HOM_{\cc R}(\cc R,F))\overset{(\text c)}{\simeq}
+\HOM_{k_X}(k_{XA},F), 
+$$ 
+where (a) follows from \eqref{18212}, (b) follows from Display (18.2.4) p.~439 of the book (which is a particular case of \eqref{HOM}), and (c) follows from \S\ref{homrr}. Let record the isomorphism 
+\begin{equation}\label{record}
+\HOM_{\cc R}(\cc R_A,F)\simeq\HOM_{k_X}(k_{XA},F). 
+\end{equation} 
+We also have for $G$ in $\Mod(\cc R)$ 
+$$
+\Hom_{\cc R}(G,\HOM_{k_X}(k_{XA},F))\overset{(\text a)}{\simeq}
+\Hom_{\cc R}(G\otimes_{k_X}k_{XA},F)\overset{(\text b)}{\simeq}
+\Hom_{\cc R}(\oo j_{A\to X}^{-1}\oo j_{A\to X*}G,F)
+$$
+$$
+\overset{(\text c)}{\simeq}
+\Hom_{\cc R}(G,\oo j_{A\to X}^\ddagger\oo j_{A\to X*}F)\overset{(\text d)}{\simeq}
+\Hom_{\cc R}(G,\Gamma_A(F)), 
+$$ 
+where (a) follows from \eqref{HOM} with 
+$$
+(k_X;k_X,\cc R,k_X;k_{XA},G,F)
+$$ 
+instead of 
+$$
+(\cc O_X;\cc{R,S,T};F,G,H),
+$$ 
+(b) follows from \eqref{18212}, Definition 17.6.10 (i), and Display (17.6.5) p.~428 of the book, (c) follows by adjunction, and (d) by Definition 17.6.10 (ii) p.~428 of the book. 
+\end{s} 
 
 %%
 
