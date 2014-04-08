@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0152)
+% about "categories and sheaves" (version_0153)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1137,9 +1137,9 @@ $$
 $$
 \end{proof}
 \end{s}
+
 %
-%%
-%
+
 \begin{s} 
 P.~40, proof of Lemma 2.1.11 (minor variant).
 %
@@ -1475,13 +1475,53 @@ $$
 \beta(j)\xrightarrow{p_{\varphi(j),j,\id_{\varphi(j)}}}\colim_{j,u}\beta(j)\xrightarrow{q_{\varphi(j)}}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
 induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
+\end{s} 
+
+% 
+
+\begin{s}\label{spreptom}
+P. 54, end of Section 2.3. Let 
+\begin{equation}\label{epreptom}
+\C\xleftarrow\beta K\xr\psi J\xr\pp I
+\end{equation} 
+be a diagram of functors. Assume that $I,J$ and $K$ are small, and that $\C$ admits small projective limits. Then Theorem 2.3.3 (ii) p.~52 of the book implies that the functors $\pp^\ddagger(\psi^\ddagger(\beta))$ and $(\pp\circ\psi)^\ddagger(\beta)$ from $I$ to $\C$ exist and are naturally isomorphic. 
+\end{s}
+
+%
+
+\begin{s}%\label{}
+P. 54, end of Section 2.3. The following fact was pointed out to me by Tom Leinster\index{Leinster}; see \href{http://mathoverflow.net/q/162162/461}{http://mathoverflow.net/q/162162/461}.
+
+Let $k$ be a field, let $\U$ and $\V$ be universes such that $k\in\U\in\V$, let $I$ be the category of $k$-vector spaces belonging to $\U$, let $J$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\beta,\pp$ and $\psi$ are the inclusions. In particular the observation made in \S\ref{spreptom} applies. 
+
+We claim: 
+\begin{equation}\label{tom}
+(\pp\circ\psi)^\ddagger(\beta)(V)\simeq V^{**},
+\end{equation} 
+where $V^{**}$ is the second dual of $V$. 
+
+In view of \S\ref{spreptom} and Theorem 2.3.3 (ii) p.~52 of the book, this will imply that $\psi^\ddagger(\beta)$ is isomorphic to the inclusion $J\to\C$, and that $\pp^\ddagger(\psi^\ddagger(\beta))(V)\simeq V^{**}$. 
+
+To prove \eqref{tom}, write $V'$ for the left hand side of \eqref{tom}. By Display (2.3.7) p.~52 of the book, we have 
+\begin{equation}\label{tomlim}
+V'\simeq\lim_{f\in V^*}k. 
+\end{equation}
+Let $a:V^{**}\to V'$ be the canonical map. More precisely, by \eqref{tomlim} the map $a$ is given by a family $(a_f:V^{**}\to k)_{f\in V^*}$ of $k$-linear maps, that is, $a$ is given by a $k$-linear map $V^*\to V^{***}$, which is easily seen to be the natural morphism. Define $b:V'\to V^{**}$ by 
+$$
+b((\lambda_f)_{f\in V^*})(g):=\lambda_g.
+$$ 
+It is straightforward to check that $a$ and $b$ are mutually inverse $k$-linear maps. 
+
+The above observation shows that the functor $(\pp\circ\psi)^\ddagger(\pp\circ\psi):I\to I$ exists and is isomorphic to the second dual functor. 
+
+Also note that the functors $\psi^\dagger(\pp\circ\psi)$ and $\pp^\dagger(\pp)$ exist and are respectively isomorphic to $\pp$ and $\id_I$. 
 \end{s}
 
 %%
 
 \subsection{Three Formulas}
 
-Here is a complement to Section 2.3 p.~54 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$. Let $\A$ be a category admitting small inductive and projective limits. 
+Here is a complement to Section 2.3 pp~52-54 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$. Let $\A$ be a category admitting small inductive and projective limits. 
 
 \subsubsection{First Formula}
 
@@ -1589,7 +1629,7 @@ $$
 $$ 
 where \eqref{prepa4a} follows from \eqref{prepa4}, \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.\pageref{c271b}), and \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
 
-%%
+%% 
 
 \subsection{Brief Comments}
 
