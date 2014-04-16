@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0154)
+% about "categories and sheaves" (version_0155)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1672,7 +1672,7 @@ $$
 
 We shall give two other proofs. Recall the statement: 
 
-\begin{prop} 
+\begin{prop}\label{246}
 In the setting 
 %
 \begin{equation}\label{241s}
@@ -1986,9 +1986,24 @@ P.~64. It might be worth displaying the formula
 \widehat F(A)(X')\simeq\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\simeq
 \colim_{(X'\to F(X))\in\C^{X'}}A(X)
 \end{equation}
-contained in the proof of Proposition 2.7.5 p.~64. Here $F:\C\to\C'$ is a functor of small categories. 
-\end{s}
+contained in the proof of Proposition 2.7.5 p.~64 of the book. Here $F:\C\to\C'$ is a functor of small categories. 
 
+For the reader's convenience we reproduce the statement and the proof of Proposition 2.7.5: 
+
+\begin{prop}
+If $F:\C\to\C'$ is a functor of small categories, then the functors $\widehat F$ and $(F^{\op})^\dagger$ from $\C^\wedge$ to $\C'^\wedge$ are isomorphic. 
+\end{prop} 
+
+\begin{proof}
+Let $A$ be in $\C^\wedge$ and $X'$ in $\C'$. Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pageref{246}) gives 
+$$
+\widehat F(A)(X')\simeq\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))
+$$
+$$
+\simeq\colim_{(X'\to F(X))\in\C^{X'}}\Hom_{\C^\wedge}(X,A)\simeq(F^{\op})^\dagger(X').
+$$
+\end{proof} 
+\end{s}
 %
 
 \begin{s}
