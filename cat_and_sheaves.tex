@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version_0155)
+% about "categories and sheaves" (version-0156)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6611,9 +6611,13 @@ with $G\in\PSh(Y,\A),U\in\C_X$, $U\to f^\tau(V)$ being a morphism in $(\C_X)^{\o
 
 %
 
-\begin{s}
-P. 408. The sentence right after the second display says 
+\begin{s}\label{s408}
+P. 408, comment preceding Convention 17.1.6. Let us recall the comment: 
 
+We extend presheaves over $X$ to presheaves over $\widehat X$ using the functor $\oo h_X^\ddagger$ associated with the Yoneda embedding $\oo h_X^t=\oo h_{\C_X}$. Hence, for $F$ in $\oo{PSh}(X,\A)$ and $A$ in $\C_X^\wedge$, we have 
+$$
+(\oo h_X^\ddagger F)(A)=\lim_{(U\to A)\in(\C_X)_A}F(U).
+$$ 
 By Corollary 2.7.4 p.~63, the functor 
 $$
 \oo h_X^\ddagger:\oo{PSh}(X,\A)\to\oo{PSh}(\widehat X,\A)
@@ -6628,10 +6632,10 @@ $$
 
 %
 
-\begin{s}\label{s408}
-P. 408, comment preceding Convention 17.1.6. Let us recall the comment: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
+\begin{s}
+P. 408, Convention 17.1.6. Recall the convention: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
 \begin{equation}\label{408}
-F(A):=\lim_{(U\to A)\in(\C_X)_A}F(U).
+F(A):=(\oo h_X^\ddagger F)(A)=\lim_{(U\to A)\in(\C_X)_A}F(U).
 \end{equation}
 (Note that the same comment is made at the beginning of Section 17.3 p.~414.) This convention of extending each presheaf $F$ over $X$ to a presheaf, still denoted by $F$, over $\widehat X$ which commutes with small projective limits implies that we have, for $A,B\in\C^\wedge$, 
 $$
