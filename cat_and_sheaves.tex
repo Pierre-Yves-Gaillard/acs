@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0156)
+% about "categories and sheaves" (version-0157)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1532,25 +1532,26 @@ Here is a complement to Section 2.3 pp~52-54 of the book. Let $\C$ be a small ca
 
 \subsubsection{First Formula}
 
-Let $F:\C\to\A$ be a functor. We claim 
+Let $F:\C\to\A$ be a functor. Recall that there is a unique functor 
+$$
+\lambda:(\C^\wedge)_A\to(\C_A)^\wedge
+$$ 
+such that 
+\begin{equation}\label{lambda}
+\lambda(B\to A)(U\to A)=\Hom_{(\C^\wedge)_A}(U\to A,B\to A)
+\end{equation} 
+for all $(B\to A)\in(\C^\wedge)_A$ and all $(U\to A)\in\C_A$. (See Lemma 1.4.12 p.~26 of the book.) We claim 
 \begin{equation}\label{prepa1}
 h(\C_A)^\ddagger(F\circ j(\C_A))\circ\lambda\simeq h(\C)^\ddagger(F)\circ j((\C^\wedge)_A).
 \end{equation}
-Proof: Recall that there is a unique functor $\lambda:(\C^\wedge)_A\to(\C_A)^\wedge$ such that 
-\begin{equation}\label{lambda}
-\lambda(A\to B)(A\to U)=\Hom_{(\C^\wedge)_A}(A\to U,A\to B)
-\end{equation} 
-for all $(A\to B)\in(\C^\wedge)_A$ and all $(A\to U)\in\C_A$. (See Lemma 1.4.12 p.~26 of the book.) Consider the quasi-commutative diagram 
-%$$\begin{tikzcd}\C_A\ar{rr}{j(\C_A)}\ar{dr}[swap]{F\circ j(\C_A)}&&\C\ar{dl}{F}\\ {}&\A,\end{tikzcd}$$
-%$$\begin{tikzcd}\C_A\ar{r}{F\circ j(\C_A)}\ar{dd}[swap]{h(\C_A)}&\A\\ {}\\ (\C_A)^\wedge\ar{uur}[swap]{h(\C_A)^\ddagger(F\circ j(\C_A))}&(\C^\wedge)_A\ar{l}{\lambda}\ar{r}[swap]{j((\C^\wedge)_A)}&\C^\wedge,\end{tikzcd}$$
+Proof: Consider the quasi-commutative diagram 
 $$
 \begin{tikzcd}
 \C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\circ j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
 {}\\ 
 (\C_A)^\wedge\ar{uurr}[swap]{h(\C_A)^\ddagger(F\circ j(\C_A))}&&(\C^\wedge)_A\ar{ll}{\lambda}\ar{rr}[swap]{j((\C^\wedge)_A)}&&\C^\wedge.\ar{uull}[swap]{h(\C)^\ddagger(F)}
 \end{tikzcd}
-$$
-%$$\begin{tikzcd}\C\ar{rr}{h(\C)}\ar{dr}[swap]{F}&&\C^\wedge\ar{dl}{h(\C)^\ddagger(F)}\\ {}&\A.\end{tikzcd}$$ 
+$$  
 We have 
 $$
 h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))\simeq\lim_{((U\to A)\to(B\to A))\in((\C^\wedge)_A)_{B\to A}}F(U)
@@ -1560,7 +1561,7 @@ $$
 $$ 
 $$
 \simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big).\ \square
-$$
+$$ 
 
 \subsubsection{Second Formula}
 
