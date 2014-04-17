@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0157)
+% about "categories and sheaves" (version-0158)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1563,8 +1563,11 @@ $$
 \simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big).\ \square
 $$ 
 
-\subsubsection{Second Formula}
+%
 
+\subsubsection{Second Formula}%\label{sprepa2}
+
+\begin{prop}\label{prepa2a}
 Consider the quasi-commutative diagram 
 $$
 \begin{tikzcd}
@@ -1572,18 +1575,60 @@ $$
 {}&\A,
 \end{tikzcd}
 $$ 
-and let $U$ be in $\C$. We claim 
+and let $U$ be in $\C$. Then we have 
 \begin{equation}\label{prepa2}
 j(\C_A)^\ddagger(G)(U)\simeq\prod_{U\to A}G(U\to A).
 \end{equation} 
-Proof: We have 
+\end{prop}
+
+\begin{lem}\label{cicau}
+The discrete category $A(U)$ is cocofinal in $(\C_A)^U$.
+\end{lem}
+
+\begin{proof}[Proof of Lemma \ref{cicau}]
+We probably give too many details, and the reader may want to skip this proof. An object $a$ of $(\C_A)^U$ is given by a triple 
+$$
+a=(U_a,U_a\xr{u_a}A;U\xr{s_a}U_a),
+$$ 
+and a morphism from $a$ to 
+$$
+b=(U_b,U_b\xr{u_b}A;U\xr{s_b}U_b)\in(\C_A)^U
+$$ 
+is given by a commutative diagram 
+$$
+\begin{tikzcd}
+{}&U\ar{dl}[swap]{s_a}\ar{dr}{s_b}\\ 
+U_a\ar{dr}[swap]{u_a}\ar{rr}{c}&&U_b\ar{dl}{u_b}\\ 
+{}&A.
+\end{tikzcd}
+$$ 
+The embedding $\pp:A(U)\to(\C_A)^U$ implicit in the statement of Lemma~\ref{cicau} is given by 
+$$
+\pp(u)=(U,U\xr uA;U\xr{\id_U}U). 
+$$ 
+Now it is easy to see that the lemma boils down to verifying that, given any $b$ in $(\C_A)^U$, there is precisely one pair $(u,c)$ such that $u$ is in $A(U)$ and $c$ is a morphism from $U$ to $U_b$ making the diagram 
+$$
+\begin{tikzcd}
+{}&U\ar{dl}[swap]{\id_U}\ar{dr}{s_b}\\ 
+U\ar{dr}[swap]{u}\ar{rr}{c}&&U_b\ar{dl}{u_b}\\ 
+{}&A
+\end{tikzcd}
+$$ 
+commute. This last statement is obvious. 
+\end{proof}
+
+\begin{proof}[Proof of Proposition \ref{prepa2a}]
+We have 
 $$
 j(\C_A)^\ddagger(G)(U)\simeq\lim_{(U\to j(\C_A)(V\to A))\in(\C_A)^U}G(V\to A)
 $$
 $$
-\simeq\lim_{(U\to V\to A)\in(\C_A)^U}G(V\to A)\simeq\lim_{U\to A}G(U\to A)\simeq\prod_{U\to A}G(U\to A),
+\simeq\lim_{U\to A}G(U\to A)\simeq\prod_{U\to A}G(U\to A),
 $$
-the penultimate isomorphism following from the fact that the discrete category $A(U)$ is cocofinal in $(\C_A)^U$. 
+the penultimate isomorphism following from Lemma~\ref{cicau}. 
+\end{proof} 
+
+% 
 
 \subsubsection{Third Formula}
 
