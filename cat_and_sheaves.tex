@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0158)
+% about "categories and sheaves" (version-0159)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1524,6 +1524,270 @@ $$
 $$ 
 \end{s}
 
+%% 
+
+\subsection{Brief Comments}
+
+\begin{s} 
+P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
+%
+\begin{prop}%\label{244}
+If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
+$$
+\colim\Delta(S)\simeq\pi_0(I)\times S.
+$$
+\end{prop} 
+%
+\begin{proof}
+On the one hand we have 
+$$
+\pi_0(I):=\Ob(I)/\!\!\sim\ , 
+$$
+where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54
+$$
+\colim\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
+$$
+where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
+$$
+(i,s)\approx(j,t)\ \ssi\ [i\sim j\text{ and }s=t].
+$$ 
+\end{proof}
+\end{s}
+
+%%
+
+\subsection{Corollary 2.4.6 (p. 56)}
+
+We shall give two other proofs. Recall the statement: 
+
+\begin{prop}\label{246}
+In the setting 
+%
+\begin{equation}\label{241s}
+A\in\C'\xleftarrow{F}\C\xrightarrow{G}\C''\ni B, 
+\end{equation} 
+%
+we have 
+%
+\begin{equation}\label{241} 
+\colim_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq 
+\colim_{(X,a)\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B). 
+\end{equation} 
+%
+Here 
+$$
+a\in\Hom_{\C'}(A,F(X)),\quad b\in\Hom_{\C''}(G(X),B). 
+$$ 
+\end{prop}
+
+\begin{proof}[First Proof]
+Denote respectively by $L$ and $R$ the left and right-hand side of (\ref{241}), let 
+$$
+p_{X,b}:\Hom_{\C'}(A,F(X))\to L,\quad q_{X,a}:\Hom_{\C''}(G(X),B)\to R
+$$
+be the coprojections (see Definition~\ref{c} p.~\pageref{c}), and define 
+$$
+f_{X,b}:\Hom_{\C'}(A,F(X))\to R,\quad g_{X,a}:\Hom_{\C''}(G(X),B)\to L
+$$
+by
+$$
+f_{X,b}(a):=q_{X,a}(b),\quad g_{X,a}(b):=p_{X,b}(a).
+$$
+One easily checks that these maps define inverse bijections between $L$ and $R$. 
+\end{proof}
+
+\begin{proof}[Second Proof]
+Put 
+$$
+Q_1:=\colim_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X)),\quad Q_2:=\colim_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B).
+$$ 
+We must prove that there is a natural bijection $Q_1\simeq Q_2$. Proposition 2.4.1 p.~54 of the book furnishes sets $S_1$ and $S_2$, and equivalence relations $R_1$ and $R_2$ on $S_1$ and $S_2$ respectively, such that $Q_i\simeq S_i/R_i$ for $i=1,2$. We shall prove that there is a natural bijection $S_1\simeq S_2$, and leave it to the reader to check that it induces a bijection $Q_1\simeq Q_2$. We have 
+$$
+S_1:=\bigsqcup_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X))
+$$
+
+$$
+\simeq\bigsqcup_{X\in\C}\quad\bigsqcup_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X))
+$$
+
+$$
+\simeq\bigsqcup_{X\in\C}\Hom_{\C'}(A,F(X))\times\Hom_{\C''}(G(X),B)
+$$
+
+$$
+\simeq\bigsqcup_{X\in\C}\quad\bigsqcup_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B)
+$$
+
+$$
+\bigsqcup_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B)=:S_2.
+$$
+\end{proof}
+
+%%
+
+\subsection{Brief Comments}
+
+\begin{s} 
+P.~56, proof of Lemma 2.4.7 (minor variant).
+
+\begin{lem} 
+If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\colim k(i_0)$ is a terminal object of $\Set$. 
+\end{lem}
+
+\begin{proof}
+For $X\in\Set$ we have (with self-explanatory notation)
+$$
+\Hom_{\Set}\left(\colim k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
+$$
+the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pageref{yol}).
+\end{proof}
+\end{s}
+
+%
+
+\begin{s} 
+P.~58, implication (vi) $\then$ (i) of Proposition 2.5.2. Here is a slightly stronger statement:
+%
+\begin{prop} 
+If $\varphi:J\to I$ is a functor, then the obvious map
+\begin{equation}\label{om}
+L_i:=\colim\Hom_I(i,\varphi)\to\pi_0(J^i)
+\end{equation}
+is bijective. 
+\end{prop}
+% 
+\begin{proof}
+For $j\in J$ let 
+$$
+p_j:\Hom_I(i,\varphi(j))\to L_i
+$$
+be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
+$$
+\Ob(J^i)\to L_i,\quad\big(j,s:i\to\varphi(j)\big)\mapsto p_j(s)
+$$
+factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}).
+\end{proof}
+\end{s}
+
+%
+
+\begin{s}
+This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
+%
+\begin{equation}\label{263a}
+\ic_{(X\to A)\in\C_A}X\xrightarrow\sim A,
+\end{equation} 
+
+\begin{equation}\label{263b}
+\colim_{(X\to A)\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
+\end{equation}
+
+\begin{equation}\label{263c}
+\Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{(X\to A)\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
+\end{equation}
+
+Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
+\end{s}
+
+%
+
+\begin{s} 
+P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
+
+\begin{lem} 
+Let $\alpha:I\to\A$ be a functor, let $A\in\A$ be the inductive limit of $\alpha$, let $\alpha':I\to\A_A$ be the obvious functor, and let $a\in\A_A$ be the identity of $A$. Then the inductive limit of $\alpha'$ is $a$. 
+\end{lem} 
+
+\begin{proof}
+If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
+
+Let $b=(b:B\to A)$ be a ``generic'' object of $\A_A$. We must check that there is a canonical bijection
+%
+\begin{equation}\label{1}
+\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\alpha',\Delta(b)).
+\end{equation}
+%
+We have a canonical bijection
+%
+\begin{equation}\label{2}
+\Hom_\A(A,B)\simeq\Hom_{\A^I}(\alpha,\Delta(B))
+\end{equation}
+%
+and inclusions 
+$$
+\Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
+%
+\Hom_{(\A_A)^I}(\alpha',\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
+$$
+It is straightforward to check that (\ref{2}) induces (\ref{1}).
+\end{proof}
+\end{s}
+
+%
+
+\begin{s} 
+P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a universe is given. Here we make an exception to this rule. 
+
+Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$.
+
+\begin{df}\label{uil}
+If the natural map $\colim\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\colim\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
+\end{df}
+
+\begin{prop}[Proposition 2.6.4 p. 61]%\label{puil}
+The following conditions are equivalent (recall that no universe is given {\em a priori}):
+
+\nn{\em(a)} $X$ is a universal inductive limit of $\alpha$,
+
+\nn{\em(b)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
+
+\nn{\em(c)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for all universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
+
+\nn{\em(d)} $\colim F\circ\alpha\simeq F(X)$ for all functor $F:\C\to\C'$. 
+\end{prop}
+
+\begin{proof} The implications (a) $\ssi$ (b) $\ssi$ (c) $\si$ (d) are clear. To prove (c) $\then$ (d), we choose a universe $\U$ such that $I$ is $\U$-small, and $\C$ and $\C'$ are $\U$-categories, and we note
+$$
+\Hom_{\C'}(F(X),X')\simeq\Hom_{\C^\wedge_\U}\big(h_\U(X),\Hom_{\C'}(F(\ ),X')\big)
+$$
+$$
+\simeq\lim\Hom_{\C^\wedge_\U}\big(h_\U\circ\alpha,\Hom_{\C'}(F(\ ),X')\big)\simeq\lim\Hom_{\C'}(F\circ\alpha,X').
+$$
+\end{proof}
+\end{s}
+
+%
+
+\begin{s}\label{c271b}
+P.~62, Proposition 2.7.1. Consider the diagram 
+$$
+\begin{tikzcd}
+\C\ar{r}{\hy_\C}\ar{dr}[swap]{F}&\C^\wedge\ar{d}{\widetilde F}&I\ar{l}[swap]{\alpha}\\
+&\A,
+\end{tikzcd}
+$$
+where $I$ is a small category and $\widetilde F$ is defined by 
+$$
+\widetilde F(A):=\colim_{(X\to A)\in\C_A}F(X). 
+$$
+Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
+
+By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
+$$
+G(X')(X):=\Hom_{\A}(F(X),X').
+$$ 
+is right adjoint to $\widetilde F$. This results from the following computation: 
+$$
+\Hom_{\A}\left(\widetilde F(A),X'\right)=
+\Hom_{\A}\left(\colim_{(X\to A)\in\C_A}F(X),X'\right)\simeq 
+\lim_{(X\to A)\in\C_A}\Hom_{\A}(F(X),X')
+$$
+$$
+=\lim_{(X\to A)\in\C_A}G(X')(X)\simeq\Hom_{\C^\wedge}(A,G(X')), 
+$$ 
+the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
+\end{s}
+
 %%
 
 \subsection{Three Formulas}
@@ -1643,7 +1907,7 @@ $$
 \A\ar[equal]{r}&\A\ar[equal]{r}&\A\ar[equal]{r}&\A.
 \end{tikzcd}
 $$ 
-(See \eqref{lambda} for the definition of $\lambda$). Let $B$ be in $\C^\wedge$. We claim 
+(See \eqref{lambda} for the definition of $\lambda$.) Let $B$ be in $\C^\wedge$. We claim 
 \begin{equation}\label{prepa3}
 h^\dagger(j^\dagger(G))(B)\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)).
 \end{equation} 
@@ -1658,7 +1922,7 @@ that is:
 \begin{equation}\label{prepa4}
 j^\dagger(G)(U)\simeq(h_A)^\dagger(G)(\lambda(U\times A\to A)).
 \end{equation} 
-Let now $B$ be in $\C^\wedge$. We get 
+For $B$ in $\C^\wedge$ we get 
 $$
 h^\dagger(j^\dagger(G))(B)
 $$
@@ -1680,277 +1944,11 @@ $$
 $$
 \simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)),
 $$ 
-where \eqref{prepa4a} follows from \eqref{prepa4}, \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.\pageref{c271b}), and \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
-
-%% 
-
-\subsection{Brief Comments}
-
-\begin{s} 
-P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
-%
-\begin{prop}%\label{244}
-If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
-$$
-\colim\Delta(S)\simeq\pi_0(I)\times S.
-$$
-\end{prop} 
-%
-\begin{proof}
-On the one hand we have 
-$$
-\pi_0(I):=\Ob(I)/\!\!\sim\ , 
-$$
-where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54
-$$
-\colim\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
-$$
-where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
-$$
-(i,s)\approx(j,t)\ \ssi\ [i\sim j\text{ and }s=t].
-$$ 
-\end{proof}
-\end{s}
+where \eqref{prepa4a} follows from \eqref{prepa4}, \eqref{prepa4b} follows from Lemma 2.1.13 (i) p.~41 of the book and the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}), and \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
 
 %%
 
-\subsection{Corollary 2.4.6 (p. 56)}
-
-We shall give two other proofs. Recall the statement: 
-
-\begin{prop}\label{246}
-In the setting 
-%
-\begin{equation}\label{241s}
-A\in\C'\xleftarrow{F}\C\xrightarrow{G}\C''\ni B, 
-\end{equation} 
-%
-we have 
-%
-\begin{equation}\label{241} 
-\colim_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq 
-\colim_{(X,a)\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B). 
-\end{equation} 
-%
-Here 
-$$
-a\in\Hom_{\C'}(A,F(X)),\quad b\in\Hom_{\C''}(G(X),B). 
-$$ 
-\end{prop}
-
-\begin{proof}[First Proof]
-Denote respectively by $L$ and $R$ the left and right-hand side of (\ref{241}), let 
-$$
-p_{X,b}:\Hom_{\C'}(A,F(X))\to L,\quad q_{X,a}:\Hom_{\C''}(G(X),B)\to R
-$$
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}), and define 
-$$
-f_{X,b}:\Hom_{\C'}(A,F(X))\to R,\quad g_{X,a}:\Hom_{\C''}(G(X),B)\to L
-$$
-by
-$$
-f_{X,b}(a):=q_{X,a}(b),\quad g_{X,a}(b):=p_{X,b}(a).
-$$
-One easily checks that these maps define inverse bijections between $L$ and $R$. 
-\end{proof}
-
-\begin{proof}[Second Proof]
-Put 
-$$
-Q_1:=\colim_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X)),\quad Q_2:=\colim_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B).
-$$ 
-We must prove that there is a natural bijection $Q_1\simeq Q_2$. Proposition 2.4.1 p.~54 of the book furnishes sets $S_1$ and $S_2$, and equivalence relations $R_1$ and $R_2$ on $S_1$ and $S_2$ respectively, such that $Q_i\simeq S_i/R_i$ for $i=1,2$. We shall prove that there is a natural bijection $S_1\simeq S_2$, and leave it to the reader to check that it induces a bijection $Q_1\simeq Q_2$. We have 
-$$
-S_1:=\bigsqcup_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X))
-$$
-
-$$
-\simeq\bigsqcup_{X\in\C}\quad\bigsqcup_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X))
-$$
-
-$$
-\simeq\bigsqcup_{X\in\C}\Hom_{\C'}(A,F(X))\times\Hom_{\C''}(G(X),B)
-$$
-
-$$
-\simeq\bigsqcup_{X\in\C}\quad\bigsqcup_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B)
-$$
-
-$$
-\bigsqcup_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B)=:S_2.
-$$
-\end{proof}
-
-%\subsubsection{Third Proof}Isomorphism~\eqref{241} p.~\pageref{241} can be written as $$G^\dagger\Big(\Hom_{\C'}\big(A,F(\ )\big)\Big)(B)\simeq(F^{\op})^\dagger\Big(\Hom_{\C''}\big(G(\ ),B\big)\Big)(A).$$ Now Corollary 2.4.6 p. 56 results immediately from Corollary~\ref{c233i} p.~\pageref{c233i}. q.e.d.
-
 \subsection{Brief Comments}
-
-\begin{s} 
-P.~56, proof of Lemma 2.4.7 (minor variant).
-
-\begin{lem} 
-If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\colim k(i_0)$ is a terminal object of $\Set$. 
-\end{lem}
-
-\begin{proof}
-For $X\in\Set$ we have (with self-explanatory notation)
-$$
-\Hom_{\Set}\left(\colim k(i_0),X\right)\simeq\Hom_{{\Set}^I}(k(i_0),\Delta(X))\simeq X,
-$$
-the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pageref{yol}).
-\end{proof}
-\end{s}
-
-%
-
-\begin{s} 
-P.~58, implication (vi) $\then$ (i) of Proposition 2.5.2. Here is a slightly stronger statement:
-%
-\begin{prop} 
-If $\varphi:J\to I$ is a functor, then the obvious map
-\begin{equation}\label{om}
-L_i:=\colim\Hom_I(i,\varphi)\to\pi_0(J^i)
-\end{equation}
-is bijective. 
-\end{prop}
-% 
-\begin{proof}
-For $j\in J$ let 
-$$
-p_j:\Hom_I(i,\varphi(j))\to L_i
-$$
-be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
-$$
-\Ob(J^i)\to L_i,\quad\big(j,s:i\to\varphi(j)\big)\mapsto p_j(s)
-$$
-factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}).
-\end{proof}
-\end{s}
-
-%
-
-%\subsection{Three Versions of an Important Formula (p. 61)}
-
-\begin{s}
-This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
-%
-\begin{equation}\label{263a}
-\ic_{(X\to A)\in\C_A}X\xrightarrow\sim A,
-\end{equation} 
-
-\begin{equation}\label{263b}
-\colim_{(X\to A)\in\C_A}\Hom_\C(Y,X)\xrightarrow\sim A(Y)\text{ for all }Y\in\C, 
-\end{equation}
-
-\begin{equation}\label{263c}
-\Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{(X\to A)\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
-\end{equation}
-
-%\noindent(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) 
-Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
-\end{s}
-
-%
-
-\begin{s} 
-P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
-
-\begin{lem} 
-Let $\alpha:I\to\A$ be a functor, let $A\in\A$ be the inductive limit of $\alpha$, let $\alpha':I\to\A_A$ be the obvious functor, and let $a\in\A_A$ be the identity of $A$. Then the inductive limit of $\alpha'$ is $a$. 
-\end{lem} 
-
-\begin{proof}
-If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
-
-Let $b=(b:B\to A)$ be a ``generic'' object of $\A_A$. We must check that there is a canonical bijection
-%
-\begin{equation}\label{1}
-\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\alpha',\Delta(b)).
-\end{equation}
-%
-We have a canonical bijection
-%
-\begin{equation}\label{2}
-\Hom_\A(A,B)\simeq\Hom_{\A^I}(\alpha,\Delta(B))
-\end{equation}
-%
-and inclusions 
-$$
-\Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
-%
-\Hom_{(\A_A)^I}(\alpha',\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
-$$
-It is straightforward to check that (\ref{2}) induces (\ref{1}).
-\end{proof}
-\end{s}
-
-%
-
-\begin{s} 
-P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a universe is given. Here we make an exception to this rule. 
-
-Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$.
-
-\begin{df}\label{uil}
-If the natural map $\colim\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\colim\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
-\end{df}
-
-\begin{prop}[Proposition 2.6.4 p. 61]%\label{puil}
-The following conditions are equivalent (recall that no universe is given {\em a priori}):
-
-\nn{\em(a)} $X$ is a universal inductive limit of $\alpha$,
-
-\nn{\em(b)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
-
-\nn{\em(c)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for all universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
-
-\nn{\em(d)} $\colim F\circ\alpha\simeq F(X)$ for all functor $F:\C\to\C'$. 
-\end{prop}
-
-\begin{proof} The implications (a) $\ssi$ (b) $\ssi$ (c) $\si$ (d) are clear. To prove (c) $\then$ (d), we choose a universe $\U$ such that $I$ is $\U$-small, and $\C$ and $\C'$ are $\U$-categories, and we note
-$$
-\Hom_{\C'}(F(X),X')\simeq\Hom_{\C^\wedge_\U}\big(h_\U(X),\Hom_{\C'}(F(\ ),X')\big)
-$$
-$$
-\simeq\lim\Hom_{\C^\wedge_\U}\big(h_\U\circ\alpha,\Hom_{\C'}(F(\ ),X')\big)\simeq\lim\Hom_{\C'}(F\circ\alpha,X').
-$$
-\end{proof}
-\end{s}
-
-%
-
-\begin{s}\label{c271b}
-P.~62, Proposition 2.7.1. Consider the diagram 
-$$
-\begin{tikzcd}
-\C\ar{r}{\hy_\C}\ar{dr}[swap]{F}&\C^\wedge\ar{d}{\widetilde F}&I\ar{l}[swap]{\alpha}\\
-&\A,
-\end{tikzcd}
-$$
-where $I$ is a small category and $\widetilde F$ is defined by 
-$$
-\widetilde F(A):=\colim_{(X\to A)\in\C_A}F(X). 
-$$
-%(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) 
-Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
-
-By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
-$$
-G(X')(X):=\Hom_{\A}(F(X),X').
-$$ 
-is right adjoint to $\widetilde F$. This results from the following computation: 
-$$
-\Hom_{\A}\left(\widetilde F(A),X'\right)=
-\Hom_{\A}\left(\colim_{(X\to A)\in\C_A}F(X),X'\right)\simeq 
-\lim_{(X\to A)\in\C_A}\Hom_{\A}(F(X),X')
-$$
-$$
-=\lim_{(X\to A)\in\C_A}G(X')(X)\simeq\Hom_{\C^\wedge}(A,G(X')), 
-$$ 
-the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
-\end{s}
-
-%
 
 \begin{s} 
 P.~63, Notation 2.7.2. Recall the $F:\C\to\C'$ is a functor of small categories. The formula 
@@ -1961,7 +1959,6 @@ may also be written as
 $$
 \widehat F(A)=\icolim_{(U\to A)\in\C_A}F(U).
 $$
-%(See (\ref{convnot}) p.~\pageref{convnot} for an explanation of the notation.) 
 It might be worth stating explicitly the isomorphism 
 $$
 \widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
