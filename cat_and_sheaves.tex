@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0160)
+% about "categories and sheaves" (version-0161)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -212,7 +212,7 @@ Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{uca
 \begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
 \end{center}
 
-We often assume implicitly that a universe $\U$ has been chosen, and we say ``category'' and ``small category'' instead of ``$\U$-category'' and ``$\U$-small category''
+We often assume implicitly that a universe $\U$ has been chosen, and we say ``category'' and ``small category'' instead of ``$\U$-category'' and ``$\U$-small category''.
 
 %%%
 
@@ -224,7 +224,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 %
 
-\noindent $*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text, the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. Proof of Corollary 1.4.6 (second line): $\hy_{\C}$ should be $\hy_{\C'}$. 
+\noindent $*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text (see Section~\ref{ucat} p.~\pageref{ucat}), the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. Proof of Corollary 1.4.6 (second line): $\hy_{\C}$ should be $\hy_{\C'}$. 
 
 \noindent $*$ P.~33, Exercise 1.19: the arrow from $L_1\circ R_1\circ L_2$ to $L_2$ should be $\eta_1\circ L_2$ instead of $\varepsilon_1\circ L_2$. 
 
@@ -652,7 +652,7 @@ P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservati
 %
 
 \begin{s}
-P. 18, Definition 1.1.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
+P. 18, Definition 1.2.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
 \begin{equation}\label{opslice}
 (\C_{X'})^{\op}\simeq(\C^{\op})_{X'},\quad(\C^{X'})^{\op}\simeq(\C^{\op})^{X'}.
 \end{equation}
@@ -726,10 +726,8 @@ Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-{\em 
 
 The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
-Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$.
-%
 \begin{df}\label{ue2} 
-An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-{\em universal element} is an element $u\in F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
 The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
@@ -742,7 +740,7 @@ The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijectio
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
 %
 \begin{prop}
-A morphism $f:A\to B$ in a category $\C$ is an isomorphisms if and only if 
+A morphism $f:A\to B$ in a category $\C$ is an isomorphism if and only if 
 $$
 \Hom_\C(X,f):\Hom_\C(X,A)\to\Hom_\C(X,B)
 $$
@@ -751,32 +749,6 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 %
 \begin{proof} By (i) there is a $g:B\to A$ satisfying $f\circ g=\id_B$, yielding $f\circ g\circ f=f$, and (ii) implies $g\circ f=\id_A$.
 \end{proof}
-\end{s}
-
-%
-
-\begin{s} 
-P.~36, Definition 2.1.2. 
-%
-\begin{df}\label{p}
-If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
-\end{df}
-%
-Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element means that for each $Y$ in $\C$ the map 
-$$
-\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\alpha),\quad f\mapsto p\circ\Delta(f)
-$$ 
-is bijective.
-%
-\begin{df}\label{c}
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
-\end{df}
-%
-Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element means that for each $Y$ in $\C$ the map 
-\begin{equation}\label{cue}
-\Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
-\end{equation}
-is bijective.
 \end{s}
 
 %%
@@ -1065,6 +1037,32 @@ $$
 \section{About Chapter 2}
 
 \subsection{Brief Comments}
+
+\begin{s} 
+P.~36, Definition 2.1.2. 
+
+\begin{df}\label{p}
+If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+\end{df}
+%
+Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element means that for each $Y$ in $\C$ the map 
+$$
+\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\alpha),\quad f\mapsto p\circ\Delta(f)
+$$ 
+is bijective.
+
+\begin{df}\label{c}
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+\end{df}
+%
+Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element means that for each $Y$ in $\C$ the map 
+\begin{equation}\label{cue}
+\Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
+\end{equation}
+is bijective.
+\end{s}
+
+%
 
 \begin{s}\label{c38}
 P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\colim\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\colim\ (\rho_j\circ\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly\index{Kelly}:%\medskip 
