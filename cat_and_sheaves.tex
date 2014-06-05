@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0161)
+% about "categories and sheaves" (version-0162)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -232,7 +232,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \noindent $*$ P.~41, sixth line: (i) should be (a).
 
-\noindent $*$ P.~42, sixth line: ``belong to $\Mor(\C)$'' should be ``belong to $\Mor_0(\C)$''.
+%\noindent $*$ P.~42, sixth line: ``belong to $\Mor(\C)$'' should be ``belong to $\Mor_0(\C)$''.
 
 \noindent $*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\oo{Fct}(I,\C)$.
 
@@ -240,7 +240,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \noindent $*$ P.~54, second display: we should have $i\to\varphi(j)$ instead of $\varphi(j)\to i$.
 
-\noindent $*$ P.~58: Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the universes axiom.) Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\varphi,\psi$ and $\varphi\circ\psi$ are cofinal, so is the third one''.
+\noindent $*$ P.~58: Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the Axiom of Universes.) Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\varphi,\psi$ and $\varphi\circ\psi$ are cofinal, so is the third one''.
 
 \noindent $*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
@@ -325,7 +325,7 @@ $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``uni
 
 \noindent $*$ P.~168, Line 9: ``$f:X\to Y$'' should be ``$f:Y\to X$''.
 
-\noindent $*$ P.~169, Lemma 8.1.2 (ii). The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the axiom of universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that\\ 
+\noindent $*$ P.~169, Lemma 8.1.2 (ii). The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that\\ 
 \noindent(a) $\mu_X$ is a group multiplication for all $X$ in $\C$,\\ 
 \noindent(b) the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$.
 
@@ -1092,7 +1092,9 @@ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coproject
 %
 
 \begin{s} 
-P.~39, Proposition 2.1.7. The following slightly stronger statement holds, statement independent of the Universes Axiom. Let $I, J, \C$ be categories and let 
+P.~39, Proposition 2.1.7. The following slightly stronger statement holds, and is independent of the Universes Axiom. 
+
+Let $I, J, \C$ be categories and let 
 $$
 (X_{ij})_{(i,j)\in I\times J}
 $$ 
@@ -1116,7 +1118,7 @@ I\ar{r}{\alpha}&\A\ar{d}[swap]{G}\ar{r}{F}&\B\\
 &\C
 \end{tikzcd}
 $$
-be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y\in\B$ there is a $Z\in\C$ and an isomorphism 
+be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
 $$
 \Hom_\B(F(\ ),Y)\simeq\Hom_\C(G(\ ),Z)
 $$
@@ -1124,7 +1126,7 @@ in $\A^\wedge$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 %
 \begin{proof}
-We have for any $Y\in\B$ 
+We have for any $Y$ in $\B$ 
 $$ 
 \Hom_\B\left(F\left(\colim\alpha\right),Y\right)\simeq
 \Hom_\C\left(G\left(\colim\alpha\right),Z\right)
@@ -1132,7 +1134,7 @@ $$
 \Hom_\C\left(\colim G(\alpha),Z\right)
 $$
 $$
-\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\colim F(\alpha),Y)
+\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\colim F(\alpha),Y).
 $$
 \end{proof}
 \end{s}
@@ -1141,21 +1143,21 @@ $$
 
 \begin{s} 
 P.~40, proof of Lemma 2.1.11 (minor variant).
-%
+
 \begin{lem}\label{l2111}
-If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $S$ is an object of $\C$ representing $\colim\alpha$, then $S$ is terminal. Conversely, if $S$ is terminal, then it is an inductive limit of the identity functor.
+If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $T$ is an object of $\C$ representing $\colim\alpha$, then $T$ is terminal. Conversely, if $T$ is terminal, then it is an inductive limit of the identity functor.
 \end{lem}
-%
+
 \begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $S$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(S))$ be a universal element for the functor $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$ (see Definition~\ref{ue} p.~\pageref{ue}), so that $S$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $T$ be in $\C$. By definition of $S$ and $p$, the map 
+Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $T$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a universal element for the functor $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$ (see Definition~\ref{ue} p.~\pageref{ue}), so that $T$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $X$ be in $\C$. By definition of $T$ and $p$, the map 
 $$
-\Hom_\C(S,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
+\Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\Delta(X)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
-is bijective. Let $\theta\mapsto\theta'$ be the inverse bijection. We have $\Delta(\theta_S)\circ p=\theta$ by definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$. This implies $\theta'=\theta_S$. Let $f$ be in $\Hom_\C(S,T)$. Using the fact that $f$ is of the form $\theta_S$ and the definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$, we obtain $f=f\circ p_S$; in particular $\id_S=p_S$. For $g$ in $\Hom_\C(X,S)$ we get 
+is bijective. Let $\theta\mapsto\theta'$ be the inverse bijection. We have $\Delta(\theta_T)\circ p=\theta$ by definition of $\Hom_{\C^\C}(\id_\C,\Delta(X))$. This implies $\theta'=\theta_T$. Let $f$ be in $\Hom_\C(T,X)$. Using the fact that $f$ is of the form $\theta_T$ and the definition of $\Hom_{\C^\C}(\id_\C,\Delta(X))$, we obtain $f=f\circ p_T$; in particular $\id_T=p_T$. For $g$ in $\Hom_\C(Y,T)$ we get 
 $$
-g=p_S\circ g=p_X,
+g=p_T\circ g=p_Y,
 $$
-the first equality following from the fact that $\id_S=p_S$, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\Delta(S))$. The second sentence of the lemma is clear.
+the first equality following from the fact that $\id_T=p_T$, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$. The second sentence of the lemma is clear.
 \end{proof}
 
 \begin{cor}\label{c2111}
@@ -1213,7 +1215,7 @@ Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have
 %
 
 \begin{s}
-P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). So, there is a big number of pages (with a high contents density) between the notation and its justification.
+P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). %So, there is a big number of pages (with a high contents density) between the notation and its justification.
 \end{s}
 
 %
@@ -1221,29 +1223,13 @@ P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger
 \begin{s} 
 P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe has been given. Let $I\xleftarrow\pp J\xr\beta\C$ be functors, let $\beta$ be in $\C^J$, and let $\pp^\dagger\beta$ be in $\C^I$. The following conditions are equivalent:
 
-\nn(a) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for some universe $\U$ such that $\C^J$ is a $\U$-category,
+\nn(a) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{some} universe $\U$ such that $\C^J$ is a $\U$-category,
 
-\nn(b) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for any universe $\U$ such that $\C^J$ is a $\U$-category. 
+\nn(b) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
 \begin{df}[Definition 2.3.2 p. 51]\label{232}
 If the above equivalent conditions hold, we say that $\pp^\dagger\beta$ {\em exists}. If $\pp^\dagger(F\circ\beta)$ exists and is isomorphic to $F\circ\pp^\dagger(F\circ\beta)$ for all functor $F:\C\to\C'$, we say that $\pp^\dagger\beta$ exists {\em universally}.
 \end{df}
-\end{s}
-
-%
-
-\begin{s} 
-P.~52, Theorem 2.3.3 (i) (minor variant). Let $I\xleftarrow\pp J\xr\beta\C$ be functors and let $\beta$ be in $\C^J$. 
-
-\begin{thm}[Theorem 2.3.3 (i) p. 52]\label{233}
-If 
-%
-\begin{equation}\label{e233}
-\colim_{(\pp(j)\to i))\in J_i}\beta(j)
-\end{equation}
-%
-exists in $\C$ for all $i$ in $I$, then $\pp^\dagger\beta$ exists, and $(\pp^\dagger\beta)(i)$ is isomorphic to \eqref{e233}. If, in addition, \eqref{e233} exists universally in the sense of Definition~\ref{uil} p.~\pageref{uil}, then $\pp^\dagger\beta$ exists universally in the sense of Definition~\ref{232}. 
-\end{thm}
 \end{s}
 
 %%
@@ -1733,16 +1719,16 @@ Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alph
 If the natural map $\colim\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\colim\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
 \end{df}
 
-\begin{prop}[Proposition 2.6.4 p. 61]%\label{puil}
+\begin{prop}[Proposition 2.6.4 p. 61]\label{puil}
 The following conditions are equivalent (recall that no universe is given {\em a priori}):
 
 \nn{\em(a)} $X$ is a universal inductive limit of $\alpha$,
 
-\nn{\em(b)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
+\nn{\em(b)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for \emph{some} universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
 
-\nn{\em(c)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for all universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
+\nn{\em(c)} $\colim h_\U\circ\alpha\simeq h_\U(X)$ for \emph{any} universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
 
-\nn{\em(d)} $\colim F\circ\alpha\simeq F(X)$ for all functor $F:\C\to\C'$. 
+\nn{\em(d)} $\colim F\circ\alpha\simeq F(X)$ for \emph{any} functor $F:\C\to\C'$. 
 \end{prop}
 
 \begin{proof} The implications (a) $\ssi$ (b) $\ssi$ (c) $\si$ (d) are clear. To prove (c) $\then$ (d), we choose a universe $\U$ such that $I$ is $\U$-small, and $\C$ and $\C'$ are $\U$-categories, and we note
@@ -1753,6 +1739,22 @@ $$
 \simeq\lim\Hom_{\C^\wedge_\U}\big(h_\U\circ\alpha,\Hom_{\C'}(F(\ ),X')\big)\simeq\lim\Hom_{\C'}(F\circ\alpha,X').
 $$
 \end{proof}
+\end{s}
+
+%
+
+\begin{s} 
+Proposition~\ref{puil} yields the following minor variant of Theorem 2.3.3 p.~52 (i) of the book. Let $I\xleftarrow\pp J\xr\beta\C$ be functors and let $\beta$ be in $\C^J$. 
+
+\begin{thm}[Theorem 2.3.3 (i) p. 52]\label{233}
+If 
+%
+\begin{equation}\label{e233}
+\colim_{(\pp(j)\to i))\in J_i}\beta(j)
+\end{equation}
+%
+exists in $\C$ for all $i$ in $I$, then $\pp^\dagger\beta$ exists, and $(\pp^\dagger\beta)(i)$ is isomorphic to \eqref{e233}. If, in addition, \eqref{e233} exists universally in the sense of Definition~\ref{uil} p.~\pageref{uil}, then $\pp^\dagger\beta$ exists universally in the sense of Definition~\ref{232}. 
+\end{thm}
 \end{s}
 
 %
@@ -5550,7 +5552,7 @@ Various related links are given in the document%\bigskip
 To make things as clear as possible, we remove TR4 from the definition of a triangulated category, and prove that any triangulated category satisfies TR4:
 %
 \begin{df}\label{tr}
-A {\em triangulated category} is an additive category $(\cc D,T)$ with translation endowed with a set of triangles satisfying the axioms {\em TR0, TR1, TR2, TR3}, and {\em TR5} on p.~243 of the book.
+A {\em triangulated category} is an additive category $(\cc D,T)$ with translation endowed with a set of triangles satisfying Axioms {\em TR0, TR1, TR2, TR3}, and {\em TR5} on p.~243 of the book.
 \end{df}
 %
 Let $(\cc D,T)$ be a triangulated category. In the book the theorem below is stated as Exercise 10.6 p.~266 and is used at the top of p.~251 within the proof of Theorem 10.2.3 p.~249.
@@ -5988,7 +5990,7 @@ an isomorphism?
 
 Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer is yes if $\C$ is a Grothendieck category. 
 
-(Note that the axiom of universes is not necessary to define the morphism~\eqref{spalt}.)
+(Observe that the Axiom of Universes is not necessary to define the morphism~\eqref{spalt}.)
 \end{s}
 
 %
