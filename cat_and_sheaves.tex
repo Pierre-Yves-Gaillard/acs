@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0163)
+% about "categories and sheaves" (version-0164)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1297,16 +1297,16 @@ The purpose of Step (b) is to prove
 \end{equation} 
 for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
 
-To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f:X\to Y$ is a morphism in $\C$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$:
+To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f$ is a morphism in $\C$ from $X$ to $Y$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$:
 $$
 \begin{tikzcd}
 X\ar{d}{u}\ar{r}{f}&Y\\ 
 X'\ar{r}[swap]{g}&Y'\ar{u}[swap]{v}.
 \end{tikzcd}
 $$ 
-Then Lemma 2.1.15 can be stated as follows: 
+The composition of morphisms is the obvious one. Lemma 2.1.15 can be stated as follows: 
 
-Let $I$ and $\A$ be categories, and let $a,b:I\parar\A$ be functors. Then 
+If $I$ and $\A$ are categories, and $a,b:I\parar\A$ are functors, then 
 $$
 (i,i\to j,j)\mapsto\Hom_\A(a(i),b(j))
 $$ 
@@ -1332,7 +1332,7 @@ with $j$ in $J$ and $i,i'$ in $I$. A morphism
 $$
 (j_1,\varphi(j_1)\to i_1\to i'_1)\to(j_2,\varphi(j_2)\to i_2\to i'_2)
 $$ 
-is given by a pair of morphisms $j_1\to j_2,i'_2\to i'_1$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(I)$ defined in Definition 2.1.14 p.~42 of the book. Consider the functors 
+is given by a triple of morphisms $j_1\to j_2,i_1\to i_2,i'_2\to i'_1$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(J)$ defined in Definition 2.1.14 p.~42 of the book. Consider the functors 
 $$
 \gamma:M^{\op}\to\Set,\quad(j,\varphi(j)\to i\to i')\mapsto\Hom_\C(\beta(j),\alpha(i')), 
 $$ 
@@ -1377,8 +1377,8 @@ We leave it to the reader to check that this defines indeed a map $\lim\delta\to
 \end{proof}
 %
 \subsubsection{Step (c)}
-%
-In (b), the authors define a map 
+
+In part (i) of their proof of Theorem 2.3.3 (i) p.~52 of the book, the authors define a map 
 %
 \begin{equation}\label{e233i} 
 %
@@ -1400,11 +1400,11 @@ u:\varphi_*(\varphi^\dagger(\alpha))\to\alpha,
 $$
 and leave it to the reader to verify that $f(\id_{\varphi_*(\varphi^\dagger(\alpha))})$ and $u$ are inverse isomorphisms. As 
 $$ 
-(\varphi_*(\varphi^\dagger(\alpha)))(j):=\varphi^\dagger(\alpha)(\varphi(j)):=\colim_{\varphi(j')\to\varphi(j)}\alpha(j'),
+\Big(\varphi_*\big(\varphi^\dagger(\alpha)\big)\Big)(j):=\varphi^\dagger(\alpha)(\varphi(j)):=\colim_{\varphi(j')\to\varphi(j)}\alpha(j'),
 $$
 we must define 
 $$
-u(\varphi(j')\to\varphi(j)):\alpha(j')\to\alpha(j),
+u\big(\varphi(j')\to\varphi(j)\big):\alpha(j')\to\alpha(j),
 $$
 that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\varphi$ is fully faithful by assumption, there is an obvious way to do it.
 
@@ -1483,27 +1483,27 @@ We claim:
 \begin{equation}\label{tom}
 (\pp\circ\psi)^\ddagger(\beta)(V)\simeq V^{**},
 \end{equation} 
-where $V^{**}$ is the second dual of $V$. 
+where $V^{**}$ is the double dual of $V$. 
 
 In view of \S\ref{spreptom} and Theorem 2.3.3 (ii) p.~52 of the book, this will imply that $\psi^\ddagger(\beta)$ is isomorphic to the inclusion $J\to\C$, and that $\pp^\ddagger(\psi^\ddagger(\beta))(V)\simeq V^{**}$. 
 
-To prove \eqref{tom}, write $V'$ for the left hand side of \eqref{tom}. By Display (2.3.7) p.~52 of the book, we have 
-\begin{equation}\label{tomlim}
-V'\simeq\lim_{f\in V^*}k. 
-\end{equation}
-Let $a:V^{**}\to V'$ be the canonical map. More precisely, by \eqref{tomlim} the map $a$ is given by a family $(a_f:V^{**}\to k)_{f\in V^*}$ of $k$-linear maps, that is, $a$ is given by a $k$-linear map $V^*\to V^{***}$, which is easily seen to be the natural morphism. Define $b:V'\to V^{**}$ by 
+To prove \eqref{tom}, write $V'$ for the left hand side of \eqref{tom}. By Display (2.3.7) p.~52 of the book, we have a natural isomorphism
+$$
+V'\simeq\lim_{(f:V\to k)\in K^V}k. 
+$$ 
+For each $f$ in $V^*$ let $a_f:V^{**}\to k$ be the evaluation at $f$. The $a_f$ induce a linear map $a:V^{**}\to V'$. Define $b:V'\to V^{**}$ by 
 $$
 b((\lambda_f)_{f\in V^*})(g):=\lambda_g.
 $$ 
 It is straightforward to check that $a$ and $b$ are mutually inverse $k$-linear maps. 
 
-The above observation shows that the functor $(\pp\circ\psi)^\ddagger(\pp\circ\psi):I\to I$ exists and is isomorphic to the second dual functor. 
+The above observation shows that the functor $(\pp\circ\psi)^\ddagger(\pp\circ\psi):I\to I$ exists and is isomorphic to the double dual functor. 
 
 The proof of the following facts is straightforward. 
 
 The functors $\psi^\dagger(\pp\circ\psi)$ and $\pp^\dagger(\pp)$ exist and are respectively isomorphic to $\pp$ and $\id_I$. 
 
-Let now $I^{\op}$ be the category of $k$-vector spaces belonging to $\U$, let $J^{\op}$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K^{\op}$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be (as before) the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\pp$ and $\psi$ are the inclusions, and that $\beta$ maps $K$ to $K^*$. Then the observation made in \S\ref{spreptom} applies and we have 
+Let now $I^{\op}$ be the category of $k$-vector spaces belonging to $\U$, let $J^{\op}$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K^{\op}$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be (as before) the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\pp$ and $\psi$ are the inclusions, and that $\beta$ maps $k$ to $k^*$. Then the observation made in \S\ref{spreptom} applies and we have 
 $$
 (\pp\circ\psi)^\dagger(\beta)(V)\simeq V^*\simeq(\pp\circ\psi)^\ddagger(\beta)(V).
 $$ 
