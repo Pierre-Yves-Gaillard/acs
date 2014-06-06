@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0166)
+% about "categories and sheaves" (version-0167)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1934,21 +1934,25 @@ $$
 \simeq\colim_{(U\to B)\in\C_B}j^\dagger(G)(U)
 $$ 
 \begin{equation}\label{prepa4a}
-\simeq\colim_{(U\to B)\in\C_B}(h_A)^\dagger(G)(\lambda(U\times A\to A)
+\simeq\colim_{(U\to B)\in\C_B}(h_A)^\dagger(G)(\lambda(U\times A\to A))
 \end{equation} 
 \begin{equation}\label{prepa4b}
-\simeq(h_A)^\dagger(G)\left(\lambda\left(\icolim_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)
+\simeq(h_A)^\dagger(G)\left(\lambda\left(\colim_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)
 \end{equation} 
-$$
+\begin{equation}\label{prepa4b'}
 \simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)\right)
-$$
+\end{equation}
 \begin{equation}\label{prepa4c}
 \simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\times A\to A\right)\right)
 \end{equation} 
 $$
 \simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)),
 $$ 
-where \eqref{prepa4a} follows from \eqref{prepa4}, \eqref{prepa4b} follows from Lemma 2.1.13 (i) p.~41 of the book and the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}), and \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
+where 
+\eqref{prepa4a} follows from \eqref{prepa4}, 
+\eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
+\eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
+\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
 
 %%
 
