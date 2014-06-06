@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0169)
+% about "categories and sheaves" (version-0170)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2009,13 +2009,7 @@ $$
 \widehat F(A)(U')\simeq\col_{(U\to A)\in\C_A}\Hom_{\C'}(U',F(U)).
 $$ 
 
-Let us assume that $A$ is a terminal object of $\C^\wedge$, and let us define a functor 
-$$
-G:\C\to\C'_{\widehat F(A)}
-$$ 
-whose composition with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
-
-We have 
+Let us assume that $A$ is a terminal object of $\C^\wedge$. We have 
 $$
 \widehat F(A)(F(U))\simeq\col_{V\in\C}\Hom_{\C'}(F(U),F(V)).
 $$ 
@@ -2023,10 +2017,15 @@ Letting
 $$
 p_V:\Hom_{\C'}(F(U),F(V))\to\widehat F(A)(F(U))
 $$ 
-be the coprojection, it suffices to define $G$ by
+be the coprojection, define the functor 
+$$
+G:\C\to\C'_{\widehat F(A)}
+$$ 
+by 
 $$
 G(U):=\big(p_U(\id_{F(U)}):F(U)\to\widehat F(A)\big).
-$$
+$$ 
+Then the composition of $G$ with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
 \end{s}
 
 %
