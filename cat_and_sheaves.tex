@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0164)
+% about "categories and sheaves" (version-0165)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1657,7 +1657,7 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 %
 
 \begin{s}
-This is about Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
+P. 61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
 \ic_{(X\to A)\in\C_A}X\xrightarrow\sim A,
@@ -1677,7 +1677,7 @@ Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \e
 %
 
 \begin{s} 
-P.~61, Proposition 2.6.3. Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii) p.~61 of the book: 
+P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
 
 \begin{lem} 
 Let $\alpha:I\to\A$ be a functor, let $A$ in $\A$ be the inductive limit of $\alpha$, let $\alpha':I\to\A_A$ be the obvious functor, and let $a$ in $\A_A$ be the identity of $A$. Then the inductive limit of $\alpha'$ is $a$. 
@@ -1686,7 +1686,7 @@ Let $\alpha:I\to\A$ be a functor, let $A$ in $\A$ be the inductive limit of $\al
 \begin{proof}
 If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
 
-Let $b=(b:B\to A)$ be a ``generic'' object of $\A_A$. We must check that there is a canonical bijection
+Let $b=(b:B\to A)$ be an object of $\A_A$. We must check that there is a canonical bijection
 %
 \begin{equation}\label{1}
 \Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\alpha',\Delta(b)).
@@ -1818,15 +1818,18 @@ $$
 \end{tikzcd}
 $$  
 We have 
-$$
-h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))\simeq\lim_{((U\to A)\to(B\to A))\in((\C^\wedge)_A)_{B\to A}}F(U)
-$$
-$$
-\simeq\lim_{(U\to B)\in\C_B}F(U)\simeq h(\C)^\ddagger(F)(B)
-$$ 
-$$
-\simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big).\ \square
-$$ 
+%
+\begin{align*} 
+%
+h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to A))\in((\C^\wedge)_A)^{B\to A}}F(U)\\ \\ 
+%
+&\simeq\lim_{(B\to U)\in\C^B}F(U)\\ \\ 
+%
+&\simeq h(\C)^\ddagger(F)(B)\\ \\ 
+%
+&\simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big). 
+% 
+\end{align*}  
 
 %
 
