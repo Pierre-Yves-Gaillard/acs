@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0174)
+% about "categories and sheaves" (version-0175)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2489,10 +2489,11 @@ Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a
 \end{lem}
 
 \begin{proof}
-(a) $\then$ (c): Put $u:=(\ee_{P(X)})^{-1}\circ P(\ee_X)$. It suffices to show $u=\id_{P(X)}$. We have $\ee_{P(X)}\circ u=P(\ee_X)$, 
+(a) $\then$ (c): Put $u:=(\ee_{P(X)})^{-1}\circ P(\ee_X)$. It suffices to show $u=\id_{P(X)}$. As we have $\ee_{P(X)}\circ u=P(\ee_X)$ by definition of $u$, and $P(\ee_X)\circ\ee_X=\ee_{P(X)}\circ\ee_X$ by naturality of $\ee$, we get 
 $$
 u\circ\ee_X=(\ee_{P(X)})^{-1}\circ P(\ee_X)\circ\ee_X=(\ee_{P(X)})^{-1}\circ\ee_{P(X)}\circ\ee_X=\ee_X,
-$$
+$$ 
+and thus 
 $$
 P(u)\circ P(\ee_X)=P(\ee_X)=\id_{P^2(u)}\circ P(\ee_X).
 $$
