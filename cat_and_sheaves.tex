@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0170)
+% about "categories and sheaves" (version-0171)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1952,14 +1952,13 @@ where
 \eqref{prepa4a} follows from \eqref{prepa4}, 
 \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
 \eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
-\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change.
+\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (see \S\ref{bc} p.~\pageref{bc}). 
 
 %%
 
-\subsection{Brief Comments}
+\subsection{Notation 2.7.2 (p. 63)}
 
-\begin{s} 
-P.~63, Notation 2.7.2. Recall that $F:\C\to\C'$ is a functor of small categories. The formula 
+Recall that $F:\C\to\C'$ is a functor of small categories. The formula 
 $$
 \widehat F(A)(V)=\colim_{(U\to A)\in\C_A}\Hom_{\C'}(V,F(U))
 $$
@@ -1969,9 +1968,8 @@ $$
 $$
 It might be worth stating explicitly the isomorphism 
 $$
-\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F,
+\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F.
 $$
-as well as the following three remarks:
 
 \begin{rk}\label{cof}
 Let $A'$ be in $\cc C'^\wedge$, and let $\cc C_{A'\circ F}\xr\varphi\cc C'_{A'}\xr\psi\C'^\wedge$ be the natural functors. By \eqref{263a} p.~\pageref{263a} the natural morphism $\colim\psi\circ\pp\to\colim\psi$ induces a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
@@ -1999,36 +1997,34 @@ As observed in the book:
 \begin{rk}\label{272}
 The functor $\widehat F$ commutes with small inductive limits.
 \end{rk}
-\end{s}
 
-%
-
-\begin{s}\label{272b}
-P. 63, Notation 2.7.2. Recall that $F:\C\to\C'$ is a functor of small categories, and that its Yoneda extension $\widehat F:\C^\wedge\to\C'^\wedge$ satisfies 
+Recall that $F:\C\to\C'$ is a functor of small categories, and that its Yoneda extension $\widehat F:\C^\wedge\to\C'^\wedge$ satisfies 
 $$
 \widehat F(A)(U')\simeq\col_{(U\to A)\in\C_A}\Hom_{\C'}(U',F(U)).
 $$ 
 
-Let us assume that $A$ is a terminal object of $\C^\wedge$. We have 
+\begin{rk}\label{272b}
+If $A$ is a terminal object of $\C^\wedge$, then there is a functor $G:\C\to\C'_{\widehat F(A)}$ whose composition with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
+\end{rk}
+
+\begin{proof}
+We have 
 $$
 \widehat F(A)(F(U))\simeq\col_{V\in\C}\Hom_{\C'}(F(U),F(V)).
 $$ 
-Letting 
+Let 
 $$
 p_V:\Hom_{\C'}(F(U),F(V))\to\widehat F(A)(F(U))
 $$ 
-be the coprojection, define the functor 
-$$
-G:\C\to\C'_{\widehat F(A)}
-$$ 
-by 
+be the coprojection, and define $G$ by 
 $$
 G(U):=\big(p_U(\id_{F(U)}):F(U)\to\widehat F(A)\big).
 $$ 
-Then the composition of $G$ with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
-\end{s}
+\end{proof}
 
-%
+%%
+
+\subsection{Brief Comments}
 
 \begin{s} 
 P.~64. It might be worth displaying the formula 
@@ -2036,34 +2032,24 @@ P.~64. It might be worth displaying the formula
 \widehat F(A)(X')\simeq\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\simeq
 \colim_{(X'\to F(X))\in\C^{X'}}A(X)
 \end{equation}
-contained in the proof of Proposition 2.7.5 p.~64 of the book. Here $F:\C\to\C'$ is a functor of small categories. 
+which is contained in the proof of Proposition 2.7.5 p.~64 of the book, and which follows from Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pageref{246}). Recall that $F:\C\to\C'$ is a functor of small categories, that $A$ is in $\C^\wedge$, and that $X'$ is in $\C'$. 
 
-For the reader's convenience we reproduce the statement and the proof of Proposition 2.7.5: 
+For the reader's convenience we reproduce the statement of Proposition 2.7.5: 
 
 \begin{prop}
 If $F:\C\to\C'$ is a functor of small categories, then the functors $\widehat F$ and $(F^{\op})^\dagger$ from $\C^\wedge$ to $\C'^\wedge$ are isomorphic. 
 \end{prop} 
 
-\begin{proof}
-Let $A$ be in $\C^\wedge$ and $X'$ in $\C'$. Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pageref{246}) gives 
-$$
-\widehat F(A)(X')\simeq\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))
-$$
-$$
-\simeq\colim_{(X'\to F(X))\in\C^{X'}}\Hom_{\C^\wedge}(X,A)\simeq(F^{\op})^\dagger(X').
-$$
-\end{proof} 
+This follows from \eqref{275}.
 \end{s}
 %
 
 \begin{s}
-P.~64, end of Chapter 2. One could add the following observation:% (which will be used in \S\ref{1725b} p.~\pageref{1725b}): 
-If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a terminal object of $(\C_A)^\wedge$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
+P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a terminal object of $(\C_A)^\wedge$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
 \begin{equation}\label{1725}
 \widehat F(B)(X)\simeq A(X).
 \end{equation}
-Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, %Corollary 2.4.4 (iii) p.~55 (see Proposition~\ref{244} p.~\pageref{244})
-Lemma 2.1.12 p.~41 of the book entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
+Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Lemma 2.1.12 p.~41 of the book entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
 \end{s}
 
 %
@@ -2191,14 +2177,14 @@ $$
 %
 \colim\ \alpha.
 $$
-Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco}, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\varphi_k$. In view of Proposition 2.5.2 p.~57, this proves the claim.
+Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco}, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\varphi_k$. In view of Proposition 2.5.2 p.~57 of the book, this proves the claim.
 \end{proof}
 \end{s}
 
 %
 
 \begin{s}\label{cipc}
-P.~75. Throughout the subsection about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136.
+P.~75. Throughout the subsection about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136 of the book.
 \end{s}
 
 %
@@ -2206,7 +2192,7 @@ P.~75. Throughout the subsection about the IPC Property, one can assume that $\A
 \begin{s}\label{poc}
 P. 77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pageref{1744i}):
 
-If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, the the natural functor $$\prod I_\gamma\to\prod J_\gamma$$ is cofinal. 
+If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, then the natural functor $$\prod I_\gamma\to\prod J_\gamma$$ is cofinal. 
 \end{s}
 
 %
@@ -6738,7 +6724,7 @@ Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Propos
 %
 
 \begin{s}\label{1724ii}
-P. 413, Definition 17.2.4 (ii): see \S\ref{272b} p.~\pageref{272b}.
+P. 413, Definition 17.2.4 (ii): see  Remark~\ref{272b} p.~\pageref{272b}.
 \end{s}
 
 %
@@ -7031,7 +7017,7 @@ P. 425, proof of Proposition 17.6.3:
 
 Step (i): $\oo j_{A\to X}$ is weakly left exact by Lemma 17.2.5 (iii) p.~413 of the book, and $(\,\cdot\,)^a$ is exact by Theorem 17.4.7 (iv) p.~421 of the book.
 
-Step (ii): ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2.4 (ii) p.~413 of the book, \S\ref{1724ii} p.~\pageref{1724ii}, and \S\ref{272b} p.~\pageref{272b}. The isomorphism $f^{-1}\simeq\oo j_{A\to X}^{-1}\circ g^{-1}$ follows from Proposition 17.5.3 p.~424 of the book.
+Step (ii): ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2.4 (ii) p.~413 of the book, \S\ref{1724ii} p.~\pageref{1724ii}, and Remark~\ref{272b} p.~\pageref{272b}. The isomorphism $f^{-1}\simeq\oo j_{A\to X}^{-1}\circ g^{-1}$ follows from Proposition 17.5.3 p.~424 of the book.
 \end{s} 
 
 % 
