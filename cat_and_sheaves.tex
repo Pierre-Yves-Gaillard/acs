@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0173)
+% about "categories and sheaves" (version-0174)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2395,7 +2395,7 @@ $$
 in $M$ satisfies $(v,w)=(v,j')\circ(i,w)$.
 \end{proof}
 
-In view of Theorem 3.1.6 p.~74 of the book, Isomorphism~\eqref{coco2} p.~\pageref{coco2} implies 
+In view of Theorem 3.1.6 p.~74 of the book, Isomorphism~\eqref{coco2} implies 
 %
 \begin{prop}\label{cocop} 
 If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
@@ -2447,10 +2447,10 @@ If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\
 \end{prop}
 %
 \begin{proof}
-Assume by contradiction that there are distinct morphisms $f'_1,f'_2:F(Y)\rightrightarrows X'$ in $\C'$ which satisfy $f'_1\circ F(f)=f'_2\circ F(f)=:f'$:
+Let $f'_1,f'_2:F(Y)\rightrightarrows X'$ be morphisms in $\C'$ satisfying $f'_1\circ F(f)=f'_2\circ F(f)=:f'$:
 $$
 \begin{tikzcd}
-\Big(F(X)\ar{r}{f}&F(Y)\ar[yshift=.7ex]{r}{f'_1}\ar[yshift=-.7ex]{r}[swap]{f'_2}&X'\Big)=\Big(F(X)\ar{r}{f'}&X'\Big)
+\Big(F(X)\ar{r}{f}&F(Y)\ar[yshift=.7ex]{r}{f'_1}\ar[yshift=-.7ex]{r}[swap]{f'_2}&X'\Big)=\Big(F(X)\ar{r}{f'}&X'\Big).
 \end{tikzcd}
 $$ 
 For $i=1,2$ let $f_i$ be the morphism $f$ viewed as a morphism from $(X,f')$ to $(Y,f'_i)$ in $\C_{X'}$: 
@@ -2467,7 +2467,7 @@ F(X)\ar{d}[swap]{f'}\ar{r}{F(f)}&F(Y)\ar{d}[swap]{f'_i}\ar{r}{F(g_i)}&F(Z)\ar{d}
 X'\ar[equal]{r}&X'\ar[equal]{r}&X'.
 \end{tikzcd}
 $$
-As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=:g$, and thus $f'_1=g'\circ F(g)=f'_2$, contradiction.
+As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=:g$, and thus $f'_1=g'\circ F(g)=f'_2$.
 \end{proof}
 \end{s}
 
