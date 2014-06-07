@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0172)
+% about "categories and sheaves" (version-0173)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2147,7 +2147,7 @@ This corollary is implicitly used in the proof of Proposition 3.3.13 p.~84.
 %
 
 \begin{s} 
-P.~75, Proposition 3.1.8 (i). In the proof of Proposition 3.3.15 p.~85, a slightly stronger result is needed (see \S\ref{3315} p.~\pageref{3315}). We state and prove this stronger result. 
+P.~75, Proposition 3.1.8 (i). In the proof of Proposition 3.3.15 p.~85 of the book, a slightly stronger result is needed (see \S\ref{3315} p.~\pageref{3315}). We state and prove this stronger result. 
 %
 \begin{prop}\label{318i} 
 %
@@ -2285,7 +2285,7 @@ The identity of $Y$ being an initial object of $\C^Y$, we have
 $$
 \colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X'),
 $$ 
-ans thus
+and thus
 %
 \begin{equation}\label{332} 
 \colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\Hom_{\C'}(F(Y),X').
@@ -2353,11 +2353,11 @@ M:=M[I\xrightarrow\varphi K\xleftarrow\psi J]
 $$ 
 is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\alpha:M\to\C$. 
 
-Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_i:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
+Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_j:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
 $$
 j\mapsto\colim_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
 $$ 
-is a functor by Lemma~\ref{r52} p.~\pageref{r52}. 
+($u$ being a morphism in $K$ from $\varphi(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pageref{r52}. 
 
 Isomorphism 
 %
@@ -2365,10 +2365,9 @@ Isomorphism
 \colim\alpha\simeq\colim_j\ \colim_{i,u}\alpha(i,j,u),
 \end{equation} 
 %
-where $(i,u)$ runs over $I_{\psi(j)}$, with $u:\varphi(i)\to\psi(j)$, will result from 
-%
+where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\varphi(i)\to\psi(j)$), will result from 
+
 \begin{prop}
-%
 Assume $I,J$, and $K$ are small categories, and $\beta:M^{\op}\to\Set$ is a functor. Then 
 $$
 j\mapsto\lim_{(i,u)\in I_{\psi(j)}}\beta(i,j,u)
@@ -2380,9 +2379,8 @@ is a functor from $J^{\op}$ to $\Set$, and we have
 \end{equation} 
 %
 as an equality between subsets of the product $P$ of the $\beta(i,j,u)$. 
-%
 \end{prop} 
-%
+
 \begin{proof}
 The first claim follows from Lemma~\ref{r52} p.~\pageref{r52}. To prove the second claim, let $L$ and $R$ denote respectively the left and right-hand side of \eqref{lili}, let $x=(x(i,j,u))$ be in $P$, and let us denote generic morphisms in $I$ and $J$ by $v:i\to i'$ and $w:j\to j'$. Then $x$ is in $L$ if and only if 
 %
@@ -2559,7 +2557,7 @@ P\ar[yshift=0.7ex]{r}{\ee\circ P}\ar[yshift=-0.7ex]{r}[swap]{P\circ\ee}&P^2\ar{r
 \end{tikzcd}
 $$ 
 
-\nn are equal to $\id_P$'' means 
+\nn are equal to $\id_P$'' means
 
 $$
 \begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
