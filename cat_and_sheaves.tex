@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0171)
+% about "categories and sheaves" (version-0172)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2278,9 +2278,17 @@ $$
 Y\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X', 
 $$ 
 Isomorphism (\ref{241}) p.~\pageref{241} gives 
+$$
+\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X').
+$$ 
+The identity of $Y$ being an initial object of $\C^Y$, we have 
+$$
+\colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X'),
+$$ 
+ans thus
 %
 \begin{equation}\label{332} 
-\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X').
+\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\Hom_{\C'}(F(Y),X').
 \end{equation} 
 %
 We have bijections 
