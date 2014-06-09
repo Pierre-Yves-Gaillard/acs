@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0177)
+% about "categories and sheaves" (version-0178)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2693,22 +2693,16 @@ P. 115, Proposition 5.1.5 (i). For the sake of completeness we spell out some de
 
 \nn(b) $\then$ (a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) of the book implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
-\nn(c) $\ssi$ (e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. As (e) is the condition in Lemma~\ref{strepi} p.~\pageref{strepi}, it suffices to show that $P\parar X\to Y$ is exact if and only if, for all $Z$ in $\C$, the map $u\mapsto u\circ f$ is a bijection $\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z)$. Recall also that the set $(\Coim f)(Z)$ has been ``computed'' in Proposition~\ref{epimono} p.~\pageref{epimono}.
-
-Let $T$ be the set of those morphisms $v:X\to Z$ such that $[P\parar X\xr vZ]$ (see Convention \ref{bra} p.~\pageref{bra}). It is enough to show $(\Coim f)(Z)=T$.
-
-Let $u$ be in $(\Coim f)(Z)$. As $[P\parar X\xr fY]$ by definition of $P$, we have $[P\parar X\xr uZ]$ by Proposition~\ref{epimono} p.~\pageref{epimono}, so that $u$ is in $T$. Let $v$ be in $T$, and let $v_1,v_2:W\parar X$ satisfy $[W\parar X\to Y]$. It suffices to prove $v\circ v_1=v\circ v_2$. The commutative diagram  
+\nn(c) $\ssi$ (e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. By Proposition~\ref{epimono} p.~\pageref{epimono} Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pageref{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pageref{bra} 
 $$
-\begin{tikzcd}
-W\ar[yshift=0.7ex]{r}{v_1}\ar[yshift=-0.7ex]{r}[swap]{v_2}\ar{d}[swap]{w}&X\ar{r}{f}\ar[equal]{d}&Y\ar[equal]{d}\\ 
-P\ar[yshift=0.7ex]{r}{p_1}\ar[yshift=-0.7ex]{r}[swap]{p_2}&X\ar{r}[swap]{f}\ar{d}{v}&Y\\ 
-{}&Z
-\end{tikzcd}
+[P\parar X\xr xZ]\iff((\forall W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]).
 $$ 
-yields
+Implication $\si$ is clear. Let us prove $\then$. Assuming 
 $$
-v\circ v_1=v\circ p_1\circ w=v\circ p_2\circ w=v\circ v_2.
-$$
+[P\parar X\xr xZ]\quad\text{and}\quad[W\parar X\xr fY],
+$$ 
+we must check $[W\parar X\xr xZ]$. As the morphisms $W\parar X$ factor through $P\parar X$ by definitions of $P$, the statement is obvious. 
+
 (Note that the equivalence (c) $\ssi$ (e) also follows from Proposition~\ref{coimim} p.~\pageref{coimim} and Proposition~\ref{strepi} p.~\pageref{strepi}.)
 \end{s}
 
