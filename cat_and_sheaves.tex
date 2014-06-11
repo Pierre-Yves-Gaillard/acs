@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0181)
+% about "categories and sheaves" (version-0182)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2877,15 +2877,17 @@ P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement:
 \begin{lem}
 If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F$ in $\F^\wedge$ we have 
 $$
-\psi(F)\simeq\colim_{Y\in\F_F}Y. 
+\psi(F)\simeq\colim_{(Y\to F)\in\F_F}Y. 
 $$ 
 \end{lem} 
 
 \begin{proof}
 We have, for $X$ in $\C$ and $F$ in $\F^\wedge$, 
 $$
-\Hom_\C\left(\colim_{Y\in\F_F}Y,X\right)\simeq\lim_{Y\in\F_F}\Hom_\C(Y,X)
-\simeq\lim_{Y\in\F_F}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(F,\varphi(X)),
+\Hom_\C\left(\colim_{(Y\to F)\in\F_F}Y,X\right)\simeq\lim_{(Y\to F)\in\F_F}\Hom_\C(Y,X)
+$$ 
+$$
+\simeq\lim_{(Y\to F)\in\F_F}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(F,\varphi(X)),
 $$  
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 \end{proof}
@@ -2921,9 +2923,9 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 %
 Proof. We may assume from the beginning that $\F$ is small.
 
-\noindent Step 1. By Proposition 5.2.3 (i) p.~118, the functor $\varphi$ is conservative and faithful.
+\noindent Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\varphi$ is conservative and faithful.
 
-\noindent Step 2. By Proposition 1.2.12 p.~16, a morphism $f$ in $\C$ is an epimorphism as soon as $\varphi(f)$ is an epimorphism.
+\noindent Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\varphi(f)$ is an epimorphism.
 
 \noindent Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism
 % 
