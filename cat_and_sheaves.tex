@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0182)
+% about "categories and sheaves" (version-0183)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2436,16 +2436,16 @@ If $F$ is a cofinally small filtrant category, then there is a small {\em filtra
 
 This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 (see Proposition~\ref{comb} p.~\pageref{comb}). This fact also justifies the sentence ``We may replace ``filtrant and small'' by ``filtrant and cofinally small'' in the above definition'' p.~132, Lines 4 and 5 of the book.
 \end{s}
-%
+
 %%
-%
+
 \begin{s} 
 P. 90, Exercise 3.4 (i). (This exercise is used in the second sentence of p.~227 of the book.) Recall the statement: 
-%
+
 \begin{prop}\label{34i}
 If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
 \end{prop}
-%
+
 \begin{proof}
 Let $f'_1,f'_2:F(Y)\rightrightarrows X'$ be morphisms in $\C'$ satisfying $f'_1\circ F(f)=f'_2\circ F(f)=:f'$:
 $$
@@ -2875,19 +2875,19 @@ $$
 P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
 
 \begin{lem}
-If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $F$ in $\F^\wedge$ we have 
+If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $A$ in $\F^\wedge$ we have 
 $$
-\psi(F)\simeq\colim_{(Y\to F)\in\F_F}Y. 
+\psi(A)\simeq\colim_{(Y\to A)\in\F_A}Y. 
 $$ 
 \end{lem} 
 
 \begin{proof}
-We have, for $X$ in $\C$ and $F$ in $\F^\wedge$, 
+We have, for $X$ in $\C$ and $A$ in $\F^\wedge$, 
 $$
-\Hom_\C\left(\colim_{(Y\to F)\in\F_F}Y,X\right)\simeq\lim_{(Y\to F)\in\F_F}\Hom_\C(Y,X)
+\Hom_\C\left(\colim_{(Y\to A)\in\F_A}Y,X\right)\simeq\lim_{(Y\to A)\in\F_A}\Hom_\C(Y,X)
 $$ 
 $$
-\simeq\lim_{(Y\to F)\in\F_F}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(F,\varphi(X)),
+\simeq\lim_{(Y\to A)\in\F_A}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(A,\varphi(X)),
 $$  
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 \end{proof}
@@ -2947,7 +2947,7 @@ $$
 \colim_i\Coim(B_i\to A)\xrightarrow{\sim}
 \Coim\left(\colim_iB_i\to A\right).
 $$
-Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$, a natural isomorphism 
+Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism 
 $$
 \Hom_\C(\Coim z,Y)\simeq\Hom_{\F^\wedge}(\Coim\varphi(z),\varphi(Y)).
 $$ 
@@ -3031,7 +3031,7 @@ it suffices to prove
 \Coim\left(\colim_{A\in I}\zeta\xi(A)\to X\right)\simeq X.
 \end{equation}
 % 
-Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\then$(b), p.~115 to check that 
+Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\then$(b), p.~115 of the book to check that 
 %
 \begin{equation}\label{step6b}
 \colim_{A\in I}\zeta\xi(A)\to X
@@ -3055,7 +3055,6 @@ Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a smal
 \noindent{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
 
 \noindent{\em(b)} There is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
-%
 \end{lem} 
 
 \begin{proof}
@@ -3075,15 +3074,21 @@ If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\
 \end{lem} 
 
 \begin{proof}
-Let $M$ be the category attached to the functors 
+Let $M$ be the category attached by Definition 3.4.1 p. 87 of the book to the functors 
 $$
 \C\xrightarrow h\C^\wedge\xleftarrow{\iota\circ\alpha}I,
 $$ 
-where $h$ and $\iota$ are the natural embeddings. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. For all $i$ in $I$ and all $X$ in $\C$ let 
+where $h:\C\to\C^\wedge$ and $\iota:\Ind(\C)\to\C^\wedge$ are the natural embeddings. Proposition~\ref{cocop} p.~\pageref{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 of the book hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. 
+
+For all $i$ in $I$ and all $X$ in $\C$ let 
 $$
 p_i:\alpha(i)\to A\quad\text{and}\quad p_i(X):\Hom_\C(X,\alpha(i))\to A(X)
 $$
-be the coprojections. Consider a commutative diagram 
+be the coprojections.
+
+Given an object $c$ of $\C_A$, and object $m$ of $M$, and a pair of parallel morphisms $\sigma,\sigma':c\parar\pp(m)$ in $\C_A$, we must find a morphism $\tau:m\to n$ in $M$ satisfying $\pp(\tau)\circ\sigma=\pp(\tau)\circ\sigma'$. 
+
+Let $c$ be given by the morphism $X\to A$ in $\C^\wedge$, let $m$ be given by the morphism $Y\to\alpha(i)$ in $\Ind(\C)$, and let $\sigma$ and $\sigma'$ be given by the morphisms $s,s':X\parar Y$ making the diagram below commute:
 $$
 \begin{tikzcd}
 X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\\ 
@@ -3091,7 +3096,10 @@ X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\\
 A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
-As $p_i(X)(y\circ s)$ equals $p_i(X)(y\circ s')$ in $A(X)\simeq\colim\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\circ y\circ s=\alpha(t)\circ y\circ s'$:
+
+Then we are looking for and object $n$ of $M$ given by a morphism $Z\to\alpha(j)$, and for a pair of morphisms $s,s':X\parar Y$ defining the sought-for morphisms $\sigma$ and $\sigma'$. 
+
+As $p_i(X)(y\circ s)$ equals $p_i(X)(y\circ s')$ in $A(X)\simeq\colim\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\circ y\circ s=\alpha(t)\circ y\circ s'$, and we can set $Z:=\alpha(j)$ and $z:=\id_{\alpha(j)}$. The situation is depicted by the commutative diagram
 $$
 \begin{tikzcd}
 X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\ar{r}&\alpha(j)\ar[equal]{d}\\ 
