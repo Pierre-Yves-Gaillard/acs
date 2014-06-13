@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0184)
+% about "categories and sheaves" (version-0185)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3116,7 +3116,7 @@ $$
 The following point is implicit in the book, and we give additional details for the reader's convenience. Proposition 6.1.9 results immediately from the statement below:
 
 \begin{prop} 
-Let $\A$ be a category which admits small filtrant inductive limits, let $F:\C\to\A$ be a functor, and let $\C\xr i\Ind(\C)\xr j\C^\wedge$ be the natural embeddings. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$ is isomorphic to $i^\dagger(F)$. 
+Let $\A$ be a category which admits small filtrant inductive limits, let $F:\C\to\A$ be a functor, and let $\C\xr i\Ind(\C)\xr j\C^\wedge$ be the natural embeddings. Then the functor $i^\dagger(F):\Ind(\C)\to\A$ exists, commutes with small filtrant inductive limits, and satisfies $i^\dagger(F)\circ i\simeq F$. Conversely, any functor $\widetilde F:\Ind(\C)\to\A$ commuting with small filtrant inductive limits with values in $\C$, and satisfying $\widetilde F\circ i\simeq F$, is isomorphic to $i^\dagger(F)$. 
 \end{prop} 
 
 \begin{proof}
@@ -3216,12 +3216,12 @@ Now we prove that $\theta$ and $\mu$ are mutually quasi-inverse.
 
 We have 
 $$
-\mu(A_1,A_2)(X_1,X_2)\simeq\colim_{y_1,y_2}\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2)
+\mu(A_1,A_2)(X_1,X_2)\simeq\colim_{y_1,y_2}\ (\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2))
 $$
 $$
 \simeq\colim_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\colim_{y_2}\Hom_{\C_2}(X_2,Y_2)\simeq A_1(X_1)\times A_2(X_2),
 $$ 
-the first isomorphism following from the IPC Property (see pp 75-77 of the book), the second isomorphism following from \eqref{263b} p.~\pageref{263b}. We record this as
+the second isomorphism following from the IPC Property (see pp 75-77 of the book), the third isomorphism following from \eqref{263b} p.~\pageref{263b}. We record this as
 $$
 \mu(A_1,A_2)(X_1,X_2)\simeq A_1(X_1)\times A_2(X_2).
 $$
@@ -3230,7 +3230,7 @@ This suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$, notation which we
 Let us prove
 %
 \begin{equation}\label{6112a}
-\theta\circ\mu\simeq\id_{\Ind(\C_1\times\C_2)}.
+\theta\circ\mu\simeq\id_{\Ind(\C_1)\times\Ind(\C_2)}.
 \end{equation}
 %
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\times A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
@@ -3242,11 +3242,11 @@ $$
 (\C_1)_{A_1}\times(\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
 is cofinal by Lemma~\ref{proj} below and the fact that $(\C_2)_{A_2}$ is connected, and the fourth one from our old friend \eqref{263a} p.~\pageref{263a}. (By the way, in this proof we are using \eqref{263a} a lot without explicit reference.)
-%
+
 \begin{lem}\label{proj}
 If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\times J\to I$ is cofinal.
 \end{lem}
-%
+
 \begin{proof}
 Let $i_0$ be in $I$. We must check that $(I\times J)^{i_0}$ is connected. An object of $(I\times J)^{i_0}$ consists of a triple $(i,j,i_0\to i)$, and a morphism from $(i,j,i_0\to i)$ to $(i',j',i_0\to i')$ consists of a pair of morphisms $(i\to i',j\to j')$ such that $(i_0\to i\to i')$ equals $(i_0\to i')$. In particular, two objects which differ only by their $J$-coordinate are in the same connected component. Moreover, any object $(i,j,i_0\to i)$ is the target of an obvious morphism from $(i_0,j,i_0\xr{\id}i_0)$. This shows that $(I\times J)^{i_0}$ is connected.
 \end{proof}
@@ -3254,9 +3254,8 @@ Let $i_0$ be in $I$. We must check that $(I\times J)^{i_0}$ is connected. An obj
 This ends the proof of \eqref{6112a}.
 
 Let us prove
-%
 \begin{equation}\label{6112b}
-\mu\circ\theta\simeq\id_{\Ind(\C_1)\times\Ind(\C_2)}.
+\mu\circ\theta\simeq\id_{\Ind(\C_1\times\C_2)}.
 \end{equation}
 
 Let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
