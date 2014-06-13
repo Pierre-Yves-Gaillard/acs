@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0187)
+% about "categories and sheaves" (version-0188)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3310,7 +3310,11 @@ One checks that $x$ does not depend on the choice of $\zeta$, and that this proc
 \subsection{Brief Comments}
 
 \begin{s} 
-P.~136, proof of Proposition 6.1.18 (i) (minor variant): If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
+P.~136, proof of Proposition 6.1.18 (i) (minor variant). We must prove:
+
+If $\C$ admits cokernel, do does $\Ind(\C)$.
+
+If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
 $$
 \colim_i\ \iota(\Coker(\varphi_i,\psi_i))\simeq
 \colim_i\ \Coker(\iota(\varphi_i),\iota(\psi_i))
@@ -3320,7 +3324,7 @@ $$
 \Coker(\colim_i\ \iota(\varphi_i),\colim_i\ \iota(\psi_i))=
 \Coker(f,g),
 $$ 
-the first isomorphism following from the right exactness of $\iota$. q.e.d.
+the first isomorphism following from the right exactness of $\iota$ (see Corollary 6.1.6 p~132 of the book). q.e.d.
 
 More generally, if $I$ is a small filtrant category, $J$ a finite category, and $\alpha:I\times J\to\C$ a functor, then the natural morphism 
 $$
