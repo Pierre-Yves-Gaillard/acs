@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0188)
+% about "categories and sheaves" (version-0189)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -295,7 +295,16 @@ Also, just before the ``q.e.d.'', Corollary 5.3.5 should be Proposition 5.3.5.
 
 \noindent $*$ P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.''
 
-\noindent $*$ P.~133, Proposition 6.1.9 (ii): See Section~\ref{619} p.~\pageref{619}.
+\begin{s}\label{s133ii} 
+P. 133. In Part (ii) of Proposition 6.1.9 the authors, I think, intended to write 
+$$
+``\ilim"(IF\circ\alpha)\xrightarrow\sim IF(``\ilim"\alpha)
+$$
+instead of 
+$$
+IF(``\ilim"\alpha)\xrightarrow\sim``\ilim"(IF\circ\alpha). 
+$$ 
+\end{s}
 
 \noindent $*$ P.~134, proof of Proposition 6.1.12: ``$\C_A\times\C_{A'}$'' should be ``$\C_A\times\C'_{A'}$'' (twice).
 
@@ -3111,7 +3120,9 @@ $$
 
 %%
 
-\subsection{Proposition 6.1.9 (p.~133)}\label{619}
+\subsection{Proposition 6.1.9 (p.~133)} 
+
+\subsubsection{Proof of Proposition 6.1.9}
 
 The following point is implicit in the book, and we give additional details for the reader's convenience. Proposition 6.1.9 results immediately from the statement below:
 
@@ -3134,8 +3145,7 @@ $$
 \Hom_\A\left(\widetilde F(\ ),Y\right)\simeq
 \Hom_{\C^\wedge}(\ \ ,B)
 $$ 
-in $\Ind(\C)^\wedge_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wedge$ is a $\V$-category. %Using the notation in \eqref{convnot} p.~\pageref{convnot}, 
-We have 
+in $\Ind(\C)^\wedge_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wedge$ is a $\V$-category. We have 
 $$
 \widetilde F(A):=\colim_{(X\to A)\in\C_A}F(X),
 $$ 
@@ -3154,28 +3164,21 @@ $$
 $$
 \end{proof}
 
-One more comment about Proposition 6.1.9: I think the authors intended to write 
-%
-\begin{equation}\label{133ii}
-``\ilim"(IF\circ\alpha)\xrightarrow\sim IF(``\ilim"\alpha)
-\end{equation} 
-%
-instead of 
-$$
-IF(``\ilim"\alpha)\xrightarrow\sim``\ilim"(IF\circ\alpha). 
-$$ 
+\subsubsection{Comments about Proposition 6.1.9} 
 
 Let us record Part (i) of the Proposition as 
-%
 \begin{equation}\label{133i}
 IF\circ\iota_\C\simeq\iota_{\C'}\circ F, 
 \end{equation} 
-%
 and recall that we have, in the setting of Corollary 6.3.2 p.~140, 
-%
 \begin{equation}\label{140}
 (JF)(``\colim"\ \alpha)\simeq\colim\ F\circ\alpha.
 \end{equation}
+Let us also record Part (ii) of the Proposition as 
+\begin{equation}\label{133ii}
+``\colim"(IF\circ\alpha)\xrightarrow\sim IF(``\colim"\alpha).
+\end{equation} 
+(See \S\ref{s133ii} p.~\pageref{s133ii}.)
 
 %%
 
