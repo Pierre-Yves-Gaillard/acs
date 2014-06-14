@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0193)
+% about "categories and sheaves" (version-0194)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3846,7 +3846,7 @@ Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$
 \begin{s} 
 P. 172, Lemma 8.2.9. Recall the statement:
 
-\begin{lem}
+\begin{lem}[Lemma 8.2.9] 
 Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is additive.
 \end{lem}
 
@@ -3877,7 +3877,7 @@ q.e.d.
 
 %
 
-\begin{s}%\label{8212}
+\begin{s}
 P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
 \begin{nota}
 If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
@@ -3900,11 +3900,11 @@ is bijective. The injectivity is obvious and the surjectivity follows from the p
 \end{proof}
 
 Recall the statement of Theorem 8.2.14:
-%
-\begin{thm}
+
+\begin{thm}[Theorem 8.2.14] 
 Any additive category has a unique structure of a pre-additive category.
 \end{thm}
-%
+
 \begin{proof}
 Let $\C$ be our additive category. Thanks to Proposition~\ref{8.2.12} we identify $\oo P(\C,\Set)$ and $\oo P(\C,\Mod(\mathbb Z))$. We define the addition of $\Hom_\C(X,Y)$ for $X$ and $Y$ in $\C$ by evaluating the functor $\Hom_\C(X,\ )$ in $\oo P(\C,\Mod(\mathbb Z))$ on $Y$. The uniqueness is clear. If $f:Y\to Z$ is morphism in $\C$, then 
 $$
@@ -3932,14 +3932,13 @@ Case $n=2$: Let $X_1,X_2$ be in $\C$. To check that the natural morphisms
 F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 \end{equation} 
 %
-are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions~\ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
+are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions~\ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
 \end{s}
 
 %
 
-\begin{s}%\label{c176a}
+\begin{s} 
 P.~176, Proposition 8.3.4 (minor variant). Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
-%
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
@@ -3956,9 +3955,25 @@ $$
 {}&X\ar{ur}[swap]{f},
 \end{tikzcd}
 $$
-and we get $b\circ h=b\circ p\circ c=0\circ c=0$. This gives a natural morphism $d:\Coker h\to\Coim f$ satisfying $d\circ a=b$. 
+and we get $b\circ h=b\circ p\circ c=0\circ c=0$. This proves the claim. We get a natural morphism $d:\Coker h\to\Coim f$ making the diagram 
+$$
+\begin{tikzcd}
+\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar{d}{d}\\ 
+P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f
+\end{tikzcd}
+$$ 
+commute. 
 
-We claim $a\circ p=0$. Indeed, $p$ factors through $h$. This gives a natural morphism $e:\Coim f\to\Coker h$ satisfying $e\circ b=a$. It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram
+As $p$ factors through $h$, we have $a\circ p=0$, and we get a natural morphism $e:\Coim f\to\Coker h$ making the diagram 
+$$
+\begin{tikzcd}
+\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
+P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar{u}[swap]{e}
+\end{tikzcd}
+$$ 
+commute. 
+
+It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram
 %
 \begin{equation}\label{834a}
 \begin{tikzcd}
@@ -3994,7 +4009,6 @@ $$
 $$ 
 which make Diagrams \eqref{834a} and \eqref{834b} commute.
 \end{prop}
-\end{s}
 
 Note that we can splice Diagrams \eqref{834a} and \eqref{834b}:
 $$
@@ -4004,10 +4018,11 @@ P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar{d}\\
 {}&{}&\Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
 {}&{}&\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f.
 \end{tikzcd}
-$$
-%
+$$ 
+\end{s}
+
 %%
-%
+
 \begin{s} 
 P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
 \end{s}
