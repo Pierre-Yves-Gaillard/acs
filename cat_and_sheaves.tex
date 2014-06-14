@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0190)
+% about "categories and sheaves" (version-0191)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -330,7 +330,7 @@ $$
 
 \noindent $*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_{\mathcal S}(s)$.
 
-$*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
+\noindent $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
 
 \noindent $*$ P.~168, Line 9: ``$f:X\to Y$'' should be ``$f:Y\to X$''.
 
@@ -3513,11 +3513,11 @@ define
 $$ 
 \varphi:N'\to(\C/G(a))^{L/a} 
 $$ 
-(see \eqref{slice} for the definition of $L/a$) by 
+(see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) by 
 $$
 \varphi((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right),
 $$
-where $u'(b)$ is defined in \eqref{u':}; and let 
+where $u'(b)$ is defined in \eqref{u':} p.~\pageref{u':}; and let 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L/a}
 $$ 
@@ -3556,7 +3556,7 @@ $$
 N\sim M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$
 
-By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134. The only remaining task is to prove the lemma below.
+By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134. The only remaining task is to prove the lemma below.
 
 \begin{lem}\label{delta}
 If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^I$ is cofinal.
@@ -3592,7 +3592,7 @@ Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')
 %
 \begin{proof}\ 
 
-\noindent(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and a morphism of functors $\varphi:\alpha\to F\circ\beta$ such that 
+\noindent(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\varphi:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
@@ -3629,20 +3629,14 @@ be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a subset of $\Ob
 $$
 \begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\B\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
 $$
-are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$. %(see Definition~\ref{dloc} p.~\pageref{dloc}).
+are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$. 
 \end{lem}
 \end{s}
 
 %
 
-%\nn[\S\ref{loc} p.~\pageref{loc} will be inserted here.]
-
-%
-
 \begin{s} 
-P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader.
-
-Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_{\mathcal S}$, and to check the equalities $f\circ\id_X=f$, $\id_X\circ g=g$ for $f$ in $\Hom_{\C^r_{\mathcal S}}(X,Y)$ and $g$ in $\Hom_{\C^r_{\mathcal S}}(Y,X)$.
+P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader. // Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_{\mathcal S}$, and to check the equalities $f\circ\id_X=f$, $\id_X\circ g=g$ for $f$ in $\Hom_{\C^r_{\mathcal S}}(X,Y)$ and $g$ in $\Hom_{\C^r_{\mathcal S}}(Y,X)$.
 \end{s}
 
 %
@@ -3663,8 +3657,7 @@ $$
 \begin{s}\label{durl} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
-Let $\C$ be a $\U$-small category, %(see \S~\ref{loc} p.~\pageref{loc}), 
-let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
+Let $\C$ be a $\U$-small category, let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
 $$
 (R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
 $$ 
@@ -3672,7 +3665,7 @@ If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pa
 
 Also, the following fact is implicit:
 
-If $F(s)$ is an isomorphism for all $s$ in $\cc S$, then $F$ is universally right localizable and the functors $R_{\cc S}F$ and $F_{\cc S}$ are canonically isomorphic. (This is the case $\cc I=\C$ of Proposition 7.3.2 p.~160.)
+If $F(s)$ is an isomorphism for all $s$ in $\cc S$, then $F$ is universally right localizable and the functors $R_{\cc S}F$ and $F_{\cc S}$ are canonically isomorphic. (This is the case $\cc I=\C$ of Proposition 7.3.2 p.~160 of the book.)
 
 The following conditions on the right localization $(\C_{\cc S},Q)$ of $\C$ are equivalent: 
 
@@ -3692,13 +3685,9 @@ Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if t
 
 %
 
-\begin{s}%\label{durl2}
-P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S~\ref{durl} p.~\pageref{durl}. 
+\begin{s}
+P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pageref{durl}. 
 \end{s}
-
-%
-
-%\nn[\S\ref{durl} p.~\pageref{durl} will be inserted here.]% already taken into account!!!
 
 %
 
@@ -3707,7 +3696,7 @@ P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $
 
 The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
 
-Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S~\ref{durl} p.~\pageref{durl}), $R_{\SSS}F\simeq F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S\ref{durl} p.~\pageref{durl}), $R_{\SSS}F\simeq F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
