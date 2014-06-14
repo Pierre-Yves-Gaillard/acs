@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0194)
+% about "categories and sheaves" (version-0195b)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3938,7 +3938,7 @@ are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\opl
 %
 
 \begin{s} 
-P.~176, Proposition 8.3.4 (minor variant). Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
+P.~176, proof of Proposition 8.3.4 (minor variant). Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
@@ -4064,7 +4064,7 @@ K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[
 &K'_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
 \end{tikzcd}
 $$ 
-The fact that $i$ and $j$ are isomorphisms follows from Proposition~\ref{p834}. 
+The fact that $i$ and $j$ are isomorphisms follows from Proposition~\ref{p834} p.~\pageref{p834}. 
 
 We shall prove 
 $$
@@ -4169,7 +4169,7 @@ $$
 \begin{s} 
 P.~182, proof of the equivalence (iii) $\ssi$ (iv) in Proposition 8.3.14. Here is the statement of the proposition:
 
-\begin{prop}
+\begin{prop}[Proposition 8.3.14] 
 Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category $\C$. Then the conditions below are equivalent:
 \begin{itemize}
 \item[\em(i)] there exits $h:X''\to X$ such that $g\circ h=\id_{X''}$,
@@ -4181,7 +4181,7 @@ Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category
 \end{itemize}
 \end{prop}
 
-The authors say that the equivalence is obvious. I agree, but here are a few more details. implication (iv) $\then$ (iii) is indeed obvious in the strongest sense of the word. Implication (iii) $\then$ (iv) can be proved as follows. 
+The authors say that the equivalence is obvious. I agree, but here are a few more details. Implication (iv) $\then$ (iii) is indeed obvious in the strongest sense of the word. Implication (iii) $\then$ (iv) can be proved as follows. 
 
 Assume (iii), that is, we have morphisms $h:X''\to X$ and $k:X\to X'$ such that 
 \begin{equation}\label{fk+hg} 
