@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0197)
+% about "categories and sheaves" (version-0199)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4273,7 +4273,7 @@ $$
 &Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
 \end{tikzcd}
 $$ 
-commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 implies that $c$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$:
+commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 of the book implies that $c$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$:
 $$
 \begin{tikzcd}
 Y\ar{d}[swap]{b}\ar[tail]{r}{c}&G_i\ar[dashed]{d}{d}\\ 
@@ -4343,7 +4343,7 @@ Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring
 \end{lem}
 %
 \begin{proof}
-Let $\psi:\M\to\C$ be defined by $\psi(M)=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\varphi$ and $\psi$ quasi-induce quasi-inverse equivalences 
+Let $\psi:\M\to\C$ be defined by $\psi(M)=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\varphi$ and $\psi$ induce quasi-inverse equivalences 
 $$
 \begin{tikzcd}
 \C_0\ar[yshift=.7ex]{r}{\varphi_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
@@ -4356,7 +4356,8 @@ $$
 (\C_0)^\wedge\ar{r}[swap]{\widehat\varphi_{{}_0}}&(\M_0)^\wedge
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pageref{gcsbc}, Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}), and Remark 1.4.13 p.~27 of the book. As $\widehat\varphi_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
+quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pageref{gcsbc} and Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}). %, and Remark 1.4.13 p.~27 of the book. 
+ As $\widehat\varphi_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -4396,11 +4397,11 @@ $$
 $$
 \end{proof}
 \end{s}
-%
+
 %%
-%
+
 \begin{s}
-P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155, to check that
+P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that
 %
 \begin{equation}\label{l}
 Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
@@ -4408,28 +4409,28 @@ Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
 %
 To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$.
 \end{s}
-%
+
 %%
-%
+
 \begin{s} 
 P.~202, Exercise 8.4. Recall the statement: 
 
 Let $\C$ be an additive category and $\cc S$ a right multiplicative system. Prove that the localization $\C_{\cc S}$ is an additive category and $Q:\C\to\C_{\cc S}$ is an additive functor. 
 
-It is easy to equip $\C_{\cc S}$ with a pre-additive structure making $Q$ additive. Then the result follows from Lemma~\ref{823b} p.~\pageref{823b}. 
+It is easy to equip $\C_{\cc S}$ with a pre-additive structure making $Q$ additive. Then the result follows from Corollary~\ref{823b} p.~\pageref{823b}. 
 
-The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way at the beginning of the following text of Dragan Mili\v{c}i\'c:%\bigskip 
+The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way at the beginning of the following text of Dragan Mili\v{c}i\'c:  
 %
 \begin{center}\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf}
 \end{center}
 \end{s}
-%
+
 %%%
-%
+
 \subsection{Exercise 8.17 (p.~204)}\label{817} 
-%
+
 \subsubsection{Preliminaries}\label{preli}
-%
+
 The following statements are easy to prove.
 
 \nn(a) Let $X\xr fY\xr gZ$ be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
@@ -4449,7 +4450,7 @@ X\ar[two heads]{dd}\ar{rr}{f}&&Y\ar[two heads]{dl}\ar{dd}{g}\\
 $$ 
 In particular $\Ima(g\circ f)\to\Ima g$ is a monomorphism.
 
-\nn(b) If in addition that $f$ is an epimorphism, then $\Ima(g\circ f)\to\Ima g$ is an isomorphism. 
+\nn(b) If in addition $f$ is an epimorphism, then $\Ima(g\circ f)\to\Ima g$ is an isomorphism. 
 
 It suffices to prove that $\Ima(g\circ f)\to\Ima g$ is an epimorphism. Let $\Ima g\to W$ be a morphism whose composition with $\Ima(g\circ f)\to\Ima g$ vanishes, and let us check that $\Ima g\to W$ vanishes. This follows immediately form the commutative diagram 
 $$
