@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0200)
+% about "categories and sheaves" (version-0201b)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -279,7 +279,7 @@ Then $a,b$ and $c$ are respectively cofinal by Parts (ii), (iii), and (iv) of Pr
 
 \noindent $*$ P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to the element $(u,u_0)$ of $F(X)\times_{F(X_1)}F(Z_0)$ under the natural bijection. (Recall $X':=X\sqcup_{X_1}Z_0$.)
 
-\noindent $*$ P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118, only Part~(iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book.
+\noindent $*$ P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118 of the book, only Part~(iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book.
 
 \noindent $*$ P.~128, proof of Theorem 5.3.9. Last display: $\sqcup$ should be $\cup$. It would be simpler in fact to put 
 $$
@@ -2272,19 +2272,16 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}
 
 \begin{s} 
 P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
-%
+
 \begin{prop} 
-%
 Consider functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\colim\alpha$ exists in $\C$. Then $\colim(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\colim(F\circ\alpha)\to\colim\alpha$ is an isomorphism. 
-%
 \end{prop} 
-%
+
 \begin{proof}
 Let $X'$ be in $\C'$. It suffices to show that the natural map 
 $$
 \Hom_{\C'}(F(\colim\alpha),X')\to\lim\Hom_{\C'}(F(\alpha),X')
 $$ 
-%
 is bijective. Replacing Setting (\ref{241s}) p.~\pageref{241s} with 
 $$
 Y\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X', 
@@ -2322,7 +2319,7 @@ The first and last bijections follow from \eqref{332}, the second one is clear, 
 \begin{s}
 P. 84, Proposition 3.3.13. Recall the statement:
 
-\begin{prop}[Proposition 3.3.13]
+\begin{prop}[Proposition 3.3.13 p. 84]
 Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^\wedge$. Then $A$ is left exact if and only if $\C_A$ is filtrant.
 \end{prop}
 
@@ -2723,7 +2720,7 @@ we must check $[W\parar X\xr xZ]$. As the morphisms $W\parar X$ factor through $
 \begin{s} 
 P.~116, proof of Proposition 5.1.7 (i) (minor variant). Recall the statement: 
 
-\begin{prop}[Proposition 5.1.7 (i)]
+\begin{prop}[Proposition 5.1.7 (i) p. 116]
 Let $\C$ be a category admitting finite inductive and projective limits in which epimorphisms are strict. Let us denote by $I'_g$ the coimage of any morphism $g$ in $\C$. Let $f:X\to Y$ be a morphism in $\C$ and $X\xr u I'_f\xr v Y$ its factorization through $I'_f$. Then $v$ is a monomorphism. 
 \end{prop}
 
@@ -3376,20 +3373,6 @@ except perhaps inclusion $i$, commute with finite projective limits. Thus inclus
 
 %
 
-%\begin{s}Proposition 6.2.1 p. 138. Let $\alpha:I\to\C$ be a functor, and let $Z$ be an object of $\C$. Consider the following condition:
-
-%There is an $i_0$ in $I$ and a morphism $\tau:Z\to\alpha(i_0)$ in $\C$ such that for all morphism $s_0:i_0\to i$ there is a morphism $g:\alpha(i)\to Z$ and a morphism $t:i\to j$ satisfying $$g\circ\alpha(s)\circ\tau=\id_Z,\quad\alpha(t\circ s)\circ\tau\circ g=\alpha(t).$$
-%\begin{nota}\label{sic}Given two categories $I$ and $\C$, we write $S(I,\C)$ for the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and the above condition holds.\end{nota}
-
-%Let $I$ and $\C$ be two categories, let $\U$ be a universe such that %\begin{equation}\label{icz}\text{$I$ is $\U$-small and $\C$ is a $\U$-category,}\end{equation}
-%and let $T(I,\C,\U)$ be the set of those couples $(\alpha,Z)$ such that $\alpha$ is a functor from $I$ to $\C$, $Z$ is an object of $\C$, and $``\colim"\alpha$ is representable by $Z$.
-%
-%\begin{prop}[Proposition 6.2.1 p. 138]\label{621}For $I,\C$ and $\U$ as above, we have $S(I,\C)=T(I,\C,\U)$. In particular $T(I,\C,\U)$ does not depend on $\U$ subject to \eqref{icz}.\end{prop}
-
-%See also Proposition~\ref{264} p.~\pageref{264}.\end{s}
-
-%
-
 \begin{s} P.~142, proof of Corollary 6.3.7. Let us check the isomorphism 
 $$
 \kappa(X)\simeq\ic\rho\circ\xi. 
@@ -3831,9 +3814,9 @@ $$
 for the projections and coprojections. We have $q_a\circ(f_1\times f_2)=f_a\circ p_a$ for all $a$, and we must show $q_b\circ (f_1\times f_2)\circ i_a=q_b\circ j_a\circ f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
 \end{proof}
 
-For the reader's convenience we state and prove Lemma 8.2.3 (ii):
+For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
 
-\begin{lem}[Lemma 8.2.3 (ii)]\label{823ii}
+\begin{lem}[Lemma 8.2.3 (ii) p. 169]\label{823ii}
 Let $\C$ be a pre-additive category; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms satisfying 
 $$
 p_a\circ i_b=\delta_{ab}\ \id_{X_a},\quad i_1\circ p_1+i_2\circ p_2=\id_X.
@@ -3865,13 +3848,13 @@ Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$
 \begin{s} 
 P. 172, Lemma 8.2.9. Recall the statement:
 
-\begin{lem}[Lemma 8.2.9] 
+\begin{lem}[Lemma 8.2.9 p. 172] 
 Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is additive.
 \end{lem}
 
 Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
 
-Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p. 169, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ in $\C$ be terminal. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
+Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ in $\C$ be terminal. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
 \end{s}
 
 %
@@ -3918,9 +3901,9 @@ $$
 is bijective. The injectivity is obvious and the surjectivity follows from the proof of Proposition 8.2.13.
 \end{proof}
 
-Recall the statement of Theorem 8.2.14:
+Recall the statement of Theorem 8.2.14 p.~173 of the book:
 
-\begin{thm}[Theorem 8.2.14] 
+\begin{thm}[Theorem 8.2.14 p. 173] 
 Any additive category has a unique structure of a pre-additive category.
 \end{thm}
 
@@ -4188,7 +4171,7 @@ $$
 \begin{s} 
 P.~182, proof of the equivalence (iii) $\ssi$ (iv) in Proposition 8.3.14. Here is the statement of the proposition:
 
-\begin{prop}[Proposition 8.3.14] 
+\begin{prop}[Proposition 8.3.14 p. 182] 
 Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category $\C$. Then the conditions below are equivalent:
 \begin{itemize}
 \item[\em(i)] there exits $h:X''\to X$ such that $g\circ h=\id_{X''}$,
@@ -4706,7 +4689,7 @@ In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about
 $$
 \xi=(\colim\psi,\colim\psi\xr x A)\in\C_A
 $$ 
-be such that $x\circ p_j=y_j$ for all $j$ and letting $f_j:\varphi(j)\to\xi$ be the obvious morphism, we have $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. q.e.d.
+be such that $x\circ p_j=y_j$ for all $j$, and letting $f_j:\varphi(j)\to\xi$ be the obvious morphism, we have $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. q.e.d.
 \end{s}
 
 %%
@@ -4817,7 +4800,7 @@ Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to 
 $$
 \colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
 $$ 
-As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
+As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
 
 It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to define a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection. 
 
@@ -4845,7 +4828,7 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies the surjectivity of $\lambda$.
 
-\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
 \nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 $$
@@ -4998,7 +4981,7 @@ for $A$ in $I$, and
 $$
 \colim_{A\in I}G^{\sqcup A}\xr\sim G^{\sqcup X(G)}\to X.
 $$ 
-Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
+Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224 of the book, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
 
 \nn$\si:$ In view of Proposition~\ref{932} p.~\pageref{932}, it suffices to prove  
 
@@ -5021,21 +5004,13 @@ By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\sqcup B}(G))<\pi
 
 \subsubsection{Brief Comments}
 
-\begin{s} 
-P. 227. Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$.
-\end{s}
+\nn$*$ P. 227, Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$. 
 
-\begin{s} 
-P. 228. Corollary 9.3.6. As already pointed out, $\ilim$ in the statement should be $\sigma_\pi$. As for the proof, Conditions (i), (ii), and (iii) of Proposition 9.2.19 p.~223 of the book follow respectively from (9.3.1) (i) (see (i) at the beginning of Section~\ref{s934} p.~\pageref{s934}), (9.3.4) (b) (see (b) right after Condition~\ref{ass} p.~\pageref{ass}), and Corollary 9.3.5 (i) p.~227.
-\end{s}
+\nn$*$ P. 228, Corollary 9.3.6. As already pointed out, $\ilim$ in the statement should be $\sigma_\pi$. As for the proof, Conditions (i), (ii), and (iii) of Proposition 9.2.19 p.~223 of the book follow respectively from (9.3.1) (i) (see (i) at the beginning of Section~\ref{s934} p.~\pageref{s934}), (9.3.4) (b) (see (b) right after Condition~\ref{ass} p.~\pageref{ass}), and Corollary 9.3.5 (i) p.~227 of the book. 
 
-\begin{s} 
-P. 228. Corollary 9.3.7. As $\{\card(X(G))\,|\,X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X$ in $S$, and apply Theorem~\ref{934} p.~\pageref{934}.
-\end{s}
+\nn$*$ P. 228, Corollary 9.3.7. As $\{\card(X(G))\,|\,X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X$ in $S$, and apply Theorem~\ref{934} p.~\pageref{934}. 
 
-\begin{s} 
-P. 228. Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 and Example 9.2.4 p.~224.
-\end{s}
+\nn$*$ P. 228, Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 of the book and Example 9.2.4 p.~224 of the book. 
 
 %%%
 
@@ -5101,7 +5076,7 @@ If $\C$ is a small nonempty category admitting small well-ordered upper bounds a
 The category $\C^X$ is again small, nonempty, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
 \end{proof}
 
-We recall the notion of {\em construction by transfinite induction}. \index{transfinite induction} %\index{con\-struc\-tion by trans\-fi\-nite in\-duc\–tion}
+We recall the notion of {\em construction by transfinite induction}. \index{transfinite induction} 
 
 \begin{thm}[Construction by Transfinite Induction]\label{meta} 
 Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $$
@@ -5138,7 +5113,11 @@ Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let u
 
 \nn(b) If $i=\sup\,\{j\,|\,j<i\}$, let $(a_j:X_j\to X_i)_{j<i}$ be some upper bound for $(X_j)_{j<i}$ and put $u_{ij}:=a_j$. 
 
-Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. Let $(b_i:X_i\to X)_{i\in I}$ be some upper bound, and let $i_0$ in $I$ be such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $u:X\to Y$ be a morphism. By Property $P(u_{i_0+1,i_0})$ applied to $u\circ b_{i_0+1}:X_{i_0+1}\to Y$, we find a morphism $w:Y\to X_{i_0+1}$ such that 
+Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. Let $(b_i:X_i\to X)_{i\in I}$ be some upper bound, and let $i_0$ in $I$ be such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $u:X\to Y$ be a morphism. By Property $P(u_{i_0+1,i_0})$ applied to 
+$$
+u\circ b_{i_0+1}:X_{i_0+1}\to Y,
+$$ 
+we find a morphism $w:Y\to X_{i_0+1}$ such that 
 %
 \begin{equation}\label{wu}
 w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}.
@@ -5270,7 +5249,7 @@ X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar{d}{h_j}\\
 X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,
 \end{tikzcd}
 $$ 
-with $v_j,w_j$ in $\Mor(\C_0)$, and for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, construct a commutative diagram 
+with $v_j,w_j$ in $\Mor(\C_0)$, and construct, for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, a commutative diagram 
 $$
 \begin{tikzcd}
 X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_j\\
@@ -5518,7 +5497,7 @@ Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C
 \end{lem}
 %
 \begin{proof}
-By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the natural functor $\oo j:I^i\to I$ is cofinal. As the obvious morphism of functor 
+By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the natural functor $\oo j:I^i\to I$ is cofinal. As the obvious morphism of functors 
 $$
 \theta\in\Hom_{\C^{I^i}}(\Delta(\alpha(i)),\alpha\circ\oo j)
 $$ 
@@ -5531,26 +5510,26 @@ $$
 $$
 \end{proof}
 \end{s}
-%
+
 %%
-%
+
 \begin{s}
 Pp 237-239. For the reader's convenience we first reproduce (with minor changes) two corollaries with their proof. 
-%
-\begin{cor}[Corollary 9.6.5]
+
+\begin{cor}[Corollary 9.6.5 p. 237]
 If $\C$ is a small abelian category, then $\Ind(\C)$ admits an injective cogenerator.
 \end{cor}
-%
+
 \begin{proof}
-Apply Theorem 8.6.5 (vi) p.~194 and Theorem 9.6.3 p.~236.
+Apply Theorem 8.6.5 (vi) p.~194 and Theorem 9.6.3 p.~236 of the book.
 \end{proof}
-%
-\begin{cor}[Corollary 9.6.6]
-Let $\C$ be a Grothendieck category. Denote by $\cc I$ the full additive subcategory of $\C$ consisting of injective objects and by $\iota:\oo I\to\C$ the inclusion functor. Then there exist a (not necessarily additive) functor $\Psi:\C\to\cc I$ and a morphism of functors $\id_\C\to\iota\circ\Psi$ such that $X\to\Psi(X)$ is a monomorphism for any $X$ in $\C$.
+
+\begin{cor}[Corollary 9.6.6 p. 237]
+Let $\C$ be a Grothendieck category. Denote by $\cc I$ the full additive subcategory of $\C$ consisting of injective objects, and by $\iota:\oo I\to\C$ the inclusion functor. Then there exist a (not necessarily additive) functor $\Psi:\C\to\cc I$ and a morphism of functors $\id_\C\to\iota\circ\Psi$ such that $X\to\Psi(X)$ is a monomorphism for any $X$ in $\C$.
 \end{cor}
-%
+
 \begin{proof}
-The category $\C$ admits an injective cogenerator $K$ by Theorem 9.6.3 p.~236, and admits small products by Proposition 8.3.27 p.~186. Consider the (non additive) functor 
+The category $\C$ admits an injective cogenerator $K$ by Theorem 9.6.3 p.~236 of the book, and admits small products by Proposition 8.3.27 p.~186 of the book. Consider the (non additive) functor 
 $$
 \Psi:\C\to\cc I,\quad X\mapsto K^{\Hom_\C(X,K)}.
 $$ 
@@ -5558,10 +5537,10 @@ The identity of
 $$
 \Hom_{\Set}(\Hom_\C(X,K),\Hom_\C(X,K))\simeq\Hom_\C(X,K^{\Hom_\C(X,K)})
 $$ 
-defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a monomorphism by Proposition 5.2.3 (iv) p.~118.
+defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a monomorphism by Proposition 5.2.3 (iv) p.~118 of the book. 
 \end{proof}
 
-We now add three parenthetical points: The first sentence of the proof of Lemma 9.6.8 follows from Proposition 5.2.3 (iv) p.~118. The second sentence of the proof of Lemma 9.6.9 follows from Part (i) of the same proposition. In the proof of Theorem 9.6.10, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p. 194.
+We now add three parenthetical points: The first sentence of the proof of Lemma 9.6.8 p.~238 of the book follows from Proposition 5.2.3 (iv) p.~118 of the book. The second sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Part (i) of the same proposition. In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book.
 \end{s}
 
 %%
@@ -5570,14 +5549,14 @@ We now add three parenthetical points: The first sentence of the proof of Lemma 
 
 \subsection{May's Definition of a Triangulated Category (p.~243)\index{definition of a triangulated category}\index{May (Peter May)}}
 
-The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:%\bigskip 
+The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:  
 %
-\begin{center}\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf}%\bigskip
+\begin{center}\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf} 
 \end{center}
 %
-Various related links are given in the document%\bigskip
+Various related links are given in the document 
 %
-\begin{center}\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}%\bigskip
+\begin{center}\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw} 
 \end{center}
 
 To make things as clear as possible, we remove TR4 from the definition of a triangulated category, and prove that any triangulated category satisfies TR4:
