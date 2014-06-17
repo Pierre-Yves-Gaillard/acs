@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0204)
+% about "categories and sheaves" (version-0205)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3720,12 +3720,11 @@ $$
 \C_\SSS\ar{r}[swap]{\alpha_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
 \end{tikzcd}
 $$
-Let $X$ be in $\C$. We must prove 
+Let $X$ be in $\C$. We must prove that there is an isomorphism 
 $$
-R_\SSS(\iota_\A\circ F)(Q(X))\simeq IF(\alpha_\SSS(Q(X))).
-$$
-
-Recall the following facts: 
+R_\SSS(\iota_\A\circ F)(Q(X))\simeq IF(\alpha_\SSS(Q(X)))
+$$ 
+in $\Ind(\C)$. Recall the following facts: 
 
 \noindent$\bu$ Proposition 7.4.1 p.~162 of the book implies
 $$
@@ -3743,6 +3742,13 @@ $$
 We want to prove $B\simeq C$.
 
 \noindent{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
+
+We shall define morphisms %???
+$$
+\begin{tikzcd}
+B\ar[yshift=.7ex]{r}{f}&C\ar[yshift=-.7ex]{l}{g}.
+\end{tikzcd}
+$$
 
 For $(X',x')$ in $\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by 
 $$
