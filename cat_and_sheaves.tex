@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0202)
+% about "categories and sheaves" (version-0203)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3428,13 +3428,15 @@ $$
 
 As in the book we assume, as we may, that any two isomorphic objects of $K$ are equal. 
 
-Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let $\alpha_k:I_k\to\C$ be a functor such that $G(k)=\ic\alpha_k$. We define the category 
+Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let $\alpha_k:I_k\to\C$ be a functor such that $G(k)=\ic\alpha_k$. 
+
+We define the category 
 $$
 N:=N\{K,G,(\alpha_k)\}
 $$ 
 as follows:
 
-An object of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
+\noindent[Beginning of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
 
 \noindent$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
 
@@ -3453,15 +3455,16 @@ $$
 $$ 
 in $\Ind(\C)$. 
 
-A morphism from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a morphism of functors, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$: 
+A \emph{morphism} from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $f_k:i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a morphism of functors, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$: 
 $$ 
 \begin{tikzcd} 
 \alpha_k(i_k)\ar{r}{\alpha_k(f_k)}\ar[equal]{d}&\alpha_k(j_k)\ar[equal]{d}\\ 
 P(k)\ar{r}[swap]{\theta_k}&Q(k).
 \end{tikzcd} 
 $$ 
+[End of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] 
 
-Then the functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by $F'(k)=\alpha_k\circ p_k$, where $p_k:N\to I_k$ is the natural projection: 
+The functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by $F'(k)=\alpha_k\circ p_k$, where $p_k:N\to I_k$ is the natural projection: 
 $$
 N\xr{p_k}I_k\xr{\alpha_k}\C.
 $$ 
@@ -3480,75 +3483,95 @@ If $n=0$ the result is clear.
 
 Otherwise, let $a$ be a maximal object $a$ of $K$; let $L$ be the full subcategory of $K$ such that 
 $$
-\Ob(L)=\Ob(K)\setminus\{a\};
+\Ob(L)=\Ob(K)\setminus\{a\}; 
 $$ 
-let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$; let 
+let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$; let  
 $$
 \widetilde{\alpha_a}:I_a\to\C/G(a)
 $$ 
-be the natural functor (see \eqref{slice} p.~\pageref{slice} for the definition of $\C/G(a)$ and recall that $\ic\alpha_k=G(k)$); put 
+(see \eqref{slice} p.~\pageref{slice} for the definition of $\C/G(a)$) be the functor defined by 
 $$
-N':=N\{L,G_L,(\alpha_\ell)\};
+\widetilde{\alpha_a}(i_a):=\big(u(i_a):\alpha_a(i_a)\to G(a)\big);
 $$
-define 
+and put 
+$$
+N':=N\{L,G_L,(\alpha_\ell)\}.
+$$ 
+
+We define the functor 
 $$ 
 \varphi:N'\to(\C/G(a))^{L/a} 
 $$ 
-(see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) by 
+(see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) as follows. Let $((i_\ell),Q)$ be in $N'$. In particular, $Q$ is a functor from $L$ to $\C$, and we have, for each $b$ in $L$, a morphism 
 $$
-\varphi((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right),
+Q(b)=\alpha_b(i_b)\xr{u'(b)}\icolim\alpha_b=G(b) 
+$$ 
+in $\C$ (see \eqref{u':} p.~\pageref{u':}). Letting $b\xr f a$ be a morphism in $K$ viewed as an object of $L/a$, we put  
 $$
-where $u'(b)$ is defined in \eqref{u':} p.~\pageref{u':}; and let 
+\varphi((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right)\in\C/G(a).
+$$
+
+Letting 
 $$
 \Delta:\C/G(a)\to(\C/G(a))^{L/a}
 $$ 
-be the diagonal functor. We shall define functors 
+be the diagonal functor, we can form the category 
+$$
+M:=M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right].
+$$ 
+Concretely, an object of $M$ is a triple 
+$$
+\Big(\big((i_b),Q\big),i_a,\big(\xi_f:Q(b)\to\alpha_a(i_a)\big)_{f:b\to a}\Big),
+$$ 
+where $f$ runs over the morphisms from $b$ to $a$ in $K$, and $\xi_f$ is a morphism which makes the following square in $\C$ commute: 
 $$
 \begin{tikzcd}
-N\ar[yshift=0.7ex]{r}{\lambda}&M:=M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]\ar[yshift=-0.7ex]{l}{\mu}
+Q(b)\ar{r}{\xi_f}\ar{d}[swap]{u'(b)}&\alpha_a(i_a)\ar{d}{u(i_a)}\\ 
+G(b)\ar{r}[swap]{G(f)}&G(a).
+\end{tikzcd}
+$$
+
+We shall define functors 
+$$
+\begin{tikzcd}
+N\ar[yshift=0.7ex]{r}{\lambda}&M\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
 and leave it to the reader to check that they are quasi-inverse. (In fact, we shall only define the effect of $\lambda$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
 
-To define $\lambda$ let $((i_k),P)$ be in $M$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
+To define $\lambda$ let $((i_k),P)$ be in $N$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
 $$
-\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big),
+\Big(\big((i_b),Q\big),i_a,\big(\xi_f:Q(b)\to\alpha_a(i_a)\big)_{f:b\to a}\Big).
 $$ 
-so that we must define 
-$$
-\pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a)).
-$$ 
-We do that by attaching to the object $b\xr f a$ in $L/a$ the morphism 
-$$
-\alpha_b(i_b)=Q(b)=P(b)\xr{P(f))}P(a)=\alpha_a(i_a).
-$$
+As $Q(b)=P(b)$ and $\alpha_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$. 
 
 To define $\mu$ let 
 $$
-\nu:=\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
+\xi:=\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
 $$ 
-be in $N$. Then $\lambda(\nu)$ will be of the form $((i_k),P)$, so that we must define $P:K\to\C$. We define $P(k)$ by putting $P(b):=Q(b)$ for $b$ in $L$, and $P(a):=\alpha_a(i_a)$. To a morphism $f:b\to c$ in $L$ we attach the morphism $Q(f):P(b)\to P(c)$. Let $b$ be in $L$. There is at most one morphism $b\to a$. Assume that this morphism does exist. Then we attach to it the morphism from $P(b)=Q(b)=\alpha_b(i_b)$ to $P(a)=\alpha_a(i_a)$ given by the morphism of functors 
-$$
-\pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a)).
-$$
+be in $M$. The object $\mu(\xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
 
-As a result, we have an equivalence 
+We define $P(k)$ by putting $P(b):=Q(b)$ for $b$ in $L$, and $P(a):=\alpha_a(i_a)$. 
+
+If $f:b\to c$ is a morphism in $L$, then we set $P(f):=Q(f):P(b)\to P(c)$. Let $b$ be in $L$. There is at most one morphism $f:b\to a$. If this morphism does exist, then we put $P(f):=\xi_f$. 
+
+After a few verifications left to the reader, we get an equivalence 
 $$ 
 N\sim M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$
 
-By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134. The only remaining task is to prove the lemma below.
+By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134 of the book. The only remaining task is to prove the lemma below.
 
 \begin{lem}\label{delta}
 If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^I$ is cofinal.
 \end{lem}
 %
 \begin{proof}
-It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 p.~78. Condition (b) is clear. To check Condition (a), let $\alpha$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\alpha$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
+It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\alpha$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\alpha$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
 $$
 (\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\alpha(i),Y)\right)\ (\forall\ (s:i\to j)\in S)\ (\mu_{j}\circ\alpha(s)=\mu_i) 
 $$ 
-by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\theta)$.
+by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\lambda)$.
 \end{proof}
 
 %%
