@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0208)
+% about "categories and sheaves" (version-0209)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4162,11 +4162,11 @@ For a complex $Z\to Y\to X$ in some abelian category, the following conditions a
 \nn{\em(b)} any commutative diagram of solid arrows
 $$
 \begin{tikzcd}
-V\ar[dashed]{d}\ar[dashed]{r}&W\ar{dr}{0}\ar{d}\\ 
+V\ar[dashed]{d}\ar[dashed, two heads]{r}&W\ar{dr}{0}\ar{d}\\ 
 Z\ar{r}&Y\ar{r}&X
 \end{tikzcd}
 $$ 
-can be completed as indicated ($W\to V$ being an epimorphism),
+can be completed as indicated ($V\to W$ being an epimorphism),
 
 \nn{\em(c)} any commutative diagram of solid arrows
 $$
@@ -4179,15 +4179,15 @@ can be completed as indicated ($W\to V$ being a monomorphism).
 \end{lem}
 
 \begin{proof}
-Equivalence (a)$\ssi$(b) is proved in the book, and equivalence (a)$\ssi$(c) follows by reversing arrows.
+Equivalence (a)$\ssi$(b) is proved in the book, and Equivalence (a)$\ssi$(c) follows by reversing arrows.
 \end{proof}
 \end{s}
-%
+
 %%
-%
+
 \begin{s} 
 Page 181, the Five Lemma (minor variant). 
-%
+
 \begin{lem} 
 Consider the commutative diagram of complexes 
 $$
@@ -4204,7 +4204,7 @@ Y^3,
 $$
 where $f^0$ is an epimorphism, $f^1$ and $f^3$ are monomorphisms, and $X^1\to X^2\to X^3$ and $Y^0\to Y^1\to Y^2$ are exact. Then $f^2$ is a monomorphism. 
 \end{lem} 
-%
+
 \begin{proof}
 Note that Lemma 8.3.12 can be stated as follows: $f:X\to Y$ is an epimorphism if and only if any subobject of $Y$ is the image of some subobject of $X$. 
 
