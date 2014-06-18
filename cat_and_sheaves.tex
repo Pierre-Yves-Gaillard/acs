@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0209)
+% about "categories and sheaves" (version-0210)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4206,11 +4206,13 @@ where $f^0$ is an epimorphism, $f^1$ and $f^3$ are monomorphisms, and $X^1\to X^
 \end{lem} 
 
 \begin{proof}
-Note that Lemma 8.3.12 can be stated as follows: $f:X\to Y$ is an epimorphism if and only if any subobject of $Y$ is the image of some subobject of $X$. 
+Note that Equivalence (a)$\ssi$(b) in Lemma~\ref{8312} p.~\pageref{8312} can be stated as follows: 
+
+\nn$(*)\ f:X\to Y$ is an epimorphism if and only if any subobject of $Y$ is the image of some subobject of $X$. 
 
 We write $fx$ for the image of a subobject $x$ of $X$, and $fg$ for $f\circ g$.
 
-Put $x^2:=\Ker f^2$. Using the Lemma we see that there is a subobject $x^1$ of $X^1$ such that $x^2=a^1x^1$ (because $f^3$ is a monomorphism, $f^3a^2x^2=0$, and $X^1\xr{a^1}X^2\xr{a^2}X^3$ is exact), a subobject $y^0$ of $Y^0$ such that $f^1x^1=b^0y^0$ (because $b^1f^1x^1=0$ and $Y^0\xr{b^0}Y^1\xr{b^1}Y$ is exact), and a subobject $y^0$ of $Y^0$ such that $y^0=f^0x^0$ (because $f^0$ is an epimorphism). This yields 
+Put $x^2:=\Ker f^2$. Using $(*)$ we see that there is a subobject $x^1$ of $X^1$ such that $x^2=a^1x^1$ (because $f^3$ is a monomorphism, $f^3a^2x^2=0$, and $X^1\xr{a^1}X^2\xr{a^2}X^3$ is exact), a subobject $y^0$ of $Y^0$ such that $f^1x^1=b^0y^0$ (because $b^1f^1x^1=0$ and $Y^0\xr{b^0}Y^1\xr{b^1}Y$ is exact), and a subobject $y^0$ of $Y^0$ such that $y^0=f^0x^0$ (because $f^0$ is an epimorphism). This yields 
 $$
 f^1a^0x^0=b^0f^0x^0=b^0y^0=f^1x^1,
 $$
