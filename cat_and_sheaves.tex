@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0205)
+% about "categories and sheaves" (version-0206)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -3743,7 +3743,7 @@ We want to prove $B\simeq C$.
 
 \noindent{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
 
-We shall define morphisms %???
+We shall define morphisms 
 $$
 \begin{tikzcd}
 B\ar[yshift=.7ex]{r}{f}&C\ar[yshift=-.7ex]{l}{g}.
@@ -3784,7 +3784,8 @@ About Lemma 8.1.2 (ii), p. 169: The fact that the notion of group object is inde
 
 \subsection{Definition 8.2.1 (p. 169)}
 
-The proofs of the Proposition and Lemma below are obvious. 
+The proposition and lemma below are obvious. 
+%
 \begin{prop}\label{payp}
 Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C^{\op}$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\Hom_\C(Y,X)$ for all $X$ and $Y$ in $\C$, let $X$ be in $\C$ and $A$ in $\A$, and let 
 $$
@@ -3798,9 +3799,13 @@ $$
 $$
 Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
 \end{prop}
+%
+\nn(See Theorem \ref{yol} p.~\pageref{yol}.)
+
 \begin{conv}\label{payc}
-In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context.
+In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) We also use Definitions~\ref{ue} and \ref{ue2} p.~\pageref{ue} in this context. 
 \end{conv} 
+
 \begin{lem}\label{payl}
 Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\colim(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\colim\alpha$ exists in $\A$ and satisfies $(\colim\alpha)(X)\simeq\colim(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
@@ -3878,13 +3883,17 @@ Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is a
 
 Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
 
-Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ in $\C$ be terminal. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
+Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ be a terminal object of $\C$. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\simeq X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\simeq0$ for any $X$, and $T$ is a zero object. q.e.d.
 \end{s}
 
 %
 
 \begin{s} 
-P.~172, proof of Lemma 8.2.10. Recall the statement: $\C$ is an additive category and $X$ is in $\C$. The claim is that $X$ is an abelian group object. The addition is given by the codiagonal morphism $\sigma:X\oplus X\to X$. This comment is only about the associativity of the addition. This associativity can also be proved as follows:
+P.~172, proof of Lemma 8.2.10. Recall the statement: 
+
+If $\C$ is an additive category and $X$ is an object of $\C$, then $X$ is an abelian group object. 
+
+The addition is given by the codiagonal morphism $\sigma:X\oplus X\to X$. This comment is only about the associativity of the addition. This associativity can also be proved as follows:
 
 Put $X^n:=X\oplus\cdots\oplus X$ ($n$ factors), and let $X\xr{i_a}X^n\xr{\sigma_n}X$ be respectively the $a$-th coprojection and the codiagonal morphism. It clearly suffices to show that the composition 
 $$
@@ -3936,7 +3945,15 @@ Let $\C$ be our additive category. Thanks to Proposition~\ref{8.2.12} we identif
 $$
 \Hom_\C(X,f)=f\circ:\Hom_\C(X,Y)\to\Hom_\C(X,Z)
 $$ 
-is a morphism in $\Mod(\mathbb Z)$. If $g:W\to X$ is morphism in $\C$, then $\circ g:\Hom_\C(X,\ )\to\Hom_\C(W,\ )$ is a morphism in $\oo P(\C,\Mod(\mathbb Z))$, and $\circ g:\Hom_\C(X,Y)\to\Hom_\C(W,Y)$ is a morphism in $\Mod(\mathbb Z)$.
+is a morphism in $\Mod(\mathbb Z)$. If $g:W\to X$ is morphism in $\C$, then 
+$$
+\circ g:\Hom_\C(X,\ )\to\Hom_\C(W,\ )
+$$ 
+is a morphism in $\oo P(\C,\Mod(\mathbb Z))$, and 
+$$
+\circ g:\Hom_\C(X,Y)\to\Hom_\C(W,Y)
+$$ 
+is a morphism in $\Mod(\mathbb Z)$.
 \end{proof}
 \end{s}
 
@@ -3948,7 +3965,7 @@ $$
 F\text{ is additive }\ssi\ F\text{ commutes with finite products}.
 $$ 
 
-I think the authors forgot to prove implication $\then$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
+I think the authors forgot to prove Implication $\then$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
 
 Case $n=0$: Put $X:=F(0)$. We must prove $X\simeq 0$. The equality $0=1$ holds in the ring $\Hom_\C(X,X)$ because it holds in the ring $\Hom_\C(0,0)$. As a result, the morphisms $0\to X$ and $X\to 0$ are inverse isomorphisms. 
 
@@ -3961,14 +3978,15 @@ F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions~\ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
 \end{s}
 
-%
+%%%
 
-\begin{s} 
-P.~176, proof of Proposition 8.3.4 (minor variant). Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
+\subsection{Proof of Proposition 8.3.4 (p. 176)}
+
+Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 $$
 \begin{tikzcd}
-\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
-P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f,
+\Ker f\ar{r}{h} &X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
+P\ar{r}[swap]{p}&X\ar{r}[swap]{b}       &\Coker p\ar[equal]{r}&\Coim f,
 \end{tikzcd}
 $$ 
 where $h,a,$ and $b$ are the natural morphisms. 
@@ -4014,11 +4032,11 @@ Dually, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to
 %
 $$
 \begin{tikzcd}
-\Ima f\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
-\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f
+\Ima f\ar{r}{a}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
+\Ker k\ar{r}{b}&Y\ar{r}[swap]{k}&\Coker f
 \end{tikzcd}
 $$ 
-where $h,a,$ and $b$ are the natural morphisms. Then there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
+where $a,b,$ and $k$ are the natural morphisms. Then there is a natural isomorphism $\Ima f\simeq\Ker k$ which makes the diagram 
 %
 \begin{equation}\label{834b}
 \begin{tikzcd}
@@ -4039,15 +4057,16 @@ which make Diagrams \eqref{834a} and \eqref{834b} commute.
 Note that we can splice Diagrams \eqref{834a} and \eqref{834b}:
 $$
 \begin{tikzcd}
-\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
-P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar{d}\\ 
+\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
+P\ar{r}[swap]{p}&X\ar{r}&\Coim f\ar{d}\\ 
 {}&{}&\Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
 {}&{}&\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f.
 \end{tikzcd}
 $$ 
-\end{s}
 
-%%
+%%% 
+
+\subsection{Brief Comments}
 
 \begin{s} 
 P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
