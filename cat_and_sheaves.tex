@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0211)
+% about "categories and sheaves" (version-0212)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4400,15 +4400,13 @@ where, we hope, the notation is self-explanatory.
 %
 
 \begin{s} P.~191, proof of Theorem 8.5.8 (iii) (minor variant). Recall the statement: 
-%
+
 \begin{lem}\label{858iii}
-%
-Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring $\operatorname{End}_\C(G)^{\op}$, put $\M:=\Mod(R)$, let $\varphi:\C\to\M$ be defined by $\varphi(X)=\Hom_\C(G,X)$. Then $\varphi$ is fully faithful. 
-%
+Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring $\operatorname{End}_\C(G)^{\op}$, put $\M:=\Mod(R)$, let $\varphi:\C\to\M$ be the functor defined by $\varphi(X):=\Hom_\C(G,X)$. Then $\varphi$ is fully faithful. 
 \end{lem}
-%
+
 \begin{proof}
-Let $\psi:\M\to\C$ be defined by $\psi(M)=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\varphi$ and $\psi$ induce quasi-inverse equivalences 
+Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\varphi$ and $\psi$ induce quasi-inverse equivalences 
 $$
 \begin{tikzcd}
 \C_0\ar[yshift=.7ex]{r}{\varphi_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
@@ -4432,7 +4430,7 @@ quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\r
 P.~191, Step (a) of the proof of Theorem 8.5.8 (iv) (minor variant). Recall the statement: 
 
 \begin{lem}
-In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\rightarrowtail R^{\oplus S}$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
+In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\rightarrowtail R^{\oplus S}$. Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
 \end{lem}
 
 \begin{proof}
