@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0206)
+% about "categories and sheaves" (version-0207)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4057,8 +4057,8 @@ which make Diagrams \eqref{834a} and \eqref{834b} commute.
 Note that we can splice Diagrams \eqref{834a} and \eqref{834b}:
 $$
 \begin{tikzcd}
-\Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
-P\ar{r}[swap]{p}&X\ar{r}&\Coim f\ar{d}\\ 
+\Ker f\ar{r}{h} &X\ar[equal]{d}\ar{r}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
+P\ar{r}[swap]{p}&X\ar{r}             &\Coim f\ar{d}{\sim}\\ 
 {}&{}&\Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
 {}&{}&\Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f.
 \end{tikzcd}
@@ -4117,14 +4117,14 @@ $$
 K'_{\varphi\circ a}\ar{r}{k}[swap]{\sim}&K'_\varphi\ar{r}{\ell}[swap]{\sim}&K'_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
 \end{tikzcd}
 $$
-This will imply (\ref{834}). We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. There is a natural monomorphism from $I_f\mono K_u$. Indeed, we have $u\circ\pp\circ a=c\circ f=0$. As $a$ is an epimorphism, this implies $u\circ\pp=0$: 
+This will imply \eqref{834} p.~\pageref{834}. We already know that $i$ and $j$ are isomorphisms. Moreover, $k$ and $n$ are isomorphisms because $a$ is an epimorphism and $d$ a monomorphism. There is a natural monomorphism from $I_f$ to $K_u$. Indeed, we have $u\circ\pp\circ a=c\circ f=0$. As $a$ is an epimorphism, this implies $u\circ\pp=0$: 
 $$
 \begin{tikzcd}
 X'\ar[two heads]{d}[swap]{a}\ar{r}{f}&X\ar[two heads]{d}{c}\ar{r}{g}&X''\\ 
 I_f\ar[tail]{ru}\ar{r}[swap]{u\circ\pp}&C_f\ar[two heads]{r}&I_g.\ar[tail]{u}
 \end{tikzcd}
 $$
-It is easy to see that there is a natural monomorphisms $K_u\mono K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
+It is easy to see that there is a natural monomorphisms from $K_u$ to $K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$, so that we can complete our previous diagram as follows: 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
@@ -4134,14 +4134,14 @@ K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[
 \end{tikzcd}
 $$ 
 (The two dashed arrows have been added.) Now the fact that $\ell$ and $m$ are isomorphisms is clear.
-%
+
 %%%%
-%
+
 \subsection{Brief Comments}
-%
+
 \begin{s}
 P. 180, Lemma 8.3.12. Here is a minor variant:
-%
+
 \begin{lem}\label{8312}
 For a complex $Z\to Y\to X$ in some abelian category, the following conditions are equivalent:
 
@@ -4165,7 +4165,7 @@ Z\ar{dr}[swap]{0}\ar{r}&Y\ar{d}\ar{r}&X\ar[dashed]{d}\\
 $$ 
 can be completed as indicated ($W\to V$ being a monomorphism).
 \end{lem}
-%
+
 \begin{proof}
 Equivalence (a)$\ssi$(b) is proved in the book, and equivalence (a)$\ssi$(c) follows by reversing arrows.
 \end{proof}
