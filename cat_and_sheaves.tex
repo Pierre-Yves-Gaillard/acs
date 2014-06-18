@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0212)
+% about "categories and sheaves" (version-0213)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4434,7 +4434,17 @@ In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an 
 \end{lem}
 
 \begin{proof}
-There is a finite subset $F'$ of $S$ such that $M\rightarrowtail R^{\oplus S}$ factors as $M\rightarrowtail R^{F'}\rightarrowtail R^{\oplus S}$. Since $R^{F'}$ is a direct summand of $R^{\oplus S}$, the arrow $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and we have to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that $f:\psi(M)\to G^{F'}$ is a monomorphism. Applying the right exact functor $\psi$ to 
+There is a finite subset $F'$ of $S$ such that $M\rightarrowtail R^{\oplus S}$ factors as 
+$$
+M\rightarrowtail R^{F'}\rightarrowtail R^{\oplus S}.
+$$ 
+As $R^{F'}$ is a direct summand of $R^{\oplus S}$, the morphism $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and it suffices to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that 
+%
+\begin{equation}\label{fpsi}
+f:\psi(M)\to G^{F'}\text{ is a monomorphism.}
+\end{equation}
+
+Applying the right exact functor $\psi$ to 
 $$
 R^F\epi M\rightarrowtail R^{F'},
 $$
@@ -4444,20 +4454,51 @@ $$
 K\ar[tail]{r}{i}\ar[bend right]{rrr}{0}&G^F\ar[two heads]{r}{p}&\psi(M)\ar{r}{f}&G^{F'},
 \end{tikzcd}
 $$
-where $K:=\Ker(f\circ p)$, and it suffices to prove $p\circ i=0$. Applying $\varphi$ we obtain
+where $K:=\Ker(f\circ p)$. Applying $\varphi$ we obtain
 $$
 \begin{tikzcd}
 \varphi(K)\ar{r}{\varphi(i)}\ar[bend right]{rrr}{0}&R^F\ar{r}{\varphi(p)}&\varphi(\psi(M))\ar{r}{\varphi(f)}&R^{F'}.
 \end{tikzcd}
 $$
-As $\varphi$ is faithful by Lemma~\ref{858iii} p.~\pageref{858iii}, it suffices to check $\varphi(p)\circ\varphi(i)=0$. This equality follows from the commutative diagram
+The commutative diagram
 $$
 \begin{tikzcd}
 \varphi(K)\ar[equal]{d}\ar{rrr}{0}&&&R^{F'}\ar[equal]{d}\\
 \varphi(K)\ar{r}{\varphi(i)}&R^F\ar[equal]{d}\ar{r}{\varphi(p)}&\varphi(\psi(M))\ar{r}{\varphi(f)}&R^{F'}\ar[equal]{d}\\
-&R^F\ar{r}&M\ar[tail]{r}\ar{u}&R^{F'}.
+&R^F\ar{r}&M\ar[tail]{r}\ar{u}&R^{F'}
 \end{tikzcd}
+$$ 
+implies $\varphi(p)\circ\varphi(i)=0$, and thus, $\varphi$ being faithful by Lemma~\ref{858iii} p.~\pageref{858iii}, 
+%
+\begin{equation}\label{pi=0}
+p\circ i=0.
+\end{equation} 
+
+Let us prove \eqref{fpsi}. Let $x:X\to\psi(M)$ be a morphism in $\C$ satisfying $f\circ x=0$. It suffices to prove 
+%
+\begin{equation}\label{x=0}
+x=0.
+\end{equation}
+% 
+As $p$ is an epimorphism, the diagram of solid arrows 
 $$
+\begin{tikzcd}
+Y\ar[dashed]{d}[swap]{y}\ar[dashed, two heads]{r}{a}&X\ar{d}{x}\\ 
+G^F\ar[two heads]{r}[swap]{p}&\psi(M)
+\end{tikzcd}
+$$ 
+can be completed, by Lemma~\ref{8312} p.~\pageref{8312}, (a)$\ssi$(b), to a commutative square as indicated, $a$ being an epimorphism. The commutative diagram of solid arrows 
+$$
+\begin{tikzcd}
+{}&Y\ar[dashed]{dl}[swap]{z}\ar{d}{y}\ar[two heads]{r}{a}&X\ar{d}[swap]{x}\ar{dr}{0}\\ 
+K\ar{r}[swap]{i}&G^F\ar[two heads]{r}[swap]{p}&\psi(M)\ar{r}[swap]{f}&G^F
+\end{tikzcd}
+$$ 
+can in turn be completed to a commutative diagram as indicated, and we get 
+$$
+x\circ a=p\circ i\circ z=0 
+$$  
+by \eqref{pi=0}. As $a$ is an epimorphism, this implies successively \eqref{x=0}, \eqref{fpsi}, and the lemma. 
 \end{proof}
 \end{s}
 
