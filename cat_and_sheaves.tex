@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0213)
+% about "categories and sheaves" (version-0214)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -236,11 +236,11 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \noindent $*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
 
-\noindent $*$ P.~54, second display: we should have $i\to\varphi(j)$ instead of $\varphi(j)\to i$.
+\noindent $*$ P.~54, second display: we should have $i\to\pp(j)$ instead of $\pp(j)\to i$.
 
 \noindent $*$ P.~58, Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the Axiom of Universes.) 
 
-\noindent $*$ P.~58, Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\varphi,\psi$ and $\varphi\circ\psi$ are cofinal, so is the third one''.
+\noindent $*$ P.~58, Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\pp,\psi$ and $\pp\circ\psi$ are cofinal, so is the third one''.
 
 \noindent $*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
@@ -248,7 +248,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \noindent $*$ P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. (See \S\ref{bc} p.~\pageref{bc}.) 
 
-\noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\varphi$.
+\noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\pp$.
 
 \noindent $*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
 
@@ -267,7 +267,7 @@ $$
 
 \noindent $*$ P.~89, last sentence of the proof of Proposition 3.4.4. The argument is slightly easier to follow if $\psi'$ is factorized as 
 $$
-(J_1)^{j_2}\xr a(J_1)^{\psi_2(j_2)}\xr b(K_1)^{\psi_2(j_2)}\xr c(K_1)^{\varphi_2(i_2)}.
+(J_1)^{j_2}\xr a(J_1)^{\psi_2(j_2)}\xr b(K_1)^{\psi_2(j_2)}\xr c(K_1)^{\pp_2(i_2)}.
 $$ 
 Then $a,b$ and $c$ are respectively cofinal by Parts (ii), (iii), and (iv) of Proposition 3.2.5 p.~79 of the book.
 
@@ -317,7 +317,7 @@ $$
 
 \noindent $*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. 
 
-\noindent $*$ P.~136, last line: ``the cokernel of $(\alpha(i),\beta(i))$'' should be ``the cokernel of\linebreak $(\varphi(i),\psi(i))$''. 
+\noindent $*$ P.~136, last line: ``the cokernel of $(\alpha(i),\beta(i))$'' should be ``the cokernel of\linebreak $(\pp(i),\psi(i))$''. 
 
 \noindent $*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\alpha$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
@@ -676,36 +676,36 @@ We state the Yoneda Lemma for the sake of completeness:
 Let $\C$ be a category, let $h:\C\to\C^\wedge$ be the Yoneda embedding, let $F$ be in $\C^\wedge$, let $A$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
-F(A)\ar[yshift=0.7ex]{r}{\varphi}&\Hom_{\C^\wedge}(h(A),F)\ar[yshift=-0.7ex]{l}{\psi}
+F(A)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\wedge}(h(A),F)\ar[yshift=-0.7ex]{l}{\psi}
 \end{tikzcd}
 $$
 by 
 \begin{equation}\label{yo}
-\varphi(a)_X(f):=F(f)(a),\quad\psi(\theta):=\theta_A(\id_A)
+\pp(a)_X(f):=F(f)(a),\quad\psi(\theta):=\theta_A(\id_A)
 \end{equation}
 for 
 $$
 a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(X,A),\quad\theta\in\Hom_{\C^\wedge}(h(A),F).
 $$ 
-Then $\varphi$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
+Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
 $$
-\varphi(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
+\pp(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
 This shows that $h$ is fully faithful.
 
 Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $F$ be in $\C^\vee$, let $A$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
-F(A)\ar[yshift=0.7ex]{r}{\varphi}&\Hom_{\C^\vee}(F,k(A))=\Hom_{\Set^\C}(k(A),F)\ar[yshift=-0.7ex]{l}{\psi}
+F(A)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\vee}(F,k(A))=\Hom_{\Set^\C}(k(A),F)\ar[yshift=-0.7ex]{l}{\psi}
 \end{tikzcd}
 $$
 by \eqref{yo} for 
 $$
 a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(A,X),\quad\theta\in\Hom_{\Set^\C}(k(A),F).
 $$ 
-Then $\varphi$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
+Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
 $$
-\varphi(a)=k(a)\in\Hom_{\C^\wedge}(k(B),k(A)).
+\pp(a)=k(a)\in\Hom_{\C^\wedge}(k(B),k(A)).
 $$
 This shows that $k$ is fully faithful.
 \end{thm}
@@ -1222,7 +1222,7 @@ Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have
 %
 
 \begin{s}
-P. 50, Definition 2.3.1. The three pieces of notation $\varphi_*,\varphi^\dagger$, and $\varphi^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). %So, there is a big number of pages (with a high contents density) between the notation and its justification.
+P. 50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dagger$, and $\pp^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). %So, there is a big number of pages (with a high contents density) between the notation and its justification.
 \end{s}
 
 %
@@ -1246,18 +1246,18 @@ If the above equivalent conditions hold, we say that $\pp^\dagger\beta$ {\em exi
 Recall the statement: 
 
 \begin{thm}[Theorem 2.3.3 (i) p.~52]\label{233i}
-Let $I\xleftarrow\varphi J\xr\beta\C$ be functors. Assume that 
+Let $I\xleftarrow\pp J\xr\beta\C$ be functors. Assume that 
 $$
-\colim_{(\varphi(j)\to i)\in J_i}\beta(j)
+\colim_{(\pp(j)\to i)\in J_i}\beta(j)
 $$ 
-exists in $\C$ for all $i$ in $I$. Then $\varphi^\dagger(\beta)$ exists and we have 
+exists in $\C$ for all $i$ in $I$. Then $\pp^\dagger(\beta)$ exists and we have 
 %
 \begin{equation}\label{236}
-\varphi^\dagger(\beta)(i)\simeq\colim_{(\varphi(j)\to i)\in J_i}\beta(j)
+\pp^\dagger(\beta)(i)\simeq\colim_{(\pp(j)\to i)\in J_i}\beta(j)
 \end{equation} 
 %
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
-$\varphi^\dagger$ exists. If moreover $\varphi$ is fully faithful, then $\varphi^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\varphi_*\circ\varphi^\dagger$. 
+$\pp^\dagger$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\circ\pp^\dagger$. 
 \end{thm}
 The proof in the book is divided into three Steps, called (a), (b), and (c). 
 
@@ -1265,7 +1265,7 @@ The proof in the book is divided into three Steps, called (a), (b), and (c).
 
 \subsubsection{Step (a)}\label{scji}
 
-We define $\varphi^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to show that $\varphi^\dagger(\beta)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
+We define $\pp^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to show that $\pp^\dagger(\beta)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
 
 \begin{lem}\label{r52}
 
@@ -1292,7 +1292,7 @@ I\ar{rr}[swap]{J}&{}&\Cat&J.
 \end{tikzcd}
 $$
 
-We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\colim\theta$ is nothing but $\varphi^\dagger(\beta)$. In particular $\varphi^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
+We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\colim\theta$ is nothing but $\pp^\dagger(\beta)$. In particular $\pp^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
 
 %
 
@@ -1300,7 +1300,7 @@ We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a
 
 The purpose of Step (b) is to prove 
 \begin{equation}\label{stepb}
-\Hom_{\C^I}(\varphi^\dagger(\beta),\alpha)\simeq\Hom_{\C^J}(\beta,\varphi_*(\alpha)) 
+\Hom_{\C^I}(\pp^\dagger(\beta),\alpha)\simeq\Hom_{\C^J}(\beta,\pp_*(\alpha)) 
 \end{equation} 
 for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
 
@@ -1327,29 +1327,29 @@ is a functor from $\Mor_0(I)^{\op}$ to $\Set$, and there is a natural isomorphis
 Returning to \eqref{stepb}, we have functors 
 $$
 \begin{tikzcd}
-J\ar{rr}{\varphi}\ar{dr}[swap]{\beta}&&I\ar{dl}{\alpha}\\ 
+J\ar{rr}{\pp}\ar{dr}[swap]{\beta}&&I\ar{dl}{\alpha}\\ 
 &\C.
 \end{tikzcd}
 $$ 
 Let us define the categories $M$ and $N$ as follows: an object of $M$ is a pair 
 $$
-(j,\varphi(j)\to i\to i')
+(j,\pp(j)\to i\to i')
 $$ 
 with $j$ in $J$ and $i,i'$ in $I$. A morphism 
 $$
-(j_1,\varphi(j_1)\to i_1\to i'_1)\to(j_2,\varphi(j_2)\to i_2\to i'_2)
+(j_1,\pp(j_1)\to i_1\to i'_1)\to(j_2,\pp(j_2)\to i_2\to i'_2)
 $$ 
 is given by a triple of morphisms $j_1\to j_2,i_1\to i_2,i'_2\to i'_1$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(J)$ defined in Definition 2.1.14 p.~42 of the book. Consider the functors 
 $$
-\gamma:M^{\op}\to\Set,\quad(j,\varphi(j)\to i\to i')\mapsto\Hom_\C(\beta(j),\alpha(i')), 
+\gamma:M^{\op}\to\Set,\quad(j,\pp(j)\to i\to i')\mapsto\Hom_\C(\beta(j),\alpha(i')), 
 $$ 
 $$
-\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C(\beta(j),\alpha(\varphi(j'))). 
+\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C(\beta(j),\alpha(\pp(j'))). 
 $$ 
 As we have 
 $$
-\Hom_{\C^I}(\varphi^\dagger(\beta),\alpha)\xr\sim\lim\gamma,\quad
-\Hom_{\C^J}(\beta,\varphi_*(\alpha))\xr\sim\lim\delta. 
+\Hom_{\C^I}(\pp^\dagger(\beta),\alpha)\xr\sim\lim\gamma,\quad
+\Hom_{\C^J}(\beta,\pp_*(\alpha))\xr\sim\lim\delta. 
 $$ 
 by \eqref{2115}, it suffices to show 
 %
@@ -1362,23 +1362,23 @@ There is a natural bijection $\lim\gamma\simeq\lim\delta$.
 \begin{proof}
 To define a map $\lim\gamma\to\lim\delta$, we attach, to a family 
 $$
-(\beta(j)\to\alpha(i'))_{\varphi(j)\to i\to i'}
+(\beta(j)\to\alpha(i'))_{\pp(j)\to i\to i'}
 $$ 
-and to a morphism $j\to j'$, a morphism $\beta(j)\to\alpha(\varphi(j'))$ by setting 
+and to a morphism $j\to j'$, a morphism $\beta(j)\to\alpha(\pp(j'))$ by setting 
 $$
-i=i'=\varphi(j'),\quad(i\to i')=\id_{\varphi(j')},
+i=i'=\pp(j'),\quad(i\to i')=\id_{\pp(j')},
 $$ 
-and by taking as $\beta(j)\to\alpha(\varphi(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $\lim\gamma\to\lim\delta$. To define a map $\lim\delta\to\lim\gamma$, we attach, to a family 
+and by taking as $\beta(j)\to\alpha(\pp(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $\lim\gamma\to\lim\delta$. To define a map $\lim\delta\to\lim\gamma$, we attach, to a family 
 $$
-\big(\beta(j)\to\alpha(\varphi(j'))\big)_{j\to j'}
+\big(\beta(j)\to\alpha(\pp(j'))\big)_{j\to j'}
 $$ 
-and to a chain of morphisms $\varphi(j)\to i\to i'$, a morphism $\beta(j)\to\alpha(i')$ by setting 
+and to a chain of morphisms $\pp(j)\to i\to i'$, a morphism $\beta(j)\to\alpha(i')$ by setting 
 $$
 j':=j,\quad(j\to j'):=\id_{j},
 $$ 
 and by taking as $\beta(j)\to\alpha(i')$ the composition 
 $$
-\beta(j)\to\alpha(\varphi(j))\to\alpha(i)\to\alpha(i'). 
+\beta(j)\to\alpha(\pp(j))\to\alpha(i)\to\alpha(i'). 
 $$ 
 We leave it to the reader to check that this defines indeed a map $\lim\delta\to\lim\gamma$, and that this map is inverse to the map constructed above.
 \end{proof}
@@ -1390,30 +1390,30 @@ In part (i) of their proof of Theorem 2.3.3 (i) p.~52 of the book, the authors d
 \begin{equation}\label{e233i} 
 %
 \Psi_{\alpha,\beta}:
-\Hom_{\C^I}(\varphi^\dagger(\alpha),\beta)\to
-\Hom_{\C^J}(\alpha,\varphi_*(\beta)),
+\Hom_{\C^I}(\pp^\dagger(\alpha),\beta)\to
+\Hom_{\C^J}(\alpha,\pp_*(\beta)),
 %
 \end{equation} 
 %
 and show that it is bijective. In particular, we have a bijection 
 $$
-f:=\Psi_{\alpha,\varphi^\dagger(\alpha)}:
-\Hom_{\C^I}(\varphi^\dagger(\alpha),\varphi^\dagger(\alpha))\to
-\Hom_{\C^J}(\alpha,\varphi_*(\varphi^\dagger(\alpha))),
+f:=\Psi_{\alpha,\pp^\dagger(\alpha)}:
+\Hom_{\C^I}(\pp^\dagger(\alpha),\pp^\dagger(\alpha))\to
+\Hom_{\C^J}(\alpha,\pp_*(\pp^\dagger(\alpha))),
 $$
-and we must check that $f(\id_{\varphi^\dagger(\alpha)})$ is an isomorphism. To this end, we will define 
+and we must check that $f(\id_{\pp^\dagger(\alpha)})$ is an isomorphism. To this end, we will define 
 $$
-u:\varphi_*(\varphi^\dagger(\alpha))\to\alpha,
+u:\pp_*(\pp^\dagger(\alpha))\to\alpha,
 $$
-and leave it to the reader to verify that $f(\id_{\varphi_*(\varphi^\dagger(\alpha))})$ and $u$ are inverse isomorphisms. As 
+and leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dagger(\alpha))})$ and $u$ are inverse isomorphisms. As 
 $$ 
-\Big(\varphi_*\big(\varphi^\dagger(\alpha)\big)\Big)(j):=\varphi^\dagger(\alpha)(\varphi(j)):=\colim_{\varphi(j')\to\varphi(j)}\alpha(j'),
+\Big(\pp_*\big(\pp^\dagger(\alpha)\big)\Big)(j):=\pp^\dagger(\alpha)(\pp(j)):=\colim_{\pp(j')\to\pp(j)}\alpha(j'),
 $$
 we must define 
 $$
-u\big(\varphi(j')\to\varphi(j)\big):\alpha(j')\to\alpha(j),
+u\big(\pp(j')\to\pp(j)\big):\alpha(j')\to\alpha(j),
 $$
-that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\varphi$ is fully faithful by assumption, there is an obvious way to do it.
+that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it.
 
 %%
 
@@ -1422,20 +1422,20 @@ that is, we must attach, to each morphism $\varphi(j')\to\varphi(j)$, a morphism
 Here is a corollary to Theorem \ref{233i} p.~\pageref{233i} (which is Theorem 2.3.3 (i) p.~52):
 
 \begin{cor}\label{c233i}
-If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\varphi^\dagger(\beta)(i)$ is (in natural bijection with) the quotient of 
+If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\pp^\dagger(\beta)(i)$ is (in natural bijection with) the quotient of 
 $$
-\bigsqcup_{j\in J}\ \beta(j)\times\Hom_I(\varphi(j),i) 
+\bigsqcup_{j\in J}\ \beta(j)\times\Hom_I(\pp(j),i) 
 $$ 
-by the smallest equivalence relation $\sim$ satisfying the following condition: If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\varphi(j'),i)$, then 
+by the smallest equivalence relation $\sim$ satisfying the following condition: If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\pp(j'),i)$, then 
 $$
-(x,u'\circ\varphi(s))\sim(\beta(s)(x),u'). 
+(x,u'\circ\pp(s))\sim(\beta(s)(x),u'). 
 $$
 \end{cor}
 
 \begin{proof}
 Recall that Theorem~\ref{233i} states the existence of an isomorphism 
 $$
-\varphi^\dagger(\beta)(i)\simeq\colim_{(\varphi(j)\to i)\in J_i}\beta(j).
+\pp^\dagger(\beta)(i)\simeq\colim_{(\pp(j)\to i)\in J_i}\beta(j).
 $$
 By Proposition 2.4.1 p.~54 of the book, the right-hand side is, in a natural way, the quotient of 
 $$
@@ -1443,7 +1443,7 @@ $$
 $$ 
 modulo a certain equivalence relation. We have 
 $$
-\bigsqcup_{(\pp(j)\to i)\in J_i}\beta(j)=\bigsqcup_{j\in J}\ \bigsqcup_{u\in\Hom_I(\varphi(j),i)}\ \beta(j)\simeq\bigsqcup_{j\in J}\beta(j)\times\Hom_I(\varphi(j),i),
+\bigsqcup_{(\pp(j)\to i)\in J_i}\beta(j)=\bigsqcup_{j\in J}\ \bigsqcup_{u\in\Hom_I(\pp(j),i)}\ \beta(j)\simeq\bigsqcup_{j\in J}\beta(j)\times\Hom_I(\pp(j),i),
 $$ 
 and it easy to see that the three data of the above bijection, of the equivalence relation in Proposition 2.4.1 of the book, and of the equivalence relation in Corollary~\ref{c233i} above are compatible.
 \end{proof}
@@ -1452,19 +1452,19 @@ and it easy to see that the three data of the above bijection, of the equivalenc
 
 \subsection{Brief Comments}
 
-\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Section~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\varphi I$, where $I$ and $J$ are small. One can prove $\colim\beta\simeq\colim\varphi^\dagger\beta$, that is 
+\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Section~\ref{2111} p.~\pageref{2111}.) Recall that we have functors $\C\xleftarrow\beta J\xrightarrow\pp I$, where $I$ and $J$ are small. One can prove $\colim\beta\simeq\colim\pp^\dagger\beta$, that is 
 %
 \begin{equation}\label{coco}
 \colim_j\beta(j)\simeq\colim_i\ \colim_{j,u}\beta(j),
 \end{equation} 
 %
-where $(j,u)$ runs over $J_i$, with $u:\varphi(j)\to i$, as follows: Let $L$ and $R$ be the left and right-hand sides of \eqref{coco}, let $f:R\to L$ be the obvious map, and let
+where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$, as follows: Let $L$ and $R$ be the left and right-hand sides of \eqref{coco}, let $f:R\to L$ be the obvious map, and let
 $$ 
 \beta(j)\xrightarrow{p_{i,j,u}}\colim_{j,u}\beta(j)\xrightarrow{q_i}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
 be the coprojections (see Definition~\ref{c} p.~\pageref{c}). We easily check that the compositions 
 $$
-\beta(j)\xrightarrow{p_{\varphi(j),j,\id_{\varphi(j)}}}\colim_{j,u}\beta(j)\xrightarrow{q_{\varphi(j)}}\colim_i\ \colim_{j,u}\beta(j)
+\beta(j)\xrightarrow{p_{\pp(j),j,\id_{\pp(j)}}}\colim_{j,u}\beta(j)\xrightarrow{q_{\pp(j)}}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
 induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 \end{s} 
@@ -1641,9 +1641,9 @@ the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and
 P.~58, implication (vi) $\then$ (i) of Proposition 2.5.2. Here is a slightly stronger statement:
 %
 \begin{prop} 
-If $\varphi:J\to I$ is a functor, then the obvious map
+If $\pp:J\to I$ is a functor, then the obvious map
 \begin{equation}\label{om}
-L_i:=\colim\Hom_I(i,\varphi)\to\pi_0(J^i)
+L_i:=\colim\Hom_I(i,\pp)\to\pi_0(J^i)
 \end{equation}
 is bijective. 
 \end{prop}
@@ -1651,11 +1651,11 @@ is bijective.
 \begin{proof}
 For $j$ in $J$ let 
 $$
-p_j:\Hom_I(i,\varphi(j))\to L_i
+p_j:\Hom_I(i,\pp(j))\to L_i
 $$
 be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
 $$
-\Ob(J^i)\to L_i,\quad\big(j,s:i\to\varphi(j)\big)\mapsto p_j(s)
+\Ob(J^i)\to L_i,\quad\big(j,s:i\to\pp(j)\big)\mapsto p_j(s)
 $$
 factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}).
 \end{proof}
@@ -1979,7 +1979,7 @@ $$
 $$
 
 \begin{rk}\label{cof}
-Let $A'$ be in $\cc C'^\wedge$, and let $\cc C_{A'\circ F}\xr\varphi\cc C'_{A'}\xr\psi\C'^\wedge$ be the natural functors. By \eqref{263a} p.~\pageref{263a} the natural morphism $\colim\psi\circ\pp\to\colim\psi$ induces a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\varphi$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
+Let $A'$ be in $\cc C'^\wedge$, and let $\cc C_{A'\circ F}\xr\pp\cc C'_{A'}\xr\psi\C'^\wedge$ be the natural functors. By \eqref{263a} p.~\pageref{263a} the natural morphism $\colim\psi\circ\pp\to\colim\psi$ induces a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
 \end{rk}
 
 The proof is obvious.
@@ -2097,11 +2097,11 @@ Note that Corollary~\ref{sbc} generalizes the distributivity of multiplication o
 \begin{s} 
 P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of the following statement: 
 
-If $\varphi:J\to I$ is a functor with $I$ filtrant and $J$ finite, then $\lim\Hom_I(\varphi,i)\neq\varnothing$ for some $i$ in $I$. 
+If $\pp:J\to I$ is a functor with $I$ filtrant and $J$ finite, then $\lim\Hom_I(\pp,i)\neq\varnothing$ for some $i$ in $I$. 
 
 Indeed, let $S$ be a set of morphisms in $J$. It is easy to prove 
 $$
-(\exists\ i\in I)\left(\exists\ a\in\prod_{j\in J}\Hom_I(\varphi(j),i)\right)\ (\forall\ (s:j\to j')\in S)\ (a_{j'}\circ\varphi(s)=a_j) 
+(\exists\ i\in I)\left(\exists\ a\in\prod_{j\in J}\Hom_I(\pp(j),i)\right)\ (\forall\ (s:j\to j')\in S)\ (a_{j'}\circ\pp(s)=a_j) 
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the claim. q.e.d.
 \end{s}
@@ -2161,21 +2161,21 @@ P.~75, Proposition 3.1.8 (i). In the proof of Proposition 3.3.15 p.~85 of the bo
 Let 
 $$
 \begin{tikzcd}
-J\ar{r}{\varphi}&I\ar{r}{\theta}&L&K\ar{l}[swap]{\psi}
+J\ar{r}{\pp}&I\ar{r}{\theta}&L&K\ar{l}[swap]{\psi}
 \end{tikzcd}
 $$
-be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious functor $\varphi_k:J_{\psi(k)}\to I_{\psi(k)}$ is cofinal for all $k$ in $K$. Then $\varphi$ is cofinal. 
+be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious functor $\pp_k:J_{\psi(k)}\to I_{\psi(k)}$ is cofinal for all $k$ in $K$. Then $\pp$ is cofinal. 
 %
 \end{prop} 
 %
 \begin{proof}
 Pick a universe making $I,J,K$, and $L$ small, and let $\alpha:I\to\Set$ be a functor. We have the following five bijections:
 $$
-\colim\ \alpha\circ\varphi\ \simeq\ 
+\colim\ \alpha\circ\pp\ \simeq\ 
 %
-\colim_{\ell\in L}\ \colim_{\theta(\varphi(j))\to\ell}\ \alpha(\varphi(j))\ \simeq\ 
+\colim_{\ell\in L}\ \colim_{\theta(\pp(j))\to\ell}\ \alpha(\pp(j))\ \simeq\ 
 %
-\colim_{k\in K}\ \colim_{\theta(\varphi(j))\to\psi(k)}\ \alpha(\varphi(j))
+\colim_{k\in K}\ \colim_{\theta(\pp(j))\to\psi(k)}\ \alpha(\pp(j))
 $$
 $$
 \ \simeq\ \colim_{k\in K}\ \colim_{\theta(i)\to\psi(k)}\ \alpha(i)\ \simeq\ 
@@ -2184,7 +2184,7 @@ $$
 %
 \colim\ \alpha.
 $$
-Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco}, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\varphi_k$. In view of Proposition 2.5.2 p.~57 of the book, this proves the claim.
+Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco}, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\pp_k$. In view of Proposition 2.5.2 p.~57 of the book, this proves the claim.
 \end{proof}
 \end{s}
 
@@ -2208,10 +2208,10 @@ If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, t
 P.~78, Proposition 3.2.2. It is easy to see that Condition (iii) is equivalent to
 %
 \begin{equation}\label{78} 
-\colim\ \Hom_I(i,\varphi)\simeq\pt\quad\text{for all }i\in I, 
+\colim\ \Hom_I(i,\pp)\simeq\pt\quad\text{for all }i\in I, 
 \end{equation} 
 %
-which is Condition (vi) in Proposition 2.5.2 p.~57 of the book. (Proposition 2.5.2 states, among other things, that \eqref{78} is equivalent to the cofinality of $\varphi$.)
+which is Condition (vi) in Proposition 2.5.2 p.~57 of the book. (Proposition 2.5.2 states, among other things, that \eqref{78} is equivalent to the cofinality of $\pp$.)
 \end{s}
 
 %
@@ -2220,11 +2220,11 @@ which is Condition (vi) in Proposition 2.5.2 p.~57 of the book. (Proposition 2.5
 P.~80. Propositions 3.2.4 and 3.2.6 can be combined as follows. 
 
 \begin{prop}\label{comb}
-Let $\varphi:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally small, and that for each $i$ in $I$ there is a morphism $i\to\varphi(j)$ for some $j$ in $J$. Then $\varphi$ is cofinal and $J$ is filtrant and cofinally small. 
+Let $\pp:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally small, and that for each $i$ in $I$ there is a morphism $i\to\pp(j)$ for some $j$ in $J$. Then $\pp$ is cofinal and $J$ is filtrant and cofinally small. 
 \end{prop} 
 
 \begin{proof}
-In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By Proposition 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\varphi(j_s)$ with $j_s$ in $J$. Then, for each $j$ in $J$ there are morphisms $\varphi(j)\to s\to\varphi(j_s)$ with $s$ in $S$. As $\varphi$ is full there is a morphism $j\to j_s$, and we conclude by using again Proposition 3.2.6.
+In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By Proposition 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\pp(j_s)$ with $j_s$ in $J$. Then, for each $j$ in $J$ there are morphisms $\pp(j)\to s\to\pp(j_s)$ with $s$ in $S$. As $\pp$ is full there is a morphism $j\to j_s$, and we conclude by using again Proposition 3.2.6.
 \end{proof}
 \end{s}
 
@@ -2347,13 +2347,13 @@ This section is divided into two parts. In Part 1 we give a proof of Proposition
 
 The statement is phrased as follows: 
 
-``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\colim\alpha\simeq\colim_{j\in J}\colim_{i\in I_{\psi(j)}}\alpha(i,j,\varphi(i)\to\psi(j))$.'' 
+``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\colim\alpha\simeq\colim_{j\in J}\colim_{i\in I_{\psi(j)}}\alpha(i,j,\pp(i)\to\psi(j))$.'' 
 
 One needs some assumption ensuring the existence of the indicated inductive limits. Here we shall assume that $\C$ admits inductive limits indexed by $J$ and $I_{\psi(j)}$ for all $j$ in $J$. 
 
-Recall the notation. We have functors $I\xrightarrow\varphi K\xleftarrow\psi J$ between small categories, and 
+Recall the notation. We have functors $I\xrightarrow\pp K\xleftarrow\psi J$ between small categories, and 
 $$
-M:=M[I\xrightarrow\varphi K\xleftarrow\psi J] 
+M:=M[I\xrightarrow\pp K\xleftarrow\psi J] 
 $$ 
 is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\alpha:M\to\C$. 
 
@@ -2361,7 +2361,7 @@ Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor f
 $$
 j\mapsto\colim_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
 $$ 
-($u$ being a morphism in $K$ from $\varphi(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pageref{r52}. 
+($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pageref{r52}. 
 
 Isomorphism 
 %
@@ -2369,7 +2369,7 @@ Isomorphism
 \colim\alpha\simeq\colim_j\ \colim_{i,u}\alpha(i,j,u),
 \end{equation} 
 %
-where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\varphi(i)\to\psi(j)$), will result from 
+where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$), will result from 
 
 \begin{prop}
 Assume $I,J$, and $K$ are small categories, and $\beta:M^{\op}\to\Set$ is a functor. Then 
@@ -2415,7 +2415,7 @@ and let $\alpha:I\to\C$ be a functor. We must prove
 $$
 \colim_i\alpha(i)\simeq\colim_j\ \colim_{i,u}\alpha(i). 
 $$ 
-(Recall: $u:\varphi(i)\to j$.) In view of \eqref{coco2}, it suffices to prove that we have 
+(Recall: $u:\pp(i)\to j$.) In view of \eqref{coco2}, it suffices to prove that we have 
 $$
 \colim_{i,j,u}\alpha(i)\simeq\colim_i\alpha(i),
 $$ 
@@ -2425,7 +2425,7 @@ or, in other words, that
 \text{the projection $M\to I$ is cofinal.} 
 \end{equation} 
 %
-If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\varphi(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\varphi(i_0)\xr\id\varphi(i_0))$ is an initial object of $M^{i_0}$, and \eqref{coco3} follows.
+If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \eqref{coco3} follows.
 
 %%
 
@@ -2818,7 +2818,7 @@ If $\F\subset\G$ are full subcategories of $\C$ and $\F$ is strictly generating,
 Let 
 $$
 \begin{tikzcd}
-\C\ar{r}{\gamma}\ar{dr}[swap]{\varphi}&\G^\wedge\ar{d}{\rho}\\
+\C\ar{r}{\gamma}\ar{dr}[swap]{\pp}&\G^\wedge\ar{d}{\rho}\\
 &\F^\wedge
 \end{tikzcd}
 $$ 
@@ -2826,12 +2826,12 @@ be the natural functors ($\rho$ being the restriction), and let $X$ and $Y$ be i
 $$
 \begin{tikzcd}
 \Hom_\C(X,Y)\ar{r}{\gamma'}\ar{dr}{\sim}[swap]{\pp'}&\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))\ar{d}{\rho'}\\ 
-{}&\Hom_{\F^\wedge}(\varphi(X),\varphi(Y)). 
+{}&\Hom_{\F^\wedge}(\pp(X),\pp(Y)). 
 \end{tikzcd}
 $$ 
 We want to prove that $\gamma'$ is bijective. As $\pp'$ is bijective, it suffices to show that $\gamma'$ is surjective. Let $\xi$ be in $\Hom_{\G^\wedge}(\gamma(X),\gamma(Y))$. There is a (unique) $f$ in $\Hom_\C(X,Y)$ such that  
 \begin{equation}\label{rhoxi}
-\rho(\xi)=\varphi(f),
+\rho(\xi)=\pp(f),
 \end{equation}
 and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\Hom_\C(Z,X)$. It suffices to show that the morphisms 
 $$
@@ -2842,13 +2842,13 @@ $$
 coincide. As $\F$ is strictly generating, it suffices to show that the morphisms 
 $$
 \begin{tikzcd}
-\varphi(Z)\arrow[yshift=0.7ex]{rr}{\varphi(\xi_Z(z))}\arrow[yshift=-0.7ex]{rr}[swap]{\varphi(f\circ z)}&&\varphi(Y)
+\pp(Z)\arrow[yshift=0.7ex]{rr}{\pp(\xi_Z(z))}\arrow[yshift=-0.7ex]{rr}[swap]{\pp(f\circ z)}&&\pp(Y)
 \end{tikzcd}
 $$ 
 coincide. Let $W$ be in $\F$. It suffices to show that the maps 
 $$
 \begin{tikzcd}
-\varphi(Z)(W)\arrow[yshift=0.7ex]{rr}{\varphi(\xi_Z(z))_W}\arrow[yshift=-0.7ex]{rr}[swap]{\varphi(f\circ z)_W}&&\varphi(Y)(W)
+\pp(Z)(W)\arrow[yshift=0.7ex]{rr}{\pp(\xi_Z(z))_W}\arrow[yshift=-0.7ex]{rr}[swap]{\pp(f\circ z)_W}&&\pp(Y)(W)
 \end{tikzcd}
 $$ 
 coincide, that is, it suffices to show that the maps 
@@ -2859,10 +2859,10 @@ $$
 $$ 
 coincide. We have, for $w$ in $\Hom_\C(W,Z)$,
 $$
-\xi_Z(z)\circ w=\xi_W(z\circ w)=\rho(\xi)_W(z\circ w)=\varphi(f)_W(z\circ w)
+\xi_Z(z)\circ w=\xi_W(z\circ w)=\rho(\xi)_W(z\circ w)=\pp(f)_W(z\circ w)
 =f\circ z\circ w, 
 $$ 
-the first equality following from the functoriality of $\xi$ (see diagram below), the second one from the definition of $\rho$, the third one from \eqref{rhoxi}, and the fourth one from the definition of $\varphi$.
+the first equality following from the functoriality of $\xi$ (see diagram below), the second one from the definition of $\rho$, the third one from \eqref{rhoxi}, and the fourth one from the definition of $\pp$.
 \end{proof}
 For the reader's convenience, we add the following diagram:
 $$
@@ -2879,7 +2879,7 @@ $$
 P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
 
 \begin{lem}
-If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\varphi:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $A$ in $\F^\wedge$ we have 
+If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\pp:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $A$ in $\F^\wedge$ we have 
 $$
 \psi(A)\simeq\colim_{(Y\to A)\in\F_A}Y. 
 $$ 
@@ -2891,7 +2891,7 @@ $$
 \Hom_\C\left(\colim_{(Y\to A)\in\F_A}Y,X\right)\simeq\lim_{(Y\to A)\in\F_A}\Hom_\C(Y,X)
 $$ 
 $$
-\simeq\lim_{(Y\to A)\in\F_A}\varphi(X)(Y)\simeq\Hom_{\F^\wedge}(A,\varphi(X)),
+\simeq\lim_{(Y\to A)\in\F_A}\pp(X)(Y)\simeq\Hom_{\F^\wedge}(A,\pp(X)),
 $$  
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 \end{proof}
@@ -2921,15 +2921,15 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 
 \noindent Then $\F$ is strictly generating.
 
-(Recall that the functor $\varphi:\C\to\F^\wedge$ is defined by $\varphi(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\varphi$ is fully faithful.)
+(Recall that the functor $\pp:\C\to\F^\wedge$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.)
 %
 \begin{center}*\end{center}
 %
 Proof. We may assume from the beginning that $\F$ is small.
 
-\noindent Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\varphi$ is conservative and faithful.
+\noindent Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
 
-\noindent Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\varphi(f)$ is an epimorphism.
+\noindent Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
 \noindent Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism
 % 
@@ -2953,12 +2953,12 @@ $$
 $$
 Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism 
 $$
-\Hom_\C(\Coim z,Y)\simeq\Hom_{\F^\wedge}(\Coim\varphi(z),\varphi(Y)).
+\Hom_\C(\Coim z,Y)\simeq\Hom_{\F^\wedge}(\Coim\pp(z),\pp(Y)).
 $$ 
 
 \noindent Step 5. Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
 $$
-\colim_{A\in I}\varphi\zeta\xi(A)\to\varphi(X) 
+\colim_{A\in I}\pp\zeta\xi(A)\to\pp(X) 
 $$ 
 is an epimorphism.
 
@@ -2975,13 +2975,13 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 %
 &\simeq\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
 %
-&\simeq\lim_{A\in I}\Hom_{\F^\wedge}\Big(\Coim\varphi\xi(A),\varphi(Y)\Big)&\text{by Step 4}\\ \\ 
+&\simeq\lim_{A\in I}\Hom_{\F^\wedge}\Big(\Coim\pp\xi(A),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
 %
-&\simeq\Hom_{\F^\wedge}\left(\colim_{A\in I}\Coim\varphi\xi(A),\varphi(Y)\right)\\ \\ 
+&\simeq\Hom_{\F^\wedge}\left(\colim_{A\in I}\Coim\pp\xi(A),\pp(Y)\right)\\ \\ 
 %
-&\simeq\Hom_{\F^\wedge}\left(\Coim\left(\colim_{A\in I}\varphi\zeta\xi(A)\to\varphi(X)\right),\varphi(Y)\right)&\text{by Step 3'}\\ \\ 
+&\simeq\Hom_{\F^\wedge}\left(\Coim\left(\colim_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3'}\\ \\ 
 %
-&\simeq\Hom_{\F^\wedge}(\varphi(X),\varphi(Y))&\text{by Step 5.}
+&\simeq\Hom_{\F^\wedge}(\pp(X),\pp(Y))&\text{by Step 5.}
 %
 \end{align*} 
 %
@@ -2995,33 +2995,33 @@ $$
 $$
 \simeq\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\times_XZ,Y)\big),
 $$ 
-and also $\Hom_\C(Z,Y)\simeq\Hom_{\F^\wedge}(\varphi(Z),\varphi(Y))$ by the Yoneda Lemma. As $\varphi$ is faithful, the natural map 
+and also $\Hom_\C(Z,Y)\simeq\Hom_{\F^\wedge}(\pp(Z),\pp(Y))$ by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
 $$
-\Hom_\C(Z\times_XZ,Y)\to\Hom_{\F^\wedge}\big(\varphi(Z\times_XZ),\varphi(Y)\big)
+\Hom_\C(Z\times_XZ,Y)\to\Hom_{\F^\wedge}\big(\pp(Z\times_XZ),\pp(Y)\big)
 $$
 $$
-\simeq\Hom_{\F^\wedge}\big(\varphi(Z)\times_{\varphi(X)}\varphi(Z),\varphi(Y)\big).
+\simeq\Hom_{\F^\wedge}\big(\pp(Z)\times_{\pp(X)}\pp(Z),\pp(Y)\big).
 $$ 
 is injective. This yields 
 $$
 \Hom_\C(\Coim z,Y)
 $$
 $$
-\simeq\Ker\Big(\Hom_{\F^\wedge}\big(\varphi(Z),\varphi(Y)\big)\rightrightarrows\Hom_{\F^\wedge}\big(\varphi(Z)\times_{\varphi(X)}\varphi(Z),\varphi(Y)\big)\Big)
+\simeq\Ker\Big(\Hom_{\F^\wedge}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wedge}\big(\pp(Z)\times_{\pp(X)}\pp(Z),\pp(Y)\big)\Big)
 $$
 $$
-\simeq\Hom_{\F^\wedge}\Big(\Coker\big(\varphi(Z)\times_{\varphi(X)}\varphi(Z)\rightrightarrows\varphi(Z)\big),\varphi(Y)\Big)
+\simeq\Hom_{\F^\wedge}\Big(\Coker\big(\pp(Z)\times_{\pp(X)}\pp(Z)\rightrightarrows\pp(Z)\big),\pp(Y)\Big)
 $$
 $$
-\simeq\Hom_{\F^\wedge}(\Coim\varphi(z),\varphi(Y)).
+\simeq\Hom_{\F^\wedge}(\Coim\pp(z),\pp(Y)).
 $$
 Proof of Step 5. Let $Z$ be in $\F$. We must show that the natural map 
 $$
-\colim_{A\in I}\ (\varphi\zeta\xi(A))(Z)\to\varphi(X)(Z):=\Hom_\C(Z,X) 
+\colim_{A\in I}\ (\pp\zeta\xi(A))(Z)\to\pp(X)(Z):=\Hom_\C(Z,X) 
 $$
 is surjective. Let $z$ be in $\Hom_\C(Z,X)$. It suffices to check that $z$ is in the image of the natural map 
 $$
-(\varphi\zeta\xi(\{z\}))(Z)=\Hom_\C(Z,Z)\xrightarrow{z\circ}\Hom_\C(Z,X),
+(\pp\zeta\xi(\{z\}))(Z)=\Hom_\C(Z,Z)\xrightarrow{z\circ}\Hom_\C(Z,X),
 $$
 which is obvious. 
 
@@ -3043,7 +3043,7 @@ Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\
 % 
 is an epimorphism. Let 
 $$
-\colim_{A\in I}\varphi\zeta\xi(A)\xrightarrow{b}\varphi\left(\colim_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\varphi(X)
+\colim_{A\in I}\pp\zeta\xi(A)\xrightarrow{b}\pp\left(\colim_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\pp(X)
 $$
 be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \eqref{step6b} is also an epimorphism.
 
@@ -3312,14 +3312,14 @@ P.~136, proof of Proposition 6.1.18 (i) (minor variant). We must prove:
 
 If $\C$ admits cokernel, do does $\Ind(\C)$.
 
-If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\varphi_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
+If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\pp_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
 $$
-\colim_i\ \iota(\Coker(\varphi_i,\psi_i))\simeq
-\colim_i\ \Coker(\iota(\varphi_i),\iota(\psi_i))
+\colim_i\ \iota(\Coker(\pp_i,\psi_i))\simeq
+\colim_i\ \Coker(\iota(\pp_i),\iota(\psi_i))
 $$
 $$
 \simeq
-\Coker(\colim_i\ \iota(\varphi_i),\colim_i\ \iota(\psi_i))=
+\Coker(\colim_i\ \iota(\pp_i),\colim_i\ \iota(\psi_i))=
 \Coker(f,g),
 $$ 
 the first isomorphism following from the right exactness of $\iota$ (see Corollary 6.1.6 p~132 of the book). q.e.d.
@@ -3500,7 +3500,7 @@ $$
 
 We define the functor 
 $$ 
-\varphi:N'\to(\C/G(a))^{L/a} 
+\pp:N'\to(\C/G(a))^{L/a} 
 $$ 
 (see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) as follows. Let $((i_\ell),Q)$ be in $N'$. In particular, $Q$ is a functor from $L$ to $\C$, and we have, for each $b$ in $L$, a morphism 
 $$
@@ -3508,7 +3508,7 @@ Q(b)=\alpha_b(i_b)\xr{u'(b)}\icolim\alpha_b=G(b)
 $$ 
 in $\C$ (see \eqref{u':} p.~\pageref{u':}). Letting $b\xr f a$ be a morphism in $K$ viewed as an object of $L/a$, we put  
 $$
-\varphi((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right)\in\C/G(a).
+\pp((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right)\in\C/G(a).
 $$
 
 Letting 
@@ -3517,7 +3517,7 @@ $$
 $$ 
 be the diagonal functor, we can form the category 
 $$
-M:=M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right].
+M:=M\left[N'\xrightarrow{\pp}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right].
 $$ 
 Concretely, an object of $M$ is a triple 
 $$
@@ -3557,7 +3557,7 @@ If $f:b\to c$ is a morphism in $L$, then we set $P(f):=Q(f):P(b)\to P(c)$. Let $
 
 After a few verifications left to the reader, we get an equivalence 
 $$ 
-N\sim M\left[N'\xrightarrow{\varphi}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
+N\sim M\left[N'\xrightarrow{\pp}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$
 
 By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134 of the book. The only remaining task is to prove the lemma below.
@@ -3596,7 +3596,7 @@ Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')
 %
 \begin{proof}\ 
 
-\noindent(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\varphi:\alpha\to F\circ\beta$ such that 
+\noindent(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
@@ -3604,9 +3604,9 @@ $\alpha$ is constant equal to $X'$,
 
 $\ic F\circ\beta\simeq IF(A)$, 
 
-$\ic\varphi\simeq f$. 
+$\ic\pp\simeq f$. 
 
-\noindent Then $f$ factorizes as $X'=\alpha(j)\xr{\varphi_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
+\noindent Then $f$ factorizes as $X'=\alpha(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
 
 \noindent(b) $\then$ (c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
 
@@ -4077,7 +4077,7 @@ P. 177, Definition 8.3.5. The following definitions and observations are implici
 Let us just add a few more details about the proof of the isomorphisms
 \begin{equation}\label{834}
 \begin{split}
-\Ima u\simeq\Coker(\varphi:\Ima f\to\Ker g)\simeq\Coker(X'\to\Ker g)\\ 
+\Ima u\simeq\Coker(\pp:\Ima f\to\Ker g)\simeq\Coker(X'\to\Ker g)\\ 
 \simeq\Ker(\psi:\Coker f\to\Ima g)\simeq\Ker(\Coker f\to X''),
 \end{split}
 \end{equation}
@@ -4104,7 +4104,7 @@ Going back to our complex $X'\xr fX\xr gX''$, let us introduce the notation
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
-X'\ar[two heads]{r}{a}&I_f\ar[tail]{r}{\varphi}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&K'_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
+X'\ar[two heads]{r}{a}&I_f\ar[tail]{r}{\pp}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&K'_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
 K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[two heads]{rr}{h}&&K'_u\\ 
 &K'_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
 \end{tikzcd}
@@ -4117,7 +4117,7 @@ i\text{ and }j\text{ are isomorphisms.}
 We shall prove 
 $$
 \begin{tikzcd}
-K'_{\varphi\circ a}\ar{r}{k}[swap]{\sim}&K'_\varphi\ar{r}{\ell}[swap]{\sim}&K'_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
+K'_{\pp\circ a}\ar{r}{k}[swap]{\sim}&K'_\pp\ar{r}{\ell}[swap]{\sim}&K'_e\ar{r}{i}[swap]{\sim}&I_u\ar{r}{j}[swap]{\sim}&K_h\ar{r}{m}[swap]{\sim}&K_\psi\ar{r}{n}[swap]{\sim}&K_{d\circ\psi}.
 \end{tikzcd}
 $$
 This will imply \eqref{834} p.~\pageref{834}. 
@@ -4140,7 +4140,7 @@ We can thus complete our previous diagram as follows:
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
-X'\ar[two heads]{r}{a}&I_f\ar[dashed]{dl}[swap]{\sim}\ar[tail]{r}{\varphi}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&K'_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
+X'\ar[two heads]{r}{a}&I_f\ar[dashed]{dl}[swap]{\sim}\ar[tail]{r}{\pp}&K_g\ar[equal]{d}\ar[tail]{r}{b}&X\ar[two heads]{r}{c}&K'_f\ar[equal]{d}\ar[two heads]{r}{\psi}&I_g\ar[tail]{r}{d}&X''\\ 
 K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[two heads]{rr}{h}&&K'_u\ar[dashed]{ul}[swap]{\sim}\\ 
 &K'_e\ar{rr}{\sim}[swap]{i}&&I_u\ar[tail]{ur}\ar{rr}{\sim}[swap]{j}&&K_h.\ar[tail]{ul}
 \end{tikzcd}
@@ -4279,11 +4279,11 @@ P. 186, Definition 8.3.24 (definition of a Grothendieck category). By Lemma 8.3.
 %
 
 \begin{s} 
-P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a$ is in $U$ and 0 otherwise, and, for each $n$ in $\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n$ in $\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a$ is in $U\subset U_n$ and 0 otherwise. This family of morphisms defines, when $U$ varies, an epimorphism $\varphi_n:F_n\epi G$. Put 
+P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a$ is in $U$ and 0 otherwise, and, for each $n$ in $\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n$ in $\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a$ is in $U\subset U_n$ and 0 otherwise. This family of morphisms defines, when $U$ varies, an epimorphism $\pp_n:F_n\epi G$. Put 
 $$
-F:=\prod_{n\in\mathbb N}F_n,\quad H:=\prod_{n\in\mathbb N}G,\quad\varphi:=\prod_{n\in\mathbb N}\varphi_n:F\to H.
+F:=\prod_{n\in\mathbb N}F_n,\quad H:=\prod_{n\in\mathbb N}G,\quad\pp:=\prod_{n\in\mathbb N}\pp_n:F\to H.
 $$ 
-It suffices to show that the morphism $\varphi(a):F(a)\to H(a)$ between the stalks at $a$ induced by $\varphi$ is not an epimorphism. This is clear because $\varphi(a)$ is the natural morphism 
+It suffices to show that the morphism $\pp(a):F(a)\to H(a)$ between the stalks at $a$ induced by $\pp$ is not an epimorphism. This is clear because $\pp(a)$ is the natural morphism 
 $$
 \bigoplus_{n\in\mathbb N}\mathbb Z\to\prod_{n\in\mathbb N}\mathbb Z.
 $$
@@ -4296,18 +4296,18 @@ q.e.d.
 
 Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\times_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
-It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\circ a_0=\varphi$:
+It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\circ a_0=\pp$:
 $$
 \begin{tikzcd}
 X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}{g_0}\ar[tail]{r}{l_0}&X\\ 
-Z&&G_i.\ar[dashed]{ul}{a_0}\ar{u}[swap]{\varphi}
+Z&&G_i.\ar[dashed]{ul}{a_0}\ar{u}[swap]{\pp}
 \end{tikzcd}
 $$ 
 Form the cartesian square 
 $$
 \begin{tikzcd}
 Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar[tail]{d}{l_0}\\
-G_i\ar[swap]{r}{\varphi}&X,
+G_i\ar[swap]{r}{\pp}&X,
 \end{tikzcd}
 $$
 and the cocartesian square 
@@ -4345,7 +4345,7 @@ $$
 \begin{tikzcd}
 {}&Y_0\ar[equal]{d}\ar{rr}{l_0}&&X\ar[equal]{d}\\ 
 X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}[swap]{g_0}\ar[tail]{r}{\lambda}&Y_1\ar{dll}{g_1}\ar[tail]{r}{l_1}&X\\ 
-Z&&&G_i.\ar{u}[swap]{\varphi}\ar{lll}{d}\ar{ul}{a_1}
+Z&&&G_i.\ar{u}[swap]{\pp}\ar{lll}{d}\ar{ul}{a_1}
 \end{tikzcd}
 $$ 
 As $\lambda$ is an isomorphism by maximality of $(Y_0,g_0,l_0)$, we can set $a_0:=\lambda^{-1}\circ a_1$, and we get 
@@ -4360,7 +4360,7 @@ q.e.d.
 Then the diagram 
 $$
 \begin{tikzcd}
-0\ar{r}&Y\ar[equal]{d}\ar{r}{(b,-c)}&Y_0\oplus G_i\ar[equal]{d}\ar{r}{(l_0,\varphi)}&X\\
+0\ar{r}&Y\ar[equal]{d}\ar{r}{(b,-c)}&Y_0\oplus G_i\ar[equal]{d}\ar{r}{(l_0,\pp)}&X\\
 &Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
 \end{tikzcd}
 $$ 
@@ -4402,25 +4402,25 @@ where, we hope, the notation is self-explanatory.
 \begin{s} P.~191, proof of Theorem 8.5.8 (iii) (minor variant). Recall the statement: 
 
 \begin{lem}\label{858iii}
-Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring $\operatorname{End}_\C(G)^{\op}$, put $\M:=\Mod(R)$, let $\varphi:\C\to\M$ be the functor defined by $\varphi(X):=\Hom_\C(G,X)$. Then $\varphi$ is fully faithful. 
+Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring $\operatorname{End}_\C(G)^{\op}$, put $\M:=\Mod(R)$, let $\pp:\C\to\M$ be the functor defined by $\pp(X):=\Hom_\C(G,X)$. Then $\pp$ is fully faithful. 
 \end{lem}
 
 \begin{proof}
-Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\varphi$ and $\psi$ induce quasi-inverse equivalences 
+Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\pp$ and $\psi$ induce quasi-inverse equivalences 
 $$
 \begin{tikzcd}
-\C_0\ar[yshift=.7ex]{r}{\varphi_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
+\C_0\ar[yshift=.7ex]{r}{\pp_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
 \end{tikzcd}
 $$ 
 We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{small} p.~\pageref{small}). If $\lambda:\C\to(\C_0)^\wedge$ and $\lambda':\M\to(\M_0)^\wedge$ are the obvious functors, then the diagram 
 $$
 \begin{tikzcd}
-\C\ar{r}{\varphi}\ar{d}[swap]{\lambda}&\M\ar{d}{\lambda'}\\
-(\C_0)^\wedge\ar{r}[swap]{\widehat\varphi_{{}_0}}&(\M_0)^\wedge
+\C\ar{r}{\pp}\ar{d}[swap]{\lambda}&\M\ar{d}{\lambda'}\\
+(\C_0)^\wedge\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wedge
 \end{tikzcd}
 $$ 
 quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pageref{gcsbc} and Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}). %, and Remark 1.4.13 p.~27 of the book. 
- As $\widehat\varphi_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
+ As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -4454,21 +4454,21 @@ $$
 K\ar[tail]{r}{i}\ar[bend right]{rrr}{0}&G^F\ar[two heads]{r}{p}&\psi(M)\ar{r}{f}&G^{F'},
 \end{tikzcd}
 $$
-where $K:=\Ker(f\circ p)$. Applying $\varphi$ we obtain
+where $K:=\Ker(f\circ p)$. Applying $\pp$ we obtain
 $$
 \begin{tikzcd}
-\varphi(K)\ar{r}{\varphi(i)}\ar[bend right]{rrr}{0}&R^F\ar{r}{\varphi(p)}&\varphi(\psi(M))\ar{r}{\varphi(f)}&R^{F'}.
+\pp(K)\ar{r}{\pp(i)}\ar[bend right]{rrr}{0}&R^F\ar{r}{\pp(p)}&\pp(\psi(M))\ar{r}{\pp(f)}&R^{F'}.
 \end{tikzcd}
 $$
 The commutative diagram
 $$
 \begin{tikzcd}
-\varphi(K)\ar[equal]{d}\ar{rrr}{0}&&&R^{F'}\ar[equal]{d}\\
-\varphi(K)\ar{r}{\varphi(i)}&R^F\ar[equal]{d}\ar{r}{\varphi(p)}&\varphi(\psi(M))\ar{r}{\varphi(f)}&R^{F'}\ar[equal]{d}\\
-&R^F\ar{r}&M\ar[tail]{r}\ar{u}&R^{F'}
+\pp(K)\ar[equal]{d}\ar{rrr}{0}&&&R^{F'}\ar[equal]{d}\\
+\pp(K)\ar{r}{\pp(i)}&R^F\ar[equal]{d}\ar{r}{\pp(p)}&\pp(\psi(M))\ar{r}{\pp(f)}&R^{F'}\ar[equal]{d}\\
+&R^F\ar{r}[swap]{a}&M\ar[tail]{r}[swap]{b}\ar{u}&R^{F'}.
 \end{tikzcd}
 $$ 
-implies $\varphi(p)\circ\varphi(i)=0$, and thus, $\varphi$ being faithful by Lemma~\ref{858iii} p.~\pageref{858iii}, 
+yields $b\circ a\circ\pp(i)=0$. As $b$ is a monomorphism, we get $a\circ\pp(i)=0$, and thus $\pp(p)\circ\pp(i)=0$. Since $\pp$ is faithful by Lemma~\ref{858iii} p.~\pageref{858iii}, this implies 
 %
 \begin{equation}\label{pi=0}
 p\circ i=0.
@@ -4483,22 +4483,22 @@ x=0.
 As $p$ is an epimorphism, the diagram of solid arrows 
 $$
 \begin{tikzcd}
-Y\ar[dashed]{d}[swap]{y}\ar[dashed, two heads]{r}{a}&X\ar{d}{x}\\ 
+Y\ar[dashed]{d}[swap]{y}\ar[dashed, two heads]{r}{c}&X\ar{d}{x}\\ 
 G^F\ar[two heads]{r}[swap]{p}&\psi(M)
 \end{tikzcd}
 $$ 
-can be completed, by Lemma~\ref{8312} p.~\pageref{8312}, (a)$\ssi$(b), to a commutative square as indicated, $a$ being an epimorphism. The commutative diagram of solid arrows 
+can be completed, by Lemma~\ref{8312} p.~\pageref{8312}, (a)$\ssi$(b), to a commutative square as indicated, $c$ being an epimorphism. The commutative diagram of solid arrows 
 $$
 \begin{tikzcd}
-{}&Y\ar[dashed]{dl}[swap]{z}\ar{d}{y}\ar[two heads]{r}{a}&X\ar{d}[swap]{x}\ar{dr}{0}\\ 
+{}&Y\ar[dashed]{dl}[swap]{z}\ar{d}{y}\ar[two heads]{r}{c}&X\ar{d}[swap]{x}\ar{dr}{0}\\ 
 K\ar{r}[swap]{i}&G^F\ar[two heads]{r}[swap]{p}&\psi(M)\ar{r}[swap]{f}&G^F
 \end{tikzcd}
 $$ 
 can in turn be completed to a commutative diagram as indicated, and we get 
 $$
-x\circ a=p\circ i\circ z=0 
+x\circ c=p\circ i\circ z=0 
 $$  
-by \eqref{pi=0}. As $a$ is an epimorphism, this implies successively \eqref{x=0}, \eqref{fpsi}, and the lemma. 
+by \eqref{pi=0}. As $c$ is an epimorphism, this implies successively \eqref{x=0}, \eqref{fpsi}, and the lemma. 
 \end{proof}
 \end{s}
 
@@ -4730,9 +4730,9 @@ Let $\pi$ be an infinite cardinal and $I$ a small category. Then $I$ is $\pi$-{\
 P.~218. One can make the following observation after Definition 9.2.2: If $I$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$, then $I$ is $\pi$-filtrant.
 
 \begin{proof}
-For $\varphi:J\to I$ we have
+For $\pp:J\to I$ we have
 $$
-\lim\Hom_\C(\varphi,\colim\varphi)\xleftarrow\sim\Hom_\C(\colim\varphi,\colim\varphi)\neq\varnothing.
+\lim\Hom_\C(\pp,\colim\pp)\xleftarrow\sim\Hom_\C(\colim\pp,\colim\pp)\neq\varnothing.
 $$
 \end{proof}
 \end{s}
@@ -4783,15 +4783,15 @@ and let $\pp:J\to\C_A$ be a functor. By Proposition 9.2.1 p.~217 of the book, it
 $$
 \lim\Hom_{\C_A}(\pp,\xi)\neq\varnothing
 $$ 
-for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\varphi$ with the natural functor $\C_A\to\C$, and write 
+for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\pp$ with the natural functor $\C_A\to\C$, and write 
 $$
-\varphi(j)=(\psi(j),\psi(j)\xr{y_j}A).
+\pp(j)=(\psi(j),\psi(j)\xr{y_j}A).
 $$ 
 In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\colim\psi$ exists in $\C$. Let $p_j:\psi(j)\to\colim\psi$ be the coprojection. By surjectivity of (9.2.2) p.~222 of the book, there is an $x:\colim\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Letting 
 $$
 \xi=(\colim\psi,\colim\psi\xr x A)\in\C_A
 $$ 
-be such that $x\circ p_j=y_j$ for all $j$, and letting $f_j:\varphi(j)\to\xi$ be the obvious morphism, we have $(f_j)\in\lim\Hom_{\C_A}(\varphi,\xi)$. q.e.d.
+be such that $x\circ p_j=y_j$ for all $j$, and letting $f_j:\pp(j)\to\xi$ be the obvious morphism, we have $(f_j)\in\lim\Hom_{\C_A}(\pp,\xi)$. q.e.d.
 \end{s}
 
 %%
@@ -5812,13 +5812,13 @@ P. 250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pagere
 \begin{s} P. 263, last sentence of the proof of Lemma 10.5.8. We already know that the bottom row of the diagram 
 $$
 \begin{tikzcd}
-\oplus_i\,\varphi(Z_i)\ar[equal]{d}\ar{r}&\oplus_i\,\varphi(Y_i)\ar[equal]{d}\ar{r}&\oplus_i\,\widetilde\varphi(X_i)\ar{d}\ar{r}&0\\ 
-\oplus_i\,\varphi(Z_i)\ar{r}&\oplus_i\,\varphi(Y_i)\ar{r}&\widetilde\varphi(\oplus_i\,X_i)\ar{r}&0 
+\oplus_i\,\pp(Z_i)\ar[equal]{d}\ar{r}&\oplus_i\,\pp(Y_i)\ar[equal]{d}\ar{r}&\oplus_i\,\widetilde\pp(X_i)\ar{d}\ar{r}&0\\ 
+\oplus_i\,\pp(Z_i)\ar{r}&\oplus_i\,\pp(Y_i)\ar{r}&\widetilde\pp(\oplus_i\,X_i)\ar{r}&0 
 \end{tikzcd}
 $$ 
 is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 (ii) p.~261) from the isomorphisms 
 $$
-\Coker(\oplus_i\,\varphi(Z_i)\to\oplus_i\,\varphi(Y_i))\simeq\oplus_i\,\Coker(\varphi(Z_i)\to\varphi(Y_i))\simeq\oplus_i\,\widetilde\varphi(X_i).
+\Coker(\oplus_i\,\pp(Z_i)\to\oplus_i\,\pp(Y_i))\simeq\oplus_i\,\Coker(\pp(Z_i)\to\pp(Y_i))\simeq\oplus_i\,\widetilde\pp(X_i).
 $$
 \end{s}
 
@@ -5828,7 +5828,7 @@ $$
 
 Recall the Yoneda isomorphisms 
 $$
-\Hom_{\cc S^{\wedge,\text{prod}}}(\varphi(X),H_0)\simeq H(X)\simeq\Hom_{\cc D^\wedge}(X,H)
+\Hom_{\cc S^{\wedge,\text{prod}}}(\pp(X),H_0)\simeq H(X)\simeq\Hom_{\cc D^\wedge}(X,H)
 $$ 
 for $X$ in $\cc S$.
 
@@ -6054,7 +6054,7 @@ is exact.
 \end{proof}
 %
 \begin{prop}[Corollary 12.2.6 p.~302]\label{sl4}
-Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\varphi:\Mc(f)\to Z$ by $\varphi:=(0,g)$. Then $\varphi$ is a morphism in $\A_c$ and is a qis. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
+Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\pp:\Mc(f)\to Z$ by $\pp:=(0,g)$. Then $\pp$ is a morphism in $\A_c$ and is a qis. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$
@@ -6071,9 +6071,9 @@ $$
 $$ 
 yields the exact sequence 
 $$
-0\to\Mc(\id_X)\to\Mc(f)\xr\varphi\Mc(0\to Z)\to0
+0\to\Mc(\id_X)\to\Mc(f)\xr\pp\Mc(0\to Z)\to0
 $$
-in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\varphi$ is a qis by Lemma~\ref{sl2}.
+in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\pp$ is a qis by Lemma~\ref{sl2}.
 \end{proof}
 
 %%%
@@ -6669,9 +6669,9 @@ $$
 $$ 
 satisfies $A^a(U)\simeq\colim\alpha$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of the book, there is a morphism 
 $$
-\varphi:(B\xr sU)\to(U\xr{\id_U}U)
+\pp:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
-in $\cc{LI}_U$ such that $\alpha(\varphi)(f_1)=\alpha(\varphi)(f_2)$. This means that the compositions $B\to U\parar A$ coincide. q.e.d.
+in $\cc{LI}_U$ such that $\alpha(\pp)(f_1)=\alpha(\pp)(f_2)$. This means that the compositions $B\to U\parar A$ coincide. q.e.d.
 \end{s}
 
 %
@@ -7587,13 +7587,13 @@ K(U):=\Ker\left(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\right)
 $$ 
 Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$ by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U$ in $\C_X$. Let $U$ be in $\C_X$, let $\pp:M'(U)\to M(U)$ be the morphism given by $\psi$, and $s$ in $K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of the morphism 
 $$
-\varphi_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
+\pp_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
 $$ 
 induced by $\pp$, and it suffices to prove $s=0$. Write 
 $$
 s=\sum_{i=1}^na'_i\otimes b_i
 $$ 
-with $a'_i$ in $M'(U)$ and $b_i$ in $P(U)$, and put $a_i:=\varphi(a_i')\in M(U)$, so that we have 
+with $a'_i$ in $M'(U)$ and $b_i$ in $P(U)$, and put $a_i:=\pp(a_i')\in M(U)$, so that we have 
 $$
 \sum_{i=1}^n\,a_i\otimes b_i=0,
 $$ 
@@ -7611,7 +7611,7 @@ The above commutative diagram of complexes gives rise to the commutative diagram
 \begin{tikzcd}
 {}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
 \cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}{q}\\ 
-M'(U)\ar{r}[swap]{\varphi}&M(U).
+M'(U)\ar{r}[swap]{\pp}&M(U).
 \end{tikzcd}
 \end{equation}
 %
@@ -7620,7 +7620,7 @@ $$
 \begin{tikzcd}
 {}&P(U)^m\ar{d}{g_1}\\ 
 P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
-s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U).
+s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
 By Lemma~\ref{techlem} p.~~\pageref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$, and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
@@ -7629,11 +7629,11 @@ $$
 \begin{tikzcd}
 N\ar{r}\ar{d}&(\cc R^{\op}|_U)^m\ar{d}{g_2}\\ 
 (\cc R^{\op}|_U)^n\ar{r}{h_2}\ar{d}[swap]{f_2}&(\cc R^{\op}|_U)^\ell\ar{d}{q_2}\\ 
-M'|_U\ar{r}[swap]{\varphi_2}&M|_U,
+M'|_U\ar{r}[swap]{\pp_2}&M|_U,
 \end{tikzcd}
 \right.
 $$
-the top square being cartesian. Then $\varphi_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption), and $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
+the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption), and $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
@@ -7644,7 +7644,7 @@ $$
 \begin{tikzcd}
 (N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{r_1}&P(U)^m\ar{d}{g_1}\ni(b'_j)\\ 
 (b_i)\in P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
-s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\varphi_1}&M(U)\otimes_{\cc R(U)}P(U),
+s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U),
 \end{tikzcd}
 $$ 
 has also a cartesian top square. In other words, we have 
