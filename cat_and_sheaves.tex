@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0210)
+% about "categories and sheaves" (version-0211)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -13,7 +13,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 %%\usepackage{showlabels}
 %\usepackage{showkeys}
@@ -4320,23 +4320,16 @@ $$
 Let $l_1:Y_1\to X$ be the morphism which makes the diagram 
 $$
 \begin{tikzcd}
-{}&Y_0\ar{d}{\lambda}\ar{dr}{l_0}\\ 
-Y\ar{ur}{b}\ar{dr}[swap]{d}&Y_1\ar[dashed]{r}{l_1}&X\\ 
+{}&Y_0\ar{d}[swap]{\lambda}\ar{dr}{l_0}\\ 
+Y\ar{ur}{b}\ar{dr}[swap]{c}&Y_1\ar[dashed]{r}{l_1}&X\\ 
 {}&G_i\ar{u}{a_1}\ar{ru}[swap]{\pp}
 \end{tikzcd}
 $$ 
-commutative. Then the diagram 
+commutative. By Lemma 8.3.11 (a) (i) p.~180 of the book, $c$ is a monomorphism, and, by Part (a) (i) of the same lemma, $\lambda$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$: 
 $$
 \begin{tikzcd}
-0\ar{r}&Y\ar[equal]{d}\ar{r}{(b,-c)}&Y_0\oplus G_i\ar[equal]{d}\ar{r}{(l_0,\varphi)}&X\\
-&Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
-\end{tikzcd}
-$$ 
-commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 of the book implies that $c$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$:
-$$
-\begin{tikzcd}
-Y\ar{d}[swap]{b}\ar[tail]{r}{c}&G_i\ar[dashed]{d}{d}\\ 
-Y_0\ar{r}[swap]{g_0}&Z.
+Y\ar{r}{b}\ar[tail]{d}[swap]{c}&Y_0\ar{d}{g_0}\\ 
+G_i\ar[dashed]{r}[swap]{d}&Z.
 \end{tikzcd}
 $$ 
 By the definition of $Y_1$ there is a morphism $g_1:Y_1\to Z$ such that 
@@ -4360,6 +4353,19 @@ $$
 l_0\circ a_0=l_0\circ\lambda^{-1}\circ a_1=l_1\circ\lambda\circ\lambda^{-1}\circ a_1=l_1\circ a_1=\pp.
 $$ 
 q.e.d.
+
+%
+
+\begin{comment}
+Then the diagram 
+$$
+\begin{tikzcd}
+0\ar{r}&Y\ar[equal]{d}\ar{r}{(b,-c)}&Y_0\oplus G_i\ar[equal]{d}\ar{r}{(l_0,\varphi)}&X\\
+&Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
+\end{tikzcd}
+$$ 
+commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 of the book implies that $c$ is also a monomorphism.
+\end{comment}
 
 %%%
 
