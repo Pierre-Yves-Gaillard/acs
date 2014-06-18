@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0214)
+% about "categories and sheaves" (version-0215)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4535,7 +4535,7 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 
 \subsubsection{Preliminaries}\label{preli}
 
-The following statements are easy to prove.
+Consider the following statements.
 
 \nn(a) Let $X\xr fY\xr gZ$ be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
 $$
@@ -4552,18 +4552,32 @@ X\ar[two heads]{dd}\ar{rr}{f}&&Y\ar[two heads]{dl}\ar{dd}{g}\\
 \Ima(g\circ f)\ar[dashed,tail]{ur}\ar[tail]{rr}&&Z.
 \end{tikzcd}
 $$ 
-In particular $\Ima(g\circ f)\to\Ima g$ is a monomorphism.
+In particular $\Ima(g\circ f)\to\Ima g$ is a monomorphism. 
+
+\begin{proof} 
+The rows of the diagram 
+$$
+\begin{tikzcd}
+{}&X\times_ZX\ar{r}{a}&X\ar{d}[swap]{f}\ar{r}{d}&\Coim g\circ f\ar{r}\ar[dashed]{ddl}{b}&0\\ 
+{}&{}&Y\ar{d}[swap]{g}\\
+0\ar{r}&\Ima g\ar{r}&Z\ar{r}[swap]{c}&Z\oplus_YZ
+\end{tikzcd}
+$$ 
+are exact sequences. The existence of $b$ follows from the vanishing of $g\circ f\circ a$. To prove the existence of $\Coim g\circ f\to\Ima g$, it suffices to verify the vanishing of $c\circ b$. As $d$ is an epimorphism, the vanishing of $c\circ b$ is equivalent to the vanishing of $c\circ b\circ d$. But we have $c\circ b\circ d=c\circ g\circ f=0\circ f=0$. 
+\end{proof} 
 
 \nn(b) If in addition $f$ is an epimorphism, then $\Ima(g\circ f)\to\Ima g$ is an isomorphism. 
 
-It suffices to prove that $\Ima(g\circ f)\to\Ima g$ is an epimorphism. Let $\Ima g\to W$ be a morphism whose composition with $\Ima(g\circ f)\to\Ima g$ vanishes, and let us check that $\Ima g\to W$ vanishes. This follows immediately form the commutative diagram 
+\begin{proof} 
+Consider the commutative square  
 $$
 \begin{tikzcd}
-X\ar{d}\ar[two heads]{r}&Y\ar[two heads]{d}\\ 
-\Ima(g\circ f)\ar{dr}[swap]{0}\ar{r}&\Ima g\ar{d}\\ 
-{}&W.
+X\ar{d}\ar{r}{f}&Y\ar{d}{a}\\ 
+\Ima g\circ f\ar{r}[swap]{b}&\Ima g,
 \end{tikzcd}
-$$
+$$ 
+where $a$ and $b$ are the natural morphisms. As $f$ and $a$ are epimorphisms, so is $b$. 
+\end{proof} 
 
 %%
 
