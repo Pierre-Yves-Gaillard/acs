@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0217)
+% about "categories and sheaves" (version-0218)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4763,7 +4763,7 @@ P.~218, Lemma 9.2.5. Clearly, $I$ satisfies condition (a) in Proposition~\ref{pp
 For the reader's convenience we state and prove Proposition 9.2.10 p. 220. 
 
 \begin{prop}[Proposition 9.2.10 p. 220]
-If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satisfying $\card(\Mor(\C))<\pi$, if $\beta:J\to\C_\pi$ is a functor, and if $\colim\beta$ exists in $\C$, then it belongs to $\C_\pi$. 
+If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satisfying $\card(\Mor(J))<\pi$, if $\beta:J\to\C_\pi$ is a functor, and if $\colim\beta$ exists in $\C$, then it belongs to $\C_\pi$. 
 \end{prop}
 
 \begin{proof}
@@ -4789,6 +4789,16 @@ P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 
 \begin{s} 
 P.~222, Proposition 9.2.17, proof of implication (ii) $\then$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
+
+Recall the setting: $\C$ is a category admitting inductive limits indexed by any category $J$ such that $\card(\Mor(J))<\pi$, and $A$ is in $\Ind(\C)$. Conditions (i) and (ii) are as follows: 
+
+\nn(i) $A$ is in $\Ind^\pi(\C)$, 
+
+\nn(ii) for any category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to\C$, the natural map 
+$$
+A(\colim\pp)\to\lim A(\pp)
+$$ 
+is surjective. 
 
 It suffices to show that $\C_A$ is $\pi$-filtrant. Let $J$ be a category satisfying 
 $$
