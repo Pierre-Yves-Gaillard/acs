@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0216)
+% about "categories and sheaves" (version-0217)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4726,14 +4726,14 @@ is surjective.
 
 {\em(c2)} for any $i$ and $j$ in $I$ and for any $B\subset\Hom_I(i,j)$ such that $\card(B)<\pi$ there is a morphism $j\to k$ in $I$ such that the composition $i\xr sj\to k$ does not depend on $s\in B$.
 
-\nn{\em(d)} For any small category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim_{j\in J}\Hom_I(\pp(j),i)\neq\varnothing$. 
+\nn{\em(d)} For any small category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim\Hom_I(\pp,i)\neq\varnothing$. 
 \end{prop}
 
 \begin{proof}
 Implications (c) $\ssi$ (d) $\then$ (a) are proved in Proposition 9.2.1 p.~217 and Proposition 9.2.9 p.~219 of the book. Implication (a) $\then$ (b) is obvious. The proof of Implication (b) $\then$ (d) is the same as the proof of Implication (b) $\then$ (a) in Theorem 3.1.6 p.~74 of the book.
 \end{proof}
 
-\begin{df}%\label{dpifil}
+\begin{df}
 Let $\pi$ be an infinite cardinal and $I$ a small category. Then $I$ is $\pi$-{\em filtrant} if (and only if) the equivalent conditions of Proposition~\ref{ppifil} are satisfied.
 \end{df}
 \end{s}
@@ -4767,14 +4767,15 @@ If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satis
 \end{prop}
 
 \begin{proof}
-Consider the commutative diagram
+Let $\alpha:I\to\C$ be a functor with $I$ small and $\pi$-filtrant, and consider the commutative diagram
 $$
 \begin{tikzcd}
-\colim_i\Hom_\C(\colim_j\beta(j),\alpha(i))\ar{r}\ar{d}[swap]{\sim}&\Hom_\C(\colim_j\beta(j),\colim_i\alpha(i))\ar{dd}{\sim}\\ 
-\colim_i\lim_j\Hom_\C(\beta(j),\alpha(i))\ar{d}[swap]{\sim}\\ 
-\lim_j\colim_i\Hom_\C(\beta(j),\alpha(i))\ar{r}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\colim_i\alpha(i)).
+\colim_i\Hom_\C(\colim_j\beta(j),\alpha(i))\ar{r}{a}\ar{d}{b}[swap]{\sim}&\Hom_\C(\colim_j\beta(j),\colim_i\alpha(i))\ar{dd}{e}[swap]{\sim}\\ 
+\colim_i\lim_j\Hom_\C(\beta(j),\alpha(i))\ar{d}{c}[swap]{\sim}\\ 
+\lim_j\colim_i\Hom_\C(\beta(j),\alpha(i))\ar{r}{d}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\colim_i\alpha(i)).
 \end{tikzcd}
-$$
+$$ 
+The morphisms $b$ and $e$ are isomorphisms for obvious reasons. The morphism $c$ is an isomorphism because of our assumptions about $I$ and $J$. The morphism $d$ is an isomorphism because $\beta(j)$ is in $\C_\pi$ for all $j$. Thus, the morphism $a$ is an isomorphism. 
 \end{proof}
 \end{s}
 
