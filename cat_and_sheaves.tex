@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0220)
+% about "categories and sheaves" (version-0221)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -19,21 +19,26 @@
 %\usepackage{showkeys}
 \makeindex
 \pagestyle{fancy}%\pagestyle{empty}
+
 \newtheorem{thm}{Theorem}%\newtheorem{mt}[thm]{Metatheorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{df}[thm]{Definition}%\newtheorem{defn}[thm]{Definition}
 \newtheorem{nota}[thm]{Notation}
+
 \theoremstyle{remark}
+\newtheorem{claim}[thm]{Claim}
 \newtheorem{cond}[thm]{Condition}
 \newtheorem{conv}[thm]{Convention}
 %\newtheorem{q}[thm]{Question}
 \newtheorem{rk}[thm]{Remark}
+
 \theoremstyle{definition}
 \newtheorem{s}[thm]{\S}%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
+
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
-%
+
 \newcommand{\dis}{\displaystyle}\newcommand{\ds}{\displaystyle}
 \newcommand{\bu}{\bullet}
 \newcommand{\nn}{\noindent}
@@ -4132,7 +4137,7 @@ $$
 u\circ\pp\circ a=c\circ f=0.
 $$ 
 As $a$ is an epimorphism, this implies $u\circ\pp=0$. 
-%$$\begin{tikzcd}X'\ar[two heads]{d}[swap]{a}\ar{r}{f}&X\ar[two heads]{d}{c}\ar{r}{g}&X''\\ I_f\ar[tail]{ru}\ar{r}[swap]{u\circ\pp}&C_f\ar[two heads]{r}&I_g.\ar[tail]{u}\end{tikzcd}$$???
+%$$\begin{tikzcd}X'\ar[two heads]{d}[swap]{a}\ar{r}{f}&X\ar[two heads]{d}{c}\ar{r}{g}&X''\\ I_f\ar[tail]{ru}\ar{r}[swap]{u\circ\pp}&C_f\ar[two heads]{r}&I_g.\ar[tail]{u}\end{tikzcd}$$
 
 It is easy to see that there is a natural monomorphisms from $K_u$ to $K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$. 
 
@@ -4902,7 +4907,7 @@ The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As sma
 \subsubsection{Proposition 9.3.2 (p. 224)}
 
 \begin{prop}[Proposition 9.3.2 p.~224]\label{932}
-If $\pi$ is an infinite regular cardinal, if $A$ is in $\C$, and if 
+Let $\C$ be a category satisfying Conditions (9.3.1) of the book, conditions stated in Section~\ref{931} p.~\pageref{931} above. If $\pi$ is an infinite regular cardinal, if $A$ is in $\C$, and if 
 $$
 \card(A(G))<\pi,\quad\card(G^{\sqcup A(G)}(G))<\pi,
 $$ 
@@ -4912,26 +4917,31 @@ then $A$ is in $\C_\pi$.
 Here is a rewriting of the proof with a few more details:
 
 \begin{proof}
-$*$ Step 1. Note that $\Set\ni Y\mapsto G^{\sqcup S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\sqcup S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
+$*$ Step 1. Note that $\Set\ni S\mapsto G^{\sqcup S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\sqcup S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
 $$S\to A(G)\to S$$ 
 whose composition is the identity. Hence, the composition 
 $$G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)$$ 
 is the identity.
 
-\nn $*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map $\lambda$ below is bijective: 
+\nn $*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map 
 $$
 \lambda:\colim_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
-$$
+$$ 
+is bijective. 
 
 Let us show that $\lambda$ is injective. (Here we shall only use $\card(A(G))<\pi$.)
 
-Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to X$ coincide. For each $s:i_0\to i$, set $N_s:=\Ker(A\parar X_i)$. As $\colim_{s\in I^{i_0}}$ is exact in $\C$ by assumption, we get, in view of Corollary 3.2.3 (i) p.~79 of the book, 
+Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to X$ coincide. For each $s:i_0\to i$, set $N_s:=\Ker(A\parar X_i)$. By Corollary 3.2.3 (i) p.~79 of the book, $I^{i_0}$ is filtrant and the forgetful functor $I^{i_0}\to I$ is cofinal. One of our assumption, namely Condition (9.3.1) (iii) of the book, stated in Section~\ref{931} p.~\pageref{931}, says that small filtrant inductive limits are exact in $\C$. In particular, $\colim_{s\in I^{i_0}}$ is exact in $\C$, and we get  
 $$
 \colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
 $$ 
 As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
 
-It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to define a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection. 
+It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to prove the 
+
+\begin{claim}\label{pig=f}
+There is a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection.
+\end{claim}  
 
 \nn $*$ Step 3. Consider the following conditions:
 
@@ -4955,7 +4965,7 @@ X_{i_0}\ar{r}[swap]{p_{i_0}}&X
 %
 can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (the morphism $C\to A$ being an epimorphism).
 
-We shall show that (a) holds, that (a) implies (b), and that (b) implies the surjectivity of $\lambda$.
+We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. 
 
 \nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
@@ -4984,7 +4994,7 @@ C\ar{r}\ar{rdd}[swap]{x}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 $$ 
 This proves (b).
 
-\nn $*$ Step 6: (b) implies the surjectivity of $\lambda$. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
+\nn $*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
 $$
 \mu:\colim_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
