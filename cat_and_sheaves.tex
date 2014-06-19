@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0218)
+% about "categories and sheaves" (version-0219)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4788,23 +4788,19 @@ P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
 %
 
 \begin{s} 
-P.~222, Proposition 9.2.17, proof of implication (ii) $\then$ (i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
+P.~222, Proposition 9.2.17, proof of implication (ii)$\then$(i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
 
 Recall the setting: $\C$ is a category admitting inductive limits indexed by any category $J$ such that $\card(\Mor(J))<\pi$, and $A$ is in $\Ind(\C)$. Conditions (i) and (ii) are as follows: 
 
-\nn(i) $A$ is in $\Ind^\pi(\C)$, 
+\nn(i) $\C_A$ is $\pi$-filtrant, 
 
-\nn(ii) for any category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to\C$, the natural map 
-$$
-A(\colim\pp)\to\lim A(\pp)
-$$ 
-is surjective. 
+\nn(ii) for any category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to\C$, the natural map $A(\colim\pp)\to\lim A(\pp)$ is surjective. 
 
-It suffices to show that $\C_A$ is $\pi$-filtrant. Let $J$ be a category satisfying 
+To prove (ii)$\then$(i), let $J$ be a category satisfying 
 $$
 \card(\Mor(J))<\pi,
 $$ 
-and let $\pp:J\to\C_A$ be a functor. By Proposition 9.2.1 p.~217 of the book, it is enough to prove 
+and let $\pp:J\to\C_A$ be a functor. We must find a $\xi$ in $\C_A$ satisfying 
 $$
 \lim\Hom_{\C_A}(\pp,\xi)\neq\varnothing
 $$ 
@@ -4812,11 +4808,11 @@ for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\pp$ with the
 $$
 \pp(j)=(\psi(j),\psi(j)\xr{y_j}A).
 $$ 
-In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\colim\psi$ exists in $\C$. Let $p_j:\psi(j)\to\colim\psi$ be the coprojection. By surjectivity of (9.2.2) p.~222 of the book, there is an $x:\colim\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Letting 
+In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\colim\psi$ exists in $\C$. Let $p_j:\psi(j)\to\colim\psi$ be the coprojection. By surjectivity of the map $A(\colim\pp)\to\lim A(\pp)$ in (ii), there is an $x:\colim\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Setting 
 $$
-\xi=(\colim\psi,\colim\psi\xr x A)\in\C_A
+\xi:=(\colim\psi,\colim\psi\xr x A)\in\C_A,
 $$ 
-be such that $x\circ p_j=y_j$ for all $j$, and letting $f_j:\pp(j)\to\xi$ be the obvious morphism, we have $(f_j)\in\lim\Hom_{\C_A}(\pp,\xi)$. q.e.d.
+and letting $f_j:\pp(j)\to\xi$ be the obvious morphism, we get $(f_j)\in\lim\Hom_{\C_A}(\pp,\xi)$. q.e.d.
 \end{s}
 
 %%
