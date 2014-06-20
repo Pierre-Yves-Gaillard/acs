@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0222)
+% about "categories and sheaves" (version-0223)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5020,7 +5020,14 @@ P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{f}\
 {}&X_{i_0}\ar{r}[swap]{p_{i_0}}&X.
 \end{tikzcd}
 $$ 
-As $\mu$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is, by Step~2, a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal. The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that 
+As $\mu$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is, by Step~2, a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal: 
+$$
+\begin{tikzcd}
+C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{g}\\ 
+X_{i_0}\ar{r}[swap]{X_s}&X_i.
+\end{tikzcd}
+$$ 
+The exactness of $P\parar C\xr aA$ implies then the existence of a morphism $g:A\to X_i$ such that 
 %
 \begin{equation}\label{ga}
 X_s\circ x=g\circ a.
@@ -5051,17 +5058,17 @@ As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof is complete.
 
 \subsubsection{Definition of two infinite regular cardinals}\label{tirg}
 
-(See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\pi_0$ be an infinite regular cardinal such that 
+(See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\C$ be a category satisfying Conditions (9.3.1) of the book, conditions stated in Section~\ref{931} p.~\pageref{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
 $$
 \card(G(G))<\pi_0,\quad\card(G^{\sqcup G(G)}(G))<\pi_0.
 $$ 
-Proposition \ref{932} implies $G$ is in $\C_{\pi_0}$. Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
+Proposition \ref{932} p.~\pageref{932} implies $G$ is in $\C_{\pi_0}$. Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
 
-$\bu\ \card(G^{\sqcup A}(G))<\pi_1$, 
+$\card(G^{\sqcup A}(G))<\pi_1$, 
 
-$\bu$ if $X$ is a quotient of $G^{\sqcup A}$, then $\card(X(G))<\pi_1$. 
+if $X$ is a quotient of $G^{\sqcup A}$, then $\card(X(G))<\pi_1$. 
 
-\nn(Since the set of quotients of $G^{\sqcup A}$ is small if $\card(A)<\pi_0$, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
+\nn(Since the set of quotients of $G^{\sqcup A}$ is small by Proposition 5.2.9 p.~121 of the book, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
 
 \begin{cond}\label{ass}
 Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
