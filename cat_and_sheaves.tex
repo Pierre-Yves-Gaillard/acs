@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0221)
+% about "categories and sheaves" (version-0222)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -4969,21 +4969,36 @@ We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \
 
 \nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
-$$
+\nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+\begin{equation}\label{s5a}
 \begin{tikzcd}
 G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
 B\ar[two heads]{rr}&&A
 \end{tikzcd}
-$$ 
-being epimorphisms by Proposition 5.2.3 (iv) p.~114 of the book, so is $C\to A$. There are commutative diagrams 
+\end{equation} 
+being epimorphisms by Proposition 5.2.3 (iv) p.~114 of the book, so is $C\to A$. From the commutative diagram 
 $$
 \begin{tikzcd}
 S\ar[equal]{rr}\ar[equal]{d}&&S\ar[equal]{d}\\ 
-S\ar{r}&B(G)\ar{r}&S
+S\ar{r}&B(G)\ar{r}&S,
 \end{tikzcd}
 $$ 
-and (by Step 1)
+we get, by Step 1, the commutative diagram 
+\begin{equation}\label{s5b}
+\begin{tikzcd}
+C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
+C\ar{r}&G^{\sqcup B(G)}\ar{r}&C.
+\end{tikzcd}
+\end{equation} 
+Splicing \eqref{s5a} and \eqref{s5b} gives 
+$$
+\begin{tikzcd}
+C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
+C\ar{r}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\ 
+{}&B\ar{r}&A,
+\end{tikzcd}
+$$ 
+and, by Step 4,
 $$
 \begin{tikzcd}
 C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
