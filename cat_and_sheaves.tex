@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0228)
+% about "categories and sheaves" (version-0229)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -156,7 +156,7 @@ The tex and pdf files for this text are available at
 
 \noindent\href{https://github.com/Pierre-Yves-Gaillard/acs}{https://github.com/Pierre-Yves-Gaillard/acs}
 
-\nn\href{https://www.dropbox.com/sh/5nu2uwlceo62u7x/AAB_ONoMGdSECUbQmwbWJYG4a}{https://www.dropbox.com/sh/5nu2uwlceo62u7x/AAB\_ONoMGdSECUbQmwbWJYG4a}
+\nn\href{http://goo.gl/mE37bM}{http://goo.gl/mE37bM}
 
 \noindent\href{https://app.box.com/s/ktfju6mts4bq3loknnrt}{https://app.box.com/s/ktfju6mts4bq3loknnrt}
 
@@ -5240,14 +5240,16 @@ We shall prove that $X$ satisfies the conditions in the statement. Let $u:X\to Y
 \nn(ii) As $Y$ is in $\cc S$, there is a morphism $Y\to X$, namely $a_Y$.
 \end{proof}
 
-\begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
-If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is in $\C$, then there is a morphism $f:X\to Y$ satisfying Property $P(f)$ below: 
+If $X\xr fY\xr uZ$ are morphisms in a given category, we denote by $\Sigma(f,u)$ the set of morphisms $v:Z\to Y$ such that $v\circ u\circ f=f$. 
 
-\nn $P(f):$ for any morphism $u:Y\to Z$, there is a morphism $v:Z\to Y$ such that $v\circ u\circ f=f$.
+\begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
+If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ satisfying Property $P(f)$ below: 
+
+\nn $P(f):$ for any morphism $u:Y\to Z$, the set $\Sigma(f,u)$ is nonempty.
 \end{lem}
 
 \begin{proof}
-The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
+The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property $P(f)$. 
 \end{proof}
 
 We recall the notion of {\em construction by transfinite induction\index{transfinite induction}}. 
@@ -5280,22 +5282,28 @@ $$
 Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$. 
 \end{proof}
 
-\begin{proof}[Proof of Theorem \ref{qtot}]
+\begin{proof}[Proof of Quasi-Terminal Object Theorem (Theorem \ref{qtot})]
 Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
 
 \nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property $P(u_{ij})$ of Lemma~\ref{944}, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$.
 
 \nn(b) If $i=\sup\,\{j\,|\,j<i\}$, let $(a_j:X_j\to X_i)_{j<i}$ be some upper bound for $(X_j)_{j<i}$ and put $u_{ij}:=a_j$. 
 
-Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. Let $(b_i:X_i\to X)_{i\in I}$ be some upper bound, and let $i_0$ in $I$ be such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. Let $u:X\to Y$ be a morphism. By Property $P(u_{i_0+1,i_0})$ applied to 
+Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. As $I$ is $\C$-special, there is an upper bound $(b_i:X_i\to X)_{i\in I}$ for $(X_i)_{i\in I}$, and there is an $i_0$ in $I$ such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. 
+
+We claim that $X$ is quasi-terminal. Let $u:X\to Y$ be a morphism. We must show that there is a $v:Y\to X$ such that $v\circ u=\id_X$. 
+
+Consider the morphisms 
 $$
-u\circ b_{i_0+1}:X_{i_0+1}\to Y,
-$$ 
-we find a morphism $w:Y\to X_{i_0+1}$ such that 
+\begin{tikzcd}
+X_{i_0}\ar{rr}{u_{i_0+1,i_0}}&&X_{i_0+1}\ar{rr}{u\circ b_{i_0+1}}&&Y.
+\end{tikzcd}
+$$
+By Property $P(u_{i_0+1,i_0})$ there is a morphism $w:Y\to X_{i_0+1}$ belonging to the set $\Sigma(u_{i_0+1,i_0},u\circ b_{i_0+1})$. This means that we have 
 %
 \begin{equation}\label{wu}
 w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}.
-\end{equation}
+\end{equation} 
 %
 Putting 
 %
@@ -5313,9 +5321,7 @@ v\circ u\circ b_{i_0}&=b_{i_0+1}\circ w\circ u\circ b_{i_0}&\text{by \eqref{vb}}
 &=\id_X\circ b_{i_0}
 \end{align*}
 %
-%$$(v\circ u)\circ b_{i_0}=(b_{i_0+1}\circ w)\circ u\circ(b_{i_0+1}\circ u_{i_0+1,i_0})$$ 
-%$$=b_{i_0+1}\circ u_{i_0+1,i_0}=b_{i_0}=\id_X\circ b_{i_0}.$$ 
-As $b_{i_0}$ is an epimorphism, we conclude that $v\circ u=\id_X$.
+As $b_{i_0}$ is an epimorphism, we conclude that $v\circ u$ is indeed equal to $\id_X$.
 \end{proof}
 
 Here is a diagrammatic illustration of the above computation:
