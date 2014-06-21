@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0225)
+% about "categories and sheaves" (version-0226)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -734,16 +734,16 @@ $$
 \end{proof}
 %
 \begin{df}\label{ue} 
-Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-{\em universal element} \index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em universal element} \index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
+The Yoneda Lemma says that $(F,X)$\--universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
 \begin{df}\label{ue2} 
-Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-{\em universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
+The Yoneda Lemma says that $(F,X)$\--universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
 %%
 
@@ -1054,20 +1054,20 @@ $$
 P.~36, Definition 2.1.2. 
 
 \begin{df}\label{p}
-If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 %
-Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$-universal element means that for each $Y$ in $\C$ the map 
+Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element means that for each $Y$ in $\C$ the map 
 $$
 \Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\alpha),\quad f\mapsto p\circ\Delta(f)
 $$ 
 is bijective.
 
 \begin{df}\label{c}
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p$ in $\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p$ in $\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 %
-Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$-universal element means that for each $Y$ in $\C$ the map 
+Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element means that for each $Y$ in $\C$ the map 
 \begin{equation}\label{cue}
 \Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
 \end{equation}
@@ -1161,7 +1161,7 @@ If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $T$ is an o
 \end{lem}
 
 \begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $T$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a universal element for the functor $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$ (see Definition~\ref{ue} p.~\pageref{ue}), so that $T$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $X$ be in $\C$. By definition of $T$ and $p$, the map 
+Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $T$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$\--universal element  (see Definition~\ref{ue} p. \pageref{ue}), so that $T$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $X$ be in $\C$. By definition of $T$ and $p$, the map 
 $$
 \Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\Delta(X)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
@@ -2647,7 +2647,7 @@ $$
 $$
 (\Ima f)(Z)=\left\{y:Z\to Y\ \bigg|\ \left[X\xr fY\parar W\right]\then\left[Z\xr yY\parar W\right]\ \forall\ W\in\C\right\}.
 $$ 
-In particular, these two sets do not depend on the universe $\U$ making $\C$ a $\U$-category. There are natural morphisms 
+In particular, these two sets do not depend on the universe $\U$ making $\C$ a $\U$\--category. There are natural morphisms 
 $$
 \ky(X)\to\Coim f\to\ky(Y),\quad\hy(X)\to\Ima f\to\hy(Y)
 $$ 
@@ -3855,7 +3855,7 @@ Let $\C$ be a pre-additive category; let $X,X_1,$ and $X_2$ be objects of $\C$; 
 $$
 p_a\circ i_b=\delta_{ab}\ \id_{X_a},\quad i_1\circ p_1+i_2\circ p_2=\id_X.
 $$
-Then $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. 
+Then $X$ is a product of $X_1$ and $X_2$ by $p_1$ and $p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1$ and $i_2$. 
 \end{lem}
 
 \begin{proof}
@@ -3866,7 +3866,7 @@ $$
 $$
 \Hom_\C(Y,i_1)\circ\Hom_\C(Y,p_1)+\Hom_\C(Y,i_2)\circ\Hom_\C(Y,p_2)=\id_{\Hom_\C(Y,X)}.
 $$ 
-This implies that $\Hom_\C(Y,X)$ is a product of $\Hom_\C(Y,X_1)$ and $\Hom_\C(Y,X_2)$ by $\Hom_\C(Y,p_1),\Hom_\C(Y,p_2)$, and thus, $Y$ being arbitrary, that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$, and we conclude by applying this observation to the opposite category.
+This implies that $\Hom_\C(Y,X)$ is a product of $\Hom_\C(Y,X_1)$ and $\Hom_\C(Y,X_2)$ by $\Hom_\C(Y,p_1)$ and $\Hom_\C(Y,p_2)$, and thus, $Y$ being arbitrary, that $X$ is a product of $X_1$ and $X_2$ by $p_1$ and $p_2$, and we conclude by applying this observation to the opposite category.
 \end{proof}
 
 Note also the following corollary to Lemma 8.2.3 (ii) (stated as Lemma~\ref{823ii} above). 
@@ -4842,7 +4842,14 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 
 \subsubsection{Summary of Section 9.3}
 
-The main purpose of Section 9.3 of the book is to prove Corollaries 9.3.7 and 9.3.8 p.~228 of the book, and these corollaries could be stated immediately after Conditions (9.3.1) above. For the reader's convenience we state Corollary 9.3.7:
+The main purpose of Section 9.3 of the book is to prove Corollaries 9.3.7 and 9.3.8 p.~228 of the book, and these corollaries could be stated immediately after Conditions (9.3.1) above. For the reader's convenience we recall the definition of a regular cardinal and state Corollary 9.3.7:
+
+\begin{df}\label{rc}
+A cardinal $\pi$ is \emph{regular}\index{regular cardinal} if for any family of sets $(B_i)_{i\in I}$ we have 
+$$
+\card(I)<\pi,\quad\card(B_i)<\pi\ \forall\ i\quad\then\quad\card\left(\bigsqcup_iB_i\right)<\pi.
+$$
+\end{df}
 
 \begin{cor}[Corollary 9.3.7 p. 228]
 Assume (9.3.1). Then for any small subset $S$ of $\Ob(\C)$ there exists an infinite cardinal $\pi$ such that $S\subset\Ob(\C_\pi)$.
@@ -4873,6 +4880,12 @@ See also Theorem \ref{961} p. \pageref{961} below.
 %
 
 \subsubsection{Lemma 9.3.1 (p. 224)}
+
+For the reader's convenience we state the lemma:
+
+\begin{lem}[Lemma 9.3.1 p. 224]\label{l331}
+Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pageref{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category, let $\alpha:I\to\C$ be a functor, and let $\colim\alpha\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\alpha(i_0)\to Y$ is an epimorphism.
+\end{lem}
 
 The proof of Lemma 9.3.1 uses twice the following lemma:
 
@@ -4935,7 +4948,7 @@ Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to 
 $$
 \colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
 $$ 
-As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
+As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}) and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
 
 It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to prove the 
 
@@ -4967,7 +4980,7 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. 
 
-\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
 \nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 \begin{equation}\label{s5a}
@@ -5129,7 +5142,7 @@ the last inequality following from Lemma~\ref{ord}, (c), and (a).
 \subsubsection{Theorem 9.3.4 (p. 227)}
 
 \begin{thm}[Theorem 9.3.4 p.~227]\label{934}
-If Condition \ref{ass} holds and if $X$ is in $\C$, then $X$ is in $\C_\pi\ssi\card(X(G))<\pi$.
+If Condition \ref{ass} p.~\pageref{ass} holds and if $X$ is in $\C$, then $X$ is in $\C_\pi\ssi\card(X(G))<\pi$.
 \end{thm}
 
 \begin{proof}[Proof of Theorem \ref{934}]${}$
@@ -5142,7 +5155,7 @@ for $A$ in $I$, and
 $$
 \colim_{A\in I}G^{\sqcup A}\xr\sim G^{\sqcup X(G)}\to X.
 $$ 
-Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224 of the book, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
+Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}), and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
 
 \nn$\si:$ In view of Proposition~\ref{932} p.~\pageref{932}, it suffices to prove  
 
@@ -5340,7 +5353,7 @@ $$
 
 Claim: There is an $i_0$ in $I$ such that $\pp^Y_{i_0}:=a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
 
-As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book, there is an $i_Y$ in $I$ such that $a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)$ is surjective. As $\card(\{i_Y\,|\,Y\in\Ob(\C)\})<\pi$ and $I$ is $\pi$-filtrant, there is an $i_0$ in $I$ such that, for any $Y$ in $\C$, there is a morphism $i_Y\to i_0$. This implies the claim. 
+As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that $a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)$ is surjective. As $\card(\{i_Y\,|\,Y\in\Ob(\C)\})<\pi$ and $I$ is $\pi$-filtrant, there is an $i_0$ in $I$ such that, for any $Y$ in $\C$, there is a morphism $i_Y\to i_0$. This implies the claim. 
 
 Let $i$ be in $I$. In particular, $a_i=\pp^{X_i}_i(\id_{X_i})$ is in $F(X_i)$. As 
 $$
@@ -6452,7 +6465,7 @@ As proved in the book, $\cc E$ contains all epimorphisms.
 The elements of $\cc E$ are called \textbf{local epimorphisms}.
 
 \begin{nota}\label{cce}
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let $\cc E=\cc E(\Gamma,\U)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
+Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let $\cc E=\cc E(\Gamma,\U)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
 \end{nota}
 
 Let us check that $\cc E$ satisfies LE1-LE4:
