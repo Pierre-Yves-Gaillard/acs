@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0226)
+% about "categories and sheaves" (version-0227)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5209,17 +5209,17 @@ Any essentially small nonempty category admitting small filtrant inductive limit
 Here is a weakening of the notion of inductive limit:
 
 \begin{df}
-Let $I$ be a well-ordered nonempty small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a morphism of functors $a:\alpha\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}.
+Let $I$ be a nonempty well-ordered small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a morphism of functors $a:\alpha\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}.
 \end{df}
 
 \begin{df}
-Let $\C$ be a category. A well-ordered set $I$ is $\C$-{\em special} if it is small, has no largest element, and for any functor $\alpha:I\to\C$ and there is some upper bound $(a_i:\alpha(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
+Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em special} if it has no largest element and if, for any functor $\alpha:I\to\C$, there is some upper bound $(a_i:\alpha(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
 \end{df}
 
 Our goal is to prove:
 
 \begin{thm}[Quasi-Terminal Object Theorem]\label{qtot}
-Let $\C$ be an essentially small nonempty category admitting small well-ordered upper bounds. Assume that there exists a $\C$-special well-ordered set. Then $\C$ has a quasi-terminal object.
+Let $\C$ be a nonempty essentially small category admitting small well-ordered upper bounds. Assume that there exists a $\C$-special well-ordered set. Then $\C$ has a quasi-terminal object.
 \end{thm}
 
 Theorem~\ref{qtot} clearly implies Zorn's Lemma (Theorem~\ref{zorn}). Lemma~\ref{945} below will show that Theorem~\ref{942} follows also from Theorem~\ref{qtot}. Theorem~\ref{942} will be used in the book to prove Theorem 9.5.5 p.~233.
@@ -5227,7 +5227,7 @@ Theorem~\ref{qtot} clearly implies Zorn's Lemma (Theorem~\ref{zorn}). Lemma~\ref
 The proof of Theorem~\ref{qtot} is essentially the same as the proof of Theorem~\ref{942} given in the book. For the reader's convenience, we spell out the details. 
 
 \begin{lem}\label{943}
-If $\C$ is a small nonempty category admitting small well-ordered upper bounds, then there is an $X$ in $\C$ such that, for all morphism $X\to Y$, there is a morphism $Y\to X$.
+If $\C$ is a nonempty small category admitting small well-ordered upper bounds, then there is an $X$ in $\C$ such that, for all morphism $X\to Y$, there is a morphism $Y\to X$.
 \end{lem}
 
 \begin{proof}
@@ -5235,22 +5235,22 @@ Let $\cc F$ be the set of well-ordered subcategories of $\C$. For $I$ and $J$ in
 
 We shall prove that $X$ satisfies the conditions in the statement. Let $u:X\to Y$ be a morphism in $\C$. 
 
-\nn(i) The object $Y$ is in $\cc S$. Otherwise, define the well ordered subcategory $\widetilde{\cc S}$ of $\C$ by appending the element $Y$ to $\cc S$ and making it the largest element of $\widetilde{\cc S}$, the morphism $S\to Y$ being $u\circ a_S$. We have $\widetilde{\cc S}$ in $\cc F$ and $\cc S<\widetilde{\cc S}$, contradicting the maximality of $\cc S$. 
+\nn(i) The object $Y$ is in $\cc S$. Otherwise, we can form the well-ordered subcategory $\widetilde{\cc S}$ of $\C$ by appending the element $Y$ to $\cc S$ and making it the largest element of $\widetilde{\cc S}$, the morphism $S\to Y$ being $u\circ a_S$. We have $\widetilde{\cc S}\in\cc F$ and $\cc S<\widetilde{\cc S}$, contradicting the maximality of $\cc S$. 
 
 \nn(ii) As $Y$ is in $\cc S$, there is a morphism $Y\to X$, namely $a_Y$.
 \end{proof}
 
 \begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
-If $\C$ is a small nonempty category admitting small well-ordered upper bounds and if $X$ is in $\C$, then there is a morphism $f:X\to Y$ satisfying Property 
+If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is in $\C$, then there is a morphism $f:X\to Y$ satisfying Property $P(f)$ below: 
 
 \nn $P(f):$ for any morphism $u:Y\to Z$, there is a morphism $v:Z\to Y$ such that $v\circ u\circ f=f$.
 \end{lem}
 
 \begin{proof}
-The category $\C^X$ is again small, nonempty, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
+The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. It is easy to see that $f$ has Property $P(f)$. 
 \end{proof}
 
-We recall the notion of {\em construction by transfinite induction}. \index{transfinite induction} 
+We recall the notion of {\em construction by transfinite induction\index{transfinite induction}}. 
 
 \begin{thm}[Construction by Transfinite Induction]\label{meta} 
 Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $$
@@ -5260,7 +5260,7 @@ for all $i$ in $I$, where $f(j)_{j<i}$ is viewed as a family of elements of $\{f
 \end{thm}
 
 \begin{proof}
-Uniqueness: Assume that $(S,f)$ and $(U,g)$ have the indicated properties. It suffices to prove $f(i)=g(i)$ for all $i$ in $I$. Suppose this is false, and let $i$ be the least element such that $f(i)\neq g(i)$. We have 
+Uniqueness: Assume that $(S,f)$ and $(T,g)$ have the indicated properties. It suffices to prove $f(i)=g(i)$ for all $i$ in $I$. Suppose this is false, and let $i$ be the least element of $I$ such that $f(i)\neq g(i)$. We have 
 $$
 f(i)=F(f(j)_{j<i})=F(g(j)_{j<i})=g(i),
 $$ 
