@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0229)
+% about "categories and sheaves" (version-0230)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5219,7 +5219,7 @@ Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em speci
 Our goal is to prove:
 
 \begin{thm}[Quasi-Terminal Object Theorem]\label{qtot}
-Let $\C$ be a nonempty essentially small category admitting small well-ordered upper bounds. Assume that there exists a $\C$-special well-ordered set. Then $\C$ has a quasi-terminal object.
+If $\C$ is a nonempty essentially small category $\C$ admitting small well-ordered upper bounds and a $\C$-special well-ordered set, then $\C$ has a quasi-terminal object.
 \end{thm}
 
 Theorem~\ref{qtot} clearly implies Zorn's Lemma (Theorem~\ref{zorn}). Lemma~\ref{945} below will show that Theorem~\ref{942} follows also from Theorem~\ref{qtot}. Theorem~\ref{942} will be used in the book to prove Theorem 9.5.5 p.~233.
@@ -5282,7 +5282,7 @@ $$
 Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$. 
 \end{proof}
 
-\begin{proof}[Proof of Quasi-Terminal Object Theorem (Theorem \ref{qtot})]
+\begin{proof}[Proof of Quasi-Terminal Object Theorem (Theorem \ref{qtot} p.~\pageref{qtot})] 
 Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
 
 \nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property $P(u_{ij})$ of Lemma~\ref{944}, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$.
@@ -5291,7 +5291,10 @@ Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let u
 
 Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. As $I$ is $\C$-special, there is an upper bound $(b_i:X_i\to X)_{i\in I}$ for $(X_i)_{i\in I}$, and there is an $i_0$ in $I$ such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. 
 
-We claim that $X$ is quasi-terminal. Let $u:X\to Y$ be a morphism. We must show that there is a $v:Y\to X$ such that $v\circ u=\id_X$. 
+We claim that $X$ is quasi-terminal. Let $u:X\to Y$ be a morphism. It suffices to prove the claim below: 
+\begin{claim}\label{cqt}
+There is a morphism $v:Y\to X$ such that $v\circ u=\id_X$. 
+\end{claim} 
 
 Consider the morphisms 
 $$
@@ -5305,23 +5308,23 @@ By Property $P(u_{i_0+1,i_0})$ there is a morphism $w:Y\to X_{i_0+1}$ belonging 
 w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}.
 \end{equation} 
 %
-Putting 
+Put
 %
 \begin{equation}\label{vb}
-v:=b_{i_0+1}\circ w:Y\to X,
+v:=b_{i_0+1}\circ w:Y\to X.
 \end{equation}
 %
-we get 
+It suffices to show that $v$ satisfies the equality $v\circ u=\id_X$ in Claim~\ref{cqt} p.~\pageref{cqt}. We have 
 %
 \begin{align*}
 v\circ u\circ b_{i_0}&=b_{i_0+1}\circ w\circ u\circ b_{i_0}&\text{by \eqref{vb}}\\ 
 &=b_{i_0+1}\circ w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}\\ 
 &=b_{i_0+1}\circ u_{i_0+1,i_0}&\text{by \eqref{wu}}\\ 
 &=b_{i_0}\\ 
-&=\id_X\circ b_{i_0}
+&=\id_X\circ b_{i_0}. 
 \end{align*}
 %
-As $b_{i_0}$ is an epimorphism, we conclude that $v\circ u$ is indeed equal to $\id_X$.
+As $b_{i_0}$ is an epimorphism, this implies $v\circ u=\id_X$, proving Claim~\ref{cqt} p.~\pageref{cqt}, and thus the Quasi-Terminal Object Theorem (Theorem \ref{qtot} p.~\pageref{qtot}). 
 \end{proof}
 
 Here is a diagrammatic illustration of the above computation:
