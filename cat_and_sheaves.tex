@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0232)
+% about "categories and sheaves" (version-0233)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6180,7 +6180,7 @@ then
 $$
 H^0\oo R_1\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
 $$ 
-Similarly, if $Y\mapsto\Hom_\C^\bu(X,Y)$ admits a right derived functor, denoted 
+Similarly, if $\Hom_\C^\bu(X,\ )$ admits a right derived functor, denoted 
 $$
 \oo R_2\!\Hom_\C(X,\ ),
 $$ 
@@ -6196,7 +6196,7 @@ This follows from the proof given in the book.
 
 \subsection{Exercise 13.15 (p. 342)}
 
-Here is a partial solution. Let $\C$ be an abelian category. Using Lemma~\ref{8312} p.~\pageref{8312} one easily proves:
+Here is a partial solution. Let $\C$ be an abelian category. %Using Lemma~\ref{8312} p.~\pageref{8312} one easily proves:
 
 \begin{lem}\label{738}
 Let $Z\to Y\to X\to W\to0$ be an exact sequence in $\C$, let $Y\to V$ be a morphism, let $U$ be the fiber coproduct $V\oplus_YX$, and let $U\to W$ be the morphism which makes 
@@ -6254,7 +6254,19 @@ $$
 can itself be completed to a commutative diagram as indicated.
 \end{proof}
 
-Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences $0\to Y\to Z\to X\to0$, and let $\sim$ be the following equivalence relation on $E$: the exact sequences $0\to Y\to Z\to X\to0$ and $0\to Y\to W\to X\to0$ are equivalent if and only if there is a commutative diagram 
+Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences 
+$$
+0\to Y\to Z\to X\to0,
+$$ 
+and let $\sim$ be the following equivalence relation on $E$: the exact sequences 
+$$
+0\to Y\to Z\to X\to0
+$$ 
+and 
+$$
+0\to Y\to W\to X\to0
+$$ 
+are equivalent if and only if there is a commutative diagram 
 $$
 \begin{tikzcd}
 0\ar{r}&Y\ar[equal]{d}\ar{r}&Z\ar{d}\ar{r}&X\ar[equal]{d}\ar{r}&0\\ 
@@ -6281,7 +6293,7 @@ We claim:
 
 (b) this map (a) is bijective. 
 
-Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
+Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} p.~\pageref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
 
 %%%
 
@@ -6349,7 +6361,11 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
 %
 \begin{cor}\label{1432}
-Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor $\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k)$. If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I$ in $\oo K_{\oo{hi}}(\C)$ (such exist) we have 
+Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor 
+$$
+\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k).
+$$ 
+If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I$ in $\oo K_{\oo{hi}}(\C)$ (such exist) we have 
 $$
 \oo{RHom}_\C(X,Y)\xr\sim\Hom_{\oo K(\C)}(X,I)\xr\sim\Hom_{\oo D(\C)}(X,I).
 $$ 
@@ -6389,7 +6405,7 @@ where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms
 
 %
 
-\begin{s}%\label{1448f}
+\begin{s}
 Step (f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \eqref{1448} are isomorphisms. As explained in the book, we have morphisms  
 \begin{equation}\label{f1}
 \begin{split}
@@ -6398,7 +6414,7 @@ Step (f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ i
 \oo{RHom}_{\C_1}(X_1,RF_1(X_2,X_3)).
 \end{split}
 \end{equation}
-Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, the morphisms 
+Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, morphisms 
 \begin{equation}\label{f2}
 \begin{split}
 \oo{Hom}_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\to\\ 
@@ -6499,13 +6515,22 @@ GT1 follows from LE1 and GT2 follows from LE3. If $S$ is a sieve over $U$ and $V
 A_{S\times_UV}=A_S\times_UV.
 \end{equation}
 %
-In view of LE4, this implies GT3. Let us prove GT4. 
+In view of LE4, this implies GT3. %Let us prove GT4. 
 
-We assume 
+\begin{lem}
+Condition GT4 holds.
+\end{lem}
+
+\begin{proof}
+Let us assume 
 $$
-S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S,
+S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S.
 $$ 
-and we must check that $S'$ is in $\Gamma_U$, or, equivalently, that $A_{S'}\to U$ is in $\cc E$. 
+It suffices to check $S'\in\Gamma_U$, or, equivalently, 
+%
+\begin{equation}\label{as'}
+(A_{S'}\to U)\in\cc E.
+\end{equation}%$A_{S'}\to U$ is in $\cc E$. 
 
 Claim: Let $s:V\to U$ be a morphism in $\C$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $A_S\to U$.
 
@@ -6518,21 +6543,34 @@ B\ar{r}\ar{d}&A_S\ar{d}\\
 A_{S'}\ar{r}&U.
 \end{tikzcd}
 $$ 
-As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE3, to check that $B\to A_S$ is in $\cc E$. Let $V\to A_S$ be a morphism in $\C^\wedge$ with $V$ in $\C$, and let 
+As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE3, to check  
+%
+\begin{equation}\label{bas}
+(B\to A_S)\in\cc E.
+\end{equation}%$B\to A_S$ is in $\cc E$. 
+%
+Let $V\to A_S$ be a morphism in $\C^\wedge$ with $V$ in $\C$, and let 
 $$
 \begin{tikzcd}
 C\ar{r}\ar{d}&V\ar{d}\\ 
 B\ar{r}&A_S
 \end{tikzcd}
 $$ 
-be a cartesian square. It is enough to verify that $C\to V$ is in $\cc E$. The square 
+be a cartesian square. It is enough to verify 
+%
+\begin{equation}\label{cv}
+(C\to V)\in\cc E.
+\end{equation} 
+%$C\to V$ is in $\cc E$. 
+The square 
 $$
 \begin{tikzcd}
 C\ar{r}\ar{d}&V\ar{d}\\ 
 A_{S'}\ar{r}&U
 \end{tikzcd}
 $$ 
-being cartesian, and $V\to U$ being in $S$ by the claim, $C\to V$ is in $\cc E$ by assumption. q.e.d.
+being cartesian, and $V\to U$ being in $S$ by the claim, \eqref{cv} holds by assumption, and implies successively \eqref{bas}, \eqref{as'}, and the lemma. 
+\end{proof}
 
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
 
