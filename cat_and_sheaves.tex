@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0231)
+% about "categories and sheaves" (version-0232)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -15,8 +15,7 @@
 \usepackage{amsthm}
 \usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
-%%\usepackage{showlabels}
-%\usepackage{showkeys}
+%\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
 \pagestyle{fancy}%\pagestyle{empty}
 
@@ -30,8 +29,7 @@
 \theoremstyle{remark}
 \newtheorem{claim}[thm]{Claim}
 \newtheorem{cond}[thm]{Condition}
-\newtheorem{conv}[thm]{Convention}
-%\newtheorem{q}[thm]{Question}
+\newtheorem{conv}[thm]{Convention}%\newtheorem{q}[thm]{Question}
 \newtheorem{rk}[thm]{Remark}
 
 \theoremstyle{definition}
@@ -57,11 +55,10 @@
 \newcommand{\SSS}{\mathcal S}
 \newcommand{\U}{\mathcal U}
 \newcommand{\V}{\mathcal V}
-%\newcommand{\Set}{\boldmath{\mathrm{Set}}}%\newcommand{\Set}{\pmb{Set}}
 \newcommand{\Cat}{\mathbf{Cat}}%\newcommand{\CCat}{\mathbf{CCat}}
-\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Set}{\mathbf{Set}}%\newcommand{\Set}{\boldmath{\mathrm{Set}}}%\newcommand{\Set}{\pmb{Set}}
 \newcommand{\pt}{\{\text{pt}\}}
-%
+
 \newcommand{\ee}{\varepsilon}
 \newcommand{\pp}{\varphi}
 \newcommand{\epi}{\twoheadrightarrow}
@@ -76,18 +73,17 @@
 \newcommand{\then}{\Rightarrow}
 \newcommand{\xl}{\xleftarrow}
 \newcommand{\xr}{\xrightarrow}
-%
+
 % LIMITS
 % old
 \newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}}
 \newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}}
 % new
-\DeclareMathOperator*{\colim}{colim}
-%\DeclareMathOperator*{\coli}{colim}
+\DeclareMathOperator*{\colim}{colim}%\DeclareMathOperator*{\coli}{colim}
 \DeclareMathOperator*{\col}{colim}
 \DeclareMathOperator*{\icolim}{``\colim"}
 \DeclareMathOperator*{\ic}{``\colim"}
-%
+
 \DeclareMathOperator{\Ad}{Add}
 \DeclareMathOperator{\card}{card}%\DeclareMathOperator{\ca}{card}
 \DeclareMathOperator{\Coim}{Coim}
@@ -111,74 +107,64 @@
 \DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\PSh}{PSh}
-\DeclareMathOperator{\Qis}{Qis}
-%\DeclareMathOperator{\Set}{Set}
+\DeclareMathOperator{\Qis}{Qis}%\DeclareMathOperator{\Set}{Set}
 %\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+
 \title{About \em{Categories and Sheaves}}
 \author{Pierre-Yves Gaillard}
 \date{\today, \currenttime}
-%
+
 \begin{document}
 %\fancyhf{}
 \maketitle
 
-\noindent The last version of this text is available at
+\nn The last version of this text is available at
 
-\noindent\href{http://iecl.univ-lorraine.fr/~Pierre-Yves.Gaillard/DIVERS/KS/}{http://iecl.univ-lorraine.fr/$\sim$Pierre-Yves.Gaillard/DIVERS/KS/}
+\nn\href{http://iecl.univ-lorraine.fr/~Pierre-Yves.Gaillard/DIVERS/KS/}{http://iecl.univ-lorraine.fr/$\sim$Pierre-Yves.Gaillard/DIVERS/KS/}
 
-\tableofcontents\newpage%\vskip2em\hrule
-%\bigskip%\vskip1em
+\tableofcontents\newpage%\vskip2em\hrule%\bigskip%\vskip1em
 
-\noindent The purpose of this text is to make a few comments about the book%\bigskip 
+\nn The purpose of this text is to make a few comments about the book%\bigskip 
 
 \textbf{Categories and Sheaves} by Kashiwara and Schapira, Springer 2006,%\bigskip 
 
-\noindent referred to as ``the book'' henceforth.%\bigskip 
+\nn referred to as ``the book'' henceforth.%\bigskip 
 
 An important reference is
 
-\noindent[GV] Grothendieck, A. and Verdier, J.-L. (1972). Pr\'efaisceaux. In Artin, M., Grothendieck, A., and Verdier, J.-L., editors, Th\'eorie des Topos et Cohomologie Etale des Sch\'emas, volume 1 of S\'eminaire de g\'eom\'etrie alg\'ebrique du Bois-Marie, 4, pages 1-218. Springer. \\ 
+\nn[GV] Grothendieck, A. and Verdier, J.-L. (1972). Pr\'efaisceaux. In Artin, M., Grothendieck, A., and Verdier, J.-L., editors, Th\'eorie des Topos et Cohomologie Etale des Sch\'emas, volume 1 of S\'eminaire de g\'eom\'etrie alg\'ebrique du Bois-Marie, 4, pages 1-218. Springer. \\ 
 Links to the above text of Grothendieck and Verdier are available at \\ 
-\noindent\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw} 
+\nn\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw} 
 
 Here are two useful links:
 
-\noindent Schapira's Errata:\\ \href{http://people.math.jussieu.fr/~schapira/books/Errata.pdf}{http://people.math.jussieu.fr/$\sim$schapira/books/Errata.pdf},
+\nn Schapira's Errata:\\ \href{http://people.math.jussieu.fr/~schapira/books/Errata.pdf}{http://people.math.jussieu.fr/$\sim$schapira/books/Errata.pdf},
 
-\noindent nLab entry:\\ \href{http://ncatlab.org/nlab/show/Categories+and+Sheaves}{http://ncatlab.org/nlab/show/Categories+and+Sheaves}. 
+\nn nLab entry:\\ \href{http://ncatlab.org/nlab/show/Categories+and+Sheaves}{http://ncatlab.org/nlab/show/Categories+and+Sheaves}. 
 
 The tex and pdf files for this text are available at
  
-\noindent\href{http://iecl.univ-lorraine.fr/~Pierre-Yves.Gaillard/DIVERS/KS/}{http://iecl.univ-lorraine.fr/$\sim$Pierre-Yves.Gaillard/DIVERS/KS/}
+\nn\href{http://iecl.univ-lorraine.fr/~Pierre-Yves.Gaillard/DIVERS/KS/}{http://iecl.univ-lorraine.fr/$\sim$Pierre-Yves.Gaillard/DIVERS/KS/}
 
-\noindent\href{https://github.com/Pierre-Yves-Gaillard/acs}{https://github.com/Pierre-Yves-Gaillard/acs}
+\nn\href{https://github.com/Pierre-Yves-Gaillard/acs}{https://github.com/Pierre-Yves-Gaillard/acs}
 
 \nn\href{http://goo.gl/mE37bM}{http://goo.gl/mE37bM}
 
-\noindent\href{https://app.box.com/s/ktfju6mts4bq3loknnrt}{https://app.box.com/s/ktfju6mts4bq3loknnrt}
+\nn\href{https://app.box.com/s/ktfju6mts4bq3loknnrt}{https://app.box.com/s/ktfju6mts4bq3loknnrt}
 
-\noindent\href{http://goo.gl/klKgiW}{http://goo.gl/klKgiW}
+\nn\href{http://goo.gl/klKgiW}{http://goo.gl/klKgiW}
 
 \nn\href{https://www.mediafire.com/folder/am7yqw1whitdg/}{https://www.mediafire.com/folder/am7yqw1whitdg/}
 
 \nn\href{https://mega.co.nz/#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}{https://mega.co.nz/\#F!udI0CahS!YSL4YDDiougL0svrOHlyRA}
 
-More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
-
-%\noindent\href{http://dx.doi.org/10.6084/m9.figshare.678328}{http://dx.doi.org/10.6084/m9.figshare.678328} 
- 
-%\noindent\href{http://dx.doi.org/10.6084/m9.figshare.678329}{http://dx.doi.org/10.6084/m9.figshare.678329}
+More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}. 
 
 I have rewritten some of the proofs in the book. Of course, I'm not suggesting that my wording is better than that of Kashiwara and Schapira! I just tried to make explicit a few points which are implicit in the book. 
 
 This is a work in progress. 
-
-%\begin{rk}\label{next}
-%The last section of this text is titled {\em Next Additions} and contains the last things I have written. When this last section contains enough pages, I incorporate it into the main text. The hope is to help the interested reader follow the progression of this work.
-%\end{rk}
 
 I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Th\'eorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de r\'esultats'' in the above book because I don't understand it.) 
 
@@ -212,7 +198,7 @@ A $\U$-{\em category} \index{$\U$-category} is a category $\C$ such that, for al
 The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ is a $\U$-set. 
 \end{df} 
 
-Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{ducat} which is isomorphic to $\C$, and similarly for $\U$-small categories.%\bigskip
+Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{ducat} which is isomorphic to $\C$, and similarly for $\U$-small categories. 
 %
 \begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
 \end{center}
@@ -225,88 +211,88 @@ We often assume implicitly that a universe $\U$ has been chosen, and we say ``ca
 
 $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
 
-\noindent $*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pageref{d125}. 
+\nn$*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pageref{d125}. 
 
-\noindent $*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text (see Section~\ref{ucat} p.~\pageref{ucat}), the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. 
+\nn$*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text (see Section~\ref{ucat} p.~\pageref{ucat}), the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. 
 
-\noindent $*$ P.~25, Proof of Corollary 1.4.6 (second line): $\hy_{\C}$ should be $\hy_{\C'}$. 
+\nn$*$ P.~25, Proof of Corollary 1.4.6 (second line): $\hy_{\C}$ should be $\hy_{\C'}$. 
 
-\noindent $*$ P.~33, Exercise 1.19: the arrow from $L_1\circ R_1\circ L_2$ to $L_2$ should be $\eta_1\circ L_2$ instead of $\varepsilon_1\circ L_2$. 
+\nn$*$ P.~33, Exercise 1.19: the arrow from $L_1\circ R_1\circ L_2$ to $L_2$ should be $\eta_1\circ L_2$ instead of $\varepsilon_1\circ L_2$. 
 
-\noindent $*$ P.~37, Remark 2.1.5: ``Let $I$ be a small set'' should be ``Let $I$ be a small category''.
+\nn$*$ P.~37, Remark 2.1.5: ``Let $I$ be a small set'' should be ``Let $I$ be a small category''.
 
-\noindent $*$ P.~41, sixth line: (i) should be (a). 
+\nn$*$ P.~41, sixth line: (i) should be (a). 
 
-\noindent $*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\oo{Fct}(I,\C)$.
+\nn$*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\oo{Fct}(I,\C)$.
 
-\noindent $*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
+\nn$*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
 
-\noindent $*$ P.~54, second display: we should have $i\to\pp(j)$ instead of $\pp(j)\to i$.
+\nn$*$ P.~54, second display: we should have $i\to\pp(j)$ instead of $\pp(j)\to i$.
 
-\noindent $*$ P.~58, Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the Axiom of Universes.) 
+\nn$*$ P.~58, Corollary 2.5.3: The assumption that $I$ and $J$ are small is not necessary. (The statement does not depend on the Axiom of Universes.) 
 
-\noindent $*$ P.~58, Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\pp,\psi$ and $\pp\circ\psi$ are cofinal, so is the third one''.
+\nn$*$ P.~58, Proposition 2.5.4: Parts (i) and (ii) could be replaced with the statement: ``If two of the functors $\pp,\psi$ and $\pp\circ\psi$ are cofinal, so is the third one''.
 
-\noindent $*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
+\nn$*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
-\noindent $*$ P.~64, proof of Proposition 2.7.5: $(\C')^\wedge$ should be $\C^\wedge$.
+\nn$*$ P.~64, proof of Proposition 2.7.5: $(\C')^\wedge$ should be $\C^\wedge$.
 
-\noindent $*$ P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. (See \S\ref{bc} p.~\pageref{bc}.) 
+\nn$*$ P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. (See \S\ref{bc} p.~\pageref{bc}.) 
 
-\noindent $*$ P.~74, last four lines: $\alpha$ should be replaced with $\pp$.
+\nn$*$ P.~74, last four lines: $\alpha$ should be replaced with $\pp$.
 
-\noindent $*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
+\nn$*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
 
-\noindent $*$ P. 83, Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. 
+\nn$*$ P.~83, Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. 
 
-\noindent $*$ Pp 83 and 85, Proof of Proposition 3.3.7 (iv): ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
+\nn$*$ Pp 83 and 85, Proof of Proposition 3.3.7 (iv): ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
 
-\noindent $*$ P.~84, Proposition 3.3.13. It is clear from the proof (I think) that the intended statement was the following one: If $\C$ is a category admitting finite inductive limits and if $A:\C^{\op}\to\Set$ is a functor, then we have 
+\nn$*$ P.~84, Proposition 3.3.13. It is clear from the proof (I think) that the intended statement was the following one: If $\C$ is a category admitting finite inductive limits and if $A:\C^{\op}\to\Set$ is a functor, then we have 
 $$
 \C\text{ small and }\C_A\text{ filtrant }\then A\text{ left exact }\then\C_A\text{ filtrant}.
 $$
 
-\noindent $*$ P.~85, proof of Proposition 3.3.13, proof of implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
+\nn$*$ P.~85, proof of Proposition 3.3.13, proof of implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pageref{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
 
-\noindent $*$ P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
+\nn$*$ P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
 
-\noindent $*$ P.~89, last sentence of the proof of Proposition 3.4.4. The argument is slightly easier to follow if $\psi'$ is factorized as 
+\nn$*$ P.~89, last sentence of the proof of Proposition 3.4.4. The argument is slightly easier to follow if $\psi'$ is factorized as 
 $$
 (J_1)^{j_2}\xr a(J_1)^{\psi_2(j_2)}\xr b(K_1)^{\psi_2(j_2)}\xr c(K_1)^{\pp_2(i_2)}.
 $$ 
 Then $a,b$ and $c$ are respectively cofinal by Parts (ii), (iii), and (iv) of Proposition 3.2.5 p.~79 of the book.
 
-\noindent $*$ P.~90, Exercise 3.2: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''.
+\nn$*$ P.~90, Exercise 3.2: ``Proposition 3.1.6'' should be ``Theorem 3.1.6''.
 
-\noindent $*$ P.~115, line 4: ``two morphisms $i_1,i_2:Y\to Y\sqcup_XY$'' should be ``two morphisms $i_1,i_2:Y\parar Y\sqcup_XY$''. 
+\nn$*$ P.~115, line 4: ``two morphisms $i_1,i_2:Y\to Y\sqcup_XY$'' should be ``two morphisms $i_1,i_2:Y\parar Y\sqcup_XY$''. 
 
-\noindent $*$ P.~115, Line 8: $i_1\circ g=i_2\circ g$ should be $g\circ i_1=g\circ i_2$.
+\nn$*$ P.~115, Line 8: $i_1\circ g=i_2\circ g$ should be $g\circ i_1=g\circ i_2$.
 
-\noindent $*$ P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to the element $(u,u_0)$ of $F(X)\times_{F(X_1)}F(Z_0)$ under the natural bijection. (Recall $X':=X\sqcup_{X_1}Z_0$.)
+\nn$*$ P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to the element $(u,u_0)$ of $F(X)\times_{F(X_1)}F(Z_0)$ under the natural bijection. (Recall $X':=X\sqcup_{X_1}Z_0$.)
 
-\noindent $*$ P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118 of the book, only Part~(iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book.
+\nn$*$ P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118 of the book, only Part~(iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book.
 
-\noindent $*$ P.~128, proof of Theorem 5.3.9. Last display: $\sqcup$ should be $\cup$. It would be simpler in fact to put 
+\nn$*$ P.~128, proof of Theorem 5.3.9. Last display: $\sqcup$ should be $\cup$. It would be simpler in fact to put 
 $$
 \Ob(\F_n):=\{Y_1\sqcup_XY_2\ |\ X\to Y_1\text{ and }X\to Y_2\text{ are morphisms in }\F_{n-1}\}.
 $$ 
 
-\noindent $*$ P.~128, proof of Theorem 5.3.9,, just before the ``q.e.d.'': Corollary 5.3.5 should be Proposition 5.3.5.
+\nn$*$ P.~128, proof of Theorem 5.3.9,, just before the ``q.e.d.'': Corollary 5.3.5 should be Proposition 5.3.5.
 
-\noindent $*$ P.~132, Line 2: It would be slightly better to replace ``for small and filtrant categories $I$ and $J$'' with ``for small and filtrant categories $I$ and $J$, and functors $\alpha:I\to\C,\beta:J\to\C$''.
+\nn$*$ P.~132, Line 2: It would be slightly better to replace ``for small and filtrant categories $I$ and $J$'' with ``for small and filtrant categories $I$ and $J$, and functors $\alpha:I\to\C,\beta:J\to\C$''.
 
-\noindent $*$ P.~132, Line 3: $\Hom_\C(A,B)$ should be $\Hom_{\Ind(\C)}(A,B)$.
+\nn$*$ P.~132, Line 3: $\Hom_\C(A,B)$ should be $\Hom_{\Ind(\C)}(A,B)$.
 
-\noindent $*$ P.~132, Lines 4 and 5: \guillemotleft We may replace ``filtrant and small'' by ``filtrant and cofinally small'' in the above definition\guillemotright: see Proposition~\ref{355} p.~\pageref{355}.
+\nn$*$ P.~132, Lines 4 and 5: \guillemotleft We may replace ``filtrant and small'' by ``filtrant and cofinally small'' in the above definition\guillemotright: see Proposition~\ref{355} p.~\pageref{355}.
 
-\noindent $*$ P.~132, Corollary 6.1.6: The following fact is implicit. Let $\C\xrightarrow{F}\C'\xrightarrow{G}\C''$ be functors, let $X'$ be in $\C'$, and assume that $G$ is fully faithful. Then the functor $\C_{X'}\to\C_{G(X')}$ induced by $G$ is an isomorphism.
+\nn$*$ P.~132, Corollary 6.1.6: The following fact is implicit. Let $\C\xrightarrow{F}\C'\xrightarrow{G}\C''$ be functors, let $X'$ be in $\C'$, and assume that $G$ is fully faithful. Then the functor $\C_{X'}\to\C_{G(X')}$ induced by $G$ is an isomorphism.
 
-\noindent $*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xrightarrow{\alpha}\C\xrightarrow{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\simeq\colim F(\alpha)$. Then $X\simeq\colim\alpha$. The proof is obvious.
+\nn$*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xrightarrow{\alpha}\C\xrightarrow{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\simeq\colim F(\alpha)$. Then $X\simeq\colim\alpha$. The proof is obvious.
 
-\noindent $*$ P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.''
+\nn$*$ P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.''
 
 \begin{s}\label{s133ii} 
-P. 133. In Part (ii) of Proposition 6.1.9 the authors, I think, intended to write 
+P.~133. In Part (ii) of Proposition 6.1.9 the authors, I think, intended to write 
 $$
 ``\ilim"(IF\circ\alpha)\xrightarrow\sim IF(``\ilim"\alpha)
 $$
@@ -316,118 +302,118 @@ IF(``\ilim"\alpha)\xrightarrow\sim``\ilim"(IF\circ\alpha).
 $$ 
 \end{s}
 
-\noindent $*$ P.~134, proof of Proposition 6.1.12: ``$\C_A\times\C_{A'}$'' should be ``$\C_A\times\C'_{A'}$'' (twice).
+\nn$*$ P.~134, proof of Proposition 6.1.12: ``$\C_A\times\C_{A'}$'' should be ``$\C_A\times\C'_{A'}$'' (twice).
 
-\noindent $*$ P.~136, proof of Proposition 6.1.16: see \S\ref{cipc} p.~\pageref{cipc}.
+\nn$*$ P.~136, proof of Proposition 6.1.16: see \S\ref{cipc} p.~\pageref{cipc}.
 
-\noindent $*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. 
+\nn$*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. 
 
-\noindent $*$ P.~136, last line: ``the cokernel of $(\alpha(i),\beta(i))$'' should be ``the cokernel of\linebreak $(\pp(i),\psi(i))$''. 
+\nn$*$ P.~136, last line: ``the cokernel of $(\alpha(i),\beta(i))$'' should be ``the cokernel of\linebreak $(\pp(i),\psi(i))$''. 
 
-\noindent $*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\alpha$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
+\nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\alpha$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
-\noindent $*$ P. 141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
+\nn$*$ P.~141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
 
-\noindent $*$ P.~143, third line of the proof of Proposition 6.4.2: $\{Y_i\}_{I\in I}$ should be $\{Y_i\}_{i\in I}$.
+\nn$*$ P.~143, third line of the proof of Proposition 6.4.2: $\{Y_i\}_{I\in I}$ should be $\{Y_i\}_{i\in I}$.
 
-\noindent $*$ P.~144, proof of Proposition 6.4.2, Step (ii), second sentence: It might be better to state explicitly the assumption that $X_\nu^i$ is in $\C_\nu$ for $\nu=1,2$. 
+\nn$*$ P.~144, proof of Proposition 6.4.2, Step (ii), second sentence: It might be better to state explicitly the assumption that $X_\nu^i$ is in $\C_\nu$ for $\nu=1,2$. 
 
-\noindent $*$ P.~146, Exercise 6.3. ``Let $\C$ be a small category'' should be ``Let $\C$ be a category''.
+\nn$*$ P.~146, Exercise 6.3. ``Let $\C$ be a small category'' should be ``Let $\C$ be a category''.
 
-\noindent $*$ P.~150, before Proposition 7.1.2. One could add after ``This implies that $F_{\SSS}$ is unique up to unique isomorphism'': Moreover we have $Q^\dagger F\simeq F_{\SSS}\simeq Q^\ddagger F$.
+\nn$*$ P.~150, before Proposition 7.1.2. One could add after ``This implies that $F_{\SSS}$ is unique up to unique isomorphism'': Moreover we have $Q^\dagger F\simeq F_{\SSS}\simeq Q^\ddagger F$.
 
-\noindent $*$ P.~153, statement of Lemma 7.1.12. The readability might be slightly improved by changing $s:X\to X'\in\mathcal S$ to $(s:X\to X')\in\mathcal S$. Same for Line 4 of the proof of Lemma 7.1.21 p.~157.
+\nn$*$ P.~153, statement of Lemma 7.1.12. The readability might be slightly improved by changing $s:X\to X'\in\mathcal S$ to $(s:X\to X')\in\mathcal S$. Same for Line 4 of the proof of Lemma 7.1.21 p.~157.
 
-\noindent $*$ P. 156, first line after the first display: $\C_{\cc S}$ should be $\C_{\cc S}^r$.
+\nn$*$ P.~156, first line after the first display: $\C_{\cc S}$ should be $\C_{\cc S}^r$.
 
-\noindent $*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_{\mathcal S}(s)$.
+\nn$*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_{\mathcal S}(s)$.
 
-\noindent $*$ P. 163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
+\nn$*$ P.~163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
 
-\noindent $*$ P.~168, Line 9: ``$f:X\to Y$'' should be ``$f:Y\to X$''.
+\nn$*$ P.~168, Line 9: ``$f:X\to Y$'' should be ``$f:Y\to X$''.
 
-\noindent $*$ P.~170, Corollary 8.2.4. The period at the end of the last display should be moved to the end of the sentence.
+\nn$*$ P.~170, Corollary 8.2.4. The period at the end of the last display should be moved to the end of the sentence.
 
-\noindent $*$ P.~172, proof of Lemma 8.2.10, first line: ``composition morphism'' should be ``addition morphism''.
+\nn$*$ P.~172, proof of Lemma 8.2.10, first line: ``composition morphism'' should be ``addition morphism''.
 
-\noindent $*$ P.~179, about one third of the page: ``a complex 
+\nn$*$ P.~179, about one third of the page: ``a complex 
 \begin{tikzcd}X\ar{r}{u}&Y\ar[yshift=0.7ex]{r}{v}\ar[yshift=-0.7ex]{r}[swap]{w}&Z\end{tikzcd}'' 
 should be ``a sequence 
 \begin{tikzcd}X\ar{r}{u}&Y\ar[yshift=0.7ex]{r}{v}\ar[yshift=-0.7ex]{r}[swap]{w}&Z\end{tikzcd}''.
 
-\noindent $*$ P. 180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$. Proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times.
+\nn$*$ P.~180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$. Proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times.
 
-\noindent $*$ P.~181, Lemma 8.3.13, second line of the proof: $h\circ f^2$ should be $f^2\circ h$.
+\nn$*$ P.~181, Lemma 8.3.13, second line of the proof: $h\circ f^2$ should be $f^2\circ h$.
 
-\noindent $*$ P.~186, Corollary 8.3.26. The proof reads: ``Apply Proposition 5.2.9''. One could add: ``and Proposition 5.2.3 (v)''.
+\nn$*$ P.~186, Corollary 8.3.26. The proof reads: ``Apply Proposition 5.2.9''. One could add: ``and Proposition 5.2.3 (v)''.
 
-\noindent $*$ P.~187, proof of Proposition 8.4.3. More generally, if $F$ is a left exact additive functor between abelian categories, then, in view of the observations made on p.~183 of the book (and especially Exercise 8.17), $F$ is exact if and only if it sends epimorphisms to epimorphisms. (A solution to the important Exercise 8.17 is given in Section~\ref{817} p.~\pageref{817}.)
+\nn$*$ P.~187, proof of Proposition 8.4.3. More generally, if $F$ is a left exact additive functor between abelian categories, then, in view of the observations made on p.~183 of the book (and especially Exercise 8.17), $F$ is exact if and only if it sends epimorphisms to epimorphisms. (A solution to the important Exercise 8.17 is given in Section~\ref{817} p.~\pageref{817}.)
 
-\noindent $*$ P.~188. In the second diagram $Y'\overset{l'}{\rightarrowtail}Z$ should be $Y'\overset{l'}{\rightarrowtail}X$. After the second diagram: ``the set of isomorphism classes of $\Delta$'' should be ``the set of isomorphism classes of objects of $\Delta$''.
+\nn$*$ P.~188. In the second diagram $Y'\overset{l'}{\rightarrowtail}Z$ should be $Y'\overset{l'}{\rightarrowtail}X$. After the second diagram: ``the set of isomorphism classes of $\Delta$'' should be ``the set of isomorphism classes of objects of $\Delta$''.
 
-\noindent $*$ P.~190, proof of Proposition 8.5.5 (a) (i): all the $R$ should be $R^{\op}$, except for the last one.
+\nn$*$ P.~190, proof of Proposition 8.5.5 (a) (i): all the $R$ should be $R^{\op}$, except for the last one.
 
-\noindent $*$ P.~191: The equality $\psi(M)=G\otimes_RM$ is used in the second display, whereas $\psi(M)=M\otimes_RG$ is used in the third display. It might be better to use $\psi(M)=M\otimes_{R^{\op}}G$ both times. 
+\nn$*$ P.~191: The equality $\psi(M)=G\otimes_RM$ is used in the second display, whereas $\psi(M)=M\otimes_RG$ is used in the third display. It might be better to use $\psi(M)=M\otimes_{R^{\op}}G$ both times. 
 
-\noindent $*$ P.~191, Proof of Theorem 8.5.8 (iii): ``the product of finite copies of $R$'' should be ``the product of finitely many copies of $R$''.
+\nn$*$ P.~191, Proof of Theorem 8.5.8 (iii): ``the product of finite copies of $R$'' should be ``the product of finitely many copies of $R$''.
 
-\noindent $*$ P.~196, Proposition 8.6.9, last sentence of the proof of (i) $\then$ (ii): ``Proposition 8.3.12'' should be ``Lemma 8.3.12''.
+\nn$*$ P.~196, Proposition 8.6.9, last sentence of the proof of (i) $\then$ (ii): ``Proposition 8.3.12'' should be ``Lemma 8.3.12''.
 
-\noindent $*$ P.~201, proof of Lemma 8.7.7, first line: ``we can construct a commutative diagram''. I think the authors meant ``we can construct an exact commutative diagram''.
+\nn$*$ P.~201, proof of Lemma 8.7.7, first line: ``we can construct a commutative diagram''. I think the authors meant ``we can construct an exact commutative diagram''.
 
-\noindent $*$ P.~218, middle of the page: ``$b:=\inf(J\setminus A)$'' should be ``$b:=\inf(J\setminus A')$'' (the prime is missing). 
+\nn$*$ P.~218, middle of the page: ``$b:=\inf(J\setminus A)$'' should be ``$b:=\inf(J\setminus A')$'' (the prime is missing). 
 
-\noindent $*$ P.~218, Proof of Lemma 9.2.5, first sentence: ``Proposition 3.2.4'' should be ``Proposition 3.2.2''.
+\nn$*$ P.~218, Proof of Lemma 9.2.5, first sentence: ``Proposition 3.2.4'' should be ``Proposition 3.2.2''.
 
-\noindent $*$ P.~220, part (ii) of the proof of Proposition 9.2.9, last sentence of the first paragraph: $s(j)$ should be $\tilde s(j)$.
+\nn$*$ P.~220, part (ii) of the proof of Proposition 9.2.9, last sentence of the first paragraph: $s(j)$ should be $\tilde s(j)$.
 
-\noindent $*$ P. 221, Lemma 9.2.15. ``Let $A\in\C$'' should be ``Let $A\in\C^\wedge$''.
+\nn$*$ P.~221, Lemma 9.2.15. ``Let $A\in\C$'' should be ``Let $A\in\C^\wedge$''.
 
-\noindent $*$ P. 224, proof of Proposition 9.3.2, line 2: ``there exist maps $S\to A(G)\to S$ whose composition is the identity'' should be ``there exist maps $A(G)\to S$ such that the composition $S\to A(G)\to S$ is the identity of $S$''.
+\nn$*$ P.~224, proof of Proposition 9.3.2, line 2: ``there exist maps $S\to A(G)\to S$ whose composition is the identity'' should be ``there exist maps $A(G)\to S$ such that the composition $S\to A(G)\to S$ is the identity of $S$''.
 
-\noindent $*$ Pp 224-228, from Proposition 9.3.2 to the end of the section. The notation $G^{\sqcup S}$, where $S$ is a set, is used twice (each time on p.~224), and the notation $G^{\coprod S}$ is used many times in the sequel of the section. I think the two pieces of notation have the same meaning. If so, it might be slightly better to uniformize the notation.
+\nn$*$ Pp 224-228, from Proposition 9.3.2 to the end of the section. The notation $G^{\sqcup S}$, where $S$ is a set, is used twice (each time on p.~224), and the notation $G^{\coprod S}$ is used many times in the sequel of the section. I think the two pieces of notation have the same meaning. If so, it might be slightly better to uniformize the notation.
 
 \begin{s}\label{225}
-P. 225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$''.
+P.~225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' should be ``Since $\card(A(G))<\pi$''.
 
-\nn $*$ P. 225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
+\nn$*$ P.~225, line~4: ``there exists $i_0\to i_1$ such that $N_{i_1}\to A$ is an epimorphism'' should be ``there exists $s:i_0\to i$ such that $N_s\to A$ is an epimorphism''.
 \end{s}
 
-\noindent $*$ P.~226, four lines before the end: ``By 9.3.4 (c)'' should be ``By (9.3.4) (c)'' (the parenthesis are missing).
+\nn$*$ P.~226, four lines before the end: ``By 9.3.4 (c)'' should be ``By (9.3.4) (c)'' (the parenthesis are missing).
 
-\noindent $*$ P. 227. The second sentence uses Exercise~3.4 (i) p. 90 (see Proposition~\ref{34i} p.~\pageref{34i}).
+\nn$*$ P.~227. The second sentence uses Exercise~3.4 (i) p. 90 (see Proposition~\ref{34i} p.~\pageref{34i}).
 
-\noindent $*$ P. 228, line~3: $\C$ should be $\C_\pi$.
+\nn$*$ P.~228, line~3: $\C$ should be $\C_\pi$.
 
-\noindent $*$ P.~228, Corollary 9.3.6: $\ilim$ should be $\sigma_\pi$.
+\nn$*$ P.~228, Corollary 9.3.6: $\ilim$ should be $\sigma_\pi$.
 
 \begin{s}\label{228}
-P. 228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G$ is in $\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
+P.~228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G$ is in $\cc S$'', instead of ``there exists an object $G\in\cc S$ which is a generator of $\C$''. (Indeed, $G$ is already mentioned in Condition (9.3.1), which is one of the assumptions of Corollary 9.3.8.)
 \end{s}
 
-\noindent $*$ P.~229, proof of 9.4.3 (i): it might be better to write ``containing $\mathcal S$ strictly'' (or ``properly''), instead of just ``containing $\mathcal S$''. 
+\nn$*$ P.~229, proof of 9.4.3 (i): it might be better to write ``containing $\mathcal S$ strictly'' (or ``properly''), instead of just ``containing $\mathcal S$''. 
 
-\noindent $*$ P.~229, proof of 9.4.4: ``The category $\C^X$ is nonempty, essentially small ...'': the adverb ``essentially'' is not necessary since $\C$ is supposed to be small.
+\nn$*$ P.~229, proof of 9.4.4: ``The category $\C^X$ is nonempty, essentially small ...'': the adverb ``essentially'' is not necessary since $\C$ is supposed to be small.
 
-\noindent $*$ P.~237: ``Proposition 9.6.3'' should be ``Theorem 9.6.3'' (twice). 
+\nn$*$ P.~237: ``Proposition 9.6.3'' should be ``Theorem 9.6.3'' (twice). 
 
-\noindent $*$ P.~237, proof of Corollary 9.6.6, first display: ``$\psi:\C\to\C$'' should be ``$\psi:\C\to\mathcal I_{inj}$''. 
+\nn$*$ P.~237, proof of Corollary 9.6.6, first display: ``$\psi:\C\to\C$'' should be ``$\psi:\C\to\mathcal I_{inj}$''. 
 
-\noindent $*$ P.~237, end of proof of Corollary 9.6.6: it might be slightly more precise to write ``$X\to\iota(\psi(X))=K^{\Hom_\C(X,K)}$'' instead of ``$X\to\psi(X)=K^{\Hom_\C(X,K)}$''.
+\nn$*$ P.~237, end of proof of Corollary 9.6.6: it might be slightly more precise to write ``$X\to\iota(\psi(X))=K^{\Hom_\C(X,K)}$'' instead of ``$X\to\psi(X)=K^{\Hom_\C(X,K)}$''.
 
-\noindent $*$ P. 244, second diagram: the arrow from $X'$ to $Z'$ should be dotted. (For a nice picture of the octahedral diagram see p.~49 of Mili\v{c}i\'c's text
+\nn$*$ P.~244, second diagram: the arrow from $X'$ to $Z'$ should be dotted. (For a nice picture of the octahedral diagram see p.~49 of Mili\v{c}i\'c's text
 
 \href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf}.)
 
-\noindent $*$ P. 245, beginning of the proof of Proposition 10.1.13: The letters $f$ and $g$ being used in the sequel, it would be better to write $X\xr fY\xr gZ\to TX$ instead of $X\to Y\to Z\to TX$. 
+\nn$*$ P.~245, beginning of the proof of Proposition 10.1.13: The letters $f$ and $g$ being used in the sequel, it would be better to write $X\xr fY\xr gZ\to TX$ instead of $X\to Y\to Z\to TX$. 
 
-\noindent $*$ P. 245, first display: The subscript $\cc D$ is missing (three times) in $\Hom_{\cc D}$.
+\nn$*$ P.~245, first display: The subscript $\cc D$ is missing (three times) in $\Hom_{\cc D}$.
 
-\noindent $*$ P.~250, Line 1: ``TR3'' should be ``TR2''. After the second diagram, $s\circ f$ should be $f\circ s$.
+\nn$*$ P.~250, Line 1: ``TR3'' should be ``TR2''. After the second diagram, $s\circ f$ should be $f\circ s$.
 
-\noindent $*$ P. 251, right after Remark 10.2.5: ``Lemma 7.1.10'' should be ``Proposition 7.1.10''.
+\nn$*$ P.~251, right after Remark 10.2.5: ``Lemma 7.1.10'' should be ``Proposition 7.1.10''.
 
-\noindent $*$ P. 252, last five lines:
+\nn$*$ P.~252, last five lines:
 
 $\bu$ ``$u$ is represented by morphisms $u':\oplus_i\ X_i\xr{u'}Y'\xleftarrow sY$'' should be ``$u$ is represented by morphisms $\oplus_i\ X_i\xr{u'}Y'\xleftarrow sY$'',
 
@@ -435,55 +421,62 @@ $\bu$ $v'_i$ should (I believe) be $u'_i$,
 
 $\bu$ $Q(u)$ should be $Q(u')$.
 
-\noindent $*$ P. 254. The functor $RF$ of Notation 10.3.4 p.~254 coincides with the functor $R_{\cc NQ}F$ of Definition 7.3.1 p.~159 of the book.
+\nn$*$ P.~254. The functor $RF$ of Notation 10.3.4 p.~254 coincides with the functor $R_{\cc NQ}F$ of Definition 7.3.1 p.~159 of the book.
 
-\noindent $*$ P. 266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes.
+\nn$*$ P.~266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes.
 
-\nn $*$ P. 278: The first display should start with $T''(s'')$ instead of $T''(s)$.
+\nn$*$ P.~278: The first display should start with $T''(s'')$ instead of $T''(s)$.
 
-\nn $*$ P. 287, first display after Proposition~11.5.4: $v(X^{n,m})$ should be $v(X)^{n,m}$.
+\nn$*$ P.~287, first display after Proposition~11.5.4: $v(X^{n,m})$ should be $v(X)^{n,m}$.
 
-\nn $*$ P. 290, line -3: ``We define the functor'' should be ``We define the isomorphisms of functors''.
+\begin{s}\label{290}
+\nn$*$ P.~290, Line 17: as indicated in Pierre Schapira's Errata, one should read 
+$$
+d^{''n,m}=\Hom_\C((-1)^{m+1}d_X^{-m-1},Y^n).
+$$
+\end{s}
 
-\noindent $*$ P. 303, just after the diagram: ``the exact sequence (12.2.2) give rise'' should be ``the exact sequence (12.2.2) gives rise''.
+\nn$*$ P.~290, Line -3: ``We define the functor'' should be ``We define the isomorphisms of functors''.
 
-\nn $*$ P. 320, Display (13.1.2): we have $\oo{Qis}=N^{\oo{ub}}(\C)$.
+\nn$*$ P.~303, just after the diagram: ``the exact sequence (12.2.2) give rise'' should be ``the exact sequence (12.2.2) gives rise''.
 
-\noindent $*$ P. 321, Line 8: $\widetilde\tau\,{}^{\ge n}(X)\to\widetilde\tau\,{}^{\ge n}(X)$ should be $\widetilde\tau\,{}^{\ge n}(X)\to\tau^{\ge n}(X)$.
+\nn$*$ P.~320, Display (13.1.2): we have $\oo{Qis}=N^{\oo{ub}}(\C)$.
 
-\noindent $*$ P. 328, Line 8: I think the authors meant ``$X^i\to Z^i$ is an isomorphism for $i>n+d\,$'' instead of ``$i\ge n+d\,$''.
+\nn$*$ P.~321, Line 8: $\widetilde\tau\,{}^{\ge n}(X)\to\widetilde\tau\,{}^{\ge n}(X)$ should be $\widetilde\tau\,{}^{\ge n}(X)\to\tau^{\ge n}(X)$.
+
+\nn$*$ P.~328, Line 8: I think the authors meant ``$X^i\to Z^i$ is an isomorphism for $i>n+d\,$'' instead of ``$i\ge n+d\,$''.
 
 \begin{s}\label{1341}
-P. 337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
+P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
 \end{s}
 
-\noindent $*$ P. 359, Line 3: $\sigma$ should be sh.
+\nn$*$ P.~359, Line 3: $\sigma$ should be sh.
 
-\noindent $*$ P. 360, Line 5 of Step (ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\cc P)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\cc C)$''.
+\nn$*$ P.~360, Line 5 of Step (ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\cc P)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\cc C)$''.
 
-\noindent $*$ P. 364, Step (g) of the proof of Theorem 14.4.8: $\mc P_1=\oo K^-(\C_1)$ should be $\mc P_1=\C_1$.
+\nn$*$ P.~364, Step (g) of the proof of Theorem 14.4.8: $\mc P_1=\oo K^-(\C_1)$ should be $\mc P_1=\C_1$.
 
-\noindent $*$ P. 365, line between the last two displays: ``adjoint'' should be ``derived''.
+\nn$*$ P.~365, line between the last two displays: ``adjoint'' should be ``derived''.
 
-\noindent $*$ P. 392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$.
+\nn$*$ P.~392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$.
 
-\nn P. 396, Lemma 16.2.4 (ii), last sentence of the proof: It would be better (I think) write ``by LE2 and LE3'' instead of ``by Proposition 16.1.11 (ii)''.
+\nn P.~396, Lemma 16.2.4 (ii), last sentence of the proof: It would be better (I think) write ``by LE2 and LE3'' instead of ``by Proposition 16.1.11 (ii)''.
 
-\noindent $*$ P. 401, Line 6: $B''\to B$ should be $B''\to B'$.
+\nn$*$ P.~401, Line 6: $B''\to B$ should be $B''\to B'$.
 
-\nn $*$ P. 406, first line of the second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
+\nn$*$ P.~406, first line of the second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
-\nn$*$ P. 409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$. 
+\nn$*$ P.~409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$. 
 
 \begin{s}\label{1722}
-P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $\fthat(u_V)$ is an epimorphism by (2), $\fthat(u_V)$ is a local isomorphism'' should be ``Since $\fthat(u_V)$ is a local epimorphism by (2), $\fthat(u_V)$ is a local isomorphism''.
+P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $\fthat(u_V)$ is an epimorphism by (2), $\fthat(u_V)$ is a local isomorphism'' should be ``Since $\fthat(u_V)$ is a local epimorphism by (2), $\fthat(u_V)$ is a local isomorphism''.
 \end{s}
 
-\nn$*$ P. 414, line before the last display: $h_X^\ddagger F$ should be $\oo h_X^\ddagger F$, \emph{i.e.} the h should be straight, not slanted. 
+\nn$*$ P.~414, line before the last display: $h_X^\ddagger F$ should be $\oo h_X^\ddagger F$, \emph{i.e.} the h should be straight, not slanted. 
 
-\nn$*$ P. 417, first sentence of the paragraph containing Display (17.4.2): $A,A'\in\C^\wedge$ should be $A,A'\in\C_X^\wedge$. 
+\nn$*$ P.~417, first sentence of the paragraph containing Display (17.4.2): $A,A'\in\C^\wedge$ should be $A,A'\in\C_X^\wedge$. 
 
-\nn$*$ P. 418, last display: 
+\nn$*$ P.~418, last display: 
 $$
 \ilim:\ilim_{(B\to A)\in\cc{LI}_A}F(B)\to\ilim_{(B\to A)\in\cc{LI}_A}F^b(B)
 $$ 
@@ -492,29 +485,29 @@ $$
 \ilim_{(B\to A)\in\cc{LI}_A}:\ilim_{(B\to A)\in\cc{LI}_A}F(B)\to\ilim_{(B\to A)\in\cc{LI}_A}F^b(B).
 $$
 
-\nn$*$ P. 419, second line: ``applying Corollary 2.3.4 to $\theta=\id_{\cc{LI}_A}$'' should be ``applying Corollary 2.3.4 to $\pp=\id_{\cc{LI}_A}$''.
+\nn$*$ P.~419, second line: ``applying Corollary 2.3.4 to $\theta=\id_{\cc{LI}_A}$'' should be ``applying Corollary 2.3.4 to $\pp=\id_{\cc{LI}_A}$''.
 
-\nn$*$ P. 421, Theorem 17.4.7 (i): $(h_X^\ddagger F)^b\simeq(h_X^\ddagger F^a)$ should be $(\oo h_X^\ddagger F)^b\simeq(\oo h_X^\ddagger F^a)$, \emph{i.e.} the h's should be straight, not slanted.
+\nn$*$ P.~421, Theorem 17.4.7 (i): $(h_X^\ddagger F)^b\simeq(h_X^\ddagger F^a)$ should be $(\oo h_X^\ddagger F)^b\simeq(\oo h_X^\ddagger F^a)$, \emph{i.e.} the h's should be straight, not slanted.
 
-\noindent $*$ P. 424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) 
+\nn$*$ P.~424, proof of Theorem 17.5.2 (iv). ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. (See \S\ref{fdagger} p.~\pageref{fdagger}.) 
 
-\noindent $*$ P. 426, Line 5: ``morphism of sites by'' should be ``morphism of sites''.
+\nn$*$ P.~426, Line 5: ``morphism of sites by'' should be ``morphism of sites''.
 
-\nn$*$ P. 428, Notation 17.6.13 (i). ``For $M\in\A$, let us denote by $M_A$ the sheaf associated with the constant presheaf $\C_X\ni U\mapsto M$'' should be  
+\nn$*$ P.~428, Notation 17.6.13 (i). ``For $M\in\A$, let us denote by $M_A$ the sheaf associated with the constant presheaf $\C_X\ni U\mapsto M$'' should be  
 
 ``For $M\in\A$, let us denote by $M_A$ the sheaf over $\C_A$ associated with the constant presheaf $\C_A\ni(U\to A)\mapsto M$''. 
 
 It might also be worth mentioning that $M_A$ is called the \emph{constant sheaf over $A$ with stalk} $M$\index{constant sheaf}. 
 
-\nn$*$ P. 437, Line 3 of Step (ii) of the proof of Lemma 18.1.5: It might be better to write $``\bigoplus_{s\in A(U)}G(U\xr sA)"$ instead of $``\coprod_{s\in A(U)}G(U\xr sA)"$; indeed $\bigoplus$ is more usual that $\coprod$ to denote the coproduct of $k$-modules. 
+\nn$*$ P.~437, Line 3 of Step (ii) of the proof of Lemma 18.1.5: It might be better to write $``\bigoplus_{s\in A(U)}G(U\xr sA)"$ instead of $``\coprod_{s\in A(U)}G(U\xr sA)"$; indeed $\bigoplus$ is more usual that $\coprod$ to denote the coproduct of $k$-modules. 
 
-\noindent $*$ P. 438, right after ``q.e.d.'': ``Notations (17.6.13)'' should be ``Notations 17.6.13'' (no parenthesis). 
+\nn$*$ P.~438, right after ``q.e.d.'': ``Notations (17.6.13)'' should be ``Notations 17.6.13'' (no parenthesis). 
 
-\nn$*$ P. 438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all $F$ in $\oo{PSh}(\cc R)$. 
+\nn$*$ P.~438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all $F$ in $\oo{PSh}(\cc R)$. 
 
-\nn$*$ P. 439, after Definition 18.2.2: One can add that we have $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F$ in $\oo{PSh}(\cc R)$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F$ in $\Mod(\cc R)$. 
+\nn$*$ P.~439, after Definition 18.2.2: One can add that we have $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F$ in $\oo{PSh}(\cc R)$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F$ in $\Mod(\cc R)$. 
 
-\nn$*$ P. 439, Proposition 18.2.3 (ii). If $\cc{R,S,T}$ are $k_X$-algebras, if $F$ is a $(\cc T\otimes_{k_X}\cc R^{\op})$-module, if $G$ is an $(\cc R\otimes_{k_X}\cc S)$-module, and if $H$ is an $(\cc S\otimes_{k_X}\cc T)$-module, then we have 
+\nn$*$ P.~439, Proposition 18.2.3 (ii). If $\cc{R,S,T}$ are $k_X$-algebras, if $F$ is a $(\cc T\otimes_{k_X}\cc R^{\op})$-module, if $G$ is an $(\cc R\otimes_{k_X}\cc S)$-module, and if $H$ is an $(\cc S\otimes_{k_X}\cc T)$-module, then we have 
 $$
 \Hom_{\cc S\otimes_{k_X}\cc T}(F\otimes_{\cc R}G,H)\simeq
 \Hom_{\cc R\otimes_{k_X}\cc S}(G,\HOM_{\cc T}(F,H)), 
@@ -524,31 +517,31 @@ $$
 \HOM_{\cc R\otimes_{k_X}\cc S}(G,\HOM_{\cc T}(F,H)). 
 $$ 
 
-\nn$*$ P. 440, last line of second display: $\Hom_{\cc R(U)}(G(U)\otimes_kF(U),H(U))$ should be $\Hom_k(F(U)\otimes_{\cc R(U)}G(U),H(U))$. 
+\nn$*$ P.~440, last line of second display: $\Hom_{\cc R(U)}(G(U)\otimes_kF(U),H(U))$ should be $\Hom_k(F(U)\otimes_{\cc R(U)}G(U),H(U))$. 
 
-\nn$*$ P. 440, first line of the fourth display, $\overset{\text{\tiny psh}}{\otimes}_{\cc R(V)}$ should be $\otimes_{\cc R(V)}$. 
+\nn$*$ P.~440, first line of the fourth display, $\overset{\text{\tiny psh}}{\otimes}_{\cc R(V)}$ should be $\otimes_{\cc R(V)}$. 
 
-\nn$*$ P. 441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}).  
+\nn$*$ P.~441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}).  
 
-\nn$*$ P. 442, first line of Step (ii) of the proof of Proposition 18.2.7: $\HOM_{\cc R}(\cc R\otimes k_{XA},F)$ should be $\HOM_{\cc R}(\cc R\otimes_{k_X}k_{XA},F)$. 
+\nn$*$ P.~442, first line of Step (ii) of the proof of Proposition 18.2.7: $\HOM_{\cc R}(\cc R\otimes k_{XA},F)$ should be $\HOM_{\cc R}(\cc R\otimes_{k_X}k_{XA},F)$. 
 
-\nn$*$ P. 442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$. 
+\nn$*$ P.~442, Line 3 of last display of Section 18.2: $\jj_{A\to X!}\jj_{A\to X}^{-1}$ should be $\jj_{A\to X}^\ddagger\jj_{A\to X*}$. 
 
-\nn$*$ P. 442. Lemma 18.3.1 (i) follows from Proposition 17.5.1 p.~432 of the book. 
+\nn$*$ P.~442. Lemma 18.3.1 (i) follows from Proposition 17.5.1 p.~432 of the book. 
 
-\nn$*$ P. 443, first display: On the third and fourth lines, $\HOM_{k_X}$ should be $\HOM_{k_Z}$. 
+\nn$*$ P.~443, first display: On the third and fourth lines, $\HOM_{k_X}$ should be $\HOM_{k_Z}$. 
 
-\nn$*$ P. 443, sentence preceding Lemma 18.3.2: $j_{A\to X}$ should be $\oo j_{A\to X}$ (the slanted j should be straight). 
+\nn$*$ P.~443, sentence preceding Lemma 18.3.2: $j_{A\to X}$ should be $\oo j_{A\to X}$ (the slanted j should be straight). 
 
 \nn$*$ Pp 447-8, proof of Lemma 18.5.3: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.
 
-\nn$*$ P. 448, Proposition 18.5.4, Line 3 of the proof: $G^{\oplus I}\epi M$ should be $\cc G^{\oplus I}\epi M$.
+\nn$*$ P.~448, Proposition 18.5.4, Line 3 of the proof: $G^{\oplus I}\epi M$ should be $\cc G^{\oplus I}\epi M$.
 
-\noindent $*$ P. 452, Part (i) (a) of the proof of Lemma 18.6.7. I think that $\cc O_U$ and $\cc O_V$ stand for $\cc O_X|_U$ and $\cc O_Y|_V$. (If this is so, it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$.) 
+\nn$*$ P.~452, Part (i) (a) of the proof of Lemma 18.6.7. I think that $\cc O_U$ and $\cc O_V$ stand for $\cc O_X|_U$ and $\cc O_Y|_V$. (If this is so, it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$.) 
 
-\noindent $*$ P. 452, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$.
+\nn$*$ P.~452, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$.
 
-\noindent $*$ P. 494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
+\nn$*$ P.~494, Index. I found useful to add the following subentries to the entry ``injective'': $\cc F$-injective, 231; $F$-injective, 253, 255, 330.
 
 %%%
 
@@ -572,7 +565,7 @@ A \textbf{universe}\index{universe} is a set $\mathcal U$ satisfying
 
 (vi) $\mathbb N\in\mathcal U$.
 
-\noindent We want to prove:
+\nn We want to prove:
 
 (vii) $U\in\mathcal U\then\bigcup_{u\in U}u\in\mathcal U$,
 
@@ -582,17 +575,17 @@ A \textbf{universe}\index{universe} is a set $\mathcal U$ satisfying
 
 (x) $I\in \mathcal U$ and $U_i\in\mathcal U$ for all $i$ $\then$ $\prod_{i\in I}U_i\in\mathcal U$.
 
-\noindent(We have kept Kashiwara and Schapira's numbering of Conditions (i) to (x).) 
+\nn(We have kept Kashiwara and Schapira's numbering of Conditions (i) to (x).) 
 
-\noindent Obviously, (ii) and (v) imply (vii), whereas (iv) and (ii) imply (ix). Axioms (iii), (vi), and (v) imply
+\nn Obviously, (ii) and (v) imply (vii), whereas (iv) and (ii) imply (ix). Axioms (iii), (vi), and (v) imply
 
 (a) $U,V\in\mathcal U\then\{U,V\}\in\mathcal U$,
 
-\noindent and thus
+\nn and thus
 
 (b) $U,V\in\mathcal U\then(U,V):=\{\{U\},\{U,V\}\}\in\mathcal U$.
 
-\noindent\textbf{Proof of (viii).} If $u\in U$ and $v\in V$, then $\{(u,v)\}\in\mathcal U$ by (ii), (b), and (iii). Now (v) yields 
+\nn\textbf{Proof of (viii).} If $u\in U$ and $v\in V$, then $\{(u,v)\}\in\mathcal U$ by (ii), (b), and (iii). Now (v) yields 
 $$
 U\times V=\bigcup_{u\in U}\ \bigcup_{v\in V}\ \{(u,v)\}\in\mathcal U.\text{ q.e.d.} 
 $$ 
@@ -601,7 +594,7 @@ Assume $U,V\in\mathcal U$, and let $V^U$ be the set of all maps from $U$ to $V$.
 
 (c) $U,V\in\mathcal U\then V^U\in\mathcal U$.
 
-\noindent\textbf{Proof of (x).} As 
+\nn\textbf{Proof of (x).} As 
 $$
 \prod_{i\in I}\ U_i\in\mathcal P\left(\left(\bigcup_{i\in I}U_i\right)^I\right),
 $$
@@ -612,7 +605,7 @@ $$
 \subsection{Brief comments}
 
 \begin{s}\label{d125}
-P. 14, category of morphisms\index{category of morphisms}. Here are some comments about Definition 1.2.5 p.~14:
+P.~14, category of morphisms\index{category of morphisms}. Here are some comments about Definition 1.2.5 p.~14:
 
 \begin{nota}\label{c*}
 For any category $\C$ define the category $\C^*$\index{$\C^*$} as follows. The objects of $\C^*$ are the objects of $\C$, the set $\Hom_{\C^*}(X,Y)$ is defined by 
@@ -659,13 +652,13 @@ When $\C$ is a small category (see Section~\ref{ucat} p. \pageref{ucat}), we ass
 %
 
 \begin{s}\label{ffc}
-P. 16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative\index{conservative}. 
+P.~16, Definition 1.2.11 (iii). Note that fully faithful functors are conservative\index{conservative}. 
 \end{s}
 
 %
 
 \begin{s}
-P. 18, Definition 1.2.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
+P.~18, Definition 1.2.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
 \begin{equation}\label{opslice}
 (\C_{X'})^{\op}\simeq(\C^{\op})_{X'},\quad(\C^{X'})^{\op}\simeq(\C^{\op})^{X'}.
 \end{equation}
@@ -1214,7 +1207,7 @@ We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and
 %
 
 \begin{s}\label{fpl}
-P. 50, Corollary 2.2.11. We also have:
+P.~50, Corollary 2.2.11. We also have:
 
 \emph{A category admits finite projective limits if and only if it admits a terminal object and binary fibered products.}
 
@@ -1227,7 +1220,7 @@ Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have
 %
 
 \begin{s}
-P. 50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dagger$, and $\pp^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). %So, there is a big number of pages (with a high contents density) between the notation and its justification.
+P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dagger$, and $\pp^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). %So, there is a big number of pages (with a high contents density) between the notation and its justification.
 \end{s}
 
 %
@@ -1477,7 +1470,7 @@ induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
 % 
 
 \begin{s}\label{spreptom}
-P. 54, end of Section 2.3. Let 
+P.~54, end of Section 2.3. Let 
 \begin{equation}\label{epreptom}
 \C\xleftarrow\beta K\xr\psi J\xr\pp I
 \end{equation} 
@@ -1487,7 +1480,7 @@ be a diagram of functors. Assume that $I,J$ and $K$ are small, and that $\C$ adm
 %
 
 \begin{s} 
-P. 54, end of Section 2.3. The following fact was pointed out to me by Tom Leinster\index{Leinster}; see \href{http://mathoverflow.net/q/162162/461}{http://mathoverflow.net/q/162162/461}.
+P.~54, end of Section 2.3. The following fact was pointed out to me by Tom Leinster\index{Leinster}; see \href{http://mathoverflow.net/q/162162/461}{http://mathoverflow.net/q/162162/461}.
 
 Let $k$ be a field, let $\U$ and $\V$ be universes such that $k\in\U\in\V$, let $I$ be the category of $k$-vector spaces belonging to $\U$, let $J$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\beta,\pp$ and $\psi$ are the inclusions. In particular the observation made in \S\ref{spreptom} applies. 
 
@@ -1669,7 +1662,7 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 %
 
 \begin{s}
-P. 61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
+P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
 \ic_{(X\to A)\in\C_A}X\xrightarrow\sim A,
@@ -2202,7 +2195,7 @@ P.~75. Throughout the subsection about the IPC Property, one can assume that $\A
 %
 
 \begin{s}\label{poc}
-P. 77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pageref{1744i}):
+P.~77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pageref{1744i}):
 
 If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, then the natural functor $$\prod I_\gamma\to\prod J_\gamma$$ is cofinal. 
 \end{s}
@@ -2258,13 +2251,13 @@ p_J:\beta_J\to B
 $$
 be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}$ is defined only for $i$ in $J$. We easily check that 
 
-\noindent$\bu$ the morphisms$f_i:=p_{\{i\}}\circ p_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
+\nn$\bu$ the morphisms$f_i:=p_{\{i\}}\circ p_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
 
-\noindent$\bu$ the morphisms $g_{i,J}:=p_i:\alpha_i\to A$ (with $i$ in $J$) induce a morphism $g_J:\beta_J\to A$, 
+\nn$\bu$ the morphisms $g_{i,J}:=p_i:\alpha_i\to A$ (with $i$ in $J$) induce a morphism $g_J:\beta_J\to A$, 
 
-\noindent$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
+\nn$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
 
-\noindent$\bu$ $f$ and $g$ are inverse isomorphisms.
+\nn$\bu$ $f$ and $g$ are inverse isomorphisms.
 \end{proof}
 \end{s}
 
@@ -2317,7 +2310,7 @@ The first and last bijections follow from \eqref{332}, the second one is clear, 
 %
 
 \begin{s}
-P. 84, Proposition 3.3.13. Recall the statement:
+P.~84, Proposition 3.3.13. Recall the statement:
 
 \begin{prop}[Proposition 3.3.13 p. 84]
 Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^\wedge$. Then $A$ is left exact if and only if $\C_A$ is filtrant.
@@ -2449,7 +2442,7 @@ This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 
 %%
 
 \begin{s} 
-P. 90, Exercise 3.4 (i). (This exercise is used in the second sentence of p.~227 of the book.) Recall the statement: 
+P.~90, Exercise 3.4 (i). (This exercise is used in the second sentence of p.~227 of the book.) Recall the statement: 
 
 \begin{prop}\label{34i}
 If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
@@ -2485,7 +2478,7 @@ As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=
 \section{About Chapter 4}
 
 \begin{s}
-P. 93, Lemma 4.1.2. Here is a slightly more general statement:
+P.~93, Lemma 4.1.2. Here is a slightly more general statement:
 
 \begin{lem}\label{proj3}
 Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a morphism of functors, and let $X$ be an object of $\C$. Then the following conditions are equivalent:
@@ -2698,7 +2691,7 @@ A morphism $f:X\to Y$ in a category $\C$ is a strict epimorphism if and only if,
 \subsection{Brief Comments}
 
 \begin{s}\label{515i}
-P. 115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details:
+P.~115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details:
 
 \nn(b) $\then$ (a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) of the book implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
@@ -2743,7 +2736,7 @@ and the conclusion follows from the fact that $u$ is an epimorphism.
 %
 
 \begin{s}
-P. 117, Definition 5.2.1 (definition of a system of generators). There is a comment about this in Pierre Schapira's Errata 
+P.~117, Definition 5.2.1 (definition of a system of generators). There is a comment about this in Pierre Schapira's Errata 
 
 \href{http://people.math.jussieu.fr/~schapira/books/Errata.pdf}{http://people.math.jussieu.fr/$\sim$schapira/books/Errata.pdf}.
 
@@ -2757,7 +2750,7 @@ Let $S$ be a set of objects of a category $\C$ and $\cc S$ the corresponding sub
 %
 
 \begin{s}
-P. 118, second display: Isomorphism 
+P.~118, second display: Isomorphism 
 $$
 \Hom_{\Set}(\Hom_\C(G,X),\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\sqcup\Hom_\C(G,X)},X)
 $$ 
@@ -2770,7 +2763,7 @@ $$
 %
 
 \begin{s}
-P. 118, proof of Prop. 5.2.3: the proof of (ii) uses Exercise~3.4 (i) p.~90 of the book (see Proposition~\ref{34i} p.~\pageref{34i}) and Proposition 3.3.7 (i) p.~83 of the book. 
+P.~118, proof of Prop. 5.2.3: the proof of (ii) uses Exercise~3.4 (i) p.~90 of the book (see Proposition~\ref{34i} p.~\pageref{34i}) and Proposition 3.3.7 (i) p.~83 of the book. 
 
 Proof of (v): We add a few details. Recall the setting: the category $\C$ admits finite projective limits, small coproducts, and a generator $G$. We already know that $\pp_G:=\Hom_\C(G,\ )$ is conservative, left exact, and preserves monomorphisms. 
 
@@ -2795,7 +2788,7 @@ the morphism $\pp(Y_1\times_XY_2)\to\pp(Y_1)\times_{\pp(X)}\pp(Y_2)$ being an is
 %
 
 \begin{s}
-P. 119, Theorem 5.2.5: see Corollary~\ref{c2111} p.~\pageref{c2111}.
+P.~119, Theorem 5.2.5: see Corollary~\ref{c2111} p.~\pageref{c2111}.
 \end{s}
 
 %
@@ -2807,7 +2800,7 @@ Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 and Theorem 5.2.6 of the 
 %
 
 \begin{s}
-P. 122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating \index{strictly generating subcategory}, then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
+P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating \index{strictly generating subcategory}, then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
 \end{s}
 
 %
@@ -2912,19 +2905,19 @@ As an exercise, I rewrite parts of the proof. The difference between the rewriti
 %
 Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 
-\noindent (i) $\C$ admits small inductive limits and finite projective limits, 
+\nn(i) $\C$ admits small inductive limits and finite projective limits, 
 
-\noindent (ii) small filtrant inductive limits are stable by base change (see Definition 2.2.6 p.~47 of the book), 
+\nn(ii) small filtrant inductive limits are stable by base change (see Definition 2.2.6 p.~47 of the book), 
 
-\noindent (iii) any epimorphism is strict.
+\nn(iii) any epimorphism is strict.
 
-\noindent Let $\F$ be an essentially small full subcategory of $\C$ such that 
+\nn Let $\F$ be an essentially small full subcategory of $\C$ such that 
 
-\noindent (a) $\Ob(\F)$ is a system of generators,
+\nn(a) $\Ob(\F)$ is a system of generators,
 
-\noindent (b) $\F$ is closed by finite coproducts in $\C$. 
+\nn(b) $\F$ is closed by finite coproducts in $\C$. 
 
-\noindent Then $\F$ is strictly generating.
+\nn Then $\F$ is strictly generating.
 
 (Recall that the functor $\pp:\C\to\F^\wedge$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.)
 %
@@ -2932,11 +2925,11 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 %
 Proof. We may assume from the beginning that $\F$ is small.
 
-\noindent Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
+\nn Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
 
-\noindent Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
+\nn Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
-\noindent Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism
+\nn Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism
 % 
 \begin{equation}\label{step3}
 \colim_i\Coim z_i\to\Coim\left(\colim_i\zeta(z_i)\to X\right)
@@ -2951,7 +2944,7 @@ $$
 $$ 
 We claim that \eqref{step3} is an isomorphism.
 
-\noindent Step 3'. Let $A$ be in $\F^\wedge$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wedge)_A$. We claim 
+\nn Step 3'. Let $A$ be in $\F^\wedge$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wedge)_A$. We claim 
 $$
 \colim_i\Coim(B_i\to A)\xrightarrow{\sim}
 \Coim\left(\colim_iB_i\to A\right).
@@ -2961,13 +2954,13 @@ $$
 \Hom_\C(\Coim z,Y)\simeq\Hom_{\F^\wedge}(\Coim\pp(z),\pp(Y)).
 $$ 
 
-\noindent Step 5. Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
+\nn Step 5. Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
 $$
 \colim_{A\in I}\pp\zeta\xi(A)\to\pp(X) 
 $$ 
 is an epimorphism.
 
-\noindent Step 6. We claim that there is a natural isomorphism 
+\nn Step 6. We claim that there is a natural isomorphism 
 $$
 \colim_{A\in I}\Coim\xi(A)\simeq X. 
 $$
@@ -2993,7 +2986,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 
 It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and Corollary~\ref{sbc} p.~\pageref{sbc}.) 
 
-\noindent Proof of Step 4. We have 
+\nn Proof of Step 4. We have 
 $$
 \Hom_\C(\Coim z,Y)\simeq\Hom_\C\big(\Coker(Z\times_XZ\rightrightarrows Z),Y\big)
 $$
@@ -3030,7 +3023,7 @@ $$
 $$
 which is obvious. 
 
-\noindent Proof of Step 6. As Step 3 implies 
+\nn Proof of Step 6. As Step 3 implies 
 $$
 \colim_{A\in I}\Coim\xi(A)\simeq\Coim\left(\colim_{A\in I}\zeta\xi(A)\to X\right),
 $$ 
@@ -3061,9 +3054,9 @@ P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as fol
 \begin{lem} 
 Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
 
-\noindent{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
+\nn{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
 
-\noindent{\em(b)} There is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
+\nn{\em(b)} There is a small full subcategory $\A'$ of $\C$ such that $\A\subset\A'\subset \C$ and that each finite inductive system in $\A$ has a limit in $\A'$. 
 \end{lem} 
 
 \begin{proof}
@@ -3353,7 +3346,7 @@ P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the 
 7&small projective limits&$\circ$&$\circ$\\ \hline
 \end{tabular}
 \end{center}%\bigskip 
-\noindent(In Line 6 we assume that $\C$ admits finite projective limits, whereas in Line 7 we assume that $\C$ admits small projective limits.)%\bigskip 
+\nn(In Line 6 we assume that $\C$ admits finite projective limits, whereas in Line 7 we assume that $\C$ admits small projective limits.)%\bigskip 
 \end{s}
 
 %
@@ -3393,7 +3386,7 @@ $$
 \simeq\ic I\rho\circ\iota_\C\circ\xi\simeq\ic\rho\circ\xi, 
 $$ 
 
-\noindent the three isomorphisms being respectively justified by \eqref{140} p.~\pageref{140}, \eqref{133ii} p.~\pageref{133ii}, and \eqref{133i} p.~\pageref{133i}. q.e.d.
+\nn the three isomorphisms being respectively justified by \eqref{140} p.~\pageref{140}, \eqref{133ii} p.~\pageref{133ii}, and \eqref{133i} p.~\pageref{133i}. q.e.d.
 \end{s}
 
 %%
@@ -3441,17 +3434,17 @@ N:=N\{K,G,(\alpha_k)\}
 $$ 
 as follows:
 
-\noindent[Beginning of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
+\nn[Beginning of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
 
-\noindent$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
+\nn$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
 
-\noindent$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors 
+\nn$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors 
 %
 \begin{equation}\label{u':}
 u':P\to G.
 \end{equation}
 
-\noindent(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square 
+\nn(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square 
 $$ 
 \begin{tikzcd} 
 \alpha_k(i_k)\ar[equal]{r}&P(k)\ar{r}{P(f)}\ar{d}[swap]{u_k(i_k)}&P(\ell)\ar{d}{u_\ell(i_\ell)}\ar[equal]{r}&\alpha_\ell(i_\ell)\\ 
@@ -3589,19 +3582,19 @@ We prove the following slightly more precise statement:
 %
 Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
 
-\noindent{\em(a)} $S\neq\varnothing$, 
+\nn{\em(a)} $S\neq\varnothing$, 
 
-\noindent{\em(b)} all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$, 
+\nn{\em(b)} all morphism $X'\to A'$ in $\Ind(\cc C')$ with $X'$ in $\cc C'$ factorizes through $F(X)$ for some $X$ in $\cc C$, 
 
-\noindent{\em(c)} the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
+\nn{\em(c)} the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
 
-\noindent{\em(d)} $A'\circ F$ is in $S$.
+\nn{\em(d)} $A'\circ F$ is in $S$.
 %
 \end{prop}
 %
 \begin{proof}\ 
 
-\noindent(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\alpha\to F\circ\beta$ such that 
+\nn(a) $\then$ (b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
@@ -3611,13 +3604,13 @@ $\ic F\circ\beta\simeq IF(A)$,
 
 $\ic\pp\simeq f$. 
 
-\noindent Then $f$ factorizes as $X'=\alpha(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
+\nn Then $f$ factorizes as $X'=\alpha(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
 
-\noindent(b) $\then$ (c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
+\nn(b) $\then$ (c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
 
-\noindent(c) $\then$ (d). This follows from Remark~\ref{cof} p.~\pageref{cof}. 
+\nn(c) $\then$ (d). This follows from Remark~\ref{cof} p.~\pageref{cof}. 
 
-\noindent(d) $\then$ (a). This is obvious.
+\nn(d) $\then$ (a). This is obvious.
 \end{proof}
 
 %%%
@@ -3678,11 +3671,11 @@ If $F(s)$ is an isomorphism for all $s$ in $\cc S$, then $F$ is universally righ
 
 The following conditions on the right localization $(\C_{\cc S},Q)$ of $\C$ are equivalent: 
 
-\noindent(a) $\id_\C$ is universally right localizable, 
+\nn(a) $\id_\C$ is universally right localizable, 
 
-\noindent(b) any functor $F:\C\to\A$ is universally right localizable, 
+\nn(b) any functor $F:\C\to\A$ is universally right localizable, 
 
-\noindent(c) any functor $F:\C\to\A$ is universally right localizable and satisfies 
+\nn(c) any functor $F:\C\to\A$ is universally right localizable and satisfies 
 $$
 R_{\cc S}F\simeq F\circ R_{\cc S}\id_\C.
 $$
@@ -3695,7 +3688,7 @@ Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if t
 %
 
 \begin{s}
-P. 159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pageref{durl}. 
+P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pageref{durl}. 
 \end{s}
 
 %
@@ -3731,7 +3724,7 @@ R_\SSS(\iota_\A\circ F)(Q(X))\simeq IF(\alpha_\SSS(Q(X)))
 $$ 
 in $\Ind(\C)$. Recall the following facts: 
 
-\noindent$\bu$ Proposition 7.4.1 p.~162 of the book implies
+\nn$\bu$ Proposition 7.4.1 p.~162 of the book implies
 $$
 A:=\alpha_\SSS(Q(X))=\colim_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
 $$ 
@@ -3746,7 +3739,7 @@ $$
 
 We want to prove $B\simeq C$.
 
-\noindent{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
+\nn{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
 
 We shall define morphisms 
 $$
@@ -3781,9 +3774,9 @@ We leave the verification of these claims to the reader.
 
 About Lemma 8.1.2 (ii), p. 169: The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that 
 
-\noindent(a) $\mu_X$ is a group multiplication for all $X$ in $\C$, 
+\nn(a) $\mu_X$ is a group multiplication for all $X$ in $\C$, 
 
-\noindent(b) the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
+\nn(b) the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
 
 %
 
@@ -3880,7 +3873,7 @@ Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$
 \subsection{Brief Comments}
 
 \begin{s} 
-P. 172, Lemma 8.2.9. Recall the statement:
+P.~172, Lemma 8.2.9. Recall the statement:
 
 \begin{lem}[Lemma 8.2.9 p. 172] 
 Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is additive.
@@ -4074,7 +4067,7 @@ $$
 \subsection{Brief Comments}
 
 \begin{s} 
-P. 177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
+P.~177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
 \end{s}
 %
 \subsection{The Complex (8.3.3) (p.~178)}
@@ -4157,7 +4150,7 @@ $$
 \subsection{Brief Comments}
 
 \begin{s}
-P. 180, Lemma 8.3.12. Here is a minor variant:
+P.~180, Lemma 8.3.12. Here is a minor variant:
 
 \begin{lem}\label{8312}
 For a complex $Z\to Y\to X$ in some abelian category, the following conditions are equivalent:
@@ -4269,7 +4262,7 @@ and (iv) follows from \eqref{fk+hg},\eqref{gh,kf}, and \eqref{kh}. q.e.d.
 %
 
 \begin{s}%\label{adic}
-P. 183. Here is an example showing that filtrant and cofiltrant small projective limits of $R$-modules are not exact in general: 
+P.~183. Here is an example showing that filtrant and cofiltrant small projective limits of $R$-modules are not exact in general: 
 $$
 \lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
 $$
@@ -4278,13 +4271,13 @@ $$
 %
 
 \begin{s}\label{gcsbc}
-P. 186, Definition 8.3.24 (definition of a Grothendieck category). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change. \index{Grothendieck category}
+P.~186, Definition 8.3.24 (definition of a Grothendieck category). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change. \index{Grothendieck category}
 \end{s}
 
 %
 
 \begin{s} 
-P. 186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a$ is in $U$ and 0 otherwise, and, for each $n$ in $\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n$ in $\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a$ is in $U\subset U_n$ and 0 otherwise. This family of morphisms defines, when $U$ varies, an epimorphism $\pp_n:F_n\epi G$. Put 
+P.~186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a$ is in $U$ and 0 otherwise, and, for each $n$ in $\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n$ in $\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a$ is in $U\subset U_n$ and 0 otherwise. This family of morphisms defines, when $U$ varies, an epimorphism $\pp_n:F_n\epi G$. Put 
 $$
 F:=\prod_{n\in\mathbb N}F_n,\quad H:=\prod_{n\in\mathbb N}G,\quad\pp:=\prod_{n\in\mathbb N}\pp_n:F\to H.
 $$ 
@@ -4708,7 +4701,7 @@ I find Chapter 9 especially beautiful!
 \subsection{Brief Comments}
 
 \begin{s}
-P. 217, beginning of Section 9.2. 
+P.~217, beginning of Section 9.2. 
 
 \begin{prop}\label{ppifil}
 Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
@@ -4936,7 +4929,7 @@ whose composition is the identity. Hence, the composition
 $$G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)$$ 
 is the identity.
 
-\nn $*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map 
+\nn$*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map 
 $$
 \lambda:\colim_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
 $$ 
@@ -4956,7 +4949,7 @@ It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morph
 There is a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection.
 \end{claim}  
 
-\nn $*$ Step 3. Consider the following conditions:
+\nn$*$ Step 3. Consider the following conditions:
 
 \nn(a) the diagram of solid arrows 
 $$
@@ -4980,9 +4973,9 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. 
 
-\nn $*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn$*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn $*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+\nn$*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 \begin{equation}\label{s5a}
 \begin{tikzcd}
 G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
@@ -5022,7 +5015,7 @@ C\ar{r}\ar{rdd}[swap]{x}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 $$ 
 This proves (b).
 
-\nn $*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
+\nn$*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
 $$
 \mu:\colim_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
@@ -5178,13 +5171,13 @@ By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\sqcup B}(G))<\pi
 
 \subsubsection{Brief Comments}
 
-\nn$*$ P. 227, Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$. 
+\nn$*$ P.~227, Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$. 
 
-\nn$*$ P. 228, Corollary 9.3.6. As already pointed out, $\ilim$ in the statement should be $\sigma_\pi$. As for the proof, Conditions (i), (ii), and (iii) of Proposition 9.2.19 p.~223 of the book follow respectively from (9.3.1) (i) (see (i) at the beginning of Section~\ref{s934} p.~\pageref{s934}), (9.3.4) (b) (see (b) right after Condition~\ref{ass} p.~\pageref{ass}), and Corollary 9.3.5 (i) p.~227 of the book. 
+\nn$*$ P.~228, Corollary 9.3.6. As already pointed out, $\ilim$ in the statement should be $\sigma_\pi$. As for the proof, Conditions (i), (ii), and (iii) of Proposition 9.2.19 p.~223 of the book follow respectively from (9.3.1) (i) (see (i) at the beginning of Section~\ref{s934} p.~\pageref{s934}), (9.3.4) (b) (see (b) right after Condition~\ref{ass} p.~\pageref{ass}), and Corollary 9.3.5 (i) p.~227 of the book. 
 
-\nn$*$ P. 228, Corollary 9.3.7. As $\{\card(X(G))\,|\,X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X$ in $S$, and apply Theorem~\ref{934} p.~\pageref{934}. 
+\nn$*$ P.~228, Corollary 9.3.7. As $\{\card(X(G))\,|\,X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X$ in $S$, and apply Theorem~\ref{934} p.~\pageref{934}. 
 
-\nn$*$ P. 228, Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 of the book and Example 9.2.4 p.~224 of the book. 
+\nn$*$ P.~228, Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 of the book and Example 9.2.4 p.~224 of the book. 
 
 %%%
 
@@ -5245,7 +5238,7 @@ If $X\xr fY\xr uZ$ are morphisms in a given category, we denote by $\Sigma(f,u)$
 \begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
 If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ satisfying Property $P(f)$ below: 
 
-\nn $P(f):$ for any morphism $u:Y\to Z$, the set $\Sigma(f,u)$ is nonempty.
+\nn$P(f):$ for any morphism $u:Y\to Z$, the set $\Sigma(f,u)$ is nonempty.
 \end{lem}
 
 \begin{proof}
@@ -5640,7 +5633,7 @@ In the book $\cc F$ is supposed to be small, but the proof clearly works if $\cc
 \subsection{Brief Comments}
 
 \begin{s} 
-P. 235, Theorem 9.6.1. In view of the comments made before Corollary~\ref{938} p.~\pageref{938}, Theorem 9.6.1 could be stated as follows:
+P.~235, Theorem 9.6.1. In view of the comments made before Corollary~\ref{938} p.~\pageref{938}, Theorem 9.6.1 could be stated as follows:
 
 \begin{thm}[Theorem 9.6.1 p. 235]\label{961}
 Let $\C$ be a Grothendieck category. Then, for any small subset $E$ of $\Ob(\C)$, there exists an infinite cardinal $\pi$ such that
@@ -5664,7 +5657,7 @@ Let $\C$ be a Grothendieck category. Then, for any small subset $E$ of $\Ob(\C)$
 %
 
 \begin{s}\label{962}
-P. 236, proof of Theorem 9.6.2. 
+P.~236, proof of Theorem 9.6.2. 
 
 Line 3: One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\cc F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
 
@@ -5880,19 +5873,19 @@ It is easy to check that all rows and columns are distinguished triangles.
 \subsection{Brief Comments}
 
 \begin{s} 
-P. 250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4.
+P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pageref{may}, it is not necessary to prove TR4.
 \end{s}
 
 %
 
-\begin{s} P. 263, last sentence of the proof of Lemma 10.5.8. We already know that the bottom row of the diagram 
+\begin{s} P.~263, last sentence of the proof of Lemma 10.5.8. We already know that the bottom row of the commutative diagram 
 $$
 \begin{tikzcd}
 \oplus_i\,\pp(Z_i)\ar[equal]{d}\ar{r}&\oplus_i\,\pp(Y_i)\ar[equal]{d}\ar{r}&\oplus_i\,\widetilde\pp(X_i)\ar{d}\ar{r}&0\\ 
 \oplus_i\,\pp(Z_i)\ar{r}&\oplus_i\,\pp(Y_i)\ar{r}&\widetilde\pp(\oplus_i\,X_i)\ar{r}&0 
 \end{tikzcd}
 $$ 
-is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 (ii) p.~261) from the isomorphisms 
+is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 (ii) p.~261 of the book) from the isomorphisms 
 $$
 \Coker(\oplus_i\,\pp(Z_i)\to\oplus_i\,\pp(Y_i))\simeq\oplus_i\,\Coker(\pp(Z_i)\to\pp(Y_i))\simeq\oplus_i\,\widetilde\pp(X_i).
 $$
@@ -5900,7 +5893,7 @@ $$
 
 %%
 
-\begin{s} P. 263, proof of Lemma 10.5.9. Before the sentence ``Since $Z_n$ and $X_n$ belong to $\cc K$, $X_{n+1}$ also belongs to $\cc K$'', one could add ``We may, and do, assume that $\cc K$ is saturated''.
+\begin{s} P.~263, proof of Lemma 10.5.9. Before the sentence ``Since $Z_n$ and $X_n$ belong to $\cc K$, $X_{n+1}$ also belongs to $\cc K$'', one could add ``We may, and do, assume that $\cc K$ is saturated''.
 
 Recall the Yoneda isomorphisms 
 $$
@@ -5913,21 +5906,21 @@ Note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
 
 %%
 
-\begin{s} P. 266, Exercise 10.11. Recall the statement: 
+\begin{s} P.~266, Exercise 10.11. Recall the statement: 
 
-\noindent(i) Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to\cc D/\cc N$ be the localization functor, and let $f:X\to Y$ be a morphism in $\cc D$ satisfying $Q(f)=0$. Then $f$ factors through some object of $\cc N$. 
+\nn(i) Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to\cc D/\cc N$ be the localization functor, and let $f:X\to Y$ be a morphism in $\cc D$ satisfying $Q(f)=0$. Then $f$ factors through some object of $\cc N$. 
 
-\noindent(ii) The following conditions on $X$ in $\cc D$ are equivalent: 
+\nn(ii) The following conditions on $X$ in $\cc D$ are equivalent: 
 
-\noindent(a) $Q(X)\simeq0$,\quad(b) $X\oplus Y\in\cc N$ for some $Y\in\cc D$,\quad(c) $X\oplus TX\in\cc N$.
+\nn(a) $Q(X)\simeq0$,\quad(b) $X\oplus Y\in\cc N$ for some $Y\in\cc D$,\quad(c) $X\oplus TX\in\cc N$.
 
 \begin{proof}\ 
 
-\noindent(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$ (see Display (7.1.5) p.~155 of the book), and thus, in view of the definition of $\cc NQ$, the existence of a triangle $W\to Y\to Z\to TW$ with $W$ in $\cc N$, and the conclusion follows from the fact that $\Hom_{\cc D}(X,\ )$ is cohomological. 
+\nn(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$ (see Display (7.1.5) p.~155 of the book), and thus, in view of the definition of $\cc NQ$, the existence of a triangle $W\to Y\to Z\to TW$ with $W$ in $\cc N$, and the conclusion follows from the fact that $\Hom_{\cc D}(X,\ )$ is cohomological. 
 
-\noindent(ii)
+\nn(ii)
 
-\noindent(a) $\then$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$ with $Z$ in $\cc N$. By TR2 there is a d.t. 
+\nn(a) $\then$ (b): As $Q(\id_X)=0$, the first part of the exercise implies that $\id_X$ factors as $X\xr fZ\xr g X$ with $Z$ in $\cc N$. By TR2 there is a d.t. 
 $$
 X\xr fZ\xr hY\xr kTX.
 $$ 
@@ -5938,9 +5931,9 @@ X\ar[equal]{d}\ar{r}{f}&Z\ar{d}{(g,h)}\ar{r}{h}&Y\ar[equal]{d}\ar{r}{0}&TX\ar[eq
 X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX,
 \end{tikzcd}
 $$
-and Proposition 10.1.15 p.~246 implies that $(g,h)$ is an isomorphism.\bigskip 
+and Proposition 10.1.15 p.~246 of the book implies that $(g,h)$ is an isomorphism.\bigskip 
 
-\noindent(b) $\then$ (c): Let $\Delta_1,\dots,\Delta_5$ be the triangles
+\nn(b) $\then$ (c): Let $\Delta_1,\dots,\Delta_5$ be the triangles
 $$
 \begin{tikzcd}
 X\ar{r}&0\ar{r}&TX\ar{r}{=}&TX\\ 
@@ -5952,7 +5945,7 @@ X\oplus Y\ar{r}&X\oplus Y\ar{r}&X\oplus TX\ar{r}&TX\oplus TY,
 $$ 
 with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. Then $\Delta_5$ is distinguished, and, as $X\oplus Y$ is in $\cc N$, Condition N'3 of Lemma 10.2.1 (b) p.~249 of the book implies that $X\oplus TX$ is in $\cc N$.
 
-\noindent(c) $\then$ (a): Straightforward.
+\nn(c) $\then$ (a): Straightforward.
 \end{proof}
 \end{s}
 
@@ -5961,7 +5954,7 @@ with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. 
 \section{About Chapter 11}
 
 \begin{s}
-P. 270. Recall that $(\A,T)$ is an additive category with translation. Let 
+P.~270. Recall that $(\A,T)$ is an additive category with translation. Let 
 \begin{equation}\label{iliad}
 (d_{X,i}:X_i\to TX_i)_{i\in I}
 \end{equation} 
@@ -5971,7 +5964,7 @@ be an inductive system in $\A_d$. Assume that $X:=\colim_iX_i$ exists in $\A$. T
 %
 
 \begin{s}
-P. 270, Definition 11.1.3. Here is a ``picture'' of the mapping cone of $f:X\to Y$:
+P.~270, Definition 11.1.3. Here is a ``picture'' of the mapping cone of $f:X\to Y$:
 $$
 \begin{tikzcd}
 TX\ar{rr}{-T(d_X)}\ar{rrdd}{T(f)}&&T^2X\\ 
@@ -5984,7 +5977,7 @@ $$
 %
 
 \begin{s}
-P. 271, Remark 11.1.5. We have:
+P.~271, Remark 11.1.5. We have:
 $$
 d_{\Mc(T(f))}=
 \begin{pmatrix}
@@ -6007,7 +6000,7 @@ is a differential isomorphism.
 %
 
 \begin{s}
-P. 275, Proof of TR5. The following commutative diagram may help visualize things: 
+P.~275, Proof of TR5. The following commutative diagram may help visualize things: 
 $$
 \begin{tikzcd}
 X\ar{r}{f}\ar[equal]{d}&Y\ar{r}{\alpha(f)}\ar{d}{g}&TX\oplus Y\ar{r}{\beta(f)}\ar{d}{u}&TX\ar[equal]{d}\\ 
@@ -6019,7 +6012,7 @@ $$
 \end{s}
 
 \begin{s}
-P. 290, Example 11.6.2 (i). Let $\C,\C'$ and $\C$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
+P.~290, Example 11.6.2 (i). (As already stated, there is a typo; see \S\ref{290} p.~\pageref{290}.) Let $\C,\C'$ and $\C$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
 $$
 F_\oplus:\operatorname{C}(\C)\times\operatorname{C}(\C')\to\operatorname{C}(\C'').
 $$ 
@@ -6159,7 +6152,7 @@ in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\pp$ is a qis by Lemma~\ref{sl2}.
 \subsection{Brief Comments}
 
 \begin{s}\label{q337}
-P. 337. Theorem 13.4.1 suggests the following question: 
+P.~337. Theorem 13.4.1 suggests the following question: 
 
 Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
 %
@@ -6176,8 +6169,8 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 
 %
 
-\begin{s}%\label{1341b}
-P. 337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
+\begin{s}
+P.~337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
 
 Moreover, if $\Hom_\C^\bu(\ ,Y)$ admits a right derived functor, denoted 
 $$
@@ -6327,13 +6320,13 @@ q.e.d.
 %
 
 \begin{s} 
-P. 350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pageref{938} and Theorem~\ref{961} p.~\pageref{961}, one could replace ``there exists an essentially small full subcategory $\cc S$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\cc S$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
+P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pageref{938} and Theorem~\ref{961} p.~\pageref{961}, one could replace ``there exists an essentially small full subcategory $\cc S$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\cc S$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
 \end{s}
 
 %
 
 \begin{s}\label{14112}
-P. 352, Corollary 14.1.12. We also have the following corollary: % (which will be used to prove Theorem~\ref{cou} p.~\pageref{cou}): 
+P.~352, Corollary 14.1.12. We also have the following corollary: 
 
 Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.
 
@@ -6345,9 +6338,9 @@ This follows immediately from Corollary 14.1.12 (i).
 \begin{s} 
 P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
-\noindent(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
+\nn(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\circ R_q\simeq\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\circ\iota$,
 
-\noindent(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url2} p.~\pageref{url2}. (See \S\ref{732} p.~\pageref{732}.)
+\nn(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url2} p.~\pageref{url2}. (See \S\ref{732} p.~\pageref{732}.)
 \end{s}
 
 %
@@ -6367,13 +6360,13 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\simeq\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo 
 %
 
 \begin{s}%\label{s144}
-P. 357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
+P.~357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
 
-\noindent(a) Replace Assumption (14.4.1) p.~358 with: ``$\C$ admits inductive limits indexed by the ordered set $\bb N$, and such limits are exact''.
+\nn(a) Replace Assumption (14.4.1) p.~358 with: ``$\C$ admits inductive limits indexed by the ordered set $\bb N$, and such limits are exact''.
 
-\noindent(b) Say (only for the duration of this comment) that a full saturated subcategory $\A$ of a category $\B$ is {\em closed by coproducts} if the coproduct of any family of objects of $\A$ which exists in $\B$ belongs to $\A$.
+\nn(b) Say (only for the duration of this comment) that a full saturated subcategory $\A$ of a category $\B$ is {\em closed by coproducts} if the coproduct of any family of objects of $\A$ which exists in $\B$ belongs to $\A$.
 
-\noindent(c) In Lemma 14.4.2 p. 359, replace ``full triangulated'' with ``full saturated triangulated'', and ``closed by small direct sums'' with ``closed by direct sums (in the sense of the above definition)''. 
+\nn(c) In Lemma 14.4.2 p. 359, replace ``full triangulated'' with ``full saturated triangulated'', and ``closed by small direct sums'' with ``closed by direct sums (in the sense of the above definition)''. 
 
 There are analog observations for the other statements of Section 14.4.
 \end{s}
@@ -6558,7 +6551,7 @@ Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$
 \subsection{Brief Comments}
 
 \begin{s}\label{390}
-P. 390, Axioms LE1-LE4. The set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
+P.~390, Axioms LE1-LE4. The set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
 
 Let $f:A\to B$ be a morphism in $\C^\wedge$, where $\C$ is the category of open subsets of $X$. For each pair $(U,b)$ with $U$ in $\C$ and $b$ in $B(U)$ let $\Sigma(U,b)$ be the set of those $V$ in $\C_U$ such that there is an $a$ in $A(V)$ satisfying $f_V(a)=b_V$, where $b_V$ is the restriction of $b$ to $V$. Then $f$ is a local epimorphism if and only if 
 $$
@@ -6578,7 +6571,7 @@ Moreover, the following conditions on a morphism $u:A\to U$ in $(\oo{Op}_X)^\wed
 %
 
 \begin{s}\label{16111}
-P. 394, Proposition 16.1.11 (i). More generally, if $A\to D, B\to D$, and $C\to D$ are morphisms in $\C^\wedge$, and if $f:B\to C$ is a local epimorphism, then 
+P.~394, Proposition 16.1.11 (i). More generally, if $A\to D, B\to D$, and $C\to D$ are morphisms in $\C^\wedge$, and if $f:B\to C$ is a local epimorphism, then 
 $$
 A\times_Df:A\times_DB\to A\times_DC
 $$ 
@@ -6598,13 +6591,13 @@ Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$
 \begin{s}\label{s1623}
 P.~395, Lemma 16.2.3 (iii). Consider the conditions
 
-\noindent(b) for any diagram $C\parar A\to B$ such that $C$ is in $\C$ and the two compositions coincide, there exists a local epimorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide,
+\nn(b) for any diagram $C\parar A\to B$ such that $C$ is in $\C$ and the two compositions coincide, there exists a local epimorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide,
 
-\noindent(c) for any diagram $C\parar A\to B$ such that $C$ is in $\C^\wedge$ and the two compositions coincide, there exists a local epimorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide,
+\nn(c) for any diagram $C\parar A\to B$ such that $C$ is in $\C^\wedge$ and the two compositions coincide, there exists a local epimorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide,
 
-\noindent(d) for any diagram $C\parar A\to B$ such that $C$ is in $\C$ and the two compositions coincide, there exists a local isomorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide,
+\nn(d) for any diagram $C\parar A\to B$ such that $C$ is in $\C$ and the two compositions coincide, there exists a local isomorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide,
 
-\noindent(e) for any diagram $C\parar A\to B$ such that $C$ is in $\C^\wedge$ and the two compositions coincide, there exists a local isomorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide.
+\nn(e) for any diagram $C\parar A\to B$ such that $C$ is in $\C^\wedge$ and the two compositions coincide, there exists a local isomorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide.
 
 Recall that (a) is the condition that $A\to B$ is a local monomorphism. Lemma 16.2.3 p.~395 of the book implies 
 %
@@ -6618,13 +6611,13 @@ Indeed, Part (iii) of the lemma says that (a), (b) and (c) are equivalent. Clear
 %
 
 \begin{s}
-P. 397, proof of Proposition 16.2.2 (vi): see \S\ref{16111} p.~\pageref{16111}.
+P.~397, proof of Proposition 16.2.2 (vi): see \S\ref{16111} p.~\pageref{16111}.
 \end{s}
 
 %
 
 \begin{s} 
-P. 397, Notation 16.2.5 (ii). The fact that 
+P.~397, Notation 16.2.5 (ii). The fact that 
 \begin{equation}\label{1625}
 \text{such a $w$ is necessarily a local isomorphism}
 \end{equation}
@@ -6634,15 +6627,13 @@ follows from Lemma 16.2.4 (vii) p. 396.
 %
 
 \begin{s} 
-P. 398, proof of Lemma 16.2.7: see \S\ref{fpl} p.~\pageref{fpl}.
+P.~398, proof of Lemma 16.2.7: see \S\ref{fpl} p.~\pageref{fpl}.
 \end{s}
-
-%\begin{s} P. 398, Lemma 16.2.7. I don't understand why $\cc{LI}_A$ admits finite projective limits. The fact that $\cc{LI}_A$ is cofiltrant follows from Lemma 16.2.4 (i) p.~395 of the book and Display~\eqref{e1623} p.~\pageref{e1623}. It seems to me that only the fact that $\cc{LI}_A$ is cofiltrant is used in the sequel.\end{s}
 
 %
 
 \begin{s} 
-P. 398, proof of Lemma 16.2.8. Recall that $\C$ is a small category. Here is a variant of the two sentences ``Let us consider the set $\cc S$ of $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism and $w:S\to A$ is a local isomorphism. By Proposition 5.2.9 and the result of Exercise 5.1, the set of quotients of any object of $\C^\wedge$ is small, and hence $\cc S$ is a small set.'' 
+P.~398, proof of Lemma 16.2.8. Recall that $\C$ is a small category. Here is a variant of the two sentences ``Let us consider the set $\cc S$ of $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism and $w:S\to A$ is a local isomorphism. By Proposition 5.2.9 and the result of Exercise 5.1, the set of quotients of any object of $\C^\wedge$ is small, and hence $\cc S$ is a small set.'' 
 
 For any set $T$ let $Q_T$ be the set of those sets $U$ for which there is an equivalence relation $R$ on $T$ such that $U$ is the set of $R$-equivalence classes in $T$. 
 
@@ -6658,7 +6649,7 @@ Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of 
 %
 
 \begin{s} 
-P. 399, beginning of Section 16.3. The category $\cc{LI}$ is a left multiplicative system by Lemma 16.2.6 p.~397 of the book. The category $\cc{LI}_A$ is cocofinally small by Lemma 16.2.8 p.~398 of the book. 
+P.~399, beginning of Section 16.3. The category $\cc{LI}$ is a left multiplicative system by Lemma 16.2.6 p.~397 of the book. The category $\cc{LI}_A$ is cocofinally small by Lemma 16.2.8 p.~398 of the book. 
 
 Moreover, any functor $F:\C\to\C'$ induces a morphism of functors 
 $$
@@ -6687,7 +6678,7 @@ depends functorially on $U\in\C$.
 %
 
 \begin{s} 
-P. 400, proof of Lemma 16.3.1 (additional details): 
+P.~400, proof of Lemma 16.3.1 (additional details): 
 
 For $(B\xr s U)$ in $\mc{LI}_U$ let 
 $$
@@ -6737,7 +6728,7 @@ The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the botto
 %
 
 \begin{s} 
-P. 400, Step (ii) in the proof of Lemma 16.3.2 (additional details):
+P.~400, Step (ii) in the proof of Lemma 16.3.2 (additional details):
 
 We want to prove that $A\to A^a$ is a local monomorphism. In view of \eqref{e1623} p.~\pageref{e1623} it suffices to check that Condition~(b) of \S\ref{s1623} p.~\pageref{s1623} holds. The functor 
 $$
@@ -6752,7 +6743,7 @@ in $\cc{LI}_U$ such that $\alpha(\pp)(f_1)=\alpha(\pp)(f_2)$. This means that th
 
 %
 
-\begin{s} P. 401, Step (i) of the proof of Proposition 16.3.3. See \eqref{e1623} p.~\pageref{e1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
+\begin{s} P.~401, Step (i) of the proof of Proposition 16.3.3. See \eqref{e1623} p.~\pageref{e1623} and \eqref{1625} p.~\pageref{1625}. (As already mentioned, $B''\to B$ should be $B''\to B'$.)
 \end{s}
 
 %%%
@@ -6760,7 +6751,7 @@ in $\cc{LI}_U$ such that $\alpha(\pp)(f_1)=\alpha(\pp)(f_2)$. This means that th
 \section{About Chapter 17}
 
 \begin{s}
-P. 405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
+P.~405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
 
 If $f:X\to Y$ is a morphism of presites, \index{morphism of presites} then we keep the notation $f^t$ for the functor from $\C_Y$ to $\C_X$, and we designate by $f^\tau$ \index{$f^\tau$} the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$:
 \begin{equation}\label{ttau}
@@ -6790,7 +6781,7 @@ $$
 %
 
 \begin{s}\label{fhat}
-P. 406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$, 
+P.~406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ should be $\C_Y$ (twice). In notation \eqref{ttau}, Formula \eqref{275} p.~\pageref{275} gives, for $B$ in $\C_Y^\wedge$ and $U$ in $\C_X$, 
 %
 \begin{equation}\label{efhat1}
 \fthat(B)(U)\simeq\colim_{(V\to B)\in(\C_Y)_B}\Hom_{(\C_X)}(U,f^t(V))\simeq\colim_{(U\to f^t(V))\in(\C_Y)^U}B(V).
@@ -6813,7 +6804,7 @@ If $f:X\to Y$ is a continuous map of small topological spaces, if $B$ is in $(\o
 %
 
 \begin{s}\label{fdagger} 
-P. 407. Let $f:X\to Y$ be a morphism of presites and let $\A$ be a category admitting small inductive and projective limits. In the notation of \eqref{ttau} p.~\pageref{ttau}, we set $f^\dagger:=(f^\tau)^\dagger$ and $f^\ddagger:=(f^\tau)^\ddagger$: 
+P.~407. Let $f:X\to Y$ be a morphism of presites and let $\A$ be a category admitting small inductive and projective limits. In the notation of \eqref{ttau} p.~\pageref{ttau}, we set $f^\dagger:=(f^\tau)^\dagger$ and $f^\ddagger:=(f^\tau)^\ddagger$: 
 $$
 f^\dagger,f^\ddagger:\PSh(X\A)\to\PSh(Y,\A),
 $$
@@ -6830,14 +6821,12 @@ f^\ddagger(G)(U)=\lim_{(U\to f^\tau(V))\in((\C_Y)^{\op})^U}G(V),
 \end{equation}
 %
 with $G$ in $\PSh(Y,\A),U$ in $\C_X$, $U\to f^\tau(V)$ being a morphism in $(\C_X)^{\op}$ (corresponding to a morphism $f^t(V)\to U$ in $\C_X$).
-
-%Also note that Theorem 3.3.18 (b) p.~86 implies \begin{prop}\label{407}Assume that $\A$ satisfies the same conditions as the category $\C$ of Theorem 3.3.18 (b). If $f$ is left exact, then $f^\dagger$ is exact. %%If $f$ is right exact, then $f^\ddagger$ is exact. \end{prop}
 \end{s}
 
 %
 
 \begin{s}\label{s408}
-P. 408, comment preceding Convention 17.1.6. Let us recall the comment: 
+P.~408, comment preceding Convention 17.1.6. Let us recall the comment: 
 
 We extend presheaves over $X$ to presheaves over $\widehat X$ using the functor $\oo h_X^\ddagger$ associated with the Yoneda embedding $\oo h_X^t=\oo h_{\C_X}$. Hence, for $F$ in $\oo{PSh}(X,\A)$ and $A$ in $\C_X^\wedge$, we have 
 $$
@@ -6858,7 +6847,7 @@ $$
 %
 
 \begin{s}
-P. 408, Convention 17.1.6. Recall the convention: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
+P.~408, Convention 17.1.6. Recall the convention: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
 \begin{equation}\label{408}
 F(A):=(\oo h_X^\ddagger F)(A)=\lim_{(U\to A)\in(\C_X)_A}F(U).
 \end{equation}
@@ -6871,25 +6860,25 @@ $$
 %
 
 \begin{s}\label{prepa5}
-P. 409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{prepa1}, \eqref{prepa2} p.~\pageref{prepa2}, and \eqref{prepa3} p.~\pageref{prepa3}.
+P.~409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{prepa1}, \eqref{prepa2} p.~\pageref{prepa2}, and \eqref{prepa3} p.~\pageref{prepa3}.
 \end{s}
 
 %
 
 \begin{s}\label{17115b}
-P. 410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
+P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 \end{s}
 
 %
 
 \begin{s}
-P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
+P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 
 %
 
 \begin{s}
-P. 412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.~\pageref{1722}. This is a copy and paste of the book; we only inserted a few line breaks.
+P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.~\pageref{1722}. This is a copy and paste of the book; we only inserted a few line breaks.
 
 Let us show that if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or a local epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wedge$. 
 
@@ -6913,19 +6902,19 @@ Taking the inductive limit with respect to $V\in(\C_Y)_B$, we conclude by Propos
 %
 
 \begin{s}\label{1724ii}
-P. 413, Definition 17.2.4 (ii): see  Remark~\ref{272b} p.~\pageref{272b}.
+P.~413, Definition 17.2.4 (ii): see  Remark~\ref{272b} p.~\pageref{272b}.
 \end{s}
 
 %
 
 \begin{s}
-P. 413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ commutes with projective limits indexed by small connected categories.
+P.~413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wedge\to\C_X^\wedge$ commutes with projective limits indexed by small connected categories.
 \end{s} 
 
 %
 
 \begin{s}\label{1725ii} 
-P. 413, Lemma 17.2.5 (ii). Here is a corollary: 
+P.~413, Lemma 17.2.5 (ii). Here is a corollary: 
 
 Let $f:X\to Y$ be a weekly left exact morphism of sites such that $\fthat(u)$ is a local epimorphism if and only if $u$ is a local epimorphism. Then $\fthat(u)$ is a local monomorphism if and only if $u$ is a local monomorphism, and $\fthat(u)$ is a local isomorphism if and only if $u$ is a local isomorphism. 
 \end{s} 
@@ -6933,13 +6922,13 @@ Let $f:X\to Y$ be a weekly left exact morphism of sites such that $\fthat(u)$ is
 %
 
 \begin{s}
-P. 413, Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from the equivalence of Conditions (a), (b) and (c) in \S\ref{390} p.~\pageref{390} and from \eqref{efhat2} p.~\pageref{efhat2}. 
+P.~413, Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from the equivalence of Conditions (a), (b) and (c) in \S\ref{390} p.~\pageref{390} and from \eqref{efhat2} p.~\pageref{efhat2}. 
 \end{s}
 
 %
 
 \begin{s} 
-P. 414, Definition 17.7.8 (minor variant):
+P.~414, Definition 17.7.8 (minor variant):
 
 \begin{df}\label{1778}
 Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology} on $X$ is a set $\cc T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\cc T'$ and $\cc T$ be Grothendieck topologies. We say that $\cc T$ is {\em stronger than} $\cc T'$, or that $\cc T'$ is {\em weaker than} $\cc T$, if $\cc T'\subset\cc T$. 
@@ -6951,7 +6940,7 @@ Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap
 %
 
 \begin{s}
-P. 415, Isomorphism (17.3.1). Recall briefly the setting. We have: 
+P.~415, Isomorphism (17.3.1). Recall briefly the setting. We have: 
 $$
 F\in\oo{PSh}(X,\A),\quad M\in\A,\quad U\in\C_X,
 $$ 
@@ -6985,18 +6974,14 @@ as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given
 
 %
 
-%\begin{s}P. 415, proof of Proposition 17.3.3, Step (ii). I don't understand why the conditions that $A\times_BU\to U$ is a local epimorphism and that $F$ is a separated presheaf imply that $F(U)\to F(A\times_BU)$ is a monomorphism. %It seems to me this proposition is not used in the sequel.\end{s}
-
-%
-
 \begin{s}
-P. 417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.
+P.~417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.
 \end{s}
 
 %
 
 \begin{s} 
-P. 418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms 
+P.~418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms 
 $$
 \colim\alpha\xr f\colim\alpha\circ\mu_u^{\op}\circ\lambda_u^{\op}\xr g\colim\alpha\circ\mu_u^{\op}\xr h\colim\alpha.
 $$
@@ -7006,7 +6991,7 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 %
 
 \begin{s}\label{1744i}
-P. 419, proof of Proposition 17.4.4: 
+P.~419, proof of Proposition 17.4.4: 
 
 First sentence of the proof: see \eqref{kfp} p.~\pageref{kfp}. 
 
@@ -7039,7 +7024,7 @@ and the isomorphisms can be justified as follows:
 %
 
 \begin{s} 
-P. 419, proof of Proposition 17.4.4, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
+P.~419, proof of Proposition 17.4.4, Step (ii). More details: The morphism $\ee_b(F^b)(A):F^b(A)\to F^{bb}(A)$ is obtained as the composition 
 $$
 F^b(A)\xr f\col_{(B\to A)\in\cc{LI}_A}F^b(A)\xr g\col_{(B\to A)\in\cc{LI}_A}F^b(B). 
 $$ 
@@ -7049,7 +7034,7 @@ Moreover, $f$ is an isomorphism by Lemma 2.1.12 p.~41 of the book, and $g$ is an
 %
 
 \begin{s}
-P. 420, proof of Proposition 17.4.4, Step (ii). We draw a few diagrams with the hope of helping the reader visualize the argument. 
+P.~420, proof of Proposition 17.4.4, Step (ii). We draw a few diagrams with the hope of helping the reader visualize the argument. 
 
 An object of the category 
 $$
@@ -7117,7 +7102,7 @@ Indeed, the isomorphisms can be justified as follows:
 %
 
 \begin{s}\label{fau}
-P. 421, first display: 
+P.~421, first display: 
 $$
 F^a(U)\simeq\colim_{(U\to A)\cc{LI}_U}F(A).
 $$ 
@@ -7126,13 +7111,13 @@ Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} d
 
 %
 
-\begin{s}P. 421, proof of Lemma 17.4.6 (i): The category $\cc{LI}_U$ is cofiltrant by Lemma 16.2.7 p.~396 of the book, small filtrant inductive limits are exact in $\A$ by Display (17.4.1) p.~417 of the book, exact functors preserve monomorphisms by Exercise~3.4 (i) p.~90 of the book (see Proposition~\ref{34i} p.~\pageref{34i}).
+\begin{s}P.~421, proof of Lemma 17.4.6 (i): The category $\cc{LI}_U$ is cofiltrant by Lemma 16.2.7 p.~396 of the book, small filtrant inductive limits are exact in $\A$ by Display (17.4.1) p.~417 of the book, exact functors preserve monomorphisms by Exercise~3.4 (i) p.~90 of the book (see Proposition~\ref{34i} p.~\pageref{34i}).
 \end{s}
 
 %
 
 \begin{s} 
-P. 422, proof of Theorem 17.4.7 (iv). First sentence of the proof: Let $B$ be in $\C_X^\wedge$ and consider the diagram 
+P.~422, proof of Theorem 17.4.7 (iv). First sentence of the proof: Let $B$ be in $\C_X^\wedge$ and consider the diagram 
 $$
 \begin{tikzcd}
 \oo{PSh}(X,\A)\ar{r}{\oo h_X^\ddagger}&\oo{PSh}(\widehat X,\A)\ar{r}{e}&\A,
@@ -7144,13 +7129,13 @@ where $e$ is the evaluation at $B$. Then $\oo h_X^\ddagger$ is left exact by Pro
 %
 
 \begin{s} 
-P. 423, end of the proof of Theorem 17.4.9 (iv): the exactness $(\ )^a$ is proved in Theorem 17.4.7 (iv) p.~421 of the book.
+P.~423, end of the proof of Theorem 17.4.9 (iv): the exactness $(\ )^a$ is proved in Theorem 17.4.7 (iv) p.~421 of the book.
 \end{s}
 
 %
 
 \begin{s} 
-P. 424, proof of Theorem 17.5.2 (i). With the convention that a diagram of the form 
+P.~424, proof of Theorem 17.5.2 (i). With the convention that a diagram of the form 
 $$
 \begin{tikzcd} 
 \C_1\ar[xshift=-0.7ex]{d}[swap]{L}\\ \C_2\ar[xshift=0.7ex]{u}[swap]{R}
@@ -7169,13 +7154,13 @@ $$
 %
 
 \begin{s} 
-P. 424, proof of Theorem 17.5.2 (iv). As already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. 
+P.~424, proof of Theorem 17.5.2 (iv). As already mentioned, there is a typo: ``The functor $f^\dagger$ is left exact'' should be ``The functor $f^\dagger$ is exact''. 
 \end{s}
 
 %
 
 \begin{s}\label{1761}
-P. 424, Definition 17.6.1. By Lemma 17.1.8 p.~409 of the book, a morphism 
+P.~424, Definition 17.6.1. By Lemma 17.1.8 p.~409 of the book, a morphism 
 $$
 \begin{tikzcd} 
 C\ar{rr}\ar{dr}&&B\ar{dl}\\ 
@@ -7188,13 +7173,13 @@ in $\C_A^\wedge$ is a local epimorphism if and only if $C\to B$ is a local epimo
 %
 
 \begin{s}
-P. 424, sentence following Definition 17.6.1: ``It is easily checked that we obtain a Grothendieck topology on $\C_A$''. The verification  of LE1, LE2, and LE3 is straightforward. Axiom LE4 follows from Parts (iii) and (ii) of Lemma 17.2.5 p.~413 of the book.
+P.~424, sentence following Definition 17.6.1: ``It is easily checked that we obtain a Grothendieck topology on $\C_A$''. The verification  of LE1, LE2, and LE3 is straightforward. Axiom LE4 follows from Parts (iii) and (ii) of Lemma 17.2.5 p.~413 of the book.
 \end{s} 
 
 %
 
 \begin{s}\label{1761b} 
-P. 424, Definition 17.6.1. Here is an observation which follows from \S\ref{1725ii} p.~\pageref{1725ii} and Lemma 17.2.5 (iii) p.~413 of the book: 
+P.~424, Definition 17.6.1. Here is an observation which follows from \S\ref{1725ii} p.~\pageref{1725ii} and Lemma 17.2.5 (iii) p.~413 of the book: 
 
 In the setting of Definition 17.6.1, let $B\to A$ be a morphism in $\C_X^\wedge$, let $u:C\to B$ be a morphism in $\C_X^\wedge$, and let $v:(C\to A)\to(B\to A)$ be the corresponding morphism in $\C_A^\wedge$. Then $u$ is a local epimorphism if and only if $v$ is a local epimorphism, $u$ is a local monomorphism if and only if $v$ is a local monomorphism, and $u$ is a local isomorphism if and only if $v$ is a local isomorphism. 
 \end{s} 
@@ -7202,7 +7187,7 @@ In the setting of Definition 17.6.1, let $B\to A$ be a morphism in $\C_X^\wedge$
 %
 
 \begin{s}
-P. 425, proof of Proposition 17.6.3: 
+P.~425, proof of Proposition 17.6.3: 
 
 Step (i): $\oo j_{A\to X}$ is weakly left exact by Lemma 17.2.5 (iii) p.~413 of the book, and $(\,\cdot\,)^a$ is exact by Theorem 17.4.7 (iv) p.~421 of the book.
 
@@ -7212,7 +7197,7 @@ Step (ii): ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2
 % 
 
 \begin{s} 
-P. 425, Display (17.6.1): Putting $j:=\oo j_{A\to X}$, we have the adjunctions 
+P.~425, Display (17.6.1): Putting $j:=\oo j_{A\to X}$, we have the adjunctions 
 $$
 \begin{tikzcd}
 \oo{Sh}(A,\A)\ar[xshift=-4ex]{d}[swap]{j^{-1}}\ar[xshift=4ex]{d}{j^\ddagger}\\ 
@@ -7230,7 +7215,7 @@ For the functor $j^\ddagger:\oo{Sh}(A,\A)\to\oo{Sh}(X,\A)$, see Proposition 17.6
 %
 
 \begin{s} 
-P. 426, proof of Proposition 17.6.7 (i). The isomorphism 
+P.~426, proof of Proposition 17.6.7 (i). The isomorphism 
 \begin{equation}\label{e406}
 \fthat(V\times B)\simeq f^t(V)\times\fthat(B)
 \end{equation} 
@@ -7257,7 +7242,7 @@ f_*\big(\oo j_{A\to X}^\ddagger(G)(V)\big)&\simeq\oo j_{A\to X}^\ddagger(G)(f^t(
 % 
 
 \begin{s}\label{1768}
-P. 427, proof of Proposition 17.6.8, Step (i). The isomorphism 
+P.~427, proof of Proposition 17.6.8, Step (i). The isomorphism 
 $$
 \oo j_{A\to X}^\ddagger(\oo j_{A\to X*}(G)(U))\simeq\oo j_{A\to X*}(G)(U\times A\to A)
 $$ 
@@ -7274,7 +7259,7 @@ is cartesian and the bottom arrow is a local isomorphism by assumption.
 %
 
 \begin{s}
-P. 427, proof of Proposition 17.6.8, Step (ii). Let $v:V\to A$ be a morphism in $\C_X^\wedge$. Here is a proof of the fact that 
+P.~427, proof of Proposition 17.6.8, Step (ii). Let $v:V\to A$ be a morphism in $\C_X^\wedge$. Here is a proof of the fact that 
 \begin{equation}\label{1768ii}
 \begin{tikzcd} 
 V\ar{rr}{(\id_V,v)}\ar{dr}&&V\times A\ar{dl}\\ 
@@ -7289,13 +7274,13 @@ As \eqref{1768ii} is a monomorphism, it suffices, by Lemma 16.2.3 (i) p.~395 of 
 %
 
 \begin{s}\label{a428}
-P. 428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
+P.~428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
 \end{s} 
 
 %
 
 \begin{s} 
-P. 430, first sentence of the proof of Proposition 17.7.1 (i). Let us make a general observation. 
+P.~430, first sentence of the proof of Proposition 17.7.1 (i). Let us make a general observation. 
 
 Let $X$ be a site. In this \S, for any $A$ in $\C_X^\wedge$, we denote the corresponding site by $A'$ instead of $A$. We also identify $\C_{A'}^\wedge$ to $(\C_X^\wedge)_A$ (see Lemma 17.1.8 p.~409 of the book). In particular, we get $\oo{pt}_{A'}\simeq(A\xr{\id_A}A)\in\C_{A'}^\wedge$. 
 
@@ -7323,13 +7308,13 @@ $$
 %
 
 \begin{s} 
-P. 430, proof of Proposition 17.7.3. The third isomorphism follows, as indicated, from Proposition 17.6.7 (ii) p.~426 of the book. The fifth isomorphism follows from (17.6.2) (ii) p.~426 of the book. 
+P.~430, proof of Proposition 17.7.3. The third isomorphism follows, as indicated, from Proposition 17.6.7 (ii) p.~426 of the book. The fifth isomorphism follows from (17.6.2) (ii) p.~426 of the book. 
 \end{s} 
 
 %
 
 \begin{s}\label{175i}
-P. 431, Exercise 17.5 (i). Put $PX:=\oo{PSh}(X,\A),\ SX:=\oo{Sh}(X,\A)$, and define $PY$ and $SY$ similarly. Let
+P.~431, Exercise 17.5 (i). Put $PX:=\oo{PSh}(X,\A),\ SX:=\oo{Sh}(X,\A)$, and define $PY$ and $SY$ similarly. Let
 $$
 \begin{tikzcd} 
 SY\ar[xshift=0.7ex]{d}{\iota_Y}\\ 
@@ -7373,7 +7358,8 @@ and the other isomorphisms hold by adjunction.
 
 %
 
-\begin{s} P. 431, Exercise 17.5 (ii). By \S\ref{1761b} p.~\pageref{1761b} we have, for $U$ in $\C_X$ and $(U\to A)$ in $\C_A$, an isomorphism 
+\begin{s} 
+P.~431, Exercise 17.5 (ii). By \S\ref{1761b} p.~\pageref{1761b} we have, for $U$ in $\C_X$ and $(U\to A)$ in $\C_A$, an isomorphism 
 $$
 \cc{LI}_{U\to A}\simeq\cc{LI}_U.
 $$
@@ -7389,13 +7375,13 @@ Exercise 17.5 (ii) follows immediately.
 %
 
 \begin{s}
-P. 437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\pageref{14112} and \S\ref{fau} p.~\pageref{fau}. 
+P.~437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are complexes of $R$-modules, then the complex of abelian groups $\RHom_R(F,G)$ (see Corollary 14.3.2 p.~356 of the book) does {\em not} depend on the universe chosen to define it (the universe in question being subject to the obvious conditions). This follows from \S\ref{14112} p.~\pageref{14112} and \S\ref{fau} p.~\pageref{fau}. 
 \end{s} 
 
 %
 
 \begin{s} 
-P. 437, proof of Theorem 18.1.6 (v). We prove 
+P.~437, proof of Theorem 18.1.6 (v). We prove 
 $$
 \Hom_{\cc R}(\cc R_U,F)\simeq F(U).
 $$ 
@@ -7424,31 +7410,31 @@ Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_
 %
 
 \begin{s}\label{a438}
-P. 438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
+P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
 \end{s} 
 
 % 
 
 \begin{s}\label{homrr}
-P. 438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all $F$ in $\oo{PSh}(\cc R)$. 
+P.~438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all $F$ in $\oo{PSh}(\cc R)$. 
 \end{s} 
 
 % 
 
 \begin{s}\label{neutral}
-P. 439, after Definition 18.2.2: One can add that we have $\cc R\overset{\text{\tiny psh}}{\otimes}_{\cc R}F\simeq F$ for $F$ in $\oo{PSh}(\cc R)$ and $\cc R\otimes_{\cc R}F\simeq F$ for $F$ in $\Mod(\cc R^{\op})$, as well as $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F$ in $\oo{PSh}(\cc R^{\op})$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F$ in $\Mod(\cc R^{\op})$. 
+P.~439, after Definition 18.2.2: One can add that we have $\cc R\overset{\text{\tiny psh}}{\otimes}_{\cc R}F\simeq F$ for $F$ in $\oo{PSh}(\cc R)$ and $\cc R\otimes_{\cc R}F\simeq F$ for $F$ in $\Mod(\cc R^{\op})$, as well as $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F$ in $\oo{PSh}(\cc R^{\op})$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F$ in $\Mod(\cc R^{\op})$. 
 \end{s} 
 
 % 
 
 \begin{s}
-P. 441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}). 
+P.~441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}). 
 \end{s} 
 
 % 
 
 \begin{s} 
-P. 441. In the notation of Remark 18.2.6 we have 
+P.~441. In the notation of Remark 18.2.6 we have 
 $$
 \Hom_{\cc R_3}({}_3M_2\otimes_{\cc R_2}{}_2M_1,{}_3M_4)\simeq
 \Hom_{\cc R_2}({}_2M_1,\HOM_{\cc R_3}({}_3M_2,{}_3M_4)),
@@ -7479,7 +7465,7 @@ $$
 %
 
 \begin{s}
-P. 442, proof of Proposition 18.2.7. Here are additional details. 
+P.~442, proof of Proposition 18.2.7. Here are additional details. 
 
 Proof of (18.2.12): We must show 
 \begin{equation}\label{18212}
@@ -7734,12 +7720,8 @@ If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $((b'_j
 
 \subsection{Brief Comments} 
 
-%\begin{s}%\label{1811}
-%P. 436, Example 18.1.1. It seems to me the authors forgot to define the {\em constant sheaf} \index{constant sheaf} $R_X$ \index{$R_X,k_X,M_X$}. I think it is the sheaf associated to the appropriate constant presheaf.
-%\end{s}
-
 \begin{s}
-P. 452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
+P.~452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_U$ and $\cc O_V$ stand presumably for $\cc O_X|_U$ and $\cc O_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\cc O_V$ instead of $\cc O_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\cc O_U^{\oplus n}\xr u\cc O_U^{\oplus m}$ should be (I think) $f_W^{-1}:\cc O_W^{\oplus n}\to\cc O_W^{\oplus m}$. 
 
 Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
 $$
