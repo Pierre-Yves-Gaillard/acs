@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0230)
+% about "categories and sheaves" (version-0231)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5423,7 +5423,7 @@ $$
 \end{lem}
 
 \begin{proof}
-We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. Let $0$ be the least element of $I$. We shall complete the following Task $(T_i)$ by transfinite induction on $i$ in $I$ (see Theorem~\ref{meta} p.~\pageref{meta}): 
+We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. Let $0$ be the least element of $I$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Theorem~\ref{meta} p.~\pageref{meta}): 
 
 \nn[Beginning of the description of Task $(T_i)$.] Construct, for each $j\le i$ in $I$, a commutative diagram 
 $$
@@ -5475,6 +5475,7 @@ X'\ar{r}{v_0}\ar[equal]{d}&Y'_{<0}\ar{r}{w_0}\ar[equal]{d}&Y'_0\ar[equal]{d}\\
 X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
 $$
+
 Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 %
 \begin{equation}\label{ujk}
@@ -5639,13 +5640,7 @@ In the book $\cc F$ is supposed to be small, but the proof clearly works if $\cc
 \subsection{Brief Comments}
 
 \begin{s} 
-%(additional details).
-
-%\begin{df}\label{cb}If $I$ and $\C$ are categories such that $\C$ admits inductive limits indexed by $I$, and if $\C_0$ is a full subcategory of $\C$, we say that $\C_0$ is {\em closed by inductive limits indexed by} $I$ if, for any functor $\alpha:I\to\C_0$, the object $\colim\alpha\in\C$ is isomorphic to some object of $\C_0$. There is an obvious analog for projective limits.\end{df}
-
-%The book says that Theorem 9.6.1 follows from Corollaries 9.3.7 and 9.3.8 p.~228. One might add Corollary 9.3.5 (iv) p.~227 (which asserts that $\C_\pi$ is closed by finite projective limits).
-
-P. 235, Theorem 9.6.1. In view of the comments made about Corollary~\ref{938} p.~\pageref{938}, Theorem 9.6.1 could be stated as follows:
+P. 235, Theorem 9.6.1. In view of the comments made before Corollary~\ref{938} p.~\pageref{938}, Theorem 9.6.1 could be stated as follows:
 
 \begin{thm}[Theorem 9.6.1 p. 235]\label{961}
 Let $\C$ be a Grothendieck category. Then, for any small subset $E$ of $\Ob(\C)$, there exists an infinite cardinal $\pi$ such that
@@ -5730,7 +5725,7 @@ We now add three parenthetical points: The first sentence of the proof of Lemma 
 
 \section{About Chapter 10}
 
-\subsection{May's Definition of a Triangulated Category (p.~243)\index{definition of a triangulated category}\index{May (Peter May)}}
+\subsection{Definition of a Triangulated Category\index{definition of a triangulated category}\index{May (Peter May)}}
 
 The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:  
 %
