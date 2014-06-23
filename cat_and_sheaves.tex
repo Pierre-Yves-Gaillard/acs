@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0233)
+% about "categories and sheaves" (version-0234)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -407,7 +407,7 @@ P.~228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G$ is in 
 
 \nn$*$ P.~245, beginning of the proof of Proposition 10.1.13: The letters $f$ and $g$ being used in the sequel, it would be better to write $X\xr fY\xr gZ\to TX$ instead of $X\to Y\to Z\to TX$. 
 
-\nn$*$ P.~245, first display: The subscript $\cc D$ is missing (three times) in $\Hom_{\cc D}$.
+\nn$*$ P.~245, first display in the proof of Proposition 10.1.13: The subscript $\cc D$ is missing (three times) in $\Hom_{\cc D}$.
 
 \nn$*$ P.~250, Line 1: ``TR3'' should be ``TR2''. After the second diagram, $s\circ f$ should be $f\circ s$.
 
@@ -421,7 +421,7 @@ $\bu$ $v'_i$ should (I believe) be $u'_i$,
 
 $\bu$ $Q(u)$ should be $Q(u')$.
 
-\nn$*$ P.~254. The functor $RF$ of Notation 10.3.4 p.~254 coincides with the functor $R_{\cc NQ}F$ of Definition 7.3.1 p.~159 of the book.
+\nn$*$ P.~254. The functor $RF$ of Notation 10.3.4 coincides with the functor $R_{\cc NQ}F$ of Definition 7.3.1 p.~159 of the book.
 
 \nn$*$ P.~266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes.
 
@@ -460,7 +460,7 @@ P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \nn$*$ P.~392, Lemma 16.1.6 (ii). It would be better to write $v:C\to U$ instead of $u:C\to U$ and $t\circ v$ instead of $t\circ u$.
 
-\nn P.~396, Lemma 16.2.4 (ii), last sentence of the proof: It would be better (I think) write ``by LE2 and LE3'' instead of ``by Proposition 16.1.11 (ii)''.
+\nn$*$ P.~396, proof of Lemma 16.2.4 (ii), last sentence of the proof: It would be better (I think) write ``by LE2 and LE3'' instead of ``by Proposition 16.1.11 (ii)''.
 
 \nn$*$ P.~401, Line 6: $B''\to B$ should be $B''\to B'$.
 
@@ -2189,7 +2189,7 @@ Indeed, the first and fifth bijections follow from \eqref{coco} p.~\pageref{coco
 %
 
 \begin{s}\label{cipc}
-P.~75. Throughout the subsection about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136 of the book.
+P.~75. Throughout the section about the IPC Property, one can assume that $\A$ is a big category. This applies in particular to Corollary 3.1.12 p.~77, corollary used in this generalized form at the end of the proof of Proposition 6.1.16 p.~136 of the book.
 \end{s}
 
 %
@@ -5355,7 +5355,11 @@ $$
 
 Claim: There is an $i_0$ in $I$ such that $\pp^Y_{i_0}:=a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
 
-As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that $a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)$ is surjective. As $\card(\{i_Y\,|\,Y\in\Ob(\C)\})<\pi$ and $I$ is $\pi$-filtrant, there is an $i_0$ in $I$ such that, for any $Y$ in $\C$, there is a morphism $i_Y\to i_0$. This implies the claim. 
+As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that 
+$$
+a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)
+$$ 
+is surjective. As $\card(\{i_Y\,|\,Y\in\Ob(\C)\})<\pi$ and $I$ is $\pi$-filtrant, there is an $i_0$ in $I$ such that, for any $Y$ in $\C$, there is a morphism $i_Y\to i_0$. This implies the claim. 
 
 Let $i$ be in $I$. In particular, $a_i=\pp^{X_i}_i(\id_{X_i})$ is in $F(X_i)$. As 
 $$
@@ -5469,7 +5473,9 @@ X'\ar{r}[swap]{v_0}&Y'_0\ar{r}[swap]{\id}&Y'_0.
 \end{tikzcd}
 $$
 
-Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
+Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. 
+
+We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 %
 \begin{equation}\label{ujk}
 u_{jk}:=w_j\circ p_{jk}.
@@ -5514,7 +5520,7 @@ p_{ik}\circ w_k\circ v_k=v_i\ \forall\ k<i,
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}\ \forall\ k<j<i.
 \end{equation} 
 %
-The commutativity of \eqref{hiui1} implies \eqref{hiui2}. To prove \eqref{pijwj}, first note that we have 
+The commutativity of \eqref{hiui1} implies \eqref{hiui2}. To prove \eqref{pikwk}, first note that we have 
 $$v_k=p_{k0}\circ w_0\circ v_0
 $$ 
 by induction hypothesis, $w_0=\id_{Y'_0}$ by \eqref{w0}, and thus 
@@ -5578,7 +5584,7 @@ g_m\circ u_m&=h_m\circ u_m&\text{by \eqref{gm}}\\
 
 \subsection{Theorems 9.5.4 and 9.5.5 (pp 232-234)}\label{954955}
 
-The purpose of this subsection is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
+The purpose of this section is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
 
 Let $\C$ be $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such that $\cc F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\cc F$, and assume 
 
