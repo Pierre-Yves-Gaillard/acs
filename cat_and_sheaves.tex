@@ -1,5 +1,5 @@
 % !TEX encoding = UTF-8 Unicode
-% about "categories and sheaves" (version-0235)
+% about "categories and sheaves" (version-0237)
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
 \addtolength{\parskip}{.5\baselineskip}%\addtocounter{section}{-2}
@@ -5680,14 +5680,18 @@ Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C
 \end{lem}
 %
 \begin{proof}
-By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the natural functor $\oo j:I^i\to I$ is cofinal. As the obvious morphism of functors 
+By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the forgetful functor $\pp:I^i\to I$ is cofinal. Define the morphism of functors 
 $$
-\theta\in\Hom_{\C^{I^i}}(\Delta(\alpha(i)),\alpha\circ\oo j)
+\theta\in\Hom_{\C^{I^i}}(\Delta(\alpha(i)),\alpha\circ\pp)
 $$ 
-($\Delta$ being the diagonal functor) is a monomorphism, so is its inductive limit (see Proposition~\ref{34i} p.~\pageref{34i}), and the conclusion follows from the commutativity of the diagram 
+($\Delta$ being the diagonal functor) by 
+$$
+\theta_{(s:i\to j)}:=\alpha(s):\alpha(i)\to\alpha(j). 
+$$ 
+As $\theta$ is a monomorphism, Proposition 3.3.3 p.~82 of the book and Proposition~\ref{34i} p.~\pageref{34i} above imply that $\colim\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
-\colim\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\colim\theta}&&\colim(\alpha\circ\oo j)\ar{d}{\sim}\\ 
+\colim\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\colim\theta}&&\colim(\alpha\circ\pp)\ar{d}{\sim}\\ 
 \alpha(i)\ar{rr}[swap]{p_i}&&\colim\alpha.
 \end{tikzcd}
 $$
@@ -5708,7 +5712,7 @@ Apply Theorem 8.6.5 (vi) p.~194 and Theorem 9.6.3 p.~236 of the book.
 \end{proof}
 
 \begin{cor}[Corollary 9.6.6 p. 237]
-Let $\C$ be a Grothendieck category. Denote by $\cc I$ the full additive subcategory of $\C$ consisting of injective objects, and by $\iota:\oo I\to\C$ the inclusion functor. Then there exist a (not necessarily additive) functor $\Psi:\C\to\cc I$ and a morphism of functors $\id_\C\to\iota\circ\Psi$ such that $X\to\Psi(X)$ is a monomorphism for any $X$ in $\C$.
+Let $\C$ be a Grothendieck category. Denote by $\cc I$ the full additive subcategory of $\C$ consisting of injective objects, and by $\iota:\cc I\to\C$ the inclusion functor. Then there exist a (not necessarily additive) functor $\Psi:\C\to\cc I$ and a morphism of functors $\id_\C\to\iota\circ\Psi$ such that $X\to\Psi(X)$ is a monomorphism for any $X$ in $\C$.
 \end{cor}
 
 \begin{proof}
