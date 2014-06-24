@@ -1,12 +1,11 @@
-% about "categories and sheaves" (version-0235)
 % !TEX encoding = UTF-8 Unicode
+% about "categories and sheaves" (version-0235)
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
 \addtolength{\parskip}{.5\baselineskip}%\addtocounter{section}{-2}
 \usepackage[a4paper,headheight=14.5pt]{geometry}
 %\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{bm}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}%\usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath}
 \usepackage{makeidx}
 \usepackage{tikz-cd}%\usepackage{tikz}
@@ -5426,15 +5425,15 @@ We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $
 \nn[Beginning of the description of Task $(T_i)$.] Construct, for each $j\le i$ in $I$, a commutative diagram 
 $$
 \begin{tikzcd}
-X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar{d}{h_j}\\
-X'\ar{r}[swap]{v_j}&Y'_{<j}\ar{r}[swap]{w_j}&Y'_j,
+X_j\ar{rr}{u_j}\ar{d}[swap]{f_j}&&Y_j\ar[dashed]{d}{h_j}\\
+X'\ar[dashed]{r}[swap]{v_j}&Y'_{<j}\ar[dashed]{r}[swap]{w_j}&Y'_j,
 \end{tikzcd}
 $$ 
 with $v_j,w_j$ in $\Mor(\C_0)$, and construct, for each $(i,j,k)$ in $I^3$ with $i\ge j>k$, a commutative diagram 
 $$
 \begin{tikzcd}
 X'\ar{r}{v_j}\ar[equal]{d}&Y'_{<j}\ar{r}{w_j}&Y'_j\\
-X'\ar{r}[swap]{v_k}&Y'_{<k}\ar{r}[swap]{w_k}&Y'_k,\ar{ul}[swap]{p_{jk}}
+X'\ar{r}[swap]{v_k}&Y'_{<k}\ar{r}[swap]{w_k}&Y'_k,\ar[dashed]{ul}[swap]{p_{jk}}
 \end{tikzcd}
 $$
 with $p_{jk}$ in $\Mor(\C_0)$, in such a way that we have
@@ -5456,16 +5455,16 @@ Y'_{<j}\ar{r}{w_j}&Y'_j\ar{ul}[swap]{p_{ij}}\\
 \end{tikzcd}
 $$
 
-\nn[End of the description of Task $(T_i)$.]
+\nn[End of the description of Task $(T_i)$.] 
 
-To handle Task $(T_0)$, let us define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
+\nn[Beginning of the accomplishment of Task $(T_i)$ for all $i$.] To handle Task $(T_0)$, we define $Y'_0,v_0$, and $h_0$ by (9.5.2) (ii):
 $$
 \begin{tikzcd}
 X_0\ar{d}[swap]{f_0}\ar{r}{u_0}&Y_0\ar[dashed]{d}{h_0}\\
 X'\ar[dashed]{r}[swap]{v_0}&Y'_0,
 \end{tikzcd}
 $$ 
-and let us define $Y'_{<0}$ and $w_0$ by the commutative diagram
+and we define $Y'_{<0}$ and $w_0$ by the commutative diagram
 $$
 \begin{tikzcd}
 X_0\ar{rr}{u_0}\ar{d}[swap]{f_0}&&Y_0\ar{d}{h_0}\\
@@ -5476,7 +5475,11 @@ $$
 
 Let $i$ in $I$ satisfy $i>0$, and let us tackle Task $(T_i)$. 
 
-We assume (as we may) that Task $(T_j)$ has already been completed for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
+We assume (as we may) that Task $(T_j)$ has already been achieved for $j<i$, {\em i.e.} that the $Y'_{<j},Y'_j,h_j,v_j,w_j$ have already been constructed for $j<i$, that the $p_{jk}$ have already been constructed for $k<j<i$, and that all these morphisms satisfy the required conditions. 
+
+It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. 
+
+For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
 %
 \begin{equation}\label{ujk}
 u_{jk}:=w_j\circ p_{jk}.
@@ -5547,7 +5550,9 @@ p_{ij}\circ w_j\circ p_{jk}&=p_{ij}\circ u_{jk}&\text{by \eqref{ujk}}\\
 %
 This proves \eqref{pijwj}. 
 
-Task $(T_i)$ has been achieved for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
+Task $(T_i)$ has been performed for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. [End of the accomplishment of Task $(T_i)$ for all $i$.]
+
+In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
 %
 \begin{equation}\label{gi}
 g_i:=u_{mi}\circ h_i\ \forall\ i<m,
