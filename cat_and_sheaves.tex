@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0240)
+% about "categories and sheaves" (version-0241)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5818,23 +5818,19 @@ we get by TR5
 X^0\ar{r}\ar[equal]{d}&Y^0\ar{d}\ar{r}&Z^0\ar{d}{e}\ar{r}[swap]{h}&TX^0\ar[equal]{d}\\
 X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}\ar{r}{d}&TX^0\ar{d}\\
 Y^0\ar{d}\ar{r}&Y^1\ar{d}\ar{r}&Y^2\ar{r}\ar[equal]{d}&TY^0\ar{d}\\
-Z^0\ar{r}[swap]{d}&W\ar{r}&Y^2\ar{r}&TZ^0.
+Z^0\ar{r}[swap]{e}&W\ar{r}&Y^2\ar{r}&TZ^0.
 \end{tikzcd}
 \end{equation}
 %
 We define $Z^0\to Z^1$ as the composition of $Z^0\xr eW$ in \eqref{v2} with $W\xr bZ^1$ in \eqref{v1}. From 
 $$
 \begin{tikzcd}
-Z^0\ar[equal]{dd}\ar{r}{d}&W\ar[equal]{d}\ar{r}&Y^2\ar{r}&TZ^0\\
+Z^0\ar[equal]{dd}\ar{r}{e}&W\ar[equal]{d}\ar{r}&Y^2\ar{r}&TZ^0\\
 &W\ar{r}{b}&Z^1\ar[equal]{d}\ar{r}{c}&TX^2\ar{r}{-Ta}&TW\\
 Z^0\ar{rr}&&Z^1\ar{rr}&&Z^2\ar{rr}{\ell}&&TZ^0,
 \end{tikzcd}
 $$
-where the second row is obtained from 
-$$
-X^2\xr aW\xr bZ^1\xr cTX^2
-$$
-in \eqref{v1} by TR3 and TR0, and the last row is obtained by TR2, we get by TR5 
+where the second row is obtained from $X^2\xr aW\xr bZ^1\xr cTX^2$ in \eqref{v1} by TR3 and TR0, and the last row is obtained by TR2, we get by TR5 
 %
 \begin{equation}\label{v3}
 \begin{tikzcd}
