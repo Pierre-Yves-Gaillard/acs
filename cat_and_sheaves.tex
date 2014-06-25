@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0241)
+% about "categories and sheaves" (version-0242)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5875,7 +5875,13 @@ The commutativity of (\ref{v2})3 and (\ref{v1})6 implies that of (\ref{v4})7.
 
 The commutativity of (\ref{v1})9 and (\ref{v3})8 implies that of (\ref{v4})8. 
 
-The commutativity of (\ref{v1})3, (\ref{v3})6, and (\ref{v2})3 implies the anti-commutativity of (\ref{v4})9. 
+To prove the anti-commutativity of the bottom right small square of \eqref{v4}, note 
+%
+\begin{align*}
+Th\circ\ell&=Td\circ Te\circ\ell&\text{by \eqref{v2}}\\ 
+&=-Td\circ Ta\circ k&\text{by \eqref{v3}}\\  
+&=-Tw\circ k&\text{by \eqref{v1}}.
+\end{align*} 
 
 It is easy to check that all rows and columns are distinguished triangles.
 \end{proof}
