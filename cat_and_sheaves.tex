@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0242)
+% about "categories and sheaves" (version-0243)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5830,7 +5830,13 @@ Z^0\ar[equal]{dd}\ar{r}{e}&W\ar[equal]{d}\ar{r}&Y^2\ar{r}&TZ^0\\
 Z^0\ar{rr}&&Z^1\ar{rr}&&Z^2\ar{rr}{\ell}&&TZ^0,
 \end{tikzcd}
 $$
-where the second row is obtained from $X^2\xr aW\xr bZ^1\xr cTX^2$ in \eqref{v1} by TR3 and TR0, and the last row is obtained by TR2, we get by TR5 
+where the second row is obtained from $X^2\xr aW\xr bZ^1\xr cTX^2$ in \eqref{v1} by TR3 and TR0, and 
+%
+\begin{equation}\label{r3}
+\text{the last row is obtained by TR2,} 
+\end{equation}
+%
+we get by TR5 
 %
 \begin{equation}\label{v3}
 \begin{tikzcd}
@@ -5841,7 +5847,13 @@ Y^2\ar{r}[swap]{j}&Z^2\ar{r}[swap]{k}&TX^2\ar{r}[swap]{-Ti}&TY^2,
 \end{tikzcd}
 \end{equation}
 %
-where $X^2\xr iY^2\xr jZ^2\xr kTX^2$ is a distinguished triangle. We want to prove that the bottom right small square of 
+where 
+%
+\begin{equation}\label{c3}
+X^2\xr iY^2\xr jZ^2\xr kTX^2\text{ is a distinguished triangle.} 
+\end{equation}
+%
+We want to prove that the bottom right small square of 
 %
 \begin{equation}\label{v4}
 \begin{tikzcd}
@@ -5883,7 +5895,7 @@ Th\circ\ell&=Td\circ Te\circ\ell&\text{by \eqref{v2}}\\
 &=-Tw\circ k&\text{by \eqref{v1}}.
 \end{align*} 
 
-It is easy to check that all rows and columns are distinguished triangles.
+The third row and column are distinguished triangles by \eqref{r3} and \eqref{c3} respectively. It is easy to check that the other rows and columns are distinguished triangles too.
 \end{proof}
 
 %%
