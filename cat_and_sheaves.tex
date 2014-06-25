@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0244)
+% about "categories and sheaves" (version-0245)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6030,13 +6030,41 @@ is a differential isomorphism.
 %
 
 \begin{s}
-P.~275, Proof of TR5. The following commutative diagram may help visualize things: 
+P.~275, Proof of TR5. We stated Axiom~TR5 right after Corollary~\ref{may} p.~\pageref{may} above. For the reader's convenience we restate it. 
+
+If the diagram 
+$$
+\begin{tikzcd}
+U\ar[equal]{dd}\ar{r}&V\ar[equal]{d}\ar{r}&W'\ar{r}&TU\\
+&V\ar{r}&W\ar[equal]{d}\ar{r}&U'\ar{r}&TV\\
+U\ar{rr}&&W\ar{rr}&&V'\ar{rr}&&TU
+\end{tikzcd}
+$$
+commutes, and if the rows are distinguished triangles, then there is a distinguished triangle $W'\to V'\to U'\to TW'$ such that the diagram below commutes:
+$$
+\begin{tikzcd}
+U\ar{r}\ar[equal]{d}&V\ar{d}\ar{r}&W'\ar{d}\ar{r}&TU\ar[equal]{d}\\
+U\ar{d}\ar{r}&W\ar{r}\ar[equal]{d}&V'\ar{d}\ar{r}&TU\ar{d}\\
+V\ar{d}\ar{r}&W\ar{d}\ar{r}&U'\ar{r}\ar[equal]{d}&TV\ar{d}\\
+W'\ar{r}&V'\ar{r}&U'\ar{r}&TW'.
+\end{tikzcd}
+$$ 
+
+Going back to the proof of TR5 on p.~275, applying TR5 to 
+$$
+\begin{tikzcd}
+X\ar[equal]{dd}\ar{r}{f}&Y\ar[equal]{d}\ar{r}{\alpha(f)}&TX\oplus Y\ar{r}{\beta(f)}&TX\\
+&Y\ar{r}{g}&Z\ar[equal]{d}\ar{r}{\alpha(g\circ f)}&TY\oplus Z\ar{r}{\beta(g)}&TY\\
+X\ar[swap]{rr}{g\circ f}&&Z\ar[swap]{rr}{\alpha(g)}&&TX\oplus Z\ar[swap]{rr}{\beta(g\circ f)}&&TX,
+\end{tikzcd}
+$$ 
+we get  
 $$
 \begin{tikzcd}
 X\ar{r}{f}\ar[equal]{d}&Y\ar{r}{\alpha(f)}\ar{d}{g}&TX\oplus Y\ar{r}{\beta(f)}\ar{d}{u}&TX\ar[equal]{d}\\ 
 X\ar{r}{g\circ f}\ar{d}[swap]{f}&Z\ar{r}{\alpha(g\circ f)}\ar[equal]{d}&TX\oplus Z\ar{r}{\beta(g\circ f)}\ar{d}{v}&TX\ar{d}{T(f)}\\ 
 Y\ar{r}{g}\ar{d}[swap]{\alpha(f)}&Z\ar{r}{\alpha(g)}\ar{d}[swap]{\alpha(g\circ f)}&TY\oplus Z\ar{r}{\beta(g)}\ar[equal]{d}&TY\ar{d}{T(\alpha(f))}\\ 
-TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Y\ar{r}[swap]{w}&T^2X\oplus TY.
+TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Z\ar{r}[swap]{w}&T^2X\oplus TY.
 \end{tikzcd}
 $$ 
 \end{s}
