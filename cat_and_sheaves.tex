@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0243)
+% about "categories and sheaves" (version-0244)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -5946,7 +5946,7 @@ Note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
 
 \begin{proof}\ 
 
-\nn(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$ (see Display (7.1.5) p.~155 of the book), and thus, in view of the definition of $\cc NQ$, the existence of a triangle $W\to Y\to Z\to TW$ with $W$ in $\cc N$, and the conclusion follows from the fact that $\Hom_{\cc D}(X,\ )$ is cohomological. 
+\nn(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$ (see Display (7.1.5) p.~155 of the book), and thus, in view of the definition of $\cc NQ$ (see (10.2.1) p.~249 of the book), the existence of a triangle $W\to Y\to Z\to TW$ with $W$ in $\cc N$, and the conclusion follows from the fact that $\Hom_{\cc D}(X,\ )$ is cohomological (see Proposition 10.1.13 p.~245 of the book). 
 
 \nn(ii)
 
@@ -5958,10 +5958,10 @@ Since $g\circ f=\id_X$, the morphism $f$ is a monomorphism, and so is $Tf$. As $
 $$
 \begin{tikzcd}
 X\ar[equal]{d}\ar{r}{f}&Z\ar{d}{(g,h)}\ar{r}{h}&Y\ar[equal]{d}\ar{r}{0}&TX\ar[equal]{d}\\ 
-X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX,
+X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX
 \end{tikzcd}
 $$
-and Proposition 10.1.15 p.~246 of the book implies that $(g,h)$ is an isomorphism.\bigskip 
+(the bottom is a d.t. by Corollary 10.2.1 (ii) p.~248 of the book) and Proposition 10.1.15 p.~246 of the book implies that $(g,h)$ is an isomorphism.\bigskip 
 
 \nn(b) $\then$ (c): Let $\Delta_1,\dots,\Delta_5$ be the triangles
 $$
@@ -5973,9 +5973,9 @@ X\oplus Y\ar{r}&Y\ar{r}&TX\ar{r}&TX\oplus TY\\
 X\oplus Y\ar{r}&X\oplus Y\ar{r}&X\oplus TX\ar{r}&TX\oplus TY,
 \end{tikzcd}
 $$ 
-with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. Then $\Delta_5$ is distinguished, and, as $X\oplus Y$ is in $\cc N$, Condition N'3 of Lemma 10.2.1 (b) p.~249 of the book implies that $X\oplus TX$ is in $\cc N$.
+with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. It is easy to see that $\Delta_1,\Delta_2$, and $\Delta_4$ are distinguished. Then $\Delta_3$ and $\Delta_5$ are distinguished by Proposition 10.1.19 p.~247 of the book, and, as $X\oplus Y$ is in $\cc N$, Condition N'3 of Lemma 10.2.1 (b) p.~249 of the book implies that $X\oplus TX$ is in $\cc N$.
 
-\nn(c) $\then$ (a): Straightforward.
+\nn(c) $\then$ (a): Follows from Theorem 10.2.3 (iv) p.~249 of the book.
 \end{proof}
 \end{s}
 
