@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0246)
+% about "categories and sheaves" (version-0247)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -340,7 +340,33 @@ $$
 should be ``a sequence 
 \begin{tikzcd}X\ar{r}{u}&Y\ar[yshift=0.7ex]{r}{v}\ar[yshift=-0.7ex]{r}[swap]{w}&Z\end{tikzcd}''.
 
-\nn$*$ P.~180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$. Proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times.
+\nn$*$ P.~180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$. Proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times. For the reader's convenience we state Lemma 8.3.11. Consider the commutative square 
+%
+\begin{equation}\label{837}
+\begin{tikzcd}
+X'\ar{d}[swap]{f'}\ar{r}{g'}&Y'\ar{d}{g}\\ 
+X\ar{r}[swap]{f}&Y
+\end{tikzcd}
+\end{equation} 
+%
+in the abelian category $\C$. 
+
+\begin{lem}[Lemma 8.3.11 p.~180]\label{8311}%(stated as Lemma~\ref{8311} p.~\pageref{8311})
+We have:
+
+\nn\emph{(a)} Assume that \eqref{837} is cartesian. 
+
+\emph{(i)} We have $\Ker f'\xr\sim\Ker f$. 
+
+\emph{(ii)} If $f$ is an epimorphism, then \eqref{837} is cocartesian and $f'$ is an epimorphism.
+
+\nn\emph{(b)} Assume that \eqref{837} is cocartesian.
+
+\emph{(i)} We have $\Coker f'\xr\sim\Coker f$.
+
+\emph{(ii)} If $f'$ is a monomorphism, then \eqref{837} is cartesian and $f$ is a
+monomorphism.
+\end{lem}
 
 \nn$*$ P.~181, Lemma 8.3.13, second line of the proof: $h\circ f^2$ should be $f^2\circ h$.
 
@@ -4323,7 +4349,7 @@ Y\ar{ur}{b}\ar{dr}[swap]{c}&Y_1\ar[dashed]{r}{l_1}&X\\
 {}&G_i\ar{u}{a_1}\ar{ru}[swap]{\pp}
 \end{tikzcd}
 $$ 
-commutative. By Lemma 8.3.11 (a) (i) p.~180 of the book, $c$ is a monomorphism, and, by Part (a) (i) of the same lemma, $\lambda$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$: 
+commutative. By Lemma 8.3.11 (a) (i) p.~180 of the book (stated as Lemma~\ref{8311} p.~\pageref{8311}), $c$ is a monomorphism, and, by Part (a) (i) of the same lemma, $\lambda$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$: 
 $$
 \begin{tikzcd}
 Y\ar{r}{b}\ar[tail]{d}[swap]{c}&Y_0\ar{d}{g_0}\\ 
@@ -4362,7 +4388,7 @@ $$
 &Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
 \end{tikzcd}
 $$ 
-commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 of the book implies that $c$ is also a monomorphism.
+commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 of the book (stated as Lemma~\ref{8311} p.~\pageref{8311}) implies that $c$ is also a monomorphism.
 \end{comment}
 
 %%%
@@ -6181,7 +6207,7 @@ is exact.
 \end{proof}
 %
 \begin{prop}[Corollary 12.2.6 p.~302]\label{sl4}
-Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\pp:\Mc(f)\to Z$ by $\pp:=(0,g)$. Then $\pp$ is a morphism in $\A_c$ and is a qis. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
+Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\pp:\Mc(f)\to Z$ by $\pp:=(0,g)$. Then $\pp$ is a morphism in $\A_c$, and this morphism is a qis. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$
@@ -6277,7 +6303,7 @@ V\ar{r}\ar{d}&U\ar[dashed]{d}\\
 T\ar[dashed,tail]{r}&S
 \end{tikzcd}
 $$ 
-can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book.
+can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book (stated as Lemma~\ref{8311} p.~\pageref{8311}).
 
 \nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By Lemma~\ref{8312}, (c)$\then$(a), it suffices to show that the commutative diagram of solid arrows 
 $$
