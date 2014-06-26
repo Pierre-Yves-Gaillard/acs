@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0245)
+% about "categories and sheaves" (version-0246)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6050,15 +6050,15 @@ W'\ar{r}&V'\ar{r}&U'\ar{r}&TW'.
 \end{tikzcd}
 $$ 
 
-Going back to the proof of TR5 on p.~275, applying TR5 to 
+Going back to the proof of TR5 on p.~275, we consider the diagram
 $$
 \begin{tikzcd}
 X\ar[equal]{dd}\ar{r}{f}&Y\ar[equal]{d}\ar{r}{\alpha(f)}&TX\oplus Y\ar{r}{\beta(f)}&TX\\
-&Y\ar{r}{g}&Z\ar[equal]{d}\ar{r}{\alpha(g\circ f)}&TY\oplus Z\ar{r}{\beta(g)}&TY\\
-X\ar[swap]{rr}{g\circ f}&&Z\ar[swap]{rr}{\alpha(g)}&&TX\oplus Z\ar[swap]{rr}{\beta(g\circ f)}&&TX,
+&Y\ar{r}{g}&Z\ar[equal]{d}\ar{r}{\alpha(g)}&TY\oplus Z\ar{r}{\beta(g)}&TY\\
+X\ar[swap]{rr}{g\circ f}&&Z\ar[swap]{rr}{\alpha(g\circ f)}&&TX\oplus Z\ar[swap]{rr}{\beta(g\circ f)}&&TX.
 \end{tikzcd}
 $$ 
-we get  
+The goal of the proof is then to construct a commutative diagram
 $$
 \begin{tikzcd}
 X\ar{r}{f}\ar[equal]{d}&Y\ar{r}{\alpha(f)}\ar{d}{g}&TX\oplus Y\ar{r}{\beta(f)}\ar{d}{u}&TX\ar[equal]{d}\\ 
