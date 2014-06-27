@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0247)
+% about "categories and sheaves" (version-0248a)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6357,9 +6357,9 @@ $$
 0\ar{r}&Y\ar{r}&W\ar{r}&X\ar{r}&0.
 \end{tikzcd}
 $$ 
-To the element $0\to Y\to Z\to X\to0$ in $E$ we attach the morphism in 
+(This is easily seen to be indeed an equivalence relation.) To the element $0\to Y\to Z\to X\to0$ in $E$ we attach the morphism in 
 $$
-\Hom_{\oo D(\C)}(X,Y[1])=\oo{Ext}^1_\C(X,Y)
+\Hom_{\oo D(\C)}(X,Y[1])=\Ext^1_\C(X,Y)
 $$ 
 suggested by the diagram 
 $$
@@ -6373,44 +6373,43 @@ where each row is a complex (viewed as an object of $\oo D(\C)$), with the conve
 
 We claim: 
 
-(a) this process induces a map from $E/\!\!\sim$ to $\oo{Ext}^1_\C(X,Y)$, 
+(a) this process induces a map from $E/\!\!\sim$ to $\Ext^1_\C(X,Y)$, 
 
 (b) this map (a) is bijective. 
 
-Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\oo{Ext}^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} p.~\pageref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\oo{Ext}^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
+Claim (a) is left to the reader. To prove (b) we construct the inverse map. To this end, we start with a complex $Z^\bullet$, a qis $Z^\bullet\to X$, and a morphism $Z^\bullet\to Y[1]$ representing our given element of $\Ext^1_\C(X,Y)$. The natural morphism $\tau^{\le0}Z^\bullet\to Z^\bullet$ being a qis, we can replace $Z^\bullet$ with $\tau^{\le0}Z^\bullet$, or, in other words, we may, and will, assume $Z^n\simeq0$ for $n>0$. Letting $Z$ be the fiber coproduct $Y\oplus_{Z^{-1}}Z^0$, Lemma~\ref{738} p.~\pageref{738} yields an exact sequence $0\to Y\to Z\to X\to0$. It is easy to see that this process defines a map from $\Ext^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
 
 %%%
 
 \section{About Chapter 14}
 
 \begin{s} 
-P.~349, proof of Proposition 14.1.6, Step~(ii). Here are some more details about the verification that $\widetilde\psi:Y\to I$ is a morphism in $\A_c$. 
+P.~349, proof of Proposition 14.1.6, Step~(ii), additional details. 
 
-We must check $T\widetilde\psi\circ d_Y=d_I\circ\widetilde\psi$. We have 
+\nn Proof of $h\circ T^{-1}f=0$: 
 $$
-T\widetilde\psi\circ d_Y-d_I\circ\widetilde\psi=\alpha+\beta
-$$
-with
-$$
-\alpha:=T\psi\circ d_Y-d_I\circ\psi,\quad\beta :=d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y.
+h\circ T^{-1}f=T^{-1}d_I\circ T^{-1}\psi\circ T^{-1}f+\psi\circ d_{T^{-1}Y}\circ T^{-1}f
 $$ 
-We get 
 $$
--T^{-1}\alpha=T^{-1}d_I\circ T^{-1}\psi-\psi\circ T^{-1}d_Y=h,
+=T^{-1}d_I\circ T^{-1}\pp+\psi\circ f\circ d_{T^{-1}X}=T^{-1}d_I\circ T^{-1}\pp+\pp\circ d_{T^{-1}X}=0.
 $$ 
-and 
+
+\nn Proof of the fact that $\widetilde\psi$ is a morphism in $\A_c$: 
 $$
-\beta=\gamma\circ g
-$$ 
-with 
+d_I\circ\widetilde\psi-T\widetilde\psi\circ d_Y
 $$
-\gamma:=d_I\circ\xi-T\xi\circ d_Z=T\widetilde h,
-$$ 
-which implies 
 $$
-T^{-1}(\alpha+\beta)=-h+\widetilde h\circ T^{-1}g=-h+h=0.
+=d_I\circ\psi-d_I\circ\xi\circ g-T\psi\circ d_Y+T\xi\circ Tg\circ d_Y
 $$
-q.e.d.
+$$
+=(d_I\circ\psi-T\psi\circ d_Y)-(d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y)
+$$
+$$
+=h-\widetilde h\circ T^{-1}g
+$$
+$$
+=0.
+$$
 \end{s}
 
 %
