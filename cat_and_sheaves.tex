@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0248a)
+% about "categories and sheaves" (version-0249)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -729,7 +729,7 @@ a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(A,X),\quad\theta\in\Hom_{\Set^\C}(k(A),
 $$ 
 Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
 $$
-\pp(a)=k(a)\in\Hom_{\C^\wedge}(k(B),k(A)).
+\pp(a)=k(a)\in\Hom_{\C^\vee}(k(B),k(A)).
 $$
 This shows that $k$ is fully faithful.
 \end{thm}
@@ -6527,7 +6527,8 @@ $$
 Conversely, to an object $A\to U$ of $(\C^\wedge)_U$ we attach the sieve $S_A$ over $U$ by putting 
 $$
 S_A:=\{V\to A\to U\}.
-$$
+$$ 
+(The notation $S_A$ is abusive because the sieve $S_A$ depends not only on $A$ but also on the morphism $A\to U$.)
 
 Let $\Sigma_U$ be the set of sieves over $U$. Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ and consider the following conditions:
 
@@ -6554,7 +6555,7 @@ Consider the following conditions on a set $\cc E$ of morphisms in $\C^\wedge$:
 
 \nn LE3: if the composition $v\circ u$ of two morphisms of $\C^\wedge$ exists and is in $\cc E$, then $v$ is in $\cc E$,
 
-\nn LE4: a morphism $A\to B$ in $\C^\wedge$ is in $\cc E$ if and only if, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the morphism $A\times_BU\to U$ is in $\cc E$.
+\nn LE4: a morphism $A\to B$ in $\C^\wedge$ is in $\cc E$ if and only if, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the projection $A\times_BU\to U$ is in $\cc E$.
 
 As proved in the book, $\cc E$ contains all epimorphisms. 
 
@@ -6563,6 +6564,18 @@ The elements of $\cc E$ are called \textbf{local epimorphisms}.
 \begin{nota}\label{cce}
 Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let $\cc E=\cc E(\Gamma,\U)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
 \end{nota}
+
+\begin{rk}\label{1613i}
+A morphism $A\to U$ in $\C^\wedge$ is in $\cc E$ if and only if $S_A$ is in $\Gamma_U$. 
+\end{rk}
+
+\begin{proof}
+This results easily from the following observation: In the setting 
+$$
+A\to U\leftarrow V
+$$ 
+(obvious notation), we have $S_{A\times_UV}=S_A\times_UV$. 
+\end{proof}
 
 Let us check that $\cc E$ satisfies LE1-LE4:
 
@@ -6580,11 +6593,11 @@ in $\C^\wedge$ (with $U$ in $\C$). We have that $S_E$ is in $\Gamma_U$ (because 
 
 \nn LE3 follows immediately from GT2.
 
-\nn LE4 results easily from the following observation: In the setting $A\to U\leftarrow V$ (obvious notation), we have 
-$$
-S_{A\times_UV}=S_A\times_UV.
-$$
-The details are left to the reader.
+\nn LE4. We must check: 
+\begin{center}
+$A\to B$ is in $\cc E$\\ $\iff$\\ for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the projection $A\times_BU\to U$ is in $\cc E$.
+\end{center}
+Implication $\then$ is obvious, and Implication $\si$ follows from Remark~\ref{1613i}. 
 
 Conversely, given an object $U$ of $\C$ and a set $\cc E$ of morphisms in $\C^\wedge$ satisfying LE1-LE4, put
 $$
@@ -6592,13 +6605,43 @@ $$
 $$
 Let us check that $\Gamma(\cc E):=(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
 
-GT1 follows from LE1 and GT2 follows from LE3. If $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
+GT1 follows from LE1 and the equality $(A_{M_U}\to U)=\id_U$. GT2 follows from LE3 and the fact that, in the setting $\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U$, $A_S\to U$ factors as $A_S\to A_{S'}\to U$. If $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
 %
 \begin{equation}\label{asuv}
 A_{S\times_UV}=A_S\times_UV.
 \end{equation}
 %
-In view of LE4, this implies GT3. %Let us prove GT4. 
+In view of LE4, this implies GT3.  
+
+The lemma below will helps us verify GT4. 
+
+\begin{lem}\label{prepagt4}
+Let $s:V\to U$ be a morphism in $\C$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
+\end{lem}
+
+\begin{proof}
+By the Yoneda Lemma (Lemma~\ref{yol} p.~~\pageref{yol}), there is a bijection 
+$$
+S\cap\Hom_\C(V,U)\xr\pp\Hom_{\C^\wedge}(V,A_S)
+$$
+such that $\pp(s)_V(t)=s\circ t$ for $s$ in $\Hom_\C(V,U)$, $V$ in $\C$, and $t$ in $\Hom_\C(V,V)$. 
+
+Assume that $s$ is in $S$ and let us show that there is a morphism $v:V\to A_S$ satisfying $i\circ v=s$. It suffices to prove $i\circ\pp(s)=s$ and to put $v:=\pp(s)$. We have 
+$$
+i\circ\pp(s)=\pp(s)_V(\id_V)=A_S(\id_V)(s)=s\circ\id_V=s.
+$$ 
+
+Conversely, assuming that $v$ is in $\Hom_{\C^\wedge}(V,A_S)$, it suffices to prove that $i\circ v$ is in $S$. We have 
+$$
+V\xr vA_S\xr iU,
+$$
+$$
+\Hom_\C(V,V)\xr{v_V}S\cap\Hom_\C(V,U)\overset{i_V}{\hookrightarrow}\Hom_\C(V,U),
+$$
+$$
+i\circ v=(i\circ v)_V(\id_V)=v_V(\id_V)\in S.
+$$
+\end{proof} 
 
 \begin{lem}
 Condition GT4 holds.
@@ -6613,11 +6656,7 @@ It suffices to check $S'\in\Gamma_U$, or, equivalently,
 %
 \begin{equation}\label{as'}
 (A_{S'}\to U)\in\cc E.
-\end{equation}%$A_{S'}\to U$ is in $\cc E$. 
-
-Claim: Let $s:V\to U$ be a morphism in $\C$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $A_S\to U$.
-
-This follows from the Yoneda Lemma (the details are left to the reader). 
+\end{equation}
 
 Form the cartesian square 
 $$
@@ -6630,7 +6669,7 @@ As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE3, to check
 %
 \begin{equation}\label{bas}
 (B\to A_S)\in\cc E.
-\end{equation}%$B\to A_S$ is in $\cc E$. 
+\end{equation}
 %
 Let $V\to A_S$ be a morphism in $\C^\wedge$ with $V$ in $\C$, and let 
 $$
@@ -6644,7 +6683,7 @@ be a cartesian square. It is enough to verify
 \begin{equation}\label{cv}
 (C\to V)\in\cc E.
 \end{equation} 
-%$C\to V$ is in $\cc E$. 
+% 
 The square 
 $$
 \begin{tikzcd}
@@ -6652,7 +6691,7 @@ C\ar{r}\ar{d}&V\ar{d}\\
 A_{S'}\ar{r}&U
 \end{tikzcd}
 $$ 
-being cartesian, and $V\to U$ being in $S$ by the claim, \eqref{cv} holds by assumption, and implies successively \eqref{bas}, \eqref{as'}, and the lemma. 
+being cartesian, and $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, Condition~\eqref{cv} holds by assumption, and implies successively \eqref{bas}, \eqref{as'}, and the lemma. 
 \end{proof}
 
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
