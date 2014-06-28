@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0252)
+% about "categories and sheaves" (version-0253)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6915,11 +6915,17 @@ Indeed, \eqref{vseu} is equivalent to $v\circ Q(s)=Q(u)$.
 \begin{s} 
 P.~400, Step (ii) in the proof of Lemma 16.3.2 (additional details):
 
-We want to prove that $A\to A^a$ is a local monomorphism. In view of \eqref{e1623} p.~\pageref{e1623} it suffices to check that Condition~(b) of \S\ref{s1623} p.~\pageref{s1623} holds. The functor 
+We want to prove that $A\to A^a$ is a local monomorphism. In view of \eqref{e1623} p.~\pageref{e1623} it suffices to check that Condition~(b) of \S\ref{s1623} p.~\pageref{s1623} holds. 
+
+Recall that the functor 
 $$
 \alpha:(\cc{LI}_U)^{\op}\to\Set,\quad(B\xr sU)\mapsto\Hom_{\C^\wedge}(B,A)
 $$ 
-satisfies $A^a(U)\simeq\colim\alpha$. Let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of $A\to A^a$, we have (in the above notation) $i(\id_U)(f_1)=i(\id_U)(f_2)$. By definition of $A^a(U)$, by the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of the book, there is a morphism 
+satisfies $\colim\alpha\simeq A^a(U)$. Let $i(s):\alpha(s)\to A^a(U)$ be the coprojection, and let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of the natural morphism $A\to A^a$, we have 
+$$
+i(\id_U)(f_1)=i(\id_U)(f_2).
+$$ 
+By the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of the book, there is a morphism 
 $$
 \pp:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
