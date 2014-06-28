@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0251)
+% about "categories and sheaves" (version-0252)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -6782,7 +6782,8 @@ P.~398, proof of Lemma 16.2.7: see \S\ref{fpl} p.~\pageref{fpl}.
 
 %
 
-\begin{s} 
+\begin{comment}
+\begin{s}
 P.~398, proof of Lemma 16.2.8. Recall that $\C$ is a small category. Here is a variant of the two sentences ``Let us consider the set $\cc S$ of $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism and $w:S\to A$ is a local isomorphism. By Proposition 5.2.9 and the result of Exercise 5.1, the set of quotients of any object of $\C^\wedge$ is small, and hence $\cc S$ is a small set.'' 
 
 For any set $T$ let $Q_T$ be the set of those sets $U$ for which there is an equivalence relation $R$ on $T$ such that $U$ is the set of $R$-equivalence classes in $T$. 
@@ -6873,6 +6874,40 @@ such that the bottom square is cartesian, and $s'$ is a local isomorphism by Lem
 \end{equation}
 %
 The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the bottom square commutes by definition of $A^a(s\circ t)$, and the top square commutes because $w$ can be viewed as a morphism $\id_V\to s'$ in $\mc{LI}_V$. The commutativity of \eqref{1631b} for all $t$ implies the commutativity of \eqref{1631a} for all $u$. q.e.d.
+\end{s}
+\end{comment}
+
+%
+
+\begin{s}
+Right after Display (16.3.1) p.~399 of the book, in view of the natural isomorphism 
+$$
+A^a(U)\simeq\Hom_{({\C^\wedge})_{\cc{LI}}}(Q(U),Q(A)),
+$$ 
+the map $A^a(U')\to A^a(U)$ induced by a morphism $U\to U'$ can also be described by the diagram 
+$$
+Q(U)\to Q(U')\to Q(A).
+$$ 
+Similarly, the map $A(U)\to A^a(U)$ at the top of p.~400 of the book can also be described by the diagram 
+$$
+A(U)\simeq\Hom_{\C^\wedge}(U,A)\to\Hom_{({\C^\wedge})_{\cc{LI}}}(Q(U),Q(A))\simeq A^a(U).
+$$ 
+Then Lemma 16.3.1 can be stated as follows. 
+
+If 
+$$
+U\xleftarrow sB\xr uA
+$$ 
+is a diagram in $\C^\wedge$ with $U$ in $\C$ and $s$ a local isomorphism, and if 
+$$
+v=Q(u)\circ Q(s)^{-1}\in A^a(U)\simeq\Hom_{({\C^\wedge})_{\cc{LI}}}(Q(U),Q(A)), 
+$$ 
+then 
+\begin{equation}\label{vseu}
+v\circ s=\ee(A)\circ u.
+\end{equation}
+
+Indeed, \eqref{vseu} is equivalent to $v\circ Q(s)=Q(u)$.
 \end{s}
 
 %
