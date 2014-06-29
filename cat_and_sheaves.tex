@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0253)
+% about "categories and sheaves" (version-0254)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1215,7 +1215,7 @@ P.~43, end of Section~2.1. One could add the following observation, which will b
 \Hom_{\A^\C}(F,G)\simeq\lim_{X\in\C}\Hom_{\A^{\C_X}}(F\circ\oo j_X,G\circ\oo j_X).
 \end{equation}
 
-Let us spell out the above statement: 
+Let us spell out the proof of the above statement: 
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
@@ -1824,7 +1824,11 @@ the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 
 \subsection{Three Formulas}
 
-Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pageref{prepa5} to prove Proposition 17.1.9 p.~409 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$. Let $\A$ be a category admitting small inductive and projective limits. 
+Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pageref{prepa5} to prove Proposition 17.1.9 p.~409 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$: 
+$$
+h(\C):\C\to\C^\wedge,\qquad j(\C_A):\C_A\to\C.
+$$
+Let $\A$ be a category admitting small inductive and projective limits. 
 
 \subsubsection{First Formula}
 
@@ -1833,21 +1837,30 @@ $$
 \lambda:(\C^\wedge)_A\to(\C_A)^\wedge
 $$ 
 such that 
+%
 \begin{equation}\label{lambda}
 \lambda(B\to A)(U\to A)=\Hom_{(\C^\wedge)_A}(U\to A,B\to A)
 \end{equation} 
+%
 for all $(B\to A)$ in $(\C^\wedge)_A$ and all $(U\to A)$ in $\C_A$. (See Lemma 1.4.12 p.~26 of the book.) We claim 
+%
 \begin{equation}\label{prepa1}
-h(\C_A)^\ddagger(F\circ j(\C_A))\circ\lambda\simeq h(\C)^\ddagger(F)\circ j((\C^\wedge)_A).
+h(\C_A)^\ddagger(F\circ j(\C_A))\circ\lambda\simeq h(\C)^\ddagger(F)\circ j((\C^\wedge)_A)
 \end{equation}
-Proof: Consider the quasi-commutative diagram 
-$$
+%
+(see \eqref{qcd}).
+
+\begin{proof} 
+Consider the quasi-commutative diagram 
+%
+\begin{equation}\label{qcd}
 \begin{tikzcd}
 \C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\circ j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
 {}\\ 
 (\C_A)^\wedge\ar{uurr}[swap]{h(\C_A)^\ddagger(F\circ j(\C_A))}&&(\C^\wedge)_A\ar{ll}{\lambda}\ar{rr}[swap]{j((\C^\wedge)_A)}&&\C^\wedge.\ar{uull}[swap]{h(\C)^\ddagger(F)}
 \end{tikzcd}
-$$  
+\end{equation}
+%
 We have 
 %
 \begin{align*} 
@@ -1860,7 +1873,8 @@ h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to 
 %
 &\simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big). 
 % 
-\end{align*}  
+\end{align*} 
+\end{proof}
 
 %
 
@@ -1946,7 +1960,9 @@ $$
 \begin{equation}\label{prepa3}
 h^\dagger(j^\dagger(G))(B)\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)).
 \end{equation} 
-Proof: We have, for $U$ in $\C$, 
+
+\begin{proof}
+We have, for $U$ in $\C$, 
 $$
 j^\dagger(G)(U)\simeq\colim_{(j(V\to A)\to U)\in(\C_A)_U}G(V\to A)\simeq\colim_{(A\leftarrow V\to U)\in(\C_A)_U}G(V\to A)
 $$
@@ -1954,9 +1970,11 @@ $$
 \simeq\colim_{((V\to A)\to(U\times A\to A))\in(\C_A)_{U\times A\to A}}G(V\to A)\simeq(h_A)^\dagger(G)(\lambda(U\times A\to A)),
 $$
 that is: 
+%
 \begin{equation}\label{prepa4}
 j^\dagger(G)(U)\simeq(h_A)^\dagger(G)(\lambda(U\times A\to A)).
 \end{equation} 
+%
 For $B$ in $\C^\wedge$ we get 
 $$
 h^\dagger(j^\dagger(G))(B)
@@ -1964,18 +1982,21 @@ $$
 $$
 \simeq\colim_{(U\to B)\in\C_B}j^\dagger(G)(U)
 $$ 
+%
 \begin{equation}\label{prepa4a}
 \simeq\colim_{(U\to B)\in\C_B}(h_A)^\dagger(G)(\lambda(U\times A\to A))
 \end{equation} 
 \begin{equation}\label{prepa4b}
 \simeq(h_A)^\dagger(G)\left(\lambda\left(\colim_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)
 \end{equation} 
+%
 \begin{equation}\label{prepa4b'}
 \simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)\right)
 \end{equation}
 \begin{equation}\label{prepa4c}
 \simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\times A\to A\right)\right)
 \end{equation} 
+%
 $$
 \simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)),
 $$ 
@@ -1984,6 +2005,7 @@ where
 \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
 \eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
 \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (see \S\ref{bc} p.~\pageref{bc}). 
+\end{proof}
 
 %%
 
@@ -7023,7 +7045,7 @@ We extend presheaves over $X$ to presheaves over $\widehat X$ using the functor 
 $$
 (\oo h_X^\ddagger F)(A)=\lim_{(U\to A)\in(\C_X)_A}F(U).
 $$ 
-By Corollary 2.7.4 p.~63, the functor 
+By Corollary 2.7.4 p.~63 of the book, the functor 
 $$
 \oo h_X^\ddagger:\oo{PSh}(X,\A)\to\oo{PSh}(\widehat X,\A)
 $$ 
@@ -7063,7 +7085,7 @@ P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 %
 
 \begin{s}
-P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition~\ref{p406} p.~\pageref{p406}.
+P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition 3.3.3 p.~82 of the book and Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 
 %
@@ -7071,7 +7093,7 @@ P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right e
 \begin{s}
 P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.~\pageref{1722}. This is a copy and paste of the book; we only inserted a few line breaks.
 
-Let us show that if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or a local epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wedge$. 
+Let us show that if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or an epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wedge$. 
 
 Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V$ in $\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism. 
 
