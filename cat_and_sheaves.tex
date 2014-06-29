@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0254)
+% about "categories and sheaves" (version-0255)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -222,6 +222,10 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \nn$*$ P.~41, sixth line: (i) should be (a). 
 
+\begin{s}\label{27i}
+P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''.
+\end{s}
+
 \nn$*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\oo{Fct}(I,\C)$.
 
 \nn$*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
@@ -236,13 +240,23 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \nn$*$ P.~64, proof of Proposition 2.7.5: $(\C')^\wedge$ should be $\C^\wedge$.
 
-\nn$*$ P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''. (See \S\ref{bc} p.~\pageref{bc}.) 
+\begin{comment}
+\begin{s}\label{bc}
+P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''.
+
+\begin{cor}\label{sbc}
+Small inductive limits in $\Set$ are stable by base change\index{base change} (see Definition 2.2.6 p.~47 of the book).
+\end{cor}
+
+Note that Corollary~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
+\end{s}
+\end{comment} 
 
 \nn$*$ P.~74, last four lines: $\alpha$ should be replaced with $\pp$.
 
 \nn$*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
 
-\nn$*$ P.~83, Statement of Proposition 3.3.7 (iv) and (v) p.~83: $k$ might be replaced with $R$. 
+\nn$*$ P.~83, Statement of Proposition 3.3.7 (iv) and (v): $k$ might be replaced with $R$. 
 
 \nn$*$ Pp 83 and 85, Proof of Proposition 3.3.7 (iv): ``Proposition 3.1.6'' should be ``Theorem 3.1.6''. Same typo on p.~85, Line 6.
 
@@ -1804,7 +1818,7 @@ $$
 $$
 Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
 
-By Proposition 2.1.10 p. 40 of the book, it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
+By Proposition 2.1.10 p. 40 of the book (see \S\ref{coll} p.~\pageref{coll}), it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
 G(X')(X):=\Hom_{\A}(F(X),X').
 $$ 
@@ -1878,7 +1892,7 @@ h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to 
 
 %
 
-\subsubsection{Second Formula}%\label{sprepa2}
+\subsubsection{Second Formula}
 
 \begin{prop}\label{prepa2a}
 Consider the quasi-commutative diagram 
@@ -2004,7 +2018,7 @@ where
 \eqref{prepa4a} follows from \eqref{prepa4}, 
 \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
 \eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
-\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (see \S\ref{bc} p.~\pageref{bc}). 
+\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (see \S~\ref{coll} p.~\pageref{coll}). 
 \end{proof}
 
 %%
@@ -2107,6 +2121,21 @@ Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha
 
 %
 
+\begin{comment}
+\begin{s}\label{bc}
+P.~65, Exercise 2.7 (i). As already indicated, ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''.
+
+\begin{cor}\label{sbc}
+Small inductive limits in $\Set$ are stable by base change\index{base change} (see Definition 2.2.6 p.~47 of the book).
+\end{cor}
+
+Note that Corollary~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
+\end{s}
+\end{comment}
+
+%
+
+\begin{comment}
 \begin{s}\label{bc}
 P.~65, Exercise 2.7 (i). Here is a variant: 
 
@@ -2122,17 +2151,18 @@ $$
 L(W\to Y):=(W\to Y\xr uZ),\quad R(X\to Z):=(Y\times_ZX\to Y).
 $$ 
 The following statement is clear:
-%
+
 \begin{prop}\label{fpa}
 In the above setting, $(L,R)$ is a pair of adjoint functors. In particular, if $\C$ admits inductive limits indexed by a small category $I$, then $L$ commutes with such limits, and if $\C$ admits projective limits indexed by a small category $I$, then $R$ commutes with such limits. 
 \end{prop}
-%
+
 \begin{cor}\label{sbc}
 Small inductive limits in $\Set$ are stable by base change\index{base change} (see Definition 2.2.6 p.~47 of the book).
 \end{cor}
 %
 Note that Corollary~\ref{sbc} generalizes the distributivity of multiplication over addition in $\bb N$.
 \end{s}
+\end{comment}
 
 %%
 
@@ -2357,6 +2387,40 @@ The first and last bijections follow from \eqref{332}, the second one is clear, 
 
 %
 
+\begin{s}\label{coll}
+P.~83, Proposition 3.3.6. For the reader's convenience we collect five statements closely related to (and including) Proposition 3.3.6. 
+
+Statement 1: Proposition 2.1.10 p.~40 of the book (see Proposition~\ref{2.1.10} p.~\pageref{2.1.10}):
+
+\begin{prop}[Proposition 2.1.10 p.~40]
+If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a small category, and if $\C$ admits projective limits indexed by $I$, then $F$ commutes with such limits.
+\end{prop}
+
+Statement 2: Definition 2.2.6 p.~47 of the book: stability by base change of certain inductive limits. 
+
+Statement 3: Exercise 2.7 p.~65 of the book (see \S\ref{27i} p.~\pageref{27i}): 
+
+\begin{prop}[Exercise 2.7 (ii) p.~65]\label{sbcs}
+The base change functors in $\Set$ commute with small inductive and projective limits limits. In particular, small inductive limits in $\Set$ are stable by base change.
+\end{prop}
+
+Note that Proposition~\ref{sbcs} generalizes the distributivity of multiplication over addition in $\bb N$.
+
+Statement 4: Proposition 3.3.3 p.~82:
+
+\begin{prop}[Proposition 3.3.3 p.~82]\label{333}
+Let $F:\C\to\C'$ be a functor and assume that $\C$ admits finite projective limits. Then $F$ is left exact if and only if it commutes with such limits.
+\end{prop}
+
+Statement 5: Proposition 3.3.6 p.~83:
+
+\begin{prop}[Proposition 3.3.6 p.~83]\label{336}
+A functor admitting a left adjoint is left exact.
+\end{prop}
+\end{s}
+
+%
+
 \begin{s}
 P.~84, Proposition 3.3.13. Recall the statement:
 
@@ -2366,7 +2430,7 @@ Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^
 
 We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
 
-By Proposition 3.3.3 p.~82 of the book, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\colim_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
+By Proposition~\ref{333} it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\colim_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
 $$
 \begin{tikzcd}
 \colim_Y\Hom_\C(\colim_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\colim_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
@@ -2519,6 +2583,10 @@ X'\ar[equal]{r}&X'\ar[equal]{r}&X'.
 $$
 As $f$ is an epimorphism, the equality $g_1\circ f=g_2\circ f$ implies $g_1=g_2=:g$, and thus $f'_1=g'\circ F(g)=f'_2$.
 \end{proof}
+
+\begin{prop}\label{34i?}
+If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
+\end{prop}
 \end{s}
 
 %%%
@@ -3032,7 +3100,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 \end{align*} 
 %
 
-It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and Corollary~\ref{sbc} p.~\pageref{sbc}.) 
+It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and \S~\ref{coll} p.~\pageref{coll}.) 
 
 \nn Proof of Step 4. We have 
 $$
@@ -5736,7 +5804,7 @@ $$
 $$
 \theta_{(s:i\to j)}:=\alpha(s):\alpha(i)\to\alpha(j). 
 $$ 
-As $\theta$ is a monomorphism, Proposition 3.3.3 p.~82 of the book and Proposition~\ref{34i} p.~\pageref{34i} above imply that $\colim\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
+As $\theta$ is a monomorphism, Proposition~\ref{333} p.~\pageref{333} and Proposition~\ref{34i} p.~\pageref{34i} imply that $\colim\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
 \colim\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\colim\theta}&&\colim(\alpha\circ\pp)\ar{d}{\sim}\\ 
@@ -7085,7 +7153,7 @@ P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 %
 
 \begin{s}
-P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition 3.3.3 p.~82 of the book and Proposition~\ref{p406} p.~\pageref{p406}.
+P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(1): $\fthat$ is right exact by Proposition~\ref{333} p.~\pageref{333} and Proposition~\ref{p406} p.~\pageref{p406}.
 \end{s}
 
 %
@@ -7187,9 +7255,7 @@ as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given
 
 %
 
-\begin{s}
-P.~417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.
-\end{s}
+%\begin{s}P.~417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.\end{s}
 
 %
 
