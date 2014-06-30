@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0262)
+% about "categories and sheaves" (version-0263)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1820,6 +1820,23 @@ $$
 the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \end{s}
 
+%
+
+\begin{s}\label{bil}
+P.~62. In the setting of Proposition 2.7.1, the functors
+$$
+\A^\C\to\A,\quad F\mapsto(\oo h_\C^\ddagger F)(A)\quad\text{and}\quad
+\C^\wedge\to\A,\quad A\mapsto(\oo h_\C^\ddagger F)(A)
+$$ 
+commute with small inductive limits. 
+
+Indeed, for the first functor the conclusion follows from the isomorphism 
+$$
+(\oo h_\C^\ddagger F)(A)\simeq\colim_{(U\to A)\in\C_A}F(U),
+$$ 
+and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
+\end{s}
+
 %%
 
 \subsection{Three Formulas}
@@ -2337,7 +2354,7 @@ Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^
 
 We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
 
-By Proposition~\ref{333} it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\colim_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
+By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\ref{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\colim_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
 $$
 \begin{tikzcd}
 \colim_Y\Hom_\C(\colim_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\colim_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
@@ -2500,6 +2517,19 @@ The base change functors in $\Set$ commute with small inductive and projective l
 \begin{prop}[Proposition 3.3.3 p.~82]\label{333}
 Let $F:\C\to\C'$ be a functor and assume that $\C$ admits finite projective limits. Then $F$ is left exact if and only if it commutes with such limits.
 \end{prop}
+
+\begin{cor}\label{bre}
+In the setting of Proposition 2.7.1 p.~62 of the book, the functors
+$$
+\A^\C\to\A,\quad F\mapsto(\oo h_\C^\ddagger F)(A)\quad\text{and}\quad
+\C^\wedge\to\A,\quad A\mapsto(\oo h_\C^\ddagger F)(A)
+$$ 
+are right exact. 
+\end{cor}
+
+\begin{proof}
+This follows from Proposition~\ref{333} and \S\ref{bil} p.~\pageref{bil}.
+\end{proof}
 
 \subsubsection{Proposition 3.3.6 p.~83}
 
@@ -7347,13 +7377,7 @@ Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} d
 %
 
 \begin{s} 
-P.~422, proof of Theorem 17.4.7 (iv). First sentence of the proof: Let $B$ be in $\C_X^\wedge$ and consider the diagram 
-$$
-\begin{tikzcd}
-\oo{PSh}(X,\A)\ar{r}{\oo h_X^\ddagger}&\oo{PSh}(\widehat X,\A)\ar{r}{e}&\A,
-\end{tikzcd}
-$$ 
-where $e$ is the evaluation at $B$. Then $\oo h_X^\ddagger$ is left exact by Proposition~\ref{336} p.~\pageref{336}, and $e$ is left exact by Assumption (17.4.1) p.~417 of the book, Proposition~\ref{336} p.~\pageref{336}, and Proposition 2.1.6 p.~38 of the book. Now Proposition 3.3.12 p.~84 of the book implies that $e\circ\oo h_X^\ddagger$ is left exact. 
+P.~422, the first sentence of the proof of Theorem 17.4.7 (iv) follows from Corollary~\ref{bre} p.~\pageref{bre}. 
 \end{s}
 
 %
@@ -7642,7 +7666,7 @@ Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_
 %
 
 \begin{s}\label{a438}
-P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by the second display on p.~429 of the book.
+P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by Corollary~\ref{bre} p.~\pageref{bre}.
 \end{s} 
 
 % 
