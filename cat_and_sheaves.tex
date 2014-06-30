@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0261)
+% about "categories and sheaves" (version-0262)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -7359,7 +7359,7 @@ where $e$ is the evaluation at $B$. Then $\oo h_X^\ddagger$ is left exact by Pro
 %
 
 \begin{s} 
-P.~423, end of the proof of Theorem 17.4.9 (iv): the exactness $(\ )^a$ is proved in Theorem 17.4.7 (iv) p.~421 of the book.
+P.~423, end of the proof of Theorem 17.4.9 (iv): the functor $(\ )^a$ is exact by Theorem 17.4.7 (iv) p.~421 of the book.
 \end{s}
 
 %
@@ -7421,7 +7421,7 @@ P.~425, proof of Proposition 17.6.3:
 
 Step (i): $\oo j_{A\to X}$ is weakly left exact by Lemma 17.2.5 (iii) p.~413 of the book, and $(\,\cdot\,)^a$ is exact by Theorem 17.4.7 (iv) p.~421 of the book.
 
-Step (ii): ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2.4 (ii) p.~413 of the book, \S\ref{1724ii} p.~\pageref{1724ii}, and Remark~\ref{272b} p.~\pageref{272b}. The isomorphism $f^{-1}\simeq\oo j_{A\to X}^{-1}\circ g^{-1}$ follows from Proposition 17.5.3 p.~424 of the book.
+Step (ii): ``$f$ factors as $X\xr{\oo j_{A\to X}}A\xr gY$'': see Definition 17.2.4 (ii) p.~413 of the book and Remark~\ref{272b} p.~\pageref{272b}. The isomorphism $f^{-1}\simeq\oo j_{A\to X}^{-1}\circ g^{-1}$ follows from Proposition 17.5.3 p.~424 of the book.
 \end{s} 
 
 % 
@@ -7498,7 +7498,9 @@ V\ar{rr}{(\id_V,v)}\ar{dr}&&V\times A\ar{dl}\\
 \end{equation} 
 is a local isomorphism in $\C_A^\wedge$. 
 
-As \eqref{1768ii} is a monomorphism, it suffices, by Lemma 16.2.3 (i) p.~395 of the book, to check that \eqref{1768ii} is a local epimorphism in $\C_A^\wedge$. By \S\ref{1761} p.~\pageref{1761}, it suffices to show that $V\to V\times A$ is a local epimorphism in $\C_X^\wedge$. As $V\to V\times A\to V$ is the identity of $V$, it suffices, by Lemma 16.2.4 (vii) p.~396 of the book, to verify that $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$. But this follows from the argument given in \S\ref{1768}.
+As $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$ by \S\ref{1768}, and $V\to V\times A\to V$ is the identity of $V$, Lemma 16.2.4 (vii) p.~396 of the book implies that $V\to V\times A$ is a local isomorphism in $\C_X^\wedge$, and thus, by \S\ref{1761b} p.~\pageref{1761b}, that \eqref{1768ii} is a local isomorphism in $\C_A^\wedge$.
+
+%As \eqref{1768ii} is a monomorphism, it suffices, by Lemma 16.2.3 (i) p.~395 of the book, to check that \eqref{1768ii} is a local epimorphism in $\C_A^\wedge$. By \S\ref{1761} p.~\pageref{1761}, it suffices to show that $V\to V\times A$ is a local epimorphism in $\C_X^\wedge$. As $V\to V\times A\to V$ is the identity of $V$, it suffices, by Lemma 16.2.4 (vii) p.~396 of the book, to verify that $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$. But this follows from the argument given in \S\ref{1768}.
 \end{s} 
 
 %
@@ -7514,7 +7516,7 @@ P.~430, first sentence of the proof of Proposition 17.7.1 (i). Let us make a gen
 
 Let $X$ be a site. In this \S, for any $A$ in $\C_X^\wedge$, we denote the corresponding site by $A'$ instead of $A$. We also identify $\C_{A'}^\wedge$ to $(\C_X^\wedge)_A$ (see Lemma 17.1.8 p.~409 of the book). In particular, we get $\oo{pt}_{A'}\simeq(A\xr{\id_A}A)\in\C_{A'}^\wedge$. 
 
-Let $A\to B$ is a local isomorphism in $\C_X^\wedge$, and let us write $\omega$ for ``the'' terminal object $\oo{pt}_{B'}\simeq(B\xr{\id_B}B)$ of $\C_{B'}^\wedge$. We claim that 
+Let $A\to B$ be a local isomorphism in $\C_X^\wedge$, and let us write $\omega$ for ``the'' terminal object $\oo{pt}_{B'}\simeq(B\xr{\id_B}B)$ of $\C_{B'}^\wedge$. We claim that 
 \begin{equation}\label{1771i1}
 (A\to B)\to\omega 
 \end{equation} 
@@ -7583,7 +7585,7 @@ where (a) and (c) follow from the fact that the presheaf $f_*\iota_XF$ is actual
 $$
 a_Y\circ \iota_Y\circ a_Y\simeq a_Y,
 $$ 
-and the other isomorphisms hold by adjunction. 
+which holds by Lemma 17.4.6 (ii) p.~421 of the book, and the other isomorphisms hold by adjunction. 
 \end{s} 
 
 %
