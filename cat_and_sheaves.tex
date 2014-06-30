@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0260)
+% about "categories and sheaves" (version-0261)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -406,7 +406,7 @@ P.~225, line 3: ``Since $N_s$ is a subobject of $A$ and $\card(A(G))<\pi$'' shou
 
 \nn$*$ P.~226, four lines before the end: ``By 9.3.4 (c)'' should be ``By (9.3.4) (c)'' (the parenthesis are missing).
 
-\nn$*$ P.~227. The second sentence uses Exercise~3.4 (i) p. 90 (see Statement~6 in \S\ref{coll} p.~\pageref{coll}).
+\nn$*$ P.~227. The second sentence uses Proposition~\ref{34i} p.~\pageref{34i}.
 
 \nn$*$ P.~228, line~3: $\C$ should be $\C_\pi$.
 
@@ -1139,9 +1139,9 @@ exists in $\C$. Then $\colim_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\
 %
 
 \begin{s} 
-P.~40, Proposition 2.1.10. Here is a slightly more general statement. 
+P.~40, Proposition 2.1.10 (stated on p.~\pageref{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
 %
-\begin{prop}\label{2.1.10}
+\begin{prop}\label{2.1.10b}
 Let 
 $$
 \begin{tikzcd}
@@ -1804,7 +1804,7 @@ $$
 $$
 Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
 
-By Proposition 2.1.10 p. 40 of the book (see \S\ref{coll} p.~\pageref{coll} below), it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
+By Proposition 2.1.10 p. 40 of the book (stated on p.~\pageref{2.1.10} below as Proposition~\ref{2.1.10}), it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
 G(X')(X):=\Hom_{\A}(F(X),X').
 $$ 
@@ -2460,17 +2460,17 @@ This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 
 
 %%
 
-\subsection{Six Closely Related Statements}\label{coll}
+\subsection{Six Closely Related Statements}
 
 For the reader's convenience we collect six statements closely related to Exercise 3.4 (i) p.~90. 
 
 \subsubsection{Proposition 2.1.10 p.~40}
 
-\begin{prop}[Proposition 2.1.10 p.~40]
+\begin{prop}[Proposition 2.1.10 p.~40]\label{2.1.10}
 If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a small category, and if $\C$ admits projective limits indexed by $I$, then $F$ commutes with such limits.
 \end{prop}
 
-(See also Proposition~\ref{2.1.10} p.~\pageref{2.1.10}.)
+(See also Proposition~\ref{2.1.10b} p.~\pageref{2.1.10b}.)
 
 \subsubsection{Definition 2.2.6 p.~47}
 
@@ -2503,13 +2503,13 @@ Let $F:\C\to\C'$ be a functor and assume that $\C$ admits finite projective limi
 
 \subsubsection{Proposition 3.3.6 p.~83}
 
-\begin{prop}[Proposition 3.3.6 p.~83]
+\begin{prop}[Proposition 3.3.6 p.~83]\label{336}
 A functor admitting a left adjoint is left exact.
 \end{prop}
 
 \subsubsection{Exercise 3.4 (i) p.~90}
 
-\begin{prop}[Exercise 3.4 (i) p.~90]
+\begin{prop}[Exercise 3.4 (i) p.~90]\label{34i}
 If $F:\C\to\C'$ is a right exact functor and $f:X\epi Y$ is an epimorphism in $\C$, then $F(f):F(X)\to F(Y)$ is an epimorphism in $\C'$.
 \end{prop}
 
@@ -2833,7 +2833,7 @@ $$
 %
 
 \begin{s}
-P.~118, proof of Prop. 5.2.3: the proof of (ii) uses Exercise~3.4 (i) p.~90 of the book (see \S\ref{coll} p.~\pageref{coll}) and Proposition 3.3.7 (i) p.~83 of the book. 
+P.~118, proof of Prop. 5.2.3: the proof of (ii) uses Proposition~\ref{34i} p.~\pageref{34i} and Proposition 3.3.7 (i) p.~83 of the book. 
 
 Proof of (v): We add a few details. Recall the setting: the category $\C$ admits finite projective limits, small coproducts, and a generator $G$. We already know that $\pp_G:=\Hom_\C(G,\ )$ is conservative, left exact, and preserves monomorphisms. 
 
@@ -3196,7 +3196,7 @@ Let $\A$ be a category which admits small filtrant inductive limits, let $F:\C\t
 \begin{proof}
 The proof is essentially the same as that of Proposition 2.7.1 on p.~62 of the book. (See also \S\ref{c271b} p.~\pageref{c271b}.) Again, we give some more details about the proof of the fact that $i^\dagger(F)$ commutes with small filtrant inductive limits. Put $\widetilde F:=i^\dagger(F)$. 
 
-Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y$ of $\A$. To apply Proposition~\ref{2.1.10} p.~\pageref{2.1.10} to the diagram 
+Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wedge$ to the object $Y$ of $\A$. To apply Proposition~\ref{2.1.10b} p.~\pageref{2.1.10b} to the diagram 
 $$
 \begin{tikzcd}
 I\ar{r}{\alpha}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
@@ -5758,7 +5758,7 @@ $$
 $$
 \theta_{(s:i\to j)}:=\alpha(s):\alpha(i)\to\alpha(j). 
 $$ 
-As $\theta$ is a monomorphism, Statement~6 in \S\ref{coll} p.~\pageref{coll} implies that $\colim\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
+As $\theta$ is a monomorphism, Proposition~\ref{34i} p.~\pageref{34i} implies that $\colim\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
 \colim\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\colim\theta}&&\colim(\alpha\circ\pp)\ar{d}{\sim}\\ 
@@ -7117,7 +7117,7 @@ P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.
 
 Claim: if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or an epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wedge$. 
 
-Proof of the claim: Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V$ in $\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism (see Section~\ref{coll} p.~\pageref{coll}). Let us show that $\fthat(u_V)$ is a local isomorphism. 
+Proof of the claim: Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V$ in $\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism by Proposition~\ref{34i} p.~\pageref{34i}. Let us show that $\fthat(u_V)$ is a local isomorphism. 
 
 If $u_V$ is a monomorphism, $\fthat(u_V)$ is a local isomorphism by assumption. 
 
@@ -7324,7 +7324,7 @@ Indeed, the isomorphisms can be justified as follows:
 
 \nn(e) exactness of filtrant inductive limits in $\A$, 
 
-\nn(f) left exactness of $F$, 
+\nn(f) cocofinality of $p_D$, 
 
 \nn(g) definition of $F^b$.
 \end{s}
@@ -7334,14 +7334,14 @@ Indeed, the isomorphisms can be justified as follows:
 \begin{s}\label{fau}
 P.~421, first display: 
 $$
-F^a(U)\simeq\colim_{(U\to A)\cc{LI}_U}F(A).
+F^a(U)\simeq\colim_{(U\to A)\in\cc{LI}_U}F(A).
 $$ 
 Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} depend on the universe such that $\C$ is a small category and $\A$ satisfies (17.4.1) p.~417 of the book.
 \end{s}
 
 %
 
-\begin{s}P.~421, proof of Lemma 17.4.6 (i): The category $\cc{LI}_U$ is cofiltrant by Lemma 16.2.7 p.~396 of the book, small filtrant inductive limits are exact in $\A$ by Display (17.4.1) p.~417 of the book, exact functors preserve monomorphisms by Exercise~3.4 (i) p.~90 of the book (see Statement~6 in \S\ref{coll} p.~\pageref{coll}).
+\begin{s}P.~421, proof of Lemma 17.4.6 (i): The category $\cc{LI}_U$ is cofiltrant by Lemma 16.2.7 p.~398 of the book, small filtrant inductive limits are exact in $\A$ by Display (17.4.1) p.~417 of the book, exact functors preserve monomorphisms by Proposition~\ref{34i} p.~\pageref{34i}.
 \end{s}
 
 %
@@ -7353,7 +7353,7 @@ $$
 \oo{PSh}(X,\A)\ar{r}{\oo h_X^\ddagger}&\oo{PSh}(\widehat X,\A)\ar{r}{e}&\A,
 \end{tikzcd}
 $$ 
-where $e$ is the evaluation at $B$. Then $\oo h_X^\ddagger$ is left exact by Proposition 3.3.6 p.~83 of the book, and $e$ is left exact by Assumption (17.4.1) p.~417 and Propositions 3.3.6 p.~83 and 2.1.6 p.~38 of the book. Now Proposition 3.3.12 p.~84 of the book implies that $e\circ\oo h_X^\ddagger$ is left exact. 
+where $e$ is the evaluation at $B$. Then $\oo h_X^\ddagger$ is left exact by Proposition~\ref{336} p.~\pageref{336}, and $e$ is left exact by Assumption (17.4.1) p.~417 of the book, Proposition~\ref{336} p.~\pageref{336}, and Proposition 2.1.6 p.~38 of the book. Now Proposition 3.3.12 p.~84 of the book implies that $e\circ\oo h_X^\ddagger$ is left exact. 
 \end{s}
 
 %
