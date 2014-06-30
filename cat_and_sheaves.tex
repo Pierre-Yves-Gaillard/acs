@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0258)
+% about "categories and sheaves" (version-0259)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2004,7 +2004,7 @@ where
 \eqref{prepa4a} follows from \eqref{prepa4}, 
 \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
 \eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
-\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (see Section~\ref{coll} p.~\pageref{coll} below). 
+\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}). 
 \end{proof}
 
 %%
@@ -2473,7 +2473,19 @@ If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a small categor
 (See also Proposition~\ref{2.1.10} p.~\pageref{2.1.10}.)
 
 \subsubsection{Definition 2.2.6 p.~47}
-Definition 2.2.6 p.~47 of the book: stability by base change\index{base change} of certain inductive limits. 
+
+\begin{df}[Definition 2.2.6 p.~47]\label{dsbc}
+Let $\C$ be a category which admits fiber products and inductive limits indexed by a category $I$.
+
+\nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change} if for any morphism $Y\to Z$ in $\C$, the base change functor 
+$\C_Z\to\C_Y$ given by 
+$$
+\C_Z\ni(X\to Z)\mapsto(X\times_ZY\to Y)\in\C_Y
+$$ 
+commutes with inductive limits indexed by $I$.
+
+\nn\emph{(ii)} If $\C$ admits small inductive limits and \emph{(i)} holds for any small category $I$, we say that \emph{small inductive limits in $\C$ are stable by base change}.
+\end{df}
 
 \subsubsection{Exercise 2.7 (ii) p.~65}
 
@@ -2965,7 +2977,7 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 
 \nn(i) $\C$ admits small inductive limits and finite projective limits, 
 
-\nn(ii) small filtrant inductive limits are stable by base change (see Definition 2.2.6 p.~47 of the book), 
+\nn(ii) small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}), 
 
 \nn(iii) any epimorphism is strict.
 
@@ -3042,7 +3054,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 \end{align*} 
 %
 
-It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- see Definition 2.2.6 p.~47 of the book and Section~\ref{coll} p.~\pageref{coll}.) 
+It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}.) 
 
 \nn Proof of Step 4. We have 
 $$
@@ -4329,7 +4341,7 @@ $$
 %
 
 \begin{s}\label{gcsbc}
-P.~186, Definition 8.3.24 (definition of a Grothendieck category). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change. \index{Grothendieck category}
+P.~186, Definition 8.3.24 (definition of a Grothendieck category\index{Grothendieck category}). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}).
 \end{s}
 
 %
@@ -6751,7 +6763,7 @@ U=\bigcup_{V\in\Sigma(U,b)}V
 $$ 
 for all $(U,b)$ as above.
 
-Moreover, a morphism $u:A\to U$ in $(\oo{Op}_X)^\wedge$ with $U$ in $\oo{Op}_X$ is a local epimorphism if and only if for all $x$ in $U$ there is a $V$ in $\oo{Op}_X$ such that $A(V)\ne\varnothing$. 
+Moreover, a morphism $u:A\to U$ in $(\oo{Op}_X)^\wedge$ with $U$ in $\oo{Op}_X$ is a local epimorphism if and only if for all $x$ in $U$ there is a $V$ in $\oo{Op}_X$ such that $x\in V$ and $A(V)\ne\varnothing$. 
 \end{s}
 
 %
@@ -7141,7 +7153,8 @@ Let $f:X\to Y$ be a weekly left exact morphism of sites such that $\fthat(u)$ is
 %
 
 \begin{s}
-P.~413, Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from the equivalence of Conditions (a), (b) and (c) in \S\ref{390} p.~\pageref{390} and from \eqref{efhat2} p.~\pageref{efhat2}. 
+P.~413, Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. %The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. 
+As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from \S\ref{390} p.~\pageref{390} and \eqref{efhat2} p.~\pageref{efhat2}. 
 \end{s}
 
 %
@@ -7163,10 +7176,12 @@ P.~415, Isomorphism (17.3.1). Recall briefly the setting. We have:
 $$
 F\in\oo{PSh}(X,\A),\quad M\in\A,\quad U\in\C_X,
 $$ 
-for $F$ in $\PSh(X,\A)$ and $M$ in $\A$, and we claim 
+and we claim 
+%
 \begin{equation}\label{1731}
 \HOM_{\oo{PSh}(X,\A)}(M,F)(U)\simeq\Hom_\A(M,F(U)).
 \end{equation} 
+%
 Here and in the sequel, we denote again by $M$ the constant presheaves over $X$ and $U$ attached to the object $M$ of $\A$. Note that, by \S\ref{s408} p.~\pageref{s408}, this isomorphism can be written 
 $$
 \HOM_\A(M,F)\simeq\Hom_\A(M,F(\ )).
