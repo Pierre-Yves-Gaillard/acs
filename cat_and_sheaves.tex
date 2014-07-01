@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0263)
+% about "categories and sheaves" (version-0264)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -7735,7 +7735,7 @@ F_A\overset{(\text a)}{\simeq}
 (\oo j_{A\to X}^{-1}(\cc R|_A))\otimes_{\cc R}F\overset{(\text d)}{\simeq} 
 \cc R_A\otimes_{\cc R}F.
 $$ 
-Indeed, (a) holds by Definition 17.6.10 (i) and Display (17.6.5) p.~428 of the book, (b) follows from \S\ref{neutral}, (c) follows from (18.2.6) p.~441 of the book. The isomorphism $F_A\simeq k_{XA}\otimes_{k_X}F$ is a particular case of the isomorphism $F_A\simeq\cc R_A\otimes_{\cc R}F$ just proved. 
+Indeed, (a) and (d) hold by Definition 17.6.10 (i) and Display (17.6.5) p.~428 of the book, (b) follows from \S\ref{neutral}, (c) follows from (18.2.6) p.~441 of the book. The isomorphism $F_A\simeq k_{XA}\otimes_{k_X}F$ is a particular case of the isomorphism $F_A\simeq\cc R_A\otimes_{\cc R}F$ just proved. 
 
 Proof of (18.2.13): We must show 
 \begin{equation}\label{18213} 
@@ -7783,31 +7783,54 @@ $$
 
 We give additional details about Lemma 18.5.3 of the book (stated below as Lemma~\ref{l1853} p.~\pageref{l1853}) with the hope of helping the reader. We start with a technical lemma.
 
-Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let $(a_i)_{i=1}^\ell$, $(b_i)_{i=1}^\ell$, and $(b'_j)_{j=1}^m$ be tuples in $A$, $B$, and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let $a:S^\ell\to A$, $b:R^\ell\to B$, and $b':R^m\to B$ be defined by 
+Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). 
+
+Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let 
+$$
+(a_i)_{i=1}^\ell,\quad(b_i)_{i=1}^\ell,\quad(b'_j)_{j=1}^m
+$$ 
+be tuples in $A$, $B$, and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let 
+$$
+a:S^\ell\to A,\quad b:R^\ell\to B,\quad b':R^m\to B
+$$ 
+be defined by 
 $$
 a(\nu)=\sum_{i=1}^\ell\ a_i\,\nu_i,\quad b(\nu)=\sum_{i=1}^n\ \nu_i\,b_i,\quad b'(\mu)=\sum_{j=1}^m\ \mu_j\,b'_j;
 $$ 
-let $(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}$ be a family of elements of $R$; and let $\lambda^*:R^\ell\to R^m$ and $\lambda:S^m\to S^\ell$ be defined by 
+let 
+$$
+(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}
+$$ 
+be a family of elements of $R$; and let $\lambda^*:R^\ell\to R^m$ and $\lambda:S^m\to S^\ell$ be defined by 
 $$
 \lambda^*(\nu)_j=\sum_{i=1}^\ell\ \nu_i\,\lambda_{ij},\quad
 \lambda(\mu)_i=\sum_{j=1}^m\ \lambda_{ij}\,\mu_j.
 $$
 
 \begin{lem}\label{techlem}
-Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, we have $\sum_{i=1}^n\,a_i\otimes b_i=0$ 
-%
-in $A\otimes_RB$ if and only if we can choose an integer $\ell\ge n$ and three families 
+Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, Conditions \emph{(i)} and \emph{(ii)} below are equivalent: 
+
+\nn\emph{(i)} We have $\sum_{i=1}^n\,a_i\otimes b_i=0$ in $A\otimes_RB$. 
+
+\nn\emph{(ii)} There are nonnegative integers $\ell,m$ with $\ell\ge n$, and there are three families 
 $$
 (a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
-as above in such a way that we have in the above notation $b'\circ\lambda^*=b$ and $a\circ\lambda=0$.
+as above, such that we have, in the above notation, 
+$$
+b'\circ\lambda^*=b,\quad a\circ\lambda=0.
+$$
 \end{lem} 
 
-Before proving the lemma we make a few simple remarks. The equalities $b'\circ\lambda=b$ and $a\circ\lambda=0$ can be expressed by the formulas
+Before proving the lemma we make a few simple remarks. The equalities 
+$$
+b'\circ\lambda^*=b,\quad a\circ\lambda=0
+$$ 
+can be respectively expressed by the formulas
 %
 \begin{equation}\label{lij}
 \sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),\quad
-\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m)
+\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m),
 \end{equation}
 %
 or by the commutative diagrams
@@ -7828,7 +7851,7 @@ S^n\ar[hook]{r}\ar{d}&S^\ell\ar{d}{a}\\
 A\ar[equal]{r}&A.
 \end{tikzcd}
 \end{equation}
-
+%
 For the reader's convenience we reproduce Diagram (18.5.3): 
 $$
 \begin{tikzcd}
@@ -7858,26 +7881,41 @@ A\otimes_RB\ar[equal]{r}&A\otimes_RB
 \end{tikzcd}
 \end{equation}
 %
-\begin{proof}
-The {\em if}\ part follows from \eqref{lij} p.~\pageref{lij}. To prove the {\em only if}\ part, we assume 
+\begin{proof}[Proof of Lemma~\ref{techlem} p.~\pageref{techlem}] 
+Implication (ii)$\then$(i) follows from \eqref{lij} p.~\pageref{lij}. To prove Implication (i)$\then$(ii), we assume 
 $$
-\sum_{i=1}^n\,a_i\otimes b_i=0,
+\sum_{i=1}^n\,a_i\otimes b_i=0.
 $$ 
-we denote by $\ell$ an integer $\ge n$ to be determined later, we choose a set $I$ containing $\{1,\dots,\ell\}$ and a family $(a_i)_{i\in I}$ generating $A$, and we write $C$ for the kernel of the natural epimorphism $f:S^{\oplus I}\epi A$. In particular we have exact sequences 
+We choose a set $I$ containing $\{1,\dots,\ell\}$, where $\ell$ be an integer $\ge n$ to be determined later, such that there is a family $(a_i)_{i\in I}$ which completes the family $(a_i)_{1\le i\le n}$ and generates $A$. We write $C$ for the kernel of the natural epimorphism 
+$$
+f:S^{\oplus I}\epi A.
+$$ 
+In particular we have exact sequences 
 $$
 C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
 $$ 
-Put $b_i:=0$ for $i$ in $I\setminus\{1,\dots,\ell\}$. Then the family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$ and a family $(\lambda_{ij})_{i\in I,1\le j\le m}$ such that $(\lambda_{ij})_i\in S^{\oplus I}$ for all $j$ and 
+Put $b_i:=0$ for $i$ in $I\setminus\{1,\dots,\ell\}$. The family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$, a family 
+$$
+(\lambda_{ij})_{i\in I,1\le j\le m}
+$$ 
+of elements of $R$ such that 
+$$
+(\lambda_{ij})_i\in C\subset S^{\oplus I}
+$$ 
+for all $j$, and a family $(b'_j)_{1\le j\le m}$ of elements of $B$, such that 
 $$
 (b_i)_i=g'
-\left(\left(\sum_{j=1}^m\lambda_{ij}\otimes b'_j\right)_i\right)=
+\left(\sum_{j=1}^m(\lambda_{ij})_i\otimes b'_j\right)=
 \left(\sum_{j=1}^m\lambda_{ij}\,b'_j\right)_i.
 $$ 
-As $(\lambda_{ij})_i$ is in $S^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is equal to $\{1,\dots,\ell\}$ with $\ell\ge n$. We get in particular  
+As $(\lambda_{ij})_i$ is in $S^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$. We get in particular  
 $$
 b_i=\sum_{j=1}^m\ \lambda_{ij}\,b'_j
 $$ 
-for $1\le i\le\ell$.
+for $1\le i\le\ell$. As $(\lambda_{ij})_i\in C$ for all $j$, we also have 
+$$
+\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m).
+$$
 \end{proof}
 %
 Let us go back to the proof of Lemma 18.5.3 p. 447.
@@ -7903,9 +7941,17 @@ is a monomorphism. For $U$ in $\C_X$ set
 $$
 K(U):=\Ker\left(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\right).
 $$ 
-Then $K$ is a presheaf and $K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)$ by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U$ in $\C_X$. Let $U$ be in $\C_X$, let $\pp:M'(U)\to M(U)$ be the morphism given by $\psi$, and $s$ in $K(U)\subset M'(U)\otimes_{\cc R(U)}P(U)$. (This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of the morphism 
+Then $K$ is a presheaf and 
 $$
-\pp_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U),
+K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)
+$$ 
+by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U$ in $\C_X$. Let $U$ be in $\C_X$, let $\pp:M'(U)\to M(U)$ be the morphism given by $\psi$, and let 
+$$
+s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U).
+$$ 
+(This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of the morphism 
+$$
+\pp_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)
 $$ 
 induced by $\pp$, and it suffices to prove $s=0$. Write 
 $$
@@ -7941,7 +7987,11 @@ P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\
 s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U).
 \end{tikzcd}
 $$ 
-By Lemma~\ref{techlem} p.~~\pageref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$, and a $(b'_j)$ in $P(U)^m$ such that $g_1((b'_j))=h_1((b_i))$ (see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
+By Lemma~\ref{techlem} p.~~\pageref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$, and a $(b'_j)$ in $P(U)^m$ such that 
+$$
+g_1((b'_j))=h_1((b_i))
+$$ 
+(see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
@@ -7970,7 +8020,7 @@ $$
 (N\otimes_{\cc R|_U}P|_U)(U)\simeq P(U)^m\times_{P(U)^\ell}P(U)^n\ni((b'_j),(b_i)).
 $$ 
 If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $((b'_j),(b_i))$, then we get $r_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
-\end{proof} 
+\end{proof}
 
 %%
 
