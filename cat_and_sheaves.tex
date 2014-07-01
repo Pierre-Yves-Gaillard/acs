@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0264)
+% about "categories and sheaves" (version-0265)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -7783,105 +7783,27 @@ $$
 
 We give additional details about Lemma 18.5.3 of the book (stated below as Lemma~\ref{l1853} p.~\pageref{l1853}) with the hope of helping the reader. We start with a technical lemma.
 
-Let $R$ be a ring. We denote $R$ by $S$ when we regard it as a right $R$-module (and keep the notation $R$ when we regard it as a left $R$-module). 
-
-Let $A$ be a right $R$-module; let $B$ be a left $R$-module; let $\ell,m$, and $n$ be nonnegative integers with $n\le\ell$; let 
-$$
-(a_i)_{i=1}^\ell,\quad(b_i)_{i=1}^\ell,\quad(b'_j)_{j=1}^m
-$$ 
-be tuples in $A$, $B$, and $B$ respectively; assume $b_i=0$ for $n<i\le\ell$; let 
-$$
-a:S^\ell\to A,\quad b:R^\ell\to B,\quad b':R^m\to B
-$$ 
-be defined by 
-$$
-a(\nu)=\sum_{i=1}^\ell\ a_i\,\nu_i,\quad b(\nu)=\sum_{i=1}^n\ \nu_i\,b_i,\quad b'(\mu)=\sum_{j=1}^m\ \mu_j\,b'_j;
-$$ 
-let 
-$$
-(\lambda_{ij})_{1\le i\le\ell,1\le j\le m}
-$$ 
-be a family of elements of $R$; and let $\lambda^*:R^\ell\to R^m$ and $\lambda:S^m\to S^\ell$ be defined by 
-$$
-\lambda^*(\nu)_j=\sum_{i=1}^\ell\ \nu_i\,\lambda_{ij},\quad
-\lambda(\mu)_i=\sum_{j=1}^m\ \lambda_{ij}\,\mu_j.
-$$
-
 \begin{lem}\label{techlem}
-Given $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ as above, Conditions \emph{(i)} and \emph{(ii)} below are equivalent: 
+Let $R$ be a ring, let $A$ be a right $R$-module, let $B$ be a left $R$-module, let $n$ be a positive integer, let 
+$$
+(a_i)_{i=1}^n,\quad(b_i)_{i=1}^n
+$$
+be two families of elements belonging respectively to $A$ and $B$. Then Conditions \emph{(i)} and \emph{(ii)} below are equivalent:
 
 \nn\emph{(i)} We have $\sum_{i=1}^n\,a_i\otimes b_i=0$ in $A\otimes_RB$. 
 
-\nn\emph{(ii)} There are nonnegative integers $\ell,m$ with $\ell\ge n$, and there are three families 
+\nn\emph{(ii)} There are nonnegative integers $\ell$ and $m$ with $\ell\ge n$, and there are three families 
 $$
 (a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
-as above, such that we have, in the above notation, 
-$$
-b'\circ\lambda^*=b,\quad a\circ\lambda=0.
-$$
-\end{lem} 
-
-Before proving the lemma we make a few simple remarks. The equalities 
-$$
-b'\circ\lambda^*=b,\quad a\circ\lambda=0
-$$ 
-can be respectively expressed by the formulas
-%
+of elements belonging respectively to $A$, $R$, and $B$, such that, if we set $b_i=0$ for $n<i\le\ell$, we have:
 \begin{equation}\label{lij}
 \sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),\quad
 \sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m),
 \end{equation}
-%
-or by the commutative diagrams
-$$
-\begin{tikzcd}
-R^\ell\ar{r}{\lambda^*}\ar{rd}[swap]{b}&R^m\ar{d}{b'}&
-S^m\ar{r}{\lambda}\ar{rd}[swap]{0}&S^\ell\ar{d}{a}
-\\ 
-{}&B&{}&A.
-\end{tikzcd}
-$$ 
-The situation can be summarized by the following commutative diagram of complexes which resembles Diagram (18.5.3) p. 447 of the book:
-%
-\begin{equation}\label{dt=0}
-\begin{tikzcd}
-{}&S^m\ar{d}{\lambda}\\ 
-S^n\ar[hook]{r}\ar{d}&S^\ell\ar{d}{a}\\ 
-A\ar[equal]{r}&A.
-\end{tikzcd}
-\end{equation}
-%
-For the reader's convenience we reproduce Diagram (18.5.3): 
-$$
-\begin{tikzcd}
-{}&{}&\cc R^{\op}(U)^m\ar{d}\\ 
-{}&\cc R^{\op}(U)^n\ar{d}\ar{r}&\cc R^{\op}(U)^\ell\ar{d}\\ 
-0\ar{r}&M'(U)\ar{r}&M(U).
-\end{tikzcd}
-$$
+\end{lem} 
 
-\nn Applying $-\otimes_RB$ to \eqref{dt=0} we get the commutative diagram of complexes
-%
-\begin{equation*}
-\begin{tikzcd}
-{}&B^m\ar{d}{\lambda}\\ 
-B^n\ar[hook]{r}\ar{d}&B^\ell\ar{d}{a}\\ 
-A\otimes_RB\ar[equal]{r}&A\otimes_RB
-\end{tikzcd}
-\end{equation*}
-%
-(we keep the notation $\lambda$ and $a$), and ``elementwise'':
-%
-\begin{equation}\label{eltwise}
-\begin{tikzcd}
-{}&(b'_j)_{j=1}^m\ar[mapsto]{d}{\lambda}\\ 
-(b_i)_{i=1}^n\ar[mapsto]{r}\ar[mapsto]{d}&(b_i)_{i=1}^\ell\ar[mapsto]{d}{a}\\ 
-0\ar[equal]{r}&0.
-\end{tikzcd}
-\end{equation}
-%
-\begin{proof}[Proof of Lemma~\ref{techlem} p.~\pageref{techlem}] 
+\begin{proof} 
 Implication (ii)$\then$(i) follows from \eqref{lij} p.~\pageref{lij}. To prove Implication (i)$\then$(ii), we assume 
 $$
 \sum_{i=1}^n\,a_i\otimes b_i=0.
@@ -7912,18 +7834,16 @@ As $(\lambda_{ij})_i$ is in $S^{\oplus I}$ for all $j$, the set of those $i$ in 
 $$
 b_i=\sum_{j=1}^m\ \lambda_{ij}\,b'_j
 $$ 
-for $1\le i\le\ell$. As $(\lambda_{ij})_i\in C$ for all $j$, we also have 
+for $1\le i\le\ell$. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have 
 $$
 \sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m).
 $$
 \end{proof}
-%
-Let us go back to the proof of Lemma 18.5.3 p. 447.
 
-[As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
+Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
 
 For the reader's convenience we state Lemma 18.5.3: 
-%
+
 \begin{lem}\label{l1853}
 Let $P$ be an $\cc R$-module. Assume that for any $U$ in $\C_X$ and any morphism $u:(\cc R|_U)^m\to(\cc R|_U)^n$, the sequence 
 $$
@@ -7931,7 +7851,7 @@ $$
 $$ 
 is exact. Then $P$ is a flat $\cc R$-module.
 \end{lem}
-%
+
 \begin{proof}
 Let $\psi:M'\mono M$ be a monomorphism in $\Mod(\cc R^{\op})$. Let us show that 
 $$
@@ -7945,7 +7865,11 @@ Then $K$ is a presheaf and
 $$
 K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)
 $$ 
-by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U$ in $\C_X$. Let $U$ be in $\C_X$, let $\pp:M'(U)\to M(U)$ be the morphism given by $\psi$, and let 
+by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U$ in $\C_X$. Let $U$ be in $\C_X$, let 
+$$
+\pp:M'(U)\to M(U)
+$$ 
+be the morphism given by $\psi$, and consider an element 
 $$
 s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U).
 $$ 
@@ -7959,44 +7883,53 @@ s=\sum_{i=1}^na'_i\otimes b_i
 $$ 
 with $a'_i$ in $M'(U)$ and $b_i$ in $P(U)$, and put $a_i:=\pp(a_i')\in M(U)$, so that we have 
 $$
-\sum_{i=1}^n\,a_i\otimes b_i=0,
+\sum_{i=1}^n\,a_i\otimes b_i=0.
 $$ 
-and the commutative diagram of complexes \eqref{dt=0} p.~\pageref{dt=0} becomes 
+By Lemma~\ref{techlem} p.~~\pageref{techlem} there are nonnegative integers $\ell,m$ with $\ell\ge n$, and there are three families 
 $$
-\begin{tikzcd}
-{}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
-\cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}\\ 
-M'(U)\ar[equal]{r}&M'(U).
-\end{tikzcd}
+(a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
-The above commutative diagram of complexes gives rise to the commutative diagram of complexes
+of elements belonging respectively to $M(U)$, $\cc R(U)$, and $P(U)$, such that, if we set $b_i=0$ for $n<i\le\ell$, we have  
+$$
+\sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),\quad
+\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m). 
+$$
+We have a commutative diagram of complexes
 %
 \begin{equation}\label{d447}
 \begin{tikzcd}
-{}&\cc R^{\op}(U)^m\ar{d}{g}\\ 
-\cc R^{\op}(U)^n\ar{r}{h}\ar{d}[swap]{f}&\cc R^{\op}(U)^\ell\ar{d}{q}\\ 
-M'(U)\ar{r}[swap]{\pp}&M(U).
+{}&\cc R^{\op}(U)^m\ar{d}{f}\\ 
+\cc R^{\op}(U)^n\ar[hook]{r}{\iota}\ar{d}[swap]{g}&\cc R^{\op}(U)^\ell\ar{d}{h}\\ 
+M'(U)\ar{r}[swap]{\pp}&M(U)
 \end{tikzcd}
 \end{equation}
 %
-Applying $-\otimes_{\cc R(U)}P(U)$, we get the commutative diagram of complexes
+with 
 $$
+f(\xi)_j=\sum_{i=1}^m\xi_i\,\lambda_{ij},\quad g(\xi)=\sum_{i=1}^na'_i\,\xi_i,\quad h(\xi)=\sum_{i=1}^\ell a_i\,\xi_i.
+$$
+Applying $-\otimes_{\cc R(U)}P(U)$, we get the commutative diagram of complexes 
+%
+\begin{equation}\label{pumb}
 \begin{tikzcd}
-{}&P(U)^m\ar{d}{g_1}\\ 
-P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
-s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U).
+{}&P(U)^m\ni(b'_j)\ar{d}{f_1}\\ 
+(b_i)\in P(U)^n\ar[hook]{r}{\iota_1}\ar{d}[swap]{g_1}&P(U)^\ell\ni(b_i)\ar{d}{h_1}\\ 
+s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U)\ni0.
 \end{tikzcd}
-$$ 
-By Lemma~\ref{techlem} p.~~\pageref{techlem} there is a $(b_i)$ in $P(U)^n$ such that $f_1((b_i))=s$, and a $(b'_j)$ in $P(U)^m$ such that 
-$$
-g_1((b'_j))=h_1((b_i))
-$$ 
-(see \eqref{eltwise} p.~\pageref{eltwise}). The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
+\end{equation}
+% 
+We have in particular 
+%
+\begin{equation}\label{g1h1}
+\iota_1((b_i))=f_1((b'_j)).
+\end{equation}
+%
+The commutative diagram of complexes \eqref{d447} also induces the commutative diagram of complexes 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
-N\ar{r}\ar{d}&(\cc R^{\op}|_U)^m\ar{d}{g_2}\\ 
-(\cc R^{\op}|_U)^n\ar{r}{h_2}\ar{d}[swap]{f_2}&(\cc R^{\op}|_U)^\ell\ar{d}{q_2}\\ 
+N\ar{r}\ar{d}&(\cc R^{\op}|_U)^m\ar{d}{f_2}\\ 
+(\cc R^{\op}|_U)^n\ar[hook]{r}{\iota_2}\ar{d}[swap]{g_2}&(\cc R^{\op}|_U)^\ell\ar{d}{h_2}\\ 
 M'|_U\ar{r}[swap]{\pp_2}&M|_U,
 \end{tikzcd}
 \right.
@@ -8010,16 +7943,20 @@ the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17
 The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
 $$
 \begin{tikzcd}
-(N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{r_1}&P(U)^m\ar{d}{g_1}\ni(b'_j)\\ 
-(b_i)\in P(U)^n\ar{r}{h_1}\ar{d}[swap]{f_1}&P(U)^\ell\ar{d}{q_1}\\ 
+(N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{k_1}&P(U)^m\ar{d}{f_1}\ni(b'_j)\\ 
+(b_i)\in P(U)^n\ar[hook]{r}{\iota_1}\ar{d}[swap]{g_1}&P(U)^\ell\ni(b_i)\ar{d}{h_1}\\ 
 s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U),
 \end{tikzcd}
 $$ 
-has also a cartesian top square. In other words, we have 
+(commutative diagram which completes \eqref{pumb}) has also a cartesian top square. In other words, we have 
 $$
-(N\otimes_{\cc R|_U}P|_U)(U)\simeq P(U)^m\times_{P(U)^\ell}P(U)^n\ni((b'_j),(b_i)).
+(N\otimes_{\cc R|_U}P|_U)(U)\simeq P(U)^n\times_{P(U)^\ell}P(U)^m.
 $$ 
-If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $((b'_j),(b_i))$, then we get $r_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
+Note that \eqref{g1h1} implies 
+$$
+x:=((b_j),(b'_i))\in P(U)^n\times_{P(U)^\ell}P(U)^m.
+$$ 
+If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$, then we get $k_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
 \end{proof}
 
 %%
