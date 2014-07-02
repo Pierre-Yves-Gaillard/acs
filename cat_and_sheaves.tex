@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0267)
+% about "categories and sheaves" (version-0268)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -135,7 +135,7 @@ An important reference is
 
 \nn[GV] Grothendieck, A. and Verdier, J.-L. (1972). Pr\'efaisceaux. In Artin, M., Grothendieck, A., and Verdier, J.-L., editors, Th\'eorie des Topos et Cohomologie Etale des Sch\'emas, volume 1 of S\'eminaire de g\'eom\'etrie alg\'ebrique du Bois-Marie, 4, pages 1-218. Springer. 
 
-Links to the above text of Grothendieck and Verdier are available at \\ 
+Links to the above text of Grothendieck and Verdier are available at \smallskip
 
 \centerline{\href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}}
 
@@ -929,6 +929,8 @@ We call $*$ the {\em horizontal composition}. \index{horizontal composition} We 
 
 Warning: many authors designate $\varepsilon$ by $\eta$ and $\eta$ by $\varepsilon$. 
 
+\subsubsection{Statements}
+
 We have a pair $(L,R)$ of adjoint functors: 
 $$
 \begin{tikzcd}
@@ -948,6 +950,8 @@ Using Notation~\ref{nhove} p.~\pageref{nhove}, Equalities (1.5.8) and (1.5.9) be
 \begin{equation}\label{159}
 (R*\eta)\circ(\eta*R)=R.
 \end{equation}
+
+\subsubsection{Pictures}
 
 Let us try to illustrate these two equalities by diagrams:
 
@@ -1062,6 +1066,60 @@ $$
 %
 \end{tikzcd}
 $$
+
+\subsubsection{Proofs}
+
+For the reader's convenience we prove these equalities. Let us denote by
+%
+\begin{equation}\label{bij1}
+\lambda_{X,X'}:\Hom_\C(X,RX')\overset\sim\to\Hom_{\C'}(LX,X')
+\end{equation} 
+%
+and 
+%
+\begin{equation}\label{bij2}
+\mu_{X,X'}=(\lambda_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
+\end{equation} 
+
+\nn the functorial bijections defining the adjunction. Recall 
+$$
+\varepsilon_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
+$$ 
+
+To prove Equality \eqref{158} p.~\pageref{158}, which can be written as 
+%
+\begin{equation}\label{158b} 
+\eta_{LX}\circ L(\varepsilon_X)=\id_{LX}, 
+\end{equation}
+%
+we view (\ref{bij1}) as a bijection functorial in $X\in\C$ (with $X'\in\C'$ fixed), we apply it to the morphism 
+$$
+\varepsilon_X:X\to RLX
+$$ 
+in $\C$, and then we replace $X'$ with $LX$. We get 
+$$
+\lambda_{RLX,LX}(f)\circ L(\varepsilon_X)=\lambda_{X,LX}(f\circ\varepsilon_X)
+$$
+
+\nn for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}.
+
+To prove Equality \eqref{159} p.~\pageref{159}, which can be written as 
+%
+\begin{equation}\label{159b} 
+R(\eta_{X'})\circ\varepsilon_{RX'}=\id_{RX'},
+\end{equation}
+
+\nn we view (\ref{bij2}) as a bijection functorial in $X'\in\C'$, (with $X\in\C$ fixed), we apply it to the morphism 
+$$
+\eta_{X'}:LRX'\to X'
+$$ 
+
+\nn in $\C'$, and then we replace $X$ with $RX'$. We get 
+$$
+R(\eta_{X'})\circ(\mu_{RX',LRX'}(f))=\mu_{RX',X'}(\eta_{X'}\circ f)
+$$
+
+\nn for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}.
 
 %%%
 
