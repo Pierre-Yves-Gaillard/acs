@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0268)
+% about "categories and sheaves" (version-0269)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -709,8 +709,11 @@ by
 \end{equation}
 for 
 $$
-a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(X,A),\quad\theta\in\Hom_{\C^\wedge}(h(A),F).
+a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(X,A),\quad\theta\in\Hom_{\C^\wedge}(h(A),F):
 $$ 
+$$
+f\in\Hom_\C(X,A)\xr{\pp(a)_X}F(X)\xleftarrow{F(f)}F(A)\ni a.
+$$
 Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
 $$
 \pp(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
@@ -725,8 +728,11 @@ F(A)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\vee}(F,k(A))=\Hom_{\Set^\C}(k(A),F)\ar[y
 $$
 by \eqref{yo} for 
 $$
-a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(A,X),\quad\theta\in\Hom_{\Set^\C}(k(A),F).
+a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(A,X),\quad\theta\in\Hom_{\Set^\C}(k(A),F):
 $$ 
+$$
+f\in\Hom_\C(A,X)\xr{\pp(a)_X}F(X)\xleftarrow{F(f)}F(A)\ni a.
+$$
 Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
 $$
 \pp(a)=k(a)\in\Hom_{\C^\vee}(k(B),k(A)).
@@ -743,11 +749,18 @@ and
 $$
 \pp(\psi(\theta))_X(f)=F(f)(\psi(\theta))=F(f)(\theta_A(\id_A))=\theta_X(f),
 $$ 
-the last equality following from the commutativity of 
+the last equality following from the commutativity of the square 
 $$
 \begin{tikzcd}
 h(A)(X)\ar{r}{\theta_X}&F(X)\\ 
-h(A)(A)\ar{u}{h(A)(f)}\ar{r}[swap]{\theta_X}&F(A).\ar{u}[swap]{F(f)}
+h(A)(A)\ar{u}{h(A)(f)}\ar{r}[swap]{\theta_A}&F(A),\ar{u}[swap]{F(f)}
+\end{tikzcd}
+$$ 
+which is equal to the square 
+$$
+\begin{tikzcd}
+\Hom_\C(X,A)\ar{r}{\theta_X}&F(X)\\ 
+\Hom_\C(A,A)\ar{u}{\circ f}\ar{r}[swap]{\theta_A}&F(A).\ar{u}[swap]{F(f)}
 \end{tikzcd}
 $$
 \end{proof}
