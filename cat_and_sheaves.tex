@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0269)
+% about "categories and sheaves" (version-0270)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -973,7 +973,7 @@ Picture of $L\xleftarrow{\eta*L}LRL$:
 $$
 \begin{tikzcd}
 %
-\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}\ar{rr}{}{1}&{}&\C\\ 
+\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}&{}&\C\ar{ll}{}[swap]{1}\\ 
 %
 \C'&\ar{u}{\eta}&\C'\ar{ll}{}{LR}&\ar{u}{L}&\C\ar{ll}{}{L}&\ar{u}{1}&\C\ar{ll}{}{1}\\ 
 %
@@ -991,7 +991,7 @@ Picture of $LRL\xleftarrow{L*\ee}L$:
 $$
 \begin{tikzcd}
 %
-\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}\ar{rr}{}{RL}&{}&\C\\ 
+\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}&{}&\C\C\ar{ll}{}[swap]{RL}\\ 
 %
 \C'&\ar{u}{1}&\C'\ar{ll}{}{1}&\ar{u}{L}&\C\ar{ll}{}{L}&\ar{u}{\ee}&\C\ar{ll}{}{1}\\ 
 %
@@ -1029,7 +1029,7 @@ Picture of $R\xleftarrow{R*\eta}RLR$:
 $$
 \begin{tikzcd}
 %
-\C&{}&\C\ar{ll}{}[swap]{1}&{}&\C'\ar{ll}{}[swap]{R}\ar{rr}{}{1}&{}&\C'\\ 
+\C&{}&\C\ar{ll}{}[swap]{1}&{}&\C'\ar{ll}{}[swap]{R}&{}&\C'\ar{ll}{}[swap]{1}\\ 
 %
 \C&\ar{u}{1}&\C\ar{ll}{}{1}&\ar{u}{R}&\C'\ar{ll}{}{R}&\ar{u}{\eta}&\C'\ar{ll}{}{LR}\\ 
 %
@@ -1043,11 +1043,10 @@ $$
 $$ 
 
 Picture of $RLR\xleftarrow{\ee*R}R$:
-
 $$
 \begin{tikzcd}
 %
-\C&{}&\C\ar{ll}{}[swap]{RL}&{}&\C'\ar{ll}{}[swap]{R}\ar{rr}{}{1}&{}&\C'\\ 
+\C&{}&\C\ar{ll}{}[swap]{RL}&{}&\C'\ar{ll}{}[swap]{R}&{}&\C'\ar{ll}{}[swap]{1}\\ 
 %
 \C&\ar{u}{\ee}&\C\ar{ll}{}{1}&\ar{u}{R}&\C'\ar{ll}{}{R}&\ar{u}{1}&\C'\ar{ll}{}{1}\\ 
 %
@@ -1082,57 +1081,50 @@ $$
 
 \subsubsection{Proofs}
 
-For the reader's convenience we prove these equalities. Let us denote by
+For the reader's convenience we prove \eqref{158} p.~\pageref{158} and \eqref{159} p.~\pageref{159}. It clearly suffices to prove \eqref{158}. 
+
+Let us denote the functorial inverse bijections defining the adjunction by 
 %
-\begin{equation}\label{bij1}
-\lambda_{X,X'}:\Hom_\C(X,RX')\overset\sim\to\Hom_{\C'}(LX,X')
+\begin{equation}\label{bij}
+\begin{tikzcd}
+\Hom_\C(X,RX')\ar[yshift=0.7ex]{rr}{\lambda_{X,X'}}&&\Hom_{\C'}(LX,X'),\ar[yshift=-0.7ex]{ll}{\mu_{X,X'}}
+\end{tikzcd}
 \end{equation} 
 %
-and 
+and recall that $\ee_X$ and $\eta_{X'}$ are defined by
 %
-\begin{equation}\label{bij2}
-\mu_{X,X'}=(\lambda_{X,X'})^{-1}:\Hom_{\C'}(LX,X')\overset\sim\to\Hom_\C(X,RX')
-\end{equation} 
-
-\nn the functorial bijections defining the adjunction. Recall 
-$$
-\varepsilon_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
-$$ 
-
-To prove Equality \eqref{158} p.~\pageref{158}, which can be written as 
-%
-\begin{equation}\label{158b} 
-\eta_{LX}\circ L(\varepsilon_X)=\id_{LX}, 
-\end{equation}
-%
-we view (\ref{bij1}) as a bijection functorial in $X\in\C$ (with $X'\in\C'$ fixed), we apply it to the morphism 
-$$
-\varepsilon_X:X\to RLX
-$$ 
-in $\C$, and then we replace $X'$ with $LX$. We get 
-$$
-\lambda_{RLX,LX}(f)\circ L(\varepsilon_X)=\lambda_{X,LX}(f\circ\varepsilon_X)
-$$
-
-\nn for all $f$ in $\Hom_\C(RLX,RLX)$. Taking for $f$ the identity of $RLX$ gives \eqref{158b}.
-
-To prove Equality \eqref{159} p.~\pageref{159}, which can be written as 
-%
-\begin{equation}\label{159b} 
-R(\eta_{X'})\circ\varepsilon_{RX'}=\id_{RX'},
+\begin{equation}\label{epseta}
+\ee_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
 \end{equation}
 
-\nn we view (\ref{bij2}) as a bijection functorial in $X'\in\C'$, (with $X\in\C$ fixed), we apply it to the morphism 
+Equality \eqref{158} p.~\pageref{158} can be written 
 $$
-\eta_{X'}:LRX'\to X'
+\lambda_{RLX,LX}(\id_{RLX})\circ L(\ee_X)=\id_{LX},
+$$ 
+and we have 
+$$
+\id_{LX}\overset{\text{(a)}}{=}\lambda_{RLX,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}\lambda_{RLX,LX}(\ee_X)\overset{\text{(c)}}{=}\big(\lambda_{RLX,LX}\circ(\circ\ee_X)\big)(\id_{RLX})
+$$
+$$
+\overset{\text{(d)}}{=}\Big(\big(\circ L(\ee_X)\big)\circ\lambda_{RLX,LX}\Big)(\id_{RLX})\overset{\text{(e)}}{=}\lambda_{RLX,LX}(\id_{RLX})\circ L(\ee_X),
+$$ 
+the successive equalities being justified as follows:
+
+(a) follows from \eqref{bij},
+
+(b) follows from \eqref{epseta},
+
+(c) is obvious,
+
+(d) follows from the commutative square 
+$$
+\begin{tikzcd}
+\Hom_\C(RLX,RLX)\ar{d}[swap]{\circ\ee}\ar{rr}{\lambda_{RLX,LX}}&&\Hom_{\C'}(LRLX,LX)\ar{d}{\circ L(\ee)}\\
+\Hom_\C(RLX,RLX)\ar{rr}[swap]{\lambda_{X,LX}}&&\Hom_{\C'}(LRLX,LX),
+\end{tikzcd}
 $$ 
 
-\nn in $\C'$, and then we replace $X$ with $RX'$. We get 
-$$
-R(\eta_{X'})\circ(\mu_{RX',LRX'}(f))=\mu_{RX',X'}(\eta_{X'}\circ f)
-$$
-
-\nn for all $f$ in $\Hom_{\C'}(LRX',LRX')$. Taking for $f$ the identity of $LRX'$ gives \eqref{159b}.
+(e) is obvious.
 
 %%%
 
