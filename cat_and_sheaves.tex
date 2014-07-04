@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0270)
+% about "categories and sheaves" (version-0271)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -783,15 +783,15 @@ The Yoneda Lemma says that $(F,X)$\--universal elements are in functorial biject
 
 \begin{s} 
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
-%
-\begin{prop}
+
+\begin{prop}\label{yp}
 A morphism $f:A\to B$ in a category $\C$ is an isomorphism if and only if 
 $$
 \Hom_\C(X,f):\Hom_\C(X,A)\to\Hom_\C(X,B)
 $$
 is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 \end{prop}
-%
+
 \begin{proof} By (i) there is a $g:B\to A$ satisfying $f\circ g=\id_B$, yielding $f\circ g\circ f=f$, and (ii) implies $g\circ f=\id_A$.
 \end{proof}
 \end{s}
@@ -799,8 +799,6 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 %%
 
 \subsection{Horizontal\index{horizontal composition} and Vertical Compositions\index{vertical composition} (p. 19)}\label{hove1}
-
-%This Section and Section~\ref{hove2} p.~\pageref{hove2} serve exactly the same purpose. The reader should read at most one of them.
 
 For each object $X$ of $\C_3$ the diagram 
 
@@ -1136,24 +1134,40 @@ $$
 P.~36, Definition 2.1.2. 
 
 \begin{df}\label{p}
-If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair 
+$$
+(X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)
+$$
+%where $X$ is an object of $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ 
+such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
-%
-Recall that the condition that $p$ is an $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element means that for each $Y$ in $\C$ the map 
+
+Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element means that for each $Y$ in $\C$ the map 
 $$
 \Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\alpha),\quad f\mapsto p\circ\Delta(f)
 $$ 
-is bijective.
+is bijective. Here is a picture:
+$$
+Y\xr fX,\quad\Delta(Y)\xr{\Delta(f)}\Delta(X)\xr{p}\alpha.
+$$
 
 \begin{df}\label{c}
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair $(X,p)$ where $X$ is in $\C$ and $p$ in $\Hom_{\C^I}(\alpha,\Delta(X))$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair 
+$$
+(X,p)\in\Ob(\C)\times\Hom_{\C^I}(\alpha,\Delta(X))
+$$
+%$(X,p)$, where $X$ is an object of $\C$ and $p$ in $\Hom_{\C^I}(\alpha,\Delta(X))$ 
+such that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
-%
-Recall that the condition that $p$ is an $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element means that for each $Y$ in $\C$ the map 
+
+Recall that the condition that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element means that for each $Y$ in $\C$ the map 
 \begin{equation}\label{cue}
 \Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
 \end{equation}
-is bijective.
+is bijective. Here is a picture:
+$$
+X\xr fY,\quad\alpha\xr{p}\Delta(X)\xr{\Delta(f)}\Delta(Y).
+$$
 \end{s}
 
 %
@@ -1186,7 +1200,7 @@ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coproject
 %
 
 \begin{s} 
-P.~39, Proposition 2.1.7. The following slightly stronger statement holds, and is independent of the Universes Axiom. 
+P.~39, Proposition 2.1.7. The following slightly stronger statement holds, and is independent of the Axiom of Universes. 
 
 Let $I, J, \C$ be categories and let 
 $$
@@ -1228,8 +1242,9 @@ $$
 \Hom_\C\left(\colim G(\alpha),Z\right)
 $$
 $$
-\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\colim F(\alpha),Y).
-$$
+\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\simeq\lim \ \Hom_\B(F(\alpha),Y)\simeq\Hom_\B(\colim F(\alpha),Y),
+$$ 
+and the conclusion follows from Proposition~\ref{yp} p.~\pageref{yp}.
 \end{proof}
 \end{s}
 
