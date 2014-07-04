@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0271)
+% about "categories and sheaves" (version-0272)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1254,19 +1254,41 @@ and the conclusion follows from Proposition~\ref{yp} p.~\pageref{yp}.
 P.~40, proof of Lemma 2.1.11 (minor variant).
 
 \begin{lem}\label{l2111}
-If $\C$ is a category, $\alpha:\C\to\C$ is the identity functor, and $T$ is an object of $\C$ representing $\colim\alpha$, then $T$ is terminal. Conversely, if $T$ is terminal, then it is an inductive limit of the identity functor.
+If $T$ is an object of a category $\C$, then 
+$$
+T\text{ is terminal }\ssi T\simeq\colim\id_\C.
+$$
 \end{lem}
 
-\begin{proof}
-Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $T$ be in $\C$, let $p$ be in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$\--universal element  (see Definition~\ref{ue} p. \pageref{ue}), so that $T$ is an inductive limit of $\id_\C$ in $\C$ (see Definition~\ref{c} p.~\pageref{c}), and let $X$ be in $\C$. By definition of $T$ and $p$, the map 
+\begin{proof} $\then$: Straightforward.
+
+\nn$\si$: Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $p\in\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$\--universal element  (see Definition~\ref{ue} p.~\pageref{ue}), and let $X$ be an object of $\C$. It suffices to show 
+%
+\begin{equation}\label{2111ets}
+\Hom_\C(X,T)=\{p_X\}.
+\end{equation}
+% 
+By definition of $T$ and $p$, the map 
 $$
-\Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\Delta(X)),\quad f\mapsto\Delta(f)\circ p 
+\Hom_\C(T,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
 $$ 
-is bijective. Let $\theta\mapsto\theta'$ be the inverse bijection. We have $\Delta(\theta_T)\circ p=\theta$ by definition of $\Hom_{\C^\C}(\id_\C,\Delta(X))$. This implies $\theta'=\theta_T$. Let $f$ be in $\Hom_\C(T,X)$. Using the fact that $f$ is of the form $\theta_T$ and the definition of $\Hom_{\C^\C}(\id_\C,\Delta(X))$, we obtain $f=f\circ p_T$; in particular $\id_T=p_T$. For $g$ in $\Hom_\C(Y,T)$ we get 
+is bijective. 
+
+Claim: the inverse bijection is $\theta\mapsto\theta_T$. 
+
+For any $\theta$ in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ and any $Y$ in $\C$ we have $\theta_T\circ p_Y=\theta_Y$, and thus $\Delta(\theta_T)\circ p=\theta$, which implies the claim. 
+
+The claim implies in particular 
+%
+\begin{equation}\label{it=pt}
+\id_T=p_T.
+\end{equation}
+
+To prove \eqref{2111ets}, note that we have for $f$ in $\Hom_\C(X,T)$
 $$
-g=p_T\circ g=p_Y,
+f=p_T\circ f=p_X,
 $$
-the first equality following from the fact that $\id_T=p_T$, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$. The second sentence of the lemma is clear.
+the first equality following from \eqref{it=pt}, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\Delta(T))$.
 \end{proof}
 
 \begin{cor}\label{c2111}
