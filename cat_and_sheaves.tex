@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0274)
+% about "categories and sheaves" (version-0275)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1308,29 +1308,29 @@ This follows from Lemma~\ref{l2111} above and Lemma 1.4.10 p.~26 of the book.
 
 %
 
-\begin{comment}
 \begin{s}
-P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115b} p.~\pageref{17115b}: If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j_X$ the forgetful functor from $\C_X$ to $\C$, then we have
+P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115b} p.~\pageref{17115b}: 
+
+If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j^X$ the forgetful functor from $\C^X$ to $\C$, then we have
 %
 \begin{equation}\label{17115}
-\Hom_{\A^\C}(F,G)\simeq\lim_{X\in\C}\Hom_{\A^{\C_X}}(F\circ\oo j_X,G\circ\oo j_X).
+\Hom_{\A^\C}(F,G)\simeq\lim_{X\in\C}\Hom_{\A^{\C^X}}(F\circ\oo j^X,G\circ\oo j^X).
 \end{equation}
 
 Let us spell out the proof of the above statement: 
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
 
-The maps $\lambda\mapsto\lambda*\oo j_X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Conversely, to an element  
+The maps $\lambda\mapsto\lambda*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Conversely, to an element  
 $$
-r=\Big(\big(\mu_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
+r=\Big(\big(\rho_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
 $$ 
 we attach the family
 $$
-\ell=\big(\mu_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
+\ell=\big(\rho_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
 $$ 
 We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are inverse bijections.
 \end{s}
-\end{comment}
 
 %
 
@@ -7232,7 +7232,9 @@ P.~409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{p
 
 %
 
-%\begin{s}\label{17115b}P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.\end{s}
+\begin{s}\label{17115b}
+P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
+\end{s}
 
 %
 
