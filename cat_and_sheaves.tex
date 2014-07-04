@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0275)
+% about "categories and sheaves" (version-0276)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1339,11 +1339,15 @@ P.~50, Corollary 2.2.11. We also have:
 
 \emph{A category admits finite projective limits if and only if it admits a terminal object and binary fibered products.}
 
-Indeed, for any pair of parallel arrows $f,g:X\parar Y$, we have 
-\begin{equation}\label{kfp}
-\Ker(f,g)\simeq X\times_{(Y\times Y)}Y.
-\end{equation}
-\end{s} 
+Indeed, if $f,g:X\parar Y$ is a pair of parallel arrows, and if the square 
+$$
+\begin{tikzcd}
+K\ar{d}\ar{r}&Y\ar{d}{\Delta}\\ 
+X\ar{r}[swap]{(f,g)}&Y\times Y
+\end{tikzcd}
+$$
+is cartesian, then $K\simeq\Ker(f,g)$. (As usual, $\Delta$ is the diagonal morphism.)
+\end{s}
 
 %
 
@@ -7355,7 +7359,7 @@ We must show that $g\circ f$ is an isomorphism. The equality $h\circ g\circ f=\i
 \begin{s}\label{1744i}
 P.~419, proof of Proposition 17.4.4: 
 
-First sentence of the proof: see \eqref{kfp} p.~\pageref{kfp}. 
+First sentence of the proof: see \S\ref{fpl} p.~\pageref{fpl}. 
 
 Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pageref{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398, and Proposition 3.2.1 (iii) p.~78 of the book. 
 
