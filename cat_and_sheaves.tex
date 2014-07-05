@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0278)
+% about "categories and sheaves" (version-0279)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1611,8 +1611,11 @@ be a diagram of functors. Assume that $I,J$ and $K$ are small, and that $\C$ adm
 
 %
 
-\begin{s} 
-P.~54, end of Section 2.3. The following fact was pointed out to me by Tom Leinster\index{Leinster}; see \href{http://mathoverflow.net/q/162162/461}{http://mathoverflow.net/q/162162/461}.
+\subsection{Kan Extensions of Vector Spaces}
+
+The following fact was pointed out to me by Tom Leinster\index{Leinster}; see \bigskip 
+
+\centerline{\href{http://mathoverflow.net/q/162162/461}{http://mathoverflow.net/q/162162/461}:}
 
 Let $k$ be a field, let $\U$ and $\V$ be universes such that $k\in\U\in\V$, let $I$ be the category of $k$-vector spaces belonging to $\U$, let $J$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\beta,\pp$ and $\psi$ are the inclusions. In particular the observation made in \S\ref{spreptom} applies. 
 
@@ -1634,17 +1637,74 @@ b((\lambda_f)_{f\in V^*})(g):=\lambda_g.
 $$ 
 It is straightforward to check that $a$ and $b$ are mutually inverse $k$-linear maps. 
 
-The above observation shows that the functor $(\pp\circ\psi)^\ddagger(\pp\circ\psi):I\to I$ exists and is isomorphic to the double dual functor. 
+This proves Part (a) of the following proposition:
 
-The proof of the following facts is straightforward. 
+\begin{prop}\label{leinster}${}$ 
 
-The functors $\psi^\dagger(\pp\circ\psi)$ and $\pp^\dagger(\pp)$ exist and are respectively isomorphic to $\pp$ and $\id_I$. 
+\nn\emph{(a)} The functor $(\pp\circ\psi)^\ddagger(\pp\circ\psi):I\to I$ exists and is isomorphic to the double dual functor. 
 
-Let now $I^{\op}$ be the category of $k$-vector spaces belonging to $\U$, let $J^{\op}$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K^{\op}$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be (as before) the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\pp$ and $\psi$ are the inclusions, and that $\beta$ maps $k$ to $k^*$. Then the observation made in \S\ref{spreptom} applies and we have 
+\nn\emph{(b)} The functors $\psi^\dagger(\pp\circ\psi)$ and $\pp^\dagger(\pp)$ exist and are respectively isomorphic to $\pp$ and $\id_I$. 
+
+\nn\emph{(c)} Let $I^{\op}$ be the category of $k$-vector spaces belonging to $\U$, let $J^{\op}$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K^{\op}$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be (as before) the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\pp$ and $\psi$ are the inclusions, and that $\beta$ maps $k$ to $k^*$. Then we have 
 $$
 (\pp\circ\psi)^\dagger(\beta)(V)\simeq V^*\simeq(\pp\circ\psi)^\ddagger(\beta)(V).
+$$
+\end{prop}
+
+\begin{proof}[Proof of Proposition~\ref{leinster}]
+As stated above, (a) has already been proved. To prove (b) and (c), we change slightly the notation: 
+
+Let $k$, $\U$ and $\V$ be as above, let $I$ be the category of $k$-vector spaces belonging to $\U$, let $J$ be the full subcategory of $J$ whose unique object is $k$, let $\pp:J\to I$ be the inclusion functor, let $\C$ be the category of $k$-vector spaces belonging to $\V$, let $\beta:J\to\C$ be the inclusion functor, and denote by $\gamma$ the functor $\beta$ viewed as a functor $\gamma:J^{\op}\to\C$ from $J^{\op}$ to $\C$. 
+
+Let $V$ be an object of $I$. Proposition~\ref{leinster} will follow from the claims below: 
+%
+\begin{equation}\label{pdbv}
+\pp^\dagger(\beta)(V)\simeq V,
+\end{equation}
+%
+\begin{equation}\label{podbv}
+\pp^{\op\dagger}(\gamma)(V)\simeq V^*,
+\end{equation}
+%
+\begin{equation}\label{poddbv}
+\pp^{\op\ddagger}(\gamma)(V)\simeq V^*.
+\end{equation}
+
+\begin{proof}[Proof of \eqref{pdbv}] 
+By Theorem 2.3.3 (i) p.~52 of the book, we have 
+$$
+\pp^\dagger(\beta)(V)\simeq\colim_{(k\to V)\in J_V}k.
 $$ 
-\end{s}
+We denote abusively by $V$ the category whose objects are the vectors of $V$ and whose only morphisms are the pairs $(\lambda,v):v\to\lambda v$ with $\lambda\in k$, $v\in V$. Then $V$ is naturally isomorphic to $J_V$. Let 
+%
+\begin{equation}\label{avc}
+\alpha:V\to\C
+\end{equation}
+%
+be the functor attaching to $(\lambda,v):v\to\lambda v$ the multiplication by $\lambda$ from $k$ to $k$. Then the right-hand side of \eqref{pdbv} is isomorphic to $\colim\alpha$, and it suffices to show that $W:=\colim\alpha$ is isomorphic to $V$. We define linear maps 
+$$
+\begin{tikzcd} 
+W\ar[yshift=0.7ex]{r}{f}&V\ar[yshift=-0.7ex]{l}{g}
+\end{tikzcd}
+$$ 
+as follows. 
+
+For each $v$ in $V$ let $p_v:k\to W$ be the coprojection. For each $v$ in $V$ we define $f_v:k\to V$ by $f_v(1)=v$, and we check that the $f_v$ induce a map $f:W\to V$. For each $v$ in $V$ we put $g(v):=p_v(1)$. We leave it to the reader to verify that $g$ is linear, and that $f$ and $g$ are mutual inverses. This proves \eqref{pdbv}. 
+\end{proof}
+
+\begin{proof}[Proof of \eqref{podbv}] 
+By Theorem 2.3.3 (i) p.~52 of the book, we have 
+$$
+\pp^{\op\dagger}(\gamma)(V)\simeq\colim_{(k\to V)\in(J^{\op})_V}k\simeq\colim_{(V\to k)\in J^V}k\simeq\colim_{(k\to V^*)\in J_{V^*}}k\simeq V^*,
+$$ 
+the last isomorphism following from \eqref{pdbv}. This proves \eqref{podbv}.
+\end{proof}
+
+\begin{proof}[Proof of \eqref{poddbv}] 
+By Theorem 2.3.3 (ii) p.~52 of the book, we have $\pp^{\op\ddagger}(\gamma)(V)\simeq\lim\alpha$, where $\alpha$ is the functor \eqref{avc} viewed as a functor from $V^{\op\op}$ to $\C$. Then the vectors of $\lim\alpha$ are the families of scalars $(\lambda_v)_{v\in V}$ satisfying $\lambda_{\mu v}=\mu\lambda_v$ for all $\mu$ in $k$ and all $v$ in $V$, so that we get $\lim\alpha\simeq V^*$. This proves \eqref{poddbv}.
+\end{proof}
+As indicated, Proposition~\ref{leinster} follows immediately from \eqref{pdbv}, \eqref{podbv}, and \eqref{poddbv}. 
+\end{proof}
 
 %% 
 
