@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0277)
+% about "categories and sheaves" (version-0278)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1399,7 +1399,7 @@ We define $\pp^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to sho
 
 \begin{lem}\label{r52}
 
-Let $I$ and $J$ be in the category $\Cat$ of small categories (see Definition~\ref{small} p.~\pageref{small}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
+Let $I$ and $J$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{small} p.~\pageref{small}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
 
 \begin{equation}\label{52} 
 (\colim\theta)(i):=\colim(\theta_i)\in J\quad\forall\ i\in I. 
@@ -1422,7 +1422,7 @@ I\ar{rr}[swap]{J}&{}&\Cat&J.
 \end{tikzcd}
 $$
 
-We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the natural functor from $J_i$ to $J$. We assume \eqref{52}. Then $\colim\theta$ is nothing but $\pp^\dagger(\beta)$. In particular $\pp^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
+We want to prove that $\pp^\dagger$ defined by \eqref{236} p.~\pageref{236} is a functor. In the setting of Lemma~\ref{r52} we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\beta$ with the forgetful functor from $J_i$ to $J$. We assume \eqref{52}. Then $\colim\theta$ is nothing but $\pp^\dagger(\beta)$. In particular $\pp^\dagger(\beta)$ is a functor by Lemma~\ref{r52}. q.e.d.
 
 %
 
@@ -1432,7 +1432,7 @@ The purpose of Step (b) is to prove
 \begin{equation}\label{stepb}
 \Hom_{\C^I}(\pp^\dagger(\beta),\alpha)\simeq\Hom_{\C^J}(\beta,\pp_*(\alpha)) 
 \end{equation} 
-for all $\alpha:J\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
+for all $\alpha:I\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
 
 To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f$ is a morphism in $\C$ from $X$ to $Y$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$:
 $$
@@ -1467,19 +1467,19 @@ $$
 $$ 
 with $j$ in $J$ and $i,i'$ in $I$. A morphism 
 $$
-(j_1,\pp(j_1)\to i_1\to i'_1)\to(j_2,\pp(j_2)\to i_2\to i'_2)
+\Big(j_1,\pp(j_1)\to i_1\to i'_1\Big)\to\Big(j_2,\pp(j_2)\to i_2\to i'_2\Big)
 $$ 
-is given by a triple of morphisms $j_1\to j_2,i_1\to i_2,i'_2\to i'_1$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(J)$ defined in Definition 2.1.14 p.~42 of the book. Consider the functors 
+is given by a triple of morphisms $j_1\to j_2,i_1\to i_2,i'_1\leftarrow i'_2$ such that the obvious diagram commutes. The category $N$ is the category $\Mor_0(J)$ defined in Definition 2.1.14 p.~42 of the book. Consider the functors 
 $$
-\gamma:M^{\op}\to\Set,\quad(j,\pp(j)\to i\to i')\mapsto\Hom_\C(\beta(j),\alpha(i')), 
+\gamma:M^{\op}\to\Set,\quad\Big(j,\pp(j)\to i\to i'\Big)\mapsto\Hom_\C\big(\beta(j),\alpha(i')\big), 
 $$ 
 $$
-\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C(\beta(j),\alpha(\pp(j'))). 
+\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C\big(\beta(j),\alpha(\pp(j'))\big). 
 $$ 
 As we have 
 $$
-\Hom_{\C^I}(\pp^\dagger(\beta),\alpha)\xr\sim\lim\gamma,\quad
-\Hom_{\C^J}(\beta,\pp_*(\alpha))\xr\sim\lim\delta. 
+\Hom_{\C^I}\big(\pp^\dagger(\beta),\alpha\big)\xr\sim\lim\gamma,\quad
+\Hom_{\C^J}\big(\beta,\pp_*(\alpha)\big)\xr\sim\lim\delta. 
 $$ 
 by \eqref{2115}, it suffices to show 
 %
@@ -1492,7 +1492,7 @@ There is a natural bijection $\lim\gamma\simeq\lim\delta$.
 \begin{proof}
 To define a map $\lim\gamma\to\lim\delta$, we attach, to a family 
 $$
-(\beta(j)\to\alpha(i'))_{\pp(j)\to i\to i'}
+\big(\beta(j)\to\alpha(i')\big)_{\pp(j)\to i\to i'}
 $$ 
 and to a morphism $j\to j'$, a morphism $\beta(j)\to\alpha(\pp(j'))$ by setting 
 $$
@@ -1520,16 +1520,16 @@ In part (i) of their proof of Theorem 2.3.3 (i) p.~52 of the book, the authors d
 \begin{equation}\label{e233i} 
 %
 \Psi_{\alpha,\beta}:
-\Hom_{\C^I}(\pp^\dagger(\alpha),\beta)\to
-\Hom_{\C^J}(\alpha,\pp_*(\beta)),
+\Hom_{\C^I}\big(\pp^\dagger(\alpha),\beta\big)\to
+\Hom_{\C^J}\big(\alpha,\pp_*(\beta)\big),
 %
 \end{equation} 
 %
 and show that it is bijective. In particular, we have a bijection 
 $$
 f:=\Psi_{\alpha,\pp^\dagger(\alpha)}:
-\Hom_{\C^I}(\pp^\dagger(\alpha),\pp^\dagger(\alpha))\to
-\Hom_{\C^J}(\alpha,\pp_*(\pp^\dagger(\alpha))),
+\Hom_{\C^I}\big(\pp^\dagger(\alpha),\pp^\dagger(\alpha)\big)\to
+\Hom_{\C^J}\big(\alpha,\pp_*(\pp^\dagger(\alpha))\big),
 $$
 and we must check that $f(\id_{\pp^\dagger(\alpha)})$ is an isomorphism. To this end, we will define 
 $$
@@ -1541,7 +1541,7 @@ $$
 $$
 we must define 
 $$
-u\big(\pp(j')\to\pp(j)\big):\alpha(j')\to\alpha(j),
+u\Big(\pp(j')\to\pp(j)\Big):\alpha(j')\to\alpha(j),
 $$
 that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it.
 
@@ -1549,7 +1549,7 @@ that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\alpha
 
 \subsubsection{A Corollary}
 
-Here is a corollary to Theorem \ref{233i} p.~\pageref{233i} (which is Theorem 2.3.3 (i) p.~52):
+Here is a corollary to Theorem \ref{233i} p.~\pageref{233i} (which is Theorem 2.3.3 (i) p.~52 of the book):
 
 \begin{cor}\label{c233i}
 If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\pp^\dagger(\beta)(i)$ is (in natural bijection with) the quotient of 
@@ -1571,7 +1571,7 @@ By Proposition 2.4.1 p.~54 of the book, the right-hand side is, in a natural way
 $$
 \bigsqcup_{(\pp(j)\to i)\in J_i}\ \beta(j)
 $$ 
-modulo a certain equivalence relation. We have 
+by a certain equivalence relation. We have 
 $$
 \bigsqcup_{(\pp(j)\to i)\in J_i}\beta(j)=\bigsqcup_{j\in J}\ \bigsqcup_{u\in\Hom_I(\pp(j),i)}\ \beta(j)\simeq\bigsqcup_{j\in J}\beta(j)\times\Hom_I(\pp(j),i),
 $$ 
@@ -1653,7 +1653,7 @@ $$
 \begin{s} 
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 %
-\begin{prop}%\label{244}
+\begin{prop}
 If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
 $$
 \colim\Delta(S)\simeq\pi_0(I)\times S.
