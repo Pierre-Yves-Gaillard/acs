@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0279)
+% about "categories and sheaves" (version-0280)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1611,100 +1611,66 @@ be a diagram of functors. Assume that $I,J$ and $K$ are small, and that $\C$ adm
 
 %
 
-\subsection{Kan Extensions of Vector Spaces}
+\subsection{Kan Extensions of Modules}
 
-The following fact was pointed out to me by Tom Leinster\index{Leinster}; see \bigskip 
+Let $R$ be a ring, let $\U$ and $\V$ be universes such that $R\in\U\in\V$, put, with self-explanatory notation, 
+$$
+I:=\Mod^\U(R),\quad\C:=\Mod^\V(R),
+$$ 
+let $J$ be the full subcategory of $I$ whose single object is $R$, and let $\C\xleftarrow\beta J\xr\pp I$ be the inclusion functors. 
 
-\centerline{\href{http://mathoverflow.net/q/162162/461}{http://mathoverflow.net/q/162162/461}:}
-
-Let $k$ be a field, let $\U$ and $\V$ be universes such that $k\in\U\in\V$, let $I$ be the category of $k$-vector spaces belonging to $\U$, let $J$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\beta,\pp$ and $\psi$ are the inclusions. In particular the observation made in \S\ref{spreptom} applies. 
-
-We claim: 
-\begin{equation}\label{tom}
-(\pp\circ\psi)^\ddagger(\beta)(V)\simeq V^{**},
+We claim 
+\begin{equation}\label{pdb1}
+\pp^\dagger(\beta)(M)\simeq M.
 \end{equation} 
-where $V^{**}$ is the double dual of $V$. 
 
-In view of \S\ref{spreptom} and Theorem 2.3.3 (ii) p.~52 of the book, this will imply that $\psi^\ddagger(\beta)$ is isomorphic to the inclusion $J\to\C$, and that $\pp^\ddagger(\psi^\ddagger(\beta))(V)\simeq V^{**}$. 
-
-To prove \eqref{tom}, write $V'$ for the left hand side of \eqref{tom}. By Display (2.3.7) p.~52 of the book, we have a natural isomorphism
+To prove \eqref{pdb1}, set 
 $$
-V'\simeq\lim_{(f:V\to k)\in K^V}k. 
+M':=\colim_{(x:R\to M)\in J_M}R\in\C, 
 $$ 
-For each $f$ in $V^*$ let $a_f:V^{**}\to k$ be the evaluation at $f$. The $a_f$ induce a linear map $a:V^{**}\to V'$. Define $b:V'\to V^{**}$ by 
+and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_x:R\to M$ by setting $\Phi_x(1):=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb1}. 
+
+We claim 
+\begin{equation}\label{pddb1}
+\pp^\ddagger(\beta)(M)\simeq M^{**}, 
+\end{equation} 
+where $M^{**}$ is the double dual of $M$. 
+
+To prove \eqref{pddb1}, set 
 $$
-b((\lambda_f)_{f\in V^*})(g):=\lambda_g.
+M':=\lim_{(f:M\to R)\in J^M}R\in\C, 
 $$ 
-It is straightforward to check that $a$ and $b$ are mutually inverse $k$-linear maps. 
+and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to M'$ by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\lambda_f))(g):=\lambda_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb1}. 
 
-This proves Part (a) of the following proposition:
-
-\begin{prop}\label{leinster}${}$ 
-
-\nn\emph{(a)} The functor $(\pp\circ\psi)^\ddagger(\pp\circ\psi):I\to I$ exists and is isomorphic to the double dual functor. 
-
-\nn\emph{(b)} The functors $\psi^\dagger(\pp\circ\psi)$ and $\pp^\dagger(\pp)$ exist and are respectively isomorphic to $\pp$ and $\id_I$. 
-
-\nn\emph{(c)} Let $I^{\op}$ be the category of $k$-vector spaces belonging to $\U$, let $J^{\op}$ be the category of finite dimensional $k$-vector spaces belonging to $\U$, let $K^{\op}$ be the full subcategory of $J$ whose unique object is $k$, and let $\C$ be (as before) the category of $k$-vector spaces belonging to $\V$. Form the diagram \eqref{epreptom} by decreeing that $\pp$ and $\psi$ are the inclusions, and that $\beta$ maps $k$ to $k^*$. Then we have 
+Let $R$, $\U$ and $\V$ be as above, put, with self-explanatory notation, 
 $$
-(\pp\circ\psi)^\dagger(\beta)(V)\simeq V^*\simeq(\pp\circ\psi)^\ddagger(\beta)(V).
-$$
-\end{prop}
-
-\begin{proof}[Proof of Proposition~\ref{leinster}]
-As stated above, (a) has already been proved. To prove (b) and (c), we change slightly the notation: 
-
-Let $k$, $\U$ and $\V$ be as above, let $I$ be the category of $k$-vector spaces belonging to $\U$, let $J$ be the full subcategory of $J$ whose unique object is $k$, let $\pp:J\to I$ be the inclusion functor, let $\C$ be the category of $k$-vector spaces belonging to $\V$, let $\beta:J\to\C$ be the inclusion functor, and denote by $\gamma$ the functor $\beta$ viewed as a functor $\gamma:J^{\op}\to\C$ from $J^{\op}$ to $\C$. 
-
-Let $V$ be an object of $I$. Proposition~\ref{leinster} will follow from the claims below: 
-%
-\begin{equation}\label{pdbv}
-\pp^\dagger(\beta)(V)\simeq V,
-\end{equation}
-%
-\begin{equation}\label{podbv}
-\pp^{\op\dagger}(\gamma)(V)\simeq V^*,
-\end{equation}
-%
-\begin{equation}\label{poddbv}
-\pp^{\op\ddagger}(\gamma)(V)\simeq V^*.
-\end{equation}
-
-\begin{proof}[Proof of \eqref{pdbv}] 
-By Theorem 2.3.3 (i) p.~52 of the book, we have 
-$$
-\pp^\dagger(\beta)(V)\simeq\colim_{(k\to V)\in J_V}k.
+I:=\Mod^\U(R)^{\op},\quad\C:=\Mod^\V(R^{\op}),
 $$ 
-We denote abusively by $V$ the category whose objects are the vectors of $V$ and whose only morphisms are the pairs $(\lambda,v):v\to\lambda v$ with $\lambda\in k$, $v\in V$. Then $V$ is naturally isomorphic to $J_V$. Let 
-%
-\begin{equation}\label{avc}
-\alpha:V\to\C
-\end{equation}
-%
-be the functor attaching to $(\lambda,v):v\to\lambda v$ the multiplication by $\lambda$ from $k$ to $k$. Then the right-hand side of \eqref{pdbv} is isomorphic to $\colim\alpha$, and it suffices to show that $W:=\colim\alpha$ is isomorphic to $V$. We define linear maps 
+let $J$ be the full subcategory of $I$ whose single object is $R$, let $\pp:J\to I$ be the inclusion functor, and let $\beta:J\to\C$ be the obvious functor satisfying $\beta(R)=R^{\op}$. 
+
+We claim 
+\begin{equation}\label{pdb2}
+\pp^\dagger(\beta)(M)\simeq M^*,
+\end{equation} 
+where $M^*$ is the dual of $M$. 
+
+To prove \eqref{pdb2}, set 
 $$
-\begin{tikzcd} 
-W\ar[yshift=0.7ex]{r}{f}&V\ar[yshift=-0.7ex]{l}{g}
-\end{tikzcd}
+M':=\colim_{(R\to M)\in J_M}R=\colim_{(f:M\to R)\in(J^{\op})^M}R\in\C, 
 $$ 
-as follows. 
+and let $p_f:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_f:R^{\op}\to M^*$ by setting $\Phi_f(1):=f$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M^*\to M'$ by putting $\Psi(f):=p_f(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb2}. 
 
-For each $v$ in $V$ let $p_v:k\to W$ be the coprojection. For each $v$ in $V$ we define $f_v:k\to V$ by $f_v(1)=v$, and we check that the $f_v$ induce a map $f:W\to V$. For each $v$ in $V$ we put $g(v):=p_v(1)$. We leave it to the reader to verify that $g$ is linear, and that $f$ and $g$ are mutual inverses. This proves \eqref{pdbv}. 
-\end{proof}
+We claim 
+\begin{equation}\label{pddb2}
+\pp^\ddagger(\beta)(M)\simeq M^*, 
+\end{equation} 
+where $M^*$ is the dual of $M$. 
 
-\begin{proof}[Proof of \eqref{podbv}] 
-By Theorem 2.3.3 (i) p.~52 of the book, we have 
+To prove \eqref{pddb2}, set 
 $$
-\pp^{\op\dagger}(\gamma)(V)\simeq\colim_{(k\to V)\in(J^{\op})_V}k\simeq\colim_{(V\to k)\in J^V}k\simeq\colim_{(k\to V^*)\in J_{V^*}}k\simeq V^*,
+M':=\lim_{(M\to R)\in J^M}R=\lim_{(x:R\to M)\in(J^{\op})_M}R\in\C, 
 $$ 
-the last isomorphism following from \eqref{pdbv}. This proves \eqref{podbv}.
-\end{proof}
-
-\begin{proof}[Proof of \eqref{poddbv}] 
-By Theorem 2.3.3 (ii) p.~52 of the book, we have $\pp^{\op\ddagger}(\gamma)(V)\simeq\lim\alpha$, where $\alpha$ is the functor \eqref{avc} viewed as a functor from $V^{\op\op}$ to $\C$. Then the vectors of $\lim\alpha$ are the families of scalars $(\lambda_v)_{v\in V}$ satisfying $\lambda_{\mu v}=\mu\lambda_v$ for all $\mu$ in $k$ and all $v$ in $V$, so that we get $\lim\alpha\simeq V^*$. This proves \eqref{poddbv}.
-\end{proof}
-As indicated, Proposition~\ref{leinster} follows immediately from \eqref{pdbv}, \eqref{podbv}, and \eqref{poddbv}. 
-\end{proof}
+and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^*$. We define a family of linear maps $\Phi_x:M^*\to M'$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb2}. 
 
 %% 
 
@@ -1725,7 +1691,7 @@ On the one hand we have
 $$
 \pi_0(I):=\Ob(I)/\!\!\sim\ , 
 $$
-where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54
+where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54 of the book 
 $$
 \colim\Delta(S)\simeq(\Ob(I)\times S)/\!\!\approx\ ,
 $$
