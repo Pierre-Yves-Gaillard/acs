@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0281)
+% about "categories and sheaves" (version-0282)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1793,23 +1793,25 @@ the first bijection being a particular case of \eqref{cue} p.~\pageref{cue}, and
 
 \begin{s} 
 P.~58, implication (vi) $\then$ (i) of Proposition 2.5.2. Here is a slightly stronger statement:
-%
+
 \begin{prop} 
 If $\pp:J\to I$ is a functor, then the obvious map
+%
 \begin{equation}\label{om}
-L_i:=\colim\Hom_I(i,\pp)\to\pi_0(J^i)
+\colim\Hom_I(i,\pp)\to\pi_0(J^i)
 \end{equation}
+%
 is bijective. 
 \end{prop}
-% 
-\begin{proof}
-For $j$ in $J$ let 
+
+\begin{proof} 
+Let $L_i$ be the left-hand side of \eqref{om}, and, for $j$ in $J$, let 
 $$
 p_j:\Hom_I(i,\pp(j))\to L_i
 $$
 be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
 $$
-\Ob(J^i)\to L_i,\quad\big(j,s:i\to\pp(j)\big)\mapsto p_j(s)
+\Ob(J^i)\to L_i,\quad\Big(j,s:i\to\pp(j)\Big)\mapsto p_j(s)
 $$
 factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}).
 \end{proof}
@@ -1832,7 +1834,24 @@ P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedg
 \Hom_{\C^\wedge}(A,B)\xrightarrow\sim\lim_{(X\to A)\in\C_A}B(X)\text{ for all }B\in\C^\wedge. 
 \end{equation}
 
-Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.)
+Clearly, \eqref{263b} implies \eqref{263a} and \eqref{263c}, and the proof of \eqref{263b} is straightforward. (See \S\ref{c38} p.~\pageref{c38} for the relationship between \eqref{263a}, \eqref{263b}, and \eqref{263c}.) 
+
+For the sake of completeness let us prove \eqref{263b}. Let $S$ be the left-hand side of \eqref{263b}, and let 
+$$
+p(X\to A):\Hom_\C(Y,X)\to S
+$$ 
+be the coprojections. The implicit map $f:S\to A(Y)$ is induced by the maps 
+$$
+f(X\to A):\Hom_\C(Y,X)\to S
+$$
+$$
+{}\kern52mm(Y\to X)\mapsto(Y\to X\to A).
+$$ 
+We define $g:A(Y)\to S$ by 
+$$
+g(Y\to A)=p(Y\to A)(\id_Y),
+$$ 
+and leave it to the reader to check that $f$ and $g$ are mutually inverse bijections.
 \end{s}
 
 %
