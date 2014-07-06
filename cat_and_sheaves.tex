@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0280)
+% about "categories and sheaves" (version-0281)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -1138,7 +1138,6 @@ If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diag
 $$
 (X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)
 $$
-%where $X$ is an object of $\C$ and $p\in\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)$ 
 such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 
@@ -1718,8 +1717,7 @@ A\in\C'\xleftarrow{F}\C\xrightarrow{G}\C''\ni B,
 we have 
 %
 \begin{equation}\label{241} 
-\colim_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq 
-\colim_{(X,a)\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B). 
+\colim_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\simeq\colim_{(X,a)\in\C^A}\Hom_{\C''}(G(X),B). 
 \end{equation} 
 %
 Here 
@@ -1747,7 +1745,7 @@ One easily checks that these maps define inverse bijections between $L$ and $R$.
 \begin{proof}[Second Proof]
 Put 
 $$
-Q_1:=\colim_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X)),\quad Q_2:=\colim_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B).
+Q_1:=\colim_{(G(X)\to B)\in\C_B}\Hom_{\C'}(A,F(X)),\quad Q_2:=\colim_{(A\to F(X))\in\C^A}\Hom_{\C''}(G(X),B).
 $$ 
 We must prove that there is a natural bijection $Q_1\simeq Q_2$. Proposition 2.4.1 p.~54 of the book furnishes sets $S_1$ and $S_2$, and equivalence relations $R_1$ and $R_2$ on $S_1$ and $S_2$ respectively, such that $Q_i\simeq S_i/R_i$ for $i=1,2$. We shall prove that there is a natural bijection $S_1\simeq S_2$, and leave it to the reader to check that it induces a bijection $Q_1\simeq Q_2$. We have 
 $$
@@ -1763,11 +1761,11 @@ $$
 $$
 
 $$
-\simeq\bigsqcup_{X\in\C}\quad\bigsqcup_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B)
+\simeq\bigsqcup_{X\in\C}\quad\bigsqcup_{(A\to F(X))\in\C^A}\Hom_{\C''}(G(X),B)
 $$
 
 $$
-\bigsqcup_{(A\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),B)=:S_2.
+\bigsqcup_{(A\to F(X))\in\C^A}\Hom_{\C''}(G(X),B)=:S_2.
 $$
 \end{proof}
 
@@ -2449,11 +2447,11 @@ Y\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X',
 $$ 
 Isomorphism (\ref{241}) p.~\pageref{241} gives 
 $$
-\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X').
+\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{(Y\to X)\in\C^Y}\Hom_{\C'}(F(X),X').
 $$ 
 The identity of $Y$ being an initial object of $\C^Y$, we have 
 $$
-\colim_{(Y\to X)\in(\C^Y)^{\op}}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X'),
+\colim_{(Y\to X)\in\C^Y}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X'),
 $$ 
 and thus
 %
@@ -6646,7 +6644,7 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
 %
 
-\begin{s}%\label{1432b}
+\begin{s}
 Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
 %
 \begin{cor}\label{1432}
