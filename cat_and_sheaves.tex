@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0286)
+% about "categories and sheaves" (version-0287)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2455,7 +2455,18 @@ be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}
 \end{proof}
 \end{s}
 
-%
+% 
+
+For the reader's convenience we reproduce Definition 3.3.1 p.~81. 
+\begin{df}
+Let $F:\C\to\C'$ be a functor.
+
+\nn\emph{(i)} We say that $F$ is \emph{right exact}\index{right exact} if the category $\C_{X'}$ is filtrant for all $X'$ in $\C'$. 
+
+\nn\emph{(ii)} We say that $F$ is \emph{left exact}\index{left exact} if $F^{\op}:\C^{\op}\to\C'^{\op}$ is right exact, or equivalently if the category $\C^{X'}$ is cofiltrant for all $X'$ in $\C'$.
+
+\nn\emph{(iii)} We say that $F$ is \emph{exact}\index{exact functor} if it is both right and left exact.
+\end{df}
 
 \begin{s} 
 P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
@@ -2471,28 +2482,28 @@ $$
 $$ 
 is bijective. Replacing Setting (\ref{241s}) p.~\pageref{241s} with 
 $$
-Y\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X', 
+X\in\C\xleftarrow{\id_\C}\C\xrightarrow{F}\C'\ni X', 
 $$ 
 Isomorphism (\ref{241}) p.~\pageref{241} gives 
 $$
-\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\colim_{(Y\to X)\in\C^Y}\Hom_{\C'}(F(X),X').
+\colim_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)\simeq\colim_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X').
 $$ 
-The identity of $Y$ being an initial object of $\C^Y$, we have 
+The identity of $X$ being an initial object of $\C^X$, we have 
 $$
-\colim_{(Y\to X)\in\C^Y}\Hom_{\C'}(F(X),X')\simeq\Hom_{\C'}(F(Y),X'),
+\colim_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X')\simeq\Hom_{\C'}(F(X),X'),
 $$ 
 and thus
 %
 \begin{equation}\label{332} 
-\colim_{(X\to X')\in\C_{X'}}\Hom_\C(Y,X)\simeq\Hom_{\C'}(F(Y),X').
+\colim_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)\simeq\Hom_{\C'}(F(X),X').
 \end{equation} 
 %
 We have bijections 
 $$ 
-\Hom_{\C'}(F(\colim\alpha),X')\simeq\colim_{(X\to X')\in\C_{X'}}\Hom_\C(\colim\alpha,X)
+\Hom_{\C'}(F(\colim\alpha),X')\simeq\colim_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\colim\alpha,Y)
 $$
 $$
-\xr\sim\colim_{(X\to X')\in\C_{X'}}\lim\Hom_\C(\alpha,X)\xr\sim\lim\colim_{(X\to X')\in\C_{X'}}\Hom_\C(\alpha,X)
+\xr\sim\colim_{(F(Y)\to X')\in\C_{X'}}\lim\Hom_\C(\alpha,Y)\xr\sim\lim\colim_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\alpha,Y)
 $$
 $$
 \simeq\lim\Hom_{\C'}(F(\alpha),X'). 
@@ -3330,7 +3341,7 @@ Since there are only countably many finite categories up to isomorphism, (b) is 
 Here is a minor variant of Step (i) of the proof of Theorem 6.1.8. Recall the statement: 
 
 \begin{lem} 
-If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha$ is in$\C^\wedge$, then $\C_A$ is filtrant. 
+If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha$ is in $\C^\wedge$, then $\C_A$ is filtrant. 
 \end{lem} 
 
 \begin{proof}
