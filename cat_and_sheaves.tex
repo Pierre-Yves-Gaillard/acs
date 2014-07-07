@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0285)
+% about "categories and sheaves" (version-0286)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -12,7 +12,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -2293,30 +2293,37 @@ by induction on the cardinal of $S$, and to see that this implies the claim. q.e
 
 %
 
-\begin{s} 
+\begin{s}% old version:  
+%https://docs.google.com/document/d/1SnpQds-AJDOA5hF38N8pMusBqYRe7atCJZkEHpBIgL0/edit
+
 P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor variant). 
-%
-\begin{lem} 
-Let $\alpha$ and $\beta$ be functors from $I$ to $\Set$, where $I$ is a small filtrant category; let $f$ and $g$ be morphisms from $\alpha$ to $\beta$; for each $i$ in $I$ let $\gamma(i)\subset\alpha(i)$ be the kernel of $(f_i,g_i)$; let 
+
+To prove that filtrant small inductive limits in $\Set$ commute with finite projective limits, one can argue as follows. 
+
+Let $I$ be a filtrant small category, let $J$ be a finite category, let $\alpha:I\times J^{\op}\to\Set$ be a functor, and put 
 $$
-a_i:\alpha(i)\to X:=\colim\alpha,\quad 
-b_i:\beta(i)\to Y:=\colim\beta,\quad 
-c_i:\gamma(i)\to Z:=\colim\gamma
-$$ 
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}); let $F,G:X\to Y$ be the obvious maps; and let $U\subset X$ be the kernel of $(F,G)$. Then the natural map $\lambda:Z\to U$ is bijective.
-\end{lem}
-%
-\begin{proof}
-Put $\ds A:=\bigsqcup_{i\in I}\,\alpha(i)$. We shall define maps $\mu'$ and $\mu$ such that the diagram
+X_{ij}:=\alpha(i,j),\quad Y_i:=\lim_jX_{ij},\quad Y:=\colim_iY_i,
 $$
-\begin{tikzcd}
-A\ar[two heads]{r}{a}&X\\ 
-a^{-1}(U)\ar[hook]{u}\ar{d}[swap]{\mu'}\ar[two heads]{r}&U\ar[hook]{u}\ar[dashed]{dl}{\mu}\\ 
-Z
-\end{tikzcd}
+$$
+Z_j:=\colim_iX_{ij},\quad Z:=\lim_jZ_j.
 $$ 
-commutes, $a$ being the natural map. Let $(i,x)$ be in $a^{-1}(U)$, with $x$ in $\alpha(i)$. This means that we have $F(a_i(x))=G(a_i(x))$. As $I$ is filtrant, there is a morphism $s:i\to j$ in $I$ such that $f_j(\alpha(s)(x))=g_j(\alpha(s)(x))$, that is $\alpha(s)(x)$ is in $\gamma(j)$. Put $\mu'(i,x):=c_j(\alpha(s)(x))$. One easily checks that there is exactly one map $\mu$ which makes the above diagram commutative, and that $\lambda$ and $\mu$ are inverse bijections.
-\end{proof}
+We claim that the natural map $f:Y\to Z$ is bijective. 
+
+To prove this, we define $g:Z\to Y$ and leave it to the reader to check that $f$ and $g$ are mutually inverse bijections. 
+
+We define $g:Z\to Y$ as follows: Let 
+$$
+\eta_i:Y_i\to Y,\quad\zeta_{ij}:X_{ij}\to Z_j
+$$ 
+be the coprojections. It is easy to see that, for each $z=(z_j)$ in $Z$, there is a pair 
+$$
+(i,(x_{ij})_j)\in\Ob(I)\times\prod_jX_{ij}
+$$ 
+such that 
+$$
+z_j=\eta_{ij}(x_{ij})\ \forall\ j,\quad(x_{ij})_j\in Y_i. 
+$$ 
+It is also easy to see  that the element $\eta_i((x_{ij})_j)$ in $Y$ does not depend on the choice of the above pair $(i,(x_{ij})_j)$, so that we can set $g(z):=\eta_i((x_{ij})_j)$. 
 \end{s}
 
 %
@@ -4602,19 +4609,8 @@ $$
 l_0\circ a_0=l_0\circ\lambda^{-1}\circ a_1=l_1\circ\lambda\circ\lambda^{-1}\circ a_1=l_1\circ a_1=\pp.
 $$ 
 q.e.d.
-
-%
-
-\begin{comment}
-Then the diagram 
-$$
-\begin{tikzcd}
-0\ar{r}&Y\ar[equal]{d}\ar{r}{(b,-c)}&Y_0\oplus G_i\ar[equal]{d}\ar{r}{(l_0,\pp)}&X\\
-&Y\ar{r}[swap]{(b,-c)}&Y_0\oplus G_i\ar{r}[swap]{(\lambda,a_1)}&Y_1\ar{r}\ar{u}[swap]{l_1}&0
-\end{tikzcd}
-$$ 
-commutes and has exact rows. By the Five Lemma, $l_1$ is a monomorphism. As $l_1\circ\lambda=l_0$ is a monomorphism, so is $\lambda$. Lemma 8.3.11 (a) (i) p.~180 of the book (stated as Lemma~\ref{8311} p.~\pageref{8311}) implies that $c$ is also a monomorphism.
-\end{comment}
+ 
+% https://docs.google.com/document/d/1r1eBAIdNxQNO4uJ7N1Ki3ewyPQBoYIxLLq5I54ciVa8/edit
 
 %%%
 
@@ -6947,19 +6943,7 @@ for all $(U,b)$ as above.
 Moreover, a morphism $u:A\to U$ in $(\oo{Op}_X)^\wedge$ with $U$ in $\oo{Op}_X$ is a local epimorphism if and only if for all $x$ in $U$ there is a $V$ in $\oo{Op}_X$ such that $x\in V$ and $A(V)\ne\varnothing$. 
 \end{s}
 
-%
-
-\begin{comment}
-\begin{s}\label{16111}
-P.~394, Proposition 16.1.11 (i). More generally, if $A\to D, B\to D$, and $C\to D$ are morphisms in $\C^\wedge$, and if $f:B\to C$ is a local epimorphism, then 
-$$
-A\times_Df:A\times_DB\to A\times_DC
-$$ 
-is a local epimorphism.
-\end{s}
-\end{comment}
-
-%
+% https://docs.google.com/document/d/1vpjtCfl-qZCuuI-wkR5rbsav31DfDsZx1mQteXzu-UM/edit
 
 \begin{s}
 For any universe $\U$, any $\U$-small category $\C$, and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $\cc M(\Gamma,\U)$ and $\cc I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\cc E(\Gamma,\U)$ (see Notation~\ref{cce} p.~\pageref{cce}). Corollary \ref{leu} p. \pageref{leu} implies:
@@ -7005,104 +6989,7 @@ follows from Lemma 16.2.4 (vii) p. 396.
 P.~398, proof of Lemma 16.2.7: see \S\ref{fpl} p.~\pageref{fpl}.
 \end{s}
 
-%
-
-\begin{comment}
-\begin{s}
-P.~398, proof of Lemma 16.2.8. Recall that $\C$ is a small category. Here is a variant of the two sentences ``Let us consider the set $\cc S$ of $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism and $w:S\to A$ is a local isomorphism. By Proposition 5.2.9 and the result of Exercise 5.1, the set of quotients of any object of $\C^\wedge$ is small, and hence $\cc S$ is a small set.'' 
-
-For any set $T$ let $Q_T$ be the set of those sets $U$ for which there is an equivalence relation $R$ on $T$ such that $U$ is the set of $R$-equivalence classes in $T$. 
-
-Let $A$ be in $\C^\wedge$, and let $\Set(A)$ be the full subcategory of $\Set$ whose (small) set of objects is 
-$$
-\bigcup_{X\in\C}Q_{A(X)}.
-$$ 
-Then $\C^\wedge(A):=\Set(A)^{\C^{\op}}$ is a small full subcategory of $\C^\wedge$ containing $A$, and the sets of quotients of $A$ in $\C^\wedge(A)$ and in $\C^\wedge$ are in bijection. In particular, these sets are small. 
-
-Let $\cc S$ be the set of those quadruples $(J,S,v,w)$ where $J$ is a subset of $I$, $v:C_J\to S$ is an epimorphism in $\C^\wedge(C_J)$, and $w:S\to A$ is a local isomorphism. Then $\cc S$ is small.
-\end{s}
-
-%
-
-\begin{s} 
-P.~399, beginning of Section 16.3. The category $\cc{LI}$ is a left multiplicative system by Lemma 16.2.6 p.~397 of the book. The category $\cc{LI}_A$ is cocofinally small by Lemma 16.2.8 p.~398 of the book. 
-
-Moreover, any functor $F:\C\to\C'$ induces a morphism of functors 
-$$
-\begin{tikzcd}
-%
-\C^{\op}\times\C\ar{rrrr}{\Hom_\C}&&\ar{d}&&\Set\\ 
-\C^{\op}\times\C\ar{rrrr}[swap]{\Hom_{\C'}(F(\ ),F(\ ))}&&{}&&\Set.
-%
-\end{tikzcd}
-$$
-If we apply this observation to the functor $Q:\C^\wedge\to(\C^\wedge)_{\cc{LI}}$, we get a morphism of functors 
-$$
-\Hom_{\C^\wedge}\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(\ )),
-$$ 
-and thus, for each $A$ in $\C^\wedge$, a morphism of functors 
-$$
-\Hom_{\C^\wedge}(\ ,A)\to\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(\ ),Q(A))=:A^a.
-$$ 
-This implies that the set 
-$$
-A^a(U):=\Hom_{(\C^\wedge)_{\cc{LI}}}(Q(U),Q(A))
-$$ 
-depends functorially on $U\in\C$.
-\end{s}
-
-%
-
-\begin{s} 
-P.~400, proof of Lemma 16.3.1 (additional details): 
-
-For $(B\xr s U)$ in $\mc{LI}_U$ let 
-$$
-i(s):\Hom_{\C^\wedge}(B,A)\to A^a(U)\simeq\colim_{(B\to U)\in\cc{LI}_U}\Hom_{\C^\wedge}(B,A)
-$$ 
-be the coprojection. We start with the diagram 
-$$
-\begin{tikzcd}
-%
-V\ar{r}{t}&B\ar{d}[swap]{u}\ar{r}{s}&U\ar{d}{i(s)(u)}\\ 
-{}&A&A^a,
-%
-\end{tikzcd}
-$$ 
-and we claim that the diagram 
-\begin{equation}\label{1631a}
-\begin{tikzcd}
-%
-B(V)\ar{d}[swap]{u\circ}\ar{r}{s\circ}&U(V)\ar{d}{i(s)(u)\circ}\\ 
-A(V)\ar{r}[swap]{i(\id_V)}&A^a(V)
-%
-\end{tikzcd}
-\end{equation} 
-commutes. There is a commutative diagram 
-$$
-\begin{tikzcd}
-%
-V\ar{dd}[swap]{t}\ar[equal]{r}&V\ar{d}[swap]{w}\ar{r}{\id_V}&V\ar[equal]{d}\\ 
-{}&B'\ar{d}[swap]{a}\ar{r}{s'}&V\ar{d}{s\circ t}\\ 
-B\ar[equal]{r}&B\ar{r}[swap]{s}&U,
-%
-\end{tikzcd}
-$$ 
-such that the bottom square is cartesian, and $s'$ is a local isomorphism by Lemma 16.2.4 (i) p.~395 of the book. Consider the diagram 
-%
-\begin{equation}\label{1631b}
-\begin{tikzcd}
-\Hom_{\C^\wedge}(V,A)\ar[equal]{r}&\Hom_{\C^\wedge}(V,A)\ar{r}{i(\id_V)}&A^a(V)\ar[equal]{d}\\ 
-{}&\Hom_{\C^\wedge}(B',A)\ar{u}{\circ w}\ar{r}{i(s')}&A^a(V)\\ 
-\Hom_{\C^\wedge}(B,A)\ar{uu}{\circ t}\ar[equal]{r}&\Hom_{\C^\wedge}(B,A)\ar{u}{\circ a}\ar{r}[swap]{i(s)}&A^a(U)\ar{u}[swap]{A^a(s\circ t)=\circ s\circ t}.
-\end{tikzcd}
-\end{equation}
-%
-The equality $A^a(s\circ t)=\circ s\circ t$ holds by the Yoneda Lemma, the bottom square commutes by definition of $A^a(s\circ t)$, and the top square commutes because $w$ can be viewed as a morphism $\id_V\to s'$ in $\mc{LI}_V$. The commutativity of \eqref{1631b} for all $t$ implies the commutativity of \eqref{1631a} for all $u$. q.e.d.
-\end{s}
-\end{comment}
-
-%
+% https://docs.google.com/document/d/1WVqlvFLqBG4k-afo0HVq-VV57s9WLch15mOq5CyTTg4/edit
 
 \begin{s}
 Right after Display (16.3.1) p.~399 of the book, in view of the natural isomorphism 
