@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0283)
+% about "categories and sheaves" (version-0284)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2217,20 +2217,16 @@ As observed in the book (see also \S\ref{c271b} p.~\pageref{c271b}):
 The functor $\widehat F$ commutes with small inductive limits.
 \end{rk} 
 
-Let $X$ be in $\C$ and $A$ be in $\C^\wedge$. We have 
+Let $X$ be in $\C$ and $A$ be a terminal object of $\C^\wedge$. We have 
 $$
-\widehat F(A)(F(X))\simeq\col_{Y\in\C}\Hom_{\C'}(F(X),F(Y)).
+\widehat F(A)(F(X))\simeq\bigsqcup_{Y\in\C}\Hom_{\C'}(F(X),F(Y)).
 $$ 
-Let 
-$$
-p_Y:\Hom_{\C'}(F(X),F(Y))\to\widehat F(A)(F(X))
-$$ 
-be the coprojection. 
+Let us identify these two sets. 
 
 \begin{rk}\label{272b}
-There is a unique functor $G:\C\to\C'_{\widehat F(A)}$ such that we have, in the above notation, 
+If $A$ is a terminal object of $\C^\wedge$, then there is a unique functor $G:\C\to\C'_{\widehat F(A)}$ such that we have, in the above notation, 
 $$
-G(X):=\big(p_X(\id_{F(X)}):F(X)\to\widehat F(A)\big).
+G(X):=\id_{F(X)}\in\Hom_{\C'}(F(X),F(X)).
 $$ 
 Moreover, the composition of $G$ with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
 \end{rk} 
