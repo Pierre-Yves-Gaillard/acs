@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0284)
+% about "categories and sheaves" (version-0285)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2239,10 +2239,12 @@ The proof is obvious.
 
 \begin{s} 
 P.~64. It might be worth displaying the formula 
+%
 \begin{equation}\label{275}
 \widehat F(A)(X')\simeq\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\simeq
-\colim_{(X'\to F(X))\in\C^{X'}}A(X)
-\end{equation}
+\colim_{(X'\to F(X))\in\C^{X'}}A(X),
+\end{equation} 
+%
 which is contained in the proof of Proposition 2.7.5 p.~64 of the book, and which follows from Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pageref{246}). Recall that $F:\C\to\C'$ is a functor of small categories, that $A$ is in $\C^\wedge$, and that $X'$ is in $\C'$. 
 
 For the reader's convenience we reproduce the statement of Proposition 2.7.5: 
@@ -2253,14 +2255,22 @@ If $F:\C\to\C'$ is a functor of small categories, then the functors $\widehat F$
 
 This follows from \eqref{275}.
 \end{s}
+
 %
 
 \begin{s}
 P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a small category, if $A$ is in $\C^\wedge$, if $B$ is a terminal object of $(\C_A)^\wedge$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
-\begin{equation}\label{1725}
-\widehat F(B)(X)\simeq A(X).
-\end{equation}
-Indeed, \eqref{275} implies $\widehat F(B)(X)\simeq\colim\alpha_X$ where $\alpha_X:(\C_A)^X\to\Set$ is the constant functor equal to $\pt$, Lemma 2.1.12 p.~41 of the book entails $\colim\alpha_X\simeq\pi_0((\C_A)^X)$, and the isomorphism $\pi_0((\C_A)^X)\simeq A(X)$ is easily checked.
+$$
+\widehat F(B)\simeq A.
+$$ 
+Indeed, we have 
+$$
+\widehat F(B)(X)\simeq\colim_{((Y\to A)\to B)\in(\C_A)_B}\Hom_\C(X,F(Y\to A))
+$$
+$$
+\simeq\colim_{(Y\to A)\in\C_A}\Hom_\C(X,Y)\simeq A(X),
+$$ 
+the last isomorphism following from \eqref{263b} p.~\pageref{263b}. 
 \end{s}
 
 %%
