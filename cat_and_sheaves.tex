@@ -2037,7 +2037,7 @@ h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to 
 %
 &\simeq h(\C)^\ddagger(F)(B)\\ \\ 
 %
-&\simeq h(\C)^\ddagger(F)\Big(j((\C^\wedge)_A)(B\to A)\Big). 
+&\simeq h(\C)^\ddagger(F)\Big(j\big((\C^\wedge)_A\big)(B\to A)\Big). 
 % 
 \end{align*} 
 \end{proof}
@@ -2122,7 +2122,7 @@ $$
 \A\ar[equal]{r}&\A\ar[equal]{r}&\A\ar[equal]{r}&\A.
 \end{tikzcd}
 $$ 
-(See \eqref{lambda} for the definition of $\lambda$.) Let $B$ be in $\C^\wedge$. We claim 
+(See \eqref{lambda} p.~\pageref{lambda} for the definition of $\lambda$.) Let $B$ be in $\C^\wedge$. We claim 
 \begin{equation}\label{prepa3}
 h^\dagger(j^\dagger(G))(B)\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)).
 \end{equation} 
@@ -2179,11 +2179,11 @@ where
 
 Recall that $F:\C\to\C'$ is a functor of small categories. The formula 
 $$
-\widehat F(A)(V)=\colim_{(U\to A)\in\C_A}\Hom_{\C'}(V,F(U))
+\widehat F(A)(X')=\colim_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))
 $$
 may also be written as 
 $$
-\widehat F(A)=\icolim_{(U\to A)\in\C_A}F(U).
+\widehat F(A)=\icolim_{(X\to A)\in\C_A}F(X).
 $$
 It might be worth stating explicitly the isomorphism 
 $$
@@ -2211,35 +2211,31 @@ $$
 the last isomorphism following from \eqref{263b} p.~\pageref{263b}.
 \end{proof}
 
-As observed in the book:
+As observed in the book (see also \S\ref{c271b} p.~\pageref{c271b}):
 
 \begin{rk}\label{272}
 The functor $\widehat F$ commutes with small inductive limits.
-\end{rk}
+\end{rk} 
 
-Recall that $F:\C\to\C'$ is a functor of small categories, and that its Yoneda extension $\widehat F:\C^\wedge\to\C'^\wedge$ satisfies 
+Let $X$ be in $\C$ and $A$ be in $\C^\wedge$. We have 
 $$
-\widehat F(A)(U')\simeq\col_{(U\to A)\in\C_A}\Hom_{\C'}(U',F(U)).
-$$ 
-
-\begin{rk}\label{272b}
-If $A$ is a terminal object of $\C^\wedge$, then there is a unique functor $G:\C\to\C'_{\widehat F(A)}$ whose composition with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
-\end{rk}
-
-\begin{proof}
-The uniqueness being obvious, let us prove the existence. We have 
-$$
-\widehat F(A)(F(U))\simeq\col_{V\in\C}\Hom_{\C'}(F(U),F(V)).
+\widehat F(A)(F(X))\simeq\col_{Y\in\C}\Hom_{\C'}(F(X),F(Y)).
 $$ 
 Let 
 $$
-p_V:\Hom_{\C'}(F(U),F(V))\to\widehat F(A)(F(U))
+p_Y:\Hom_{\C'}(F(X),F(Y))\to\widehat F(A)(F(X))
 $$ 
-be the coprojection, and define $G$ by 
+be the coprojection. 
+
+\begin{rk}\label{272b}
+There is a unique functor $G:\C\to\C'_{\widehat F(A)}$ such that we have, in the above notation, 
 $$
-G(U):=\big(p_U(\id_{F(U)}):F(U)\to\widehat F(A)\big).
+G(X):=\big(p_X(\id_{F(X)}):F(X)\to\widehat F(A)\big).
 $$ 
-\end{proof}
+Moreover, the composition of $G$ with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
+\end{rk} 
+
+The proof is obvious. 
 
 %%
 
