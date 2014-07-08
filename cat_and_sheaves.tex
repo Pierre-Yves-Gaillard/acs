@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0292)
+% about "categories and sheaves" (version-0293)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2899,11 +2899,11 @@ for any $Z$ in $\C$. Lemma \ref{imset} implies
 \end{equation}
 
 \begin{df}\label{dci}
-In the above setting, the {\em coimage} \index{coimage} of $f$ is the object $\Coim f$ in $\C^\vee$ defined by 
+In the above setting, the {\em coimage} \index{coimage} of $f$ is the object $\Coim f$ of $\C^\vee$ defined by 
 $$ 
 (\Coim f)(Z):=\Hom_{\C^\wedge}(\IM\hy(f),\hy(Z))
 $$ 
-for all $Z$ in $\C$, and the {\em image} \index{image} of $f$ is the object $\Ima f$ in $\C^\wedge$ defined by 
+for all $Z$ in $\C$, and the {\em image} \index{image} of $f$ is the object $\Ima f$ of $\C^\wedge$ defined by 
 $$ 
 (\Ima f)(Z):=\Hom_{\C^\vee}(\ky(Z),\IM\ky(f)) 
 $$ 
@@ -2964,10 +2964,18 @@ $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$.
 A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism} \index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ is an isomorphism.
 \end{df} 
 
-The lemma below obvious:
+The lemma below is obvious:
 
 \begin{lem}\label{strepi}
-A morphism $f:X\to Y$ in a category $\C$ is a strict epimorphism if and only if, for all $Z$ in $\C$, the map $\circ f:\Hom_\C(Y,Z)\to\Hom_\C(X,Z)$ induces a bijection $\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z)$. By Proposition~\ref{epimono} p.~\pageref{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. Moreover, a strict epimorphism is an epimorphism. 
+A morphism $f:X\to Y$ in a category $\C$ is a strict epimorphism if and only if, for all $Z$ in $\C$, the map 
+$$
+\circ f:\Hom_\C(Y,Z)\to\Hom_\C(X,Z)
+$$ 
+induces a bijection 
+$$
+\Hom_\C(Y,Z)\xr\sim(\Coim f)(Z).
+$$ 
+By Proposition~\ref{epimono} p.~\pageref{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. Moreover, a strict epimorphism is an epimorphism. 
 \end{lem} 
 
 %%
@@ -4690,8 +4698,7 @@ $$
 (\C_0)^\wedge\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wedge
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pageref{gcsbc} and Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}). %, and Remark 1.4.13 p.~27 of the book. 
- As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
+quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pageref{gcsbc} and Theorem 5.3.6 p.~124 (stated at the beginning of Section~\ref{536} p.~\pageref{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
 \end{proof}
 \end{s}
 
