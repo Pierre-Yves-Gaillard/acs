@@ -1,38 +1,38 @@
-% about "categories and sheaves" (version-0295)
+% about "categories and sheaves" (version-0296)
 % !TEX encoding = UTF-8 Unicode
-%\RequirePackage[l2tabu,orthodox]{nag}
-\documentclass[12pt]{article}%\pagestyle{headings}
-\addtolength{\parskip}{.5\baselineskip}%\addtocounter{section}{-2}
+% old version:
+% https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
+\documentclass[12pt]{article}
+\addtolength{\parskip}{.5\baselineskip}
 \usepackage[a4paper,headheight=14.5pt]{geometry}
-%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}%\usepackage{bm}
-\usepackage[T1]{fontenc}%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{amssymb,amsmath}
 \usepackage{makeidx}
-\usepackage{tikz-cd}%\usepackage{tikz}
+\usepackage{tikz-cd}
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
 %\usepackage{comment}
-\usepackage{fancyhdr}%\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
-\pagestyle{fancy}%\pagestyle{empty}
+\pagestyle{fancy}
 
-\newtheorem{thm}{Theorem}%\newtheorem{mt}[thm]{Metatheorem}
+\newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
-\newtheorem{df}[thm]{Definition}%\newtheorem{defn}[thm]{Definition}
+\newtheorem{df}[thm]{Definition}
 \newtheorem{nota}[thm]{Notation}
 
 \theoremstyle{remark}
 \newtheorem{claim}[thm]{Claim}
 \newtheorem{cond}[thm]{Condition}
-\newtheorem{conv}[thm]{Convention}%\newtheorem{q}[thm]{Question}
+\newtheorem{conv}[thm]{Convention}
 \newtheorem{rk}[thm]{Remark}
 
 \theoremstyle{definition}
-\newtheorem{s}[thm]{\S}%\newtheorem{cm}[thm]{C}%\newtheorem{defn}{Definition}
+\newtheorem{s}[thm]{\S}
 
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
 
@@ -43,7 +43,7 @@
 \newcommand{\mc}{\mathcal}
 \newcommand{\bb}{\mathbb}
 \newcommand{\oo}{\operatorname}
-%
+
 \newcommand{\A}{\mathcal A}
 \newcommand{\B}{\mathcal B}
 \newcommand{\C}{\mathcal C}
@@ -54,8 +54,8 @@
 \newcommand{\SSS}{\mathcal S}
 \newcommand{\U}{\mathcal U}
 \newcommand{\V}{\mathcal V}
-\newcommand{\Cat}{\mathbf{Cat}}%\newcommand{\CCat}{\mathbf{CCat}}
-\newcommand{\Set}{\mathbf{Set}}%\newcommand{\Set}{\boldmath{\mathrm{Set}}}%\newcommand{\Set}{\pmb{Set}}
+\newcommand{\Cat}{\mathbf{Cat}}
+\newcommand{\Set}{\mathbf{Set}}
 \newcommand{\pt}{\{\text{pt}\}}
 
 \newcommand{\ee}{\varepsilon}
@@ -63,12 +63,11 @@
 \newcommand{\epi}{\twoheadrightarrow}
 \newcommand{\fthat}{(f^t)\ \widehat{}\ }
 \newcommand{\HOM}{\cc H\!\mathit{om}}
-\newcommand{\mono}{\rightarrowtail}%\newcommand{\m}{\rightarrowtail}
+\newcommand{\mono}{\rightarrowtail}
 \newcommand{\incl}{\hookrightarrow}
 \newcommand{\parar}{\rightrightarrows}
-%\newcommand{\paralelarrows}{\rightrightarrows}% parallel
 \newcommand{\si}{\Leftarrow}
-\newcommand{\ssi}{\Leftrightarrow}%\Leftrightarrow\Rightarrow
+\newcommand{\ssi}{\Leftrightarrow}
 \newcommand{\then}{\Rightarrow}
 \newcommand{\xl}{\xleftarrow}
 \newcommand{\xr}{\xrightarrow}
@@ -78,13 +77,13 @@
 \newcommand{\ilim}{\operatornamewithlimits{\underset{\longrightarrow}{lim}}}
 \newcommand{\plim}{\operatornamewithlimits{\underset{\longleftarrow}{lim}}}
 % new
-\DeclareMathOperator*{\colim}{colim}%\DeclareMathOperator*{\coli}{colim}
+\DeclareMathOperator*{\colim}{colim}
 \DeclareMathOperator*{\col}{colim}
 \DeclareMathOperator*{\icolim}{``\colim"}
 \DeclareMathOperator*{\ic}{``\colim"}
 
 \DeclareMathOperator{\Ad}{Add}
-\DeclareMathOperator{\card}{card}%\DeclareMathOperator{\ca}{card}
+\DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\Coim}{Coim}
 \DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\D}{D}
@@ -96,7 +95,7 @@
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\jj}{j}
 \DeclareMathOperator{\Fct}{Fct}
-\DeclareMathOperator{\Hom}{Hom}%\DeclareMathOperator{\h}{Hom}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\RHom}{RHom}
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Ker}{Ker}
@@ -106,7 +105,7 @@
 \DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\PSh}{PSh}
-\DeclareMathOperator{\Qis}{Qis}%\DeclareMathOperator{\Set}{Set}
+\DeclareMathOperator{\Qis}{Qis}
 %\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,20 +115,20 @@
 \date{\today, \currenttime}
 
 \begin{document}
-%\fancyhf{}
+
 \maketitle
 
 \nn The last version of this text is available at
 
 \nn\href{http://iecl.univ-lorraine.fr/~Pierre-Yves.Gaillard/DIVERS/KS/}{http://iecl.univ-lorraine.fr/$\sim$Pierre-Yves.Gaillard/DIVERS/KS/}
 
-\tableofcontents\newpage%\vskip2em\hrule%\bigskip%\vskip1em
+\tableofcontents\newpage
 
-\nn The purpose of this text is to make a few comments about the book%\bigskip 
+\nn The purpose of this text is to make a few comments about the book 
 
-\textbf{Categories and Sheaves} by Kashiwara and Schapira, Springer 2006,%\bigskip 
+\textbf{Categories and Sheaves} by Kashiwara and Schapira, Springer 2006, 
 
-\nn referred to as ``the book'' henceforth.%\bigskip 
+\nn referred to as ``the book'' henceforth. 
 
 An important reference is
 
@@ -2985,7 +2984,7 @@ By Proposition~\ref{epimono} p.~\pageref{epimono}, this condition does not depen
 \begin{s}\label{515i}
 P.~115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details, and, for the reader's convenience we reproduce Proposition 5.1.5 (i) p.~115 of the book. 
 
-\begin{prop}
+\begin{prop}[Proposition 5.1.5 (i) p.~115] 
 If $\C$ is a category admitting finite inductive and projective limits, then the following five conditions on a morphism $f:X\to Y$ are equivalent:
 
 \nn\emph{(a)} $f$ is an epimorphism and $\Coim f\to\Ima f$ is an isomorphism,
@@ -3005,7 +3004,7 @@ Here are the additional details:
 
 \nn(c)$\ssi$(e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. By Proposition~\ref{epimono} p.~\pageref{epimono} Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pageref{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pageref{bra} 
 $$
-[P\parar X\xr xZ]\iff((\forall W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]).
+[P\parar X\xr xZ]\iff\Big((\forall\ W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]\Big).
 $$ 
 Implication $\si$ is clear. Let us prove $\then$. Assuming 
 $$
@@ -3033,7 +3032,11 @@ X\ar[two heads]{d}[swap]{b}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v
 I'_{a\circ u}\ar{ur}{d}\ar[two heads]{r}[swap]{c}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
-(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) By (the dual of) Proposition 5.1.2 (iv) p.~114 of the book, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a)$\then$(b), p.~115 of the book, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have $a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}$ and 
+(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pageref{fun}.) By (the dual of) Proposition 5.1.2 (iv) p.~114 of the book, it suffices to show that $a$ is an isomorphism. As $a\circ u$ is a strict epimorphism, Proposition 5.1.5 (i), (a)$\then$(b), p.~115 of the book, implies that $c$ is an isomorphism. We claim that $d\circ c^{-1}$ is inverse to $a$. We have 
+$$
+a\circ d\circ c^{-1}=c\circ c^{-1}=\id_{I'_v}
+$$ 
+and 
 $$
 d\circ c^{-1}\circ a\circ u=d\circ c^{-1}\circ c\circ b=d\circ b=u=\id_{I'_f}\circ u,
 $$ 
