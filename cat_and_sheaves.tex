@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0289)
+% about "categories and sheaves" (version-0290)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2769,7 +2769,13 @@ Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a
 
 \begin{proof} It is enough to prove (a)$\then$(c)$\Leftarrow$(b). 
 
-\nn(a)$\then$(c): Put $u:=(\ee_{P(X)})^{-1}\circ P(\ee_X)$. It suffices to show $u=\id_{P(X)}$. As we have $\ee_{P(X)}\circ u=P(\ee_X)$ by definition of $u$, and $P(\ee_X)\circ\ee_X=\ee_{P(X)}\circ\ee_X$ by naturality of $\ee$, we get 
+\nn(a)$\then$(c): Put $u:=(\ee_{P(X)})^{-1}\circ P(\ee_X)$. It suffices to show 
+%
+\begin{equation}\label{uidpx}
+u=\id_{P(X)}.
+\end{equation}
+%
+As we have $\ee_{P(X)}\circ u=P(\ee_X)$ by definition of $u$, and $P(\ee_X)\circ\ee_X=\ee_{P(X)}\circ\ee_X$ by naturality of $\ee$, we get 
 $$
 u\circ\ee_X=(\ee_{P(X)})^{-1}\circ P(\ee_X)\circ\ee_X=(\ee_{P(X)})^{-1}\circ\ee_{P(X)}\circ\ee_X=\ee_X,
 $$ 
@@ -2781,31 +2787,31 @@ As $P(\ee_X)$ is an epimorphism, this implies $P(u)=\id_{P^2(u)}$, and thus
 $$
 \ee_{P(X)}\circ u=P(u)\circ \ee_{P(X)}=\ee_{P(X)}.
 $$ 
-As $\ee_{P(X)}$ is an isomorphism, this implies $u=\id_{P(X)}$, as required.
+As $\ee_{P(X)}$ is an isomorphism, this implies \eqref{uidpx}, as required.
 
-\nn(b)$\then$(c): We shall use several times the fact that $P(\ee_X)$ is an isomorphism. Put $v:=P(\ee_X)^{-1}\circ\ee_{P(X)}$. It suffices to show $v=\id_{P(X)}$. We have 
-
+\nn(b)$\then$(c): We shall use several times the fact that $P(\ee_X)$ is an isomorphism. Put $v:=P(\ee_X)^{-1}\circ\ee_{P(X)}$. It suffices to show $v=\id_{P(X)}$. 
+%
+\begin{equation}\label{vidpx}
+v=\id_{P(X)}.
+\end{equation}
+%
+We have 
 $$
 P(\ee_X)\circ v\circ\ee_X=P(\ee_X)\circ P(\ee_X)^{-1}\circ\ee_{P(X)}\circ\ee_X=P(\ee_X)\circ\ee_X,
 $$ 
-
 $$
 v\circ\ee_X=\ee_X,
 $$
-
 $$
 P(v)\circ P(\ee_X)=P(\ee_X),
 $$
-
 $$
 P(v)=\id_{P^2(X)},
 $$
-
 $$
 \ee_{P(X)}\circ v=P(v)\circ\ee_{P(X)}=\ee_{P(X)}=\ee_{P(X)}\circ\id_{P(X)}.
 $$ 
-
-\nn As $\ee_{P(X)}$ is a monomorphism, this implies $v=\id_{P(X)}$, as required.
+As $\ee_{P(X)}$ is a monomorphism, this implies \eqref{vidpx}, as required. 
 \end{proof}
 
 Definition 4.1.1 p.~93 of the book can be stated as follows:
