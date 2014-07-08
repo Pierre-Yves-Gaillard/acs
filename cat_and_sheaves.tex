@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0293)
+% about "categories and sheaves" (version-0294)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2983,7 +2983,23 @@ By Proposition~\ref{epimono} p.~\pageref{epimono}, this condition does not depen
 \subsection{Brief Comments}
 
 \begin{s}\label{515i}
-P.~115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details:
+P.~115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details, and, for the reader's convenience we reproduce Proposition 5.1.5 (i) p.~115 of the book. 
+
+\begin{prop}
+If $\C$ is a category admitting finite inductive and projective limits, then the following five conditions on a morphism $f:X\to Y$ are equivalent:
+
+\nn\emph{(a)} $f$ is a strict epimorphism,
+
+\nn\emph{(b)} $\Coim f\xr\sim Y$,
+
+\nn\emph{(c)} the sequence $X\times_YX\parar X\to Y$ is exact,
+
+\nn\emph{(d)} there exists a pair of parallel arrows $g,h:Z\parar X$ such that $f\circ g=f\circ h$ and $\Coker(g,h)\to Y$ is an isomorphism,
+
+\nn\emph{(e)} for any $Z$ in $\C$, the set $\Hom_\C(Y,Z)$ is isomorphic to the set of morphisms $u:X\to Z$ satisfying $u\circ v_1=u\circ v_2$ for any pair of parallel morphisms $v_1,v_2:W\parar X$ such that $f\circ v_1=f\circ v_2$. 
+\end{prop} 
+
+Here are the additional details: 
 
 \nn(b)$\then$(a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) of the book implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
