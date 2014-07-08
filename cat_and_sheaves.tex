@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0287)
+% about "categories and sheaves" (version-0288)
 % !TEX encoding = UTF-8 Unicode
 %\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[12pt]{article}%\pagestyle{headings}
@@ -2523,7 +2523,15 @@ Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^
 
 We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
 
-By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\ref{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map $A(\colim_i X_i)\to\lim_iA(X_i)$ is bijective. Consider the diagram below, in which we abbreviate $(Y\to A)\in\C_A$ by $Y$: 
+By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\ref{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map 
+$$
+A(\colim_i X_i)\to\lim_iA(X_i)
+$$ 
+is bijective. Consider the diagram below, in which we abbreviate 
+$$
+(Y\to A)\in\C_A
+$$ 
+by $Y$: 
 $$
 \begin{tikzcd}
 \colim_Y\Hom_\C(\colim_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\colim_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
@@ -2648,7 +2656,7 @@ This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 
 
 \subsection{Six Closely Related Statements}
 
-For the reader's convenience we collect six statements closely related to Exercise 3.4 (i) p.~90. 
+For the reader's convenience we collect six statements closely related to Exercise 3.4 (i) p.~90 of the book. 
 
 \subsubsection{Proposition 2.1.10 p.~40}
 
@@ -2754,7 +2762,7 @@ Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a
 
 \nn{\em(a)} $\ee_{P(X)}$ is an isomorphism and $P(\ee_X)$ is an epimorphism,
 
-\nn{\em(b)} $P(\ee_X)$ is an isomorphism and $\ee_{P(X)}$ is an monomorphism,
+\nn{\em(b)} $P(\ee_X)$ is an isomorphism and $\ee_{P(X)}$ is a monomorphism,
 
 \nn{\em(c)} $\ee_{P(X)}$ and $P(\ee_X)$ are equal isomorphisms.
 \end{lem}
@@ -2796,7 +2804,7 @@ $$
 \ee_{P(X)}\circ v=P(v)\circ\ee_{P(X)}=\ee_{P(X)}=\ee_{P(X)}\circ\id_{P(X)}.
 $$ 
 
-\nn As $\ee_{P(X)}$ is an monomorphism, this implies $v=\id_{P(X)}$, as required.
+\nn As $\ee_{P(X)}$ is a monomorphism, this implies $v=\id_{P(X)}$, as required.
 \end{proof}
 
 Definition 4.1.1 p.~93 of the book can be stated as follows:
@@ -5115,7 +5123,7 @@ Assume (9.3.1) and let $\kappa$ be a cardinal. Then there exists an infinite reg
 
 \nn{\em(ii)} if $X\epi Y$ is an epimorphism and $X$ is in $\C_\pi$, then $Y$ is in $\C_\pi$,
 
-\nn{\em(iii)} if $X\mono Y$ is an monomorphism and $Y$ in $\C_\pi$, then $X$ is in $\C_\pi$,
+\nn{\em(iii)} if $X\mono Y$ is a monomorphism and $Y$ in $\C_\pi$, then $X$ is in $\C_\pi$,
 
 \nn{\em(iv)} $G$ is in $\C_\pi$,
 
