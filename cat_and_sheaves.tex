@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0298)
+% about "categories and sheaves" (version-0299)
 % !TEX encoding = UTF-8 Unicode
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
@@ -2390,7 +2390,11 @@ P.~75. Throughout the section about the IPC Property, one can assume that $\A$ i
 \begin{s}\label{poc}
 P.~77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pageref{1744i}):
 
-If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, then the natural functor $$\prod I_\gamma\to\prod J_\gamma$$ is cofinal. 
+If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, then the natural functor 
+$$
+\prod I_\gamma\to\prod J_\gamma
+$$ 
+is cofinal. 
 \end{s}
 
 %
@@ -2774,7 +2778,7 @@ Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a
 u=\id_{P(X)}.
 \end{equation}
 %
-As we have $\ee_{P(X)}\circ u=P(\ee_X)$ by definition of $u$, and $P(\ee_X)\circ\ee_X=\ee_{P(X)}\circ\ee_X$ by naturality of $\ee$, we get 
+As we have $\ee_{P(X)}\circ u=P(\ee_X)$ by definition of $u$, and $P(\ee_X)\circ\ee_X=\ee_{P(X)}\circ\ee_X$ by functoriality of $\ee$, we get 
 $$
 u\circ\ee_X=(\ee_{P(X)})^{-1}\circ P(\ee_X)\circ\ee_X=(\ee_{P(X)})^{-1}\circ\ee_{P(X)}\circ\ee_X=\ee_X,
 $$ 
@@ -3117,13 +3121,13 @@ P.~119, Theorem 5.2.5: see Corollary~\ref{c2111} p.~\pageref{c2111}.
 %
 
 \begin{s}
-Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 and Theorem 5.2.6 of the book.
+Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 p.~121 of the book and Theorems 5.2.5 and 5.2.6 p.~119 of the book.
 \end{s}
 
 %
 
 \begin{s}
-P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating \index{strictly generating subcategory}, then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
+P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating,\index{strictly generating subcategory} then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
 \end{s}
 
 %
@@ -3131,8 +3135,8 @@ P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\c
 \begin{s} 
 P.~122, proof of Lemma 5.3.2 (minor variant). 
 
-\begin{lem} 
-If $\F\subset\G$ are full subcategories of $\C$ and $\F$ is strictly generating, then $\G$ is strictly generating. 
+\begin{lem}[Lemma 5.3.2 p.~122]
+If $\F\subset\G$ are full subcategories of a category $\C$, and if $\F$ is strictly generating, then $\G$ is strictly generating. 
 \end{lem} 
 
 \begin{proof}
@@ -3180,12 +3184,16 @@ $$
 $$ 
 coincide. We have, for $w$ in $\Hom_\C(W,Z)$,
 $$
-\xi_Z(z)\circ w=\xi_W(z\circ w)=\rho(\xi)_W(z\circ w)=\pp(f)_W(z\circ w)
-=f\circ z\circ w, 
+\xi_Z(z)\circ w
+\overset{\text{(a)}}{=}\xi_W(z\circ w)
+\overset{\text{(b)}}{=}\rho(\xi)_W(z\circ w)
+\overset{\text{(c)}}{=}\pp(f)_W(z\circ w)
+\overset{\text{(d)}}{=}f\circ z\circ w, 
 $$ 
-the first equality following from the functoriality of $\xi$ (see diagram below), the second one from the definition of $\rho$, the third one from \eqref{rhoxi}, and the fourth one from the definition of $\pp$.
+Equality (a) following from the functoriality of $\xi$ (see diagram below), Equality (b) following from the definition of $\rho$, Equality (c) following from \eqref{rhoxi}, and Equality (d) following from the definition of $\pp$.
 \end{proof}
-For the reader's convenience, we add the following diagram:
+
+For the reader's convenience, we add the diagram 
 $$
 \begin{tikzcd}
 Z&z\in\Hom_\C(Z,X)\ar{r}{\xi_Z}\ar{d}[swap]{\circ w}&\Hom_\C(Z,Y)\ar{d}{\circ w}\\ 
@@ -3199,7 +3207,7 @@ $$
 \begin{s} 
 P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
 
-\begin{lem}
+\begin{lem}[Lemma 5.3.3 p.~122] 
 If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\pp:\C\to\F^\wedge$ admits a left adjoint $\psi:\F^\wedge\to\C$, and for $A$ in $\F^\wedge$ we have 
 $$
 \psi(A)\simeq\colim_{(Y\to A)\in\F_A}Y. 
@@ -3252,20 +3260,13 @@ Proof. We may assume from the beginning that $\F$ is small.
 
 \nn Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
-\nn Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the natural functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. Define the morphism
-% 
-\begin{equation}\label{step3}
-\colim_i\Coim z_i\to\Coim\left(\colim_i\zeta(z_i)\to X\right)
-\end{equation}
-%
-as follows: If $z:\zeta(z)\to X$ is the inductive limit of $(\zeta(z_i)\to X)$, then \eqref{step3} is induced by the morphisms $\Coim z_{i_0}\to\Coim z$ defined by the commutative diagram 
+\nn Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the forgetful functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. We claim that the natural morphism
 $$
-\begin{tikzcd}
-\zeta(z_{i_0})\times_X\zeta(z_{i_0})\ar{d}\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&\zeta(z_{i_0})\ar{d}\ar{r}&\Coim z_{i_0}\ar{d}\\ 
-\zeta(z)\times_X\zeta(z)\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&\zeta(z)\ar{r}&\Coim z.
-\end{tikzcd}
-$$ 
-We claim that \eqref{step3} is an isomorphism.
+\colim_i\Coim z_i\to\Coim\left(\colim_i\zeta(z_i)\to X\right)
+$$
+is an isomorphism.
+% old version: 
+% https://docs.google.com/document/d/1-bgnW0CaMksEslkcQPfmcPCVRyQHWSC4JscWC9YaZzA/edit
 
 \nn Step 3'. Let $A$ be in $\F^\wedge$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wedge)_A$. We claim 
 $$
@@ -5113,7 +5114,7 @@ and let $\pp:J\to\C_A$ be a functor. We must find a $\xi$ in $\C_A$ satisfying
 $$
 \lim\Hom_{\C_A}(\pp,\xi)\neq\varnothing
 $$ 
-for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\pp$ with the natural functor $\C_A\to\C$, and write 
+for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\pp$ with the forgetful functor $\C_A\to\C$, and write 
 $$
 \pp(j)=(\psi(j),\psi(j)\xr{y_j}A).
 $$ 
