@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0297)
+% about "categories and sheaves" (version-0298)
 % !TEX encoding = UTF-8 Unicode
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
@@ -3063,7 +3063,7 @@ Let $S$ be a set of objects of a category $\C$ and $\cc S$ the corresponding sub
 \begin{s}
 P.~118, second display: Isomorphism 
 $$
-\Hom_{\Set}(\Hom_\C(G,X),\Hom_\C(G,X))\simeq\Hom_{\C^\vee}(G^{\sqcup\Hom_\C(G,X)},X)
+\Hom_{\Set}\Big(\Hom_\C(G,X),\Hom_\C(G,X)\Big)\simeq\Hom_{\C^\vee}(G^{\sqcup\Hom_\C(G,X)},X)
 $$ 
 is a particular case of the following isomorphism, which holds for any $\U$-set $S$ and any objects $G$ and $X$ of $\C$: 
 $$
@@ -3078,14 +3078,22 @@ P.~118, proof of Prop. 5.2.3: the proof of (ii) uses Proposition~\ref{34i} p.~\p
 
 Proof of (v): We add a few details. Recall the setting: the category $\C$ admits finite projective limits, small coproducts, and a generator $G$. We already know that $\pp_G:=\Hom_\C(G,\ )$ is conservative, left exact, and preserves monomorphisms. 
 
-Put $\pp:=\pp_G:=\Hom_\C(G,\ )$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $\pp(f_1)$ and $\pp(f_2)$ have same image. We claim that $\pp(f_1)$ and $\pp(f_2)$ define the same subobject of $X$. We have a cartesian square
-$$
+Put $\pp:=\pp_G:=\Hom_\C(G,\ )$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $\pp(f_1)$ and $\pp(f_2)$ have same image. We want to prove:
+
+Claim 1: $\pp(f_1)$ and $\pp(f_2)$ define the same subobject of $X$.
+
+Form the cartesian square
+%
+\begin{equation}\label{523v1}
 \begin{tikzcd}
 Y_1\times_XY_2\ar{r}{p_1}\ar{d}[swap]{p_2}&Y_1\ar[tail]{d}{f_1}\\ 
 Y_2\ar[tail]{r}[swap]{f_2}&X.
 \end{tikzcd}
-$$ 
-It suffices to show that $p_1$ and $p_2$ are isomorphisms. Applying $\pp$ we get the commutative diagram 
+\end{equation}
+
+Claim 2: $p_1$ and $p_2$ are isomorphisms. 
+
+Clearly, Claim 2 implies Claim 1. Applying $\pp$ to \eqref{523v1}, we get the commutative diagram 
 $$
 \begin{tikzcd}
 \pp(Y_1\times_XY_2)\ar{rd}{\sim}\ar[bend left]{rrd}{\pp(p_1)}\ar[bend right]{rdd}[swap]{\pp(p_2)}\\ 
@@ -3093,7 +3101,11 @@ $$
 {}&\pp(Y_2)\ar[tail]{r}[swap]{\pp(f_2)}&\pp(X),
 \end{tikzcd}
 $$ 
-the morphism $\pp(Y_1\times_XY_2)\to\pp(Y_1)\times_{\pp(X)}\pp(Y_2)$ being an isomorphism by left-exactness of $\pp$. As $\pp(f_1)$ and $\pp(f_2)$ are injective and have same image, $q_1$ and $q_2$ are bijective. The diagram being commutative, $\pp(p_1)$ and $\pp(p_2)$ are also bijective. As $\pp$ is conservative,  $p_1$ and $p_2$ are indeed isomorphisms.
+the morphism 
+$$
+\pp(Y_1\times_XY_2)\to\pp(Y_1)\times_{\pp(X)}\pp(Y_2)
+$$ 
+being an isomorphism by left-exactness of $\pp$. As $\pp(f_1)$ and $\pp(f_2)$ are injective and have same image, $q_1$ and $q_2$ are bijective, and thus $\pp(p_1)$ and $\pp(p_2)$ are also bijective. As $\pp$ is conservative,  this implies Claim~2, and we saw that Claim~2 implies Claim~1.
 \end{s}
 
 %
