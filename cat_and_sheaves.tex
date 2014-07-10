@@ -1,5 +1,4 @@
-% about "categories and sheaves" (version-0299)
-% !TEX encoding = UTF-8 Unicode
+% about "categories and sheaves" (version-0300)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -3230,31 +3229,27 @@ the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 
 \subsection{Theorem 5.3.6 (p.~124)}\label{536}
 
-As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem:
-%
-\begin{center}*\end{center}
-%
+As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem. (Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory of $\C$, that the functor $\pp:\C\to\F^\wedge$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.)
+
+\begin{thm}[Theorem 5.3.6 p.~124]
 Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 
-\nn(i) $\C$ admits small inductive limits and finite projective limits, 
+\nn\emph{(i)} $\C$ admits small inductive limits and finite projective limits, 
 
-\nn(ii) small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}), 
+\nn\emph{(ii)} small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}), 
 
-\nn(iii) any epimorphism is strict.
+\nn\emph{(iii)} any epimorphism is strict.
 
 \nn Let $\F$ be an essentially small full subcategory of $\C$ such that 
 
-\nn(a) $\Ob(\F)$ is a system of generators,
+\nn\emph{(a)} $\Ob(\F)$ is a system of generators,
 
-\nn(b) $\F$ is closed by finite coproducts in $\C$. 
+\nn\emph{(b)} $\F$ is closed by finite coproducts in $\C$. 
 
 \nn Then $\F$ is strictly generating.
+\end{thm}
 
-(Recall that the functor $\pp:\C\to\F^\wedge$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.)
-%
-\begin{center}*\end{center}
-%
-Proof. We may assume from the beginning that $\F$ is small.
+\begin{proof} We may assume from the beginning that $\F$ is small.
 
 \nn Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
 
@@ -3306,18 +3301,22 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 &\simeq\Hom_{\F^\wedge}(\pp(X),\pp(Y))&\text{by Step 5.}
 %
 \end{align*} 
-%
 
-It remains to prove Steps 3, 3', 4, 5, 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}.) 
+It remains to prove Steps 3, 3', 4, 5, and 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}.) 
 
-\nn Proof of Step 4. We have 
+\begin{proof}[Proof of Step 4] 
+We have 
 $$
 \Hom_\C(\Coim z,Y)\simeq\Hom_\C\big(\Coker(Z\times_XZ\rightrightarrows Z),Y\big)
 $$
 $$
 \simeq\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\times_XZ,Y)\big),
 $$ 
-and also $\Hom_\C(Z,Y)\simeq\Hom_{\F^\wedge}(\pp(Z),\pp(Y))$ by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
+and also 
+$$
+\Hom_\C(Z,Y)\simeq\Hom_{\F^\wedge}(\pp(Z),\pp(Y))
+$$ 
+by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
 $$
 \Hom_\C(Z\times_XZ,Y)\to\Hom_{\F^\wedge}\big(\pp(Z\times_XZ),\pp(Y)\big)
 $$
@@ -3336,8 +3335,11 @@ $$
 $$
 $$
 \simeq\Hom_{\F^\wedge}(\Coim\pp(z),\pp(Y)).
-$$
-Proof of Step 5. Let $Z$ be in $\F$. We must show that the natural map 
+$$ 
+\end{proof}
+
+\begin{proof}[Proof of Step 5]
+Let $Z$ be in $\F$. We must show that the natural map 
 $$
 \colim_{A\in I}\ (\pp\zeta\xi(A))(Z)\to\pp(X)(Z):=\Hom_\C(Z,X) 
 $$
@@ -3346,8 +3348,10 @@ $$
 (\pp\zeta\xi(\{z\}))(Z)=\Hom_\C(Z,Z)\xrightarrow{z\circ}\Hom_\C(Z,X),
 $$
 which is obvious. 
+\end{proof}
 
-\nn Proof of Step 6. As Step 3 implies 
+\begin{proof}[Proof of Step 6] 
+As Step 3 implies 
 $$
 \colim_{A\in I}\Coim\xi(A)\simeq\Coim\left(\colim_{A\in I}\zeta\xi(A)\to X\right),
 $$ 
@@ -3367,7 +3371,9 @@ is an epimorphism. Let
 $$
 \colim_{A\in I}\pp\zeta\xi(A)\xrightarrow{b}\pp\left(\colim_{A\in I}\zeta\xi(A)\right)\xrightarrow{a}\pp(X)
 $$
-be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \eqref{step6b} is also an epimorphism.
+be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \eqref{step6b} is also an epimorphism. 
+\end{proof}
+\end{proof}
 
 %%
 
@@ -3390,6 +3396,8 @@ Since there are only countably many finite categories up to isomorphism, (b) is 
 %%%
 
 \section{About Chapter 6}
+
+%\begin{comment}
 
 \subsection{Theorem 6.1.8 (p. 132)}
 
@@ -3423,7 +3431,7 @@ A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
 
-Then we are looking for and object $n$ of $M$ given by a morphism $Z\to\alpha(j)$, and for a pair of morphisms $s,s':X\parar Y$ defining the sought-for morphisms $\sigma$ and $\sigma'$. 
+Then we are looking for and object $n$ of $M$ given by a morphism $Z\to\alpha(j)$, and for a morphism $t:Y\to Z$ defining the sought-for morphism $\tau$. 
 
 As $p_i(X)(y\circ s)$ equals $p_i(X)(y\circ s')$ in $A(X)\simeq\colim\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\circ y\circ s=\alpha(t)\circ y\circ s'$, and we can set $Z:=\alpha(j)$ and $z:=\id_{\alpha(j)}$. The situation is depicted by the commutative diagram
 $$
@@ -3434,6 +3442,8 @@ A\ar[equal]{r}&A\ar[equal]{r}&A.
 \end{tikzcd}
 $$
 \end{proof}
+
+%\end{comment}
 
 %%
 
