@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0300)
+% about "categories and sheaves" (version-0301)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -3497,7 +3497,7 @@ Let us record Part (i) of the Proposition as
 \begin{equation}\label{133i}
 IF\circ\iota_\C\simeq\iota_{\C'}\circ F, 
 \end{equation} 
-and recall that we have, in the setting of Corollary 6.3.2 p.~140, 
+and note that we have, in the setting of Corollary 6.3.2 p.~140, 
 \begin{equation}\label{140}
 (JF)(``\colim"\ \alpha)\simeq\colim\ F\circ\alpha.
 \end{equation}
@@ -3542,8 +3542,11 @@ $$
 \mu(A_1,A_2):=\ic_{x_1,x_2}\ (X_1,X_2). 
 $$ 
 
-Now we prove that $\theta$ and $\mu$ are mutually quasi-inverse.
+\begin{prop}[Proposition 6.1.12 p.~134]\label{p6112}
+The functors $\theta$ and $\mu$ are mutually quasi-inverse.
+\end{prop}
 
+\begin{proof}
 We have 
 $$
 \mu(A_1,A_2)(X_1,X_2)\simeq\colim_{y_1,y_2}\ (\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2))
@@ -3633,7 +3636,8 @@ A\ar[equal]{r}&A\\
 (X_1,X_2)\ar{u}{x}\ar{r}[swap]{(f_1,f_2)}&(Z_1,Z_2)\ar{u}[swap]{z}
 \end{tikzcd}
 $$ 
-One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. This ends the proof of \eqref{6112b}.
+One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. This ends the proofs of Isomorphism~\eqref{6112b} p.~\pageref{6112b} and Proposition~\ref{p6112} p.~\pageref{p6112}. 
+\end{proof} 
 
 %%
 
