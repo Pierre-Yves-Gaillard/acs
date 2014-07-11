@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0301)
+% about "categories and sheaves" (version-0302)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -3549,12 +3549,13 @@ The functors $\theta$ and $\mu$ are mutually quasi-inverse.
 \begin{proof}
 We have 
 $$
-\mu(A_1,A_2)(X_1,X_2)\simeq\colim_{y_1,y_2}\ (\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2))
+\mu(A_1,A_2)(X_1,X_2)\simeq\colim_{y_1,y_2}\Big(\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2)\Big)
 $$
 $$
-\simeq\colim_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\colim_{y_2}\Hom_{\C_2}(X_2,Y_2)\simeq A_1(X_1)\times A_2(X_2),
+\overset{\text{(a)}}{\simeq}\colim_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\colim_{y_2}\Hom_{\C_2}(X_2,Y_2)
+\overset{\text{(b)}}{\simeq}A_1(X_1)\times A_2(X_2),
 $$ 
-the second isomorphism following from the IPC Property (see pp 75-77 of the book), the third isomorphism following from \eqref{263b} p.~\pageref{263b}. We record this as
+Isomorphism~(a) following from the IPC Property (see pp 75-77 of the book), and Isomorphism~(b) following from \eqref{263b} p.~\pageref{263b}. We record this as
 $$
 \mu(A_1,A_2)(X_1,X_2)\simeq A_1(X_1)\times A_2(X_2).
 $$
@@ -3568,13 +3569,16 @@ Let us prove
 %
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\times A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
-B_1\simeq\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1\simeq\ic_{x_1}\ X_1\simeq A_1.
+B_1
+\overset{\text{(a)}}{\simeq}\ic_x\ X_1\simeq\ic_{x_1,x_2}\ X_1
+\overset{\text{(b)}}{\simeq}\ic_{x_1}\ X_1
+\overset{\text{(c)}}{\simeq}A_1.
 $$ 
-Indeed, the first isomorphism follows \eqref{ai}, the second one from the definition of $A$, the third one from the fact that the projection 
+Indeed, Isomorphism~(a) follows from \eqref{ai}, Isomorphism~(b) from the definition of $A$, Isomorphism~(b) from the fact that the projection 
 $$
 (\C_1)_{A_1}\times(\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
-is cofinal by Lemma~\ref{proj} below and the fact that $(\C_2)_{A_2}$ is connected, and the fourth one from our old friend \eqref{263a} p.~\pageref{263a}. (By the way, in this proof we are using \eqref{263a} a lot without explicit reference.)
+is cofinal by Lemma~\ref{proj} below coupled with the fact that $(\C_2)_{A_2}$ is connected, and Isomorphism~(c) from our old friend \eqref{263a} p.~\pageref{263a}. (By the way, in this proof we are using \eqref{263a} a lot without explicit reference.)
 
 \begin{lem}\label{proj}
 If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\times J\to I$ is cofinal.
