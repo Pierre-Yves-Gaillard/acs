@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0305)
+% about "categories and sheaves" (version-0306)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -3794,7 +3794,14 @@ $$
 
 As in the book we assume, as we may, that any two isomorphic objects of $K$ are equal. 
 
-Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let $\alpha_k:I_k\to\C$ be a functor such that $G(k)=\ic\alpha_k$. 
+Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let 
+$$
+\alpha_k:I_k\to\C
+$$ 
+be a functor such that 
+$$
+G(k)=\ic\alpha_k.
+$$ 
 
 We define the category 
 $$
@@ -3830,13 +3837,17 @@ P(k)\ar{r}[swap]{\theta_k}&Q(k).
 $$ 
 [End of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] 
 
-The functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by $F'(k)=\alpha_k\circ p_k$, where $p_k:N\to I_k$ is the natural projection: 
+The functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by 
+$$
+F'(k)=\alpha_k\circ p_k,
+$$ 
+where $p_k:N\to I_k$ is the natural projection: 
 $$
 N\xr{p_k}I_k\xr{\alpha_k}\C.
 $$ 
 In other words, we set
 $$
-F((i_k),P)(k_0):=\alpha_{k_0}(i_{k_0}).
+F\big((i_k),P\big)(k_0):=\alpha_{k_0}(i_{k_0}).
 $$ 
 
 It suffices to check that $N$ is small and filtrant, and that $p_k$ is cofinal. 
@@ -3857,7 +3868,7 @@ $$
 $$ 
 (see \eqref{slice} p.~\pageref{slice} for the definition of $\C/G(a)$) be the functor defined by 
 $$
-\widetilde{\alpha_a}(i_a):=\big(u(i_a):\alpha_a(i_a)\to G(a)\big);
+\widetilde{\alpha_a}(i_a):=\Big(u(i_a):\alpha_a(i_a)\to G(a)\Big);
 $$
 and put 
 $$
@@ -3866,7 +3877,7 @@ $$
 
 We define the functor 
 $$ 
-\pp:N'\to(\C/G(a))^{L/a} 
+\pp:N'\to\big(\C/G(a)\big)^{L/a} 
 $$ 
 (see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) as follows. Let $((i_\ell),Q)$ be in $N'$. In particular, $Q$ is a functor from $L$ to $\C$, and we have, for each $b$ in $L$, a morphism 
 $$
@@ -3874,16 +3885,16 @@ Q(b)=\alpha_b(i_b)\xr{u'(b)}\icolim\alpha_b=G(b)
 $$ 
 in $\C$ (see \eqref{u':} p.~\pageref{u':}). Letting $b\xr f a$ be a morphism in $K$ viewed as an object of $L/a$, we put  
 $$
-\pp((i_\ell),Q)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right)\in\C/G(a).
+\pp\big((i_\ell),Q\big)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right)\in\C/G(a).
 $$
 
 Letting 
 $$
-\Delta:\C/G(a)\to(\C/G(a))^{L/a}
+\Delta:\C/G(a)\to\big(\C/G(a)\big)^{L/a}
 $$ 
 be the diagonal functor, we can form the category 
 $$
-M:=M\left[N'\xrightarrow{\pp}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right].
+M:=M\left[N'\xrightarrow{\pp}\big(\C/G(a)\big)^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right].
 $$ 
 Concretely, an object of $M$ is a triple 
 $$
@@ -3913,7 +3924,7 @@ As $Q(b)=P(b)$ and $\alpha_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$.
 
 To define $\mu$ let 
 $$
-\xi:=\Big(((i_b),Q)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
+\xi:=\Big(\big((i_b),Q\big)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
 $$ 
 be in $M$. The object $\mu(\xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
 
@@ -3935,7 +3946,7 @@ If $I$ is a finite category and $\C$ a filtrant category, then the diagonal func
 \begin{proof}
 It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\alpha$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\alpha$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
 $$
-(\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\alpha(i),Y)\right)\ (\forall\ (s:i\to j)\in S)\ (\mu_{j}\circ\alpha(s)=\mu_i) 
+(\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\alpha(i),Y)\right)\Big(\forall\ (s:i\to j)\in S\Big)\Big(\mu_{j}\circ\alpha(s)=\mu_i\Big) 
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\lambda)$.
 \end{proof}
