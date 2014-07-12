@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0303)
+% about "categories and sheaves" (version-0304)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -2499,7 +2499,7 @@ Let $F:\C\to\C'$ be a functor.
 \begin{s} 
 P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
 
-\begin{prop} 
+\begin{prop}[Proposition 3.3.2 p.~81]\label{p332} 
 Consider functors $I\xrightarrow\alpha\C\xrightarrow F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\colim\alpha$ exists in $\C$. Then $\colim(F\circ\alpha)$ exists in $\C'$, and the natural morphism $\colim(F\circ\alpha)\to\colim\alpha$ is an isomorphism. 
 \end{prop} 
 
@@ -3423,11 +3423,19 @@ Since there are only countably many finite categories up to isomorphism, (b) is 
 
 \section{About Chapter 6}
 
-%\begin{comment}
+\subsection{Theorem 6.1.8 (p. 132)} 
 
-\subsection{Theorem 6.1.8 (p. 132)}
+Recall the statement:
 
-Here is a minor variant of Step (i) of the proof of Theorem 6.1.8. Recall the statement: 
+\begin{thm}[Theorem 6.1.8 p.~132]\label{618}
+If $\C$ is a category, then the category $\Ind(\C)$ admits small filtrant inductive limits and the natural functor $\Ind(\C)\to\C^\wedge$ commutes with such limits.
+\end{thm} 
+
+%The proposition below follows from Theorem~\ref{618} above and Proposition~\ref{333} p.~\pageref{333}. 
+
+%\begin{prop} If $\C$ is a category, then small filtrant inductive limits exist in $\Ind(\C)$ and are right exact. \end{prop}
+
+Here is a minor variant of Step (i) of the proof of Theorem 6.1.8. We must show:  
 
 \begin{lem} 
 If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha$ is in $\C^\wedge$, then $\C_A$ is filtrant. 
@@ -3468,8 +3476,6 @@ A\ar[equal]{r}&A\ar[equal]{r}&A.
 \end{tikzcd}
 $$
 \end{proof}
-
-%\end{comment}
 
 %%
 
@@ -3672,27 +3678,17 @@ One checks that $x$ does not depend on the choice of $\zeta$, and that this proc
 \subsection{Brief Comments}
 
 \begin{s} 
-P.~136, proof of Proposition 6.1.18 (i) (minor variant). We must prove:
+P.~136, proof of Proposition 6.1.18 (i) (minor variant). Recall the statement: 
 
-If $\C$ admits cokernel, do does $\Ind(\C)$.
+\begin{prop}[Proposition 6.1.18 (i) p.~136] 
+If a category $\C$ admits cokernels, do does $\Ind(\C)$. 
+\end{prop}
 
-If $\iota:\C\hookrightarrow\Ind(\C)$ is the inclusion functor and $(\pp_i,\psi_i:\alpha_i\parar\beta_i)_{i\in I}$ is a small filtrant inductive system of parallel arrows in $\C$ whose limit in $\Ind(\C)$ is a pair of parallel arrows $f,g:A\parar B$ (that is, $A=\ic_i\ \alpha_i$, and so on...), then we have 
-$$
-\colim_i\ \iota(\Coker(\pp_i,\psi_i))\simeq
-\colim_i\ \Coker(\iota(\pp_i),\iota(\psi_i))
-$$
-$$
-\simeq
-\Coker(\colim_i\ \iota(\pp_i),\colim_i\ \iota(\psi_i))=
-\Coker(f,g),
-$$ 
-the first isomorphism following from the right exactness of $\iota$ (see Corollary 6.1.6 p~132 of the book). q.e.d.
+This follows from Proposition~\ref{p332} p.~\pageref{p332}. 
 
-More generally, if $I$ is a small filtrant category, $J$ a finite category, and $\alpha:I\times J\to\C$ a functor, then the natural morphism 
-$$
-\colim_j\colim_i\iota(\alpha(i,j))\to\colim_i\iota\left(\colim_j\alpha(i,j)\right) 
-$$ 
-is an isomorphism. Indeed, $\colim_j$ commutes with $\colim_i$ for obvious reasons, and with $\iota$ because $\iota$ is right exact.
+% old version 
+% https://docs.google.com/document/d/1bt5g2ANcF0Fnngn7mMdYA8qgN-K0iVKjWbtTEG7PPZU/edit
+
 \end{s}
 
 %
