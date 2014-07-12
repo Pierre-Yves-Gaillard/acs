@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0304)
+% about "categories and sheaves" (version-0305)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1148,7 +1148,7 @@ $$
 Y\xr fX,\quad\Delta(Y)\xr{\Delta(f)}\Delta(X)\xr{p}\alpha.
 $$
 
-\begin{df}\label{c}
+\begin{df} 
 If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\times\Hom_{\C^I}(\alpha,\Delta(X))
@@ -1190,7 +1190,7 @@ in $\C^J$ is an epimorphism, and that this implies that the coproduct
 $$
 g\sqcup_fg,
 $$ 
-taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$; see Definition~\ref{c} p.~\pageref{c}). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
+taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
 \end{s}
 
 %
@@ -1588,7 +1588,7 @@ where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$, as follows: Let $L$ and $R$
 $$ 
 \beta(j)\xrightarrow{p_{i,j,u}}\colim_{j,u}\beta(j)\xrightarrow{q_i}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}). We easily check that the compositions 
+be the coprojections. We easily check that the compositions 
 $$
 \beta(j)\xrightarrow{p_{\pp(j),j,\id_{\pp(j)}}}\colim_{j,u}\beta(j)\xrightarrow{q_{\pp(j)}}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
@@ -1728,7 +1728,7 @@ Denote respectively by $L$ and $R$ the left and right-hand side of (\ref{241}), 
 $$
 p_{X,b}:\Hom_{\C'}(A,F(X))\to L,\quad q_{X,a}:\Hom_{\C''}(G(X),B)\to R
 $$
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}), and define 
+be the coprojections, and define 
 $$
 f_{X,b}:\Hom_{\C'}(A,F(X))\to R,\quad g_{X,a}:\Hom_{\C''}(G(X),B)\to L
 $$
@@ -1806,7 +1806,7 @@ Let $L_i$ be the left-hand side of \eqref{om}, and, for $j$ in $J$, let
 $$
 p_j:\Hom_I(i,\pp(j))\to L_i
 $$
-be the coprojection (see Definition~\ref{c} p.~\pageref{c}). It is easy to check that the map 
+be the coprojection. It is easy to check that the map 
 $$
 \Ob(J^i)\to L_i,\quad\Big(j,s:i\to\pp(j)\Big)\mapsto p_j(s)
 $$
@@ -2471,7 +2471,7 @@ p_i:\alpha_i\to A,\quad
 p_{i,J}:\alpha_i\to\beta_J,\quad 
 p_J:\beta_J\to B
 $$
-be the coprojections (see Definition~\ref{c} p.~\pageref{c}). Note that $p_{i,J}$ is defined only for $i$ in $J$. We easily check that 
+be the coprojections. Note that $p_{i,J}$ is defined only for $i$ in $J$. We easily check that 
 
 \nn$\bu$ the morphisms$f_i:=p_{\{i\}}\circ p_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
 
@@ -3526,17 +3526,23 @@ $$
 \subsubsection{Comments about Proposition 6.1.9} 
 
 Let us record Part (i) of the Proposition as 
+%
 \begin{equation}\label{133i}
 IF\circ\iota_\C\simeq\iota_{\C'}\circ F, 
 \end{equation} 
+%
 and note that we have, in the setting of Corollary 6.3.2 p.~140, 
+%
 \begin{equation}\label{140}
-(JF)(``\colim"\ \alpha)\simeq\colim\ F\circ\alpha.
-\end{equation}
-Let us also record Part (ii) of the Proposition as 
-\begin{equation}\label{133ii}
-``\colim"(IF\circ\alpha)\xrightarrow\sim IF(``\colim"\alpha).
+\colim(F\circ\alpha)\xr\sim(JF)(\ic\alpha).
 \end{equation} 
+%
+Let us also record Part (ii) of the Proposition as 
+% 
+\begin{equation}\label{133ii}
+\ic(IF\circ\alpha)\xr\sim IF(\ic\alpha).
+\end{equation} 
+% 
 (See \S\ref{s133ii} p.~\pageref{s133ii}.)
 
 %%
@@ -3739,13 +3745,13 @@ I\ar{r}{\xi}&\C^{\text fp}\ar{d}[swap]{\iota_\C}\ar{r}{\rho}&\C\ar[yshift=-.9ex]
 {}&\Ind(\C^{\text fp})\ar{ur}{J\rho}\ar{r}[swap]{I\rho}&\Ind(\C),
 \end{tikzcd}
 $$ 
-$\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book). We have 
+$\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book), and $\kappa$ is defined by $\kappa:=I\rho\circ\kappa'$. We have 
 $$
-\kappa(X)=I\rho(\kappa'(\colim\rho\circ\xi))\simeq I\rho(\ic\xi)
+\kappa(X)=I\rho(\kappa'(\colim(\rho\circ\xi)))\simeq I\rho(\ic\xi)
 $$
 
 $$
-\simeq\ic I\rho\circ\iota_\C\circ\xi\simeq\ic\rho\circ\xi, 
+\simeq\ic(I\rho\circ\iota_\C\circ\xi)\simeq\ic(\rho\circ\xi), 
 $$ 
 
 \nn the three isomorphisms being respectively justified by \eqref{140} p.~\pageref{140}, \eqref{133ii} p.~\pageref{133ii}, and \eqref{133i} p.~\pageref{133i}. q.e.d.
@@ -3765,7 +3771,7 @@ instead of $\C_{G(a)}$ and $L_a$, to avoid confusion. Superscripts will {\em alw
 
 Recall the statement: 
 %
-\begin{thm}\label{643}
+\begin{thm}[Theorem 6.4.3 p.~144]\label{643} 
 If $\C$ is a category and $K$ is a finite category such that $\Hom_K(k,k)$ $=\{\id_k\}$ for all $k$ in $K$, then the natural functor 
 $$
 \Phi:\Ind(\C^K)\to\Ind(\C)^K
@@ -3796,11 +3802,11 @@ N:=N\{K,G,(\alpha_k)\}
 $$ 
 as follows:
 
-\nn[Beginning of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P:K\to\C$ is a functor, subject to the conditions 
+\nn[Beginning of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P$ is a functor from $K$ to $\C$, subject to the conditions 
 
 \nn$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
 
-\nn$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ (see Definition~\ref{c} p.~\pageref{c}) induce a morphism of functors 
+\nn$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ induce a morphism of functors 
 %
 \begin{equation}\label{u':}
 u':P\to G.
@@ -3966,7 +3972,7 @@ $\ic F\circ\beta\simeq IF(A)$,
 
 $\ic\pp\simeq f$. 
 
-\nn Then $f$ factorizes as $X'=\alpha(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection (see Definition~\ref{c} p.~\pageref{c}).
+\nn Then $f$ factorizes as $X'=\alpha(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
 
 \nn(b)$\then$(c). This follows from Proposition~\ref{comb} p.~\pageref{comb}. 
 
@@ -4101,7 +4107,7 @@ $$
 
 We want to prove $B\simeq C$.
 
-\nn{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection (see Definition~\ref{c} p.~\pageref{c}). (Of course this morphism depends on $\alpha$.) 
+\nn{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection. (Of course this morphism depends on $\alpha$.) 
 
 We shall define morphisms 
 $$
@@ -4335,7 +4341,7 @@ Case $n=2$: Let $X_1,X_2$ be in $\C$. To check that the natural morphisms
 F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 \end{equation} 
 %
-are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections (see Definitions~\ref{p} p.~\pageref{p} and \ref{c} p.~\pageref{c}), and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
+are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections, and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
 \end{s}
 
 %%%
