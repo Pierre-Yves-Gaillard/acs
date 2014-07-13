@@ -3854,11 +3854,11 @@ It suffices to check that $N$ is small and filtrant, and that $p_k$ is cofinal.
 
 We start as in the proof of Theorem 6.4.3 p.~144 of the book: 
 
-We order $\Ob(K)$ be decreeing $a\le b$ if and only if $\Hom_K(a,b)\neq\varnothing$, and argue by induction on the cardinal $n$ of $\Ob(K)$. 
+We order $\Ob(K)$ be decreeing $k\le\ell$ if and only if $\Hom_K(k,\ell)\neq\varnothing$, and argue by induction on the cardinal $n$ of $\Ob(K)$. 
 
 If $n=0$ the result is clear.
 
-Otherwise, let $a$ be a maximal object $a$ of $K$; let $L$ be the full subcategory of $K$ such that 
+Otherwise, let $a$ be a maximal object of $K$; let $L$ be the full subcategory of $K$ such that 
 $$
 \Ob(L)=\Ob(K)\setminus\{a\}; 
 $$ 
@@ -3879,13 +3879,13 @@ We define the functor
 $$ 
 \pp:N'\to\big(\C/G(a)\big)^{L/a} 
 $$ 
-(see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) as follows. Let $((i_\ell),Q)$ be in $N'$. In particular, $Q$ is a functor from $L$ to $\C$, and we have, for each $b$ in $L$, a morphism 
+(see \eqref{slice} p.~\pageref{slice} for the definition of $L/a$) as follows. Let $((i_\ell),Q)$ be in $N'$. In particular, $Q$ is a functor from $L$ to $\C$, and we have, for each $\ell$ in $L$, a morphism 
 $$
-Q(b)=\alpha_b(i_b)\xr{u'(b)}\icolim\alpha_b=G(b) 
+Q(\ell)=\alpha_\ell(i_\ell)\xr{u'(\ell)}\icolim\alpha_\ell=G(\ell) 
 $$ 
-in $\C$ (see \eqref{u':} p.~\pageref{u':}). Letting $b\xr f a$ be a morphism in $K$ viewed as an object of $L/a$, we put  
+in $\C$ (see \eqref{u':} p.~\pageref{u':}). Letting $\ell\xr fa$ be a morphism in $K$ viewed as an object of $L/a$, we put  
 $$
-\pp\big((i_\ell),Q\big)\left(b\xr f a\right):=\left(Q(b)\xr{u'(b)} G(b)\xr{G(f)}G(a)\right)\in\C/G(a).
+\pp\big((i_\ell),Q\big)\left(\ell\xr fa\right):=\left(Q(\ell)\xr{u'(\ell)}G(\ell)\xr{G(f)}G(a)\right)\in\C/G(a).
 $$
 
 Letting 
@@ -3897,16 +3897,30 @@ $$
 M:=M\left[N'\xrightarrow{\pp}\big(\C/G(a)\big)^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right].
 $$ 
 Concretely, an object of $M$ is a triple 
-$$
-\Big(\big((i_b),Q\big),i_a,\big(\xi_f:Q(b)\to\alpha_a(i_a)\big)_{f:b\to a}\Big),
-$$ 
-where $f$ runs over the morphisms from $b$ to $a$ in $K$, and $\xi_f$ is a morphism which makes the following square in $\C$ commute: 
+%
+\begin{equation}\label{il}
+\Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\alpha_a(i_a)\big)_{f:\ell\to a}\Big),
+\end{equation}
+%  
+where $((i_\ell),Q)$ is an object of $N'$, where $i_a$ is an object of $I_a$, where $f$ runs over the morphisms from $\ell$ to $a$ in $K$, and where $\xi_f$ is a morphism from $Q(\ell)$ to $\alpha_a(i_a)$ which makes the square  
 $$
 \begin{tikzcd}
-Q(b)\ar{r}{\xi_f}\ar{d}[swap]{u'(b)}&\alpha_a(i_a)\ar{d}{u(i_a)}\\ 
-G(b)\ar{r}[swap]{G(f)}&G(a).
+Q(\ell)\ar{r}{\xi_f}\ar{d}[swap]{u'(\ell)}&\alpha_a(i_a)\ar{d}{u(i_a)}\\ 
+G(\ell)\ar{r}[swap]{G(f)}&G(a) 
 \end{tikzcd}
+$$ 
+in $\C$ commute, and a morphism from \eqref{il} to 
 $$
+\Big(\big((i'_\ell),Q'\big),i'_a,\big(\xi'_f:Q'(\ell)\to\alpha_a(i'_a)\big)_{f:\ell\to a}\Big)
+$$ 
+is given by a family $(f_k:i_k\to i'_k)_{k\in K}$ of morphisms in $I_k$ making the squares 
+$$
+\begin{tikzcd}
+Q(\ell)\ar{r}{\alpha_\ell(f_\ell)}\ar{d}[swap]{\xi_f}&Q'(\ell)\ar{d}{\xi'_f}\\ 
+\alpha_a(i_a)\ar{r}[swap]{\alpha_a(f_a)}&\alpha_a(i'_a) 
+\end{tikzcd}
+$$ 
+in $\C$ commute. (Recall $Q(\ell)=\alpha_\ell(i_\ell)$, $Q'(\ell)=\alpha_\ell(i'_\ell)$.)
 
 We shall define functors 
 $$
@@ -3914,23 +3928,23 @@ $$
 N\ar[yshift=0.7ex]{r}{\lambda}&M\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
-and leave it to the reader to check that they are quasi-inverse. (In fact, we shall only define the effect of $\lambda$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
+and leave it to the reader to check that they are mutually inverse isomorphisms. (In fact, we shall only define the effect of $\lambda$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
 
 To define $\lambda$ let $((i_k),P)$ be in $N$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
 $$
-\Big(\big((i_b),Q\big),i_a,\big(\xi_f:Q(b)\to\alpha_a(i_a)\big)_{f:b\to a}\Big).
+\Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\alpha_a(i_a)\big)_{f:\ell\to a}\Big).
 $$ 
-As $Q(b)=P(b)$ and $\alpha_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$. 
+As $Q(\ell)=P(\ell)$ and $\alpha_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$. 
 
 To define $\mu$ let 
 $$
-\xi:=\Big(\big((i_b),Q\big)\ ,\ i_a\ ,\ \pp((i_b),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
+\xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
 $$ 
 be in $M$. The object $\mu(\xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
 
-We define $P(k)$ by putting $P(b):=Q(b)$ for $b$ in $L$, and $P(a):=\alpha_a(i_a)$. 
+We define $P(k)$ by putting $P(\ell):=Q(\ell)$ for $\ell$ in $L$, and $P(a):=\alpha_a(i_a)$. 
 
-If $f:b\to c$ is a morphism in $L$, then we set $P(f):=Q(f):P(b)\to P(c)$. Let $b$ be in $L$. There is at most one morphism $f:b\to a$. If this morphism does exist, then we put $P(f):=\xi_f$. 
+If $f:\ell\to m$ is a morphism in $L$, then we set $P(f):=Q(f):P(\ell)\to P(m)$. Let $\ell$ be in $L$. There is at most one morphism $f:\ell\to a$. If this morphism does exist, then we put $P(f):=\xi_f$. 
 
 After a few verifications left to the reader, we get an equivalence 
 $$ 
@@ -3942,7 +3956,7 @@ By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_
 \begin{lem}\label{delta}
 If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^I$ is cofinal.
 \end{lem}
-%
+
 \begin{proof}
 It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\alpha$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\alpha$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
 $$
@@ -3956,9 +3970,8 @@ by induction on the cardinal of $S$, and to see that this implies the existence 
 \subsection{Exercise 6.11 (p. 147)} 
 
 We prove the following slightly more precise statement:
-%
+
 \begin{prop}\label{myprop1}
-%
 Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')$, and let $S$ be the set of objects $A$ of $\Ind(\cc C)$ such that $IF(A)\simeq A'$. Then the following conditions are equivalent: 
 
 \nn{\em(a)} $S\neq\varnothing$, 
@@ -3968,18 +3981,17 @@ Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')
 \nn{\em(c)} the natural functor $\cc C_{A'\circ F}\to\cc C'_{A'}$ is cofinal, 
 
 \nn{\em(d)} $A'\circ F$ is in $S$.
-%
 \end{prop}
-%
+
 \begin{proof}\ 
 
-\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic F\circ\beta_0\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\alpha\to F\circ\beta$ such that 
+\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\simeq A$; in particular $\ic(F\circ\beta_0)\simeq IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\alpha\to F\circ\beta$ such that 
 
 $J$ is small and filtrant, 
 
 $\alpha$ is constant equal to $X'$, 
 
-$\ic F\circ\beta\simeq IF(A)$, 
+$\ic(F\circ\beta)\simeq IF(A)$, 
 
 $\ic\pp\simeq f$. 
 
