@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0308)
+% about "categories and sheaves" (version-0309)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1957,7 +1957,7 @@ If
 \colim_{(\pp(j)\to i))\in J_i}\beta(j)
 \end{equation}
 %
-exists in $\C$ for all $i$ in $I$, then $\pp^\dagger\beta$ exists, and $(\pp^\dagger\beta)(i)$ is isomorphic to \eqref{e233}. If, in addition, \eqref{e233} exists universally in the sense of Definition~\ref{uil} p.~\pageref{uil}, then $\pp^\dagger\beta$ exists universally in the sense of Definition~\ref{232}. 
+exists in $\C$ for all $i$ in $I$, then $\pp^\dagger\beta$ exists, and $(\pp^\dagger\beta)(i)$ is isomorphic to \eqref{e233}. If, in addition, \eqref{e233} exists universally in the sense of Definition~\ref{uil} p.~\pageref{uil}, then $\pp^\dagger\beta$ exists universally in the sense of Definition~\ref{232} p.~\pageref{232}. 
 \end{thm}
 \end{s}
 
@@ -2215,7 +2215,7 @@ $$
 $$
 
 \begin{rk}\label{cof}
-Let $A'$ be in $\cc C'^\wedge$, and let $\cc C_{A'\circ F}\xr\pp\cc C'_{A'}\xr\psi\C'^\wedge$ be the natural functors. By \eqref{263a} p.~\pageref{263a} the natural morphism $\colim\psi\circ\pp\to\colim\psi$ induces a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
+Let $A'$ be in $\cc C'^\wedge$, and let $\cc C_{A'\circ F}\xr\pp\cc C'_{A'}\xr\psi\C'^\wedge$ be the natural functors. By \eqref{263a} p.~\pageref{263a} the natural morphism $\colim(\psi\circ\pp)\to\colim\psi$ induces a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
 \end{rk}
 
 The proof is obvious.
@@ -4027,11 +4027,15 @@ Let
 $$
 \begin{tikzcd}\C\ar[yshift=.5ex]{r}{Q}&\C'\ar[yshift=-.4ex]{l}{R}\end{tikzcd}
 $$ 
-be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that $Q(s)$ is an isomorphism for all $s$ in $\cc S$, let $\theta:\id_\C\to R\circ Q$ satisfy $\theta_X\in\cc S$ for all $X$ in $\C$, let $\A$ be a category, and let $\B$ be the full subcategory of $\A^\C$ whose objects are the functors turning the elements of $\cc S$ into isomorphisms. Then the functors
+be functors such that $Q\circ R\simeq\id_{\C'}$, let $\cc S$ be a subset of $\Ob(\Mor(\C))$ such that $Q(s)$ is an isomorphism for all $s$ in $\cc S$, let 
+$$
+\theta:\id_\C\to R\circ Q
+$$ 
+satisfy $\theta_X\in\cc S$ for all $X$ in $\C$, let $\A$ be a category, and let $\B$ be the full subcategory of $\A^\C$ whose objects are the functors turning the elements of $\cc S$ into isomorphisms. Then the functors
 $$
 \begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\circ Q}&\B\ar[yshift=-.5ex]{l}{\circ R}\end{tikzcd}
 $$
-are quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$. 
+are mutually quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\cc S$. 
 \end{lem}
 \end{s}
 
@@ -4139,9 +4143,9 @@ $$
 
 We want to prove $B\simeq C$.
 
-\nn{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(B,i):\alpha(i)\to X$ for the coprojection. (Of course this morphism depends on $\alpha$.) 
+\nn{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(X,i):\alpha(i)\to X$ for the coprojection. (Of course this morphism depends on $\alpha$.) 
 
-We shall define morphisms 
+We shall define morphisms of functors 
 $$
 \begin{tikzcd}
 B\ar[yshift=.7ex]{r}{f}&C\ar[yshift=-.7ex]{l}{g}.
