@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0309)
+% about "categories and sheaves" (version-0310)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4156,7 +4156,7 @@ For $(X',x')$ in $\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by
 $$
 f(X',x'):=p(C,X',p(A,X',x')),
 $$ 
-and we claim that the morphisms $f(X',x')$ induce a morphism $f:B\to C$. 
+and we claim that the morphisms $f(X',x')$ induce a morphism of functors $f:B\to C$. 
 
 Let $(U,u)$ be in $\C_A$, that is
 $$
@@ -4166,7 +4166,7 @@ Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=p(A(U),X',x')(f)$, and
 $$
 g(U,u):=p(B,X',x')\circ\iota_\A(F(f)):\iota_\A(F(U))\to B.
 $$ 
-We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
+We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism of functors $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
 
 We leave the verification of these claims to the reader. 
 
@@ -4176,7 +4176,11 @@ We leave the verification of these claims to the reader.
 
 \subsection{Brief Comment}
 
-About Lemma 8.1.2 (ii), p. 169: The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a family of maps $\mu_X:G(X)^2\to G(X)$ such that 
+About Lemma 8.1.2 (ii), p. 169: The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a functorial family of maps 
+$$
+(\mu_X:G(X)^2\to G(X))_{X\in\C}
+$$ 
+such that 
 
 \nn(a) $\mu_X$ is a group multiplication for all $X$ in $\C$, 
 
