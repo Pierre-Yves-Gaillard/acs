@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0310)
+% about "categories and sheaves" (version-0311)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4201,7 +4201,7 @@ $$
 $$
 be defined by 
 $$
-\Phi(\theta)=\theta_X(\id_X),\quad\psi(x)(f)=A(f)(x).
+\Phi(\theta)=\theta_X(\id_X),\quad\Psi(x)(f)=A(f)(x).
 $$
 Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
 \end{prop}
@@ -4213,7 +4213,11 @@ In the above setting we denote $\A$ by $\C^\wedge$ and $h$ by $\hy_\C$. (This ab
 \end{conv} 
 
 \begin{lem}\label{payl}
-Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\colim(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\colim\alpha$ exists in $\A$ and satisfies $(\colim\alpha)(X)\simeq\colim(\alpha(X))$ for all $X$ in $\C$. (There is a similar statement for projective limits.)
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\colim(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\colim\alpha$ exists in $\A$ and satisfies 
+$$
+(\colim\alpha)(X)\simeq\colim(\alpha(X))
+$$ 
+for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
 
 %%%
@@ -4236,7 +4240,11 @@ $$
 Let us denote the object $X$ above by $X_1\oplus X_2$. The following lemma is implicit in the book. 
 
 \begin{lem}
-For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have $f_1\times f_2=f_1\sqcup f_2$ (equality in $\Hom_\C(X_1\oplus X_2,Y_1\oplus Y_2)$). 
+For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have 
+$$
+f_1\times f_2=f_1\sqcup f_2
+$$ 
+(equality in $\Hom_\C(X_1\oplus X_2,Y_1\oplus Y_2)$). 
 \end{lem} 
 
 We denote this morphism by $f_1\oplus f_2$.\medskip 
