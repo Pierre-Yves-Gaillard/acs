@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0307)
+% about "categories and sheaves" (version-0308)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -3930,6 +3930,13 @@ N\ar[yshift=0.7ex]{r}{\lambda}&M\ar[yshift=-0.7ex]{l}{\mu}
 $$ 
 and leave it to the reader to check that they are mutually inverse isomorphisms. (In fact, we shall only define the effect of $\lambda$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
 
+We shall define maps 
+$$
+\begin{tikzcd}
+\Ob(N)\ar[yshift=0.7ex]{r}{\lambda}&\Ob(M).\ar[yshift=-0.7ex]{l}{\mu}
+\end{tikzcd}
+$$ 
+
 To define $\lambda$ let $((i_k),P)$ be in $N$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
 $$
 \Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\alpha_a(i_a)\big)_{f:\ell\to a}\Big).
@@ -3938,17 +3945,19 @@ As $Q(\ell)=P(\ell)$ and $\alpha_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$
 
 To define $\mu$ let 
 $$
-\xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
+\Xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
 $$ 
-be in $M$. The object $\mu(\xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
+be in $M$. The object $\mu(\Xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
 
 We define $P(k)$ by putting $P(\ell):=Q(\ell)$ for $\ell$ in $L$, and $P(a):=\alpha_a(i_a)$. 
 
 If $f:\ell\to m$ is a morphism in $L$, then we set $P(f):=Q(f):P(\ell)\to P(m)$. Let $\ell$ be in $L$. There is at most one morphism $f:\ell\to a$. If this morphism does exist, then we put $P(f):=\xi_f$. 
 
-After a few verifications left to the reader, we get an equivalence 
+We leave it to the reader to check that $\lambda$ and $\mu$ are mutually inverse bijections. 
+
+We also leave it to the reader to check that the set of morphisms in $M$ from $\lambda((i_k),P)$ to $\lambda((i'_k),P')$ is \emph{equal} (in the strictest sense of the word) to the set of morphisms in $N$ from $((i_k),P)$ to $((i'_k),P')$, so that we get an isomorphism 
 $$ 
-N\sim M\left[N'\xrightarrow{\pp}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
+N\simeq M\left[N'\xrightarrow{\pp}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$
 
 By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134 of the book. The only remaining task is to prove the lemma below.
