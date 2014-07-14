@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0316)
+% about "categories and sheaves" (version-0317)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4965,11 +4965,10 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 
 \subsection{Exercise 8.17 (p.~204)}\label{817} 
 
-\subsubsection{Preliminaries}\label{preli}
+\subsubsection{Preliminaries} 
 
-Consider the following statements.
-
-\nn(a) Let $X\xr fY\xr gZ$ be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
+\begin{lem}\label{817a1} 
+Let $X\xr fY\xr gZ$ be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
 $$
 \begin{tikzcd}
 \Ker(g\circ f)\ar{r}&X\ar{d}\ar{r}&\Ima(g\circ f)\ar[dashed]{dl}\ar{d}\ar{r}&0\\ 
@@ -4985,27 +4984,34 @@ X\ar[two heads]{dd}\ar{rr}{f}&&Y\ar[two heads]{dl}\ar{dd}{g}\\
 \end{tikzcd}
 $$ 
 In particular $\Ima(g\circ f)\to\Ima g$ is a monomorphism. 
+\end{lem} 
 
 \begin{proof} 
-The rows of the diagram 
+Our first claim is that the diagram of solid arrows 
 $$
 \begin{tikzcd}
-{}&X\times_ZX\ar{r}{a}&X\ar{d}[swap]{f}\ar{r}{d}&\Coim g\circ f\ar{r}\ar[dashed]{ddl}{b}&0\\ 
+{}&X\times_ZX\ar{r}{a}&X\ar{d}[swap]{f}\ar{r}{d}&\Coim(g\circ f)\ar{r}\ar[dashed]{ddl}{b}&0\\ 
 {}&{}&Y\ar{d}[swap]{g}\\
-0\ar{r}&\Ima g\ar{r}&Z\ar{r}[swap]{c}&Z\oplus_YZ
+0\ar{r}&\Ima g\ar{r}&Z\ar{r}[swap]{c}&Z\oplus_YZ,
 \end{tikzcd}
 $$ 
-are exact sequences. The existence of $b$ follows from the vanishing of $g\circ f\circ a$. To prove the existence of $\Coim g\circ f\to\Ima g$, it suffices to verify the vanishing of $c\circ b$. As $d$ is an epimorphism, the vanishing of $c\circ b$ is equivalent to the vanishing of $c\circ b\circ d$. But we have $c\circ b\circ d=c\circ g\circ f=0\circ f=0$. 
+whose rows are exact sequences, can be completed as indicated. Indeed, the existence of $b$ follows from the vanishing of $g\circ f\circ a$. This proves the first claim. To prove the lemma, it is enough to check that $c\circ b$ factors through $\Ima g$, or, equivalently, that $c\circ b=0$. As $d$ is an epimorphism, the vanishing of $c\circ b$ is equivalent to the vanishing of $c\circ b\circ d$. But we have $c\circ b\circ d=c\circ g\circ f=0\circ f=0$. 
 \end{proof} 
 
-\nn(b) If in addition $f$ is an epimorphism, then $\Ima(g\circ f)\to\Ima g$ is an isomorphism. 
+\begin{lem}\label{817b1} 
+If, in the setting of Lemma~\ref{817a}, $f$ is an epimorphism, then 
+$$
+\Ima(g\circ f)\to\Ima g
+$$ 
+is an isomorphism. 
+\end{lem} 
 
 \begin{proof} 
 Consider the commutative square  
 $$
 \begin{tikzcd}
 X\ar{d}\ar{r}{f}&Y\ar{d}{a}\\ 
-\Ima g\circ f\ar{r}[swap]{b}&\Ima g,
+\Ima(g\circ f)\ar{r}[swap]{b}&\Ima g,
 \end{tikzcd}
 $$ 
 where $a$ and $b$ are the natural morphisms. As $f$ and $a$ are epimorphisms, so is $b$. 
@@ -5123,8 +5129,8 @@ it suffices to observe that the isomorphism
 $$
 \Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X))
 $$
-results from Section~\ref{preli} above and the exactness of $F(X')\to F(K_g)\to0$.
-\end{proof}
+results from Lemmas \ref{817a1} and \ref{817b1} above and the exactness of $F(X')\to F(K_g)\to0$.
+\end{proof} 
 
 %%%
 
