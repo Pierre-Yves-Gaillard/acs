@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0313)
+% about "categories and sheaves" (version-0314)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -349,7 +349,7 @@ X\ar{r}[swap]{f}&Y
 %
 in the abelian category $\C$. 
 
-\begin{lem}[Lemma 8.3.11 p.~180]\label{8311}%(stated as Lemma~\ref{8311} p.~\pageref{8311})
+\begin{lem}[Lemma 8.3.11 p.~180]\label{8311}
 We have:
 
 \nn\emph{(a)} Assume that \eqref{837} is cartesian. 
@@ -2194,7 +2194,7 @@ where
 \eqref{prepa4a} follows from \eqref{prepa4}, 
 \eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
 \eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
-\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}). 
+\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated here as Definition~\ref{dsbc} p.~\pageref{dsbc}). 
 \end{proof}
 
 %%
@@ -2551,7 +2551,7 @@ Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^
 
 We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
 
-By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\ref{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map 
+By Proposition 3.3.3 of the book, stated here as Proposition~\ref{333} p.~\ref{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map 
 $$
 A(\colim_i X_i)\to\lim_iA(X_i)
 $$ 
@@ -3262,7 +3262,7 @@ Let $\C$ be a category satisfying the conditions (i)-(iii) below:
 
 \nn\emph{(i)} $\C$ admits small inductive limits and finite projective limits, 
 
-\nn\emph{(ii)} small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}), 
+\nn\emph{(ii)} small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated here as Definition~\ref{dsbc} p.~\pageref{dsbc}), 
 
 \nn\emph{(iii)} any epimorphism is strict.
 
@@ -3328,7 +3328,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 %
 \end{align*} 
 
-It remains to prove Steps 3, 3', 4, 5, and 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}.) 
+It remains to prove Steps 3, 3', 4, 5, and 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wedge$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated here as Definition~\ref{dsbc} p.~\pageref{dsbc}.) 
 
 \begin{proof}[Proof of Step 4] 
 We have 
@@ -4278,7 +4278,7 @@ $$
 This implies that $\Hom_\C(Y,X)$ is a product of $\Hom_\C(Y,X_1)$ and $\Hom_\C(Y,X_2)$ by $\Hom_\C(Y,p_1)$ and $\Hom_\C(Y,p_2)$, and thus, $Y$ being arbitrary, that $X$ is a product of $X_1$ and $X_2$ by $p_1$ and $p_2$, and we conclude by applying this observation to the opposite category.
 \end{proof}
 
-Note also the following corollary to Lemma 8.2.3 (ii) (stated as Lemma~\ref{823ii} above). 
+Note also the following corollary to Lemma 8.2.3 (ii) (stated here as Lemma~\ref{823ii} above). 
 
 \begin{cor}\label{823b}
 Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
@@ -4671,21 +4671,31 @@ Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category
 The authors say that the equivalence (iii)$\ssi$(iv) is obvious. I agree, but here are a few more details. Implication (iv)$\then$(iii) is indeed obvious in the strongest sense of the word. Implication (iii)$\then$(iv) can be proved as follows. 
 
 Assume (iii), that is, we have morphisms $h:X''\to X$ and $k:X\to X'$ such that 
+%
 \begin{equation}\label{fk+hg} 
 f\circ k+h\circ g=\id_X.
 \end{equation} 
-The proofs of (iii)$\then$(i) and (iii)$\then$(ii) show that we also have 
+% 
+As $g\circ f=0$, this implies 
+$$
+g\circ h\circ g=g\circ f\circ k+g\circ h\circ g=g\circ\id_X=g. 
+$$ 
+Since $g$ is an epimorphism, this entails $g\circ h=\id_{X''}$. We prove similarly $k\circ f=\id_{X'}$. Let us record the two above equalities: 
+% 
 \begin{equation}\label{gh,kf} 
 g\circ h=\id_{X''},\quad k\circ f=\id_{X'}.
 \end{equation} 
-Equalities \eqref{fk+hg} and \eqref{gh,kf} imply 
+% 
+Now \eqref{fk+hg} and \eqref{gh,kf} imply 
 $$
 k\circ h=k\circ(f\circ k+h\circ g)\circ h=k\circ f\circ k\circ h+k\circ h\circ g\circ h=k\circ h+k\circ h,
 $$ 
 and thus 
+%
 \begin{equation}\label{kh} 
 k\circ h=0, 
 \end{equation} 
+% 
 and (iv) follows from \eqref{fk+hg},\eqref{gh,kf}, and \eqref{kh}. q.e.d.
 \end{s}
 
@@ -4701,7 +4711,7 @@ $$
 %
 
 \begin{s}\label{gcsbc}
-P.~186, Definition 8.3.24 (definition of a Grothendieck category\index{Grothendieck category}). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated as Definition~\ref{dsbc} p.~\pageref{dsbc}).
+P.~186, Definition 8.3.24 (definition of a Grothendieck category\index{Grothendieck category}). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated here as Definition~\ref{dsbc} p.~\pageref{dsbc}).
 \end{s}
 
 %
@@ -4753,7 +4763,7 @@ Y\ar{ur}{b}\ar{dr}[swap]{c}&Y_1\ar[dashed]{r}{l_1}&X\\
 {}&G_i\ar{u}{a_1}\ar{ru}[swap]{\pp}
 \end{tikzcd}
 $$ 
-commutative. By Lemma 8.3.11 (a) (i) p.~180 of the book (stated as Lemma~\ref{8311} p.~\pageref{8311}), $c$ is a monomorphism, and, by Part (a) (i) of the same lemma, $\lambda$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$: 
+commutative. By Lemma 8.3.11 (a) (i) p.~180 of the book (stated here as Lemma~\ref{8311} p.~\pageref{8311}), $c$ is a monomorphism, and, by Part (a) (i) of the same lemma, $\lambda$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\circ c=g_0\circ b$: 
 $$
 \begin{tikzcd}
 Y\ar{r}{b}\ar[tail]{d}[swap]{c}&Y_0\ar{d}{g_0}\\ 
@@ -5359,7 +5369,7 @@ Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to 
 $$
 \colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
 $$ 
-As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}) and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
+As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book (stated here as Lemma~\ref{l331} p.~\pageref{l331}) and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
 
 It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to prove the 
 
@@ -5391,7 +5401,7 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. 
 
-\nn$*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn$*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated here as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
 \nn$*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 \begin{equation}\label{s5a}
@@ -5566,7 +5576,7 @@ for $A$ in $I$, and
 $$
 \colim_{A\in I}G^{\sqcup A}\xr\sim G^{\sqcup X(G)}\to X.
 $$ 
-Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}), and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
+Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224 of the book (stated here as Lemma~\ref{l331} p.~\pageref{l331}), and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
 
 \nn$\si:$ In view of Proposition~\ref{932} p.~\pageref{932}, it suffices to prove  
 
@@ -5773,7 +5783,7 @@ $$
 
 Claim: There is an $i_0$ in $I$ such that $\pp^Y_{i_0}:=a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
 
-As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book (stated as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that 
+As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book (stated here as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that 
 $$
 a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)
 $$ 
@@ -6695,7 +6705,7 @@ V\ar{r}\ar{d}&U\ar[dashed]{d}\\
 T\ar[dashed,tail]{r}&S
 \end{tikzcd}
 $$ 
-can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book (stated as Lemma~\ref{8311} p.~\pageref{8311}).
+can be completed to a commutative diagram as indicated. To do this, we decree that the above completed square is cocartesian, and note that $T\to S$ is a monomorphism by Lemma 8.3.11 (b) (ii) p.~180 of the book (stated here as Lemma~\ref{8311} p.~\pageref{8311}).
 
 \nn Exactness at $U$: Let $U\to T$ be a morphism whose composition with $V\to U$ is zero. By Lemma~\ref{8312}, (c)$\then$(a), it suffices to show that the commutative diagram of solid arrows 
 $$
