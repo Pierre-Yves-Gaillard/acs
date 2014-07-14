@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0312)
+% about "categories and sheaves" (version-0313)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4608,7 +4608,7 @@ Equivalence (a)$\ssi$(b) is proved in the book, and Equivalence (a)$\ssi$(c) fol
 \begin{s} 
 Page 181, the Five Lemma (minor variant). 
 
-\begin{lem} 
+\begin{thm}[Lemma 8.3.13 p.~181, Five Lemma] 
 Consider the commutative diagram of complexes 
 $$
 \begin{tikzcd}
@@ -4623,7 +4623,7 @@ Y^3,
 \end{tikzcd}
 $$
 where $f^0$ is an epimorphism, $f^1$ and $f^3$ are monomorphisms, and $X^1\to X^2\to X^3$ and $Y^0\to Y^1\to Y^2$ are exact. Then $f^2$ is a monomorphism. 
-\end{lem} 
+\end{thm} 
 
 \begin{proof}
 Note that Equivalence (a)$\ssi$(b) in Lemma~\ref{8312} p.~\pageref{8312} can be stated as follows: 
@@ -4632,14 +4632,22 @@ Note that Equivalence (a)$\ssi$(b) in Lemma~\ref{8312} p.~\pageref{8312} can be 
 
 We write $fx$ for the image of a subobject $x$ of $X$, and $fg$ for $f\circ g$.
 
-Put $x^2:=\Ker f^2$. Using $(*)$ we see that there is a subobject $x^1$ of $X^1$ such that $x^2=a^1x^1$ (because $f^3$ is a monomorphism, $f^3a^2x^2=0$, and $X^1\xr{a^1}X^2\xr{a^2}X^3$ is exact), a subobject $y^0$ of $Y^0$ such that $f^1x^1=b^0y^0$ (because $b^1f^1x^1=0$ and $Y^0\xr{b^0}Y^1\xr{b^1}Y$ is exact), and a subobject $y^0$ of $Y^0$ such that $y^0=f^0x^0$ (because $f^0$ is an epimorphism). This yields 
+Put $x^2:=\Ker f^2$. Using $(*)$ we see that there is: 
+
+\nn$\bu$ a subobject $x^1$ of $X^1$ such that $x^2=a^1x^1$ (because $f^3$ is a monomorphism, $f^3a^2x^2=0$, and $X^1\xr{a^1}X^2\xr{a^2}X^3$ is exact), 
+
+\nn$\bu$ a subobject $y^0$ of $Y^0$ such that $f^1x^1=b^0y^0$ (because $b^1f^1x^1=0$ and $Y^0\xr{b^0}Y^1\xr{b^1}Y$ is exact), and 
+
+\nn$\bu$ a subobject $x^0$ of $X^0$ such that $y^0=f^0x^0$ (because $f^0$ is an epimorphism). 
+
+This yields 
 $$
 f^1a^0x^0=b^0f^0x^0=b^0y^0=f^1x^1,
 $$
 implying $a^0x^0=x^1$ (because $f^1$ is a monomorphism), and thus 
 $$
 0=a^1a^0x^0=a^1x^1=x^2.
-$$
+$$ 
 \end{proof}
 \end{s}
 
