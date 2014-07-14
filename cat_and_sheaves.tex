@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0311)
+% about "categories and sheaves" (version-0312)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -642,7 +642,7 @@ $$
 $$ 
 \end{nota}
 
-Note that there are natural inverse isomorphisms $\C\rightleftarrows\C^*$. 
+Note that there are natural mutually inverse isomorphisms $\C\rightleftarrows\C^*$. 
 
 \begin{nota}\label{mor}
 %
@@ -712,7 +712,7 @@ $$
 $$
 f\in\Hom_\C(X,A)\xr{\pp(a)_X}F(X)\xleftarrow{F(f)}F(A)\ni a.
 $$
-Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
+Then $\pp$ and $\psi$ are mutually inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
 $$
 \pp(a)=h(a)\in\Hom_{\C^\wedge}(h(A),h(B)).
 $$
@@ -731,7 +731,7 @@ $$
 $$
 f\in\Hom_\C(A,X)\xr{\pp(a)_X}F(X)\xleftarrow{F(f)}F(A)\ni a.
 $$
-Then $\pp$ and $\psi$ are inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
+Then $\pp$ and $\psi$ are mutually inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
 $$
 \pp(a)=k(a)\in\Hom_{\C^\vee}(k(B),k(A)).
 $$
@@ -1079,7 +1079,7 @@ $$
 
 For the reader's convenience we prove \eqref{158} p.~\pageref{158} and \eqref{159} p.~\pageref{159}. It clearly suffices to prove \eqref{158}. 
 
-Let us denote the functorial inverse bijections defining the adjunction by 
+Let us denote the functorial mutually inverse bijections defining the adjunction by 
 %
 \begin{equation}\label{bij}
 \begin{tikzcd}
@@ -1325,7 +1325,7 @@ we attach the family
 $$
 \ell=\big(\rho_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
 $$ 
-We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are inverse bijections.
+We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are mutually inverse bijections.
 \end{s}
 
 %
@@ -1531,7 +1531,7 @@ and we must check that $f(\id_{\pp^\dagger(\alpha)})$ is an isomorphism. To this
 $$
 u:\pp_*(\pp^\dagger(\alpha))\to\alpha,
 $$
-and leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dagger(\alpha))})$ and $u$ are inverse isomorphisms. As 
+and leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dagger(\alpha))})$ and $u$ are mutually inverse isomorphisms. As 
 $$ 
 \Big(\pp_*\big(\pp^\dagger(\alpha)\big)\Big)(j):=\pp^\dagger(\alpha)(\pp(j)):=\colim_{\pp(j')\to\pp(j)}\alpha(j'),
 $$
@@ -1592,7 +1592,7 @@ be the coprojections. We easily check that the compositions
 $$
 \beta(j)\xrightarrow{p_{\pp(j),j,\id_{\pp(j)}}}\colim_{j,u}\beta(j)\xrightarrow{q_{\pp(j)}}\colim_i\ \colim_{j,u}\beta(j)
 $$ 
-induce a map $g:L\to R$, and that $f$ and $g$ are inverse bijections. q.e.d.
+induce a map $g:L\to R$, and that $f$ and $g$ are mutually inverse bijections. q.e.d.
 \end{s} 
 
 % 
@@ -1736,7 +1736,7 @@ by
 $$
 f_{X,b}(a):=q_{X,a}(b),\quad g_{X,a}(b):=p_{X,b}(a).
 $$
-One easily checks that these maps define inverse bijections between $L$ and $R$. 
+One easily checks that these maps define mutually inverse bijections between $L$ and $R$. 
 \end{proof}
 
 \begin{proof}[Second Proof]
@@ -2479,7 +2479,7 @@ be the coprojections. Note that $p_{i,J}$ is defined only for $i$ in $J$. We eas
 
 \nn$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
 
-\nn$\bu$ $f$ and $g$ are inverse isomorphisms.
+\nn$\bu$ $f$ and $g$ are mutually inverse isomorphisms.
 \end{proof}
 \end{s}
 
@@ -3555,7 +3555,7 @@ $$
 \Ind(\C_1\times\C_2)\ar[yshift=0.7ex]{r}{\theta}&\Ind(\C_1)\times\Ind(\C_2),\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
-and prove that they are quasi-inverse equivalences. (In fact, we shall only define the effect of $\theta$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.) But first let us introduce some notation. We shall consider functors 
+and prove that they are mutually quasi-inverse equivalences. (In fact, we shall only define the effect of $\theta$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.) But first let us introduce some notation. We shall consider functors 
 $$
 A\in\Ind(\C_1\times\C_2);\quad A_i,B_i\in\Ind(\C_i);
 $$ 
@@ -4381,7 +4381,7 @@ $$
 
 I think the authors forgot to prove Implication $\then$. Let us do it. It suffices to show that $F$ commutes with $n$-fold products for $n=0$ or $n=2$. 
 
-Case $n=0$: Put $X:=F(0)$. We must prove $X\simeq 0$. The equality $0=1$ holds in the ring $\Hom_\C(X,X)$ because it holds in the ring $\Hom_\C(0,0)$. As a result, the morphisms $0\to X$ and $X\to 0$ are inverse isomorphisms. 
+Case $n=0$: Put $X:=F(0)$. We must prove $X\simeq 0$. The equality $0=1$ holds in the ring $\Hom_\C(X,X)$ because it holds in the ring $\Hom_\C(0,0)$. As a result, the morphisms $0\to X$ and $X\to 0$ are mutually inverse isomorphisms. 
 
 Case $n=2$: Let $X_1,X_2$ be in $\C$. To check that the natural morphisms 
 %
@@ -4389,7 +4389,7 @@ Case $n=2$: Let $X_1,X_2$ be in $\C$. To check that the natural morphisms
 F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 \end{equation} 
 %
-are inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections, and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
+are mutually inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections, and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
 \end{s}
 
 %%%
@@ -4431,7 +4431,7 @@ P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar{u}[swap]{e}
 $$ 
 commute. 
 
-It is easy to see that $d$ and $e$ are inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram
+It is easy to see that $d$ and $e$ are mutually inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\simeq\Coim f$ which makes the diagram
 %
 \begin{equation}\label{834a}
 \begin{tikzcd}
@@ -4495,7 +4495,13 @@ Let us just add a few more details about the proof of the isomorphisms
 \simeq\Ker(\psi:\Coker f\to\Ima g)\simeq\Ker(\Coker f\to X''),
 \end{split}
 \end{equation}
-labeled (8.3.4) in the book. Recall that the underlying category $\C$ is abelian, and that the complex in question is denoted $X'\xrightarrow{f}X\xrightarrow{g}X''$. We shall freely use the isomorphism between image and coimage, as well as the abbreviations 
+labeled (8.3.4) in the book. Recall that the underlying category $\C$ is abelian, and that the complex in question is denoted 
+%
+\begin{equation}\label{833}
+X'\xrightarrow{f}X\xrightarrow{g}X''.
+\end{equation}
+%  
+We shall freely use the isomorphism between image and coimage, as well as the abbreviations 
 $$
 K_v:=\Ker v,\quad K'_v:=\Coker v,\quad I_v:=\Ima v.
 $$ 
@@ -4514,7 +4520,7 @@ $$
 Then the bottom arrows are isomorphisms.
 \end{prop}
 %
-Going back to our complex $X'\xr fX\xr gX''$, let us introduce the notation 
+Going back to our complex \eqref{833} p.~\pageref{833}, let us introduce the notation 
 $$
 \begin{tikzcd}
 X'\ar{rrr}{f}\ar[equal]{d}&&&X\ar[equal]{d}\ar{rrr}{g}&&&X''\ar[equal]{d}\\ 
@@ -4648,7 +4654,7 @@ Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category
 \item[\em(i)] there exits $h:X''\to X$ such that $g\circ h=\id_{X''}$,
 \item[\em(ii)] there exits $k:X\to X'$ such that $k\circ f=\id_{X'}$,
 \item[\em(iii)] there exits $h:X''\to X$ and $k:X\to X'$ such that $\id_X=f\circ k+h\circ g$,
-\item[\em(iv)] there exits $\pp=(k,g)$ and $\psi=(f,h)$ such that $X\xr\pp X'\oplus X''$ and $X'\oplus X''\xr\psi X$ are inverse isomorphisms,
+\item[\em(iv)] there exits $\pp=(k,g)$ and $\psi=(f,h)$ such that $X\xr\pp X'\oplus X''$ and $X'\oplus X''\xr\psi X$ are mutually inverse isomorphisms,
 \item[\em(v)] for any $Y$ in $\C$, the map $\Hom_\C(Y,X)\xr{g\circ}\Hom_\C(Y,X'')$ is surjective,
 \item[\em(vi)] for any $Y$ in $\C$, the map $\Hom_\C(X,Y)\xr{\circ f}\Hom_\C(X',Y)$ is surjective.
 \end{itemize}
@@ -4809,7 +4815,7 @@ Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring
 \end{lem}
 
 \begin{proof}
-Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\pp$ and $\psi$ induce quasi-inverse equivalences 
+Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\pp$ and $\psi$ induce mutually quasi-inverse equivalences 
 $$
 \begin{tikzcd}
 \C_0\ar[yshift=.7ex]{r}{\pp_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
@@ -7428,7 +7434,7 @@ $$
 \Hom_{\oo{PSh}(U,\A)}(M,\oo j_{U\to X*}F)\ar[yshift=0.7ex]{r}{\pp}&\Hom_\A(M,F(U))\ar[yshift=-0.7ex]{l}{\psi}
 \end{tikzcd} 
 $$ 
-as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given by morphisms $p(V\to U):M\to F(V)$ in $\A$, then we put $\pp(p):=p(U\xr{\id_U}U)$; if $a:M\to F(U)$ is a morphism in $\A$, then we put $\psi(a)(V\xr cU):=F(c)\circ a$; and we check that $\pp$ and $\psi$ are inverse bijections. 
+as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given by morphisms $p(V\to U):M\to F(V)$ in $\A$, then we put $\pp(p):=p(U\xr{\id_U}U)$; if $a:M\to F(U)$ is a morphism in $\A$, then we put $\psi(a)(V\xr cU):=F(c)\circ a$; and we check that $\pp$ and $\psi$ are mutually inverse bijections. 
 \end{s}
 
 %\begin{s}P.~417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.\end{s}
