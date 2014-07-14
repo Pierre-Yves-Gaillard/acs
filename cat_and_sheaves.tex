@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0317)
+% about "categories and sheaves" (version-0318)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4967,8 +4967,14 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 
 \subsubsection{Preliminaries} 
 
-\begin{lem}\label{817a1} 
-Let $X\xr fY\xr gZ$ be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
+\begin{lem} 
+Let 
+%
+\begin{equation}\label{e817}
+X\xr fY\xr gZ 
+\end{equation}
+% 
+be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
 $$
 \begin{tikzcd}
 \Ker(g\circ f)\ar{r}&X\ar{d}\ar{r}&\Ima(g\circ f)\ar[dashed]{dl}\ar{d}\ar{r}&0\\ 
@@ -5072,7 +5078,7 @@ $$
 $$ 
 is exact. The exactness at $F(X')$ is clear. To check the exactness at $F(X)$, note that we have 
 $$
-\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I))\simeq\Ima(F(X')\to F(X)),
+\Ker\big(F(X)\to F(X'')\big)\simeq\Ker\big(F(X)\to F(I)\big)\simeq\Ima\big(F(X')\to F(X)\big),
 $$ 
 the isomorphisms following respectively from the exactness of $0\to F(I)\to F(X'')$ and $F(X')\to F(X)\to F(I)$.
 \end{proof}
@@ -5120,16 +5126,16 @@ $$
 $$
 are exact. We must show that $F(X')\to F(X)\to F(X'')$ is exact. As
 $$
-\Ker(F(X)\to F(X''))\simeq\Ker(F(X)\to F(I_g))\simeq\Ima(F(K_g)\to F(X)),$$ 
+\Ker\big(F(X)\to F(X'')\big)\simeq\Ker\big(F(X)\to F(I_g)\big)\simeq\Ima\big(F(K_g)\to F(X)\big),$$ 
 the isomorphisms following respectively from the exactness of 
 $$
 0\to F(I_g)\to F(X'')\quad\text{and}\quad F(K_g)\to F(X)\to F(I_g),
 $$ 
-it suffices to observe that the isomorphism
+it suffices to observe that, in view of the exactness of $F(X')\to F(K_g)\to0$, the isomorphism
 $$
-\Ima(F(K_g)\to F(X))\simeq\Ima(F(X')\to F(X))
+\Ima\big(F(K_g)\to F(X)\big)\simeq\Ima\big(F(X')\to F(X)\big)
 $$
-results from Lemmas \ref{817a1} and \ref{817b1} above and the exactness of $F(X')\to F(K_g)\to0$.
+results from Lemma~\ref{817b1} p.~\pageref{817b1} with $F(X')\to F(K_g)\to F(X)$ instead of \eqref{e817} p.~\pageref{e817}. 
 \end{proof} 
 
 %%%
