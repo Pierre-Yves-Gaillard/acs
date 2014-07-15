@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0320)
+% about "categories and sheaves" (version-0321)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5346,9 +5346,9 @@ For the reader's convenience we state the lemma:
 Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pageref{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category, let $\alpha:I\to\C$ be a functor, and let $\colim\alpha\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\alpha(i_0)\to Y$ is an epimorphism.
 \end{lem}
 
-The proof of Lemma 9.3.1 uses twice the following lemma:
+The proof of Lemma~\ref{l331} uses twice the following lemma:
 
-\begin{lem}\label{ppi}
+\begin{lem}\label{ppi} 
 Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\alpha:I\to\C$ be a functor admitting an inductive limit $X$ in $\C$. Assume that the coprojections $p_i:\alpha(i)\to X$ are monomorphisms, and consider the conditions below:
 
 \nn{\em(a)} $I$ is $\pi$-filtrant and $X$ is $\pi$-accessible,
@@ -5366,7 +5366,7 @@ Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\alpha:I\to\
 This follows immediately from Exercise 1.7 p. 31 of the book.
 \end{proof}
 
-We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1. This second sentence is 
+We give a slightly more detailed writing of the second sentence in Step (a) of the proof of Lemma 9.3.1 p.~224 of the book. This second sentence is 
 
 ``Set $S:=\colim_iY_i(G)\subset Y(G)$.'' 
 
@@ -5378,42 +5378,66 @@ The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As sma
 
 \subsubsection{Proposition 9.3.2 (p. 224)}
 
-\begin{prop}[Proposition 9.3.2 p.~224]\label{932}
+\begin{prop}[Proposition 9.3.2 p.~224]\label{932} 
 Let $\C$ be a category satisfying Conditions (9.3.1) of the book, conditions stated in Section~\ref{931} p.~\pageref{931} above. If $\pi$ is an infinite regular cardinal, if $A$ is in $\C$, and if 
 $$
-\card(A(G))<\pi,\quad\card(G^{\sqcup A(G)}(G))<\pi,
+\card(A(G))<\pi,\quad\card\big(G^{\sqcup A(G)}(G)\big)<\pi,
 $$ 
 then $A$ is in $\C_\pi$.
 \end{prop}
 
 Here is a rewriting of the proof with a few more details:
 
-\begin{proof}
+\begin{proof}[Proof of Proposition~\ref{932}] 
 $*$ Step 1. Note that $\Set\ni S\mapsto G^{\sqcup S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\sqcup S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
-$$S\to A(G)\to S$$ 
+$$
+S\to A(G)\to S
+$$ 
 whose composition is the identity. Hence, the composition 
-$$G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)$$ 
+$$
+G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)
+$$ 
 is the identity.
 
-\nn$*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. It suffices to show that the map 
+\nn$*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. Claim~\ref{lbij} below will imply Proposition~\ref{932}. 
+
+\begin{claim}\label{lbij} 
+The map 
 $$
 \lambda:\colim_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
 $$ 
 is bijective. 
+\end{claim}
 
-Let us show that $\lambda$ is injective. (Here we shall only use $\card(A(G))<\pi$.)
+\begin{claim}\label{linj} 
+The map $\lambda$ is injective. 
+\end{claim} 
 
-Let $f,g:A\parar X_{i_0}$ be such that the two compositions $A\parar X_{i_0}\to X$ coincide. For each $s:i_0\to i$, set $N_s:=\Ker(A\parar X_i)$. By Corollary 3.2.3 (i) p.~79 of the book, $I^{i_0}$ is filtrant and the forgetful functor $I^{i_0}\to I$ is cofinal. One of our assumption, namely Condition (9.3.1) (iii) of the book, stated in Section~\ref{931} p.~\pageref{931}, says that small filtrant inductive limits are exact in $\C$. In particular, $\colim_{s\in I^{i_0}}$ is exact in $\C$, and we get  
+\begin{proof}[Proof of Claim~\ref{linj}] 
+(We shall only use $\card(A(G))<\pi$.) Suppose that $f,g:A\parar X_{i_0}$ have same image in $\Hom_\C(A,X)$. This just means that the two compositions 
 $$
-\colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A.
+A\parar X_{i_0}\to X
 $$ 
-As $\card(A(G))<\pi$ by assumption, we may apply Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}) and conclude that there is an $s:i_0\to i$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. This proves that $\lambda$ is injective. 
+coincide. We must show that $f$ and $g$ have already same image in 
+$$
+\colim_{i\in I}\Hom_\C(A,X_i),
+$$ 
+that is, we must show that there is a morphism $s_1:i_0\to i_1$ in $I$ such that the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide. For each $s:i_0\to i$, set 
+$$
+N_s:=\Ker(A\parar X_i).
+$$ 
+By Corollary 3.2.3 (i) p.~79 of the book, $I^{i_0}$ is filtrant and the forgetful functor $I^{i_0}\to I$ is cofinal. One of our assumption, namely Condition (9.3.1) (iii) in Section~\ref{931} p.~\pageref{931}, says that small filtrant inductive limits are exact in $\C$. In particular, $\colim_{s\in I^{i_0}}$ is exact in $\C$, and we get  
+$$
+\colim_{s\in I^{i_0}}N_s\simeq\Ker\left(A\parar\colim_{s\in I^{i_0}}X_i\right)\simeq\Ker(A\parar X)\simeq A. 
+$$ 
+As $\card(A(G))<\pi$ by assumption, Lemma~\ref{l331} p.~\pageref{l331} implies that there is a morphism $s_1:i_0\to i_1$ in $I$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide, as was to be shown. This proves Claim~\ref{linj}. 
+\end{proof} 
 
-It only remains to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. It suffices to prove the 
+It only remains, in order to prove Proposition~\ref{932}, to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. Claim~\ref{pig=f} below will imply the surjectivity of $\lambda$, and thus the truth of Proposition~\ref{932}. 
 
-\begin{claim}\label{pig=f}
+\begin{claim}\label{pig=f} 
 There is a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection.
-\end{claim}  
+\end{claim} 
 
 \nn$*$ Step 3. Consider the following conditions:
 
@@ -5441,7 +5465,7 @@ We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \
 
 \nn$*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn$*$ Step 5: (a) implies (b). Put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+\nn$*$ Step 5: (a) implies (b). Assuming (a), put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
 \begin{equation}\label{s5a}
 \begin{tikzcd}
 G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
@@ -5481,7 +5505,7 @@ C\ar{r}\ar{rdd}[swap]{x}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 $$ 
 This proves (b).
 
-\nn$*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
+\nn$*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Assuming (b), put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
 $$
 \mu:\colim_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
@@ -5499,15 +5523,14 @@ C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{g}\\
 X_{i_0}\ar{r}[swap]{X_s}&X_i.
 \end{tikzcd}
 $$ 
-The exactness of $P\parar C\xr aA$ implies then the existence of a morphism $g:A\to X_i$ such that 
+The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that 
 %
 \begin{equation}\label{ga}
 X_s\circ x=g\circ a.
 \end{equation}
-%
-As indicated at the end of Step~2, we only need to verify the equality $p_i\circ g=f$.
 
-Consider the diagram 
+\begin{proof}[Proof of Claim~\ref{pig=f}]
+It suffices to show that the above morphism $g$ satisfies $f=p_i\circ g$. Consider the diagram 
 $$
 \begin{tikzcd}
 P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{d}[swap]{x}\ar[two heads]{rr}{a}&&A\ar{dl}[swap]{g}\ar{d}{f}\\ 
@@ -5523,8 +5546,11 @@ f\circ a&=p_{i_0}\circ x&\text{by \eqref{fa} p.~\pageref{fa}}\\
 &=p_i\circ g\circ a&\text{by \eqref{ga} p.~\pageref{ga}}.
 \end{align*}
 %
-As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof is complete.
-\end{proof}
+As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof of Claim~\ref{pig=f} is complete. 
+\end{proof} 
+
+As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932}.
+\end{proof} 
 
 %%
 
