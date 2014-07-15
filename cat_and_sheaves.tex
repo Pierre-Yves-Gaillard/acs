@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0324)
+% about "categories and sheaves" (version-0325)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5566,15 +5566,15 @@ As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932} p.~\pagere
 
 \subsubsection{Definition of two infinite regular cardinals}\label{tirg}
 
-(See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\C$ be a category satisfying Conditions (9.3.1) of the book, conditions stated in Section~\ref{931} p.~\pageref{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
+(See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\C$ be a category satisfying Conditions (9.3.1) in Section~\ref{931} p.~\pageref{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
 $$
-\card(G(G))<\pi_0,\quad\card(G^{\sqcup G(G)}(G))<\pi_0.
+\card\big(G(G)\big)<\pi_0,\quad\card\big(G^{\sqcup G(G)}(G)\big)<\pi_0.
 $$ 
 Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
 
-$\card(G^{\sqcup A}(G))<\pi_1$, 
+$\card\big(G^{\sqcup A}(G)\big)<\pi_1$, 
 
-if $X$ is a quotient of $G^{\sqcup A}$, then $\card(X(G))<\pi_1$. 
+if $X$ is a quotient of $G^{\sqcup A}$, then $\card\big(X(G)\big)<\pi_1$. 
 
 \nn(Since the set of quotients of $G^{\sqcup A}$ is small by Proposition 5.2.9 p.~121 of the book, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
 
@@ -5590,11 +5590,15 @@ Conditions (i)--(v) of Section~\ref{931} p.~\pageref{931} hold; $\pi_0$ and $\pi
 
 (c) $\pi'^{\pi_0}<\pi$ for any $\pi'<\pi$, 
 
-(d) if $X$ is a quotient of $G^{\sqcup A}$ with $\card(A)<\pi_0$, then $\card(X(G))<\pi$, 
+(d) if $X$ is a quotient of $G^{\sqcup A}$ with $\card(A)<\pi_0$, then $\card\big(X(G)\big)<\pi$, 
 
-(e) if $A$ is a set with $\card(A)<\pi_0$, then $\card(G^{\sqcup A}(G))<\pi$.
+(e) if $A$ is a set with $\card(A)<\pi_0$, then $\card\big(G^{\sqcup A}(G)\big)<\pi$.
 
-\nn Condition~(a) holds because $\pi_0$ is infinite regular by assumption, and $\pi_0$ is infinite regular by Statement~(iv) p.~217 of the book. Condition~(b) holds by Proposition \ref{932} p.~\pageref{932}. Condition~(c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and $\pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi$. Conditions (d) and (e) are clear. 
+\nn Condition~(a) holds because $\pi_0$ is infinite regular by assumption, and $\pi_0$ is infinite regular by Statement~(iv) p.~217 of the book. Condition~(b) holds by Proposition \ref{932} p.~\pageref{932}. Condition~(c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and 
+$$
+\pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi.
+$$ 
+Conditions (d) and (e) are clear. 
 
 \subsubsection{Lemma 9.3.3 (p. 226)}
 
@@ -5637,7 +5641,10 @@ the last inequality following from Lemma~\ref{ord}, (c), and (a).
 \subsubsection{Theorem 9.3.4 (p. 227)}
 
 \begin{thm}[Theorem 9.3.4 p.~227]\label{934}
-If Condition \ref{ass} p.~\pageref{ass} holds and if $X$ is in $\C$, then $X$ is in $\C_\pi\ssi\card(X(G))<\pi$.
+Assume Condition~\ref{ass} p.~\pageref{ass} holds and let $X$ be an object of $\C$. Then we have 
+$$
+X\in\C_\pi\ssi\card(X(G))<\pi.
+$$ 
 \end{thm}
 
 \begin{proof}[Proof of Theorem \ref{934}]${}$
@@ -5650,15 +5657,15 @@ for $A$ in $I$, and
 $$
 \colim_{A\in I}G^{\sqcup A}\xr\sim G^{\sqcup X(G)}\to X.
 $$ 
-Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}), and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
+Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (iv) p.~118 of the book, that $G^{\sqcup A}\to X$ is an epimorphism for some $A$ in $I$ by Lemma~\ref{l331} p.~\pageref{l331}, and that $\card(X(G))<\pi$ by Lemma~\ref{933} p.~\pageref{933}.
 
 \nn$\si:$ In view of Proposition~\ref{932} p.~\pageref{932}, it suffices to prove  
 
 \begin{equation}\label{934b}
-\card(G^{\sqcup X(G)}(G))<\pi.
+\card\big(G^{\sqcup X(G)}(G)\big)<\pi.
 \end{equation} 
 
-To verify this inequality, we argue as in the proof of Lemma~\ref{933} p.~\pageref{933}. (Conditions (b), (c), and (e) referred to below are stated in Section~\ref{tirg} p.~\pageref{tirg}.)
+To verify this inequality, we argue as in the proof of Lemma 9.3.3 p.~226 of the book (stated on p.~\pageref{933} above as Lemma~\ref{933}). (Conditions (b), (c), and (e) referred to below are stated in Section~\ref{tirg} p.~\pageref{tirg}.)
 
 Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
 $$
@@ -5668,7 +5675,7 @@ As $G$ is $\pi_0$-accessible by (b), we get
 $$
 G^{\sqcup X(G)}(G)\simeq\colim_{B\in I}\ G^{\sqcup B}(G).
 $$ 
-By Lemma \ref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\sqcup B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}.
+By Lemma~\ref{cardipi} p.~\pageref{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\sqcup B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \eqref{934b}.
 \end{proof}
 
 \subsubsection{Brief Comments}
