@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0323)
+% about "categories and sheaves" (version-0324)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5404,13 +5404,13 @@ is the identity.
 \begin{claim}\label{lbij} 
 The map 
 $$
-\lambda:\colim_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
+\lambda_A:\colim_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
 $$ 
 is bijective. 
 \end{claim}
 
 \begin{claim}\label{linj} 
-The map $\lambda$ is injective. 
+The map $\lambda_A$ is injective. 
 \end{claim} 
 
 \begin{proof}[Proof of Claim~\ref{linj}] 
@@ -5433,7 +5433,7 @@ $$
 As $\card(A(G))<\pi$ by assumption, Lemma~\ref{l331} p.~\pageref{l331} implies that there is a morphism $s_1:i_0\to i_1$ in $I$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide, as was to be shown. This proves Claim~\ref{linj}. 
 \end{proof} 
 
-It only remains, in order to prove Proposition~\ref{932}, to check that $\lambda$ is surjective. Let $f:A\to X$ be a morphism. Claim~\ref{pig=f} below will imply the surjectivity of $\lambda$, and thus the truth of Proposition~\ref{932}. 
+It only remains, in order to prove Proposition~\ref{932}, to check that $\lambda_A$ is surjective. Let $f:A\to X$ be a morphism. Claim~\ref{pig=f} below will imply the surjectivity of $\lambda_A$, and thus the truth of Proposition~\ref{932}. 
 
 \begin{claim}\label{pig=f} 
 There is a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection.
@@ -5510,9 +5510,20 @@ C\ar{r}\ar{rdd}[swap]{x}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 $$ 
 This proves (b).
 
-\nn$*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Assuming (b), put $P:=C\times_AC$. Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. On the other hand, we have $P(G)\le\card(C(G))^2<\pi$. By Step~2 the natural map 
+\nn$*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Assuming (b), form the cartesian square 
 $$
-\mu:\colim_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
+\begin{tikzcd}
+P\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\ 
+C\ar[two heads]{r}[swap]{a}&A.
+\end{tikzcd}
+$$
+Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. As 
+$$
+P(G)\le\card(C(G))^2<\pi,
+$$ 
+Claim~\ref{linj} implies that the natural map 
+$$
+\lambda_P:\colim_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
 is injective. Consider the commutative diagram 
 $$
@@ -5521,18 +5532,12 @@ P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{f}\
 {}&X_{i_0}\ar{r}[swap]{p_{i_0}}&X.
 \end{tikzcd}
 $$ 
-As $\mu$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is, by Step~2, a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal: 
-$$
-\begin{tikzcd}
-C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{g}\\ 
-X_{i_0}\ar{r}[swap]{X_s}&X_i.
-\end{tikzcd}
-$$ 
-The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that 
+As $\lambda_P$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal. The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that 
 %
 \begin{equation}\label{ga}
 X_s\circ x=g\circ a.
-\end{equation}
+\end{equation} 
+% 
 
 \begin{proof}[Proof of Claim~\ref{pig=f}]
 It suffices to show that the above morphism $g$ satisfies $f=p_i\circ g$. Consider the diagram 
@@ -5555,7 +5560,7 @@ As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof of Claim~\re
 \end{proof} 
 
 As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932} p.~\pageref{932}. 
-\end{proof} 
+\end{proof}  
 
 %%
 
