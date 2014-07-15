@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0322)
+% about "categories and sheaves" (version-0323)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5439,7 +5439,7 @@ It only remains, in order to prove Proposition~\ref{932}, to check that $\lambda
 There is a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection.
 \end{claim} 
 
-\nn$*$ Step 3. Consider the following conditions:
+\nn$*$ Step 3. Consider the following conditions: 
 
 \nn(a) the diagram of solid arrows 
 $$
@@ -5465,13 +5465,24 @@ We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \
 
 \nn$*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn$*$ Step 5: (a) implies (b). Assuming (a), put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 we have $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+\nn$*$ Step 5: (a) implies (b). Assuming (a), we build the commutative square 
+%
 \begin{equation}\label{s5a}
+\begin{tikzcd}
+B\ar[two heads]{r}\ar{d}&A\ar{d}{f}\\ 
+X_{i_0}\ar{r}[swap]{p_{i_0}}&X,
+\end{tikzcd}
+\end{equation}
+% 
+and we put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 this implies $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+%
+\begin{equation}\label{s5b}
 \begin{tikzcd}
 G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
 B\ar[two heads]{rr}&&A
 \end{tikzcd}
 \end{equation} 
+%
 being epimorphisms by Proposition 5.2.3 (iv) p.~118 of the book, so is $C\to A$. From the commutative diagram 
 $$
 \begin{tikzcd}
@@ -5480,21 +5491,15 @@ S\ar{r}&B(G)\ar{r}&S,
 \end{tikzcd}
 $$ 
 we get, by Step 1, the commutative diagram 
-\begin{equation}\label{s5b}
+%
+\begin{equation}\label{s5c}
 \begin{tikzcd}
 C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
 C\ar{r}&G^{\sqcup B(G)}\ar{r}&C.
 \end{tikzcd}
 \end{equation} 
-Splicing \eqref{s5a} and \eqref{s5b} gives 
-$$
-\begin{tikzcd}
-C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
-C\ar{r}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\ 
-{}&B\ar{r}&A,
-\end{tikzcd}
-$$ 
-and, by Step 4,
+%
+Splicing \eqref{s5a}, \eqref{s5b}, and \eqref{s5c} gives 
 $$
 \begin{tikzcd}
 C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
@@ -5549,7 +5554,7 @@ f\circ a&=p_{i_0}\circ x&\text{by \eqref{fa} p.~\pageref{fa}}\\
 As $a$ is an epimorphism, this forces $f=p_i\circ g$, and the proof of Claim~\ref{pig=f} is complete. 
 \end{proof} 
 
-As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932} p.~\pageref{932}.
+As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932} p.~\pageref{932}. 
 \end{proof} 
 
 %%
