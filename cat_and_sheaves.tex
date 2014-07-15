@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0319)
+% about "categories and sheaves" (version-0320)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5264,19 +5264,19 @@ To prove (ii)$\then$(i), let $J$ be a category satisfying
 $$
 \card(\Mor(J))<\pi,
 $$ 
-and let $\pp:J\to\C_A$ be a functor. We must find a $\xi$ in $\C_A$ satisfying 
+and let $\psi:J\to\C_A$ be a functor. We must find a $\xi$ in $\C_A$ satisfying 
 $$
-\lim\Hom_{\C_A}(\pp,\xi)\neq\varnothing
+\lim\Hom_{\C_A}(\psi,\xi)\neq\varnothing.
 $$ 
-for some $\xi$ in $\C_A$. Let $\psi:J\to\C$ be the composition of $\pp$ with the forgetful functor $\C_A\to\C$, and write 
+Let $\pp:J\to\C$ be the composition of $\psi$ with the forgetful functor $\C_A\to\C$, and write 
 $$
-\pp(j)=(\psi(j),\psi(j)\xr{y_j}A).
+\psi(j)=\left(\pp(j),\pp(j)\xr{y_j}A\right)\in\C_A.
 $$ 
-In particular the family $(y_j)$ belongs to $\lim A(\psi)$. Our assumption about $\C$ implies that $\colim\psi$ exists in $\C$. Let $p_j:\psi(j)\to\colim\psi$ be the coprojection. By surjectivity of the map $A(\colim\pp)\to\lim A(\pp)$ in (ii), there is an $x:\colim\psi\to A$ such that $x\circ p_j=y_j$ for all $j$. Setting 
+In particular the family $(y_j)$ belongs to $\lim A(\pp)$. Our assumption about $\C$ implies that $\colim\pp$ exists in $\C$. Let $p_j:\pp(j)\to\colim\pp$ be the coprojection. By surjectivity of the map $A(\colim\pp)\to\lim A(\pp)$ in (ii), there is an $x:\colim\pp\to A$ such that $x\circ p_j=y_j$ for all $j$. Setting 
 $$
-\xi:=(\colim\psi,\colim\psi\xr x A)\in\C_A,
+\xi:=\left(\colim\pp,\colim\pp\xr x A\right)\in\C_A,
 $$ 
-and letting $f_j:\pp(j)\to\xi$ be the obvious morphism, we get $(f_j)\in\lim\Hom_{\C_A}(\pp,\xi)$. q.e.d.
+and letting $f_j:\psi(j)\to\xi$ be the obvious morphism, we get $(f_j)\in\lim\Hom_{\C_A}(\psi,\xi)$. q.e.d. 
 \end{s}
 
 %%
