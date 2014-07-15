@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0318)
+% about "categories and sheaves" (version-0319)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -175,24 +175,24 @@ Thank you to Pierre Schapira for his interest!
 
 \section{U-categories and U-small Categories\label{ucat}\index{$\U$-category}\index{$\U$-small category}}
 
-Here are a few comments about the definition of a $\U$-category on p.~11 of the book. Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set. The following definitions are used in the book: 
+Here are a few comments about the definition of a $\U$-category on p.~11 of the book. Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set\index{$\U$-set}. The following definitions are used in the book: 
 
-\begin{df}\label{ucatg}
-A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set\index{$\U$-set}. 
+\begin{df}[$\U$-category]\label{ucatg} 
+A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set. 
 \end{df} 
 
-\begin{df}
+\begin{df}[$\U$-small category] 
 The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ is equipotent to some $\U$-set. 
 \end{df} 
 
 One could also consider the following variant: 
 
-\begin{df}\label{ducat}
-A $\U$-{\em category} \index{$\U$-category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ is a $\U$-set. 
+\begin{df}[$\U$-category]\label{ducat} 
+A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ is a $\U$-set. 
 \end{df} 
 
-\begin{df}\label{small}
-The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ is a $\U$-set. 
+\begin{df}[$\U$-small category]\label{small}
+The category $\C$ is $\U$-{\em small}\index{$\U$-small category} if in addition the set of objects of $\C$ is a $\U$-set. 
 \end{df} 
 
 Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{ducat} which is isomorphic to $\C$, and similarly for $\U$-small categories. 
@@ -737,13 +737,13 @@ $$
 $$
 \end{proof}
 %
-\begin{df}\label{ue} 
-Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em universal element} \index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+\begin{df}[universal element]\label{ue} 
+Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
 The Yoneda Lemma says that $(F,X)$\--universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
-\begin{df}\label{ue2} 
+\begin{df}[universal element]\label{ue2} 
 Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
@@ -902,8 +902,8 @@ $$
 $$
 \end{prop}
 
-\begin{df}\label{dil1} 
-We call $*$ the {\em horizontal composition}. \index{horizontal composition} We call $\circ$ the {\em vertical composition}. \index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}. \index{Interchange Law}
+\begin{df}[horizontal and vertical composition, Interchange Law]\label{dil1} 
+We call $*$ the {\em horizontal composition}.\index{horizontal composition} We call $\circ$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
 \end{df}
 
 %%
@@ -1105,7 +1105,7 @@ $$
 \begin{s}\label{212}
 P.~36, Definition 2.1.2. 
 
-\begin{df}\label{p}
+\begin{df}[projective limit]\label{p}
 If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)
@@ -1122,8 +1122,8 @@ $$
 Y\xr fX,\quad\Delta(Y)\xr{\Delta(f)}\Delta(X)\xr{p}\alpha.
 $$
 
-\begin{df} 
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit of}\index{inductive limit} $\alpha$ {\em in} $\C$ is a pair 
+\begin{df}[inductive limit] 
+If $\alpha:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\alpha$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\times\Hom_{\C^I}(\alpha,\Delta(X))
 $$
@@ -1334,7 +1334,7 @@ P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe h
 
 \nn(b) $\pp^\dagger\beta$ represents $\Hom_{\C^J}(\beta,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
-\begin{df}[Definition 2.3.2 p. 51]\label{232}
+\begin{df}[Definition 2.3.2 p. 51]\label{232} 
 If the above equivalent conditions hold, we say that $\pp^\dagger\beta$ {\em exists}. If $\pp^\dagger(F\circ\beta)$ exists and is isomorphic to $F\circ\pp^\dagger(\beta)$ for all functor $F:\C\to\C'$, we say that $\pp^\dagger\beta$ exists {\em universally}.
 \end{df}
 \end{s}
@@ -1893,8 +1893,8 @@ P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a u
 
 Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wedge_\U$.
 
-\begin{df}\label{uil}
-If the natural map $\colim\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit \index{universal inductive limit} of $\alpha$, and that $\colim\alpha$ exists {\em universally} \index{universal existence of a limit} in $\C$.
+\begin{df}[universal inductive limit]\label{uil}
+If the natural map $\colim\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit\index{universal inductive limit} of $\alpha$, and that $\colim\alpha$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 \begin{prop}[Proposition 2.6.4 p. 61]\label{puil}
@@ -2460,7 +2460,8 @@ be the coprojections. Note that $p_{i,J}$ is defined only for $i$ in $J$. We eas
 % 
 
 For the reader's convenience we reproduce Definition 3.3.1 p.~81. 
-\begin{df}
+
+\begin{df}[Definition 3.3.1 p.~81, exactness] 
 Let $F:\C\to\C'$ be a functor.
 
 \nn\emph{(i)} We say that $F$ is \emph{right exact}\index{right exact} if the category $\C_{X'}$ is filtrant for all $X'$ in $\C'$. 
@@ -2670,11 +2671,10 @@ If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a small categor
 
 \subsubsection{Definition 2.2.6 p.~47}
 
-\begin{df}[Definition 2.2.6 p.~47]\label{dsbc}
+\begin{df}[Definition 2.2.6 p.~47, stability by base change]\label{dsbc}
 Let $\C$ be a category which admits fiber products and inductive limits indexed by a category $I$.
 
-\nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change} if for any morphism $Y\to Z$ in $\C$, the base change functor 
-$\C_Z\to\C_Y$ given by 
+\nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change}\index{stable by base change} if for any morphism $Y\to Z$ in $\C$, the base change functor $\C_Z\to\C_Y$ given by 
 $$
 \C_Z\ni(X\to Z)\mapsto(X\times_ZY\to Y)\in\C_Y
 $$ 
@@ -2818,8 +2818,8 @@ As $\ee_{P(X)}$ is a monomorphism, this implies \eqref{vidpx}, as required.
 
 Definition 4.1.1 p.~93 of the book can be stated as follows:
 
-\begin{df}
-Let $\C$ be a category. A {\em projector} \index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that each object $X$ of $\C$ satisfies the equivalent conditions of Lemma~\ref{proj3}. 
+\begin{df}[Definition 4.1.1 p.~93, projector] 
+Let $\C$ be a category. A {\em projector}\index{projector} on $\C$ is the data of a functor $P:\C\to\C$ and a morphism $\ee:\id_\C\to P$ such that each object $X$ of $\C$ satisfies the equivalent conditions of Lemma~\ref{proj3}. 
 \end{df}
 \end{s}
 
@@ -2900,12 +2900,12 @@ for any $Z$ in $\C$. Lemma \ref{imset} implies
 \end{split}
 \end{equation}
 
-\begin{df}\label{dci}
-In the above setting, the {\em coimage} \index{coimage} of $f$ is the object $\Coim f$ of $\C^\vee$ defined by 
+\begin{df}[coimage, image]\label{dci}
+In the above setting, the {\em coimage}\index{coimage} of $f$ is the object $\Coim f$ of $\C^\vee$ defined by 
 $$ 
 (\Coim f)(Z):=\Hom_{\C^\wedge}(\IM\hy(f),\hy(Z))
 $$ 
-for all $Z$ in $\C$, and the {\em image} \index{image} of $f$ is the object $\Ima f$ of $\C^\wedge$ defined by 
+for all $Z$ in $\C$, and the {\em image}\index{image} of $f$ is the object $\Ima f$ of $\C^\wedge$ defined by 
 $$ 
 (\Ima f)(Z):=\Hom_{\C^\vee}(\ky(Z),\IM\ky(f)) 
 $$ 
@@ -2962,8 +2962,8 @@ $f\mapsto\Ima\hy(f)$ and $\Ima$ are functors from $\Mor(\C)$ to $\C^\wedge$,
 $f\mapsto\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$. 
 \end{prop}
 
-\begin{df}
-A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism} \index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ is an isomorphism.
+\begin{df}[strict epimorphism] 
+A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism}\index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ is an isomorphism.
 \end{df} 
 
 The lemma below is obvious:
@@ -3056,8 +3056,8 @@ P.~117, Definition 5.2.1 (definition of a system of generators). There is a comm
 
 As observed at the bottom of p.~121 of the book, the definition can be stated as follows:
 
-\begin{df}
-Let $S$ be a set of objects of a category $\C$ and $\cc S$ the corresponding subcategory. We say that $S$ is a {\em system of generators} \index{generator} \index{system of generators} if the functor $\pp:\C\to\cc S^\wedge$, $X\mapsto\Hom_\C(\ ,X)$ is conservative.
+\begin{df}[generator, system of generators] 
+Let $S$ be a set of objects of a category $\C$ and $\cc S$ the corresponding subcategory. We say that $S$ is a {\em system of generators}\index{generator}\index{system of generators} if the functor $\pp:\C\to\cc S^\wedge$, $X\mapsto\Hom_\C(\ ,X)$ is conservative.
 \end{df}
 \end{s}
 
@@ -4058,8 +4058,8 @@ $$
 R_{\cc S}F\simeq F\circ R_{\cc S}\id_\C.
 $$
 
-\begin{df}\label{url2}
-Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal} if the above conditions are satisfied.
+\begin{df}[universal localization]\label{url2} 
+Say that the right localization $(\C_{\cc S},Q)$ of $\C$ is {\em universal}\index{universal localization} if the above conditions are satisfied.
 \end{df}
 \end{s}
 
@@ -5152,13 +5152,21 @@ P.~217, beginning of Section 9.2.
 \begin{prop}\label{ppifil}
 Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
 
-\nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
+\nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
+$$
+\alpha:I\times J^{\op}\to\Set
+$$ 
+the natural map 
 $$
 \colim_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\colim_{i\in I}\alpha(i,j)
 $$ 
 is bijective.
 
-\nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor $\alpha:I\times J^{\op}\to\Set$ the natural map 
+\nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
+$$
+\alpha:I\times J^{\op}\to\Set
+$$ 
+the natural map 
 $$
 \colim_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\colim_{i\in I}\alpha(i,j)
 $$ 
@@ -5177,8 +5185,8 @@ is surjective.
 Implications (c) $\ssi$ (d) $\then$ (a) are proved in Proposition 9.2.1 p.~217 and Proposition 9.2.9 p.~219 of the book. Implication (a)$\then$(b) is obvious. The proof of Implication (b)$\then$(d) is the same as the proof of Implication (b)$\then$(a) in Theorem 3.1.6 p.~74 of the book.
 \end{proof}
 
-\begin{df}
-Let $\pi$ be an infinite cardinal and $I$ a small category. Then $I$ is $\pi$-{\em filtrant} if (and only if) the equivalent conditions of Proposition~\ref{ppifil} are satisfied.
+\begin{df}[$\pi$-filtrant category] 
+Let $\pi$ be an infinite cardinal and $I$ a small category. Then $I$ is $\pi$-{\em filtrant}\index{$\pi$-filtrant} if (and only if) the equivalent conditions of Proposition~\ref{ppifil} are satisfied.
 \end{df}
 \end{s}
 
@@ -5198,7 +5206,13 @@ $$
 %
 
 \begin{s}
-P.~218, Lemma 9.2.5. Clearly, $I$ satisfies condition (a) in Proposition~\ref{ppifil} p.~\pageref{ppifil}. 
+P.~218, Lemma 9.2.5. 
+
+\begin{lem}[Lemma 9.2.5 p.~218] 
+Let $\pp:J\to I$ be a cofinal functor. If $J$ is $\pi$-filtrant, so is $I$.
+\end{lem}
+
+Clearly, $I$ satisfies conditions (a) and (b) in Proposition~\ref{ppifil} p.~\pageref{ppifil}. 
 \end{s}
 
 %
@@ -5226,7 +5240,13 @@ The morphisms $b$ and $e$ are isomorphisms for obvious reasons. The morphism $c$
 %
 
 \begin{s} 
-P.~220, proof of Corollary 9.2.11: Use \S\ref{922}.
+P.~220, proof of Corollary 9.2.11. 
+
+\begin{cor}[Corollary 9.2.11 p.~220] 
+If $\C$ admits small inductive limits and if $X$ is an object of $\C$, then $\C_\pi$ and $(\C_\pi)_X$ are $\pi$-filtrant. 
+\end{cor}
+
+This follows from \S\ref{922}.
 \end{s}
 
 %
@@ -5283,7 +5303,7 @@ Recall Conditions (9.3.1) of the book: $\C$ is a category satisfying
 
 The main purpose of Section 9.3 of the book is to prove Corollaries 9.3.7 and 9.3.8 p.~228 of the book, and these corollaries could be stated immediately after Conditions (9.3.1) above. For the reader's convenience we recall the definition of a regular cardinal and state Corollary 9.3.7:
 
-\begin{df}\label{rc}
+\begin{df}[regular cardinal]\label{rc} 
 A cardinal $\pi$ is \emph{regular}\index{regular cardinal} if for any family of sets $(B_i)_{i\in I}$ we have 
 $$
 \card(I)<\pi,\quad\card(B_i)<\pi\ \forall\ i\quad\then\quad\card\left(\bigsqcup_iB_i\right)<\pi.
@@ -5637,22 +5657,22 @@ If $X$ is an ordered set such that each well-ordered subset of $X$ has an upper 
 
 The purpose of this section is to prove a common generalization of Theorem~\ref{zorn} above and of Theorem 9.4.2 p.~229 of the book, stated below as Theorem~\ref{942}. We start with a reminder:
 
-\begin{df}
-An object $X$ of a category $\C$ is {\em quasi-terminal} if any morphism $u:X\to Y$ admits a left inverse.
+\begin{df}[Definition 9.4.1 p.~228, quasi-terminal object] 
+An object $X$ of a category $\C$ is {\em quasi-terminal}\index{quasi-terminal object} if any morphism $u:X\to Y$ admits a left inverse.
 \end{df}
 
-\begin{thm}[Theorem 9.4.2 p.~229]\label{942}
+\begin{thm}[Theorem 9.4.2 p.~229]\label{942} 
 Any essentially small nonempty category admitting small filtrant inductive limits has a quasi-terminal object.
 \end{thm}
 
 Here is a weakening of the notion of inductive limit:
 
-\begin{df}
-Let $I$ be a nonempty well-ordered small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a morphism of functors $a:\alpha\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}.
+\begin{df}[small well-ordered upper bounds] 
+Let $I$ be a nonempty well-ordered small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a morphism of functors $a:\alpha\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}\index{small well-ordered upper bounds}. 
 \end{df}
 
-\begin{df}
-Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em special} if it has no largest element and if, for any functor $\alpha:I\to\C$, there is some upper bound $(a_i:\alpha(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
+\begin{df}[special well-ordered small set] 
+Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em special}\index{special well-ordered small set} if it has no largest element and if, for any functor $\alpha:I\to\C$, there is some upper bound $(a_i:\alpha(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
 \end{df}
 
 Our goal is to prove:
@@ -6190,13 +6210,13 @@ The purpose of this Section is to spell out the observation made by J. P. May th
 Various related links are given in the document \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}. 
 
 To make things as clear as possible, we remove TR4 from the definition of a triangulated category, and prove that any triangulated category satisfies TR4:
-%
-\begin{df}\label{tr}
-A {\em triangulated category} is an additive category $(\cc D,T)$ with translation endowed with a set of triangles satisfying Axioms {\em TR0, TR1, TR2, TR3}, and {\em TR5} on p.~243 of the book.
+
+\begin{df}[triangulated category]\label{tr} 
+A {\em triangulated category}\index{triangulated category} is an additive category $(\cc D,T)$ with translation endowed with a set of triangles satisfying Axioms {\em TR0, TR1, TR2, TR3}, and {\em TR5} on p.~243 of the book.
 \end{df}
-%
+
 Let $(\cc D,T)$ be a triangulated category. In the book the theorem below is stated as Exercise 10.6 p.~266 and is used at the top of p.~251 within the proof of Theorem 10.2.3 p.~249.
-%
+
 \begin{thm}\label{mayt}
 Let 
 $$
@@ -6209,7 +6229,7 @@ TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0,
 $$ 
 be a diagram of solid arrows in $\cc D$. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that the bottom right small square anti-commutes, the eight other small squares commute, and all rows and columns are distinguished triangles. 
 \end{thm}
-%
+
 \begin{cor}\label{may}
 Any category which is triangulated in the sense of Definition~\ref{tr} satisfies {\em TR4}.
 \end{cor} 
@@ -7429,8 +7449,8 @@ As explained in the book, to see that $f$ is a morphism of sites, it suffices to
 \begin{s} 
 P.~414, Definition 17.7.8 (minor variant):
 
-\begin{df}\label{1778}
-Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology} on $X$ is a set $\cc T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\cc T'$ and $\cc T$ be Grothendieck topologies. We say that $\cc T$ is {\em stronger than} $\cc T'$, or that $\cc T'$ is {\em weaker than} $\cc T$, if $\cc T'\subset\cc T$. 
+\begin{df}[Definition 17.7.8, Grothendieck topology]\label{1778} 
+Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology}\index{Grothendieck topology} on $X$ is a set $\cc T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\cc T'$ and $\cc T$ be Grothendieck topologies. We say that $\cc T$ is {\em stronger than} $\cc T'$, or that $\cc T'$ is {\em weaker than} $\cc T$, if $\cc T'\subset\cc T$. 
 \end{df}
 
 Let $(\cc T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\cc T_i$ is a Grothendieck topology, and we denote by $\bigvee\cc T_i$ the intersection of all the Grothendieck topologies containing $\bigcup\cc T_i$.
