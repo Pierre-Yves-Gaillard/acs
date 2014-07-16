@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0325)
+% about "categories and sheaves" (version-0326)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5686,7 +5686,7 @@ By Lemma~\ref{cardipi} p.~\pageref{cardipi} we have $\card(I)<\pi$. Since $\card
 
 \nn$*$ P.~228, Corollary 9.3.7. As $\{\card(X(G))\,|\,X\in S\}$ is a small set of cardinals, we may assume in Condition~\ref{ass} p.~\pageref{ass} that we have $\pi>\card(X(G))$ for all $X$ in $S$, and apply Theorem~\ref{934} p.~\pageref{934}. 
 
-\nn$*$ P.~228, Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 of the book and Example 9.2.4 p.~224 of the book. 
+\nn$*$ P.~228, Corollary 9.3.8. The proof uses implicitly Proposition 5.2.3 (iv) p.~118 of the book and Example 9.2.4 p.~218 of the book. 
 
 %%%
 
@@ -5740,24 +5740,25 @@ We shall prove that $X$ satisfies the conditions in the statement. Let $u:X\to Y
 \nn(i) The object $Y$ is in $\cc S$. Otherwise, we can form the well-ordered subcategory $\widetilde{\cc S}$ of $\C$ by appending the element $Y$ to $\cc S$ and making it the largest element of $\widetilde{\cc S}$, the morphism $S\to Y$ being $u\circ a_S$. We have $\widetilde{\cc S}\in\cc F$ and $\cc S<\widetilde{\cc S}$, contradicting the maximality of $\cc S$. 
 
 \nn(ii) As $Y$ is in $\cc S$, there is a morphism $Y\to X$, namely $a_Y$.
-\end{proof}
+\end{proof} 
 
-If $X\xr fY\xr uZ$ are morphisms in a given category, we denote by $\Sigma(f,u)$ the set of morphisms $v:Z\to Y$ such that $v\circ u\circ f=f$. 
+\begin{df}[Property~$P(a)$]\label{pofa} 
+We say that a morphism $a:A\to B$ in a given category has \emph{Property}~$P(a)$ if for any morphism $b:B\to C$ there is a morphism $c:C\to B$ satisfying $c\circ b\circ a=a$.  
+\end{df}  
 
 \begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
-If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ satisfying Property $P(f)$ below: 
-
-\nn$P(f):$ for any morphism $u:Y\to Z$, the set $\Sigma(f,u)$ is nonempty.
+If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ satisfying Property~$P(f)$.
 \end{lem}
 
 \begin{proof}
-The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property $P(f)$. 
+The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property~$P(f)$. 
 \end{proof}
 
 We recall the notion of {\em construction by transfinite induction\index{transfinite induction}}. 
 
 \begin{thm}[Construction by Transfinite Induction]\label{meta} 
-Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have $$
+Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have 
+$$
 f(i)=F(f(j)_{j<i})
 $$ 
 for all $i$ in $I$, where $f(j)_{j<i}$ is viewed as a family of elements of $\{f(j)\,|\,j\in I,j<i\}$ indexed by $\{j\in I\,|\,j<i\}$. (In particular, $S$ is a $\U$-set.)
@@ -5784,16 +5785,19 @@ $$
 Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$. 
 \end{proof}
 
-\begin{proof}[Proof of Quasi-Terminal Object Theorem (Theorem \ref{qtot} p.~\pageref{qtot})] 
+\begin{proof}[Proof of the Quasi-Terminal Object Theorem (Theorem \ref{qtot} p.~\pageref{qtot})] 
 Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
 
-\nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property $P(u_{ij})$ of Lemma~\ref{944}, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$.
+\nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property~$P(u_{ij})$, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$. 
+
+(Recall that, by Definition~\ref{pofa} p.~\pageref{pofa}, the condition ``$u_{ij}:X_j\to X_i$ has Property~$P(u_{ij})$'' means that for any morphism $b:X_i\to C$ there is a morphism $c:C\to X_i$ satisfying $c\circ b\circ u_{ij}=u_{ij}$. Recall also that such a $u_{ij}$ exists by Lemma~\ref{944} p.~\pageref{944}.) 
 
 \nn(b) If $i=\sup\,\{j\,|\,j<i\}$, let $(a_j:X_j\to X_i)_{j<i}$ be some upper bound for $(X_j)_{j<i}$ and put $u_{ij}:=a_j$. 
 
 Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. As $I$ is $\C$-special, there is an upper bound $(b_i:X_i\to X)_{i\in I}$ for $(X_i)_{i\in I}$, and there is an $i_0$ in $I$ such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. 
 
 We claim that $X$ is quasi-terminal. Let $u:X\to Y$ be a morphism. It suffices to prove the claim below: 
+%
 \begin{claim}\label{cqt}
 There is a morphism $v:Y\to X$ such that $v\circ u=\id_X$. 
 \end{claim} 
@@ -5804,12 +5808,12 @@ $$
 X_{i_0}\ar{rr}{u_{i_0+1,i_0}}&&X_{i_0+1}\ar{rr}{u\circ b_{i_0+1}}&&Y.
 \end{tikzcd}
 $$
-By Property $P(u_{i_0+1,i_0})$ there is a morphism $w:Y\to X_{i_0+1}$ belonging to the set $\Sigma(u_{i_0+1,i_0},u\circ b_{i_0+1})$. This means that we have 
+By Property~$P(u_{i_0+1,i_0})$ of Lemma~\ref{944} there is a morphism $w:Y\to X_{i_0+1}$ satisfying  
 %
 \begin{equation}\label{wu}
 w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}.
-\end{equation} 
-%
+\end{equation}  
+% 
 Put
 %
 \begin{equation}\label{vb}
