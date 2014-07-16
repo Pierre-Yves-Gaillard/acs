@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0327)
+% about "categories and sheaves" (version-0328)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5868,7 +5868,7 @@ $$
 
 Claim: There is an $i_0$ in $I$ such that $\pp^Y_{i_0}:=a_{i_0}\circ:\Hom_\C(Y,X_{i_0})\to F(Y)$ is surjective for all $Y$ in $\C$.
 
-As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$. By Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that 
+As $\card(\Hom_\C(Y,X))<\pi$, we have $F(Y)\in\Set_\pi$ by Corollary 9.2.12 p.~221 of the book. By Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}), there is an $i_Y$ in $I$ such that 
 $$
 a_{i_Y}\circ:\Hom_\C(Y,X_{i_Y})\to F(Y)
 $$ 
@@ -6015,19 +6015,19 @@ $$
 Y'_{<i}\xr{w_i}Y'_i\xleftarrow{h_i}Y_i
 $$
 by (9.5.2) (ii):
-%
-\begin{equation}\label{hiui1}
+$$
 \begin{tikzcd}
 X_i\ar{d}[swap]{v_i\circ f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{h_i}\\
-Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i.
+Y'_{<i}\ar[dashed]{r}[swap]{w_i}&Y'_i,
 \end{tikzcd}
+$$
+so that we have  
+%
+\begin{equation}\label{hiui2}
+h_i\circ u_i=w_i\circ v_i\circ f_i. 
 \end{equation} 
 %
 We must check 
-%
-\begin{equation}\label{hiui2}
-h_i\circ u_i=w_i\circ v_i\circ f_i,
-\end{equation}
 %
 \begin{equation}\label{pikwk}
 p_{ik}\circ w_k\circ v_k=v_i\ \forall\ k<i,
@@ -6037,7 +6037,7 @@ p_{ik}\circ w_k\circ v_k=v_i\ \forall\ k<i,
 p_{ij}\circ w_j\circ p_{jk}=p_{ik}\ \forall\ k<j<i.
 \end{equation} 
 %
-The commutativity of \eqref{hiui1} implies \eqref{hiui2}. To prove \eqref{pikwk}, first note that we have 
+To prove \eqref{pikwk}, first note that we have 
 $$v_k=p_{k0}\circ w_0\circ v_0
 $$ 
 by induction hypothesis, $w_0=\id_{Y'_0}$ by \eqref{w0}, and thus 
@@ -6046,7 +6046,7 @@ by induction hypothesis, $w_0=\id_{Y'_0}$ by \eqref{w0}, and thus
 v_k=p_{k0}\circ v_0.
 \end{equation}
 %
-This implies
+We get 
 % 
 \begin{align*}
 p_{ik}\circ w_k\circ v_k&=p_{ik}\circ w_k\circ p_{k0}\circ v_0&\text{by \eqref{vk}}\\ 
