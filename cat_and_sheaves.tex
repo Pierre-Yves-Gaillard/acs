@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0326)
+% about "categories and sheaves" (version-0327)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5742,16 +5742,16 @@ We shall prove that $X$ satisfies the conditions in the statement. Let $u:X\to Y
 \nn(ii) As $Y$ is in $\cc S$, there is a morphism $Y\to X$, namely $a_Y$.
 \end{proof} 
 
-\begin{df}[Property~$P(a)$]\label{pofa} 
-We say that a morphism $a:A\to B$ in a given category has \emph{Property}~$P(a)$ if for any morphism $b:B\to C$ there is a morphism $c:C\to B$ satisfying $c\circ b\circ a=a$.  
+\begin{df}[Property~$(P)$]\label{pofa} 
+We say that a morphism $a:A\to B$ in a given category has \emph{Property}~$(P)$ if for any morphism $b:B\to C$ there is a morphism $c:C\to B$ satisfying $c\circ b\circ a=a$.  
 \end{df}  
 
-\begin{lem}[Sublemma 9.4.4 p. 229]\label{944}
-If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ satisfying Property~$P(f)$.
+\begin{lem}[Sublemma 9.4.4 p. 229]\label{944} 
+If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ having Property~$(P)$.
 \end{lem}
 
 \begin{proof}
-The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property~$P(f)$. 
+The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property~$(P)$. 
 \end{proof}
 
 We recall the notion of {\em construction by transfinite induction\index{transfinite induction}}. 
@@ -5788,11 +5788,11 @@ Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$.
 \begin{proof}[Proof of the Quasi-Terminal Object Theorem (Theorem \ref{qtot} p.~\pageref{qtot})] 
 Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
 
-\nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property~$P(u_{ij})$, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$. 
-
-(Recall that, by Definition~\ref{pofa} p.~\pageref{pofa}, the condition ``$u_{ij}:X_j\to X_i$ has Property~$P(u_{ij})$'' means that for any morphism $b:X_i\to C$ there is a morphism $c:C\to X_i$ satisfying $c\circ b\circ u_{ij}=u_{ij}$. Recall also that such a $u_{ij}$ exists by Lemma~\ref{944} p.~\pageref{944}.) 
+\nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property~$(P)$, and put $u_{ik}:=u_{ij}\circ u_{jk}$ for any $k\le j$. 
 
 \nn(b) If $i=\sup\,\{j\,|\,j<i\}$, let $(a_j:X_j\to X_i)_{j<i}$ be some upper bound for $(X_j)_{j<i}$ and put $u_{ij}:=a_j$. 
+
+(Recall that, by Definition~\ref{pofa} p.~\pageref{pofa}, the condition ``$u_{ij}:X_j\to X_i$ has Property~$(P)$'' means that for any morphism $b:X_i\to C$ there is a morphism $c:C\to X_i$ satisfying $c\circ b\circ u_{ij}=u_{ij}$. Recall also that such a $u_{ij}$ exists by Lemma~\ref{944} p.~\pageref{944}.) 
 
 Then $(X_i)_{i\in I}$ is indeed an inductive system in $\C$. As $I$ is $\C$-special, there is an upper bound $(b_i:X_i\to X)_{i\in I}$ for $(X_i)_{i\in I}$, and there is an $i_0$ in $I$ such that $b_{i_0}:X_{i_0}\to X$ is an epimorphism. 
 
@@ -5808,7 +5808,7 @@ $$
 X_{i_0}\ar{rr}{u_{i_0+1,i_0}}&&X_{i_0+1}\ar{rr}{u\circ b_{i_0+1}}&&Y.
 \end{tikzcd}
 $$
-By Property~$P(u_{i_0+1,i_0})$ of Lemma~\ref{944} there is a morphism $w:Y\to X_{i_0+1}$ satisfying  
+As $u_{i_0+1,i_0}$ has Property~$(P)$, there is a morphism $w:Y\to X_{i_0+1}$ satisfying  
 %
 \begin{equation}\label{wu}
 w\circ u\circ b_{i_0+1}\circ u_{i_0+1,i_0}=u_{i_0+1,i_0}.
