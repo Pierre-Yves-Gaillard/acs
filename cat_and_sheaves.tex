@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0328)
+% about "categories and sheaves" (version-0329)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -131,7 +131,7 @@
 
 An important reference is
 
-\nn[GV] Grothendieck, A. and Verdier, J.-L. (1972). Pr\'efaisceaux. In Artin, M., Grothendieck, A., and Verdier, J.-L., editors, Th\'eorie des Topos et Cohomologie Etale des Sch\'emas, volume 1 of S\'eminaire de g\'eom\'etrie alg\'ebrique du Bois-Marie, 4, pages 1-218. Springer. 
+\nn[GV] Grothendieck, A. and Verdier, J.-L. (1972). Préfaisceaux. In Artin, M., Grothendieck, A., and Verdier, J.-L., editors, Théorie des Topos et Cohomologie Etale des Schémas, volume 1 of Séminaire de géométrie algébrique du Bois-Marie, 4, pages 1-218. Springer. 
 
 Links to the above text of Grothendieck and Verdier are available at \smallskip
 
@@ -163,7 +163,7 @@ More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
 I have rewritten some of the proofs in the book. Of course, I'm not suggesting that my wording is better than that of Kashiwara and Schapira! I just tried to make explicit a few points which are implicit in the book. 
 
-I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Th\'eorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de r\'esultats'' in the above book because I don't understand it.) 
+I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Théorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de résultats'' in the above book because I don't understand it.) 
 
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\circ g$, and some parenthesis might be omitted. We write $\bigsqcup$\index{$\bigsqcup$} instead of $\coprod$\index{$\coprod$} for the coproduct\index{coproduct}. 
 
@@ -5903,7 +5903,7 @@ $$
 
 We give more details about the proof, but first let us recall the setting:
 
-Let $\C$ be $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume 
+Let $\C$ be a $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume 
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
 
@@ -6105,7 +6105,7 @@ g_m\circ u_m&=h_m\circ u_m&\text{by \eqref{gm}}\\
 
 The purpose of this section is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
 
-Let $\C$ be $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such that $\cc F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\cc F$, and assume 
+Let $\C$ be a $\U$-category, let $\cc F\subset\C_0$ be subcategories of $\C$ such that $\cc F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\cc F$, and assume 
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them;
 
@@ -6116,7 +6116,7 @@ X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\
 X'\ar[dashed]{r}[swap]{u'}&Y',
 \end{tikzcd}
 $$ 
-with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$; 
+with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed as indicated to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$; 
 
 \nn(9.5.6) for any $X$ in $\C_0$, the category $(\C_0)_X$ is essentially small;
 
@@ -6143,9 +6143,9 @@ U\ar{d}[swap]{u}\ar{r}{s}&V\ar{d}{v}\ar[dashed]{ld}[swap]{\xi}\\
 X\ar{r}[swap]{f}&Y
 \end{tikzcd}
 $$ 
-can be completed to a commutative diagram in $\C$ with the dashed arrow $\xi$, then $f$ is an isomorphism. 
+can be completed as indicated to a commutative diagram in $\C$ with the dashed arrow $\xi$, then $f$ is an isomorphism. 
 %
-\begin{thm}%\label{9545}
+\begin{thm} 
 If the above conditions hold, then, for any $X$ in $\C_0$, there is a $\Mor(\C_0)$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$. If (9.5.2) holds, but (9.5.6), (9.5.7), and (9.5.8) do not necessarily hold, then there is an $\F$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$.
 \end{thm}
 %
@@ -6199,7 +6199,7 @@ $$
 $$ 
 ($\Delta$ being the diagonal functor) by 
 $$
-\theta_{(s:i\to j)}:=\alpha(s):\alpha(i)\to\alpha(j). 
+\theta_{(s:i\to j)}:=\big(\alpha(s):\alpha(i)\to\alpha(j)\big). 
 $$ 
 As $\theta$ is a monomorphism, Proposition~\ref{34i} p.~\pageref{34i} implies that $\colim\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
@@ -6240,7 +6240,13 @@ $$
 defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a monomorphism by Proposition 5.2.3 (iv) p.~118 of the book. 
 \end{proof}
 
-We now add three parenthetical points: The first sentence of the proof of Lemma 9.6.8 p.~238 of the book follows from Proposition 5.2.3 (iv) p.~118 of the book. The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Part (i) of the same proposition. In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book.
+We now add three parenthetical points: 
+
+The first sentence of the proof of Lemma 9.6.8 p.~238 of the book follows from Proposition 5.2.3 (iv) p.~118 of the book. 
+
+The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book. 
+
+In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book.
 \end{s}
 
 %%
@@ -6271,7 +6277,7 @@ $$
 X^0\ar{r}{u}\ar{d}[swap]{f}&X^1\ar{d}\ar{r}{v}&X^2\ar[dashed]{d}\ar{r}{w}&TX^0\ar{d}{Tf}\\ 
 Y^0\ar{r}\ar{d}[swap]{g}&Y^1\ar{d}\ar{r}&Y^2\ar[dashed]{d}\ar{r}&TY^0\ar{d}{Tg}\\ 
 Z^0\ar[dashed]{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar[dashed]{r}&Z^2\ar[dashed]{d}\ar[dashed]{r}&TZ^0\ar{d}{-Th}\\ 
-TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0,
+TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0 
 \end{tikzcd}
 $$ 
 be a diagram of solid arrows in $\cc D$. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that the bottom right small square anti-commutes, the eight other small squares commute, and all rows and columns are distinguished triangles. 
@@ -6289,15 +6295,17 @@ U\ar[equal]{dd}\ar{r}&V\ar[equal]{d}\ar{r}&W'\ar{r}&TU\\
 U\ar{rr}&&W\ar{rr}&&V'\ar{rr}&&TU
 \end{tikzcd}
 $$
-commutes, and if the rows are distinguished triangles, then there is a distinguished triangle $W'\to V'\to U'\to TW'$ such that the diagram below commutes:
+commutes, and if the rows are distinguished triangles, then there is a distinguished triangle $W'\to V'\to U'\to TW'$ such that the diagram 
 $$
 \begin{tikzcd}
 U\ar{r}\ar[equal]{d}&V\ar{d}\ar{r}&W'\ar{d}\ar{r}&TU\ar[equal]{d}\\
 U\ar{d}\ar{r}&W\ar{r}\ar[equal]{d}&V'\ar{d}\ar{r}&TU\ar{d}\\
 V\ar{d}\ar{r}&W\ar{d}\ar{r}&U'\ar{r}\ar[equal]{d}&TV\ar{d}\\
-W'\ar{r}&V'\ar{r}&U'\ar{r}&TW'.
+W'\ar{r}&V'\ar{r}&U'\ar{r}&TW' 
 \end{tikzcd}
-$$
+$$ 
+commutes. 
+
 \begin{proof}[Proof of Theorem~\ref{mayt}]
 From 
 $$
