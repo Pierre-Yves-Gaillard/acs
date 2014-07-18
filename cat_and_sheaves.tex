@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0331)
+% about "categories and sheaves" (version-0332)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -6776,10 +6776,10 @@ This follows from the proof given in the book.
 
 \subsection{Exercise 13.15 (p. 342)}
 
-Here is a partial solution. Let $\C$ be an abelian category. %Using Lemma~\ref{8312} p.~\pageref{8312} one easily proves:
+Here is a partial solution. Let $\C$ be an abelian category. 
 
 \begin{lem}\label{738}
-Let $Z\to Y\to X\to W\to0$ be an exact sequence in $\C$, let $Y\to V$ be a morphism, let $U$ be the fiber coproduct $V\oplus_YX$, and let $U\to W$ be the morphism which makes 
+Let $Z\to Y\to X\to W\to0$ be an exact sequence and $Y\to V$ a morphism in $\C$, let $U$ be the fiber coproduct $V\oplus_YX$, and let $U\to W$ be the morphism which makes 
 $$
 \begin{tikzcd}
 Z\ar{d}\ar{r}&Y\ar{d}\ar{r}&X\ar{d}\ar{r}&W\ar[equal]{d}\ar{r}&0\\ 
@@ -6853,7 +6853,11 @@ $$
 0\ar{r}&Y\ar{r}&W\ar{r}&X\ar{r}&0.
 \end{tikzcd}
 $$ 
-(This is easily seen to be indeed an equivalence relation.) To the element $0\to Y\to Z\to X\to0$ in $E$ we attach the morphism in 
+(This is easily seen to be indeed an equivalence relation.) To the element 
+$$
+0\to Y\to Z\to X\to0
+$$ 
+of $E$ we attach the morphism in 
 $$
 \Hom_{\oo D(\C)}(X,Y[1])=\Ext^1_\C(X,Y)
 $$ 
@@ -6879,36 +6883,76 @@ Claim (a) is left to the reader. To prove (b) we construct the inverse map. To t
 
 \section{About Chapter 14}
 
-\begin{s} 
-P.~349, proof of Proposition 14.1.6, Step~(ii), additional details. 
+\subsection{Proof of Proposition 14.1.6 (p.~349)}
 
-\nn Proof of $h\circ T^{-1}f=0$: 
+Here are some additional details about Step~(ii). 
+
+We refer the reader to the book for a precise description of the setting. The following facts can be easily verified: 
+
+The morphisms 
 $$
-h\circ T^{-1}f=T^{-1}d_I\circ T^{-1}\psi\circ T^{-1}f+\psi\circ d_{T^{-1}Y}\circ T^{-1}f
+f:X\to Y,\quad\pp:X\to I,\quad g:Y\to Z
 $$ 
-$$
-=T^{-1}d_I\circ T^{-1}\pp+\psi\circ f\circ d_{T^{-1}X}=T^{-1}d_I\circ T^{-1}\pp+\pp\circ d_{T^{-1}X}=0.
-$$ 
-
-\nn Proof of the fact that $\widetilde\psi$ is a morphism in $\A_c$: 
-$$
-d_I\circ\widetilde\psi-T\widetilde\psi\circ d_Y
-$$
-$$
-=d_I\circ\psi-d_I\circ\xi\circ g-T\psi\circ d_Y+T\xi\circ Tg\circ d_Y
-$$
-$$
-=(d_I\circ\psi-T\psi\circ d_Y)-(d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y)
-$$
-$$
-=h-\widetilde h\circ T^{-1}g
-$$
-$$
-=0.
-$$
-\end{s}
-
+in $\A$ satisfy 
 %
+\begin{equation}\label{minac}
+f,\pp,g\text{ are in fact morphisms in }\A_c.
+\end{equation}
+%
+We also have morphisms 
+$$
+\widetilde h:T^{-1}\to I,\quad\widetilde\psi:Y\to I,\quad\psi:Y\to I,\quad h:T^{-1}Y\to I,\quad\xi:Z\to I
+$$ 
+in $\A$, and we have the equalities 
+%
+\begin{equation}\label{ppf}
+\pp=\psi\circ f,
+\end{equation}
+%
+\begin{equation}\label{hpm1}
+h=T^{-1}d_I\circ T^{-1}\psi-\psi\circ T^{-1}d_Y,
+\end{equation}
+%
+\begin{equation}\label{hpm2}
+h=T^{-1}d_I\circ T^{-1}\psi+\psi\circ d_{T^{-1}Y},
+\end{equation}
+%
+\begin{equation}\label{hhg}
+h=\widetilde h\circ T^{-1}g,
+\end{equation}
+%
+\begin{equation}\label{htilde}
+\widetilde h=T^{-1}d_I\circ T^{-1}\circ\xi-\xi\circ T^{-1}d_Z,
+\end{equation}
+%
+\begin{equation}\label{psitildef}
+\widetilde\psi=\psi-\xi\circ g,
+\end{equation}
+
+To prove $h\circ T^{-1}f=0$, we note: 
+%
+\begin{align*}
+h\circ T^{-1}f&=T^{-1}d_I\circ T^{-1}\psi\circ T^{-1}f+\psi\circ d_{T^{-1}Y}\circ T^{-1}f&\text{by \eqref{hpm2}}\\ 
+&=T^{-1}d_I\circ T^{-1}\pp+\psi\circ d_{T^{-1}Y}\circ T^{-1}f&\text{by \eqref{ppf}}\\ 
+&=T^{-1}d_I\circ T^{-1}\pp+\psi\circ f\circ d_{T^{-1}X}&\text{by \eqref{minac}}\\ 
+&=T^{-1}d_I\circ T^{-1}\pp+\pp\circ d_{T^{-1}X}&\text{by \eqref{ppf}}\\ 
+&=0&\text{by \eqref{minac}}. 
+\end{align*}
+
+To prove that $\widetilde\psi$ is a morphism in $\A_c$, we note: 
+%
+\begin{align*}
+d_I\circ\widetilde\psi-T\widetilde\psi\circ d_Y&=d_I\circ\psi-d_I\circ\xi\circ g-T\psi\circ d_Y+T\xi\circ Tg\circ d_Y&\text{by \eqref{psitildef}}\\ 
+&=(d_I\circ\psi-T\psi\circ d_Y)-(d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y)\\ 
+&=Th-(d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y)&\text{by \eqref{hpm1}}\\ 
+&=Th-(d_I\circ\xi\circ g-T\xi\circ T^{-1}d_Z\circ g)&\text{by \eqref{minac}}\\ 
+&=Th-T\widetilde h\circ g&\text{by \eqref{htilde}}\\ 
+&=0&\text{by \eqref{hhg}}. 
+\end{align*}
+
+%%
+
+\subsection{Brief Comments}
 
 \begin{s} 
 P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pageref{938} and Theorem~\ref{961} p.~\pageref{961}, one could replace ``there exists an essentially small full subcategory $\cc S$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\cc S$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
