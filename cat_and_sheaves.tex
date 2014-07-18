@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0330)
+% about "categories and sheaves" (version-0331)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -6430,14 +6430,14 @@ P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pagere
 
 %
 
-\begin{s} P.~263, last sentence of the proof of Lemma 10.5.8. We already know that the bottom row of the commutative diagram 
+\begin{s} P.~263, last sentence of the proof of Lemma 10.5.8. Consider the commutative diagram  
 $$
 \begin{tikzcd}
 \oplus_i\,\pp(Z_i)\ar[equal]{d}\ar{r}&\oplus_i\,\pp(Y_i)\ar[equal]{d}\ar{r}&\oplus_i\,\widetilde\pp(X_i)\ar{d}\ar{r}&0\\ 
-\oplus_i\,\pp(Z_i)\ar{r}&\oplus_i\,\pp(Y_i)\ar{r}&\widetilde\pp(\oplus_i\,X_i)\ar{r}&0 
+\oplus_i\,\pp(Z_i)\ar{r}&\oplus_i\,\pp(Y_i)\ar{r}&\widetilde\pp(\oplus_i\,X_i)\ar{r}&0, 
 \end{tikzcd}
 $$ 
-is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 (ii) p.~261 of the book) from the isomorphisms 
+whose rows are complexes. We already know that the bottom row is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 (ii) p.~261 of the book) from the isomorphisms 
 $$
 \Coker(\oplus_i\,\pp(Z_i)\to\oplus_i\,\pp(Y_i))\simeq\oplus_i\,\Coker(\pp(Z_i)\to\pp(Y_i))\simeq\oplus_i\,\widetilde\pp(X_i).
 $$
@@ -6468,7 +6468,7 @@ Note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
 
 \begin{proof}\ 
 
-\nn(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$ (see Display (7.1.5) p.~155 of the book), and thus, in view of the definition of $\cc NQ$ (see (10.2.1) p.~249 of the book), the existence of a triangle $W\to Y\to Z\to TW$ with $W$ in $\cc N$, and the conclusion follows from the fact that $\Hom_{\cc D}(X,\ )$ is cohomological (see Proposition 10.1.13 p.~245 of the book). 
+\nn(i) The definition of $\cc D/\cc N$ and the assumption $Q(f)=0$ imply the existence of a morphism $s:Y\to Z$ in $\cc NQ$ such that $s\circ f=0$ (see (7.1.5) p.~155 of the book), and thus, in view of the definition of $\cc NQ$ (see (10.2.1) p.~249 of the book), the existence of a d.t. $W\to Y\to Z\to TW$ with $W$ in $\cc N$, and the conclusion follows from the fact that $\Hom_{\cc D}(X,\ )$ is cohomological (see Proposition 10.1.13 p.~245 of the book). 
 
 \nn(ii)
 
@@ -6483,7 +6483,7 @@ X\ar[equal]{d}\ar{r}{f}&Z\ar{d}{(g,h)}\ar{r}{h}&Y\ar[equal]{d}\ar{r}{0}&TX\ar[eq
 X\ar{r}&X\oplus Y\ar{r}&Y\ar{r}&TX
 \end{tikzcd}
 $$
-(the bottom is a d.t. by Corollary 10.2.1 (ii) p.~248 of the book) and Proposition 10.1.15 p.~246 of the book implies that $(g,h)$ is an isomorphism.\bigskip 
+(the bottom is a d.t. by Corollary 10.1.20 (ii) p.~248 of the book) and Proposition 10.1.15 p.~246 of the book implies that $(g,h)$ is an isomorphism.\bigskip 
 
 \nn(b)$\then$(c): Let $\Delta_1,\dots,\Delta_5$ be the triangles
 $$
@@ -6592,7 +6592,7 @@ $$
 \end{s}
 
 \begin{s}
-P.~290, Example 11.6.2 (i). (As already stated, there is a typo; see \S\ref{290} p.~\pageref{290}.) Let $\C,\C'$ and $\C$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
+P.~290, Example 11.6.2 (i). (As already stated, there is a typo; see \S\ref{290} p.~\pageref{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
 $$
 F_\oplus:\operatorname{C}(\C)\times\operatorname{C}(\C')\to\operatorname{C}(\C'').
 $$ 
@@ -6606,7 +6606,7 @@ F_\pi:\operatorname{C}(\C)\times\operatorname{C}(\C')^{\op}\to\operatorname{C}(\
 $$ 
 The formulas defining $F_\pi$ in this setting are almost the same as in the previous setting, and we give them without further comments:
 $$
-F(Y,X)^{n,m}=F(Y^n,X^{-m}),
+F_\pi(Y,X)^{n,m}=F(Y^n,X^{-m}),
 $$
 $$
 d'^{n,m}=F(d_Y^n,X^{-m}),
@@ -7548,8 +7548,6 @@ $$
 $$ 
 as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\oo{PSh}(U,\A)$, given by morphisms $p(V\to U):M\to F(V)$ in $\A$, then we put $\pp(p):=p(U\xr{\id_U}U)$; if $a:M\to F(U)$ is a morphism in $\A$, then we put $\psi(a)(V\xr cU):=F(c)\circ a$; and we check that $\pp$ and $\psi$ are mutually inverse bijections. 
 \end{s}
-
-%\begin{s}P.~417, Displays (17.4.2) and (17.4.2): see Proposition~\ref{fpa} p.~\pageref{fpa}.\end{s}
 
 %
 
