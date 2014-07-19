@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0334)
+% about "categories and sheaves" (version-0335)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1790,8 +1790,9 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 
 %
 
-\begin{s}
-P.~61, Proposition 2.6.3 (i). Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
+\subsection{Proposition 2.6.3 (i) (p.~61)}
+
+Let $\C$ be a category and let $A$ be in $\C^\wedge$. Consider the statements
 %
 \begin{equation}\label{263a}
 \ic_{(X\to A)\in\C_A}X\xrightarrow\sim A,
@@ -1850,9 +1851,10 @@ $$
 \Hom_{\Set}(S,B(X))\to\Hom_{\oo{Fct}((\C_A)^{\op},\Set)}(\gamma,\Delta(S)),\quad g\mapsto r\circ\Delta(g)
 $$ 
 is bijective. 
-\end{s}
 
-%
+%%
+
+\subsection{Brief Commments}
 
 \begin{s} 
 P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
@@ -3129,10 +3131,11 @@ Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 p.~121 of the book and Th
 P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\cc F$ is strictly generating,\index{strictly generating subcategory} then $\Ob(\cc F)$ is a system of generators''. See \S\ref{ffc} p.~\pageref{ffc}.
 \end{s}
 
-%
+%%
 
-\begin{s} 
-P.~122, proof of Lemma 5.3.2 (minor variant). 
+\subsection{Lemma 5.3.2 (p.~122)} 
+
+Here is a minor variant of the proof of Lemma 5.3.2. 
 
 \begin{lem}[Lemma 5.3.2 p.~122]
 If $\F\subset\G$ are full subcategories of a category $\C$, and if $\F$ is strictly generating, then $\G$ is strictly generating. 
@@ -3199,9 +3202,10 @@ Z&z\in\Hom_\C(Z,X)\ar{r}{\xi_Z}\ar{d}[swap]{\circ w}&\Hom_\C(Z,Y)\ar{d}{\circ w}
 W\ar{u}{w}&\Hom_\C(W,X)\ar{r}[swap]{\xi_W}&\Hom_\C(W,X).
 \end{tikzcd}
 $$
-\end{s}
 
-%
+%%
+
+\subsection{Brief Comments} 
 
 \begin{s} 
 P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
@@ -3232,7 +3236,7 @@ the last isomorphism following from \eqref{263c} p.~\pageref{263c}.
 As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem. (Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory of $\C$, that the functor $\pp:\C\to\F^\wedge$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.)
 
 \begin{thm}[Theorem 5.3.6 p.~124]\label{536} 
-Let $\C$ be a category satisfying the conditions (i)-(iii) below:
+Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 
 \nn\emph{(i)} $\C$ admits small inductive limits and finite projective limits, 
 
@@ -3377,9 +3381,9 @@ be the natural morphisms. As $a\circ b$ is an epimorphism by Step~5, $a$ is an e
 
 %%
 
-\subsection{Brief Comment}
+\subsection{Theorem 5.3.9 (p.~128)}
 
-P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as follows. 
+To prove the existence of $\F$, one can also argue as follows. 
 
 \begin{lem} 
 Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
@@ -4148,9 +4152,9 @@ We leave the verification of these claims to the reader.
 
 \section{About Chapter 8}
 
-\subsection{Brief Comment}
+\subsection{Lemma 8.1.2 (ii) (p.~169)}
 
-About Lemma 8.1.2 (ii), p. 169: The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a functorial family of maps 
+The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a functorial family of maps 
 $$
 (\mu_X:G(X)^2\to G(X))_{X\in\C}
 $$ 
@@ -4368,9 +4372,9 @@ are mutually inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\t
 
 %%%
 
-\subsection{Proof of Proposition 8.3.4 (p. 176)}
+\subsection{Proposition 8.3.4 (p. 176)}
 
-Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
+Here are a few more details about the proof of Proposition 8.3.4. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h} &X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
@@ -4454,14 +4458,14 @@ $$
 
 %%% 
 
-\subsection{Brief Comments}
+\subsection{Definition 8.3.5 (p.~177)}
 
-\begin{s} 
-P.~177, Definition 8.3.5. The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
-\end{s}
-%
+The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
+
+%%
+
 \subsection{The Complex (8.3.3) (p.~178)}
-%
+
 Let us just add a few more details about the proof of the isomorphisms
 \begin{equation}\label{834}
 \begin{split}
@@ -4856,10 +4860,11 @@ quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\r
 \end{proof}
 \end{s}
 
-%
+%%
 
-\begin{s} 
-P.~191, Step (a) of the proof of Theorem 8.5.8 (iv) (minor variant). Recall the statement: 
+\subsection{Theorem 8.5.8 (iv) (p.~191)} 
+
+Here is a minor variant of Step (a) of the proof of Theorem 8.5.8 (iv). Recall the statement: 
 
 \begin{lem}
 In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\rightarrowtail R^{\oplus S}$. Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
@@ -4932,9 +4937,10 @@ x\circ c=p\circ i\circ z=0
 $$  
 by \eqref{pi=0}. As $c$ is an epimorphism, this implies successively \eqref{x=0}, \eqref{fpsi}, and the lemma. 
 \end{proof}
-\end{s}
 
 %%
+
+\subsection{Brief Comments} 
 
 \begin{s}
 P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that
@@ -6458,7 +6464,9 @@ Note that Convention~\ref{payc} p.~\pageref{payc} can be applied.
 
 %%
 
-\begin{s} P.~266, Exercise 10.11. Recall the statement: 
+\subsection{Exercise 10.11 (p.~266)} 
+
+Recall the statement: 
 
 \nn(i) Let $\cc N$ be a null system in a triangulated category $\cc D$, let $Q:\cc D\to\cc D/\cc N$ be the localization functor, and let $f:X\to Y$ be a morphism in $\cc D$ satisfying $Q(f)=0$. Then $f$ factors through some object of $\cc N$. 
 
@@ -6498,8 +6506,7 @@ $$
 with $\Delta_3:=\Delta_1\oplus\Delta_2$ and $\Delta_5:=\Delta_3\oplus\Delta_4$. It is easy to see that $\Delta_1,\Delta_2$, and $\Delta_4$ are distinguished. Then $\Delta_3$ and $\Delta_5$ are distinguished by Proposition 10.1.19 p.~247 of the book, and, as $X\oplus Y$ is in $\cc N$, Condition N'3 of Lemma 10.2.1 (b) p.~249 of the book implies that $X\oplus TX$ is in $\cc N$.
 
 \nn(c)$\then$(a): Follows from Theorem 10.2.3 (iv) p.~249 of the book.
-\end{proof}
-\end{s}
+\end{proof} 
 
 %%%
 
@@ -6549,10 +6556,11 @@ $$
 is a differential isomorphism.
 \end{s}
 
-%
+%%
 
-\begin{s}
-P.~275, Proof of TR5. We stated Axiom~TR5 right after Corollary~\ref{may} p.~\pageref{may} above. For the reader's convenience we restate it. 
+\subsection{Theorem 11.2.6 (p~273)} 
+
+Here is a minor comment about the verification of Axiom TR5 in the proof of Theorem 11.2.6. We stated Axiom~TR5 right after Corollary~\ref{may} p.~\pageref{may} above. For the reader's convenience we restate it. 
 
 If the diagram 
 $$
@@ -6589,10 +6597,12 @@ Y\ar{r}{g}\ar{d}[swap]{\alpha(f)}&Z\ar{r}{\alpha(g)}\ar{d}[swap]{\alpha(g\circ f
 TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Z\ar{r}[swap]{w}&T^2X\oplus TY.
 \end{tikzcd}
 $$ 
-\end{s}
 
-\begin{s}
-P.~290, Example 11.6.2 (i). (As already stated, there is a typo; see \S\ref{290} p.~\pageref{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
+%%
+
+\subsection{Example 11.6.2 (i) (p.~290)} 
+
+(As already stated, there is a typo; see \S\ref{290} p.~\pageref{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
 $$
 F_\oplus:\operatorname{C}(\C)\times\operatorname{C}(\C')\to\operatorname{C}(\C'').
 $$ 
@@ -6632,8 +6642,7 @@ $$
 $$
 {\theta'}_{Y,X}^{i,j}:F_\pi(Y^i,(T^{-1}X)^{-j})=F(Y^i,X^{-j-1})\to F_\pi(Y,X)^{i+j+1}=(TF_\pi(Y,X))^{i+j},
 $$
-the morphism ${\theta'}_{Y,X}^{i,j}$ being $(-1)^i$ times the canonical embedding.
-\end{s}
+the morphism ${\theta'}_{Y,X}^{i,j}$ being $(-1)^i$ times the canonical embedding. 
 
 %%%
 
@@ -6883,9 +6892,9 @@ Claim (a) is left to the reader. To prove (b) we construct the inverse map. To t
 
 \section{About Chapter 14}
 
-\subsection{Proof of Proposition 14.1.6 (p.~349)}
+\subsection{Proposition 14.1.6 (p.~349)}
 
-Here are some additional details about Step~(ii). 
+Here are some additional details about Step~(ii) of the proof of Proposition 14.1.6. 
 
 We refer the reader to the book for a precise description of the setting. The following facts can be easily verified: 
 
@@ -7384,6 +7393,8 @@ in $\cc{LI}_U$ such that $\alpha(\pp)(f_1)=\alpha(\pp)(f_2)$. This means that th
 
 \section{About Chapter 17}
 
+\subsection{Brief Comments}
+
 \begin{s}
 P.~405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
 
@@ -7660,8 +7671,9 @@ Moreover, $f$ is an isomorphism by Lemma 2.1.12 p.~41 of the book, and $g$ is an
 
 %
 
-\begin{s}
-P.~420, proof of Proposition 17.4.4, Step (ii). We draw a few diagrams with the hope of helping the reader visualize the argument. 
+\subsection{Proposition 17.4.4 (p.~420)}
+
+We draw a few diagrams with the hope of helping the reader visualize the argument in Step (ii) of the proof of Proposition 17.4.4. 
 
 An object of the category 
 $$
@@ -7723,10 +7735,11 @@ Indeed, the isomorphisms can be justified as follows:
 
 \nn(f) cocofinality of $p_D$, 
 
-\nn(g) definition of $F^b$.
-\end{s}
+\nn(g) definition of $F^b$. 
 
-%
+%%
+
+\subsection{Brief Comments}
 
 \begin{s}\label{fau}
 P.~421, first display: 
@@ -8146,9 +8159,9 @@ $$
 
 %%
 
-\subsection{Proof of Lemma 18.5.3 (p. 447)} 
+\subsection{Lemma 18.5.3 (p. 447)} 
 
-We give additional details about Lemma 18.5.3 of the book (stated below as Lemma~\ref{l1853} p.~\pageref{l1853}) with the hope of helping the reader. We start with a technical lemma.
+We give additional details about the proof of Lemma 18.5.3 of the book (stated below as Lemma~\ref{l1853} p.~\pageref{l1853}) with the hope of helping the reader. We start with a technical lemma.
 
 \begin{lem}\label{techlem}
 Let $R$ be a ring, let $A$ be a right $R$-module, let $B$ be a left $R$-module, let $n$ be a positive integer, let 
