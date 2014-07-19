@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0333)
+% about "categories and sheaves" (version-0334)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -7192,11 +7192,13 @@ $$
 Condition GT4 holds.
 \end{lem}
 
-\begin{proof}
+\begin{proof} 
 Let us assume 
-$$
+%
+\begin{equation}\label{sgu}
 S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S.
-$$ 
+\end{equation}
+%
 It suffices to check $S'\in\Gamma_U$, or, equivalently, 
 %
 \begin{equation}\label{as'}
@@ -7210,7 +7212,7 @@ B\ar{r}\ar{d}&A_S\ar{d}\\
 A_{S'}\ar{r}&U.
 \end{tikzcd}
 $$ 
-As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE3, to check  
+As $A_S\to U$ is in $\cc E$ by assumption, it suffices, by LE2 and LE3, to check  
 %
 \begin{equation}\label{bas}
 (B\to A_S)\in\cc E.
@@ -7223,20 +7225,25 @@ C\ar{r}\ar{d}&V\ar{d}\\
 B\ar{r}&A_S
 \end{tikzcd}
 $$ 
-be a cartesian square. It is enough to verify 
+be a cartesian square. By LE4 it is enough to verify 
 %
 \begin{equation}\label{cv}
 (C\to V)\in\cc E.
 \end{equation} 
 % 
-The square 
+The morphism $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, the sieve $S'\times_UV$ is in $\Gamma_V$ by \eqref{sgu}, and $A_{S'\times_UV}\to V$ is in $\cc E$ by definition of $\Gamma_V$. We have 
+$$
+\cc E\ni(A_{S'\times_UV}\to V)\simeq(A_{S'}\times_UV\to V)\simeq(C\to V).
+$$ 
+Indeed, the first isomorphism holds by \eqref{asuv} p.~\pageref{asuv}, and the second one holds because the rectangle 
 $$
 \begin{tikzcd}
 C\ar{r}\ar{d}&V\ar{d}\\ 
+B\ar{r}\ar{d}&A_S\ar{d}\\ 
 A_{S'}\ar{r}&U
 \end{tikzcd}
 $$ 
-being cartesian, and $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, Condition~\eqref{cv} holds by assumption, and implies successively \eqref{bas}, \eqref{as'}, and the lemma. 
+is cartesian. This proves successively \eqref{cv}, \eqref{bas}, \eqref{as'}, and the lemma.  
 \end{proof}
 
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
