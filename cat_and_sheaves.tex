@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0332)
+% about "categories and sheaves" (version-0333)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -7066,9 +7066,8 @@ A_S(V):=S\cap\Hom_\C(V,U).
 $$ 
 Conversely, to an object $A\to U$ of $(\C^\wedge)_U$ we attach the sieve $S_A$ over $U$ by putting 
 $$
-S_A:=\{V\to A\to U\}.
+S_{A\to U}:=\{V\to A\to U\}.
 $$ 
-(The notation $S_A$ is abusive because the sieve $S_A$ depends not only on $A$ but also on the morphism $A\to U$.)
 
 Let $\Sigma_U$ be the set of sieves over $U$. Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ and consider the following conditions:
 
@@ -7101,12 +7100,16 @@ As proved in the book, $\cc E$ contains all epimorphisms.
 
 The elements of $\cc E$ are called \textbf{local epimorphisms}.
 
-\begin{nota}\label{cce}
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let $\cc E=\cc E(\Gamma,\U)$ be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU}$ is in $\Gamma_U$. 
-\end{nota}
+Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let 
+%
+\begin{equation}\label{cce}
+\cc E=\cc E(\Gamma,\U)
+\end{equation}
+%
+be the set of those morphisms $A\to B$ in $\C^\wedge$ such that, for any morphism $U\to B$ in $\C^\wedge$ with $U$ in $\C$, the sieve $S_{A\times_BU\to U}$ is in $\Gamma_U$. 
 
 \begin{rk}\label{1613i}
-A morphism $A\to U$ in $\C^\wedge$ is in $\cc E$ if and only if $S_A$ is in $\Gamma_U$. 
+A morphism $A\to U$ in $\C^\wedge$ is in $\cc E$ if and only if $S_{A\to U}$ is in $\Gamma_U$. 
 \end{rk}
 
 \begin{proof}
@@ -7114,7 +7117,7 @@ This results easily from the following observation: In the setting
 $$
 A\to U\leftarrow V
 $$ 
-(obvious notation), we have $S_{A\times_UV}=S_A\times_UV$. 
+(obvious notation), we have $S_{A\times_UV\to V}=S_{A\to U}\times_UV$. 
 \end{proof}
 
 Let us check that $\cc E$ satisfies LE1-LE4:
@@ -7129,7 +7132,7 @@ D\ar{r}\ar{d}&E\ar{r}\ar{d}&U\ar{d}\\
 A\ar{r}&B\ar{r}&C
 \end{tikzcd}
 $$
-in $\C^\wedge$ (with $U$ in $\C$). We have that $S_E$ is in $\Gamma_U$ (because $B\to C$ is in $\cc E$) and we must prove that $S_D$ is in $\Gamma_U$. Let $V\to U$ be in $S_E$, and let us complete the diagram with cartesian squares as indicated. By GT4 it suffices to check that $S_F$ is in $\Gamma_V$. But this follows from the assumption that $A\to B$ is in $\cc E$ (together with a transitivity property of cartesian squares which has already been tacitly used).
+in $\C^\wedge$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $\Gamma_U$ (because $B\to C$ is in $\cc E$) and we must prove that $S_{D\to U}$ is in $\Gamma_U$. Let $V\to U$ be in $S_{E\to U}$, and let us complete the diagram with cartesian squares as indicated. By GT4 it suffices to check that $S_{F\to V}$ is in $\Gamma_V$. But this follows from the assumption that $A\to B$ is in $\cc E$ (together with a transitivity property of cartesian squares which has already been tacitly used).
 
 \nn LE3 follows immediately from GT2.
 
@@ -7145,7 +7148,15 @@ $$
 $$
 Let us check that $\Gamma(\cc E):=(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
 
-GT1 follows from LE1 and the equality $(A_{M_U}\to U)=\id_U$. GT2 follows from LE3 and the fact that, in the setting $\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U$, $A_S\to U$ factors as $A_S\to A_{S'}\to U$. If $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
+GT1 follows from LE1 and the equality $(A_{M_U}\to U)=\id_U$. 
+
+GT2 follows from LE3 and the fact that, in the setting 
+$$
+\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U,
+$$ 
+the morphism $A_S\to U$ factors as $A_S\to A_{S'}\to U$. 
+
+To prove GT3, note that if $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
 %
 \begin{equation}\label{asuv}
 A_{S\times_UV}=A_S\times_UV.
@@ -7156,7 +7167,7 @@ In view of LE4, this implies GT3.
 The lemma below will helps us verify GT4. 
 
 \begin{lem}\label{prepagt4}
-Let $s:V\to U$ be a morphism in $\C$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
+Let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
 \end{lem}
 
 \begin{proof}
@@ -7164,23 +7175,17 @@ By the Yoneda Lemma (Lemma~\ref{yol} p.~~\pageref{yol}), there is a bijection
 $$
 S\cap\Hom_\C(V,U)\xr\pp\Hom_{\C^\wedge}(V,A_S)
 $$
-such that $\pp(s)_V(t)=s\circ t$ for $s$ in $\Hom_\C(V,U)$, $V$ in $\C$, and $t$ in $\Hom_\C(V,V)$. 
+such that $\pp(s)_W=s\circ$ for all $W$ in $\C$. 
 
-Assume that $s$ is in $S$ and let us show that there is a morphism $v:V\to A_S$ satisfying $i\circ v=s$. It suffices to prove $i\circ\pp(s)=s$ and to put $v:=\pp(s)$. We have 
+Assume that $s$ is in $S$ and let us show that there is a morphism $v:V\to A_S$ satisfying $i\circ v=s$. It suffices to prove $i\circ\pp(s)=s$ and to put $v:=\pp(s)$. We have for all $W$ in $\C$
 $$
-i\circ\pp(s)=\pp(s)_V(\id_V)=A_S(\id_V)(s)=s\circ\id_V=s.
+(i\circ\pp(s))_W=i_W\circ\pp(s)_W=i_W\circ(s\circ)=s\circ=s_W.
 $$ 
 
 Conversely, assuming that $v$ is in $\Hom_{\C^\wedge}(V,A_S)$, it suffices to prove that $i\circ v$ is in $S$. We have 
 $$
-V\xr vA_S\xr iU,
-$$
-$$
-\Hom_\C(V,V)\xr{v_V}S\cap\Hom_\C(V,U)\overset{i_V}{\hookrightarrow}\Hom_\C(V,U),
-$$
-$$
-i\circ v=(i\circ v)_V(\id_V)=v_V(\id_V)\in S.
-$$
+i\circ v=(i\circ v)\circ\id_V=(i\circ v)_V(\id_V)=i_V(v_V(\id_V))=v_V(\id_V)\in A_S(V)\subset S. 
+$$ 
 \end{proof} 
 
 \begin{lem}
@@ -7243,7 +7248,7 @@ If $\C$ is a $\U$-small category, if $\Gamma$ is a subfamily of $(\Sigma_U)_{U\i
 \end{thm}
 
 \begin{cor}\label{leu}
-Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is in $\cc E(\Gamma,\U)$ (see Notation~\ref{cce} p.~\pageref{cce}) if and only if $u'$ is in $\cc E(\Gamma,\U')$.
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is in $\cc E(\Gamma,\U)$ (see \eqref{cce} p.~\pageref{cce}) if and only if $u'$ is in $\cc E(\Gamma,\U')$.
 \end{cor}
 
 %%
@@ -7265,7 +7270,7 @@ Moreover, a morphism $u:A\to U$ in $(\oo{Op}_X)^\wedge$ with $U$ in $\oo{Op}_X$ 
 % https://docs.google.com/document/d/1vpjtCfl-qZCuuI-wkR5rbsav31DfDsZx1mQteXzu-UM/edit
 
 \begin{s}
-For any universe $\U$, any $\U$-small category $\C$, and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $\cc M(\Gamma,\U)$ and $\cc I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\cc E(\Gamma,\U)$ (see Notation~\ref{cce} p.~\pageref{cce}). Corollary \ref{leu} p. \pageref{leu} implies:
+For any universe $\U$, any $\U$-small category $\C$, and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pageref{gt}), let $\cc M(\Gamma,\U)$ and $\cc I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\cc E(\Gamma,\U)$ (see \eqref{cce} p.~\pageref{cce}). Corollary \ref{leu} p. \pageref{leu} implies:
 
 Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $u:A\to B$ be a morphism in $\C^\wedge_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wedge_{\U'}$. Then $u$ is in $\cc M(\Gamma,\U)$ (resp. in $\cc I(\Gamma,\U)$) if and only if $u'$ is in $\cc M(\Gamma,\U')$ (resp. in $\cc I(\Gamma,\U')$).
 \end{s}
