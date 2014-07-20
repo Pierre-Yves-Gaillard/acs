@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0335)
+% about "categories and sheaves" (version-0336)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1322,7 +1322,7 @@ is cartesian, then $K\simeq\Ker(f,g)$. (As usual, $\Delta$ is the diagonal morph
 %
 
 \begin{s}
-P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dagger$, and $\pp^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). %So, there is a big number of pages (with a high contents density) between the notation and its justification.
+P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dagger$, and $\pp^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). 
 \end{s}
 
 %
@@ -2187,8 +2187,20 @@ $$
 $$
 It might be worth stating explicitly the isomorphism 
 $$
-\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F.
+\widehat F\circ\hy_\C\xr\sim\hy_{\C'}\circ F, 
+$$ 
+that is, the diagram 
 $$
+\begin{tikzcd}
+\C\ar{r}\ar{d}[swap]{\hy_\C}\ar{r}{F}&\C'\ar{d}{\hy_{\C'}}\\ 
+\C^\wedge\ar{r}[swap]{\widehat F}&\C'^\wedge.
+\end{tikzcd}
+$$ 
+quasi-commutes. 
+
+\begin{prop}\label{yf}
+Let $\U$ be a universe, let $\A$ be the category of $\U$-small categories (see Definition~\ref{small} p.~\pageref{small}), let $\B$ be the category whose objects are the $\U$-categories (see Definition~\ref{ducat} p.~\pageref{ducat}) and whose morphisms are the isomorphism classes of morphisms of functors. Then there is a functor $\Phi:\A\to\B$ satisfying $\Phi(\C)=\C^\wedge$ and $\Phi(F)=\widehat F$, and there is a morphism of functors $\theta$ from the ``inclusion'' $\A\to\B$ to $\Phi$ satisfying $\theta_\C=\hy_\C$ for all $\C$ in $\A$.
+\end{prop}
 
 \begin{rk}\label{cof}
 Let $A'$ be in $\cc C'^\wedge$, and let $\cc C_{A'\circ F}\xr\pp\cc C'_{A'}\xr\psi\C'^\wedge$ be the natural functors. By \eqref{263a} p.~\pageref{263a} the natural morphism $\colim(\psi\circ\pp)\to\colim\psi$ induces a morphism $f:\widehat F(A'\circ F)\to A'$ functorial in $A'$. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pageref{myprop1}.)
@@ -7313,7 +7325,7 @@ Recall that (a) is the condition that $A\to B$ is a local monomorphism. Lemma 16
 Indeed, Part (iii) of the lemma says that (a), (b) and (c) are equivalent. Clearly (e) implies (c) and (d), and (d) implies (b). It suffices to check that (c) implies (e). Let $C\parar A\to B$ be as in the assumption (c), let $D\to C$ be the local epimorphism furnished by (c), and let $I$ be its image. The two compositions $I\to C\parar A$ coincide because $D\to I$ is an epimorphism, and $I\to C$ is a local isomorphism by Part (ii) of the lemma. q.e.d.
 \end{s}
 
-%\begin{s}P.~397, proof of Proposition 16.2.2 (vi): see \S\ref{16111} p.~\pageref{16111}.\end{s}
+%
 
 \begin{s} 
 P.~397, Notation 16.2.5 (ii). The fact that 
@@ -7451,7 +7463,7 @@ If $f:X\to Y$ is a continuous map of small topological spaces, if $B$ is in $(\o
 \begin{s}\label{fdagger} 
 P.~407. Let $f:X\to Y$ be a morphism of presites and let $\A$ be a category admitting small inductive and projective limits. In the notation of \eqref{ttau} p.~\pageref{ttau}, we set $f^\dagger:=(f^\tau)^\dagger$ and $f^\ddagger:=(f^\tau)^\ddagger$: 
 $$
-f^\dagger,f^\ddagger:\PSh(X\A)\to\PSh(Y,\A),
+f^\dagger,f^\ddagger:\PSh(X\A)\to\PSh(Y,\A).
 $$
 Then (17.1.3) and (17.1.4) follow respectively from (2.3.6) and (2.3.7) p.~52 of the book. For the sake of completeness, let us rewrite (17.1.3) and (17.1.4) (in the notation of \eqref{ttau}):
 %
@@ -7512,6 +7524,14 @@ P.~409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{p
 
 \begin{s}\label{17115b}
 P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
+\end{s} 
+
+%
+
+\begin{s}
+P.~411, Definition 17.2.1 of the notions of sites and of morphism of site. Proposition~\ref{yf} p.~\pageref{yf} implies:
+
+If $\U$ is a universe, then there is a $\U$-category $\A$ (see Definition~\ref{ducat} p.~\pageref{ducat}) whose objects are the $\U$-small categories (see Definition~\ref{small} p.~\pageref{small}) and whose morphisms are are morphisms of sites.
 \end{s}
 
 %
@@ -7527,11 +7547,11 @@ P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.
 
 Claim: if a local isomorphism $u:A\to B$ in $\C_Y^\wedge$ is either a monomorphism or an epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wedge$. 
 
-Proof of the claim: Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V$ in $\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism by Proposition~\ref{34i} p.~\pageref{34i}. Let us show that $\fthat(u_V)$ is a local isomorphism. 
+Proof of the claim: Let $V\to B$ be a morphism in $\C_Y^\wedge$ with $V$ in $\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism by Proposition~\ref{sbcs} p.~\pageref{sbcs} and Proposition~\ref{34i} p.~\pageref{34i}. Let us show that $\fthat(u_V)$ is a local isomorphism. 
 
 If $u_V$ is a monomorphism, $\fthat(u_V)$ is a local isomorphism by assumption. 
 
-If $u_V$ is an epimorphism, then $u_V$ has a section $s:V\to A\times_BV$. Since $u_V$ is a local isomorphism by Lemma 16.2.4 (i) p.~396 of the book, $s$ is a local isomorphism. Since 
+If $u_V$ is an epimorphism, then $u_V$ has a section $s:V\to A\times_BV$. Since $u_V$ is a local isomorphism by Lemma 16.2.4 (i) p.~395 of the book, $s$ is a local isomorphism. Since 
 $$
 \fthat(u_V)\circ\fthat(s)\simeq\id_{f^t(V)}
 $$ 
@@ -7563,16 +7583,15 @@ Let $f:X\to Y$ be a weekly left exact morphism of sites such that $\fthat(u)$ is
 %
 
 \begin{s}
-P.~413, Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. %The book says that $f$ is a left exact morphism of sites. It seems to me that $f$ is also right exact. 
-As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from \S\ref{390} p.~\pageref{390} and \eqref{efhat2} p.~\pageref{efhat2}. 
+P.~413, Example 17.2.7 (i). Recall that $f:X\to Y$ is a continuous map of small topological spaces. As explained in the book, to see that $f$ is a morphism of sites, it suffices to check that, if $u:B\to V$ is a local epimorphism in $(\oo{Op}_Y)^\wedge$ with $V$ in $\oo{Op}_Y$, then $\fthat(B)\to f^{-1}(V)$ is a local epimorphism in $(\oo{Op}_X)^\wedge$. This follows immediately from \S\ref{390} p.~\pageref{390} and \eqref{efhat2} p.~\pageref{efhat2}. 
 \end{s}
 
 %
 
 \begin{s} 
-P.~414, Definition 17.7.8 (minor variant):
+P.~414, Definition 17.2.8 (minor variant):
 
-\begin{df}[Definition 17.7.8, Grothendieck topology]\label{1778} 
+\begin{df}[Definition 17.2.8 p.~414, Grothendieck topology]\label{1778} 
 Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology}\index{Grothendieck topology} on $X$ is a set $\cc T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\cc T'$ and $\cc T$ be Grothendieck topologies. We say that $\cc T$ is {\em stronger than} $\cc T'$, or that $\cc T'$ is {\em weaker than} $\cc T$, if $\cc T'\subset\cc T$. 
 \end{df}
 
@@ -7677,7 +7696,7 @@ We draw a few diagrams with the hope of helping the reader visualize the argumen
 
 An object of the category 
 $$
-M[J\to K\leftarrow M[I\to K\leftarrow K]]
+M\big[J\to K\leftarrow M[I\to K\leftarrow K]\big]
 $$ 
 can be represented by a diagram 
 $$
@@ -7902,9 +7921,7 @@ V\ar{rr}{(\id_V,v)}\ar{dr}&&V\times A\ar{dl}\\
 \end{equation} 
 is a local isomorphism in $\C_A^\wedge$. 
 
-As $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$ by \S\ref{1768}, and $V\to V\times A\to V$ is the identity of $V$, Lemma 16.2.4 (vii) p.~396 of the book implies that $V\to V\times A$ is a local isomorphism in $\C_X^\wedge$, and thus, by \S\ref{1761b} p.~\pageref{1761b}, that \eqref{1768ii} is a local isomorphism in $\C_A^\wedge$.
-
-%As \eqref{1768ii} is a monomorphism, it suffices, by Lemma 16.2.3 (i) p.~395 of the book, to check that \eqref{1768ii} is a local epimorphism in $\C_A^\wedge$. By \S\ref{1761} p.~\pageref{1761}, it suffices to show that $V\to V\times A$ is a local epimorphism in $\C_X^\wedge$. As $V\to V\times A\to V$ is the identity of $V$, it suffices, by Lemma 16.2.4 (vii) p.~396 of the book, to verify that $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$. But this follows from the argument given in \S\ref{1768}.
+As $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$ by \S\ref{1768}, and $V\to V\times A\to V$ is the identity of $V$, Lemma 16.2.4 (vii) p.~396 of the book implies that $V\to V\times A$ is a local isomorphism in $\C_X^\wedge$, and thus, by \S\ref{1761b} p.~\pageref{1761b}, that \eqref{1768ii} is a local isomorphism in $\C_A^\wedge$. 
 \end{s} 
 
 %
@@ -7932,13 +7949,14 @@ Proof: \eqref{1771i1} is a local epimorphism by \S\ref{1761} p.~\pageref{1761}. 
 \end{equation} 
 is a local epimorphism. But this follows again from \S\ref{1761} p.~\pageref{1761}. $\square$ 
 
-Consider the morphism of presites $B'\to A'$ induced by $A\to B$ and note that the following square commutes: 
+Consider the morphism of presites $B'\to A'$ induced by $A\to B$ and note that the square
 $$
 \begin{tikzcd} 
 X\ar{rr}{\oo j_{A\to X}}\ar[equal]{d}&&A'\\ 
 X\ar{rr}[swap]{\oo j_{B\to X}}&&B'.\ar{u}
 \end{tikzcd}
 $$ 
+commutes.
 \end{s} 
 
 %
@@ -7995,7 +8013,7 @@ which holds by Lemma 17.4.6 (ii) p.~421 of the book, and the other isomorphisms 
 %
 
 \begin{s} 
-P.~431, Exercise 17.5 (ii). By \S\ref{1761b} p.~\pageref{1761b} we have, for $U$ in $\C_X$ and $(U\to A)$ in $\C_A$, an isomorphism 
+P.~431, Exercise 17.5 (ii). By \S\ref{1761b} p.~\pageref{1761b} we have, for $U$ in $\C_X$ and $U\to A$ in $\C_A$, an isomorphism 
 $$
 \cc{LI}_{U\to A}\simeq\cc{LI}_U.
 $$
@@ -8046,7 +8064,7 @@ Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_
 %
 
 \begin{s}\label{a438}
-P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428}, and $\Gamma(A;-)$ is left exact by Corollary~\ref{bre} p.~\pageref{bre}.
+P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428} p.~\pageref{a428}, and $\Gamma(A;-)$ is left exact by Corollary~\ref{bre} p.~\pageref{bre}.
 \end{s} 
 
 % 
@@ -8058,13 +8076,28 @@ P.~438, bottom: One can add that we have $\HOM_{\cc R}(\cc R,F)\simeq F$ for all
 % 
 
 \begin{s}\label{neutral}
-P.~439, after Definition 18.2.2: One can add that we have $\cc R\overset{\text{\tiny psh}}{\otimes}_{\cc R}F\simeq F$ for $F$ in $\oo{PSh}(\cc R)$ and $\cc R\otimes_{\cc R}F\simeq F$ for $F$ in $\Mod(\cc R^{\op})$, as well as $F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F$ for $F$ in $\oo{PSh}(\cc R^{\op})$ and $F\otimes_{\cc R}\cc R\simeq F$ for $F$ in $\Mod(\cc R^{\op})$. 
+P.~439, after Definition 18.2.2: One can add that we have 
+$$
+\cc R\overset{\text{\tiny psh}}{\otimes}_{\cc R}F\simeq F
+$$ 
+for $F$ in $\oo{PSh}(\cc R)$ and 
+$$
+\cc R\otimes_{\cc R}F\simeq F
+$$ 
+for $F$ in $\Mod(\cc R^{\op})$, as well as 
+$$F\overset{\text{\tiny psh}}{\otimes}_{\cc R}\cc R\simeq F
+$$ 
+for $F$ in $\oo{PSh}(\cc R^{\op})$ and 
+$$
+F\otimes_{\cc R}\cc R\simeq F
+$$ 
+for $F$ in $\Mod(\cc R^{\op})$. 
 \end{s} 
 
 % 
 
 \begin{s}
-P.~441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pageref{175i}). 
+P.~441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and \S\ref{175i} p.~\pageref{175i}. 
 \end{s} 
 
 % 
@@ -8132,9 +8165,11 @@ $$
 \HOM_{k_X}(k_{XA},F), 
 $$ 
 where (a) follows from \eqref{18212}, (b) follows from Display (18.2.4) p.~439 of the book (which is a particular case of \eqref{HOM}), and (c) follows from \S\ref{homrr}. Let us record the isomorphism 
+%
 \begin{equation}\label{record}
 \HOM_{\cc R}(\cc R_A,F)\simeq\HOM_{k_X}(k_{XA},F). 
 \end{equation} 
+%
 We also have for $G$ in $\Mod(\cc R)$ 
 $$
 \Hom_{\cc R}(G,\HOM_{k_X}(k_{XA},F))\overset{(\text a)}{\simeq}
@@ -8164,7 +8199,7 @@ $$
 We give additional details about the proof of Lemma 18.5.3 of the book (stated below as Lemma~\ref{l1853} p.~\pageref{l1853}) with the hope of helping the reader. We start with a technical lemma.
 
 \begin{lem}\label{techlem}
-Let $R$ be a ring, let $A$ be a right $R$-module, let $B$ be a left $R$-module, let $n$ be a positive integer, let 
+Let $R$ be a ring, let $A$ be a right $R$-module, let $B$ be a left $R$-module, let $n$ be a positive integer, and let 
 $$
 (a_i)_{i=1}^n,\quad(b_i)_{i=1}^n
 $$
@@ -8172,29 +8207,29 @@ be two families of elements belonging respectively to $A$ and $B$. Then Conditio
 
 \nn\emph{(i)} We have $\sum_{i=1}^n\,a_i\otimes b_i=0$ in $A\otimes_RB$. 
 
-\nn\emph{(ii)} There are nonnegative integers $\ell$ and $m$ with $\ell\ge n$, and there are three families 
+\nn\emph{(ii)} There are positive integers $\ell$ and $m$ with $\ell\ge n$, and there are three families 
 $$
 (a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
 of elements belonging respectively to $A$, $R$, and $B$, such that, if we set $b_i=0$ for $n<i\le\ell$, we have:
-\begin{equation}\label{lij}
-\sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),\quad
+%
+\begin{equation}\label{lij1}
+\sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),
+\end{equation}
+%
+\begin{equation}\label{lij2}
 \sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m),
 \end{equation}
 \end{lem} 
 
 \begin{proof} 
-Implication (ii)$\then$(i) follows from \eqref{lij}. To prove Implication (i)$\then$(ii), we assume 
+Implication (ii)$\then$(i) is clear. To prove Implication (i)$\then$(ii), we assume (i), and we choose a set $I$ containing $\{1,\dots,\ell\}$, where $\ell$ be an integer $\ge n$ to be determined later, such that there is a family $(a_i)_{i\in I}$ which completes the family $(a_i)_{1\le i\le n}$ and generates $A$. We write $C$ for the kernel of the natural epimorphism 
 $$
-\sum_{i=1}^n\,a_i\otimes b_i=0.
-$$ 
-We choose a set $I$ containing $\{1,\dots,\ell\}$, where $\ell$ be an integer $\ge n$ to be determined later, such that there is a family $(a_i)_{i\in I}$ which completes the family $(a_i)_{1\le i\le n}$ and generates $A$. We write $C$ for the kernel of the natural epimorphism 
-$$
-f:S^{\oplus I}\epi A.
+f:R^{\oplus I}\epi A.
 $$ 
 In particular we have exact sequences 
 $$
-C\xr gS^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
+C\xr gR^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
 $$ 
 Put $b_i:=0$ for $i$ in $I\setminus\{1,\dots,\ell\}$. The family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$, a family 
 $$
@@ -8202,22 +8237,15 @@ $$
 $$ 
 of elements of $R$ such that 
 $$
-(\lambda_{ij})_i\in C\subset S^{\oplus I}
+(\lambda_{ij})_i\in C\subset R^{\oplus I}
 $$ 
-for all $j$, and a family $(b'_j)_{1\le j\le m}$ of elements of $B$, such that 
+for $1\le j\le m$, and a family $(b'_j)_{1\le j\le m}$ of elements of $B$, such that 
 $$
 (b_i)_i=g'
 \left(\sum_{j=1}^m(\lambda_{ij})_i\otimes b'_j\right)=
 \left(\sum_{j=1}^m\lambda_{ij}\,b'_j\right)_i.
 $$ 
-As $(\lambda_{ij})_i$ is in $S^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$. We get in particular  
-$$
-b_i=\sum_{j=1}^m\ \lambda_{ij}\,b'_j
-$$ 
-for $1\le i\le\ell$. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have 
-$$
-\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m).
-$$
+As $(\lambda_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$, and we get \eqref{lij1}. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have \eqref{lij2}.
 \end{proof}
 
 Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
@@ -8269,7 +8297,7 @@ By Lemma~\ref{techlem} p.~~\pageref{techlem} there are nonnegative integers $\el
 $$
 (a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
-of elements belonging respectively to $M(U)$, $\cc R(U)$, and $P(U)$, such that, if we set $b_i=0$ for $n<i\le\ell$, we get \eqref{lij} p.~\pageref{lij}. We have a commutative diagram of complexes
+of elements belonging respectively to $M(U)$, $\cc R(U)$, and $P(U)$, such that, if we set $b_i=0$ for $n<i\le\ell$, we get \eqref{lij1} and \eqref{lij2} p.~\pageref{lij1}. We have a commutative diagram of complexes
 %
 \begin{equation}\label{d447}
 \begin{tikzcd}
@@ -8283,8 +8311,7 @@ with
 $$
 f(\xi)_j=\sum_{i=1}^m\xi_i\,\lambda_{ij},\quad g(\xi)=\sum_{i=1}^na'_i\,\xi_i,\quad h(\xi)=\sum_{i=1}^\ell a_i\,\xi_i.
 $$ 
-(Equality $h\circ f=0$ follows from the second equality in \eqref{lij} p.~\pageref{lij}.)
-Applying $-\otimes_{\cc R(U)}P(U)$, we get the commutative diagram of complexes 
+(Equality $h\circ f=0$ follows from \eqref{lij2} p.~\pageref{lij2}.) Applying $-\otimes_{\cc R(U)}P(U)$, we get the commutative diagram of complexes 
 %
 \begin{equation}\label{pumb}
 \begin{tikzcd}
@@ -8294,7 +8321,7 @@ s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U)\n
 \end{tikzcd}
 \end{equation}
 % 
-The first equality in \eqref{lij} p.~\pageref{lij} implies  
+Equality \eqref{lij1} p.~\pageref{lij1} implies  
 %
 \begin{equation}\label{g1h1}
 \iota_1((b_i))=f_1((b'_j)).
