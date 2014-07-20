@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0336)
+% about "categories and sheaves" (version-0337)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -8223,14 +8223,18 @@ of elements belonging respectively to $A$, $R$, and $B$, such that, if we set $b
 \end{lem} 
 
 \begin{proof} 
-Implication (ii)$\then$(i) is clear. To prove Implication (i)$\then$(ii), we assume (i), and we choose a set $I$ containing $\{1,\dots,\ell\}$, where $\ell$ be an integer $\ge n$ to be determined later, such that there is a family $(a_i)_{i\in I}$ which completes the family $(a_i)_{1\le i\le n}$ and generates $A$. We write $C$ for the kernel of the natural epimorphism 
+Implication (ii)$\then$(i) is clear. To prove Implication (i)$\then$(ii), we assume (i), and we choose a set $I$ containing $\{1,\dots,\ell\}$, where $\ell$ is an integer $\ge n$ to be determined later, such that there is a family $(a_i)_{i\in I}$ which completes the family $(a_i)_{1\le i\le n}$ and generates $A$. We write $C$ for the kernel of the epimorphism 
 $$
-f:R^{\oplus I}\epi A.
+f:R^{\oplus I}\epi A,\quad(\mu_i)\mapsto\sum_{i\in I}a_i\,\mu_i.
 $$ 
 In particular we have exact sequences 
 $$
-C\xr gR^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0.
+C\xr gR^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otimes_RB\to0,
 $$ 
+with 
+$$
+g'\left(\left(\sum_{k=1}^p\mu_{ik}\otimes b''_k\right)_i\ \right)=\left(\sum_{k=1}^p\mu_{ik}\,b''_k\right)_i. 
+$$
 Put $b_i:=0$ for $i$ in $I\setminus\{1,\dots,\ell\}$. The family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$, a family 
 $$
 (\lambda_{ij})_{i\in I,1\le j\le m}
@@ -8245,7 +8249,7 @@ $$
 \left(\sum_{j=1}^m(\lambda_{ij})_i\otimes b'_j\right)=
 \left(\sum_{j=1}^m\lambda_{ij}\,b'_j\right)_i.
 $$ 
-As $(\lambda_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$, and we get \eqref{lij1}. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have \eqref{lij2}.
+As $(\lambda_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$, and we get \eqref{lij1}. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have \eqref{lij2}. 
 \end{proof}
 
 Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
