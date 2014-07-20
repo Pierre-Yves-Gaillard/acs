@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0340)
+% about "categories and sheaves" (version-0341)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -8278,7 +8278,7 @@ let $U$ be an object of $\C_X$, and let $s$ be an element of $K_0(U)$. We shall 
 \begin{equation}\label{s=0il}
 \text{Equality $s=0$ implies the lemma.}
 \end{equation} 
-% 
+
 Write 
 $$
 s=\sum_{i=1}^na'_i\otimes b_i
@@ -8321,7 +8321,7 @@ Equality \eqref{lij1} p.~\pageref{lij1} implies
 \iota_1((b_i))=f_1((b'_j)).
 \end{equation}
 %
-The commutative diagram of complexes \eqref{d447} also induces the commutative diagram of complexes 
+The commutative diagram of complexes \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
@@ -8331,7 +8331,7 @@ M'|_U\ar{r}[swap]{\pp_2}&M|_U,
 \end{tikzcd}
 \right.
 $$
-the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption). The condition that the top square is cartesian is equivalent to the exactness of 
+the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption). This implies in particular that $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
@@ -8346,14 +8346,16 @@ s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U),
 \end{tikzcd}
 $$ 
 (commutative diagram which completes \eqref{pumb}) has also a cartesian top square. In other words, we have 
-$$
+%
+\begin{equation}\label{nrpu}
 (N\otimes_{\cc R|_U}P|_U)(U)\simeq P(U)^n\times_{P(U)^\ell}P(U)^m.
-$$ 
+\end{equation}
+% 
 Note that \eqref{g1h1} implies 
 $$
 x:=\big((b_j),(b'_i)\big)\in P(U)^n\times_{P(U)^\ell}P(U)^m.
 $$ 
-If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$, then we get $k_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$. By \eqref{s=0il}, this completes the proof.  
+If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$ under Isomorphism~\eqref{nrpu}, then we get $k_1(t)=(b_i)$, and thus $s=g_1((b_i))=g_1(k_1(t))=0$. By \eqref{s=0il}, this completes the proof.  
 \end{proof}
 
 %%
