@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0337)
+% about "categories and sheaves" (version-0338)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -8233,7 +8233,7 @@ C\xr gR^{\oplus I}\xr fA\to0,\qquad C\otimes_RB\xr{g'}B^{\oplus I}\xr{f'}A\otime
 $$ 
 with 
 $$
-g'\left(\left(\sum_{k=1}^p\mu_{ik}\otimes b''_k\right)_i\ \right)=\left(\sum_{k=1}^p\mu_{ik}\,b''_k\right)_i. 
+g'((\mu_i)\otimes b))=(\mu_i\,b). 
 $$
 Put $b_i:=0$ for $i$ in $I\setminus\{1,\dots,\ell\}$. The family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$, a family 
 $$
@@ -8289,7 +8289,13 @@ $$
 $$
 \pp_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)
 $$ 
-induced by $\pp$, and it suffices to prove $s=0$. Write 
+induced by $\pp$, and 
+%
+\begin{equation}\label{s=0}
+\text{it suffices to prove}\quad s=0.
+\end{equation}
+%
+Write 
 $$
 s=\sum_{i=1}^na'_i\otimes b_i
 $$ 
@@ -8297,7 +8303,7 @@ with $a'_i$ in $M'(U)$ and $b_i$ in $P(U)$, and put $a_i:=\pp(a_i')\in M(U)$, so
 $$
 \sum_{i=1}^n\,a_i\otimes b_i=0.
 $$ 
-By Lemma~\ref{techlem} p.~~\pageref{techlem} there are nonnegative integers $\ell,m$ with $\ell\ge n$, and there are three families 
+By Lemma~\ref{techlem} p.~~\pageref{techlem} there are positive integers $\ell,m$ with $\ell\ge n$, and there are three families 
 $$
 (a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
@@ -8341,13 +8347,13 @@ M'|_U\ar{r}[swap]{\pp_2}&M|_U,
 \end{tikzcd}
 \right.
 $$
-the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption), and $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
+the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption). The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
 \end{equation}
 % 
-The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
+The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853} p.~\pageref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
 $$
 \begin{tikzcd}
 (N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{k_1}&P(U)^m\ar{d}{f_1}\ni(b'_j)\\ 
@@ -8361,9 +8367,9 @@ $$
 $$ 
 Note that \eqref{g1h1} implies 
 $$
-x:=((b_j),(b'_i))\in P(U)^n\times_{P(U)^\ell}P(U)^m.
+x:=\big((b_j),(b'_i)\big)\in P(U)^n\times_{P(U)^\ell}P(U)^m.
 $$ 
-If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$, then we get $k_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, as required.
+If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$, then we get $k_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, and we conclude by \eqref{s=0}.
 \end{proof}
 
 %%
@@ -8375,7 +8381,7 @@ P.~452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\cc O_
 
 Also, one may refer to \eqref{ttau} p.~\pageref{ttau} and \S\ref{fdagger} p.~\pageref{fdagger} to describe the morphism of sites $f_W:W\to V$. More precisely, we define, in the notation \eqref{ttau}, the functor $(f_W)^\tau:((\C_Y)_V)^{\op}\to((\C_X)_W)^{\op}$ by
 $$
-(f_W)^\tau(V'\to V):=(f^\tau(V')\to f^\tau(V)\to W).
+(f_W)^\tau(V'\to V):=\big(f^\tau(V')\to f^\tau(V)\to W\big).
 $$
 Finally, let us rewrite explicitly one of the key equalities (see \S\ref{fdagger} p.~\pageref{fdagger}): 
 $$
