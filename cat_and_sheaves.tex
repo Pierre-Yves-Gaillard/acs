@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0339)
+% about "categories and sheaves" (version-0340)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -8257,7 +8257,7 @@ Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there 
 For the reader's convenience we state Lemma 18.5.3: 
 
 \begin{lem}[Lemma 18.5.3 p. 447]\label{l1853}
-Let $P$ be an $\cc R$-module. Assume that for any $U$ in $\C_X$ and any morphism $u:(\cc R|_U)^m\to(\cc R|_U)^n$, the sequence 
+Let $P$ be an $\cc R$-module. Assume that for all $U$ in $\C_X$ and all $\cc R|_U$-linear morphism $u:(\cc R|_U)^m\to(\cc R|_U)^n$, the sequence 
 $$
 0\to\Ker(u)\otimes_{\cc R|_U}(P|_U)\to(\cc R|_U)^m\otimes_{\cc R(U)}(P|_U)\to(\cc R|_U)^n\otimes_{\cc R|_U}(P|_U)
 $$ 
@@ -8265,36 +8265,20 @@ is exact. Then $P$ is a flat $\cc R$-module.
 \end{lem}
 
 \begin{proof}
-Let $\psi:M'\mono M$ be a monomorphism in $\Mod(\cc R^{\op})$. (We often regard $\cc R^{\op}$-modules as right $\cc R$-modules.) Let us show that 
-$$
-M'\otimes_{\cc R}P\to M\otimes_{\cc R}P
+Consider a monomorphism $M'\mono M$ in $\Mod(\cc R^{\op})$ and put 
 $$ 
-is a monomorphism. For $U$ in $\C_X$ set 
-$$
-K(U):=\Ker\left(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\right).
+K:=\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P).
 $$ 
-Then $K$ is a presheaf and 
+It suffices to prove $K\simeq0$. Let $K_0$ be the presheaf defined by 
 $$
-K^a\simeq\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)
+K_0(U):=\Ker\Big(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\Big),
 $$ 
-by Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book. Hence it is enough to check that the morphism $K(U)\to(M'\otimes_{\cc R}P)(U)$ vanishes for any $U$ in $\C_X$. Let $U$ be in $\C_X$, let 
-$$
-\pp:M'(U)\to M(U)
-$$ 
-be the morphism given by $\psi$, and consider an element 
-$$
-s\in K(U)\subset M'(U)\otimes_{\cc R(U)}P(U).
-$$ 
-(This first part of the proof is taken almost word for word from the book.) So, we have an element $s$ in the kernel of the morphism 
-$$
-\pp_1:M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)
-$$ 
-induced by $\pp$, and 
+let $U$ be an object of $\C_X$, and let $s$ be an element of $K_0(U)$. We shall prove $s=0$. By Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book, $K$ is the sheaf associated to $K_0$. Hence, Equality $s=0$ will imply successively $K_0\simeq0$, $K\simeq0$, and the lemma. Let us record this observation: 
 %
-\begin{equation}\label{s=0}
-\text{it suffices to prove}\quad s=0.
-\end{equation}
-%
+\begin{equation}\label{s=0il}
+\text{Equality $s=0$ implies the lemma.}
+\end{equation} 
+% 
 Write 
 $$
 s=\sum_{i=1}^na'_i\otimes b_i
@@ -8303,7 +8287,7 @@ with $a'_i$ in $M'(U)$ and $b_i$ in $P(U)$, and put $a_i:=\pp(a_i')\in M(U)$, so
 $$
 \sum_{i=1}^n\,a_i\otimes b_i=0.
 $$ 
-By Lemma~\ref{techlem} p.~~\pageref{techlem} there are positive integers $\ell,m$ with $\ell\ge n$, and there are three families 
+By Lemma~\ref{techlem} p.~\pageref{techlem} there are positive integers $\ell,m$ with $\ell\ge n$, and there are three families 
 $$
 (a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
@@ -8369,7 +8353,7 @@ Note that \eqref{g1h1} implies
 $$
 x:=\big((b_j),(b'_i)\big)\in P(U)^n\times_{P(U)^\ell}P(U)^m.
 $$ 
-If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$, then we get $k_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$, and we conclude by \eqref{s=0}.
+If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$, then we get $k_1(t)=(b_i)$, and thus $s=f_1((b_i))=f_1(r_1(t))=0$. By \eqref{s=0il}, this completes the proof.  
 \end{proof}
 
 %%
