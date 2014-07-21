@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0344)
+% about "categories and sheaves" (version-0345)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4993,13 +4993,13 @@ The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way a
 \subsubsection{Preliminaries} 
 
 \begin{lem} 
-Let 
+If  
 %
 \begin{equation}\label{e817}
 X\xr fY\xr gZ 
 \end{equation}
 % 
-be morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$). The commutative diagram 
+are morphisms in an abelian category $\C$ (we do not assume $g\circ f=0$), then the commutative diagram 
 $$
 \begin{tikzcd}
 \Ker(g\circ f)\ar{r}&X\ar{d}\ar{r}&\Ima(g\circ f)\ar[dashed]{dl}\ar{d}\ar{r}&0\\ 
@@ -5018,7 +5018,7 @@ In particular $\Ima(g\circ f)\to\Ima g$ is a monomorphism.
 \end{lem} 
 
 \begin{proof} 
-Our first claim is that the diagram of solid arrows 
+We claim that the diagram of solid arrows 
 $$
 \begin{tikzcd}
 {}&X\times_ZX\ar{r}{a}&X\ar{d}[swap]{f}\ar{r}{d}&\Coim(g\circ f)\ar{r}\ar[dashed]{ddl}{b}&0\\ 
@@ -5026,8 +5026,8 @@ $$
 0\ar{r}&\Ima g\ar{r}&Z\ar{r}[swap]{c}&Z\oplus_YZ,
 \end{tikzcd}
 $$ 
-whose rows are exact sequences, can be completed as indicated. Indeed, the existence of $b$ follows from the vanishing of $g\circ f\circ a$. This proves the first claim. To prove the lemma, it is enough to check that $c\circ b$ factors through $\Ima g$, or, equivalently, that $c\circ b=0$. As $d$ is an epimorphism, the vanishing of $c\circ b$ is equivalent to the vanishing of $c\circ b\circ d$. But we have $c\circ b\circ d=c\circ g\circ f=0\circ f=0$. 
-\end{proof} 
+whose rows are exact sequences, can be completed as indicated. Indeed, the existence of $b$ follows from the equalities $g\circ f\circ a=g\circ0=0$. To prove the lemma, it is enough to check that $b$ factors through $\Ima g$, or, equivalently, that $c\circ b=0$. As $d$ is an epimorphism, the vanishing of $c\circ b$ is equivalent to the vanishing of $c\circ b\circ d$. But we have $c\circ b\circ d=c\circ g\circ f=0\circ f=0$. 
+\end{proof}
 
 \begin{lem}\label{817b1} 
 If, in the setting of Lemma~\ref{817a}, $f$ is an epimorphism, then 
@@ -5079,34 +5079,54 @@ Consider the condition
 \end{matrix}
 \right\}
 \end{equation}
-%
+
 \begin{lem}\label{817a}
 We have (\ref{sex1})$\ssi$(\ref{sex2}). 
 \end{lem}
-%
+
 \begin{proof}
 Implication $\then$ is clear. To prove $\si$, let 
 $$
 0\to X'\xr fX\xr gX''
 $$
-be exact, let $I$ be the image of $g$, and observe that 
-$$
-0\to I\to X''\to X''/I\to0\quad\text{and}\quad0\to X'\to X\to I\to0
-$$ 
-are exact, and so are, by our assumption, 
-$$
-0\to F(I)\to F(X'')\quad\text{and}\quad0\to F(X')\to F(X)\to F(I).
-$$ 
-We claim that 
-$$
+be exact. We must check that 
+%
+\begin{equation}\label{0fx'fxfx''}
 0\to F(X')\to F(X)\to F(X'')
+\end{equation} 
+% 
+is exact. Let $I$ be the image of $g$. The sequence 
 $$ 
-is exact. The exactness at $F(X')$ is clear. To check the exactness at $F(X)$, note that we have 
-$$
-\Ker\big(F(X)\to F(X'')\big)\simeq\Ker\big(F(X)\to F(I)\big)\simeq\Ima\big(F(X')\to F(X)\big),
+0\to X'\to X\to I\to0
 $$ 
-the isomorphisms following respectively from the exactness of $0\to F(I)\to F(X'')$ and $F(X')\to F(X)\to F(I)$.
-\end{proof}
+being exact, so is 
+%
+\begin{equation}\label{0fx'fxfi}
+0\to F(X')\to F(X)\to F(I).
+\end{equation} 
+% 
+This implies that \eqref{0fx'fxfx''} is exact at $F(X')$. The sequence 
+$$ 
+0\to I\to X''\to X''/I\to0
+$$  
+being exact, so is 
+$$ 
+0\to F(I)\to F(X''),
+$$  
+and we have 
+%
+\begin{equation}\label{kfxfx'}
+\Ker\big(F(X)\to F(X'')\big)\simeq\Ker\big(F(X)\to F(I)\big).
+\end{equation} 
+% 
+The exactness of \eqref{0fx'fxfi} implies 
+%
+\begin{equation}\label{kfxfi}
+\Ker\big(F(X)\to F(I)\big)\simeq\Ima\big(F(X')\to F(X)\big), 
+\end{equation} 
+% 
+and the exactness of \eqref{0fx'fxfx''} at $F(X)$ follows from \eqref{kfxfx'} and \eqref{kfxfi}. 
+\end{proof} 
 
 Consider the conditions below on our additive functor $F:\C\to\C'$:
 %
@@ -5129,38 +5149,65 @@ F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X''
 \end{matrix}
 \right\}
 \end{equation}
-%
+
 \begin{lem}\label{817b}
 We have (\ref{ex1})$\ssi$(\ref{ex2}).
 \end{lem}
-%
+
 \begin{proof}
 Implication $\si$ is clear. To prove $\then$, let 
 $$
 X'\xr fX\xr gX''
 $$
-be exact; let $K_g,K_f$ and $I_g$ denote the indicated kernels and image; and observe that the sequences 
-$$
-0\to K_f\to X'\to K_g\to 0,
-$$
-$$
-0\to K_g\to X\to I_g\to 0,
-$$
-$$
-0\to I_g\to X''\to X''/I_g\to 0
-$$
-are exact. We must show that $F(X')\to F(X)\to F(X'')$ is exact. As
-$$
-\Ker\big(F(X)\to F(X'')\big)\simeq\Ker\big(F(X)\to F(I_g)\big)\simeq\Ima\big(F(K_g)\to F(X)\big),$$ 
-the isomorphisms following respectively from the exactness of 
-$$
-0\to F(I_g)\to F(X'')\quad\text{and}\quad F(K_g)\to F(X)\to F(I_g),
+be exact. We must show that 
+%
+\begin{equation}\label{fx'fxfx''}
+F(X')\to F(X)\to F(X'')
+\end{equation} 
+% 
+is exact. Let $K_g,K_f$ and $I_g$ denote the indicated kernels and image. The sequence 
 $$ 
-it suffices to observe that, in view of the exactness of $F(X')\to F(K_g)\to0$, the isomorphism
-$$
-\Ima\big(F(K_g)\to F(X)\big)\simeq\Ima\big(F(X')\to F(X)\big)
-$$
-results from Lemma~\ref{817b1} p.~\pageref{817b1} with $F(X')\to F(K_g)\to F(X)$ instead of \eqref{e817} p.~\pageref{e817}. 
+0\to I_g\to X''\to X''/I_g\to 0
+$$ 
+being exact, so is 
+$$ 
+0\to F(I_g)\to F(X''), 
+$$ 
+and we get 
+%
+\begin{equation}\label{kfxfx''}
+\Ker\big(F(X)\to F(X'')\big)\simeq\Ker\big(F(X)\to F(I_g)\big). 
+\end{equation} 
+% 
+The sequence 
+$$ 
+0\to K_g\to X\to I_g\to 0
+$$ 
+being exact, so is 
+$$ 
+F(K_g)\to F(X)\to F(I_g), 
+$$ 
+and we get 
+%
+\begin{equation}\label{kfxfig}
+\Ker\big(F(X)\to F(I_g)\big)\simeq\Ima\big(F(K_g)\to F(X)\big). 
+\end{equation} 
+% 
+The sequence 
+$$ 
+0\to K_f\to X'\to K_g\to 0 
+$$ 
+being exact, so is 
+$$ 
+F(X')\to F(K_g)\to0,  
+$$ 
+and the isomorphism 
+%
+\begin{equation}\label{ifkg}
+\Ima\big(F(K_g)\to F(X)\big)\simeq\Ima\big(F(X')\to F(X)\big)  
+\end{equation} 
+% 
+results from Lemma~\ref{817b1} p.~\pageref{817b1} with $F(X')\to F(K_g)\to F(X)$ instead of \eqref{e817} p.~\pageref{e817}. The exactness of \eqref{fx'fxfx''} follows from \eqref{kfxfx''}, \eqref{kfxfig}, and \eqref{ifkg}.
 \end{proof} 
 
 %%%
