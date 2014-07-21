@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0341)
+% about "categories and sheaves" (version-0342)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1587,9 +1587,10 @@ Let $R$ be a ring, let $\U$ and $\V$ be universes such that $R\in\U\in\V$, put, 
 $$
 I:=\Mod^\U(R),\quad\C:=\Mod^\V(R),
 $$ 
-let $J$ be the full subcategory of $I$ whose single object is $R$, and let $\C\xleftarrow\beta J\xr\pp I$ be the inclusion functors. 
+let $J$ be the full subcategory of $I$ whose single object is $R$, and let $\C\xleftarrow\beta J\xr\pp I$ be the inclusion functors. We identify $\Hom_R(R,M)$ to $M$ whenever convenient. 
 
-We claim 
+We claim that the functor $\pp^\dagger(\beta):I\to\C$ satisfies 
+%
 \begin{equation}\label{pdb1}
 \pp^\dagger(\beta)(M)\simeq M.
 \end{equation} 
@@ -1598,12 +1599,14 @@ To prove \eqref{pdb1}, set
 $$
 M':=\colim_{(x:R\to M)\in J_M}R\in\C, 
 $$ 
-and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_x:R\to M$ by setting $\Phi_x(1):=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb1}. 
+and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_x:R\to M$ by setting $\Phi_x:=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb1}. 
 
-We claim 
+We claim that the functor $\pp^\ddagger(\beta):I\to\C$ satisfies 
+%
 \begin{equation}\label{pddb1}
 \pp^\ddagger(\beta)(M)\simeq M^{**}, 
 \end{equation} 
+%
 where $M^{**}$ is the double dual of $M$. 
 
 To prove \eqref{pddb1}, set 
@@ -1618,27 +1621,31 @@ I:=\Mod^\U(R)^{\op},\quad\C:=\Mod^\V(R^{\op}),
 $$ 
 let $J$ be the full subcategory of $I$ whose single object is $R$, let $\pp:J\to I$ be the inclusion functor, and let $\beta:J\to\C$ be the obvious functor satisfying $\beta(R)=R^{\op}$. 
 
-We claim 
+We claim that the functor $\pp^\dagger(\beta):I\to\C$ satisfies 
+%
 \begin{equation}\label{pdb2}
 \pp^\dagger(\beta)(M)\simeq M^*,
 \end{equation} 
+%
 where $M^*$ is the dual of $M$. 
 
 To prove \eqref{pdb2}, set 
 $$
-M':=\colim_{(R\to M)\in J_M}R=\colim_{(f:M\to R)\in(J^{\op})^M}R\in\C, 
+M':=\colim_{(R\to M)\in J_M}R^{\op}=\colim_{(f:M\to R)\in(J^{\op})^M}R^{\op}\in\C, 
 $$ 
-and let $p_f:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_f:R^{\op}\to M^*$ by setting $\Phi_f(1):=f$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M^*\to M'$ by putting $\Psi(f):=p_f(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb2}. 
+and let $p_f:R^{\op}\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_f:R^{\op}\to M^*$ by setting $\Phi_f(1):=f$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M^*\to M'$ by putting $\Psi(f):=p_f(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb2}. 
 
-We claim 
+We claim that the functor $\pp^\ddagger(\beta):I\to\C$ satisfies 
+%
 \begin{equation}\label{pddb2}
 \pp^\ddagger(\beta)(M)\simeq M^*, 
 \end{equation} 
+%
 where $M^*$ is the dual of $M$. 
 
 To prove \eqref{pddb2}, set 
 $$
-M':=\lim_{(M\to R)\in J^M}R=\lim_{(x:R\to M)\in(J^{\op})_M}R\in\C, 
+M':=\lim_{(M\to R)\in J^M}R^{\op}=\lim_{(x:R\to M)\in(J^{\op})_M}R^{\op}\in\C, 
 $$ 
 and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^*$. We define a family of linear maps $\Phi_x:M^*\to M'$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb2}. 
 
