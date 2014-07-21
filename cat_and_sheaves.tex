@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0345)
+% about "categories and sheaves" (version-0347)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4169,9 +4169,11 @@ We leave the verification of these claims to the reader.
 
 %%%%
 
-\section{About Chapter 8}
+\section{About Chapter 8} 
 
-\subsection{Lemma 8.1.2 (ii) (p.~169)}
+\subsection{About Section 8.1}
+
+Here is a comment about Lemma 8.1.2 (ii) p.~169. 
 
 The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a functorial family of maps 
 $$
@@ -4183,9 +4185,11 @@ such that
 
 \nn(b) the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
 
-%
+%%%
 
-\subsection{Definition 8.2.1 (p. 169)}
+\subsection{About Section 8.2}
+
+\subsubsection{Definition 8.2.1 (p. 169)}
 
 The proposition and lemma below are obvious. 
 %
@@ -4217,9 +4221,9 @@ $$
 for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
 
-%%%
+%%
 
-\subsection{Lemma 8.2.3 (p. 169)}
+\subsubsection{Lemma 8.2.3 (p. 169)}
 
 Here is a statement contained in Lemma 8.2.3:
 
@@ -4281,9 +4285,9 @@ Note also the following corollary to Lemma 8.2.3 (ii) (stated above as Lemma \re
 Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
 \end{cor}
 
-%%%
+%%
 
-\subsection{Brief Comments}
+\subsubsection{Brief Comments}
 
 \begin{s} 
 P.~172, Lemma 8.2.9. Recall the statement:
@@ -4389,9 +4393,11 @@ F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 are mutually inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\to X_1\oplus X_2$ be the projections and coprojections, and apply Lemma 8.2.3 p.~169 of the book to the morphisms $p_j,i_j,F(p_j),F(i_j)$. q.e.d.
 \end{s}
 
-%%%
+%%
 
-\subsection{Proposition 8.3.4 (p. 176)}
+\subsection{About Section 8.3}
+
+\subsubsection{Proposition 8.3.4 (p. 176)}
 
 Here are a few more details about the proof of Proposition 8.3.4. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 $$
@@ -4475,15 +4481,15 @@ P\ar{r}[swap]{p}&X\ar{r}             &\Coim f\ar{d}{\sim}\\
 \end{tikzcd}
 $$ 
 
-%%% 
+%%
 
-\subsection{Definition 8.3.5 (p.~177)}
+\subsubsection{Definition 8.3.5 (p.~177)}
 
 The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
 
 %%
 
-\subsection{The Complex (8.3.3) (p.~178)}
+\subsubsection{The Complex (8.3.3) (p.~178)}
 
 Let us just add a few more details about the proof of the isomorphisms
 \begin{equation}\label{834}
@@ -4549,7 +4555,6 @@ $$
 u\circ\pp\circ a=c\circ f=0.
 $$ 
 As $a$ is an epimorphism, this implies $u\circ\pp=0$. 
-%$$\begin{tikzcd}X'\ar[two heads]{d}[swap]{a}\ar{r}{f}&X\ar[two heads]{d}{c}\ar{r}{g}&X''\\ I_f\ar[tail]{ru}\ar{r}[swap]{u\circ\pp}&C_f\ar[two heads]{r}&I_g.\ar[tail]{u}\end{tikzcd}$$
 
 It is easy to see that there is a natural monomorphisms from $K_u$ to $K_c$. By Proposition~\ref{p834} p.~\pageref{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$. 
 
@@ -4564,9 +4569,9 @@ K_u\ar[tail]{rr}{e}&&K_g\ar[two heads]{dl}\ar[two heads]{dr}\ar{rr}{u}&&K'_f\ar[
 $$ 
 (The two dashed arrows have been added.) Now \eqref{lmisos} is clear.
 
-%%%
+%%
 
-\subsection{Brief Comments}
+\subsubsection{Brief Comments}
 
 \begin{s} 
 For the reader's convenience we state Lemma 8.3.11 p.~180. Consider the commutative square 
@@ -4632,7 +4637,7 @@ Equivalence (a)$\ssi$(b) is proved in the book, and Equivalence (a)$\ssi$(c) fol
 \end{proof}
 \end{s}
 
-%%
+%
 
 \begin{s} 
 Page 181, the Five Lemma (minor variant). 
@@ -4730,7 +4735,7 @@ and (iv) follows from \eqref{fk+hg},\eqref{gh,kf}, and \eqref{kh}. q.e.d.
 
 %
 
-\begin{s}%\label{adic}
+\begin{s} 
 P.~183. Here is an example showing that filtrant and cofiltrant small projective limits of $R$-modules are not exact in general: 
 $$
 \lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
@@ -4757,9 +4762,11 @@ $$
 q.e.d.
 \end{s}
 
-%%
+%% 
 
-\subsection{Proposition 8.4.7 (p. 187)}
+\subsection{About Section 8.4} 
+
+Here is a comment about Proposition 8.4.7 p.~187. 
 
 Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\times_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
@@ -4823,9 +4830,11 @@ q.e.d.
  
 % https://docs.google.com/document/d/1r1eBAIdNxQNO4uJ7N1Ki3ewyPQBoYIxLLq5I54ciVa8/edit
 
-%%%
+%% 
 
-\subsection{Brief Comments}
+\subsection{About Section 8.5}
+
+\subsubsection{Brief Comments}
 
 \begin{s} P.~190, Proposition 8.5.5. It might be worth writing explicitly the formulas (for $X\in\Mod(R,\C)$):
 $$
@@ -4881,7 +4890,7 @@ quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\r
 
 %%
 
-\subsection{Theorem 8.5.8 (iv) (p.~191)} 
+\subsubsection{Theorem 8.5.8 (iv) (p.~191)} 
 
 Here is a minor variant of Step (a) of the proof of Theorem 8.5.8 (iv). Recall the statement: 
 
@@ -4957,24 +4966,26 @@ $$
 by \eqref{pi=0}. As $c$ is an epimorphism, this implies successively \eqref{x=0}, \eqref{fpsi}, and the lemma. 
 \end{proof}
 
-%%
+%% 
 
-\subsection{Brief Comments} 
+\subsection{About Section 8.7}
 
-\begin{s}
+
 P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\cc D'_{\cc S}\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that
 %
 \begin{equation}\label{l}
 Q:\cc D'\to\C\text{ is a localization of }\cc D'\text{ by }\cc S.
 \end{equation}
 %
-To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$.
-\end{s}
+To prove \eqref{l}, one can apply Lemma~\ref{711} p.~\pageref{711} with $R:\C\to\cc D'$ defined by $R(X):=(0\to X)$. 
 
-%%
+%% 
 
-\begin{s} 
-P.~202, Exercise 8.4. Recall the statement: 
+\subsection{About the Exercises} 
+
+\subsubsection{Exercise 8.4 (p.~202)}
+
+Recall the statement: 
 
 Let $\C$ be an additive category and $\cc S$ a right multiplicative system. Prove that the localization $\C_{\cc S}$ is an additive category and $Q:\C\to\C_{\cc S}$ is an additive functor. 
 
@@ -4983,14 +4994,13 @@ It is easy to equip $\C_{\cc S}$ with a pre-additive structure making $Q$ additi
 The pre-additive structure on $\C_{\cc S}$ is described in a very detailed way at the beginning of the following text of Dragan Mili\v{c}i\'c:  
 %
 \begin{center}\href{http://www.math.utah.edu/~milicic/Eprints/dercat.pdf}{http://www.math.utah.edu/$\sim$milicic/Eprints/dercat.pdf}
-\end{center}
-\end{s}
+\end{center} 
 
 %%%
 
-\subsection{Exercise 8.17 (p.~204)}\label{817} 
+\subsubsection{Exercise 8.17 (p.~204)}\label{817} 
 
-\subsubsection{Preliminaries} 
+\paragraph{Preliminaries} 
 
 \begin{lem} 
 If  
@@ -5050,7 +5060,7 @@ where $a$ and $b$ are the natural morphisms. As $f$ and $a$ are epimorphisms, so
 
 %%
 
-\subsubsection{Exercise 8.17}
+\paragraph{Exercise 8.17}
 
 The exercise follows easily from Lemmas \ref{817a} and \ref{817b} below.
 
@@ -5210,7 +5220,7 @@ and the isomorphism
 results from Lemma~\ref{817b1} p.~\pageref{817b1} with $F(X')\to F(K_g)\to F(X)$ instead of \eqref{e817} p.~\pageref{e817}. The exactness of \eqref{fx'fxfx''} follows from \eqref{kfxfx''}, \eqref{kfxfig}, and \eqref{ifkg}.
 \end{proof} 
 
-%%%
+%%%%
 
 \section{About Chapter 9}
 
