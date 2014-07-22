@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0349)
+% about "categories and sheaves" (version-0350)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -8313,9 +8313,9 @@ $$
 As $(\lambda_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$, and we get \eqref{lij1}. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have \eqref{lij2}. 
 \end{proof}
 
-Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.]
+Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.] 
 
-For the reader's convenience we state Lemma 18.5.3: 
+For the reader's convenience we state Lemma 18.5.3 (see Notation 17.6.13 p.~428 of the book): 
 
 \begin{lem}[Lemma 18.5.3 p. 447]\label{l1853}
 Let $P$ be an $\cc R$-module. Assume that for all $U$ in $\C_X$ and all $\cc R|_U$-linear morphism $u:(\cc R|_U)^m\to(\cc R|_U)^n$, the sequence 
@@ -8364,7 +8364,7 @@ M'(U)\ar{r}[swap]{\pp}&M(U)
 %
 with 
 $$
-f(\xi)_j=\sum_{i=1}^m\xi_i\,\lambda_{ij},\quad g(\xi)=\sum_{i=1}^na'_i\,\xi_i,\quad h(\xi)=\sum_{i=1}^\ell a_i\,\xi_i.
+f(\xi)_i=\sum_{j=1}^m\lambda_{ij}\,\xi_j,\quad g(\xi)=\sum_{i=1}^na'_i\,\xi_i,\quad h(\xi)=\sum_{i=1}^\ell a_i\,\xi_i.
 $$ 
 (Equality $h\circ f=0$ follows from \eqref{lij2} p.~\pageref{lij2}.) Applying $-\otimes_{\cc R(U)}P(U)$, we get the commutative diagram of complexes 
 %
@@ -8398,7 +8398,7 @@ the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
 \end{equation}
 % 
-The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853} p.~\pageref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is, 
+The sequence $\Sigma\otimes_{\cc R|_U}P|_U$ being exact thanks to the assumption in Lemma~\ref{l1853} p.~\pageref{l1853}, we see that the commutative diagram of complexes $\Delta\otimes_{\cc R|_U}P|_U$ has a cartesian top square, and that, by left exactness of $\Gamma(U;-)$ (see \S\ref{a438} p.~\pageref{a438}), the commutative diagram of complexes $\Gamma(U;\Delta\otimes_{\cc R|_U}P|_U)$, that is (see Notation 17.6.13 p.~428 of the book), 
 $$
 \begin{tikzcd}
 (N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{k_1}&P(U)^m\ar{d}{f_1}\ni(b'_j)\\ 
