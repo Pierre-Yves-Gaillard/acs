@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0350)
+% about "categories and sheaves" (version-0351)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1981,14 +1981,14 @@ the last isomorphism following from \eqref{263c} p.~\pageref{263c}. q.e.d.
 \begin{s}\label{bil}
 P.~62. In the setting of Proposition 2.7.1, the functors
 $$
-\A^\C\to\A,\quad F\mapsto(\oo h_\C^\ddagger F)(A)\quad\text{and}\quad
-\C^\wedge\to\A,\quad A\mapsto(\oo h_\C^\ddagger F)(A)
+\A^\C\to\A,\quad F\mapsto(\oo h_\C^\dagger F)(A)\quad\text{and}\quad
+\C^\wedge\to\A,\quad A\mapsto(\oo h_\C^\dagger F)(A)
 $$ 
 commute with small inductive limits. 
 
 Indeed, for the first functor the conclusion follows from the isomorphism 
 $$
-(\oo h_\C^\ddagger F)(A)\simeq\colim_{(U\to A)\in\C_A}F(U),
+(\oo h_\C^\dagger F)(A)\simeq\colim_{(U\to A)\in\C_A}F(U),
 $$ 
 and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
 \end{s}
@@ -2721,8 +2721,8 @@ Let $F:\C\to\C'$ be a functor and assume that $\C$ admits finite projective limi
 \begin{cor}\label{bre}
 In the setting of Proposition 2.7.1 p.~62 of the book, the functors
 $$
-\A^\C\to\A,\quad F\mapsto(\oo h_\C^\ddagger F)(A)\quad\text{and}\quad
-\C^\wedge\to\A,\quad A\mapsto(\oo h_\C^\ddagger F)(A)
+\A^\C\to\A,\quad F\mapsto(\oo h_\C^\dagger F)(A)\quad\text{and}\quad
+\C^\wedge\to\A,\quad A\mapsto(\oo h_\C^\dagger F)(A)
 $$ 
 are right exact. 
 \end{cor}
@@ -8386,13 +8386,13 @@ The commutative diagram of complexes \eqref{d447} also induces the commutative d
 $$
 \Delta:=\left\{
 \begin{tikzcd}
-N\ar{r}\ar{d}&(\cc R^{\op}|_U)^m\ar{d}{f_2}\\ 
+N\ar{r}\ar{d}[swap]{k_2}&(\cc R^{\op}|_U)^m\ar{d}{f_2}\\ 
 (\cc R^{\op}|_U)^n\ar[hook]{r}{\iota_2}\ar{d}[swap]{g_2}&(\cc R^{\op}|_U)^\ell\ar{d}{h_2}\\ 
 M'|_U\ar{r}[swap]{\pp_2}&M|_U,
 \end{tikzcd}
 \right.
 $$
-the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 of the book (recall that $M'\to M$ is a monomorphism by assumption). This implies in particular that $\Delta$ is a commutative diagram of complexes. The condition that the top square is cartesian is equivalent to the exactness of 
+the top square being cartesian. Then $\pp_2$ is a monomorphism by Proposition 17.6.6 p.~425 and Notation 17.6.13 p.~428 of the book (recall that $M'\to M$ is a monomorphism by assumption). This implies $g_2\circ k_2=0$. Hence $\Delta$ is a commutative diagram of \emph{complexes}. The condition that the top square is cartesian is equivalent to the exactness of 
 %
 \begin{equation}\label{tsc2}
 \Sigma:=\Big(0\to N\to(\cc R^{\op}|_U)^m\oplus(\cc R^{\op}|_U)^n\to(\cc R^{\op}|_U)^\ell\Big).
