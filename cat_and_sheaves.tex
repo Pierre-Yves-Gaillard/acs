@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0347)
+% about "categories and sheaves" (version-0348)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -78,8 +78,8 @@
 % new
 \DeclareMathOperator*{\colim}{colim}
 \DeclareMathOperator*{\col}{colim}
-\DeclareMathOperator*{\icolim}{``\colim"}
-\DeclareMathOperator*{\ic}{``\colim"}
+\DeclareMathOperator*{\icolim}{``\!\colim\!"}
+\DeclareMathOperator*{\ic}{``\!\colim\!"}
 
 \DeclareMathOperator{\Ad}{Add}
 \DeclareMathOperator{\card}{card}
@@ -1613,7 +1613,7 @@ To prove \eqref{pddb1}, set
 $$
 M':=\lim_{(f:M\to R)\in J^M}R\in\C, 
 $$ 
-and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to M'$ by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\lambda_f))(g):=\lambda_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb1}. 
+and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to R$ by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\lambda_f))(g):=\lambda_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb1}. 
 
 Let $R$, $\U$ and $\V$ be as above, put, with self-explanatory notation, 
 $$
@@ -1647,7 +1647,7 @@ To prove \eqref{pddb2}, set
 $$
 M':=\lim_{(M\to R)\in J^M}R^{\op}=\lim_{(x:R\to M)\in(J^{\op})_M}R^{\op}\in\C, 
 $$ 
-and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^*$. We define a family of linear maps $\Phi_x:M^*\to M'$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb2}. 
+and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb2}. 
 
 %% 
 
