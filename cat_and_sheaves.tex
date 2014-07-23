@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0353)
+% about "categories and sheaves" (version-0354)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1323,7 +1323,15 @@ is cartesian, then $K\simeq\Ker(f,g)$. (As usual, $\Delta$ is the diagonal morph
 
 \begin{s}
 P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dagger$, and $\pp^\ddagger$ are justified by Notation 17.1.5 p.~407 (see also \eqref{ttau} p.~\pageref{ttau}). 
-\end{s}
+\end{s} 
+
+% 
+
+\begin{s}\label{phistar}
+P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor $\pp_*:=\circ\pp:\C^I\to\C^J$. The following fact is clear: 
+
+If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and $\C^J$, and $\pp_*$ commutes with such limits. 
+\end{s} 
 
 %
 
@@ -1991,7 +1999,7 @@ $$
 (\oo h_\C^\dagger F)(A)\simeq\colim_{(U\to A)\in\C_A}F(U),
 $$ 
 and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
-\end{s}
+\end{s} 
 
 %%
 
@@ -2180,7 +2188,7 @@ where
 \eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pageref{dsbc}). 
 \end{proof}
 
-%%
+%% 
 
 \subsection{Notation 2.7.2 (p. 63)}
 
@@ -2254,7 +2262,45 @@ The proof is obvious.
 
 %%
 
-\subsection{Brief Comments}
+\subsection{Brief Comments} 
+
+\begin{s}\label{extsh} 
+P.~63, Corollary 2.7.4. Here is a variant: 
+
+Let $\C$ be a category and $\A$ a category admitting small projective limits, let $h:\C\to\C^\wedge$ the Yoneda embedding, and let $\oo{Fct}^{p\ell}((\C^\wedge)^{\op},\A)$ be the category of functors from $(\C^\wedge)^{\op}$ to $\A$ commuting with small projective limits. Then the functors 
+$$
+\begin{tikzcd}
+\oo{Fct}^{pl}((\C^\wedge)^{\op},\A)\ar[yshift=0.7ex]{r}{(h^{\op})_*}&\oo{Fct}(\C^{\op},\A)\ar[yshift=-0.7ex]{l}{(h^{\op})^\ddagger}
+\end{tikzcd}
+$$
+are mutually quasi-inverse equivalences. 
+
+Let $F$ be in $\oo{Fct}((\C^\wedge)^{\op},\A)$. Assume $(A_i)$ is a projective system in $(\C^\wedge)^{\op}$, or, equivalently, $(A_i)$ is an inductive system in $\C^\wedge$. In particular $(F(A_i))$ is a projective system in $\A$. 
+
+Then $F$ is in $\oo{Fct}^{p\ell}((\C^\wedge)^{\op},\A)$ if and only if the following condition holds: 
+
+For any system $(A_i)$ as above, the natural morphism 
+$$
+F\left(\col_iA_i\right)\to\lim_iF(A_i)
+$$ 
+is an isomorphism. 
+
+The functor $(h^{\op})^\ddagger$ is given by 
+$$ 
+(h^{\op})^\ddagger(F)(A)=\lim_{(U\to A)\in\C_A}F(U). 
+$$ 
+
+The functors 
+$$
+\A^{\C^{\op}}\to\A,\quad F\mapsto(h^{\op})^\ddagger(F)(A)\quad\text{and}\quad
+\C^\wedge\to\A,\quad A\mapsto(h^{\op})^\ddagger(F)(A)
+$$ 
+commute with small projective limits. 
+
+For a justification, see \S~\ref{bil} p.~\pageref{bil}.
+\end{s}
+
+%%
 
 \begin{s} 
 P.~64. It might be worth displaying the formula 
@@ -2729,7 +2775,16 @@ are right exact.
 
 \begin{proof}
 This follows from Proposition~\ref{333} and \S\ref{bil} p.~\pageref{bil}.
-\end{proof}
+\end{proof} 
+
+\begin{cor}\label{bre2}
+In the setting of \S\ref{extsh} p.~\pageref{extsh}, the functors
+$$
+\A^{\C^{\op}}\to\A,\quad F\mapsto(h^{\op})^\ddagger(F)(A)\quad\text{and}\quad
+\C^\wedge\to\A,\quad A\mapsto(h^{\op})^\ddagger(F)(A)
+$$ 
+are left exact. 
+\end{cor} 
 
 \subsubsection{Proposition 3.3.6 p.~83}
 
@@ -7566,13 +7621,15 @@ $$
 
 \begin{s}
 P.~408, Convention 17.1.6. Recall the convention: If $F$ is an $\A$-valued presheaf over $X$ and $A$ is a presheaf of sets over $X$, then we put 
+%
 \begin{equation}\label{408}
 F(A):=(\oo h_X^\ddagger F)(A)=\lim_{(U\to A)\in(\C_X)_A}F(U).
 \end{equation}
+% 
 (Note that the same comment is made at the beginning of Section 17.3 p.~414.) This convention of extending each presheaf $F$ over $X$ to a presheaf, still denoted by $F$, over $\widehat X$ which commutes with small projective limits implies that we have, for $A,B$ in $\C^\wedge$, 
 $$
 B(A)\simeq\Hom_{\C_X^\wedge}(A,B).
-$$
+$$ 
 \end{s}
 
 %
@@ -7988,7 +8045,13 @@ As $V\times A\to V$ is a local isomorphism in $\C_X^\wedge$ by \S\ref{1768}, and
 %
 
 \begin{s}\label{a428}
-P.~428, just after Definition 17.6.10: $((-)_A,\Gamma_A(-))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book.
+P.~428, just after Definition 17.6.10: $((\ )_A,\Gamma_A(\ ))$ is a pair of adjoint functors: this follows from Theorem 17.5.2 (i) p.~424 of the book. 
+\end{s} 
+
+%
+
+\begin{s}\label{429}
+P.~429, top. By \S\ref{phistar} p.~\pageref{phistar} and Corollary~\ref{bre2} p.~\pageref{bre2}, the functor $\Gamma(A;\ )$ commutes with small projective limits. 
 \end{s} 
 
 %
@@ -8125,7 +8188,7 @@ Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_
 %
 
 \begin{s}\label{a438}
-P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428} p.~\pageref{a428}, and $\Gamma(A;-)$ is left exact by Corollary~\ref{bre} p.~\pageref{bre}.
+P.~438, end of Section 18.1: $\Gamma_A$ is left exact by \S\ref{a428} p.~\pageref{a428}. Moreover, $\Gamma(A;\ )$ commutes with small projective limits by \S\ref{429} p.~\pageref{429}, and is thus left exact by Proposition~\ref{333} p.~\pageref{333}. 
 \end{s} 
 
 % 
