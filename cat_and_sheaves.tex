@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0351)
+% about "categories and sheaves" (version-0352)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -8334,10 +8334,10 @@ It suffices to prove $K\simeq0$. Let $K_0$ be the presheaf defined by
 $$
 K_0(U):=\Ker\Big(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\Big),
 $$ 
-let $U$ be an object of $\C_X$, and let $s$ be an element of $K_0(U)$. We shall prove $s=0$. By Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book, $K$ is the sheaf associated to $K_0$. Hence, Equality $s=0$ will imply successively $K_0\simeq0$, $K\simeq0$, and the lemma. Let us record this observation: 
+let $U$ be an object of $\C_X$, let $s$ be an element of $K_0(U)$, and let $\overline s$ be the image of $s$ in $K(U)$. We shall prove $\overline s=0$. By Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book, $K$ is the sheaf associated to $K_0$. Hence, as $U$ and $s$ are arbitrary, Equality $\overline s=0$ will imply that the natural morphism $K_0\to K$ vanishes. By (17.4.12) p.~421 of the book, this vanishing will entail $K\simeq0$, and, thus, the lemma. Let us record this observation: 
 %
 \begin{equation}\label{s=0il}
-\text{Equality $s=0$ implies the lemma.}
+\text{Equality $\overline s=0$ implies the lemma.}
 \end{equation} 
 
 Write 
@@ -8403,10 +8403,16 @@ $$
 \begin{tikzcd}
 (N\otimes_{\cc R|_U}P|_U)(U)\ar{r}\ar{d}[swap]{k_1}&P(U)^m\ar{d}{f_1}\ni(b'_j)\\ 
 (b_i)\in P(U)^n\ar[hook]{r}{\iota_1}\ar{d}[swap]{g_1}&P(U)^\ell\ni(b_i)\ar{d}{h_1}\\ 
-s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U),
+\overline s\in\left(M'\otimes_{\cc R}P\right)(U)\ar{r}[swap]{\pp_1}&\left(M\otimes_{\cc R}P\right)(U),
 \end{tikzcd}
 $$ 
-(commutative diagram which completes \eqref{pumb}) has also a cartesian top square. In other words, we have 
+(commutative diagram which completes \eqref{pumb}) has also a cartesian top square. We have used the isomorphisms 
+%
+\begin{equation}\label{mupu}
+\Gamma\left(U;M|_U\otimes_{\cc R|_U}P|_U\right)\simeq\Gamma\Big(U;\left(M\otimes_{\cc R}P\right)|_U\Big)\simeq\left(M\otimes_{\cc R}P\right)(U),
+\end{equation}
+% 
+and similarly with $M'$ instead of $M$. Indeed, the first isomorphism in \eqref{mupu} is a particular case of (18.2.5) p.~441 of the book, and the second isomorphism in \eqref{mupu} results from the last two displays on p.~428 of the book. In other words, we have 
 %
 \begin{equation}\label{nrpu}
 (N\otimes_{\cc R|_U}P|_U)(U)\simeq P(U)^n\times_{P(U)^\ell}P(U)^m.
@@ -8416,7 +8422,7 @@ Note that \eqref{g1h1} implies
 $$
 x:=\big((b_j),(b'_i)\big)\in P(U)^n\times_{P(U)^\ell}P(U)^m.
 $$ 
-If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$ under Isomorphism~\eqref{nrpu}, then we get $k_1(t)=(b_i)$, and thus $s=g_1((b_i))=g_1(k_1(t))=0$. By \eqref{s=0il}, this completes the proof.  
+If $t$ is the element of $(N\otimes_{\cc R|_U}P|_U)(U)$ corresponding to $x$ under Isomorphism~\eqref{nrpu}, then we get $k_1(t)=(b_i)$, and thus $\overline s=g_1((b_i))=g_1(k_1(t))=0$. By \eqref{s=0il}, this completes the proof.   
 \end{proof}
 
 %%
