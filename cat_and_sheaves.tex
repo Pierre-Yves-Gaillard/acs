@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0354)
+% about "categories and sheaves" (version-0355)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -2264,7 +2264,7 @@ The proof is obvious.
 
 \subsection{Brief Comments} 
 
-\begin{s}\label{extsh} 
+\begin{s}\label{opddagg} 
 P.~63, Corollary 2.7.4. Here is a variant: 
 
 Let $\C$ be a category and $\A$ a category admitting small projective limits, let $h:\C\to\C^\wedge$ the Yoneda embedding, and let $\oo{Fct}^{p\ell}((\C^\wedge)^{\op},\A)$ be the category of functors from $(\C^\wedge)^{\op}$ to $\A$ commuting with small projective limits. Then the functors 
@@ -2778,7 +2778,7 @@ This follows from Proposition~\ref{333} and \S\ref{bil} p.~\pageref{bil}.
 \end{proof} 
 
 \begin{cor}\label{bre2}
-In the setting of \S\ref{extsh} p.~\pageref{extsh}, the functors
+In the setting of \S\ref{opddagg} p.~\pageref{opddagg}, the functors
 $$
 \A^{\C^{\op}}\to\A,\quad F\mapsto(h^{\op})^\ddagger(F)(A)\quad\text{and}\quad
 \C^\wedge\to\A,\quad A\mapsto(h^{\op})^\ddagger(F)(A)
@@ -7630,6 +7630,13 @@ F(A):=(\oo h_X^\ddagger F)(A)=\lim_{(U\to A)\in(\C_X)_A}F(U).
 $$
 B(A)\simeq\Hom_{\C_X^\wedge}(A,B).
 $$ 
+
+In the notation of \S\ref{opddagg} p.~\pageref{opddagg}, Convention 17.1.6 can be described as follows:
+
+If $X$ is a site, if $\C$ is the corresponding category, if $h:\C\to\C^\wedge$ is the Yoneda embedding, if $F$ is an $\A$ valued sheaf over $X$, and if $A$ is an object of $\C^\wedge$, then Convention 17.1.6 consists in putting 
+$$
+F(A):=(h^{\op})^\ddagger(F)(A).
+$$ 
 \end{s}
 
 %
@@ -8379,20 +8386,24 @@ As $(\lambda_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in 
 Here is another technical lemma:
 
 \begin{lem}\label{techlem2}
-Let $R$ be a ring, let $\pp:A'\to A$ be a morphism of right $R$-modules, and let $s$ be an element of $\Ker(A'\otimes_RB\to A\otimes_RB)$. Then there is a commutative diagram 
+Let $R$ be a ring, let $\pp:A'\to A$ be a morphism of right $R$-modules, let $B$ be a left $R$-module, and let $s$ be an element of $\Ker(A'\otimes_RB\to A\otimes_RB)$. Then there exist 
+
+\nn$\bu$ a commutative diagram 
 $$
 \begin{tikzcd}
-{}&F'\ar{d}{f}\\ 
+{}&F'\ar{d}{f}\ar[equal]{r}&F'\ar{dd}{0}\\ 
 F''\ar{r}{\psi}\ar{d}[swap]{g}&F\ar{d}{h}\\ 
-A'\ar{r}[swap]{\pp}&A
+A'\ar{r}[swap]{\pp}&A\ar[equal]{r}&A
 \end{tikzcd}
 $$  
-of right $R$-modules such that $F,F'$ and $F''$ are free of finite rank, and we have $h\circ f=0$; and there are elements $t\in F'\otimes_RB$, $u\in F''\otimes_RB$ such that the commutative diagram 
+of right $R$-modules such that $F,F'$ and $F''$ are free of finite rank,  
+
+\nn$\bu$ elements $t\in F'\otimes_RB$, $u\in F''\otimes_RB$ such that the commutative diagram 
 $$
 \begin{tikzcd}
-{}&F'\otimes_RB\ar{d}{f_1}\\ 
-F''\otimes_RB\ar{r}{\psi_1}\ar{d}[swap]{g_1}&F\otimes_RB\ar{d}{h_1}\\ 
-A'\otimes_RB\ar{r}[swap]{\pp_1}&A\otimes_RB
+{}&F'\otimes_RB\ni t\ar{d}{f_1}\\ 
+u\in F''\otimes_RB\ar{r}{\psi_1}\ar{d}[swap]{g_1}&F\otimes_RB\ar{d}{h_1}\\ 
+s\in A'\otimes_RB\ar{r}[swap]{\pp_1}&A\otimes_RB
 \end{tikzcd}
 $$  
 satisfies $g_1(u)=s$ and $\psi_1(u)=f_1(t)$. 
@@ -8440,6 +8451,8 @@ $$
 is exact. Then $P$ is a flat $\cc R$-module.
 \end{lem} 
 
+(Recall that the notation $?|_U$ is defined in Notation 17.6.13 (ii) p.~428 of the book.)
+
 \begin{proof}
 Consider a monomorphism $M'\mono M$ of right $\cc R$-modules and put 
 $$ 
@@ -8455,15 +8468,19 @@ let $U$ be an object of $\C_X$, let $s$ be an element of $K_0(U)$, and let $\ove
 \text{Equality $\overline s=0$ implies the lemma.}
 \end{equation}  
 %  
-By Lemma~\ref{techlem2} p.~\pageref{techlem2} there is a commutative diagram 
+By Lemma~\ref{techlem2} p.~\pageref{techlem2} there exist 
+
+\nn$\bu$ a commutative diagram 
 $$
 \begin{tikzcd}
-{}&F'(U)\ar{d}{f}\\ 
+{}&F'(U)\ar{d}{f}\ar[equal]{r}&F'(U)\ar{dd}{0}\\ 
 F''(U)\ar{r}{\psi}\ar{d}[swap]{g}&F(U)\ar{d}{h}\\ 
-M'(U)\ar{r}[swap]{\pp}&M(U)
+M'(U)\ar{r}[swap]{\pp}&M(U)\ar[equal]{r}&M(U)
 \end{tikzcd}
 $$  
-of right $\cc R(U)$-modules such that $F,F'$ and $F''$ are free right $\cc R$-modules of finite rank, and we have $h\circ f=0$; and there are elements $t\in F'(U)\otimes_{\cc R(U)}P(U)$, $u\in F''(U)\otimes_{\cc R(U)}P(U)$ such that the commutative diagram 
+of right $\cc R(U)$-modules such that $F,F'$ and $F''$ are free right $\cc R$-modules of finite rank,  
+
+\nn$\bu$ elements $t\in F'(U)\otimes_{\cc R(U)}P(U)$, $u\in F''(U)\otimes_{\cc R(U)}P(U)$ such that the commutative diagram 
 %
 \begin{equation}\label{ff'f''}
 \begin{tikzcd}
@@ -8473,7 +8490,7 @@ s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U)
 \end{tikzcd}
 \end{equation} 
 % 
-satisfies $g_1(u)=s$ and $\psi_1(u)=f_1(t)$. The commutative diagram of \eqref{d447} also induces the commutative diagram 
+satisfies $g_1(u)=s$ and $\psi_1(u)=f_1(t)$. The commutative diagram \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
