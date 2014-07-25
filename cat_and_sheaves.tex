@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0356)
+% about "categories and sheaves" (version-0357)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -3901,6 +3901,15 @@ $$
 
 It suffices to check that $N$ is small and filtrant, and that $p_k$ is cofinal. 
 
+***
+
+\begin{lem}\label{npk}
+The category $N$ is small and filtrant, and the functor $p_k$ is cofinal.
+\end{lem} 
+
+Clearly, Lemma~\ref{npk} implies Theorem~\ref{643}.  
+
+\begin{proof}[Proof of Lemma~\ref{npk}]
 We start as in the proof of Theorem 6.4.3 p.~144 of the book: 
 
 We order $\Ob(K)$ be decreeing $k\le\ell$ if and only if $\Hom_K(k,\ell)\neq\varnothing$, and argue by induction on the cardinal $n$ of $\Ob(K)$. 
@@ -4009,7 +4018,22 @@ $$
 N\simeq M\left[N'\xrightarrow{\pp}(\C/G(a))^{L/a}\xleftarrow{\ \Delta\circ\widetilde{\alpha_a}}I_a\right]. 
 $$
 
-By induction hypothesis, $N'$ is small and filtrant and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below implies that $\Delta$ is cofinal. Thus, $\Delta\circ\widetilde{\alpha_a}$ is cofinal. From this point, to complete the proof of Theorem~\ref{643} p.~\pageref{643}, we can argue as in the proof of Proposition 6.1.13 p.~134 of the book. The only remaining task is to prove the lemma below.
+By induction hypothesis, 
+%
+\begin{equation}\label{n'saf}
+N'\text{ is small and filtrant}
+\end{equation} 
+%
+and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below will imply that $\Delta$ is cofinal. Thus, 
+%
+\begin{equation}\label{daa}
+\Delta\circ\widetilde{\alpha_a}\text{ is cofinal.}
+\end{equation} 
+% 
+Taking Lemma~\ref{delta} below for granted, Lemma~\ref{npk} p.~\pageref{npk} now follows from \eqref{n'saf}, \eqref{daa}, and Proposition 3.4.5 p.~89 of the book. 
+\end{proof} 
+
+As already observed, Lemma~\ref{npk} implies Theorem~\ref{643} p.~\pageref{643}. The only remaining task is to prove 
 
 \begin{lem}\label{delta}
 If $I$ is a finite category and $\C$ a filtrant category, then the diagonal functor $\Delta:\C\to\C^I$ is cofinal.
@@ -4021,7 +4045,7 @@ $$
 (\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\alpha(i),Y)\right)\Big(\forall\ (s:i\to j)\in S\Big)\Big(\mu_{j}\circ\alpha(s)=\mu_i\Big) 
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\lambda)$.
-\end{proof}
+\end{proof} 
 
 %%
 
