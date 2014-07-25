@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0358)
+% about "categories and sheaves" (version-0359)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -5544,8 +5544,9 @@ then $A$ is in $\C_\pi$.
 
 Here is a rewriting of the proof with a few more details:
 
-\begin{proof}[Proof of Proposition~\ref{932}] 
-$*$ Step 1. Note that $\Set\ni S\mapsto G^{\sqcup S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\sqcup S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
+\begin{proof}[Proof of Proposition~\ref{932}]${}$ 
+
+\nn$\bu$ Step 1. Note that $\Set\ni S\mapsto G^{\sqcup S}\in\C$ is a well-defined covariant functor. Also note that $\card(G^{\sqcup S}(G))<\pi$ for any $S\subset A(G)$. Indeed, there are maps 
 $$
 S\to A(G)\to S
 $$ 
@@ -5555,7 +5556,7 @@ G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)
 $$ 
 is the identity.
 
-\nn$*$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. Claim~\ref{lbij} below will imply Proposition~\ref{932}. 
+\nn$\bu$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. Claim~\ref{lbij} below will imply Proposition~\ref{932}. 
 
 \begin{claim}\label{lbij} 
 The map 
@@ -5595,7 +5596,7 @@ It only remains, in order to prove Proposition~\ref{932}, to check that $\lambda
 There is a morphism $g:A\to X_i$ such that $p_i\circ g=f$, where $p_i:X_i\to X$ is the coprojection.
 \end{claim} 
 
-\nn$*$ Step 3. Consider the following conditions: 
+\nn$\bu$ Step 3. Consider the following conditions: 
 
 \nn(a) the diagram of solid arrows 
 $$
@@ -5619,9 +5620,9 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. 
 
-\nn$*$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn$\bu$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\colim_i$ is exact in $\C$, we have $\colim_iY_i\simeq A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pageref{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn$*$ Step 5: (a) implies (b). Assuming (a), we build the commutative square 
+\nn$\bu$ Step 5: (a) implies (b). Assuming (a), we build the commutative square 
 %
 \begin{equation}\label{s5a}
 \begin{tikzcd}
@@ -5666,7 +5667,7 @@ C\ar{r}\ar{rdd}[swap]{x}&G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 $$ 
 This proves (b).
 
-\nn$*$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Assuming (b), form the cartesian square 
+\nn$\bu$ Step 6: (b) implies Claim~\ref{pig=f} p.~\pageref{pig=f}, and thus Proposition~\ref{932} p.~\pageref{932}. Assuming (b), form the cartesian square 
 $$
 \begin{tikzcd}
 P\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\ 
@@ -7081,11 +7082,11 @@ h=\widetilde h\circ T^{-1}g,
 \end{equation}
 %
 \begin{equation}\label{htilde}
-\widetilde h=T^{-1}d_I\circ T^{-1}\circ\xi-\xi\circ T^{-1}d_Z,
+\widetilde h=T^{-1}d_I\circ T^{-1}\xi-\xi\circ T^{-1}d_Z,
 \end{equation}
 %
 \begin{equation}\label{psitildef}
-\widetilde\psi=\psi-\xi\circ g,
+\widetilde\psi=\psi-\xi\circ g. 
 \end{equation}
 
 To prove $h\circ T^{-1}f=0$, we note: 
@@ -7104,7 +7105,7 @@ To prove that $\widetilde\psi$ is a morphism in $\A_c$, we note:
 d_I\circ\widetilde\psi-T\widetilde\psi\circ d_Y&=d_I\circ\psi-d_I\circ\xi\circ g-T\psi\circ d_Y+T\xi\circ Tg\circ d_Y&\text{by \eqref{psitildef}}\\ 
 &=(d_I\circ\psi-T\psi\circ d_Y)-(d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y)\\ 
 &=Th-(d_I\circ\xi\circ g-T\xi\circ Tg\circ d_Y)&\text{by \eqref{hpm1}}\\ 
-&=Th-(d_I\circ\xi\circ g-T\xi\circ T^{-1}d_Z\circ g)&\text{by \eqref{minac}}\\ 
+&=Th-(d_I\circ\xi\circ g-T\xi\circ d_Z\circ g)&\text{by \eqref{minac}}\\ 
 &=Th-T\widetilde h\circ g&\text{by \eqref{htilde}}\\ 
 &=0&\text{by \eqref{hhg}}. 
 \end{align*}
