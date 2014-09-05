@@ -1,12 +1,12 @@
-% about "categories and sheaves" (version-0361)
+% about "categories and sheaves" (version-0362)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
-\addtolength{\parskip}{.5\baselineskip}
-\usepackage[a4paper,headheight=14.5pt]{geometry}
+% !TEX encoding = UTF-8 Unicode
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath}
+\usepackage[a4paper,headheight=14.5pt]{geometry}
 \usepackage{makeidx}
 \usepackage{tikz-cd}
 \usepackage[pdfusetitle]{hyperref}
@@ -15,6 +15,7 @@
 %\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
+\addtolength{\parskip}{.5\baselineskip}
 \makeindex
 \pagestyle{fancy}
 
@@ -322,7 +323,7 @@ $$
 
 \nn$*$ P.~153, statement of Lemma 7.1.12. The readability might be slightly improved by changing $s:X\to X'\in\mathcal S$ to $(s:X\to X')\in\mathcal S$. Same for Line 4 of the proof of Lemma 7.1.21 p.~157.
 
-\nn$*$ P.~156, first line after the first display: $\C_{\cc S}$ should be $\C_{\cc S}^r$.
+\nn$*$ P.~156, first line of the first display and first line after the first display: $\C_{\cc S}$ should be $\C_{\cc S}^r$.
 
 \nn$*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_{\mathcal S}(s)$.
 
@@ -4130,6 +4131,32 @@ X\ar{r}{\id_X}\ar{d}[swap]{s}&X\ar[dashed]{d}{t}\\ X'\ar[dashed]{r}[swap]{g}&Y'.
 $$
 \end{s}
 
+%
+
+\begin{s}\label{778}
+Let us spell out the proof of Remark 7.7.8 (ii) p.~156. Recall that $\cc S$ is a left and right multiplicative system in $\C$. For $X,Y\in\C$ we have 
+
+$$
+\Hom_{\C_{\cc S}^r}(X,Y)\simeq\colim_{(X'\to X)\in\cc S_X}\Hom_{\C_{\cc S}^r}(X,Y)\simeq\colim_{(X'\to X)\in\cc S_X}\Hom_{\C_{\cc S}^r}(X',Y)
+$$
+
+$$
+\simeq
+\colim_{(X'\to X)\in\cc S_X}\ \colim_{(Y\to Y')\in\cc S^Y}\Hom_{\C_{\cc S}^r}(X',Y')\simeq
+\colim_{(Y\to Y')\in\cc S^Y}\ \colim_{(X'\to X)\in\cc S_X}\Hom_{\C_{\cc S}^r}(X',Y')
+$$
+
+$$
+\simeq
+\colim_{(Y\to Y')\in\cc S^Y}\Hom_{\C_{\cc S}^\ell}(X,Y')\simeq
+\colim_{(Y\to Y')\in\cc S^Y}\Hom_{\C_{\cc S}^\ell}(X,Y)\simeq
+\Hom_{\C_{\cc S}^\ell}(X,Y),
+$$ 
+the first and last isomorphisms being justified by the fact that $\cc S_X$ and $\cc S^Y$ are connected by Proposition 7.1.10 p.~153 of the book. This shows that $\C_{\cc S}^r$ and $\C_{\cc S}^\ell$ are isomorphic.
+\end{s}
+
+%
+
 \begin{s}\label{durl} 
 P.~159, Definition 7.3.1. Recall the definition: 
 
@@ -6928,7 +6955,7 @@ $$
 H^0\oo R_2\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
 $$
 
-This follows from the proof given in the book. 
+This follows from the proof given in the book and from \S\ref{778} p.~\pageref{778}.
 \end{s}
 
 %%
