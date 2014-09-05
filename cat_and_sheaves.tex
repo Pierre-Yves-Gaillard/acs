@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0362)
+% about "categories and sheaves" (version-0363)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4161,9 +4161,12 @@ the first and last isomorphisms being justified by the fact that $\cc S_X$ and $
 P.~159, Definition 7.3.1. Recall the definition: 
 
 Let $\C$ be a $\U$-small category, let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
-$$
-(R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
-$$ 
+%
+\begin{equation}\label{rsfq}
+(R_{\cc S}F)(Q(X))\simeq\colim_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).
+%(R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
+\end{equation}
+%
 If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pageref{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable} By Theorem~\ref{233} p.~\pageref{233}, this is equivalent to saying that $Q^\dagger F$ exists universally in the sense of Definition~\ref{232} p.~\pageref{232}. 
 
 Also, the following fact is implicit:
@@ -4206,6 +4209,31 @@ $$
 \C_{\SSS}\ar{rr}[swap]{(K\circ F)_{\SSS}}\ar{rru}[swap]{F_{\SSS}}&&\A'.
 \end{tikzcd}
 $$
+\end{s}
+
+%
+
+\begin{s}
+We paste Display (7.3.7) p.~161 of the book (see Formula~\eqref{rsfq} p.~\pageref{rsfq}):
+%
+\begin{equation}\label{rsfq2}
+(R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
+\end{equation}
+%
+In view of \S\ref{778} p.~\pageref{778}, this implies the following:
+
+Let $X$ and $Y$ be two objects of $\C$. If $\cc S$ is a right multiplicative system in $\C$, then 
+%
+\begin{equation}\label{hcsr}%\label{hcsr}\label{hcsl}???
+\Hom_{\C_{\cc S}^r}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(\ \ ,Y)\big)(X).
+\end{equation}
+% 
+Similarly, if $\cc S$ is a left multiplicative system in $\C$, then 
+%
+\begin{equation}\label{hcsl}
+\Hom_{\C_{\cc S}^\ell}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y).
+\end{equation}
+% 
 \end{s}
 
 %%
@@ -6936,26 +6964,30 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 %
 
 \begin{s}
-P.~337, Theorem 13.4.1. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) One could add:
-
-Moreover, if $\Hom_\C^\bu(\ ,Y)$ admits a right derived functor, denoted 
+P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of \eqref{hcsr} p.~\pageref{hcsr}, \eqref{hcsl} p.~\pageref{hcsl}, and Theorem 13.4.1 p.~337 of the book, the functors
 $$
-\oo R_1\!\Hom_\C(\ ,Y),
+\Hom_\C^\bu:\oo K(\C)\times\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
 $$ 
-then 
+and 
 $$
-H^0\oo R_1\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+\Hom_{\oo K(\C)}:\oo K(\C)\times\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
-Similarly, if $\Hom_\C^\bu(X,\ )$ admits a right derived functor, denoted 
+satisfy 
 $$
-\oo R_2\!\Hom_\C(X,\ ),
-$$ 
-then 
-$$
-H^0\oo R_2\!\Hom_\C(X,Y)\simeq\Hom_{\oo D(\C)}(X,Y).
+\Hom_{\oo D(\C)}(X,Y)\simeq H^0R(\Hom_\C^\bu)(X,Y)\simeq 
 $$
 
-This follows from the proof given in the book and from \S\ref{778} p.~\pageref{778}.
+$$
+\simeq H^0R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq H^0R(\Hom_\C^\bu(\ \ ,Y))(X)
+$$
+
+$$
+\simeq R(\Hom_{\oo K(\C)})(X,Y)\simeq R(\Hom_{\oo K(\C)}(X,\ \ ))(Y)\simeq R(\Hom_{\oo K(\C)}(\ \ ,Y))(X).
+$$ 
+(In the last line, we use Notation 10.3.8 p.~255 of the book.) This implies 
+$$
+R(\Hom_\C^\bu)(X,Y)\simeq R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R(\Hom_\C^\bu(\ \ ,Y))(X).
+$$
 \end{s}
 
 %%
