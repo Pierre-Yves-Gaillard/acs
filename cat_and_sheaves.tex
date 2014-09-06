@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0366)
+% about "categories and sheaves" (version-0367)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4299,9 +4299,11 @@ We leave the verification of these claims to the reader.
 
 \subsection{Remark 7.4.5 (p.~163)}\label{745}
 
+In this section we adhere to Convention 11.7.1 of the book, according to which, paradoxically, $Y$ is considered as the first variable and $X$ is as the second variable in the expression $\Hom_\C(X,Y)$.
+
 Let $\cc S$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pageref{737} implies that the functors 
 $$
-R_{\cc S}\Hom_\C(X,\ \ ),\quad R_{\cc S}\Hom_\C(\ \ ,Y),\quad R_{\cc S}\Hom_\C
+R_{\cc S}\Hom_\C(X,\ \ ),\quad R_{{\cc S}^{\op}}\Hom_\C(\ \ ,Y),\quad R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C
 $$
 exist and satisfy 
 $$
@@ -4309,8 +4311,17 @@ $$
 $$
 
 $$
-\simeq R_{\cc S}\big(\Hom_\C(\ \ ,Y)\big)(X)\simeq R_{\cc S}\Hom_\C(X,Y).
+\simeq R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\simeq R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C(X,Y).
 $$
+
+\nn More precisely, the diagram 
+$$
+\begin{tikzcd}
+R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C(X,Y)\ar[leftrightarrow]{d}&R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
+&\Hom_{\C_{\cc S}}(X,Y),
+\end{tikzcd}
+$$
+where the horizontal arrows are the natural morphisms, and the other arrows are the above isomorphisms, commutes.
 
 %%%%
 
