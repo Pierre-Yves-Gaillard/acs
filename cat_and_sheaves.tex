@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0364)
+% about "categories and sheaves" (version-0365)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4152,7 +4152,7 @@ $$
 \colim_{(Y\to Y')\in\cc S^Y}\Hom_{\C_{\cc S}^\ell}(X,Y)\simeq
 \Hom_{\C_{\cc S}^\ell}(X,Y),
 $$ 
-the first and last isomorphisms being justified by the fact that $\cc S_X$ and $\cc S^Y$ are connected by Proposition 7.1.10 p.~153 of the book. This shows that $\C_{\cc S}^r$ and $\C_{\cc S}^\ell$ are isomorphic.
+the first and last isomorphisms being justified by the fact that $\cc S_X$ and $\cc S^Y$ are connected by Proposition 7.1.10 p.~153 of the book. This shows that $\C_{\cc S}^r$ and $\C_{\cc S}^\ell$ are isomorphic categories.
 \end{s}
 
 %
@@ -4214,7 +4214,7 @@ $$
 %
 
 \begin{s}
-We paste Display (7.3.7) p.~161 of the book (see Formula~\eqref{rsfq} p.~\pageref{rsfq}):
+We paste Display (7.3.7) p.~161 of the book (see \eqref{rsfq} p.~\pageref{rsfq}):
 %
 \begin{equation}\label{rsfq2}
 (R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
@@ -4224,14 +4224,14 @@ In view of \S\ref{778} p.~\pageref{778}, this implies the following:
 
 Let $X$ and $Y$ be two objects of $\C$. If $\cc S$ is a right multiplicative system in $\C$, then 
 %
-\begin{equation}\label{hcsr}%\label{hcsr}\label{hcsl}???
-\Hom_{\C_{\cc S}^r}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(\ \ ,Y)\big)(X).
+\begin{equation}\label{hcsr}
+\Hom_{\C_{\cc S}^r}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y).
 \end{equation}
 % 
 Similarly, if $\cc S$ is a left multiplicative system in $\C$, then 
 %
 \begin{equation}\label{hcsl}
-\Hom_{\C_{\cc S}^\ell}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y).
+\Hom_{\C_{\cc S}^\ell}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(\ \ ,Y)\big)(X).
 \end{equation}
 % 
 \end{s}
@@ -4294,6 +4294,20 @@ $$
 We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism of functors $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
 
 We leave the verification of these claims to the reader. 
+
+%%
+
+\subsection{Remark 7.4.5 (p.~163)}\label{745}
+
+Let $\cc S$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. Formulas \eqref{hcsr} p.~\pageref{hcsr} and \eqref{hcsl} p.~\pageref{hcsl} imply
+
+$$
+\Hom_{\C_{\cc S}}(X,Y)\simeq R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y)
+$$
+
+$$
+\simeq R_{\cc S}\big(\Hom_\C(\ \ ,Y)\big)(X)\simeq R_{\cc S}\Hom_\C(X,Y).
+$$
 
 %%%%
 
@@ -6964,7 +6978,7 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 %
 
 \begin{s}
-P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of \eqref{hcsr} p.~\pageref{hcsr}, \eqref{hcsl} p.~\pageref{hcsl}, and Theorem 13.4.1 p.~337 of the book, the functors
+P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of Section~\ref{745} p.~\pageref{745} and Theorem 13.4.1 p.~337 of the book, the functors
 
 $$
 \Hom_\C^\bu:\oo K(\C)\times\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
