@@ -6965,28 +6965,35 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 
 \begin{s}
 P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of \eqref{hcsr} p.~\pageref{hcsr}, \eqref{hcsl} p.~\pageref{hcsl}, and Theorem 13.4.1 p.~337 of the book, the functors
+
 $$
 \Hom_\C^\bu:\oo K(\C)\times\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
 $$ 
-and 
+
+\nn and 
+
 $$
 \Hom_{\oo K(\C)}:\oo K(\C)\times\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
-satisfy 
+
+\nn give rise to the following functorial isomorphisms:
+
 $$
-\Hom_{\oo D(\C)}(X,Y)\simeq H^0R(\Hom_\C^\bu)(X,Y)\simeq 
+R^0\Hom_\C^\bu(X,Y)\simeq R^0(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R^0(\Hom_\C^\bu(\ \ ,Y))(X)
 $$
 
 $$
-\simeq H^0R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq H^0R(\Hom_\C^\bu(\ \ ,Y))(X)
-$$
-
-$$
-\simeq R(\Hom_{\oo K(\C)})(X,Y)\simeq R(\Hom_{\oo K(\C)}(X,\ \ ))(Y)\simeq R(\Hom_{\oo K(\C)}(\ \ ,Y))(X).
+\simeq R\Hom_{\oo K(\C)}(X,Y)\simeq R(\Hom_{\oo K(\C)}(X,\ \ ))(Y)\simeq R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)
 $$ 
-(In the last line, we use Notation 10.3.8 p.~255 of the book.) This implies 
+
 $$
-R(\Hom_\C^\bu)(X,Y)\simeq R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R(\Hom_\C^\bu(\ \ ,Y))(X).
+\simeq\Hom_{\oo D(\C)}(X,Y).
+$$
+
+\nn(In penultimate last line, we use Notation 10.3.8 p.~255 of the book.) This implies 
+
+$$
+R\Hom_\C^\bu(X,Y)\simeq R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R(\Hom_\C^\bu(\ \ ,Y))(X).
 $$
 \end{s}
 
