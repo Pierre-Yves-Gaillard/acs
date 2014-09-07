@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0367)
+% about "categories and sheaves" (version-0368)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4214,10 +4214,12 @@ $$
 %
 
 \begin{s}\label{737}
-We paste Display (7.3.7) p.~161 of the book (see \eqref{rsfq} p.~\pageref{rsfq}):
-$$
+P.~161. We paste Display (7.3.7) p.~161 of the book (see \eqref{rsfq} p.~\pageref{rsfq}):
+%
+\begin{equation}\label{(7.3.7)}
 (R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
-$$
+\end{equation}
+%
 In view of \S\ref{778} p.~\pageref{778}, this implies the following:
 
 Let $X$ and $Y$ be two objects of $\C$. 
@@ -4257,7 +4259,7 @@ in $\Ind(\C)$. Recall the following facts:
 $$
 A:=\alpha_\SSS(Q(X))=\colim_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
 $$ 
-$\bu$ Display (7.3.7) p.~161 of the book implies
+$\bu$ Display~\eqref{(7.3.7)} p.~\pageref{(7.3.7)} implies
 $$
 B:=R_\SSS(\iota_\A\circ F)(Q(X))=\colim_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
 $$
@@ -6669,6 +6671,12 @@ P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pagere
 
 %
 
+\begin{s} 
+P.~253, Definition 10.3.1. One of the key ingredients justifying the second sentence is Display~\eqref{(7.3.7)} p.~\pageref{(7.3.7)}.
+\end{s}
+
+%
+
 \begin{s} P.~263, last sentence of the proof of Lemma 10.5.8. Consider the commutative diagram  
 $$
 \begin{tikzcd}
@@ -6992,7 +7000,7 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 %
 
 \begin{s}
-P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of Section~\ref{745} p.~\pageref{745} and Theorem 13.4.1 p.~337 of the book, the functors
+P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of Section~\ref{745} p.~\pageref{745} and Theorem 13.4.1 p.~337 of the book, the functors 
 
 $$
 \Hom_\C^\bu:\oo K(\C)\times\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
@@ -7004,21 +7012,25 @@ $$
 \Hom_{\oo K(\C)}:\oo K(\C)\times\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
 
-\nn give rise to the following functorial isomorphisms:
-
+\nn give rise to the following commutative diagram of functorial isomorphisms:
 $$
-R^0\Hom_\C^\bu(X,Y)\simeq R^0(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R^0(\Hom_\C^\bu(\ \ ,Y))(X)
+\begin{tikzcd}
+R^0(\Hom_\C^\bu(X,\ \ ))(Y)\ar[leftrightarrow]{d}\ar{r}&
+R^0\Hom_\C^\bu(X,Y)\ar[leftrightarrow]{d}&
+R^0(\Hom_\C^\bu(\ \ ,Y))(X)\ar{l}\ar[leftrightarrow]{d}\\ 
+%
+R(\Hom_{\oo K(\C)}(X,\ \ ))(Y)\ar[leftrightarrow]{dr}\ar{r}&
+R\Hom_{\oo K(\C)}(X,Y)\ar[leftrightarrow]{d}&
+R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
+%
+&\Hom_{\oo D(\C)}(X,Y),
+\end{tikzcd}
 $$
-
+where the horizontal arrows are the natural morphisms and the other arrows are the natural isomorphisms, and where 
 $$
-\simeq R\Hom_{\oo K(\C)}(X,Y)\simeq R(\Hom_{\oo K(\C)}(X,\ \ ))(Y)\simeq R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)
+R(\Hom_{\oo K(\C)}(X,\ \ ))(Y),\quad R\Hom_{\oo K(\C)}(X,Y),\quad R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)
 $$ 
-
-$$
-\simeq\Hom_{\oo D(\C)}(X,Y).
-$$
-
-\nn(In penultimate last line, we use Notation 10.3.8 p.~255 of the book.) This implies 
+are defined by Notation 10.3.8 p.~255 of the book. This implies 
 
 $$
 R\Hom_\C^\bu(X,Y)\simeq R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R(\Hom_\C^\bu(\ \ ,Y))(X).
