@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0368)
+% about "categories and sheaves" (version-0369)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -189,17 +189,17 @@ The category $\C$ is $\U$-{\em small} if in addition the set of objects of $\C$ 
 
 One could also consider the following variant: 
 
-\begin{df}[$\U$-category]\label{ducat} 
+\begin{df}[$\U$-category]\label{myucat} 
 A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ is a $\U$-set. 
 \end{df} 
 
-\begin{df}[$\U$-small category]\label{small}
+\begin{df}[$\U$-small category]\label{myuscat}
 The category $\C$ is $\U$-{\em small}\index{$\U$-small category} if in addition the set of objects of $\C$ is a $\U$-set. 
 \end{df} 
 
-Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{ducat} which is isomorphic to $\C$, and similarly for $\U$-small categories. 
+Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{myucat} which is isomorphic to $\C$, and similarly for $\U$-small categories. 
 %
-\begin{center}\fbox{In this text we shall always use Definitions \ref{ducat} and \ref{small}.}
+\begin{center}\fbox{In this text we shall always use Definitions \ref{myucat} and \ref{myuscat}.}
 \end{center}
 
 We often assume implicitly that a universe $\U$ has been chosen, and we say ``category'' and ``small category'' instead of ``$\U$-category'' and ``$\U$-small category''.
@@ -1379,7 +1379,7 @@ We define $\pp^\dagger(\beta)$ by \eqref{236}. The purpose of Step (a) is to sho
 
 \begin{lem}\label{r52}
 
-Let $I$ and $J$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{small} p.~\pageref{small}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
+Let $I$ and $J$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{myuscat} p.~\pageref{myuscat}), let $\Phi:I\to\Cat$ be a functor, view $J$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to J$ be a morphism of functors. Assume 
 
 \begin{equation}\label{52} 
 (\colim\theta)(i):=\colim(\theta_i)\in J\quad\forall\ i\in I. 
@@ -2216,7 +2216,7 @@ $$
 quasi-commutes. 
 
 \begin{prop}\label{yf} 
-Let $\U\in\V$ be universes, let $\A$ be the category of $\U$-small categories (see Definition~\ref{small} p.~\pageref{small}), let $\B$ be the category whose objects are the $\V$-small $\U$-categories (see Definition~\ref{ducat} p.~\pageref{ducat}) and whose morphisms are the isomorphism classes of functors. Then there is a functor $\Phi:\A\to\B$ satisfying $\Phi(\C)=\C^\wedge_\U$ and $\Phi(F)=\widehat F$, and there is a morphism of functors $\theta$ from the ``inclusion'' $\A\to\B$ to $\Phi$ satisfying $\theta_\C=\hy_\C$ for all $\C$ in $\A$. 
+Let $\U\in\V$ be universes, let $\A$ be the category of $\U$-small categories (see Definition~\ref{myuscat} p.~\pageref{myuscat}), let $\B$ be the category whose objects are the $\V$-small $\U$-categories (see Definition~\ref{myucat} p.~\pageref{myucat}) and whose morphisms are the isomorphism classes of functors. Then there is a functor $\Phi:\A\to\B$ satisfying $\Phi(\C)=\C^\wedge_\U$ and $\Phi(F)=\widehat F$, and there is a morphism of functors $\theta$ from the ``inclusion'' $\A\to\B$ to $\Phi$ satisfying $\theta_\C=\hy_\C$ for all $\C$ in $\A$. 
 \end{prop}
 
 \begin{rk}\label{cof}
@@ -4214,13 +4214,14 @@ $$
 %
 
 \begin{s}\label{737}
-P.~161. We paste Display (7.3.7) p.~161 of the book (see \eqref{rsfq} p.~\pageref{rsfq}):
+P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) on p.~161 of the book:
 %
 \begin{equation}\label{(7.3.7)}
 (R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
 \end{equation}
 %
-In view of \S\ref{778} p.~\pageref{778}, this implies the following:
+(See \eqref{rsfq} p.~\pageref{rsfq}.) 
+Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pageref{myucat}), and let $\V$ be a universe such that $\U\in\V$ and $\C$ is a $\U$-small category (Definition~\ref{myucat} p.~\pageref{myucat}). Writing $\A$ for the category of $\V$-sets, Proposition 7.3.3 (iii) of the book implies the following:
 
 Let $X$ and $Y$ be two objects of $\C$. 
 
@@ -5035,7 +5036,7 @@ $$
 \C_0\ar[yshift=.7ex]{r}{\pp_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
 \end{tikzcd}
 $$ 
-We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{small} p.~\pageref{small}). If $\lambda:\C\to(\C_0)^\wedge$ and $\lambda':\M\to(\M_0)^\wedge$ are the obvious functors, then the diagram 
+We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{myuscat} p.~\pageref{myuscat}). If $\lambda:\C\to(\C_0)^\wedge$ and $\lambda':\M\to(\M_0)^\wedge$ are the obvious functors, then the diagram 
 $$
 \begin{tikzcd}
 \C\ar{r}{\pp}\ar{d}[swap]{\lambda}&\M\ar{d}{\lambda'}\\
@@ -7784,7 +7785,7 @@ P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
 \begin{s}
 P.~411, Definition 17.2.1 of the notions of sites and of morphism of site. Proposition~\ref{yf} p.~\pageref{yf} implies:
 
-If $\U$ is a universe, then there is a $\U$-category $\A$ (see Definition~\ref{ducat} p.~\pageref{ducat}) whose objects are the $\U$-small categories (see Definition~\ref{small} p.~\pageref{small}) and whose morphisms are are morphisms of sites.
+If $\U$ is a universe, then there is a $\U$-category $\A$ (see Definition~\ref{myucat} p.~\pageref{myucat}) whose objects are the $\U$-small categories (see Definition~\ref{myuscat} p.~\pageref{myuscat}) and whose morphisms are are morphisms of sites.
 \end{s}
 
 %
