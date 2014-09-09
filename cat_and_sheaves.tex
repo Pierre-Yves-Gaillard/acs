@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0371)
+% about "categories and sheaves" (version-0372)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1308,7 +1308,7 @@ Let $L$ and $R$ be the left and right-hand sides of \eqref{17115mod}.
 
 The maps $\lambda\mapsto\lambda*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Conversely, to an element  
 $$
-r=(r_X)_X=\Big(\big(r_{X,y:Y\to X}:F(Y)\to G(Y)\big)_{y:Y\to X}\Big)_X\in R
+r=(r_X)_X=\Big(\big(r_{X,y:X\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X\in R
 $$ 
 we attach the family
 $$
@@ -1316,7 +1316,7 @@ $$
 $$ 
 We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are mutually inverse bijections. The key point is that a family 
 $$
-\Big(\big(r_{X,y:Y\to X}:F(Y)\to G(Y)\big)_{y:Y\to X}\Big)_X
+\Big(\big(r_{X,y:X\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X
 $$ 
 as above belongs to $R$ if and only if, for all diagram 
 $$
@@ -1324,7 +1324,7 @@ X\xr fY\xr zZ
 $$ 
 in $\C$, we have 
 $$
-r_{Y,z}\circ F(z)=G(z)\circ r_{X,f}.
+r_{Y,z:Y\to Z}\circ F(z)=G(z)\circ r_{X,f:X\to Y}.
 $$
 \end{s}
 
