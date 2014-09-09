@@ -1306,14 +1306,27 @@ Let us spell out the proof of the above statement:
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115mod}. 
 
-The maps $\lambda\mapsto\lambda*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Conversely, to an element  
+The maps $\lambda\mapsto\lambda*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Concretely, to a family 
 $$
+\left(F(X)\xr{\ell_X}G(X)\right)_X\in L
+$$
+we attach the family 
+$$
+\left(F(Y)\xr{\ell_Y}G(Y)\right)_{X,y:X\to Y}\in R.
+$$
+
+Conversely, to a family 
+%
+\begin{equation}\label{r_X}
 r=(r_X)_X=\Big(\big(r_{X,y:X\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X\in R
-$$ 
+\end{equation}
+% 
 we attach the family
-$$
-\ell=\big(r_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
-$$ 
+%
+\begin{equation}\label{rid_X}
+\ell:=\big(r_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
+\end{equation}
+% 
 We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are mutually inverse bijections. The key point is that a family 
 $$
 \Big(\big(r_{X,y:X\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X
@@ -1322,9 +1335,23 @@ as above belongs to $R$ if and only if, for all diagram
 $$
 X\xr fY\xr zZ
 $$ 
-in $\C$, we have 
-$$
+in $\C$, we have  
+%
+\begin{equation}\label{Y,z:Yto Z}
 r_{Y,z:Y\to Z}\circ F(z)=G(z)\circ r_{X,f:X\to Y}.
+\end{equation}
+%
+For instance, to verify that the composition $R\to L\to R$ is the identity of $R$, we start with a family $r$ as in \eqref{r_X}, we form the family $\ell$ given by \eqref{rid_X}, and we show that the family 
+$$
+\Big(\big(r_{Y,\id_Y:Y\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X
+$$ 
+coincides with $r$ by observing that the diagram 
+$$
+X\xr yY\xr{\id_Y}Y
+$$  
+gives rise, by \eqref{Y,z:Yto Z}, to the equality 
+$$
+r_{Y,\id_Y:Y\to Y}=r_{X,y:X\to Y}.
 $$
 \end{s}
 
