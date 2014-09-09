@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0369)
+% about "categories and sheaves" (version-0370)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -466,6 +466,19 @@ P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \nn$*$ P.~406, first line of the second display: $(\C_Y)^\wedge$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pageref{fhat}.)
 
 \nn$*$ P.~409, line 2: $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A$ should be $\lambda\circ(\oo h_X^t)_A\simeq\oo h_A^t$. 
+
+\begin{s}\label{17115typo}
+P.~410, Display (17.1.15):instead of 
+$$
+\Hom_{\oo{PSh}(X,\A)}(F,G)\simeq\lim_{U\in\C_X}\cc Hom_{\oo{PSh}(U,\A)}(F,G)(U).
+$$
+we should have
+$$
+\Hom_{\oo{PSh}(X,\A)}(F,G)\simeq\lim_{U\in\C_X}\cc Hom_{\oo{PSh}(X,\A)}(F,G)(U).
+$$
+\end{s}
+
+%
 
 \begin{s}\label{1722}
 P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). ``Since $\fthat(u_V)$ is an epimorphism by (2), $\fthat(u_V)$ is a local isomorphism'' should be ``Since $\fthat(u_V)$ is a local epimorphism by (2), $\fthat(u_V)$ is a local isomorphism''.
@@ -1281,27 +1294,38 @@ This follows from Lemma~\ref{l2111} above and Lemma 1.4.10 p.~26 of the book.
 %
 
 \begin{s}
-P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115b} p.~\pageref{17115b}: 
+P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115ps} p.~\pageref{17115ps}: 
 
 If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j^X$ the forgetful functor from $\C^X$ to $\C$, then we have
 %
-\begin{equation}\label{17115}
+\begin{equation}\label{17115mod}
 \Hom_{\A^\C}(F,G)\simeq\lim_{X\in\C}\Hom_{\A^{\C^X}}(F\circ\oo j^X,G\circ\oo j^X).
 \end{equation}
 
 Let us spell out the proof of the above statement: 
 
-Let $L$ and $R$ be the left and right-hand sides of \eqref{17115}. 
+Let $L$ and $R$ be the left and right-hand sides of \eqref{17115mod}. 
 
 The maps $\lambda\mapsto\lambda*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Conversely, to an element  
 $$
-r=\Big(\big(\rho_{u:Y\to X}:F(Y)\to G(Y)\big)_{u:Y\to X}\Big)_X\in R
+r=(r_X)_X=\Big(\big(r_{X,y:Y\to X}:F(Y)\to G(Y)\big)_{y:Y\to X}\Big)_X\in R
 $$ 
 we attach the family
 $$
-\ell=\big(\rho_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
+\ell=\big(r_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
 $$ 
-We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are mutually inverse bijections.
+We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are mutually inverse bijections. The key point is that a family 
+$$
+\Big(\big(r_{X,y:Y\to X}:F(Y)\to G(Y)\big)_{y:Y\to X}\Big)_X
+$$ 
+as above belongs to $R$ if and only if, for all diagram 
+$$
+X\xr fY\xr zZ
+$$ 
+in $\C$, we have 
+$$
+r_{Y,z}\circ F(z)=G(z)\circ r_{X,f}.
+$$
 \end{s}
 
 %
@@ -7776,8 +7800,12 @@ P.~409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{p
 
 %
 
-\begin{s}\label{17115b}
-P.~410, Formula (17.1.15) follows from \eqref{17115} p.~\pageref{17115}.
+\begin{s}\label{17115ps}
+P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (17.1.15) p.~410 should read 
+$$
+\Hom_{\oo{PSh}(X,\A)}(F,G)\simeq\lim_{U\in\C_X}\cc Hom_{\oo{PSh}(X,\A)}(F,G)(U).
+$$
+This follows from \eqref{17115mod} p.~\pageref{17115mod}. 
 \end{s} 
 
 %
