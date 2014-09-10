@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0374)
+% about "categories and sheaves" (version-0375)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1302,11 +1302,36 @@ If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\o
 \Hom_{\oo{Fct}(\C,\A)}(F,G)\simeq\lim_{X\in\C}\Hom_{\oo{Fct}(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X).
 \end{equation}
 
-Let us spell out the proof of the above statement: 
+The following point is implicit in the definition of the right hand side of \eqref{17115mod}: To a morphism $f:X\to Y$ in $\C$ we attach a map 
+$$
+\Phi(f):\Hom_{\oo{Fct}(\C^Y,\A)}(F\circ\oo j^Y,G\circ\oo j^Y)\to\Hom_{\oo{Fct}(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X)
+$$ 
+by sending $\theta:F\circ\oo j^Y\to G\circ\oo j^Y$ to the horizontal composition $\theta*(\circ f)$ (see Definition~\ref{dil1} p.~\pageref{dil1}): 
+$$
+\begin{tikzcd}
+%
+\A&{}&\C^Y\ar{ll}{}[near start,swap]{G\circ\oo j^Y}&{}&\C^X\ar{ll}{}[near start,swap]{\circ f}\\ 
+%
+\A&\ar{u}{\theta}&\C^Y\ar{ll}{}[near start]{F\circ\oo j^Y}&\ar{u}{\circ f}&\C^X.\ar{ll}{}[near start]{\circ f}
+%
+\end{tikzcd}
+$$ 
+
+Let us spell out the proof of \eqref{17115mod}: 
 
 Let $L$ and $R$ be the left and right-hand sides of \eqref{17115mod}. 
 
-The maps $\ell\mapsto\ell*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$. Concretely, to a family 
+The maps $\ell\mapsto\ell*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$:
+$$
+\begin{tikzcd}
+%
+\A&{}&\C\ar{ll}{}[near start,swap]{G}&{}&\C^X\ar{ll}{}[near start,swap]{\oo j^X}\\ 
+%
+\A&\ar{u}{\ell}&\C\ar{ll}{}[near start]{F}&\ar{u}{\oo j^X}&\C^X.\ar{ll}{}[near start]{\oo j^X}
+%
+\end{tikzcd}
+$$  
+Concretely, to a family 
 $$
 \ell=\left(F(X)\xr{\ell_X}G(X)\right)_X\in L
 $$
