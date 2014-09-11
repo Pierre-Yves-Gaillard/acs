@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0375)
+% about "categories and sheaves" (version-0376)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -4237,12 +4237,9 @@ the first and last isomorphisms being justified by the fact that $\cc S_X$ and $
 P.~159, Definition 7.3.1. Recall the definition: 
 
 Let $\C$ be a $\U$-small category, let $\cc S$ be a right multiplicative system, and let $Q:\C\to\C_{\cc S}$ be the right the localization of $\C$ by $\cc S$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dagger F$ exists, in which case we say that $Q^\dagger F$ a {\em right localization} of $F$, and denote this functor by $R_{\cc S}F$. It might be worth displaying the formula 
-%
-\begin{equation}\label{rsfq}
+$$
 (R_{\cc S}F)(Q(X))\simeq\colim_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).
-%(R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
-\end{equation}
-%
+$$
 If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pageref{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable} By Theorem~\ref{233} p.~\pageref{233}, this is equivalent to saying that $Q^\dagger F$ exists universally in the sense of Definition~\ref{232} p.~\pageref{232}. 
 
 Also, the following fact is implicit:
@@ -4290,14 +4287,13 @@ $$
 %
 
 \begin{s}\label{737}
-P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) on p.~161 of the book:
+P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) p.~161 of the book:
 %
 \begin{equation}\label{(7.3.7)}
 (R_{\cc S}F)(Q(X))\simeq\colim_{(X\to Y)\in\cc S^X}F(Y).
 \end{equation}
 %
-(See \eqref{rsfq} p.~\pageref{rsfq}.) 
-Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pageref{myucat}), and let $\V$ be a universe such that $\U\in\V$ and $\C$ is a $\U$-small category (Definition~\ref{myucat} p.~\pageref{myucat}). Writing $\A$ for the category of $\V$-sets, Proposition 7.3.3 (iii) of the book implies the following:
+Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pageref{myucat}), and let $\V$ be a universe such that $\U\in\V$ and $\C$ is a $\U$-small category (Definition~\ref{myuscat} p.~\pageref{myuscat}). Writing $\A$ for the category of $\V$-sets, Proposition 7.3.3 (iii) of the book implies the following:
 
 Let $X$ and $Y$ be two objects of $\C$. 
 
@@ -4309,7 +4305,7 @@ exists and is isomorphic to $\Hom_{\C_{\cc S}^r}(X,\ \ )$.
 
 Similarly, if $\cc S$ is a left multiplicative system in $\C$, then the functor 
 $$
-R_{\cc S}\Hom_\C(\ \ ,Y)
+R_{{\cc S}^{\op}}\Hom_\C(\ \ ,Y)
 $$ 
 exists and is isomorphic to $\Hom_{\C_{\cc S}^\ell}(\ \ ,Y)$.
 % 
@@ -4378,7 +4374,7 @@ We leave the verification of these claims to the reader.
 
 \subsection{Remark 7.4.5 (p.~163)}\label{745}
 
-In this section we adhere to Convention 11.7.1 of the book, according to which, paradoxically, $Y$ is considered as the first variable and $X$ is as the second variable in the expression $\Hom_\C(X,Y)$.
+In this section we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ is as the \emph{second} variable.
 
 Let $\cc S$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pageref{737} implies that the functors 
 $$
@@ -4393,14 +4389,16 @@ $$
 \simeq R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\simeq R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C(X,Y).
 $$
 
-\nn More precisely, the diagram 
-$$
+\nn More precisely, if, in the diagram 
+%
+\begin{equation}\label{rccs}
 \begin{tikzcd}
 R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C(X,Y)\ar[leftrightarrow]{d}&R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
 &\Hom_{\C_{\cc S}}(X,Y),
 \end{tikzcd}
-$$
-where the horizontal arrows are the natural morphisms, and the other arrows are the above isomorphisms, commutes.
+\end{equation}
+%
+the horizontal arrows are the natural maps, and the other arrows are the above bijections, then \eqref{rccs} commutes and all its arrows are bijective.
 
 %%%%
 
@@ -7058,7 +7056,7 @@ in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\pp$ is a qis by Lemma~\ref{sl2}.
 
 \subsection{Brief Comments}
 
-\begin{s}\label{q337}
+\begin{s}%\label{q337}
 P.~337. Theorem 13.4.1 suggests the following question: 
 
 Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
@@ -7077,7 +7075,7 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pageref{1432} imply that the answer 
 %
 
 \begin{s}
-P.~337. (See \S\ref{1341} p. \pageref{1341} and \S\ref{q337} p.~\pageref{q337}.) In view of Section~\ref{745} p.~\pageref{745} and Theorem 13.4.1 p.~337 of the book, the functors 
+P.~337. (See \S\ref{1341} p. \pageref{1341}.) In view of Section~\ref{745} p.~\pageref{745} above and Theorem 13.4.1 p.~337 of the book, the functors 
 
 $$
 \Hom_\C^\bu:\oo K(\C)\times\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
@@ -7089,8 +7087,9 @@ $$
 \Hom_{\oo K(\C)}:\oo K(\C)\times\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
 
-\nn give rise to the following commutative diagram of functorial isomorphisms:
-$$
+\nn give rise to the diagram% following commutative diagram of functorial isomorphisms:
+%
+\begin{equation}\label{r0hom}
 \begin{tikzcd}
 R^0(\Hom_\C^\bu(X,\ \ ))(Y)\ar[leftrightarrow]{d}\ar{r}&
 R^0\Hom_\C^\bu(X,Y)\ar[leftrightarrow]{d}&
@@ -7102,12 +7101,13 @@ R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)\ar{l}\ar[leftrightarrow]{dl}\\
 %
 &\Hom_{\oo D(\C)}(X,Y),
 \end{tikzcd}
-$$
-where the horizontal arrows are the natural morphisms and the other arrows are the natural isomorphisms, and where 
+\end{equation}
+%
+where the horizontal arrows are the natural maps and the other arrows are the natural bijections, and where 
 $$
 R(\Hom_{\oo K(\C)}(X,\ \ ))(Y),\quad R\Hom_{\oo K(\C)}(X,Y),\quad R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)
 $$ 
-are defined by Notation 10.3.8 p.~255 of the book. This implies 
+are defined by Notation 10.3.8 p.~255 of the book. Then \eqref{r0hom} commutes, and all its arrows are bijective. This implies 
 
 $$
 R\Hom_\C^\bu(X,Y)\simeq R(\Hom_\C^\bu(X,\ \ ))(Y)\simeq R(\Hom_\C^\bu(\ \ ,Y))(X).
