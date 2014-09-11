@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0376)
+% about "categories and sheaves" (version-0377)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1304,18 +1304,18 @@ If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\o
 
 The following point is implicit in the definition of the right hand side of \eqref{17115mod}: To a morphism $f:X\to Y$ in $\C$ we attach a map 
 $$
-\Phi(f):\Hom_{\oo{Fct}(\C^Y,\A)}(F\circ\oo j^Y,G\circ\oo j^Y)\to\Hom_{\oo{Fct}(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X)
+\Hom_{\oo{Fct}(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X)\to\Hom_{\oo{Fct}(\C^Y,\A)}(F\circ\oo j^Y,G\circ\oo j^Y)
 $$ 
-by sending $\theta:F\circ\oo j^Y\to G\circ\oo j^Y$ to the horizontal composition $\theta*(\circ f)$ (see Definition~\ref{dil1} p.~\pageref{dil1}): 
+by sending $\theta:F\circ\oo j^X\to G\circ\oo j^X$ to the horizontal composition $\theta*(\circ f)$ (see Definition~\ref{dil1} p.~\pageref{dil1}): 
 $$
 \begin{tikzcd}
 %
-\A&{}&\C^Y\ar{ll}{}[near start,swap]{G\circ\oo j^Y}&{}&\C^X\ar{ll}{}[near start,swap]{\circ f}\\ 
+\A&{}&\C^X\ar{ll}{}[near start,swap]{G\circ\oo j^X}&{}&\C^Y\ar{ll}{}[near start,swap]{\circ f}\\ 
 %
-\A&\ar{u}{\theta}&\C^Y\ar{ll}{}[near start]{F\circ\oo j^Y}&\ar{u}{\circ f}&\C^X.\ar{ll}{}[near start]{\circ f}
+\A&\ar{u}{\theta}&\C^X\ar{ll}{}[near start]{F\circ\oo j^X}&\ar{u}{\circ f}&\C^Y.\ar{ll}{}[near start]{\circ f}
 %
 \end{tikzcd}
-$$ 
+$$
 
 Let us spell out the proof of \eqref{17115mod}: 
 
@@ -1363,9 +1363,16 @@ $$
 in $\C$, we have  
 %
 \begin{equation}\label{Y,z:Yto Z}
-r_{Y,z:Y\to Z}\circ F(z)=G(z)\circ r_{X,f:X\to Y}.
+r_{Y,z:Y\to Z}\circ F(z)=G(z)\circ r_{X,f:X\to Y}:
 \end{equation}
-%
+
+$$
+\begin{tikzcd}
+F(X)\ar{r}{F(f)}&F(Y)\ar{d}[swap]{r_{X,f:X\to Y}}\ar{r}{F(z)}&F(Z)\ar{d}{r_{Y,z:Y\to Z}}\\ 
+G(X)\ar{r}[swap]{G(f)}&G(Y)\ar{r}[swap]{G(z)}&G(Z).
+\end{tikzcd}
+$$
+
 For instance, to verify that the composition $R\to L\to R$ is the identity of $R$, we start with a family $r$ as in \eqref{r_X}, we form the family $\ell$ given by \eqref{rid_X}, and we show that the family 
 $$
 \Big(\big(r_{Y,\id_Y:Y\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X
@@ -1376,7 +1383,14 @@ X\xr yY\xr{\id_Y}Y
 $$  
 gives rise, by \eqref{Y,z:Yto Z}, to the equality 
 $$
-r_{Y,\id_Y:Y\to Y}=r_{X,y:X\to Y}.
+r_{Y,\id_Y:Y\to Y}=r_{X,y:X\to Y}:
+$$
+
+$$
+\begin{tikzcd}
+F(X)\ar{r}{F(y)}&F(Y)\ar{d}[swap]{r_{X,y:X\to Y}}\ar{r}{\id_{F(Y)}}&F(Y)\ar{d}{r_{Y,\id_Y:Y\to Y}}\\ 
+G(X)\ar{r}[swap]{G(y)}&G(Y)\ar{r}[swap]{\id_{G(Y)}}&G(Y).
+\end{tikzcd}
 $$
 \end{s}
 
