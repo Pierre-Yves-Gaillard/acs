@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0377)
+% about "categories and sheaves" (version-0378)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -222,9 +222,9 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \nn$*$ P.~41, sixth line: (i) should be (a). 
 
-\nn$*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\oo{Fct}(I,\C)$.
+\nn$*$ P.~52, fourth line: $\Mor(I,\C)$ should be $\Fct(I,\C)$.
 
-\nn$*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\oo{Fct}(J,\A)$'' should be ``$\beta\in\oo{Fct}(J,\C)$''.
+\nn$*$ P.~53, Part (i) (c) of the proof of Theorem 2.3.3 (Line 2): ``$\beta\in\Fct(J,\A)$'' should be ``$\beta\in\Fct(J,\C)$''.
 
 \nn$*$ P.~54, second display: we should have $i\to\pp(j)$ instead of $\pp(j)\to i$.
 
@@ -1299,12 +1299,12 @@ P.~43, end of Section~2.1. One could add the following observation, which will b
 If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j^X$ the forgetful functor from $\C^X$ to $\C$, then we have
 %
 \begin{equation}\label{17115mod}
-\Hom_{\oo{Fct}(\C,\A)}(F,G)\simeq\lim_{X\in\C}\Hom_{\oo{Fct}(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X).
+\Hom_{\Fct(\C,\A)}(F,G)\simeq\lim_{X\in\C}\Hom_{\Fct(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X).
 \end{equation}
 
 The following point is implicit in the definition of the right hand side of \eqref{17115mod}: To a morphism $f:X\to Y$ in $\C$ we attach a map 
 $$
-\Hom_{\oo{Fct}(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X)\to\Hom_{\oo{Fct}(\C^Y,\A)}(F\circ\oo j^Y,G\circ\oo j^Y)
+\Hom_{\Fct(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X)\to\Hom_{\Fct(\C^Y,\A)}(F\circ\oo j^Y,G\circ\oo j^Y)
 $$ 
 by sending $\theta:F\circ\oo j^X\to G\circ\oo j^X$ to the horizontal composition $\theta*(\circ f)$ (see Definition~\ref{dil1} p.~\pageref{dil1}): 
 $$
@@ -1927,7 +1927,7 @@ p_{X\to A}:=(X\to A)
 % 
 for all $X\to A$ in $\C_A$. The claim is that the map 
 $$
-\Hom_{\C^\wedge}(A,B)\to\Hom_{\oo{Fct}(\C_A,\C^\wedge)}(\alpha,\Delta(B)),\quad\theta\mapsto\Delta(\theta)\circ p
+\Hom_{\C^\wedge}(A,B)\to\Hom_{\Fct(\C_A,\C^\wedge)}(\alpha,\Delta(B)),\quad\theta\mapsto\Delta(\theta)\circ p
 $$ 
 is bijective. 
 
@@ -1941,7 +1941,7 @@ q_{X\to A}(Y\to X):=(Y\to X\to A)
 $$ 
 for all $X\to A$ in $\C_A$. The claim is that the map 
 $$
-\Hom_{\Set}(A(Y),S)\to\Hom_{\oo{Fct}(\C_A,\Set)}(\beta,\Delta(S)),\quad f\mapsto\Delta(f)\circ q
+\Hom_{\Set}(A(Y),S)\to\Hom_{\Fct(\C_A,\Set)}(\beta,\Delta(S)),\quad f\mapsto\Delta(f)\circ q
 $$ 
 is bijective. 
 
@@ -1955,7 +1955,7 @@ r_{X\to A}(A\to B):=(X\to A\to B)
 $$ 
 for all $X\to A$ in $\C_A$. The claim is that the map 
 $$
-\Hom_{\Set}(S,B(X))\to\Hom_{\oo{Fct}((\C_A)^{\op},\Set)}(\gamma,\Delta(S)),\quad g\mapsto r\circ\Delta(g)
+\Hom_{\Set}(S,B(X))\to\Hom_{\Fct((\C_A)^{\op},\Set)}(\gamma,\Delta(S)),\quad g\mapsto r\circ\Delta(g)
 $$ 
 is bijective. 
 
@@ -2359,17 +2359,17 @@ The proof is obvious.
 \begin{s}\label{opddagg} 
 P.~63, Corollary 2.7.4. Here is a variant: 
 
-Let $\C$ be a category and $\A$ a category admitting small projective limits, let $h:\C\to\C^\wedge$ the Yoneda embedding, and let $\oo{Fct}^{p\ell}((\C^\wedge)^{\op},\A)$ be the category of functors from $(\C^\wedge)^{\op}$ to $\A$ commuting with small projective limits. Then the functors 
+Let $\C$ be a category and $\A$ a category admitting small projective limits, let $h:\C\to\C^\wedge$ the Yoneda embedding, and let $\Fct^{p\ell}((\C^\wedge)^{\op},\A)$ be the category of functors from $(\C^\wedge)^{\op}$ to $\A$ commuting with small projective limits. Then the functors 
 $$
 \begin{tikzcd}
-\oo{Fct}^{pl}((\C^\wedge)^{\op},\A)\ar[yshift=0.7ex]{r}{(h^{\op})_*}&\oo{Fct}(\C^{\op},\A)\ar[yshift=-0.7ex]{l}{(h^{\op})^\ddagger}
+\Fct^{pl}((\C^\wedge)^{\op},\A)\ar[yshift=0.7ex]{r}{(h^{\op})_*}&\Fct(\C^{\op},\A)\ar[yshift=-0.7ex]{l}{(h^{\op})^\ddagger}
 \end{tikzcd}
 $$
 are mutually quasi-inverse equivalences. 
 
-Let $F$ be in $\oo{Fct}((\C^\wedge)^{\op},\A)$. Assume $(A_i)$ is a projective system in $(\C^\wedge)^{\op}$, or, equivalently, $(A_i)$ is an inductive system in $\C^\wedge$. In particular $(F(A_i))$ is a projective system in $\A$. 
+Let $F$ be in $\Fct((\C^\wedge)^{\op},\A)$. Assume $(A_i)$ is a projective system in $(\C^\wedge)^{\op}$, or, equivalently, $(A_i)$ is an inductive system in $\C^\wedge$. In particular $(F(A_i))$ is a projective system in $\A$. 
 
-Then $F$ is in $\oo{Fct}^{p\ell}((\C^\wedge)^{\op},\A)$ if and only if the following condition holds: 
+Then $F$ is in $\Fct^{p\ell}((\C^\wedge)^{\op},\A)$ if and only if the following condition holds: 
 
 For any system $(A_i)$ as above, the natural morphism 
 $$
@@ -4388,7 +4388,7 @@ We leave the verification of these claims to the reader.
 
 \subsection{Remark 7.4.5 (p.~163)}\label{745}
 
-In this section we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ is as the \emph{second} variable.
+In this section we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
 
 Let $\cc S$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pageref{737} implies that the functors 
 $$
@@ -4407,12 +4407,12 @@ $$
 %
 \begin{equation}\label{rccs}
 \begin{tikzcd}
-R_{\cc S}\big(\Hom_\C(X,\ \ )\big)(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C(X,Y)\ar[leftrightarrow]{d}&R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
-&\Hom_{\C_{\cc S}}(X,Y),
+R_{\cc S}\oo H_\C(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{{\cc S}\times{\cc S}^{\op}}\oo H_\C(X,Y)\ar[leftrightarrow]{d}&R_{{\cc S}^{\op}}\oo H_\C(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
+&\oo H_{\C_{\cc S}}(X,Y),
 \end{tikzcd}
 \end{equation}
 %
-the horizontal arrows are the natural maps, and the other arrows are the above bijections, then \eqref{rccs} commutes and all its arrows are bijective.
+where we have written $\oo H$ for $\Hom$ to save space, the horizontal arrows are the natural maps, and the other arrows are the above bijections, then \eqref{rccs} commutes and all its arrows are bijective.
 
 %%%%
 
@@ -7070,7 +7070,7 @@ in $\A_c$. As $H(\Mc(\id_X))\simeq0$, $\pp$ is a qis by Lemma~\ref{sl2}.
 
 \subsection{Brief Comments}
 
-\begin{s}%\label{q337}
+\begin{s}
 P.~337. Theorem 13.4.1 suggests the following question: 
 
 Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
@@ -7101,23 +7101,23 @@ $$
 \Hom_{\oo K(\C)}:\oo K(\C)\times\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
 
-\nn give rise to the diagram% following commutative diagram of functorial isomorphisms:
+\nn give rise to the diagram 
 %
 \begin{equation}\label{r0hom}
 \begin{tikzcd}
-R^0(\Hom_\C^\bu(X,\ \ ))(Y)\ar[leftrightarrow]{d}\ar{r}&
-R^0\Hom_\C^\bu(X,Y)\ar[leftrightarrow]{d}&
-R^0(\Hom_\C^\bu(\ \ ,Y))(X)\ar{l}\ar[leftrightarrow]{d}\\ 
+R^0\oo H_\C^\bu(X,\ \ )(Y)\ar[leftrightarrow]{d}\ar{r}&
+R^0\oo H_\C^\bu(X,Y)\ar[leftrightarrow]{d}&
+R^0\oo H_\C^\bu(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{d}\\ 
 %
-R(\Hom_{\oo K(\C)}(X,\ \ ))(Y)\ar[leftrightarrow]{dr}\ar{r}&
-R\Hom_{\oo K(\C)}(X,Y)\ar[leftrightarrow]{d}&
-R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
+R\oo H_{\oo K(\C)}(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&
+R\oo H_{\oo K(\C)}(X,Y)\ar[leftrightarrow]{d}&
+R\oo H_{\oo K(\C)}(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
 %
-&\Hom_{\oo D(\C)}(X,Y),
+&\oo H_{\oo D(\C)}(X,Y),
 \end{tikzcd}
 \end{equation}
 %
-where the horizontal arrows are the natural maps and the other arrows are the natural bijections, and where 
+where we have written $\oo H$ for $\Hom$ to save space, and where the horizontal arrows are the natural maps and the other arrows are the natural bijections, and where 
 $$
 R(\Hom_{\oo K(\C)}(X,\ \ ))(Y),\quad R\Hom_{\oo K(\C)}(X,Y),\quad R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)
 $$ 
