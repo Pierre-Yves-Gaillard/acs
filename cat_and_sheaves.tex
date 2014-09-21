@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0378)
+% about "categories and sheaves" (version-0379)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -758,11 +758,11 @@ Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\e
 
 The Yoneda Lemma says that $(F,X)$\--universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
-\begin{df}[universal element]\label{ue2} 
-Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
+\begin{df}[co-universal element]\label{ue2} 
+Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$\--{\em co-universal element}\index{co-universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mapsto F(f)(u)$ is bijective. 
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$\--universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
+The Yoneda Lemma says that $(F,X)$\--co-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a {\em representation of} $F$ {\em by} $X$.
 
 %%
 
@@ -1125,7 +1125,7 @@ If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diag
 $$
 (X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)
 $$
-such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element\index{universal element} (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element (see Definition~\ref{ue} p.~\pageref{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element means that for each $Y$ in $\C$ the map 
@@ -1142,10 +1142,10 @@ If $\alpha:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive l
 $$
 (X,p)\in\Ob(\C)\times\Hom_{\C^I}(\alpha,\Delta(X))
 $$
-such that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element. For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+such that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pageref{ue2}). For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 
-Recall that the condition that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--universal element means that for each $Y$ in $\C$ the map 
+Recall that the condition that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ the map 
 \begin{equation}\label{cue}
 \Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\circ p
 \end{equation}
