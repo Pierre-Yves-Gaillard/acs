@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0380)
+% about "categories and sheaves" (version-0381)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1247,19 +1247,17 @@ $$
 
 \begin{proof} $\then$: Straightforward.
 
-\nn$\si$: Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $p\in\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a $\Hom_{\C^\C}(\id_\C,\Delta(\ ))$\--co-universal element  (see Definition~\ref{ue2} p.~\pageref{ue2}), and let $X$ be an object of $\C$. It suffices to show 
+\nn$\si$: Let $\Delta:\C\to\C^\C$ be the diagonal functor, let $p\in\Hom_{\C^\C}(\id_\C,\Delta(T))$ be a $(\Hom_{\C^\C}(\id_\C,\Delta(\ )),T)$\--co-universal element  (see Definition~\ref{ue2} p.~\pageref{ue2}). Recall that this means that, for each object $X$ of $\C$, the map 
+$$
+\pp_X:\Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\Delta(X)),\quad f\mapsto\Delta(f)\circ p 
+$$ 
+is bijective. Let $X$ be an object of $\C$. It suffices to show 
 %
 \begin{equation}\label{2111ets}
 \Hom_\C(X,T)=\{p_X\}.
 \end{equation}
-% 
-By definition of $T$ and $p$, the map 
-$$
-\Hom_\C(T,T)\to\Hom_{\C^\C}(\id_\C,\Delta(T)),\quad f\mapsto\Delta(f)\circ p 
-$$ 
-is bijective. 
 
-Claim: the inverse bijection is $\theta\mapsto\theta_T$. 
+Claim: the inverse of $\pp_T$ is $\theta\mapsto\theta_T$. 
 
 For any $\theta$ in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ and any $Y$ in $\C$ we have $\theta_T\circ p_Y=\theta_Y$, and thus $\Delta(\theta_T)\circ p=\theta$, which implies the claim. 
 
