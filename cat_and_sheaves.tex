@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0381)
+% about "categories and sheaves" (version-0382)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -1261,7 +1261,17 @@ Claim: the inverse of $\pp_T$ is $\theta\mapsto\theta_T$.
 
 For any $\theta$ in $\Hom_{\C^\C}(\id_\C,\Delta(T))$ and any $Y$ in $\C$ we have $\theta_T\circ p_Y=\theta_Y$, and thus $\Delta(\theta_T)\circ p=\theta$, which implies the claim. 
 
-The claim implies in particular 
+In other words, we have 
+$$
+\begin{tikzcd} 
+\Hom_\C(T,T)\ar[yshift=0.7ex]{rr}{\pp_T=\Delta(?)\circ p}&&\Hom_{\C^\C}(\id_\C,\Delta(T)).\ar[yshift=-0.7ex]{ll}{\pp_T^{-1}=?_T}
+\end{tikzcd}
+$$ 
+This implies 
+$$
+\pp_T(\id_T)=\Delta(\id_T)\circ p=\id_{\Delta(T)}\circ p=p=\pp_T(\pp_T^{-1}(p))=\pp_T(p_T),
+$$ 
+and thus 
 %
 \begin{equation}\label{it=pt}
 \id_T=p_T.
