@@ -1,4 +1,4 @@
-% about "categories and sheaves" (version-0382)
+% about "categories and sheaves" (version-0383)
 % old version:
 % https://docs.google.com/document/d/1n47WZ7Ka9hSBzIXCBkboFPYzhe6lHJdQZ3QZliwOs_4/edit
 \documentclass[12pt]{article}
@@ -12,7 +12,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \addtolength{\parskip}{.5\baselineskip}
@@ -1302,6 +1302,49 @@ This follows from Lemma~\ref{l2111} above and Lemma 1.4.10 p.~26 of the book.
 %
 
 \begin{s}
+Lemma 2.1.15 p.~42. Here is a complement, will be used in \S\ref{17115ps} p.~\pageref{17115ps}. Let $I$ be a small category with disjoint hom-sets, let $\alpha,\beta:I\to\C$ be two functors, and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. 
+
+\begin{thm}\label{fgd}
+The natural map 
+$$
+\Hom_{\Fct(I,\C)}(\alpha,\beta)\to\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\circ U^i,\beta\circ U^i)
+$$ 
+is bijective.
+\end{thm}
+
+\begin{proof}
+View 
+$$
+\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\circ U^i,\beta\circ U^i)
+$$ 
+as a subset $S$ of 
+$$
+P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\alpha(j),\beta(j)).
+$$ 
+Let $x=(x_{i,i\to j})$ be in $P$. This just means that each $x_{i,i\to j}$ is a morphism $\alpha(j)\to\beta(j)$. Then $x$ belongs to $S$ if and only if the following two conditions hold:
+
+\nn(a) For all $i$ in $I$ the family $(x_{i,i\to j})_{i\to j}$ is in 
+$$
+\Hom_{\Fct(I^i,\C)}(\alpha\circ U^i,\beta\circ U^i),
+$$ 
+that is, for all diagram $i\to j\to k$ in $I$, the square 
+$$
+\begin{tikzcd}
+\alpha(j)\ar{rr}{x_{i,i\to j}}\ar{d}[swap]{\alpha(j\to k)}&&\beta(j)\ar{d}{\beta(j\to k)}\\ 
+\alpha(k)\ar{rr}[swap]{x_{i,i\to j\to k}}&&\beta(k)
+\end{tikzcd}
+$$
+commutes.
+
+\nn(b) We have $x_{i,i\to j\to k}=x_{j,j\to k}$ for all diagram $i\to j\to k$ in $I$. 
+
+\nn This implies clearly that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\alpha$ to $\beta$.
+\end{proof}
+\end{s}
+
+%
+\begin{comment}
+\begin{s}
 P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115ps} p.~\pageref{17115ps}: 
 
 If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j^X$ the forgetful functor from $\C^X$ to $\C$, then we have
@@ -1401,6 +1444,7 @@ G(X)\ar{r}[swap]{G(y)}&G(Y)\ar{r}[swap]{\id_{G(Y)}}&G(Y).
 \end{tikzcd}
 $$
 \end{s}
+\end{comment}
 
 %
 
@@ -7879,7 +7923,7 @@ P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (1
 $$
 \Hom_{\oo{PSh}(X,\A)}(F,G)\simeq\lim_{U\in\C_X}\cc Hom_{\oo{PSh}(X,\A)}(F,G)(U).
 $$
-This follows from \eqref{17115mod} p.~\pageref{17115mod}. 
+This follows from Theorem~\ref{fgd} p.~\pageref{fgd}. %\eqref{17115mod} p.~\pageref{17115mod}. 
 \end{s} 
 
 %
