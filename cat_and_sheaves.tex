@@ -1208,14 +1208,9 @@ exists in $\C$. Then $\colim_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\
 P.~40, Proposition 2.1.10 (stated on p.~\pageref{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
 %
 \begin{prop}\label{2.1.10b}
-Let 
-$$
-\begin{tikzcd}
-I\ar{r}{\alpha}&\A\ar{d}[swap]{G}\ar{r}{F}&\B\\
-&\C
-\end{tikzcd}
-$$
-be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
+Let $
+\C\overset G\longleftarrow\A\overset F\longrightarrow\B
+$ be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
 $$
 \Hom_\B(F(\ ),Y)\simeq\Hom_\C(G(\ ),Z)
 $$
@@ -1223,7 +1218,7 @@ in $\A^\wedge$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 %
 \begin{proof}
-We have for any $Y$ in $\B$ 
+We have for any functor $\alpha:I\to\A$ any object $Y$ in $\B$ 
 $$ 
 \Hom_\B\left(F\left(\colim\alpha\right),Y\right)\simeq
 \Hom_\C\left(G\left(\colim\alpha\right),Z\right)
