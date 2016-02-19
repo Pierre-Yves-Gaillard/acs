@@ -14,7 +14,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \addtolength{\parskip}{.5\baselineskip}
@@ -55,6 +55,7 @@
 \newcommand{\J}{\mathcal J}
 \newcommand{\M}{\mathcal M}
 \newcommand{\SSS}{\mathcal S}
+\newcommand{\R}{\mathcal R}
 \newcommand{\U}{\mathcal U}
 \newcommand{\V}{\mathcal V}
 \newcommand{\Cat}{\mathbf{Cat}}
@@ -1341,111 +1342,8 @@ commutes.
 \end{proof}
 \end{s}
 
-%
-\begin{comment}
-\begin{s}
-P.~43, end of Section~2.1. One could add the following observation, which will be used in \S\ref{17115ps} p.~\pageref{17115ps}: 
-
-If $\A$ and $\C$ are categories, and, if, for each $X$ in $\C$, we denote by $\oo j^X$ the forgetful functor from $\C^X$ to $\C$, then we have
-%
-\begin{equation}\label{17115mod}
-\Hom_{\Fct(\C,\A)}(F,G)\simeq\lim_{X\in\C}\Hom_{\Fct(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X).
-\end{equation}
-
-The following point is implicit in the definition of the right hand side of \eqref{17115mod}: To a morphism $f:X\to Y$ in $\C$ we attach a map 
-$$
-\Hom_{\Fct(\C^X,\A)}(F\circ\oo j^X,G\circ\oo j^X)\to\Hom_{\Fct(\C^Y,\A)}(F\circ\oo j^Y,G\circ\oo j^Y)
-$$ 
-by sending $\theta:F\circ\oo j^X\to G\circ\oo j^X$ to the horizontal composition $\theta*(\circ f)$ (see Definition~\ref{dil1} p.~\pageref{dil1}): 
-$$
-\begin{tikzcd}
-%
-\A&{}&\C^X\ar{ll}{}[near start,swap]{G\circ\oo j^X}&{}&\C^Y\ar{ll}{}[near start,swap]{\circ f}\\ 
-%
-\A&\ar{u}{\theta}&\C^X\ar{ll}{}[near start]{F\circ\oo j^X}&\ar{u}{\circ f}&\C^Y.\ar{ll}{}[near start]{\circ f}
-%
-\end{tikzcd}
-$$
-
-Let us spell out the proof of \eqref{17115mod}: 
-
-Let $L$ and $R$ be the left and right-hand sides of \eqref{17115mod}. 
-
-The maps $\ell\mapsto\ell*\oo j^X$, where $*$ denotes horizontal composition (see Definition~\ref{dil1} p.~\pageref{dil1}), induce a map $f:L\to R$:
-$$
-\begin{tikzcd}
-%
-\A&{}&\C\ar{ll}{}[near start,swap]{G}&{}&\C^X\ar{ll}{}[near start,swap]{\oo j^X}\\ 
-%
-\A&\ar{u}{\ell}&\C\ar{ll}{}[near start]{F}&\ar{u}{\oo j^X}&\C^X.\ar{ll}{}[near start]{\oo j^X}
-%
-\end{tikzcd}
-$$  
-Concretely, to a family 
-$$
-\ell=\left(F(X)\xr{\ell_X}G(X)\right)_X\in L
-$$
-we attach the family 
-$$
-r:=\left(F(Y)\xr{\ell_Y}G(Y)\right)_{X,y:X\to Y}\in R.
-$$
-
-Conversely, to a family 
-%
-\begin{equation}\label{r_X}
-r=(r_X)_X=\Big(\big(r_{X,y:X\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X\in R
-\end{equation}
-% 
-we attach the family
-%
-\begin{equation}\label{rid_X}
-\ell:=\big(r_{\id_X:X\to X}:F(X)\to G(X)\big)_X.
-\end{equation}
-% 
-We easily check that the assignment $r\mapsto\ell$ defines a map $g:R\to L$, and that $f$ and $g$ are mutually inverse bijections. The key point is that a family 
-$$
-\Big(\big(r_{X,y:X\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X
-$$ 
-as above belongs to $R$ if and only if, for all diagram 
-$$
-X\xr fY\xr zZ
-$$ 
-in $\C$, we have  
-%
-\begin{equation}\label{Y,z:Yto Z}
-r_{Y,z:Y\to Z}\circ F(z)=G(z)\circ r_{X,f:X\to Y}:
-\end{equation}
-
-$$
-\begin{tikzcd}
-F(X)\ar{r}{F(f)}&F(Y)\ar{d}[swap]{r_{X,f:X\to Y}}\ar{r}{F(z)}&F(Z)\ar{d}{r_{Y,z:Y\to Z}}\\ 
-G(X)\ar{r}[swap]{G(f)}&G(Y)\ar{r}[swap]{G(z)}&G(Z).
-\end{tikzcd}
-$$
-
-For instance, to verify that the composition $R\to L\to R$ is the identity of $R$, we start with a family $r$ as in \eqref{r_X}, we form the family $\ell$ given by \eqref{rid_X}, and we show that the family 
-$$
-\Big(\big(r_{Y,\id_Y:Y\to Y}:F(Y)\to G(Y)\big)_{y:X\to Y}\Big)_X
-$$ 
-coincides with $r$ by observing that the diagram 
-$$
-X\xr yY\xr{\id_Y}Y
-$$  
-gives rise, by \eqref{Y,z:Yto Z}, to the equality 
-$$
-r_{Y,\id_Y:Y\to Y}=r_{X,y:X\to Y}:
-$$
-
-$$
-\begin{tikzcd}
-F(X)\ar{r}{F(y)}&F(Y)\ar{d}[swap]{r_{X,y:X\to Y}}\ar{r}{\id_{F(Y)}}&F(Y)\ar{d}{r_{Y,\id_Y:Y\to Y}}\\ 
-G(X)\ar{r}[swap]{G(y)}&G(Y)\ar{r}[swap]{\id_{G(Y)}}&G(Y).
-\end{tikzcd}
-$$
-\end{s}
-\end{comment}
-
-%
+% removed
+% https://docs.google.com/document/d/1ydcLZ0o0IQjew7DRTL5J8BFQ_9V9fc56CfpscjLnrUE/edit
 
 \begin{s}\label{fpl}
 P.~50, Corollary 2.2.11. We also have:
@@ -1510,7 +1408,7 @@ exists in $\C$ for all $i$ in $I$. Then $\pp^\dagger(\beta)$ exists and we have
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then 
 $\pp^\dagger$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dagger$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\circ\pp^\dagger$. 
 \end{thm}
-The proof in the book is divided into three Steps, called (a), (b), and (c). 
+The proof in the book is divided into three steps, called (a), (b), and (c). 
 
 %
 
@@ -8439,6 +8337,17 @@ P.~437, Theorem 18.1.6 (v). If $X$ is a site, if $R$ a ring, if $F$ and $G$ are 
 
 %
 
+\begin{s}\label{pshab}
+P.~436, Lemma 18.1.4. Note that $\PSh(\R)$ is abelian, that $\Mod(\R)$ is an additive subcategory of $\PSh(\R)$, and that the functors
+$$
+\begin{tikzcd}
+\Mod(\R)\ar[yshift=0.7ex,hook]{r}&\PSh(\R)\ar[yshift=-0.7ex]{l}{(\cdot)^a}\end{tikzcd}
+$$ 
+are additive.
+\end{s} 
+
+%
+
 \begin{s} 
 P.~437, proof of Theorem 18.1.6 (v). We prove 
 $$
@@ -8728,15 +8637,15 @@ is exact. Then $P$ is a flat $\cc R$-module.
 (Recall that the notation $?|_U$ is defined in Notation 17.6.13 (ii) p.~428 of the book.)
 
 \begin{proof}
-Consider a monomorphism $M'\mono M$ of right $\cc R$-modules and put 
+Consider a monomorphism $M'\mono M$ of right $\cc R$-modules. It suffices to prove that the sheaf 
 $$ 
-K:=\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P).
+K:=\Ker(M'\otimes_{\cc R}P\to M\otimes_{\cc R}P)
 $$ 
-It suffices to prove $K\simeq0$. Let $K_0$ be the presheaf defined by 
+of $k_X$-modules over $X$ vanishes. Let $K_0$ be the presheaf of $k_X$-modules over $X$ defined by 
 $$
 K_0(U):=\Ker\Big(M'(U)\otimes_{\cc R(U)}P(U)\to M(U)\otimes_{\cc R(U)}P(U)\Big),
 $$ 
-let $U$ be an object of $\C_X$, let $s$ be an element of $K_0(U)$, and let $\overline s$ be the image of $s$ in $K(U)$. We shall prove $\overline s=0$. By Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book, $K$ is the sheaf associated to $K_0$. Hence, as $U$ and $s$ are arbitrary, Equality $\overline s=0$ will imply that the natural morphism $K_0\to K$ vanishes. By (17.4.12) p.~421 of the book, this vanishing will entail $K\simeq0$, and, thus, the lemma. Let us record this observation: 
+let $U$ be an object of $\C_X$, let $s$ be an element of $K_0(U)$, and let $\overline s$ be the image of $s$ in $K(U)$. We shall prove $\overline s=0$. By \S\ref{pshab} p.~\pageref{pshab} above, Definition 18.2.2 p.~439 and Theorem 17.4.7 (iv) p.~421 of the book, $K$ is the sheaf associated to $K_0$. Hence, as $U$ and $s$ are arbitrary, Equality $\overline s=0$ will imply that the natural morphism $K_0\to K$ vanishes. By (17.4.12) p.~421 of the book, this vanishing will entail $K\simeq0$, and, thus, the lemma. Let us record this observation: 
 %
 \begin{equation}\label{s=0il}
 \text{Equality $\overline s=0$ implies the lemma.}
