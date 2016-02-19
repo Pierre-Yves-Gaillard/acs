@@ -8622,6 +8622,17 @@ $$
 In particular, \eqref{lij2} p.~\pageref{lij2} implies $h\circ f=0$. 
 \end{proof} 
 
+\begin{lem}\label{rff'}
+If $F$ and $F'$ are two $\R$-modules of finite rank, then the natural map
+$$
+\Hom_\R(F,F')\to\Hom_{\Gamma(X,\R)}(\Gamma(X,F),\Gamma(X,F'))
+$$ 
+is bijective. (Recall that $\Gamma(X,F)$ is defined just before Proposition 17.6.14 p.~429 of the book.)
+\end{lem}
+\begin{proof}
+It suffices to prove the statement when $F=F'=\R$, which is easy.
+\end{proof}
+
 Let us turn to the proof of Lemma 18.5.3 p. 447. [As already pointed out, there are two typos in the proof: in (18.5.3) $M'|_U$ and $M|_U$ should be $M'(U)$ and $M(U)$, and, after the second display on p.~448, $s_1\in((\cc R^{\op})^{\oplus m}\otimes_{\cc R}P)(U)$ should be $s_1\in((\cc R^{\op})^{\oplus n}\otimes_{\cc R}P)(U)$.] 
 
 For the reader's convenience we state (in a slightly different form) Lemma 18.5.3 (see Notation 17.6.13 p.~428 of the book): 
@@ -8675,7 +8686,7 @@ s\in M'(U)\otimes_{\cc R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\cc R(U)}P(U)
 % 
 satisfies $g_1(u)=s$ and $\psi_1(u)=f_1(t)$. 
 
-The commutative diagram \eqref{d447} also induces the commutative diagram 
+By Lemma~\ref{rff'} p.~\pageref{rff'}, the commutative diagram \eqref{d447} also induces the commutative diagram 
 $$
 \Delta:=\left\{
 \begin{tikzcd}
