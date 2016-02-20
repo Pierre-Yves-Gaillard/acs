@@ -926,7 +926,7 @@ We call $*$ the {\em horizontal composition}.\index{horizontal composition} We c
 
 %%
 
-\subsection{Equalities (1.5.8) and (1.5.9) (p.~29)}
+\subsection{Equalities (1.5.8) and (1.5.9) p.~29}
 
 Warning: many authors designate $\varepsilon$ by $\eta$ and $\eta$ by $\varepsilon$. 
 
@@ -938,8 +938,11 @@ $$
 \C\ar[xshift=-.7ex]{d}[swap]{L}\\ 
 \C'.\ar[xshift=.7ex]{u}[swap]{R}
 \end{tikzcd}
+$$ 
+Recall that $\ee_X\in\Hom_\C(X,RLX)$ and $\eta_{X'}\in\Hom_{\C'}(LRX',X')$ for all $X$ in $\C$ and all $X'$ in $\C'$: 
 $$
-
+\ee_X:X\to RLX,\quad\eta_{X'}:LRX'\to X'.
+$$ 
 Using Notation~\ref{nhove} p.~\pageref{nhove}, Equalities (1.5.8) and (1.5.9) become respectively 
 
 \begin{equation}\label{158}
@@ -1069,8 +1072,10 @@ $$
 
 \subsubsection{Proofs}
 
-For the reader's convenience we prove \eqref{158} p.~\pageref{158} and \eqref{159} p.~\pageref{159}. It clearly suffices to prove \eqref{158}. 
-
+For the reader's convenience we prove \eqref{158} p.~\pageref{158} and \eqref{159} p.~\pageref{159}. It clearly suffices to prove \eqref{158}. Recall that \eqref{158} claims 
+$$
+(\eta*L)\circ(L*\ee)=L.
+$$ 
 Let us denote the functorial mutually inverse bijections defining the adjunction by 
 %
 \begin{equation}\label{bij}
@@ -1091,7 +1096,10 @@ $$
 $$ 
 and we have 
 $$
-\id_{LX}\overset{\text{(a)}}{=}\lambda_{RLX,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}\lambda_{RLX,LX}(\ee_X)\overset{\text{(c)}}{=}\big(\lambda_{RLX,LX}\circ(\circ\ee_X)\big)(\id_{RLX})
+\id_{LX}\overset{\text{(a)}}{=}
+\lambda_{RLX,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}
+\lambda_{RLX,LX}(\ee_X)\overset{\text{(c)}}{=}
+\big(\lambda_{X,LX}\circ(\circ\ee_X)\big)(\id_{RLX})
 $$
 $$
 \overset{\text{(d)}}{=}\Big(\big(\circ L(\ee_X)\big)\circ\lambda_{RLX,LX}\Big)(\id_{RLX})\overset{\text{(e)}}{=}\lambda_{RLX,LX}(\id_{RLX})\circ L(\ee_X),
@@ -1107,8 +1115,8 @@ the successive equalities being justified as follows:
 (d) follows from the commutative square 
 $$
 \begin{tikzcd}
-\Hom_\C(RLX,RLX)\ar{d}[swap]{\circ\ee}\ar{rr}{\lambda_{RLX,LX}}&&\Hom_{\C'}(LRLX,LX)\ar{d}{\circ L(\ee)}\\
-\Hom_\C(RLX,RLX)\ar{rr}[swap]{\lambda_{X,LX}}&&\Hom_{\C'}(LRLX,LX),
+\Hom_\C(RLX,RLX)\ar{d}[swap]{\circ\ee_X}\ar{rr}{\lambda_{RLX,LX}}&&\Hom_{\C'}(LRLX,LX)\ar{d}{\circ L(\ee_X)}\\
+\Hom_\C(X,RLX)\ar{rr}[swap]{\lambda_{X,LX}}&&\Hom_{\C'}(LX,LX),
 \end{tikzcd}
 $$ 
 
@@ -7696,8 +7704,10 @@ If $f:X\to Y$ is a morphism of presites, \index{morphism of presites} then we ke
 \begin{equation}\label{ttau}
 f^t:\C_Y\to\C_X,\quad f^\tau:(\C_Y)^{\op}\to(\C_X)^{\op}.
 \end{equation}
-In other words, we set $f^\tau:=(f^t)^{\op}$. 
-
+In other words, we set 
+$$
+\boxed{f^\tau:=(f^t)^{\op}}
+$$ 
 We keep the same definition of left exactness (based on $f^t$) of $f:X\to Y$ as in the book.
 
 The motivation for introducing the functor $f^\tau$ can be described as follows: The diagram 
@@ -7729,7 +7739,7 @@ P.~406. Recall that, in the first line of the second display, $(\C_Y)^\wedge$ sh
 For the sake of emphasis, we state: 
 
 \begin{prop}\label{p406}
-The functor $\fthat$ commutes with small inductive limits (Proposition 2.7.1 p.~62 of the book, Remark~\ref{272} p.~\pageref{272}). Moreover, if $f$ is left exact, then $\fthat$ is exact (Corollary 3.3.19 p.~87 of the book).
+The functor $\fthat$ commutes with small inductive limits (Proposition 2.7.1 p.~62 of the book, Remark~\ref{272} p.~\pageref{272} above). Moreover, if $f$ is left exact, then $\fthat$ is exact (Corollary 3.3.19 p.~87 of the book).
 \end{prop}
 
 If $f:X\to Y$ is a continuous map of small topological spaces, if $B$ is in $(\oo{Op}_Y)^\wedge$ and $U$ in $\oo{Op}_X$, then \eqref{efhat1} gives 
@@ -7743,7 +7753,11 @@ If $f:X\to Y$ is a continuous map of small topological spaces, if $B$ is in $(\o
 %
 
 \begin{s}\label{fdagger} 
-P.~407. Let $f:X\to Y$ be a morphism of presites and let $\A$ be a category admitting small inductive and projective limits. In the notation of \eqref{ttau} p.~\pageref{ttau}, we set $f^\dagger:=(f^\tau)^\dagger$ and $f^\ddagger:=(f^\tau)^\ddagger$: 
+P.~407. Let $f:X\to Y$ be a morphism of presites and let $\A$ be a category admitting small inductive and projective limits. In the notation of \eqref{ttau} p.~\pageref{ttau}, we set 
+$$
+\boxed{f_*:=(f^\tau)_*}\quad,\quad\boxed{f^\dagger:=(f^\tau)^\dagger}\quad,\quad\boxed{f^\ddagger:=(f^\tau)^\ddagger}\quad,
+$$ 
+yielding
 $$
 f^\dagger,f^\ddagger:\PSh(X\A)\to\PSh(Y,\A).
 $$
