@@ -1312,9 +1312,9 @@ Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p
 
 \begin{thm}\label{fgd}
 The natural map 
-$$
+\begin{equation}\label{hficab}
 \Hom_{\Fct(I,\C)}(\alpha,\beta)\to\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\circ U^i,\beta\circ U^i)
-$$ 
+\end{equation} 
 is bijective.
 \end{thm}
 
@@ -1344,7 +1344,11 @@ commutes.
 
 \nn(b) We have $x_{i,i\to j\to k}=x_{j,j\to k}$ for all diagram $i\to j\to k$ in $I$. 
 
-\nn This implies clearly that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\alpha$ to $\beta$.
+\nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\alpha$ to $\beta$. We get a map 
+\begin{equation}\label{liifii}
+\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\circ U^i,\beta\circ U^i)\to\Hom_{\Fct(I,\C)}(\alpha,\beta),
+\end{equation} 
+and we leave it to the reader to check that \eqref{hficab} and \eqref{liifii} are inverse bijections.
 \end{proof}
 \end{s}
 
@@ -1462,7 +1466,7 @@ for all $\alpha:I\to\C$. As pointed out in the book, this can also be achieved b
 To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f$ is a morphism in $\C$ from $X$ to $Y$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\circ f'\circ u$:
 $$
 \begin{tikzcd}
-X\ar{d}{u}\ar{r}{f}&Y\\ 
+X\ar{d}[swap]{u}\ar{r}{f}&Y\\ 
 X'\ar{r}[swap]{g}&Y'\ar{u}[swap]{v}.
 \end{tikzcd}
 $$ 
@@ -1501,17 +1505,18 @@ $$
 $$
 \delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C\big(\beta(j),\alpha(\pp(j'))\big). 
 $$ 
-As we have 
-$$
-\Hom_{\C^I}\big(\pp^\dagger(\beta),\alpha\big)\xr\sim\lim\gamma,\quad
-\Hom_{\C^J}\big(\beta,\pp_*(\alpha)\big)\xr\sim\lim\delta. 
-$$ 
-by \eqref{2115}, it suffices to show 
-%
+The existence of a natural bijection 
+\begin{equation}\label{nb1}
+\Hom_{\C^J}\big(\beta,\pp_*(\alpha)\big)\xr\sim\lim\delta
+\end{equation} 
+follows immediately from \eqref{2115}. Using \eqref{2115} again, it is easy to see that we also have a natural bijection 
+\begin{equation}\label{nb2}
+\Hom_{\C^I}\big(\pp^\dagger(\beta),\alpha\big)\xr\sim\lim\gamma.
+\end{equation} 
+By \eqref{nb1} and \eqref{nb2}, it suffices to show 
+% 
 \begin{lem}
-%
 There is a natural bijection $\lim\gamma\simeq\lim\delta$. 
-%
 \end{lem} 
 %
 \begin{proof}
