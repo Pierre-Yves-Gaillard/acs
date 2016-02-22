@@ -1709,7 +1709,7 @@ To prove \eqref{pddb2}, set
 $$
 M':=\lim_{(M\to R)\in J^M}R^{\op}=\lim_{(x:R\to M)\in(J^{\op})_M}R^{\op}\in\C, 
 $$ 
-and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb2}. 
+and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\simeq\pp^\ddagger(\beta)(M)$, it suffices to prove $M'\simeq M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \eqref{pddb2}. 
 
 %% 
 
@@ -1887,13 +1887,13 @@ and let $p:\alpha\to\Delta(A)$ be the tautological morphism in $(\C^\wedge)^{\C_
 p_{X\to A}:=(X\to A)
 \end{equation}
 % 
-for all $X\to A$ in $\C_A$. The claim is that the map 
+for all $X\to A$ in $\C_A$. Let $B$ be in $\C^\wedge$. The claim is that the map 
 $$
 \Hom_{\C^\wedge}(A,B)\to\Hom_{\Fct(\C_A,\C^\wedge)}(\alpha,\Delta(B)),\quad\theta\mapsto\Delta(\theta)\circ p
 $$ 
 is bijective. 
 
-Isomorphism \eqref{263b} can be decoded as follows: Consider the functor 
+Isomorphism \eqref{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
 $$
 \beta:\C_A\to\Set,\quad(X\to A)\mapsto\Hom_\C(Y,X), 
 $$ 
@@ -1901,23 +1901,23 @@ and let $q:\beta\to\Delta(A(Y))$ be the morphism in $(\Set)^{\C_A}$ defined by
 $$
 q_{X\to A}(Y\to X):=(Y\to X\to A)
 $$ 
-for all $X\to A$ in $\C_A$. The claim is that the map 
+for all $X\to A$ in $\C_A$. Let $S$ be in $\Set$. The claim is that the map 
 $$
 \Hom_{\Set}(A(Y),S)\to\Hom_{\Fct(\C_A,\Set)}(\beta,\Delta(S)),\quad f\mapsto\Delta(f)\circ q
 $$ 
 is bijective. 
 
-Isomorphism \eqref{263c} can be decoded as follows: Consider the functor 
+Isomorphism \eqref{263c} can be decoded as follows: Let $B$ be in $\C^\wedge$, consider the functor 
 $$
-\gamma:(\C_A)^{\op}\to\Set,\quad(X\to A):=B(X),
+\gamma:(\C_A)^{\op}\to\Set,\quad(X\to A)\mapsto B(X),
 $$ 
-and let $r:\Delta(A(Y))\to\gamma$ be the morphism in $(\Set)^{\C_A}$ defined by 
+and let $r:\Delta(B(A))\to\gamma$ be the morphism in $(\Set)^{(\C_A)^{\op}}$ defined by 
 $$
 r_{X\to A}(A\to B):=(X\to A\to B)
 $$ 
-for all $X\to A$ in $\C_A$. The claim is that the map 
+for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$. The claim is that the map 
 $$
-\Hom_{\Set}(S,B(X))\to\Hom_{\Fct((\C_A)^{\op},\Set)}(\gamma,\Delta(S)),\quad g\mapsto r\circ\Delta(g)
+\Hom_{\Set}(S,B(A))\to\Hom_{\Fct((\C_A)^{\op},\Set)}(\Delta(S),\gamma),\quad g\mapsto r\circ\Delta(g)
 $$ 
 is bijective. 
 
