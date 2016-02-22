@@ -110,6 +110,7 @@
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\PSh}{PSh}
 \DeclareMathOperator{\Qis}{Qis}
+\DeclareMathOperator{\Sh}{Sh}
 %\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1561,11 +1562,11 @@ f:=\Psi_{\alpha,\pp^\dagger(\alpha)}:
 \Hom_{\C^I}\big(\pp^\dagger(\alpha),\pp^\dagger(\alpha)\big)\to
 \Hom_{\C^J}\big(\alpha,\pp_*(\pp^\dagger(\alpha))\big),
 $$
-and we must check that $f(\id_{\pp^\dagger(\alpha)})$ is an isomorphism. To this end, we will define 
+and we must check that $f(\id_{\pp^\dagger(\alpha)})$ is an isomorphism. To this end, we define 
 $$
-u:\pp_*(\pp^\dagger(\alpha))\to\alpha,
+u:\pp_*(\pp^\dagger(\alpha))\to\alpha
 $$
-and leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dagger(\alpha))})$ and $u$ are mutually inverse isomorphisms. As 
+as follows. Since 
 $$ 
 \Big(\pp_*\big(\pp^\dagger(\alpha)\big)\Big)(j):=\pp^\dagger(\alpha)(\pp(j)):=\colim_{\pp(j')\to\pp(j)}\alpha(j'),
 $$
@@ -1573,7 +1574,7 @@ we must define
 $$
 u\Big(\pp(j')\to\pp(j)\Big):\alpha(j')\to\alpha(j),
 $$
-that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it.
+that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it. We leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dagger(\alpha))})$ and $u$ are mutually inverse isomorphisms.
 
 %%
 
@@ -1588,8 +1589,9 @@ $$
 $$ 
 by the smallest equivalence relation $\sim$ satisfying the following condition: If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\pp(j'),i)$, then 
 $$
-(x,u'\circ\pp(s))\sim(\beta(s)(x),u'). 
-$$
+p_j(x,u'\circ\pp(s))\sim p_{j'}(\beta(s)(x),u'),
+$$ 
+where $p_j$ is the $j$-coprojection. 
 \end{cor}
 
 \begin{proof}
@@ -1659,7 +1661,7 @@ To prove \eqref{pdb1}, set
 $$
 M':=\colim_{(x:R\to M)\in J_M}R\in\C, 
 $$ 
-and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\dagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_x:R\to M$ by setting $\Phi_x:=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb1}. 
+and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\simeq\pp^\ddagger(\beta)(M)$, it suffices to prove $M'\simeq M$. We define a family of linear maps $\Phi_x:R\to M$ by setting $\Phi_x:=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \eqref{pdb1}. 
 
 We claim that the functor $\pp^\ddagger(\beta):I\to\C$ satisfies 
 %
@@ -8090,7 +8092,9 @@ Lemma 16.2.8 p.~398 of the book, and its proof, show that $F^a$ does {\em not} d
 %
 
 \begin{s} 
-P.~422, the first sentence of the proof of Theorem 17.4.7 (iv) follows from Corollary~\ref{bre} p.~\pageref{bre}. 
+P.~422. The first sentence of the proof of Theorem 17.4.7 (iv) follows from Corollary~\ref{bre} p.~\pageref{bre}. One could add:
+
+If $\A$ is abelian, then $\PSh(X,\A)$ and $\Sh(X,\A)$ are abelian, and $\iota:\Sh(X,\A)\to\PSh(X,\A)$ and $(\ )^a:\PSh(X,\A)\to\Sh(X,\A)$ are additive
 \end{s}
 
 %
