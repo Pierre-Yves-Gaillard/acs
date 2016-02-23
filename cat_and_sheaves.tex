@@ -1933,27 +1933,33 @@ Let $\alpha:I\to\A$ be a functor, let $A$ in $\A$ be the inductive limit of $\al
 \end{lem} 
 
 \begin{proof}
-If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. 
-
-Let $b=(b:B\to A)$ be an object of $\A_A$. We must check that there is a canonical bijection
-%
-\begin{equation}\label{1}
-\Hom_{\A_A}(a,b)\simeq\Hom_{(\A_A)^I}(\alpha',\Delta(b)).
-\end{equation}
-%
-We have a canonical bijection
-%
-\begin{equation}\label{2}
-\Hom_\A(A,B)\simeq\Hom_{\A^I}(\alpha,\Delta(B))
-\end{equation}
-%
-and inclusions 
+If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. Let $p\in\Hom_{\A^I}(\alpha,\Delta(A))$ be the coprojection. For any $C$ in $\A$ the map 
+$$
+f_C:\Hom_\A(A,C)\to\Hom_{\A^I}(\alpha,\Delta(C)),\quad u\mapsto\Delta(u)\circ p
+$$ 
+is bijective. Let $b=(b:B\to A)$ be an object of $\A_A$. We have the inclusions 
 $$
 \Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
 %
 \Hom_{(\A_A)^I}(\alpha',\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
+$$ 
+Let $u$ be in $\Hom_\A(A,B)$. It suffices to check 
 $$
-It is straightforward to check that (\ref{2}) induces (\ref{1}).
+f_B(u)\in\Hom_{(\A_A)^I}(\alpha',\Delta(b))\ssi u\in\Hom_{\A_A}(a,b),
+$$ 
+that is 
+$$
+\Delta(b)\circ\Delta(u)\circ p=p\ssi\Delta(b\circ u)=\id_{\Delta(A)},
+$$ 
+that is 
+$$
+\Delta(b\circ u)\circ p=p\ssi\Delta(b\circ u)=\id_{\Delta(A)},
+$$ 
+that is 
+$$
+f_A(b\circ u)=f_A(\id_A)\ssi b\circ u=\id_A.
+$$ 
+But this follows from the injectivity of $f_A$.
 \end{proof}
 \end{s}
 
