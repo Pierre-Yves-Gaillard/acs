@@ -1991,7 +1991,10 @@ $$
 \Hom_{\C'}(F(X),X')\simeq\Hom_{\C^\wedge_\U}\big(h_\U(X),\Hom_{\C'}(F(\ ),X')\big)
 $$
 $$
-\simeq\lim\Hom_{\C^\wedge_\U}\big(h_\U\circ\alpha,\Hom_{\C'}(F(\ ),X')\big)\simeq\lim\Hom_{\C'}(F\circ\alpha,X').
+\simeq\lim\Hom_{\C^\wedge_\U}\big(h_\U\circ\alpha,\Hom_{\C'}(F(\ ),X')\big)\simeq\lim\Hom_{\C'}(F\circ\alpha,X')
+$$ 
+$$
+\simeq\Hom_{\C'}(\colim F\circ\alpha,X').
 $$
 \end{proof}
 \end{s}
@@ -2022,11 +2025,11 @@ $$
 &\A,
 \end{tikzcd}
 $$
-where $I$ is a small category and $\widetilde F$ is defined by 
+where $I$ is a small category and $\widetilde F$ satisfies 
 $$
-\widetilde F(A):=\colim_{(X\to A)\in\C_A}F(X). 
-$$
-Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
+\widetilde F(A)\simeq\colim_{(X\to A)\in\C_A}F(X)
+$$ 
+for all $A$ in $\C^\wedge$. Let us rewrite the proof of the fact that the natural morphism $\colim\widetilde F(\alpha)\to\widetilde F\left(\colim\alpha\right)$ is an isomorphism. 
 
 By Proposition 2.1.10 p. 40 of the book (stated on p.~\pageref{2.1.10} below as Proposition~\ref{2.1.10}), it suffices to check that the functor $G:\A\to\C^\wedge$ defined by 
 $$
@@ -2103,18 +2106,12 @@ Consider the diagram
 \end{equation}
 %
 We have 
-%
-\begin{align*} 
-%
-h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to A))\in((\C^\wedge)_A)^{B\to A}}F(U)\\ \\ 
-%
-&\simeq\lim_{(B\to U)\in\C^B}F(U)\\ \\ 
-%
-&\simeq h(\C)^\ddagger(F)(B)\\ \\ 
-%
-&\simeq h(\C)^\ddagger(F)\Big(j\big((\C^\wedge)_A\big)(B\to A)\Big). 
-% 
-\end{align*} 
+%\begin{align*}h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to A))\in((\C^\wedge)_A)^{B\to A}}F(U)\\ \\ &\simeq\lim_{(B\to U)\in\C^B}F(U)\\ \\ &\simeq h(\C)^\ddagger(F)(B)\\ \\ &\simeq h(\C)^\ddagger(F)\Big(j\big((\C^\wedge)_A\big)(B\to A)\Big).\end{align*} 
+
+$$h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))\simeq\lim_{((B\to A)\to(U\to A))\in((\C^\wedge)_A)^{B\to A}}F(U)$$
+
+$$\simeq\lim_{(B\to U)\in\C^B}F(U)\simeq h(\C)^\ddagger(F)(B)
+\simeq h(\C)^\ddagger(F)\Big(j\big((\C^\wedge)_A\big)(B\to A)\Big).$$ 
 \end{proof}
 
 %
