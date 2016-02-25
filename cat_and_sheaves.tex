@@ -2092,9 +2092,28 @@ for all $(B\to A)$ in $(\C^\wedge)_A$ and all $(U\to A)$ in $\C_A$. Moreover
 \end{equation} 
 and we have 
 \begin{equation}\label{lcom}
-\lambda\circ h(\C)_A\simeq h(\C_A).
+\lambda\circ h(\C)_A\simeq h(\C_A),
 \end{equation}
-(See Lemma 1.4.12 p.~26 of the book.) 
+that is, the diagram
+$$
+\begin{tikzcd}
+\C_A\ar{r}{h(\C)_A}\ar{rd}[swap]{h(\C)_A}&(\C^\wedge)_A\ar{d}{\lambda}\\ 
+&(\C_A)^\wedge
+\end{tikzcd}
+$$ 
+quasi-commutes. (See Lemma 1.4.12 p.~26 of the book.) 
+
+The statement below follows from Proposition 2.7.1 p.~62 of the book:
+
+\begin{prop}\label{271}
+Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits small inductive limits. Then the functor $h(\C)^\dagger F:\C^\wedge\to\A$ exists, commutes with small inductive limits and satisfies $h(\C)^\dagger F\circ h(\C)\simeq F$.
+\end{prop}
+
+For the reader's convenience we paste Lemma 2.1.13 (i) p.~41 of the book:
+
+\begin{lem}[Lemma 2.1.13 (i)]\label{2113}
+Let $I$ be a category. Assume that $\C$ admits inductive limits indexed by $I$, and that $A:\C^{\op}\to\Set$ commutes with projective limits indexed by $I$ (i.e. $A(\colim_{i\in I}X_i)\simeq\lim_{i\in I} A(X_i)$ for any inductive system $(X_i)_{i\in I}$ in $\C$). Then $\C_A$ admits inductive limits indexed by $I$ and $j(\C_A):\C_A\to\C$ commutes with such limits.
+\end{lem}
 
 We claim 
 
@@ -2120,11 +2139,11 @@ For $U$ in $\C$ and $U\to A$ in $\C_A$, we have
 
 $$h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(U\to A))\simeq F(U)$$
 
-\nn by \eqref{leq}, \eqref{lcom} and Proposition~2.7.1 (see p.~62 of the book). We also have 
+\nn by Proposition~\ref{271} and \eqref{lcom}. We also have 
 
 $$h(\C)^\ddagger(j((\C^\wedge)_A))(U\to A)\simeq F(U)$$
 
-\nn by Proposition~2.7.1. For $B$ in $\C^\wedge$ and $B\to A$ in $(\C^\wedge)_A$, we have 
+\nn by Proposition~\ref{271}. For $B$ in $\C^\wedge$ and $B\to A$ in $(\C^\wedge)_A$, we have 
 
 $$h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))$$
 
@@ -2136,7 +2155,7 @@ $$\overset{(\text c)}\simeq\colim_{(U\to B)\in\C_B}h(\C_A)^\ddagger(F\circ j(\C_
 
 $$\overset{(\text d)}\simeq\colim_{(U\to B)\in\C_B}F(U),$$
 
-\nn where (a) follows from \eqref{263a} p.~\pageref{263a}; (b) follows from Lemma 2.1.13 (i) p.~41 of the book; (c) follows from \eqref{leq}, \eqref{lcom} and Proposition~2.7.1 (see p.~62 of the book); and (d) follows from Proposition~2.7.1. A similar computation shows 
+\nn where (a) follows from \eqref{263a} p.~\pageref{263a}; (b) follows from Lemma~\ref{2113}; (c) follows from Proposition~\ref{271} and \eqref{leq}, \eqref{lcom}; and (d) follows from Proposition~\ref{271}. A similar computation shows 
 $$
 h(\C)^\ddagger(F)\circ j((\C^\wedge)_A)\simeq\colim_{(U\to B)\in\C_B}F(U).
 $$ 
@@ -2254,10 +2273,10 @@ $$\overset{(\text d)}\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\
 
 \nn where 
 (a) follows from \eqref{prepa4}; 
-(b) follows from \eqref{lcom} and Proposition~2.7.1 (see p.~62 of the book);  
-(c) follows from Lemma 2.1.13 (i) p.~41 of the book; 
+(b) follows from Proposition~\ref{271} and \eqref{lcom};  
+(c) follows from Lemma~\ref{2113}; 
 (d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pageref{dsbc}); and 
-(e) follows from Proposition~2.7.1.
+(e) follows from Proposition~\ref{271}.
 \end{proof}
 
 %% 
