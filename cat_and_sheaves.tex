@@ -2066,8 +2066,6 @@ and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
 
 %%
 
-\begin{comment}
-
 \subsection{Three Formulas}
 
 Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pageref{prepa5} to prove Proposition 17.1.9 p.~409 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$: 
@@ -2088,13 +2086,23 @@ such that
 \lambda(B\to A)(U\to A)=\Hom_{(\C^\wedge)_A}(U\to A,B\to A)
 \end{equation} 
 %
-for all $(B\to A)$ in $(\C^\wedge)_A$ and all $(U\to A)$ in $\C_A$. (See Lemma 1.4.12 p.~26 of the book.) We claim 
-%
+for all $(B\to A)$ in $(\C^\wedge)_A$ and all $(U\to A)$ in $\C_A$. Moreover 
+\begin{equation}\label{leq}
+\text{$\lambda$ is an equivalence,}
+\end{equation} 
+and we have 
+\begin{equation}\label{lcom}
+\lambda\circ h(\C)_A\simeq h(\C_A).
+\end{equation}
+(See Lemma 1.4.12 p.~26 of the book.) 
+
+We claim 
+
 \begin{equation}\label{prepa1}
 h(\C_A)^\ddagger(F\circ j(\C_A))\circ\lambda\simeq h(\C)^\ddagger(F)\circ j((\C^\wedge)_A)
 \end{equation}
-%
-(see the diagram \eqref{qcd} below).
+
+\nn(see the diagram \eqref{qcd} below).
 
 \begin{proof} 
 Consider the diagram 
@@ -2106,14 +2114,37 @@ Consider the diagram
 (\C_A)^\wedge\ar{uurr}[swap]{h(\C_A)^\ddagger(F\circ j(\C_A))}&&(\C^\wedge)_A\ar{ll}{\lambda}\ar{rr}[swap]{j((\C^\wedge)_A)}&&\C^\wedge.\ar{uull}[swap]{h(\C)^\ddagger(F)}
 \end{tikzcd}
 \end{equation}
-%
-We have 
 %\begin{align*}h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))&\simeq\lim_{((B\to A)\to(U\to A))\in((\C^\wedge)_A)^{B\to A}}F(U)\\ \\ &\simeq\lim_{(B\to U)\in\C^B}F(U)\\ \\ &\simeq h(\C)^\ddagger(F)(B)\\ \\ &\simeq h(\C)^\ddagger(F)\Big(j\big((\C^\wedge)_A\big)(B\to A)\Big).\end{align*} 
 
-$$h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))\simeq\lim_{((B\to A)\to(U\to A))\in((\C^\wedge)_A)^{B\to A}}F(U)$$
+For $U$ in $\C$ and $U\to A$ in $\C_A$, we have 
 
-$$\simeq\lim_{(B\to U)\in\C^B}F(U)\simeq h(\C)^\ddagger(F)(B)
-\simeq h(\C)^\ddagger(F)\Big(j\big((\C^\wedge)_A\big)(B\to A)\Big).$$ 
+$$h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(U\to A))\simeq F(U)$$
+
+\nn by \eqref{leq}, \eqref{lcom} and Proposition~2.7.1 p.~62 of the book. We also have 
+
+$$h(\C)^\ddagger(j((\C^\wedge)_A))(U\to A)\simeq F(U)$$
+
+\nn by Proposition~2.7.1 p.~62 of the book.
+
+For $B$ in $\C^\wedge$ and $B\to A$ in $(\C^\wedge)_A$, we have 
+
+$$h(\C_A)^\ddagger(F\circ j(\C_A))(\lambda(B\to A))$$
+
+$$\overset{(\text a)}\simeq h(\C_A)^\ddagger(F\circ j(\C_A))\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\to A\right)\right)$$
+
+$$\overset{(\text b)}\simeq h(\C_A)^\ddagger(F\circ j(\C_A))\left(\lambda\left(\icolim_{(U\to B)\in\C_B}(U\to A)\right)\right)$$
+
+$$\overset{(\text c)}\simeq\colim_{(U\to B)\in\C_B}h(\C_A)^\ddagger(F\circ j(\C_A))(U\to A)$$
+
+$$\overset{(\text d)}\simeq\colim_{(U\to B)\in\C_B}F(U),$$
+
+\nn where (a) follows from \eqref{263a} p.~\pageref{263a}; (b) follows from Lemma 2.1.13 (i) p.~41 of the book; (c) follows from \eqref{leq}, \eqref{lcom} and Proposition~2.7.1 (see p.~62 of the book); and (d) Proposition~2.7.1. 
+
+A similar computation shows 
+$$
+h(\C)^\ddagger(F)\circ j((\C^\wedge)_A)\simeq\colim_{(U\to B)\in\C_B}F(U).
+$$ 
+This proves \eqref{prepa1}.
 \end{proof}
 
 %
@@ -2216,38 +2247,22 @@ j^\dagger(G)(U)\simeq(h_A)^\dagger(G)(\lambda(U\times A\to A)).
 \end{equation} 
 %
 For $B$ in $\C^\wedge$ we get 
-$$
-h^\dagger(j^\dagger(G))(B)
-$$
-$$
-\simeq\colim_{(U\to B)\in\C_B}j^\dagger(G)(U)
-$$ 
-%
-\begin{equation}\label{prepa4a}
-\simeq\colim_{(U\to B)\in\C_B}(h_A)^\dagger(G)(\lambda(U\times A\to A))
-\end{equation} 
-\begin{equation}\label{prepa4b}
-\simeq(h_A)^\dagger(G)\left(\lambda\left(\colim_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)
-\end{equation} 
-%
-\begin{equation}\label{prepa4b'}
-\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)\right)
-\end{equation}
-\begin{equation}\label{prepa4c}
-\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\times A\to A\right)\right)
-\end{equation} 
-%
-$$
-\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)),
-$$ 
-where 
-\eqref{prepa4a} follows from \eqref{prepa4}, 
-\eqref{prepa4b} follows from the fact that $(h_A)^\dagger(G)$ commutes with small inductive limits by Proposition~2.7.1 p.~62 of the book (see also \S\ref{c271b} p.~\pageref{c271b}),  
-\eqref{prepa4b'} follows from Lemma 2.1.13 (i) p.~41 of the book, and 
-\eqref{prepa4c} follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pageref{dsbc}). 
-\end{proof}
 
-\end{comment}
+$$h^\dagger(j^\dagger(G))(B)\simeq\colim_{(U\to B)\in\C_B}j^\dagger(G)(U)\overset{(\text a)}\simeq\colim_{(U\to B)\in\C_B}(h_A)^\dagger(G)(\lambda(U\times A\to A))$$
+
+$$\overset{(\text b)}\simeq(h_A)^\dagger(G)\left(\lambda\left(\colim_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)$$
+
+$$\overset{(\text c)}\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\colim_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)\right)$$
+
+$$\overset{(\text d)}\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\times A\to A\right)\right)\overset{(\text e)}\simeq(h_A)^\dagger(G)(\lambda(B\times A\to A)),$$ 
+
+\nn where 
+(a) follows from \eqref{prepa4}; 
+(b) follows from \eqref{lcom} and Proposition~2.7.1 (see p.~62 of the book);  
+(c) follows from Lemma 2.1.13 (i) p.~41 of the book; 
+(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pageref{dsbc}); and 
+(e) follows from Proposition~2.7.1.
+\end{proof}
 
 %% 
 
@@ -7835,7 +7850,9 @@ $$
 
 %
 
-%\begin{s}\label{prepa5}P.~409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{prepa1}, \eqref{prepa2} p.~\pageref{prepa2}, and \eqref{prepa3} p.~\pageref{prepa3}.\end{s}
+\begin{s}\label{prepa5}
+P.~409, Proposition 17.1.9 follows immediately from \eqref{prepa1} p.~\pageref{prepa1}, \eqref{prepa2} p.~\pageref{prepa2}, and \eqref{prepa3} p.~\pageref{prepa3}.
+\end{s}
 
 %
 
