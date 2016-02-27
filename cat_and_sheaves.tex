@@ -14,7 +14,7 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{datetime}
 \usepackage{amsthm}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \addtolength{\parskip}{.5\baselineskip}
@@ -1098,8 +1098,8 @@ $$
 and we have 
 $$
 \id_{LX}\overset{\text{(a)}}{=}
-\lambda_{RLX,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}
-\lambda_{RLX,LX}(\ee_X)\overset{\text{(c)}}{=}
+\lambda_{X,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}
+\lambda_{X,LX}(\ee_X)\overset{\text{(c)}}{=}
 \big(\lambda_{X,LX}\circ(\circ\ee_X)\big)(\id_{RLX})
 $$
 $$
@@ -1923,7 +1923,7 @@ is bijective.
 
 %%
 
-\subsection{Brief Commments}
+\subsection{Brief Comments}
 
 \begin{s} 
 P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
@@ -2068,15 +2068,16 @@ and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
 
 \subsection{Three Formulas}
 
-Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pageref{prepa5} to prove Proposition 17.1.9 p.~409 of the book. Let $\C$ be a small category and $A$ an object of $\C^\wedge$. In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$: 
+Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pageref{prepa5} to prove Proposition 17.1.9 p.~409 of the book. 
+
+In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wedge$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$: 
 $$
 h(\C):\C\to\C^\wedge,\qquad j(\C_A):\C_A\to\C.
 $$
-Let $\A$ be a category admitting small inductive and projective limits. 
 
-\subsubsection{First Formula}
+\subsubsection{Preliminaries}
 
-Let $F:\C\to\A$ be a functor. Recall that there is a unique functor 
+Let $\C$ be a category and $A$ an object of $\C^\wedge$. Recall that there is a unique functor 
 $$
 \lambda:(\C^\wedge)_A\to(\C_A)^\wedge
 $$ 
@@ -2114,6 +2115,30 @@ Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits sma
 %\begin{lem}[Lemma 2.1.13 (i)]\label{2113}
 %Let $I$ be a category. Assume that $\C$ admits inductive limits indexed by $I$, and that $A:\C^{\op}\to\Set$ commutes with projective limits indexed by $I$ (i.e. $A(\colim_{i\in I}X_i)\simeq\lim_{i\in I} A(X_i)$ for any inductive system $(X_i)_{i\in I}$ in $\C$). Then $\C_A$ admits inductive limits indexed by $I$ and $j(\C_A):\C_A\to\C$ commutes with such limits.
 %\end{lem}
+
+The following lemma will be useful:
+
+\begin{lem}\label{cc}
+Let $I\xrightarrow\alpha\C\xrightarrow F\C'$ be functors, let $X$ be in $\C$ and $X'$ in $\C'$, let $f:F(X)\to X'$ be a morphism, assume $X\simeq\colim\alpha$, let $p:\alpha\to\Delta X$ be the coprojection, define $\beta:I\to\C_{X'}$ by $\beta(i):=(\alpha(i),f\circ F(p_i))$:
+$$
+F(\alpha(i))\xrightarrow{F(p_i)}F(X)\xrightarrow fX'.
+$$ 
+Then $(X,f)\simeq\colim\beta$, the coprojection $q:\beta\to\Delta(X,f)$ being given by $q_i:=p_i$ for all $i$ in $I$.
+\end{lem}
+\begin{proof}
+Recall that $\Delta$ denotes the appropriate diagonal functor. Let 
+$$
+(Y,g)\in\C_{X'},\quad h\in\Hom_{\Fct(I,\C_{X'})}(\beta,\Delta(Y,g));
+$$ 
+let $h'$ in $\Hom_{\Fct(I,\C)}(\beta,\Delta Y)$ be defined by the condition $h'_i=h_i\in\Hom_\C(\alpha(i),Y)$ for all $i$ in $I$; and let $k$ be in $\Hom_\C(X,Y)$. Then we have 
+$$
+\Delta k\circ q=h\ssi\Delta k\circ p=h'.
+$$
+\end{proof}
+
+Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wedge$, and assume that $\C$ is small and that $\A$ admits small inductive and projective limits.
+
+\subsubsection{First Formula}
 
 We claim 
 
@@ -2155,7 +2180,7 @@ $$\overset{(\text c)}\simeq\colim_{(U\to B)\in\C_B}h(\C_A)^\ddagger(F\circ j(\C_
 
 $$\overset{(\text d)}\simeq\colim_{(U\to B)\in\C_B}F(U),$$
 
-\nn where (a) follows from \eqref{263a} p.~\pageref{263a}; (b) is obvious; (c) follows from Proposition~\ref{271} and \eqref{leq}, \eqref{lcom}; and (d) follows from Proposition~\ref{271}. A similar computation shows 
+\nn where (a) follows from \eqref{263a} p.~\pageref{263a}; (b) follows from Lemma~\ref{cc}; (c) follows from Proposition~\ref{271} and \eqref{leq}, \eqref{lcom}; and (d) follows from Proposition~\ref{271}. A similar computation shows 
 $$
 h(\C)^\ddagger(F)\circ j((\C^\wedge)_A)\simeq\colim_{(U\to B)\in\C_B}F(U).
 $$ 
@@ -2274,7 +2299,7 @@ $$\overset{(\text d)}\simeq(h_A)^\dagger(G)\left(\lambda\left(\left(\icolim_{(U\
 \nn where 
 (a) follows from \eqref{prepa4}; 
 (b) follows from Proposition~\ref{271} and \eqref{lcom};  
-(c) is obvious; 
+(c) follows from Lemma~\ref{cc}; 
 (d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pageref{dsbc}); and 
 (e) follows from Proposition~\ref{271}.
 \end{proof}
