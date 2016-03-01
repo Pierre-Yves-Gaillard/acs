@@ -68,6 +68,7 @@
 \nc{\Set}{\mathbf{Set}}
 \nc{\pt}{\{\text{pt}\}}
 
+\nc{\al}{\alpha}
 \nc{\ci}{\circ}\nc{\rd}{\circ}
 \nc{\dg}{\dagger}\nc{\ddg}{\ddagger}
 \nc{\ee}{\varepsilon}
@@ -86,6 +87,7 @@
 \nc{\si}{\Leftarrow}
 \nc{\ssi}{\Leftrightarrow}
 \nc{\then}{\Rightarrow}
+\nc{\tm}{\times}
 \nc{\wdg}{\wedge}\nc{\wg}{\wedge}
 \nc{\xl}{\xleftarrow}
 \nc{\xr}{\xrightarrow}
@@ -185,7 +187,7 @@ I have rewritten some of the proofs in the book. Of course, I'm not suggesting t
 
 I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Théorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de résultats'' in the above book because I don't understand it.) 
 
-The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\alpha_i$ for $\alpha(i)$, $fg$ for $f\ci g$, and some parenthesis might be omitted. We write $\bigsqcup$\index{$\bigsqcup$} instead of $\coprod$\index{$\coprod$} for the coproduct\index{coproduct}. 
+The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\al_i$ for $\al(i)$, $fg$ for $f\ci g$, and some parenthesis might be omitted. We write $\bigsqcup$\index{$\bigsqcup$} instead of $\coprod$\index{$\coprod$} for the coproduct\index{coproduct}. 
 
 Following a suggestion of Pierre Schapira's, we shall denote projective limits\index{projective limit} by $\lim$\index{$\lim$} instead of $\plim$\index{$\plim$}, and inductive limits\index{inductive limit} by $\col$\index{$\col$} instead of $\ilim$\index{$\ilim$}. 
 
@@ -256,7 +258,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''.
 \end{s}
 
-\nn$*$ P.~74, last four lines: $\alpha$ should be replaced with $\pp$.
+\nn$*$ P.~74, last four lines: $\al$ should be replaced with $\pp$.
 
 \nn$*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
 
@@ -296,7 +298,7 @@ $$
 
 \nn$*$ P.~128, proof of Theorem 5.3.9,, just before the ``q.e.d.'': Corollary 5.3.5 should be Proposition 5.3.5.
 
-\nn$*$ P.~132, Line 2: It would be slightly better to replace ``for small and filtrant categories $I$ and $J$'' with ``for small and filtrant categories $I$ and $J$, and functors $\alpha:I\to\C,\beta:J\to\C$''.
+\nn$*$ P.~132, Line 2: It would be slightly better to replace ``for small and filtrant categories $I$ and $J$'' with ``for small and filtrant categories $I$ and $J$, and functors $\al:I\to\C,\beta:J\to\C$''.
 
 \nn$*$ P.~132, Line 3: $\Hom_\C(A,B)$ should be $\Hom_{\Ind(\C)}(A,B)$.
 
@@ -304,18 +306,18 @@ $$
 
 \nn$*$ P.~132, Corollary 6.1.6: The following fact is implicit. Let $\C\xr{F}\C'\xr{G}\C''$ be functors, let $X'$ be in $\C'$, and assume that $G$ is fully faithful. Then the functor $\C_{X'}\to\C_{G(X')}$ induced by $G$ is an isomorphism.
 
-\nn$*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xr{\alpha}\C\xr{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\iso\col F(\alpha)$. Then $X\iso\col\alpha$. The proof is obvious.
+\nn$*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xr{\al}\C\xr{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\iso\col F(\al)$. Then $X\iso\col\al$. The proof is obvious.
 
 \nn$*$ P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.''
 
 \begin{s}\lb{s133ii} 
 P.~133. In Part (ii) of Proposition 6.1.9 the authors, I think, intended to write 
 $$
-``\ilim"(IF\ci\alpha)\xr\sim IF(``\ilim"\alpha)
+``\ilim"(IF\ci\al)\xr\sim IF(``\ilim"\al)
 $$
 instead of 
 $$
-IF(``\ilim"\alpha)\xr\sim``\ilim"(IF\ci\alpha). 
+IF(``\ilim"\al)\xr\sim``\ilim"(IF\ci\al). 
 $$ 
 \end{s}
 
@@ -325,9 +327,9 @@ $$
 
 \nn$*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. 
 
-\nn$*$ P.~136, last line: ``the cokernel of $(\alpha(i),\beta(i))$'' should be ``the cokernel of\linebreak $(\pp(i),\psi(i))$''. 
+\nn$*$ P.~136, last line: ``the cokernel of $(\al(i),\beta(i))$'' should be ``the cokernel of\linebreak $(\pp(i),\psi(i))$''. 
 
-\nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\alpha$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
+\nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\al$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
 \nn$*$ P.~141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
 
@@ -1183,44 +1185,44 @@ $$
 P.~36, Definition 2.1.2. 
 
 \begin{df}[projective limit]\lb{p}
-If $\alpha:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\alpha$ {\em in} $\C$ is a pair 
+If $\al:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
 $$
-(X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\alpha)
+(X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\al)
 $$
-such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\alpha(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 
-Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\alpha),X)$\--universal element means that for each $Y$ in $\C$ the map 
+Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\al),X)$\--universal element means that for each $Y$ in $\C$ the map 
 $$
-\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\alpha),\quad f\mapsto p\ci\Delta(f)
+\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\Delta(Y),\al),\quad f\mapsto p\ci\Delta(f)
 $$ 
 is bijective. Here is a picture:
 $$
-Y\xr fX,\quad\Delta(Y)\xr{\Delta(f)}\Delta(X)\xr{p}\alpha.
+Y\xr fX,\quad\Delta(Y)\xr{\Delta(f)}\Delta(X)\xr{p}\al.
 $$
 
 \begin{df}[inductive limit] 
-If $\alpha:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\alpha$ {\em in} $\C$ is a pair 
+If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\al$ {\em in} $\C$ is a pair 
 $$
-(X,p)\in\Ob(\C)\times\Hom_{\C^I}(\alpha,\Delta(X))
+(X,p)\in\Ob(\C)\times\Hom_{\C^I}(\al,\Delta(X))
 $$
-such that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\alpha(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+such that $p$ is a $(\Hom_{\C^I}(\al,\Delta(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
 
-Recall that the condition that $p$ is a $(\Hom_{\C^I}(\alpha,\Delta(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ the map 
+Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\Delta(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ the map 
 \begin{equation}\lb{cue}
-\Hom_\C(X,Y)\to\Hom_{\C^I}(\alpha,\Delta(Y)),\quad f\mapsto\Delta(f)\ci p
+\Hom_\C(X,Y)\to\Hom_{\C^I}(\al,\Delta(Y)),\quad f\mapsto\Delta(f)\ci p
 \end{equation}
 is bijective. Here is a picture:
 $$
-X\xr fY,\quad\alpha\xr{p}\Delta(X)\xr{\Delta(f)}\Delta(Y).
+X\xr fY,\quad\al\xr{p}\Delta(X)\xr{\Delta(f)}\Delta(Y).
 $$
 \end{s}
 
 %
 
 \begin{s}\lb{c38}
-P.~38, Proposition 2.1.6. Here is an example of a functor $\alpha:I\to\C^J$ such that $\col\alpha$ exists in $\C^J$ but there is a $j$ in $J$ such that $\col\ (\rho_j\ci\alpha)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly\index{Kelly}:%\medskip 
+P.~38, Proposition 2.1.6. Here is an example of a functor $\al:I\to\C^J$ such that $\col\al$ exists in $\C^J$ but there is a $j$ in $J$ such that $\col\ (\rho_j\ci\al)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly\index{Kelly}:%\medskip 
 %
 \begin{center}\href{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}
 \end{center}
@@ -1276,15 +1278,15 @@ in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 %
 \begin{proof}
-We have for any functor $\alpha:I\to\A$ any object $Y$ in $\B$ 
+We have for any functor $\al:I\to\A$ any object $Y$ in $\B$ 
 $$ 
-\Hom_\B\left(F\left(\col\alpha\right),Y\right)\iso
-\Hom_\C\left(G\left(\col\alpha\right),Z\right)
+\Hom_\B\left(F\left(\col\al\right),Y\right)\iso
+\Hom_\C\left(G\left(\col\al\right),Z\right)
 \xr\sim
-\Hom_\C\left(\col G(\alpha),Z\right)
+\Hom_\C\left(\col G(\al),Z\right)
 $$
 $$
-\xr\sim\lim \ \Hom_\C(G(\alpha),Z)\iso\lim \ \Hom_\B(F(\alpha),Y)\iso\Hom_\B(\col F(\alpha),Y),
+\xr\sim\lim \ \Hom_\C(G(\al),Z)\iso\lim \ \Hom_\B(F(\al),Y)\iso\Hom_\B(\col F(\al),Y),
 $$ 
 and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
 \end{proof}
@@ -1359,12 +1361,12 @@ This follows from Lemma~\ref{l2111} above and Proposition 1.4.10 p.~26 of the bo
 %
 
 \begin{s}
-Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. Let $I$ be a small category with disjoint hom-sets, let $\alpha,\beta:I\to\C$ be two functors, and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. 
+Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. Let $I$ be a small category with disjoint hom-sets, let $\al,\beta:I\to\C$ be two functors, and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. 
 
 \begin{thm}\lb{fgd}
 The natural map 
 \begin{equation}\lb{hficab}
-\Hom_{\Fct(I,\C)}(\alpha,\beta)\to\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\ci U^i,\beta\ci U^i)
+\Hom_{\Fct(I,\C)}(\al,\beta)\to\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\beta\ci U^i)
 \end{equation} 
 is bijective.
 \end{thm}
@@ -1372,32 +1374,32 @@ is bijective.
 \begin{proof}
 View 
 $$
-\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\ci U^i,\beta\ci U^i)
+\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\beta\ci U^i)
 $$ 
 as a subset $S$ of 
 $$
-P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\alpha(j),\beta(j)).
+P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\al(j),\beta(j)).
 $$ 
-Let $x=(x_{i,i\to j})$ be in $P$. This just means that each $x_{i,i\to j}$ is a morphism $\alpha(j)\to\beta(j)$. Then $x$ belongs to $S$ if and only if the following two conditions hold:
+Let $x=(x_{i,i\to j})$ be in $P$. This just means that each $x_{i,i\to j}$ is a morphism $\al(j)\to\beta(j)$. Then $x$ belongs to $S$ if and only if the following two conditions hold:
 
 \nn(a) For all $i$ in $I$ the family $(x_{i,i\to j})_{i\to j}$ is in 
 $$
-\Hom_{\Fct(I^i,\C)}(\alpha\ci U^i,\beta\ci U^i),
+\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\beta\ci U^i),
 $$ 
 that is, for all diagram $i\to j\to k$ in $I$, the square 
 $$
 \begin{tikzcd}
-\alpha(j)\ar{rr}{x_{i,i\to j}}\ar{d}[swap]{\alpha(j\to k)}&&\beta(j)\ar{d}{\beta(j\to k)}\\ 
-\alpha(k)\ar{rr}[swap]{x_{i,i\to j\to k}}&&\beta(k)
+\al(j)\ar{rr}{x_{i,i\to j}}\ar{d}[swap]{\al(j\to k)}&&\beta(j)\ar{d}{\beta(j\to k)}\\ 
+\al(k)\ar{rr}[swap]{x_{i,i\to j\to k}}&&\beta(k)
 \end{tikzcd}
 $$
 commutes.
 
 \nn(b) We have $x_{i,i\to j\to k}=x_{j,j\to k}$ for all diagram $i\to j\to k$ in $I$. 
 
-\nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\alpha$ to $\beta$. We get a map 
+\nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\al$ to $\beta$. We get a map 
 \begin{equation}\lb{liifii}
-\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\alpha\ci U^i,\beta\ci U^i)\to\Hom_{\Fct(I,\C)}(\alpha,\beta),
+\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\beta\ci U^i)\to\Hom_{\Fct(I,\C)}(\al,\beta),
 \end{equation} 
 and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inverse bijections.
 \end{proof}
@@ -1509,9 +1511,9 @@ We want to prove that $\pp^\dg$ defined by \qr{236} p.~\pr{236} is a functor. In
 
 The purpose of Step~(b) is to prove 
 \begin{equation}\lb{stepb}
-\Hom_{\C^I}(\pp^\dg(\beta),\alpha)\iso\Hom_{\C^J}(\beta,\pp_*(\alpha)) 
+\Hom_{\C^I}(\pp^\dg(\beta),\al)\iso\Hom_{\C^J}(\beta,\pp_*(\al)) 
 \end{equation} 
-for all $\alpha:I\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
+for all $\al:I\to\C$. As pointed out in the book, this can also be achieved by using Lemma 2.1.15 p.~42. Here is a sketch of the argument. We start with a reminder of Lemma 2.1.15. 
 
 To any category $\A$ we attach the category $\Mor_0(\A)$ defined as follows. The objects of $\Mor_0(\A)$ are the triples $(X,f,Y)$ such that $f$ is a morphism in $\C$ from $X$ to $Y$. The morphisms in $\Mor_0(\A)$ from $(X,f,Y)$ to $(X',f',Y')$ are the pairs $(u,v)$ with $u:X\to X'$, $v:Y'\to Y$, and $f=v\ci f'\ci u$:
 $$
@@ -1536,7 +1538,7 @@ is a functor from $\Mor_0(I)^{\op}$ to $\Set$, and there is a natural isomorphis
 Returning to \qr{stepb}, we have functors 
 $$
 \begin{tikzcd}
-J\ar{rr}{\pp}\ar{dr}[swap]{\beta}&&I\ar{dl}{\alpha}\\ 
+J\ar{rr}{\pp}\ar{dr}[swap]{\beta}&&I\ar{dl}{\al}\\ 
 &\C.
 \end{tikzcd}
 $$ 
@@ -1550,18 +1552,18 @@ $$
 $$ 
 is given by a triple of morphisms $j_1\to j_2,i_1\to i_2,i'_1\leftarrow i'_2$ such that the obvious diagram commutes. The category $N$ is $\Mor_0(J)$. Consider the functors 
 $$
-\gamma:M^{\op}\to\Set,\quad\Big(j,\pp(j)\to i\to i'\Big)\mapsto\Hom_\C\big(\beta(j),\alpha(i')\big), 
+\gamma:M^{\op}\to\Set,\quad\Big(j,\pp(j)\to i\to i'\Big)\mapsto\Hom_\C\big(\beta(j),\al(i')\big), 
 $$ 
 $$
-\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C\big(\beta(j),\alpha(\pp(j'))\big). 
+\delta:N^{\op}\to\Set,\quad(j\to j')\mapsto\Hom_\C\big(\beta(j),\al(\pp(j'))\big). 
 $$ 
 The existence of a natural bijection 
 \begin{equation}\lb{nb1}
-\Hom_{\C^J}\big(\beta,\pp_*(\alpha)\big)\xr\sim\lim\delta
+\Hom_{\C^J}\big(\beta,\pp_*(\al)\big)\xr\sim\lim\delta
 \end{equation} 
 follows immediately from \qr{2115}. Using \qr{2115} again, it is easy to see that we also have a natural bijection 
 \begin{equation}\lb{nb2}
-\Hom_{\C^I}\big(\pp^\dg(\beta),\alpha\big)\xr\sim\lim\gamma.
+\Hom_{\C^I}\big(\pp^\dg(\beta),\al\big)\xr\sim\lim\gamma.
 \end{equation} 
 By \qr{nb1} and \qr{nb2}, it suffices to show 
 % 
@@ -1572,23 +1574,23 @@ There is a natural bijection $\lim\gamma\iso\lim\delta$.
 \begin{proof}
 To define a map $\lim\gamma\to\lim\delta$, we attach, to a family 
 $$
-\big(\beta(j)\to\alpha(i')\big)_{\pp(j)\to i\to i'}
+\big(\beta(j)\to\al(i')\big)_{\pp(j)\to i\to i'}
 $$ 
-and to a morphism $j\to j'$, a morphism $\beta(j)\to\alpha(\pp(j'))$ by setting 
+and to a morphism $j\to j'$, a morphism $\beta(j)\to\al(\pp(j'))$ by setting 
 $$
 i=i'=\pp(j'),\quad(i\to i')=\id_{\pp(j')},
 $$ 
-and by taking as $\beta(j)\to\alpha(\pp(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $\lim\gamma\to\lim\delta$. To define a map $\lim\delta\to\lim\gamma$, we attach, to a family 
+and by taking as $\beta(j)\to\al(\pp(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $\lim\gamma\to\lim\delta$. To define a map $\lim\delta\to\lim\gamma$, we attach, to a family 
 $$
-\big(\beta(j)\to\alpha(\pp(j'))\big)_{j\to j'}
+\big(\beta(j)\to\al(\pp(j'))\big)_{j\to j'}
 $$ 
-and to a chain of morphisms $\pp(j)\to i\to i'$, a morphism $\beta(j)\to\alpha(i')$ by setting 
+and to a chain of morphisms $\pp(j)\to i\to i'$, a morphism $\beta(j)\to\al(i')$ by setting 
 $$
 j':=j,\quad(j\to j'):=\id_{j},
 $$ 
-and by taking as $\beta(j)\to\alpha(i')$ the composition 
+and by taking as $\beta(j)\to\al(i')$ the composition 
 $$
-\beta(j)\to\alpha(\pp(j))\to\alpha(i)\to\alpha(i'). 
+\beta(j)\to\al(\pp(j))\to\al(i)\to\al(i'). 
 $$ 
 We leave it to the reader to check that this defines indeed a map $\lim\delta\to\lim\gamma$, and that this map is inverse to the map constructed above.
 \end{proof}
@@ -1601,35 +1603,35 @@ In part (i) of their proof of Theorem 2.3.3 (i), the authors define a map
 %
 \begin{equation}\lb{e233i} 
 %
-\Psi_{\alpha,\beta}:
-\Hom_{\C^I}\big(\pp^\dg(\alpha),\beta\big)\to
-\Hom_{\C^J}\big(\alpha,\pp_*(\beta)\big),
+\Psi_{\al,\beta}:
+\Hom_{\C^I}\big(\pp^\dg(\al),\beta\big)\to
+\Hom_{\C^J}\big(\al,\pp_*(\beta)\big),
 %
 \end{equation} 
 %
 and show that it is bijective. In particular, we have a bijection 
 $$
-f:=\Psi_{\alpha,\pp^\dg(\alpha)}:
-\Hom_{\C^I}\big(\pp^\dg(\alpha),\pp^\dg(\alpha)\big)\to
-\Hom_{\C^J}\big(\alpha,\pp_*(\pp^\dg(\alpha))\big).
+f:=\Psi_{\al,\pp^\dg(\al)}:
+\Hom_{\C^I}\big(\pp^\dg(\al),\pp^\dg(\al)\big)\to
+\Hom_{\C^J}\big(\al,\pp_*(\pp^\dg(\al))\big).
 $$ 
 We claim that 
 \begin{equation}\lb{fip}
-f(\id_{\pp^\dg(\alpha)})\text{ is an isomorphism.}
+f(\id_{\pp^\dg(\al)})\text{ is an isomorphism.}
 \end{equation}
 To prove this, we define 
 $$
-u:\pp_*(\pp^\dg(\alpha))\to\alpha
+u:\pp_*(\pp^\dg(\al))\to\al
 $$
 as follows. Since 
 $$ 
-\Big(\pp_*\big(\pp^\dg(\alpha)\big)\Big)(j):=\pp^\dg(\alpha)(\pp(j)):=\col_{\pp(j')\to\pp(j)}\alpha(j'),
+\Big(\pp_*\big(\pp^\dg(\al)\big)\Big)(j):=\pp^\dg(\al)(\pp(j)):=\col_{\pp(j')\to\pp(j)}\al(j'),
 $$
 we must define 
 $$
-u\Big(\pp(j')\to\pp(j)\Big):\alpha(j')\to\alpha(j),
+u\Big(\pp(j')\to\pp(j)\Big):\al(j')\to\al(j),
 $$
-that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\alpha(j')\to\alpha(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it. We leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dg(\alpha))})$ and $u$ are mutually inverse isomorphisms. This proves \qr{fip}. The fact that $\pp^\dg$ is fully faithful follows now from Proposition 1.5.6 (ii) p.~29 of the book.
+that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\al(j')\to\al(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it. We leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dg(\al))})$ and $u$ are mutually inverse isomorphisms. This proves \qr{fip}. The fact that $\pp^\dg$ is fully faithful follows now from Proposition 1.5.6 (ii) p.~29 of the book.
 
 %%
 
@@ -1934,9 +1936,9 @@ Clearly, \qr{263b} implies \qr{263a} and \qr{263c}, and the proof of \qr{263b} i
 
 Isomorphism \qr{263a} can be decoded as follows: Consider the functor 
 $$
-\alpha:\C_A\to\C^\wg,\quad(X\to A)\mapsto X,
+\al:\C_A\to\C^\wg,\quad(X\to A)\mapsto X,
 $$ 
-and let $p:\alpha\to\Delta(A)$ be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
+and let $p:\al\to\Delta(A)$ be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
 %
 \begin{equation}\lb{pxa}
 p_{X\to A}:=(X\to A)
@@ -1944,7 +1946,7 @@ p_{X\to A}:=(X\to A)
 % 
 for all $X\to A$ in $\C_A$. Let $B$ be in $\C^\wg$. The claim is that the map 
 $$
-\Hom_{\C^\wg}(A,B)\to\Hom_{\Fct(\C_A,\C^\wg)}(\alpha,\Delta(B)),\quad\theta\mapsto\Delta(\theta)\ci p
+\Hom_{\C^\wg}(A,B)\to\Hom_{\Fct(\C_A,\C^\wg)}(\al,\Delta(B)),\quad\theta\mapsto\Delta(\theta)\ci p
 $$ 
 is bijective. 
 
@@ -1984,23 +1986,23 @@ is bijective.
 P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
 
 \begin{lem} 
-Let $\alpha:I\to\A$ be a functor, let $A$ in $\A$ be the inductive limit of $\alpha$, let $\alpha':I\to\A_A$ be the obvious functor, and let $a$ in $\A_A$ be the identity of $A$. Then the inductive limit of $\alpha'$ is $a$. 
+Let $\al:I\to\A$ be a functor, let $A$ in $\A$ be the inductive limit of $\al$, let $\al':I\to\A_A$ be the obvious functor, and let $a$ in $\A_A$ be the identity of $A$. Then the inductive limit of $\al'$ is $a$. 
 \end{lem} 
 
 \begin{proof}
-If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. Let $p\in\Hom_{\A^I}(\alpha,\Delta(A))$ be the coprojection. For any $C$ in $\A$ the map 
+If $I$ and $\C$ are categories, we write $\Delta$ for the diagonal functor from $\C$ to $\C^I$. Let $p\in\Hom_{\A^I}(\al,\Delta(A))$ be the coprojection. For any $C$ in $\A$ the map 
 $$
-f_C:\Hom_\A(A,C)\to\Hom_{\A^I}(\alpha,\Delta(C)),\quad u\mapsto\Delta(u)\ci p
+f_C:\Hom_\A(A,C)\to\Hom_{\A^I}(\al,\Delta(C)),\quad u\mapsto\Delta(u)\ci p
 $$ 
 is bijective. Let $b=(b:B\to A)$ be an object of $\A_A$. We have the inclusions 
 $$
 \Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
 %
-\Hom_{(\A_A)^I}(\alpha',\Delta(b))\subset\Hom_{\A^I}(\alpha,\Delta(B)).
+\Hom_{(\A_A)^I}(\al',\Delta(b))\subset\Hom_{\A^I}(\al,\Delta(B)).
 $$ 
 Let $u$ be in $\Hom_\A(A,B)$. It suffices to check 
 $$
-f_B(u)\in\Hom_{(\A_A)^I}(\alpha',\Delta(b))\ssi u\in\Hom_{\A_A}(a,b),
+f_B(u)\in\Hom_{(\A_A)^I}(\al',\Delta(b))\ssi u\in\Hom_{\A_A}(a,b),
 $$ 
 that is 
 $$
@@ -2023,22 +2025,22 @@ But this follows from the injectivity of $f_A$.
 \begin{s} 
 P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a universe is given. Here we make an exception to this rule. 
 
-Let $\alpha:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\alpha\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wg_\U$.
+Let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\al\to\Delta(X)$ be a morphism in $\C^I$ (where $\Delta(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wg_\U$.
 
 \begin{df}[universal inductive limit]\lb{uil}
-If the natural map $\col\Hom_\C(Y,\alpha)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit\index{universal inductive limit} of $\alpha$, and that $\col\alpha$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+If the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 \begin{prop}[Proposition 2.6.4 p. 61]\lb{puil}
 The following conditions are equivalent (recall that no universe is given {\em a priori}):
 
-\nn{\em(a)} $X$ is a universal inductive limit of $\alpha$,
+\nn{\em(a)} $X$ is a universal inductive limit of $\al$,
 
-\nn{\em(b)} $\col h_\U\ci\alpha\iso h_\U(X)$ for \emph{some} universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
+\nn{\em(b)} $\col h_\U\ci\al\iso h_\U(X)$ for \emph{some} universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category,
 
-\nn{\em(c)} $\col h_\U\ci\alpha\iso h_\U(X)$ for \emph{any} universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
+\nn{\em(c)} $\col h_\U\ci\al\iso h_\U(X)$ for \emph{any} universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, 
 
-\nn{\em(d)} $\col F\ci\alpha\iso F(X)$ for \emph{any} functor $F:\C\to\C'$. 
+\nn{\em(d)} $\col F\ci\al\iso F(X)$ for \emph{any} functor $F:\C\to\C'$. 
 \end{prop}
 
 \begin{proof} The implications (a)$\ssi$(b)$\ssi$(c)$\si$(d) are clear. To prove (c)$\then$(d), we choose a universe $\U$ such that $I$ is $\U$-small, and $\C$ and $\C'$ are $\U$-categories, and we note
@@ -2046,10 +2048,10 @@ $$
 \Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg_\U}\big(h_\U(X),\Hom_{\C'}(F(\ ),X')\big)
 $$
 $$
-\iso\lim\Hom_{\C^\wg_\U}\big(h_\U\ci\alpha,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\alpha,X')
+\iso\lim\Hom_{\C^\wg_\U}\big(h_\U\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X')
 $$ 
 $$
-\iso\Hom_{\C'}(\col F\ci\alpha,X').
+\iso\Hom_{\C'}(\col F\ci\al,X').
 $$
 \end{proof}
 \end{s}
@@ -2076,7 +2078,7 @@ exists in $\C$ for all $i$ in $I$, then $\pp^\dg\beta$ exists, and $(\pp^\dg\bet
 P.~62, Proposition 2.7.1. Consider the diagram 
 $$
 \begin{tikzcd}
-\C\ar{r}{\hy_\C}\ar{dr}[swap]{F}&\C^\wg\ar{d}{\widetilde F}&I\ar{l}[swap]{\alpha}\\
+\C\ar{r}{\hy_\C}\ar{dr}[swap]{F}&\C^\wg\ar{d}{\widetilde F}&I\ar{l}[swap]{\al}\\
 &\A,
 \end{tikzcd}
 $$
@@ -2084,7 +2086,7 @@ where $I$ is a small category and $\widetilde F$ satisfies
 $$
 \widetilde F(A)\iso\col_{(X\to A)\in\C_A}F(X)
 $$ 
-for all $A$ in $\C^\wg$. Let us rewrite the proof of the fact that the natural morphism $\col\widetilde F(\alpha)\to\widetilde F\left(\col\alpha\right)$ is an isomorphism. 
+for all $A$ in $\C^\wg$. Let us rewrite the proof of the fact that the natural morphism $\col\widetilde F(\al)\to\widetilde F\left(\col\al\right)$ is an isomorphism. 
 
 By Proposition 2.1.10 p. 40 of the book (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}), it suffices to check that the functor $G:\A\to\C^\wg$ defined by 
 $$
@@ -2174,9 +2176,9 @@ Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits sma
 The following lemma will be useful:
 
 \begin{lem}\lb{cc}
-Let $I\xr\alpha\C\xr F\C'$ be functors, let $X$ be in $\C$ and $X'$ in $\C'$, let $f:F(X)\to X'$ be a morphism, assume $X\iso\col\alpha$, let $p:\alpha\to\Delta X$ be the coprojection, define $\beta:I\to\C_{X'}$ by $\beta(i):=(\alpha(i),f\ci F(p_i))$:
+Let $I\xr\al\C\xr F\C'$ be functors, let $X$ be in $\C$ and $X'$ in $\C'$, let $f:F(X)\to X'$ be a morphism, assume $X\iso\col\al$, let $p:\al\to\Delta X$ be the coprojection, define $\beta:I\to\C_{X'}$ by $\beta(i):=(\al(i),f\ci F(p_i))$:
 $$
-F(\alpha(i))\xr{F(p_i)}F(X)\xr fX'.
+F(\al(i))\xr{F(p_i)}F(X)\xr fX'.
 $$ 
 Then $(X,f)\iso\col\beta$, the coprojection $q:\beta\to\Delta(X,f)$ being given by $q_i:=p_i$ for all $i$ in $I$.
 \end{lem}
@@ -2185,7 +2187,7 @@ Recall that $\Delta$ denotes the appropriate diagonal functor. Let
 $$
 (Y,g)\in\C_{X'},\quad h\in\Hom_{\Fct(I,\C_{X'})}(\beta,\Delta(Y,g));
 $$ 
-let $h'$ in $\Hom_{\Fct(I,\C)}(\beta,\Delta Y)$ be defined by the condition $h'_i=h_i\in\Hom_\C(\alpha(i),Y)$ for all $i$ in $I$; and let $k$ be in $\Hom_\C(X,Y)$. Then we have 
+let $h'$ in $\Hom_{\Fct(I,\C)}(\beta,\Delta Y)$ be defined by the condition $h'_i=h_i\in\Hom_\C(\al(i),Y)$ for all $i$ in $I$; and let $k$ be in $\Hom_\C(X,Y)$. Then we have 
 $$
 \Delta k\ci q=h\ssi\Delta k\ci p=h'.
 $$
@@ -2509,6 +2511,20 @@ $$
 the last isomorphism following from \qr{263b} p.~\pr{263b}. 
 \end{s}
 
+%
+
+\begin{s}
+P.~64, Exercise 2.4. Set $P:=X\tm_YX$.
+
+\nn(i) We have $p_1\ci\delta=\id_X=p_2\ci\delta$.
+
+\nn(ii) $f$ monomorphism $\then$ $p_1=p_2$: we have $f\ci p_1=f\ci p_2$;
+
+\nn$p_1=p_2\ \then$ $\delta$ isomorphism: $p_i\ci\delta\ci p_j=p_i\ci\id_P$ for all $i,j$, and thus $\delta\ci p_j=\id_P$ for all $j$;
+
+\nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$, and note that (i) implies $p_1=p_2$, and thus $g=h$.
+\end{s}
+
 %%
 
 \section{About Chapter 3}
@@ -2536,9 +2552,9 @@ P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor 
 
 To prove that filtrant small inductive limits in $\Set$ commute with finite projective limits, one can argue as follows. 
 
-Let $I$ be a filtrant small category, let $J$ be a finite category, let $\alpha:I\times J^{\op}\to\Set$ be a functor, and put 
+Let $I$ be a filtrant small category, let $J$ be a finite category, let $\al:I\times J^{\op}\to\Set$ be a functor, and put 
 $$
-X_{ij}:=\alpha(i,j),\quad Y_i:=\lim_jX_{ij},\quad Y:=\col_iY_i,
+X_{ij}:=\al(i,j),\quad Y_i:=\lim_jX_{ij},\quad Y:=\col_iY_i,
 $$
 $$
 Z_j:=\col_iX_{ij},\quad Z:=\lim_jZ_j.
@@ -2568,10 +2584,10 @@ It is also easy to see  that the element $\eta_i((x_{ij})_j)$ in $Y$ does not de
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
 %
 \begin{cor}\lb{316}
-Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\alpha:I\times J^{\op}\to\Set$ a functor such that $\col_i\alpha(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\alpha(i,j)$ exists in $\Set$, and the natural map 
+Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\al:I\times J^{\op}\to\Set$ a functor such that $\col_i\al(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\al(i,j)$ exists in $\Set$, and the natural map 
 $$
-\col_i\lim_j\alpha(i,j)\to
-\lim_j\col_i\alpha(i,j)
+\col_i\lim_j\al(i,j)\to
+\lim_j\col_i\al(i,j)
 $$ 
 is bijective. 
 \end{cor}
@@ -2597,20 +2613,20 @@ be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious 
 \end{prop} 
 %
 \begin{proof}
-Pick a universe making $I,J,K$, and $L$ small, and let $\alpha:I\to\Set$ be a functor. We have the following five bijections:
+Pick a universe making $I,J,K$, and $L$ small, and let $\al:I\to\Set$ be a functor. We have the following five bijections:
 $$
-\col\ \alpha\ci\pp\ \iso\ 
+\col\ \al\ci\pp\ \iso\ 
 %
-\col_{\ell\in L}\ \col_{\theta(\pp(j))\to\ell}\ \alpha(\pp(j))\ \iso\ 
+\col_{\ell\in L}\ \col_{\theta(\pp(j))\to\ell}\ \al(\pp(j))\ \iso\ 
 %
-\col_{k\in K}\ \col_{\theta(\pp(j))\to\psi(k)}\ \alpha(\pp(j))
+\col_{k\in K}\ \col_{\theta(\pp(j))\to\psi(k)}\ \al(\pp(j))
 $$
 $$
-\ \iso\ \col_{k\in K}\ \col_{\theta(i)\to\psi(k)}\ \alpha(i)\ \iso\ 
+\ \iso\ \col_{k\in K}\ \col_{\theta(i)\to\psi(k)}\ \al(i)\ \iso\ 
 %
-\col_{\ell\in L}\ \col_{\theta(i)\to\ell}\ \alpha(i)\ \iso\ 
+\col_{\ell\in L}\ \col_{\theta(i)\to\ell}\ \al(i)\ \iso\ 
 %
-\col\ \alpha.
+\col\ \al.
 $$
 Indeed, the first and fifth bijections follow from \qr{coco} p.~\pr{coco}, the second and fourth bijections follow from the cofinality of $\psi$, the third bijection follows from the cofinality of $\pp_k$. In view of Proposition 2.5.2 p.~57 of the book, this proves the claim.
 \end{proof}
@@ -2665,29 +2681,29 @@ In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By
 \begin{s} 
 P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\ds\ilim$'' is missing in the last display. Recall the statement:
 \begin{lem}
-Let $I$ be a small ordered set, $\alpha:I\to\C$ a functor. Let $\cc J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J$ in $\cc J$, associate the restriction $\alpha_J:\cc J\to\C$ of $\alpha$ to $\cc J$. Then $\cc J$ is small and filtrant and moreover
+Let $I$ be a small ordered set, $\al:I\to\C$ a functor. Let $\cc J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J$ in $\cc J$, associate the restriction $\al_J:\cc J\to\C$ of $\al$ to $\cc J$. Then $\cc J$ is small and filtrant and moreover
 $$
-\col\alpha\iso\col_{J\in\cc J}\col\alpha_J.
+\col\al\iso\col_{J\in\cc J}\col\al_J.
 $$
 \end{lem}
 \begin{proof}
 Put
 $$
-A:=\col\alpha,\quad
-\beta_J:=\col\alpha_J,\quad
+A:=\col\al,\quad
+\beta_J:=\col\al_J,\quad
 B:=\col\beta.
 $$
 Let 
 $$
-p_i:\alpha_i\to A,\quad 
-p_{i,J}:\alpha_i\to\beta_J,\quad 
+p_i:\al_i\to A,\quad 
+p_{i,J}:\al_i\to\beta_J,\quad 
 p_J:\beta_J\to B
 $$
 be the coprojections. Note that $p_{i,J}$ is defined only for $i$ in $J$. We easily check that 
 
-\nn$\bu$ the morphisms$f_i:=p_{\{i\}}\ci p_{i,\{i\}}:\alpha_i\to B$ induce a morphism $f:A\to B$, 
+\nn$\bu$ the morphisms$f_i:=p_{\{i\}}\ci p_{i,\{i\}}:\al_i\to B$ induce a morphism $f:A\to B$, 
 
-\nn$\bu$ the morphisms $g_{i,J}:=p_i:\alpha_i\to A$ (with $i$ in $J$) induce a morphism $g_J:\beta_J\to A$, 
+\nn$\bu$ the morphisms $g_{i,J}:=p_i:\al_i\to A$ (with $i$ in $J$) induce a morphism $g_J:\beta_J\to A$, 
 
 \nn$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
 
@@ -2713,13 +2729,13 @@ Let $F:\C\to\C'$ be a functor.
 P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
 
 \begin{prop}[Proposition 3.3.2 p.~81]\lb{p332} 
-Consider functors $I\xr\alpha\C\xr F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\col\alpha$ exists in $\C$. Then $\col(F\ci\alpha)$ exists in $\C'$, and the natural morphism $\col(F\ci\alpha)\to\col\alpha$ is an isomorphism. 
+Consider functors $I\xr\al\C\xr F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\col\al$ exists in $\C$. Then $\col(F\ci\al)$ exists in $\C'$, and the natural morphism $\col(F\ci\al)\to\col\al$ is an isomorphism. 
 \end{prop} 
 
 \begin{proof}
 Let $X'$ be in $\C'$. It suffices to show that the natural map 
 $$
-\Hom_{\C'}(F(\col\alpha),X')\to\lim\Hom_{\C'}(F(\alpha),X')
+\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F(\al),X')
 $$ 
 is bijective. Replacing Setting (\ref{241s}) p.~\pr{241s} with 
 $$
@@ -2741,13 +2757,13 @@ and thus
 %
 We have bijections 
 $$ 
-\Hom_{\C'}(F(\col\alpha),X')\iso\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\alpha,Y)
+\Hom_{\C'}(F(\col\al),X')\iso\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y)
 $$
 $$
-\xr\sim\col_{(F(Y)\to X')\in\C_{X'}}\lim\Hom_\C(\alpha,Y)\xr\sim\lim\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\alpha,Y)
+\xr\sim\col_{(F(Y)\to X')\in\C_{X'}}\lim\Hom_\C(\al,Y)\xr\sim\lim\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\al,Y)
 $$
 $$
-\iso\lim\Hom_{\C'}(F(\alpha),X'). 
+\iso\lim\Hom_{\C'}(F(\al),X'). 
 $$ 
 The first and last bijections follow from \qr{332}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
 \end{proof}
@@ -2799,7 +2815,7 @@ This section is divided into two parts. In Part 1 we give a proof of Proposition
 
 The statement is phrased as follows: 
 
-``For any category $\C$ and any functor $\alpha:M[I\to K\rightarrow J]\to\C$ we have $\col\alpha\iso\col_{j\in J}\col_{i\in I_{\psi(j)}}\alpha(i,j,\pp(i)\to\psi(j))$.'' 
+``For any category $\C$ and any functor $\al:M[I\to K\rightarrow J]\to\C$ we have $\col\al\iso\col_{j\in J}\col_{i\in I_{\psi(j)}}\al(i,j,\pp(i)\to\psi(j))$.'' 
 
 One needs some assumption ensuring the existence of the indicated inductive limits. Here we shall assume that $\C$ admits inductive limits indexed by $J$ and $I_{\psi(j)}$ for all $j$ in $J$. 
 
@@ -2807,18 +2823,18 @@ Recall the notation. We have functors $I\xr\pp K\xl\psi J$ between small categor
 $$
 M:=M[I\xr\pp K\xl\psi J] 
 $$ 
-is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\alpha:M\to\C$. 
+is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\al:M\to\C$. 
 
-Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_j:I_{\psi(j)}\to\C$ is the composition of $\alpha$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
+Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_j:I_{\psi(j)}\to\C$ is the composition of $\al$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
 $$
-j\mapsto\col_{(i,u)\in I_{\psi(j)}}\alpha(i,j,u) 
+j\mapsto\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
 $$ 
 ($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pr{r52}. 
 
 Isomorphism 
 %
 \begin{equation}\lb{coco2}
-\col\alpha\iso\col_j\ \col_{i,u}\alpha(i,j,u),
+\col\al\iso\col_j\ \col_{i,u}\al(i,j,u),
 \end{equation} 
 %
 where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$), will result from 
@@ -2863,13 +2879,13 @@ Here is another proof of \qr{coco} p.~\pr{coco}: In the above setting, let us as
 $$
 K=J,\quad\psi=\id_J,
 $$ 
-and let $\alpha:I\to\C$ be a functor. We must prove 
+and let $\al:I\to\C$ be a functor. We must prove 
 $$
-\col_i\alpha(i)\iso\col_j\ \col_{i,u}\alpha(i). 
+\col_i\al(i)\iso\col_j\ \col_{i,u}\al(i). 
 $$ 
 (Recall: $u:\pp(i)\to j$.) In view of \qr{coco2}, it suffices to prove that we have 
 $$
-\col_{i,j,u}\alpha(i)\iso\col_i\alpha(i),
+\col_{i,j,u}\al(i)\iso\col_i\al(i),
 $$ 
 or, in other words, that 
 %
@@ -3658,40 +3674,40 @@ If $\C$ is a category, then the category $\Ind(\C)$ admits small filtrant induct
 Here is a minor variant of Step~(i) of the proof of Theorem 6.1.8. We must show:  
 
 \begin{lem} 
-If $\alpha:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\alpha$ is in $\C^\wg$, then $\C_A$ is filtrant. 
+If $\al:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\al$ is in $\C^\wg$, then $\C_A$ is filtrant. 
 \end{lem} 
 
 \begin{proof}
 Let $M$ be the category attached by Definition 3.4.1 p. 87 of the book to the functors 
 $$
-\C\xr h\C^\wg\xl{\iota\ci\alpha}I,
+\C\xr h\C^\wg\xl{\iota\ci\al}I,
 $$ 
 where $h:\C\to\C^\wg$ and $\iota:\Ind(\C)\to\C^\wg$ are the natural embeddings. Proposition~\ref{cocop} p.~\pr{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 of the book hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. 
 
 For all $i$ in $I$ and all $X$ in $\C$ let 
 $$
-p_i:\alpha(i)\to A\quad\text{and}\quad p_i(X):\Hom_\C(X,\alpha(i))\to A(X)
+p_i:\al(i)\to A\quad\text{and}\quad p_i(X):\Hom_\C(X,\al(i))\to A(X)
 $$
 be the coprojections.
 
 Given an object $c$ of $\C_A$, and object $m$ of $M$, and a pair of parallel morphisms $\sigma,\sigma':c\parar\pp(m)$ in $\C_A$, we must find a morphism $\tau:m\to n$ in $M$ satisfying $\pp(\tau)\ci\sigma=\pp(\tau)\ci\sigma'$. 
 
-Let $c$ be given by the morphism $X\to A$ in $\C^\wg$, let $m$ be given by the morphism $Y\to\alpha(i)$ in $\Ind(\C)$, and let $\sigma$ and $\sigma'$ be given by the morphisms $s,s':X\parar Y$ making the diagram below commute:
+Let $c$ be given by the morphism $X\to A$ in $\C^\wg$, let $m$ be given by the morphism $Y\to\al(i)$ in $\Ind(\C)$, and let $\sigma$ and $\sigma'$ be given by the morphisms $s,s':X\parar Y$ making the diagram below commute:
 $$
 \begin{tikzcd}
 X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\\ 
-{}&\alpha(i)\ar{d}{p_i}\\ 
+{}&\al(i)\ar{d}{p_i}\\ 
 A\ar[equal]{r}&A.
 \end{tikzcd}
 $$ 
 
-Then we are looking for and object $n$ of $M$ given by a morphism $Z\to\alpha(j)$, and for a morphism $t:Y\to Z$ defining the sought-for morphism $\tau$. 
+Then we are looking for and object $n$ of $M$ given by a morphism $Z\to\al(j)$, and for a morphism $t:Y\to Z$ defining the sought-for morphism $\tau$. 
 
-As $p_i(X)(y\ci s)$ equals $p_i(X)(y\ci s')$ in $A(X)\iso\col\Hom_\C(X,\alpha)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\alpha(t)\ci y\ci s=\alpha(t)\ci y\ci s'$, and we can set $Z:=\alpha(j)$ and $z:=\id_{\alpha(j)}$. The situation is depicted by the commutative diagram
+As $p_i(X)(y\ci s)$ equals $p_i(X)(y\ci s')$ in $A(X)\iso\col\Hom_\C(X,\al)$ and $I$ is filtrant, there is a morphism $t:i\to j$ in $I$ such that $\al(t)\ci y\ci s=\al(t)\ci y\ci s'$, and we can set $Z:=\al(j)$ and $z:=\id_{\al(j)}$. The situation is depicted by the commutative diagram
 $$
 \begin{tikzcd}
-X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\ar{r}&\alpha(j)\ar[equal]{d}\\ 
-{}&\alpha(i)\ar{d}{p_i}\ar{r}{\alpha(t)}&\alpha(j)\ar{d}{p_j}\\ 
+X\ar{dd}\ar[yshift=0.7ex]{r}{s}\ar[yshift=-0.7ex]{r}[swap]{s'}&Y\ar{d}{y}\ar{r}&\al(j)\ar[equal]{d}\\ 
+{}&\al(i)\ar{d}{p_i}\ar{r}{\al(t)}&\al(j)\ar{d}{p_j}\\ 
 A\ar[equal]{r}&A\ar[equal]{r}&A.
 \end{tikzcd}
 $$
@@ -3715,7 +3731,7 @@ The proof is essentially the same as that of Proposition 2.7.1 on p.~62 of the b
 Let us attach the functor $B:=\Hom_\A(F(\ ),Y)\in\C^\wg$ to the object $Y$ of $\A$. To apply Proposition~\ref{2.1.10b} p.~\pr{2.1.10b} to the diagram 
 $$
 \begin{tikzcd}
-I\ar{r}{\alpha}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
+I\ar{r}{\al}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
 &\C^\wg
 \end{tikzcd}
 $$
@@ -3754,13 +3770,13 @@ IF\ci\iota_\C\iso\iota_{\C'}\ci F,
 and note that we have, in the setting of Corollary 6.3.2 p.~140, 
 %
 \begin{equation}\lb{140}
-\col(F\ci\alpha)\xr\sim(JF)(\ic\alpha).
+\col(F\ci\al)\xr\sim(JF)(\ic\al).
 \end{equation} 
 %
 Let us also record Part (ii) of the Proposition as 
 % 
 \begin{equation}\lb{133ii}
-\ic(IF\ci\alpha)\xr\sim IF(\ic\alpha).
+\ic(IF\ci\al)\xr\sim IF(\ic\al).
 \end{equation} 
 % 
 (See \S\ref{s133ii} p.~\pr{s133ii}.)
@@ -4016,24 +4032,24 @@ As in the book we assume, as we may, that any two isomorphic objects of $K$ are 
 
 Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let 
 $$
-\alpha_k:I_k\to\C
+\al_k:I_k\to\C
 $$ 
 be a functor such that 
 $$
-G(k)=\ic\alpha_k.
+G(k)=\ic\al_k.
 $$ 
 
 We define the category 
 $$
-N:=N\{K,G,(\alpha_k)\}
+N:=N\{K,G,(\al_k)\}
 $$ 
 as follows:
 
-\nn[Beginning of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P$ is a functor from $K$ to $\C$, subject to the conditions 
+\nn[Beginning of the definition of the category $N:=N\{K,G,(\al_k)\}$.] An \emph{object} of $N$ is a pair $((i_k),P)$, where each $i_k$ is in $I_k$ and $P$ is a functor from $K$ to $\C$, subject to the conditions 
 
-\nn$\bu\ \alpha_k(i_k)=P(k)$ for all $k$, 
+\nn$\bu\ \al_k(i_k)=P(k)$ for all $k$, 
 
-\nn$\bu$ the coprojections $u_k(i_k):\alpha_k(i_k)=P(k)\to G(k)$ induce a morphism of functors 
+\nn$\bu$ the coprojections $u_k(i_k):\al_k(i_k)=P(k)\to G(k)$ induce a morphism of functors 
 %
 \begin{equation}\lb{u':}
 u':P\to G.
@@ -4042,32 +4058,32 @@ u':P\to G.
 \nn(We regard $\C$ as a subcategory of $\Ind(\C)$.) The picture is very similar to the second diagram of p.~135 of the book: For each morphism $f:k\to\ell$ in $K$ we have the commutative square 
 $$ 
 \begin{tikzcd} 
-\alpha_k(i_k)\ar[equal]{r}&P(k)\ar{r}{P(f)}\ar{d}[swap]{u_k(i_k)}&P(\ell)\ar{d}{u_\ell(i_\ell)}\ar[equal]{r}&\alpha_\ell(i_\ell)\\ 
+\al_k(i_k)\ar[equal]{r}&P(k)\ar{r}{P(f)}\ar{d}[swap]{u_k(i_k)}&P(\ell)\ar{d}{u_\ell(i_\ell)}\ar[equal]{r}&\al_\ell(i_\ell)\\ 
 {}&G(k)\ar{r}[swap]{G(f)}&G(\ell) 
 \end{tikzcd} 
 $$ 
 in $\Ind(\C)$. 
 
-A \emph{morphism} from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $f_k:i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a morphism of functors, subject to the condition $\theta_k=\alpha_k(f_k)$ for all $k$: 
+A \emph{morphism} from $((i_k),P)$ to $((j_k),Q)$ is a pair $((f_k),\theta)$, where each $f_k$ is a morphism $f_k:i_k\to j_k$ in $I_k$, and $\theta:P\to Q$ is a morphism of functors, subject to the condition $\theta_k=\al_k(f_k)$ for all $k$: 
 $$ 
 \begin{tikzcd} 
-\alpha_k(i_k)\ar{r}{\alpha_k(f_k)}\ar[equal]{d}&\alpha_k(j_k)\ar[equal]{d}\\ 
+\al_k(i_k)\ar{r}{\al_k(f_k)}\ar[equal]{d}&\al_k(j_k)\ar[equal]{d}\\ 
 P(k)\ar{r}[swap]{\theta_k}&Q(k).
 \end{tikzcd} 
 $$ 
-[End of the definition of the category $N:=N\{K,G,(\alpha_k)\}$.] 
+[End of the definition of the category $N:=N\{K,G,(\al_k)\}$.] 
 
 The functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by 
 $$
-F'(k)=\alpha_k\ci p_k,
+F'(k)=\al_k\ci p_k,
 $$ 
 where $p_k:N\to I_k$ is the natural projection: 
 $$
-N\xr{p_k}I_k\xr{\alpha_k}\C.
+N\xr{p_k}I_k\xr{\al_k}\C.
 $$ 
 In other words, we set
 $$
-F\big((i_k),P\big)(k_0):=\alpha_{k_0}(i_{k_0}).
+F\big((i_k),P\big)(k_0):=\al_{k_0}(i_{k_0}).
 $$ 
 
 \begin{lem}\lb{npk}
@@ -4089,15 +4105,15 @@ $$
 $$ 
 let $G_L:L\to\Ind(\C)$ be the restriction of $G$ to $L$; let  
 $$
-\widetilde{\alpha_a}:I_a\to\C/G(a)
+\widetilde{\al_a}:I_a\to\C/G(a)
 $$ 
 (see \qr{slice} p.~\pr{slice} for the definition of $\C/G(a)$) be the functor defined by 
 $$
-\widetilde{\alpha_a}(i_a):=\Big(u(i_a):\alpha_a(i_a)\to G(a)\Big);
+\widetilde{\al_a}(i_a):=\Big(u(i_a):\al_a(i_a)\to G(a)\Big);
 $$
 and put 
 $$
-N':=N\{L,G_L,(\alpha_\ell)\}.
+N':=N\{L,G_L,(\al_\ell)\}.
 $$ 
 
 We define the functor 
@@ -4106,7 +4122,7 @@ $$
 $$ 
 (see \qr{slice} p.~\pr{slice} for the definition of $L/a$) as follows. Let $((i_\ell),Q)$ be in $N'$. In particular, $Q$ is a functor from $L$ to $\C$, and we have, for each $\ell$ in $L$, a morphism 
 $$
-Q(\ell)=\alpha_\ell(i_\ell)\xr{u'(\ell)}\icolim\alpha_\ell=G(\ell) 
+Q(\ell)=\al_\ell(i_\ell)\xr{u'(\ell)}\icolim\al_\ell=G(\ell) 
 $$ 
 in $\C$ (see \qr{u':} p.~\pr{u':}). Letting $\ell\xr fa$ be a morphism in $K$ viewed as an object of $L/a$, we put  
 $$
@@ -4119,33 +4135,33 @@ $$
 $$ 
 be the diagonal functor, we can form the category 
 $$
-M:=M\left[N'\xr{\pp}\big(\C/G(a)\big)^{L/a}\xl{\ \Delta\ci\widetilde{\alpha_a}}I_a\right].
+M:=M\left[N'\xr{\pp}\big(\C/G(a)\big)^{L/a}\xl{\ \Delta\ci\widetilde{\al_a}}I_a\right].
 $$ 
 Concretely, an object of $M$ is a triple 
 %
 \begin{equation}\lb{il}
-\Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\alpha_a(i_a)\big)_{f:\ell\to a}\Big),
+\Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\al_a(i_a)\big)_{f:\ell\to a}\Big),
 \end{equation}
 %  
-where $((i_\ell),Q)$ is an object of $N'$, where $i_a$ is an object of $I_a$, where $f$ runs over the morphisms from $\ell$ to $a$ in $K$, and where $\xi_f$ is a morphism from $Q(\ell)$ to $\alpha_a(i_a)$ which makes the square  
+where $((i_\ell),Q)$ is an object of $N'$, where $i_a$ is an object of $I_a$, where $f$ runs over the morphisms from $\ell$ to $a$ in $K$, and where $\xi_f$ is a morphism from $Q(\ell)$ to $\al_a(i_a)$ which makes the square  
 $$
 \begin{tikzcd}
-Q(\ell)\ar{r}{\xi_f}\ar{d}[swap]{u'(\ell)}&\alpha_a(i_a)\ar{d}{u(i_a)}\\ 
+Q(\ell)\ar{r}{\xi_f}\ar{d}[swap]{u'(\ell)}&\al_a(i_a)\ar{d}{u(i_a)}\\ 
 G(\ell)\ar{r}[swap]{G(f)}&G(a) 
 \end{tikzcd}
 $$ 
 in $\C$ commute, and a morphism from \qr{il} to 
 $$
-\Big(\big((i'_\ell),Q'\big),i'_a,\big(\xi'_f:Q'(\ell)\to\alpha_a(i'_a)\big)_{f:\ell\to a}\Big)
+\Big(\big((i'_\ell),Q'\big),i'_a,\big(\xi'_f:Q'(\ell)\to\al_a(i'_a)\big)_{f:\ell\to a}\Big)
 $$ 
 is given by a family $(f_k:i_k\to i'_k)_{k\in K}$ of morphisms in $I_k$ making the squares 
 $$
 \begin{tikzcd}
-Q(\ell)\ar{r}{\alpha_\ell(f_\ell)}\ar{d}[swap]{\xi_f}&Q'(\ell)\ar{d}{\xi'_f}\\ 
-\alpha_a(i_a)\ar{r}[swap]{\alpha_a(f_a)}&\alpha_a(i'_a) 
+Q(\ell)\ar{r}{\al_\ell(f_\ell)}\ar{d}[swap]{\xi_f}&Q'(\ell)\ar{d}{\xi'_f}\\ 
+\al_a(i_a)\ar{r}[swap]{\al_a(f_a)}&\al_a(i'_a) 
 \end{tikzcd}
 $$ 
-in $\C$ commute. (Recall $Q(\ell)=\alpha_\ell(i_\ell)$, $Q'(\ell)=\alpha_\ell(i'_\ell)$.)
+in $\C$ commute. (Recall $Q(\ell)=\al_\ell(i_\ell)$, $Q'(\ell)=\al_\ell(i'_\ell)$.)
 
 We shall define functors 
 $$
@@ -4164,17 +4180,17 @@ $$
 
 To define $\lambda$ let $((i_k),P)$ be in $N$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
 $$
-\Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\alpha_a(i_a)\big)_{f:\ell\to a}\Big).
+\Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\al_a(i_a)\big)_{f:\ell\to a}\Big).
 $$ 
-As $Q(\ell)=P(\ell)$ and $\alpha_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$. 
+As $Q(\ell)=P(\ell)$ and $\al_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$. 
 
 To define $\mu$ let 
 $$
-\Xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\Delta(\widetilde{\alpha_a}(i_a))\Big)
+\Xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\Delta(\widetilde{\al_a}(i_a))\Big)
 $$ 
 be in $M$. The object $\mu(\Xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
 
-We define $P(k)$ by putting $P(\ell):=Q(\ell)$ for $\ell$ in $L$, and $P(a):=\alpha_a(i_a)$. 
+We define $P(k)$ by putting $P(\ell):=Q(\ell)$ for $\ell$ in $L$, and $P(a):=\al_a(i_a)$. 
 
 If $f:\ell\to m$ is a morphism in $L$, then we set $P(f):=Q(f):P(\ell)\to P(m)$. Let $\ell$ be in $L$. There is at most one morphism $f:\ell\to a$. If this morphism does exist, then we put $P(f):=\xi_f$. 
 
@@ -4182,7 +4198,7 @@ We leave it to the reader to check that $\lambda$ and $\mu$ are mutually inverse
 
 We also leave it to the reader to check that the set of morphisms in $M$ from $\lambda((i_k),P)$ to $\lambda((i'_k),P')$ is \emph{equal} (in the strictest sense of the word) to the set of morphisms in $N$ from $((i_k),P)$ to $((i'_k),P')$, so that we get an isomorphism 
 $$ 
-N\iso M\left[N'\xr{\pp}(\C/G(a))^{L/a}\xl{\ \Delta\ci\widetilde{\alpha_a}}I_a\right]. 
+N\iso M\left[N'\xr{\pp}(\C/G(a))^{L/a}\xl{\ \Delta\ci\widetilde{\al_a}}I_a\right]. 
 $$
 
 By induction hypothesis, 
@@ -4191,10 +4207,10 @@ By induction hypothesis,
 N'\text{ is small and filtrant}
 \end{equation} 
 %
-and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\alpha_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below will imply that $\Delta$ is cofinal. Thus, 
+and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\al_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below will imply that $\Delta$ is cofinal. Thus, 
 %
 \begin{equation}\lb{daa}
-\Delta\ci\widetilde{\alpha_a}\text{ is cofinal.}
+\Delta\ci\widetilde{\al_a}\text{ is cofinal.}
 \end{equation} 
 % 
 Taking Lemma~\ref{delta} below for granted, Lemma~\ref{npk} p.~\pr{npk} now follows from \qr{n'saf}, \qr{daa}, and Proposition 3.4.5 p.~89 of the book. 
@@ -4207,9 +4223,9 @@ If $I$ is a finite category and $\C$ a filtrant category, then the diagonal func
 \end{lem}
 
 \begin{proof}
-It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\alpha$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\alpha$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
+It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\al$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\al$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
 $$
-(\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\alpha(i),Y)\right)\Big(\forall\ (s:i\to j)\in S\Big)\Big(\mu_{j}\ci\alpha(s)=\mu_i\Big) 
+(\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\al(i),Y)\right)\Big(\forall\ (s:i\to j)\in S\Big)\Big(\mu_{j}\ci\al(s)=\mu_i\Big) 
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\lambda)$.
 \end{proof} 
@@ -4234,17 +4250,17 @@ Let $F:\cc C\to\cc C'$ be a fully faithful functor, let $A'$ be in $\Ind(\cc C')
 
 \begin{proof}\ 
 
-\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\iso A$; in particular $\ic(F\ci\beta_0)\iso IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\alpha:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\alpha\to F\ci\beta$ such that 
+\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\cc C')$ with $X'$ in $\cc C'$ and $A$ in $\Ind(\cc C)$, let $\beta_0:I\to\cc C$ be a functor with $I$ small and filtrant and $\ic\beta_0\iso A$; in particular $\ic(F\ci\beta_0)\iso IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\al:J\to\cc C'$ and $\beta:J\to\cc C$, and there is a morphism of functors $\pp:\al\to F\ci\beta$ such that 
 
 $J$ is small and filtrant, 
 
-$\alpha$ is constant equal to $X'$, 
+$\al$ is constant equal to $X'$, 
 
 $\ic(F\ci\beta)\iso IF(A)$, 
 
 $\ic\pp\iso f$. 
 
-\nn Then $f$ factorizes as $X'=\alpha(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
+\nn Then $f$ factorizes as $X'=\al(j)\xr{\pp_j}F(\beta(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
 
 \nn(b)$\then$(c). This follows from Proposition~\ref{comb} p.~\pr{comb}. 
 
@@ -4412,18 +4428,18 @@ Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-co
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
-\C_\SSS\ar{r}[swap]{\alpha_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
+\C_\SSS\ar{r}[swap]{\al_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
 \end{tikzcd}
 $$
 Let $X$ be in $\C$. We must prove that there is an isomorphism 
 $$
-R_\SSS(\iota_\A\ci F)(Q(X))\iso IF(\alpha_\SSS(Q(X)))
+R_\SSS(\iota_\A\ci F)(Q(X))\iso IF(\al_\SSS(Q(X)))
 $$ 
 in $\Ind(\C)$. Recall the following facts: 
 
 \nn$\bu$ Proposition 7.4.1 p.~162 of the book implies
 $$
-A:=\alpha_\SSS(Q(X))=\col_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
+A:=\al_\SSS(Q(X))=\col_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
 $$ 
 $\bu$ Display~\qr{(7.3.7)} p.~\pr{(7.3.7)} implies
 $$
@@ -4436,7 +4452,7 @@ $$
 
 We want to prove $B\iso C$.
 
-\nn{\em Notation.} If $\alpha:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(X,i):\alpha(i)\to X$ for the coprojection. (Of course this morphism depends on $\alpha$.) 
+\nn{\em Notation.} If $\al:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(X,i):\al(i)\to X$ for the coprojection. (Of course this morphism depends on $\al$.) 
 
 We shall define morphisms of functors 
 $$
@@ -4540,9 +4556,9 @@ In the above setting we denote $\A$ by $\C^\wg$ and $h$ by $\hy_\C$. (This abuse
 \end{conv} 
 
 \begin{lem}\lb{payl}
-Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\alpha:I\to\A$ be a functor such that $\col(\alpha(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\col\alpha$ exists in $\A$ and satisfies 
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\al:I\to\A$ be a functor such that $\col(\al(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\col\al$ exists in $\A$ and satisfies 
 $$
-(\col\alpha)(X)\iso\col(\alpha(X))
+(\col\al)(X)\iso\col(\al(X))
 $$ 
 for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
@@ -5562,21 +5578,21 @@ Let $\pi$ be an infinite cardinal. The following conditions on a small category 
 
 \nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
-\alpha:I\times J^{\op}\to\Set
+\al:I\times J^{\op}\to\Set
 $$ 
 the natural map 
 $$
-\col_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\col_{i\in I}\alpha(i,j)
+\col_{i\in I}\lim_{j\in J}\al(i,j)\to\lim_{j\in J}\col_{i\in I}\al(i,j)
 $$ 
 is bijective.
 
 \nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
-\alpha:I\times J^{\op}\to\Set
+\al:I\times J^{\op}\to\Set
 $$ 
 the natural map 
 $$
-\col_{i\in I}\lim_{j\in J}\alpha(i,j)\to\lim_{j\in J}\col_{i\in I}\alpha(i,j)
+\col_{i\in I}\lim_{j\in J}\al(i,j)\to\lim_{j\in J}\col_{i\in I}\al(i,j)
 $$ 
 is surjective.
 
@@ -5633,12 +5649,12 @@ If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satis
 \end{prop}
 
 \begin{proof}
-Let $\alpha:I\to\C$ be a functor with $I$ small and $\pi$-filtrant, and consider the commutative diagram
+Let $\al:I\to\C$ be a functor with $I$ small and $\pi$-filtrant, and consider the commutative diagram
 $$
 \begin{tikzcd}
-\col_i\Hom_\C(\col_j\beta(j),\alpha(i))\ar{r}{a}\ar{d}{b}[swap]{\sim}&\Hom_\C(\col_j\beta(j),\col_i\alpha(i))\ar{dd}{e}[swap]{\sim}\\ 
-\col_i\lim_j\Hom_\C(\beta(j),\alpha(i))\ar{d}{c}[swap]{\sim}\\ 
-\lim_j\col_i\Hom_\C(\beta(j),\alpha(i))\ar{r}{d}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\col_i\alpha(i)).
+\col_i\Hom_\C(\col_j\beta(j),\al(i))\ar{r}{a}\ar{d}{b}[swap]{\sim}&\Hom_\C(\col_j\beta(j),\col_i\al(i))\ar{dd}{e}[swap]{\sim}\\ 
+\col_i\lim_j\Hom_\C(\beta(j),\al(i))\ar{d}{c}[swap]{\sim}\\ 
+\lim_j\col_i\Hom_\C(\beta(j),\al(i))\ar{r}{d}[swap]{\sim}&\lim_j\Hom_\C(\beta(j),\col_i\al(i)).
 \end{tikzcd}
 $$ 
 The morphisms $b$ and $e$ are isomorphisms for obvious reasons. The morphism $c$ is an isomorphism because of our assumptions about $I$ and $J$. The morphism $d$ is an isomorphism because $\beta(j)$ is in $\C_\pi$ for all $j$. Thus, the morphism $a$ is an isomorphism. 
@@ -5751,13 +5767,13 @@ See also Theorem \ref{961} p. \pr{961} below.
 For the reader's convenience we state the lemma:
 
 \begin{lem}[Lemma 9.3.1 p. 224]\lb{l331}
-Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pr{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category, let $\alpha:I\to\C$ be a functor, and let $\col\alpha\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\alpha(i_0)\to Y$ is an epimorphism.
+Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pr{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category, let $\al:I\to\C$ be a functor, and let $\col\al\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\al(i_0)\to Y$ is an epimorphism.
 \end{lem}
 
 The proof of Lemma~\ref{l331} uses twice the following lemma:
 
 \begin{lem}\lb{ppi} 
-Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\alpha:I\to\C$ be a functor admitting an inductive limit $X$ in $\C$. Assume that the coprojections $p_i:\alpha(i)\to X$ are monomorphisms, and consider the conditions below:
+Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\al:I\to\C$ be a functor admitting an inductive limit $X$ in $\C$. Assume that the coprojections $p_i:\al(i)\to X$ are monomorphisms, and consider the conditions below:
 
 \nn{\em(a)} $I$ is $\pi$-filtrant and $X$ is $\pi$-accessible,
 
@@ -5765,7 +5781,7 @@ Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\alpha:I\to\
 
 \nn{\em(c)} the coprojection $p_i$ is an isomorphism for some $i$,
 
-\nn{\em(d)} there is an $i$ in $I$ such that $\alpha(s):\alpha(i)\to\alpha(j)$ is an isomorphism for all morphism $s:i\to j$ in $I$.
+\nn{\em(d)} there is an $i$ in $I$ such that $\al(s):\al(i)\to\al(j)$ is an isomorphism for all morphism $s:i\to j$ in $I$.
 
 \nn Then we have {\em(a)} $\then$ {\em(b)} $\ssi$ {\em(c)} $\then$ {\em(d)}. 
 \end{lem}
@@ -6024,7 +6040,7 @@ If $A$ and $\pi$ are as above, and if $I:=\{B\subset A\,|\,\card(B)<\pi\}$, then
 \end{lem}
 
 \begin{lem}\lb{ord}
-If $\alpha$ is a cardinal, then the cardinal of the set of those cardinals $\beta$ such that $\beta<\alpha$ does not exceed $\alpha$.
+If $\al$ is a cardinal, then the cardinal of the set of those cardinals $\beta$ such that $\beta<\al$ does not exceed $\al$.
 \end{lem}
 
 \begin{proof}[Proof of Lemma~\ref{ord}]
@@ -6036,13 +6052,13 @@ Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ 
 
 \nn$\bu$ if $W$ is a well-ordered set, then the assignment $w\mapsto W_{<w}$ is an isomorphism of well-ordered sets from $W$ onto the set of proper segments of $W$.
 
-Let $A$ be a well-ordered set of cardinal $\alpha$, and, for each cardinal $\beta$ with $\beta<\alpha$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
+Let $A$ be a well-ordered set of cardinal $\al$, and, for each cardinal $\beta$ with $\beta<\al$, let $B$ be a well-ordered set of cardinal $\beta$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\beta\mapsto a$ is injective.
 \end{proof}
 
 \begin{proof}[Proof of Lemma~\ref{cardipi}] 
-Putting $\alpha:=\card(A)$ we have
+Putting $\al:=\card(A)$ we have
 $$
-\card(I)=\sum_{\pi'<\pi_0}\ \binom{\alpha}{\pi'}\le\sum_{\pi'<\pi_0}\ \alpha^{\pi_0}<\pi,
+\card(I)=\sum_{\pi'<\pi_0}\ \binom{\al}{\pi'}\le\sum_{\pi'<\pi_0}\ \al^{\pi_0}<\pi,
 $$ 
 the last inequality following from Lemma~\ref{ord}, (c), and (a). 
 \end{proof}
@@ -6120,11 +6136,11 @@ Any essentially small nonempty category admitting small filtrant inductive limit
 Here is a weakening of the notion of inductive limit:
 
 \begin{df}[small well-ordered upper bounds] 
-Let $I$ be a nonempty well-ordered small set and $\alpha:I\to\C$ a functor. An {\em upper bound} for $\alpha$ is a morphism of functors $a:\alpha\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}\index{small well-ordered upper bounds}. 
+Let $I$ be a nonempty well-ordered small set and $\al:I\to\C$ a functor. An {\em upper bound} for $\al$ is a morphism of functors $a:\al\to\Delta(X)$. (As usual, $\Delta(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}\index{small well-ordered upper bounds}. 
 \end{df}
 
 \begin{df}[special well-ordered small set] 
-Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em special}\index{special well-ordered small set} if it has no largest element and if, for any functor $\alpha:I\to\C$, there is some upper bound $(a_i:\alpha(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
+Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em special}\index{special well-ordered small set} if it has no largest element and if, for any functor $\al:I\to\C$, there is some upper bound $(a_i:\al(i)\to X)_{i\in I}$ and some element $i_0$ in $I$ such that $a_{i_0}$ is an epimorphism. 
 \end{df}
 
 Our goal is to prove:
@@ -6598,23 +6614,23 @@ Line 3: One could change ``Let $\cc F$ be the set of monomorphisms $N\incl G$. T
 Line 6: Condition (9.5.2) (i) (see Section~\ref{954955} p.~\pr{954955}) follows from 
 %
 \begin{lem}\lb{952i}
-Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C$ and are exact. Let $\alpha:I\to\C$ be a functor such that $I$ is small and filtrant, and $\alpha(s):\alpha(i)\to\alpha(j)$ is a monomorphism for all morphism $s:i\to j$ in $I$. Then the coprojection $p_i:\alpha(i)\to\col\alpha$ is a monomorphism.
+Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C$ and are exact. Let $\al:I\to\C$ be a functor such that $I$ is small and filtrant, and $\al(s):\al(i)\to\al(j)$ is a monomorphism for all morphism $s:i\to j$ in $I$. Then the coprojection $p_i:\al(i)\to\col\al$ is a monomorphism.
 \end{lem}
 %
 \begin{proof}
 By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the forgetful functor $\pp:I^i\to I$ is cofinal. Define the morphism of functors 
 $$
-\theta\in\Hom_{\C^{I^i}}(\Delta(\alpha(i)),\alpha\ci\pp)
+\theta\in\Hom_{\C^{I^i}}(\Delta(\al(i)),\al\ci\pp)
 $$ 
 ($\Delta$ being the diagonal functor) by 
 $$
-\theta_{(s:i\to j)}:=\big(\alpha(s):\alpha(i)\to\alpha(j)\big). 
+\theta_{(s:i\to j)}:=\big(\al(s):\al(i)\to\al(j)\big). 
 $$ 
 As $\theta$ is a monomorphism, Proposition~\ref{34i} p.~\pr{34i} implies that $\col\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
-\col\Delta(\alpha(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\col\theta}&&\col(\alpha\ci\pp)\ar{d}{\sim}\\ 
-\alpha(i)\ar{rr}[swap]{p_i}&&\col\alpha.
+\col\Delta(\al(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\col\theta}&&\col(\al\ci\pp)\ar{d}{\sim}\\ 
+\al(i)\ar{rr}[swap]{p_i}&&\col\al.
 \end{tikzcd}
 $$
 \end{proof}
@@ -6992,17 +7008,17 @@ $$
 Going back to the proof of TR5 on p.~275, we consider the diagram
 $$
 \begin{tikzcd}
-X\ar[equal]{dd}\ar{r}{f}&Y\ar[equal]{d}\ar{r}{\alpha(f)}&TX\oplus Y\ar{r}{\beta(f)}&TX\\
-&Y\ar{r}{g}&Z\ar[equal]{d}\ar{r}{\alpha(g)}&TY\oplus Z\ar{r}{\beta(g)}&TY\\
-X\ar[swap]{rr}{g\ci f}&&Z\ar[swap]{rr}{\alpha(g\ci f)}&&TX\oplus Z\ar[swap]{rr}{\beta(g\ci f)}&&TX.
+X\ar[equal]{dd}\ar{r}{f}&Y\ar[equal]{d}\ar{r}{\al(f)}&TX\oplus Y\ar{r}{\beta(f)}&TX\\
+&Y\ar{r}{g}&Z\ar[equal]{d}\ar{r}{\al(g)}&TY\oplus Z\ar{r}{\beta(g)}&TY\\
+X\ar[swap]{rr}{g\ci f}&&Z\ar[swap]{rr}{\al(g\ci f)}&&TX\oplus Z\ar[swap]{rr}{\beta(g\ci f)}&&TX.
 \end{tikzcd}
 $$ 
 The goal of the proof is then to construct a commutative diagram
 $$
 \begin{tikzcd}
-X\ar{r}{f}\ar[equal]{d}&Y\ar{r}{\alpha(f)}\ar{d}{g}&TX\oplus Y\ar{r}{\beta(f)}\ar{d}{u}&TX\ar[equal]{d}\\ 
-X\ar{r}{g\ci f}\ar{d}[swap]{f}&Z\ar{r}{\alpha(g\ci f)}\ar[equal]{d}&TX\oplus Z\ar{r}{\beta(g\ci f)}\ar{d}{v}&TX\ar{d}{T(f)}\\ 
-Y\ar{r}{g}\ar{d}[swap]{\alpha(f)}&Z\ar{r}{\alpha(g)}\ar{d}[swap]{\alpha(g\ci f)}&TY\oplus Z\ar{r}{\beta(g)}\ar[equal]{d}&TY\ar{d}{T(\alpha(f))}\\ 
+X\ar{r}{f}\ar[equal]{d}&Y\ar{r}{\al(f)}\ar{d}{g}&TX\oplus Y\ar{r}{\beta(f)}\ar{d}{u}&TX\ar[equal]{d}\\ 
+X\ar{r}{g\ci f}\ar{d}[swap]{f}&Z\ar{r}{\al(g\ci f)}\ar[equal]{d}&TX\oplus Z\ar{r}{\beta(g\ci f)}\ar{d}{v}&TX\ar{d}{T(f)}\\ 
+Y\ar{r}{g}\ar{d}[swap]{\al(f)}&Z\ar{r}{\al(g)}\ar{d}[swap]{\al(g\ci f)}&TY\oplus Z\ar{r}{\beta(g)}\ar[equal]{d}&TY\ar{d}{T(\al(f))}\\ 
 TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Z\ar{r}[swap]{w}&T^2X\oplus TY.
 \end{tikzcd}
 $$ 
@@ -7107,7 +7123,7 @@ is cohomological.
 \begin{proof}
 Let $X\to Y\to Z\to TX$ be a d.t. in $K_c(\A)$. It is isomorphic to 
 $$
-V\xr{\alpha(u)}\Mc(u)\xr{\beta(u)}TU\to TV
+V\xr{\al(u)}\Mc(u)\xr{\beta(u)}TU\to TV
 $$ 
 for some morphism $u:U\to V$. Since the sequence 
 $$
@@ -7531,11 +7547,14 @@ Consider the following conditions on a set $\E$ of morphisms in $\C^\wg$:
 
 \nn LE4: a morphism $A\to B$ in $\C^\wg$ is in $\E$ if and only if, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\times_BU\to U$ is in $\E$.
 
-As proved in the book, $\E$ contains all epimorphisms. 
+As proved in the book, 
+\begin{equation}\lb{ecae}
+\E\text{ contains all epimorphisms.}
+\end{equation}
 
-For the reader's convenience we paste the proof of the above statement:
+For the reader's convenience we paste the proof of \qr{ecae} (see p.~391 in the book):
 
-Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ (see Proposition 2.1.6 p.~38, Proposition 3.3.3 p.~82 and Exercise 5.1 p.~128 in the book). Hence, $\id_U:U\to U$ factors as $U\to A\times_BU\to U$. Therefore $A\times_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
+Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ (see Proposition 2.1.6 p.~38, Proposition 3.3.3 p.~82, Proposition 5.1.5 (i) p.~115 and Exercise 5.1 p.~128 in the book). Hence, $\id_U:U\to U$ factors as $U\to A\times_BU\to U$. Therefore $A\times_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
@@ -7547,9 +7566,9 @@ Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ sat
 %
 be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\times_BU\to U}$ is in $\Gamma_U$. 
 
-\begin{rk}\lb{1613i}
+\begin{lem}\lb{1613i}
 A morphism $A\to U$ in $\C^\wg$ with $U$ in $\C$ is in $\E$ if and only if $S_{A\to U}$ is in $\Gamma_U$. 
-\end{rk}
+\end{lem}
 
 \begin{proof}
 Observe first that, in the setting 
@@ -7573,7 +7592,7 @@ S_{A\to U}\times_UV\in\Gamma_V\quad\forall\quad V\to U,
 \begin{equation}\lb{28e}
 S_{A\to U}\in\Gamma_U.
 \end{equation} 
-We have \qr{28b} $\ssi$ \qr{28c} by definition of $\E$, and \qr{28c} $\ssi$ \qr{28d} by Remark~\ref{1613i}, \qr{28d} $\then$ \qr{28e} by GT1 and GT4, and \qr{28e} $\then$ \qr{28d} by GT3.
+We have \qr{28b} $\ssi$ \qr{28c} by definition of $\E$, and \qr{28c} $\ssi$ \qr{28d} by Lemma~\ref{1613i}, \qr{28d} $\then$ \qr{28e} by GT1 and GT4, and \qr{28e} $\then$ \qr{28d} by GT3.
 \end{proof}
 
 Let us check that $\E$ satisfies LE1-LE4:
@@ -7592,11 +7611,11 @@ in $\C^\wg$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $\Gamma_U$ (beca
 
 \nn LE3 follows immediately from GT2.
 
-\nn LE4 follows immediately from Remark~\ref{1613i}. %Let $A\to B$ be a morphism in $\C^\wg$. We must check: 
+\nn LE4 follows immediately from Lemma~\ref{1613i}. %Let $A\to B$ be a morphism in $\C^\wg$. We must check: 
 %\begin{center}
 %$A\to B$ is in $\E$\\ $\iff$\\ for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\times_BU\to U$ is in $\E$.
 %\end{center}
-%Implication $\then$ is obvious, and Implication $\si$ follows from Remark~\ref{1613i}. 
+%Implication $\then$ is obvious, and Implication $\si$ follows from Lemma~\ref{1613i}. 
 
 Conversely, given an object $U$ of $\C$ and a set $\E$ of morphisms in $\C^\wg$ satisfying LE1-LE4, put
 $$
@@ -7818,9 +7837,9 @@ We want to prove that $A\to A^a$ is a local monomorphism. In view of \qr{e1623} 
 
 Recall that the functor 
 $$
-\alpha:(\cc{LI}_U)^{\op}\to\Set,\quad(B\xr sU)\mapsto\Hom_{\C^\wg}(B,A)
+\al:(\cc{LI}_U)^{\op}\to\Set,\quad(B\xr sU)\mapsto\Hom_{\C^\wg}(B,A)
 $$ 
-satisfies $\col\alpha\iso A^a(U)$. Let $i(s):\alpha(s)\to A^a(U)$ be the coprojection, and let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of the natural morphism $A\to A^a$, we have 
+satisfies $\col\al\iso A^a(U)$ (see (16.3.1) p.~399 of the book). Let $i(s):\al(s)\to A^a(U)$ be the coprojection, and let $f_1,f_2:U\parar A$ be two morphisms such that the compositions $U\parar A\to A^a$ coincide. By definition of the natural morphism $A\to A^a$, we have 
 $$
 i(\id_U)(f_1)=i(\id_U)(f_2).
 $$ 
@@ -7828,7 +7847,7 @@ By the fact that $\cc{LI}_U$ is cofiltrant, and by Proposition 3.1.3 p.~73 of th
 $$
 \pp:(B\xr sU)\to(U\xr{\id_U}U)
 $$ 
-in $\cc{LI}_U$ such that $\alpha(\pp)(f_1)=\alpha(\pp)(f_2)$. This means that the compositions $B\to U\parar A$ coincide. q.e.d.
+in $\cc{LI}_U$ such that $\al(\pp)(f_1)=\al(\pp)(f_2)$. This means that the compositions $B\to U\parar A$ coincide. q.e.d.
 \end{s}
 
 %
@@ -8094,9 +8113,9 @@ as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\PSh(U,\A)$, given by 
 \begin{s} 
 P.~418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms 
 $$
-\col\alpha\xr f\col\alpha\ci\mu_u^{\op}\ci\lambda_u^{\op}\xr g\col\alpha\ci\mu_u^{\op}\xr h\col\alpha.
+\col\al\xr f\col\al\ci\mu_u^{\op}\ci\lambda_u^{\op}\xr g\col\al\ci\mu_u^{\op}\xr h\col\al.
 $$
-We must show that $g\ci f$ is an isomorphism. The equality $h\ci g\ci f=\id_{\col\alpha}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal by Lemma 3.3.10 p.~84 of the book, and $h$ is an isomorphism. q.e.d.
+We must show that $g\ci f$ is an isomorphism. The equality $h\ci g\ci f=\id_{\col\al}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal by Lemma 3.3.10 p.~84 of the book, and $h$ is an isomorphism. q.e.d.
 \end{s}  
 
 %
@@ -8155,7 +8174,7 @@ $$
 can be represented by a diagram 
 $$
 \begin{tikzcd}
-B'\ar{d}[swap]{\beta}&B'\times_BA\ar{d}&A'\ar{l}[swap]{(u',\alpha)}\ar{r}{(v',\alpha)}\ar{d}{\alpha}&C'\times_CA\ar{d}&C'\ar{d}{\gamma}\\ 
+B'\ar{d}[swap]{\beta}&B'\times_BA\ar{d}&A'\ar{l}[swap]{(u',\al)}\ar{r}{(v',\al)}\ar{d}{\al}&C'\times_CA\ar{d}&C'\ar{d}{\gamma}\\ 
 B&A\ar[equal]{r}&A\ar[equal]{r}&A&C, 
 \end{tikzcd}
 $$ 
