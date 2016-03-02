@@ -78,6 +78,7 @@
 \nc{\incl}{\hookrightarrow}
 \nc{\iso}{\simeq}
 \nc{\lb}{\label}
+\nc{\ld}{\lambda}
 \nc{\mono}{\rightarrowtail}
 \nc{\parar}{\rightrightarrows}
 \nc{\pp}{\varphi}
@@ -171,7 +172,7 @@ The tex file is available at
 
 \nn\href{https://github.com/Pierre-Yves-Gaillard/acs}{https://github.com/Pierre-Yves-Gaillard/acs}
 
-\nn\href{https://goo.gl/ORIE5W}{https://goo.gl/ORIE5W}
+\nn\href{https://goo.gl/eJxVyj}{https://goo.gl/eJxVyj}
 
 %\nn\href{https://app.box.com/s/ktfju6mts4bq3loknnrt}{https://app.box.com/s/ktfju6mts4bq3loknnrt}
 
@@ -255,7 +256,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 \nn$*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
 \begin{s}\lb{27i}
-P.~65, Exercise 2.7 (i): ``$\cdot\times_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\times_ZY:\Set_Z\to\Set_Y$''.
+P.~65, Exercise 2.7 (i): ``$\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\tm_ZY:\Set_Z\to\Set_Y$''.
 \end{s}
 
 \nn$*$ P.~74, last four lines: $\al$ should be replaced with $\pp$.
@@ -287,7 +288,7 @@ Then $a,b$ and $c$ are respectively cofinal by Parts (ii), (iii), and (iv) of Pr
 
 \nn$*$ P.~115, Line 8: $i_1\ci g=i_2\ci g$ should be $g\ci i_1=g\ci i_2$.
 
-\nn$*$ P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to the element $(u,u_0)$ of $F(X)\times_{F(X_1)}F(Z_0)$ under the natural bijection. (Recall $X':=X\sqcup_{X_1}Z_0$.)
+\nn$*$ P.~120, proof of Theorem 5.2.6. We define $u':X'\to F$ as the element of $F(X')$ corresponding to the element $(u,u_0)$ of $F(X)\tm_{F(X_1)}F(Z_0)$ under the natural bijection. (Recall $X':=X\sqcup_{X_1}Z_0$.)
 
 \nn$*$ P.~121, proof of Proposition 5.2.9. The fact that, in Proposition 5.2.3 p.~118 of the book, only Part~(iv) needs the assumption that $\C$ admits small coproducts is implicitly used in the sequel of the book.
 
@@ -321,7 +322,7 @@ IF(``\ilim"\al)\xr\sim``\ilim"(IF\ci\al).
 $$ 
 \end{s}
 
-\nn$*$ P.~134, proof of Proposition 6.1.12: ``$\C_A\times\C_{A'}$'' should be ``$\C_A\times\C'_{A'}$'' (twice).
+\nn$*$ P.~134, proof of Proposition 6.1.12: ``$\C_A\tm\C_{A'}$'' should be ``$\C_A\tm\C'_{A'}$'' (twice).
 
 \nn$*$ P.~136, proof of Proposition 6.1.16: see \S\ref{cipc} p.~\pr{cipc}.
 
@@ -485,7 +486,7 @@ P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \nn$*$ P.~406, first line of the second display: $(\C_Y)^\wg$ should be $\C_Y$ (twice). (See \S\ref{fhat} p.~\pr{fhat}.)
 
-\nn$*$ P.~409, line 2: $\lambda\ci(\oo h_X^t)_A\iso\oo h_A$ should be $\lambda\ci(\oo h_X^t)_A\iso\oo h_A^t$. 
+\nn$*$ P.~409, line 2: $\ld\ci(\oo h_X^t)_A\iso\oo h_A$ should be $\ld\ci(\oo h_X^t)_A\iso\oo h_A^t$. 
 
 \begin{s}\lb{17115typo}
 P.~410, Display (17.1.15):instead of 
@@ -602,11 +603,11 @@ A \textbf{universe}\index{universe} is a set $\U$ satisfying
 
 (vii) $U\in\U\then\bigcup_{u\in U}u\in\U$,
 
-(viii) $U,V\in\U\then U\times V\in\U$,
+(viii) $U,V\in\U\then U\tm V\in\U$,
 
 (ix) $U\subset V\in\U\then U\in\U$,
 
-(x) $I\in \U$ and $U_i\in\U$ for all $i$ $\then$ $\prod_{i\in I}U_i\in\U$.
+(x) $I\in\U$ and $U_i\in\U$ for all $i$ $\then$ $\prod_{i\in I}U_i\in\U$.
 
 \nn(We have kept Kashiwara and Schapira's numbering of Conditions (i) to (x).) 
 
@@ -620,10 +621,10 @@ A \textbf{universe}\index{universe} is a set $\U$ satisfying
 
 \nn\textbf{Proof of (viii).} If $u\in U$ and $v\in V$, then $\{(u,v)\}\in\U$ by (ii), (b), and (iii). Now (v) yields 
 $$
-U\times V=\bigcup_{u\in U}\ \bigcup_{v\in V}\ \{(u,v)\}\in\U.\text{ q.e.d.} 
+U\tm V=\bigcup_{u\in U}\ \bigcup_{v\in V}\ \{(u,v)\}\in\U.\text{ q.e.d.} 
 $$ 
 
-Assume $U,V\in\U$, and let $V^U$ be the set of all maps from $U$ to $V$. As $V^U\in\mc P(U\times V)$, Statements (viii), (iv), and (ii) give
+Assume $U,V\in\U$, and let $V^U$ be the set of all maps from $U$ to $V$. As $V^U\in\mc P(U\tm V)$, Statements (viii), (iv), and (ii) give
 
 (c) $U,V\in\U\then V^U\in\U$.
 
@@ -643,7 +644,7 @@ P.~14, category of morphisms\index{category of morphisms}. Here are some comment
 \begin{nota}\lb{c*}
 For any category $\C$ define the category $\C^*$\index{$\C^*$} as follows. The objects of $\C^*$ are the objects of $\C$, the set $\Hom_{\C^*}(X,Y)$ is defined by 
 $$
-\Hom_{\C^*}(X,Y):=\{Y\}\times\Hom_{\C}(X,Y)\times\{X\},
+\Hom_{\C^*}(X,Y):=\{Y\}\tm\Hom_{\C}(X,Y)\tm\{X\},
 $$
 and the composition is defined by 
 $$
@@ -661,7 +662,7 @@ $$
 $$
 $\ds\Hom_{\Mor(\C)}((Y,f,X),(V,g,U)):=$\bigskip 
 
-$\hfill\ds\{(a,b)\in\Hom_\C(X,U)\times\Hom_\C(Y,V)\ | \ g\ci a=b\ci f\},$\bigskip
+$\hfill\ds\{(a,b)\in\Hom_\C(X,U)\tm\Hom_\C(Y,V)\ | \ g\ci a=b\ci f\},$\bigskip
 
 \nn{\em i.e.} 
 $$
@@ -954,12 +955,12 @@ $$
 $$ 
 Let us denote the functorial bijection defining the adjunction by 
 $$
-\lambda_{X,X'}:\Hom_\C(X,RX')\to\Hom_{\C'}(LX,X')
+\ld_{X,X'}:\Hom_\C(X,RX')\to\Hom_{\C'}(LX,X')
 $$ 
 for $X$ in $\C$ and $X'$ in $\C'$. The diagram (1.5.6) can be written as 
 \begin{equation}\lb{156}
 \begin{tikzcd}
-\Hom_{\C'}(X',Y')\ar{r}{R}\ar{dr}[swap]{\ci\lambda_{RX',X'}(\id_{RX'})}&\Hom_\C(RX',RY'),\ar{d}{\lambda_{RX',Y'}}\\ 
+\Hom_{\C'}(X',Y')\ar{r}{R}\ar{dr}[swap]{\ci\ld_{RX',X'}(\id_{RX'})}&\Hom_\C(RX',RY'),\ar{d}{\ld_{RX',Y'}}\\ 
 &\Hom_{\C'}(LRX',Y').
 \end{tikzcd}
 \end{equation} 
@@ -967,13 +968,13 @@ for $X$ in $\C$ and $X'$ in $\C'$. The diagram (1.5.6) can be written as
 As the diagram 
 $$
 \begin{tikzcd}
-\Hom_\C(RX',RX')\ar{r}{\lambda_{RX',X'}}\ar{d}[swap]{R(f)\ci}&\Hom_{\C'}(LRX',X'),\ar{d}{f\ci}\\ 
-\Hom_\C(RX',RY')\ar{r}[swap]{\lambda_{RX',Y'}}&\Hom_{\C'}(LRX',Y')
+\Hom_\C(RX',RX')\ar{r}{\ld_{RX',X'}}\ar{d}[swap]{R(f)\ci}&\Hom_{\C'}(LRX',X'),\ar{d}{f\ci}\\ 
+\Hom_\C(RX',RY')\ar{r}[swap]{\ld_{RX',Y'}}&\Hom_{\C'}(LRX',Y')
 \end{tikzcd}
 $$ 
 commutes for $f$ in $\Hom_{\C'}(X',Y')$, we get in particular
 $$
-f\ci\lambda_{RX',X'}(\id_{RX'})=\lambda_{RX',Y'}(R(f)\ci\id_{RX'})=\lambda_{RX',Y'}(R(f)).
+f\ci\ld_{RX',X'}(\id_{RX'})=\ld_{RX',Y'}(R(f)\ci\id_{RX'})=\ld_{RX',Y'}(R(f)).
 $$ 
 This shows that \eqref{156} commutes, as required.
 
@@ -1133,29 +1134,29 @@ Let us denote the functorial mutually inverse bijections defining the adjunction
 %
 \begin{equation}\lb{bij}
 \begin{tikzcd}
-\Hom_\C(X,RX')\ar[yshift=0.7ex]{rr}{\lambda_{X,X'}}&&\Hom_{\C'}(LX,X'),\ar[yshift=-0.7ex]{ll}{\mu_{X,X'}}
+\Hom_\C(X,RX')\ar[yshift=0.7ex]{rr}{\ld_{X,X'}}&&\Hom_{\C'}(LX,X'),\ar[yshift=-0.7ex]{ll}{\mu_{X,X'}}
 \end{tikzcd}
 \end{equation} 
 %
 and recall that $\ee_X$ and $\eta_{X'}$ are defined by
 %
 \begin{equation}\lb{epseta}
-\ee_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\lambda_{RX',X'}(\id_{RX'}).
+\ee_X:=\mu_{X,LX}(\id_{LX}),\quad\eta_{X'}:=\ld_{RX',X'}(\id_{RX'}).
 \end{equation}
 
 Equality \qr{158} p.~\pr{158} can be written 
 $$
-\lambda_{RLX,LX}(\id_{RLX})\ci L(\ee_X)=\id_{LX},
+\ld_{RLX,LX}(\id_{RLX})\ci L(\ee_X)=\id_{LX},
 $$ 
 and we have 
 $$
 \id_{LX}\overset{\text{(a)}}{=}
-\lambda_{X,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}
-\lambda_{X,LX}(\ee_X)\overset{\text{(c)}}{=}
-\big(\lambda_{X,LX}\ci(\ci\ee_X)\big)(\id_{RLX})
+\ld_{X,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}
+\ld_{X,LX}(\ee_X)\overset{\text{(c)}}{=}
+\big(\ld_{X,LX}\ci(\ci\ee_X)\big)(\id_{RLX})
 $$
 $$
-\overset{\text{(d)}}{=}\Big(\big(\ci L(\ee_X)\big)\ci\lambda_{RLX,LX}\Big)(\id_{RLX})\overset{\text{(e)}}{=}\lambda_{RLX,LX}(\id_{RLX})\ci L(\ee_X),
+\overset{\text{(d)}}{=}\Big(\big(\ci L(\ee_X)\big)\ci\ld_{RLX,LX}\Big)(\id_{RLX})\overset{\text{(e)}}{=}\ld_{RLX,LX}(\id_{RLX})\ci L(\ee_X),
 $$ 
 the successive equalities being justified as follows:
 
@@ -1168,8 +1169,8 @@ the successive equalities being justified as follows:
 (d) follows from the commutative square 
 $$
 \begin{tikzcd}
-\Hom_\C(RLX,RLX)\ar{d}[swap]{\ci\ee_X}\ar{rr}{\lambda_{RLX,LX}}&&\Hom_{\C'}(LRLX,LX)\ar{d}{\ci L(\ee_X)}\\
-\Hom_\C(X,RLX)\ar{rr}[swap]{\lambda_{X,LX}}&&\Hom_{\C'}(LX,LX),
+\Hom_\C(RLX,RLX)\ar{d}[swap]{\ci\ee_X}\ar{rr}{\ld_{RLX,LX}}&&\Hom_{\C'}(LRLX,LX)\ar{d}{\ci L(\ee_X)}\\
+\Hom_\C(X,RLX)\ar{rr}[swap]{\ld_{X,LX}}&&\Hom_{\C'}(LX,LX),
 \end{tikzcd}
 $$ 
 
@@ -1187,7 +1188,7 @@ P.~36, Definition 2.1.2.
 \begin{df}[projective limit]\lb{p}
 If $\al:I^{\op}\to\C$ is a functor and $\Delta:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
 $$
-(X,p)\in\Ob(\C)\times\Hom_{\C^{I^{\op}}}(\Delta(X),\al)
+(X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\Delta(X),\al)
 $$
 such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\Delta(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
@@ -1204,7 +1205,7 @@ $$
 \begin{df}[inductive limit] 
 If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\al$ {\em in} $\C$ is a pair 
 $$
-(X,p)\in\Ob(\C)\times\Hom_{\C^I}(\al,\Delta(X))
+(X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\Delta(X))
 $$
 such that $p$ is a $(\Hom_{\C^I}(\al,\Delta(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
 \end{df}
@@ -1251,9 +1252,9 @@ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coproject
 \begin{s} 
 P.~39, Proposition 2.1.7. The following slightly stronger statement holds. 
 
-Let $I, J, \C$ be categories and let 
+Let $I,J,\C$ be categories and let 
 $$
-(X_{ij})_{(i,j)\in I\times J}
+(X_{ij})_{(i,j)\in I\tm J}
 $$ 
 be an inductive system in $\C$. Assume that $\col_jX_{ij}$ exists in $\C$ for all $i$, and that 
 \begin{equation}\lb{limlim}
@@ -1286,7 +1287,7 @@ $$
 \Hom_\C\left(\col G(\al),Z\right)
 $$
 $$
-\xr\sim\lim \ \Hom_\C(G(\al),Z)\iso\lim \ \Hom_\B(F(\al),Y)\iso\Hom_\B(\col F(\al),Y),
+\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\iso\Hom_\B(\col F(\al),Y),
 $$ 
 and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
 \end{proof}
@@ -1417,7 +1418,7 @@ Indeed, if $f,g:X\parar Y$ is a pair of parallel arrows, and if the square
 $$
 \begin{tikzcd}
 K\ar{d}\ar{r}&Y\ar{d}{\Delta}\\ 
-X\ar{r}[swap]{(f,g)}&Y\times Y
+X\ar{r}[swap]{(f,g)}&Y\tm Y
 \end{tikzcd}
 $$
 is cartesian, then $K\iso\Ker(f,g)$. (As usual, $\Delta$ is the diagonal morphism.)
@@ -1642,7 +1643,7 @@ Here is a corollary to Theorem \ref{233i} p.~\pr{233i} (which is Theorem 2.3.3 (
 \begin{cor}\lb{c233i}
 If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\pp^\dg(\beta)(i)$ is (in natural bijection with) the quotient of 
 $$
-\bigsqcup_{j\in J}\ \beta(j)\times\Hom_I(\pp(j),i) 
+\bigsqcup_{j\in J}\ \beta(j)\tm\Hom_I(\pp(j),i) 
 $$ 
 by the smallest equivalence relation $\sim$ satisfying the following condition: If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\beta(j)$, and if $u'$ is in $\Hom_I(\pp(j'),i)$, then 
 $$
@@ -1662,7 +1663,7 @@ $$
 $$ 
 by a certain equivalence relation. We have 
 $$
-\bigsqcup_{(\pp(j)\to i)\in J_i}\beta(j)=\bigsqcup_{j\in J}\ \bigsqcup_{u\in\Hom_I(\pp(j),i)}\ \beta(j)\iso\bigsqcup_{j\in J}\beta(j)\times\Hom_I(\pp(j),i),
+\bigsqcup_{(\pp(j)\to i)\in J_i}\beta(j)=\bigsqcup_{j\in J}\ \bigsqcup_{u\in\Hom_I(\pp(j),i)}\ \beta(j)\iso\bigsqcup_{j\in J}\beta(j)\tm\Hom_I(\pp(j),i),
 $$ 
 and it easy to see that the three data of the above bijection, of the equivalence relation in Proposition 2.4.1 of the book, and of the equivalence relation in Corollary~\ref{c233i} above are compatible.
 \end{proof}
@@ -1732,7 +1733,7 @@ To prove \qr{pddb1}, set
 $$
 M':=\lim_{(f:M\to R)\in J^M}R\in\C, 
 $$ 
-and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\dg(\beta)(M)$, it suffices to prove $M'\iso M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to R$ by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\lambda_f))(g):=\lambda_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb1}. 
+and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\dg(\beta)(M)$, it suffices to prove $M'\iso M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to R$ by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\ld_f))(g):=\ld_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb1}. 
 
 Let $R$, $\U$ and $\V$ be as above, put, with self-explanatory notation, 
 $$
@@ -1766,7 +1767,7 @@ To prove \qr{pddb2}, set
 $$
 M':=\lim_{(M\to R)\in J^M}R^{\op}=\lim_{(x:R\to M)\in(J^{\op})_M}R^{\op}\in\C, 
 $$ 
-and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\ddg(\beta)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\lambda_x))(y):=\lambda_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb2}. 
+and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\ddg(\beta)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\ld_x))(y):=\ld_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb2}. 
 
 %% 
 
@@ -1778,7 +1779,7 @@ P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 \begin{prop}
 If $\Delta:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
 $$
-\col\Delta(S)\iso\pi_0(I)\times S.
+\col\Delta(S)\iso\pi_0(I)\tm S.
 $$
 \end{prop} 
 %
@@ -1789,7 +1790,7 @@ $$
 $$
 where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54 of the book 
 $$
-\col\Delta(S)\iso(\Ob(I)\times S)/\!\!\approx\ ,
+\col\Delta(S)\iso(\Ob(I)\tm S)/\!\!\approx\ ,
 $$
 where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
 $$
@@ -1854,7 +1855,7 @@ $$
 $$
 
 $$
-\iso\bigsqcup_{X\in\C}\Hom_{\C'}(A,F(X))\times\Hom_{\C''}(G(X),B)
+\iso\bigsqcup_{X\in\C}\Hom_{\C'}(A,F(X))\tm\Hom_{\C''}(G(X),B)
 $$
 
 $$
@@ -1883,6 +1884,13 @@ $$
 \Hom_{\Set}\left(\col k(i_0),X\right)\iso\Hom_{{\Set}^I}(k(i_0),\Delta(X))\iso X,
 $$
 the first bijection being a particular case of \qr{cue} p.~\pr{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}).
+\end{proof}
+
+Here is a second proof:
+
+\begin{proof}
+Each element of $\col_{i\in I}\Hom_I(i_0,i)$ is represented by some morphism $i_0\to i$ in $I$. Moreover, a composition of the form $i_0\to i\to j$ represents the same element as 
+$i_0\to i$. In particular $i_0\to i$ represents the same element as $\id_{s_0}$. 
 \end{proof}
 \end{s}
 
@@ -2136,26 +2144,26 @@ $$
 
 Let $\C$ be a category and $A$ an object of $\C^\wg$. Recall that there is a unique functor 
 $$
-\lambda:(\C^\wg)_A\to(\C_A)^\wg
+\ld:(\C^\wg)_A\to(\C_A)^\wg
 $$ 
 such that 
 %
 \begin{equation}\lb{lambda}
-\lambda(B\to A)(U\to A)=\Hom_{(\C^\wg)_A}(U\to A,B\to A)
+\ld(B\to A)(U\to A)=\Hom_{(\C^\wg)_A}(U\to A,B\to A)
 \end{equation} 
 %
 for all $(B\to A)$ in $(\C^\wg)_A$ and all $(U\to A)$ in $\C_A$. Moreover 
 \begin{equation}\lb{leq}
-\text{$\lambda$ is an equivalence,}
+\text{$\ld$ is an equivalence,}
 \end{equation} 
 and we have 
 \begin{equation}\lb{lcom}
-\lambda\ci h(\C)_A\iso h(\C_A),
+\ld\ci h(\C)_A\iso h(\C_A),
 \end{equation}
 that is, the diagram
 $$
 \begin{tikzcd}
-\C_A\ar{r}{h(\C)_A}\ar{rd}[swap]{h(\C)_A}&(\C^\wg)_A\ar{d}{\lambda}\\ 
+\C_A\ar{r}{h(\C)_A}\ar{rd}[swap]{h(\C)_A}&(\C^\wg)_A\ar{d}{\ld}\\ 
 &(\C_A)^\wg
 \end{tikzcd}
 $$ 
@@ -2200,7 +2208,7 @@ Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$
 We claim 
 
 \begin{equation}\lb{prepa1}
-h(\C_A)^\ddg(F\ci j(\C_A))\ci\lambda\iso h(\C)^\ddg(F)\ci j((\C^\wg)_A)
+h(\C_A)^\ddg(F\ci j(\C_A))\ci\ld\iso h(\C)^\ddg(F)\ci j((\C^\wg)_A)
 \end{equation}
 
 \nn(see the diagram \qr{qcd} below).
@@ -2212,14 +2220,14 @@ Consider the diagram
 \begin{tikzcd}
 \C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\ci j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
 {}\\ 
-(\C_A)^\wg\ar{uurr}[swap]{h(\C_A)^\ddg(F\ci j(\C_A))}&&(\C^\wg)_A\ar{ll}{\lambda}\ar{rr}[swap]{j((\C^\wg)_A)}&&\C^\wg.\ar{uull}[swap]{h(\C)^\ddg(F)}
+(\C_A)^\wg\ar{uurr}[swap]{h(\C_A)^\ddg(F\ci j(\C_A))}&&(\C^\wg)_A\ar{ll}{\ld}\ar{rr}[swap]{j((\C^\wg)_A)}&&\C^\wg.\ar{uull}[swap]{h(\C)^\ddg(F)}
 \end{tikzcd}
 \end{equation}
-%\begin{align*}h(\C_A)^\ddg(F\ci j(\C_A))(\lambda(B\to A))&\iso\lim_{((B\to A)\to(U\to A))\in((\C^\wg)_A)^{B\to A}}F(U)\\ \\ &\iso\lim_{(B\to U)\in\C^B}F(U)\\ \\ &\iso h(\C)^\ddg(F)(B)\\ \\ &\iso h(\C)^\ddg(F)\Big(j\big((\C^\wg)_A\big)(B\to A)\Big).\end{align*} 
+%\begin{align*}h(\C_A)^\ddg(F\ci j(\C_A))(\ld(B\to A))&\iso\lim_{((B\to A)\to(U\to A))\in((\C^\wg)_A)^{B\to A}}F(U)\\ \\ &\iso\lim_{(B\to U)\in\C^B}F(U)\\ \\ &\iso h(\C)^\ddg(F)(B)\\ \\ &\iso h(\C)^\ddg(F)\Big(j\big((\C^\wg)_A\big)(B\to A)\Big).\end{align*} 
 
 For $U$ in $\C$ and $U\to A$ in $\C_A$, we have 
 
-$$h(\C_A)^\ddg(F\ci j(\C_A))(\lambda(U\to A))\iso F(U)$$
+$$h(\C_A)^\ddg(F\ci j(\C_A))(\ld(U\to A))\iso F(U)$$
 
 \nn by Proposition~\ref{271} and \qr{lcom}. We also have 
 
@@ -2227,11 +2235,11 @@ $$h(\C)^\ddg(j((\C^\wg)_A))(U\to A)\iso F(U)$$
 
 \nn by Proposition~\ref{271}. For $B$ in $\C^\wg$ and $B\to A$ in $(\C^\wg)_A$, we have 
 
-$$h(\C_A)^\ddg(F\ci j(\C_A))(\lambda(B\to A))$$
+$$h(\C_A)^\ddg(F\ci j(\C_A))(\ld(B\to A))$$
 
-$$\overset{(\text a)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\to A\right)\right)$$
+$$\overset{(\text a)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\to A\right)\right)$$
 
-$$\overset{(\text b)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\lambda\left(\col_{(U\to B)\in\C_B}(U\to A)\right)\right)$$
+$$\overset{(\text b)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}(U\to A)\right)\right)$$
 
 $$\overset{(\text c)}\iso\col_{(U\to B)\in\C_B}h(\C_A)^\ddg(F\ci j(\C_A))(U\to A)$$
 
@@ -2320,13 +2328,13 @@ $$
 \C\ar{l}[swap]{h}\ar{d}[swap]{j^\dg(G)}&
 \C_A\ar{l}[swap]{j}\ar{r}{h_A}\ar{d}{G}&
 (\C_A)^\wg\ar{d}{(h_A)^\dg(G)}&
-(\C^\wg)_A\ar{l}[swap]{\lambda}\\ 
+(\C^\wg)_A\ar{l}[swap]{\ld}\\ 
 \A\ar[equal]{r}&\A\ar[equal]{r}&\A\ar[equal]{r}&\A.
 \end{tikzcd}
 $$ 
-(See \qr{lambda} p.~\pr{lambda} for the definition of $\lambda$.) Let $B$ be in $\C^\wg$. We claim 
+(See \qr{lambda} p.~\pr{lambda} for the definition of $\ld$.) Let $B$ be in $\C^\wg$. We claim 
 \begin{equation}\lb{prepa3}
-h^\dg(j^\dg(G))(B)\iso(h_A)^\dg(G)(\lambda(B\times A\to A)).
+h^\dg(j^\dg(G))(B)\iso(h_A)^\dg(G)(\ld(B\tm A\to A)).
 \end{equation} 
 
 \begin{proof}
@@ -2335,23 +2343,23 @@ $$
 j^\dg(G)(U)\iso\col_{(j(V\to A)\to U)\in(\C_A)_U}G(V\to A)\iso\col_{(A\leftarrow V\to U)\in(\C_A)_U}G(V\to A)
 $$
 $$
-\iso\col_{((V\to A)\to(U\times A\to A))\in(\C_A)_{U\times A\to A}}G(V\to A)\iso(h_A)^\dg(G)(\lambda(U\times A\to A)),
+\iso\col_{((V\to A)\to(U\tm A\to A))\in(\C_A)_{U\tm A\to A}}G(V\to A)\iso(h_A)^\dg(G)(\ld(U\tm A\to A)),
 $$
 that is: 
 %
 \begin{equation}\lb{prepa4}
-j^\dg(G)(U)\iso(h_A)^\dg(G)(\lambda(U\times A\to A)).
+j^\dg(G)(U)\iso(h_A)^\dg(G)(\ld(U\tm A\to A)).
 \end{equation} 
 %
 For $B$ in $\C^\wg$ we get 
 
-$$h^\dg(j^\dg(G))(B)\iso\col_{(U\to B)\in\C_B}j^\dg(G)(U)\overset{(\text a)}\iso\col_{(U\to B)\in\C_B}(h_A)^\dg(G)(\lambda(U\times A\to A))$$
+$$h^\dg(j^\dg(G))(B)\iso\col_{(U\to B)\in\C_B}j^\dg(G)(U)\overset{(\text a)}\iso\col_{(U\to B)\in\C_B}(h_A)^\dg(G)(\ld(U\tm A\to A))$$
 
-$$\overset{(\text b)}\iso(h_A)^\dg(G)\left(\lambda\left(\col_{(U\to B)\in\C_B}(U\times A\to A)\right)\right)$$
+$$\overset{(\text b)}\iso(h_A)^\dg(G)\left(\ld\left(\col_{(U\to B)\in\C_B}(U\tm A\to A)\right)\right)$$
 
-$$\overset{(\text c)}\iso(h_A)^\dg(G)\left(\lambda\left(\left(\col_{(U\to B)\in\C_B}(U\times A)\right)\to A\right)\right)$$
+$$\overset{(\text c)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\col_{(U\to B)\in\C_B}(U\tm A)\right)\to A\right)\right)$$
 
-$$\overset{(\text d)}\iso(h_A)^\dg(G)\left(\lambda\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\times A\to A\right)\right)\overset{(\text e)}\iso(h_A)^\dg(G)(\lambda(B\times A\to A)),$$ 
+$$\overset{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\tm A\to A\right)\right)\overset{(\text e)}\iso(h_A)^\dg(G)(\ld(B\tm A\to A)),$$ 
 
 \nn where 
 (a) follows from \qr{prepa4}; 
@@ -2552,7 +2560,7 @@ P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor 
 
 To prove that filtrant small inductive limits in $\Set$ commute with finite projective limits, one can argue as follows. 
 
-Let $I$ be a filtrant small category, let $J$ be a finite category, let $\al:I\times J^{\op}\to\Set$ be a functor, and put 
+Let $I$ be a filtrant small category, let $J$ be a finite category, let $\al:I\tm J^{\op}\to\Set$ be a functor, and put 
 $$
 X_{ij}:=\al(i,j),\quad Y_i:=\lim_jX_{ij},\quad Y:=\col_iY_i,
 $$
@@ -2569,11 +2577,11 @@ $$
 $$ 
 be the coprojections. It is easy to see that, for each $z=(z_j)$ in $Z$, there is a pair 
 $$
-(i,(x_{ij})_j)\in\Ob(I)\times\prod_jX_{ij}
+(i,(x_{ij})_j)\in\Ob(I)\tm\prod_jX_{ij}
 $$ 
 such that 
 $$
-z_j=\eta_{ij}(x_{ij})\ \forall\ j,\quad(x_{ij})_j\in Y_i. 
+z_j=\zeta_{ij}(x_{ij})\ \forall\ j,\quad(x_{ij})_j\in Y_i. 
 $$ 
 It is also easy to see  that the element $\eta_i((x_{ij})_j)$ in $Y$ does not depend on the choice of the above pair $(i,(x_{ij})_j)$, so that we can set $g(z):=\eta_i((x_{ij})_j)$. 
 \end{s}
@@ -2584,7 +2592,7 @@ It is also easy to see  that the element $\eta_i((x_{ij})_j)$ in $Y$ does not de
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
 %
 \begin{cor}\lb{316}
-Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\al:I\times J^{\op}\to\Set$ a functor such that $\col_i\al(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\al(i,j)$ exists in $\Set$, and the natural map 
+Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\al:I\tm J^{\op}\to\Set$ a functor such that $\col_i\al(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\al(i,j)$ exists in $\Set$, and the natural map 
 $$
 \col_i\lim_j\al(i,j)\to
 \lim_j\col_i\al(i,j)
@@ -2930,7 +2938,7 @@ Let $\C$ be a category which admits fiber products and inductive limits indexed 
 
 \nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change}\index{stable by base change} if for any morphism $Y\to Z$ in $\C$, the base change functor $\C_Z\to\C_Y$ given by 
 $$
-\C_Z\ni(X\to Z)\mapsto(X\times_ZY\to Y)\in\C_Y
+\C_Z\ni(X\to Z)\mapsto(X\tm_ZY\to Y)\in\C_Y
 $$ 
 commutes with inductive limits indexed by $I$.
 
@@ -3050,7 +3058,7 @@ P(u)\ci P(\ee_X)=P(\ee_X)=\id_{P^2(X)}\ci P(\ee_X).
 $$
 As $P(\ee_X)$ is an epimorphism, this implies $P(u)=\id_{P^2(X)}$, and thus 
 $$
-\ee_{P(X)}\ci u=P(u)\ci \ee_{P(X)}=\ee_{P(X)}.
+\ee_{P(X)}\ci u=P(u)\ci\ee_{P(X)}=\ee_{P(X)}.
 $$ 
 As $\ee_{P(X)}$ is an isomorphism, this implies \qr{uidpx}, as required.
 
@@ -3142,7 +3150,7 @@ We want to define the notions of coimage (denoted by $\Coim$) and image (denoted
 \begin{lem}\lb{imset} 
 For any set theoretical map $g:U\to V$ we have natural bijections 
 $$ 
-\Coker(U\times_VU\parar U)\iso\IM g\iso\Ker(V\parar V\sqcup_UV),
+\Coker(U\tm_VU\parar U)\iso\IM g\iso\Ker(V\parar V\sqcup_UV),
 $$ 
 where $\IM g$ denotes the image of $g$. 
 \end{lem} 
@@ -3155,7 +3163,7 @@ for any $Z$ in $\C$. Lemma \ref{imset} implies
 
 \begin{equation}\lb{IM2}
 \begin{split}
-\IM\hy(f)\iso\Coker(\hy(X)\times_{\hy(Y)}\hy(X)\parar\hy(X)),\\ \\ 
+\IM\hy(f)\iso\Coker(\hy(X)\tm_{\hy(Y)}\hy(X)\parar\hy(X)),\\ \\ 
 \IM\ky(f)\iso\Ker(\ky(Y)\parar\ky(Y)\sqcup_{\ky(X)}\ky(Y)).
 \end{split}
 \end{equation}
@@ -3200,7 +3208,7 @@ $$
 
 By \qr{IM2} we have 
 $$ 
-(\Coim f)(Z)\iso\Ker\Big(\Hom_\C(X,Z)\parar\Hom_{\C^\wg}\big(\hy(X)\times_{\hy(Y)}\hy(X),\hy(Z)\big)\Big), 
+(\Coim f)(Z)\iso\Ker\Big(\Hom_\C(X,Z)\parar\Hom_{\C^\wg}\big(\hy(X)\tm_{\hy(Y)}\hy(X),\hy(Z)\big)\Big), 
 $$ 
 $$ 
 (\Ima f)(Z)\iso\Ker\Big(\Hom_\C(Z,Y)\parar\Hom_{\C^\vee}\big(\ky(Z),\ky(Y)\sqcup_{\ky(X)}\ky(Y)\big)\Big). 
@@ -3209,7 +3217,7 @@ $$
 This implies 
 
 \begin{prop}\lb{coimim}
-If $P:=X\times_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\parar X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\parar S)\in\C^\wg$. 
+If $P:=X\tm_YX$ exists in $\C$, then $\Coim f$ is naturally isomorphic to $\Coker(P\parar X)\in\C^\vee$. If $S:=Y\sqcup_XY$ exists in $\C$, then $\Ima f$ is naturally isomorphic to $\Ker(Y\parar S)\in\C^\wg$. 
 \end{prop} 
 
 In view of Lemma~\ref{imset} and Proposition~\ref{coimim} we can replace the notation $\IM$ with $\Ima$ (or $\Coim$). The following proposition is obvious: 
@@ -3254,7 +3262,7 @@ If $\C$ is a category admitting finite inductive and projective limits, then the
 
 \nn\emph{(b)} $\Coim f\xr\sim Y$,
 
-\nn\emph{(c)} the sequence $X\times_YX\parar X\to Y$ is exact,
+\nn\emph{(c)} the sequence $X\tm_YX\parar X\to Y$ is exact,
 
 \nn\emph{(d)} there exists a pair of parallel arrows $g,h:Z\parar X$ such that $f\ci g=f\ci h$ and $\Coker(g,h)\to Y$ is an isomorphism,
 
@@ -3265,7 +3273,7 @@ Here are the additional details:
 
 \nn(b)$\then$(a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) of the book implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
-\nn(c)$\ssi$(e): Write $P$ for $X\times_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. By Proposition~\ref{epimono} p.~\pr{epimono} Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pr{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pr{bra} 
+\nn(c)$\ssi$(e): Write $P$ for $X\tm_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. By Proposition~\ref{epimono} p.~\pr{epimono} Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pr{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pr{bra} 
 $$
 [P\parar X\xr xZ]\iff\Big((\forall\ W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]\Big).
 $$ 
@@ -3349,7 +3357,7 @@ Form the cartesian square
 %
 \begin{equation}\lb{523v1}
 \begin{tikzcd}
-Y_1\times_XY_2\ar{r}{p_1}\ar{d}[swap]{p_2}&Y_1\ar[tail]{d}{f_1}\\ 
+Y_1\tm_XY_2\ar{r}{p_1}\ar{d}[swap]{p_2}&Y_1\ar[tail]{d}{f_1}\\ 
 Y_2\ar[tail]{r}[swap]{f_2}&X.
 \end{tikzcd}
 \end{equation}
@@ -3359,14 +3367,14 @@ Claim 2: $p_1$ and $p_2$ are isomorphisms.
 Clearly, Claim 2 implies Claim 1. Applying $\pp$ to \qr{523v1}, we get the commutative diagram 
 $$
 \begin{tikzcd}
-\pp(Y_1\times_XY_2)\ar{rd}{\sim}\ar[bend left]{rrd}{\pp(p_1)}\ar[bend right]{rdd}[swap]{\pp(p_2)}\\ 
-{}&\pp(Y_1)\times_{\pp(X)}\pp(Y_2)\ar{r}{q_1}\ar{d}[swap]{q_2}&\pp(Y_1)\ar[tail]{d}{\pp(f_1)}\\ 
+\pp(Y_1\tm_XY_2)\ar{rd}{\sim}\ar[bend left]{rrd}{\pp(p_1)}\ar[bend right]{rdd}[swap]{\pp(p_2)}\\ 
+{}&\pp(Y_1)\tm_{\pp(X)}\pp(Y_2)\ar{r}{q_1}\ar{d}[swap]{q_2}&\pp(Y_1)\ar[tail]{d}{\pp(f_1)}\\ 
 {}&\pp(Y_2)\ar[tail]{r}[swap]{\pp(f_2)}&\pp(X),
 \end{tikzcd}
 $$ 
 the morphism 
 $$
-\pp(Y_1\times_XY_2)\to\pp(Y_1)\times_{\pp(X)}\pp(Y_2)
+\pp(Y_1\tm_XY_2)\to\pp(Y_1)\tm_{\pp(X)}\pp(Y_2)
 $$ 
 being an isomorphism by left-exactness of $\pp$. As $\pp(f_1)$ and $\pp(f_2)$ are injective and have same image, $q_1$ and $q_2$ are bijective, and thus $\pp(p_1)$ and $\pp(p_2)$ are also bijective. As $\pp$ is conservative,  this implies Claim~2, and we saw that Claim~2 implies Claim~1.
 \end{s}
@@ -3569,10 +3577,10 @@ It remains to prove Steps 3, 3', 4, 5, and 6. We refer to the book for Step 3. T
 \begin{proof}[Proof of Step 4] 
 We have 
 $$
-\Hom_\C(\Coim z,Y)\iso\Hom_\C\big(\Coker(Z\times_XZ\rightrightarrows Z),Y\big)
+\Hom_\C(\Coim z,Y)\iso\Hom_\C\big(\Coker(Z\tm_XZ\rightrightarrows Z),Y\big)
 $$
 $$
-\iso\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\times_XZ,Y)\big),
+\iso\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big),
 $$ 
 and also 
 $$
@@ -3580,20 +3588,20 @@ $$
 $$ 
 by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
 $$
-\Hom_\C(Z\times_XZ,Y)\to\Hom_{\F^\wg}\big(\pp(Z\times_XZ),\pp(Y)\big)
+\Hom_\C(Z\tm_XZ,Y)\to\Hom_{\F^\wg}\big(\pp(Z\tm_XZ),\pp(Y)\big)
 $$
 $$
-\iso\Hom_{\F^\wg}\big(\pp(Z)\times_{\pp(X)}\pp(Z),\pp(Y)\big).
+\iso\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big).
 $$ 
 is injective. This yields 
 $$
 \Hom_\C(\Coim z,Y)
 $$
 $$
-\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\times_{\pp(X)}\pp(Z),\pp(Y)\big)\Big)
+\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big)
 $$
 $$
-\iso\Hom_{\F^\wg}\Big(\Coker\big(\pp(Z)\times_{\pp(X)}\pp(Z)\rightrightarrows\pp(Z)\big),\pp(Y)\Big)
+\iso\Hom_{\F^\wg}\Big(\Coker\big(\pp(Z)\tm_{\pp(X)}\pp(Z)\rightrightarrows\pp(Z)\big),\pp(Y)\Big)
 $$
 $$
 \iso\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).
@@ -3788,12 +3796,12 @@ Let us also record Part (ii) of the Proposition as
 We give some more details about the proof. Recall the setting: We have two categories $\C_1$ and $\C_2$, and we shall define functors
 $$
 \begin{tikzcd}
-\Ind(\C_1\times\C_2)\ar[yshift=0.7ex]{r}{\theta}&\Ind(\C_1)\times\Ind(\C_2),\ar[yshift=-0.7ex]{l}{\mu}
+\Ind(\C_1\tm\C_2)\ar[yshift=0.7ex]{r}{\theta}&\Ind(\C_1)\tm\Ind(\C_2),\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
 and prove that they are mutually quasi-inverse equivalences. (In fact, we shall only define the effect of $\theta$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.) But first let us introduce some notation. We shall consider functors 
 $$
-A\in\Ind(\C_1\times\C_2);\quad A_i,B_i\in\Ind(\C_i);
+A\in\Ind(\C_1\tm\C_2);\quad A_i,B_i\in\Ind(\C_i);
 $$ 
 objects $X_i,Y_i,\dots$ in $\C_i$; and elements 
 $$
@@ -3803,7 +3811,7 @@ When we write
 $$
 \col_x\ \cdots,\quad\col_{x_i}\ \cdots,\quad\col_{x_1,x_2}\ \cdots,
 $$ 
-we mean, in the first case, not only that $x$ runs over the elements of $A(X_1,X_2)$, but also that $X_1$ and $X_2$ themselves run over the objects of $\C_1$ and $\C_2$, so that we are taking the inductive limit of some functor defined over $(\C_1\times\C_2)_A$. In the other cases, the interpretation is similar. 
+we mean, in the first case, not only that $x$ runs over the elements of $A(X_1,X_2)$, but also that $X_1$ and $X_2$ themselves run over the objects of $\C_1$ and $\C_2$, so that we are taking the inductive limit of some functor defined over $(\C_1\tm\C_2)_A$. In the other cases, the interpretation is similar. 
 
 Let us define $\theta$ and $\mu$: The functor $\theta$ is defined by $\theta(A)=(A_1,A_2)$ with
 %
@@ -3829,25 +3837,25 @@ The functors $\theta$ and $\mu$ are mutually quasi-inverse.
 \begin{proof}
 We have 
 $$
-\mu(A_1,A_2)(X_1,X_2)\iso\col_{y_1,y_2}\Big(\Hom_{\C_1}(X_1,Y_1)\times\Hom_{\C_2}(X_2,Y_2)\Big)
+\mu(A_1,A_2)(X_1,X_2)\iso\col_{y_1,y_2}\Big(\Hom_{\C_1}(X_1,Y_1)\tm\Hom_{\C_2}(X_2,Y_2)\Big)
 $$
 $$
-\overset{\text{(a)}}{\iso}\col_{y_1}\Hom_{\C_1}(X_1,Y_1)\times\col_{y_2}\Hom_{\C_2}(X_2,Y_2)
-\overset{\text{(b)}}{\iso}A_1(X_1)\times A_2(X_2),
+\overset{\text{(a)}}{\iso}\col_{y_1}\Hom_{\C_1}(X_1,Y_1)\tm\col_{y_2}\Hom_{\C_2}(X_2,Y_2)
+\overset{\text{(b)}}{\iso}A_1(X_1)\tm A_2(X_2),
 $$ 
 Isomorphism~(a) following from the IPC Property (see pp 75-77 of the book), and Isomorphism~(b) following from \qr{263b} p.~\pr{263b}. We record this as
 $$
-\mu(A_1,A_2)(X_1,X_2)\iso A_1(X_1)\times A_2(X_2).
+\mu(A_1,A_2)(X_1,X_2)\iso A_1(X_1)\tm A_2(X_2).
 $$
-This suggests the notation $A_1\times A_2$ for $\mu(A_1,A_2)$, notation which we shall use henceforth.
+This suggests the notation $A_1\tm A_2$ for $\mu(A_1,A_2)$, notation which we shall use henceforth.
 
 Let us prove
 %
 \begin{equation}\lb{6112a}
-\theta\ci\mu\iso\id_{\Ind(\C_1)\times\Ind(\C_2)}.
+\theta\ci\mu\iso\id_{\Ind(\C_1)\tm\Ind(\C_2)}.
 \end{equation}
 %
-If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\times A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
+If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\tm A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
 B_1
 \overset{\text{(a)}}{\iso}\ic_x\ X_1\iso\ic_{x_1,x_2}\ X_1
@@ -3856,28 +3864,28 @@ B_1
 $$ 
 Indeed, Isomorphism~(a) follows from \qr{ai}, Isomorphism~(b) from the definition of $A$, Isomorphism~(b) from the fact that the projection 
 $$
-(\C_1)_{A_1}\times(\C_2)_{A_2}\to(\C_1)_{A_1}
+(\C_1)_{A_1}\tm(\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
 is cofinal by Lemma~\ref{proj} below coupled with the fact that $(\C_2)_{A_2}$ is connected, and Isomorphism~(c) from our old friend \qr{263a} p.~\pr{263a}. (By the way, in this proof we are using \qr{263a} a lot without explicit reference.)
 
 \begin{lem}\lb{proj}
-If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\times J\to I$ is cofinal.
+If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\tm J\to I$ is cofinal.
 \end{lem}
 
 \begin{proof}
-Let $i_0$ be in $I$. We must check that $(I\times J)^{i_0}$ is connected. We have $(I\times J)^{i_0}\iso I^{i_0}\times J$, and it is easy to see that a product of connected categories is connected. 
+Let $i_0$ be in $I$. We must check that $(I\tm J)^{i_0}$ is connected. We have $(I\tm J)^{i_0}\iso I^{i_0}\tm J$, and it is easy to see that a product of connected categories is connected. 
 \end{proof}
 
 This ends the proof of \qr{6112a}.
 
 Let us prove
 \begin{equation}\lb{6112b}
-\mu\ci\theta\iso\id_{\Ind(\C_1\times\C_2)}.
+\mu\ci\theta\iso\id_{\Ind(\C_1\tm\C_2)}.
 \end{equation}
 
-Let $A$ be in $\Ind(\C_1\times\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\times A_2$ and $A_1\times A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
+Let $A$ be in $\Ind(\C_1\tm\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\tm A_2$ and $A_1\tm A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
 
-\nn$\bu$ Definition of the morphism $A\to A_1\times A_2$: Recall 
+\nn$\bu$ Definition of the morphism $A\to A_1\tm A_2$: Recall 
 $$
 A\iso\ic_y\ (Y_1,Y_2), 
 $$ 
@@ -3885,23 +3893,23 @@ and let $y$ be in $A(Y_1,Y_2)$. We shall define $y_i$ in $A_i(Y_i),i=1,2$. In No
 $$
 y_i:=a_i(y,Y_i)(\id_{Y_i}). 
 $$ 
-To define our morphism $A\to A_1\times A_2$ we consider the commutative diagram
+To define our morphism $A\to A_1\tm A_2$ we consider the commutative diagram
 $$
 \begin{tikzcd}
-A\iso\ds\ic_y(Y_1,Y_2)\ar{r}&\ds\ic_{x_1,x_2}(X_1,X_2)\iso A_1\times A_2\\ 
+A\iso\ds\ic_y(Y_1,Y_2)\ar{r}&\ds\ic_{x_1,x_2}(X_1,X_2)\iso A_1\tm A_2\\ 
 (Y_1,Y_2)\ar{u}{y}\ar[equal]{r}&(Y_1,Y_2),\ar{u}[swap]{(y_1,y_2)}
 \end{tikzcd}
 $$ 
 (see \qr{263a} p.~\pr{263a} and \qr{pxa} p.~\pr{pxa}) and we leave it to the reader to check that this diagram does define the indicated morphism.
 
-\nn$\bu$ Definition of the morphism $A_1\times A_2\to A$. We must define the morphism represented by the dashed arrow in the diagram  
+\nn$\bu$ Definition of the morphism $A_1\tm A_2\to A$. We must define the morphism represented by the dashed arrow in the diagram  
 $$
 \begin{tikzcd}
-A_1\times A_2\iso\ds\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\ds\ic_x(X_1,X_2)\iso A\\ 
+A_1\tm A_2\iso\ds\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\ds\ic_x(X_1,X_2)\iso A\\ 
 (X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2)\ar{u}[swap]{x}
 \end{tikzcd}
 $$ 
-(see \qr{263a} p.~\pr{263a} and \qr{pxa} p.~\pr{pxa}). Let $x_i$ in $A_i(X_i)$ be given for $i=1,2$. The category $(\C_1\times\C_2)_A$ being filtrant, there is, by Proposition 3.1.3 p.~73 of the book, a 5-tuple 
+(see \qr{263a} p.~\pr{263a} and \qr{pxa} p.~\pr{pxa}). Let $x_i$ in $A_i(X_i)$ be given for $i=1,2$. The category $(\C_1\tm\C_2)_A$ being filtrant, there is, by Proposition 3.1.3 p.~73 of the book, a 5-tuple 
 $$
 \zeta:=(Z_1,Z_2,z,f_1,f_2)
 $$ 
@@ -3912,7 +3920,7 @@ A\ar[equal]{r}&A\\
 (X_1,X_2)\ar{u}{x}\ar{r}[swap]{(f_1,f_2)}&(Z_1,Z_2)\ar{u}[swap]{z}
 \end{tikzcd}
 $$ 
-One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\times A_2$ to $A$. This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\ref{p6112} p.~\pr{p6112}. 
+One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\tm A_2$ to $A$. This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\ref{p6112} p.~\pr{p6112}. 
 \end{proof} 
 
 %%
@@ -3941,11 +3949,11 @@ P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}\hline
 &&$\C\to\Ind(\C)$&$\Ind(\C)\to\C^\wg$\\ \hline
-1&finite inductive limits&$\ci$&$\times$\\ \hline
-2&finite coproducts&$\ci$&$\times$\\ \hline
-3&small filtrant inductive limits&$\times$&$\ci$\\ \hline
-4&small coproducts&$\times$&$\times$\\ \hline
-5&small inductive limits&$\times$&$\times$\\ \hline
+1&finite inductive limits&$\ci$&$\tm$\\ \hline
+2&finite coproducts&$\ci$&$\tm$\\ \hline
+3&small filtrant inductive limits&$\tm$&$\ci$\\ \hline
+4&small coproducts&$\tm$&$\tm$\\ \hline
+5&small inductive limits&$\tm$&$\tm$\\ \hline
 6&finite projective limits&$\ci$&$\ci$\\ \hline
 7&small projective limits&$\ci$&$\ci$\\ \hline
 \end{tabular}
@@ -4166,19 +4174,19 @@ in $\C$ commute. (Recall $Q(\ell)=\al_\ell(i_\ell)$, $Q'(\ell)=\al_\ell(i'_\ell)
 We shall define functors 
 $$
 \begin{tikzcd}
-N\ar[yshift=0.7ex]{r}{\lambda}&M\ar[yshift=-0.7ex]{l}{\mu}
+N\ar[yshift=0.7ex]{r}{\ld}&M\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
-and leave it to the reader to check that they are mutually inverse isomorphisms. (In fact, we shall only define the effect of $\lambda$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
+and leave it to the reader to check that they are mutually inverse isomorphisms. (In fact, we shall only define the effect of $\ld$ and $\mu$ on objects, leaving also to the reader the definition of the effect of these functors on morphisms.)
 
 We shall define maps 
 $$
 \begin{tikzcd}
-\Ob(N)\ar[yshift=0.7ex]{r}{\lambda}&\Ob(M).\ar[yshift=-0.7ex]{l}{\mu}
+\Ob(N)\ar[yshift=0.7ex]{r}{\ld}&\Ob(M).\ar[yshift=-0.7ex]{l}{\mu}
 \end{tikzcd}
 $$ 
 
-To define $\lambda$ let $((i_k),P)$ be in $N$, and let $Q$ be the restriction of $P$ to $L$. Then $\lambda((i_k),P)$ will be of the form 
+To define $\ld$ let $((i_k),P)$ be in $N$, and let $Q$ be the restriction of $P$ to $L$. Then $\ld((i_k),P)$ will be of the form 
 $$
 \Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\al_a(i_a)\big)_{f:\ell\to a}\Big).
 $$ 
@@ -4194,9 +4202,9 @@ We define $P(k)$ by putting $P(\ell):=Q(\ell)$ for $\ell$ in $L$, and $P(a):=\al
 
 If $f:\ell\to m$ is a morphism in $L$, then we set $P(f):=Q(f):P(\ell)\to P(m)$. Let $\ell$ be in $L$. There is at most one morphism $f:\ell\to a$. If this morphism does exist, then we put $P(f):=\xi_f$. 
 
-We leave it to the reader to check that $\lambda$ and $\mu$ are mutually inverse bijections. 
+We leave it to the reader to check that $\ld$ and $\mu$ are mutually inverse bijections. 
 
-We also leave it to the reader to check that the set of morphisms in $M$ from $\lambda((i_k),P)$ to $\lambda((i'_k),P')$ is \emph{equal} (in the strictest sense of the word) to the set of morphisms in $N$ from $((i_k),P)$ to $((i'_k),P')$, so that we get an isomorphism 
+We also leave it to the reader to check that the set of morphisms in $M$ from $\ld((i_k),P)$ to $\ld((i'_k),P')$ is \emph{equal} (in the strictest sense of the word) to the set of morphisms in $N$ from $((i_k),P)$ to $((i'_k),P')$, so that we get an isomorphism 
 $$ 
 N\iso M\left[N'\xr{\pp}(\C/G(a))^{L/a}\xl{\ \Delta\ci\widetilde{\al_a}}I_a\right]. 
 $$
@@ -4223,11 +4231,11 @@ If $I$ is a finite category and $\C$ a filtrant category, then the diagonal func
 \end{lem}
 
 \begin{proof}
-It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\al$ be in $\C^I$. We must show that there is pair $(X,\lambda)$, where $X$ is in $\C$ and $\lambda$ is a morphism of functors from $\al$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
+It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\al$ be in $\C^I$. We must show that there is pair $(X,\ld)$, where $X$ is in $\C$ and $\ld$ is a morphism of functors from $\al$ to $\Delta(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
 $$
 (\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\al(i),Y)\right)\Big(\forall\ (s:i\to j)\in S\Big)\Big(\mu_{j}\ci\al(s)=\mu_i\Big) 
 $$ 
-by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\lambda)$.
+by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\ld)$.
 \end{proof} 
 
 %%
@@ -4487,7 +4495,7 @@ In this section we adhere to Convention 11.7.1 of the book, according to which, 
 
 Let $\cc S$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pr{737} implies that the functors 
 $$
-R_{\cc S}\Hom_\C(X,\ \ ),\quad R_{{\cc S}^{\op}}\Hom_\C(\ \ ,Y),\quad R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C
+R_{\cc S}\Hom_\C(X,\ \ ),\quad R_{{\cc S}^{\op}}\Hom_\C(\ \ ,Y),\quad R_{{\cc S}\tm{\cc S}^{\op}}\Hom_\C
 $$
 exist and satisfy 
 $$
@@ -4495,14 +4503,14 @@ $$
 $$
 
 $$
-\iso R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\iso R_{{\cc S}\times{\cc S}^{\op}}\Hom_\C(X,Y).
+\iso R_{{\cc S}^{\op}}\big(\Hom_\C(\ \ ,Y)\big)(X)\iso R_{{\cc S}\tm{\cc S}^{\op}}\Hom_\C(X,Y).
 $$
 
 \nn More precisely, if, in the diagram 
 %
 \begin{equation}\lb{rccs}
 \begin{tikzcd}
-R_{\cc S}\oo H_\C(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{{\cc S}\times{\cc S}^{\op}}\oo H_\C(X,Y)\ar[leftrightarrow]{d}&R_{{\cc S}^{\op}}\oo H_\C(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
+R_{\cc S}\oo H_\C(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{{\cc S}\tm{\cc S}^{\op}}\oo H_\C(X,Y)\ar[leftrightarrow]{d}&R_{{\cc S}^{\op}}\oo H_\C(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
 &\oo H_{\C_{\cc S}}(X,Y),
 \end{tikzcd}
 \end{equation}
@@ -4570,13 +4578,13 @@ for all $X$ in $\C$. (There is a similar statement for projective limits.)
 Here is a statement contained in Lemma 8.2.3:
 
 \begin{cor}\lb{823}
-Let $\C$ be a pre-additive category, let $X_1$ and $X_2$ be two objects of $\C$ such that the product $X=X_1\times X_2$ exists in $\C$, let $p_a:X\to X_a$ be the projection, and define $i_a:X_a\to X$ by 
+Let $\C$ be a pre-additive category, let $X_1$ and $X_2$ be two objects of $\C$ such that the product $X=X_1\tm X_2$ exists in $\C$, let $p_a:X\to X_a$ be the projection, and define $i_a:X_a\to X$ by 
 $$
 p_a\ci i_b=\begin{cases}\id_{X_a}&\text{if }a=b\\0&\text{if }a\not=b.\end{cases}
 $$ 
 Then $X$ is a coproduct of $X_1$ and $X_2$ by $i_1$ and $i_2$. Moreover we have 
 $$
-i_1\ci p_1+i_2\ci p_2=\id_{X_1\times X_2}.
+i_1\ci p_1+i_2\ci p_2=\id_{X_1\tm X_2}.
 $$
 \end{cor}
 
@@ -4585,7 +4593,7 @@ Let us denote the object $X$ above by $X_1\oplus X_2$. The following lemma is im
 \begin{lem}
 For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have 
 $$
-f_1\times f_2=f_1\sqcup f_2
+f_1\tm f_2=f_1\sqcup f_2
 $$ 
 (equality in $\Hom_\C(X_1\oplus X_2,Y_1\oplus Y_2)$). 
 \end{lem} 
@@ -4597,7 +4605,7 @@ Put $X:=X_1\oplus X_2,\ Y:=Y_1\oplus Y_2$ and write
 $$
 X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
 $$ 
-for the projections and coprojections. We have $q_a\ci(f_1\times f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\times f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
+for the projections and coprojections. We have $q_a\ci(f_1\tm f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\tm f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
 \end{proof}
 
 For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
@@ -4640,7 +4648,7 @@ Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is a
 
 Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
 
-Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\times Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ be a terminal object of $\C$. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\iso X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\iso0$ for any $X$, and $T$ is a zero object. q.e.d.
+Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\tm Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ be a terminal object of $\C$. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\iso X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\iso0$ for any $X$, and $T$ is a zero object. q.e.d.
 \end{s}
 
 %
@@ -4741,7 +4749,7 @@ are mutually inverse isomorphisms, let $p_j:X_1\oplus X_2\to X_j$ and $i_j:X_j\t
 
 \subsubsection{Proposition 8.3.4 (p. 176)}
 
-Here are a few more details about the proof of Proposition 8.3.4. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\times_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
+Here are a few more details about the proof of Proposition 8.3.4. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\tm_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h} &X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
@@ -4827,7 +4835,7 @@ $$
 
 \subsubsection{Definition 8.3.5 (p.~177)}
 
-The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to \cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
+The following definitions and observations are implicit in the book. Let $\cc A$ be a subcategory of a pre-additive category $\cc B$, and let $\iota:\cc A\to\cc B$ be the inclusion. If $\cc A$ is pre-additive and $\iota$ is additive, we say that $\cc A$ is a {\em pre-additive subcategory} of $\cc B$. If in addition $\cc A$ and $\cc B$ are additive (resp. abelian), we say that $\cc A$ is {\em an additive (resp. abelian) subcategory} of $\cc B$. Now let $\cc A$ and $\cc B$ be categories. If $\cc B$ is pre-additive (resp. additive, abelian), then so is the category $\cc C:=\cc B^\cc A$ of functors from $\cc A$ to $\cc B$. Assume in addition that $\cc A$ is pre-additive. If $\cc B$ is pre-additive (resp. additive, abelian), then the full subcategory $\cc D:=\Ad(\cc A,\cc B)$ of $\cc C$ whose objects are the additive functors from $\cc A$ to $\cc B$ is a pre-additive (resp. additive, abelian) subcategory of $\cc C$.
 
 %%
 
@@ -5110,7 +5118,7 @@ q.e.d.
 
 Here is a comment about Proposition 8.4.7 p.~187. 
 
-Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\times_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
+Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\tm_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
 It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\ci a_0=\pp$:
 $$
@@ -5129,19 +5137,19 @@ $$
 and the cocartesian square 
 $$
 \begin{tikzcd}
-Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar{d}{\lambda}\\
+Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar{d}{\ld}\\
 G_i\ar[swap]{r}{a_1}&Y_1.
 \end{tikzcd}
 $$ 
 Let $l_1:Y_1\to X$ be the morphism which makes the diagram 
 $$
 \begin{tikzcd}
-{}&Y_0\ar{d}[swap]{\lambda}\ar{dr}{l_0}\\ 
+{}&Y_0\ar{d}[swap]{\ld}\ar{dr}{l_0}\\ 
 Y\ar{ur}{b}\ar{dr}[swap]{c}&Y_1\ar[dashed]{r}{l_1}&X\\ 
 {}&G_i\ar{u}{a_1}\ar{ru}[swap]{\pp}
 \end{tikzcd}
 $$ 
-commutative. By Lemma \ref{8311} (a) (i) p.~\pr{8311}, $c$ is a monomorphism, and, by Part (b) (ii) of the same lemma, $\lambda$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\ci c=g_0\ci b$: 
+commutative. By Lemma \ref{8311} (a) (i) p.~\pr{8311}, $c$ is a monomorphism, and, by Part (b) (ii) of the same lemma, $\ld$ is also a monomorphism. As $Z$ is injective, there is a morphism $d:G_i\to Z$ satisfying $d\ci c=g_0\ci b$: 
 $$
 \begin{tikzcd}
 Y\ar{r}{b}\ar[tail]{d}[swap]{c}&Y_0\ar{d}{g_0}\\ 
@@ -5151,7 +5159,7 @@ $$
 By the definition of $Y_1$ there is a morphism $g_1:Y_1\to Z$ such that 
 $$
 \begin{tikzcd}
-Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar{d}[swap]{\lambda}\ar[bend left]{ddr}{g_0}\\
+Y\ar{r}{b}\ar[swap]{d}{c}&Y_0\ar{d}[swap]{\ld}\ar[bend left]{ddr}{g_0}\\
 G_i\ar{r}{a_1}\ar[bend right]{rrd}[swap]{d}&Y_1\ar{dr}{g_1}\\ 
 {}&{}&Z
 \end{tikzcd}
@@ -5160,13 +5168,13 @@ commutes. We get the commutative diagram
 $$
 \begin{tikzcd}
 {}&Y_0\ar[equal]{d}\ar{rr}{l_0}&&X\ar[equal]{d}\\ 
-X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}[swap]{g_0}\ar[tail]{r}{\lambda}&Y_1\ar{dll}{g_1}\ar[tail]{r}{l_1}&X\\ 
+X'\ar{d}[swap]{h}\ar[tail]{r}{k_0}&Y_0\ar{dl}[swap]{g_0}\ar[tail]{r}{\ld}&Y_1\ar{dll}{g_1}\ar[tail]{r}{l_1}&X\\ 
 Z&&&G_i.\ar{u}[swap]{\pp}\ar{lll}{d}\ar{ul}{a_1}
 \end{tikzcd}
 $$ 
-As $\lambda$ is an isomorphism by maximality of $(Y_0,g_0,l_0)$, we can set $a_0:=\lambda^{-1}\ci a_1$, and we get 
+As $\ld$ is an isomorphism by maximality of $(Y_0,g_0,l_0)$, we can set $a_0:=\ld^{-1}\ci a_1$, and we get 
 $$
-l_0\ci a_0=l_0\ci\lambda^{-1}\ci a_1=l_1\ci\lambda\ci\lambda^{-1}\ci a_1=l_1\ci a_1=\pp.
+l_0\ci a_0=l_0\ci\ld^{-1}\ci a_1=l_1\ci\ld\ci\ld^{-1}\ci a_1=l_1\ci a_1=\pp.
 $$ 
 q.e.d.
  
@@ -5219,14 +5227,14 @@ $$
 \C_0\ar[yshift=.7ex]{r}{\pp_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
 \end{tikzcd}
 $$ 
-We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{myuscat} p.~\pr{myuscat}). If $\lambda:\C\to(\C_0)^\wg$ and $\lambda':\M\to(\M_0)^\wg$ are the obvious functors, then the diagram 
+We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{myuscat} p.~\pr{myuscat}). If $\ld:\C\to(\C_0)^\wg$ and $\ld':\M\to(\M_0)^\wg$ are the obvious functors, then the diagram 
 $$
 \begin{tikzcd}
-\C\ar{r}{\pp}\ar{d}[swap]{\lambda}&\M\ar{d}{\lambda'}\\
+\C\ar{r}{\pp}\ar{d}[swap]{\ld}&\M\ar{d}{\ld'}\\
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\lambda$ and $\lambda'$ are fully faithful by \S\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by \S\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -5373,7 +5381,7 @@ In particular $\Ima(g\ci f)\to\Ima g$ is a monomorphism.
 We claim that the diagram of solid arrows 
 $$
 \begin{tikzcd}
-{}&X\times_ZX\ar{r}{a}&X\ar{d}[swap]{f}\ar{r}{d}&\Coim(g\ci f)\ar{r}\ar[dashed]{ddl}{b}&0\\ 
+{}&X\tm_ZX\ar{r}{a}&X\ar{d}[swap]{f}\ar{r}{d}&\Coim(g\ci f)\ar{r}\ar[dashed]{ddl}{b}&0\\ 
 {}&{}&Y\ar{d}[swap]{g}\\
 0\ar{r}&\Ima g\ar{r}&Z\ar{r}[swap]{c}&Z\oplus_YZ,
 \end{tikzcd}
@@ -5578,7 +5586,7 @@ Let $\pi$ be an infinite cardinal. The following conditions on a small category 
 
 \nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
-\al:I\times J^{\op}\to\Set
+\al:I\tm J^{\op}\to\Set
 $$ 
 the natural map 
 $$
@@ -5588,7 +5596,7 @@ is bijective.
 
 \nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
-\al:I\times J^{\op}\to\Set
+\al:I\tm J^{\op}\to\Set
 $$ 
 the natural map 
 $$
@@ -5829,13 +5837,13 @@ is the identity.
 \begin{claim}\lb{lbij} 
 The map 
 $$
-\lambda_A:\col_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
+\ld_A:\col_{i\in I}\Hom_\C(A,X_i)\to\Hom_\C(A,X).
 $$ 
 is bijective. 
 \end{claim}
 
 \begin{claim}\lb{linj} 
-The map $\lambda_A$ is injective. 
+The map $\ld_A$ is injective. 
 \end{claim} 
 
 \begin{proof}[Proof of Claim~\ref{linj}] 
@@ -5858,7 +5866,7 @@ $$
 As $\card(A(G))<\pi$ by assumption, Lemma~\ref{l331} p.~\pr{l331} implies that there is a morphism $s_1:i_0\to i_1$ in $I$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide, as was to be shown. This proves Claim~\ref{linj}. 
 \end{proof} 
 
-It only remains, in order to prove Proposition~\ref{932}, to check that $\lambda_A$ is surjective. Let $f:A\to X$ be a morphism. Claim~\ref{pig=f} below will imply the surjectivity of $\lambda_A$, and thus the truth of Proposition~\ref{932}. 
+It only remains, in order to prove Proposition~\ref{932}, to check that $\ld_A$ is surjective. Let $f:A\to X$ be a morphism. Claim~\ref{pig=f} below will imply the surjectivity of $\ld_A$, and thus the truth of Proposition~\ref{932}. 
 
 \begin{claim}\lb{pig=f} 
 There is a morphism $g:A\to X_i$ such that $p_i\ci g=f$, where $p_i:X_i\to X$ is the coprojection.
@@ -5888,7 +5896,7 @@ can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (
 
 We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f}, and thus Proposition~\ref{932} p.~\pr{932}. 
 
-\nn$\bu$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\times_XX_i$. As $\col_i$ is exact in $\C$, we have $\col_iY_i\iso A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pr{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
+\nn$\bu$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\tm_XX_i$. As $\col_i$ is exact in $\C$, we have $\col_iY_i\iso A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pr{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
 \nn$\bu$ Step 5: (a) implies (b). Assuming (a), we build the commutative square 
 %
@@ -5948,7 +5956,7 @@ P(G)\le\card(C(G))^2<\pi,
 $$ 
 Claim~\ref{linj} implies that the natural map 
 $$
-\lambda_P:\col_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
+\ld_P:\col_{i\in I}\Hom_\C(P,X_i)\to\Hom_\C(P,X)
 $$ 
 is injective. Consider the commutative diagram 
 $$
@@ -5957,7 +5965,7 @@ P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{r}{a}\ar{d}[swap]{x}&A\ar{d}{f}\
 {}&X_{i_0}\ar{r}[swap]{p_{i_0}}&X.
 \end{tikzcd}
 $$ 
-As $\lambda_P$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal. The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that 
+As $\ld_P$ is injective, and as the compositions $P\parar C\xr xX_{i_0}\xr{p_{i_0}}X$ are equal, there is a morphism $s:i_0\to i$ such that the compositions $P\parar C\xr xX_{i_0}\xr{X_s} X_i$ are equal. The exactness of $P\parar C\xr aA$ implies the existence of a morphism $g:A\to X_i$ such that 
 %
 \begin{equation}\lb{ga}
 X_s\ci x=g\ci a.
@@ -7027,17 +7035,17 @@ $$
 
 \sbs{Example 11.6.2 (i) (p.~290)} 
 
-(As already stated, there is a typo; see \S\ref{290} p.~\pr{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\times\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
+(As already stated, there is a typo; see \S\ref{290} p.~\pr{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\tm\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
 $$
-F_\oplus:\oo{C}(\C)\times\oo{C}(\C')\to\oo{C}(\C'').
+F_\oplus:\oo{C}(\C)\tm\oo{C}(\C')\to\oo{C}(\C'').
 $$ 
 If $\C''$ admits countable products instead of direct sums, then $F$ induces a bifunctor of additive categories with translation 
 $$
-F_\pi:\oo{C}(\C)\times\oo{C}(\C')\to\oo{C}(\C'').
+F_\pi:\oo{C}(\C)\tm\oo{C}(\C')\to\oo{C}(\C'').
 $$ 
-The precise formulas are given in the book. If $F:\C\times\C'^\op\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable products, then $F$ induces again a bifunctor of additive categories with translation 
+The precise formulas are given in the book. If $F:\C\tm\C'^\op\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable products, then $F$ induces again a bifunctor of additive categories with translation 
 $$
-F_\pi:\oo{C}(\C)\times\oo{C}(\C')^{\op}\to\oo{C}(\C'').
+F_\pi:\oo{C}(\C)\tm\oo{C}(\C')^{\op}\to\oo{C}(\C'').
 $$ 
 The formulas defining $F_\pi$ in this setting are almost the same as in the previous setting, and we give them without further comments:
 $$
@@ -7187,13 +7195,13 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pr{1432} imply that the answer is ye
 P.~337. (See \S\ref{1341} p. \pr{1341}.) In view of Section~\ref{745} p.~\pr{745} above and Theorem 13.4.1 p.~337 of the book, the functors 
 
 $$
-\Hom_\C^\bu:\oo K(\C)\times\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
+\Hom_\C^\bu:\oo K(\C)\tm\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
 $$ 
 
 \nn and 
 
 $$
-\Hom_{\oo K(\C)}:\oo K(\C)\times\oo K(\C)^{\op}\to\Mod(\mathbb Z)
+\Hom_{\oo K(\C)}:\oo K(\C)\tm\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
 
 \nn give rise to the diagram 
@@ -7437,7 +7445,7 @@ Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
 \begin{cor}\lb{1432}
 Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor 
 $$
-\oo{RHom}_\C:\oo D(\C)\times\oo D(\C)^{\op}\to\oo D(k).
+\oo{RHom}_\C:\oo D(\C)\tm\oo D(\C)^{\op}\to\oo D(k).
 $$ 
 If $X$ and $Y$ are in $\oo K(\C)$, then for any qis $Y\to I$ with $I$ in $\oo K_{\oo{hi}}(\C)$ (such exist) we have 
 $$
@@ -7507,7 +7515,7 @@ By (1.5.7) p. 29 of the book, Composition~\qr{f2} coincides with Composition~\qr
 
 This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
 $$
-S\times_UV:=\{W\to V\ |\ (W\to V\to U)\in S\}.
+S\tm_UV:=\{W\to V\ |\ (W\to V\to U)\in S\}.
 $$
 One easily checks that this is a sieve over $V$. 
 
@@ -7529,11 +7537,11 @@ $\ $
 
 \nn GT2: for all $U$ in $\C$ we have: $\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U$,
 
-\nn GT3: for all $U$ in $\C$ we have: $S\in\Gamma_U,\ (V\to U)\in M\implies S\times_UV\in\Gamma_V$,
+\nn GT3: for all $U$ in $\C$ we have: $S\in\Gamma_U,\ (V\to U)\in M\implies S\tm_UV\in\Gamma_V$,
 
 \nn GT4: for all $U$ in $\C$ we have: 
 $$
-S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S\implies S'\in\Gamma_U.
+S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\tm_UV\in\Gamma_V\ \forall\ (V\to U)\in S\implies S'\in\Gamma_U.
 $$
 \end{cond}
 
@@ -7545,7 +7553,7 @@ Consider the following conditions on a set $\E$ of morphisms in $\C^\wg$:
 
 \nn LE3: if the composition $v\ci u$ of two morphisms of $\C^\wg$ exists and is in $\E$, then $v$ is in $\E$,
 
-\nn LE4: a morphism $A\to B$ in $\C^\wg$ is in $\E$ if and only if, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\times_BU\to U$ is in $\E$.
+\nn LE4: a morphism $A\to B$ in $\C^\wg$ is in $\E$ if and only if, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\tm_BU\to U$ is in $\E$.
 
 As proved in the book, 
 \begin{equation}\lb{ecae}
@@ -7554,7 +7562,7 @@ As proved in the book,
 
 For the reader's convenience we paste the proof of \qr{ecae} (see p.~391 in the book):
 
-Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ (see Proposition 2.1.6 p.~38, Proposition 3.3.3 p.~82, Proposition 5.1.5 (i) p.~115 and Exercise 5.1 p.~128 in the book). Hence, $\id_U:U\to U$ factors as $U\to A\times_BU\to U$. Therefore $A\times_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
+Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ (see Proposition 2.1.6 p.~38, Proposition 3.3.3 p.~82, Proposition 5.1.5 (i) p.~115 and Exercise 5.1 p.~128 in the book). Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
@@ -7564,7 +7572,7 @@ Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ sat
 \E=\E(\Gamma,\U)
 \end{equation}
 %
-be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\times_BU\to U}$ is in $\Gamma_U$. 
+be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\tm_BU\to U}$ is in $\Gamma_U$. 
 
 \begin{lem}\lb{1613i}
 A morphism $A\to U$ in $\C^\wg$ with $U$ in $\C$ is in $\E$ if and only if $S_{A\to U}$ is in $\Gamma_U$. 
@@ -7577,17 +7585,17 @@ A\to U\leftarrow V
 $$ 
 (obvious notation), we have 
 \begin{equation}\lb{28a}
-S_{A\times_UV\to V}=S_{A\to U}\times_UV.
+S_{A\tm_UV\to V}=S_{A\to U}\tm_UV.
 \end{equation} 
 Let $A\to U$ be a morphism in $\C^\wg$ with $U$ in $\C$. Consider the conditions (with obvious notation) 
 \begin{equation}\lb{28b}
 (A\to U)\in\E,
 \end{equation}
 \begin{equation}\lb{28c}
-S_{A\times_UV\to V}\in\Gamma_V\quad\forall\quad V\to U,
+S_{A\tm_UV\to V}\in\Gamma_V\quad\forall\quad V\to U,
 \end{equation}
 \begin{equation}\lb{28d}
-S_{A\to U}\times_UV\in\Gamma_V\quad\forall\quad V\to U,
+S_{A\to U}\tm_UV\in\Gamma_V\quad\forall\quad V\to U,
 \end{equation}
 \begin{equation}\lb{28e}
 S_{A\to U}\in\Gamma_U.
@@ -7613,7 +7621,7 @@ in $\C^\wg$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $\Gamma_U$ (beca
 
 \nn LE4 follows immediately from Lemma~\ref{1613i}. %Let $A\to B$ be a morphism in $\C^\wg$. We must check: 
 %\begin{center}
-%$A\to B$ is in $\E$\\ $\iff$\\ for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\times_BU\to U$ is in $\E$.
+%$A\to B$ is in $\E$\\ $\iff$\\ for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\tm_BU\to U$ is in $\E$.
 %\end{center}
 %Implication $\then$ is obvious, and Implication $\si$ follows from Lemma~\ref{1613i}. 
 
@@ -7634,7 +7642,7 @@ the morphism $A_S\to U$ factors as $A_S\to A_{S'}\to U$.
 To prove GT3, note that if $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
 %
 \begin{equation}\lb{asuv}
-A_{S\times_UV}=A_S\times_UV.
+A_{S\tm_UV}=A_S\tm_UV.
 \end{equation}
 %
 In view of LE4, this implies GT3.  
@@ -7671,7 +7679,7 @@ Condition GT4 holds.
 Let us assume 
 %
 \begin{equation}\lb{sgu}
-S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\times_UV\in\Gamma_V\ \forall\ (V\to U)\in S.
+S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\tm_UV\in\Gamma_V\ \forall\ (V\to U)\in S.
 \end{equation}
 %
 It suffices to check $S'\in\Gamma_U$, or, equivalently, 
@@ -7706,9 +7714,9 @@ be a cartesian square. By LE4 it is enough to verify
 (C\to V)\in\E.
 \end{equation} 
 % 
-The morphism $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, the sieve $S'\times_UV$ is in $\Gamma_V$ by \qr{sgu}, and $A_{S'\times_UV}\to V$ is in $\E$ by definition of $\Gamma_V$. We have 
+The morphism $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, the sieve $S'\tm_UV$ is in $\Gamma_V$ by \qr{sgu}, and $A_{S'\tm_UV}\to V$ is in $\E$ by definition of $\Gamma_V$. We have 
 $$
-\E\ni(A_{S'\times_UV}\to V)\iso(A_{S'}\times_UV\to V)\iso(C\to V).
+\E\ni(A_{S'\tm_UV}\to V)\iso(A_{S'}\tm_UV\to V)\iso(C\to V).
 $$ 
 Indeed, the first isomorphism holds by \qr{asuv} p.~\pr{asuv}, and the second one holds because the rectangle 
 $$
@@ -8020,11 +8028,11 @@ P.~412, proof of Lemma 17.2.2 (ii), (b)$\then$(a), Step~(3). See \S\ref{1722} p.
 
 Claim: if a local isomorphism $u:A\to B$ in $\C_Y^\wg$ is either a monomorphism or an epimorphism, then $\fthat(u)$ is a local isomorphism in $\C_X^\wg$. 
 
-Proof of the claim: Let $V\to B$ be a morphism in $\C_Y^\wg$ with $V$ in $\C_Y$. Then $u_V: A\times_BV\to V$ is either a monomorphism or an epimorphism by Proposition~\ref{sbcs} p.~\pr{sbcs} and Proposition~\ref{34i} p.~\pr{34i}. Let us show that $\fthat(u_V)$ is a local isomorphism. 
+Proof of the claim: Let $V\to B$ be a morphism in $\C_Y^\wg$ with $V$ in $\C_Y$. Then $u_V: A\tm_BV\to V$ is either a monomorphism or an epimorphism by Proposition~\ref{sbcs} p.~\pr{sbcs} and Proposition~\ref{34i} p.~\pr{34i}. Let us show that $\fthat(u_V)$ is a local isomorphism. 
 
 If $u_V$ is a monomorphism, $\fthat(u_V)$ is a local isomorphism by assumption. 
 
-If $u_V$ is an epimorphism, then $u_V$ has a section $s:V\to A\times_BV$. Since $u_V$ is a local isomorphism by Lemma 16.2.4 (i) p.~395 of the book, $s$ is a local isomorphism. Since 
+If $u_V$ is an epimorphism, then $u_V$ has a section $s:V\to A\tm_BV$. Since $u_V$ is a local isomorphism by Lemma 16.2.4 (i) p.~395 of the book, $s$ is a local isomorphism. Since 
 $$
 \fthat(u_V)\ci\fthat(s)\iso\id_{f^t(V)}
 $$ 
@@ -8113,7 +8121,7 @@ as follows: If $p:M\to\oo j_{U\to X*}F$ is a morphism in $\PSh(U,\A)$, given by 
 \begin{s} 
 P.~418, proof of Lemma 17.4.2 (minor variant): Consider the natural morphisms 
 $$
-\col\al\xr f\col\al\ci\mu_u^{\op}\ci\lambda_u^{\op}\xr g\col\al\ci\mu_u^{\op}\xr h\col\al.
+\col\al\xr f\col\al\ci\mu_u^{\op}\ci\ld_u^{\op}\xr g\col\al\ci\mu_u^{\op}\xr h\col\al.
 $$
 We must show that $g\ci f$ is an isomorphism. The equality $h\ci g\ci f=\id_{\col\al}$ is easily checked. Being a right adjoint, $\mu_u^{\op}$ is left exact, hence cofinal by Lemma 3.3.10 p.~84 of the book, and $h$ is an isomorphism. q.e.d.
 \end{s}  
@@ -8174,7 +8182,7 @@ $$
 can be represented by a diagram 
 $$
 \begin{tikzcd}
-B'\ar{d}[swap]{\beta}&B'\times_BA\ar{d}&A'\ar{l}[swap]{(u',\al)}\ar{r}{(v',\al)}\ar{d}{\al}&C'\times_CA\ar{d}&C'\ar{d}{\gamma}\\ 
+B'\ar{d}[swap]{\beta}&B'\tm_BA\ar{d}&A'\ar{l}[swap]{(u',\al)}\ar{r}{(v',\al)}\ar{d}{\al}&C'\tm_CA\ar{d}&C'\ar{d}{\gamma}\\ 
 B&A\ar[equal]{r}&A\ar[equal]{r}&A&C, 
 \end{tikzcd}
 $$ 
@@ -8190,7 +8198,7 @@ $$
 ($p_E$ is defined in the book, $j_E$ is the forgetful functor, and $q_E$ is the composition). We also define $r_E:\cc{LI}_E\to\E$ by mapping the object $E''\to E$ of $\cc{LI}_E$ to the object 
 $$
 \begin{tikzcd}
-B\times_EE''\ar{d}&A\times_EE''\ar{l}\ar{r}\ar{d}&C\times_EE''\ar{d}\\ 
+B\tm_EE''\ar{d}&A\tm_EE''\ar{l}\ar{r}\ar{d}&C\tm_EE''\ar{d}\\ 
 B&A\ar{r}\ar{l}&C
 \end{tikzcd}
 $$ 
@@ -8202,16 +8210,16 @@ F^b(D)
 $$
 $$
 \overset{(\text c)}{\iso}\col_{x\in\E}F\left(q_B(x)``\!\!\!\bigsqcup_{q_A(x)}\!\!\!"q_C(x)\right)
-\overset{(\text d)}{\iso}\col_{x\in\E}(F(q_B(x))\times_{F(q_A(x))}F(q_C(x)))
+\overset{(\text d)}{\iso}\col_{x\in\E}(F(q_B(x))\tm_{F(q_A(x))}F(q_C(x)))
 $$
 $$
-\overset{(\text e)}{\iso}\left(\col_{x\in\E}F(q_B(x))\right)\times_{\col_{x\in\E}F(q_A(x))}\left(\col_{x\in\E}F(q_C(x))\right)
+\overset{(\text e)}{\iso}\left(\col_{x\in\E}F(q_B(x))\right)\tm_{\col_{x\in\E}F(q_A(x))}\left(\col_{x\in\E}F(q_C(x))\right)
 $$ 
 $$
-\overset{(\text f)}{\iso}\left(\col_{y\in\cc{LI}_B}F(j_B(y))\right)\times_{\col_{y\in\cc{LI}_A}F(j_A(y))}\left(\col_{y\in\cc{LI}_C}F(j_C(y))\right)
+\overset{(\text f)}{\iso}\left(\col_{y\in\cc{LI}_B}F(j_B(y))\right)\tm_{\col_{y\in\cc{LI}_A}F(j_A(y))}\left(\col_{y\in\cc{LI}_C}F(j_C(y))\right)
 $$ 
 $$
-\overset{(\text g)}{\iso}F^b(B)\times_{F^b(A)}F^b(C).
+\overset{(\text g)}{\iso}F^b(B)\tm_{F^b(A)}F^b(C).
 $$ 
 Indeed, the isomorphisms can be justified as follows: 
 
@@ -8345,16 +8353,16 @@ For the functor $j^\ddg:\Sh(A,\A)\to\Sh(X,\A)$, see Proposition 17.6.2 p.~425 of
 \begin{s} 
 P.~426, proof of Proposition 17.6.7 (i). The isomorphism 
 \begin{equation}\lb{e406}
-\fthat(V\times B)\iso f^t(V)\times\fthat(B)
+\fthat(V\tm B)\iso f^t(V)\tm\fthat(B)
 \end{equation} 
 follows from Proposition~\ref{p406} p.~\pr{p406}, and we have 
 \begin{align*} 
 %
-\oo j_{B\to Y}^\ddg\big(f_{B*}(G)(V)\big)&\iso f_{B*}(G)(V\times B\to B)&\text{by (17.1.12) p. 409}\\ \\ 
+\oo j_{B\to Y}^\ddg\big(f_{B*}(G)(V)\big)&\iso f_{B*}(G)(V\tm B\to B)&\text{by (17.1.12) p. 409}\\ \\ 
 %
-&\iso G\big(\fthat(V\times B)\to\fthat(B)\big)&\text{by (17.1.6) p. 408}\\ \\ 
+&\iso G\big(\fthat(V\tm B)\to\fthat(B)\big)&\text{by (17.1.6) p. 408}\\ \\ 
 %
-&\iso G\big(f^t(V)\times A\to A\big)&\text{by \qr{e406}}, 
+&\iso G\big(f^t(V)\tm A\to A\big)&\text{by \qr{e406}}, 
 % 
 \end{align*} 
 as well as 
@@ -8362,7 +8370,7 @@ as well as
 %
 f_*\big(\oo j_{A\to X}^\ddg(G)(V)\big)&\iso\oo j_{A\to X}^\ddg(G)(f^t(V))\\ \\ 
 %
-&\iso G\big(f^t(V)\times A\to A\big)&\text{by (17.1.12) p. 409}. 
+&\iso G\big(f^t(V)\tm A\to A\big)&\text{by (17.1.12) p. 409}. 
 % 
 \end{align*}  
 \end{s} 
@@ -8372,12 +8380,12 @@ f_*\big(\oo j_{A\to X}^\ddg(G)(V)\big)&\iso\oo j_{A\to X}^\ddg(G)(f^t(V))\\ \\
 \begin{s}\lb{1768}
 P.~427, proof of Proposition 17.6.8, Step~(i). The isomorphism 
 $$
-\oo j_{A\to X}^\ddg(\oo j_{A\to X*}(G)(U))\iso\oo j_{A\to X*}(G)(U\times A\to A)
+\oo j_{A\to X}^\ddg(\oo j_{A\to X*}(G)(U))\iso\oo j_{A\to X*}(G)(U\tm A\to A)
 $$ 
-follows from (17.1.12) p.~409 of the book. The fact that $p:A\times U\to U$ is a local isomorphism follows from the fact that the obvious square 
+follows from (17.1.12) p.~409 of the book. The fact that $p:A\tm U\to U$ is a local isomorphism follows from the fact that the obvious square 
 $$
 \begin{tikzcd} 
-A\times U\ar{r}\ar{d}&U\ar{d}\\ 
+A\tm U\ar{r}\ar{d}&U\ar{d}\\ 
 A\ar{r}&\oo{pt}_X
 \end{tikzcd}
 $$ 
@@ -8390,13 +8398,13 @@ is cartesian and the bottom arrow is a local isomorphism by assumption.
 P.~427, proof of Proposition 17.6.8, Step~(ii). Let $v:V\to A$ be a morphism in $\C_X^\wg$. Here is a proof of the fact that 
 \begin{equation}\lb{1768ii}
 \begin{tikzcd} 
-V\ar{rr}{(\id_V,v)}\ar{dr}&&V\times A\ar{dl}\\ 
+V\ar{rr}{(\id_V,v)}\ar{dr}&&V\tm A\ar{dl}\\ 
 {}&A
 \end{tikzcd}
 \end{equation} 
 is a local isomorphism in $\C_A^\wg$. 
 
-As $V\times A\to V$ is a local isomorphism in $\C_X^\wg$ by \S\ref{1768}, and $V\to V\times A\to V$ is the identity of $V$, Lemma 16.2.4 (vii) p.~396 of the book implies that $V\to V\times A$ is a local isomorphism in $\C_X^\wg$, and thus, by \S\ref{1761b} p.~\pr{1761b}, that \qr{1768ii} is a local isomorphism in $\C_A^\wg$. 
+As $V\tm A\to V$ is a local isomorphism in $\C_X^\wg$ by \S\ref{1768}, and $V\to V\tm A\to V$ is the identity of $V$, Lemma 16.2.4 (vii) p.~396 of the book implies that $V\to V\tm A$ is a local isomorphism in $\C_X^\wg$, and thus, by \S\ref{1761b} p.~\pr{1761b}, that \qr{1768ii} is a local isomorphism in $\C_A^\wg$. 
 \end{s} 
 
 %
@@ -8426,7 +8434,7 @@ is a local isomorphism in $\C_{B'}^\wg$.
 
 Proof: \qr{1771i1} is a local epimorphism by \S\ref{1761} p.~\pr{1761}. It remains to check that 
 \begin{equation}\lb{1771i2}
-(A\to B)\to(A\to B)\times_\omega(A\to B)\iso(A\times_BA\to B)
+(A\to B)\to(A\to B)\tm_\omega(A\to B)\iso(A\tm_BA\to B)
 \end{equation} 
 is a local epimorphism. But this follows again from \S\ref{1761} p.~\pr{1761}. $\square$ 
 
@@ -8460,7 +8468,7 @@ SX\ar[xshift=0.7ex]{u}[swap]{\iota_X}
 $$ 
 be the obvious diagram of adjoint functors. We must show 
 $$
-a_X\ci f^\dg\ci \iota_Y\ci a_Y\iso a_X\ci f^\dg. 
+a_X\ci f^\dg\ci\iota_Y\ci a_Y\iso a_X\ci f^\dg. 
 $$ 
 Let $F$ be in $SX$ and $G$ be in $PY$. We have (omitting most of the parenthesis) 
 $$
@@ -8486,7 +8494,7 @@ $$
 $$ 
 where (a) and (c) follow from the fact that the presheaf $f_*\iota_XF$ is actually a sheaf (Proposition 17.5.1 p.~423 of the book), (b) follows from the isomorphism 
 $$
-a_Y\ci \iota_Y\ci a_Y\iso a_Y,
+a_Y\ci\iota_Y\ci a_Y\iso a_Y,
 $$ 
 which holds by Lemma 17.4.6 (ii) p.~421 of the book, and the other isomorphisms hold by adjunction. 
 \end{s} 
@@ -8550,7 +8558,7 @@ and leave it to the reader to check that they are mutually inverse.
 
 Definition of $\pp$: Let $\theta$ be in $\Hom_{\R|U}(\R|U,F|U)$. In particular, for each morphism $f:V\to U$ in $\C_X$ we have a map $\theta(f):\R(V)\to F(V)$, and we put $\pp(\theta):=\theta(\id_U)(1)$. 
 
-Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_X$ we define $\psi(x)(f):\R(V)\to F(V)$ by $\psi(x)(f)(\lambda):=\lambda\,F(f)(x)$.
+Definition of $\psi$: Let $x$ be in $F(U)$. For each morphism $f:V\to U$ in $\C_X$ we define $\psi(x)(f):\R(V)\to F(V)$ by $\psi(x)(f)(\ld):=\ld\,F(f)(x)$.
 \end{s}
 
 %
@@ -8701,16 +8709,16 @@ be two families of elements belonging respectively to $A$ and $B$. Then Conditio
 
 \nn\emph{(ii)} There are positive integers $\ell$ and $m$ with $\ell\ge n$, and there are three families 
 $$
-(a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
+(a_i)_{i=n+1}^\ell,\quad(\ld_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
 of elements belonging respectively to $A$, $R$, and $B$, such that, if we set $b_i=0$ for $n<i\le\ell$, we have:
 %
 \begin{equation}\lb{lij1}
-\sum_{j=1}^m\ \lambda_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),
+\sum_{j=1}^m\ \ld_{ij}\,b'_j=b_i\quad(\forall\ 1\le i\le\ell),
 \end{equation}
 %
 \begin{equation}\lb{lij2}
-\sum_{i=1}^\ell\ a_i\,\lambda_{ij}=0\quad(\forall\ 1\le j\le m).
+\sum_{i=1}^\ell\ a_i\,\ld_{ij}=0\quad(\forall\ 1\le j\le m).
 \end{equation}
 \end{lem} 
 
@@ -8729,19 +8737,19 @@ g'\big((\mu_i)\otimes b)\big)=(\mu_i\,b),\quad f'((b''_i))=\sum_{i\in I}a_i\otim
 $$
 Put $b_i:=0$ for $i$ in $I\setminus\{1,\dots,\ell\}$. The family $(b_i)_{i\in I}$ is in $\Ker f'$, and thus in $\Ima g'$. The condition $(b_i)\in\Ima g'$ means that there is a positive integer $m$, a family 
 $$
-(\lambda_{ij})_{i\in I,1\le j\le m}
+(\ld_{ij})_{i\in I,1\le j\le m}
 $$ 
 of elements of $R$ such that 
 $$
-(\lambda_{ij})_i\in C\subset R^{\oplus I}
+(\ld_{ij})_i\in C\subset R^{\oplus I}
 $$ 
 for $1\le j\le m$, and a family $(b'_j)_{1\le j\le m}$ of elements of $B$, such that 
 $$
 (b_i)_i=g'
-\left(\sum_{j=1}^m(\lambda_{ij})_i\otimes b'_j\right)=
-\left(\sum_{j=1}^m\lambda_{ij}\,b'_j\right)_i.
+\left(\sum_{j=1}^m(\ld_{ij})_i\otimes b'_j\right)=
+\left(\sum_{j=1}^m\ld_{ij}\,b'_j\right)_i.
 $$ 
-As $(\lambda_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\lambda_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$, and we get \qr{lij1}. As $(\lambda_{ij})_i$ is in $C$ for all $j$, we also have \qr{lij2}. 
+As $(\ld_{ij})_i$ is in $R^{\oplus I}$ for all $j$, the set of those $i$ in $I$ for which there is a $j$ such that $\ld_{ij}\neq0$ is finite, and we can arrange the notation so that this set is contained in $\{1,\dots,\ell\}$ with $\ell\ge n$, and we get \qr{lij1}. As $(\ld_{ij})_i$ is in $C$ for all $j$, we also have \qr{lij2}. 
 \end{proof} 
 
 Here is another technical lemma:
@@ -8781,7 +8789,7 @@ $$
 $$ 
 By Lemma~\ref{techlem1} p.~\pr{techlem1} there are positive integers $\ell,m$ with $\ell\ge n$, and there are three families 
 $$
-(a_i)_{i=n+1}^\ell,\quad(\lambda_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
+(a_i)_{i=n+1}^\ell,\quad(\ld_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
 of elements belonging respectively to $A$, $R$, and $B$, such that, if we set $b_i=0$ for $n<i\le\ell$, we get \qr{lij1} and \qr{lij2} p.~\pr{lij1}. We have a commutative diagram of right $R$-modules 
 %
@@ -8795,7 +8803,7 @@ A'\ar{r}[swap]{\pp}&A
 %
 with 
 $$
-f(x)_i=\sum_{j=1}^m\lambda_{ij}\,x_j,\quad g(x)=\sum_{i=1}^na'_i\,x_i,\quad h(x)=\sum_{i=1}^\ell a_i\,x_i.
+f(x)_i=\sum_{j=1}^m\ld_{ij}\,x_j,\quad g(x)=\sum_{i=1}^na'_i\,x_i,\quad h(x)=\sum_{i=1}^\ell a_i\,x_i.
 $$ 
 In particular, \qr{lij2} p.~\pr{lij2} implies $h\ci f=0$. 
 \end{proof} 
@@ -8901,12 +8909,12 @@ We have used the isomorphisms
 and similarly with $M'$ instead of $M$. Indeed, the first isomorphism in \qr{mupu} is a particular case of (18.2.5) p.~441 of the book, and the second isomorphism in \qr{mupu} results from the last two displays on p.~428 of the book. In other words, we have 
 %
 \begin{equation}\lb{nrpu}
-(N\otimes_{\R|_U}P|_U)(U)\iso(F'\otimes_\R P)(U)\times_{(F\otimes_\R P)(U)}(F''\otimes_\R P)(U).
+(N\otimes_{\R|_U}P|_U)(U)\iso(F'\otimes_\R P)(U)\tm_{(F\otimes_\R P)(U)}(F''\otimes_\R P)(U).
 \end{equation}
 % 
 Note that \qr{p1uf1t} implies 
 $$
-x:=(t,u)\in(F'\otimes_\R P)(U)\times_{(F\otimes_\R P)(U)}(F''\otimes_\R P)(U).
+x:=(t,u)\in(F'\otimes_\R P)(U)\tm_{(F\otimes_\R P)(U)}(F''\otimes_\R P)(U).
 $$ 
 If $y$ is the element of $(N\otimes_{\R|_U}P|_U)(U)$ corresponding to $x$ under Isomorphism~\qr{nrpu}, then we get $k_1(y)=u$, and thus $\overline s=g_3(u)=g_3(k_1(y))=0$. By \qr{s=0il}, this completes the proof. 
 \end{proof}
