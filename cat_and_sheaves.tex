@@ -1202,7 +1202,7 @@ $$
 Y\xr fX,\quad\Delta(Y)\xr{\Delta(f)}\Delta(X)\xr{p}\al.
 $$
 
-\begin{df}[inductive limit] 
+\begin{df}[inductive limit]\lb{ilim}
 If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\al$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\Delta(X))
@@ -1356,6 +1356,26 @@ If $\C$ is a category and $F$ an object of $\C^\wg$, then the following conditio
 
 \begin{proof}
 This follows from Lemma~\ref{l2111} above and Proposition 1.4.10 p.~26 of the book.
+\end{proof}
+\end{s}
+
+%
+
+\begin{s}
+P. 41, Lemma 2.1.12. The following variant will be useful to prove Proposition 2.5.2 p.~57 of the book (see \S\ref{252} p.~\pr{252} below).
+
+\begin{lem}\lb{2112}
+If $I$ and $\C$ are categories, if $X$ is in $\C$, if $\Delta X:I\to\C$ is the constant functor with value $X$, and if $I$ is connected, then 
+
+\nn\emph{(a)} $(X,\id_{\Delta X})$ is an inductive limit of $\Delta X$ in $\C$ in the sense of Definition~\ref{ilim} p.~\pr{ilim},
+
+\nn\emph{(b)} for all $Y$ in $\C$ the natural map $\Delta':\Hom_\C(X,Y)\to\Hom_{\C^I}(\Delta X,\Delta Y)$ is bijective, and, for all $i$ in $I$, the map $\theta\mapsto\theta_i$ is the inverse of $\Delta'$,
+
+\nn\emph{(c)} we have $\theta_i=\theta_j$ for all $\theta:\Delta X\to\Delta Y$ with $Y$ in $\C$ and $i,j$ in $I$.
+\end{lem}
+
+\begin{proof}
+To prove (c) we can assume that there is a morphism $i\to j$, in which case the claim is obvious. Clearly (c) implies (a) and (b).
 \end{proof}
 \end{s}
 
@@ -1890,10 +1910,15 @@ Here is a second proof:
 
 \begin{proof}
 Each element of $\col_{i\in I}\Hom_I(i_0,i)$ is represented by some morphism $i_0\to i$ in $I$. Moreover, a composition of the form $i_0\to i\to j$ represents the same element as 
-$i_0\to i$. In particular $i_0\to i$ represents the same element as $\id_{s_0}$. 
+$i_0\to i$. In particular $i_0\to i$ represents the same element as $\id_{i_0}$. 
 \end{proof}
 \end{s}
 
+%
+
+\begin{s}\lb{252}
+P. 57, Proposition 2.5.2. In the proof of the implication (i) $\then$ (v), the authors define a morphism $\al(i_0)\to\col\al\ci\pp$. Then they write ``Taking the inductive limit with respect to $i_0\in I$, we get a morphism $\mu:\col\al\to\col\al\ci\pp$''. We must check that, for any morphism $i_0\to i_1$ in $I$ the composition $\al(i_0)\to\al(i_1)\to\col\al\ci\pp$ coincides with our morphism $\al(i_0)\to\col\al\ci\pp$. This follows from Lemma~\ref{2112} p.~\pr{2112}. (More precisely, the morphism $\al(i_0)\to\col\al\ci\pp$ is obtained by choosing an object of $J^{i_0}$, but Lemma~\ref{2112} shows that different choices yield the same morphism.)
+\end{s}
 %
 
 \begin{s} 
