@@ -1188,39 +1188,68 @@ $$
 \begin{s}\lb{212}
 P.~36, Definition 2.1.2. 
 
+\begin{nota}\lb{diag}
+If $I$ and $\C$ are categories, we denote by $\DD$ the diagonal functor from $\C$ to $\C^I$. The categories $I$ and $\C$ shall be explicitly indicated only when they are not clear from the context. Furthermore, we shall often write $\DD X$ for $\DD(X)$. To be more precise, $\DD X$ is the constant functor from $I$ to $\C$ with value $X$.
+\end{nota}
+
 \begin{df}[projective limit]\lb{p}
-If $\al:I^{\op}\to\C$ is a functor and $\DD:\C\to\C^{I^{\op}}$ is the diagonal functor, then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
+If $\al:I^{\op}\to\C$ is a functor, %and $\DD:\C\to\C^{I^{\op}}$ is the diagonal functor, 
+then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
 $$
-(X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\DD(X),\al)
+(X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\DD X,\al)
 $$
-such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DD(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DD(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. %(We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.) 
+If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) However, if $\C=\Set$ and $I$ is small we denote by $\lim\bt$ the subset of $\prod_{i\in I}\bt(i)$ defined in Display (2.1.2) p.~36 of the book.
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DD(\ ),\al),X)$\--universal element means that for each $Y$ in $\C$ the map 
 $$
-\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\DD(Y),\al),\quad f\mt p\ci\DD(f)
+\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\DD Y,\al),\quad f\mt p\ci\DD f
 $$ 
 is bijective. Here is a picture:
 $$
-Y\xr fX,\quad\DD(Y)\xr{\DD(f)}\DD(X)\xr{p}\al.
+Y\xr fX,\quad\DD Y\xr{\DD f}\DD X\xr p\al.
 $$
 
 \begin{df}[inductive limit]\lb{ilim}
 If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\al$ {\em in} $\C$ is a pair 
 $$
-(X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\DD(X))
+(X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\DD X)
 $$
-such that $p$ is a $(\Hom_{\C^I}(\al,\DD(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. (We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.)
+such that $p$ is a $(\Hom_{\C^I}(\al,\DD(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. %(We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.) 
+If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) However, if $\C=\Set$ and $I$ is small we denote by $\colim\al$ the set defined in Proposition 2.4.1 p.~54 of the book.
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\DD(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ the map 
 \begin{equation}\lb{cue}
-\Hom_\C(X,Y)\to\Hom_{\C^I}(\al,\DD(Y)),\quad f\mt\DD(f)\ci p
+\Hom_\C(X,Y)\to\Hom_{\C^I}(\al,\DD Y),\quad f\mt\DD f\ci p
 \end{equation}
 is bijective. Here is a picture:
 $$
-X\xr fY,\quad\al\xr{p}\DD(X)\xr{\DD(f)}\DD(Y).
+X\xr fY,\quad\al\xr p\DD X\xr{\DD f}\DD Y.
 $$
+\end{s}
+
+%
+
+\begin{s}%\lb{aic}
+Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
+$$%\begin{equation}\lb{hciady}
+\Hom_{\C^I}(\al,\DD Y)\iso\lim\Hom_\C(\al,Y),
+$$%\end{equation} 
+the projection 
+$$
+p:\DD\Hom_{\C^I}(\al,\DD Y)\to\Hom_\C(\al,Y)
+$$ 
+being given by the obvious maps 
+$$
+p_i:\Hom_{\C^I}(\al,\DD Y)\to\Hom_\C(\al(i),Y).
+$$ 
+For $S$ in $\Set$, the inverse of 
+$$
+\Hom_\Set(S,\Hom_{\C^I}(\al,\DD Y))\to\Hom_{\Set^{I^{\op}}}(\DD S,\Hom_\C(\al,Y)),\quad f\mt p\ci\DD f
+$$ 
+is the map $\xi\mt f$ defined by the formula $f(s)_i:=\xi_i(s)$.
 \end{s}
 
 %
@@ -1340,9 +1369,9 @@ $$
 
 \begin{proof} $\then$: Straightforward.
 
-\nn$\si$: Let $\DD:\C\to\C^\C$ be the diagonal functor, let $p\in\Hom_{\C^\C}(\id_\C,\DD(T))$ be a $(\Hom_{\C^\C}(\id_\C,\DD(\ )),T)$\--co-universal element  (see Definition~\ref{ue2} p.~\pr{ue2}). Recall that this means that, for each object $X$ of $\C$, the map 
+\nn$\si$: Let $p\in\Hom_{\C^\C}(\id_\C,\DD T)$ (see Notation~\ref{diag} p.~\pr{diag}) be a $(\Hom_{\C^\C}(\id_\C,\DD(\ )),T)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2} and Notation~\ref{diag} p.~\pr{diag}). Recall that this means that, for each object $X$ of $\C$, the map 
 $$
-\pp_X:\Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\DD(X)),\quad f\mt\DD(f)\ci p 
+\pp_X:\Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\DD X),\quad f\mt\DD f\ci p 
 $$ 
 is bijective. Let $X$ be an object of $\C$. It suffices to show 
 %
@@ -1352,17 +1381,17 @@ is bijective. Let $X$ be an object of $\C$. It suffices to show
 
 Claim: the inverse of $\pp_T$ is $\theta\mt\theta_T$. 
 
-For any $\theta$ in $\Hom_{\C^\C}(\id_\C,\DD(T))$ and any $Y$ in $\C$ we have $\theta_T\ci p_Y=\theta_Y$, and thus $\DD(\theta_T)\ci p=\theta$, which implies the claim. 
+For any $\theta$ in $\Hom_{\C^\C}(\id_\C,\DD T)$ and any $Y$ in $\C$ we have $\theta_T\ci p_Y=\theta_Y$, and thus $\DD\theta_T\ci p=\theta$, which implies the claim. 
 
 In other words, we have 
 $$
 \begin{tikzcd} 
-\Hom_\C(T,T)\ar[yshift=0.7ex]{rr}{\pp_T=\DD(?)\ci p}&&\Hom_{\C^\C}(\id_\C,\DD(T)).\ar[yshift=-0.7ex]{ll}{\pp_T^{-1}=?_T}
+\Hom_\C(T,T)\ar[yshift=0.7ex]{rr}{\pp_T=\DD(?)\ci p}&&\Hom_{\C^\C}(\id_\C,\DD T).\ar[yshift=-0.7ex]{ll}{\pp_T^{-1}=?_T}
 \end{tikzcd}
 $$ 
 This implies 
 $$
-\pp_T(\id_T)=\DD(\id_T)\ci p=\id_{\DD(T)}\ci p=p=\pp_T(\pp_T^{-1}(p))=\pp_T(p_T),
+\pp_T(\id_T)=\DD\id_T\ci p=\id_{\DD T}\ci p=p=\pp_T(\pp_T^{-1}(p))=\pp_T(p_T),
 $$ 
 and thus 
 %
@@ -1374,7 +1403,7 @@ To prove \qr{2111ets}, note that we have for $f$ in $\Hom_\C(X,T)$
 $$
 f=p_T\ci f=p_X,
 $$
-the first equality following from \qr{it=pt}, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\DD(T))$.
+the first equality following from \qr{it=pt}, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\DD T)$.
 \end{proof}
 
 \begin{cor}\lb{c2111}
@@ -1830,10 +1859,11 @@ and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of t
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 %
 \begin{prop}
-If $\DD:\Set\to\Set^I$ is the diagonal functor, then there is a canonical bijection
+There is a canonical bijection
 $$
-\col\DD(S)\iso\pi_0(I)\tm S.
-$$
+\col\DD S\iso\pi_0(I)\tm S.
+$$ 
+(See Notation~\ref{diag} p.~\pr{diag}.)
 \end{prop} 
 %
 \begin{proof}
@@ -1843,7 +1873,7 @@ $$
 $$
 where $\sim$ is the equivalence relation defined on p.~18 of the book. On the other hand we have by Proposition 2.4.1 p.~54 of the book 
 $$
-\col\DD(S)\iso(\Ob(I)\tm S)/\!\!\approx\ ,
+\col\DD S\iso(\Ob(I)\tm S)/\!\!\approx\ ,
 $$
 where $\approx$ is the equivalence relation described in the proposition. In view of the definition of $\approx$ and $\sim$, we get 
 $$
@@ -1932,11 +1962,11 @@ If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda
 \end{lem}
 
 \begin{proof}
-For $X$ in $\Set$ we have (with self-explanatory notation)
+For $X$ in $\Set$ we have %(with self-explanatory notation)
 $$
-\Hom_{\Set}\left(\col k(i_0),X\right)\iso\Hom_{{\Set}^I}(k(i_0),\DD(X))\iso X,
+\Hom_{\Set}\left(\col k(i_0),X\right)\iso\Hom_{{\Set}^I}(k(i_0),\DD X)\iso X,
 $$
-the first bijection being a particular case of \qr{cue} p.~\pr{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}).
+(see Notation~\ref{diag} p.~\pr{diag}) the first bijection being a particular case of \qr{cue} p.~\pr{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}).
 \end{proof}
 
 Here is a second proof:
@@ -2004,7 +2034,7 @@ Isomorphism \qr{263a} can be decoded as follows: Consider the functor
 $$
 \al:\C_A\to\C^\wg,\quad(X\to A)\mt X,
 $$ 
-and let $p:\al\to\DD(A)$ be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
+and let $p:\al\to\DD A$ (see Notation~\ref{diag} p.~\pr{diag}) be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
 %
 \begin{equation}\lb{pxa}
 p_{X\to A}:=(X\to A)
@@ -2012,7 +2042,7 @@ p_{X\to A}:=(X\to A)
 % 
 for all $X\to A$ in $\C_A$. Let $B$ be in $\C^\wg$. The claim is that the map 
 \begin{equation}\lb{hcwab}
-\Hom_{\C^\wg}(A,B)\to\Hom_{\Fct(\C_A,\C^\wg)}(\al,\DD(B)),\quad\theta\mt\DD(\theta)\ci p
+\Hom_{\C^\wg}(A,B)\to\Hom_{\Fct(\C_A,\C^\wg)}(\al,\DD B),\quad\theta\mt\DD \theta\ci p
 \end{equation} 
 is bijective. In fact, the inverse of \eqref{hcwab} is the map $\xi\mt\theta$ defined by 
 $$
@@ -2023,13 +2053,13 @@ Isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider th
 $$
 \bt:\C_A\to\Set,\quad(X\to A)\mt\Hom_\C(Y,X), 
 $$ 
-and let $q:\bt\to\DD(A(Y))$ be the morphism in $\Set^{\C_A}$ defined by 
+and let $q:\bt\to\DD A(Y)$ be the morphism in $\Set^{\C_A}$ defined by 
 $$
 q_{X\to A}(Y\to X):=(Y\to X\to A)
 $$ 
 for all $X\to A$ in $\C_A$. Let $S$ be in $\Set$. The claim is that the map 
 \begin{equation}\lb{hsays}
-\Hom_{\Set}(A(Y),S)\to\Hom_{\Fct(\C_A,\Set)}(\bt,\DD(S)),\quad f\mt\DD(f)\ci q
+\Hom_{\Set}(A(Y),S)\to\Hom_{\Fct(\C_A,\Set)}(\bt,\DD S),\quad f\mt\DD f\ci q
 \end{equation} 
 is bijective. In fact, the inverse of \eqref{hsays} is the map $\xi\mt f$ defined by 
 $$
@@ -2040,13 +2070,13 @@ Isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, conside
 $$
 \gamma:(\C_A)^{\op}\to\Set,\quad(X\to A)\mt B(X),
 $$ 
-and let $r:\DD(B(A))\to\gamma$ be the morphism in $\Set^{(\C_A)^{\op}}$ defined by 
+and let $r:\DD B(A)\to\gamma$ be the morphism in $\Set^{(\C_A)^{\op}}$ defined by 
 $$
 r_{X\to A}(A\to B):=(X\to A\to B)
 $$ 
 for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$. The claim is that the map 
 \begin{equation}\lb{hssba}
-\Hom_{\Set}(S,B(A))\to\Hom_{\Fct((\C_A)^{\op},\Set)}(\DD(S),\gamma),\quad g\mt r\ci\DD(g)
+\Hom_{\Set}(S,B(A))\to\Hom_{\Fct((\C_A)^{\op},\Set)}(\DD S,\gamma),\quad g\mt r\ci\DD g
 \end{equation} 
 is bijective. In fact, the inverse of \qr{hssba} is the map $\xi\mt g$ defined by 
 $$
@@ -2058,40 +2088,16 @@ $$
 \sbs{Brief Comments}
 
 \begin{s} 
+% old version: 
+%https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
 P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
 
 \begin{lem} 
-Let $\al:I\to\A$ be a functor, let $A$ in $\A$ be the inductive limit of $\al$, let $\al':I\to\A_A$ be the obvious functor, and let $a$ in $\A_A$ be the identity of $A$. Then the inductive limit of $\al'$ is $a$. 
+Let $\al:I\to\A$ be a functor, let $A$ be in $\A$, let $p:\al\to\DD A$ (see Notation~\ref{diag} p.~\pr{diag}) be a morphism of functors, assume that $(A,p)$ is an inductive limit of $\al$ (see Definition~\ref{ilim} p.~\pr{ilim}), let $\al':I\to\A_A$ be the obvious functor, let $a$ in $\A_A$ be given by the identity of $A$, and let $q:\al'\to\DD a$ be the obvious morphism of functors. Then $(a,q)$ is an inductive limit of $\al'$. 
 \end{lem} 
 
 \begin{proof}
-If $I$ and $\C$ are categories, we write $\DD$ for the diagonal functor from $\C$ to $\C^I$. Let $p\in\Hom_{\A^I}(\al,\DD(A))$ be the coprojection. For any $C$ in $\A$ the map 
-$$
-f_C:\Hom_\A(A,C)\to\Hom_{\A^I}(\al,\DD(C)),\quad u\mt\DD(u)\ci p
-$$ 
-is bijective. Let $b=(b:B\to A)$ be an object of $\A_A$. We have the inclusions 
-$$
-\Hom_{\A_A}(a,b)\subset\Hom_\A(A,B),\quad
-%
-\Hom_{(\A_A)^I}(\al',\DD(b))\subset\Hom_{\A^I}(\al,\DD(B)).
-$$ 
-Let $u$ be in $\Hom_\A(A,B)$. It suffices to check 
-$$
-f_B(u)\in\Hom_{(\A_A)^I}(\al',\DD(b))\ssi u\in\Hom_{\A_A}(a,b),
-$$ 
-that is 
-$$
-\DD(b)\ci\DD(u)\ci p=p\ssi\DD(b\ci u)=\id_{\DD(A)},
-$$ 
-that is 
-$$
-\DD(b\ci u)\ci p=p\ssi\DD(b\ci u)=\id_{\DD(A)},
-$$ 
-that is 
-$$
-f_A(b\ci u)=f_A(\id_A)\ssi b\ci u=\id_A.
-$$ 
-But this follows from the injectivity of $f_A$.
+Let $b=(B\to A)$ be in $\A_A$. We define a map from $\Hom_{(\A_A)^I}(\al',\DD b)$ to $\Hom{\A_A}(a,b)$ by attaching to a morphism of functors $\eta:\al'\to\DD b$ the morphism $g:a\to b$ defined as follows. Let $\xi:\al\to\DD B$ be the morphism of functors induced by $\eta$, let $f:A\to B$ be the unique morphism satisfying $\DD f\ci p=\xi$, and let $g:a\to b$ be induced by $f$. We leave it to the reader to check that $\eta\mt g$ is inverse to $g\mt\DD g\ci q$.
 \end{proof}
 \end{s}
 
@@ -2100,7 +2106,7 @@ But this follows from the injectivity of $f_A$.
 \begin{s} 
 P.~61, Proposition 2.6.4 (minor variant). Usually, we assume implicitly that a universe is given. Here we make an exception to this rule. 
 
-Let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\al\to\DD(X)$ be a morphism in $\C^I$ (where $\DD(X)$ is constant with value $X$). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wg_\U$.
+Let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$, and let $p:\al\to\DD X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). For all universe $\U$ such that $\C$ is a $\U$-category, we write $h_\U$ for the Yoneda embedding from $\C$ to $\C^\wg_\U$.
 
 \begin{df}[universal inductive limit]\lb{uil}
 If the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective for all $Y$ in $\C$, we say that $X$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
@@ -2255,10 +2261,10 @@ Let $I\xr\al\C\xr F\C'$ be functors, let $X$ be in $\C$ and $X'$ in $\C'$, let $
 $$
 F(\al(i))\xr{F(p_i)}F(X)\xr fX'.
 $$ 
-Then $(X,f)\iso\col\bt$, the coprojection $q:\bt\to\DD(X,f)$ being given by $q_i:=p_i$ for all $i$ in $I$.
+Then $(X,f)\iso\col\bt$, the coprojection $q:\bt\to\DD(X,f)$ (see Notation~\ref{diag} p.~\pr{diag}) being given by $q_i:=p_i$ for all $i$ in $I$.
 \end{lem}
 \begin{proof}
-Recall that $\DD$ denotes the appropriate diagonal functor. Let 
+Let 
 $$
 (Y,g)\in\C_{X'},\quad h\in\Hom_{\Fct(I,\C_{X'})}(\bt,\DD(Y,g));
 $$ 
@@ -4208,7 +4214,7 @@ Letting
 $$
 \DD:\C/G(a)\to\big(\C/G(a)\big)^{L/a}
 $$ 
-be the diagonal functor, we can form the category 
+be the diagonal functor (see Notation~\ref{diag} p.~\pr{diag}), we can form the category 
 $$
 M:=M\left[N'\xr{\pp}\big(\C/G(a)\big)^{L/a}\xl{\ \DD\ci\widetilde{\al_a}}I_a\right].
 $$ 
@@ -4261,7 +4267,7 @@ As $Q(\ell)=P(\ell)$ and $\al_a(i_a)=P(a)$, we can (and do) put $\xi_f:=P(f)$.
 
 To define $\mu$ let 
 $$
-\Xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\DD(\widetilde{\al_a}(i_a))\Big)
+\Xi:=\Big(\big((i_\ell),Q\big)\ ,\ i_a\ ,\ \pp((i_\ell),Q)\to\DD\widetilde{\al_a}(i_a)\Big)
 $$ 
 be in $M$. The object $\mu(\Xi)$ of $N$ will be of the form $((i_k),P)$, so that we must define a functor $P:K\to\C$. 
 
@@ -4298,7 +4304,7 @@ If $I$ is a finite category and $\C$ a filtrant category, then the diagonal func
 \end{lem}
 
 \begin{proof}
-It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\al$ be in $\C^I$. We must show that there is pair $(X,\ld)$, where $X$ is in $\C$ and $\ld$ is a morphism of functors from $\al$ to $\DD(X)$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
+It suffices to verify Conditions (a) and (b) of Proposition 3.2.2 (iii) p.~78 of the book. Condition (b) is clear. To check Condition (a), let $\al$ be in $\C^I$. We must show that there is pair $(X,\ld)$, where $X$ is in $\C$ and $\ld$ is a morphism of functors from $\al$ to $\DD X$. Let $S$ be a set of morphisms in $I$. It is easy to prove 
 $$
 (\exists\ Y\in\C)\left(\exists\ \mu\in\prod_{i\in I}\Hom_\C(\al(i),Y)\right)\Big(\forall\ (s:i\to j)\in S\Big)\Big(\mu_{j}\ci\al(s)=\mu_i\Big) 
 $$ 
@@ -6211,7 +6217,7 @@ Any essentially small nonempty category admitting small filtrant inductive limit
 Here is a weakening of the notion of inductive limit:
 
 \begin{df}[small well-ordered upper bounds] 
-Let $I$ be a nonempty well-ordered small set and $\al:I\to\C$ a functor. An {\em upper bound} for $\al$ is a morphism of functors $a:\al\to\DD(X)$. (As usual, $\DD(X)$ is the functor with constant value $X$.) If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}\index{small well-ordered upper bounds}. 
+Let $I$ be a nonempty well-ordered small set and $\al:I\to\C$ a functor. An {\em upper bound} for $\al$ is a morphism of functors $a:\al\to\DD X$ (see Notation~\ref{diag} p.~\pr{diag}). If $\C$ has the property that any such functor admits some upper bound, we say that $\C$ {\em admits small well-ordered upper bounds}\index{small well-ordered upper bounds}. 
 \end{df}
 
 \begin{df}[special well-ordered small set] 
@@ -6695,16 +6701,16 @@ Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C
 \begin{proof}
 By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the forgetful functor $\pp:I^i\to I$ is cofinal. Define the morphism of functors 
 $$
-\theta\in\Hom_{\C^{I^i}}(\DD(\al(i)),\al\ci\pp)
+\theta\in\Hom_{\C^{I^i}}(\DD \al(i),\al\ci\pp)
 $$ 
-($\DD$ being the diagonal functor) by 
+(see Notation~\ref{diag} p.~\pr{diag}) by 
 $$
 \theta_{(s:i\to j)}:=\big(\al(s):\al(i)\to\al(j)\big). 
 $$ 
 As $\theta$ is a monomorphism, Proposition~\ref{34i} p.~\pr{34i} implies that $\col\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
-\col\DD(\al(i))\ar{d}[swap]{\sim}\ar[tail]{rr}{\col\theta}&&\col(\al\ci\pp)\ar{d}{\sim}\\ 
+\col\DD\al(i)\ar{d}[swap]{\sim}\ar[tail]{rr}{\col\theta}&&\col(\al\ci\pp)\ar{d}{\sim}\\ 
 \al(i)\ar{rr}[swap]{p_i}&&\col\al.
 \end{tikzcd}
 $$
