@@ -270,7 +270,7 @@ P.~65, Exercise 2.7 (i): ``$\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\tm
 
 \nn$*$ P.~74, last four lines: $\al$ should be replaced with $\pp$.
 
-\nn$*$ P.~80, last display: a ``$\ds\ilim$'' is missing.
+\nn$*$ P.~80, last display: a $\ds\ilim$ is missing.
 
 \nn$*$ P.~83, Statement of Proposition 3.3.7 (iv) and (v): $k$ might be replaced with $R$. 
 
@@ -2795,6 +2795,25 @@ which is Condition (vi) in Proposition 2.5.2 p.~57 of the book. (Proposition 2.5
 %
 
 \begin{s} 
+P.~79, proof of Corollary 3.2.3 (ii). Here are more details: For $(i,j)\in I\tm J$ we have $I^{(i,j)}\iso(I^i)^j$. Part (i) implies that $I^i$ is filtrant and the forgetful functor $I^i\to I$ is cofinal. Then Proposition 3.2.2, (i) $\then$ (ii), p.~78 of the book implies that $(I^i)^j$ is filtrant. Finally, Proposition 3.2.2, (ii) $\then$ (i) implies that the diagonal functor $I\to I\tm I$ is cofinal.
+\end{s}
+
+%
+
+\begin{s}
+P. 79, Proposition 3.2.5. It is claimed that (ii) is a particular case of (iv). More precisely, (ii) is obtained from (iv) by replacing the setting 
+$$
+I\xr\pp J\xr\psi K,\quad u:k\to\psi(j)
+$$ 
+with 
+$$
+I\xr{\id_I}I\xr\pp J,\quad\id_{\pp(i)}:\pp(i)\to\pp(i).
+$$ 
+\end{s}
+
+%
+
+\begin{s} 
 P.~80. Propositions 3.2.4 and 3.2.6 can be combined as follows. 
 
 \begin{prop}\lb{comb}
@@ -2809,31 +2828,32 @@ In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By
 %
 
 \begin{s} 
-P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a ``$\ds\ilim$'' is missing in the last display. Recall the statement:
+P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a $\ds\ilim$ is missing in the last display. Recall the statement:
 \begin{lem}
-Let $I$ be a small ordered set, $\al:I\to\C$ a functor. Let $\J$ denote the set of finite subsets of $I$, ordered by inclusion. To each $J$ in $\J$, associate the restriction $\al_J:\J\to\C$ of $\al$ to $\J$. Then $\J$ is small and filtrant and moreover
+Let $I$ be a small ordered set, let $\al:I\to\C$ be a functor, let $\J$ be the set of finite subsets of $I$ ordered by inclusion, and for each $J$ in $\J$ let $\al_J:\J\to\C$ be the restriction of $\al$ to $\J$. Then $\J$ is small and filtrant, and we have
 $$
 \col\al\iso\col_{J\in\J}\col\al_J.
-$$
+$$ 
+in $\C^\vee$.
 \end{lem}
 \begin{proof}
-Put
+Set
 $$
 A:=\col\al,\quad
-\bt_J:=\col\al_J,\quad
+\bt(J):=\col\al_J,\quad
 B:=\col\bt.
 $$
 Let 
 $$
-p_i:\al_i\to A,\quad 
-p_{i,J}:\al_i\to\bt_J,\quad 
-p_J:\bt_J\to B
+p_i:\al(i)\to A,\quad 
+p_{i,J}:\al(i)\to\bt(J),\quad 
+p_J:\bt(J)\to B
 $$
 be the coprojections. Note that $p_{i,J}$ is defined only for $i$ in $J$. We easily check that 
 
-\nn$\bu$ the morphisms$f_i:=p_{\{i\}}\ci p_{i,\{i\}}:\al_i\to B$ induce a morphism $f:A\to B$, 
+\nn$\bu$ the morphisms$f_i:=p_{\{i\}}\ci p_{i,\{i\}}:\al(i)\to B$ induce a morphism $f:A\to B$, 
 
-\nn$\bu$ the morphisms $g_{i,J}:=p_i:\al_i\to A$ (with $i$ in $J$) induce a morphism $g_J:\bt_J\to A$, 
+\nn$\bu$ the morphisms $g_{i,J}:=p_i:\al(i)\to A$ (with $i$ in $J$) induce a morphism $g_J:\bt(J)\to A$, 
 
 \nn$\bu$ the morphisms $g_J$ induce a morphism $g:B\to A$, 
 
@@ -2845,7 +2865,7 @@ be the coprojections. Note that $p_{i,J}$ is defined only for $i$ in $J$. We eas
 
 For the reader's convenience we reproduce Definition 3.3.1 p.~81. 
 
-\begin{df}[Definition 3.3.1 p.~81, exactness] 
+\begin{df}[Definition 3.3.1, exactness] 
 Let $F:\C\to\C'$ be a functor.
 
 \nn\emph{(i)} We say that $F$ is \emph{right exact}\index{right exact} if the category $\C_{X'}$ is filtrant for all $X'$ in $\C'$. 
