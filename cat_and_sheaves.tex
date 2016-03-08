@@ -1189,10 +1189,7 @@ $$
 
 \section{About Chapter 2}
 
-\sbs{Brief Comments}
-
-\begin{s}\lb{212}
-P.~36, Definition 2.1.2. 
+\sbs{Definition of limits (\S2.1 p.~36)}\lb{212}%\begin{s}\lb{212}P.~36, Definition 2.1.2. 
 
 \begin{nota}\lb{diag}
 If $I$ and $\C$ are categories, we denote by $\DT$ the diagonal functor from $\C$ to $\C^I$. The categories $I$ and $\C$ shall be explicitly indicated only when they are not clear from the context. Furthermore, we shall often write $\DT X$ for $\DT(X)$. To be more precise, $\DT X$ is the constant functor from $I$ to $\C$ with value $X$.
@@ -1248,9 +1245,10 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if 
 
 \nn\emph{(d)} $(\Hom_\C(X,Y),\Hom_\C(p,Y))$ is a projective limit of $\Hom_\C(\al,Y)$ in $\Set$, where $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ is the morphism in $\Set^I$ induced by $p$.
 \end{prop}
-\end{s}
+%\end{s}
+%%
 
-%
+\sbs{Brief Comments}
 
 \begin{s}%\lb{aic}
 Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
@@ -1582,7 +1580,6 @@ The proof in the book is divided into three steps, called (a), (b), and (c).
 We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
 
 \begin{lem}\lb{r52}
-
 Let $I$ and $K$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\Phi:I\to\Cat$ be a functor, view $K$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to K$ be a morphism of functors. Assume 
 
 \begin{equation}\lb{52} 
@@ -1595,7 +1592,6 @@ $$
 \col\theta_{i'}=(\col\theta)(i'). 
 $$ 
 Then $\col\theta$ is a functor from $I$ to $K$. 
-%
 \end{lem}
 %
 Here is a picture:
@@ -1774,21 +1770,12 @@ and it easy to see that the three data of the above bijection, of the equivalenc
 
 \sbs{Brief Comments}
 
-\begin{s} P.~53, Corollary 2.3.4. (Another proof will be given in Section~\ref{2111} p.~\pr{2111}.) Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small. One can prove $\col\bt\iso\col\pp^\dg\bt$, that is 
-%
+\begin{s} P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small, and that the statement is the existence of a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
 \col_j\bt(j)\iso\col_i\ \col_{j,u}\bt(j),
 \end{equation} 
-%
-where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$, as follows: Let $L$ and $R$ be the left and right-hand sides of \qr{coco}, let $f:R\to L$ be the obvious map, and let
-$$ 
-\bt(j)\xr{p_{i,j,u}}\col_{j,u}\bt(j)\xr{q_i}\col_i\ \col_{j,u}\bt(j)
-$$ 
-be the coprojections. We easily check that the compositions 
-$$
-\bt(j)\xr{p_{\pp(j),j,\id_{\pp(j)}}}\col_{j,u}\bt(j)\xr{q_{\pp(j)}}\col_i\ \col_{j,u}\bt(j)
-$$ 
-induce a map $g:L\to R$, and that $f$ and $g$ are mutually inverse bijections. q.e.d.
+where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. In Section~\ref{2111} p.~\pr{2111} we shall give a proof of this fact which differs slightly from the one in the book.
+% https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
 \end{s} 
 
 % 
@@ -2050,7 +2037,7 @@ Let $\C$ be a category and let $A$ be in $\C^\wg$. Consider the statements
 
 Clearly, \qr{263b} implies \qr{263a} and \qr{263c} (see \S\ref{216} p.~\pr{216}), and the proof of \qr{263b} is straightforward. (See \S\ref{c38} p.~\pr{c38} for the relationship between \qr{263a}, \qr{263b}, and \qr{263c}.) 
 
-Isomorphism \qr{263a} can be decoded as follows: Consider the functor 
+The isomorphism \qr{263a} can be decoded as follows: Consider the functor 
 $$
 \al:\C_A\to\C^\wg,\quad(X\to A)\mt X,
 $$ 
@@ -2069,7 +2056,7 @@ $$
 \theta_X(X\to A):=\xi_{X\to A}.
 $$
 
-Isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
+The isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
 $$
 \bt:\C_A\to\Set,\quad(X\to A)\mt\Hom_\C(Y,X), 
 $$ 
@@ -2086,7 +2073,7 @@ $$
 f(Y\to A):=\xi_{Y\to A}(\id_A).
 $$
 
-Isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, consider the functor 
+The isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, consider the functor 
 $$
 \gamma:(\C_A)^{\op}\to\Set,\quad(X\to A)\mt B(X),
 $$ 
@@ -2891,7 +2878,7 @@ is bijective. Replacing Setting (\ref{241s}) p.~\pr{241s} with
 $$
 X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X', 
 $$ 
-Isomorphism (\ref{241}) p.~\pr{241} gives 
+The isomorphism (\ref{241}) p.~\pr{241} gives 
 $$
 \col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)\iso\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X').
 $$ 
@@ -2963,12 +2950,6 @@ This section is divided into two parts. In Part 1 we give a proof of Proposition
 
 \subsubsection{Part 1} 
 
-The statement is phrased as follows: 
-
-``For any category $\C$ and any functor $\al:M[I\to K\rightarrow J]\to\C$ we have $\col\al\iso\col_{j\in J}\col_{i\in I_{\psi(j)}}\al(i,j,\pp(i)\to\psi(j))$.'' 
-
-One needs some assumption ensuring the existence of the indicated inductive limits. Here we shall assume that $\C$ admits inductive limits indexed by $J$ and $I_{\psi(j)}$ for all $j$ in $J$. 
-
 Recall the notation. We have functors $I\xr\pp K\xl\psi J$ between small categories, and 
 $$
 M:=M[I\xr\pp K\xl\psi J] 
@@ -2979,49 +2960,43 @@ Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor f
 $$
 j\mt\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
 $$ 
-($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pr{r52}. 
+($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pr{r52}.  
 
-Isomorphism 
-%
-\begin{equation}\lb{coco2}
-\col\al\iso\col_j\ \col_{i,u}\al(i,j,u),
-\end{equation} 
-%
-where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$), will result from 
-
-\begin{prop}
-Assume $I,J$, and $K$ are small categories, and $\bt:M^{\op}\to\Set$ is a functor. Then 
+\begin{prop}\lb{coco2}
+We have an isomorphism 
 $$
-j\mt\lim_{(i,u)\in I_{\psi(j)}}\bt(i,j,u)
-$$ 
-is a functor from $J^{\op}$ to $\Set$, and we have
-%
-\begin{equation}\lb{lili} 
-\lim\bt=\lim_j\ \lim_{(i,u)\in I_{\psi(j)}}\bt(i,j,u) 
-\end{equation} 
-%
-as an equality between subsets of the product $P$ of the $\bt(i,j,u)$. 
+\col\al\iso\col_j\ \col_{i,u}\al(i,j,u),
+$$  
+where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$).
 \end{prop} 
 
 \begin{proof}
-The first claim follows from Lemma~\ref{r52} p.~\pr{r52}. To prove the second claim, let $L$ and $R$ denote respectively the left and right-hand side of \qr{lili}, let $x=(x(i,j,u))$ be in $P$, and let us denote generic morphisms in $I$ and $J$ by $v:i\to i'$ and $w:j\to j'$. Then $x$ is in $L$ if and only if 
-%
-\begin{equation}\lb{fe} 
-(v,w)\in\Hom_M((i,j,u),(i',j',u'))\then x(i,j,u)=\bt(v,w)(x(i',j',u',)), 
-\end{equation} 
-%
-whereas $x$ is in $R$ if and only if \qr{fe} holds when $v$ or $w$ is an identity morphism, so that the equality $L=R$ follows from the fact that any morphism 
+Let  
 $$
-(v,w):(i,j,u)\to(i',j',u')
+\al(i,j,u)\xr{p_{iju}}\col\al,\quad\al(i,j,u)\xr{q_{iju}}\col_{i,u}\al(i,j,u)\xr{r_j}\col\al
 $$ 
-in $M$ satisfies $(v,w)=(v,j')\ci(i,w)$.
+be the coprojections. There is an obvious morphism 
+$$
+f:\col\al\to\col_j\ \col_{i,u}\al(i,j,u).
+$$ 
+Consider the diagram 
+\begin{equation}\lb{iju}
+\begin{tikzcd}
+\al(i,j,u)\ar{d}[swap]{q_{iju}}\ar{r}{\id}&\al(i,j,u)\ar{d}{p_{iju}}\\ 
+\ds\col_{i,u}\al(i,j,u)\ar{d}[swap]{r_j}\ar{r}{g_j}&\col\al\ar{d}{\id}\\ 
+\ds\col_j\col_{i,u}\al(i,j,u)\ar{r}[swap]{g}&\col\al.
+\end{tikzcd}
+\end{equation} 
+We fix $j$ and define $g_j$ by the condition that the top square of \qr{iju} commutes for all $(i,u)$. Then we define $g$ by the condition that the bottom square of \qr{iju} commutes for all $j$. We leave it to the reader to check that $f$ and $g$ are inverse isomorphisms. 
 \end{proof}
 
-In view of Theorem 3.1.6 p.~74 of the book, Isomorphism~\qr{coco2} implies 
+In view of Theorem 3.1.6 p.~74 of the book, Proposition~\ref{coco2} implies 
 %
 \begin{prop}\lb{cocop} 
 If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 \end{prop}
+
+%
 
 \subsubsection{Part 2}\lb{2111}
 
@@ -3033,7 +3008,7 @@ and let $\al:I\to\C$ be a functor. We must prove
 $$
 \col_i\al(i)\iso\col_j\ \col_{i,u}\al(i). 
 $$ 
-(Recall: $u:\pp(i)\to j$.) In view of \qr{coco2}, it suffices to prove that we have 
+(Recall: $u:\pp(i)\to j$.) In view of Proposition~\ref{coco2} p.~\pr{coco2}, it suffices to prove that we have 
 $$
 \col_{i,j,u}\al(i)\iso\col_i\al(i),
 $$ 
@@ -3474,7 +3449,7 @@ Let $S$ be a set of objects of a category $\C$ and $\SSS$ the corresponding subc
 %
 
 \begin{s}
-P.~118, second display: Isomorphism 
+P.~118, second display: the isomorphism 
 $$
 \Hom_{\Set}\Big(\Hom_\C(G,X),\Hom_\C(G,X)\Big)\iso\Hom_{\C^\vee}(G^{\sqcup\Hom_\C(G,X)},X)
 $$ 
