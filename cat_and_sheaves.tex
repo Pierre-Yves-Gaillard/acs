@@ -704,7 +704,8 @@ P.~16, Definition 1.2.11 (iii). Note that fully faithful functors are conservati
 P.~18, Definition 1.2.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
 \begin{equation}\lb{opslice}
 (\C_{X'})^{\op}\iso(\C^{\op})^{X'},\quad(\C^{X'})^{\op}\iso(\C^{\op})_{X'}.
-\end{equation}
+\end{equation} 
+Also note that, if $\Cat$ is the category of small categories, then the formula $X'\mt\C_{X'}$ defines a functor $\C'\to\Cat$, and the formula $X'\mt\C^{X'}$ defines a functor $\C'^{\op}\to\Cat$.
 \end{s}
 
 %%
@@ -1462,10 +1463,10 @@ To prove (c) we can assume that there is a morphism $i\to j$, in which case the 
 %
 
 \begin{s}
-Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. Let $I$ be a small category with disjoint hom-sets, let $\al,\bt:I\to\C$ be two functors, and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. 
+Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}.  
 
 \begin{thm}\lb{fgd}
-The natural map 
+Let $I$ be a small category with disjoint hom-sets; let $\al,\bt:I\to\C$ be two functors; and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. Then the natural map 
 \begin{equation}\lb{hficab}
 \Hom_{\Fct(I,\C)}(\al,\bt)\to\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
 \end{equation} 
@@ -1580,7 +1581,7 @@ The proof in the book is divided into three steps, called (a), (b), and (c).
 We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
 
 \begin{lem}\lb{r52}
-Let $I$ and $K$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\Phi:I\to\Cat$ be a functor, view $K$ as a constant functor from $I$ to $\Cat$, and let $\theta:\Phi\to K$ be a morphism of functors. Assume 
+Let $I$ and $K$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\Phi:I\to\Cat$ be a functor, and let $\theta:\Phi\to\DT K$ be a morphism of functors (recall that $\DT$ is the diagonal functor, see Definition~\ref{diag} p.~\pr{diag}). Assume 
 
 \begin{equation}\lb{52} 
 (\col\theta)(i):=\col(\theta_i)\in K\quad\forall\ i\in I. 
@@ -1598,11 +1599,11 @@ Here is a picture:
 $$
 \begin{tikzcd}
 I\ar{rr}{\Phi}&\ar{d}[swap]{\theta}&\Cat&\Phi(i)\ar{d}{\theta_i}\\ 
-I\ar{rr}[swap]{K}&{}&\Cat&K.
+I\ar{rr}[swap]{\DT K}&{}&\Cat&K.
 \end{tikzcd}
 $$
 
-We want to prove that $\pp^\dg$ defined by \qr{236} p.~\pr{236} is a functor. In the setting of Lemma~\ref{r52} we set $K:=\C$, we choose $\U$ so that $I$ and $k=\C$ are in $\Cat$, we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\bt$ with the forgetful functor from $J_i$ to $J$. We assume \qr{52}. Then $\col\theta$ is nothing but $\pp^\dg(\bt)$. In particular $\pp^\dg(\bt)$ is a functor by Lemma~\ref{r52}. q.e.d.
+We want to prove that $\pp^\dg$ defined by \qr{236} p.~\pr{236} is a functor. In the setting of Lemma~\ref{r52} we set $K:=\C$, we choose $\U$ so that $I$ and $k=\C$ are in $\Cat$, we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\DT\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\bt$ with the forgetful functor from $J_i$ to $J$. We assume \qr{52}. Then $\col\theta$ is nothing but $\pp^\dg(\bt)$. In particular $\pp^\dg(\bt)$ is a functor by Lemma~\ref{r52}. q.e.d.
 
 %
 
@@ -1770,11 +1771,36 @@ and it easy to see that the three data of the above bijection, of the equivalenc
 
 \sbs{Brief Comments}
 
-\begin{s} P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small, and that the statement is the existence of a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
+\begin{s}\lb{scoco}
+P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
-\col_j\bt(j)\iso\col_i\ \col_{j,u}\bt(j),
+\col\bt\iso\col_i\ \col_{j,u}\bt(j),
 \end{equation} 
-where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. In Section~\ref{2111} p.~\pr{2111} we shall give a proof of this fact which differs slightly from the one in the book.
+where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. 
+
+\nn\textbf{First proof of \qr{coco}}
+
+\nn We shall define maps 
+$$
+\begin{tikzcd} 
+\col\bt\ar[yshift=0.7ex]{r}{f}&\ds\col_i\ \col_{j,u}\bt(j),\ar[yshift=-0.7ex]{l}{g}
+\end{tikzcd}
+$$ 
+and leave the verification that $f$ and $g$ are inverse isomorphisms to the reader. We have coprojections 
+$$
+\bt(j)\xr{p_j}\col\bt,\quad\bt(j)\xr{q_{iju}}\col_{j,u}\bt(j)\xr{r_i}\col_i\ \col_{j,u}.
+$$ 
+The definition of $f$ is obvious. To define $g$, consider the diagram
+\begin{equation}\lb{biju}
+\begin{tikzcd}
+\bt(j)\ar{d}[swap]{q_{iju}}\ar{r}{\id}&\bt(j)\ar{d}{p_j}\\ 
+\ds\col_{i,u}\bt(j)\ar{d}[swap]{r_i}\ar{r}{g_i}&\col\bt\ar{d}{\id}\\ 
+\ds\col_i\col_{j,u}\bt(j)\ar{r}[swap]{g}&\col\bt.
+\end{tikzcd}
+\end{equation} 
+We let $i$ be in $I$ and define $g_i$ by the condition that the top square of \qr{biju} commutes for all $(j,u)$. Then we define $g$ by the condition that the bottom square of \qr{biju} commutes for all $i$. q.e.d.
+
+In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
 % https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
 \end{s} 
 
@@ -2942,11 +2968,11 @@ The maps $a,b,c,$ and $d$ are bijective for the following reasons: obviously for
 P.~85, proof of Proposition 3.3.15. To prove that $\A\to\C$ is cofinal, one can apply Proposition~\ref{318i} p.~\pr{318i} with $J=\A,I=\C,L=\C',K=\SSS$. 
 \end{s}
 
-%%%
+%%%£
 
 \sbs{Proposition 3.4.3 (i) (p.~88)}
 
-This section is divided into two parts. In Part 1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part 2 we derive from Proposition 3.4.3 (i) another proof of \qr{coco} p.~\pr{coco}. 
+This section is divided into two parts. In Part 1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part 2 we give two proofs of \qr{coco} p.~\pr{coco}. 
 
 \subsubsection{Part 1} 
 
@@ -2956,7 +2982,7 @@ M:=M[I\xr\pp K\xl\psi J]
 $$ 
 is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\al:M\to\C$. 
 
-Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, view $\C$ is a constant functor from $J$ to $\Cat$, and let $\theta:\Phi\to\C$ be the morphism of functors such that $\theta_j:I_{\psi(j)}\to\C$ is the composition of $\al$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
+Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, recall that $\DT$ denotes the diagonal functor (see Notation~\ref{diag} p.~\pr{diag}), and let $\theta:\Phi\to\DT\C$ be the morphism of functors such that $\theta_j:I_{\psi(j)}\to\C$ is the composition of $\al$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
 $$
 j\mt\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
 $$ 
@@ -3000,7 +3026,11 @@ If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 
 \subsubsection{Part 2}\lb{2111}
 
-Here is another proof of \qr{coco} p.~\pr{coco}: In the above setting, let us assume 
+In \S\ref{2111} p.~\pr{2111} we gave a first proof of \qr{coco} p.~\pr{coco}. Here are two other proofs.
+
+\nn\textbf{Second proof of \qr{coco} p.~\pr{coco}}
+
+\nn In the above setting, let us assume 
 $$
 K=J,\quad\psi=\id_J,
 $$ 
@@ -3009,16 +3039,43 @@ $$
 \col_i\al(i)\iso\col_j\ \col_{i,u}\al(i). 
 $$ 
 (Recall: $u:\pp(i)\to j$.) In view of Proposition~\ref{coco2} p.~\pr{coco2}, it suffices to prove that we have 
-$$
-\col_{i,j,u}\al(i)\iso\col_i\al(i),
-$$ 
-or, in other words, that 
-%
 \begin{equation}\lb{coco3} 
+\col_{i,j,u}\al(i)\iso\col_i\al(i),
+\end{equation} 
+or, in other words, that 
+\begin{equation}\lb{coco4} 
 \text{the projection $M\to I$ is cofinal.} 
 \end{equation} 
-%
-If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco3} follows.
+If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.
+
+\nn\textbf{Third proof of \qr{coco} p.~\pr{coco}}
+
+\nn As observed above, it suffices to show \qr{coco3}. We shall define maps 
+$$
+\begin{tikzcd} 
+\ds\col_i\al(i)\ar[yshift=0.7ex]{r}{f}&\ds\col_{i,j,u}\al(i),\ar[yshift=-0.7ex]{l}{g}
+\end{tikzcd}
+$$ 
+and leave the verification that $f$ and $g$ are inverse isomorphisms to the reader. We have coprojections 
+$$
+\al(i)\xr{p_i}\col_i\al(i),\quad\al(i)\xr{q_{i,j,u}}\col_{i,j,u}\al(i).
+$$ 
+We define $f$ by the condition that  
+$$
+\begin{tikzcd}
+\al(i)\ar{d}[swap]{p_i}\ar{r}{\id}&\al(i)\ar{d}{q_{i,\pp(i),\id_{\pp(i)}}}\\ 
+\ds\col_i\al(i)\ar{r}[swap]{f}&\ds\col_{i,j,u}\al(i)
+\end{tikzcd}
+$$ 
+commutes for all $i$. To define $g$, consider the diagram
+\begin{equation}\lb{ciju}
+\begin{tikzcd}
+\al(i)\ar{d}[swap]{\id}\ar{r}{\id}&\al(i)\ar{d}{p_j}\\ 
+\al(i)\ar{d}[swap]{q_{i,j,u}}\ar{r}{g_{iju}}&\ds\col_i\al(i)\ar{d}{\id}\\ 
+\ds\col_{i,j,u}\al(i)\ar{r}[swap]{g}&\ds\col_i\al(i).
+\end{tikzcd}
+\end{equation} 
+We let $i$ be in $I$ and define $g_{iju}$ by the condition that the top square of \qr{ciju} commutes for all $(j,u)$. Then we define $g$ by the condition that the bottom square of \qr{ciju} commutes for all $i$. q.e.d.
 
 %%
 
