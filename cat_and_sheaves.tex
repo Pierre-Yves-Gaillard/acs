@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -1578,7 +1578,7 @@ The proof in the book is divided into three steps, called (a), (b), and (c).
 
 \subsubsection{Step~(a)}\lb{scji}
 
-We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. Here is a variant of the argument of the book. The proof of the following lemma is obvious: 
+We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. Here is a variant of the argument of the book. %The proof of the following lemma is obvious: 
 
 \begin{lem}\lb{r52}
 Let $I$ and $K$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\Phi:I\to\Cat$ be a functor, and let $\theta:\Phi\to\DT K$ be a morphism of functors (recall that $\DT$ is the diagonal functor, see Definition~\ref{diag} p.~\pr{diag}). Assume 
@@ -1601,7 +1601,32 @@ $$
 I\ar{rr}{\Phi}&\ar{d}[swap]{\theta}&\Cat&\Phi(i)\ar{d}{\theta_i}\\ 
 I\ar{rr}[swap]{\DT K}&{}&\Cat&K.
 \end{tikzcd}
+$$ 
+\begin{proof}[Proof of Lemma \ref{r52}]
+In this proof we shall only explain how to attach a morphism $\Phi(s):\Phi(i)\to\Phi(i')$ to a morphism $s:i\to i'$, and leave the other verifications to the reader. We have $\theta_{i'}\ci\Phi(s)=\theta_i$: 
 $$
+\begin{tikzcd}
+\Phi(i)\ar{d}[swap]{\Phi(s)}\ar{r}{\theta_i}&K\ar{d}{\id}\\ 
+\Phi(i')\ar{r}[swap]{\theta_{i'}}&K.
+\end{tikzcd}
+$$ 
+Letting $p_{i,x}:\theta_i(x)\to(\col\theta)(i)$ be the coprojection attached to $x$ in $\Phi(i)$, we define 
+$$
+(\col\theta)(s):(\col\theta)(i)\to(\col\theta)(i')
+$$ 
+by requiring that the equality 
+\begin{equation}\lb{cts}
+(\col\theta)(s)\ci p_{i,x}=p_{i',\Phi(s)(x)}
+\end{equation} 
+holds for all $x$ in $\Phi(i)$: 
+$$
+\begin{tikzcd}
+\theta_i(x)\ar{d}[swap]{p_{i,x}}\ar{rr}{\id}&&\theta_{i'}(\Phi(s)(x))\ar{d}{p_{i',\Phi(s)(x)}}\\ 
+(\col\theta)(i)\ar{rr}[swap]{(\col\theta)(s)}&&(\col\theta)(i').
+\end{tikzcd}
+$$ 
+(Recall that $\theta_{i'}(\Phi(s)(x))=\theta_i(x)$.) 
+\end{proof}
 
 We want to prove that $\pp^\dg$ defined by \qr{236} p.~\pr{236} is a functor. In the setting of Lemma~\ref{r52} we set $K:=\C$, we choose $\U$ so that $I$ and $k=\C$ are in $\Cat$, we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\DT\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\bt$ with the forgetful functor from $J_i$ to $J$. We assume \qr{52}. Then $\col\theta$ is nothing but $\pp^\dg(\bt)$. In particular $\pp^\dg(\bt)$ is a functor by Lemma~\ref{r52}. q.e.d.
 
@@ -1774,33 +1799,67 @@ and it easy to see that the three data of the above bijection, of the equivalenc
 \begin{s}\lb{scoco}
 P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
-\col\bt\iso\col_i\ \col_{j,u}\bt(j),
+\col\bt\iso\col_i\ \col_{(j,u)\in J_i}\bt(j),
 \end{equation} 
 where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. 
 
 \nn\textbf{First proof of \qr{coco}}
 
-\nn We shall define maps 
+\nn We define morphisms 
 $$
 \begin{tikzcd} 
-\col\bt\ar[yshift=0.7ex]{r}{f}&\ds\col_i\ \col_{j,u}\bt(j),\ar[yshift=-0.7ex]{l}{g}
+\col\bt\ar[yshift=0.7ex]{r}{f}&\ds\col_i\ \col_{(j,u)\in J_i}\bt(j),\ar[yshift=-0.7ex]{l}{g}
 \end{tikzcd}
 $$ 
-and leave the verification that $f$ and $g$ are inverse isomorphisms to the reader. We have coprojections 
+and claim that $f$ and $g$ are inverse isomorphisms. We have coprojections 
 $$
-\bt(j)\xr{p_j}\col\bt,\quad\bt(j)\xr{q_{iju}}\col_{j,u}\bt(j)\xr{r_i}\col_i\ \col_{j,u}.
+\bt(j)\xr{p_j}\col\bt,\qquad\bt(j)\xr{q_{i,j,u}}\col_{(j,u)\in J_i}\bt(j)\xr{r_i}\col_i\ \col_{(j,u)\in J_i}\bt(j).
 $$ 
-The definition of $f$ is obvious. To define $g$, consider the diagram
+
+We define $f$ by the condition that we have 
+$$
+f\ci p_j=r_{\pp(j)}\ci q_{\pp(j),j,\id_{\pp(j)}}
+$$ 
+for all $j$ in $J$: 
+$$
+\begin{tikzcd}
+\bt(j)\ar{dd}[swap]{p_j}\ar{r}{\id}&\bt(j)\ar{d}{q_{\pp(j),j,\id_{\pp(j)}}}\\ 
+&\ds\col_{(j,u)\in J_{\pp(j)}}\bt(j)\ar{d}{r_{\pp(j)}}\\ 
+\col\bt\ar{r}[swap]{f}&\ds\col_i\col_{(j,u)\in J_i}\bt(j).
+\end{tikzcd}
+$$
+
+To define $g$, consider the diagram
 \begin{equation}\lb{biju}
 \begin{tikzcd}
-\bt(j)\ar{d}[swap]{q_{iju}}\ar{r}{\id}&\bt(j)\ar{d}{p_j}\\ 
-\ds\col_{i,u}\bt(j)\ar{d}[swap]{r_i}\ar{r}{g_i}&\col\bt\ar{d}{\id}\\ 
-\ds\col_i\col_{j,u}\bt(j)\ar{r}[swap]{g}&\col\bt.
+\bt(j)\ar{d}[swap]{q_{i,j,u}}\ar{r}{\id}&\bt(j)\ar{d}{p_j}\\ 
+\ds\col_{(j,u)\in J_i}\bt(j)\ar{d}[swap]{r_i}\ar{r}{g_i}&\col\bt\ar{d}{\id}\\ 
+\ds\col_i\col_{(j,u)\in J_i}\bt(j)\ar{r}[swap]{g}&\col\bt.
 \end{tikzcd}
 \end{equation} 
-We let $i$ be in $I$ and define $g_i$ by the condition that the top square of \qr{biju} commutes for all $(j,u)$. Then we define $g$ by the condition that the bottom square of \qr{biju} commutes for all $i$. q.e.d.
+We let $i$ be in $I$ and define $g_i$ by the condition that the top square of \qr{biju} commutes for all $(j,u)\in J_i$. Then we define $g$ by the condition that the bottom square of \qr{biju} commutes for all $i$. 
 
-In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
+Let us prove that $f\ci g$ is the identity of $\col_i\col_{(j,u)\in J_i}\bt(j)$. As we have 
+$$
+f\ci g\ci r_i\ci q_{i,j,u}=f\ci p_j=r_{\pp(j)}\ci q_{\pp(j),j,\id_{\pp(j)}}
+$$ 
+for all $i\in J,(j,u)\in J_i$. Let $i\in J,(j,u)\in J_i$. It suffices to show 
+\begin{equation}\lb{ri}
+r_i\ci q_{i,j,u}=r_{\pp(j)}\ci q_{\pp(j),j,\id_{\pp(j)}},
+\end{equation} 
+that is, it suffices to show that the diagram
+$$ 
+\begin{tikzcd}
+\bt(j)\ar{d}[swap]{q_{\pp(j),j,\id_{\pp(j)}}}\ar{r}{\id}&\bt(j)\ar{d}{q_{i,j,u}}\\ 
+\ds\col_{(j',u')\in J_{\pp(j)}}\bt(j')\ar{d}[swap]{r_{\pp(j)}}\ar{r}{u_*}&\ds\col_{(j',u')\in J_i}\bt(j')\ar{d}{r_i}\\ 
+\ds\col_{i'}\col_{(j',u')\in J_i}\bt(j')\ar{r}[swap]{\id}&\ds\col_{i'}\col_{(j',u')\in J_i}\bt(j'),
+\end{tikzcd}
+$$ 
+where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  \qr{cts}, and the bottom square commutes for obvious reasons. 
+
+We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. q.e.d.
+
+In Section~\ref{2111} p.~\pr{2111} we shall give another proof of \qr{coco}.
 % https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
 \end{s} 
 
@@ -2943,9 +3002,9 @@ Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^
 
 We spell out the details of the proof of the implication $\C_A$ is filtrant $\then$ $A$ left exact.
 
-By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\ref{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map 
+By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\pr{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map 
 $$
-A(\col_i X_i)\to\lim_iA(X_i)
+A\left(\col_i X_i\right)\to\lim_iA(X_i)
 $$ 
 is bijective. Consider the diagram below, in which we abbreviate 
 $$
@@ -2968,11 +3027,11 @@ The maps $a,b,c,$ and $d$ are bijective for the following reasons: obviously for
 P.~85, proof of Proposition 3.3.15. To prove that $\A\to\C$ is cofinal, one can apply Proposition~\ref{318i} p.~\pr{318i} with $J=\A,I=\C,L=\C',K=\SSS$. 
 \end{s}
 
-%%%£
+%%%
 
 \sbs{Proposition 3.4.3 (i) (p.~88)}
 
-This section is divided into two parts. In Part 1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part 2 we give two proofs of \qr{coco} p.~\pr{coco}. 
+This section is divided into two parts. In Part~1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part~2 we give a proof of \qr{coco} p.~\pr{coco} slightly different from the one in \S\ref{scoco} p.~\pr{scoco}. 
 
 \subsubsection{Part 1} 
 
@@ -2999,7 +3058,7 @@ where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$).
 \begin{proof}
 Let  
 $$
-\al(i,j,u)\xr{p_{iju}}\col\al,\quad\al(i,j,u)\xr{q_{iju}}\col_{i,u}\al(i,j,u)\xr{r_j}\col\al
+\al(i,j,u)\xr{p_{iju}}\col\al,\qquad\al(i,j,u)\xr{q_{iju}}\col_{i,u}\al(i,j,u)\xr{r_j}\col_j\ \col_{i,u}\al(i,j,u)
 $$ 
 be the coprojections. There is an obvious morphism 
 $$
@@ -3026,7 +3085,7 @@ If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 
 \subsubsection{Part 2}\lb{2111}
 
-In \S\ref{2111} p.~\pr{2111} we gave a first proof of \qr{coco} p.~\pr{coco}. Here are two other proofs.
+In \S\ref{2111} p.~\pr{2111} we gave a first proof of \qr{coco} p.~\pr{coco}. Here is another one.
 
 \nn\textbf{Second proof of \qr{coco} p.~\pr{coco}}
 
@@ -3047,6 +3106,8 @@ or, in other words, that
 \text{the projection $M\to I$ is cofinal.} 
 \end{equation} 
 If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.
+
+\begin{comment}
 
 \nn\textbf{Third proof of \qr{coco} p.~\pr{coco}}
 
@@ -3076,6 +3137,8 @@ commutes for all $i$. To define $g$, consider the diagram
 \end{tikzcd}
 \end{equation} 
 We let $i$ be in $I$ and define $g_{iju}$ by the condition that the top square of \qr{ciju} commutes for all $(j,u)$. Then we define $g$ by the condition that the bottom square of \qr{ciju} commutes for all $i$. q.e.d.
+
+\end{comment}
 
 %%
 
@@ -3180,7 +3243,7 @@ $$
 \Big(F(X)\ar{r}{f}&F(Y)\ar[yshift=.7ex]{r}{f'_1}\ar[yshift=-.7ex]{r}[swap]{f'_2}&X'\Big)=\Big(F(X)\ar{r}{f'}&X'\Big).
 \end{tikzcd}
 $$ 
-For $i=1,2$ let $f_i$ be the morphism $f$ viewed as a morphism from $(X,f')$ to $(Y,f'_i)$ in $\C_{X'}$: 
+It suffices to prove $f'_1=f'_2$. For $i=1,2$ let $f_i$ be the morphism $f$ viewed as a morphism from $(X,f')$ to $(Y,f'_i)$ in $\C_{X'}$: 
 $$
 \begin{tikzcd}
 F(X)\ar{dr}[swap]{f'}\ar{rr}{F(f)}&&F(Y)\ar{dl}{f'_i}\\ 
@@ -7736,7 +7799,7 @@ As proved in the book,
 
 For the reader's convenience we paste the proof of \qr{ecae} (see p.~391 in the book):
 
-Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ (see Proposition 2.1.6 p.~38, Proposition 3.3.3 p.~82, Proposition 5.1.5 (i) p.~115 and Exercise 5.1 p.~128 in the book). Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
+Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ by Proposition 3.3.3 p.~82 of the book, stated above as Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, stated above as Proposition~\ref{34i} p.~\pr{34i}. Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
