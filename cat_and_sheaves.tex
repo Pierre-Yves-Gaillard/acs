@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-\up{comment}
+%\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -89,6 +89,7 @@
 \nc{\ld}{\lambda}
 \nc{\mono}{\rightarrowtail}
 \nc{\mt}{\mapsto}
+\nc{\os}{\overset}
 \nc{\parar}{\rightrightarrows}
 \nc{\pp}{\varphi}
 \nc{\pr}{\pageref}
@@ -378,7 +379,7 @@ should be ``a sequence
 
 \nn$*$ P.~187, proof of Proposition 8.4.3. More generally, if $F$ is a left exact additive functor between abelian categories, then, in view of the observations made on p.~183 of the book (and especially Exercise 8.17), $F$ is exact if and only if it sends epimorphisms to epimorphisms. (A solution to the important Exercise 8.17 is given in Section~\ref{817} p.~\pr{817}.)
 
-\nn$*$ P.~188. In the second diagram $Y'\overset{l'}{\rightarrowtail}Z$ should be $Y'\overset{l'}{\rightarrowtail}X$. After the second diagram: ``the set of isomorphism classes of $\DT$'' should be ``the set of isomorphism classes of objects of $\DT$''.
+\nn$*$ P.~188. In the second diagram $Y'\os{l'}{\rightarrowtail}Z$ should be $Y'\os{l'}{\rightarrowtail}X$. After the second diagram: ``the set of isomorphism classes of $\DT$'' should be ``the set of isomorphism classes of objects of $\DT$''.
 
 \nn$*$ P.~190, proof of Proposition 8.5.5 (a) (i): all the $R$ should be $R^{\op}$, except for the last one.
 
@@ -547,7 +548,7 @@ It might also be worth mentioning that $M_A$ is called the \emph{constant sheaf 
 
 \nn$*$ P.~438, bottom: One can add that we have $\HOM_\R(\R,F)\iso F$ for all $F$ in $\PSh(\R)$. 
 
-\nn$*$ P.~439, after Definition 18.2.2: One can add that we have $F\overset{\text{\tiny psh}}{\otimes}_\R\R\iso F$ for $F$ in $\PSh(\R)$ and $F\otimes_\R\R\iso F$ for $F$ in $\Mod(\R)$. 
+\nn$*$ P.~439, after Definition 18.2.2: One can add that we have $F\os{\text{\tiny psh}}{\otimes}_\R\R\iso F$ for $F$ in $\PSh(\R)$ and $F\otimes_\R\R\iso F$ for $F$ in $\Mod(\R)$. 
 
 \nn$*$ P.~439, Proposition 18.2.3 (ii). Here is a slightly stronger statement: If $\mc{R,S,T}$ are $k_X$-algebras, if $F$ is a $(\T\otimes_{k_X}\R^{\op})$-module, if $G$ is an $(\R\otimes_{k_X}\SSS)$-module, and if $H$ is an $(\SSS\otimes_{k_X}\T)$-module, then there are isomorphisms 
 $$
@@ -562,7 +563,7 @@ functorial with respect to $F,G$, and $H$.
 
 \nn$*$ P.~440, last line of second display: $\Hom_{\R(U)}(G(U)\otimes_kF(U),H(U))$ should be $\Hom_k(F(U)\otimes_{\R(U)}G(U),H(U))$. 
 
-\nn$*$ P.~440, first line of the fourth display, $\overset{\text{\tiny psh}}{\otimes}_{\R(V)}$ should be $\otimes_{\R(V)}$. 
+\nn$*$ P.~440, first line of the fourth display, $\os{\text{\tiny psh}}{\otimes}_{\R(V)}$ should be $\otimes_{\R(V)}$. 
 
 \nn$*$ P.~441. The proof of Proposition 18.2.5 uses Display (17.1.11) p.~409 of the book and Exercise 17.5 (i) p.~431 of the book (see \S\ref{175i} p.~\pr{175i}).  
 
@@ -1160,13 +1161,13 @@ $$
 $$ 
 and we have 
 $$
-\id_{LX}\overset{\text{(a)}}{=}
-\ld_{X,LX}\big(\mu_{X,LX}(\id_{LX})\big)\overset{\text{(b)}}{=}
-\ld_{X,LX}(\ee_X)\overset{\text{(c)}}{=}
+\id_{LX}\os{\text{(a)}}{=}
+\ld_{X,LX}\big(\mu_{X,LX}(\id_{LX})\big)\os{\text{(b)}}{=}
+\ld_{X,LX}(\ee_X)\os{\text{(c)}}{=}
 \big(\ld_{X,LX}\ci(\ci\ee_X)\big)(\id_{RLX})
 $$
 $$
-\overset{\text{(d)}}{=}\Big(\big(\ci L(\ee_X)\big)\ci\ld_{RLX,LX}\Big)(\id_{RLX})\overset{\text{(e)}}{=}\ld_{RLX,LX}(\id_{RLX})\ci L(\ee_X),
+\os{\text{(d)}}{=}\Big(\big(\ci L(\ee_X)\big)\ci\ld_{RLX,LX}\Big)(\id_{RLX})\os{\text{(e)}}{=}\ld_{RLX,LX}(\id_{RLX})\ci L(\ee_X),
 $$ 
 the successive equalities being justified as follows:
 
@@ -1351,7 +1352,7 @@ P.~40, Proposition 2.1.10 (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.
 %
 \begin{prop}\lb{2.1.10b}
 Let $
-\C\overset G\longleftarrow\A\overset F\longrightarrow\B
+\C\os G\longleftarrow\A\os F\longrightarrow\B
 $ be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
 $$
 \Hom_\B(F(\ ),Y)\iso\Hom_\C(G(\ ),Z)
@@ -1811,9 +1812,9 @@ $$
 \col\bt\ar[yshift=0.7ex]{r}{f}&\ds\col_i\ \col_{(j,u)\in J_i}\bt(j),\ar[yshift=-0.7ex]{l}{g}
 \end{tikzcd}
 $$ 
-and claim that $f$ and $g$ are inverse isomorphisms. We have coprojections 
+and claim that $f$ and $g$ are inverse isomorphisms. We have the coprojections 
 $$
-\bt(j)\xr{p_j}\col\bt,\qquad\bt(j)\xr{q_{i,j,u}}\col_{(j,u)\in J_i}\bt(j)\xr{r_i}\col_i\ \col_{(j,u)\in J_i}\bt(j).
+\bt(j)\xr{p_j}\col\bt,\qquad\bt(j)\xr{q_{i,j,u}}\col_{(j',u')\in J_i}\bt(j')\xr{r_i}\col_{i'}\ \col_{(j',u')\in J_{i'}}\bt(j').
 $$ 
 
 We define $f$ by the condition that we have 
@@ -1824,8 +1825,8 @@ for all $j$ in $J$:
 $$
 \begin{tikzcd}
 \bt(j)\ar{dd}[swap]{p_j}\ar{r}{\id}&\bt(j)\ar{d}{q_{\pp(j),j,\id_{\pp(j)}}}\\ 
-&\ds\col_{(j,u)\in J_{\pp(j)}}\bt(j)\ar{d}{r_{\pp(j)}}\\ 
-\col\bt\ar{r}[swap]{f}&\ds\col_i\col_{(j,u)\in J_i}\bt(j).
+&\ds\col_{(j',u)\in J_{\pp(j)}}\bt(j')\ar{d}{r_{\pp(j)}}\\ 
+\col\bt\ar{r}[swap]{f}&\ds\col_i\col_{(j',u)\in J_i}\bt(j').
 \end{tikzcd}
 $$
 
@@ -1833,13 +1834,13 @@ To define $g$, consider the diagram
 \begin{equation}\lb{biju}
 \begin{tikzcd}
 \bt(j)\ar{d}[swap]{q_{i,j,u}}\ar{r}{\id}&\bt(j)\ar{d}{p_j}\\ 
-\ds\col_{(j,u)\in J_i}\bt(j)\ar{d}[swap]{r_i}\ar{r}{g_i}&\col\bt\ar{d}{\id}\\ 
-\ds\col_i\col_{(j,u)\in J_i}\bt(j)\ar{r}[swap]{g}&\col\bt.
+\ds\col_{(j',u')\in J_i}\bt(j')\ar{d}[swap]{r_i}\ar{r}{g_i}&\col\bt\ar{d}{\id}\\ 
+\ds\col_{i'}\col_{(j',u')\in J_{i'}}\bt(j')\ar{r}[swap]{g}&\col\bt.
 \end{tikzcd}
 \end{equation} 
 We let $i$ be in $I$ and define $g_i$ by the condition that the top square of \qr{biju} commutes for all $(j,u)\in J_i$. Then we define $g$ by the condition that the bottom square of \qr{biju} commutes for all $i$. 
 
-Let us prove that $f\ci g$ is the identity of $\col_i\col_{(j,u)\in J_i}\bt(j)$. As we have 
+Let us prove that $f\ci g$ is the identity of $\col_i\col_{(j,u)\in J_i}\bt(j)$. We have 
 $$
 f\ci g\ci r_i\ci q_{i,j,u}=f\ci p_j=r_{\pp(j)}\ci q_{\pp(j),j,\id_{\pp(j)}}
 $$ 
@@ -1855,11 +1856,11 @@ $$
 \ds\col_{i'}\col_{(j',u')\in J_i}\bt(j')\ar{r}[swap]{\id}&\ds\col_{i'}\col_{(j',u')\in J_i}\bt(j'),
 \end{tikzcd}
 $$ 
-where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  \qr{cts}, and the bottom square commutes for obvious reasons. 
+where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  \qr{cts} p.~\pr{cts}, and the bottom square commutes for obvious reasons. 
 
 We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. q.e.d.
 
-In Section~\ref{2111} p.~\pr{2111} we shall give another proof of \qr{coco}.
+In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
 % https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
 \end{s} 
 
@@ -2427,13 +2428,13 @@ $$h(\C)^\ddg(j((\C^\wg)_A))(U\to A)\iso F(U)$$
 
 $$h(\C_A)^\ddg(F\ci j(\C_A))(\ld(B\to A))$$
 
-$$\overset{(\text a)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\to A\right)\right)$$
+$$\os{(\text a)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\to A\right)\right)$$
 
-$$\overset{(\text b)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}(U\to A)\right)\right)$$
+$$\os{(\text b)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}(U\to A)\right)\right)$$
 
-$$\overset{(\text c)}\iso\col_{(U\to B)\in\C_B}h(\C_A)^\ddg(F\ci j(\C_A))(U\to A)$$
+$$\os{(\text c)}\iso\col_{(U\to B)\in\C_B}h(\C_A)^\ddg(F\ci j(\C_A))(U\to A)$$
 
-$$\overset{(\text d)}\iso\col_{(U\to B)\in\C_B}F(U),$$
+$$\os{(\text d)}\iso\col_{(U\to B)\in\C_B}F(U),$$
 
 \nn where (a) follows from \qr{263a} p.~\pr{263a}; (b) follows from Lemma~\ref{cc}; (c) follows from Proposition~\ref{271} and \qr{leq}, \qr{lcom}; and (d) follows from Proposition~\ref{271}. A similar computation shows 
 $$
@@ -2543,13 +2544,13 @@ j^\dg(G)(U)\iso(h_A)^\dg(G)(\ld(U\tm A\to A)).
 %
 For $B$ in $\C^\wg$ we get 
 
-$$h^\dg(j^\dg(G))(B)\iso\col_{(U\to B)\in\C_B}j^\dg(G)(U)\overset{(\text a)}\iso\col_{(U\to B)\in\C_B}(h_A)^\dg(G)(\ld(U\tm A\to A))$$
+$$h^\dg(j^\dg(G))(B)\iso\col_{(U\to B)\in\C_B}j^\dg(G)(U)\os{(\text a)}\iso\col_{(U\to B)\in\C_B}(h_A)^\dg(G)(\ld(U\tm A\to A))$$
 
-$$\overset{(\text b)}\iso(h_A)^\dg(G)\left(\ld\left(\col_{(U\to B)\in\C_B}(U\tm A\to A)\right)\right)$$
+$$\os{(\text b)}\iso(h_A)^\dg(G)\left(\ld\left(\col_{(U\to B)\in\C_B}(U\tm A\to A)\right)\right)$$
 
-$$\overset{(\text c)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\col_{(U\to B)\in\C_B}(U\tm A)\right)\to A\right)\right)$$
+$$\os{(\text c)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\col_{(U\to B)\in\C_B}(U\tm A)\right)\to A\right)\right)$$
 
-$$\overset{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\tm A\to A\right)\right)\overset{(\text e)}\iso(h_A)^\dg(G)(\ld(B\tm A\to A)),$$ 
+$$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\tm A\to A\right)\right)\os{(\text e)}\iso(h_A)^\dg(G)(\ld(B\tm A\to A)),$$ 
 
 \nn where 
 (a) follows from \qr{prepa4}; 
@@ -3031,7 +3032,7 @@ P.~85, proof of Proposition 3.3.15. To prove that $\A\to\C$ is cofinal, one can 
 
 \sbs{Proposition 3.4.3 (i) (p.~88)}
 
-This section is divided into two parts. In Part~1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part~2 we give a proof of \qr{coco} p.~\pr{coco} slightly different from the one in \S\ref{scoco} p.~\pr{scoco}. 
+This section is divided into two parts. In Part~1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part~2 we give two proofs of \qr{coco} p.~\pr{coco} slightly different from the one in \S\ref{scoco} p.~\pr{scoco}. 
 
 \subsubsection{Part 1} 
 
@@ -3060,10 +3061,18 @@ Let
 $$
 \al(i,j,u)\xr{p_{iju}}\col\al,\qquad\al(i,j,u)\xr{q_{iju}}\col_{i,u}\al(i,j,u)\xr{r_j}\col_j\ \col_{i,u}\al(i,j,u)
 $$ 
-be the coprojections. There is an obvious morphism 
+be the coprojections. There is a unique morphism 
 $$
-f:\col\al\to\col_j\ \col_{i,u}\al(i,j,u).
+f:\col\al\to\col_j\ \col_{i,u}\al(i,j,u)
 $$ 
+such that $f\ci p_{iju}=r_j\ci q_{iju}$ for all $i,j,u$: 
+$$
+\begin{tikzcd}
+\al(i,j,u)\ar{dd}[swap]{p_{iju}}\ar{r}{\id}&\al(i,j,u)\ar{d}{q_{iju}}\\ 
+&\ds\col_{i,u}\al(i,j,u)\ar{d}{r_j}\\ 
+\col\al\ar{r}[swap]{f}&\ds\col_j\col_{i,u}\al(i,j,u).
+\end{tikzcd}
+$$
 Consider the diagram 
 \begin{equation}\lb{iju}
 \begin{tikzcd}
@@ -3085,7 +3094,7 @@ If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 
 \subsubsection{Part 2}\lb{2111}
 
-In \S\ref{2111} p.~\pr{2111} we gave a first proof of \qr{coco} p.~\pr{coco}. Here is another one.
+In \S\ref{2111} p.~\pr{2111} we gave a first proof of \qr{coco} p.~\pr{coco}. Here are two others.
 
 \nn\textbf{Second proof of \qr{coco} p.~\pr{coco}}
 
@@ -3095,50 +3104,53 @@ K=J,\quad\psi=\id_J,
 $$ 
 and let $\al:I\to\C$ be a functor. We must prove 
 $$
-\col_i\al(i)\iso\col_j\ \col_{i,u}\al(i). 
+\col\al\iso\col_j\ \col_{i,u}\al(i). 
 $$ 
 (Recall: $u:\pp(i)\to j$.) In view of Proposition~\ref{coco2} p.~\pr{coco2}, it suffices to prove that we have 
 \begin{equation}\lb{coco3} 
-\col_{i,j,u}\al(i)\iso\col_i\al(i),
+\col_{i,j,u}\al(i)\iso\col\al,
 \end{equation} 
 or, in other words, that 
 \begin{equation}\lb{coco4} 
 \text{the projection $M\to I$ is cofinal.} 
 \end{equation} 
-If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.
-
-\begin{comment}
+If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.%\begin{comment}
 
 \nn\textbf{Third proof of \qr{coco} p.~\pr{coco}}
 
 \nn As observed above, it suffices to show \qr{coco3}. We shall define maps 
 $$
 \begin{tikzcd} 
-\ds\col_i\al(i)\ar[yshift=0.7ex]{r}{f}&\ds\col_{i,j,u}\al(i),\ar[yshift=-0.7ex]{l}{g}
+\col\al\ar[yshift=0.7ex]{r}{f}&\ds\col_{i,j,u}\al(i).\ar[yshift=-0.7ex]{l}{g}
 \end{tikzcd}
 $$ 
-and leave the verification that $f$ and $g$ are inverse isomorphisms to the reader. We have coprojections 
+We have the coprojections 
 $$
-\al(i)\xr{p_i}\col_i\al(i),\quad\al(i)\xr{q_{i,j,u}}\col_{i,j,u}\al(i).
+\al(i)\xr{p_i}\col\al,\quad\al(i)\xr{q_{i,j,u}}\col_{i',j',u'}\al(i').
 $$ 
 We define $f$ by the condition that  
 $$
 \begin{tikzcd}
 \al(i)\ar{d}[swap]{p_i}\ar{r}{\id}&\al(i)\ar{d}{q_{i,\pp(i),\id_{\pp(i)}}}\\ 
-\ds\col_i\al(i)\ar{r}[swap]{f}&\ds\col_{i,j,u}\al(i)
+\col\al\ar{r}[swap]{f}&\ds\col_{i',j,u}\al(i')
 \end{tikzcd}
 $$ 
-commutes for all $i$. To define $g$, consider the diagram
-\begin{equation}\lb{ciju}
+commutes for all $i$, and we define $g$ by the condition that  
+$$
 \begin{tikzcd}
-\al(i)\ar{d}[swap]{\id}\ar{r}{\id}&\al(i)\ar{d}{p_j}\\ 
-\al(i)\ar{d}[swap]{q_{i,j,u}}\ar{r}{g_{iju}}&\ds\col_i\al(i)\ar{d}{\id}\\ 
-\ds\col_{i,j,u}\al(i)\ar{r}[swap]{g}&\ds\col_i\al(i).
+\al(i)\ar{d}[swap]{q_{i,j,u}}\ar{r}{\id}&\al(i)\ar{d}{p_i}\\ 
+\ds\col_{i',j',u'}\al(i')\ar{r}[swap]{g}&\col\al
 \end{tikzcd}
-\end{equation} 
-We let $i$ be in $I$ and define $g_{iju}$ by the condition that the top square of \qr{ciju} commutes for all $(j,u)$. Then we define $g$ by the condition that the bottom square of \qr{ciju} commutes for all $i$. q.e.d.
-
-\end{comment}
+$$ 
+commutes for all $i,j,u$. The proof that $g\ci f$ is the identity of $\col\al$ is straightforward. The proof that $f\ci g$ is the identity of $\col_{i,j,u}\al(i)$ boils down to verifying the equality 
+\begin{equation}\lb{qippi}
+q_{i,\pp(i),\id_{\pp(i)}}=q_{i,j,u}.
+\end{equation}
+Defining $\bt:M\to\C$ by $\bt(i,j,u):=\al(i)$ for all $(i,j,u)\in M$, we get 
+$$
+\bt(i,\pp(i),\id_{\pp(i)})=\al(i)=\bt(i,j,u),
+$$ 
+and $\qr{qippi}$ follows from the existence of an obvious morphism from $(i,\pp(i),\id_{\pp(i)})$ to $(i,j,u)$ in $M$. q.e.d.%\end{comment}
 
 %%
 
@@ -3364,11 +3376,11 @@ $$
 \begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
 =\begin{pmatrix}R*\eta&L\\ \ee*R&L\end{pmatrix}
 =\begin{pmatrix}R*\eta\\ \ee*R\end{pmatrix}\ci\begin{pmatrix}L\\ L\end{pmatrix}
-\overset{\text{(a)}}{=}RL
+\os{\text{(a)}}{=}RL
 $$
 
 $$
-\overset{\text{(b)}}{=}\begin{pmatrix}R\\ R\end{pmatrix}\ci\begin{pmatrix}\eta*L\\ L*\ee\end{pmatrix}
+\os{\text{(b)}}{=}\begin{pmatrix}R\\ R\end{pmatrix}\ci\begin{pmatrix}\eta*L\\ L*\ee\end{pmatrix}
 =\begin{pmatrix}R&\eta*L\\ R&L*\ee\end{pmatrix}
 =\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix},
 $$ 
@@ -3690,10 +3702,10 @@ $$
 coincide. We have, for $w$ in $\Hom_\C(W,Z)$,
 $$
 \xi_Z(z)\ci w
-\overset{\text{(a)}}{=}\xi_W(z\ci w)
-\overset{\text{(b)}}{=}\rho(\xi)_W(z\ci w)
-\overset{\text{(c)}}{=}\pp(f)_W(z\ci w)
-\overset{\text{(d)}}{=}f\ci z\ci w, 
+\os{\text{(a)}}{=}\xi_W(z\ci w)
+\os{\text{(b)}}{=}\rho(\xi)_W(z\ci w)
+\os{\text{(c)}}{=}\pp(f)_W(z\ci w)
+\os{\text{(d)}}{=}f\ci z\ci w, 
 $$ 
 Equality (a) following from the functoriality of $\xi$ (see diagram below), Equality (b) following from the definition of $\rho$, Equality (c) following from \qr{rhoxi}, and Equality (d) following from the definition of $\pp$.
 \end{proof}
@@ -4077,8 +4089,8 @@ $$
 \mu(A_1,A_2)(X_1,X_2)\iso\col_{y_1,y_2}\Big(\Hom_{\C_1}(X_1,Y_1)\tm\Hom_{\C_2}(X_2,Y_2)\Big)
 $$
 $$
-\overset{\text{(a)}}{\iso}\col_{y_1}\Hom_{\C_1}(X_1,Y_1)\tm\col_{y_2}\Hom_{\C_2}(X_2,Y_2)
-\overset{\text{(b)}}{\iso}A_1(X_1)\tm A_2(X_2),
+\os{\text{(a)}}{\iso}\col_{y_1}\Hom_{\C_1}(X_1,Y_1)\tm\col_{y_2}\Hom_{\C_2}(X_2,Y_2)
+\os{\text{(b)}}{\iso}A_1(X_1)\tm A_2(X_2),
 $$ 
 Isomorphism~(a) following from the IPC Property (see pp 75-77 of the book), and Isomorphism~(b) following from \qr{263b} p.~\pr{263b}. We record this as
 $$
@@ -4095,9 +4107,9 @@ Let us prove
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\tm A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
 B_1
-\overset{\text{(a)}}{\iso}\ic_x\ X_1\iso\ic_{x_1,x_2}\ X_1
-\overset{\text{(b)}}{\iso}\ic_{x_1}\ X_1
-\overset{\text{(c)}}{\iso}A_1.
+\os{\text{(a)}}{\iso}\ic_x\ X_1\iso\ic_{x_1,x_2}\ X_1
+\os{\text{(b)}}{\iso}\ic_{x_1}\ X_1
+\os{\text{(c)}}{\iso}A_1.
 $$ 
 Indeed, Isomorphism~(a) follows from \qr{ai}, Isomorphism~(b) from the definition of $A$, Isomorphism~(b) from the fact that the projection 
 $$
@@ -4551,7 +4563,7 @@ P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is
 \begin{s} 
 P.~155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\SSS$ is given by 
 $$
-X'\xr gY'\overset{t}{\leftarrow}X,
+X'\xr gY'\os{t}{\leftarrow}X,
 $$
 where $g$ and $t$ are obtained by applying S3 with $f=\id_X$:
 $$
@@ -5095,7 +5107,7 @@ We shall freely use the isomorphism between image and coimage, as well as the ab
 $$
 K_v:=\Ker v,\quad K'_v:=\Coker v,\quad I_v:=\Ima v.
 $$ 
-Let us also write ``$A\overset{\sim}{\to}B$'' for ``the natural morphism $A\to B$ is an isomorphism''. 
+Let us also write ``$A\os{\sim}{\to}B$'' for ``the natural morphism $A\to B$ is an isomorphism''. 
 
 Proposition \ref{p834} p.~\pr{p834} can be stated as follows. 
 %
@@ -5660,7 +5672,7 @@ Recall that, by Proposition 8.3.18 p.~183 of the book, an additive functor betwe
 \begin{matrix}
 0\to X'\xr fX\xr gX''\text{ exact }\\ 
 \then\\ 
-0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
+0\to F(X')\os{F(f)\ }{\longrightarrow}F(X)\os{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
 \end{equation}
@@ -5672,7 +5684,7 @@ Consider the condition
 \begin{matrix}
 0\to X'\xr fX\xr gX''\to0\text{ exact }\\ 
 \then\\ 
-0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
+0\to F(X')\os{F(f)\ }{\longrightarrow}F(X)\os{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
 \end{equation}
@@ -5732,7 +5744,7 @@ Consider the conditions below on our additive functor $F:\C\to\C'$:
 \begin{matrix}
 0\to X'\xr fX\xr gX''\to0\text{ exact }\\ 
 \then\\ 
-0\to F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\to0\text{ exact}
+0\to F(X')\os{F(f)\ }{\longrightarrow}F(X)\os{F(g)\ }{\longrightarrow}F(X'')\to0\text{ exact}
 \end{matrix}
 \right\}
 \end{equation}
@@ -5742,7 +5754,7 @@ Consider the conditions below on our additive functor $F:\C\to\C'$:
 \begin{matrix}
 X'\xr fX\xr gX''\text{ exact }\\ 
 \then\\ 
-F(X')\overset{F(f)\ }{\longrightarrow}F(X)\overset{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
+F(X')\os{F(f)\ }{\longrightarrow}F(X)\os{F(g)\ }{\longrightarrow}F(X'')\text{ exact}
 \end{matrix}
 \right\}
 \end{equation}
@@ -5897,9 +5909,9 @@ If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satis
 Let $\al:I\to\C$ be a functor with $I$ small and $\pi$-filtrant, and consider the commutative diagram
 $$
 \begin{tikzcd}
-\col_i\Hom_\C(\col_j\bt(j),\al(i))\ar{r}{a}\ar{d}{b}[swap]{\sim}&\Hom_\C(\col_j\bt(j),\col_i\al(i))\ar{dd}{e}[swap]{\sim}\\ 
+\col_i\Hom_\C(\col_j\bt(j),\al(i))\ar{r}{a}\ar{d}{b}[swap]{\sim}&\Hom_\C(\col_j\bt(j),\col\al)\ar{dd}{e}[swap]{\sim}\\ 
 \col_i\lim_j\Hom_\C(\bt(j),\al(i))\ar{d}{c}[swap]{\sim}\\ 
-\lim_j\col_i\Hom_\C(\bt(j),\al(i))\ar{r}{d}[swap]{\sim}&\lim_j\Hom_\C(\bt(j),\col_i\al(i)).
+\lim_j\col_i\Hom_\C(\bt(j),\al(i))\ar{r}{d}[swap]{\sim}&\lim_j\Hom_\C(\bt(j),\col\al).
 \end{tikzcd}
 $$ 
 The morphisms $b$ and $e$ are isomorphisms for obvious reasons. The morphism $c$ is an isomorphism because of our assumptions about $I$ and $J$. The morphism $d$ is an isomorphism because $\bt(j)$ is in $\C_\pi$ for all $j$. Thus, the morphism $a$ is an isomorphism. 
@@ -8375,13 +8387,13 @@ Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant result
 Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419 of the book: The chain reads 
 $$
 \prod_i\ F^b(A_i)
-\overset{(\text a)}{\iso}\prod_i\ \col_{(B_i\to A_i)\in\mc{LI}_{A_i}}F(B_i)
-\overset{(\text b)}{\iso}\col_{(B_i\to A_i)_{i\in I}\in K}\ \prod_i\ F(B_i)
+\os{(\text a)}{\iso}\prod_i\ \col_{(B_i\to A_i)\in\mc{LI}_{A_i}}F(B_i)
+\os{(\text b)}{\iso}\col_{(B_i\to A_i)_{i\in I}\in K}\ \prod_i\ F(B_i)
 $$
 $$
-\overset{(\text c)}{\iso}\col_{(B_i\to A_i)_{i\in I}\in K}\ F\left(``\bigsqcup_i\!"B_i\right)
-\overset{(\text d)}{\iso}\col_{(B\to A)\in\mc{LI}_A}F(B)
-\overset{(\text e)}{\iso}F^b(A), 
+\os{(\text c)}{\iso}\col_{(B_i\to A_i)_{i\in I}\in K}\ F\left(``\bigsqcup_i\!"B_i\right)
+\os{(\text d)}{\iso}\col_{(B\to A)\in\mc{LI}_A}F(B)
+\os{(\text e)}{\iso}F^b(A), 
 $$ 
 and the isomorphisms can be justified as follows: 
 
@@ -8442,21 +8454,21 @@ $$
 of $\E$. One checks that $(p_E,r_E)$ is a pair of adjoint functors. In particular $p_E$ is cocofinal. We have
 $$
 F^b(D)
-\overset{(\text a)}{\iso}\col_{y\in\mc{LI}_D}F(j_D(y))
-\overset{(\text b)}{\iso}\col_{x\in\E}F(q_D(x))
+\os{(\text a)}{\iso}\col_{y\in\mc{LI}_D}F(j_D(y))
+\os{(\text b)}{\iso}\col_{x\in\E}F(q_D(x))
 $$
 $$
-\overset{(\text c)}{\iso}\col_{x\in\E}F\left(q_B(x)``\!\!\!\bigsqcup_{q_A(x)}\!\!\!"q_C(x)\right)
-\overset{(\text d)}{\iso}\col_{x\in\E}(F(q_B(x))\tm_{F(q_A(x))}F(q_C(x)))
+\os{(\text c)}{\iso}\col_{x\in\E}F\left(q_B(x)``\!\!\!\bigsqcup_{q_A(x)}\!\!\!"q_C(x)\right)
+\os{(\text d)}{\iso}\col_{x\in\E}(F(q_B(x))\tm_{F(q_A(x))}F(q_C(x)))
 $$
 $$
-\overset{(\text e)}{\iso}\left(\col_{x\in\E}F(q_B(x))\right)\tm_{\col_{x\in\E}F(q_A(x))}\left(\col_{x\in\E}F(q_C(x))\right)
+\os{(\text e)}{\iso}\left(\col_{x\in\E}F(q_B(x))\right)\tm_{\col_{x\in\E}F(q_A(x))}\left(\col_{x\in\E}F(q_C(x))\right)
 $$ 
 $$
-\overset{(\text f)}{\iso}\left(\col_{y\in\mc{LI}_B}F(j_B(y))\right)\tm_{\col_{y\in\mc{LI}_A}F(j_A(y))}\left(\col_{y\in\mc{LI}_C}F(j_C(y))\right)
+\os{(\text f)}{\iso}\left(\col_{y\in\mc{LI}_B}F(j_B(y))\right)\tm_{\col_{y\in\mc{LI}_A}F(j_A(y))}\left(\col_{y\in\mc{LI}_C}F(j_C(y))\right)
 $$ 
 $$
-\overset{(\text g)}{\iso}F^b(B)\tm_{F^b(A)}F^b(C).
+\os{(\text g)}{\iso}F^b(B)\tm_{F^b(A)}F^b(C).
 $$ 
 Indeed, the isomorphisms can be justified as follows: 
 
@@ -8714,14 +8726,14 @@ $$
 \Hom_{PY}(\iota_Ya_YG,f_*\iota_XF)
 $$
 $$
-\overset{(\text a)}{\iso}
+\os{(\text a)}{\iso}
 \Hom_{PY}(\iota_Ya_YG,\iota_Ya_Yf_*\iota_XF)\iso
 \Hom_{SY}(a_Y\iota_Ya_YG,a_Yf_*\iota_XF)
 $$
 $$
-\overset{(\text b)}{\iso}
+\os{(\text b)}{\iso}
 \Hom_{SY}(a_YG,a_Yf_*\iota_XF)\iso
-\Hom_{PY}(G,\iota_Ya_Yf_*\iota_XF)\overset{(\text c)}{\iso}
+\Hom_{PY}(G,\iota_Ya_Yf_*\iota_XF)\os{(\text c)}{\iso}
 \Hom_{PY}(G,f_*\iota_XF)
 $$ 
 $$ 
@@ -8815,14 +8827,14 @@ P.~438, bottom: One can add that we have $\HOM_\R(\R,F)\iso F$ for all $F$ in $\
 \begin{s}\lb{neutral}
 P.~439, after Definition 18.2.2: One can add that we have 
 $$
-\R\overset{\text{\tiny psh}}{\otimes}_\R F\iso F
+\R\os{\text{\tiny psh}}{\otimes}_\R F\iso F
 $$ 
 for $F$ in $\PSh(\R)$ and 
 $$
 \R\otimes_\R F\iso F
 $$ 
 for $F$ in $\Mod(\R^{\op})$, as well as 
-$$F\overset{\text{\tiny psh}}{\otimes}_\R\R\iso F
+$$F\os{\text{\tiny psh}}{\otimes}_\R\R\iso F
 $$ 
 for $F$ in $\PSh(\R^{\op})$ and 
 $$
@@ -8879,10 +8891,10 @@ F_A\iso\R_A\otimes_\R F\iso k_{XA}\otimes_{k_X}F.
 \end{equation} 
 We have 
 $$
-F_A\overset{(\text a)}{\iso}
-\oo j_{A\to X}^{-1}(F|_A)\overset{(\text b)}{\iso}
-\oo j_{A\to X}^{-1}(\R|_A\otimes_{\R|_A}F|_A)\overset{(\text c)}{\iso}
-(\oo j_{A\to X}^{-1}(\R|_A))\otimes_\R F\overset{(\text d)}{\iso} 
+F_A\os{(\text a)}{\iso}
+\oo j_{A\to X}^{-1}(F|_A)\os{(\text b)}{\iso}
+\oo j_{A\to X}^{-1}(\R|_A\otimes_{\R|_A}F|_A)\os{(\text c)}{\iso}
+(\oo j_{A\to X}^{-1}(\R|_A))\otimes_\R F\os{(\text d)}{\iso} 
 \R_A\otimes_\R F.
 $$ 
 Indeed, (a) and (d) hold by Definition 17.6.10 (i) and Display (17.6.5) p.~428 of the book, (b) follows from \S\ref{neutral}, (c) follows from (18.2.6) p.~441 of the book. The isomorphism $F_A\iso k_{XA}\otimes_{k_X}F$ is a particular case of the isomorphism $F_A\iso\R_A\otimes_\R F$ just proved. 
@@ -8893,12 +8905,12 @@ Proof of (18.2.13): We must show
 \end{equation}
 We have 
 $$
-\HOM_\R(\R_A,F)\overset{(\text a)}{\iso}
+\HOM_\R(\R_A,F)\os{(\text a)}{\iso}
 \HOM_\R(\R\otimes_{k_X}k_{XA},F)
 $$
 $$
-\overset{(\text b)}{\iso}
-\HOM_{k_X}(k_{XA},\HOM_\R(\R,F))\overset{(\text c)}{\iso}
+\os{(\text b)}{\iso}
+\HOM_{k_X}(k_{XA},\HOM_\R(\R,F))\os{(\text c)}{\iso}
 \HOM_{k_X}(k_{XA},F), 
 $$ 
 where (a) follows from \qr{18212}, (b) follows from Display (18.2.4) p.~439 of the book (which is a particular case of \qr{HOM}), and (c) follows from \S\ref{homrr}. Let us record the isomorphism 
@@ -8909,13 +8921,13 @@ where (a) follows from \qr{18212}, (b) follows from Display (18.2.4) p.~439 of t
 %
 We also have for $G$ in $\Mod(\R)$ 
 $$
-\Hom_\R(G,\HOM_{k_X}(k_{XA},F))\overset{(\text a)}{\iso}
-\Hom_\R(G\otimes_{k_X}k_{XA},F)\overset{(\text b)}{\iso}
+\Hom_\R(G,\HOM_{k_X}(k_{XA},F))\os{(\text a)}{\iso}
+\Hom_\R(G\otimes_{k_X}k_{XA},F)\os{(\text b)}{\iso}
 \Hom_\R(\oo j_{A\to X}^{-1}\oo j_{A\to X*}G,F)
 $$
 $$
-\overset{(\text c)}{\iso}
-\Hom_\R(G,\oo j_{A\to X}^\ddg\oo j_{A\to X*}F)\overset{(\text d)}{\iso}
+\os{(\text c)}{\iso}
+\Hom_\R(G,\oo j_{A\to X}^\ddg\oo j_{A\to X*}F)\os{(\text d)}{\iso}
 \Hom_\R(G,\Gamma_A(F)), 
 $$ 
 where (a) follows from \qr{HOM} with 
