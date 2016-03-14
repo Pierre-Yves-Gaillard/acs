@@ -1017,7 +1017,7 @@ Using Notation~\ref{nhove} p.~\pr{nhove}, Equalities (1.5.8) and (1.5.9) become 
 \nn and 
 
 \begin{equation}\lb{159}
-(R*\eta)\ci(\eta*R)=R.
+(R*\eta)\ci(\ee*R)=R.
 \end{equation}
 
 \subsubsection{Pictures}
@@ -1343,6 +1343,28 @@ be an inductive system in $\C$. Assume that $\col_jX_{ij}$ exists in $\C$ for al
 \col_i\col_jX_{ij}
 \end{equation}
 exists in $\C$. Then $\col_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\ref{limlim}).
+\end{s}
+
+%
+
+\begin{s}
+P. 39, Definition 2.1.8. Let $\C$ be a category, let 
+$$
+h:\C\to\C^\wg,\quad k:\C\to\C^\vee
+$$ 
+be the Yoneda embeddings, let 
+$$
+\al:I\to\C,\quad\bt:J^{\op}\to\C
+$$ 
+be functors defined on small categories, and assume 
+$$
+\col\al,\lim\bt\in\C.
+$$ 
+Then the natural morphisms 
+$$
+\col k\ci\al\to k(\col\al),\quad h(\lim\bt)\to\lim h\ci\bt
+$$ 
+are isomorphisms.
 \end{s}
 
 %
@@ -3355,6 +3377,26 @@ the vertical arrows are bijective by (a), and the bottom arrow is bijective by (
 
 %%
 
+\begin{s}
+P. 95, end of the proof of Proposition 4.1.3. Recall that we have functors 
+$$
+\begin{tikzcd} 
+\C_0\ar[yshift=0.7ex,hook]{r}{\iota}&\C.\ar[yshift=-0.7ex]{l}{P}
+\end{tikzcd}
+$$
+The last sentence of the proof says that $P$ ``is a left adjoint to $\iota$ by (i)''. One could also write that $P$ ``is a left adjoint to $\iota$ by Condition (b) in Part (ii)''. Indeed, Condition (b) in Part (ii) asserts that the map
+$$
+\Hom_\C(P(Y),X)\xr{\ci\ee_Y}\Hom_\C(Y,X),
+$$ 
+that is 
+$$
+\Hom_{\C_0}(P(Y),X)\xr{\ci\ee_Y}\Hom_\C(Y,\iota(X)),
+$$
+is bijective for all $Y$ in $\C$. 
+\end{s}
+
+%%
+
 \begin{s} 
 P.~95, proof of Proposition 4.1.4 (i) (additional details). The authors write: ``The two compositions 
 $$
@@ -3375,12 +3417,12 @@ $$
 $$
 \begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
 =\begin{pmatrix}R*\eta&L\\ \ee*R&L\end{pmatrix}
-=\begin{pmatrix}R*\eta\\ \ee*R\end{pmatrix}\ci\begin{pmatrix}L\\ L\end{pmatrix}
+=\begin{pmatrix}R*\eta\\ \ee*R\end{pmatrix}*\begin{pmatrix}L\\ L\end{pmatrix}
 \os{\text{(a)}}{=}RL
 $$
 
 $$
-\os{\text{(b)}}{=}\begin{pmatrix}R\\ R\end{pmatrix}\ci\begin{pmatrix}\eta*L\\ L*\ee\end{pmatrix}
+\os{\text{(b)}}{=}\begin{pmatrix}R\\ R\end{pmatrix}*\begin{pmatrix}\eta*L\\ L*\ee\end{pmatrix}
 =\begin{pmatrix}R&\eta*L\\ R&L*\ee\end{pmatrix}
 =\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix},
 $$ 
