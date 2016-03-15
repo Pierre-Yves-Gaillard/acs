@@ -3459,7 +3459,7 @@ for any $Z$ in $\C$. Lemma \ref{imset} implies
 \end{split}
 \end{equation}
 
-\begin{df}[coimage, image]\lb{dci}
+\begin{df}[coimage, image]%\lb{dci}
 In the above setting, the {\em coimage}\index{coimage} of $f$ is the object $\Coim f$ of $\C^\vee$ defined by 
 $$ 
 (\Coim f)(Z):=\Hom_{\C^\wg}(\IM\hy(f),\hy(Z))
@@ -3468,14 +3468,44 @@ for all $Z$ in $\C$, and the {\em image}\index{image} of $f$ is the object $\Ima
 $$ 
 (\Ima f)(Z):=\Hom_{\C^\vee}(\ky(Z),\IM\ky(f)) 
 $$ 
-for all $Z$ in $\C$. Moreover, we regard $(\Coim f)(Z)$ as a subset of $\Hom_\C(X,Z)$, and $(\Ima f)(Z)$ as a subset of $\Hom_\C(Z,Y)$. (These subsets will be spelled out by Proposition~\ref{epimono} below.)
+for all $Z$ in $\C$. 
 \end{df} 
+
+\begin{prop}\lb{reg}
+We may regard $(\Coim f)(Z)$ as a subset of $\Hom_\C(X,Z)$, and $(\Ima f)(Z)$ as a subset of $\Hom_\C(Z,Y)$. (These subsets will be spelled out by Proposition~\ref{epimono} below.)
+\end{prop}
+
+\begin{proof}
+We prove that $(\Coim f)(Z)$ is naturally embedded into $\Hom_\C(X,Z)$. The morphisms 
+$$
+\hy(X)\to\IM \hy(f)\to\hy(Y)
+$$ 
+are given by the maps 
+$$
+\Hom_\C(Z,X)\iso\hy(X)(Z)\to\IM\hy(f)_Z\to\hy(Y)(Z)\iso\Hom_\C(Z,Y).
+$$ 
+In view of the definition of $\Coim(f)$, it suffices to check that $\hy(X)\to\IM\hy(f)$ is an epimorphism in $\C^\wg$, that is, it suffices to check that the map $\hy(X)(Z)\to\IM\hy(f)_Z$ is surjective for all $Z$ in $\C$. But this is clear. 
+
+We prove that $(\Ima f)(Z)$ is naturally embedded into $\Hom_\C(Z,Y)$. The morphisms 
+$$
+\ky(X)\to\IM\ky(f)\to\ky(Y)
+$$ 
+in $\C^\vee$ are given by the morphisms 
+$$
+\ky(Y)\to\IM\ky(f)\to\ky(X)
+$$ 
+in $\Set^\C$, which are, in turn, given by the maps 
+$$
+\Hom_\C(Y,Z)=\ky(Y)(Z)\to\IM\ky(f)_Z\to\ky(X)(Z)=\Hom_\C(X,Z).
+$$ 
+In view of the definition of $\Ima(f)$, it suffices to check that $\ky(Y)\to\IM\ky(f)$ is an epimorphism in $\Set^\C$, that is, it suffices to check that the map $\ky(Y)(Z)\to\IM\ky(f)_Z$ is surjective for all $Z$ in $\C$. But this is clear. 
+\end{proof} 
+
+According to Proposition \ref{reg} we regard from now on $(\Coim f)(Z)$ as a subset of $\Hom_\C(X,Z)$ and $(\Ima f)(Z)$ as a subset of $\Hom_\C(Z,Y)$.\bigskip
 
 \begin{conv}\lb{bra}
 If $A\parar B\to C$ is a diagram in a given category, then the notation $[A\parar B\to C]$ shall mean that the two compositions coincide.
-\end{conv}
-
-The following proposition is obvious:
+\end{conv}\bigskip
 
 \begin{prop}\lb{epimono}
 If $f:X\to Y$ is a morphism in a category $\C$, and if $Z$ is an object of $\C$, then we have 
@@ -3496,6 +3526,32 @@ For the sake of emphasis we write
 $$
 \ky(X)\epi\Coim f\to\ky(Y),\quad\hy(X)\to\Ima f\mono\hy(Y).
 $$ 
+
+\begin{proof}
+Let $x:X\to Z$ and assume 
+\begin{equation}\lb{lw}
+\left[W\parar X\xr fY\right]\then\left[W\parar X\xr xZ\right]\ \forall\ W\in\C.
+\end{equation} 
+Let us prove that $x$ is in $\Coim f$, that is, let us prove that there is a morphism $\IM\hy(f)\to\hy(Z)$ in $\C^\wg$ such that the composition 
+$$
+\hy(X)\to\IM\hy(f)\to\hy(Z)
+$$ 
+is $\hy(x)$. Let $W$ be in $\C$. Recalling that $(\IM\hy(f))(W):=\IM\hy(f)_W$, we see that it suffices to show that there is a map 
+$$
+\IM\hy(f)_W\to\Hom_\C(W,Z)
+$$ 
+such that the composition 
+$$
+\Hom_\C(W,X)\to\IM\hy(f)_W\to\Hom_\C(W,Y)
+$$ 
+is $\hy(f)_W:\hy(X)(W)\to\hy(Y)(W)$. But this follows from \qr{lw}. 
+
+Let us show that the natural morphism $\ky(X)\to\Coim f$ is an epimorphism. As $\ky(X)\to\Coim f$ is a morphism in $\C^\vee$, it is given by a morphism $\Coim f\to\ky(X)$ in $\Set^\C$, and we must check that $\Coim f\to\ky(X)$ is a monomorphism in $\Set^\C$. But in Proposition~\ref{reg}, we noticed that $(\Coim f)(Z)$ could be viewed as a subset of $\Hom_\C(X,Z)=\ky(X)(Z)$ for any $Z$ in $\C$. 
+
+Let us show that the natural morphism $\Ima f\to\hy(Y)$ is an monomorphism. But in Proposition~\ref{reg}, we noticed that $(\Ima f)(Z)$ could be viewed as a subset of $\Hom_\C(Z,Y)=\hy(Y)(Z)$ for any $Z$ in $\C$. 
+
+The rest of the proof is left to the reader.
+\end{proof}
 
 By \qr{IM2} we have 
 $$ 
@@ -3522,7 +3578,7 @@ $f\mt\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$.
 \end{prop}
 
 \begin{df}[strict epimorphism] 
-A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism}\index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ is an isomorphism.
+A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism}\index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ in $\C^\vee$ is an isomorphism.
 \end{df} 
 
 The lemma below is obvious:
@@ -3537,7 +3593,7 @@ $$
 \Hom_\C(Y,Z)\xr\sim(\Coim f)(Z).
 $$ 
 By Proposition~\ref{epimono} p.~\pr{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. Moreover, a strict epimorphism is an epimorphism. 
-\end{lem} 
+\end{lem}
 
 %%
 
@@ -3564,7 +3620,7 @@ Here are the additional details:
 
 \nn(b)$\then$(a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) of the book implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
-\nn(c)$\ssi$(e): Write $P$ for $X\tm_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. By Proposition~\ref{epimono} p.~\pr{epimono} Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pr{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pr{bra} 
+\nn(c)$\ssi$(e): Write $P$ for $X\tm_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. Proposition~\ref{epimono} p.~\pr{epimono} implies that Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pr{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pr{bra} 
 $$
 [P\parar X\xr xZ]\iff\Big((\forall\ W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]\Big).
 $$ 
@@ -3572,12 +3628,12 @@ Implication $\si$ is clear. Let us prove $\then$. Assuming
 $$
 [P\parar X\xr xZ]\quad\text{and}\quad[W\parar X\xr fY],
 $$ 
-we must check $[W\parar X\xr xZ]$. As the morphisms $W\parar X$ factor through $P\parar X$ by definitions of $P$, the statement is obvious. 
+we must check $[W\parar X\xr xZ]$. As the morphisms $W\parar X$ factor through $P\parar X$ by definition of $P$, the statement is obvious. 
 
-(Note that the equivalence (c)$\ssi$(e) also follows from Proposition~\ref{coimim} p.~\pr{coimim} and Proposition~\ref{strepi} p.~\pr{strepi}.)
+(Note that the equivalence (c)$\ssi$(e) also follows from Proposition~\ref{epimono} p.~\pr{epimono}, Proposition~\ref{coimim} p.~\pr{coimim} and Proposition~\ref{strepi} p.~\pr{strepi}.)
 \end{s}
 
-%
+%£
 
 \begin{s} 
 P.~116, proof of Proposition 5.1.7 (i) (minor variant). Recall the statement: 
