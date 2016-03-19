@@ -3581,9 +3581,9 @@ $f\mt\Ima\ky(f)$ and $\Coim$ are functors from $\Mor(\C)$ to $\C^\vee$.
 A morphism $f:X\to Y$ in a category $\C$ is a {\em strict epimorphism}\index{strict epimorphism} if the morphism $\Coim f\to\ky(Y)$ in $\C^\vee$ is an isomorphism.
 \end{df} 
 
-The lemma below is obvious:
+The proposition below is obvious:
 
-\begin{lem}\lb{strepi}
+\begin{prop}\lb{strepi}
 A morphism $f:X\to Y$ in a category $\C$ is a strict epimorphism if and only if, for all $Z$ in $\C$, the map 
 $$
 \ci f:\Hom_\C(Y,Z)\to\Hom_\C(X,Z)
@@ -3593,7 +3593,7 @@ $$
 \Hom_\C(Y,Z)\xr\sim(\Coim f)(Z).
 $$ 
 By Proposition~\ref{epimono} p.~\pr{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. Moreover, a strict epimorphism is an epimorphism. 
-\end{lem}
+\end{prop}
 
 %%
 
@@ -3620,20 +3620,38 @@ Here are the additional details:
 
 \nn(b)$\then$(a): The composition $\Coim f\to\Ima f\to Y$ being an isomorphism by assumption, $\Ima f\to Y$ is an epimorphism. Then Proposition 5.1.2 (iv) of the book implies that $f$ is an epimorphism and that $\Ima f\to Y$ is an isomorphism, from which we conclude that $\Coim f\to\Ima f$ is an isomorphism.
 
-\nn(c)$\ssi$(e): Write $P$ for $X\tm_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. Proposition~\ref{epimono} p.~\pr{epimono} implies that Condition~(e) is equivalent to the condition in Lemma~\ref{strepi} p.~\pr{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pr{bra} 
-$$
-[P\parar X\xr xZ]\iff\Big((\forall\ W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]\Big).
-$$ 
-Implication $\si$ is clear. Let us prove $\then$. Assuming 
-$$
-[P\parar X\xr xZ]\quad\text{and}\quad[W\parar X\xr fY],
-$$ 
-we must check $[W\parar X\xr xZ]$. As the morphisms $W\parar X$ factor through $P\parar X$ by definition of $P$, the statement is obvious. 
+%\nn(c)$\ssi$(e): Write $P$ for $X\tm_YX$. Recall that (c) says that $P\parar X\to Y$ is exact. Proposition~\ref{epimono} p.~\pr{epimono} implies that Condition~(e) is equivalent to the condition in Proposition~\ref{strepi} p.~\pr{strepi}. Thus, it suffices to show that, letting $Z$ be an object of $\C$, we have in the notation of Convention~\ref{bra} p.~\pr{bra} $$[P\parar X\xr xZ]\iff\Big((\forall\ W\in\C)\ [W\parar X\xr fY]\then[W\parar X\xr xZ]\Big).$$ Implication $\si$ is clear. Let us prove $\then$. Assuming $$[P\parar X\xr xZ]\quad\text{and}\quad[W\parar X\xr fY],$$ we must check $[W\parar X\xr xZ]$. As the morphisms $W\parar X$ factor through $P\parar X$ by definition of $P$, the statement is obvious. 
 
-(Note that the equivalence (c)$\ssi$(e) also follows from Proposition~\ref{epimono} p.~\pr{epimono}, Proposition~\ref{coimim} p.~\pr{coimim} and Proposition~\ref{strepi} p.~\pr{strepi}.)
+%(Note that the equivalence (c)$\ssi$(e) also follows from Proposition~\ref{epimono} p.~\pr{epimono}, Proposition~\ref{coimim} p.~\pr{coimim} and Proposition~\ref{strepi} p.~\pr{strepi}.)Exercise 3.4 (i) p.~90]\lb{34i}
 \end{s}
 
-%£
+%
+
+\begin{s}
+Proposition 5.1.5 p. 115. Here is a corollary to Proposition 5.1.5 and to Proposition~\ref{34i} p.~\pr{34i}:
+
+\begin{cor}\lb{fg}
+Let $F$ and $G$ be functors from a category $\C$ to a category $\C'$, let $\theta:F\to G$ be a morphism of functors, and consider the following conditions: 
+
+\nn\emph{(a)} $\C'$ admits finite inductive and projective limits,
+
+\nn\emph{(b)} $\theta$ is an epimorphism,
+
+\nn\emph{(c)} $\theta$ is a strict epimorphism,
+
+\nn\emph{(d)} $\theta_X:F(X)\to G(X)$ is an epimorphism for all $X$ in $\C$,
+
+\nn\emph{(e)} $\theta_X:F(X)\to G(X)$ is a strict epimorphism for all $X$ in $\C$,
+
+\nn\emph{(f)} $\theta$ is a monomorphism,
+
+\nn\emph{(g)} $\theta_X:F(X)\to G(X)$ is a monomorphism for all $X$ in $\C$.
+
+\nn Then \emph{(d)} $\then$ \emph{(b)}, \emph{(g)} $\then$ \emph{(f)}, \emph{(a)} and \emph{(b)} imply \emph{(d)}, \emph{(a)} and \emph{(f)} imply \emph{(g)}, \emph{(a)} implies that \emph{(c)} and \emph{(e)} are equivalent. 
+\end{cor}
+\end{s}
+
+%
 
 \begin{s} 
 P.~116, proof of Proposition 5.1.7 (i) (minor variant). Recall the statement: 
@@ -3696,7 +3714,7 @@ P.~118, proof of Proposition 5.2.3: the proof of (ii) uses Proposition~\ref{34i}
 
 Proof of (v): We add a few details. Recall the setting: the category $\C$ admits finite projective limits, small coproducts, and a generator $G$. We already know that $\pp_G:=\Hom_\C(G,\ )$ is conservative, left exact, and preserves monomorphisms. 
 
-Put $\pp:=\pp_G:=\Hom_\C(G,\ )$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $\pp(f_1)$ and $\pp(f_2)$ have same image. We want to prove:
+Put $\pp:=\pp_G:=\Hom_\C(G,\ )$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $f_1$ and $f_2$ have same image. We want to prove:
 
 Claim 1: $\pp(f_1)$ and $\pp(f_2)$ define the same subobject of $X$.
 
@@ -3735,7 +3753,7 @@ P.~119, Theorem 5.2.5: see Corollary~\ref{c2111} p.~\pr{c2111}.
 %
 
 \begin{s}
-Corollary 5.2.10 p. 121 follows from Proposition 5.2.9 p.~121 of the book and Theorems 5.2.5 and 5.2.6 p.~119 of the book.
+Corollary 5.2.10 p. 121 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9 p.~121 of the book.
 \end{s}
 
 %
@@ -3805,7 +3823,7 @@ $$
 \os{\text{(c)}}{=}\pp(f)_W(z\ci w)
 \os{\text{(d)}}{=}f\ci z\ci w, 
 $$ 
-Equality (a) following from the functoriality of $\xi$ (see diagram below), Equality (b) following from the definition of $\rho$, Equality (c) following from \qr{rhoxi}, and Equality (d) following from the definition of $\pp$.
+Equality~(a) following from the functoriality of $\xi$ (see diagram below), Equality~(b) following from the definition of $\rho$, Equality~(c) following from \qr{rhoxi}, and Equality~(d) following from the definition of $\pp$.
 \end{proof}
 
 For the reader's convenience, we add the diagram 
@@ -3994,9 +4012,34 @@ be the natural morphisms. As $a\ci b$ is an epimorphism by Step~5, $a$ is an epi
 
 %%
 
-\sbs{Theorem 5.3.9 (p.~128)}
+\sbs{Brief comments}
 
-To prove the existence of $\F$, one can also argue as follows. 
+\begin{s}
+P.~127, proof of Theorem 5.3.8. 
+
+The sentence ``Since $\pp$ is conservative by (a), it remains to show that $\pp(u)$ is a monomorphism'' is justified by Proposition 5.1.5 (ii) p.~115 of the book and Corollary~\ref{fg} p.~\pr{fg} above.
+
+The phrase ``the two arrows $\pp(X_{i_1}\tm_XX_{i_1})\parar\lim_i\pp(X_i)$ coincide'' can be justified as follows: The two compositions  
+$$
+\begin{tikzcd}
+X_{i_1}\tm_XX_{i_1}\ar[yshift=0.7ex]{r}{\xi_1}\ar[yshift=-0.7ex]{r}[swap]{\xi_2}&X_0\ar{r}{u}&X
+\end{tikzcd}
+$$ 
+coincide by definition. Thus the two compositions  
+$$
+\pp(X_{i_1}\tm_XX_{i_1})\parar\pp(X_0)\to\pp(X),
+$$ 
+which can be written as 
+$$
+\pp(X_{i_1}\tm_XX_{i_1})\parar\lim_i\pp(X_i)\to\pp(X_0)\to\pp(X),
+$$
+coincide. The composition $\lim_i\pp(X_i)\to\pp(X_0)\to\pp(X)$ being an isomorphism, the two morphisms $\pp(X_{i_1}\tm_XX_{i_1})\parar\lim_i\pp(X_i)$ coincide.
+\end{s}
+
+%
+
+\begin{s}
+P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as follows. 
 
 \begin{lem} 
 Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
@@ -4009,6 +4052,7 @@ Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a smal
 \begin{proof}
 Since there are only countably many finite categories up to isomorphism, (b) is clear. To prove (a), let $\A\subset\A'\subset\A''\subset\cdots$ be a tower of full subcategories obtained by iterating the argument used to prove (b), and let $\B$ be the union of the $\A^{(n)}$.
 \end{proof}
+\end{s}
 
 %%%
 
