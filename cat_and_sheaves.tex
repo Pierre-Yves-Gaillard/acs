@@ -139,7 +139,7 @@
 \DMO{\PSh}{PSh}
 \DMO{\Qis}{Qis}
 \DMO{\Sh}{Sh}
-%\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
+%\textsf{happly}\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
 % END
 
 \title{About \em{Categories and Sheaves}}
@@ -4073,7 +4073,7 @@ If $\C$ is a category, then the category $\Ind(\C)$ admits small filtrant induct
 Here is a minor variant of Step~(i) of the proof of Theorem 6.1.8. We must show:  
 
 \begin{lem} 
-If $\al:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if $A=\ic\al$ is in $\C^\wg$, then $\C_A$ is filtrant. 
+If $\al:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if we define $A\in\C^\wg$ by $A=\ic\al$, then $\C_A$ is filtrant. 
 \end{lem} 
 
 \begin{proof}
@@ -4081,7 +4081,7 @@ Let $M$ be the category attached by Definition 3.4.1 p. 87 of the book to the fu
 $$
 \C\xr h\C^\wg\xl{\iota\ci\al}I,
 $$ 
-where $h:\C\to\C^\wg$ and $\iota:\Ind(\C)\to\C^\wg$ are the natural embeddings. Proposition~\ref{cocop} p.~\pr{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 of the book hold for the obvious functor $M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. 
+where $h:\C\to\C^\wg$ and $\iota:\Ind(\C)\to\C^\wg$ are the natural embeddings. Proposition~\ref{cocop} p.~\pr{cocop} implies that $M$ is filtrant, and that it suffices to check that Conditions (iii) (a) and (iii) (b) of Proposition 3.2.2 p.~78 of the book hold for the obvious functor $\pp:M\to\C_A$. Let us do it for Condition (iii) (b), the case of Condition (iii) (a) being similar and simpler. 
 
 For all $i$ in $I$ and all $X$ in $\C$ let 
 $$
@@ -4204,19 +4204,15 @@ $$
 $$ 
 we mean, in the first case, not only that $x$ runs over the elements of $A(X_1,X_2)$, but also that $X_1$ and $X_2$ themselves run over the objects of $\C_1$ and $\C_2$, so that we are taking the inductive limit of some functor defined over $(\C_1\tm\C_2)_A$. In the other cases, the interpretation is similar. 
 
-Let us define $\theta$ and $\mu$: The functor $\theta$ is defined by $\theta(A)=(A_1,A_2)$ with
-%
+Let us define $\theta$ and $\mu$: We define $\theta$ by setting $\theta(A)=(A_1,A_2)$ with
 \begin{equation}\lb{ai}
 A_i:=\ic_x\ X_i, 
-\end{equation}
-% 
-and let 
-%
+\end{equation} 
+we let 
 \begin{equation}\lb{dot}
 a_i(x):X_i\to A_i,\quad a_i(x,Y_i):\Hom_{\C_i}(Y_i,X_i)\to A_i(Y_i)
-\end{equation}
-% 
-be the coprojections. The functor $\mu$ is defined by 
+\end{equation} 
+be the coprojections, and we define $\mu$ by putting  
 $$
 \mu(A_1,A_2):=\ic_{x_1,x_2}\ (X_1,X_2). 
 $$ 
@@ -4249,15 +4245,16 @@ Let us prove
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\tm A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
 B_1
-\os{\text{(a)}}{\iso}\ic_x\ X_1\iso\ic_{x_1,x_2}\ X_1
-\os{\text{(b)}}{\iso}\ic_{x_1}\ X_1
-\os{\text{(c)}}{\iso}A_1.
+\os{\text{(a)}}{\iso}\ic_x\ X_1
+\os{\text{(b)}}{\iso}\ic_{x_1,x_2}\ X_1
+\os{\text{(c)}}{\iso}\ic_{x_1}\ X_1
+\os{\text{(d)}}{\iso}A_1.
 $$ 
-Indeed, Isomorphism~(a) follows from \qr{ai}, Isomorphism~(b) from the definition of $A$, Isomorphism~(b) from the fact that the projection 
+Indeed, Isomorphism~(a) follows from \qr{ai}, Isomorphism~(b) from the definition of $A$, Isomorphism~(c) from the fact that the projection 
 $$
 (\C_1)_{A_1}\tm(\C_2)_{A_2}\to(\C_1)_{A_1}
 $$ 
-is cofinal by Lemma~\ref{proj} below coupled with the fact that $(\C_2)_{A_2}$ is connected, and Isomorphism~(c) from our old friend \qr{263a} p.~\pr{263a}. (By the way, in this proof we are using \qr{263a} a lot without explicit reference.)
+is cofinal by Lemma~\ref{proj} below coupled with the fact that $(\C_2)_{A_2}$ is connected, and Isomorphism~(d) from our old friend \qr{263a} p.~\pr{263a}. (By the way, in this proof we are using \qr{263a} a lot without explicit reference.)
 
 \begin{lem}\lb{proj}
 If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\tm J\to I$ is cofinal.
@@ -4308,7 +4305,7 @@ with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Z_i)$, 
 $$
 \begin{tikzcd}
 A\ar[equal]{r}&A\\ 
-(X_1,X_2)\ar{u}{x}\ar{r}[swap]{(f_1,f_2)}&(Z_1,Z_2)\ar{u}[swap]{z}
+(X_1,X_2)\ar{u}{x}\ar{r}[swap]{(f_1,f_2)}&(Z_1,Z_2).\ar{u}[swap]{z}
 \end{tikzcd}
 $$ 
 One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\tm A_2$ to $A$. This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\ref{p6112} p.~\pr{p6112}. 
