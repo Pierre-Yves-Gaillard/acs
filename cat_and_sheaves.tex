@@ -338,7 +338,7 @@ $$
 
 \nn$*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. 
 
-\nn$*$ P.~136, last line: ``the cokernel of $(\al(i),\bt(i))$'' should be ``the cokernel of\linebreak $(\pp(i),\psi(i))$''. 
+\nn$*$ P.~136, last line: ``the cokernel of $(\al(i),\bt(i))$'' should be ``the cokernel of $(\pp_i,\psi_i)$''. Moreover, the cokernel in question is denoted by $\ld_i$ on the last line of p.~136 and by $\ld(i)$ on the first line of p.~137.
 
 \nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\al$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
@@ -2865,6 +2865,48 @@ P.~75. Throughout the section about the IPC Property, one can assume that $\A$ i
 
 %
 
+\begin{s}
+P.~77, Proposition 3.1.11 (ii). This proposition says that $\Set$ has the IPC property. Recall the setting:
+
+Let $S$ be a small set, for each $s$ in $S$ let $I_s$ be a small set and $\al_s:I_s\to\Set$ a functor, put $I:=\prod_{s\in S}I_s$, let 
+$$
+p_j:\prod_{s\in S}\ \al_s(j_s)\ \to\ \col_{i\in I}\ \prod_{s\in S}\ \al_s(i_s),\quad q_{j_s}:\al_s(j_s)\ \to\ \col_{i_s\in I_s}\ \al_s(i_s)
+$$ 
+be the coprojections, and define  
+$$
+f:\col_{i\in I}\ \prod_{s\in S}\ \al_s(i_s)\ \to\ \prod_{s\in S}\ \col_{i_s\in I_s}\ \al_s(i_s)
+$$ 
+by $(f(p_j(x)))_s:=q_{j_s}(x_s)$. Let 
+\begin{equation}\lb{eg}
+g:\prod_{s\in S}\ \col_{i_s\in I_s}\ \al_s(i_s)\ \to\ \col_{i\in I}\ \prod_{s\in S}\ \al_s(i_s)
+\end{equation} 
+and consider the following condition on $g$:
+%\begin{equation}\lb{g}  y\in\prod_{s\in S}\ \al_s(j_s)\implies g((q_{j_s}(y_s))_{s\in S})=p_j(y).\end{equation} 
+\begin{cond}\lb{cg} 
+We have 
+$$
+g((q_{j_s}(y_s))_{s\in S})=p_j(y)
+$$ 
+for all $j$ in $I$ and all $y$ in $\prod_{s\in S}\ \al_s(j_s)$.
+\end{cond} 
+%\begin{prop}  If $g$ satisfies \qr{g}, then $f$ and $g$ are inverse bijections. If $I_s$ is filtrant for all $s$ in $S$, then $g$ satisfies \qr{g}.\end{prop} 
+
+Clearly the proposition below implies Proposition 3.1.11 (ii) in the book.
+
+\begin{prop}  
+If $g$ satisfies Condition~\ref{cg}, then $f$ and $g$ are inverse bijections. If $I_s$ is filtrant for all $s$ in $S$, then there is a $g$ as in \qr{eg} satisfying Condition~\ref{cg}.
+\end{prop} 
+\begin{proof}
+The proof of the first sentence is straightforward. To prove the second sentence, let $j$ and $k$ be in $I$, let $y$ in $\prod_{s\in S}\al_s(j_s)$ and $z$ in $\prod_{s\in S}\al_s(k_s)$ satisfy $q_{j_s}(y_s)=q_{k_s}(z_s)$ for all $s$ in $S$. It suffices to show $p_j(y)=p_k(z)$. By Corollary 3.1.4 (ii) p.~73 in the book, for each $s$ in $S$ there is a diagram 
+$$
+j_s\xr{u_s}\ell_s\xl{v_s}k_s
+$$ 
+in $I_s$ and an element $w_s$ in $\al_s(\ell_s)$ such that $\al_s(u_s)(y_s)=w_s=\al_s(v_s)(z_s)$. This implies $p_j(y)=p_\ell(w)=p_k(z)$, and thus $p_j(y)=p_k(z)$ as requested.
+\end{proof}
+\end{s}
+
+%
+
 \begin{s}\lb{poc}
 P.~77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pr{1744i}):
 
@@ -2974,7 +3016,7 @@ Let $F:\C\to\C'$ be a functor.
 P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
 
 \begin{prop}[Proposition 3.3.2 p.~81]\lb{p332} 
-Consider functors $I\xr\al\C\xr F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\col\al$ exists in $\C$. Then $\col(F\ci\al)$ exists in $\C'$, and the natural morphism $\col(F\ci\al)\to\col\al$ is an isomorphism. 
+Consider functors $I\xr\al\C\xr F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\col\al$ exists in $\C$. Then $\col(F\ci\al)$ exists in $\C'$, and the natural morphism $\col(F\ci\al)\to F(\col\al)$ is an isomorphism. 
 \end{prop} 
 
 \begin{proof}
@@ -4181,6 +4223,8 @@ Let us also record Part (ii) of the Proposition as
 (See \S\ref{s133ii} p.~\pr{s133ii}.)
 
 %%
+% old version:
+% https://docs.google.com/document/d/1CDoSFxs8pfmtM0ibrH0OiKADadx50sqoLAbaWn-u00U/edit
 
 \sbs{Proposition 6.1.12 (p.~134)}\lb{6112}
 
@@ -4208,40 +4252,22 @@ Let us define $\theta$ and $\mu$: We define $\theta$ by setting $\theta(A)=(A_1,
 \begin{equation}\lb{ai}
 A_i:=\ic_x\ X_i, 
 \end{equation} 
-we let 
-\begin{equation}\lb{dot}
-a_i(x):X_i\to A_i,\quad a_i(x,Y_i):\Hom_{\C_i}(Y_i,X_i)\to A_i(Y_i)
-\end{equation} 
-be the coprojections, and we define $\mu$ by putting  
+%we let \begin{equation}\lb{dot}a_i(x):X_i\to A_i,\quad a_i(x,Y_i):\Hom_{\C_i}(Y_i,X_i)\to A_i(Y_i)\end{equation} be the coprojections, 
+and we define $\mu$ by putting $\mu(A_1,A_2):=A_1\tm A_2$ with 
 $$
-\mu(A_1,A_2):=\ic_{x_1,x_2}\ (X_1,X_2). 
+(A_1\tm A_2)(X_1,X_2):=A_1(X_1)\tm A_2(X_2)
 $$ 
+for all $X_i$ in $\C_i$ ($i=1,2$).%$$\mu(A_1,A_2):=\ic_{x_1,x_2}\ (X_1,X_2). $$ 
 
 \begin{prop}[Proposition 6.1.12 p.~134]\lb{p6112}
 The functors $\theta$ and $\mu$ are mutually quasi-inverse.
 \end{prop}
 
 \begin{proof}
-We have 
-$$
-\mu(A_1,A_2)(X_1,X_2)\iso\col_{y_1,y_2}\Big(\Hom_{\C_1}(X_1,Y_1)\tm\Hom_{\C_2}(X_2,Y_2)\Big)
-$$
-$$
-\os{\text{(a)}}{\iso}\col_{y_1}\Hom_{\C_1}(X_1,Y_1)\tm\col_{y_2}\Hom_{\C_2}(X_2,Y_2)
-\os{\text{(b)}}{\iso}A_1(X_1)\tm A_2(X_2),
-$$ 
-Isomorphism~(a) following from the IPC Property (see pp 75-77 of the book), and Isomorphism~(b) following from \qr{263b} p.~\pr{263b}. We record this as
-$$
-\mu(A_1,A_2)(X_1,X_2)\iso A_1(X_1)\tm A_2(X_2).
-$$
-This suggests the notation $A_1\tm A_2$ for $\mu(A_1,A_2)$, notation which we shall use henceforth.
-
 Let us prove
-%
 \begin{equation}\lb{6112a}
 \theta\ci\mu\iso\id_{\Ind(\C_1)\tm\Ind(\C_2)}.
 \end{equation}
-%
 If $A_i$ is in $\Ind(\C_i)$ for $i=1,2$; if $A$ is $A_1\tm A_2$; and if $(B_1,B_2)$ is $\theta(A)$, then we have 
 $$ 
 B_1
@@ -4273,42 +4299,29 @@ Let us prove
 
 Let $A$ be in $\Ind(\C_1\tm\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall define morphisms $A\to A_1\tm A_2$ and $A_1\tm A_2\to A$, and leave it to the reader to check that these morphisms are mutually inverse isomorphisms of functors. 
 
-\nn$\bu$ Definition of the morphism $A\to A_1\tm A_2$: Recall 
+\nn$\bu$ Definition of the morphism $A\to A_1\tm A_2$: Let $X_i$ be in $\C_i$ ($i=1,2$). We must define a map $A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$. We shall define firstly a map 
+\begin{equation}\lb{ax1}
+A(X_1,X_2)\to A_1(X_1).%A_1(X_1)\tm A_2(X_2)
+\end{equation}%A(X_1,X_2)\to A_2(X_2)$ $A(X_1,X_2)\to A_1(X_1)$. 
+This will enable us to define a map $A(X_1,X_2)\to A_2(X_2)$ %\begin{equation}\lb{?}A(X_1,X_2)\to A_1(X_1)%A_1(X_1)\tm A_2(X_2)\end{equation}A(X_1,X_2)\to A_2(X_2)$ 
+similarly, yielding our map $A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$. As we have an isomorphism 
 $$
-A\iso\ic_y\ (Y_1,Y_2), 
+A_1(X_1)\iso\col_y\Hom_{\C_1}(X_1,Y_1)
 $$ 
-and let $y$ be in $A(Y_1,Y_2)$. We shall define $y_i$ in $A_i(Y_i),i=1,2$. In Notation~\qr{dot} p.~\pr{dot} put 
+and coprojections 
 $$
-y_i:=a_i(y,Y_i)(\id_{Y_i}). 
+p_{1y}:\Hom_{\C_1}(X_1,Y_1)\to A_1(X_1),
 $$ 
-To define our morphism $A\to A_1\tm A_2$ we consider the commutative diagram
-$$
-\begin{tikzcd}
-A\iso\ds\ic_y(Y_1,Y_2)\ar{r}&\ds\ic_{x_1,x_2}(X_1,X_2)\iso A_1\tm A_2\\ 
-(Y_1,Y_2)\ar{u}{y}\ar[equal]{r}&(Y_1,Y_2),\ar{u}[swap]{(y_1,y_2)}
-\end{tikzcd}
-$$ 
-(see \qr{263a} p.~\pr{263a} and \qr{pxa} p.~\pr{pxa}) and we leave it to the reader to check that this diagram does define the indicated morphism.
+we can define \qr{ax1} %$A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$ 
+by $x\mt p_{1x}(\id_{X_1})$. We leave it to the reader to check that this does define a morphism $A\to A_1\tm A_2$.
 
-\nn$\bu$ Definition of the morphism $A_1\tm A_2\to A$. We must define the morphism represented by the dashed arrow in the diagram  
+\nn$\bu$ Definition of the morphism $A_1\tm A_2\to A$. Letting $X_i$ be in $\C_i$ as above, we must define a map $A_1(X_1)\tm A_2(X_2)\to A(X_1,X_2)$. Letting $x_i$ be in $A_i(X_i)$, we must define an element $x$ in $A(X_1,X_2)$. We have $x_1=p_{1y}(f_1)$ and $x_2=p_{2z}(f_2)$ for some $y$ and $z$ in $(\C_1\tm\C_2)_A$, some $f_1$ in $\Hom_{\C_1}(X_1,Y_1)$ and some $f_2$ in $\Hom_{\C_2}(X_2,Z_2)$. The category $(\C_1\tm\C_2)_A$ being filtrant, we can assume $z=y$. We have an isomorphism 
 $$
-\begin{tikzcd}
-A_1\tm A_2\iso\ds\ic_{x_1,x_2}(X_1,X_2)\ar[dashed]{r}&\ds\ic_x(X_1,X_2)\iso A\\ 
-(X_1,X_2)\ar{u}{(x_1,x_2)}\ar[equal]{r}&(X_1,X_2)\ar{u}[swap]{x}
-\end{tikzcd}
+A(X_1,X_2)\iso\col_w\Hom_{\C_1}(X_1,W_1)\tm\Hom_{\C_2}(X_2,W_2)
 $$ 
-(see \qr{263a} p.~\pr{263a} and \qr{pxa} p.~\pr{pxa}). Let $x_i$ in $A_i(X_i)$ be given for $i=1,2$. The category $(\C_1\tm\C_2)_A$ being filtrant, there is, by Proposition 3.1.3 p.~73 of the book, a 5-tuple 
-$$
-\zeta:=(Z_1,Z_2,z,f_1,f_2)
-$$ 
-with $Z_i$ in $\C_i$, $z$ in $A(Z_1,Z_2)$, and $f_i$ in $\Hom_{\C_i}(X_i,Z_i)$, such that $x_i=a_i(z,X_i)(f_i)$ for $i=1,2$ (see \qr{dot} p.~\pr{dot}). We choose such a 5-tuple $\zeta$ and put $x:=A(f_1,f_2)(z)$: 
-$$
-\begin{tikzcd}
-A\ar[equal]{r}&A\\ 
-(X_1,X_2)\ar{u}{x}\ar{r}[swap]{(f_1,f_2)}&(Z_1,Z_2).\ar{u}[swap]{z}
-\end{tikzcd}
-$$ 
-One checks that $x$ does not depend on the choice of $\zeta$, and that this process defines a morphism from $A_1\tm A_2$ to $A$. This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\ref{p6112} p.~\pr{p6112}. 
+and coprojections $q_w:\Hom_{\C_1}(X_1,W_1)\tm\Hom_{\C_2}(X_2,W_2)\to A(X_1,X_2)$, we can define $x$ by $x:=q_y(f_1,f_2)$. We leave it to the reader to check that this does define a morphism $A_1\tm A_2\to A$, and that this morphism is an inverse to the morphism $A\to A_1\tm A_2$ defined above.
+
+This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\ref{p6112} p.~\pr{p6112}. 
 \end{proof} 
 
 %%
@@ -4316,20 +4329,13 @@ One checks that $x$ does not depend on the choice of $\zeta$, and that this proc
 \sbs{Brief Comments}
 
 \begin{s} 
-P.~136, proof of Proposition 6.1.18 (i) (minor variant). Recall the statement: 
-
-\begin{prop}[Proposition 6.1.18 (i) p.~136] 
-If a category $\C$ admits cokernels, do does $\Ind(\C)$. 
-\end{prop}
-
-This follows from Proposition~\ref{p332} p.~\pr{p332}. 
-
+P.~136, proof of Proposition 6.1.18 (i) (minor variant). Recall the statement: \begin{prop}[Proposition 6.1.18 (i) p.~136] 
+If a category $\C$ admits cokernels, so does $\Ind(\C)$. 
+\end{prop} 
+This follows from Proposition~\ref{p332} p.~\pr{p332} above and Corollary 6.1.6 p.~132 in the book. 
 % old version 
 % https://docs.google.com/document/d/1bt5g2ANcF0Fnngn7mMdYA8qgN-K0iVKjWbtTEG7PPZU/edit
-
 \end{s}
-
-%
 
 \begin{s} 
 P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the table:\bigskip 
@@ -4362,6 +4368,20 @@ P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ 
 \end{tikzcd}
 \]
 except perhaps inclusion $i$, commute with finite projective limits. Thus inclusion $i$ commutes with finite projective limits. The argument for $\U$-small projective limits is the same. q.e.d.
+\end{s}
+
+%
+
+\begin{s} 
+P.~138, proof of Proposition 6.2.1. The second sentence of the proof can be justified as follows: Let 
+$$
+p_i:\Hom_\C(Z,\al(i))\to\col\Hom_\C(Z,\al)
+$$ 
+be the coprojections. The map 
+$$
+\psi:\col\Hom_\C(Z,\al)\to\Hom_{\Ind(\C)}(Z,\ic\al)
+$$ 
+defined by the equalities $\psi(p_i(\tau))=\rho_i\ci\tau$ for all $i$ in $I$ and all $\tau$ in $\Hom_\C(Z,\al(i))$ is bijective (because $Z$ is in $\C$). If $\pp:Z\to\ic\al$ is a morphism in $\Ind(\C)$, then $\psi^{-1}(\pp)$ is of the form $p_{i_0}(\tau_0)$ for some $i_0$ in $I$ and some $\tau_0$ in $\Hom_\C(Z,\al(i_0))$, and we get $\pp=\rho_{i_0}\ci\tau_0$. 
 \end{s}
 
 %
