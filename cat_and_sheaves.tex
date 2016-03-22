@@ -4358,6 +4358,12 @@ P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the 
 %
 
 \begin{s} 
+P.~138, Corollary 6.1.17. If $\C$ admits finite projective limits, then $\C$ is exact in $\Ind(\C)$. This follows from Corollary 6.1.17, Corollary 6.1.6 p.~132 and Proposition 3.3.3 p.~82 of the book.
+\end{s}
+
+%
+
+\begin{s} 
 P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ admits finite projective limits. By Remark 2.6.5 p.~62 and Corollary 6.1.17 p.~136, all the inclusions represented in the diagram 
 \[
 \begin{tikzcd}
@@ -4386,7 +4392,53 @@ defined by the equalities $\psi(p_i(\tau))=\rho_i\ci\tau$ for all $i$ in $I$ and
 
 %
 
-\begin{s} P.~142, proof of Corollary 6.3.7. Let us check the isomorphism 
+\begin{s} 
+P.~138, proof of Proposition 6.2.1, sentence ``Let $w\in\Hom_\C(X,\al(i))$ and let $s:i_0\to i$.'' This sentence is on the fourth line of the proof when the lines of the proof are counted backward from the last to the first. Here is a more detailed phrasing: Let $y$ be in $\col\Hom_\C(X,\al)$. Then $y$ is of the form $p_i(w)$ where 
+$$
+p_i:\Hom_\C(X,\al(i))\to\col\Hom_\C(X,\al)
+$$ 
+is the coprojection and $w$ is in $\Hom_\C(X,\al(i))$. Furthermore we can choose $i$ and $w$ in such a way that there exists a morphism $s:i_0\to i$.
+\end{s}
+
+%
+
+\begin{s} 
+P.~140, proof of Corollary 6.3.2. For $X$ in $\J$ we have 
+$$
+F(X)\iso\sigma_\C(\iota_\C(F(X)))\iso\sigma_\C(IF(\iota_\J(X))).
+$$
+\end{s}
+
+%
+
+\begin{s} 
+P.~140, Definition 6.3.3. We spell out some details. Recall that the embedding functor $\iota:\C\to\Ind(\C)$ has a left adjoint functor $\sigma$:
+$$
+\begin{tikzcd}
+\C\ar[xshift=.7ex]{d}{\iota}\\ 
+\Ind(\C).\ar[xshift=-.7ex]{u}{\sigma}
+\end{tikzcd}
+$$ 
+In particular, for each $A$ in $\Ind(\C)$ we have a morphism $\ee_A:A\to\iota(\sigma(A))$. Recall also that $\C$ is a category admitting small filtrant limits. Consider the following conditions on an object $X$ in $\C$:
+
+\nn(a) The natural morphism $\col\Hom_\C(X,\al)\to\Hom_\C(X,\col\al)$ is an isomorphism for all functor $\al:I\to\C$ with $I$ small and filtrant.
+
+\nn(b) The morphism $\ee_A\ci:\Hom_{\Ind(\C)}(\iota(X),A)\to\Hom_{\Ind(\C)}(\iota(X),\iota(\sigma(A)))$ is an isomorphism for all $A$ in $\Ind(\C)$.
+\begin{lem}
+The above conditions are equivalent.
+\end{lem}
+\begin{proof}
+Left to the reader.
+\end{proof} 
+\begin{df}
+We say that $X$ is of \emph{finite presentation} if the above conditions are satisfied.
+\end{df}
+\end{s}
+
+%
+
+\begin{s} 
+P.~142, proof of Corollary 6.3.7. Let us check the isomorphism 
 $$
 \kappa(X)\iso\ic\rho\ci\xi. 
 $$ 
