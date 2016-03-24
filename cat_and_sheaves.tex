@@ -4205,23 +4205,17 @@ $$
 \subsubsection{Comments about Proposition 6.1.9} 
 
 Let us record Part (i) of the Proposition as 
-%
 \begin{equation}\lb{133i}
 IF\ci\iota_\C\iso\iota_{\C'}\ci F, 
 \end{equation} 
-%
 and note that we have, in the setting of Corollary 6.3.2 p.~140, 
-%
 \begin{equation}\lb{140}
 \col(F\ci\al)\xr\sim(JF)(\ic\al).
 \end{equation} 
-%
 Let us also record Part (ii) of the Proposition as 
-% 
 \begin{equation}\lb{133ii}
 \ic(IF\ci\al)\xr\sim IF(\ic\al).
 \end{equation} 
-% 
 (See \S\ref{s133ii} p.~\pr{s133ii}.)
 
 %%
@@ -4439,11 +4433,21 @@ We say that $X$ is of \emph{finite presentation} if the above conditions are sat
 
 %
 
+\begin{s}\lb{634}
+P. 140, Corollary 6.3.4. Here is a consequence:
+
+Let $\C$ be a category admitting small filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.
+
+Proof. Let $\iota:\C^{fp}\to\C$ be the inclusion functor. By Proposition 6.3.2 and Corollary 6.3.4 p.~140 of the book, the functor $J\iota:\Ind(\C^{fp})\to\C$ is fully faithful and commutes with small filtrant inductive limits, and $\iota$ factors through $J\iota$. By Lemma 1.3.11 p.~21 of the book, $J\iota$ induces an equivalence $\Ind(\C^{fp})\xr\sim\C'$. The claims in the previous paragraph follow easily from these observations.
+\end{s}
+
+%
+
 \begin{s} 
 P.~142, proof of Corollary 6.3.7. Let us check the isomorphism 
-$$
-\kappa(X)\iso\ic\rho\ci\xi. 
-$$ 
+\begin{equation}\lb{k}
+\kappa(X)\iso\ic\rho\ci\xi.
+\end{equation}
 Recall the setting:
 $$
 \begin{tikzcd}
@@ -4451,7 +4455,7 @@ I\ar{r}{\xi}&\C^{\text fp}\ar{d}[swap]{\iota_\C}\ar{r}{\rho}&\C\ar[yshift=-.9ex]
 {}&\Ind(\C^{\text fp})\ar{ur}{J\rho}\ar{r}[swap]{I\rho}&\Ind(\C),
 \end{tikzcd}
 $$ 
-$\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book), and $\kappa$ is defined by $\kappa:=I\rho\ci\kappa'$. We have 
+$\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book), $\kappa$ is defined by $\kappa:=I\rho\ci\kappa'$, and $X\iso\col\rho\ci\xi$. We have 
 $$
 \kappa(X)=I\rho(\kappa'(\col(\rho\ci\xi)))\iso I\rho(\ic\xi)
 $$
@@ -4460,7 +4464,13 @@ $$
 \iso\ic(I\rho\ci\iota_\C\ci\xi)\iso\ic(\rho\ci\xi), 
 $$ 
 
-\nn the three isomorphisms being respectively justified by \qr{140} p.~\pr{140}, \qr{133ii} p.~\pr{133ii}, and \qr{133i} p.~\pr{133i}. q.e.d.
+\nn the three isomorphisms being respectively justified by \qr{140} p.~\pr{140}, \qr{133ii} p.~\pr{133ii}, and \qr{133i} p.~\pr{133i}. This proves \qr{k}. 
+
+Parts (ii) and (iii) of Corollary 6.3.7 are equivalent by Proposition 1.5.6 (ii) p.~29 of the book. To prove (ii) note that we have 
+$$
+\sigma(\kappa(\col\rho\ci\xi))\iso\sigma(\ic\rho\ci\xi)\iso\col\rho\ci\xi
+$$ 
+by Corollary 6.3.7 (i) p.~141 and Proposition 6.3.1 (i) p.~139 of the book. 
 \end{s}
 
 %%
@@ -4475,28 +4485,34 @@ Notational convention for this section, {\em and for this section only!} Supersc
 %
 instead of $\C_{G(a)}$ and $L_a$, to avoid confusion. Superscripts will {\em always} be used to designate categories of functors, like the category $\B^\A$ of functors from $\A$ to $\B$. 
 
-Recall the statement: 
-%
-\begin{thm}[Theorem 6.4.3 p.~144]\lb{643} 
-If $\C$ is a category and $K$ is a finite category such that $\Hom_K(k,k)$ $=\{\id_k\}$ for all $k$ in $K$, then the natural functor 
+Let $\C$ be a category and $K$ is a small category. Recall that, by Corollary 6.3.2 p.~140 of the book (see \qr{140} p.~\pr{140} above), there is a functor $\Phi:\Ind(\C^K)\to\Ind(\C)^K$ such that, if $F:N\to\C^K$ is a functor defined on a small filtrant category and if $k$ is in $K$, then we have 
 $$
-\Phi:\Ind(\C^K)\to\Ind(\C)^K
+\Phi(\ic F)(k)\iso\ic_{n\in N}(F(n)(k))=\ic(F(\ )(k)).
+$$
+
+\begin{thm}[Theorem 6.4.3 p.~144]\lb{643} 
+If $\C$ is a category and if $K$ is a finite category such that $\Hom_K(k,k)=\{\id_k\}$ for all $k$ in $K$, then the functor 
+$$
+\Phi:\Ind(\C^K)\to\Ind(\C)^K,
 $$ 
-is an equivalence.
-\end{thm}
+whose existence is recalled above, is an equivalence.
+\end{thm} 
 
 The key point is to check that 
-%
 \begin{equation}\lb{es} 
 \Phi\text{ is essentially surjective.} 
 \end{equation} 
-%
 (The fact that $\Phi$ is fully faithful is proved as Proposition 6.4.1 p.~142 of the book.) 
 
 In the book \qr{es} is proved by an inductive argument. The limited purpose of this section is to attach, in an ``explicit'' way (in the spirit of the proof of Proposition 6.1.13 p.~134 of the book), to an object $G$ of $\Ind(\C)^K$ a small filtrant category $N$ and a functor $F:N\to\C^K$ such that 
 $$ 
-\Phi(\ic F)\iso G. 
+\Phi(\ic F)\iso G,
 $$ 
+that is, we want isomorphisms 
+$$
+\ic F(\ )(k)\iso G(k)
+$$ 
+functorial in $k\in K$.
 
 As in the book we assume, as we may, that any two isomorphic objects of $K$ are equal. 
 
@@ -4543,11 +4559,12 @@ P(k)\ar{r}[swap]{\theta_k}&Q(k).
 $$ 
 [End of the definition of the category $N:=N\{K,G,(\al_k)\}$.] 
 
-The functor $F':K\to\C^N$ corresponding to $F:N\to\C^K$ is given by 
+Let $p_k:N\to I_k$ be the natural projection. Then the functor %$F':K\to\C^N$ corresponding to 
+$F:N\to\C^K$ is given by 
 $$
-F'(k)=\al_k\ci p_k,
+F(\ )(k)=\al_k\ci p_k\quad\forall\ k\in K:
 $$ 
-where $p_k:N\to I_k$ is the natural projection: 
+
 $$
 N\xr{p_k}I_k\xr{\al_k}\C.
 $$ 
@@ -4699,6 +4716,64 @@ $$
 $$ 
 by induction on the cardinal of $S$, and to see that this implies the existence of $(X,\ld)$.
 \end{proof} 
+
+%%
+
+\sbs{Exercise 6.8 (p.~14)} 
+
+Recall the statement: 
+
+Let $R$ be a ring.
+
+\nn(i) Prove that $M\in\Mod(R)$ is of finite presentation in the sense of Definition 6.3.3 if and only if it is of finite presentation in the classical sense (see Examples 1.2.4 (iv)), that is, if there exists an exact sequence $R^m\to R^n\to M\to0$.
+
+\nn(ii) Prove that any $R$-module $M$ is a small filtrant inductive limit of modules of finite presentation. (Hint: consider the full subcategory of $(\Mod(R))_M$ consisting of modules of finite presentation and prove it is essentially small and filtrant.)
+
+\nn(iii) Deduce that the functor $J\rho$ defined in Diagram (6.3.1) induces an equivalence $J\rho:\Ind(\Mod^{fp}(R))\to\Mod(R)$.
+
+\nn\textbf{Solution.} We shall freely use Proposition 3.1.3 p.~73 of the book, which describes the inductive limit of a set-valued functor defined on a small filtrant category, as well as Corollary 3.1.5 (same page), which says that the forgetful functor $\Mod(R)\to\Set$ commutes with small filtrant inductive limits.
+
+\nn(i) (a) Let $R^m\to R^n\to M\to0$ be exact, and let us show that $M\in\Mod(R)$ is of finite presentation in the sense of Definition 6.3.3. 
+
+Let $(N_i)_{i\in I}$ be an inductive system in $\Mod(R)$ indexed by a small filtrant category $I$, let $N$ be its inductive limit, and, for each $i$, let $p_i:N_i\to N$ 
+$$
+p_i:N_i\to N\quad\text{and}\quad q_i:\Hom_R(M,N_i)\to\col_i\Hom_R(M,N_i)
+$$ 
+be the coprojections, and consider the map
+\begin{equation}\lb{pc}
+\col\Hom_R(M,N_i)\to\Hom_R(M,N)
+\end{equation}  
+induced by the 
+$$
+p_i\ci:\Hom_R(M,N_i)\to\Hom_R(M,N).
+$$ 
+(i) (a1) The map \qr{pc} is injective. (This part of the proof also works if $M$ is just finitely \emph{generated}, without being finitely presented.) Let $i$ be an object of $I$ and $f:M\to N_i$ an $R$-linear map such that $q_i(f)$ is in the kernel of \qr{pc}. It suffices to show $q_i(f)=0$. Let $F$ be the subset of $M$ formed by the images of the elements of the canonical basis of $R^n$. For each $x$ in $F$, the element $f(x)$ is annihilated by $p_i$. As $F$ is finite, there is a $j$ in $I$ and a morphism $s:i\to j$ such that $N_s(f(x))=0$ for all $x$ in $F$, and thus for all $x$ in $M$. This implies $q_i(f)=0$, as required. This ends the proof of the injectivity of \qr{pc}.
+
+\nn(i) (a2) The map \qr{pc} is surjective. Let $f:M\to N$ be $R$-linear. It suffices to show that $f$ factors through $p_i:N_i\to N$ for some $i$ in $I$. Let $a_j\in M$ be the image of the $j$-th element of the canonical basis of $R^n$, and let $(\ld_{jk})$ be the matrix of our map $R^m\to R^n$, so that we have 
+$$
+\sum_{j=1}^n\ \ld_{jk}\,a_j=0\quad\text{for}\quad k=1,\dots,m.
+$$ 
+There is an $i'$ in $I$ and there are $b_1,\dots,b_n$ in $N_{i'}$ such that $p_{i'}(b_j)=f(a_j)$ for all $j$. This yields 
+$$
+p_{i'}\left(\sum_{j=1}^n\ \ld_{jk}\,b_j\right)=0\quad\text{for}\quad k=1,\dots,m.
+$$ 
+As a result, there is a $i$ in $I$ and there are $c_1,\dots,c_n$ in $N_i$ such that $p_{i'}(c_j)=f(a_j)$ for all $j$ and 
+$$
+\sum_{j=1}^n\ \ld_{jk}\,c_j=0\quad\text{for}\quad k=1,\dots,m.
+$$ 
+Hence there is an $R$-linear map $g:M\to N_i$ such that $g(a_j)=c_j$ for all $j$, and thus $p_i\ci g=f$. This ends the proof of the surjectivity of \qr{pc}, and also the proof of the fact that any $R$-module which is of finite presentation in the classical sense is of finite presentation in the sense of Definition 6.3.3. 
+
+\nn(i) (b) We assume now that $M\in\Mod(R)$ is of finite presentation in the sense of Definition 6.3.3, and we prove that $M$ is of finite presentation in the classical sense.
+
+\nn(i) (b1) The $R$-module $M$ is finitely generated. Let $I$ be the set of all the finitely generated submodules of $M$. Then $I$ is a small filtrant ordered set. For each $N$ in $I$ let $q_N:\Hom_R(M,N)\to\col_N\Hom_R(M,N)$ be the coprojection. Then the identity of $M$ is the image of $q_N(f)$ for some $N$ in $I$ and some $R$-linear $f:M\to N$. This implies $N=M$. 
+
+\nn(i) (b2) The $R$-module $M$ is finitely presented in the classical sense. The argument is similar to the one in (i) (b1) above. There is a small set $K$, a positive integer $n$ and an exact sequence $R^{\oplus K}\xr f R^n\to M\to0$. Let $I$ be the set of the finite subsets of $K$. Then $I$ is a small filtrant ordered set. For each $F$ in $I$ set $M_F:=R^n/f(R^{\oplus F})$. Then $(M_F)_{F\in I}$ has a natural structure of an inductive system whose colimit is $M$, the coprojections being the obvious maps $p_F:M_F\to M$. Let $q_F:\Hom_R(M,M_F)\to\Hom_R(M,M)$ be the coprojections. The identity of $M$ factors through $p_F:M_F\to M$ for some $F$ in $I$. This implies $M\iso M_F$, ending the proof that $M$ is finitely presented in the classical sense, and thus the proof of (i).
+
+\nn(ii) (I don't understand the hint.) Clearly any $R$-module is a small filtrant inductive limit of finitely generated $R$-modules. Hence, in view of \S\ref{634} p.~\pr{634}, it suffices to show that any finitely generated $R$-module is a small filtrant inductive limit of finitely presented $R$-modules. But this follows from (i) (b2) above.
+
+There is also a more direct way to prove that any $R$-module $M$ is a small filtrant inductive limit of finitely presented $R$-modules: Let $F$ be a finite subset of $M$, let $K_F$ be the kernel the natural map $R^{\oplus F}\to M$, let $G$ be a finite subset of $K_F$, and let $M_{F,G}$ be the cokernel of the obvious map $R^{\oplus G}\to R^{\oplus F}$. Then the $M_{F,G}$ form a small filtrant inductive system of $R$-modules whose colimit is $M$.
+
+\nn(iii) Claim (iii) follows from Corollary 6.3.5 p.~141 of the book.
 
 %%
 
