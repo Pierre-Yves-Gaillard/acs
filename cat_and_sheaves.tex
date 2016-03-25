@@ -354,6 +354,8 @@ $$
 
 \nn$*$ P.~150, before Proposition 7.1.2. One could add after ``This implies that $F_{\SSS}$ is unique up to unique isomorphism'': Moreover we have $Q^\dg F\iso F_{\SSS}\iso Q^\ddg F$.
 
+\nn$*$ P.~151, second diagram. The arrows $G(s_1), G(s_2)$ and $G(Q(t_2))$ are marked with a tilde to indicate that they are isomorphisms, but the tilde on $G(Q(t_1))$ has been forgotten.
+
 \nn$*$ P.~153, statement of Lemma 7.1.12. The readability might be improved by changing $s:X\to X'\in\SSS$ to $(s:X\to X')\in\SSS$. Same for Line 4 of the proof of Lemma 7.1.21 p.~157.
 
 \nn$*$ P.~156, first line of the first display and first line after the first display: $\C_\SSS$ should be $\C_\SSS^r$.
@@ -2618,7 +2620,11 @@ Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\
 $$
 \widehat F(A'\ci F)=\col(\psi\ci\pp)\to\col\psi\iso A',
 $$ 
-the equality $F(A'\ci F)=\col(\psi\ci\pp)$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pr{myprop1}.)
+the equality $F(A'\ci F)=\col(\psi\ci\pp)$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
+$$
+\col_{(X\to A'\ci F)\in\C_{A'\ci F}}\Hom_{\C'}(X',F(X))\to A'(X')
+$$ 
+is bijective. This condition depends only on the functor $F:\C\to\C'$ and the projective system of sets $(A'(X'))_{X'\in\C'}$. (This remark will be used to prove Proposition~\ref{myprop1} p.~\pr{myprop1}.)
 \end{rk}
 
 The proof is obvious.
@@ -4204,7 +4210,7 @@ $$
 
 \subsubsection{Comments about Proposition 6.1.9} 
 
-Let us record Part (i) of the Proposition as 
+Let us record Part (i) of the proposition as 
 \begin{equation}\lb{133i}
 IF\ci\iota_\C\iso\iota_{\C'}\ci F, 
 \end{equation} 
@@ -4212,11 +4218,17 @@ and note that we have, in the setting of Corollary 6.3.2 p.~140,
 \begin{equation}\lb{140}
 \col(F\ci\al)\xr\sim(JF)(\ic\al).
 \end{equation} 
-Let us also record Part (ii) of the Proposition as 
+Let us also record Part (ii) of the proposition as 
 \begin{equation}\lb{133ii}
 \ic(IF\ci\al)\xr\sim IF(\ic\al).
 \end{equation} 
 (See \S\ref{s133ii} p.~\pr{s133ii}.)
+
+Also note that the proof of Proposition 6.1.9 shows
+
+\begin{prop}\lb{f}
+If $F:\C\to\C'$ is a functor of small categories, then the functor $\widehat F:\C^\wg\to\C'^\wg$ defined in Notation 2.7.2 p.~63 of the book induces the functor $IF:\Ind(\C)\to\Ind(\C')$.
+\end{prop}
 
 %%
 % old version:
@@ -4719,7 +4731,7 @@ by induction on the cardinal of $S$, and to see that this implies the existence 
 
 %%
 
-\sbs{Exercise 6.8 (p.~14)} 
+\sbs{Exercise 6.8 (p.~146)} 
 
 Recall the statement: 
 
@@ -4795,21 +4807,19 @@ Let $F:\C\to\C'$ be a fully faithful functor, let $A'$ be in $\Ind(\C')$, and le
 
 \begin{proof}\ 
 
-\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\C')$ with $X'$ in $\C'$ and $A$ in $\Ind(\C)$, let $\bt_0:I\to\C$ be a functor with $I$ small and filtrant and $\ic\bt_0\iso A$; in particular $\ic(F\ci\bt_0)\iso IF(A)$. By Proposition 6.1.13 p.~134 of the book there are functors $\al:J\to\C'$ and $\bt:J\to\C$, and there is a morphism of functors $\pp:\al\to F\ci\bt$ such that 
+\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\C')$ with $X'$ in $\C'$ and $A$ in $\Ind(\C)$, let $\bt_0:I\to\C$ be a functor with $I$ small and filtrant and $\ic\bt_0\iso A$; in particular $\ic(F\ci\bt_0)\iso IF(A)$. By Proposition 6.1.13 p.~134 of the book there is a functor $\bt:J\to\C$ and a morphism of functors $\pp:\DT X'\to F\ci\bt$, where $\DT X':J\to\C'$ is the constant functor equal to $X'$, such that 
 
 $J$ is small and filtrant, 
-
-$\al$ is constant equal to $X'$, 
 
 $\ic(F\ci\bt)\iso IF(A)$, 
 
 $\ic\pp\iso f$. 
 
-\nn Then $f$ factorizes as $X'=\al(j)\xr{\pp_j}F(\bt(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
+\nn Then $f$ factorizes as $X'\xr{\pp_j}F(\bt(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
 
 \nn(b)$\then$(c). This follows from Proposition~\ref{comb} p.~\pr{comb}. 
 
-\nn(c)$\then$(d). This follows from Remark~\ref{cof} p.~\pr{cof}. 
+\nn(c)$\then$(d). This follows from Remark~\ref{cof} p.~\pr{cof} and Proposition~\ref{f} p.~\pr{f}. 
 
 \nn(d)$\then$(a). This is obvious.
 \end{proof}
@@ -4839,6 +4849,10 @@ $$
 are mutually quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\SSS$. 
 \end{lem}
 \end{s}
+
+%
+
+%\begin{s}P.~150, Lemma 7.1.3. Proposition 1.5.6 (ii) is implicitly used the statement of the lemma.\end{s}
 
 %
 
