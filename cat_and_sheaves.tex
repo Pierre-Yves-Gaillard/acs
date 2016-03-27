@@ -791,16 +791,16 @@ $$
 \end{proof}
 %
 \begin{df}[universal element]\lb{ue} 
-Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mt F(f)(u)$ is bijective. We sometimes say that $X$ \emph{represents}\index{represents} $F$ via $u$ if $u$ is an $(F,X)$-universal element.
+Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{represents}\index{represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{represents} $F$. %We sometimes say that $X$ \emph{represents}\index{represents} $F$ via $u$ if $u$ is an $(F,X)$-universal element.
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ \emph{by} $X$.
+The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ \emph{by} $X$. In particular, if the pairs $(X,u)$ and $(X',u')$ both represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u')=u$; moreover $g$ is an isomorphism.
 
 \begin{df}[co-universal element]\lb{ue2} 
-Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{co-universal element}\index{co-universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mt F(f)(u)$ is bijective. We sometimes say that $X$ \emph{co-represents}\index{co-represents} $F$ via $u$ if $u$ is an $(F,X)$-co-universal element.
+Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{co-universal element}\index{co-universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{co-represents}\index{co-represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{co-represents} $F$. %We sometimes say that $X$ \emph{co-represents}\index{co-represents} $F$ via $u$ if $u$ is an $(F,X)$-co-universal element.
 \end{df}
 
-The Yoneda Lemma says that $(F,X)$-co-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a \emph{co-representation of} $F$ \emph{by} $X$.
+The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-co-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a \emph{co-representation of} $F$ \emph{by} $X$. In particular, if the pairs $(X,u)$ and $(X',u')$ both co-represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u)=u'$; moreover $g$ is an isomorphism.
 
 %%
 
@@ -1573,29 +1573,29 @@ If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and 
 \begin{s}\lb{s232} 
 P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 in terms of Definition~\ref{ue} p.~\pr{ue} and Definition~\ref{ue2} p.~\pr{ue2}. Let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. Recall that we denote horizontal composition of morphisms of functors by $*$ (see Definition~\ref{dil1} p.~\pr{dil1}).
 
-\nn(a) We say that $\pp^\dg\bt$ exists if there is a $u:\bt\to\pp_*\pp^\dg\bt$ such that $\pp^\dg\bt$ co-represents the functor $\Hom_{\C^J}(\bt,\pp_*(\ )):\C^I\to\Set$ via $u$ in the sense of Definition~\ref{ue2} p.~\pr{ue2}. This means that, for all $\al:I\to\C$, the map 
+\nn(a) We say that $\pp^\dg\bt$ exists if there is a $u:\bt\to\pp_*\pp^\dg\bt$ such that the pair $(\pp^\dg\bt,u)$ co-represents the functor $\Hom_{\C^J}(\bt,\pp_*(\ )):\C^I\to\Set$ in the sense of Definition~\ref{ue2} p.~\pr{ue2}. This means that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\pp^\dg\bt,\al)\to\Hom_{\C^J}(\bt,\pp_*\al),\quad v\mt(v*\pp)\ci u
 $$ 
-is bijective. (See \S\ref{713} p.~\pr{713} below.)
+is bijective. (See \S\ref{731} p.~\pr{731} below.)
 
-\nn(b) We say that $\pp^\ddg\bt$ exists if there is a $u:\pp_*\pp^\ddg\bt\to\bt$ such that $\pp^\ddg\bt$ represents the functor $\Hom_{\C^J}(\pp_*(\ ),\bt):(\C^I)^{\op}\to\Set$ via $u$ in the sense of Definition~\ref{ue} p.~\pr{ue}. This means that, for all $\al:I\to\C$, the map 
+\nn(b) We say that $\pp^\ddg\bt$ exists if there is a $u:\pp_*\pp^\ddg\bt\to\bt$ such that the pair $(\pp^\ddg\bt,u)$ represents the functor $\Hom_{\C^J}(\pp_*(\ ),\bt):(\C^I)^{\op}\to\Set$ in the sense of Definition~\ref{ue} p.~\pr{ue}. This means that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\al,\pp^\ddg\bt)\to\Hom_{\C^J}(\pp_*\al,\bt),\quad v\mt u\ci(v*\pp)
 $$ 
 is bijective.
 
-\nn(c) Let $\gamma:I\to\C$ and let $u$ be an endomorphism of the functor $\pp_*\gamma:J\to\C$. The phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via $u$'' means that, for all $\al:I\to\C$, the map 
+\nn(c) Let $\gamma:I\to\C$ and let $u$ be an endomorphism of the functor $\pp_*\gamma:J\to\C$. The phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via $u$'' shall mean that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\al,\gamma)\to\Hom_{\C^J}(\pp_*\al,\pp_*\gamma),\quad v\mt u\ci(v*\pp)
 $$ 
-is bijective. (See \S\ref{731} p.~\pr{731} below.)
+is bijective. 
 
-In particular, the phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via the identity of $\pp_*\gamma:J\to\C$'' means that, for all $\al:I\to\C$, the map 
+In particular, the phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via the identity of $\pp_*\gamma:J\to\C$'' shall mean that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\al,\gamma)\to\Hom_{\C^J}(\pp_*\al,\pp_*\gamma),\quad v\mt v*\pp
 $$ 
-is bijective.
+is bijective. (See \S\ref{713} p.~\pr{713} below.)
 \end{s}
 
 %
@@ -4950,11 +4950,10 @@ can be completed to a commutative square as indicated, with $v$ in $\SSS$, and i
 %
 
 \begin{s}\lb{731} 
-P. 159, Lemma 7.3.1 (i). The claim is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that $Q^\dg F$ co-represents the functor 
+P. 159, Lemma 7.3.1 (i). The claim is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
 $$
-\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set
+\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.
 $$ 
-via $\tau$.
 \end{s}
 
 %
@@ -4999,17 +4998,36 @@ P.~159, Definition of universally right localizable functor (Definition 7.3.1 (i
 %
 
 \begin{s}\lb{732} 
-P.~160, Proposition 7.3.2. If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
+P.~160, Proposition 7.3.2. 
 
-The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
+\nn(a) The second sentence of the proof reads: ``By hypothesis (i) and Corollary 7.2.2, $\iota_Q:\I_\T\to\C_\SSS$ is an equivalence''. It is also worth noting that $\I$ is a right multiplicative system in $\I$.
 
-Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S\ref{durl} p.~\pr{durl}), $R_{\SSS}F\iso F_{\SSS}$, and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+\nn(b) The third sentence of the proof reads: ``By hypothesis (ii) the localization $F_\T$ of $F\ci\iota$ exists''. The functor of $F_\SSS$ is defined in Definition 7.1.1 p.~149, but it is not called a localization. By condition (b) in Definition 7.1.1 we have
+\begin{equation}\lb{ft}
+F_\T\ci Q_\T\iso F\ci\iota.
+\end{equation}
+
+\nn(c) The last claim in Proposition 7.3.2 is the existence of an isomorphism 
+$$
+RF\ci Q_\SSS\ci\iota\iso F\ci\iota.
+$$ 
+This can be proved as follows: 
+$$
+RF\ci Q_\SSS\ci\iota\iso RF\ci\iota_Q\ci Q_\T\iso F_\T\ci\iota_Q^{-1}\ci\iota_Q\ci Q_\T\iso F_\T\ci Q_\T\iso F\ci\iota,
+$$ 
+the last isomorphism following from \qr{ft}.
+
+\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
+
+\nn(e) The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
+
+Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S\ref{durl} p.~\pr{durl}), $R_{\SSS}F\iso F_{\SSS}$ (for the definition of $F_{\SSS}$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
 \C_{\SSS}\ar{rr}[swap]{(K\ci F)_{\SSS}}\ar{rru}[swap]{F_{\SSS}}&&\A'.
 \end{tikzcd}
-$$
+$$ 
 \end{s}
 
 %
@@ -5021,7 +5039,7 @@ P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) p.~16
 (R_\SSS F)(Q(X))\iso\col_{(X\to Y)\in\SSS^X}F(Y).
 \end{equation}
 %
-Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), and let $\V$ be a universe such that $\U\in\V$ and $\C$ is a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}). Writing $\A$ for the category of $\V$-sets, Proposition 7.3.3 (iii) of the book implies the following:
+Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), and let $\V$ be a universe such that $\U\in\V$ and $\C$ is a $\V$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}). Writing $\A$ for the category of $\V$-sets, Proposition 7.3.3 (iii) of the book implies the following:
 
 Let $X$ and $Y$ be two objects of $\C$. 
 
