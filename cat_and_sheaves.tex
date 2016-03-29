@@ -789,7 +789,7 @@ $$
 \end{tikzcd}
 $$
 \end{proof}
-%
+
 \begin{df}[universal element]\lb{ue} 
 Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{represents}\index{represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{represents} $F$. %We sometimes say that $X$ \emph{represents}\index{represents} $F$ via $u$ if $u$ is an $(F,X)$-universal element.
 \end{df}
@@ -1210,7 +1210,7 @@ $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\DT X,\al)
 $$
 such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. %(We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.) 
-If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) However, if $\C=\Set$ and $I$ is small we denote by $\lim\bt$ the subset of $\prod_{i\in I}\bt(i)$ defined in Display (2.1.2) p.~36 of the book.
+If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is a projective limit of $\bt$ in $\C$. However, if $\C=\Set$ and $I$ is small we denote by $\lim\bt$ the subset of $\prod_{i\in I}\bt(i)$ defined in Display (2.1.2) p.~36 of the book.
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element means that for each $Y$ in $\C$ the map 
@@ -1228,7 +1228,7 @@ $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\DT X)
 $$
 such that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. %(We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.) 
-If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) However, if $\C=\Set$ and $I$ is small we denote by $\colim\al$ the set defined in Proposition 2.4.1 p.~54 of the book.
+If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is an inductive limit of $\al$ in $\C$. However, if $\C=\Set$ and $I$ is small we denote by $\colim\al$ the set defined in Proposition 2.4.1 p.~54 of the book.
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ the map 
@@ -1241,7 +1241,6 @@ X\xr fY,\quad\al\xr p\DT X\xr{\DT f}\DT Y.
 $$
 
 The following proposition is obvious:
-%
 \begin{prop}\lb{a}
 If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
 
@@ -1257,6 +1256,74 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if 
 %%
 
 \sbs{Brief Comments}
+
+\begin{s} 
+Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). For any $Y$ in $\C$ we write 
+$$
+\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)
+$$ 
+for the induced morphism in $\Set^I$, for any functor $F:\C\to\C'$ we write 
+$$
+F(p):F\ci\al\to\DT F(X)
+$$ 
+for the induced morphism in $\C'^I$, and for any functor $F:\C\to\C'$ and any $X'$ in $\C'$ we write 
+$$
+\Hom_{\C'}(F(p),X'):\DT\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
+$$ 
+for the induced morphism in $\Set^{I^{\op}}$. In particular, for each $i$ in $I$ we get a morphism 
+\begin{equation}\lb{c'fpi}
+\Hom_{\C'}(F(p_i),X'):\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
+\end{equation}
+in $\Set$. Let $h:\C\to\C^\wg$ be the Yoneda embedding, and recall Definition~\ref{p} p.~\pr{p} and Definition~\ref{ilim} p.~\pr{ilim}.
+
+\begin{prop}\lb{b}
+The following conditions are equivalent:
+
+\nn\emph{(a)} $(h(X),h(p))$ is an inductive limit of $h\ci\al$ in $\C^\wg$,
+
+\nn\emph{(b)} $(\Hom_\C(Y,X),\Hom_\C(Y,p))$ is an inductive limit of $\Hom_\C(Y,\al)$ in $\Set$ for any $Y$ in $\C$,
+
+\nn\emph{(c)} $(F(X),F(p))$ is an inductive limit of $F\ci\al$ in $\C'$ for any functor $F:\C\to\C'$,
+
+\nn\emph{(d)} $(\Hom_{\C'}(F(X),X'),\Hom_{\C'}(F(p),X'))$ is a projective limit of $\Hom_{\C'}(F\ci\al,X')$ in $\Set$ for any functor $F:\C\to\C'$ and any $X'$ in $\C'$.
+\end{prop}
+
+\begin{proof}
+Recall Proposition~\ref{a} p.~\pr{a}. We obviously have (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
+$$
+\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)
+$$
+$$
+\iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').
+$$ 
+Here $\lim\Hom_{\C'}(F\ci\al,X')$ is defined as the usual subset of 
+$$
+\prod_{i\in I}\ \Hom_{\C'}(F(\al(i)),X')
+$$ 
+(see Definition~\ref{p} p.~\pr{p}). In particular we have natural projections 
+$$
+\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').
+$$ 
+To complete the proof, it suffices to note that the morphism 
+$$
+\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
+$$ 
+obtained by composing the above isomorphisms with the above projection coincides with \qr{c'fpi}.
+\end{proof}
+\begin{df}[universal inductive limit]\lb{uil} 
+Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+\end{df}
+
+There is of course an analogous notion of universal projective limit. 
+
+Here is the classic example of a non-universal inductive limit. Letting $\al$ be the unique functor from the empty category to $\Set$, we get $\col\al\iso\varnothing$. Writing $h:\Set\to\Set^\wg$ for the Yoneda embedding yields $\col h\ci\al\iso\DT\varnothing$. But we have, on the one hand $(\DT\varnothing)(\varnothing)\not\iso\varnothing$, and on the other hand $(h(\varnothing))(\varnothing)=\varnothing$, implying 
+$$
+\col(h\ci\al)\not\iso h(\col\al).
+$$ 
+This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
+\end{s}
+
+%
 
 \begin{s}%\lb{aic}
 Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
@@ -1609,7 +1676,7 @@ P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe h
 
 \begin{df}[Definition 2.3.2 p. 51]\lb{232} 
 If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists}. If $\pp^\dg(F\ci\bt)$ exists and is isomorphic to $F\ci\pp^\dg(\bt)$ for all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
-\end{df}
+\end{df} 
 \end{s}
 
 %%
@@ -2252,79 +2319,16 @@ Let $b=(B\to A)$ be in $\A_A$. We define a map from $\Hom_{(\A_A)^I}(\al',\DT b)
 \end{proof}
 \end{s}
 
-%
-
-\begin{s} 
-P.~61, Proposition 2.6.4 (minor variant). Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). For any $Y$ in $\C$ we write 
-$$
-\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)
-$$ 
-for the induced morphism in $\Set^I$, for any functor $F:\C\to\C'$ we write 
-$$
-F(p):F\ci\al\to\DT F(X)
-$$ 
-for the induced morphism in $\C'^I$, and for any functor $F:\C\to\C'$ and any $X'$ in $\C'$ we write 
-$$
-\Hom_{\C'}(F(p),X'):\DT\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
-$$ 
-for the induced morphism in $\Set^{I^{\op}}$. In particular, for each $i$ in $I$ we get a morphism 
-\begin{equation}\lb{c'fpi}
-\Hom_{\C'}(F(p_i),X'):\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
-\end{equation}
-in $\Set$. Let $h:\C\to\C^\wg$ be the Yoneda embedding, and recall Definition~\ref{p} p.~\pr{p} and Definition~\ref{ilim} p.~\pr{ilim}.
-%
-\begin{prop}\lb{b}
-The following conditions are equivalent:
-
-\nn\emph{(a)} $(h(X),h(p))$ is an inductive limit of $h\ci\al$ in $\C^\wg$,
-
-\nn\emph{(b)} $(\Hom_\C(Y,X),\Hom_\C(Y,p))$ is an inductive limit of $\Hom_\C(Y,\al)$ in $\Set$ for any $Y$ in $\C$,
-
-\nn\emph{(c)} $(F(X),F(p))$ is an inductive limit of $F\ci\al$ in $\C'$ for any functor $F:\C\to\C'$,
-
-\nn\emph{(d)} $(\Hom_{\C'}(F(X),X'),\Hom_{\C'}(F(p),X'))$ is a projective limit of $\Hom_{\C'}(F\ci\al,X')$ in $\Set$ for any functor $F:\C\to\C'$ and any $X'$ in $\C'$.
-\end{prop}
-%
-\begin{proof}
-Recall Proposition~\ref{a} p.~\pr{a}. We obviously have (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
-$$
-\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg_\U}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)
-$$
-$$
-\iso\lim\Hom_{\C^\wg_\U}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').
-$$ 
-Here $\lim\Hom_{\C'}(F\ci\al,X')$ is defined as the usual subset of 
-$$
-\prod_{i\in I}\ \Hom_{\C'}(F(\al(i)),X')
-$$ 
-(see Definition~\ref{p} p.~\pr{p}). In particular we have natural projections 
-$$
-\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').
-$$ 
-To complete the proof, it suffices to note that the morphism 
-$$
-\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
-$$ 
-obtained by composing the above isomorphisms with the above projection coincides with \qr{c'fpi}.
-\end{proof}
-%
-\begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $X$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
-\end{df}
-\end{s}
-
-%
+% the \S with the label \lb{b} was here before
 
 \begin{s} 
 Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 p.~52 (i) of the book. Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
 
 \begin{thm}[Theorem 2.3.3 (i) p. 52]\lb{233}
 If 
-%
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i))\in J_i}\bt(j)
 \end{equation}
-%
 exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. If, in addition, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 \end{thm}
 \end{s}
@@ -5059,9 +5063,136 @@ exists and is isomorphic to $\Hom_{\C_\SSS^\ell}(\ \ ,Y)$.
 
 %%
 
+\sbs{Isomorphism at the bottom of p. 161}
+
+We sketch the proof of the isomorphism at the bottom of p. 161. Our argument sadly involves an enormous number of verifications, almost all of which will be left to the reader. 
+
+Recall the setting: $\SSS$ is a right multiplicative system in a category $\C$ such that $\SSS^X$ is cofinally small for all $X$ in $\C$. Let $X$ and $Y$ be in $\C$. It is claimed in the book that there is a natural isomorphism 
+\begin{equation}\lb{clc}
+\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\xr\sim\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y').
+\end{equation} 
+We shall use systematically the following convention (used intensively in the book): given $U$ and $V$ in $\C$ we designate a generic morphism from $U$ to $V$ by $U\to V$: 
+$$
+(U\to V)\in\Hom_\C(U,V).
+$$ 
+
+Let us start by verifying that the right-hand side is well defined. It suffices to show that there is a functor $\al:\C^{\op}\to\Set$ such that 
+\begin{equation}\lb{al}
+\al(X')=\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
+\end{equation} 
+for all $X'$ in $\C$. For each $X'$ in $\C$ and each $Y\to Y'$ in $\SSS$ let 
+$$
+a[X',Y\to Y'\,]:\Hom_\C(X',Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
+$$ 
+be the coprojection. To prove the existence of $\al$ as above, we let $X'\to X''$ and we leave it to the reader to check that there is a unique map 
+$$
+\al(X'\to X''):\al(X'')\to\al(X')
+$$ 
+such that we have for all $(Y\to Y'')\in\SSS$ and all $X''\to Y''$ 
+$$
+\al(X'\to X'')\big(a[X'',Y\to Y''\,](X''\to Y'')\big):=a[X',Y\to Y''\,](X'\to X''\to Y'').
+$$ 
+
+Going back to \qr{clc}, we shall define maps 
+\begin{equation}\lb{cfg}
+\begin{tikzcd} 
+\ds\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\ar[yshift=0.7ex]{r}{f}&\ds\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y'),\ar[yshift=-0.7ex]{l}{g}
+\end{tikzcd}
+\end{equation} 
+and claim that they are inverse bijections. 
+
+For each $Y\to Y'$ in $\SSS$ we write 
+$$
+b[Y\to Y']:\Hom_\C(X,Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')
+$$ 
+for the corresponding coprojection. For each $X\to X'$ in $\SSS$ we write 
+$$
+p[X\to X']:\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
+$$ 
+for the corresponding projection. 
+
+Let us define $f$ in \qr{cfg}. 
+
+For each $X\to X'$ and $Y\to Y'$ in $\SSS$ we define 
+\begin{equation}\lb{lm}
+\Hom_\C(X,Y')\to\col_{(Y\to Y'')\in\SSS^Y}\Hom_\C(X',Y'')
+\end{equation} 
+as follows. We define $X'\to Y''$ and $(Y'\to Y'')\in\SSS$ using Axiom S3 of right multiplicative systems:
+\begin{equation}\lb{y''}
+\begin{tikzcd}
+X\ar{r}\ar{d}&Y'\ar[dashed]{d}\\ X'\ar[dashed]{r}&Y'',
+\end{tikzcd}
+\end{equation} 
+then we define \qr{lm} by 
+$$
+(X\to Y')\mt a[X',Y\to Y'\to Y''](X'\to Y''),
+$$ 
+and we leave it to the reader to check that there is a (unique) map $f$ as in \qr{cfg} such that 
+$$
+p[X\to X']\ci f\ci b[Y\to Y']
+$$ 
+is given by \qr{lm} for all $X\to X'$ and $Y\to Y'$ in $\SSS$. 
+
+Let us define $g$ in \qr{cfg}. 
+
+Let $r$ be in the right-hand side of \qr{cfg}. To any $X\to X'$ in $\SSS$ is attached some $(Y\to Y')\in\SSS$ and some $X'\to Y'$ such that 
+$$
+p[X\to X'](r)=a[X',Y\to Y'](X'\to Y').
+$$ 
+We get in particular 
+$$
+p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to Y'),
+$$ 
+where $(Y\to Y')\in\SSS$ and $X\to Y'$ are attached to the identity of $X$. We leave it to the reader to check that there is a (unique) map $g$ as \qr{cfg} such that 
+$$
+g(r)=b[Y\to Y'](X\to Y')
+$$ 
+for $Y\to Y'$ and $X\to Y'$ as above. 
+
+We prove that $g\ci f$ is the identity of the left-hand side of \qr{cfg}. To compute 
+$$
+g(f(b[Y\to Y'](X\to Y'))),
+$$ 
+we first note that we have 
+$$
+p[X\xr{\id}X](f(b[Y\to Y'](X\to Y')))=a[X,Y\to Y'](X\to Y')
+$$ 
+because we can take $Y''$ as $Y'$ in \qr{y''}, yielding 
+$$
+g(f(b[Y\to Y'](X\to Y')))=b[Y\to Y'](X\to Y'),
+$$ 
+as desired.
+
+%
+
+We prove that $f\ci g$ is the identity of the right-hand side of \qr{cfg}.
+
+Let $r$ be in the right-hand side of \qr{cfg}, let $X\to X'$ be in $\SSS$, and write 
+$$
+p[X\to X'](r)=a[X',Y\to Y'\,](X'\to Y').
+$$ 
+We claim 
+$$
+p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to X'\to Y').
+$$  
+It suffices to show 
+$$
+\al(X\to X')\big(a[X',Y\to Y'\,](X'\to Y')\big)=a[X,Y\to Y'\,](X\to X'\to Y'),
+$$
+where $\al$ is the functor defined in \qr{al}. But the above equality holds by the definition of $\al(X\to X')$. We get
+$$
+p[X\to X'](f(g(r)))=p[X\to X'](f(b[Y\to Y'\,](X\to X'\to Y')))
+$$ 
+$$
+=a[X',Y\to Y'\,](X'\to Y'),
+$$ 
+as required, the second equality being justified by the fact that we can set $Y'':=Y'$ in \qr{y''}.
+
+%%
+
 \sbs{Proof of (7.4.3) (p.~162)}
 
-Recall that $\SSS$ is a right multiplicative system in $\C$. We have the (non-commutative) diagram
+Recall that $\SSS$ is a right multiplicative system in $\C$ such that $\SSS^X$ is cofinally small for all $X$ in $\C$. We have the (non-commutative) diagram
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
@@ -5089,9 +5220,19 @@ $$
 
 We want to prove $B\iso C$.
 
-\nn{\em Notation.} If $\al:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(X,i):\al(i)\to X$ for the coprojection. (Of course this morphism depends on $\al$.) 
+%\nn{\em Notation.} If $\al:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(X,i):\al(i)\to X$ for the coprojection. (Of course this morphism depends on $\al$.) 
 
-We shall define morphisms of functors 
+In the rest of this section we use the following convention: 
+
+\nn If $\al:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write 
+$$
+p(X,i):\al(i)\to X
+$$ 
+for the corresponding coprojection. 
+
+As the inductive systems we shall consider have different colimits, this convention should create no confusion.
+
+We shall define morphisms 
 $$
 \begin{tikzcd}
 B\ar[yshift=.7ex]{r}{f}&C\ar[yshift=-.7ex]{l}{g}.
@@ -5102,7 +5243,7 @@ For $(X',x')$ in $\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by
 $$
 f(X',x'):=p(C,X',p(A,X',x')),
 $$ 
-and we claim that the morphisms $f(X',x')$ induce a morphism of functors $f:B\to C$. 
+and we claim that the morphisms $f(X',x')$ induce a morphism $f:B\to C$. 
 
 Let $(U,u)$ be in $\C_A$, that is
 $$
@@ -5112,7 +5253,7 @@ Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=p(A(U),X',x')(f)$, and
 $$
 g(U,u):=p(B,X',x')\ci\iota_\A(F(f)):\iota_\A(F(U))\to B.
 $$ 
-We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism of functors $g:C\to B$; and that $f$ and $g$ are mutually inverse. 
+We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism $g:C\to B$; that $f$ and $g$ are mutually inverse; and that $f$ and $g$ depend functorially on $X\in\C$. 
 
 We leave the verification of these claims to the reader. 
 
