@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -4923,6 +4923,14 @@ $$
 
 %
 
+%\begin{s}\lb{155} 
+%P.~155. Here is a corollary to Theorem 7.1.16. (The proof is obvious.)
+
+%If $\SSS$ is a right multiplicative system in a category $\C$, if $\C\xr F\A\xr G\B$ are functors, and if $F(s)$ is an isomorphism for all $s$ in $\SSS$, then $F_\SSS$ and $(G\ci F)_\SSS$ exist. Moreover $G\ci F_\SSS$ and $(G\ci F)_\SSS$ are isomorphic. 
+%\end{s}
+
+%
+
 \begin{s}\lb{778}
 % old version
 %https://docs.google.com/document/d/1v9ahntIb_GRudtAonRtBkkQeCONr4j5W4CrT5YxZJA8/edit
@@ -4951,26 +4959,20 @@ $$
 can be completed to a commutative square as indicated, with $v$ in $\SSS$, and it suffices to set $u:=s\ci v$. We leave the proof of the fact that the element in the right hand side of \qr{x} so obtained does not depend on the choice of the object $X''$ and the morphisms $g$ and $v$. From this point the proof of Remark 7.1.18 (ii) is straightforward.
 \end{s}
 
-%
-
-\begin{s}\lb{731} 
-P. 159, Lemma 7.3.1 (i). The claim is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
-$$
-\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.
-$$ 
-\end{s}
-
-%
+%£
 
 \begin{s}\lb{durl} 
-P.~159, Definition 7.3.1. Recall the definition: 
+P.~159, Definition 7.3.1 (i). Recall the definition: 
 
 Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, and let $Q:\C\to\C_\SSS$ be the right the localization of $\C$ by $\SSS$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dg F$ exists, in which case we say that $Q^\dg F$ a {\em right localization} of $F$, and denote this functor by $R_\SSS F$. 
 
 It might be worth displaying the formula 
 $$
 (R_\SSS F)(Q(X))\iso\col_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).
-$$
+$$ 
+
+\begin{comment}
+
 If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pr{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable} By Theorem~\ref{233} p.~\pr{233}, this is equivalent to saying that $Q^\dg F$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 
 Also, the following fact is implicit:
@@ -4991,13 +4993,35 @@ $$
 \begin{df}[universal localization]\lb{url2} 
 Say that the right localization $(\C_\SSS,Q)$ of $\C$ is {\em universal}\index{universal localization} if the above conditions are satisfied.
 \end{df}
+
+\end{comment}
+
 \end{s}
 
 %
 
-\begin{s}
-P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}. 
+\begin{s}\lb{731} 
+P. 159, Definition 7.3.1 (i). The condition is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
+$$
+\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.
+$$ 
 \end{s}
+
+%
+
+\begin{s}\lb{731b} 
+P. 159, Definition 7.3.1 (ii). It is written: 
+
+``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is localizable and $R_\SSS(K\ci F)\xr\sim K\ci R_\SSS F$.'' 
+
+This suggests that there is a natural morphism of functors from $R_\SSS(K\ci F)$ to $K\ci R_\SSS F$, and that the condition is that this morphism is an isomorphism. Unfortunately I don't see this morphism. As a result I prefer to be more prudent and write 
+
+``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.''
+\end{s}
+
+%
+
+%\begin{s} P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}. \end{s} 
 
 %
 
@@ -5021,11 +5045,11 @@ RF\ci Q_\SSS\ci\iota\iso RF\ci\iota_Q\ci Q_\T\iso F_\T\ci\iota_Q^{-1}\ci\iota_Q\
 $$ 
 the last isomorphism following from \qr{ft}.
 
-\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
+%\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
 
-\nn(e) The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
+\nn(d) The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
 
-Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S\ref{durl} p.~\pr{durl}), $R_{\SSS}F\iso F_{\SSS}$ (for the definition of $F_{\SSS}$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S\ref{731b} p.~\pr{731b}), $R_{\SSS}F\iso F_{\SSS}$ (for the definition of $F_{\SSS}$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
@@ -8204,10 +8228,11 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 
 \nn(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\ci R_q\iso\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\ci\iota$,
 
-\nn(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ is universal in the sense of Definition~\ref{url2} p.~\pr{url2}. (See \S\ref{732} p.~\pr{732}.)
+\nn(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ exists. %is universal in the sense of Definition~\ref{url2} p.~\pr{url2}. 
+(See \S\ref{732} p.~\pr{732}.)
 \end{s}
 
-%
+%£
 
 \begin{s}
 Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
