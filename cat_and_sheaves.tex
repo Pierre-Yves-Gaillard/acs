@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-\up{comment}
+%\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -1644,7 +1644,7 @@ P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We sp
 $$
 \Hom_{\C^I}(\pp^\dg\bt,\al)\to\Hom_{\C^J}(\bt,\pp_*\al),\quad v\mt(v*\pp)\ci u
 $$ 
-is bijective. (See \S\ref{731} p.~\pr{731} below.)
+is bijective. (See \S\ref{durl} p.~\pr{durl} below.)
 
 \nn(b) We say that $\pp^\ddg\bt$ exists if there is a $u:\pp_*\pp^\ddg\bt\to\bt$ such that the pair $(\pp^\ddg\bt,u)$ represents the functor $\Hom_{\C^J}(\pp_*(\ ),\bt):(\C^I)^{\op}\to\Set$ in the sense of Definition~\ref{ue} p.~\pr{ue}. This means that, for all $\al:I\to\C$, the map 
 $$
@@ -2319,7 +2319,7 @@ Let $b=(B\to A)$ be in $\A_A$. We define a map from $\Hom_{(\A_A)^I}(\al',\DT b)
 \end{proof}
 \end{s}
 
-% the \S with the label \lb{b} was here before
+% the \S with the label \lb{b} was here
 
 \begin{s} 
 Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 p.~52 (i) of the book. Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
@@ -4931,9 +4931,8 @@ $$
 
 %
 
-\begin{s}\lb{778}
-% old version
-%https://docs.google.com/document/d/1v9ahntIb_GRudtAonRtBkkQeCONr4j5W4CrT5YxZJA8/edit
+\begin{s}\lb{778}% old version
+% https://docs.google.com/document/d/1v9ahntIb_GRudtAonRtBkkQeCONr4j5W4CrT5YxZJA8/edit
 %
 About the proof of Remark 7.1.18 (ii) p.~156. The following is almost a copy and paste of the display in the proof of Remark 7.1.18 (ii) p.~156: 
 $$
@@ -4959,78 +4958,71 @@ $$
 can be completed to a commutative square as indicated, with $v$ in $\SSS$, and it suffices to set $u:=s\ci v$. We leave the proof of the fact that the element in the right hand side of \qr{x} so obtained does not depend on the choice of the object $X''$ and the morphisms $g$ and $v$. From this point the proof of Remark 7.1.18 (ii) is straightforward.
 \end{s}
 
-%£
+%
 
 \begin{s}\lb{durl} 
 P.~159, Definition 7.3.1 (i). Recall the definition: 
 
 Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, and let $Q:\C\to\C_\SSS$ be the right the localization of $\C$ by $\SSS$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dg F$ exists, in which case we say that $Q^\dg F$ a {\em right localization} of $F$, and denote this functor by $R_\SSS F$. 
 
-It might be worth displaying the formula 
-$$
-(R_\SSS F)(Q(X))\iso\col_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).
-$$ 
-
-\begin{comment}
-
-If this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pr{uil}, we say that $F$ is {\em universally} right localizable. \index{universally right localizable} By Theorem~\ref{233} p.~\pr{233}, this is equivalent to saying that $Q^\dg F$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
-
-Also, the following fact is implicit:
-
-If $F(s)$ is an isomorphism for all $s$ in $\SSS$, then $F$ is universally right localizable and the functors $R_\SSS F$ and $F_\SSS$ are canonically isomorphic. (This is the case $\I=\C$ of Proposition 7.3.2 p.~160 of the book.)
-
-The following conditions on the right localization $(\C_\SSS,Q)$ of $\C$ are equivalent: 
-
-\nn(a) $\id_\C$ is universally right localizable, 
-
-\nn(b) any functor $F:\C\to\A$ is universally right localizable, 
-
-\nn(c) any functor $F:\C\to\A$ is universally right localizable and satisfies 
-$$
-R_\SSS F\iso F\ci R_\SSS\id_\C.
-$$
-
-\begin{df}[universal localization]\lb{url2} 
-Say that the right localization $(\C_\SSS,Q)$ of $\C$ is {\em universal}\index{universal localization} if the above conditions are satisfied.
-\end{df}
-
-\end{comment}
-
-\end{s}
-
+% It might be worth displaying the formula $$(R_\SSS F)(Q(X))\iso\col_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).$$ 
 %
+% The {comment} below was here
+% https://docs.google.com/document/d/1WwEuQko13SpCaJ53JDskmaGyiC3F0HQuxLvMMLLubJI/edit
 
-\begin{s}\lb{731} 
-P. 159, Definition 7.3.1 (i). The condition is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
+In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
 $$
 \Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.
 $$ 
 \end{s}
 
-%
+%\begin{s}\lb{731} P. 159, Definition 7.3.1 (i). The condition is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor $$\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.$$ \end{s}
 
 \begin{s}\lb{731b} 
 P. 159, Definition 7.3.1 (ii). It is written: 
 
 ``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is localizable and $R_\SSS(K\ci F)\xr\sim K\ci R_\SSS F$.'' 
 
-This suggests that there is a natural morphism of functors from $R_\SSS(K\ci F)$ to $K\ci R_\SSS F$, and that the condition is that this morphism is an isomorphism. Unfortunately I don't see this morphism. As a result I prefer to be more prudent and write 
+This suggests that there is a natural morphism of functors from $R_\SSS(K\ci F)$ to $K\ci R_\SSS F$, and that the condition is that this morphism is an isomorphism. Unfortunately I don't see this morphism. As a result I prefer to be more prudent and set 
 
-``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.''
+\begin{df}%\lb{o1}
+In the above situation $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.
+\end{df}
+
+%``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.'' 
+
+Another option would be to set 
+
+\begin{df}%\lb{o2}
+In the above situation $F$ is universally right localizable if 
+$$
+\col_{(X\to X')\in\SSS^X}F(X')
+$$ 
+exists universally in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}.
+\end{df}
+
+The following proposition is obvious:
+
+\begin{prop}\lb{rsf}
+In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al_X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al_X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al_X$ in $\A$ in the sense of Definition~\ref{uil} p.~\ref{uil}. In particular $F$ is universally right localizable in the sense of the two above definitions, $R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+$$
+\begin{tikzcd}
+\C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
+\C_{\SSS}\ar{rr}[swap]{(K\ci F)_{\SSS}}\ar{rru}[swap]{F_{\SSS}}&&\A'.
+\end{tikzcd}
+$$ 
+\end{prop}
 \end{s}
 
-%
-
-%\begin{s} P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}. \end{s} 
-
-%
+%\begin{s} P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}. \end{s}
 
 \begin{s}\lb{732} 
 P.~160, Proposition 7.3.2. 
 
 \nn(a) The second sentence of the proof reads: ``By hypothesis (i) and Corollary 7.2.2, $\iota_Q:\I_\T\to\C_\SSS$ is an equivalence''. It is also worth noting that $\I$ is a right multiplicative system in $\I$.
 
-\nn(b) The third sentence of the proof reads: ``By hypothesis (ii) the localization $F_\T$ of $F\ci\iota$ exists''. The functor of $F_\SSS$ is defined in Definition 7.1.1 p.~149, but it is not called a localization. By condition (b) in Definition 7.1.1 we have
+\nn(b) The third sentence of the proof reads: ``By hypothesis (ii) the localization $F_\T$ of $F\ci\iota$ exists''. %The functor of $F_\SSS$ is defined in Definition 7.1.1 p.~149, but it is not called a localization. 
+See Proposition~\ref{rsf}. By condition (b) in Definition 7.1.1 we have
 \begin{equation}\lb{ft}
 F_\T\ci Q_\T\iso F\ci\iota.
 \end{equation}
@@ -5047,15 +5039,8 @@ the last isomorphism following from \qr{ft}.
 
 %\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
 
-\nn(d) The following statement is easy to prove and implicit in the proof of Proposition 7.3.2. 
-
-Let $\C$ be a category, let $\SSS$ a right multiplicative system, and let $F:\C\to\A$ be a functor such that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Then $F$ is universally right localizable (see \S\ref{731b} p.~\pr{731b}), $R_{\SSS}F\iso F_{\SSS}$ (for the definition of $F_{\SSS}$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
-$$
-\begin{tikzcd}
-\C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
-\C_{\SSS}\ar{rr}[swap]{(K\ci F)_{\SSS}}\ar{rru}[swap]{F_{\SSS}}&&\A'.
-\end{tikzcd}
-$$ 
+% removed:
+% https://docs.google.com/document/d/18qXG0GqcLJD33QRv2VQFE2Yn41AbyXqzHMTKzuDZsR4/edit
 \end{s}
 
 %
@@ -5283,9 +5268,20 @@ We leave the verification of these claims to the reader.
 
 %%
 
-\sbs{Remark 7.4.5 (p.~163)}\lb{745}
+\sbs{Brief comments}
 
-In this section we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
+\begin{s}
+P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. it seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
+
+\begin{lem}
+If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\col\iota\ci\al\iso\iota(X)$ for some $X$ in $\C$, then we have $\col\al\iso X$. 
+\end{lem}
+\end{s}
+
+%
+
+\begin{s}\lb{745}%\sbs{Remark 7.4.5 (p.~163)}\lb{745}
+P. 163, Remark 7.4.5. In this \S we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
 
 Let $\SSS$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pr{737} implies that the functors 
 $$
@@ -5310,6 +5306,7 @@ R_\SSS\oo H_\C(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{\SSS\tm\SSS^{\op}}\oo 
 \end{equation}
 %
 where we have written $\oo H$ for $\Hom$ to save space, the horizontal arrows are the natural maps, and the other arrows are the above bijections, then \qr{rccs} commutes and all its arrows are bijective.
+\end{s}
 
 %%%%
 
@@ -7986,7 +7983,7 @@ Theorem 13.4.1 and Corollary~\ref{1432} p.~\pr{1432} imply that the answer is ye
 %
 
 \begin{s}
-P.~337. (See \S\ref{1341} p. \pr{1341}.) In view of Section~\ref{745} p.~\pr{745} above and Theorem 13.4.1 p.~337 of the book, the functors 
+P.~337. (See \S\ref{1341} p. \pr{1341}.) In view of \S\ref{745} p.~\pr{745} above and Theorem 13.4.1 p.~337 of the book, the functors 
 
 $$
 \Hom_\C^\bu:\oo K(\C)\tm\oo K(\C)^{\op}\to\oo K(\Mod(\mathbb Z))
@@ -8232,7 +8229,7 @@ P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
 (See \S\ref{732} p.~\pr{732}.)
 \end{s}
 
-%£
+%
 
 \begin{s}
 Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
