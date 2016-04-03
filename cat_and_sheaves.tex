@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -5312,9 +5312,63 @@ where we have written $\oo H$ for $\Hom$ to save space, the horizontal arrows ar
 
 \section{About Chapter 8} 
 
-\sbs{About Section 8.1}
+\sbs{Definition of a commutative group object (p. 169)}
 
-Here is a comment about Lemma 8.1.2 (ii) p.~169. 
+The following definition is much less general and much less elegant than the one in the book, but it is slightly simpler and seems sufficient in this context. 
+
+Let $\C$ be a category with finite products; let $0$ be the terminal object of $\C$; let $X$ be in $\C$; let $p_1,p_2:X\tm X\to X$ be the projections; and let $v:X\tm X\to X\tm X$ be defined by the equalities 
+$$
+p_i\ci v=p_j
+$$ 
+for all $i,j$ such that $\{i,j\}=\{1,2\}$. 
+
+A structure of \emph{commutative group object} on $X$ of $\C$ is a triple $(\al,e,a)$ satisfying the following conditions:
+
+We have 
+$$
+\al:X\tm X\to X,\quad e:0\to X,\quad a:X\to X,
+$$ 
+and the following diagrams commute:
+$$
+\begin{tikzcd}
+X\tm X\tm X\ar{d}[swap]{\al\tm\id}\ar{r}{\id\tm\al}&X\tm X\ar{d}{\al}\\ 
+X\tm X\ar{r}[swap]{\al}&X,
+\end{tikzcd}
+$$ 
+$$
+\begin{tikzcd}
+X\ar{rd}[swap]{\id}\ar{r}{(\id,e)}&X\tm X\ar{d}{\al}\\ 
+&X,
+\end{tikzcd}
+$$ 
+$$
+\begin{tikzcd}
+X\ar{rd}[swap]{\id}\ar{r}{(e,\id)}&X\tm X\ar{d}{\al}\\ 
+&X,
+\end{tikzcd}
+$$
+$$
+\begin{tikzcd}
+X\ar{d}\ar{r}{(\id,a)}&X\tm X\ar{d}{\al}\\ 
+0\ar{r}[swap]{e}&X,
+\end{tikzcd}
+$$
+$$
+\begin{tikzcd}
+X\ar{d}\ar{r}{(a,\id)}&X\tm X\ar{d}{\al}\\ 
+0\ar{r}[swap]{e}&X,
+\end{tikzcd}
+$$ 
+$$
+\begin{tikzcd}
+X\tm X\ar{rd}[swap]{\al}\ar{r}{v}&X\tm X\ar{d}{\al}\\ 
+&X.
+\end{tikzcd}
+$$
+
+%%
+
+\sbs{Lemma 8.1.2 (ii) (p.~169)}
 
 The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a functorial family of maps 
 $$
@@ -5471,8 +5525,16 @@ q.e.d.
 
 %
 
+\begin{s} 
+P.~173, proof of Proposition 8.2.13. The fact that any $X$ in $\C$ has a structure of commutative group object follows from Lemma 8.2.10 p.~172 of the book.
+\end{s}
+
+%
+
 \begin{s}
-P.~173, Propositions 8.2.12, 8.2.13, and Theorem 8.2.14  (minor variant). 
+P.~173, %Propositions 8.2.12, 8.2.13, and 
+Theorem 8.2.14  (minor variant). 
+\begin{comment}
 \begin{nota}
 If $\C$ and $\C'$ are categories admitting finite products, we denote by $\oo P(\C,\C')$ the category of those functors from $\C$ to $\C'$ which commute with finite products.
 \end{nota}
@@ -5493,7 +5555,7 @@ $$
 is bijective. The injectivity is obvious and the surjectivity follows from the proof of Proposition 8.2.13.
 \end{proof}
 
-Recall the statement of Theorem 8.2.14 p.~173 of the book:
+Recall the statement of Theorem 8.2.14:% p.~173 of the book:
 
 \begin{thm}[Theorem 8.2.14 p. 173] 
 Any additive category has a unique structure of a pre-additive category.
@@ -5514,6 +5576,7 @@ $$
 $$ 
 is a morphism in $\Mod(\mathbb Z)$.
 \end{proof}
+\end{comment}
 \end{s}
 
 %
