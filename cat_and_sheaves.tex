@@ -5537,8 +5537,7 @@ P.~173, proof of Proposition 8.2.13. The fact that any $X$ in $\C$ has a structu
 \begin{s}
 % https://docs.google.com/document/d/19UsvOfHLs3aEap6kzitWQo-ciyyiBHJgVxqyMVZfTbI/edit
 % was removed from here
-P.~173, %Propositions 8.2.12, 8.2.13, and 
-Theorem 8.2.14. Let me state the result in a more explicit way: 
+P.~173, Theorem 8.2.14. Let me state the result in a more explicit way: 
 \begin{thm}[Theorem 8.2.14]
 If $\C$ is an additive category, then $\C$ has a unique structure of a pre-additive category. More precisely, for $f$ and $g$ in $\Hom_\C(X,Y)$, the morphism $f+g\in\Hom_\C(X,Y)$ is given by the composition 
 $$
@@ -5593,11 +5592,11 @@ We claim $b\ci h=0$. Indeed, we define $c:\Ker f\to P$ by the condition $p_1\ci 
 $$
 \begin{tikzcd}
 {}&X\ar{dr}{f}\\ 
-\Ker f\ar{ur}{h}\ar{dr}[swap]{0}\ar[dashed]{r}{c}&P\ar{u}{p_1}\ar{d}{p_2}&Y\\ 
+\Ker f\ar{ur}{h}\ar{dr}[swap]{0}\ar[dashed]{r}{c}&P\ar{u}[swap]{p_1}\ar{d}{p_2}&Y\\ 
 {}&X\ar{ur}[swap]{f},
 \end{tikzcd}
 $$
-and we get $b\ci h=b\ci p\ci c=0\ci c=0$. This proves the claim. We get a natural morphism $d:\Coker h\to\Coim f$ making the diagram 
+and we get $b\ci h=b\ci p\ci c=0\ci c=0$. This proves the claim. Hence, there is a unique morphism $d:\Coker h\to\Coim f$ making the diagram 
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar{d}{d}\\ 
@@ -5606,7 +5605,7 @@ P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f
 $$ 
 commute. 
 
-As $p$ factors through $h$, we have $a\ci p=0$, and we get a natural morphism $e:\Coim f\to\Coker h$ making the diagram 
+As $p$ factors through $h$, we have $a\ci p=0$, and there is a unique morphism $e:\Coim f\to\Coker h$ making the diagram 
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
@@ -5737,7 +5736,7 @@ u\ci\pp\ci a=c\ci f=0.
 $$ 
 As $a$ is an epimorphism, this implies $u\ci\pp=0$. 
 
-It is easy to see that there is a natural monomorphisms from $K_u$ to $K_c$. By Proposition~\ref{p834} p.~\pr{p834}, the composition $I_f\to K_c$ is an isomorphism. This implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$. 
+It is easy to see that there is a natural monomorphisms from $K_u$ to $K_c$. By Proposition~\ref{p834} p.~\pr{p834}, we have $I_f\xr\sim K_c$, and it is easy to see that this implies $I_f\xr\sim K_u$. Similarly we prove $K'_u\xr\sim I_g$. 
 
 We can thus complete our previous diagram as follows: 
 $$
