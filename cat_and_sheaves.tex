@@ -5885,31 +5885,25 @@ Let $0\to X'\xr fX\xr gX''\to0$ be a short exact sequence in an abelian category
 The authors say that the equivalence (iii)$\ssi$(iv) is obvious. I agree, but here are a few more details. Implication (iv)$\then$(iii) is indeed obvious in the strongest sense of the word. Implication (iii)$\then$(iv) can be proved as follows. 
 
 Assume (iii), that is, we have morphisms $h:X''\to X$ and $k:X\to X'$ such that 
-%
 \begin{equation}\lb{fk+hg} 
 f\ci k+h\ci g=\id_X.
 \end{equation} 
-% 
 As $g\ci f=0$, this implies 
 $$
 g\ci h\ci g=g\ci f\ci k+g\ci h\ci g=g\ci\id_X=g. 
 $$ 
 Since $g$ is an epimorphism, this entails $g\ci h=\id_{X''}$. We prove similarly $k\ci f=\id_{X'}$. Let us record the two above equalities: 
-% 
 \begin{equation}\lb{gh,kf} 
 g\ci h=\id_{X''},\quad k\ci f=\id_{X'}.
 \end{equation} 
-% 
 Now \qr{fk+hg} and \qr{gh,kf} imply 
 $$
 k\ci h=k\ci(f\ci k+h\ci g)\ci h=k\ci f\ci k\ci h+k\ci h\ci g\ci h=k\ci h+k\ci h,
 $$ 
 and thus 
-%
 \begin{equation}\lb{kh} 
 k\ci h=0, 
 \end{equation} 
-% 
 and (iv) follows from \qr{fk+hg},\qr{gh,kf}, and \qr{kh}. q.e.d.
 \end{s}
 
@@ -5922,10 +5916,104 @@ $$
 $$
 \end{s}
 
+%%
+
+\subsubsection{Proof of Lemma 8.3.23 (p. 184)}
+
+The proof of the following statement is left to the reader:
+
+If 
+$$
+\begin{tikzcd}
+&&0\ar[d]&0\ar[d]\\ 
+&&Z\ar[d,"b"']\ar[r,"a"]&Y\ar[d,"c"]\\ 
+0\ar[r]&X\ar[d,equal]\ar[r,"d"]&W\ar[d,"f"']\ar[r,"e"]&V\ar[d,"g"]\ar[r]&0\\ 
+0\ar[r]&X\ar[r,"h"']&U\ar[d]\ar[r,"i"']&T\ar[d]\ar[r]&0\\ 
+&&0&0
+\end{tikzcd}
+$$ 
+is an exact commutative diagram in some abelian category, then 
+\begin{equation}\lb{8323}
+a\text{ is an isomorphism}.
+\end{equation} 
+
+In the proof of \qr{8323} below we write $\psi\pp$ for $\psi\ci\pp$, and we tacitly, use Lemma 8.3.12 p.~180 of the book, stated above as Lemma~\ref{8312} p.~\pr{8312}. 
+
+We claim
+\begin{equation}\lb{8323m}
+a\text{ is a monomorphism}.
+\end{equation}
+Let $z:S\to Z$ satisfy $az=0$, and let us show $z=0$. We have $ebz=0$, and the solid diagram 
+$$
+\begin{tikzcd}
+R\ar[d,"x"',dashed]\ar[r,"j",dashed,two heads]&S\ar[d,"bz"]\\ 
+X\ar[r,"d"']&W\ar[r,"e"']&V
+\end{tikzcd}
+$$ 
+may be completed as indicated, yielding successively $hx=fdx=fbzj=0$, $x=0$, $bzj=0$, $bz=0$, $z=0$. This proves \qr{8323m}. 
+
+We claim
+\begin{equation}\lb{8323e}
+a\text{ is an epimorphism}.
+\end{equation} 
+Let $y:S\to Y$ and let us show that the solid diagram 
+$$
+\begin{tikzcd}
+R\ar[d,"z"',dashed]\ar[r,"j",dashed,two heads]&S\ar[d,"y"]\\ 
+Z\ar[r,"a"']&Y
+\end{tikzcd}
+$$ 
+may be completed as indicated. We get successively: a commutative square 
+$$
+\begin{tikzcd}
+Q\ar[d,"w"']\ar[r,"k",two heads]&S\ar[d,"cy"]\\ 
+W\ar[r,"e"',two heads]&V;
+\end{tikzcd}
+$$ 
+equalities $ifw=gew=gcy=0$; an exact commutative diagram 
+$$
+\begin{tikzcd}
+P\ar[d,"x"']\ar[r,"\ell",two heads]&Q\ar[d,"fw"]\\ 
+W\ar[r,"h"']&V\ar[r,"i"']&T;
+\end{tikzcd}
+$$ 
+equalities $fdx=hx=fw\ell$, $f(w\ell-dx)=0$; an exact commutative diagram 
+$$
+\begin{tikzcd}
+R\ar[d,"z"']\ar[r,"m",two heads]&P\ar[d,"w\ell-dx"]\\ 
+Z\ar[r,"b"']&W\ar[r,"f"']&U;
+\end{tikzcd}
+$$ 
+equalities $caz=ebz=ew\ell m-edxm=ew\ell m=cyk\ell m$, $az=yk\ell m$; and it suffices to set $j:=k\ell m$. This proves \qr{8323e}, and thus \qr{8323}.
+
+%%
+
+\subsubsection{Brief Comments}
+
+\begin{s} 
+On p. 185 we read:
+
+``Recall (see Proposition 5.2.4) that in an abelian category, the conditions
+below are equivalent:
+
+(i) $G$ is a generator, that is, the functor $\pp_G=\Hom_\C(G,\cdot)$ is conservative,
+
+(ii) The functor $\pp_G$ is faithful.
+
+\nn\dots
+
+Moreover, if C admits small inductive limits, the conditions above are
+equivalent to:
+
+(iii) for any $X\in\C$, there exist a small set $I$ and an epimorphism $G^{\sqcup I}\epi X$.''
+
+It would be better (I think) to refer to Proposition 2.2.3 p.~45 of the book for the equivalence between (i) and (ii).
+\end{s}
+
 %
 
 \begin{s}\lb{gcsbc}
-P.~186, Definition 8.3.24 (definition of a Grothendieck category\index{Grothendieck category}). By Lemma 8.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
+P.~186, Definition 8.3.24 (definition of a Grothendieck category\index{Grothendieck category}). By Lemma 3.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
 \end{s}
 
 %
@@ -5946,8 +6034,8 @@ q.e.d.
 
 \sbs{About Section 8.4} 
 
-Here is a comment about Proposition 8.4.7 p.~187. 
-
+\subsubsection{Proposition 8.4.7 (p. 187)}
+ 
 Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\tm_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
 It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\ci a_0=\pp$:
@@ -6007,8 +6095,17 @@ $$
 l_0\ci a_0=l_0\ci\ld^{-1}\ci a_1=l_1\ci\ld\ci\ld^{-1}\ci a_1=l_1\ci a_1=\pp.
 $$ 
 q.e.d.
+% https://docs.google.com/document/d/1r1eBAIdNxQNO4uJ7N1Ki3ewyPQBoYIxLLq5I54ciVa8/edit 
+
+%
+
+\subsubsection{Corollary 8.3.26 (p.~189)}
  
-% https://docs.google.com/document/d/1r1eBAIdNxQNO4uJ7N1Ki3ewyPQBoYIxLLq5I54ciVa8/edit
+Recall the statement:
+
+Let $\C$ be a Grothendieck category and let $X\in\C$. Then the set of quotients of $X$ and the the set of subobjects of $X$ are small. 
+
+The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\dots and Proposition 5.2.3 (v)''.
 
 %% 
 
