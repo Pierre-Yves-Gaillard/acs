@@ -1606,6 +1606,12 @@ and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inve
 % removed
 % https://docs.google.com/document/d/1ydcLZ0o0IQjew7DRTL5J8BFQ_9V9fc56CfpscjLnrUE/edit
 
+\begin{s}\lb{ex}
+P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is exact if and only if its image in $\C^\wg$ is exact.
+\end{s}
+
+%
+
 \begin{s}\lb{fpl}
 P.~50, Corollary 2.2.11. We also have:
 
@@ -6114,13 +6120,11 @@ The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\d
 \subsubsection{Brief Comments}
 
 \begin{s} P.~190, Proposition 8.5.5. It might be worth writing explicitly the formulas (for $X\in\Mod(R,\C)$):
+\begin{equation}\lb{rop}
+\Hom_{R^{\op}}(N,\Hom_\C(X,Y))\iso\Hom_\C\left(N\otimes_RX,Y\right),
+\end{equation} 
 $$
-\Hom_{R^{\op}}(N,\Hom_\C(X,Y))\iso
-\Hom_\C\left(N\otimes_RX,Y\right),
-$$
-$$
-\Hom_R(M,\Hom_\C(Y,X))\iso
-\Hom_\C\left(Y,\Hom_R(M,X)\right),
+\Hom_R(M,\Hom_\C(Y,X))\iso\Hom_\C\left(Y,\Hom_R(M,X)\right),
 $$
 $$
 R^{\op}\otimes_RX\iso X,
@@ -6137,6 +6141,12 @@ $$
 \end{tikzcd}
 $$
 where, we hope, the notation is self-explanatory.
+
+The fact that the functor 
+$$
+-\otimes_R-:\Mod(R^{\op})\tm\Mod(R,\C)\to\C
+$$ 
+is right exact in each variable follows from \qr{rop} and \S\ref{ex} p.~\pr{ex}.
 \end{s}
 
 %
