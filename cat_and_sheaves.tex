@@ -2653,9 +2653,9 @@ $$
 $$ 
 quasi-commutes. 
 
-\begin{prop}\lb{yf} 
-Let $\U\in\V$ be universes, let $\A$ be the category of $\U$-small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\B$ be the category whose objects are the $\V$-small $\U$-categories (see Definition~\ref{myucat} p.~\pr{myucat}) and whose morphisms are the isomorphism classes of functors. Then there is a functor $\Phi:\A\to\B$ satisfying $\Phi(\C)=\C^\wg_\U$ and $\Phi(F)=\widehat F$, and there is a morphism of functors $\theta$ from the ``inclusion'' $\A\to\B$ to $\Phi$ satisfying $\theta_\C=\hy_\C$ for all $\C$ in $\A$. 
-\end{prop}
+%\begin{prop}\lb{yf} 
+%Let $\U\in\V$ be universes, let $\A$ be the category of $\U$-small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\B$ be the category whose objects are the $\V$-small $\U$-categories (see Definition~\ref{myucat} p.~\pr{myucat}) and whose morphisms are the isomorphism classes of functors. Then there is a functor $\Phi:\A\to\B$ satisfying $\Phi(\C)=\C^\wg_\U$ and $\Phi(F)=\widehat F$, and there is a morphism of functors $\theta$ from the ``inclusion'' $\A\to\B$ to $\Phi$ satisfying $\theta_\C=\hy_\C$ for all $\C$ in $\A$. 
+%\end{prop}
 
 \begin{rk}\lb{cof}
 Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. By \qr{263a} p.~\pr{263a} the natural morphism $\col(\psi\ci\pp)\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
@@ -6018,12 +6018,6 @@ It would be better (I think) to refer to Proposition 2.2.3 p.~45 of the book for
 
 %
 
-\begin{s}\lb{gcsbc}
-P.~186, Definition 8.3.24 (definition of a Grothendieck category\index{Grothendieck category}). By Lemma 3.3.9 p.~83 of the book, in a Grothendieck category $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
-\end{s}
-
-%
-
 \begin{s} 
 P.~186, Definition 8.3.24 (definition of a Grothendieck category). The condition that small filtrant inductive limits are exact is not automatic. I know no entirely elementary proof of this important fact. Here is a proof using a little bit of sheaf theory. To show that there is an abelian category where small filtrant inductive limits exist but are not exact, it suffices to prove that there is an abelian category $\C$ where small filtrant {\em projective} limits exist but are not exact. It is even enough to show that small products are not exact in $\C$. Let $X$ be a topological space, and let $U_0\supset U_1\supset\cdots$ be a decreasing sequence of open subsets whose intersection is a non-open closed singleton $\{a\}$. We can take for $\C$ the category of small abelian sheaves on $X$. To see this, let $G$ be the abelian presheaf over $X$ such that $G(U)$ is $\mathbb Z$ if $a$ is in $U$ and 0 otherwise, and, for each $n$ in $\mathbb N$, let $F_n$ be the abelian presheaf over $X$ such that $F_n(U)$ is $\mathbb Z$ if $U\subset U_n$ and 0 otherwise. These presheaves are easily seen to be sheaves. For each $n$ in $\mathbb N$ and each open set $U$ let $F_n(U)\to G(U)$ be the identity if $a$ is in $U\subset U_n$ and 0 otherwise. This family of morphisms defines, when $U$ varies, an epimorphism $\pp_n:F_n\epi G$. Put 
 $$
@@ -6034,6 +6028,12 @@ $$
 \bigoplus_{n\in\mathbb N}\mathbb Z\to\prod_{n\in\mathbb N}\mathbb Z.
 $$
 q.e.d.
+\end{s}
+
+%
+
+\begin{s}\lb{gcsbc}
+P.~186, Proposition 8.3.27 (i). By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
 \end{s}
 
 %% 
@@ -6158,20 +6158,28 @@ Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring
 \end{lem}
 
 \begin{proof}
-Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are the direct sums of finitely many copies of $G$, and let $\M_0$ be the full subcategory of $\M$ whose objects are the direct sums of finitely many copies of $R$. Then $\pp$ and $\psi$ induce mutually quasi-inverse equivalences 
+Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are 
+$$
+0,\quad G,\quad G\oplus G,\quad G\oplus G\oplus G,\quad\dots,
+$$
+and let $\M_0$ be the full subcategory of $\M$ whose objects are 
+$$
+0,\quad R,\quad R\oplus R,\quad R\oplus R\oplus R,\quad\dots
+$$
+Then $\pp$ and $\psi$ induce mutually quasi-inverse equivalences 
 $$
 \begin{tikzcd}
 \C_0\ar[yshift=.7ex]{r}{\pp_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
 \end{tikzcd}
 $$ 
-We can assume that $\C_0$ and $\M_0$ are small (in the sense of Definition~\ref{myuscat} p.~\pr{myuscat}). If $\ld:\C\to(\C_0)^\wg$ and $\ld':\M\to(\M_0)^\wg$ are the obvious functors, then the diagram 
+We can assume that $\C_0$ and $\M_0$ are small. If $\ld:\C\to(\C_0)^\wg$ and $\ld':\M\to(\M_0)^\wg$ are the obvious functors, then the diagram 
 $$
 \begin{tikzcd}
 \C\ar{r}{\pp}\ar{d}[swap]{\ld}&\M\ar{d}{\ld'}\\
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by \S\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$), the proof is complete.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by \S\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -6252,6 +6260,16 @@ x\ci c=p\ci i\ci z=0
 $$  
 by \qr{pi=0}. As $c$ is an epimorphism, this implies successively \qr{x=0}, \qr{fpsi}, and the lemma. 
 \end{proof}
+
+%
+
+\subsubsection{Additivity of ind-objects (p.~193)} 
+
+Just before the statement of Proposition 8.6.2 p.~193 it is claimed that the inclusion 
+$$
+\Ind(\C)\subset\C^{\wg,add}
+$$ 
+holds. This inclusion follows from Propositions 6.1.7 p.~132 and 8.2.15 p.~173 in the book.
 
 %% 
 
@@ -8947,11 +8965,11 @@ This follows from Theorem~\ref{fgd} p.~\pr{fgd}. %\qr{17115mod} p.~\pr{17115mod}
 
 %
 
-\begin{s}
-P.~411, Definition 17.2.1 of the notions of sites and of morphism of site. Proposition~\ref{yf} p.~\pr{yf} implies:
+%\begin{s}
+%P.~411, Definition 17.2.1 of the notions of sites and of morphism of site. Proposition~\ref{yf} p.~\pr{yf} implies:
 
-If $\U$ is a universe, then there is a $\U$-category $\A$ (see Definition~\ref{myucat} p.~\pr{myucat}) whose objects are the $\U$-small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}) and whose morphisms are are morphisms of sites.
-\end{s}
+%If $\U$ is a universe, then there is a $\U$-category $\A$ (see Definition~\ref{myucat} p.~\pr{myucat}) whose objects are the $\U$-small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}) and whose morphisms are are morphisms of sites.
+%\end{s}
 
 %
 
