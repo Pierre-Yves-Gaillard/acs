@@ -4379,6 +4379,18 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 \sbs{Brief Comments}
 
 \begin{s} 
+P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
+
+Assume that for any pair of parallel arrows in $\C$, its kernel in $\C^\wg$ belongs to $\Ind(\C)$. Then, for any pair of parallel arrows in $\Ind(\C)$, its kernel in $\C^\wg$ is its kernel in $\Ind(\C)$.
+
+Here is a slightly more detailed rewriting of the proof:
+
+Let $f,g:A\parar B$ be a pair of parallel arrows in $\Ind(\C)$. With the notation of Corollary 6.1.14, we may assume that there exist a small filtrant category $I$ and parallel arrows $\pp,\psi:\al\parar\bt$ in $\C^I$ such that $A=\ic\al$, $B=\ic\bt$, $f=\ic\pp$ and $g=\ic\psi$. For each $i$ in $I$ set $\gamma(i):=\Ker(\pp_i,\psi_i)\in\C^\wg$. By assumption we get $\gamma(i)\in\Ind(\C)$. Then $\ic\gamma$ is a kernel of $(f,g)$ in $\C^\wg$, and it belongs to $\Ind(\C)$ by Theorem 6.1.8 p.~132 of the book.
+\end{s}
+
+%
+
+\begin{s} 
 P.~136, proof of Proposition 6.1.18 (i) (minor variant). Recall the statement: \begin{prop}[Proposition 6.1.18 (i) p.~136] 
 If a category $\C$ admits cokernels, so does $\Ind(\C)$. 
 \end{prop} 
@@ -5318,9 +5330,9 @@ where we have written $\oo H$ for $\Hom$ to save space, the horizontal arrows ar
 
 \section{About Chapter 8} 
 
-\sbs{Definition of a commutative group object (p. 169)}
+\sbs{About Section 8.1}
 
-The following definition is much less general and much less elegant than the one in the book, but it is slightly simpler and seems sufficient in this context. 
+The following definition of a commutative group object is much less general and much less elegant than the one in the book (p.~169), but it is slightly simpler and seems sufficient in this context. 
 
 Let $\C$ be a category with finite products; let $0$ be the terminal object of $\C$; let $X$ be in $\C$; let $p_1,p_2:X\tm X\to X$ be the projections; and let $v:X\tm X\to X\tm X$ be defined by the equalities 
 $$
@@ -6263,13 +6275,43 @@ by \qr{pi=0}. As $c$ is an epimorphism, this implies successively \qr{x=0}, \qr{
 
 %
 
-\subsubsection{Additivity of ind-objects (p.~193)} 
+\sbs{About Section 8.6} 
 
-Just before the statement of Proposition 8.6.2 p.~193 it is claimed that the inclusion 
+\begin{s}
+P.~193. Just before the statement of Proposition 8.6.2 it is claimed that the inclusion 
 $$
 \Ind(\C)\subset\C^{\wg,add}
 $$ 
 holds. This inclusion follows from Propositions 6.1.7 p.~132 and 8.2.15 p.~173 in the book.
+\end{s}
+
+%
+
+\begin{s}\lb{869} 
+P. 195, proof of Proposition 8.6.9. We give additional details:
+
+\nn(i) $\Ind(\C)$ is additive: For $A,B$ in $\Ind(\C)$ we define $A\oplus B\in\C^\wg$ by the formula 
+$$
+(A\oplus B)(X):=A(X)\oplus B(X),
+$$ 
+and easily check that $A\oplus B$ is additive and left exact, and thus belongs to $\Ind(\C)$. It is then obvious that $A\oplus B$ is a product and a coproduct in $\Ind(\C)$. 
+
+$\Ind(\C)$ admits kernels and cokernels: $\Ind(\C)$ admits finite inductive and projective limits by Corollary 6.1.17 (i) and Proposition 6.1.18 (iii) p.~136.
+
+\nn(ii) $\Ind(\C)$ admits small filtrant inductive limits by Theorem 6.1.8 p.~132.
+
+\nn(iii) The natural embedding $\Ind(\C)\to\C^{\wg,add}$ commutes with kernels: this follows from Proposition 6.1.16 (i) p.~136.
+\end{s}
+
+%
+
+\begin{s}
+P. 194, proof of Theorem 8.6.5. 
+
+\nn(ii) The exactness of $\C\to\Ind(\C)$ follows from Corollaries 6.1.6 and 6.1.17 (i). The left exactness of $\Ind(\C)\to\C^{\wg,add}$ follows from \S\ref{869} above and Proposition 6.1.16 (i) p.~136 in the book. 
+
+\nn(iii) $\Ind(\C)$ admits small inductive limits by Proposition 6.1.18 (iii) p.~136 in the book.
+\end{s}
 
 %% 
 
