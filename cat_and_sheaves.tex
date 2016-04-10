@@ -5773,14 +5773,12 @@ $$
 
 \begin{s} 
 For the reader's convenience we state Lemma 8.3.11 p.~180. Consider the commutative square 
-%
 \begin{equation}\lb{837}
 \begin{tikzcd}
 X'\ar{d}[swap]{g'}\ar{r}{f'}&Y'\ar{d}{g}\\ 
 X\ar{r}[swap]{f}&Y
 \end{tikzcd}
 \end{equation} 
-%
 in the abelian category $\C$. 
 
 \begin{lem}[Lemma 8.3.11 p.~180]\lb{8311}
@@ -6287,6 +6285,16 @@ holds. This inclusion follows from Propositions 6.1.7 p.~132 and 8.2.15 p.~173 i
 
 %
 
+\begin{s}
+P. 194, proof of Theorem 8.6.5. 
+
+\nn(ii) The exactness of $\C\to\Ind(\C)$ follows from Corollaries 6.1.6 and 6.1.17 (i). The left exactness of $\Ind(\C)\to\C^{\wg,add}$ follows from \S\ref{869} above and Proposition 6.1.16 (i) p.~136 in the book. 
+
+\nn(iii) $\Ind(\C)$ admits small inductive limits by Proposition 6.1.18 (iii) p.~136 in the book.
+\end{s}
+
+%
+
 \begin{s}\lb{869} 
 P. 195, proof of Proposition 8.6.9. We give additional details:
 
@@ -6305,12 +6313,37 @@ $\Ind(\C)$ admits kernels and cokernels: $\Ind(\C)$ admits finite inductive and 
 
 %
 
-\begin{s}
-P. 194, proof of Theorem 8.6.5. 
+\begin{s} 
+P. 197, proof of Proposition 8.6.12. The statement ``Since the top square on the left is co-Cartesian, the middle row is exact'' follows from the lemma below.
 
-\nn(ii) The exactness of $\C\to\Ind(\C)$ follows from Corollaries 6.1.6 and 6.1.17 (i). The left exactness of $\Ind(\C)\to\C^{\wg,add}$ follows from \S\ref{869} above and Proposition 6.1.16 (i) p.~136 in the book. 
-
-\nn(iii) $\Ind(\C)$ admits small inductive limits by Proposition 6.1.18 (iii) p.~136 in the book.
+\begin{lem}
+If, in the commutative diagram 
+$$
+\begin{tikzcd}
+0\ar[r]&A\ar[d]\ar[r]&B\ar[d]\ar[r]&C\ar[d,equal]\ar[r]&0\\ 
+0\ar[r]&D\ar[r]&E\ar[r]&C\ar[r]&0,
+\end{tikzcd}
+$$ 
+the left square is co-cartesian and the top row is exact, then the bottom top row is exact.
+\end{lem} 
+\begin{proof}
+In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom top row is exact at $E$. By Lemma \ref{8312} p.~\ref{8312}, (a)$\ssi$(c), it suffices to check that the solid diagram 
+$$
+\begin{tikzcd}
+0\ar[r]&A\ar[d]\ar[r]&B\ar[d,"v"]\ar[r,"t"]&C\ar[d,equal]\ar[r]&0\\ 
+0\ar[r]&D\ar[rd,"0"']\ar[r,"u"]&E\ar[d,"y"]\ar[r,"w"]&C\ar[d,"x",dashed]\ar[r]&0\\ 
+&&F\ar[r,"z"',dashed,rightarrowtail]&G
+\end{tikzcd}
+$$ 
+can be completed as indicated. The top row being exact, 
+$$
+\begin{tikzcd}
+0\ar[r]&A\ar[rd,"0"']\ar[r]&B\ar[d,"yv"]\ar[r,"t"]&C\ar[d,"x",dashed]\ar[r]&0\\ 
+&&F\ar[r,"z"',dashed,rightarrowtail]&G
+\end{tikzcd}
+$$ 
+can be completed as indicated. It suffices to prove $zy=xw$. The left square is co-cartesian, it suffices to prove $zyv=xwv$ and $zyu=xwu$, which is easy. Thus shows that $0\to D\to E\to C$ is exact at $E$. Using Lemma~\ref{8311} p.~\ref{8311} it is straightforward to prove the exactness at $D$ and $C$.
+\end{proof}
 \end{s}
 
 %% 
