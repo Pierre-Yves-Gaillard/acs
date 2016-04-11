@@ -6327,7 +6327,7 @@ $$
 the left square is co-cartesian and the top row is exact, then the bottom top row is exact.
 \end{lem} 
 \begin{proof}
-In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom top row is exact at $E$. By Lemma \ref{8312} p.~\ref{8312}, (a)$\ssi$(c), it suffices to check that the solid diagram 
+In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom top row is exact at $E$. By Lemma \ref{8312} p.~\ref{8312}, (c)$\then$(a), it suffices to check that the solid diagram 
 $$
 \begin{tikzcd}
 0\ar[r]&A\ar[d]\ar[r]&B\ar[d,"v"]\ar[r,"t"]&C\ar[d,equal]\ar[r]&0\\ 
@@ -6350,8 +6350,80 @@ can be completed as indicated. It suffices to prove $zy=xw$. The left square is 
 
 \sbs{About Section 8.7}
 
+\subsubsection{Lemma 8.7.3 p. 198}
 
-P.~199, Lemma 8.7.4 (ii). This comment is about the claim that the natural functor $E:\DD'_\SSS\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that
+We spell out the proof of the fact that $K(\al)$ is a monomorphism. Consider the commutative diagram 
+$$
+\begin{tikzcd} 
+Z\ar[ddd,"f"']\ar[r,"a"]&Y\ar[d,"c"']\ar[rr,"b"]&&X\ar[d,"d"]\\ 
+&W\ar[dd,"g"']\ar[rd,twoheadrightarrow,"h"]\ar[rr,"e"]&&V\ar[dd,twoheadrightarrow,"i"]\\ 
+&&U\ar[d,"j"]\\ 
+T\ar[r,"k"']&S\ar[r,twoheadrightarrow,"\ell"']&R\ar[r,"m"']&Q,
+\end{tikzcd}
+$$ 
+where the five rectangles are cartesian, and the three sequences 
+$$
+T\to S\to R\to 0,\quad X\to V\to Q\to 0,\quad Z\to W\to U\to 0
+$$ 
+are exact. 
+
+We must check the $j$ is a monomorphism. 
+
+(In the proof below we omit the compositions symbols $\ci$ and most of the parenthesis. We shall freely use the equivalence (a)$\ssi$(b) in Lemma \ref{8312} p.~\ref{8312}.)
+
+Let $u:P\to U$ satisfy $ju=0$, and let us show $u=0$. 
+
+There is a commutative square 
+$$
+\begin{tikzcd} 
+N\ar[d,"w"']\ar[r,twoheadrightarrow,"n"]&P\ar[d,"u"]\\ 
+W\ar[r,twoheadrightarrow,"h"']&U.
+\end{tikzcd}
+$$ 
+As $\ell gw=jhw=jun=0$, there is a commutative diagram 
+$$
+\begin{tikzcd} 
+M\ar[d,"t"']\ar[r,twoheadrightarrow,"p"]&N\ar[d,"gw"']\ar[rd,"0"]\\ 
+T\ar[r,"k"']&S\ar[r,"\ell"']&R.
+\end{tikzcd}
+$$ 
+As $iewp=m\ell gwp=m\ell kt=0$, there is a commutative diagram 
+$$
+\begin{tikzcd} 
+L\ar[d,"x"']\ar[r,twoheadrightarrow,"q"]&M\ar[d,"ewp"']\ar[rd,"0"]\\ 
+X\ar[r,"d"']&V\ar[r,"i"']&Q.
+\end{tikzcd}
+$$
+
+As $Z\iso T\oplus X$, we can introduce the coprojections $a'$ and $f'$ indicated below:
+$$
+\begin{tikzcd} 
+Z\ar[ddd,xshift=0.7ex,"f"]\ar[r,"a"]&Y\ar[d,"c"']\ar[rr,"b"]&&X\ar[d,"d"]\ar[lll,bend right,"a'"']\\ 
+&W\ar[dd,"g"']\ar[rd,twoheadrightarrow,"h"]\ar[rr,"e"]&&V\ar[dd,twoheadrightarrow,"i"]\\ 
+&&U\ar[d,"j"]\\ 
+T\ar[uuu,xshift=-0.7ex,"f'"]\ar[r,"k"']&S\ar[r,twoheadrightarrow,"\ell"']&R\ar[r,"m"']&Q.
+\end{tikzcd}
+$$ 
+
+Define $z:L\to Z$ by $z:=f'tq+a'x$. We claim 
+\begin{equation}\lb{caz}
+caz=wpq.
+\end{equation} 
+It suffices to verify 
+$$
+gcaz=gwpq,\quad ecaz=ewpq.
+$$ 
+The proof of the two above equalities is straightforward and left to the reader, so that we consider that \qr{caz} has been proved. We get 
+$$
+unpq=hwpq=hcaz=0.
+$$ 
+As $pq$ is an epimorphism, this implies $u=0$, as desired. q.e.d.
+
+%
+
+\subsubsection{Lemma 8.7.4 (ii) p. 199}
+
+This comment is about the claim that the natural functor $E:\DD'_\SSS\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that
 %
 \begin{equation}\lb{l}
 Q:\DD'\to\C\text{ is a localization of }\DD'\text{ by }\SSS.
