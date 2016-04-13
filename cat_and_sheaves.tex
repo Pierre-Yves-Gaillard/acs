@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -4884,8 +4884,10 @@ $\ic\pp\iso f$.
 
 \sbs{Brief Comments}
 
+\begin{comment}
+
 \begin{s} 
-P.~149, Definition 7.1.1. The set $\SSS$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pr{mor}). The proof of the following lemma (which will be used to prove \qr{l} p.~\pr{l}) is obvious. Neither Definition 7.1.1 nor the lemma below requires the Axiom of Universes.
+P.~149, Definition 7.1.1. The set $\SSS$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pr{mor}). The proof of the following lemma (which will be used to prove \qr{qdd} p.~\pr{qdd}) is obvious. Neither Definition 7.1.1 nor the lemma below requires the Axiom of Universes.
 
 \begin{lem}\lb{711}
 Let 
@@ -4903,6 +4905,8 @@ $$
 are mutually quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\SSS$. 
 \end{lem}
 \end{s}
+
+\end{comment}
 
 %
 
@@ -5299,7 +5303,7 @@ If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\co
 %
 
 \begin{s}\lb{745}%\sbs{Remark 7.4.5 (p.~163)}\lb{745}
-P. 163, Remark 7.4.5. In this \S we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
+P. 163, Remark 7.4.5. In this \S\ we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
 
 Let $\SSS$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pr{737} implies that the functors 
 $$
@@ -6350,9 +6354,9 @@ can be completed as indicated. It suffices to prove $zy=xw$. The left square is 
 
 \sbs{About Section 8.7}
 
-\subsubsection{Lemma 8.7.3 p. 198}
+\subsubsection{Lemma 8.7.3 p. 198}\lb{873}
 
-We spell out the proof of the fact that $K(\al)$ is a monomorphism. Consider the commutative diagram 
+Let us spell out the proof of the fact that $K(\al)$ is a monomorphism. Consider the commutative diagram 
 $$
 \begin{tikzcd} 
 Z\ar[ddd,"f"']\ar[r,"a"]&Y\ar[d,"c"']\ar[rr,"b"]&&X\ar[d,"d"]\\ 
@@ -6419,17 +6423,66 @@ unpq=hwpq=hcaz=0.
 $$ 
 As $pq$ is an epimorphism, this implies $u=0$, as desired. q.e.d.
 
-%
+\begin{comment}
 
-\subsubsection{Lemma 8.7.4 (ii) p. 199}
+\subsubsection{Lemma 8.7.4 (ii) p. 199} 
 
-This comment is about the claim that the natural functor $E:\DD'_\SSS\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that
-%
-\begin{equation}\lb{l}
+This comment is about the claim that the natural functor $E:\DD'_\SSS\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that 
+\begin{equation}\lb{qdd}
 Q:\DD'\to\C\text{ is a localization of }\DD'\text{ by }\SSS.
-\end{equation}
+\end{equation} 
+To prove \qr{qdd}, one can apply Lemma~\ref{711} p.~\pr{711} with $R:\C\to\DD'$ defined by $R(X):=(0\to X)$. 
+
+\end{comment}
+
 %
-To prove \qr{l}, one can apply Lemma~\ref{711} p.~\pr{711} with $R:\C\to\DD'$ defined by $R(X):=(0\to X)$. 
+
+\subsubsection{Lemma 8.7.5 (i) p.~199}
+
+Let us spell out the proof of the fact that $\Coker(u)\to\Coker(v)$ is a monomorphism. We shall use the same notation and arguments as in \S\ref{873} p.~\pr{873}.
+
+In the commutative diagram 
+$$
+\begin{tikzcd} 
+Y'\ar[d,twoheadrightarrow,"a"']\\ 
+Z\ar[d,"p"']\ar[r,"q"]&Y\ar[d,"u"]\\ 
+X'\ar[d,twoheadrightarrow,"c"']\ar[r,"b"]&X\ar[d,twoheadrightarrow,"d"]\\ 
+W'\ar[r,"e"']&W
+\end{tikzcd}
+$$ 
+the square $ZYXX'$ is cartesian and the sequences 
+$$
+Y\to X\to W\to0,\quad Y'\to X'\to W'\to0
+$$ 
+are exact. 
+
+We claim that $e$ is a monomorphism.
+
+Let $w':V\to W'$. It suffices to prove $ew'=0$. 
+
+Form the commutative square
+$$
+\begin{tikzcd} 
+U\ar[d,"x'"']\ar[r,twoheadrightarrow,"f"]&V\ar[d,"w'"]\\ 
+X'\ar[r,twoheadrightarrow,"c"']&W'.
+\end{tikzcd}
+$$ 
+As we have $dbx'=ecx'=ew'f=0$, we can form the commutative diagram
+$$
+\begin{tikzcd} 
+T\ar[d,"y"']\ar[r,twoheadrightarrow,"g"]&U\ar[d,"bx'"']\ar[rd,"0"]\\ 
+Y\ar[r,"u"']&X\ar[r,"d"']&W.
+\end{tikzcd}
+$$ 
+As we have $bx'g=uy$, we get a morphism $z:T\to Z$ such that $pz=x'g$ and $qz=y$, and we can form the commutative square
+$$
+\begin{tikzcd} 
+S\ar[d,"y'"']\ar[r,twoheadrightarrow,"h"]&T\ar[d,"z"]\\ 
+Y'\ar[r,twoheadrightarrow,"a"']&Z.
+\end{tikzcd}
+$$ 
+
+This yields $w'fgh=cx'gh=cpzh=cpay'=0$.
 
 %% 
 
