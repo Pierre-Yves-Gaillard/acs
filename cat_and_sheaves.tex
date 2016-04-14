@@ -5805,6 +5805,23 @@ monomorphism.
 
 %
 
+\begin{s}\lb{8311c} 
+The converse to Lemma~\ref{8311} p.~\pr{8311} holds:
+
+Consider the commutative square \qr{837} p.~\pr{837}. If $\Ker f'\xr\sim\Ker f$, then \qr{837} is cartesian. 
+
+Proof. Set $Z:=X\tm_YY'$, form the obvious commutative diagram with exact rows
+$$
+\begin{tikzcd}
+0\ar[r]&W'\ar[d,"\sim"]\ar[r]&X'\ar[d]\ar[r,"f'"]&Y'\ar[d,equal]\\ 
+0\ar[r]&W\ar[r]&Z\ar[r]&Y',
+\end{tikzcd} 
+$$ 
+and apply Theorem~\ref{5l} p.~\pr{5l} and Theorem~\ref{5ld} p.~\pr{5ld}.
+\end{s}
+
+%
+
 \begin{s}
 P.~180, Lemma 8.3.12. Here is a minor variant:
 
@@ -5842,7 +5859,7 @@ Equivalence (a)$\ssi$(b) is proved in the book, and Equivalence (a)$\ssi$(c) fol
 \begin{s} 
 Page 181, the Five Lemma (minor variant). 
 
-\begin{thm}[Lemma 8.3.13 p.~181, Five Lemma] 
+\begin{thm}[Lemma 8.3.13 p.~181, Five Lemma]\lb{5l} 
 Consider the commutative diagram of complexes 
 $$
 \begin{tikzcd}
@@ -5883,6 +5900,28 @@ $$
 0=a^1a^0x^0=a^1x^1=x^2.
 $$ 
 \end{proof}
+\end{s}
+
+%
+
+\begin{s} 
+P.~181, Lemma 8.3.13 (Five Lemma). We spell out the dual of Theorem~\ref{5l} above.
+\begin{thm}\lb{5ld} 
+Consider the commutative diagram of complexes 
+$$
+\begin{tikzcd}
+X^0\arrow[two heads]{d}[swap]{f^0}\arrow{r}{a^0}&
+X^1\arrow{d}[swap]{f^1}\arrow{r}{a^1}&
+X^2\arrow[two heads]{d}{f^2}\arrow{r}{a^2}&
+X^3\arrow[tail]{d}{f^3}\\ 
+Y^0\arrow{r}[swap]{b^0}&
+Y^1\arrow{r}[swap]{b^1}&
+Y^2\arrow{r}[swap]{b^2}&
+Y^3,
+\end{tikzcd}
+$$
+where $f^0$ and $f^2$ are epimorphisms, $f^3$ is a monomorphism, and $X^0\to X^1\to X^2$ and $Y^1\to Y^2\to Y^3$ are exact. Then $f^1$ is an epimorphism. 
+\end{thm}
 \end{s}
 
 %
@@ -6046,17 +6085,27 @@ q.e.d.
 
 %
 
-\begin{s}\lb{gcsbc}
-P.~186, Proposition 8.3.27 (i). By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
-\end{s}
+\subsubsection{Corollary 8.3.26 (p.~186)}
+ 
+Recall the statement:
+
+Let $\C$ be a Grothendieck category and let $X\in\C$. Then the set of quotients of $X$ and the the set of subobjects of $X$ are small. 
+
+The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\dots and Proposition 5.2.3 (v)''.
+
+%
+
+\subsubsection{Proposition 8.3.27 (i) p.~186}\lb{gcsbc}
+
+By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
 
 %% 
 
 \sbs{About Section 8.4} 
 
-\subsubsection{Proposition 8.4.7 (p. 187)}
- 
-Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\tm_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
+%\subsubsection{Proposition 8.4.7 (p. 187)}
+
+This is about Proposition 8.4.7 p. 187. Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\tm_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
 It suffices to show that there is a morphism $a_0:G_i\to Y_0$ satisfying $l_0\ci a_0=\pp$:
 $$
@@ -6116,16 +6165,6 @@ l_0\ci a_0=l_0\ci\ld^{-1}\ci a_1=l_1\ci\ld\ci\ld^{-1}\ci a_1=l_1\ci a_1=\pp.
 $$ 
 q.e.d.
 % https://docs.google.com/document/d/1r1eBAIdNxQNO4uJ7N1Ki3ewyPQBoYIxLLq5I54ciVa8/edit 
-
-%
-
-\subsubsection{Corollary 8.3.26 (p.~189)}
- 
-Recall the statement:
-
-Let $\C$ be a Grothendieck category and let $X\in\C$. Then the set of quotients of $X$ and the the set of subobjects of $X$ are small. 
-
-The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\dots and Proposition 5.2.3 (v)''.
 
 %% 
 
@@ -6193,7 +6232,7 @@ $$
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by \S\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -6423,6 +6462,69 @@ unpq=hwpq=hcaz=0.
 $$ 
 As $pq$ is an epimorphism, this implies $u=0$, as desired. q.e.d.
 
+%
+
+\subsubsection{Proof of Lemma 8.7.6 p. 200}
+
+The statement 
+
+``The condition that $K(\al)$ is an isomorphism is equivalent to the fact that the
+sequence $Y\to X\oplus Y\to X\to0$ is exact'' 
+
+\nn follows from \S\ref{8311c} p.~\pr{8311c}.
+
+%
+
+\subsubsection{Proof of (8.7.2) p. 200}
+
+Let us spell out the proof of the claim 
+
+``The condition $K(\al)=0$ implies that $X\tm_{X'}Y'\to X$ is an epimorphism.''
+
+\nn(This is the third sentence of the last paragraph.)
+
+We shall use the same notation and arguments as in Section~\ref{873} p.~\pr{873}.
+
+We have the commutative square with exact columns 
+$$
+\begin{tikzcd} 
+Y\ar[d,"u"']\ar[r,"\al_0"]&Y'\ar[d,"v"]\\ 
+X\ar[d,"u'"']\ar[r,"\al_1"]&X'\ar[d,"v'"]\\ 
+Ku\ar[d,"0"]\ar[r]&Kv\ar[d]\\ 
+0&0.
+\end{tikzcd}
+$$ 
+
+Set $Z:=X\tm_{X'}Y'$ and write $p:Z\to X$ and $q:Z\to Y'$ for the projections, so that we must show that $p$ is an epimorphism. Let $x:W\to X$ be given. It suffices to complete the solid diagram 
+$$
+\begin{tikzcd} 
+V\ar[d,dashed,"z"']\ar[r,dashed,two heads,"a"]&W\ar[d,"x"]\\ 
+Z\ar[r,"p"']&X
+\end{tikzcd}
+$$ 
+as indicated. As $v'\al_0x=0$, we get the commutative diagram 
+$$
+\begin{tikzcd} 
+V\ar[d,"y'"']\ar[r,two heads,"a"]&W\ar[d,"\al_0x"']\ar[rd,"0"]\\ 
+Y'\ar[r,"v"']&X'\ar[r,"v'"']&Kv.
+\end{tikzcd}
+$$ 
+As $\al_0x=vy'$ we get the commutative diagram 
+$$
+\begin{tikzcd} 
+V\ar[d,"xa"']\ar[r,"y'"]\ar[rd,"z"]&Y'\\ 
+X&Z\ar[l,"p"]\ar[u,"q"'].
+\end{tikzcd}
+$$ 
+
+%
+
+\subsubsection{Commutativity of the last diagram p. 200}
+
+I failed to prove that the triangle $Y_1Y'X_1$ commutes, but it seems to me that this is not needed.
+
+%
+
 \begin{comment}
 
 \subsubsection{Lemma 8.7.4 (ii) p. 199} 
@@ -6439,7 +6541,7 @@ To prove \qr{qdd}, one can apply Lemma~\ref{711} p.~\pr{711} with $R:\C\to\DD'$ 
 
 \subsubsection{Lemma 8.7.5 (i) p.~199}
 
-Let us spell out the proof of the fact that $\Coker(u)\to\Coker(v)$ is a monomorphism. We shall use the same notation and arguments as in \S\ref{873} p.~\pr{873}.
+Let us spell out the proof of the fact that $\Coker(u)\to\Coker(v)$ is a monomorphism. We shall use the same notation and arguments as in Section~\ref{873} p.~\pr{873}.
 
 In the commutative diagram 
 $$
