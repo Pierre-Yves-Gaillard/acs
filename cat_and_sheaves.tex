@@ -5805,23 +5805,6 @@ monomorphism.
 
 %
 
-\begin{s}\lb{8311c} 
-The converse to Lemma~\ref{8311} p.~\pr{8311} holds:
-
-Consider the commutative square \qr{837} p.~\pr{837}. If $\Ker f'\xr\sim\Ker f$, then \qr{837} is cartesian. 
-
-Proof. Set $Z:=X\tm_YY'$, form the obvious commutative diagram with exact rows
-$$
-\begin{tikzcd}
-0\ar[r]&W'\ar[d,"\sim"]\ar[r]&X'\ar[d]\ar[r,"f'"]&Y'\ar[d,equal]\\ 
-0\ar[r]&W\ar[r]&Z\ar[r]&Y',
-\end{tikzcd} 
-$$ 
-and apply Theorem~\ref{5l} p.~\pr{5l} and Theorem~\ref{5ld} p.~\pr{5ld}.
-\end{s}
-
-%
-
 \begin{s}
 P.~180, Lemma 8.3.12. Here is a minor variant:
 
@@ -5857,7 +5840,7 @@ Equivalence (a)$\ssi$(b) is proved in the book, and Equivalence (a)$\ssi$(c) fol
 %
 
 \begin{s} 
-Page 181, the Five Lemma (minor variant). 
+Page 181, the Five Lemma (minor variant of the proof). 
 
 \begin{thm}[Lemma 8.3.13 p.~181, Five Lemma]\lb{5l} 
 Consider the commutative diagram of complexes 
@@ -5923,6 +5906,27 @@ $$
 where $f^0$ and $f^2$ are epimorphisms, $f^3$ is a monomorphism, and $X^0\to X^1\to X^2$ and $Y^1\to Y^2\to Y^3$ are exact. Then $f^1$ is an epimorphism. 
 \end{thm}
 \end{s}
+
+%
+
+\begin{comment}
+
+\begin{s}\lb{8311c} 
+The converse to Lemma~\ref{8311} p.~\pr{8311} holds:
+
+Consider the commutative square \qr{837} p.~\pr{837}. If $\Ker f'\xr\sim\Ker f$, then \qr{837} is cartesian. 
+
+Proof. Set $Z:=X\tm_YY'$, form the obvious commutative diagram with exact rows
+$$
+\begin{tikzcd}
+0\ar[r]&W'\ar[d,"\sim"]\ar[r]&X'\ar[d]\ar[r,"f'"]&Y'\ar[d,equal]\\ 
+0\ar[r]&W\ar[r]&Z\ar[r]&Y',
+\end{tikzcd} 
+$$ 
+and apply Theorem~\ref{5l} p.~\pr{5l} and Theorem~\ref{5ld} p.~\pr{5ld}.
+\end{s}
+
+\end{comment}
 
 %
 
@@ -6464,14 +6468,27 @@ As $pq$ is an epimorphism, this implies $u=0$, as desired. q.e.d.
 
 %
 
-\subsubsection{Proof of Lemma 8.7.6 p. 200}
+\subsubsection{Proof of (8.7.3) p. 200}
 
-The statement 
+Right after (8.7.4) we read
 
 ``The condition that $K(\al)$ is an isomorphism is equivalent to the fact that the
-sequence $Y\to X\oplus Y\to X\to0$ is exact'' 
+sequence $Y\to X\oplus Y'\to X'\to0$ is exact.''
 
-\nn follows from \S\ref{8311c} p.~\pr{8311c}.
+It seems to me we get a counterexample by setting $0\iso Y\iso X\iso X'\not\iso Y'$, but we can prove
+
+\nn(8.7.3) for $\al:u\to v$ in $\Mor(\DD_0)$, if $K(\al)$ is an isomorphism, then $A'(\al)$ is an isomorphism
+
+\nn as follows: 
+
+Let $\al:u\to v$ in $\Mor(\DD_0)$ be such that $K(\al)$ is an isomorphism. By Proposition 8.3.18 p.~183, the diagram below commutes: 
+$$
+\begin{tikzcd} 
+A'(u)\ar[d,equal]\ar[rr,"A'(\al)"]&&A'(v)\ar[d,equal]\\ 
+\Coker A(u)\ar[d,"\sim"']\ar[rr,"\Coker A(\al)"]&&\Coker A'(v)\ar[d,"\sim"]\\ 
+A(K(u))\ar[rr,"A(K(\al))","\sim"']&&A(K(v)).
+\end{tikzcd}
+$$
 
 %
 
