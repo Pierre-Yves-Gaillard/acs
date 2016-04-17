@@ -6416,7 +6416,7 @@ are exact.
 
 We must check the $j$ is a monomorphism. 
 
-(In the proof below we omit the compositions symbols $\ci$ and most of the parenthesis. We shall freely use the equivalence (a)$\ssi$(b) in Lemma \ref{8312} p.~\ref{8312}.)
+(In the proof below we omit the composition symbols $\ci$ and most of the parenthesis. We shall freely use the equivalence (a)$\ssi$(b) in Lemma \ref{8312} p.~\ref{8312}.)
 
 Let $u:P\to U$ satisfy $ju=0$, and let us show $u=0$. 
 
@@ -6603,6 +6603,129 @@ $$
 
 This yields $w'fgh=cx'gh=cpzh=cpay'=0$.
 
+%
+
+\subsubsection{Proof of Lemma 8.7.7 p. 201}
+
+The last sentence of the proof of Lemma 8.7.7 uses Exercise 8.19 p.~204 (see Section \ref{819} p.~\pr{819} below).
+
+(In the rest of this section we omit the composition symbols $\ci$ and most of the parenthesis, we freely use Lemma~\ref{8311} p.~\pr{8311} and Lemma~\ref{8312} p.~\pr{8312}, and we let the setting of Lemma 8.7.7 of the book be in force.)
+
+\begin{lem}\lb{877}
+If $Z\xr aY\xr bX\to0$ is an exact sequence in $\C$, then there is an exact commutative diagram 
+\begin{equation}\lb{zyx}
+\begin{tikzcd} 
+T\ar[d,"h"']\ar[r,"k"]&S\ar[d,"i"]\ar[r,"\ell"]&R\ar[d,"j"]\ar[r]&0\\ 
+W\ar[d,"c"']\ar[r,"f"]&V\ar[d,"d"]\ar[r,"g"]&U\ar[d,"e"]\ar[r]&0\\ 
+Z\ar[d]\ar[r,"a"']&Y\ar[d]\ar[r,"b"']&X\ar[d]\ar[r]&0\\ 
+0&0&0
+\end{tikzcd}
+\end{equation} 
+with $R,S,T,U,V,W$ in $\J$.
+\end{lem}
+
+\begin{lem}\lb{877a}
+The solid diagram in $\C$ below can be completed as indicated to a commutative diagram in $\C$ with $Z$ in $\J$: 
+$$
+\begin{tikzcd} 
+\Ker b\ar[d,dashed,two heads,"c"']\ar[r,dashed,rightarrowtail,"a"]&Z\ar[d,dashed,two heads,"d"]\ar[r,dashed,two heads,"b"]&Y\ar[d,two heads,"e"]\\ 
+\Ker g\ar[r,rightarrowtail,"f"']&X\ar[r,two heads,"g"']&W.
+\end{tikzcd}
+$$
+\end{lem}
+
+\begin{proof}[Proof of Lemma \ref{877a}]
+Form the cartesian square 
+$$
+\begin{tikzcd} 
+V\ar[d,"i"']\ar[r,"h"]&Y\ar[d,two heads,"e"]\\ 
+X\ar[r,,two heads,"g"']&W.
+\end{tikzcd}
+$$ 
+Note that $h$ and $i$ are epimorphisms. Let $\begin{tikzcd}Z\ar[r,two heads,"j"]&V\end{tikzcd}$ be an epimorphism in $\C$ with $Z$ in $\J$. We get the commutative diagram 
+$$
+\begin{tikzcd} 
+\Ker b\ar[dd,"c"']\ar[r,rightarrowtail,"a"]&Z\ar[d,two heads,"j"']\ar[dr,two heads,"b"]\\ 
+&V\ar[d,two heads,"i"']\ar[r,two heads,"h"']&Y\ar[d,two heads,"e"]\\ 
+\Ker g\ar[r,rightarrowtail,"f"']&X\ar[r,two heads,"g"']&W.
+\end{tikzcd}
+$$ 
+Set $d:=ij$. It only remains to check that $c$ is an epimorphism. Let $x:U\to\Ker g$. It suffices to complete the solid diagram 
+$$
+\begin{tikzcd} 
+T\ar[d,dashed,"z"']\ar[r,dashed,two heads,"k"]&U\ar[d,"x"]\\ 
+\Ker b\ar[r,"c"']&\Ker g
+\end{tikzcd}
+$$ 
+as indicated. There is a morphism $v:U\to V$ such that 
+$$
+\begin{tikzcd} 
+&Y\\ 
+U\ar[ru,"0"]\ar[r,"v"]\ar[rd,"fx"']&V\ar[u,two heads,"h"']\ar[d,two heads,"i"]\\ 
+&X
+\end{tikzcd}
+$$ 
+commutes, and there are morphisms $k$ and $z'$ such that 
+$$
+\begin{tikzcd} 
+T\ar[d,"z'"']\ar[r,two heads,"k"]&U\ar[d,"x"]\\ 
+Z\ar[r,two heads,"j"']&V
+\end{tikzcd}
+$$ 
+commutes. As we have $bz'=hjz'=hvk=0$, there is a morphism $z:T\to\Ker b$ such that $az=z'$, and we get $fcz=ijaz=ijz'=ivk=fxk$. Since $f$ is a monomorphism, this yields $cz=xk$, as desired. 
+\end{proof}
+
+The above proof shows that we have in fact:
+
+\begin{lem}\lb{877b}
+The solid diagram in $\C$ below can be completed as indicated to a commutative diagram in $\C$ with $Z$ in $\J$: 
+$$
+\begin{tikzcd} 
+&\Ker b\ar[d,dashed,rightarrowtail]\ar[r,dashed,two heads]&\Ker c\ar[d,rightarrowtail]\\ 
+\Ker a\ar[d,dashed,two heads]\ar[r,dashed,rightarrowtail]&Z\ar[d,dashed,two heads,"b"']\ar[r,dashed,two heads,"a"]&Y\ar[d,two heads,"c"]\\ 
+\Ker d\ar[r,rightarrowtail]&X\ar[r,two heads,"d"']&W.
+\end{tikzcd}
+$$
+\end{lem}
+
+\begin{proof}[Proof of Lemma \ref{877}] 
+Let $e:U\epi X$ be an epimorphism in $\C$ with $U$ in $\J$. A first application of Lemma~\ref{877b} gives a commutative diagram 
+$$
+\begin{tikzcd} 
+&&\Ker d\ar[d,rightarrowtail]\ar[r,two heads,"m"]&\Ker e\ar[d,rightarrowtail]\\ 
+&\Ker g\ar[d,two heads]\ar[r,rightarrowtail]&V\ar[d,two heads,"d"]\ar[r,two heads,"g"]&U\ar[d,two heads,"e"]\\ 
+Z\ar[r,two heads]&\Ker b\ar[r,rightarrowtail]&Y\ar[r,two heads,"b"']&X
+\end{tikzcd}
+$$ 
+with $V$ in $\J$. A second application of Lemma~\ref{877b} gives a commutative diagram 
+$$
+\begin{tikzcd} 
+&&\Ker d\ar[d,rightarrowtail]\ar[r,two heads,"m"]&\Ker e\ar[d,rightarrowtail]\\ 
+W\ar[d,two heads,"c"']\ar[r,two heads]&\Ker g\ar[d,two heads]\ar[r,rightarrowtail]&V\ar[d,two heads,"d"]\ar[r,two heads,"g"]&U\ar[d,two heads,"e"]\\ 
+Z\ar[r,two heads]&\Ker b\ar[r,rightarrowtail]&Y\ar[r,two heads,"b"']&X
+\end{tikzcd}
+$$ 
+with $W$ in $\J$. Let $R\epi\Ker e$ be an epimorphism in $\C$ with $R$ in $\J$. A third application of Lemma~\ref{877b} gives a commutative diagram 
+$$
+\begin{tikzcd} 
+&\Ker\ell\ar[d,two heads]\ar[r,rightarrowtail]&S\ar[d,two heads]\ar[r,two heads,"\ell"]&R\ar[d,two heads]\\ 
+&\Ker m\ar[r,rightarrowtail]&\Ker d\ar[d,rightarrowtail]\ar[r,two heads,"m"]&\Ker e\ar[d,rightarrowtail]\\ 
+W\ar[d,two heads]\ar[r,two heads]&\Ker g\ar[d,two heads]\ar[r,rightarrowtail]&V\ar[d,two heads,"d"]\ar[r,two heads,"g"]&U\ar[d,two heads,"e"]\\ 
+Z\ar[r,two heads]&\Ker b\ar[r,rightarrowtail]&Y\ar[r,two heads,"b"']&X
+\end{tikzcd}
+$$ 
+with $S$ in $\J$. Let $\begin{tikzcd}\Ker c&T\ar[l,two heads]\ar[r,two heads]&\Ker\ell\end{tikzcd}$ be a diagram in $\C$ with $T$ in $\J$. We finally get 
+$$
+\begin{tikzcd} 
+T\ar[d,two heads]\ar[r,two heads]&\Ker\ell\ar[d,two heads]\ar[r,rightarrowtail]&S\ar[d,two heads]\ar[r,two heads,"\ell"]&R\ar[d,two heads]\\ 
+\Ker c\ar[d,rightarrowtail]&\Ker m\ar[r,rightarrowtail]&\Ker d\ar[d,rightarrowtail]\ar[r,two heads,"m"]&\Ker e\ar[d,rightarrowtail]\\ 
+W\ar[d,two heads,"c"']\ar[r,two heads]&\Ker g\ar[d,two heads]\ar[r,rightarrowtail]&V\ar[d,two heads,"d"]\ar[r,two heads,"g"]&U\ar[d,two heads,"e"]\\ 
+Z\ar[r,two heads]&\Ker b\ar[r,rightarrowtail]&Y\ar[r,two heads,"b"']&X,
+\end{tikzcd}
+$$ 
+as required. 
+\end{proof}
+
 %% 
 
 \sbs{About the Exercises} 
@@ -6691,7 +6814,6 @@ The exercise follows easily from Lemmas \ref{817a} and \ref{817b} below.
 Let us denote the cokernel of any morphism $h:Y\to Z$ in any abelian category by $Z/\Ima h$. 
 
 Recall that, by Proposition 8.3.18 p.~183 of the book, an additive functor between abelian categories $F:\C\to\C'$ is left exact if and only if
-%
 \begin{equation}\lb{sex1}
 \left.
 \begin{matrix}
@@ -6703,7 +6825,6 @@ Recall that, by Proposition 8.3.18 p.~183 of the book, an additive functor betwe
 \end{equation}
 
 Consider the condition
-%
 \begin{equation}\lb{sex2}
 \left.
 \begin{matrix}
@@ -6724,21 +6845,17 @@ $$
 0\to X'\xr fX\xr gX''
 $$
 be exact. We must check that 
-%
 \begin{equation}\lb{0fx'fxfx''}
 0\to F(X')\to F(X)\to F(X'')
 \end{equation} 
-% 
 is exact. Let $I$ be the image of $g$. The sequence 
 $$ 
 0\to X'\to X\to I\to0
 $$ 
 being exact, so is 
-%
 \begin{equation}\lb{0fx'fxfi}
 0\to F(X')\to F(X)\to F(I).
 \end{equation} 
-% 
 This implies that \qr{0fx'fxfx''} is exact at $F(X')$. The sequence 
 $$ 
 0\to I\to X''\to X''/I\to0
@@ -6748,22 +6865,17 @@ $$
 0\to F(I)\to F(X''),
 $$  
 and we have 
-%
 \begin{equation}\lb{kfxfx'}
 \Ker\big(F(X)\to F(X'')\big)\iso\Ker\big(F(X)\to F(I)\big).
 \end{equation} 
-% 
 The exactness of \qr{0fx'fxfi} implies 
-%
 \begin{equation}\lb{kfxfi}
 \Ker\big(F(X)\to F(I)\big)\iso\Ima\big(F(X')\to F(X)\big), 
 \end{equation} 
-% 
 and the exactness of \qr{0fx'fxfx''} at $F(X)$ follows from \qr{kfxfx'} and \qr{kfxfi}. 
 \end{proof} 
 
 Consider the conditions below on our additive functor $F:\C\to\C'$:
-%
 \begin{equation}\lb{ex1}
 \left.
 \begin{matrix}
@@ -6794,11 +6906,9 @@ $$
 X'\xr fX\xr gX''
 $$
 be exact. We must show that 
-%
 \begin{equation}\lb{fx'fxfx''}
 F(X')\to F(X)\to F(X'')
 \end{equation} 
-% 
 is exact. Let $K_g,K_f$ and $I_g$ denote the indicated kernels and image. The sequence 
 $$ 
 0\to I_g\to X''\to X''/I_g\to 0
@@ -6808,11 +6918,9 @@ $$
 0\to F(I_g)\to F(X''), 
 $$ 
 and we get 
-%
 \begin{equation}\lb{kfxfx''}
 \Ker\big(F(X)\to F(X'')\big)\iso\Ker\big(F(X)\to F(I_g)\big). 
 \end{equation} 
-% 
 The sequence 
 $$ 
 0\to K_g\to X\to I_g\to 0
@@ -6822,11 +6930,9 @@ $$
 F(K_g)\to F(X)\to F(I_g), 
 $$ 
 and we get 
-%
 \begin{equation}\lb{kfxfig}
 \Ker\big(F(X)\to F(I_g)\big)\iso\Ima\big(F(K_g)\to F(X)\big). 
 \end{equation} 
-% 
 The sequence 
 $$ 
 0\to K_f\to X'\to K_g\to 0 
@@ -6836,13 +6942,61 @@ $$
 F(X')\to F(K_g)\to0,  
 $$ 
 and the isomorphism 
-%
 \begin{equation}\lb{ifkg}
 \Ima\big(F(K_g)\to F(X)\big)\iso\Ima\big(F(X')\to F(X)\big)  
 \end{equation} 
-% 
 results from Lemma~\ref{817b1} p.~\pr{817b1} with $F(X')\to F(K_g)\to F(X)$ instead of \qr{e817} p.~\pr{e817}. The exactness of \qr{fx'fxfx''} follows from \qr{kfxfx''}, \qr{kfxfig}, and \qr{ifkg}.
 \end{proof} 
+
+%%
+
+\subsubsection{Exercise 8.19 (p. 204)}\lb{819}
+
+Let 
+$$
+\begin{tikzcd} 
+&0\ar[d]&0\ar[d]&0\ar[d]\\ 
+0\ar[r]&Z\ar[d,"c"']\ar[r,"a"]&Y\ar[d,"d"]\ar[r,"b"]&X\ar[d,"e"]\\ 
+0\ar[r]&W\ar[d,"h"']\ar[r,"f"]&V\ar[d,"i"]\ar[r,"g"]&U\\ 
+&T\ar[r,"j"']&S
+\end{tikzcd}
+$$ 
+be a commutative diagram in an abelian category. If the row containing $a$, the row containing $f$, and the column containing $d$ are exact, then the column containing $c$ is exact. 
+
+\begin{proof}
+(In this proof we omit the composition symbols $\ci$ and most of the parenthesis, and we freely use Lemma~\ref{8311} p.~\pr{8311} and Lemma~\ref{8312} p.~\pr{8312}.)
+
+\nn Exactness at $Z$: If $z:R\to Z$ satisfies $cz=0$, we get $daz=fcz=0$, and thus $z=0$.
+
+\nn Exactness at $W$: Let $w:Q\to W$ satisfy $hw=0$: 
+$$
+\begin{tikzcd}
+&Q\ar[dr,"0"]\ar[d,"w"']\\ 
+Z\ar[r,"c"']&W\ar[r,"h"']&T.
+\end{tikzcd}
+$$ 
+The equalities $ifw=jhw=0$ yield the commutative diagram 
+$$
+\begin{tikzcd} 
+P\ar[d,"y"']\ar[r,two heads,"k"]&Q\ar[d,"fw"']\ar[dr,"0"]\\ 
+Y\ar[r,"d"']&V\ar[r,"i"']&S,
+\end{tikzcd}
+$$ 
+and the equalities $eby=gdy=gfwk=0$ and thus $by=0$ yield the commutative diagram 
+$$
+\begin{tikzcd} 
+N\ar[d,"z"']\ar[r,two heads,"\ell"]&P\ar[d,"y"']\ar[dr,"0"]\\ 
+Z\ar[r,"a"']&Y\ar[r,"b"']&X.
+\end{tikzcd}
+$$ 
+This implies $fcz=daz=dy\ell=fwk\ell$, and thus $cz=wk\ell$: 
+$$
+\begin{tikzcd}
+N\ar[d,"z"']\ar[r,two heads,"k\ell"]&Q\ar[dr,"0"]\ar[d,"w"']\\ 
+Z\ar[r,"c"']&W\ar[r,"h"']&T.
+\end{tikzcd}
+$$ 
+\end{proof}
 
 %%%%
 
