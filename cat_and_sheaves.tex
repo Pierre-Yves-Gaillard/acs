@@ -403,7 +403,7 @@ should be ``a sequence
 
 \nn$*$ P.~220, part (ii) of the proof of Proposition 9.2.9, last sentence of the first paragraph: $s(j)$ should be $\tilde s(j)$.
 
-\nn$*$ P.~221, Lemma 9.2.15. ``Let $A\in\C$'' should be ``Let $A\in\C^\wg$''.
+\nn$*$ P.~221, Lemma 9.2.15. ``Let $A\in\C$'' should be ``Let $A\in\Ind(\C)$''.
 
 \nn$*$ P.~224, proof of Proposition 9.3.2, line 2: ``there exist maps $S\to A(G)\to S$ whose composition is the identity'' should be ``there exist maps $A(G)\to S$ such that the composition $S\to A(G)\to S$ is the identity of $S$''.
 
@@ -7012,7 +7012,7 @@ P.~217, beginning of Section 9.2.
 \begin{prop}\lb{ppifil}
 Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
 
-\nn{\em(a)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
+\nn{\em(a)} For any category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
 \al:I\tm J^{\op}\to\Set
 $$ 
@@ -7022,7 +7022,7 @@ $$
 $$ 
 is bijective.
 
-\nn{\em(b)} For any small category $J$ with $\card(\Mor(J))<\pi$ and any functor 
+\nn{\em(b)} For any category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
 \al:I\tm J^{\op}\to\Set
 $$ 
@@ -7038,7 +7038,7 @@ is surjective.
 
 {\em(c2)} for any $i$ and $j$ in $I$ and for any $B\subset\Hom_I(i,j)$ such that $\card(B)<\pi$ there is a morphism $j\to k$ in $I$ such that the composition $i\xr sj\to k$ does not depend on $s\in B$.
 
-\nn{\em(d)} For any small category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim\Hom_I(\pp,i)\neq\varnothing$. 
+\nn{\em(d)} For any category $J$ such that $\card(\Mor(J))<\pi$ and any functor $\pp:J\to I$ there is an $i$ in $I$ such that $\lim\Hom_I(\pp,i)\neq\varnothing$. 
 \end{prop}
 
 \begin{proof}
@@ -7046,14 +7046,16 @@ Implications (c) $\ssi$ (d) $\then$ (a) are proved in Proposition 9.2.1 p.~217 a
 \end{proof}
 
 \begin{df}[$\pi$-filtrant category] 
-Let $\pi$ be an infinite cardinal and $I$ a small category. Then $I$ is $\pi$-{\em filtrant}\index{$\pi$-filtrant} if (and only if) the equivalent conditions of Proposition~\ref{ppifil} are satisfied.
+Let $\pi$ be an infinite cardinal and $I$ a category. Then $I$ is $\pi$-{\em filtrant}\index{$\pi$-filtrant} if (and only if) the equivalent conditions of Proposition~\ref{ppifil} are satisfied.
 \end{df}
 \end{s}
 
 %
 
 \begin{s}\lb{922}
-P.~218. One can make the following observation after Definition 9.2.2: If $I$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$, then $I$ is $\pi$-filtrant.
+P.~218. One can make the following observation after Definition 9.2.2: 
+
+If $I$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$, then $I$ is $\pi$-filtrant.
 
 \begin{proof}
 For $\pp:J\to I$ we have
@@ -7073,6 +7075,12 @@ Let $\pp:J\to I$ be a cofinal functor. If $J$ is $\pi$-filtrant, so is $I$.
 \end{lem}
 
 Clearly, $I$ satisfies conditions (a) and (b) in Proposition~\ref{ppifil} p.~\pr{ppifil}. 
+\end{s}
+
+%
+
+\begin{s}
+P.~219, proof of Remark 9.2.6. To prove that $I'$ is $\pi$-filtrant it is straightforward to check that $I'$ satisfies Conditions (c1) and (c2) in Proposition~\ref{ppifil} p.~\pr{ppifil}.
 \end{s}
 
 %
@@ -7106,8 +7114,12 @@ P.~220, proof of Corollary 9.2.11.
 If $\C$ admits small inductive limits and if $X$ is an object of $\C$, then $\C_\pi$ and $(\C_\pi)_X$ are $\pi$-filtrant. 
 \end{cor}
 
-This follows from \S\ref{922}.
+This follows from \S\ref{922}. Note that it suffices to assume that $\C$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$. (For the case of $(\C_\pi)_X$, see Lemma 2.1.12 p.~41 in the book.)
 \end{s}
+
+%
+
+%\begin{s} P.~221, Lemma 9.2.15. In the first sentence of the proof it is written ``$\C_A$ is cofinally small by Proposition 6.1.5 (see Remark 9.2.6).'' More simply, $\C_A$ is cofinally small because the identity of $A$ is a terminal object of $\C_A$ (recall that $A$ is in $\C$).\end{s} 
 
 %
 
@@ -7124,11 +7136,11 @@ To prove (ii)$\then$(i), let $J$ be a category satisfying
 $$
 \card(\Mor(J))<\pi,
 $$ 
-and let $\psi:J\to\C_A$ be a functor. We must find a $\xi$ in $\C_A$ satisfying 
+and let $\psi:J\to\C_A$ be a functor. It suffices find a $\xi$ in $\C_A$ satisfying 
 $$
-\lim\Hom_{\C_A}(\psi,\xi)\neq\varnothing.
+\lim\Hom_{\C_A}(\psi,\xi)\neq\varnothing
 $$ 
-Let $\pp:J\to\C$ be the composition of $\psi$ with the forgetful functor $\C_A\to\C$, and write 
+(see Condition~(d) in Proposition~\ref{ppifil} p.~\pr{ppifil}). Let $\pp:J\to\C$ be the composition of $\psi$ with the forgetful functor $\C_A\to\C$, and write 
 $$
 \psi(j)=\left(\pp(j),\pp(j)\xr{y_j}A\right)\in\C_A.
 $$ 
