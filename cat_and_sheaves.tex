@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-\up{comment}
+%\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -1711,70 +1711,32 @@ $$
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
 $$ 
 exists in $\C$ for all $i$ in $I$. Then $\pp^\dg(\bt)$ exists and we have 
-%
 \begin{equation}\lb{236}
 \pp^\dg(\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation} 
-%
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
 \end{thm}
 The proof in the book is divided into three steps, called (a), (b), and (c). 
 
-%
-
 \subsubsection{Step~(a)}\lb{scji}
 
-We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. Here is a variant of the argument of the book. %The proof of the following lemma is obvious: 
+% old version:
+%https://docs.google.com/document/d/1CSDj0ZCUrvizbqLCHeJn5rkrra1IUVZ57wqqizF2J3U/edit
 
-\begin{lem}\lb{r52}
-Let $I$ and $K$ be two objects of the category $\Cat$ of small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\Phi:I\to\Cat$ be a functor, and let $\theta:\Phi\to\DT K$ be a morphism of functors (recall that $\DT$ is the diagonal functor, see Definition~\ref{diag} p.~\pr{diag}). Assume 
+We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. For the reader's convenience we reproduce the argument in the book: %Here is a variant of the argument of the book. 
 
-\begin{equation}\lb{52} 
-(\col\theta)(i):=\col(\theta_i)\in K\quad\forall\ i\in I. 
-\end{equation} 
-%
-For any morphism $s:i\to i'$ in $I$, let $(\col\theta)(s)$ be the natural morphism 
-$$
-(\col\theta)(i)=\col(\theta_{i'}\ci\Phi(s))\to
-\col\theta_{i'}=(\col\theta)(i'). 
-$$ 
-Then $\col\theta$ is a functor from $I$ to $K$. 
-\end{lem}
-%
-Here is a picture:
+Let $i\to i'$ be a morphism in $I$. It is easily checked that there is a unique morphism $\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')$ which make the diagrams 
 $$
 \begin{tikzcd}
-I\ar{rr}{\Phi}&\ar{d}[swap]{\theta}&\Cat&\Phi(i)\ar{d}{\theta_i}\\ 
-I\ar{rr}[swap]{\DT K}&{}&\Cat&K.
+\pp^\dg(\bt)(i)=\ds\col_{(\pp(j)\to i)\in J_i}\bt(j)\ar[rr]&&\ds\col_{(\pp(j)\to i')\in J_{i'}}\bt(j)=\pp^\dg(\bt)(i')\\ 
+&\bt(j)\ar[lu,"p(\pp(j)\to i)"]\ar[ru,"q(\pp(j)\to i\to i')"']
 \end{tikzcd}
 $$ 
-\begin{proof}[Proof of Lemma \ref{r52}]
-In this proof we shall only explain how to attach a morphism $\Phi(s):\Phi(i)\to\Phi(i')$ to a morphism $s:i\to i'$, and leave the other verifications to the reader. We have $\theta_{i'}\ci\Phi(s)=\theta_i$: 
+commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections, and that the assignment 
 $$
-\begin{tikzcd}
-\Phi(i)\ar{d}[swap]{\Phi(s)}\ar{r}{\theta_i}&K\ar{d}{\id}\\ 
-\Phi(i')\ar{r}[swap]{\theta_{i'}}&K.
-\end{tikzcd}
+(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)
 $$ 
-Letting $p_{i,x}:\theta_i(x)\to(\col\theta)(i)$ be the coprojection attached to $x$ in $\Phi(i)$, we define 
-$$
-(\col\theta)(s):(\col\theta)(i)\to(\col\theta)(i')
-$$ 
-by requiring that the equality 
-\begin{equation}\lb{cts}
-(\col\theta)(s)\ci p_{i,x}=p_{i',\Phi(s)(x)}
-\end{equation} 
-holds for all $x$ in $\Phi(i)$: 
-$$
-\begin{tikzcd}
-\theta_i(x)\ar{d}[swap]{p_{i,x}}\ar{rr}{\id}&&\theta_{i'}(\Phi(s)(x))\ar{d}{p_{i',\Phi(s)(x)}}\\ 
-(\col\theta)(i)\ar{rr}[swap]{(\col\theta)(s)}&&(\col\theta)(i').
-\end{tikzcd}
-$$ 
-(Recall that $\theta_{i'}(\Phi(s)(x))=\theta_i(x)$.) 
-\end{proof}
-
-We want to prove that $\pp^\dg$ defined by \qr{236} p.~\pr{236} is a functor. In the setting of Lemma~\ref{r52} we set $K:=\C$, we choose $\U$ so that $I$ and $k=\C$ are in $\Cat$, we define $\Phi:I\to\Cat$ by $\Phi(i):=J_i$ and we consider the morphism of functors $\theta:\Phi\to\DT\C$ such that $\theta_i:\Phi(i)=J_i\to\C$ is the composition of $\bt$ with the forgetful functor from $J_i$ to $J$. We assume \qr{52}. Then $\col\theta$ is nothing but $\pp^\dg(\bt)$. In particular $\pp^\dg(\bt)$ is a functor by Lemma~\ref{r52}. q.e.d.
+is functorial.
 
 %
 
@@ -1837,23 +1799,23 @@ follows immediately from \qr{2115}. Using \qr{2115} again, it is easy to see tha
 \Hom_{\C^I}\big(\pp^\dg(\bt),\al\big)\xr\sim\lim\gamma.
 \end{equation} 
 By \qr{nb1} and \qr{nb2}, it suffices to show 
-% 
+
 \begin{lem}
 There is a natural bijection $\lim\gamma\iso\lim\delta$. 
 \end{lem} 
-%
+
 \begin{proof}
 To define a map $\lim\gamma\to\lim\delta$, we attach, to a family 
 $$
-\big(\bt(j)\to\al(i')\big)_{\pp(j)\to i\to i'}
+\big(\bt(j)\to\al(i')\big)_{\pp(j)\to i\to i'}\in\lim\gamma
 $$ 
 and to a morphism $j\to j'$, a morphism $\bt(j)\to\al(\pp(j'))$ by setting 
 $$
-i=i'=\pp(j'),\quad(i\to i')=\id_{\pp(j')},
+i:=i':=\pp(j'),\quad(i\to i'):=\id_{\pp(j')},
 $$ 
 and by taking as $\bt(j)\to\al(\pp(j'))$ the corresponding member of our family. We leave it to the reader to check that this defines indeed a map $\lim\gamma\to\lim\delta$. To define a map $\lim\delta\to\lim\gamma$, we attach, to a family 
 $$
-\big(\bt(j)\to\al(\pp(j'))\big)_{j\to j'}
+\big(\bt(j)\to\al(\pp(j'))\big)_{j\to j'}\in\lim\delta
 $$ 
 and to a chain of morphisms $\pp(j)\to i\to i'$, a morphism $\bt(j)\to\al(i')$ by setting 
 $$
@@ -1865,21 +1827,17 @@ $$
 $$ 
 We leave it to the reader to check that this defines indeed a map $\lim\delta\to\lim\gamma$, and that this map is inverse to the map constructed above.
 \end{proof}
-%
+
 \subsubsection{Step~(c)}
 
-The purpose of Step~(c) is to prove the last two sentences of the statement of Theorem 2.3.3 (i) p.~52 of the book (see Theorem~\ref{233i} p.~\pr{233i}). We assume that $\C$ admits small inductive limits, that $J$ is small (in particular $\pp^\dg$ exists), and that $\pp$ is fully faithful. We must show that $\pp^\dg$ is fully faithful, and that there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
+The purpose of Step~(c) is to prove the last two sentences of the statement of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). We assume that $\C$ admits small inductive limits, that $J$ is small (in particular $\pp^\dg$ exists), and that $\pp$ is fully faithful. We must show that $\pp^\dg$ is fully faithful, and that there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
 
 In part (i) of their proof of Theorem 2.3.3 (i), the authors define a map 
-%
 \begin{equation}\lb{e233i} 
-%
 \Psi_{\al,\bt}:
 \Hom_{\C^I}\big(\pp^\dg(\al),\bt\big)\to
 \Hom_{\C^J}\big(\al,\pp_*(\bt)\big),
-%
 \end{equation} 
-%
 and show that it is bijective. In particular, we have a bijection 
 $$
 f:=\Psi_{\al,\pp^\dg(\al)}:
@@ -1908,7 +1866,7 @@ that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\al(j'
 
 \subsubsection{A Corollary}
 
-Here is a corollary to Theorem \ref{233i} p.~\pr{233i} (which is Theorem 2.3.3 (i) p.~52 of the book):
+Here is a corollary to Theorem~\ref{233i} p.~\pr{233i} (which is Theorem 2.3.3 (i) p.~52 of the book):
 
 \begin{cor}\lb{c233i}
 If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\pp^\dg(\bt)(i)$ is (in natural bijection with) the quotient of 
@@ -1959,7 +1917,7 @@ $$
 $$ 
 and claim that $f$ and $g$ are inverse isomorphisms. We have the coprojections 
 $$
-\bt(j)\xr{p_j}\col\bt,\qquad\bt(j)\xr{q_{i,j,u}}\col_{(j',u')\in J_i}\bt(j')\xr{r_i}\col_{i'}\ \col_{(j',u')\in J_{i'}}\bt(j').
+\bt(j)\xr{p_j}\col\bt,\qquad\bt(j)\xr{q_{i,j,u}}\col_{(j',u')\in J_i}\bt(j')\xr{r_i}\col_{i'}\ \col_{(j'',u'')\in J_{i'}}\bt(j'').
 $$ 
 
 We define $f$ by the condition that we have 
@@ -2001,7 +1959,7 @@ $$
 \ds\col_{i'}\col_{(j',u')\in J_i}\bt(j')\ar{r}[swap]{\id}&\ds\col_{i'}\col_{(j',u')\in J_i}\bt(j'),
 \end{tikzcd}
 $$ 
-where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  \qr{cts} p.~\pr{cts}, and the bottom square commutes for obvious reasons. 
+where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  definition of $u_*$, and the bottom square commutes for obvious reasons. % old version: The top square commutes by  \qr{cts} p.~\pr{cts}
 
 We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. q.e.d.
 
@@ -2030,7 +1988,6 @@ $$
 let $J$ be the full subcategory of $I$ whose single object is $R$, and let $\C\xl\bt J\xr\pp I$ be the inclusion functors. We identify $\Hom_R(R,M)$ to $M$ whenever convenient. 
 
 We claim that the functor $\pp^\dg(\bt):I\to\C$ satisfies 
-%
 \begin{equation}\lb{pdb1}
 \pp^\dg(\bt)(M)\iso M.
 \end{equation} 
@@ -2039,21 +1996,19 @@ To prove \qr{pdb1}, set
 $$
 M':=\col_{(x:R\to M)\in J_M}R\in\C, 
 $$ 
-and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\iso\pp^\ddg(\bt)(M)$, it suffices to prove $M'\iso M$. We define a family of linear maps $\Phi_x:R\to M$ by setting $\Phi_x:=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \qr{pdb1}. 
+and let $p_x:R\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}) implies $M'\iso\pp^\dg(\bt)(M)$, it suffices to prove $M'\iso M$. We define a family of linear maps $\Phi_x:R\to M$, indexed by $x:R\to M$, by setting $\Phi_x:=x$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M'\to M$. We define the set theoretic map $\Psi:M\to M'$ by putting $\Psi(x):=p_x(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \qr{pdb1}. 
 
 We claim that the functor $\pp^\ddg(\bt):I\to\C$ satisfies 
-%
 \begin{equation}\lb{pddb1}
 \pp^\ddg(\bt)(M)\iso M^{**}, 
 \end{equation} 
-%
 where $M^{**}$ is the double dual of $M$. 
 
 To prove \qr{pddb1}, set 
 $$
 M':=\lim_{(f:M\to R)\in J^M}R\in\C, 
 $$ 
-and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\dg(\bt)(M)$, it suffices to prove $M'\iso M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to R$ by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\ld_f))(g):=\ld_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb1}. 
+and let $p_f:M'\to R$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\ddg(\bt)(M)$, it suffices to prove $M'\iso M^{**}$. We define a family of linear maps $\Phi_f:M^{**}\to R$, indexed by $f:M\to R$, by setting $\Phi_f(F):=F(f)$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M^{**}\to M'$. We define the linear map $\Psi:M'\to M^{**}$ by putting $\Psi((\ld_f))(g):=\ld_g$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb1}. 
 
 Let $R$, $\U$ and $\V$ be as above, put, with self-explanatory notation, 
 $$
@@ -2062,18 +2017,16 @@ $$
 let $J$ be the full subcategory of $I$ whose single object is $R$, let $\pp:J\to I$ be the inclusion functor, and let $\bt:J\to\C$ be the obvious functor satisfying $\bt(R)=R^{\op}$. 
 
 We claim that the functor $\pp^\dg(\bt):I\to\C$ satisfies 
-%
 \begin{equation}\lb{pdb2}
 \pp^\dg(\bt)(M)\iso M^*,
 \end{equation} 
-%
 where $M^*$ is the dual of $M$. 
 
 To prove \qr{pdb2}, set 
 $$
 M':=\col_{(R\to M)\in J_M}R^{\op}=\col_{(f:M\to R)\in(J^{\op})^M}R^{\op}\in\C, 
 $$ 
-and let $p_f:R^{\op}\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book implies $M'\iso\pp^\dg(\bt)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_f:R^{\op}\to M^*$ by setting $\Phi_f(1):=f$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M'\to M^*$. We define the set theoretic map $\Psi:M^*\to M'$ by putting $\Psi(f):=p_f(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \qr{pdb2}. 
+and let $p_f:R^{\op}\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}) implies $M'\iso\pp^\dg(\bt)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_f:R^{\op}\to M^*$, indexed by $f:M\to R$, by setting $\Phi_f(1):=f$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M'\to M^*$. We define the set theoretic map $\Psi:M^*\to M'$ by putting $\Psi(f):=p_f(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \qr{pdb2}. 
 
 We claim that the functor $\pp^\ddg(\bt):I\to\C$ satisfies 
 %
@@ -2087,7 +2040,7 @@ To prove \qr{pddb2}, set
 $$
 M':=\lim_{(M\to R)\in J^M}R^{\op}=\lim_{(x:R\to M)\in(J^{\op})_M}R^{\op}\in\C, 
 $$ 
-and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\ddg(\bt)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$ by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\ld_x))(y):=\ld_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb2}. 
+and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of the book implies $M'\iso\pp^\ddg(\bt)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_x:M^*\to R^{\op}$, indexed by $x:R\to M$, by setting $\Phi_x(f):=f(x)$, and leave it to the reader to check that the $\Phi_x$ induce a linear map $\Phi:M^*\to M'$. We define the linear map $\Psi:M'\to M^*$ by putting $\Psi((\ld_x))(y):=\ld_y$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse linear bijections. This proves \qr{pddb2}. 
 
 %% 
 
@@ -3164,17 +3117,37 @@ This section is divided into two parts. In Part~1 we give a proof of Proposition
 
 \subsubsection{Part 1} 
 
+% old version:
+%https://docs.google.com/document/d/1ODl6Kwqz4LekRjoydQLeDXX23NiBk034UbtlK4fLzrI/edit
+
 Recall the notation. We have functors $I\xr\pp K\xl\psi J$ between small categories, and 
 $$
 M:=M[I\xr\pp K\xl\psi J] 
 $$ 
 is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\al:M\to\C$. 
 
-Choose a universe $\U$ making $\C$ a small category, let $\Phi$ be the functor from $J$ to $\Cat$ defined by $\Phi(j):=I_{\psi(j)}$, recall that $\DT$ denotes the diagonal functor (see Notation~\ref{diag} p.~\pr{diag}), and let $\theta:\Phi\to\DT\C$ be the morphism of functors such that $\theta_j:I_{\psi(j)}\to\C$ is the composition of $\al$ with the natural functor from $I_{\psi(j)}$ to $M$. Then 
+Claim:
 $$
 j\mt\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
 $$ 
-($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$ by Lemma~\ref{r52} p.~\pr{r52}.  
+($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$. 
+
+Proof. Let $j\to j'$ be a morphism in $J$. It is easily checked that there is a unique dashed arrow which make all the diagrams 
+$$
+\begin{tikzcd}
+\ds\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u)\ar[rr,dashed]&&\ds\col_{(i,u)\in I_{\psi(j')}}\al(i,j',u)\\ 
+\al(i,j,u)\ar{u}{p(i,u)}\ar[rr,"q(\pp(j)\to i\to i')"']&&\al(i,j',u')\ar{u}[swap]{q(i,u')}
+\end{tikzcd}
+$$ 
+commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections and $u'$ is the obvious composition 
+$$
+\pp(i)\xr u\psi(j)\to\psi(j'),
+$$ 
+and that the assignment 
+$$
+(j\to j')\mt\left(\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u)\to\col_{(i,u)\in I_{\psi(j')}}\al(i,j',u)\right)
+$$ 
+is functorial. 
 
 \begin{prop}\lb{coco2}
 We have an isomorphism 
@@ -3242,7 +3215,7 @@ or, in other words, that
 \begin{equation}\lb{coco4} 
 \text{the projection $M\to I$ is cofinal.} 
 \end{equation} 
-If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.%\begin{comment}
+If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.
 
 \nn\textbf{Third proof of \qr{coco} p.~\pr{coco}}
 
@@ -3278,7 +3251,7 @@ Defining $\bt:M\to\C$ by $\bt(i,j,u):=\al(i)$ for all $(i,j,u)\in M$, we get
 $$
 \bt(i,\pp(i),\id_{\pp(i)})=\al(i)=\bt(i,j,u),
 $$ 
-and $\qr{qippi}$ follows from the existence of an obvious morphism from $(i,\pp(i),\id_{\pp(i)})$ to $(i,j,u)$ in $M$. q.e.d.%\end{comment}
+and $\qr{qippi}$ follows from the existence of an obvious morphism from $(i,\pp(i),\id_{\pp(i)})$ to $(i,j,u)$ in $M$. q.e.d. 
 
 %%
 
@@ -4898,35 +4871,9 @@ $\ic\pp\iso f$.
 
 \sbs{Brief Comments}
 
-\begin{comment}
-
-\begin{s} 
-P.~149, Definition 7.1.1. The set $\SSS$ is a subset of $\Ob(\Mor(\C))$ (see Notation~\ref{mor} p.~\pr{mor}). The proof of the following lemma (which will be used to prove \qr{qdd} p.~\pr{qdd}) is obvious. Neither Definition 7.1.1 nor the lemma below requires the Axiom of Universes.
-
-\begin{lem}\lb{711}
-Let 
-$$
-\begin{tikzcd}\C\ar[yshift=.5ex]{r}{Q}&\C'\ar[yshift=-.4ex]{l}{R}\end{tikzcd}
-$$ 
-be functors such that $Q\ci R\iso\id_{\C'}$, let $\SSS$ be a subset of $\Ob(\Mor(\C))$ such that $Q(s)$ is an isomorphism for all $s$ in $\SSS$, let 
-$$
-\theta:\id_\C\to R\ci Q
-$$ 
-satisfy $\theta_X\in\SSS$ for all $X$ in $\C$, let $\A$ be a category, and let $\B$ be the full subcategory of $\A^\C$ whose objects are the functors turning the elements of $\SSS$ into isomorphisms. Then the functors
-$$
-\begin{tikzcd}\A^{\C'}\ar[yshift=.4ex]{r}{\ci Q}&\B\ar[yshift=-.5ex]{l}{\ci R}\end{tikzcd}
-$$
-are mutually quasi-inverse equivalences. In particular, $Q$ is a localization of $\C$ by $\SSS$. 
-\end{lem}
-\end{s}
-
-\end{comment}
-
-%
+% https://docs.google.com/document/d/1XSIMsAb8ChL6VxN-VQ3HoC5sg1C4Yzu0Gmq87ebsLdY/edit
 
 %\begin{s}P.~150, Lemma 7.1.3. Proposition 1.5.6 (ii) is implicitly used the statement of the lemma.\end{s}
-
-%
 
 \begin{s}\lb{713} 
 P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C_\SSS\to\A$, the map 
@@ -5003,7 +4950,7 @@ Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, 
 
 % It might be worth displaying the formula $$(R_\SSS F)(Q(X))\iso\col_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).$$ 
 %
-% The {comment} below was here
+% The comment below was here
 % https://docs.google.com/document/d/1WwEuQko13SpCaJ53JDskmaGyiC3F0HQuxLvMMLLubJI/edit
 
 In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
@@ -5921,28 +5868,7 @@ where $f^0$ and $f^2$ are epimorphisms, $f^3$ is a monomorphism, and $X^0\to X^1
 \end{thm}
 \end{s}
 
-%
-
-\begin{comment}
-
-\begin{s}\lb{8311c} 
-The converse to Lemma~\ref{8311} p.~\pr{8311} holds:
-
-Consider the commutative square \qr{837} p.~\pr{837}. If $\Ker f'\xr\sim\Ker f$, then \qr{837} is cartesian. 
-
-Proof. Set $Z:=X\tm_YY'$, form the obvious commutative diagram with exact rows
-$$
-\begin{tikzcd}
-0\ar[r]&W'\ar[d,"\sim"]\ar[r]&X'\ar[d]\ar[r,"f'"]&Y'\ar[d,equal]\\ 
-0\ar[r]&W\ar[r]&Z\ar[r]&Y',
-\end{tikzcd} 
-$$ 
-and apply Theorem~\ref{5l} p.~\pr{5l} and Theorem~\ref{5ld} p.~\pr{5ld}.
-\end{s}
-
-\end{comment}
-
-%
+% https://docs.google.com/document/d/1jB8iAaLYhMJ3lRUk7lY_gFxdUTgktM8Libu7Pa6ONac/edit
 
 \begin{s} 
 P.~182, proof of the equivalence (iii)$\ssi$(iv) in Proposition 8.3.14. Here is the statement of the proposition:
@@ -6554,21 +6480,7 @@ $$
 
 I failed to prove that the triangle $Y_1Y'X_1$ commutes, but it seems to me that this is not needed.
 
-%
-
-\begin{comment}
-
-\subsubsection{Lemma 8.7.4 (ii) p. 199} 
-
-This comment is about the claim that the natural functor $E:\DD'_\SSS\to\C$ is an equivalence. I don't understand the proof of the faithfulness of $E$ given in the book. I think that it suffices, in view of Proposition 7.1.2 (i) p.~150 and Theorem 7.1.16 p.~155 of the book, to check that 
-\begin{equation}\lb{qdd}
-Q:\DD'\to\C\text{ is a localization of }\DD'\text{ by }\SSS.
-\end{equation} 
-To prove \qr{qdd}, one can apply Lemma~\ref{711} p.~\pr{711} with $R:\C\to\DD'$ defined by $R(X):=(0\to X)$. 
-
-\end{comment}
-
-%
+% https://docs.google.com/document/d/1M17qN1VK4E_zpNvlS6bNHYr32iVugc2GZFJJ7Nl8m9c/edit
 
 \subsubsection{Lemma 8.7.5 (i) p.~199}
 
