@@ -21,10 +21,11 @@
 \makeindex
 %\pagestyle{empty}
 \pagestyle{fancy}
+\addtolength{\parskip}{.5\baselineskip}
+%\nc{\bu}{*}
+\nc{\bu}{\bullet}
 
 % BEGIN
-\addtolength{\parskip}{.5\baselineskip}
-
 \nc{\nt}{\newtheorem}
 \nt{thm}{Theorem}
 \nt{lem}[thm]{Lemma}
@@ -45,7 +46,6 @@
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals}
 
 \nc{\dis}{\displaystyle}\nc{\ds}{\displaystyle}
-\nc{\bu}{*}%\nc{\bu}{\bullet}
 \nc{\nn}{\noindent}
 \nc{\mc}{\mathcal}%\nc{\cc}{\mathcal}
 \nc{\bb}{\mathbb}
@@ -2171,7 +2171,28 @@ $i_0\to i$. In particular $i_0\to i$ represents the same element as $\id_{i_0}$.
 %
 
 \begin{s}\lb{252}
-P. 57, Proposition 2.5.2. In the proof of the implication (i) $\then$ (v), the authors define a morphism $\al(i_0)\to\col\al\ci\pp$. Then they write ``Taking the inductive limit with respect to $i_0\in I$, we get a morphism $\mu:\col\al\to\col\al\ci\pp$''. We must check that, for any morphism $i_0\to i_1$ in $I$ the composition $\al(i_0)\to\al(i_1)\to\col\al\ci\pp$ coincides with our morphism $\al(i_0)\to\col\al\ci\pp$. This follows from Lemma~\ref{2112} p.~\pr{2112}. (More precisely, the morphism $\al(i_0)\to\col\al\ci\pp$ is obtained by choosing an object of $J^{i_0}$, but Lemma~\ref{2112} shows that different choices yield the same morphism.)
+P. 57, proof of Proposition 2.5.2 (minor variant). Instead of proving (i)$\then$(v), we prove (i)$\then$(ii), that is, we prove the following statement:
+
+If $\pp:J\to I$ and $\bt:I^{\op}\to\Set$ are functors and if the category $J^i$ is connected for all $i$ in $I$, then the natural map 
+$$
+f:\lim\bt\to\lim\bt\ci\pp^{\op}
+$$ 
+is bijective. 
+
+In fact we shall define a map 
+$$
+g:\lim\bt\ci\pp^{\op}\to\lim\bt
+$$ 
+and leave it to the reader to check that $f$ and $g$ are inverse. %Let $p_i:\lim\bt\to\bt(i)$ and $q_j:\lim\ci\pp^{\op}\to\bt(\pp(j))$ be the projections, and 
+Let $y$ be in $\lim\bt\ci\pp^{\op}$. In particular $y$ is of the form $(y_j)_{j\in J}$ with $y_j\in\bt(\pp(j))$. We must define the element $g(y)_i$ in $\bt(i)$, where $i$ is an arbitrary element in $I$. Let us choose a morphism $u:i\to\pp(j)$ in $I$. It suffices to show that the element $\bt(u)(y_j)$ in $\bt(i)$ does not depend on the choice of $u$, so that we shall be able to set $g(y)_i:=\bt(u)(y_j)$. Given another choice $u':i\to\pp(j')$, we must prove $\bt(u)(y_j)=\bt(u')(y_{j'})$. As $J^i$ is connected, we may assume that there is a morphism $j\to j'$ in $J$, and the proof is straightforward. q.e.d.
+
+%\nn$\bu$ One can also prove (vi)$\then$(i) as follows. Recall that $\pp:J\to I$ is a functor. Let $i$ be in $I$. It suffices to prove that 
+
+%$J^i$ is connected whenever $\col\Hom_I(i,\pp)$ is a singleton. 
+
+%In fact, if the $p_j:\Hom_I(i,\pp(j))$ are the coprojections, then it is easy to see that the map $$J^i\to\col\Hom_I(i,\pp),\quad(j,u)\mapsto p_j(u)$$ induces a bijection $\pi_0(J^i)\xr\sim\col\Hom_I(i,\pp)$. q.e.d.
+
+%In the proof of the implication (i) $\then$ (v), the authors define a morphism $\al(i_0)\to\col\al\ci\pp$. Then they write ``Taking the inductive limit with respect to $i_0\in I$, we get a morphism $\mu:\col\al\to\col\al\ci\pp$''. We must check that, for any morphism $i_0\to i_1$ in $I$ the composition $\al(i_0)\to\al(i_1)\to\col\al\ci\pp$ coincides with our morphism $\al(i_0)\to\col\al\ci\pp$. This follows from Lemma~\ref{2112} p.~\pr{2112}. (More precisely, the morphism $\al(i_0)\to\col\al\ci\pp$ is obtained by choosing an object of $J^{i_0}$, but Lemma~\ref{2112} shows that different choices yield the same morphism.)
 \end{s}
 %
 
@@ -2180,11 +2201,9 @@ P.~58, implication (vi)$\then$(i) of Proposition 2.5.2. Here is a slightly stron
 
 \begin{prop} 
 If $\pp:J\to I$ is a functor, then the obvious map
-%
 \begin{equation}\lb{om}
 \col\Hom_I(i,\pp)\to\pi_0(J^i)
 \end{equation}
-%
 is bijective. 
 \end{prop}
 
@@ -2203,10 +2222,9 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 
 %
 
-\sbs{Proposition 2.6.3 (i) (p.~61)}
+\sbs{Proposition 2.6.3 (i) p.~61}
 
 Let $\C$ be a category and let $A$ be in $\C^\wg$. Consider the statements
-%
 \begin{equation}\lb{263a}
 \ic_{(X\to A)\in\C_A}X\xr\sim A,
 \end{equation} 
@@ -2226,11 +2244,9 @@ $$
 \al:\C_A\to\C^\wg,\quad(X\to A)\mt X,
 $$ 
 and let $p:\al\to\DT A$ (see Notation~\ref{diag} p.~\pr{diag}) be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
-%
 \begin{equation}\lb{pxa}
 p_{X\to A}:=(X\to A)
 \end{equation}
-% 
 for all $X\to A$ in $\C_A$. Let $B$ be in $\C^\wg$. The claim is that the map 
 \begin{equation}\lb{hcwab}
 \Hom_{\C^\wg}(A,B)\to\Hom_{\Fct(\C_A,\C^\wg)}(\al,\DT B),\quad\theta\mt\DT \theta\ci p
