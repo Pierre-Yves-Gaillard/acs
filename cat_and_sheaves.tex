@@ -22,8 +22,7 @@
 %\pagestyle{empty}
 \pagestyle{fancy}
 \addtolength{\parskip}{.5\baselineskip}
-%\nc{\bu}{*}
-\nc{\bu}{\bullet}
+\nc{\bu}{\bullet}%\nc{\bu}{*}
 
 % BEGIN
 \nc{\nt}{\newtheorem}
@@ -724,82 +723,82 @@ Also note that, if $\Cat$ is the category of small categories, then the formula 
 We state the Yoneda Lemma for the sake of completeness:
 
 \begin{thm}[Yoneda's Lemma]\lb{yol}
-Let $\C$ be a category, let $h:\C\to\C^\wg$ be the Yoneda embedding, let $F$ be in $\C^\wg$, let $A$ be in $\C$, and define 
+Let $\C$ be a category, let $h:\C\to\C^\wg$ be the Yoneda embedding, let $F$ be in $\C^\wg$, let $X$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
-F(A)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\wg}(h(A),F)\ar[yshift=-0.7ex]{l}{\psi}
+F(X)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\wg}(h(X),F)\ar[yshift=-0.7ex]{l}{\psi}
 \end{tikzcd}
 $$
 by 
 \begin{equation}\lb{yo}
-\pp(a)_X(f):=F(f)(a),\quad\psi(\theta):=\theta_A(\id_A)
+\pp(u)_Y(f):=F(f)(u),\quad\psi(\theta):=\theta_X(\id_X)
 \end{equation}
 for 
 $$
-a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(X,A),\quad\theta\in\Hom_{\C^\wg}(h(A),F):
+u\in F(X),\quad Y\in\C,\quad f\in\Hom_\C(Y,X),\quad\theta\in\Hom_{\C^\wg}(h(X),F):
 $$ 
 $$
-f\in\Hom_\C(X,A)\xr{\pp(a)_X}F(X)\xl{F(f)}F(A)\ni a.
+f\in\Hom_\C(Y,X)\xr{\pp(u)_Y}F(Y)\xl{F(f)}F(X)\ni u.
 $$
-Then $\pp$ and $\psi$ are mutually inverse bijections. In the particular case where $F$ is equal to $h(B)$ for some $B$ in $\C$, we get 
+Then $\pp$ and $\psi$ are mutually inverse bijections. In the particular case where $F$ is equal to $h(Z)$ for some $Z$ in $\C$, we get 
 $$
-\pp(a)=h(a)\in\Hom_{\C^\wg}(h(A),h(B)).
+\pp(u)=h(u)\in\Hom_{\C^\wg}(h(X),h(Z)).
 $$
 This shows that $h$ is fully faithful.
 
-Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $F$ be in $\C^\vee$, let $A$ be in $\C$, and define 
+Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $F$ be in $\C^\vee$, let $X$ be in $\C$, and define 
 $$
 \begin{tikzcd} 
-F(A)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\vee}(F,k(A))=\Hom_{\Set^\C}(k(A),F)\ar[yshift=-0.7ex]{l}{\psi}
+F(X)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\vee}(F,k(X))=\Hom_{\Set^\C}(k(X),F)\ar[yshift=-0.7ex]{l}{\psi}
 \end{tikzcd}
 $$
 by \qr{yo} for 
 $$
-a\in F(A),\quad X\in\C,\quad f\in\Hom_\C(A,X),\quad\theta\in\Hom_{\Set^\C}(k(A),F):
+u\in F(X),\quad Y\in\C,\quad f\in\Hom_\C(X,Y),\quad\theta\in\Hom_{\Set^\C}(k(X),F):
 $$ 
 $$
-f\in\Hom_\C(A,X)\xr{\pp(a)_X}F(X)\xl{F(f)}F(A)\ni a.
+f\in\Hom_\C(X,Y)\xr{\pp(u)_Y}F(Y)\xl{F(f)}F(X)\ni u.
 $$
-Then $\pp$ and $\psi$ are mutually inverse bijections. In the particular case where $F$ is equal to $k(B)$ for some $B$ in $\C$, we get 
+Then $\pp$ and $\psi$ are mutually inverse bijections. In the particular case where $F$ is equal to $k(Z)$ for some $Z$ in $\C$, we get 
 $$
-\pp(a)=k(a)\in\Hom_{\C^\vee}(k(B),k(A)).
+\pp(u)=k(u)\in\Hom_{\C^\vee}(k(Z),k(X)).
 $$
 This shows that $k$ is fully faithful.
 \end{thm}
-%
+
 \begin{proof}
 It suffices to prove the first statement: We have 
 $$
-\psi(\pp(a))=\pp(a)_A(\id_A)=F(\id_A)(a)=a
+\psi(\pp(u))=\pp(u)_X(\id_X)=F(\id_X)(u)=u
 $$ 
 and
 $$
-\pp(\psi(\theta))_X(f)=F(f)(\psi(\theta))=F(f)(\theta_A(\id_A))=\theta_X(f),
+\pp(\psi(\theta))_Y(f)=F(f)(\psi(\theta))=F(f)(\theta_X(\id_X))=\theta_Y(f),
 $$ 
 the last equality following from the commutativity of the square 
 $$
 \begin{tikzcd}
-h(A)(X)\ar{r}{\theta_X}&F(X)\\ 
-h(A)(A)\ar{u}{h(A)(f)}\ar{r}[swap]{\theta_A}&F(A),\ar{u}[swap]{F(f)}
+h(X)(Y)\ar{r}{\theta_Y}&F(Y)\\ 
+h(X)(X)\ar{u}{h(X)(f)}\ar{r}[swap]{\theta_X}&F(X),\ar{u}[swap]{F(f)}
 \end{tikzcd}
 $$ 
 which is equal to the square 
 $$
 \begin{tikzcd}
-\Hom_\C(X,A)\ar{r}{\theta_X}&F(X)\\ 
-\Hom_\C(A,A)\ar{u}{\ci f}\ar{r}[swap]{\theta_A}&F(A).\ar{u}[swap]{F(f)}
+\Hom_\C(Y,X)\ar{r}{\theta_Y}&F(Y)\\ 
+\Hom_\C(X,X)\ar{u}{\ci f}\ar{r}[swap]{\theta_X}&F(X).\ar{u}[swap]{F(f)}
 \end{tikzcd}
 $$
 \end{proof}
 
 \begin{df}[universal element]\lb{ue} 
-Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{represents}\index{represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{represents} $F$. %We sometimes say that $X$ \emph{represents}\index{represents} $F$ via $u$ if $u$ is an $(F,X)$-universal element.
+Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{represents}\index{represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{represents} $F$. 
 \end{df}
 
 The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ \emph{by} $X$. In particular, if the pairs $(X,u)$ and $(X',u')$ both represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u')=u$; moreover $g$ is an isomorphism.
 
 \begin{df}[co-universal element]\lb{ue2} 
-Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{co-universal element}\index{co-universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{co-represents}\index{co-represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{co-represents} $F$. %We sometimes say that $X$ \emph{co-represents}\index{co-represents} $F$ via $u$ if $u$ is an $(F,X)$-co-universal element.
+Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{co-universal element}\index{co-universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{co-represents}\index{co-represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{co-represents} $F$. 
 \end{df}
 
 The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-co-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a \emph{co-representation of} $F$ \emph{by} $X$. In particular, if the pairs $(X,u)$ and $(X',u')$ both co-represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u)=u'$; moreover $g$ is an isomorphism.
@@ -1199,51 +1198,78 @@ $$
 
 \section{About Chapter 2}
 
-\sbs{Definition of limits (\S2.1 p.~36)}\lb{212}%\begin{s}\lb{212}P.~36, Definition 2.1.2. 
+\sbs{Definition of limits (\S2.1 p.~36)}\lb{212} 
+
+% previous version
+% https://docs.google.com/document/d/1nk0fA1LSkAaOoW1U04-D0BROtph6oaqcIQahx1JYlno/edit
 
 \begin{nota}\lb{diag}
 If $I$ and $\C$ are categories, we denote by $\DT$ the diagonal functor from $\C$ to $\C^I$. The categories $I$ and $\C$ shall be explicitly indicated only when they are not clear from the context. Furthermore, we shall often write $\DT X$ for $\DT(X)$. To be more precise, $\DT X$ is the constant functor from $I$ to $\C$ with value $X$.
 \end{nota}
 
 \begin{df}[projective limit]\lb{p}
-If $\al:I^{\op}\to\C$ is a functor, %and $\DT:\C\to\C^{I^{\op}}$ is the diagonal functor, 
-then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
+If $\al:I^{\op}\to\C$ is a functor, then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\DT X,\al)
 $$
-such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. %(We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.) 
-If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is a projective limit of $\bt$ in $\C$. However, if $\C=\Set$ and $I$ is small we denote by $\lim\bt$ the subset of $\prod_{i\in I}\bt(i)$ defined in Display (2.1.2) p.~36 of the book.
+such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is a projective limit of $\bt$ in $\C$. %However, if $\C=\Set$ and $I$ is small we denote by $\lim\bt$ the subset of $\prod_{i\in I}\bt(i)$ defined in Display (2.1.2) p.~36 of the book.
 \end{df}
 
-Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element means that for each $Y$ in $\C$ the map 
-$$
-\Hom_\C(Y,X)\to\Hom_{\C^{I^{\op}}}(\DT Y,\al),\quad f\mt p\ci\DT f
+Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element means that for each $Y$ in $\C$ and each morphism of functors $\theta:\DT Y\to\al$ there is a unique morphism $f:Y\to X$ satisfying $p\ci\DT f=\theta$: 
+\begin{equation}\lb{yfy}
+\begin{tikzcd}
+Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[r,"\theta"]&\al\\ 
+X&\DT X.\ar[ru,"p"']
+\end{tikzcd}
+\end{equation}
+
+Let $\al:I^{\op}\to\Set$ be a functor defined on a small category, set 
 $$ 
-is bijective. Here is a picture:
+\lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(f)(x_j)\ \forall\ f:i\to j\right\}\in\Set,
+$$ 
+and define $p_i:\lim\al\to\al(i)$ by $p_i(x):=x_i$. It is easily seen that $(\lim\al,p)$ is a projective limit of $\al$. More precisely, the map $f$ in \qr{yfy} is given by 
 $$
-Y\xr fX,\quad\DT Y\xr{\DT f}\DT X\xr p\al.
+f(y):=(\theta_i(y))_{i\in I}.
 $$
+%\begin{df}We say that the above pair $(\lim\al,p)$ is \emph{the} projective limit of $\al$.\end{df}
+\begin{conv}
+We say that the above pair $(\lim\al,p)$ is \textbf{the} projective limit of $\al$.
+\end{conv}
 
 \begin{df}[inductive limit]\lb{ilim}
 If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\al$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\DT X)
 $$
-such that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. %(We almost always write $X$ for $(X,p)$, the mental picture being that $p$ is a structure $X$ is equipped with.) 
-If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is an inductive limit of $\al$ in $\C$. However, if $\C=\Set$ and $I$ is small we denote by $\colim\al$ the set defined in Proposition 2.4.1 p.~54 of the book.
+such that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is an inductive limit of $\al$ in $\C$. %However, if $\C=\Set$ and $I$ is small we denote by $\colim\al$ the set defined in Proposition 2.4.1 p.~54 of the book.
 \end{df}
 
-Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ the map 
+Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ and each morphism of functors $\theta:\al\to\DT Y$ there is a unique morphism $f:X\to Y$ satisfying $\DT f\ci p=\theta$: 
 \begin{equation}\lb{cue}
-\Hom_\C(X,Y)\to\Hom_{\C^I}(\al,\DT Y),\quad f\mt\DT f\ci p
+\begin{tikzcd}
+\al\ar[r,"p"]\ar[dr,"\theta"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
+&\DT Y&Y.
+\end{tikzcd}
 \end{equation}
-is bijective. Here is a picture:
-$$
-X\xr fY,\quad\al\xr p\DT X\xr{\DT f}\DT Y.
-$$
 
-The following proposition is obvious:
-\begin{prop}\lb{a}
+Let $\al:I\to\Set$ be a functor defined on a small category, set 
+$$ 
+U:=\{(i,x)\in\U\ |\ i\in I,x\in\al(i)\},
+$$ 
+let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,\al(f)(x))$ for all morphisms $f:i\to j$, let $\col\al$ be the quotient $U/\!\!\sim$, let $\pi:U\to\col\al$ be the canonical projection, and, for all $i$ in $I$, define $p_i:\al(i)\to\col\al$ by $p_i(x):=\pi(i,x)$. It is easily seen that $(\col\al,p)$ is an inductive limit of $\al$. 
+%\begin{df}We say that the above pair $(\lim\al,p)$ is \emph{the} projective limit of $\al$.\end{df}
+\begin{conv}
+We say that the above pair $(\lim\al,p)$ is \textbf{the} inductive limit of $\al$.
+\end{conv}
+
+If $\al:I\to\Set$ is a functor defined on a small category and $X$ is in $\Set$, then the map 
+$$
+\Hom_\Set(\col\al,X)\to\lim\Hom_\Set(\al,X),\quad f\mt(f\ci p_i)_{i\in I}
+$$ 
+is well-defined and bijective.
+
+The following propositions are obvious:
+\begin{prop}\lb{aic}
 If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $(X,p)$ is an inductive limit of $\al$ in $\C$,
@@ -1253,13 +1279,22 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if 
 \nn\emph{(c)} $(k(X),k(p))$ is a projective limit of $k\ci\al$ in $\Set^\C$, where $k(p):\DT k(X)\to k\ci\al$ is the morphism in $(\Set^\C)^I$ induced by $p$,
 
 \nn\emph{(d)} $(\Hom_\C(X,Y),\Hom_\C(p,Y))$ is a projective limit of $\Hom_\C(\al,Y)$ in $\Set$, where $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ is the morphism in $\Set^I$ induced by $p$.
+\end{prop} 
+
+\begin{prop}
+If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\C^{I^{\op}}$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
+
+\nn\emph{(a)} $(X,p)$ is an projective limit of $\al$ in $\C$,
+
+\nn\emph{(b)} $(h(X),h(p))$ is an projective limit of $h\ci\al$ in $\C^\wg$, where $h(p):\DT h(X)\to h\ci\al$ is the morphism in $(\C^\wg)^{I^{\op}}$ induced by $p$,
+
+\nn\emph{(c)} $(\Hom_\C(Y,X),\Hom_\C(Y,p))$ is a projective limit of $\Hom_\C(Y,\al)$ in $\Set$, where $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ is the morphism in $\Set^{I^{\op}}$ induced by $p$.
 \end{prop}
-%\end{s}
+
 %%
 
-\sbs{Brief Comments}
+\sbs{Universal limits}
 
-\begin{s} 
 Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). For any $Y$ in $\C$ we write 
 $$
 \Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)
@@ -1291,7 +1326,7 @@ The following conditions are equivalent:
 \end{prop}
 
 \begin{proof}
-Recall Proposition~\ref{a} p.~\pr{a}. We obviously have (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
+Recall Proposition~\ref{aic} p.~\pr{aic}. We obviously have (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
 $$
 \Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)
 $$
@@ -1318,20 +1353,21 @@ Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object 
 
 There is of course an analogous notion of universal projective limit. 
 
-Here is the classic example of a non-universal inductive limit. Letting $\al$ be the unique functor from the empty category to $\Set$, we get $\col\al\iso\varnothing$. Writing $h:\Set\to\Set^\wg$ for the Yoneda embedding yields $\col h\ci\al\iso\DT\varnothing$. But we have, on the one hand $(\DT\varnothing)(\varnothing)\not\iso\varnothing$, and on the other hand $(h(\varnothing))(\varnothing)=\varnothing$, implying 
+Here is the classic example of a non-universal inductive limit. Letting $\al$ be the unique functor from the empty category to $\Set$, we get $\col\al\iso\varnothing$. Writing $h:\Set\to\Set^\wg$ for the Yoneda embedding yields $\col h\ci\al\iso\DT\varnothing$. But we have, on the one hand $(\DT\varnothing)(\varnothing)=\varnothing$, and on the other hand $(h(\varnothing))(\varnothing)\not\iso\varnothing$, implying 
 $$
 \col(h\ci\al)\not\iso h(\col\al).
 $$ 
 This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
-\end{s}
 
-%
+%%
 
-\begin{s}%\lb{aic}
+\sbs{Brief Comments}
+
+\begin{s}
 Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
-$$%\begin{equation}\lb{hciady}
+$$
 \Hom_{\C^I}(\al,\DT Y)\iso\lim\Hom_\C(\al,Y),
-$$%\end{equation} 
+$$  
 the projection 
 $$
 p:\DT\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al,Y)
@@ -1374,7 +1410,7 @@ for all $i$, that is
 $$
 \al(i)(j)\xr{q_{ij}}\bt(j)
 $$ 
-for all $i,j$. It suffices to set $q_{ij}:p_{ji}$. There is a similar statement for projective limits.
+for all $i,j$. It suffices to set $q_{ij}:=p_{ji}$. There is a similar statement for projective limits.
 \end{s}
 
 %
@@ -2239,7 +2275,7 @@ Let $\C$ be a category and let $A$ be in $\C^\wg$. Consider the statements
 
 Clearly, \qr{263b} implies \qr{263a} and \qr{263c} (see \S\ref{216} p.~\pr{216}), and the proof of \qr{263b} is straightforward. (See \S\ref{c38} p.~\pr{c38} for the relationship between \qr{263a}, \qr{263b}, and \qr{263c}.) 
 
-The isomorphism \qr{263a} can be decoded as follows: Consider the functor 
+\nn$\bu$ The isomorphism \qr{263a} can be decoded as follows: Consider the functor 
 $$
 \al:\C_A\to\C^\wg,\quad(X\to A)\mt X,
 $$ 
@@ -2256,7 +2292,7 @@ $$
 \theta_X(X\to A):=\xi_{X\to A}.
 $$
 
-The isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
+\nn$\bu$ The isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
 $$
 \bt:\C_A\to\Set,\quad(X\to A)\mt\Hom_\C(Y,X), 
 $$ 
@@ -2270,18 +2306,18 @@ for all $X\to A$ in $\C_A$. Let $S$ be in $\Set$. The claim is that the map
 \end{equation} 
 is bijective. In fact, the inverse of \eqref{hsays} is the map $\xi\mt f$ defined by 
 $$
-f(Y\to A):=\xi_{Y\to A}(\id_A).
+f(Y\to A):=\xi_{Y\to A}(\id_Y).
 $$
 
-The isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, consider the functor 
+\nn$\bu$ The isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, consider the functor 
 $$
 \gamma:(\C_A)^{\op}\to\Set,\quad(X\to A)\mt B(X),
 $$ 
-and let $r:\DT B(A)\to\gamma$ be the morphism in $\Set^{(\C_A)^{\op}}$ defined by 
+let $r:\DT B(A)\to\gamma$ be the morphism in $\Set^{(\C_A)^{\op}}$ defined by 
 $$
 r_{X\to A}(A\to B):=(X\to A\to B)
 $$ 
-for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$. The claim is that the map 
+for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$, and let $S$ be in $\Set$. The claim is that the map 
 \begin{equation}\lb{hssba}
 \Hom_{\Set}(S,B(A))\to\Hom_{\Fct((\C_A)^{\op},\Set)}(\DT S,\gamma),\quad g\mt r\ci\DT g
 \end{equation} 
