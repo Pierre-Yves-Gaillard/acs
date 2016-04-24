@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -1221,7 +1221,8 @@ Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\-
 Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[r,"\theta"]&\al\\ 
 X&\DT X.\ar[ru,"p"']
 \end{tikzcd}
-\end{equation}
+\end{equation} 
+In particular, if $(X',p')$ is another projective limit of $\al$, then there is a unique morphism $f:X\to X'$ such that $p'\ci\DT f=p$; moreover $f$ is an isomorphism.
 
 Let $\al:I^{\op}\to\Set$ be a functor defined on a small category, set 
 $$ 
@@ -1235,6 +1236,8 @@ $$
 \begin{conv}
 We say that the above pair $(\lim\al,p)$ is \textbf{the} projective limit of $\al$.
 \end{conv}
+
+Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category.
 
 \begin{df}[inductive limit]\lb{ilim}
 If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limit} of $\al$ {\em in} $\C$ is a pair 
@@ -1250,7 +1253,8 @@ Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-univ
 \al\ar[r,"p"]\ar[dr,"\theta"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
 &\DT Y&Y.
 \end{tikzcd}
-\end{equation}
+\end{equation} 
+In particular, if $(X',p')$ is another inductive limit of $\al$, then there is a unique morphism $f:X\to X'$ such that $\DT f\ci p=p'$; moreover $f$ is an isomorphism.
 
 Let $\al:I\to\Set$ be a functor defined on a small category, set 
 $$ 
@@ -1262,24 +1266,162 @@ let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,\al(
 We say that the above pair $(\lim\al,p)$ is \textbf{the} inductive limit of $\al$.
 \end{conv}
 
+Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category.
+
 If $\al:I\to\Set$ is a functor defined on a small category and $X$ is in $\Set$, then the map 
 $$
 \Hom_\Set(\col\al,X)\to\lim\Hom_\Set(\al,X),\quad f\mt(f\ci p_i)_{i\in I}
 $$ 
 is well-defined and bijective.
 
-The following propositions are obvious:
-\begin{prop}\lb{aic}
-If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
+%%
 
-\nn\emph{(a)} $(X,p)$ is an inductive limit of $\al$ in $\C$,
+\sbs{Brief Comments}
 
-\nn\emph{(b)} $(k(X),k(p))$ is an inductive limit of $k\ci\al$ in $\C^\vee$, where $k(p):k\ci\al\to\DT k(X)$ is the morphism in $(\C^\vee)^I$ induced by $p$,
+\begin{s}
+Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
+$$
+\Hom_{\C^I}(\al,\DT Y)\iso\lim\Hom_\C(\al,Y),
+$$  
+the projection 
+$$
+p:\DT\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al,Y)
+$$ 
+being given by the obvious maps 
+$$
+p_i:\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al(i),Y).
+$$ 
+More precisely, given $\theta$ as in the diagram
+$$
+\begin{tikzcd}
+S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[r,"\theta"]&\Hom_\C(\al,Y)\\ 
+\Hom_{\C^I}(\al,\DT Y)&\DT\Hom_{\C^I}(\al,\DT Y),\ar[ru,"p"']
+\end{tikzcd}
+$$ 
+we can define $f$ by %For $S$ in $\Set$, the inverse of $$\Hom_\Set(S,\Hom_{\C^I}(\al,\DT Y))\to\Hom_{\Set^{I^{\op}}}(\DT S,\Hom_\C(\al,Y)),\quad f\mt p\ci\DT f$$ is the map $\xi\mt f$ defined by the formula 
+$f(s)_i:=\theta_i(s)$.
+\end{s}
 
-\nn\emph{(c)} $(k(X),k(p))$ is a projective limit of $k\ci\al$ in $\Set^\C$, where $k(p):\DT k(X)\to k\ci\al$ is the morphism in $(\Set^\C)^I$ induced by $p$,
+%
 
-\nn\emph{(d)} $(\Hom_\C(X,Y),\Hom_\C(p,Y))$ is a projective limit of $\Hom_\C(\al,Y)$ in $\Set$, where $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ is the morphism in $\Set^I$ induced by $p$.
-\end{prop} 
+% previous version:
+% https://docs.google.com/document/d/1OdYPoUxq-6Hu8lFAKK4yazvZ15DINxnYgdzoVUVTtPc/edit
+
+\begin{s}\lb{216}
+P.~38, Proposition 2.1.6. Here are more details. Recall the setting: 
+
+We have a functor $\al:I\to\C^J$, we assume that for each $j$ in $J$ the functor $\al(\ )(j)$ admits an inductive limit $(X_j,p_j)$: 
+\begin{equation}\lb{ajpj}
+\begin{tikzcd}
+\al(\ )(j)\ar[r,"p_j"]\ar[dr]&\DT X_j\ar[d]&X\ar[d,dashed]\\ 
+&\DT Y&Y.
+\end{tikzcd}
+\end{equation}
+
+We claim that there is a natural functor $\bt:J\to\C$ satisfying $\bt(j)=X_j$ for all $j$ in $J$. Given $j\to j'$ we define $X_j\to X_{j'}$ as suggested by the commutative diagram 
+$$
+\begin{tikzcd}
+\al(\ )(j)\ar[d]\ar[r,"p_j"]&\DT X_j\ar[d]&X_j\ar[d,dashed]\\ 
+\al(\ )(j')\ar[r,"p_{j'}"']&\DT X_{j'}&X_{j'}.
+\end{tikzcd}
+$$ 
+This proves the claim.
+
+We want to define a morphism $q:\al\to\DT\bt$. Let $i$ be in $I$. We must define $q_i:\al(i)\to\bt$, that is, given $j$ in $J$ we must define $q_{ij}:\al(i)(j)\to\bt(j)$. It suffices to set $q_{ij}:=p_{ji}$. 
+
+\begin{prop}\lb{216p}
+In the above setting $(\bt,q)$ is an inductive limit of $\al$. 
+\end{prop}
+
+\begin{proof}
+Let $\gamma:J\to\C$ be a functor and $\ld:\al\to\DT\gamma$ a morphism of functors. We must solve the problem described by the commutative diagram 
+$$
+\begin{tikzcd}
+\al\ar[r,"q"]\ar[dr,"\ld"']&\DT\bt\ar[d,"\DT\mu"]&\bt\ar[d,dashed,"\mu"]\\ 
+&\DT\gamma&\gamma.
+\end{tikzcd}
+$$ 
+
+Note that $\ld$ is given by a family of morphisms $\ld_i:\al(i)\to\gamma$, morphisms given in turn by families $\ld_{ij}:\al(i)(j)\to\gamma(j)$. 
+
+In view of \qr{ajpj} we can define $\mu_j:\bt(j)\to\gamma(j)$ as suggested by the commutative diagram 
+$$
+\begin{tikzcd}
+\al(\ )(j)\ar[r,"p_j"]\ar[dr,"\ld_{\bu j}"']&\DT\bt(j)\ar[d,"\DT\mu_j"]&\bt(j)\ar[d,dashed,"\mu_j"]\\ 
+&\DT\gamma(j)&\gamma(j).
+\end{tikzcd}
+$$ 
+
+It is straightforward to check that the functors $\mu_j:\bt(j)\to\gamma(j)$ give rise to a functor $\mu:\bt\to\gamma$, and that this functor satisfies $\DT\mu\ci q=\ld$, as required. 
+\end{proof}
+\end{s}
+
+%
+
+\begin{s}\lb{c38}
+P.~38, Proposition 2.1.6. Here is an example of a functor $\al:I\to\C^J$ such that $\col\al$ exists in $\C^J$ but there is a $j$ in $J$ such that $\col\ (\rho_j\ci\al)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly\index{Kelly}:%\medskip 
+%
+\begin{center}\href{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}
+\end{center}
+
+The category $J$ has two objects, 1, 2; it has exactly one nontrivial morphism; and this morphism goes from 1 to 2. The category $\C$ has exactly three objects, 1, 2, 3, and exactly four nontrivial morphisms, $f,g,h,g\ci f=h\ci f$, with 
+$$
+\begin{tikzcd}
+1\ar{r}{f}&2\ar[yshift=.7ex]{r}{g}\ar[yshift=-.7ex]{r}[swap]{h}&3.
+\end{tikzcd}
+$$ 
+Then $\C^J$ is the category of morphisms in $\C$. It is easy to see that the morphism 
+\begin{equation}\lb{38}
+f\xr{(f,h)}g 
+\end{equation}
+in $\C^J$ is an epimorphism, and that this implies that the coproduct 
+$$
+g\sqcup_fg,
+$$ 
+taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
+\end{s}
+
+%
+
+\begin{s} 
+P.~39, Proposition 2.1.7. Let $\al:I\tm J\to\C$ be a bifunctor, and let $(X_i)_{i\in I}$ be a family of objects of $\C$. Assume that, for all $i$ in $I$ the functor $\al(i,\ )$ admits an inductive limit of the form $(X_i,p_i)$: 
+$$
+\begin{tikzcd}
+\al(i,\ )\ar[r,"p_i"]\ar[dr]&\DT X_i\ar[d]&X_i\ar[d,dashed]\\ 
+&\DT Y&Y.
+\end{tikzcd}
+$$ 
+By arguing as in \S\ref{216} p.~\pr{216} we see that there is a natural functor $\bt:I\to\C$ such that $\bt(i)=X_i$ for all $i$. Let $(X,q)$ be an inductive limit of $\bt$: 
+\begin{equation}\lb{bqx}
+\begin{tikzcd}
+\bt\ar[r,"q"]\ar[dr]&\DT X\ar[d]&X\ar[d,dashed]\\ 
+&\DT Y&Y.
+\end{tikzcd}
+\end{equation} 
+
+We claim that $(X,r)$ is an inductive limit of $\al$, where $r:\al\to\DT X$ is the obvious morphism of functors. 
+
+Let $Y$ be in $\C$ and $\theta:\al\to\DT Y$ a morphism of functors. We must solve the problem 
+$$
+\begin{tikzcd}
+\al\ar[r,"r"]\ar[dr,"\theta"']&\DT X\ar[d]&X\ar[d,dashed]\\ 
+&\DT Y&Y.
+\end{tikzcd}
+$$ 
+Noting that $\theta$ induces, for all $i$, a morphism of functors $\al(i,\ )\to\DT Y$, we get firstly a morphism $\bt(i)\to Y$:
+$$
+\begin{tikzcd}
+\al(i,\ )\ar[r,"p_i"]\ar[dr]&\DT\bt(i)\ar[d]&\bt(i)\ar[d,dashed]\\ 
+&\DT Y&Y,
+\end{tikzcd}
+$$ 
+secondly a morphism of functors $\bt\to\DT Y$, and thirdly a morphism $X\to Y$ by \qr{bqx}. It is straightforward to check that this morphism $X\to Y$ does the job. q.e.d.
+\end{s}
+
+%
+
+\begin{s} 
+The two propositions below are basic.
 
 \begin{prop}
 If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\C^{I^{\op}}$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
@@ -1290,6 +1432,96 @@ If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C
 
 \nn\emph{(c)} $(\Hom_\C(Y,X),\Hom_\C(Y,p))$ is a projective limit of $\Hom_\C(Y,\al)$ in $\Set$, where $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ is the morphism in $\Set^{I^{\op}}$ induced by $p$.
 \end{prop}
+
+\begin{proof}
+Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We shall prove that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
+\begin{equation}\lb{zfz}
+\begin{tikzcd}
+Z\ar[d,dashed,"f"']&\DT Z\ar[d,"\DT f"']\ar[r,"\ld"]&\al\\ 
+X&\DT X,\ar[ru,"p"']
+\end{tikzcd}
+\end{equation} 
+
+\begin{equation}\lb{sgs}
+\begin{tikzcd}
+S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(Y,\al)\\ 
+\Hom_\C(Y,X)&\DT\Hom_\C(Y,X).\ar{ru}[swap]{\Hom_\C(Y,p)}
+\end{tikzcd}
+\end{equation} 
+
+To prove (c)$\then$(a), we suppose $Z$ and $\ld$ given in \qr{zfz}, and in \qr{sgs} we let $S$ be a singleton, we set $Y:=Z$, and we define $\mu$ by the formula $\mu_i(s):=\ld_i$. The end of the proof of (a) is easy. 
+
+To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let $s$ be in $S$. We must define $g(s):Y\to X$. We set $Z:=Y$ in \qr{zfz}. We must define $\ld:\DT Y\to\al$. Letting $i$ be in $I$, it suffices to define $\ld_i:Y\to\al(i)$. To do this we set $\ld_i:=\mu_i(s)$. Again we leave the rest of the proof to the reader.
+\end{proof}
+
+The proof of the following proposition is left as an easy exercise to the reader.
+
+\begin{prop}\lb{aic}
+If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
+
+\nn\emph{(a)} $(X,p)$ is an inductive limit of $\al$ in $\C$,
+
+\nn\emph{(b)} $(k(X),k(p))$ is an inductive limit of $k\ci\al$ in $\C^\vee$, where $k(p):k\ci\al\to\DT k(X)$ is the morphism in $(\C^\vee)^I$ induced by $p$,
+
+\nn\emph{(c)} $(k(X),k(p))$ is a projective limit of $k\ci\al$ in $\Set^\C$, where $k(p):\DT k(X)\to k\ci\al$ is the morphism in $(\Set^\C)^I$ induced by $p$,
+
+\nn\emph{(d)} $(\Hom_\C(X,Y),\Hom_\C(p,Y))$ is a projective limit of $\Hom_\C(\al,Y)$ in $\Set$, where $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ is the morphism in $\Set^I$ induced by $p$.
+\end{prop}
+\end{s}
+
+%
+
+\begin{comment}
+\begin{s}
+P. 39, Definition 2.1.8. Let $\C$ be a category, let 
+$$
+h:\C\to\C^\wg,\quad k:\C\to\C^\vee
+$$ 
+be the Yoneda embeddings, let 
+$$
+\al:I\to\C,\quad\bt:J^{\op}\to\C
+$$ 
+be functors defined on small categories, and assume 
+$$
+\col\al,\lim\bt\in\C.
+$$ 
+Then the natural morphisms 
+$$
+\col k\ci\al\to k(\col\al),\quad h(\lim\bt)\to\lim h\ci\bt
+$$ 
+are isomorphisms.
+\end{s}
+\end{comment}
+
+%
+
+\begin{s} 
+P.~40, Proposition 2.1.10 (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
+%
+\begin{prop}\lb{2.1.10b}
+Let $
+\C\os G\longleftarrow\A\os F\longrightarrow\B
+$ be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
+$$
+\Hom_\B(F(\ ),Y)\iso\Hom_\C(G(\ ),Z)
+$$
+in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
+\end{prop}
+%
+\begin{proof}
+We have for any functor $\al:I\to\A$ any object $Y$ in $\B$ 
+$$ 
+\Hom_\B\left(F\left(\col\al\right),Y\right)\iso
+\Hom_\C\left(G\left(\col\al\right),Z\right)
+\xr\sim
+\Hom_\C\left(\col G(\al),Z\right)
+$$
+$$
+\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\iso\Hom_\B(\col F(\al),Y),
+$$ 
+and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
+\end{proof}
+\end{s}
 
 %%
 
@@ -1361,154 +1593,7 @@ This shows that the inductive limit of $\al$ does not exist universally in $\Set
 
 %%
 
-\sbs{Brief Comments}
-
-\begin{s}
-Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
-$$
-\Hom_{\C^I}(\al,\DT Y)\iso\lim\Hom_\C(\al,Y),
-$$  
-the projection 
-$$
-p:\DT\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al,Y)
-$$ 
-being given by the obvious maps 
-$$
-p_i:\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al(i),Y).
-$$ 
-For $S$ in $\Set$, the inverse of 
-$$
-\Hom_\Set(S,\Hom_{\C^I}(\al,\DT Y))\to\Hom_{\Set^{I^{\op}}}(\DT S,\Hom_\C(\al,Y)),\quad f\mt p\ci\DT f
-$$ 
-is the map $\xi\mt f$ defined by the formula $f(s)_i:=\xi_i(s)$.
-\end{s}
-
-%
-
-\begin{s}\lb{216}
-P.~38, Proposition 2.1.6. Here are more details. Recall the setting: we have a functor $\al:I\to\C^J$, we assume that $\col_i(\al(i)(j))$ exists in $\C$ for all $j$, we define $\bt\in\C^J$ by $\bt(j):=\col_i(\al(i)(j))$ (it is easy to see that this formula does define a functor $\bt$), and we claim $\bt=\col\al$. 
-
-Let us explicit this claim (leaving the proof to the reader):
-
-We are given a coprojection
-$$
-\al(\ )(j)\xr{p_j}\DT\bt(j)
-$$ 
-for all $j$ (see Definition~\ref{ilim}), that is 
-$$
-\al(i)(j)\xr{p_{ji}}\bt(j)
-$$ 
-for all $i,j$. We must define a coprojection 
-$$
-\al\xr q\DT\bt,
-$$ 
-that is 
-$$
-\al(i)\xr{q_i}\bt
-$$ 
-for all $i$, that is 
-$$
-\al(i)(j)\xr{q_{ij}}\bt(j)
-$$ 
-for all $i,j$. It suffices to set $q_{ij}:=p_{ji}$. There is a similar statement for projective limits.
-\end{s}
-
-%
-
-\begin{s}\lb{c38}
-P.~38, Proposition 2.1.6. Here is an example of a functor $\al:I\to\C^J$ such that $\col\al$ exists in $\C^J$ but there is a $j$ in $J$ such that $\col\ (\rho_j\ci\al)$ does not exist in $\C$. (Recall that $\rho_j:\C^J\to\C$ is the evaluation at $j\in J$.) This example is taken from Section 3.3 of the book \textbf{Basic Concepts of Enriched Category Theory} of G.M. Kelly\index{Kelly}:%\medskip 
-%
-\begin{center}\href{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}{http://www.tac.mta.ca/tac/reprints/articles/10/tr10abs.html}
-\end{center}
-
-The category $J$ has two objects, 1, 2; it has exactly one nontrivial morphism; and this morphism goes from 1 to 2. The category $\C$ has exactly three objects, 1, 2, 3, and exactly four nontrivial morphisms, $f,g,h,g\ci f=h\ci f$, with 
-$$
-\begin{tikzcd}
-1\ar{r}{f}&2\ar[yshift=.7ex]{r}{g}\ar[yshift=-.7ex]{r}[swap]{h}&3.
-\end{tikzcd}
-$$ 
-Then $\C^J$ is the category of morphisms in $\C$. It is easy to see that the morphism 
-%
-\begin{equation}\lb{38}
-f\xr{(f,h)}g 
-\end{equation}
-%
-in $\C^J$ is an epimorphism, and that this implies that the coproduct 
-$$
-g\sqcup_fg,
-$$ 
-taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
-\end{s}
-
-%
-
-\begin{s} 
-P.~39, Proposition 2.1.7. The following slightly stronger statement holds. 
-
-Let $I,J,\C$ be categories and let 
-$$
-(X_{ij})_{(i,j)\in I\tm J}
-$$ 
-be an inductive system in $\C$. Assume that $\col_jX_{ij}$ exists in $\C$ for all $i$, and that 
-\begin{equation}\lb{limlim}
-\col_i\col_jX_{ij}
-\end{equation}
-exists in $\C$. Then $\col_{i,j}X_{ij}$ exists in $\C$ and is isomorphic to (\ref{limlim}).
-\end{s}
-
-%
-
-\begin{s}
-P. 39, Definition 2.1.8. Let $\C$ be a category, let 
-$$
-h:\C\to\C^\wg,\quad k:\C\to\C^\vee
-$$ 
-be the Yoneda embeddings, let 
-$$
-\al:I\to\C,\quad\bt:J^{\op}\to\C
-$$ 
-be functors defined on small categories, and assume 
-$$
-\col\al,\lim\bt\in\C.
-$$ 
-Then the natural morphisms 
-$$
-\col k\ci\al\to k(\col\al),\quad h(\lim\bt)\to\lim h\ci\bt
-$$ 
-are isomorphisms.
-\end{s}
-
-%
-
-\begin{s} 
-P.~40, Proposition 2.1.10 (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
-%
-\begin{prop}\lb{2.1.10b}
-Let $
-\C\os G\longleftarrow\A\os F\longrightarrow\B
-$ be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
-$$
-\Hom_\B(F(\ ),Y)\iso\Hom_\C(G(\ ),Z)
-$$
-in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
-\end{prop}
-%
-\begin{proof}
-We have for any functor $\al:I\to\A$ any object $Y$ in $\B$ 
-$$ 
-\Hom_\B\left(F\left(\col\al\right),Y\right)\iso
-\Hom_\C\left(G\left(\col\al\right),Z\right)
-\xr\sim
-\Hom_\C\left(\col G(\al),Z\right)
-$$
-$$
-\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\iso\Hom_\B(\col F(\al),Y),
-$$ 
-and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
-\end{proof}
-\end{s}
-
-%
+\sbs{Brief comments}
 
 \begin{s} 
 P.~40, proof of Lemma 2.1.11 (minor variant).
