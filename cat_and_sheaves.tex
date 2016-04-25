@@ -795,13 +795,27 @@ $$
 Let $F:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{universal element}\index{universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{represents}\index{represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{represents} $F$. 
 \end{df}
 
-The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ \emph{by} $X$. In particular, if the pairs $(X,u)$ and $(X',u')$ both represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u')=u$; moreover $g$ is an isomorphism.
+The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-universal elements are in functorial bijection with isomorphisms $\hy_\C(X)\xr\sim F$, such an isomorphism being called a {\em representation of} $F$ \emph{by} $X$. More precisely, the Yoneda Lemma says that a morphism $u:\hy_\C(X)\to F$ in $\C^\wg$ is universal if and only if any morphism $\hy_\C(Y)\to F$ factors uniquely through $u$:
+$$
+\begin{tikzcd}
+\hy_\C(Y)\ar[rr]\ar[dr,dashed]&&F\\ 
+&\hy_\C(X).\ar[ru,"u"']
+\end{tikzcd}
+$$ 
+(This unique factorization condition implies that $u$ is an isomorphism.) In particular, if the pairs $(X,u)$ and $(X',u')$ both represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u')=u$; moreover $g$ is an isomorphism.
 
 \begin{df}[co-universal element]\lb{ue2} 
 Let $F:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(F,X)$-\emph{co-universal element}\index{co-universal element} is an element $u$ of $F(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to F(Y),\ f\mt F(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{co-represents}\index{co-represents} $F$, or, when we want to be more precise, that the pair $(X,u)$ \emph{co-represents} $F$. 
 \end{df}
 
-The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-co-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a \emph{co-representation of} $F$ \emph{by} $X$. In particular, if the pairs $(X,u)$ and $(X',u')$ both co-represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u)=u'$; moreover $g$ is an isomorphism.
+The Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) says that $(F,X)$-co-universal elements are in functorial bijection with isomorphisms $F\xr\sim\ky_\C(X)$, such an isomorphism being called a \emph{co-representation of} $F$ \emph{by} $X$. More precisely, the Yoneda Lemma says that a morphism $u:F\to\ky_\C(X)$ in $\C^\vee$ is co-universal if and only if any morphism $F\to\ky_\C(Y)$ factors uniquely through $u$:
+$$
+\begin{tikzcd}
+F\ar[rr]\ar[dr,"u"']&&\ky_\C(Y)\\ 
+&\ky_\C(X).\ar[ru,dashed]
+\end{tikzcd}
+$$ 
+(This unique factorization condition implies that $u$ is an isomorphism.) In particular, if the pairs $(X,u)$ and $(X',u')$ both co-represent $F$, then there is a unique morphism $g:X\to X'$ such that $F(g)(u)=u'$; moreover $g$ is an isomorphism.
 
 %%
 
@@ -1607,41 +1621,22 @@ $$
 
 \begin{proof} $\then$: Straightforward.
 
-\nn$\si$: Let $p\in\Hom_{\C^\C}(\id_\C,\DT T)$ (see Notation~\ref{diag} p.~\pr{diag}) be a $(\Hom_{\C^\C}(\id_\C,\DT(\ )),T)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2} and Notation~\ref{diag} p.~\pr{diag}). Recall that this means that, for each object $X$ of $\C$, the map 
+\nn$\si$: Let $p:\id_\C\to\DT T$ be the coprojection (this is a morphism in $\C^\C$). Let $X$ be in $\C$. For all morphism of functors $\theta:\id_\C\to\DT X$ there is a unique morphism $f:T\to X$ satisfying $\DT f\ci p=\theta$. Let us denote this $f$ by $f^\theta$: 
 $$
-\pp_X:\Hom_\C(T,X)\to\Hom_{\C^\C}(\id_\C,\DT X),\quad f\mt\DT f\ci p 
-$$ 
-is bijective. Let $X$ be an object of $\C$. It suffices to show 
-%
-\begin{equation}\lb{2111ets}
-\Hom_\C(X,T)=\{p_X\}.
-\end{equation}
-
-Claim: the inverse of $\pp_T$ is $\theta\mt\theta_T$. 
-
-For any $\theta$ in $\Hom_{\C^\C}(\id_\C,\DT T)$ and any $Y$ in $\C$ we have $\theta_T\ci p_Y=\theta_Y$, and thus $\DT\theta_T\ci p=\theta$, which implies the claim. 
-
-In other words, we have 
-$$
-\begin{tikzcd} 
-\Hom_\C(T,T)\ar[yshift=0.7ex]{rr}{\pp_T=\DT(?)\ci p}&&\Hom_{\C^\C}(\id_\C,\DT T).\ar[yshift=-0.7ex]{ll}{\pp_T^{-1}=?_T}
+\begin{tikzcd}
+\id_\C\ar[r,"p"]\ar[dr,"\theta"']&\DT T\ar[d,"\DT f^\theta"]&T\ar[d,dashed,"f^\theta"]\\ 
+&\DT X&X.
 \end{tikzcd}
 $$ 
-This implies 
-$$
-\pp_T(\id_T)=\DT\id_T\ci p=\id_{\DT T}\ci p=p=\pp_T(\pp_T^{-1}(p))=\pp_T(p_T),
-$$ 
-and thus 
-%
-\begin{equation}\lb{it=pt}
+We claim 
+\begin{equation}\lb{fttt}
+f^\theta=\theta_T.
+\end{equation} 
+We have indeed $(\DT\theta_T\ci p)_Y=\theta_T\ci p_Y=\theta_Y=(\DT f^\theta\ci p)_Y$ for any $Y$ in $\C$. This proves \qr{fttt}. We claim 
+\begin{equation}\lb{idtpt}
 \id_T=p_T.
-\end{equation}
-
-To prove \qr{2111ets}, note that we have for $f$ in $\Hom_\C(X,T)$
-$$
-f=p_T\ci f=p_X,
-$$
-the first equality following from \qr{it=pt}, and the second one from the definition of $\Hom_{\C^\C}(\id_\C,\DT T)$.
+\end{equation} 
+We have indeed $(\DT p_T\ci p)_X=p_T\ci p_X=p_X=(\DT\id_T\ci p)_X$. This proves \qr{idtpt}. Let $f:X\to T$ be a morphism in $\C$. We have $f=\id_T\ci f=p_T\ci f=p_X$, the second equality following from \qr{idtpt}. This shows that $T$ is terminal.
 \end{proof}
 
 \begin{cor}\lb{c2111}
