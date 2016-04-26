@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-\up{comment}
+%\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -1221,7 +1221,7 @@ $$
 If $I$ and $\C$ are categories, we denote by $\DT$ the diagonal functor from $\C$ to $\C^I$. The categories $I$ and $\C$ shall be explicitly indicated only when they are not clear from the context. Furthermore, we shall often write $\DT X$ for $\DT(X)$. To be more precise, $\DT X$ is the constant functor from $I$ to $\C$ with value $X$.
 \end{nota}
 
-\begin{df}[projective limit]\lb{p}
+\begin{df}[projective limit]\lb{plim}
 If $\al:I^{\op}\to\C$ is a functor, then a {\em projective limit of}\index{projective limit} $\al$ {\em in} $\C$ is a pair 
 $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\DT X,\al)
@@ -1247,7 +1247,7 @@ $$
 f(y):=(\theta_i(y))_{i\in I}.
 $$
 %\begin{df}We say that the above pair $(\lim\al,p)$ is \emph{the} projective limit of $\al$.\end{df}
-\begin{conv}
+\begin{conv}\lb{the}
 We say that the above pair $(\lim\al,p)$ is \textbf{the} projective limit of $\al$.
 \end{conv}
 
@@ -1437,7 +1437,7 @@ secondly a morphism of functors $\bt\to\DT Y$, and thirdly a morphism $X\to Y$ b
 \begin{s} 
 The two propositions below are basic.
 
-\begin{prop}
+\begin{prop}\lb{aioc}
 If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\C^{I^{\op}}$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $(X,p)$ is an projective limit of $\al$ in $\C$,
@@ -1446,6 +1446,11 @@ If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C
 
 \nn\emph{(c)} $(\Hom_\C(Y,X),\Hom_\C(Y,p))$ is a projective limit of $\Hom_\C(Y,\al)$ in $\Set$, where $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ is the morphism in $\Set^{I^{\op}}$ induced by $p$.
 \end{prop}
+
+Condition (c) is often abridged by 
+$$
+\Hom_\C(Y,\lim\al)\xr\sim\lim\Hom_\C(Y,\al).
+$$
 
 \begin{proof}
 Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We shall prove that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
@@ -1468,7 +1473,7 @@ To prove (c)$\then$(a), we suppose $Z$ and $\ld$ given in \qr{zfz}, and in \qr{s
 To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let $s$ be in $S$. We must define $g(s):Y\to X$. We set $Z:=Y$ in \qr{zfz}. We must define $\ld:\DT Y\to\al$. Letting $i$ be in $I$, it suffices to define $\ld_i:Y\to\al(i)$. To do this we set $\ld_i:=\mu_i(s)$. Again we leave the rest of the proof to the reader.
 \end{proof}
 
-The proof of the following proposition is left as an easy exercise to the reader.
+The proof of the following proposition is similar to the previous one and is left to the reader as an easy exercise.
 
 \begin{prop}\lb{aic}
 If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
@@ -1481,33 +1486,15 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if 
 
 \nn\emph{(d)} $(\Hom_\C(X,Y),\Hom_\C(p,Y))$ is a projective limit of $\Hom_\C(\al,Y)$ in $\Set$, where $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ is the morphism in $\Set^I$ induced by $p$.
 \end{prop}
+
+Condition (d) is often abridged by 
+$$
+\Hom_\C(\col\al,Y)\xr\sim\lim\Hom_\C(\al,Y).
+$$
 \end{s}
 
-%
-
-\begin{comment}
-\begin{s}
-P. 39, Definition 2.1.8. Let $\C$ be a category, let 
-$$
-h:\C\to\C^\wg,\quad k:\C\to\C^\vee
-$$ 
-be the Yoneda embeddings, let 
-$$
-\al:I\to\C,\quad\bt:J^{\op}\to\C
-$$ 
-be functors defined on small categories, and assume 
-$$
-\col\al,\lim\bt\in\C.
-$$ 
-Then the natural morphisms 
-$$
-\col k\ci\al\to k(\col\al),\quad h(\lim\bt)\to\lim h\ci\bt
-$$ 
-are isomorphisms.
-\end{s}
-\end{comment}
-
-%
+% paragraph removed:
+% https://docs.google.com/document/d/1Hx-fRBi-yTwTyFKvGi-qFLmgNQwYl7YJvZMd_ngC6nw/edit
 
 \begin{s} 
 P.~40, Proposition 2.1.10 (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
@@ -1525,13 +1512,10 @@ in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
 \begin{proof}
 We have for any functor $\al:I\to\A$ any object $Y$ in $\B$ 
 $$ 
-\Hom_\B\left(F\left(\col\al\right),Y\right)\iso
-\Hom_\C\left(G\left(\col\al\right),Z\right)
-\xr\sim
-\Hom_\C\left(\col G(\al),Z\right)
+\Hom_\B\left(F\left(\col\al\right),Y\right)\iso\Hom_\C\left(G\left(\col\al\right),Z\right)\xr\sim\Hom_\C\left(\col G(\al),Z\right)
 $$
 $$
-\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\iso\Hom_\B(\col F(\al),Y),
+\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\xleftarrow\sim\Hom_\B(\col F(\al),Y),
 $$ 
 and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
 \end{proof}
@@ -1541,26 +1525,11 @@ and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
 
 \sbs{Universal limits}
 
-Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). For any $Y$ in $\C$ we write 
-$$
-\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)
-$$ 
-for the induced morphism in $\Set^I$, for any functor $F:\C\to\C'$ we write 
-$$
-F(p):F\ci\al\to\DT F(X)
-$$ 
-for the induced morphism in $\C'^I$, and for any functor $F:\C\to\C'$ and any $X'$ in $\C'$ we write 
-$$
-\Hom_{\C'}(F(p),X'):\DT\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
-$$ 
-for the induced morphism in $\Set^{I^{\op}}$. In particular, for each $i$ in $I$ we get a morphism 
-\begin{equation}\lb{c'fpi}
-\Hom_{\C'}(F(p_i),X'):\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
-\end{equation}
-in $\Set$. Let $h:\C\to\C^\wg$ be the Yoneda embedding, and recall Definition~\ref{p} p.~\pr{p} and Definition~\ref{ilim} p.~\pr{ilim}.
+% previous version:
+% https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
 \begin{prop}\lb{b}
-The following conditions are equivalent:
+If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}), and if $h:\C\to\C^\wg$ be the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $(h(X),h(p))$ is an inductive limit of $h\ci\al$ in $\C^\wg$,
 
@@ -1572,18 +1541,14 @@ The following conditions are equivalent:
 \end{prop}
 
 \begin{proof}
-Recall Proposition~\ref{aic} p.~\pr{aic}. We obviously have (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
+Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
 $$
 \Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)
 $$
 $$
 \iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').
 $$ 
-Here $\lim\Hom_{\C'}(F\ci\al,X')$ is defined as the usual subset of 
-$$
-\prod_{i\in I}\ \Hom_{\C'}(F(\al(i)),X')
-$$ 
-(see Definition~\ref{p} p.~\pr{p}). In particular we have natural projections 
+Here $\lim\Hom_{\C'}(F\ci\al,X')$ is \emph{the} projective limit of $\Hom_{\C'}(F\ci\al,X')$ in the sense of Convention~\ref{the} p.~\pr{the}. In particular we have natural projections 
 $$
 \lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').
 $$ 
@@ -1591,7 +1556,8 @@ To complete the proof, it suffices to note that the morphism
 $$
 \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
 $$ 
-obtained by composing the above isomorphisms with the above projection coincides with \qr{c'fpi}.
+obtained by composing the above isomorphisms with the above projection coincides with %\qr{c'fpi}
+the natural one.
 \end{proof}
 \begin{df}[universal inductive limit]\lb{uil} 
 Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
@@ -1621,22 +1587,19 @@ $$
 
 \begin{proof} $\then$: Straightforward.
 
-\nn$\si$: Let $p:\id_\C\to\DT T$ be the coprojection (this is a morphism in $\C^\C$). Let $X$ be in $\C$. For all morphism of functors $\theta:\id_\C\to\DT X$ there is a unique morphism $f:T\to X$ satisfying $\DT f\ci p=\theta$. Let us denote this $f$ by $f^\theta$: 
+\nn$\si$: Let $p:\id_\C\to\DT T$ be the coprojection (this is a morphism in $\C^\C$). Let $X$ be in $\C$. For all morphism of functors $\theta:\id_\C\to\DT X$ there is a unique morphism $f:T\to X$ satisfying $\DT f\ci p=\theta$. %Let us denote this $f$ by $f^\theta$: 
 $$
 \begin{tikzcd}
-\id_\C\ar[r,"p"]\ar[dr,"\theta"']&\DT T\ar[d,"\DT f^\theta"]&T\ar[d,dashed,"f^\theta"]\\ 
+\id_\C\ar[r,"p"]\ar[dr,"\theta"']&\DT T\ar[d,"\DT f"]&T\ar[d,dashed,"f"]\\ 
 &\DT X&X.
 \end{tikzcd}
 $$ 
+%We claim \begin{equation}\lb{fttt}f^\theta=\theta_T.\end{equation} We have indeed $(\DT\theta_T\ci p)_Y=\theta_T\ci p_Y=\theta_Y=(\DT f^\theta\ci p)_Y$ for any $Y$ in $\C$. This proves \qr{fttt}. 
 We claim 
-\begin{equation}\lb{fttt}
-f^\theta=\theta_T.
-\end{equation} 
-We have indeed $(\DT\theta_T\ci p)_Y=\theta_T\ci p_Y=\theta_Y=(\DT f^\theta\ci p)_Y$ for any $Y$ in $\C$. This proves \qr{fttt}. We claim 
 \begin{equation}\lb{idtpt}
 \id_T=p_T.
 \end{equation} 
-We have indeed $(\DT p_T\ci p)_X=p_T\ci p_X=p_X=(\DT\id_T\ci p)_X$. This proves \qr{idtpt}. Let $f:X\to T$ be a morphism in $\C$. We have $f=\id_T\ci f=p_T\ci f=p_X$, the second equality following from \qr{idtpt}. This shows that $T$ is terminal.
+We have indeed $(\DT p_T\ci p)_X=p_T\ci p_X=p_X=(\DT\id_T\ci p)_X$. This proves \qr{idtpt}. If $f:X\to T$ is a morphism in $\C$, then we have $f=\id_T\ci f=p_T\ci f=p_X$, the second equality following from \qr{idtpt}. This shows that $T$ is terminal.
 \end{proof}
 
 \begin{cor}\lb{c2111}
@@ -1682,7 +1645,7 @@ Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p
 \begin{thm}\lb{fgd}
 Let $I$ be a small category with disjoint hom-sets; let $\al,\bt:I\to\C$ be two functors; and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. Then the natural map 
 \begin{equation}\lb{hficab}
-\Hom_{\Fct(I,\C)}(\al,\bt)\to\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
+\Hom_{\Fct(I,\C)}(\al,\bt)\to\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
 \end{equation} 
 is bijective.
 \end{thm}
@@ -1690,7 +1653,7 @@ is bijective.
 \begin{proof}
 View 
 $$
-\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
+\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
 $$ 
 as a subset $S$ of 
 $$
@@ -1715,7 +1678,7 @@ commutes.
 
 \nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\al$ to $\bt$. We get a map 
 \begin{equation}\lb{liifii}
-\lim_{i\in I}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)\to\Hom_{\Fct(I,\C)}(\al,\bt),
+\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)\to\Hom_{\Fct(I,\C)}(\al,\bt),
 \end{equation} 
 and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inverse bijections.
 \end{proof}
@@ -1780,20 +1743,38 @@ P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We sp
 $$
 \Hom_{\C^I}(\pp^\dg\bt,\al)\to\Hom_{\C^J}(\bt,\pp_*\al),\quad v\mt(v*\pp)\ci u
 $$ 
-is bijective. (See \S\ref{durl} p.~\pr{durl} below.)
+is bijective, or, more naively, that for all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v*\pp)\ci u=w$: 
+$$
+\begin{tikzcd}
+\bt\ar[r,"u"]\ar[dr,"w"']&\pp_*\pp^\dg\bt\ar[d,"v*\pp"]&\pp^\dg\bt\ar[d,dashed,"v"]\\ 
+&\pp_*\al&\al.
+\end{tikzcd}
+$$
+(See \S\ref{durl} p.~\pr{durl} below.)
 
 \nn(b) We say that $\pp^\ddg\bt$ exists if there is a $u:\pp_*\pp^\ddg\bt\to\bt$ such that the pair $(\pp^\ddg\bt,u)$ represents the functor $\Hom_{\C^J}(\pp_*(\ ),\bt):(\C^I)^{\op}\to\Set$ in the sense of Definition~\ref{ue} p.~\pr{ue}. This means that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\al,\pp^\ddg\bt)\to\Hom_{\C^J}(\pp_*\al,\bt),\quad v\mt u\ci(v*\pp)
 $$ 
-is bijective.
+is bijective, or, more naively, that for all $w:\pp_*\al\to\bt$ there is a unique $v:\al\to\pp^\ddg\bt$ such that $u\ci(v*\pp)=w$: 
+$$
+\begin{tikzcd}
+\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v*\pp"']\ar[r,"w"]&\bt\\ 
+\pp^\ddg\bt&\pp_*\pp^\ddg\bt.\ar[ru,"u"']
+\end{tikzcd}
+$$
 
 \nn(c) Let $\gamma:I\to\C$ and let $u$ be an endomorphism of the functor $\pp_*\gamma:J\to\C$. The phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via $u$'' shall mean that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\al,\gamma)\to\Hom_{\C^J}(\pp_*\al,\pp_*\gamma),\quad v\mt u\ci(v*\pp)
 $$ 
-is bijective. 
-
+is bijective, or, more naively, that for all $w:\pp_*\al\to\pp_*\gamma$ there is a unique $v:\al\to\gamma$ such that $u\ci(v*\pp)=w$: 
+$$
+\begin{tikzcd}
+\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v*\pp"']\ar[r,"w"]&\pp_*\gamma\\ 
+\gamma&\pp_*\gamma.\ar[ru,"u"']
+\end{tikzcd}
+$$ 
 In particular, the phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via the identity of $\pp_*\gamma:J\to\C$'' shall mean that, for all $\al:I\to\C$, the map 
 $$
 \Hom_{\C^I}(\al,\gamma)\to\Hom_{\C^J}(\pp_*\al,\pp_*\gamma),\quad v\mt v*\pp
@@ -1817,7 +1798,7 @@ If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists}. 
 
 %%
 
-\sbs{Theorem 2.3.3 (i) (p.~52)}
+\sbs{Theorem 2.3.3 (i) p.~52}
 
 Recall the statement: 
 
