@@ -2454,15 +2454,44 @@ P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of P
 Let $\al:I\to\A$ be a functor, let $A$ be in $\A$, let $p:\al\to\DT A$ (see Notation~\ref{diag} p.~\pr{diag}) be a morphism of functors, assume that $(A,p)$ is an inductive limit of $\al$ (see Definition~\ref{ilim} p.~\pr{ilim}), let $\al':I\to\A_A$ be the obvious functor, let $a$ in $\A_A$ be given by the identity of $A$, and let $q:\al'\to\DT a$ be the obvious morphism of functors. Then $(a,q)$ is an inductive limit of $\al'$. 
 \end{lem} 
 
-\begin{proof}
-Let $b=(B\to A)$ be in $\A_A$. We define a map from $\Hom_{(\A_A)^I}(\al',\DT b)$ to $\Hom{\A_A}(a,b)$ by attaching to a morphism of functors $\eta:\al'\to\DT b$ the morphism $g:a\to b$ defined as follows. Let $\xi:\al\to\DT B$ be the morphism of functors induced by $\eta$, let $f:A\to B$ be the unique morphism satisfying $\DT f\ci p=\xi$, and let $g:a\to b$ be induced by $f$. We leave it to the reader to check that $\eta\mt g$ is inverse to $g\mt\DT g\ci q$.
+\begin{proof} 
+We know that for all $B$ in $\A$ and all $\pp:\al\to\DT B$ there is a unique $f:A\to B$ such that $\DT f\ci p=\pp$: 
+\begin{equation}\lb{apa}
+\begin{tikzcd}
+\al\ar[r,"p"]\ar[dr,"\pp"']&\DT A\ar[d,"\DT f"]&A\ar[d,dashed,"f"]\\ 
+&\DT B&B.
+\end{tikzcd}
+\end{equation} 
+Let $a:=(A\xr{\id}A)$ and $b=(B\xr bA)$ be in $\A_A$, and let $\psi:\al'\to\DT b$, that is 
+$$
+\begin{tikzcd}
+\al(i)\ar[rd,"p_i"']\ar[rr,"\psi_i"]&&B\ar[dl,"b"]\\ 
+&A,
+\end{tikzcd}
+$$ 
+be given. We want to prove that there is a unique $g:a\to b$, that is 
+$$
+\begin{tikzcd}
+A\ar[rd,"\id"']\ar[rr,dashed,"g"]&&B\ar[dl,"b"]\\ 
+&A,
+\end{tikzcd}
+$$ 
+such that $\DT g\ci q=\psi$: 
+$$
+\begin{tikzcd}
+\al'\ar[r,"q"]\ar[dr,"\psi"']&\DT a\ar[d,"\DT g"]&a\ar[d,dashed,"g"]\\ 
+&\DT b&b.
+\end{tikzcd}
+$$ 
+It is easy to see that there is a unique $\pp:\al\to\DT B$ such that $\pp_i=\psi_i$ for all $i\in I$, and that the morphism $g:=f$, where $f$ is given by \qr{apa}, does the job.
+%Let $b=(B\to A)$ be in $\A_A$. We define a map from $\Hom_{(\A_A)^I}(\al',\DT b)$ to $\Hom{\A_A}(a,b)$ by attaching to a morphism of functors $\eta:\al'\to\DT b$ the morphism $g:a\to b$ defined as follows. Let $\xi:\al\to\DT B$ be the morphism of functors induced by $\eta$, let $f:A\to B$ be the unique morphism satisfying $\DT f\ci p=\xi$, and let $g:a\to b$ be induced by $f$. We leave it to the reader to check that $\eta\mt g$ is inverse to $g\mt\DT g\ci q$.
 \end{proof}
 \end{s}
 
 % the \S with the label \lb{b} was here
 
 \begin{s} 
-Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 p.~52 (i) of the book. Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
+Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 (i) p.~52 of the book. Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
 
 \begin{thm}[Theorem 2.3.3 (i) p. 52]\lb{233}
 If 
@@ -2495,7 +2524,7 @@ G(X')(X):=\Hom_{\A}(F(X),X').
 $$ 
 is right adjoint to $\widetilde F$. This results from the following computation: 
 $$
-\Hom_{\A}\left(\widetilde F(A),X'\right)=
+\Hom_{\A}\left(\widetilde F(A),X'\right)\iso
 \Hom_{\A}\left(\col_{(X\to A)\in\C_A}F(X),X'\right)\iso 
 \lim_{(X\to A)\in\C_A}\Hom_{\A}(F(X),X')
 $$
@@ -2540,11 +2569,9 @@ $$
 \ld:(\C^\wg)_A\to(\C_A)^\wg
 $$ 
 such that 
-%
 \begin{equation}\lb{lambda}
 \ld(B\to A)(U\to A)=\Hom_{(\C^\wg)_A}(U\to A,B\to A)
 \end{equation} 
-%
 for all $(B\to A)$ in $(\C^\wg)_A$ and all $(U\to A)$ in $\C_A$. Moreover 
 \begin{equation}\lb{leq}
 \text{$\ld$ is an equivalence,}
@@ -2556,7 +2583,7 @@ and we have
 that is, the diagram
 $$
 \begin{tikzcd}
-\C_A\ar{r}{h(\C)_A}\ar{rd}[swap]{h(\C)_A}&(\C^\wg)_A\ar{d}{\ld}\\ 
+\C_A\ar{r}{h(\C)_A}\ar{rd}[swap]{h(\C_A)}&(\C^\wg)_A\ar{d}{\ld}\\ 
 &(\C_A)^\wg
 \end{tikzcd}
 $$ 
@@ -2576,27 +2603,55 @@ Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits sma
 
 The following lemma will be useful:
 
+% previous version
+% https://docs.google.com/document/d/1h1cHxZ_Bdwh5o2DuO1et13-OkpRBe2bhjqtLgkhMbQY/edit
+
 \begin{lem}\lb{cc}
-Let $I\xr\al\C\xr F\C'$ be functors, let $X$ be in $\C$ and $X'$ in $\C'$, let $f:F(X)\to X'$ be a morphism, assume $X\iso\col\al$, let $p:\al\to\DT X$ be the coprojection, define $\bt:I\to\C_{X'}$ by $\bt(i):=(\al(i),f\ci F(p_i))$:
+If $\al:I\to\C$ is a functor admitting an inductive limit and if $f:\col\al\to Y$ is a morphism in $\C$, then we have 
 $$
-F(\al(i))\xr{F(p_i)}F(X)\xr fX'.
+\col_{i\in I}\ (\al(i)\to\col\al\to Y)\iso(\col\al\to Y).
+$$
+More precisely, let $X$ be in $\C$, let $p:\al\to\DT X$ be a morphism in $\C^I$ such that $(X,p)$ is an inductive limit of $\al$, define $\bt:I\to\C_Y$ by $\bt(i):=(\al(i)\xr{p_i}X\xr fY)$ and $q:\bt\to\DT(X\xr fY)$ by $q_i:=p_i$: 
+$$
+\begin{tikzcd}
+\al(i)\ar[rd,"f\ci p_i"']\ar[rr,"q_i"]&&X\ar[dl,"f"]\\ 
+&Y.
+\end{tikzcd}
 $$ 
-Then $(X,f)\iso\col\bt$, the coprojection $q:\bt\to\DT(X,f)$ (see Notation~\ref{diag} p.~\pr{diag}) being given by $q_i:=p_i$ for all $i$ in $I$.
+Then $((X\xr fY),q)$ is an inductive limit of $\bt$. 
 \end{lem}
+
 \begin{proof}
-Let 
+For all $Z$ in $\C$ and all morphism $\pp:\al\to\DT Z$ in $\C^I$ there is a unique morphism $g:X\to Z$ in $\C$ such that $\DT g\ci p=\pp$: 
 $$
-(Y,g)\in\C_{X'},\quad h\in\Hom_{\Fct(I,\C_{X'})}(\bt,\DT(Y,g));
+\begin{tikzcd}
+\al\ar[r,"p"]\ar[dr,"\pp"']&\DT X\ar[d,"\DT g"]&X\ar[d,dashed,"g"]\\ 
+&\DT Z&Z.
+\end{tikzcd}
 $$ 
-let $h'$ in $\Hom_{\Fct(I,\C)}(\bt,\DT Y)$ be defined by the condition $h'_i=h_i\in\Hom_\C(\al(i),Y)$ for all $i$ in $I$; and let $k$ be in $\Hom_\C(X,Y)$. Then we have 
+Let $(Z\xr hY)$ be an object of $\C_Y$ and $\psi:\bt\to\DT(Z\xr hY)$ a morphism in $(\C_Y)^I$. We must show that there is a unique morphism $k:(X\xr fY)\to(Z\xr hY)$, which it is more suggestive to display as 
 $$
-\DT k\ci q=h\ssi\DT k\ci p=h'.
+\begin{tikzcd}
+X\ar[rd,"f"']\ar[rr,"k"]&&Z\ar[dl,"h"]\\ 
+&Y,
+\end{tikzcd}
+$$ 
+such that $\DT k\ci q=\psi$: 
 $$
+\begin{tikzcd}
+\bt\ar[r,"q"]\ar[dr,"\psi"']&\DT(X\xr fY)\ar[d,"\DT k"]&(X\xr fY)\ar[d,dashed,"k"]\\ 
+&\DT(Z\xr hY)&(Z\xr hY).
+\end{tikzcd}
+$$ 
+It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k_i:=g_i$ do the job. 
 \end{proof}
 
 Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$ is small and that $\A$ admits small inductive and projective limits.
 
 \subsubsection{First Formula}
+
+% previous version
+% https://docs.google.com/document/d/1viwkdjeF7abC7eEjaRiufDMDTcof8h3Qc2pUzmVQ6zU/edit
 
 We claim 
 
@@ -2614,34 +2669,39 @@ Consider the diagram
 {}\\ 
 (\C_A)^\wg\ar{uurr}[swap]{h(\C_A)^\ddg(F\ci j(\C_A))}&&(\C^\wg)_A\ar{ll}{\ld}\ar{rr}[swap]{j((\C^\wg)_A)}&&\C^\wg.\ar{uull}[swap]{h(\C)^\ddg(F)}
 \end{tikzcd}
-\end{equation}
-%\begin{align*}h(\C_A)^\ddg(F\ci j(\C_A))(\ld(B\to A))&\iso\lim_{((B\to A)\to(U\to A))\in((\C^\wg)_A)^{B\to A}}F(U)\\ \\ &\iso\lim_{(B\to U)\in\C^B}F(U)\\ \\ &\iso h(\C)^\ddg(F)(B)\\ \\ &\iso h(\C)^\ddg(F)\Big(j\big((\C^\wg)_A\big)(B\to A)\Big).\end{align*} 
+\end{equation} 
 
-For $U$ in $\C$ and $U\to A$ in $\C_A$, we have 
+For $B$ in $\C^\wg$ and $B\to A$ in $(\C^\wg)_A$, setting 
 
-$$h(\C_A)^\ddg(F\ci j(\C_A))(\ld(U\to A))\iso F(U)$$
+$$X:=h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\Big(\ld(B\to A)\Big),$$
 
-\nn by Proposition~\ref{271} and \qr{lcom}. We also have 
+\nn we get %the following chain of isomorphisms, where the isomorphism marked with the symbol $(\star)$ results from \qr{leq} and Proposition~\ref{271}:
 
-$$h(\C)^\ddg(j((\C^\wg)_A))(U\to A)\iso F(U)$$
-
-\nn by Proposition~\ref{271}. For $B$ in $\C^\wg$ and $B\to A$ in $(\C^\wg)_A$, we have 
-
-$$h(\C_A)^\ddg(F\ci j(\C_A))(\ld(B\to A))$$
-
-$$\os{(\text a)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\right)\to A\right)\right)$$
-
-$$\os{(\text b)}\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}(U\to A)\right)\right)$$
-
-$$\os{(\text c)}\iso\col_{(U\to B)\in\C_B}h(\C_A)^\ddg(F\ci j(\C_A))(U\to A)$$
-
-$$\os{(\text d)}\iso\col_{(U\to B)\in\C_B}F(U),$$
-
-\nn where (a) follows from \qr{263a} p.~\pr{263a}; (b) follows from Lemma~\ref{cc}; (c) follows from Proposition~\ref{271} and \qr{leq}, \qr{lcom}; and (d) follows from Proposition~\ref{271}. A similar computation shows 
-$$
-h(\C)^\ddg(F)\ci j((\C^\wg)_A)\iso\col_{(U\to B)\in\C_B}F(U).
-$$ 
-This proves \qr{prepa1}.
+\begin{align*}
+%
+X&\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\
+%
+&\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h(\C)(U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\
+%
+&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)(U)\to A\Big)\bigg)\Bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\
+%
+&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)_A(U\to A)\Big)\bigg)\Bigg)\\
+%
+&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)\Bigg)&\text{by \qr{lcom}}\\
+%
+&\iso\col_{(U\to B)\in\C_B}\Big(\big(F\ci j(\C_A)\big)(U\to A)\Big)&\text{by Prop.~\ref{271}}\\
+%
+&\iso\col_{(U\to B)\in\C_B}F(U)\\
+%
+&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C)^\ddg(F)\Big(h(\C)(U)\Big)\Bigg)&\text{by Prop.~\ref{271}}\\
+%
+&\iso h(\C)^\ddg(F)\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)&\text{by Prop.~\ref{271}}\\
+%
+&\iso\Bigg(h(\C)^\ddg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\\
+%
+&\iso\Bigg(h(\C)^\ddg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(B\to A\right)&\text{by \qr{263a}.}
+%
+\end{align*}
 \end{proof}
 
 %
