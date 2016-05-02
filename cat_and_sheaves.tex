@@ -1266,7 +1266,7 @@ If $\al:I^{\op}\to\C$ is a functor, then a {\em projective limit of}\index{proje
 $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^{I^{\op}}}(\DT X,\al)
 $$
-such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is a projective limit of $\bt$ in $\C$. %However, if $\C=\Set$ and $I$ is small we denote by $\lim\bt$ the subset of $\prod_{i\in I}\bt(i)$ defined in Display (2.1.2) p.~36 of the book.
+such that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element (see Definition~\ref{ue} p.~\pr{ue}). For each $i$ in $I$ the morphism $p_i:X\to\al(i)$ is called the $i$-{\em projection}\index{projection} of $X$. If $\bt:I^{\op}\to\C$ is a functor, we often write $X\iso\lim\bt$ to indicate the fact that $(X,p)$ is a projective limit of $\bt$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is a projective limit of $\bt$ in $\C$. 
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^{I^{\op}}}(\DT(\ ),\al),X)$\--universal element means that for each $Y$ in $\C$ and each morphism of functors $\theta:\DT Y\to\al$ there is a unique morphism $f:Y\to X$ satisfying $p\ci\DT f=\theta$: 
@@ -1280,18 +1280,21 @@ In particular, if $(X',p')$ is another projective limit of $\al$, then there is 
 
 Let $\al:I^{\op}\to\Set$ be a functor defined on a small category, set 
 $$ 
-\lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(f)(x_j)\ \forall\ f:i\to j\right\}\in\Set,
+\lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
 $$ 
 and define $p_i:\lim\al\to\al(i)$ by $p_i(x):=x_i$. It is easily seen that $(\lim\al,p)$ is a projective limit of $\al$. More precisely, the map $f$ in \qr{yfy} is given by 
 $$
 f(y):=(\theta_i(y))_{i\in I}.
 $$
-%\begin{df}We say that the above pair $(\lim\al,p)$ is \emph{the} projective limit of $\al$.\end{df}
 \begin{conv}\lb{the}
 We say that the above pair $(\lim\al,p)$ is \textbf{the} projective limit of $\al$.
 \end{conv}
 
 Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category.
+
+Even if it is easy, we give a formal proof of the fact that \emph{the} projective limit of $\al$ satisfies the expected universal property:
+
+Let $\theta$ in \qr{yfy} be given. As often it is better to start by verifying the \emph{uniqueness} of $f$. We must have $p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$, as already observed. It is straightforward to check that the map $f$ defined by the above equality does the job.
 
 Let $\al:I\to\C$ be a functor. In short, an inductive limit of $\al$ in $\C$ is an object $X$ of $\C$ such that ``the value of the left adjoint $\col$ to $\DT:\C\to\C^I$ is defined at $\al$ and isomorphic to $X$'' in the sense of Section~\ref{defat} p.~\pr{defat}. For the reader's convenience we spell out this condition.
 
@@ -1300,7 +1303,7 @@ If $\al:I\to\C$ is a functor, then an {\em inductive limit}\index{inductive limi
 $$
 (X,p)\in\Ob(\C)\tm\Hom_{\C^I}(\al,\DT X)
 $$
-such that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is an inductive limit of $\al$ in $\C$. %However, if $\C=\Set$ and $I$ is small we denote by $\colim\al$ the set defined in Proposition 2.4.1 p.~54 of the book.
+such that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element (see Definition~\ref{ue2} p.~\pr{ue2}). For each $i$ in $I$ the morphism $p_i:\al(i)\to X$ is called the $i$-{\em coprojection}\index{coprojection} of $X$. If $\al:I\to\C$ is a functor, we often write $\colim\bt\iso X$ to indicate the fact that $(X,p)$ is an inductive limit of $\al$ in $\C$. (This huge abuse of notation seems unavoidable.) We also often say that $X$ (instead of $(X,p)$) is an inductive limit of $\al$ in $\C$. 
 \end{df}
 
 Recall that the condition that $p$ is a $(\Hom_{\C^I}(\al,\DT(\ )),X)$\--co-universal element means that for each $Y$ in $\C$ and each morphism of functors $\theta:\al\to\DT Y$ there is a unique morphism $f:X\to Y$ satisfying $\DT f\ci p=\theta$: 
@@ -1317,18 +1320,33 @@ $$
 U:=\{(i,x)\in\U\ |\ i\in I,x\in\al(i)\},
 $$ 
 let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,\al(f)(x))$ for all morphisms $f:i\to j$, let $\col\al$ be the quotient $U/\!\!\sim$, let $\pi:U\to\col\al$ be the canonical projection, and, for all $i$ in $I$, define $p_i:\al(i)\to\col\al$ by $p_i(x):=\pi(i,x)$. It is easily seen that $(\col\al,p)$ is an inductive limit of $\al$. 
-%\begin{df}We say that the above pair $(\lim\al,p)$ is \emph{the} projective limit of $\al$.\end{df}
 \begin{conv}
 We say that the above pair $(\lim\al,p)$ is \textbf{the} inductive limit of $\al$.
 \end{conv}
 
 Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category.
 
-If $\al:I\to\Set$ is a functor defined on a small category and $X$ is in $\Set$, then the map 
-$$
-\Hom_\Set(\col\al,X)\to\lim\Hom_\Set(\al,X),\quad f\mt(f\ci p_i)_{i\in I}
-$$ 
-is well-defined and bijective.
+%If $\al:I\to\Set$ is a functor defined on a small category and $X$ is in $\Set$, then the map $$\Hom_\Set(\col\al,X)\to\lim\Hom_\Set(\al,X),\quad f\mt(f\ci p_i)_{i\in I}$$ is well-defined and bijective.
+
+Again we give a formal proof of the fact that \emph{the} inductive limit of $\al:I\to\Set$ has the expected universal property:
+
+Given $\theta$ in \qr{cue} let us prove the uniqueness of $f$. Any $x$ in $X$ is of the form $p_i(t)$ for some $i$ in $I$ and $t$ in $\al(i)$, and we must have $f(x)=\theta_i(t)$. This proves the uniqueness. To verify the existence, we must assume $p_i(t)=p_j(u)$ (obvious notation), and derive $\theta_i(t)=\theta_j(u)$. We may assume that there is a morphism $s:i\to j$, and the verification is straightforward.
+
+Let $(X,p)$ be an inductive limit of $\al:I\to\C$: 
+\begin{equation}\lb{xp}
+\begin{tikzcd}
+\al\ar[r,"p"]\ar[dr,"\ld"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
+&\DT Y&Y
+\end{tikzcd}
+\end{equation} 
+and let $Z$ be an object of $\C$. We claim that $(\Hom_\C(X,Z),\ci p)$ is a projective limit of $\Hom_\C(\al,Z)$: 
+\begin{equation}\lb{zc}
+\begin{tikzcd}
+S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(\al,Z)\\ 
+\Hom_\C(X,Z)&\DT\Hom_\C(X,Z).\ar[ru,"\ci p"']
+\end{tikzcd}
+\end{equation} 
+More precisely, assume we are given $\mu$ as above and $s$ in $S$. Then we set $Y:=Z$ and $\ld_i:=\mu_i(s)$ in \qr{xp}. We get an $f:X\to Z$, and we set $g(s):=f$. We leave it to the reader to check that this process yields a solution to \qr{zc}, and that this solution is unique.
 
 %%
 
@@ -1354,8 +1372,7 @@ S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[r,"\theta"]&\Hom_\C(\al,Y)\\
 \Hom_{\C^I}(\al,\DT Y)&\DT\Hom_{\C^I}(\al,\DT Y),\ar[ru,"p"']
 \end{tikzcd}
 $$ 
-we can define $f$ by %For $S$ in $\Set$, the inverse of $$\Hom_\Set(S,\Hom_{\C^I}(\al,\DT Y))\to\Hom_{\Set^{I^{\op}}}(\DT S,\Hom_\C(\al,Y)),\quad f\mt p\ci\DT f$$ is the map $\xi\mt f$ defined by the formula 
-$f(s)_i:=\theta_i(s)$.
+we can define $f$ by $f(s)_i:=\theta_i(s)$.
 \end{s}
 
 %
@@ -1369,7 +1386,7 @@ P.~38, Proposition 2.1.6. Here are more details. Recall the setting:
 We have a functor $\al:I\to\C^J$, we assume that for each $j$ in $J$ the functor $\al(\ )(j)$ admits an inductive limit $(X_j,p_j)$: 
 \begin{equation}\lb{ajpj}
 \begin{tikzcd}
-\al(\ )(j)\ar[r,"p_j"]\ar[dr]&\DT X_j\ar[d]&X\ar[d,dashed]\\ 
+\al(\ )(j)\ar[r,"p_j"]\ar[dr]&\DT X_j\ar[d]&X_j\ar[d,dashed]\\ 
 &\DT Y&Y.
 \end{tikzcd}
 \end{equation}
@@ -1381,7 +1398,7 @@ $$
 \al(\ )(j')\ar[r,"p_{j'}"']&\DT X_{j'}&X_{j'}.
 \end{tikzcd}
 $$ 
-This proves the claim.
+We leave it to the reader to verify that this construction does define our functor $\bt$.
 
 We want to define a morphism $q:\al\to\DT\bt$. Let $i$ be in $I$. We must define $q_i:\al(i)\to\bt$, that is, given $j$ in $J$ we must define $q_{ij}:\al(i)(j)\to\bt(j)$. It suffices to set $q_{ij}:=p_{ji}$. 
 
@@ -2290,15 +2307,18 @@ $$
 P.~56, proof of Lemma 2.4.7 (minor variant).
 
 \begin{lem} 
-If $I$ is a small category, $i_0$ is in $I$, and $k(i_0)\in\Set^I$ is the Yoneda functor $\Hom_I(i_0,\ )$, then $\col k(i_0)$ is a terminal object of $\Set$. 
+If $I$ is a small category, $i_0$ is in $I$, and $\al:I\to\Set$ is the functor satisfying $\Hom_I(i_0,\ )$, then $\col\al$ is a terminal object of $\Set$. 
 \end{lem}
 
 \begin{proof}
-For $X$ in $\Set$ we have %(with self-explanatory notation)
+We shall use \qr{cue} p.~\pr{cue}. Let $X=\{x\}$ be a terminal object of $\Set$, let $p:\al\to\DT X$ be the unique morphism from $\al$ to $\DT X$, let $\theta:\al\to\DT Y$ be a morphism in $\Set^I$ (with $Y$ in $\Set$), and let us show that there is a unique map $f:X\to Y$ such that $\DT f\ci p=\theta$: 
 $$
-\Hom_{\Set}\left(\col k(i_0),X\right)\iso\Hom_{{\Set}^I}(k(i_0),\DT X)\iso X,
-$$
-(see Notation~\ref{diag} p.~\pr{diag}) the first bijection being a particular case of \qr{cue} p.~\pr{cue}, and the second one following from the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}).
+\begin{tikzcd}
+\al\ar[r,"p"]\ar[dr,"\theta"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
+&\DT Y&Y.
+\end{tikzcd}
+$$ 
+Unsurprisingly it is better to start with the uniqueness: any such $f$ must satisfy $f(x)=\theta_{i_0}(\id_{i_0})$. For the existence, it is easy to see that the map $f$ defined by the above equality does the job.
 \end{proof}
 
 Here is a second proof:
@@ -2314,27 +2334,23 @@ $i_0\to i$. In particular $i_0\to i$ represents the same element as $\id_{i_0}$.
 \begin{s}\lb{252}
 P. 57, proof of Proposition 2.5.2 (minor variant). Instead of proving (i)$\then$(v), we prove (i)$\then$(ii), that is, we prove the following statement:
 
-If $\pp:J\to I$ and $\bt:I^{\op}\to\Set$ are functors and if the category $J^i$ is connected for all $i$ in $I$, then the natural map 
+\begin{lem}
+If $\pp:J\to I$ and $\bt:I^{\op}\to\Set$ are functors defined on small categories and if the category $J^i$ is connected for all $i$ in $I$, then the natural map 
 $$
 f:\lim\bt\to\lim\bt\ci\pp^{\op}
 $$ 
 is bijective. 
+\end{lem}
 
+\begin{proof}
 In fact we shall define a map 
 $$
 g:\lim\bt\ci\pp^{\op}\to\lim\bt
 $$ 
-and leave it to the reader to check that $f$ and $g$ are inverse. %Let $p_i:\lim\bt\to\bt(i)$ and $q_j:\lim\ci\pp^{\op}\to\bt(\pp(j))$ be the projections, and 
-Let $y$ be in $\lim\bt\ci\pp^{\op}$. In particular $y$ is of the form $(y_j)_{j\in J}$ with $y_j\in\bt(\pp(j))$. We must define the element $g(y)_i$ in $\bt(i)$, where $i$ is an arbitrary element in $I$. Let us choose a morphism $u:i\to\pp(j)$ in $I$. It suffices to show that the element $\bt(u)(y_j)$ in $\bt(i)$ does not depend on the choice of $u$, so that we shall be able to set $g(y)_i:=\bt(u)(y_j)$. Given another choice $u':i\to\pp(j')$, we must prove $\bt(u)(y_j)=\bt(u')(y_{j'})$. As $J^i$ is connected, we may assume that there is a morphism $j\to j'$ in $J$, and the proof is straightforward. q.e.d.
-
-%\nn$\bu$ One can also prove (vi)$\then$(i) as follows. Recall that $\pp:J\to I$ is a functor. Let $i$ be in $I$. It suffices to prove that 
-
-%$J^i$ is connected whenever $\col\Hom_I(i,\pp)$ is a singleton. 
-
-%In fact, if the $p_j:\Hom_I(i,\pp(j))$ are the coprojections, then it is easy to see that the map $$J^i\to\col\Hom_I(i,\pp),\quad(j,u)\mapsto p_j(u)$$ induces a bijection $\pi_0(J^i)\xr\sim\col\Hom_I(i,\pp)$. q.e.d.
-
-%In the proof of the implication (i) $\then$ (v), the authors define a morphism $\al(i_0)\to\col\al\ci\pp$. Then they write ``Taking the inductive limit with respect to $i_0\in I$, we get a morphism $\mu:\col\al\to\col\al\ci\pp$''. We must check that, for any morphism $i_0\to i_1$ in $I$ the composition $\al(i_0)\to\al(i_1)\to\col\al\ci\pp$ coincides with our morphism $\al(i_0)\to\col\al\ci\pp$. This follows from Lemma~\ref{2112} p.~\pr{2112}. (More precisely, the morphism $\al(i_0)\to\col\al\ci\pp$ is obtained by choosing an object of $J^{i_0}$, but Lemma~\ref{2112} shows that different choices yield the same morphism.)
+and leave it to the reader to check that $f$ and $g$ are inverse. Let $y$ be in $\lim\bt\ci\pp^{\op}$. In particular $y$ is of the form $(y_j)_{j\in J}$ with $y_j\in\bt(\pp(j))$. We must define the element $g(y)_i$ in $\bt(i)$, where $i$ is an arbitrary element in $I$. Let us choose a morphism $u:i\to\pp(j)$ in $I$. It suffices to show that the element $\bt(u)(y_j)$ in $\bt(i)$ does not depend on the choice of $u$, so that we shall be able to set $g(y)_i:=\bt(u)(y_j)$. Given another choice $u':i\to\pp(j')$, we must prove $\bt(u)(y_j)=\bt(u')(y_{j'})$. As $J^i$ is connected, we may assume that there is a morphism $j\to j'$ in $J$, and the proof is straightforward. 
+\end{proof}
 \end{s}
+
 %
 
 \begin{s} 
@@ -2545,9 +2561,9 @@ $$
 commute with small inductive limits. 
 
 Indeed, for the first functor the conclusion follows from the isomorphism 
-$$
+\begin{equation}\lb{hfa}
 (\oo h_\C^\dg F)(A)\iso\col_{(U\to A)\in\C_A}F(U),
-$$ 
+\end{equation}
 and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
 \end{s} 
 
@@ -2656,7 +2672,7 @@ Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$
 We claim 
 
 \begin{equation}\lb{prepa1}
-h(\C_A)^\ddg(F\ci j(\C_A))\ci\ld\iso h(\C)^\ddg(F)\ci j((\C^\wg)_A)
+h(\C_A)^\dg(F\ci j(\C_A))\ci\ld\iso h(\C)^\dg(F)\ci j((\C^\wg)_A)
 \end{equation}
 
 \nn(see the diagram \qr{qcd} below).
@@ -2667,39 +2683,39 @@ Consider the diagram
 \begin{tikzcd}
 \C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\ci j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
 {}\\ 
-(\C_A)^\wg\ar{uurr}[swap]{h(\C_A)^\ddg(F\ci j(\C_A))}&&(\C^\wg)_A\ar{ll}{\ld}\ar{rr}[swap]{j((\C^\wg)_A)}&&\C^\wg.\ar{uull}[swap]{h(\C)^\ddg(F)}
+(\C_A)^\wg\ar{uurr}[swap]{h(\C_A)^\dg(F\ci j(\C_A))}&&(\C^\wg)_A\ar{ll}{\ld}\ar{rr}[swap]{j((\C^\wg)_A)}&&\C^\wg.\ar{uull}[swap]{h(\C)^\dg(F)}
 \end{tikzcd}
 \end{equation} 
 
 For $B$ in $\C^\wg$ and $B\to A$ in $(\C^\wg)_A$, setting 
 
-$$X:=h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\Big(\ld(B\to A)\Big),$$
+$$X:=h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\Big(\ld(B\to A)\Big),$$
 
 \nn we get %the following chain of isomorphisms, where the isomorphism marked with the symbol $(\star)$ results from \qr{leq} and Proposition~\ref{271}:
 
 \begin{align*}
 %
-X&\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\
+X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\
 %
-&\iso h(\C_A)^\ddg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h(\C)(U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\
+&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h(\C)(U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\
 %
-&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)(U)\to A\Big)\bigg)\Bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\
+&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)(U)\to A\Big)\bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\
 %
-&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)_A(U\to A)\Big)\bigg)\Bigg)\\
+&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)_A(U\to A)\Big)\bigg)\\
 %
-&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C_A)^\ddg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)\Bigg)&\text{by \qr{lcom}}\\
+&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)&\text{by \qr{lcom}}\\
 %
-&\iso\col_{(U\to B)\in\C_B}\Big(\big(F\ci j(\C_A)\big)(U\to A)\Big)&\text{by Prop.~\ref{271}}\\
+&\iso\col_{(U\to B)\in\C_B}\big(F\ci j(\C_A)\big)(U\to A)&\text{by Prop.~\ref{271}}\\
 %
 &\iso\col_{(U\to B)\in\C_B}F(U)\\
 %
-&\iso\col_{(U\to B)\in\C_B}\Bigg(h(\C)^\ddg(F)\Big(h(\C)(U)\Big)\Bigg)&\text{by Prop.~\ref{271}}\\
+%&\iso\col_{(U\to B)\in\C_B}h(\C)^\dg(F)\Big(h(\C)(U)\Big)&\text{by Prop.~\ref{271}}\\
 %
-&\iso h(\C)^\ddg(F)\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)&\text{by Prop.~\ref{271}}\\
+%&\iso h(\C)^\dg(F)\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)&\text{by Prop.~\ref{271}}\\
 %
-&\iso\Bigg(h(\C)^\ddg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\\
+%&\iso\Bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\\
 %
-&\iso\Bigg(h(\C)^\ddg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(B\to A\right)&\text{by \qr{263a}.}
+&\iso\bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\bigg)\left(B\to A\right)&\text{by \qr{hfa}.}
 %
 \end{align*}
 \end{proof}
@@ -2813,13 +2829,13 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 
 \nn where 
 (a) follows from \qr{prepa4}; 
-(b) follows from Proposition~\ref{271} and \qr{lcom};  
+(b) follows from Proposition~\ref{271} and \qr{leq};  
 (c) follows from Lemma~\ref{cc}; 
 (d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pr{dsbc}); and 
-(e) follows from Proposition~\ref{271}.
+(e) follows from \qr{263a} p.~\pr{263a}.
 \end{proof}
 
-%% 
+%%
 
 \sbs{Notation 2.7.2 p. 63}
 
@@ -2853,7 +2869,7 @@ Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\
 $$
 \widehat F(A'\ci F)=\col(\psi\ci\pp)\to\col\psi\iso A',
 $$ 
-the equality $F(A'\ci F)=\col(\psi\ci\pp)$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover, if $\pp$ is cofinal, then $f$ is an isomorphism. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
+the equality $F(A'\ci F)=\col(\psi\ci\pp)$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover $f$ is an isomorphism whenever $\pp$ is cofinal. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
 $$
 \col_{(X\to A'\ci F)\in\C_{A'\ci F}}\Hom_{\C'}(X',F(X))\to A'(X')
 $$ 
@@ -2894,7 +2910,7 @@ Assume $A$ is a terminal object of $\C^\wg$, and define, using the above identif
 $$
 G(X):=(F(X),p_X(\id_{F(X)})),
 $$ 
-where $p_X:\Hom_{\C'}(F(X),F(X))\to\widehat F(A)(F(X))$ is the coprojection. Moreover, the composition of $G$ with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
+where $p_X:\Hom_{\C'}(F(X),F(X))\to\widehat F(A)(F(X))$ is the coprojection. Then the composition of $G$ with the forgetful functor $\C'_{\widehat F(A)}\to\C'$ is $F$.
 \end{rk} 
 
 The proof is obvious. 
@@ -2963,10 +2979,13 @@ This follows from \qr{275}.
 %
 
 \begin{s}
-P.~64, end of Chapter 2. One could add the following observation: If $\C$ is a small category, if $A$ is in $\C^\wg$, if $B$ is a terminal object of $(\C_A)^\wg$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
+P.~64, end of Chapter 2. One could add the following observation: 
+
+If $\C$ is a small category, if $A$ is in $\C^\wg$, if $B$ is a terminal object of $(\C_A)^\wg$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
 $$
 \widehat F(B)\iso A.
 $$ 
+
 Indeed, we have 
 $$
 \widehat F(B)(X)\iso\col_{((Y\to A)\to B)\in(\C_A)_B}\Hom_\C(X,F(Y\to A))
