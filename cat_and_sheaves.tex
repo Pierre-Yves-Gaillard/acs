@@ -803,24 +803,19 @@ We often identify the source and the target of $\pp$ in \qr{axp1} and \qr{axp2},
 \end{conv}
 
 A morphism $x:X\to A$ in $\C^\wg$ with $X$ in $\C$ is a representation of $A$ if and only if any morphism $Y\to A$ with $Y$ in $\C$ factors uniquely through $x$:
-$$%\begin{equation}\lb{fpor}
+$$
 \begin{tikzcd}
 Y\ar[rr]\ar[dr,dashed]&&A\\ 
 &X.\ar[ru,"x"']
 \end{tikzcd}
-$$%\end{equation}
-%We leave the precise formulation of the dual statement to the reader, and only display the diagram dual to \qr{fpor}: 
-A morphism $x:A\to X$ in $\C^\vee$ with $X$ in $\C$ is a representation of $A$ if and only if any morphism $A\to Y$ with $Y$ in $\C$ factors uniquely through $x$:
+$$ 
+A morphism $x:A\to X$ in $\C^\vee$ with $X$ in $\C$ is a co-representation of $A$ if and only if any morphism $A\to Y$ with $Y$ in $\C$ factors uniquely through $x$:
 $$
 \begin{tikzcd}
 A\ar[rr]\ar[dr,"x"']&&Y\\ 
 &X.\ar[ru,dashed]
 \end{tikzcd}
 $$ 
-
-%\begin{df}[universal element]\lb{ue} Let $A:\C^{\op}\to\Set$ be a functor and $X$ an object of $\C$. An $(A,X)$-\emph{universal element}\index{universal element} is an element $u$ of $A(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(Y,X)\to A(Y),\ f\mt A(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{represents}\index{represents} $A$, or, when we want to be more precise, that the pair $(X,u)$ \emph{represents} $A$. \end{df}
-
-%\begin{df}[co-universal element]\lb{ue2} Let $A:\C\to\Set$ be a functor and $X$ an object of $\C$. An $(A,X)$-\emph{co-universal element}\index{co-universal element} is an element $u$ of $A(X)$ such that, for all $Y$ in $\C$, the map $\Hom_\C(X,Y)\to A(Y),\ f\mt A(f)(u)$ is bijective. In such a setting, we say that $X$ \emph{co-represents}\index{co-represents} $A$, or, when we want to be more precise, that the pair $(X,u)$ \emph{co-represents} $A$. \end{df}
 
 %%
 
