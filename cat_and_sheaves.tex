@@ -767,6 +767,8 @@ $$
 \pp(x)=k(x)\in\Hom_{\C^\vee}(k(Z),k(X)).
 $$
 This shows that $k$ is fully faithful.
+
+Finally, the bijections \qr{axp1} and \qr{axp1} are functorial in $A$ and $X$.
 \end{thm}
 
 \begin{proof}
@@ -980,7 +982,7 @@ We call $*$ the {\em horizontal composition}.\index{horizontal composition} We c
 
 %The following observations about the notion of adjoint functor are implicit in the book.
 
-\begin{s}\lb{sdefat}
+\begin{s}\lb{rdefat}
 Let $L:\C\to\C'$ be a functor and $X'$ an object of $\C'$. If the functor 
 $$
 \Hom_{\C'}(L(\ ),X'):\C^{\op}\to\Set
@@ -1005,8 +1007,10 @@ We call $\eta_{X'}$ the \emph{unit} of the adjunction.
 
 \begin{s}
 Let $T$ be a terminal object of $\Set$. Then a functor $A:\C^{\op}\to\Set$ is representable if and only if the right adjoint of $A^{\op}:\C\to\Set^{\op}$ is defined at $T$.
+\end{s}
 
-Let us spell out the statement dual to \S\ref{sdefat}:
+\begin{s}\lb{ldefat}
+Let us spell out the statement dual to \S\ref{rdefat}:
 
 Let $R:\C'\to\C$ be a functor and $X$ an object of $\C$. If the functor 
 $$
@@ -1278,7 +1282,7 @@ If $I$ and $\C$ are categories, we denote by $\DT$\index{$\DT$} the diagonal fun
 \end{nota}
 
 \begin{df}[projective limit]\lb{plim} 
-Let $\al:I^{\op}\to\C$ be a functor. If the value at $\al$ of the right adjoint $\lim$ to $\DT:\C\to\C^{I^{\op}}$ exists (see Section~\ref{defat} p.~\pr{defat}), we denote it by $\lim\al$ and call it {\em the projective limit}\index{projective limit} of $\al$. Moreover, we say that the unit $p:\DT\lim\al\to\al$ of the adjunction is \textbf{the} \emph{projection}\index{projection}. More generally we say that $q:\DT X\to\al$ (with $X$ in $\C$) is \textbf{a} \emph{projection} if the corresponding morphism 
+Let $\al:I^{\op}\to\C$ be a functor. If the value at $\al$ of the right adjoint $\lim$ to $\DT:\C\to\C^{I^{\op}}$ exists (see \S\ref{rdefat} p.~\pr{rdefat}), we denote it by $\lim\al$ and call it {\em the projective limit}\index{projective limit} of $\al$. Moreover, we say that the unit $p:\DT\lim\al\to\al$ of the adjunction is \textbf{the} \emph{projection}\index{projection}. More generally we say that $q:\DT X\to\al$ (with $X$ in $\C$) is \textbf{a} \emph{projection} if the corresponding morphism 
 $$
 X\to\Hom_{\Fct(I^{\op},\C)}(\DT(\ ),\al)
 $$ 
@@ -1300,17 +1304,18 @@ If $\al:I^{\op}\to\Set$ is a functor defined on a small category, then we define
 $$ 
 \lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
 $$ 
-and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. As often it is better to start by verifying the \emph{uniqueness} of $f$. We must have $p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$, as already observed. It is straightforward to check that the map $f$ defined by the above equality does the job.]
+and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. As often it is better to start by verifying the \emph{uniqueness} of $f$. We must have $p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$. It is straightforward to check that the map $f$ defined by the above equality does the job.]
 \end{conv}
 
 Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category.
 
 \begin{df}[inductive limit]\lb{ilim} 
-Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ to $\DT:\C\to\C^I$ exists, we denote it by $\col\al$ and call it {\em the inductive limit}\index{inductive limit} of the $\al$ (see Section~\ref{defat} p.~\pr{defat}). Moreover, we say that the co-unit $p:\al\to\DT\col\al$ of the adjunction is \textbf{the} \emph{coprojection}\index{coprojection}. More generally we say that $q:\al\to\DT X$ (with $X$ in $\C$) is \textbf{a} \emph{coprojection} if the corresponding morphism 
+Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ to $\DT:\C\to\C^I$ exists, we denote it by $\col\al$ and call it {\em the inductive limit}\index{inductive limit} of the $\al$ (see \S\ref{ldefat} p.~\pr{ldefat}). Moreover, we say that the co-unit $p:\al\to\DT\col\al$ of the adjunction is \textbf{the} \emph{coprojection}\index{coprojection}. More generally we say that $q:\al\to\DT X$ (with $X$ in $\C$) is \textbf{a} \emph{coprojection} if the corresponding morphism 
 $$
 \Hom_{\C^I}(\al,\DT(\ ))\to X
 $$ 
-in $\C^\vee$ (see the Yoneda Lemma, stated on p.~\pr{yol} as Theorem~\ref{yol}) is an isomorphism.
+in $\C^\vee$ %(see the Yoneda Lemma, stated on p.~\pr{yol} as Theorem~\ref{yol}) 
+is an isomorphism.
 \end{df}
 
 The characteristic property of the pair $(\col\al,p)$ can be described as follows: For each $Y$ in $\C$ and each morphism of functors $\theta:\al\to\DT Y$ there is a unique morphism $f:X\to Y$ satisfying $\DT f\ci p=\theta$: 
@@ -1333,14 +1338,27 @@ and let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,
 
 Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category.
 
-Let $\al:I\to\C$ be a functor, $X$ an object of $\C$ and $p:\al\to\DT X$ a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
+%%
+
+\sbs{Brief Comments}
+
+\begin{s} 
+We shall spell out two versions of a certain statement about the following setting: $\al:I\to\C$ is a functor and $Z$ is an object of $\C$. The first version will be short, but somewhat incomplete, whereas the second version will be much longer, but more precise.
+
+\nn Short version: If $\col$ exists in $\C$, then we have 
+$$
+\Hom_\C(\col\al,Z)\xr\sim\lim\Hom_\C(\al,Z).
+$$
+
+\nn Long version: Let $X$ be an object of $\C$ and $p:\al\to\DT X$ a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
 \begin{equation}\lb{xp}
 \begin{tikzcd}
 \al\ar[r,"p"]\ar[dr,"\ld"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
-&\DT Y&Y,
+&\DT Y&Y.
 \end{tikzcd}
 \end{equation} 
-and let $Z$ be an object of $\C$. We claim that 
+%and let $Z$ be an object of $\C$. 
+We claim that 
 $$
 \ci p:\DT\Hom_\C(X,Z)\to\Hom_\C(\al,Z)
 $$ 
@@ -1352,35 +1370,12 @@ S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(\al,Z)\\
 \end{tikzcd}
 \end{equation} 
 More precisely, assume we are given $\mu$ as above and $s$ in $S$. Then we set $Y:=Z$ and $\ld_i:=\mu_i(s)$ in \qr{xp}. We get an $f:X\to Z$, and we set $g(s):=f$. We leave it to the reader to check that this process yields a solution to \qr{zc}, and that this solution is unique.
-
-%%
-
-\sbs{Brief Comments}
-
-\begin{s}
-Let $\al:I\to\C$ be a functor defined on a small category, and let $Y$ be in $\C$. We claim 
-$$
-\Hom_{\C^I}(\al,\DT Y)\iso\lim\Hom_\C(\al,Y).
-$$ 
-More precisely, we claim that the morphism 
-$$
-p:\DT\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al,Y)
-$$ 
-given by the obvious maps 
-$$
-p_i:\Hom_{\C^I}(\al,\DT Y)\to\Hom_\C(\al(i),Y).
-$$ 
-is a projection in the sense of Definition~\ref{plim} p.~\pr{plim}.
-
-Indeed, given $\theta$ as in the diagram
-$$
-\begin{tikzcd}
-S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[r,"\theta"]&\Hom_\C(\al,Y)\\ 
-\Hom_{\C^I}(\al,\DT Y)&\DT\Hom_{\C^I}(\al,\DT Y),\ar[ru,"p"']
-\end{tikzcd}
-$$ 
-we can define $f$ by $f(s)_i:=\theta_i(s)$.
 \end{s}
+
+%
+
+% removed:
+% https://docs.google.com/document/d/1w4pNu9aysXFDFK3VXsAeiKrAm826_hq8rA21PsqNHH0/edit
 
 %
 
@@ -1388,9 +1383,13 @@ we can define $f$ by $f(s)_i:=\theta_i(s)$.
 % https://docs.google.com/document/d/1OdYPoUxq-6Hu8lFAKK4yazvZ15DINxnYgdzoVUVTtPc/edit
 
 \begin{s}\lb{216}
-P.~38, Proposition 2.1.6. Here are more details. Recall the setting: 
+P.~38, Proposition 2.1.6. We want to find a setting where the isomorphism 
+$$
+(\col\al)(j)\iso\col(\al(j))
+$$ 
+makes sense, and prove that it holds.%Here are more details. Recall the setting: 
 
-We have a functor $\al:I\to\C^J$, we assume that for each $j$ in $J$ the functor $\al(\ )(j):I\to\C$ admits a coprojection $p_j:\al(\ )(j)\to\DT X_j$ in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
+Let $\al:I\to\C^J$ be a functor, and let us assume that for each $j$ in $J$ the functor $\al(\ )(j):I\to\C$ admits a coprojection $p_j:\al(\ )(j)\to\DT X_j$ in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
 \begin{equation}\lb{ajpj}
 \begin{tikzcd}
 \al(\ )(j)\ar[r,"p_j"]\ar[dr]&\DT X_j\ar[d]&X_j\ar[d,dashed]\\ 
@@ -1734,7 +1733,7 @@ If $\C$ is a category and $A$ an object of $\C^\wg$, then the following conditio
 \end{cor}
 
 \begin{proof}
-This follows from Lemma~\ref{l2111} above and Convention~\ref{term} p.~\pr{term}.% Proposition 1.4.10 p.~26 of the book.
+This follows from Lemma~\ref{l2111} above and Convention~\ref{term} p.~\pr{term}.
 \end{proof}
 \end{s}
 
@@ -1867,11 +1866,7 @@ If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and 
 \begin{s}\lb{s232} 
 P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 using the terminology of Section~\ref{defat} p.~\pr{defat}. Let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. Recall that we denote horizontal composition of morphisms of functors by $*$ (see Definition~\ref{dil1} p.~\pr{dil1}).
 
-%Items (a), (b) and (c) below are particular cases of the situation considered in Section~\ref{defat} p.~\pr{defat}:
-
-\nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, %such that the pair $(\pp^\dg\bt,\ee_\bt)$ co-represents the functor $\Hom_{\C^J}(\bt,\pp_*(\ )):\C^I\to\Set$ in the sense of Definition~\ref{ue2} p.~\pr{ue2}. This means 
-that is, for all $\al:I\to\C$ %the map $$\Hom_{\C^I}(\pp^\dg\bt,\al)\to\Hom_{\C^J}(\bt,\pp_*\al),\quad v\mt(v*\pp)\ci \ee_\bt$$ is bijective, or, more naively, that for
-and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v*\pp)\ci \ee_\bt=w$: 
+\nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, that is, for all $\al:I\to\C$ and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v*\pp)\ci \ee_\bt=w$: 
 $$
 \begin{tikzcd}
 \bt\ar[r,"\ee_\bt"]\ar[dr,"w"']&\pp_*\pp^\dg\bt\ar[d,"v*\pp"]&\pp^\dg\bt\ar[d,dashed,"v"]\\ 
@@ -1904,6 +1899,33 @@ is bijective. (See \S\ref{713} p.~\pr{713} below.)
 %
 
 \begin{s} 
+Let $I\xl\pp J\xr\bt\C\xr F\C'$ be functors, let $\bt$ be in $\C^J$ and assume that $\pp^\dg(\bt)$ and $\pp^\dg(F\ci\bt)$:
+$$
+\begin{tikzcd}
+J\ar[ddd,"\bt"']\ar[rrr,"\pp"]&&&I\ar[dddlll,"\pp^\dg(\bt)"']\ar[ddd,"\pp^\dg(F\ci\bt)"]\\ \\ \\ 
+\C\ar[rrr,"F"']&&&\C'.
+\end{tikzcd}
+$$ 
+
+We claim that there is a natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$. 
+
+As $F\ci\pp^\dg(\bt)=\pp_*(F\ci\pp^\dg(\bt))$, it suffices to define a morphism $F\ci\bt\to F\ci\pp^\dg(\bt)\ci\pp$: 
+$$
+\begin{tikzcd}
+F\ci\bt\ar[r,"\ee_{F\ci\bt}"]\ar[dr]&\pp_*\pp^\dg(F\ci\bt)\ar[d]&\pp^\dg(F\ci\bt)\ar[d,dashed]\\ 
+&\pp_*(F\ci\pp^\dg(\bt))&F\ci\pp^\dg(\bt).
+\end{tikzcd}
+$$ 
+As we have $\ee_\bt:\bt\to\pp^\dg(\bt)\ci\pp$, we can take $F*\ee_\bt:F\ci\bt\to F\ci\pp^\dg(\bt)\ci\pp$. 
+
+\begin{df}\lb{kcw}
+If the above morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism, we say that $F$ commutes with $\pp^\dg$ at $\bt$.
+\end{df}
+\end{s}
+
+%
+
+\begin{s} 
 P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe has been given. Let $I\xl\pp J\xr\bt\C$ be functors, let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ be in $\C^I$. The following conditions are equivalent:
 
 \nn(a) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{some} universe $\U$ such that $\C^J$ is a $\U$-category,
@@ -1911,13 +1933,15 @@ P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe h
 \nn(b) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
 \begin{df}[Definition 2.3.2 p. 51]\lb{232} 
-If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists}. If $\pp^\dg(F\ci\bt)$ exists and is isomorphic to $F\ci\pp^\dg(\bt)$ for all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
+If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If $\pp^\dg(F\ci\bt)$ exists and $F$ commutes with $\pp^\dg$ (Definition~\ref{kcw}) at $\bt$ for all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
 \end{df} 
 \end{s}
 
 %%
 
 \sbs{Theorem 2.3.3 (i) p.~52}
+
+Note that projective and inductive limits are particular cases of Kan extensions.
 
 Recall the statement: 
 
@@ -2085,13 +2109,13 @@ that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\al(j'
 Here is a corollary to Theorem~\ref{233i} p.~\pr{233i} (which is Theorem 2.3.3 (i) p.~52 of the book):
 
 \begin{cor}\lb{c233i}
-If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ (and $I$ and $J$ are small), then $\pp^\dg(\bt)(i)$ is (in natural bijection with) the quotient of 
+If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ and $J$ is small, then $\pp^\dg(\bt)(i)$ is (in natural bijection with) the quotient of 
 $$
 \bigsqcup_{j\in J}\ \bt(j)\tm\Hom_I(\pp(j),i) 
 $$ 
-by the smallest equivalence relation $\sim$ satisfying the following condition: If $s:j\to j'$ is a morphism in $J$, if $x$ is in $\bt(j)$, and if $u'$ is in $\Hom_I(\pp(j'),i)$, then 
+by the smallest equivalence relation $\sim$ satisfying the following condition: If $j\to j'$ is a morphism in $J$, if $x$ is in $\bt(j)$, and if $\pp(j')\to i$ is a morphism in $I$, then 
 $$
-p_j(x,u'\ci\pp(s))\sim p_{j'}(\bt(s)(x),u'),
+p_j(x,\pp(j)\to\pp(j')\to i)\sim p_{j'}(\bt(j\to j')(x),\pp(j')\to i),
 $$ 
 where $p_j$ is the $j$-coprojection. 
 \end{cor}
@@ -2111,6 +2135,12 @@ $$
 $$ 
 and it easy to see that the three data of the above bijection, of the equivalence relation in Proposition 2.4.1 of the book, and of the equivalence relation in Corollary~\ref{c233i} above are compatible.
 \end{proof}
+
+Under the same assumptions $\pp^\ddg(\bt)(i)$ is (in natural bijection with) the set of all $x$ in 
+$$
+\prod_{(i\to\pp(j))\in J^i}\bt(j)
+$$ 
+such that $x_{i\to\pp(j)\to\pp(j')}=\bt(j\to j')(x_{i\to\pp(j)})$ for all morphism $j\to j'$ in $J$.
 
 %%
 
