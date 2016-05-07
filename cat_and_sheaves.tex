@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -726,7 +726,9 @@ Also note that, if $\Cat$ is the category of small categories, then the formula 
 We state the Yoneda Lemma for the sake of completeness:
 
 \begin{thm}[Yoneda's Lemma]\lb{yol}
-Let $\C$ be a category, let $h:\C\to\C^\wg$ be the Yoneda embedding, let $A$ be in $\C^\wg$, let $X$ be in $\C$, and define 
+Let $\C$ be a category.
+
+\nn\emph{(a)} Let $h:\C\to\C^\wg$ be the Yoneda embedding, let $A$ be in $\C^\wg$, let $X$ be in $\C$, and define 
 \begin{equation}\lb{axp1}
 \begin{tikzcd} 
 A(X)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\wg}(h(X),A)\ar[yshift=-0.7ex]{l}{\psi}
@@ -749,7 +751,7 @@ $$
 $$
 This shows that $h$ is fully faithful.
 
-Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $A$ be in $\C^\vee$, let $X$ be in $\C$, and define 
+\nn\emph{(b)} Let $k:\C\to\C^\vee$ be the Yoneda embedding, let $A$ be in $\C^\vee$, let $X$ be in $\C$, and define 
 \begin{equation}\lb{axp2}
 \begin{tikzcd} 
 A(X)\ar[yshift=0.7ex]{r}{\pp}&\Hom_{\C^\vee}(A,k(X))=\Hom_{\Set^\C}(k(X),A)\ar[yshift=-0.7ex]{l}{\psi}
@@ -768,11 +770,11 @@ $$
 $$
 This shows that $k$ is fully faithful.
 
-Finally, the bijections \qr{axp1} and \qr{axp1} are functorial in $A$ and $X$.
+\nn\emph{(c)} The bijections \qr{axp1} and \qr{axp2} are functorial in $A$ and $X$.
 \end{thm}
 
 \begin{proof}
-It suffices to prove the first statement: We have 
+(a) We have 
 $$
 \psi(\pp(x))=\pp(x)_X(\id_X)=A(\id_X)(x)=x
 $$ 
@@ -793,7 +795,9 @@ $$
 \Hom_\C(Y,X)\ar{r}{\theta_Y}&A(Y)\\ 
 \Hom_\C(X,X)\ar{u}{\ci f}\ar{r}[swap]{\theta_X}&A(X).\ar{u}[swap]{A(f)}
 \end{tikzcd}
-$$
+$$ 
+
+The proof of (b) is similar. The proof of (c) is left to the reader.
 \end{proof}
 
 \begin{conv}\lb{term}
@@ -1002,7 +1006,7 @@ X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"g"]&X'\\
 R(X')&L(R(X')).\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 $$ 
-We call $\eta_{X'}$ the \emph{unit} of the adjunction.
+We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.
 \end{s}
 
 \begin{s}
@@ -1031,7 +1035,7 @@ X\ar[r,"\ee_X"]\ar[dr,"g"']&R(L(X))\ar[d,"R(f)"]&L(X)\ar[d,dashed,"f"]\\
 &R(X')&X'.
 \end{tikzcd}
 $$ 
-We call $\ee_X$ the \emph{co-unit} of the adjunction.
+We call $\ee_X$ the \emph{co-unit}\index{co-unit} of the adjunction.
 \end{s}
 
 %%
@@ -1387,7 +1391,7 @@ P.~38, Proposition 2.1.6. We want to find a setting where the isomorphism
 $$
 (\col\al)(j)\iso\col(\al(j))
 $$ 
-makes sense, and prove that it holds.%Here are more details. Recall the setting: 
+makes sense and is true.% prove that it holds.%Here are more details. Recall the setting: 
 
 Let $\al:I\to\C^J$ be a functor, and let us assume that for each $j$ in $J$ the functor $\al(\ )(j):I\to\C$ admits a coprojection $p_j:\al(\ )(j)\to\DT X_j$ in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
 \begin{equation}\lb{ajpj}
@@ -1463,7 +1467,13 @@ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coproject
 %
 
 \begin{s} 
-P.~39, Proposition 2.1.7. Let $\al:I\tm J\to\C$ be a bifunctor, and let $(X_i)_{i\in I}$ be a family of objects of $\C$. Assume that for any $i$ in $I$ there is some morphism $p_i:\al(i,\ )\to\DT X_i$ which is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
+P.~39, Proposition 2.1.7. We want to find a setting where the isomorphism 
+$$
+\col_{i,j}\al(i,j)\iso\col_j\col_i\al(i,j)
+$$ 
+makes sense and is true.
+
+Let $\al:I\tm J\to\C$ be a bifunctor, and let $(X_i)_{i\in I}$ be a family of objects of $\C$. Assume that for any $i$ in $I$ there is some morphism $p_i:\al(i,\ )\to\DT X_i$ which is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
 $$
 \begin{tikzcd}
 \al(i,\ )\ar[r,"p_i"]\ar[dr]&\DT X_i\ar[d]&X_i\ar[d,dashed]\\ 
@@ -1509,7 +1519,7 @@ If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C
 
 \nn\emph{(b)} the morphism $h(p):\DT h(X)\to h\ci\al$ in $(\C^\wg)^{I^{\op}}$ induced by $p$ is a projection,
 
-\nn\emph{(c)} the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Set^{I^{\op}}$ induced by $p$ is a projection, 
+\nn\emph{(c)} for all $Y$ in $\C$ the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Set^{I^{\op}}$ induced by $p$ is a projection.
 \end{prop}
 
 Condition (c) is often abridged by 
@@ -1518,7 +1528,7 @@ $$
 $$
 
 \begin{proof}
-Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We shall prove that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
+Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We sketch the proof that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
 \begin{equation}\lb{zfz}
 \begin{tikzcd}
 Z\ar[d,dashed,"f"']&\DT Z\ar[d,"\DT f"']\ar[r,"\ld"]&\al\\ 
@@ -1533,9 +1543,9 @@ S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(Y,\al)\\
 \end{tikzcd}
 \end{equation} 
 
-To prove (c)$\then$(a), we suppose $Z$ and $\ld$ given in \qr{zfz}, and in \qr{sgs} we let $S$ be a singleton, we set $Y:=Z$, and we define $\mu$ by the formula $\mu_i(s):=\ld_i$. The end of the proof of (a) is easy. 
+To prove (c)$\then$(a), we suppose $Z$ and $\ld$ given in \qr{zfz}, and in \qr{sgs} we let $S$ be a singleton, we set $Y:=Z$, we define $\mu$ by the formula $\mu_i(s):=\ld_i$, we get a $g$ as above, we set $f:=g(s)$, and we check that this works. 
 
-To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let $s$ be in $S$. We must define $g(s):Y\to X$. We set $Z:=Y$ in \qr{zfz}. We must define $\ld:\DT Y\to\al$. Letting $i$ be in $I$, it suffices to define $\ld_i:Y\to\al(i)$. To do this we set $\ld_i:=\mu_i(s)$. Again we leave the rest of the proof to the reader.
+To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let $s$ be in $S$. We must define $g(s):Y\to X$. We set $Z:=Y$ in \qr{zfz}. We must define $\ld:\DT Y\to\al$. Letting $i$ be in $I$, it suffices to define $\ld_i:Y\to\al(i)$. To do this we set $\ld_i:=\mu_i(s)$, we get an $f$ (depending on $s$) as above, we set $g(s):=f$, and we check that this works.
 \end{proof}
 
 The proof of the following proposition is similar to the previous one and is left to the reader as an easy exercise.
@@ -1545,11 +1555,11 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if 
 
 \nn\emph{(a)} $p$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim},
 
-\nn\emph{(b)} the morphism $k(p):k\ci\al\to\DT k(X)$ in $(\C^\vee)^I$ induced by $p$ is a coprojection,% $(k(X),k(p))$ is an inductive limit of $k\ci\al$ in $\C^\vee$, where $k(p):k\ci\al\to\DT k(X)$ is the morphism in $(\C^\vee)^I$ induced by $p$,
+\nn\emph{(b)} the morphism $k(p):k\ci\al\to\DT k(X)$ in $(\C^\vee)^I$ induced by $p$ is a coprojection,
 
-\nn\emph{(c)} the morphism $k(p):\DT k(X)\to k\ci\al^{\op}$ in $(\Set^\C)^{I^{\op}}$ induced by $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},% $(k(X),k(p))$ is a projective limit of $k\ci\al$ in $\Set^\C$, where $k(p):\DT k(X)\to k\ci\al$ is the morphism in $(\Set^\C)^{I^{\op}}$ induced by $p$,
+\nn\emph{(c)} the morphism $k(p):\DT k(X)\to k\ci\al^{\op}$ in $(\Set^\C)^{I^{\op}}$ induced by $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
-\nn\emph{(d)} the morphism $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ in $\Set^{I^{\op}}$ is a projection.% $(\Hom_\C(X,Y),\Hom_\C(p,Y))$ is a projective limit of $\Hom_\C(\al,Y)$ in $\Set$, where $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ is the morphism in $\Set^I$ induced by $p$.
+\nn\emph{(d)} for all $Y$ in $\C$  the morphism $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ in $\Set^{I^{\op}}$ is a projection.
 \end{prop}
 
 Condition (d) is often abridged by 
@@ -1565,7 +1575,7 @@ $$
 P.~40, Proposition 2.1.10 (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
 
 \begin{prop}\lb{2.1.10b}
-Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
+Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
 $$
 \Hom_\B(F(\ ),Y)\iso\Hom_\C(G(\ ),Z)
 $$
@@ -1586,7 +1596,8 @@ and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
 \end{proof}
 
 \begin{proof}[Second proof] 
-Recall that the notion of coprojection is defined in Definition~\ref{ilim} p.~\pr{ilim}. Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$, let $p:\al\to\DT\col\al$ be the coprojection, and let $Y$ be in $\B$. Consider the following commutative diagrams similar to \qr{cue} p.~\pr{cue}:
+Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$, let $p:\al\to\DT\col\al$ be the coprojection, and let $Y$ be in $\B$. Consider the self-explanatory 
+commutative diagrams 
 \begin{equation}\lb{faq}
 \begin{tikzcd}
 F\ci\al\ar[r,"q"]\ar[dr,"F(p)"']&\DT\col F\ci\al\ar[d,"\DT f"]&\col F\ci\al\ar[d,dashed,"f"]\\ 
@@ -1613,7 +1624,7 @@ $$
 \DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 $$ 
-The last three horizontal arrows a projections in the sense of Definition~\ref{plim} p.~\pr{plim}. %, and we want to prove that the top horizontal arrow is also a projection. 
+The last three horizontal arrows are projections. %in the sense of Definition~\ref{plim} p.~\pr{plim}. 
 The bottom horizontal arrow being a projection, there is a unique morphism 
 $$
 h:\Hom_\C(\col G\ci\al,Y)\to\Hom_\B(F(\col\al),Y)
@@ -1631,9 +1642,8 @@ commute. Moreover $h$ is an isomorphism because $\Hom_\C(G(p),Z)$ is a projectio
 $$
 k:\Hom_\B(F(\col\al),Y)\to\Hom_\B(F(\col\al),Y)
 $$ 
-by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\C(G(p),Z)$ is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
-%Define $f:\col F\ci\al\to F(\col\al)$ and $g:\col G\ci\al\to G(\col\al)$
-%We have for any functor $\al:I\to\A$ and any object $Y$ in $\B$ $$ \Hom_\B\left(F\left(\col\al\right),Y\right)\iso\Hom_\C\left(G\left(\col\al\right),Z\right)\xr\sim\Hom_\C\left(\col G(\al),Z\right)$$ $$\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\xleftarrow\sim\Hom_\B(\col F(\al),Y),$$ and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
+by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\B(q,Y)$ %$\Hom_\C(G(p),Z)$ 
+is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
 \end{proof}
 \end{s}
 
@@ -1647,37 +1657,29 @@ by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have 
 \begin{prop}\lb{b}
 If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}), and if $h:\C\to\C^\wg$ be the Yoneda embedding, then the following conditions are equivalent:
 
-\nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim},%$(h(X),h(p))$ is an inductive limit of $h\ci\al$ in $\C^\wg$,
+\nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection,%in the sense of Definition~\ref{ilim} p.~\pr{ilim}
 
-\nn\emph{(b)} the obvious morphism $\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ is a coprojection,%in the sense of Definition~\ref{ilim} p.~\pr{ilim},%$(\Hom_\C(Y,X),\Hom_\C(Y,p))$ is an inductive limit of $\Hom_\C(Y,\al)$ in $\Set$ for any $Y$ in $\C$,
+\nn\emph{(b)} for all object $Y$ in $\C$ the obvious morphism $\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ is a coprojection,
 
-\nn\emph{(c)} for any functor $F:\C\to\C'$ the obvious morphism $F(p):F\ci\al\to\DT F(X)$ is a coprojection,%$(F(X),F(p))$ is an inductive limit of $F\ci\al$ in $\C'$ for any functor $F:\C\to\C'$,
+\nn\emph{(c)} for any functor $F:\C\to\C'$ the obvious morphism $F(p):F\ci\al\to\DT F(X)$ is a coprojection,
 
-\nn\emph{(d)} for any functor $F:\C\to\C'$ the obvious morphism 
+\nn\emph{(d)} for any functor $F:\C\to\C'$ and any object $X'$ in $\C'$ the obvious morphism 
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$ 
-is a projection in the sense of Definition~\ref{plim} p.~\pr{plim}.% $(\Hom_{\C'}(F(X),X'),\Hom_{\C'}(F(p),X'))$ is a projective limit of $\Hom_{\C'}(F\ci\al,X')$ in $\Set$ for any functor $F:\C\to\C'$ and any $X'$ in $\C'$.
+is a projection.%in the sense of Definition~\ref{plim} p.~\pr{plim}.
 \end{prop}
 
 \begin{proof}
-Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), observe the isomorphisms
+Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), let $X'$ be in $\C'$ and set $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
 $$
-\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)
-$$
-$$
-\iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').
+\begin{tikzcd}
+\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A(\al)\ar[d,"\sim"]\\ 
+\DT\Hom_{\C^\wg}(h(p),A)\ar{rrr}[swap]{\Hom_{\C^\wg}(h(p),A)}&&&\Hom_{\C^\wg}(h(p),A),
+\end{tikzcd}
 $$ 
-Here $\lim\Hom_{\C'}(F\ci\al,X')$ is \emph{the} projective limit of $\Hom_{\C'}(F\ci\al,X')$ in the sense of Convention~\ref{the} p.~\pr{the}. In particular we have natural projections 
-$$
-\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').
-$$ 
-To complete the proof, it suffices to note that the morphism 
-$$
-\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')
-$$ 
-obtained by composing the above isomorphisms with the above projection coincides with %\qr{c'fpi}
-the natural one.
+where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
+%To prove (a) $\then$ (d), observe the isomorphisms $$\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)$$ $$\iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').$$ Here $\lim\Hom_{\C'}(F\ci\al,X')$ is \emph{the} projective limit of $\Hom_{\C'}(F\ci\al,X')$ in the sense of Convention~\ref{the} p.~\pr{the}. In particular we have natural projections $$\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').$$ To complete the proof, it suffices to note that the morphism $$\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')$$ obtained by composing the above isomorphisms with the above projection coincides with the natural one.
 \end{proof}
 \begin{df}[universal inductive limit]\lb{uil} 
 Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
@@ -1954,8 +1956,9 @@ exists in $\C$ for all $i$ in $I$. Then $\pp^\dg(\bt)$ exists and we have
 \begin{equation}\lb{236}
 \pp^\dg(\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation} 
-for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
+for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and the co-unit $\ee_\bt:\id_{\C^J}\to\pp_*\ci\pp^\dg$ (see \S\ref{ldefat} p.~\pr{ldefat}) is an isomorphism.%$\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
 \end{thm}
+
 The proof in the book is divided into three steps, called (a), (b), and (c). 
 
 \subsubsection{Step~(a)}\lb{scji}
@@ -2002,11 +2005,9 @@ $$
 (i,i\to j,j)\mt\Hom_\A(a(i),b(j))
 $$ 
 is a functor from $\Mor_0(I)^{\op}$ to $\Set$, and there is a natural isomorphism 
-%
 \begin{equation}\lb{2115} 
 \Hom_{\A^I}(a,b)\xr\sim\lim_{(i\to j)\in\Mor_0(I)}\Hom_\A(a(i),b(j)).
 \end{equation}
-%
 
 Returning to \qr{stepb}, we have functors 
 $$
@@ -2070,7 +2071,30 @@ We leave it to the reader to check that this defines indeed a map $\lim\delta\to
 
 \subsubsection{Step~(c)}
 
-The purpose of Step~(c) is to prove the last two sentences of the statement of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). We assume that $\C$ admits small inductive limits, that $J$ is small (in particular $\pp^\dg$ exists), and that $\pp$ is fully faithful. We must show that $\pp^\dg$ is fully faithful, and that there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
+The purpose of Step~(c) is to prove the last two sentences of the statement of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). We assume that $\C$ admits small inductive limits, that $J$ is small (in particular $\pp^\dg$ exists), and that $\pp$ is fully faithful. We must show that $\pp^\dg$ is fully faithful, and that the co-unit $\ee_\bt:\id_{\C^J}\to\pp_*\ci\pp^\dg$ (see \S\ref{ldefat} p.~\pr{ldefat}) is an isomorphism. %there is an isomorphism $\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
+Recall that we have 
+$$
+\pp^\dg(\bt)(i):=\col_{(\pp(j)\to i)\in J_i}\bt(j),
+$$ 
+and let 
+$$
+p(\pp(j)\to i):\bt(j)\to\pp^\dg(\bt)(i)
+$$ 
+be the coprojections. By the proof of Step~(b) in the book, the co-unit 
+$$
+\ee_{\bt,j}:\bt(j)\to\pp^\dg(\bt)(\pp(j))
+$$ 
+coincides with the coprojection $p(\pp(j)\xr\id\pp(j))$. We shall define a morphism $$\pp^\dg(\bt)(\pp(j))\to\bt(j)$$ and leave it to the reader to check that it is inverse to $\ee_{\bt,j}$. It suffices to define a functorial family of morphisms 
+$$
+f(\pp(j')\to\pp(j)):\bt(\pp(j'))\to\bt(\pp(j))
+$$ 
+indexed by $(\pp(j')\to\pp(j))\in J_{\pp(j)}$. Let such a morphism $\pp(j')\to\pp(j)$ be given. As $\pp$ is fully faithful, we get a well-defined morphism $j\to j'$, and we set 
+$$
+f(\pp(j')\to\pp(j)):=\bt(j\to j').
+$$ 
+It is straightforward to verify that the family of morphisms defined this way is functorial.
+
+\begin{comment}
 
 In part (i) of their proof of Theorem 2.3.3 (i), the authors define a map 
 \begin{equation}\lb{e233i} 
@@ -2101,6 +2125,8 @@ $$
 u\Big(\pp(j')\to\pp(j)\Big):\al(j')\to\al(j),
 $$
 that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\al(j')\to\al(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it. We leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dg(\al))})$ and $u$ are mutually inverse isomorphisms. This proves \qr{fip}. The fact that $\pp^\dg$ is fully faithful follows now from Proposition 1.5.6 (ii) p.~29 of the book.
+
+\end{comment}
 
 %%
 
