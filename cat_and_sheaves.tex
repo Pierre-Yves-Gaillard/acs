@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-\up{comment}
+%\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -801,7 +801,7 @@ The proof of (b) is similar. The proof of (c) is left to the reader.
 \end{proof}
 
 \begin{conv}\lb{term}
-An object $Y$ in a category $\A$ is \emph{terminal} if all $X$ in $\A$ admits a unique morphism $X\to Y$. Let $T_\A$ be the set of terminal objects of $\A$. If $Y,Z\in T_\A$, then there is a unique morphism $Y\to Z$, and this morphism is an isomorphism. For all category $\A$ such that $T_\A\neq\varnothing$ we choose an element in $T_\A$ and call it \textbf{the} terminal object of $\A$. Let us insist: we make a distinction between ``\emph{a} terminal object of $\A$'' and ``\emph{the} terminal object of $\A$'' (when they exist). Unless otherwise indicated, the choice of \emph{the} terminal object of $\A$ is random (but there will be two exceptions to this rule: see Convention~\ref{the} p.~\pr{the} and Convention~\ref{the'} p.~\pr{the'}).
+An object $Y$ in a category $\A$ is \emph{terminal} if all $X$ in $\A$ admits a unique morphism $X\to Y$. Let $T_\A$ be the set of terminal objects of $\A$. If $Y,Z\in T_\A$, then there is a unique morphism $Y\to Z$, and this morphism is an isomorphism. For all category $\A$ such that $T_\A\neq\varnothing$ we choose an element in $T_\A$ and call it \textbf{the} terminal object of $\A$. Let us insist: we make a distinction between ``\emph{a} terminal object of $\A$'' and ``\emph{the} terminal object of $\A$'' (when they exist). Unless otherwise indicated, the choice of \emph{the} terminal object of $\A$ is random (but there will be two exceptions to this rule: see Convention~\ref{thep} p.~\pr{thep} and Convention~\ref{thei} p.~\pr{thei}).
 \end{conv}
 
 \begin{conv}\lb{yoc}
@@ -825,7 +825,7 @@ $$
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
@@ -844,7 +844,7 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 
 %%
 
-\sbs{Horizontal\index{horizontal composition} and Vertical Compositions\index{vertical composition} (p. 19)}\lb{hove1}
+\sbs{Horizontal\index{horizontal composition} and vertical compositions\index{vertical composition} (p. 19)}\lb{hove1}
 
 For each object $X$ of $\C_3$ the diagram 
 
@@ -1303,7 +1303,7 @@ Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[r,"\theta"]&\al\\
 
 In Convention~\ref{term} p.~\pr{term} we stated a rule and indicated that we would make some exceptions to it. Here is the first such exception:
 
-\begin{conv}\lb{the}
+\begin{conv}\lb{thep}
 If $\al:I^{\op}\to\Set$ is a functor defined on a small category, then we define its projective limit $\lim\al$ by 
 $$ 
 \lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
@@ -1332,7 +1332,7 @@ The characteristic property of the pair $(\col\al,p)$ can be described as follow
 
 In Convention~\ref{term} p.~\pr{term} we stated a rule and indicated that we would make some exceptions to it. Here is the second such exception:
 
-\begin{conv}\lb{the'}
+\begin{conv}\lb{thei}
 Let $\al:I\to\Set$ be a functor defined on a small category, set 
 $$ 
 U:=\{(i,x)\in\U\ |\ i\in I,x\in\al(i)\},
@@ -1344,7 +1344,7 @@ Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe 
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 We shall spell out two versions of a certain statement about the following setting: $\al:I\to\C$ is a functor and $Z$ is an object of $\C$. The first version will be short, but somewhat incomplete, whereas the second version will be much longer, but more precise.
@@ -1679,7 +1679,7 @@ $$
 \end{tikzcd}
 $$ 
 where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
-%To prove (a) $\then$ (d), observe the isomorphisms $$\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)$$ $$\iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').$$ Here $\lim\Hom_{\C'}(F\ci\al,X')$ is \emph{the} projective limit of $\Hom_{\C'}(F\ci\al,X')$ in the sense of Convention~\ref{the} p.~\pr{the}. In particular we have natural projections $$\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').$$ To complete the proof, it suffices to note that the morphism $$\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')$$ obtained by composing the above isomorphisms with the above projection coincides with the natural one.
+%To prove (a) $\then$ (d), observe the isomorphisms $$\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)$$ $$\iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').$$ Here $\lim\Hom_{\C'}(F\ci\al,X')$ is \emph{the} projective limit of $\Hom_{\C'}(F\ci\al,X')$ in the sense of Convention~\ref{thep} p.~\pr{thep}. In particular we have natural projections $$\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').$$ To complete the proof, it suffices to note that the morphism $$\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')$$ obtained by composing the above isomorphisms with the above projection coincides with the natural one.
 \end{proof}
 \begin{df}[universal inductive limit]\lb{uil} 
 Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
@@ -1780,11 +1780,11 @@ is bijective.
 \end{thm}
 
 \begin{proof}
-View 
+By Convention~\ref{thep} p.~\pr{thep}  
 $$
 \lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
 $$ 
-as a subset $S$ of 
+is a subset $S$ of 
 $$
 P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\al(j),\bt(j)).
 $$ 
@@ -2094,39 +2094,8 @@ f(\pp(j')\to\pp(j)):=\bt(j\to j').
 $$ 
 It is straightforward to verify that the family of morphisms defined this way is functorial.
 
-\begin{comment}
-
-In part (i) of their proof of Theorem 2.3.3 (i), the authors define a map 
-\begin{equation}\lb{e233i} 
-\Psi_{\al,\bt}:
-\Hom_{\C^I}\big(\pp^\dg(\al),\bt\big)\to
-\Hom_{\C^J}\big(\al,\pp_*(\bt)\big),
-\end{equation} 
-and show that it is bijective. In particular, we have a bijection 
-$$
-f:=\Psi_{\al,\pp^\dg(\al)}:
-\Hom_{\C^I}\big(\pp^\dg(\al),\pp^\dg(\al)\big)\to
-\Hom_{\C^J}\big(\al,\pp_*(\pp^\dg(\al))\big).
-$$ 
-We claim that 
-\begin{equation}\lb{fip}
-f(\id_{\pp^\dg(\al)})\text{ is an isomorphism.}
-\end{equation}
-To prove this, we define 
-$$
-u:\pp_*(\pp^\dg(\al))\to\al
-$$
-as follows. Since 
-$$ 
-\Big(\pp_*\big(\pp^\dg(\al)\big)\Big)(j):=\pp^\dg(\al)(\pp(j)):=\col_{\pp(j')\to\pp(j)}\al(j'),
-$$
-we must define 
-$$
-u\Big(\pp(j')\to\pp(j)\Big):\al(j')\to\al(j),
-$$
-that is, we must attach, to each morphism $\pp(j')\to\pp(j)$, a morphism $\al(j')\to\al(j)$. As $\pp$ is fully faithful by assumption, there is an obvious way to do it. We leave it to the reader to verify that $f(\id_{\pp_*(\pp^\dg(\al))})$ and $u$ are mutually inverse isomorphisms. This proves \qr{fip}. The fact that $\pp^\dg$ is fully faithful follows now from Proposition 1.5.6 (ii) p.~29 of the book.
-
-\end{comment}
+% removed
+% https://docs.google.com/document/d/1MG8V4VHz0r4RCvKSMNpsFtb8frv1A_9RC6CPuHwMXE0/edit
 
 %%
 
@@ -2170,7 +2139,7 @@ such that $x_{i\to\pp(j)\to\pp(j')}=\bt(j\to j')(x_{i\to\pp(j)})$ for all morphi
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}\lb{scoco}
 P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
@@ -2241,17 +2210,11 @@ In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
 
 % 
 
-\begin{s}\lb{spreptom}
-P.~54, end of Section 2.3. Let 
-\begin{equation}\lb{epreptom}
-\C\xl\bt K\xr\psi J\xr\pp I
-\end{equation} 
-be a diagram of functors. Assume that $I,J$ and $K$ are small, and that $\C$ admits small projective limits. Then Theorem 2.3.3 (ii) p.~52 of the book implies that the functors $\pp^\ddg(\psi^\ddg(\bt))$ and $(\pp\ci\psi)^\ddg(\bt)$ from $I$ to $\C$ exist and are naturally isomorphic. 
-\end{s}
+%\begin{s} P.~54, end of Section 2.3. Let \begin{equation}\C\xl\bt K\xr\psi J\xr\pp I\end{equation} be a diagram of functors. Assume that $I,J$ and $K$ are small, and that $\C$ admits small projective limits. Then Theorem 2.3.3 (ii) p.~52 of the book implies that the functors $\pp^\ddg(\psi^\ddg(\bt))$ and $(\pp\ci\psi)^\ddg(\bt)$ from $I$ to $\C$ exist and are naturally isomorphic. \end{s}
 
 %
 
-\sbs{Kan Extensions of Modules}
+\sbs{Kan extensions of modules}
 
 Let $R$ be a ring, let $\U$ and $\V$ be universes such that $R\in\U\in\V$, put, with self-explanatory notation, 
 $$
@@ -2316,7 +2279,7 @@ and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of t
 
 %% 
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
@@ -2415,7 +2378,7 @@ $$
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~56, proof of Lemma 2.4.7 (minor variant).
@@ -2573,7 +2536,7 @@ where $f$ is given by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 % old version: 
@@ -2683,7 +2646,7 @@ and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
 
 %%
 
-\sbs{Three Formulas}
+\sbs{Three formulas}
 
 Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pr{prepa5} to prove Proposition 17.1.9 p.~409 of the book. 
 
@@ -3031,7 +2994,7 @@ The proof is obvious.
 
 %%
 
-\sbs{Brief Comments} 
+\sbs{Brief comments} 
 
 \begin{s}\lb{opddagg} 
 P.~63, Corollary 2.7.4. Here is a variant: 
@@ -3128,7 +3091,7 @@ P.~64, Exercise 2.4. Set $P:=X\tm_YX$.
 
 \section{About Chapter 3}
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~72, proof of Lemma 3.1.2. Here is a minor variant of the proof of the following statement: 
@@ -3612,7 +3575,7 @@ and $\qr{qippi}$ follows from the existence of an obvious morphism from $(i,\pp(
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~89, Proposition 3.4.5 (iii). The proof uses implicitly the following fact: 
@@ -3626,7 +3589,7 @@ This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 
 
 %%
 
-\sbs{Six Closely Related Statements}
+\sbs{Six closely related statements}
 
 For the reader's convenience we collect six statements closely related to Exercise 3.4 (i) p.~90 of the book. 
 
@@ -4033,7 +3996,7 @@ By Proposition~\ref{epimono} p.~\pr{epimono}, this condition does not depend on 
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}\lb{515i}
 P.~115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details, and, for the reader's convenience we reproduce Proposition 5.1.5 (i) p.~115 of the book. 
@@ -4272,7 +4235,7 @@ $$
 
 %%
 
-\sbs{Brief Comments} 
+\sbs{Brief comments} 
 
 \begin{s} 
 P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
@@ -4720,7 +4683,7 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
@@ -5226,7 +5189,7 @@ $\ic\pp\iso f$.
 
 \section{About Chapter 7}
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 % https://docs.google.com/document/d/1XSIMsAb8ChL6VxN-VQ3HoC5sg1C4Yzu0Gmq87ebsLdY/edit
 
@@ -5620,7 +5583,7 @@ If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\co
 
 %
 
-\begin{s}\lb{745}%\sbs{Remark 7.4.5 (p.~163)}\lb{745}
+\begin{s}\lb{745}
 P. 163, Remark 7.4.5. In this \S\ we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
 
 Let $\SSS$ be a left and right multiplicative system in $\C$, and let $X$ and $Y$ be two objects of $\C$. \S~\ref{737} p.~\pr{737} implies that the functors 
@@ -5704,17 +5667,7 @@ $$
 X\tm X\ar{rd}[swap]{\al}\ar{r}{v}&X\tm X\ar{d}{\al}\\ 
 &X.
 \end{tikzcd}
-$$
-
-%%
-
-%\sbs{Lemma 8.1.2 (ii) p.~169}
-
-%The fact that the notion of group object is independent of the choice of a universe $\U$ such that $\C$ is a $\U$-category is implicit in the proof. A way to make this point clear is to define the notion of a group object structure on an object $G$ of $\C$ without the Axiom of Universes. As in the book, we use the notation $G(X):=\Hom_\C(X,G)$. A group object structure on $G$ is given by a functorial family of maps $$(\mu_X:G(X)^2\to G(X))_{X\in\C}$$ such that 
-
-%\nn(a) $\mu_X$ is a group multiplication for all $X$ in $\C$, 
-
-%\nn(b) the map $G(Y)\to G(X)$ is a morphism of groups for all morphism $X\to Y$ in $\C$. 
+$$ 
 
 %%%
 
@@ -5819,7 +5772,7 @@ Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$
 
 %%
 
-\subsubsection{Brief Comments}
+\subsubsection{Brief comments}
 
 \begin{s} 
 P.~172, Lemma 8.2.9. Recall the statement:
@@ -6091,7 +6044,7 @@ $$
 
 %%
 
-\subsubsection{Brief Comments}
+\subsubsection{Brief comments}
 
 \begin{s} 
 For the reader's convenience we state Lemma 8.3.11 p.~180. Consider the commutative square 
@@ -6348,7 +6301,7 @@ equalities $caz=ebz=ew\ell m-edxm=ew\ell m=cyk\ell m$, $az=yk\ell m$; and it suf
 
 %%
 
-\subsubsection{Brief Comments}
+\subsubsection{Brief comments}
 
 \begin{s} 
 On p. 185 we read:
@@ -6403,8 +6356,6 @@ By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $
 %% 
 
 \sbs{About Section 8.4} 
-
-%\subsubsection{Proposition 8.4.7 p. 187}
 
 This is about Proposition 8.4.7 p. 187. Let us just rewrite in a slightly less concise way the part of the proof on p.~188 which starts with the sentence ``Define $Y:=Y_0\tm_XG_i$'' at the fifth line of the last paragraph of the proof, and goes to the end of the proof. 
 
@@ -6471,7 +6422,7 @@ q.e.d.
 
 \sbs{About Section 8.5}
 
-\subsubsection{Brief Comments}
+\subsubsection{Brief comments}
 
 \begin{s} P.~190, Proposition 8.5.5. It might be worth writing explicitly the formulas (for $X\in\Mod(R,\C)$):
 \begin{equation}\lb{rop}
@@ -7011,7 +6962,7 @@ as required.
 
 %% 
 
-\sbs{About the Exercises} 
+\sbs{About the exercises} 
 
 \subsubsection{Exercise 8.4 p.~202}
 
@@ -7287,7 +7238,7 @@ $$
 
 I find Chapter 9 especially beautiful!
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}
 P.~217, beginning of Section 9.2. 
@@ -7834,7 +7785,7 @@ $$
 By Lemma~\ref{cardipi} p.~\pr{cardipi} we have $\card(I)<\pi$. Since $\card(G^{\sqcup B}(G))<\pi$ for all $B$ in $I$ by (e), this implies \qr{934b}.
 \end{proof}
 
-\subsubsection{Brief Comments}
+\subsubsection{Brief comments}
 
 \nn$*$ P.~227, Corollary 9.3.5. In the proof of (i) we use Propositions 5.2.3 (iv) p.~118 and 5.2.9 p.~121 of the book. As already pointed out, in the proof of (iv), $\C$ should be $\C_\pi$. 
 
@@ -8311,7 +8262,7 @@ In the book $\F$ is supposed to be small, but the proof clearly works if $\F$ is
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~235, Theorem 9.6.1. In view of the comments made before Corollary~\ref{938} p.~\pr{938}, Theorem 9.6.1 could be stated as follows:
@@ -8409,7 +8360,7 @@ In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pr
 
 \section{About Chapter 10}
 
-\sbs{Definition of a Triangulated Category\index{triangulated category}\index{May (Peter May)}}
+\sbs{Definition of a triangulated category\index{triangulated category}\index{May (Peter May)}}
 
 The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:  
 %
@@ -8578,7 +8529,7 @@ The third row and column are distinguished triangles by \qr{r3} and \qr{c3} resp
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pr{may}, it is not necessary to prove TR4.
@@ -8894,7 +8845,7 @@ in $\A_c$. As $H(\Mc(\id_X))\iso0$, $\pp$ is a qis by Lemma~\ref{sl2}.
 
 \section{About Chapter 13}
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}
 P.~337. Theorem 13.4.1 suggests the following question: 
@@ -9134,7 +9085,7 @@ d_I\ci\widetilde\psi-T\widetilde\psi\ci d_Y&=d_I\ci\psi-d_I\ci\xi\ci g-T\psi\ci 
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s} 
 P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pr{938} and Theorem~\ref{961} p.~\pr{961}, one could replace ``there exists an essentially small full subcategory $\SSS$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\SSS$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
@@ -9235,7 +9186,7 @@ By (1.5.7) p. 29 of the book, Composition~\qr{f2} coincides with Composition~\qr
 
 \section{About Chapter 16}
 
-\sbs{Sieves and Local Epimorphisms}\index{sieve}\index{local epimorphism}
+\sbs{Sieves and local epimorphisms}\index{sieve}\index{local epimorphism}
 
 This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
 $$
@@ -9467,7 +9418,7 @@ Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}\lb{390}
 P.~390, Axioms LE1-LE4. The set of local epimorphisms attached to the natural Grothendieck topology associated with a small topological space $X$ can be described as follows. 
@@ -9591,7 +9542,7 @@ in $\mc{LI}_U$ such that $\al(\pp)(f_1)=\al(\pp)(f_2)$. This means that the comp
 
 \section{About Chapter 17}
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}
 P.~405, Chapter 17. It seems to me it would be more convenient to denote by $f^t$ the functor from $(\C_Y)^{\op}$ to $(\C_X)^{\op}$ (and {\em not} the functor from $\C_Y$ to $\C_X$) which defines $f$. To avoid confusion, we shall adopt here the following convention:
@@ -9963,7 +9914,7 @@ Indeed, the isomorphisms can be justified as follows:
 
 %%
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 \begin{s}\lb{fau}
 P.~421, first display: 
@@ -10237,7 +10188,7 @@ Exercise 17.5 (ii) follows immediately.
 
 \section{About Chapter 18} 
 
-\sbs{Brief Comments}
+\sbs{Brief comments}
 
 %
 
@@ -10645,7 +10596,7 @@ If $y$ is the element of $(N\otimes_{\R|_U}P|_U)(U)$ corresponding to $x$ under 
 
 %%
 
-\sbs{Brief Comments} 
+\sbs{Brief comments} 
 
 \begin{s}
 P.~452, Part (i) (a) of the proof of Lemma 18.6.7. As already mentioned, $\OO_U$ and $\OO_V$ stand presumably for $\OO_X|_U$ and $\OO_Y|_V$ (and it would be better, in the penultimate display of the page, to write $\OO_V$ instead of $\OO_Y|_V$), and, a few lines before the penultimate display of the page, $f_W^{-1}:\OO_U^{\oplus n}\xr u\OO_U^{\oplus m}$ should be (I think) $f_W^{-1}:\OO_W^{\oplus n}\to\OO_W^{\oplus m}$. 
