@@ -1000,14 +1000,40 @@ is representable, we denote its representative by $R(X')$ and its representation
 \nn``$R(X')$ exists''.  
 
 Concretely this means that, for all $X$ in $\C$ and all $g:L(X)\to X'$ there is a unique $f:X\to R(X')$ such that $\eta_{X'}\ci L(f)=g$: 
-$$
+\begin{equation}\lb{xfl1}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"g"]&X'\\ 
 R(X')&L(R(X')).\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
-$$ 
+\end{equation} 
 We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.
 \end{s}
+
+%
+
+\begin{s} 
+In the above setting consider the commutative diagram 
+\begin{equation}\lb{xfl2}
+\begin{tikzcd}
+X\ar[d,dashed,"f"']\ar[r,"\theta"]&\Hom_{\C'}(L(\ ),X')\\ 
+L(R(X')).\ar[ru,"\eta_{X'}"']
+\end{tikzcd}
+\end{equation}
+Even if it is straightforward, we sketch the proof of the fact that the conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. For the purpose of this proof, it is better to rewrite \qr{xfl1} as 
+$$
+\begin{tikzcd}
+X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"\theta_X(\id_X)"]&X'\\ 
+R(X')&L(R(X')).\ar[ru,"\eta_{X',R(X')(\id_{R(X')})}"']
+\end{tikzcd}
+$$ 
+It suffices then to observe the equalities 
+$$
+(\eta_{X'}\ci f)_X(\id_X)=\eta_{X',X}(f)=\eta_{X',R(X')}(\id_{R(X')})\ci L(f),
+$$ 
+equalities respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. 
+\end{s}
+
+%
 
 \begin{s}
 Let $T$ be a terminal object of $\Set$. Then a functor $A:\C^{\op}\to\Set$ is representable if and only if the right adjoint of $A^{\op}:\C\to\Set^{\op}$ is defined at $T$.
@@ -1860,7 +1886,7 @@ P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dg$, and $\pp^
 \begin{s}\lb{phistar}
 P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor $\pp_*:=\ci\pp:\C^I\to\C^J$. The following fact results from Proposition 2.1.6 p.~38 of the book: 
 
-If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and $\C^J$, and $\pp_*$ commutes with such limits. 
+\emph{If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and $\C^J$, and $\pp_*$ commutes with such limits.} 
 \end{s} 
 
 %
@@ -2478,16 +2504,13 @@ Clearly, \qr{263b} implies \qr{263a} and \qr{263c} (see \S\ref{216} p.~\pr{216})
 
 We shall spell out Isomorphisms \qr{263a} and \qr{263b} (resp. Isomorphism \qr{263c}) in terms of Diagram \qr{cue} p.~\pr{cue} (resp. Diagram \qr{yfy} p.~\pr{yfy}). 
 
-%Warning: We let $h:\C\to\C^\wg$ denote the Yoneda embedding. From here to the end of this section we write $X$ for $h(X)$, with the single exception of the second occurrence of $X$ in \qr{aca} below.
-
 Warning: From here to the end of this section the symbols $X$ and $Y$ will designate either two objects of $\C$ or the image of these objects in $\C^\wg$. The context only will tell which interpretation is the good one. (It seems to me the choice of the correct interpretation will always be obvious.)
 
 \nn$\bu$ Isomorphism \qr{263a} can be decoded as follows: Consider the functor 
-$$%\begin{equation}\lb{aca}
+$$
 \al:\C_A\to\C^\wg,\quad(X\to A)\mt X,
-$$%\end{equation} 
-and let $p:\al\to\DT A$ %(see Notation~\ref{diag} p.~\pr{diag}) 
-be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
+$$ 
+and let $p:\al\to\DT A$ be the tautological morphism in $(\C^\wg)^{\C_A}$ defined by 
 \begin{equation}\lb{pxa}
 p_{X\to A}:=(X\to A)
 \end{equation}
@@ -2498,7 +2521,7 @@ $$
 &\DT B&B,
 \end{tikzcd}
 $$ 
-where $f$ is given by $f_X(X\to A):=\theta_{X\to A}$. 
+and we can define $f$ by $f_X(X\to A):=\theta_{X\to A}$. 
 
 \nn$\bu$ Isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
 $$
@@ -2515,7 +2538,7 @@ $$
 &\DT S&S,
 \end{tikzcd}
 $$ 
-where $f$ is given by $f(Y\to A):=\theta_{Y\to A}(\id_Y)$. 
+and we can define $f$ by $f(Y\to A):=\theta_{Y\to A}(\id_Y)$. 
 
 \nn$\bu$ Isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, consider the functor 
 $$
@@ -2529,10 +2552,21 @@ for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$, and let $S$ be in $\Set$.
 $$
 \begin{tikzcd}
 S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[r,"\theta"]&\gamma\\ 
-B(A)&\DT B(A),\ar[ru,"p"']
+B(A)&\DT B(A),\ar[ru,"r"']
 \end{tikzcd}
 $$ 
-where $f$ is given by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
+and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
+
+Isomorphisms \qr{263a}, \qr{263b} and \qr{263c} are functorial. This fact is probably best expressed in terms of the (co)projections. Let us state explicitly the functoriality of \qr{263a}. 
+
+Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $*$ denotes horizontal composition. Then the diagram 
+$$
+\begin{tikzcd}
+\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ 
+\al_A\ar{rrr}[swap]{p_B*((A\to B)\ci)}&&&\DT B
+\end{tikzcd}
+$$ 
+commutes.
 
 %%
 
@@ -2540,11 +2574,13 @@ where $f$ is given by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
 
 \begin{s} 
 % old version: 
-%https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
+% https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
 P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
 
 \begin{lem} 
-Let $\al:I\to\A$ be a functor, let $A$ be in $\A$, let $p:\al\to\DT A$ (see Notation~\ref{diag} p.~\pr{diag}) be a morphism of functors, assume that $(A,p)$ is an inductive limit of $\al$ (see Definition~\ref{ilim} p.~\pr{ilim}), let $\al':I\to\A_A$ be the obvious functor, let $a$ in $\A_A$ be given by the identity of $A$, and let $q:\al'\to\DT a$ be the obvious morphism of functors. Then $q$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}.%n inductive limit of $\al'$. 
+If $\al:I\to\A$ is a functor, if $A$ is in $\A$, if $p:\al\to\DT A$ is a coprojection, 
+if $\al':I\to\A_A$ is the obvious functor, and if $a$ in $\A_A$ is given by the identity of $A$, then the obvious morphism of functors $q:\al'\to\DT a$ is a coprojection.
+%Let $\al:I\to\A$ be a functor, let $A$ be in $\A$, let $p:\al\to\DT A$ (see Notation~\ref{diag} p.~\pr{diag}) be a morphism of functors, assume that $(A,p)$ is an inductive limit of $\al$ (see Definition~\ref{ilim} p.~\pr{ilim}), let $\al':I\to\A_A$ be the obvious functor, let $a$ in $\A_A$ be given by the identity of $A$, and let $q:\al'\to\DT a$ be the obvious morphism of functors. Then $q$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}. 
 \end{lem} 
 
 \begin{proof} 
