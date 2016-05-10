@@ -1992,20 +1992,33 @@ The proof in the book is divided into three steps, called (a), (b), and (c).
 % old version:
 %https://docs.google.com/document/d/1CSDj0ZCUrvizbqLCHeJn5rkrra1IUVZ57wqqizF2J3U/edit
 
-We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. For the reader's convenience we reproduce the argument in the book: %Here is a variant of the argument of the book. 
+We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. 
 
-Let $i\to i'$ be a morphism in $I$. It is easily checked that there is a unique morphism $\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')$ which make the diagrams 
+We prefer proving the dual statement: Let us assume that 
 $$
-\begin{tikzcd}
-\pp^\dg(\bt)(i)=\ds\col_{(\pp(j)\to i)\in J_i}\bt(j)\ar[rr]&&\ds\col_{(\pp(j)\to i')\in J_{i'}}\bt(j)=\pp^\dg(\bt)(i')\\ 
-&\bt(j)\ar[lu,"p(\pp(j)\to i)"]\ar[ru,"q(\pp(j)\to i\to i')"']
-\end{tikzcd}
+\lim_{(i\to\pp(j))\in J^i}\bt(j)
 $$ 
-commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections, and that the assignment 
+exists for all $i$ in $I$, let us denote this limit by $\pp^\ddg(\bt)(i)$, and let us show that $\pp^\ddg(\bt)$ is a functor. %(By duality this will imply the desired result about $\pp^\dg(\bt)$.)
+
+For $i$ in $I$ write $\gamma_i:J^i\to\C$ for the functor $(i\to\pp(j))\mt\bt(j)$, and define $A_i\in\C^\wg$ by 
 $$
-(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)
+A_i:=\Hom_{\Fct(J^i,\C)}(\DT(\ ),\gamma_i).
 $$ 
-is functorial.
+We want to attach to each morphism $i\to i'$ in $I$ a morphism $A_{i\to i'}:A_i\to A_{i'}$ in $\C^\wg$. Let $X$ be an object of $\C$ and $i\to i'$ a morphism in $I$. We define 
+$$
+A_{i\to i'}(X):A_i(X)\to A_{i'}(X)
+$$ 
+by 
+$$
+A_{i\to i'}(X)(\theta)_{i'\to\pp(j)}:=\theta_{i\to i'\to\pp(j)}:X\to\bt(j).
+$$ 
+It is easy to see that $i\mt A_i(X)$ is a functor from $I$ to $\Set$, and to conclude that $i\mt A_i$ is a functor from $I$ to $\C^\wg$. %For $i$ in $I$ write $\gamma_i:J^i\to\C$ for the functor $(i\to\pp(j))\mt\bt(j)$, and define $A_i\in\C^\wg$ by $$A_i(X):=\Hom_{\Fct(J^i,\C)}(\DT X,\gamma_i).$$ Let $i\to i'$ be a morphism in $I$. We have in particular $$A_{i'}(X):=\Hom_{\Fct(J^{i'},\C)}(\DT'X,\gamma_{i'}).$$ (Here $\DT$ and $\DT'$ designate respectively the diagonal functors from $\C$ to $\Fct(J^i,\C)$ and to $\Fct(J^{i'},\C)$.) Let us define a morphism $A_i\to A_{i'}$. Let $X$ be in $\C$ and let us define a morphism $A_i(X)\to A_{i'}(X)$. Let $\ld:\DT X\to\gamma_i$ be given. In particular for each $i\to\pp(j)$ in $J^i$ we have a morphism $\ld_{i\to\pp(j)}:X\to\bt(j)$. Let us define $\mu:\DT'X\to\gamma_{i'}$. Given $i'\to\pp(j)$ be in $J^{i'}$, we may define $\mu_{i'\to\pp(j)}:X\to\bt(j)$ by $$\mu_{i'\to\pp(j)}:=\ld_{i\to i'\to\pp(j)}.$$ Clearly, this defines a functor $\delta:I\to\C^\wg$ satisfying $\delta(i)=A_i$ for all $i$ in $I$. Moreover, 
+As we have by assumption a representation $\pp^\ddg(\bt)(i)\xr\sim A_i$ of $A_i$ by $\pp^\ddg(\bt)(i)$ for all $i$ in $I$, Lemma 1.3.11 p.~21 in the book implies that $\pp^\ddg(\bt)$ is a functor. 
+%we have, for all $i$, a representation $\pp^\ddg(\bt)(i)\xr\sim A_i$ of $A_i$ by $\pp^\ddg(\bt)(i)$. Then Lemma 1.3.11 p.~21 in the book implies that $\pp^\ddg(\bt)$ can be viewed as a functor.  
+
+%For the reader's convenience we reproduce the argument in the book: 
+
+%Let $i\to i'$ be a morphism in $I$. It is easily checked that there is a unique morphism $\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')$ which make the diagrams $$\begin{tikzcd}\pp^\dg(\bt)(i)=\ds\col_{(\pp(j)\to i)\in J_i}\bt(j)\ar[rr]&&\ds\col_{(\pp(j)\to i')\in J_{i'}\bt(j)=\pp^\dg(\bt)(i')\\ &\bt(j)\ar[lu,"p(\pp(j)\to i)"]\ar[ru,"q(\pp(j)\to i\to i')"']\end{tikzcd}$$ commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections, and that the assignment $$(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)$$ is functorial.
 
 %
 
@@ -2499,6 +2512,8 @@ Let $\C$ be a category and let $A$ be in $\C^\wg$. Consider the statements
 
 Clearly, \qr{263b} implies \qr{263a} and \qr{263c} (see \S\ref{216} p.~\pr{216}), and the proof of \qr{263b} is straightforward. (See \S\ref{c38} p.~\pr{c38} for the relationship between \qr{263a}, \qr{263b}, and \qr{263c}.) 
 
+Note that \qr{263a} can be stated as follows: If $h:\C\to\C^\wg$ is the Yoneda embedding, then the natural morphism $h^\dg(h)\to\id_{\C^\wg}$ is an isomorphism. This implies in particular that \qr{263a} is functorial in $A$.
+
 % previous version
 %https://docs.google.com/document/d/1WNqMtfDDCRbs9WqNffO6yj37ck60FBy6xxHGA8Cf764/edit
 
@@ -2557,16 +2572,9 @@ B(A)&\DT B(A),\ar[ru,"r"']
 $$ 
 and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
 
-Isomorphisms \qr{263a}, \qr{263b} and \qr{263c} are functorial. This fact is probably best expressed in terms of the (co)projections. Let us state explicitly the functoriality of \qr{263a}. 
+%Isomorphisms \qr{263a}, \qr{263b} and \qr{263c} are functorial. This fact is probably best expressed in terms of the (co)projections. Let us state explicitly the functoriality of \qr{263a}. 
 
-Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $*$ denotes horizontal composition. Then the diagram 
-$$
-\begin{tikzcd}
-\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ 
-\al_A\ar{rrr}[swap]{p_B*((A\to B)\ci)}&&&\DT B
-\end{tikzcd}
-$$ 
-commutes.
+%Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $*$ denotes horizontal composition. Then the diagram $$\begin{tikzcd}\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ \al_A\ar{rrr}[swap]{p_B*((A\to B)\ci)}&&&\DT B\end{tikzcd}$$ commutes.
 
 %%
 
@@ -2577,43 +2585,47 @@ commutes.
 % https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
 P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
 
-\begin{lem} 
-If $\al:I\to\A$ is a functor, if $A$ is in $\A$, if $p:\al\to\DT A$ is a coprojection, 
-if $\al':I\to\A_A$ is the obvious functor, and if $a$ in $\A_A$ is given by the identity of $A$, then the obvious morphism of functors $q:\al'\to\DT a$ is a coprojection.
-%Let $\al:I\to\A$ be a functor, let $A$ be in $\A$, let $p:\al\to\DT A$ (see Notation~\ref{diag} p.~\pr{diag}) be a morphism of functors, assume that $(A,p)$ is an inductive limit of $\al$ (see Definition~\ref{ilim} p.~\pr{ilim}), let $\al':I\to\A_A$ be the obvious functor, let $a$ in $\A_A$ be given by the identity of $A$, and let $q:\al'\to\DT a$ be the obvious morphism of functors. Then $q$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}. 
-\end{lem} 
+% old version (160509): 
+% https://docs.google.com/document/d/167Wrv21BZvIOaVYRo1BDkEFQyjZ8mSHUJaWcHo_zWDU/edit
 
-\begin{proof} 
-We know that for all $B$ in $\A$ and all $\pp:\al\to\DT B$ there is a unique $f:A\to B$ such that $\DT f\ci p=\pp$: 
-\begin{equation}\lb{apa}
-\begin{tikzcd}
-\al\ar[r,"p"]\ar[dr,"\pp"']&\DT A\ar[d,"\DT f"]&A\ar[d,dashed,"f"]\\ 
-&\DT B&B.
-\end{tikzcd}
-\end{equation} 
-Let $a:=(A\xr{\id}A)$ and $b=(B\xr bA)$ be in $\A_A$, and let $\psi:\al'\to\DT b$, that is 
+\begin{lem}\lb{cc}
+If $\al:I\to\C$ is a functor admitting an inductive limit and if $f:\col\al\to Y$ is a morphism in $\C$, then we have 
+$$
+\col_{i\in I}\ (\al(i)\to\col\al\to Y)\iso(\col\al\to Y).
+$$
+More precisely, let $X$ be in $\C$, let $p:\al\to\DT X$ be a coprojection, define $\bt:I\to\C_Y$ by $\bt(i):=(\al(i)\xr{p_i}X\xr fY)$ and $q:\bt\to\DT(X\xr fY)$ by $q_i:=p_i$: 
 $$
 \begin{tikzcd}
-\al(i)\ar[rd,"p_i"']\ar[rr,"\psi_i"]&&B\ar[dl,"b"]\\ 
-&A,
+\al(i)\ar[rd,"f\ci p_i"']\ar[rr,"p_i"]&&X\ar[dl,"f"]\\ 
+&Y.
 \end{tikzcd}
 $$ 
-be given. We want to prove that there is a unique $g:a\to b$, that is 
+Then $q$ is a coprojection. 
+\end{lem}
+
+\begin{proof}
+For all $Z$ in $\C$ and all morphism $\pp:\al\to\DT Z$ in $\C^I$ there is a unique morphism $g:X\to Z$ in $\C$ such that $\DT g\ci p=\pp$: 
 $$
 \begin{tikzcd}
-A\ar[rd,"\id"']\ar[rr,dashed,"g"]&&B\ar[dl,"b"]\\ 
-&A,
+\al\ar[r,"p"]\ar[dr,"\pp"']&\DT X\ar[d,"\DT g"]&X\ar[d,dashed,"g"]\\ 
+&\DT Z&Z.
 \end{tikzcd}
 $$ 
-such that $\DT g\ci q=\psi$: 
+Let $(Z\xr hY)$ be an object of $\C_Y$ and $\psi:\bt\to\DT(Z\xr hY)$ a morphism in $(\C_Y)^I$. We must show that there is a unique morphism $k:(X\xr fY)\to(Z\xr hY)$, which it is more suggestive to display as 
 $$
 \begin{tikzcd}
-\al'\ar[r,"q"]\ar[dr,"\psi"']&\DT a\ar[d,"\DT g"]&a\ar[d,dashed,"g"]\\ 
-&\DT b&b.
+X\ar[rd,"f"']\ar[rr,"k"]&&Z\ar[dl,"h"]\\ 
+&Y,
 \end{tikzcd}
 $$ 
-It is easy to see that there is a unique $\pp:\al\to\DT B$ such that $\pp_i=\psi_i$ for all $i\in I$, and that the morphism $g:=f$, where $f$ is given by \qr{apa}, does the job.
-%Let $b=(B\to A)$ be in $\A_A$. We define a map from $\Hom_{(\A_A)^I}(\al',\DT b)$ to $\Hom{\A_A}(a,b)$ by attaching to a morphism of functors $\eta:\al'\to\DT b$ the morphism $g:a\to b$ defined as follows. Let $\xi:\al\to\DT B$ be the morphism of functors induced by $\eta$, let $f:A\to B$ be the unique morphism satisfying $\DT f\ci p=\xi$, and let $g:a\to b$ be induced by $f$. We leave it to the reader to check that $\eta\mt g$ is inverse to $g\mt\DT g\ci q$.
+such that $\DT k\ci q=\psi$: 
+$$
+\begin{tikzcd}
+\bt\ar[r,"q"]\ar[dr,"\psi"']&\DT(X\xr fY)\ar[d,"\DT k"]&(X\xr fY)\ar[d,dashed,"k"]\\ 
+&\DT(Z\xr hY)&(Z\xr hY).
+\end{tikzcd}
+$$ 
+It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k_i:=g_i$ do the job. 
 \end{proof}
 \end{s}
 
@@ -2730,50 +2742,10 @@ Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits sma
 %Let $I$ be a category. Assume that $\C$ admits inductive limits indexed by $I$, and that $A:\C^{\op}\to\Set$ commutes with projective limits indexed by $I$ (i.e. $A(\col_{i\in I}X_i)\iso\lim_{i\in I} A(X_i)$ for any inductive system $(X_i)_{i\in I}$ in $\C$). Then $\C_A$ admits inductive limits indexed by $I$ and $j(\C_A):\C_A\to\C$ commutes with such limits.
 %\end{lem}
 
-The following lemma will be useful:
+%The following lemma will be useful:
 
 % previous version
 % https://docs.google.com/document/d/1h1cHxZ_Bdwh5o2DuO1et13-OkpRBe2bhjqtLgkhMbQY/edit
-
-\begin{lem}\lb{cc}
-If $\al:I\to\C$ is a functor admitting an inductive limit and if $f:\col\al\to Y$ is a morphism in $\C$, then we have 
-$$
-\col_{i\in I}\ (\al(i)\to\col\al\to Y)\iso(\col\al\to Y).
-$$
-More precisely, let $X$ be in $\C$, let $p:\al\to\DT X$ be a morphism in $\C^I$ such that $(X,p)$ is an inductive limit of $\al$, define $\bt:I\to\C_Y$ by $\bt(i):=(\al(i)\xr{p_i}X\xr fY)$ and $q:\bt\to\DT(X\xr fY)$ by $q_i:=p_i$: 
-$$
-\begin{tikzcd}
-\al(i)\ar[rd,"f\ci p_i"']\ar[rr,"q_i"]&&X\ar[dl,"f"]\\ 
-&Y.
-\end{tikzcd}
-$$ 
-Then $((X\xr fY),q)$ is an inductive limit of $\bt$. 
-\end{lem}
-
-\begin{proof}
-For all $Z$ in $\C$ and all morphism $\pp:\al\to\DT Z$ in $\C^I$ there is a unique morphism $g:X\to Z$ in $\C$ such that $\DT g\ci p=\pp$: 
-$$
-\begin{tikzcd}
-\al\ar[r,"p"]\ar[dr,"\pp"']&\DT X\ar[d,"\DT g"]&X\ar[d,dashed,"g"]\\ 
-&\DT Z&Z.
-\end{tikzcd}
-$$ 
-Let $(Z\xr hY)$ be an object of $\C_Y$ and $\psi:\bt\to\DT(Z\xr hY)$ a morphism in $(\C_Y)^I$. We must show that there is a unique morphism $k:(X\xr fY)\to(Z\xr hY)$, which it is more suggestive to display as 
-$$
-\begin{tikzcd}
-X\ar[rd,"f"']\ar[rr,"k"]&&Z\ar[dl,"h"]\\ 
-&Y,
-\end{tikzcd}
-$$ 
-such that $\DT k\ci q=\psi$: 
-$$
-\begin{tikzcd}
-\bt\ar[r,"q"]\ar[dr,"\psi"']&\DT(X\xr fY)\ar[d,"\DT k"]&(X\xr fY)\ar[d,dashed,"k"]\\ 
-&\DT(Z\xr hY)&(Z\xr hY).
-\end{tikzcd}
-$$ 
-It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k_i:=g_i$ do the job. 
-\end{proof}
 
 Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$ is small and that $\A$ admits small inductive and projective limits.
 
