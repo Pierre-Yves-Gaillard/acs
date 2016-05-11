@@ -1016,7 +1016,7 @@ In the above setting consider the commutative diagram
 \begin{equation}\lb{xfl2}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']\ar[r,"\theta"]&\Hom_{\C'}(L(\ ),X')\\ 
-L(R(X')).\ar[ru,"\eta_{X'}"']
+R(X').\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 \end{equation}
 Even if it is straightforward, we sketch the proof of the fact that the conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. For the purpose of this proof, it is better to rewrite \qr{xfl1} as 
@@ -1994,31 +1994,19 @@ The proof in the book is divided into three steps, called (a), (b), and (c).
 
 We define $\pp^\dg(\bt)$ by \qr{236}. The purpose of Step~(a) is to show that $\pp^\dg(\bt)$ is indeed a functor. 
 
-We prefer proving the dual statement: Let us assume that 
-$$
-\lim_{(i\to\pp(j))\in J^i}\bt(j)
-$$ 
-exists for all $i$ in $I$, let us denote this limit by $\pp^\ddg(\bt)(i)$, and let us show that $\pp^\ddg(\bt)$ is a functor. %(By duality this will imply the desired result about $\pp^\dg(\bt)$.)
+% For another version, see
+% https://docs.google.com/document/d/1wI4jmZbaMMD-f_EslRMPowUqU5J9sIUOkwo5NqTBMY8/edit  
 
-For $i$ in $I$ write $\gamma_i:J^i\to\C$ for the functor $(i\to\pp(j))\mt\bt(j)$, and define $A_i\in\C^\wg$ by 
-$$
-A_i:=\Hom_{\Fct(J^i,\C)}(\DT(\ ),\gamma_i).
-$$ 
-We want to attach to each morphism $i\to i'$ in $I$ a morphism $A_{i\to i'}:A_i\to A_{i'}$ in $\C^\wg$. Let $X$ be an object of $\C$ and $i\to i'$ a morphism in $I$. We define 
-$$
-A_{i\to i'}(X):A_i(X)\to A_{i'}(X)
-$$ 
-by 
-$$
-A_{i\to i'}(X)(\theta)_{i'\to\pp(j)}:=\theta_{i\to i'\to\pp(j)}:X\to\bt(j).
-$$ 
-It is easy to see that $i\mt A_i(X)$ is a functor from $I$ to $\Set$, and to conclude that $i\mt A_i$ is a functor from $I$ to $\C^\wg$. %For $i$ in $I$ write $\gamma_i:J^i\to\C$ for the functor $(i\to\pp(j))\mt\bt(j)$, and define $A_i\in\C^\wg$ by $$A_i(X):=\Hom_{\Fct(J^i,\C)}(\DT X,\gamma_i).$$ Let $i\to i'$ be a morphism in $I$. We have in particular $$A_{i'}(X):=\Hom_{\Fct(J^{i'},\C)}(\DT'X,\gamma_{i'}).$$ (Here $\DT$ and $\DT'$ designate respectively the diagonal functors from $\C$ to $\Fct(J^i,\C)$ and to $\Fct(J^{i'},\C)$.) Let us define a morphism $A_i\to A_{i'}$. Let $X$ be in $\C$ and let us define a morphism $A_i(X)\to A_{i'}(X)$. Let $\ld:\DT X\to\gamma_i$ be given. In particular for each $i\to\pp(j)$ in $J^i$ we have a morphism $\ld_{i\to\pp(j)}:X\to\bt(j)$. Let us define $\mu:\DT'X\to\gamma_{i'}$. Given $i'\to\pp(j)$ be in $J^{i'}$, we may define $\mu_{i'\to\pp(j)}:X\to\bt(j)$ by $$\mu_{i'\to\pp(j)}:=\ld_{i\to i'\to\pp(j)}.$$ Clearly, this defines a functor $\delta:I\to\C^\wg$ satisfying $\delta(i)=A_i$ for all $i$ in $I$. Moreover, 
-As we have by assumption a representation $\pp^\ddg(\bt)(i)\xr\sim A_i$ of $A_i$ by $\pp^\ddg(\bt)(i)$ for all $i$ in $I$, Lemma 1.3.11 p.~21 in the book implies that $\pp^\ddg(\bt)$ is a functor. 
-%we have, for all $i$, a representation $\pp^\ddg(\bt)(i)\xr\sim A_i$ of $A_i$ by $\pp^\ddg(\bt)(i)$. Then Lemma 1.3.11 p.~21 in the book implies that $\pp^\ddg(\bt)$ can be viewed as a functor.  
+For the reader's convenience we reproduce the argument in the book: 
 
-%For the reader's convenience we reproduce the argument in the book: 
-
-%Let $i\to i'$ be a morphism in $I$. It is easily checked that there is a unique morphism $\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')$ which make the diagrams $$\begin{tikzcd}\pp^\dg(\bt)(i)=\ds\col_{(\pp(j)\to i)\in J_i}\bt(j)\ar[rr]&&\ds\col_{(\pp(j)\to i')\in J_{i'}\bt(j)=\pp^\dg(\bt)(i')\\ &\bt(j)\ar[lu,"p(\pp(j)\to i)"]\ar[ru,"q(\pp(j)\to i\to i')"']\end{tikzcd}$$ commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections, and that the assignment $$(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)$$ is functorial.
+Let $i\to i'$ be a morphism in $I$. It is easily checked that there is a unique morphism $\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')$ which make the diagrams 
+$$
+\begin{tikzcd}
+\pp^\dg(\bt)(i)=\ds\col_{(\pp(j)\to i)\in J_i}\bt(j)\ar[rr]&&\ds\col_{(\pp(j)\to i')\in J_{i'}\bt(j)}=\pp^\dg(\bt)(i')\\ 
+&\bt(j)\ar[lu,"p(\pp(j)\to i)"]\ar[ru,"q(\pp(j)\to i\to i')"']
+\end{tikzcd}
+$$ 
+commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections, and that the assignment $$(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)$$ is functorial.
 
 %
 
