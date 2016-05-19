@@ -3361,25 +3361,26 @@ Let $X'$ be in $\C'$. It suffices to show that the natural map
 $$
 \Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F(\al),X')
 $$ 
-is bijective. Replacing Setting (\ref{241s}) p.~\pr{241s} with 
+is bijective. We claim 
+%\begin{equation}
+%\left.
+%\begin{aligned}
+%\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)&\iso\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X')\quad\\ % [use \quad as spacer between equation and right brace]
+%&\iso\Hom_{\C'}(F(X),X')
+%\end{aligned}
+%\right\}
+%\end{equation}
+\begin{subequations}\lb{fyx'}
+\begin{align}
+\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)&\iso\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X')\lb{fyx'1}\\
+&\iso\Hom_{\C'}(F(X),X').\lb{fyx'2}
+\end{align}
+\end{subequations}
+Indeed, we obtain \qr{fyx'1} by replacing the setting (\ref{241s}) p.~\pr{241s} with 
 $$
-X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X', 
+X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X' 
 $$ 
-The isomorphism (\ref{241}) p.~\pr{241} gives 
-$$
-\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)\iso\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X').
-$$ 
-The identity of $X$ being an initial object of $\C^X$, we have 
-$$
-\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X')\iso\Hom_{\C'}(F(X),X'),
-$$ 
-and thus
-%
-\begin{equation}\lb{332} 
-\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)\iso\Hom_{\C'}(F(X),X').
-\end{equation} 
-%
-We have bijections 
+in the isomorphism (\ref{241}) p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have bijections 
 $$ 
 \Hom_{\C'}(F(\col\al),X')\iso\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y)
 $$
@@ -3389,7 +3390,7 @@ $$
 $$
 \iso\lim\Hom_{\C'}(F(\al),X'). 
 $$ 
-The first and last bijections follow from \qr{332}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
+The first and last bijections follow from \qr{fyx'}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
 \end{proof}
 \end{s}
 
