@@ -3396,6 +3396,17 @@ The first and last bijections follow from \qr{fyx'}, the second one is clear, an
 
 %
 
+\begin{s} Some more details in the proof of Proposition 3.3.12 p. 84:
+\begin{prop}[Proposition 3.3.12 p. 84] 
+Let $F:\C\to\C'$ and $G:\C'\to\C''$ be two functors. If $F$ and $G$ are right exact, then $G\ci F$ is right exact.
+\end{prop}
+\begin{proof}
+Since $G$ is right exact, $\C'_{X''}$ is filtrant for any $X''$ in $\C''$. The obvious functor $\C_{X''}\to\C'_{X''}$ is again right exact. Indeed, for any $(X',u)$ in $\C'_{X''}$, with $X'$ in $\C'$ and $u:G(X')\to X''$, the category $(\C_{X''})_{(X',u)}\iso\C_{X'}$ is filtrant because $F$ is right exact. Hence, Proposition 3.3.11 implies that $\C_{X''}$ is filtrant.
+\end{proof}
+\end{s}
+
+%
+
 \begin{s}
 P.~84, Proposition 3.3.13. Recall the statement:
 
@@ -3409,7 +3420,7 @@ By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\pr{333} be
 $$
 A\left(\col_i X_i\right)\to\lim_iA(X_i)
 $$ 
-is bijective. Consider the diagram below, in which we abbreviate 
+is bijective. Consider the commutative diagram below, in which we abbreviate 
 $$
 (Y\to A)\in\C_A
 $$ 
@@ -3421,7 +3432,7 @@ $$
 A(\col_iX_i)\ar{r}[swap]{e}&\lim_iA(X_i).
 \end{tikzcd}
 $$ 
-The maps $a,b,c,$ and $d$ are bijective for the following reasons: obviously for $a$, because of \qr{263b} p.~\pr{263b} for $c$ and $d$, and by Theorem 3.1.6 p.~74 of the book for $b$. Thus $e$ is also bijective.
+The maps $a,b,c$ and $d$ are bijective for the following reasons: obviously for $a$, because of \qr{263b} p.~\pr{263b} for $c$ and $d$, and by Theorem 3.1.6 p.~74 of the book for $b$. Thus $e$ is also bijective.
 \end{s}
 
 %
