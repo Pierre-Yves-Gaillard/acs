@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-\up{comment}
+%\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -2169,13 +2169,13 @@ such that $x_{i\to\pp(j)\to\pp(j')}=\bt(j\to j')(x_{i\to\pp(j)})$ for all morphi
 \sbs{Brief comments}
 
 \begin{s}\lb{scoco}
-P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
+P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small and $\C$ admits small inductive limits, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
 \col\bt\iso\col_i\ \col_{(j,u)\in J_i}\bt(j),
 \end{equation} 
 where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. 
 
-\nn\textbf{First proof of \qr{coco}}
+\paragraph{First proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{First proof of \qr{coco}}
 
 \nn We define morphisms 
 $$
@@ -2201,7 +2201,7 @@ $$
 \end{tikzcd}
 $$
 
-To define $g$, consider the diagram
+To define $g$, we form the diagram
 \begin{equation}\lb{biju}
 \begin{tikzcd}
 \bt(j)\ar{d}[swap]{q_{i,j,u}}\ar{r}{\id}&\bt(j)\ar{d}{p_j}\\ 
@@ -2209,7 +2209,7 @@ To define $g$, consider the diagram
 \ds\col_{i'}\col_{(j',u')\in J_{i'}}\bt(j')\ar{r}[swap]{g}&\col\bt.
 \end{tikzcd}
 \end{equation} 
-We let $i$ be in $I$ and define $g_i$ by the condition that the top square of \qr{biju} commutes for all $(j,u)\in J_i$. Then we define $g$ by the condition that the bottom square of \qr{biju} commutes for all $i$. 
+as follows: We let $i$ be in $I$ and define $g_i$ by the condition that the top square of \qr{biju} commutes for all $(j,u)\in J_i$. Then we define $g$ by the condition that the bottom square of \qr{biju} commutes for all $i$. 
 
 Let us prove that $f\ci g$ is the identity of $\col_i\col_{(j,u)\in J_i}\bt(j)$. We have 
 $$
@@ -3101,46 +3101,8 @@ $$
 by induction on the cardinal of $S$, and to see that this implies the claim. q.e.d.
 \end{s}
 
-%
-
-\begin{comment}
-
-\begin{s}% old version:  
-%https://docs.google.com/document/d/1SnpQds-AJDOA5hF38N8pMusBqYRe7atCJZkEHpBIgL0/edit
-
-P.~74, Theorem 3.1.6, Part (i) of the proof of implication (a)$\then$(b) (minor variant). 
-
-To prove that filtrant small inductive limits in $\Set$ commute with finite projective limits, one can argue as follows. 
-
-Let $I$ be a filtrant small category, let $J$ be a finite category, let $\al:I\tm J^{\op}\to\Set$ be a functor, and put 
-$$
-X_{ij}:=\al(i,j),\quad Y_i:=\lim_jX_{ij},\quad Y:=\col_iY_i,
-$$
-$$
-Z_j:=\col_iX_{ij},\quad Z:=\lim_jZ_j.
-$$ 
-We claim that the natural map $f:Y\to Z$ is bijective. 
-
-To prove this, we define $g:Z\to Y$ and leave it to the reader to check that $f$ and $g$ are mutually inverse bijections. 
-
-We define $g:Z\to Y$ as follows: Let 
-$$
-\eta_i:Y_i\to Y,\quad\zeta_{ij}:X_{ij}\to Z_j
-$$ 
-be the coprojections. It is easy to see that, for each $z=(z_j)$ in $Z$, there is a pair 
-$$
-(i,(x_{ij})_j)\in\Ob(I)\tm\prod_jX_{ij}
-$$ 
-such that 
-$$
-z_j=\zeta_{ij}(x_{ij})\ \forall\ j,\quad(x_{ij})_j\in Y_i. 
-$$ 
-It is also easy to see  that the element $\eta_i((x_{ij})_j)$ in $Y$ does not depend on the choice of the above pair $(i,(x_{ij})_j)$, so that we can set $g(z):=\eta_i((x_{ij})_j)$. 
-\end{s}
-
-\end{comment}
-
-%
+% removed
+% https://docs.google.com/document/d/1BYGPoHg2m2Y7p9DfLzJ6Qraz0PfXqpy-r8PiNdfH2XQ/edit
 
 \begin{s} 
 P.~74, Theorem 3.1.6. Here is an immediate corollary: 
@@ -3401,7 +3363,8 @@ The first and last bijections follow from \qr{fyx'}, the second one is clear, an
 Let $F:\C\to\C'$ and $G:\C'\to\C''$ be two functors. If $F$ and $G$ are right exact, then $G\ci F$ is right exact.
 \end{prop}
 \begin{proof}
-Since $G$ is right exact, $\C'_{X''}$ is filtrant for any $X''$ in $\C''$. The obvious functor $\C_{X''}\to\C'_{X''}$ is again right exact. Indeed, for any $(X',u)$ in $\C'_{X''}$, with $X'$ in $\C'$ and $u:G(X')\to X''$, the category $(\C_{X''})_{(X',u)}\iso\C_{X'}$ is filtrant because $F$ is right exact. Hence, Proposition 3.3.11 implies that $\C_{X''}$ is filtrant.
+Since $G$ is right exact, $\C'_{X''}$ is filtrant for any $X''$ in $\C''$. The obvious functor $\C_{X''}\to\C'_{X''}$ is again right exact. Indeed, for any $G(X')\to X''$ in $\C'_{X''}$, the category $(\C_{X''})_{G(X')\to X''}\iso\C_{X'}$ is filtrant because $F$ is right exact. Hence, Proposition 3.3.11 implies that $\C_{X''}$ is filtrant.
+%Indeed, for any $(X',u)$ in $\C'_{X''}$, with $X'$ in $\C'$ and $u:G(X')\to X''$, the category $(\C_{X''})_{(X',u)}\iso\C_{X'}$ is filtrant because $F$ is right exact. Hence, Proposition 3.3.11 implies that $\C_{X''}$ is filtrant.
 \end{proof}
 \end{s}
 
@@ -3452,26 +3415,30 @@ This section is divided into two parts. In Part~1 we give a proof of Proposition
 % old version:
 %https://docs.google.com/document/d/1ODl6Kwqz4LekRjoydQLeDXX23NiBk034UbtlK4fLzrI/edit
 
-Recall the notation. We have functors $I\xr\pp K\xl\psi J$ between small categories, and 
+\begin{lem}
+%Recall the notation. We have functors $I\xr\pp K\xl\psi J$ between small categories, and
+If $I\xr\pp K\xl\psi J$ are functors between small categories, if 
 $$
 M:=M[I\xr\pp K\xl\psi J] 
 $$ 
-is the category defined in Definition 3.4.1 p.~87 of the book. We also have a functor $\al:M\to\C$. 
-
-Claim:
+is the category defined in Definition 3.4.1 p.~87 of the book, if $\al:M\to\C$ is a functor, and if $\C$ admits small inductive limits, then there is a natural functor (described in the proof) from $J$ to $\C$ mapping $j\in J$ to 
+%We also have a functor $\al:M\to\C$. Claim:
 $$
-j\mt\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
+%j\mt
+\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
 $$ 
-($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$) is a functor from $J$ to $\C$. 
+($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$).%is a functor from $J$ to $\C$.
+\end{lem}
 
-Proof. Let $j\to j'$ be a morphism in $J$. It is easily checked that there is a unique dashed arrow which make all the diagrams 
+\begin{proof}
+Let $j\to j'$ be a morphism in $J$. It is easily checked that there is a unique dashed arrow which make all the diagrams 
 $$
 \begin{tikzcd}
 \ds\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u)\ar[rr,dashed]&&\ds\col_{(i,u)\in I_{\psi(j')}}\al(i,j',u)\\ 
-\al(i,j,u)\ar{u}{p(i,u)}\ar[rr,"q(\pp(j)\to i\to i')"']&&\al(i,j',u')\ar{u}[swap]{q(i,u')}
+\al(i,j,u)\ar{u}{p_{iu}}\ar{rr}[swap]{\al(\id_i,j\mt j')}&&\al(i,j',u')\ar{u}[swap]{q_{iu'}}
 \end{tikzcd}
-$$ 
-commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections and $u'$ is the obvious composition 
+$$
+commute, where $p_{iu}$ and $q_{iu'}$ are the coprojections and $u'$ is the obvious composition 
 $$
 \pp(i)\xr u\psi(j)\to\psi(j'),
 $$ 
@@ -3479,7 +3446,8 @@ and that the assignment
 $$
 (j\to j')\mt\left(\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u)\to\col_{(i,u)\in I_{\psi(j')}}\al(i,j',u)\right)
 $$ 
-is functorial. 
+is functorial.
+\end{proof} 
 
 \begin{prop}\lb{coco2}
 We have an isomorphism 
@@ -3506,7 +3474,7 @@ $$
 \col\al\ar{r}[swap]{f}&\ds\col_j\col_{i,u}\al(i,j,u).
 \end{tikzcd}
 $$
-Consider the diagram 
+We construct the diagram 
 \begin{equation}\lb{iju}
 \begin{tikzcd}
 \al(i,j,u)\ar{d}[swap]{q_{iju}}\ar{r}{\id}&\al(i,j,u)\ar{d}{p_{iju}}\\ 
@@ -3514,7 +3482,7 @@ Consider the diagram
 \ds\col_j\col_{i,u}\al(i,j,u)\ar{r}[swap]{g}&\col\al.
 \end{tikzcd}
 \end{equation} 
-We fix $j$ and define $g_j$ by the condition that the top square of \qr{iju} commutes for all $(i,u)$. Then we define $g$ by the condition that the bottom square of \qr{iju} commutes for all $j$. We leave it to the reader to check that $f$ and $g$ are inverse isomorphisms. 
+as follows: We fix $j$ and define $g_j$ by the condition that the top square of \qr{iju} commutes for all $(i,u)$. Then we define $g$ by the condition that the bottom square of \qr{iju} commutes for all $j$. We leave it to the reader to check that $f$ and $g$ are inverse isomorphisms. 
 \end{proof}
 
 In view of Theorem 3.1.6 p.~74 of the book, Proposition~\ref{coco2} implies 
@@ -3529,13 +3497,13 @@ If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 
 In \S\ref{2111} p.~\pr{2111} we gave a first proof of \qr{coco} p.~\pr{coco}. Here are two others.
 
-\nn\textbf{Second proof of \qr{coco} p.~\pr{coco}}
+\paragraph{Second proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{Second proof of \qr{coco} p.~\pr{coco}}
 
-\nn In the above setting, let us assume 
+\nn In the above setting, let us assume that 
 $$
 K=J,\quad\psi=\id_J,
 $$ 
-and let $\al:I\to\C$ be a functor. We must prove 
+that $\al:I\to\C$ is a functor, and that $\C$ admits small inductive limits. We must prove 
 $$
 \col\al\iso\col_j\ \col_{i,u}\al(i). 
 $$ 
@@ -3549,7 +3517,7 @@ or, in other words, that
 \end{equation} 
 If $i_0$ is in $I$, then an object of $M^{i_0}$ is a pair of morphisms $(i_0\to i,\pp(i)\to j)$. It is easy to see that $(i_0\xr\id i_0,\pp(i_0)\xr\id\pp(i_0))$ is an initial object of $M^{i_0}$, and \qr{coco4} follows.
 
-\nn\textbf{Third proof of \qr{coco} p.~\pr{coco}}
+\paragraph{Third proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{Third proof of \qr{coco} p.~\pr{coco}}
 
 \nn As observed above, it suffices to show \qr{coco3}. We shall define maps 
 $$
