@@ -1019,24 +1019,55 @@ X\ar[d,dashed,"f"']\ar[r,"\theta"]&\Hom_{\C'}(L(\ ),X')\\
 R(X').\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 \end{equation}
-Even if it is straightforward, we sketch the proof of the fact that the conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. For the purpose of this proof, it is better to rewrite \qr{xfl1} as 
-$$
+
+Even if it is straightforward, we %sketch the proof of
+state and prove formally the fact that the conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. %For the purpose of this proof, it is better
+We prefer to rewrite \qr{xfl1} as 
+\begin{equation}\lb{xfl1b}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"\theta_X(\id_X)"]&X'\\ 
 R(X')&L(R(X')).\ar[ru,"\eta_{X',R(X')(\id_{R(X')})}"']
 \end{tikzcd}
-$$ 
-It suffices then to observe the equalities 
+\end{equation} 
+%It suffices then to observe the equalities $$(\eta_{X'}\ci f)_X(\id_X)=\eta_{X',X}(f)=\eta_{X',R(X')}(\id_{R(X')})\ci L(f),$$ equalities respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. 
+
+%Even if it is straightforward, we state and prove the following lemma:
+\begin{lem}
+If $L:\C\to\C'$ is a functor, if $X$ and $R(X')$ are objects of $\C$, if $f:X\to R(X')$ is a morphism in $\C$, and if 
 $$
-(\eta_{X'}\ci f)_X(\id_X)=\eta_{X',X}(f)=\eta_{X',R(X')}(\id_{R(X')})\ci L(f),
+\eta_{X'}:R(X')\to\Hom_{\C'}(L(\ ),X')\quad\text{and}\quad\theta:X\to\Hom_{\C'}(L(\ ),X')
 $$ 
-equalities respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. 
+are morphisms of functors, then %the conditions summarized by \qr{xfl2} and \qr{xfl1b} are equivalent. More precisely, 
+we have 
+$$
+\eta_{X'}\ci f=\theta\iff\eta_{X',R(X')(\id_{R(X')})}\ci L(f)=\theta_X(\id_X)
+$$ 
+(see \qr{xfl2} and \qr{xfl1b}).
+\end{lem} 
+
+\begin{proof}
+%It suffices then to o
+The equalities 
+$$%\begin{equation}\lb{ef}
+(\eta_{X'}\ci f)_X(\id_X)=\eta_{X',X}(f)=\eta_{X',R(X')}(\id_{R(X')})\ci L(f)
+$$%\end{equation} 
+are respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. As the Yoneda Lemma (Theorem~\ref{yol} p.~\ref{yol}) implies 
+$$
+\eta_{X'}\ci f=\theta\iff(\eta_{X'}\ci f)_X(\id_X)=\theta_X(\id_X),
+$$ 
+the lemma is proved. 
+\end{proof} 
 \end{s}
 
 %
 
 \begin{s}
 Let $T$ be a terminal object of $\Set$. Then a functor $A:\C^{\op}\to\Set$ is representable if and only if the right adjoint of $A^{\op}:\C\to\Set^{\op}$ is defined at $T$. 
+
+Indeed we have 
+$$
+\Hom_{\Set^{\op}}(A^{\op}(\ ),T)\iso\Hom_\Set(T,A(\ ))\iso A.
+$$
 
 \end{s}
 
@@ -1373,7 +1404,7 @@ Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe 
 
 \sbs{Brief comments}
 
-\begin{s} 
+\begin{s}\lb{sv} 
 We shall spell out two versions of a certain statement about the following setting: $\al:I\to\C$ is a functor and $Z$ is an object of $\C$. The first version will be short, but somewhat incomplete, whereas the second version will be much longer, but more precise.
 
 \nn Short version: If $\col$ exists in $\C$, then we have 
@@ -1388,12 +1419,11 @@ $$
 &\DT Y&Y.
 \end{tikzcd}
 \end{equation} 
-%and let $Z$ be an object of $\C$. 
 We claim that 
 $$
 \ci p:\DT\Hom_\C(X,Z)\to\Hom_\C(\al,Z)
 $$ 
-is a projection:
+is a projection in the sense of Definition~\ref{plim} p.~\pr{plim}:
 \begin{equation}\lb{zc}
 \begin{tikzcd}
 S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(\al,Z)\\ 
@@ -1592,7 +1622,9 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if 
 Condition (d) is often abridged by 
 $$
 \Hom_\C(\col\al,Y)\xr\sim\lim\Hom_\C(\al,Y).
-$$
+$$ 
+
+In \S\ref{sv} p.~\pr{sv} we proved that (a) implies (d).
 \end{s}
 
 % paragraph removed:
@@ -1614,10 +1646,10 @@ We give two proofs. The first proof is short and written in a traditional way. T
 \begin{proof}[First proof] 
 We have for any functor $\al:I\to\A$ and any object $Y$ in $\B$ 
 $$ 
-\Hom_\B\left(F\left(\col\al\right),Y\right)\iso\Hom_\C\left(G\left(\col\al\right),Z\right)\xr\sim\Hom_\C\left(\col G(\al),Z\right)
+\Hom_\B\left(F\left(\col\al\right),Y\right)\iso\Hom_\C\left(G\left(\col\al\right),Z\right)\xr\sim\Hom_\C\left(\col G\ci\al,Z\right)
 $$
 $$
-\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\xleftarrow\sim\Hom_\B(\col F(\al),Y),
+\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\xleftarrow\sim\Hom_\B(\col F\ci\al,Y),
 $$ 
 and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.
 \end{proof}
@@ -1640,7 +1672,7 @@ G\ci\al\ar[r,"r"]\ar[dr,"G(p)"']&\DT\col G\ci\al\ar[d,"\DT g"]&\col G\ci\al\ar[d
 $$ 
 where $q$ and $r$ are the coprojections. Note that $g$ is an isomorphism by assumption. Our goal is to prove that $f$ is an isomorphism too. It suffices to show that 
 $$
-\Hom_\B(f,Y):\Hom_\B(F(\col\al),Y)\to\Hom_\B(F(\col\al),Y)
+\Hom_\B(f,Y):\Hom_\B(F(\col\al),Y)\to\Hom_\B(\col F\ci\al,Y)
 $$ 
 is an isomorphism. Form the commutative diagram 
 $$
@@ -1648,13 +1680,13 @@ $$
 \DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(F(p),Y)}\ar[d,"\sim","\DT\theta_{\col\al}"']&&&\Hom_\B(F\ci\al,Y)\ar[d,"\theta_\al","\sim"']\\ 
 \DT\Hom_\C(G(\col\al),Z)\ar{rrr}{\Hom_\C(r,Z)}\ar{d}{\sim}[swap]{\DT\Hom_\C(g,Z)}&&&\Hom_\C(G\ci\al,Z)\ar[d,equal]\\ 
 \DT\Hom_\C(\col G\ci\al,Y)\ar{rrr}{\Hom_\C(G(p),Z)}&&&\Hom_\C(G\ci\al,Z)\\ 
-\DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
+\DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 $$ 
 The last three horizontal arrows are projections. %in the sense of Definition~\ref{plim} p.~\pr{plim}. 
 The bottom horizontal arrow being a projection, there is a unique morphism 
 $$
-h:\Hom_\C(\col G\ci\al,Y)\to\Hom_\B(F(\col\al),Y)
+h:\Hom_\C(\col G\ci\al,Y)\to\Hom_\B(\col F\ci\al,Y)
 $$ 
 making the diagram 
 \begin{equation}\lb{dbf}
@@ -1662,12 +1694,12 @@ making the diagram
 \DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(F(p),Y)}\ar[d,"\sim","\DT\theta_{\col\al}"']&&&\Hom_\B(F\ci\al,Y)\ar[d,"\theta_\al","\sim"']\\ 
 \DT\Hom_\C(G(\col\al),Z)\ar{rrr}{\Hom_\C(r,Z)}\ar{d}{\sim}[swap]{\DT\Hom_\C(g,Z)}&&&\Hom_\C(G\ci\al,Z)\ar[d,equal]\\ 
 \DT\Hom_\C(\col G\ci\al,Y)\ar{rrr}{\Hom_\C(G(p),Z)}\ar[d,"\DT h"']&&&\Hom_\C(G\ci\al,Z)\\ 
-\DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
+\DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 \end{equation} 
 commute. Moreover $h$ is an isomorphism because $\Hom_\C(G(p),Z)$ is a projection. Define the isomorphism 
 $$
-k:\Hom_\B(F(\col\al),Y)\to\Hom_\B(F(\col\al),Y)
+k:\Hom_\B(F(\col\al),Y)\to\Hom_\B(\col F\ci\al,Y)
 $$ 
 by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\B(q,Y)$ %$\Hom_\C(G(p),Z)$ 
 is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
@@ -1682,7 +1714,8 @@ is a projection, this equality follows from the commutativity of \qr{faq} and \q
 % https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
 \begin{prop}\lb{b}
-If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}), and if $h:\C\to\C^\wg$ be the Yoneda embedding, then the following conditions are equivalent:
+If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ %(see Notation~\ref{diag} p.~\pr{diag}), 
+and if $h:\C\to\C^\wg$ be the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection,%in the sense of Definition~\ref{ilim} p.~\pr{ilim}
 
@@ -1701,7 +1734,7 @@ is a projection.%in the sense of Definition~\ref{plim} p.~\pr{plim}.
 Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), let $X'$ be in $\C'$ and set $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
 $$
 \begin{tikzcd}
-\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A(\al)\ar[d,"\sim"]\\ 
+\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
 \DT\Hom_{\C^\wg}(h(p),A)\ar{rrr}[swap]{\Hom_{\C^\wg}(h(p),A)}&&&\Hom_{\C^\wg}(h(p),A),
 \end{tikzcd}
 $$ 
@@ -1714,7 +1747,7 @@ Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object 
 
 There is of course an analogous notion of universal projective limit. 
 
-Here is the classic example of a non-universal inductive limit. Letting $\al$ be the unique functor from the empty category to $\Set$, we get $\col\al\iso\varnothing$. Writing $h:\Set\to\Set^\wg$ for the Yoneda embedding yields $\col h\ci\al\iso\DT\varnothing$. But we have, on the one hand $(\DT\varnothing)(\varnothing)=\varnothing$, and on the other hand $(h(\varnothing))(\varnothing)\not\iso\varnothing$, implying 
+Here is the classic example of a non-universal inductive limit. Letting $\al$ be the unique functor from the empty category to $\Set$, we get $\col\al=\varnothing$. Writing $h:\Set\to\Set^\wg$ for the Yoneda embedding yields $\col h\ci\al=\DT\varnothing$. But we have, on the one hand $(\DT\varnothing)(\varnothing)=\varnothing$, and on the other hand $(h(\varnothing))(\varnothing)\not\iso\varnothing$, implying 
 $$
 \col(h\ci\al)\not\iso h(\col\al).
 $$ 
@@ -1736,7 +1769,7 @@ $$
 
 \begin{proof} $\then$: Straightforward.
 
-\nn$\si$: Let $p:\id_\C\to\DT T$ be a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}). Let $X$ be in $\C$. For all morphism of functors $\theta:\id_\C\to\DT X$ there is a unique morphism $f:T\to X$ satisfying $\DT f\ci p=\theta$. %Let us denote this $f$ by $f^\theta$: 
+\nn$\si$: Let $p:\id_\C\to\DT T$ be a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}) and let $X$ be in $\C$. For all morphism of functors $\theta:\id_\C\to\DT X$ there is a unique morphism $f:T\to X$ satisfying $\DT f\ci p=\theta$: %Let us denote this $f$ by $f^\theta$: 
 $$
 \begin{tikzcd}
 \id_\C\ar[r,"p"]\ar[dr,"\theta"']&\DT T\ar[d,"\DT f"]&T\ar[d,dashed,"f"]\\ 
@@ -1840,14 +1873,14 @@ and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inve
 \end{proof}
 \end{s}
 
-%
+%£
 
 \begin{s}
 P.~42. The last diagram can also be drawn as follows:
 $$
 \begin{tikzcd}
-\al(i)\ar[dd,"\pp(i\xr\id i)"']&&\al(i)\ar[dd,"\pp(i\to j)"]\ar[ll,"\al(i\xr\id i)"']\ar[rr,"\al(i\to j)"]&&\al(j)\ar[dd,"\pp(j\xr\id j)"]\\ \\ 
-\bt(i)\ar[rr,"\bt(i\to j)"']&&\bt(j)&&\bt(j)\ar[ll,"\bt(i\xr\id i)"].
+\al(i)\ar[dd,"\pp(i\xr\id i)"']\ar[rr,"\al(i\xr\id i)"]&&\al(i)\ar[dd,"\pp(i\to j)"]\ar[rr,"\al(i\to j)"]&&\al(j)\ar[dd,"\pp(j\xr\id j)"]\\ \\ 
+\bt(i)\ar[rr,"\bt(i\to j)"']&&\bt(j)\ar[rr,"\bt(i\xr\id i)"']&&\bt(j).
 \end{tikzcd}
 $$
 \end{s}
@@ -1885,7 +1918,7 @@ P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dg$, and $\pp^
 % 
 
 \begin{s}\lb{phistar}
-P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor $\pp_*:=\ci\pp:\C^I\to\C^J$. The following fact results from Proposition 2.1.6 p.~38 of the book: 
+P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor $\pp_*:=\ci\pp:\C^I\to\C^J$. The following fact results from Proposition 2.1.6 p.~38 of the book (see \S\ref{216} p.~\pr{216}): 
 
 \emph{If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and $\C^J$, and $\pp_*$ commutes with such limits.} 
 \end{s} 
@@ -1928,7 +1961,7 @@ is bijective. (See \S\ref{713} p.~\pr{713} below.)
 %
 
 \begin{s} 
-Let $I\xl\pp J\xr\bt\C\xr F\C'$ be functors, let $\bt$ be in $\C^J$ and assume that $\pp^\dg(\bt)$ and $\pp^\dg(F\ci\bt)$:
+Let $I\xl\pp J\xr\bt\C\xr F\C'$ be functors, let $\bt$ be in $\C^J$ and assume that $\pp^\dg(\bt)$ and $\pp^\dg(F\ci\bt)$ exist:
 $$
 \begin{tikzcd}
 J\ar[ddd,"\bt"']\ar[rrr,"\pp"]&&&I\ar[dddlll,"\pp^\dg(\bt)"']\ar[ddd,"\pp^\dg(F\ci\bt)"]\\ \\ \\ 
