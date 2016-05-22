@@ -15,7 +15,7 @@
 \up{datetime}
 \up{tikz-cd}
 \up[pdfusetitle]{hyperref}
-%\up{comment}
+\up{comment}
 \up{fancyhdr}
 %\up{showkeys}%%\up{showlabels}
 \makeindex
@@ -1036,7 +1036,8 @@ equalities respectively justified by the definition of the vertical composition 
 %
 
 \begin{s}
-Let $T$ be a terminal object of $\Set$. Then a functor $A:\C^{\op}\to\Set$ is representable if and only if the right adjoint of $A^{\op}:\C\to\Set^{\op}$ is defined at $T$.
+Let $T$ be a terminal object of $\Set$. Then a functor $A:\C^{\op}\to\Set$ is representable if and only if the right adjoint of $A^{\op}:\C\to\Set^{\op}$ is defined at $T$. 
+
 \end{s}
 
 \begin{s}\lb{ldefat}
@@ -2175,9 +2176,9 @@ P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where
 \end{equation} 
 where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. 
 
-\paragraph{First proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{First proof of \qr{coco}}
+%\paragraph{First proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{First proof of \qr{coco}}
 
-\nn We define morphisms 
+To prove \qr{coco} we define morphisms 
 $$
 \begin{tikzcd} 
 \col\bt\ar[yshift=0.7ex]{r}{f}&\ds\col_i\ \col_{(j,u)\in J_i}\bt(j),\ar[yshift=-0.7ex]{l}{g}
@@ -2231,7 +2232,7 @@ where $u_*$ denotes the morphism induced by $u$, commutes. The top square commut
 
 We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. q.e.d.
 
-In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
+%In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
 % https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
 \end{s} 
 
@@ -3408,9 +3409,9 @@ P.~85, proof of Proposition 3.3.15. To prove that $\A\to\C$ is cofinal, one can 
 
 \sbs{Proposition 3.4.3 (i) p.~88}
 
-This section is divided into two parts. In Part~1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part~2 we give two proofs of \qr{coco} p.~\pr{coco} slightly different from the one in \S\ref{scoco} p.~\pr{scoco}. 
+%This section is divided into two parts. In Part~1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part~2 we give two proofs of \qr{coco} p.~\pr{coco} slightly different from the one in \S\ref{scoco} p.~\pr{scoco}. 
 
-\subsubsection{Part 1} 
+%\subsubsection{Part 1} 
 
 % old version:
 %https://docs.google.com/document/d/1ODl6Kwqz4LekRjoydQLeDXX23NiBk034UbtlK4fLzrI/edit
@@ -3449,12 +3450,12 @@ $$
 is functorial.
 \end{proof} 
 
-\begin{prop}\lb{coco2}
+\begin{prop}[Proposition 3.4.3 (i) p. 88]\lb{coco2}
 We have an isomorphism 
 $$
 \col\al\iso\col_j\ \col_{i,u}\al(i,j,u),
 $$  
-where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$).
+where $(i,u)$ runs over $I_{\psi(j)}$ (with $u:\pp(i)\to\psi(j)$). This isomorphism is explicitly described in  the proof.
 \end{prop} 
 
 \begin{proof}
@@ -3486,12 +3487,13 @@ as follows: We fix $j$ and define $g_j$ by the condition that the top square of 
 \end{proof}
 
 In view of Theorem 3.1.6 p.~74 of the book, Proposition~\ref{coco2} implies 
-%
 \begin{prop}\lb{cocop} 
 If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 \end{prop}
 
 %
+
+\begin{comment}
 
 \subsubsection{Part 2}\lb{2111}
 
@@ -3553,9 +3555,50 @@ $$
 $$ 
 and $\qr{qippi}$ follows from the existence of an obvious morphism from $(i,\pp(i),\id_{\pp(i)})$ to $(i,j,u)$ in $M$. q.e.d. 
 
+\end{comment}
+
 %%
 
 \sbs{Brief comments}
+
+\begin{s} 
+We prove Proposition 3.4.3 (ii) p.~88. Recall the statement:
+
+If $\psi$ is cofinal, then $M[I\to K\leftarrow J]\to I$ is cofinal. 
+
+To prove this, we let $\al:I\to\Set$ be a functor, we denote by $\bt$ the composition $M[I\to K\leftarrow J]\to I\to\Set$, and we verify that the natural map $\col\bt\to\col\al$ is bijective as follows. 
+
+In the commutative diagram below we write $u$ for a generic morphism $\pp(i)\to\psi(j)$ and $v$ for a generic morphism $\pp(i)\to k$, with $i\in I, j\in J, k\in K$, and we abbreviate $\col_{(i,u)\in I_{\psi(j)}}$ by $\col_{i,u}$ and $\col_{(i,v)\in I_k}$ by $\col_{i,v}$: 
+$$
+\begin{tikzcd}
+\al(i)\ar{dd}{a_{iju}}\ar{r}{\id}&\al(i)\ar{d}{b_{iju}}\ar{r}{\id}&\al(i)\ar{d}{b_{i\psi(j)u}}\ar{r}{\id}&\al(i)\ar{dd}{e_i}\\ 
+&\ds\col_{i,u}\al(i)\ar{d}{c_j}\ar{r}{\id}&\ds\col_{i,u}\al(i)\ar{d}{d_{\psi(j)}}\\ 
+\col\bt\ar{r}{f}&\ds\col_j\col_{i,u}\al(i)\ar{r}\ar{r}{g}&\ds\col_k\col_{i,v}\al(i)\ar{r}\ar{r}{h}&\col\al.
+\end{tikzcd}
+$$ 
+%The third column involves the coprojections $$\al(i)\xr{d_{ikv}}\col_{(i,v)\in I_k}\al(i)\xr{e_k}\col_{k\in K}\col_{(i,v)\in I_k}\al(i).$$ 
+(The vertical arrows are the various coprojections.) The diagram being commutative, $h\ci g\ci f$ is the natural map $\col\bt\to\col\al$. Moreover $f$ is bijective by the proof of Proposition~\ref{coco2}, $g$ is bijective because $\psi$ is cofinal and $h$ is bijective by the proof of \qr{coco} p.~\pr{coco}.
+
+\begin{comment}
+
+$$
+\begin{tikzcd}
+\al(i)\ar{dd}{a_{iju}}\ar{r}{\id}&\al(i)\ar{d}{b_{iju}}\ar{r}{\id}&\al(i)\ar{d}{d_{i\psi(j)u}}\ar{r}{\id}&\al(i)\ar{dd}{f_i}\\ 
+&\ds\col_{i,u}\al(i)\ar{d}{c_j}\ar{r}&\ds\col_{i,u}\al(i)\ar{d}{e_{\psi(j)}}\\ 
+\col\bt\ar{r}[swap]{z}&\ds\col_j\col_{i,u}\al(i)\ar{r}\ar{r}[swap]{y}&\ds\col_k\col_{i,v}\al(i)\ar{r}\ar{r}[swap]{x}&\col\al.
+\end{tikzcd}
+$$ 
+The third column involves the coprojections 
+$$
+\al(i)\xr{d_{ikv}}\col_{(i,v)\in I_k}\al(i)\xr{e_k}\col_{k\in K}\col_{(i,v)\in I_k}\al(i).
+$$ 
+The diagram being commutative, $x\ci y\ci z$ is the natural map $\col\bt\to\col\al$. Moreover $z$ is bijective by the proof of Proposition~\ref{coco2}, $y$ is bijective because $\psi$ is cofinal and $x$ is bijective by the proof of \qr{coco} p.~\pr{coco}.
+
+\end{comment}
+ 
+\end{s}
+
+%
 
 \begin{s} 
 P.~89, Proposition 3.4.5 (iii). The proof uses implicitly the following fact: 
@@ -3564,7 +3607,7 @@ P.~89, Proposition 3.4.5 (iii). The proof uses implicitly the following fact:
 If $F$ is a cofinally small filtrant category, then there is a small {\em filtrant} full subcategory of $F$ cofinal to $F$. 
 \end{prop}
 
-This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 (see Proposition~\ref{comb} p.~\pr{comb}). This fact also justifies the sentence ``We may replace ``filtrant and small'' by ``filtrant and cofinally small'' in the above definition'' p.~132, Lines 4 and 5 of the book.
+This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 (see Proposition~\ref{comb} p.~\pr{comb}). This fact also justifies the sentence ``We may replace `filtrant and small' by `filtrant and cofinally small' in the above definition'' p.~132, Lines 4 and 5 of the book.
 \end{s}
 
 %%
