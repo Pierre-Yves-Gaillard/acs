@@ -1873,16 +1873,64 @@ and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inve
 \end{proof}
 \end{s}
 
-%£
+%
 
 \begin{s}
-P.~42. The last diagram can also be drawn as follows:
+P.~42. Here are some additional details about the last diagram on p.~42:
+
+To the commutative diagram 
 $$
 \begin{tikzcd}
-\al(i)\ar[dd,"\pp(i\xr\id i)"']\ar[rr,"\al(i\xr\id i)"]&&\al(i)\ar[dd,"\pp(i\to j)"]\ar[rr,"\al(i\to j)"]&&\al(j)\ar[dd,"\pp(j\xr\id j)"]\\ \\ 
-\bt(i)\ar[rr,"\bt(i\to j)"']&&\bt(j)\ar[rr,"\bt(i\xr\id i)"']&&\bt(j).
+i\ar[d,"\id"']\ar[r,"f"]&j\\ 
+i\ar[r,"\id"']&i\ar[u,"f"']
 \end{tikzcd}
+$$ 
+in $I$ we attach the commutative diagram 
+\begin{equation}\lb{42a}
+\begin{tikzcd}
+\al(i)\ar[d,"\id"']\ar[r,"\pp(f)"]&\bt(j)\\ 
+\al(i)\ar[r,"\pp(\id_i)"']&\bt(i)\ar[u,"\bt(f)"']
+\end{tikzcd}
+\end{equation} 
+in $\C$. Turning \qr{42a} upside down we get 
+\begin{equation}\lb{42b}
+\begin{tikzcd}
+\al(i)\ar[r,"\pp(\id_i)"]&\bt(i)\ar[d,"\bt(f)"]\\ 
+\al(i)\ar[u,"\id"]\ar[r,"\pp(f)"']&\bt(j).
+\end{tikzcd}
+\end{equation} 
+To the commutative diagram 
 $$
+\begin{tikzcd}
+i\ar[d,"f"']\ar[r,"f"]&j\\ 
+j\ar[r,"\id"']&j\ar[u,"\id"']
+\end{tikzcd}
+$$ 
+in $I$ we attach the commutative diagram 
+\begin{equation}\lb{42c}
+\begin{tikzcd}
+\al(i)\ar[d,"\al(f)"']\ar[r,"\pp(f)"]&\bt(j)\\ 
+\al(j)\ar[r,"\pp(\id_j)"']&\bt(j)\ar[u,"\id"']
+\end{tikzcd}
+\end{equation} 
+in $\C$. Splicing \qr{42b} and \qr{42c} we get 
+$$
+\begin{tikzcd}
+\al(i)\ar[r,"\pp(\id_i)"]&\bt(i)\ar[d,"\bt(f)"]\\ 
+\al(i)\ar[u,"\id"]\ar[d,"\al(f)"']\ar[r,"\pp(f)"]&\bt(j)\\ 
+\al(j)\ar[r,"\pp(\id_j)"']&\bt(j).\ar[u,"\id"']
+\end{tikzcd}
+$$ 
+Reversing the identity arrows, we get 
+$$
+\begin{tikzcd}
+\al(i)\ar[d,"\id"']\ar[r,"\pp(\id)"]&\bt(i)\ar[d,"\bt(f)"]\\ 
+\al(i)\ar[d,"\al(f)"']\ar[r,"\pp(f)"]&\bt(j)\ar[d,"\id"]\\ 
+\al(j)\ar[r,"\pp(\id_j)"']&\bt(j),
+\end{tikzcd}
+$$ 
+as desired.
+%The last diagram can also be drawn as follows: $$\begin{tikzcd}\al(i)\ar[dd,"\pp(i\xr\id i)"']\ar[rr,"\al(i\xr\id i)"]&&\al(i)\ar[dd,"\pp(i\to j)"]\ar[rr,"\al(i\to j)"]&&\al(j)\ar[dd,"\pp(j\xr\id j)"]\\ \\ \bt(i)\ar[rr,"\bt(i\to j)"']&&\bt(j)\ar[rr,"\bt(i\xr\id i)"']&&\bt(j).\end{tikzcd}$$
 \end{s}
 
 % removed
@@ -1918,15 +1966,23 @@ P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dg$, and $\pp^
 % 
 
 \begin{s}\lb{phistar}
-P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor $\pp_*:=\ci\pp:\C^I\to\C^J$. The following fact results from Proposition 2.1.6 p.~38 of the book (see \S\ref{216} p.~\pr{216}): 
+P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor 
+\begin{equation}\lb{pcp}
+\pp_*:=\ci\pp:\C^I\to\C^J.
+\end{equation}
+The following fact results from Proposition 2.1.6 p.~38 of the book (see \S\ref{216} p.~\pr{216}): 
 
 \emph{If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and $\C^J$, and $\pp_*$ commutes with such limits.} 
+
+Recall that we denote horizontal composition of morphisms of functors by $*$ (see Definition~\ref{dil1} p.~\pr{dil1}).
+
+The effect of the functor \qr{pcp} on morphisms can be described as follows: If $\theta:\al\to\bt$ is a morphism in $\C^I$, then the morphism $\pp_*\theta:\pp_*\al\to\pp_*\bt$ in $\C^J$ is defined by $\pp_*\theta:=\theta*\pp$, which is in turn defined by $(\theta*\pp)_j:=\theta_{\pp(j)}$. 
 \end{s} 
 
 %
 
 \begin{s}\lb{s232} 
-P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 using the terminology of Section~\ref{defat} p.~\pr{defat}. Let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. Recall that we denote horizontal composition of morphisms of functors by $*$ (see Definition~\ref{dil1} p.~\pr{dil1}).
+P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 using the terminology of Section~\ref{defat} p.~\pr{defat}. Let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. 
 
 \nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, that is, for all $\al:I\to\C$ and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v*\pp)\ci \ee_\bt=w$: 
 $$
@@ -1971,7 +2027,7 @@ $$
 
 We claim that there is a natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$. 
 
-As $F\ci\pp^\dg(\bt)=\pp_*(F\ci\pp^\dg(\bt))$, it suffices to define a morphism $F\ci\bt\to F\ci\pp^\dg(\bt)\ci\pp$: 
+As $F\ci\pp^\dg(\bt)\ci\pp=\pp_*(F\ci\pp^\dg(\bt))$, it suffices to define a natural morphism $F\ci\bt\to F\ci\pp^\dg(\bt)\ci\pp$: 
 $$
 \begin{tikzcd}
 F\ci\bt\ar[r,"\ee_{F\ci\bt}"]\ar[dr]&\pp_*\pp^\dg(F\ci\bt)\ar[d]&\pp^\dg(F\ci\bt)\ar[d,dashed]\\ 
@@ -2147,11 +2203,12 @@ $$
 $$ 
 coincides with the coprojection $p(\pp(j)\xr\id\pp(j))$. We shall define a morphism $$\pp^\dg(\bt)(\pp(j))\to\bt(j)$$ and leave it to the reader to check that it is inverse to $\ee_{\bt,j}$. It suffices to define a functorial family of morphisms 
 $$
-f(\pp(j')\to\pp(j)):\bt(\pp(j'))\to\bt(\pp(j))
+%f(\pp(j')\to\pp(j)):\bt(\pp(j'))\to\bt(\pp(j))
+f(\pp(j')\to\pp(j)):\bt(j')\to\bt(j)
 $$ 
-indexed by $(\pp(j')\to\pp(j))\in J_{\pp(j)}$. Let such a morphism $\pp(j')\to\pp(j)$ be given. As $\pp$ is fully faithful, we get a well-defined morphism $j\to j'$, and we set 
+indexed by $(\pp(j')\to\pp(j))\in J_{\pp(j)}$. Let such a morphism $\pp(j')\to\pp(j)$ be given. As $\pp$ is fully faithful, we get a well-defined morphism $j'\to j$, and we set 
 $$
-f(\pp(j')\to\pp(j)):=\bt(j\to j').
+f(\pp(j')\to\pp(j)):=\bt(j'\to j).
 $$ 
 It is straightforward to verify that the family of morphisms defined this way is functorial.
 
@@ -2346,7 +2403,7 @@ and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of t
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 
 \begin{prop}
-If $I$ is a small category, if $S$ is in $\Set$ and $\DT S:T\to\Set$ is the corresponding constant functor, then there is a canonical bijection
+If $I$ is a small category, if $S$ is in $\Set$ and $\DT S:I\to\Set$ is the corresponding constant functor, then there is a canonical bijection
 $$
 \col\DT S\iso\pi_0(I)\tm S.
 $$ 
@@ -2373,21 +2430,57 @@ $$
 
 \sbs{Corollary 2.4.6 p. 56}
 
+%We shall give two other proofs. 
+Recall the statement: 
+
+\begin{prop}[Corollary 2.4.6]\lb{246}
+%In the setting 
+If $X'$ and $X''$ are objects, if $\C$ and $\C'$ are categories, and if $F$ and $G$ are functors satisfying 
+\begin{equation}\lb{241s}
+X'\in\C'\xl{F}\C\xr{G}\C''\ni X'', 
+\end{equation} 
+then we have 
+\begin{equation}\lb{241} 
+\col_{(G(X)\to X'')\in\C_B}\Hom_{\C'}(X',F(X))\iso\col_{(X'\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),X''). 
+\end{equation} 
+%Here $$a\in\Hom_{\C'}(A,F(X)),\quad b\in\Hom_{\C''}(G(X),B). $$ 
+\end{prop}
+
+\begin{proof}%[First Proof] 
+Consider the diagram 
+$$
+\begin{tikzcd}
+\ds\col_{(G(X)\to X'')\in\C_B}\Hom_{\C'}(X',F(X))\ar[r,yshift=0.7ex,dashed,"f"]&\ds\col_{(X'\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),X'')\ar[l,yshift=-0.7ex,dashed,"g"]\\ 
+\Hom_{\C'}(X',F(X))\ar[u,"p(G(X)\to X'')"]&\Hom_{\C''}(G(X),X'')\ar[u,"q(X'\to F(X))"'],
+\end{tikzcd}
+$$ 
+where the vertical arrows are the coprojections. We leave it to the reader to check firstly that there are maps $f$ and $g$ as in the above diagram satisfying %and the maps $f$ and $g$ are defined by 
+$$
+f\Big(p\big(G(X)\to X''\big)\big(X'\to F(X)\big)\Big):=q\big(X'\to F(X)\big)\big(G(X)\to X''\big),
+$$ 
+$$
+g\Big(q\big(X'\to F(X)\big)\big(G(X)\to X''\big)\Big):=p\big(G(X)\to X''\big)\big(X'\to F(X)\big)
+$$ 
+for all morphism $G(X)\to X''$ in $\C''$ and all morphism $X'\to F(X)$ in $\C'$, and secondly that $f$ and $g$ are inverse bijections. 
+\end{proof}
+
+\begin{comment}
+
+% Previous version:
+
+\sbs{Corollary 2.4.6 p. 56}
+
 We shall give two other proofs. Recall the statement: 
 
 \begin{prop}[Corollary 2.4.6]\lb{246}
 In the setting 
-%
 \begin{equation}\lb{241s}
 A\in\C'\xl{F}\C\xr{G}\C''\ni B, 
 \end{equation} 
-%
 we have 
-%
 \begin{equation}\lb{241} 
 \col_{(X,b)\in\C_B}\Hom_{\C'}(A,F(X))\iso\col_{(X,a)\in\C^A}\Hom_{\C''}(G(X),B). 
 \end{equation} 
-%
 Here 
 $$
 a\in\Hom_{\C'}(A,F(X)),\quad b\in\Hom_{\C''}(G(X),B). 
@@ -2437,6 +2530,8 @@ $$
 $$
 \end{proof}
 
+\end{comment}
+
 %%
 
 \sbs{Brief comments}
@@ -2445,7 +2540,7 @@ $$
 P.~56, proof of Lemma 2.4.7 (minor variant).
 
 \begin{lem} 
-If $I$ is a small category, $i_0$ is in $I$, and $\al:I\to\Set$ is the functor satisfying $\Hom_I(i_0,\ )$, then $\col\al$ is a terminal object of $\Set$. 
+If $I$ is a small category, $i_0$ is in $I$, and $\al:I\to\Set$ is the functor $\Hom_I(i_0,\ )$, then $\col\al$ is a terminal object of $\Set$. 
 \end{lem}
 
 \begin{proof}
@@ -2481,7 +2576,7 @@ is bijective.
 \end{lem}
 
 \begin{proof}
-In fact we shall define a map 
+We shall define a map 
 $$
 g:\lim\bt\ci\pp^{\op}\to\lim\bt
 $$ 
