@@ -2430,31 +2430,28 @@ $$
 
 \sbs{Corollary 2.4.6 p. 56}
 
-%We shall give two other proofs. 
 Recall the statement: 
 
 \begin{prop}[Corollary 2.4.6]\lb{246}
-%In the setting 
 If $X'$ and $X''$ are objects, if $\C$ and $\C'$ are categories, and if $F$ and $G$ are functors satisfying 
 \begin{equation}\lb{241s}
 X'\in\C'\xl{F}\C\xr{G}\C''\ni X'', 
 \end{equation} 
 then we have 
 \begin{equation}\lb{241} 
-\col_{(G(X)\to X'')\in\C_B}\Hom_{\C'}(X',F(X))\iso\col_{(X'\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),X''). 
+\col_{(G(X)\to X'')\in\C_{X''}}\Hom_{\C'}(X',F(X))\iso\col_{(X'\to F(X))\in(\C^{X'})^{\op}}\Hom_{\C''}(G(X),X''). 
 \end{equation} 
-%Here $$a\in\Hom_{\C'}(A,F(X)),\quad b\in\Hom_{\C''}(G(X),B). $$ 
 \end{prop}
 
-\begin{proof}%[First Proof] 
+\begin{proof} 
 Consider the diagram 
 $$
 \begin{tikzcd}
-\ds\col_{(G(X)\to X'')\in\C_B}\Hom_{\C'}(X',F(X))\ar[r,yshift=0.7ex,dashed,"f"]&\ds\col_{(X'\to F(X))\in(\C^A)^{\op}}\Hom_{\C''}(G(X),X'')\ar[l,yshift=-0.7ex,dashed,"g"]\\ 
+\ds\col_{(G(X)\to X'')\in\C_{X''}}\Hom_{\C'}(X',F(X))\ar[r,yshift=0.7ex,dashed,"f"]&\ds\col_{(X'\to F(X))\in(\C^{X'})^{\op}}\Hom_{\C''}(G(X),X'')\ar[l,yshift=-0.7ex,dashed,"g"]\\ 
 \Hom_{\C'}(X',F(X))\ar[u,"p(G(X)\to X'')"]&\Hom_{\C''}(G(X),X'')\ar[u,"q(X'\to F(X))"'],
 \end{tikzcd}
 $$ 
-where the vertical arrows are the coprojections. We leave it to the reader to check firstly that there are maps $f$ and $g$ as in the above diagram satisfying %and the maps $f$ and $g$ are defined by 
+where the vertical arrows are the coprojections. We leave it to the reader to check firstly that there are maps $f$ and $g$ as in the above diagram satisfying 
 $$
 f\Big(p\big(G(X)\to X''\big)\big(X'\to F(X)\big)\Big):=q\big(X'\to F(X)\big)\big(G(X)\to X''\big),
 $$ 
@@ -2580,7 +2577,7 @@ We shall define a map
 $$
 g:\lim\bt\ci\pp^{\op}\to\lim\bt
 $$ 
-and leave it to the reader to check that $f$ and $g$ are inverse. Let $y$ be in $\lim\bt\ci\pp^{\op}$. In particular $y$ is of the form $(y_j)_{j\in J}$ with $y_j\in\bt(\pp(j))$. We must define the element $g(y)_i$ in $\bt(i)$, where $i$ is an arbitrary element in $I$. Let us choose a morphism $u:i\to\pp(j)$ in $I$. It suffices to show that the element $\bt(u)(y_j)$ in $\bt(i)$ does not depend on the choice of $u$, so that we shall be able to set $g(y)_i:=\bt(u)(y_j)$. Given another choice $u':i\to\pp(j')$, we must prove $\bt(u)(y_j)=\bt(u')(y_{j'})$. As $J^i$ is connected, we may assume that there is a morphism $j\to j'$ in $J$, and the proof is straightforward. 
+and leave it to the reader to check that $f$ and $g$ are inverse. Let $y$ be in $\lim\bt\ci\pp^{\op}$. In particular $y$ is of the form $(y_j)_{j\in J}$ with $y_j\in\bt(\pp(j))$. We must define the element $g(y)_i$ in $\bt(i)$, where $i$ is an arbitrary element in $I$. Let us choose a morphism $i\to\pp(j)$ in $I$. It suffices to show that the element $\bt(i\to\pp(j))(y_j)$ in $\bt(i)$ does not depend on the choice of $i\to\pp(j)$, enabling us to set $$g(y)_i:=\bt(i\to\pp(j))(y_j).$$ Given another choice $i\to\pp(j')$, we must prove $$\bt(i\to\pp(j))(y_j)=\bt(i\to\pp(j'))(y_{j'}).$$ As $J^i$ is connected, we may assume that there is a morphism $j\to j'$ in $J$ such that $(i\to\pp(j'))=(i\to\pp(j)\to\pp(j'))$, and the proof is straightforward. %and leave it to the reader to check that $f$ and $g$ are inverse. Let $y$ be in $\lim\bt\ci\pp^{\op}$. In particular $y$ is of the form $(y_j)_{j\in J}$ with $y_j\in\bt(\pp(j))$. We must define the element $g(y)_i$ in $\bt(i)$, where $i$ is an arbitrary element in $I$. Let us choose a morphism $u:i\to\pp(j)$ in $I$. It suffices to show that the element $\bt(u)(y_j)$ in $\bt(i)$ does not depend on the choice of $u$, so that we shall be able to set $g(y)_i:=\bt(u)(y_j)$. Given another choice $u':i\to\pp(j')$, we must prove $\bt(u)(y_j)=\bt(u')(y_{j'})$. As $J^i$ is connected, we may assume that there is a morphism $j\to j'$ in $J^i$, and the proof is straightforward. 
 \end{proof}
 \end{s}
 
@@ -2604,9 +2601,9 @@ p_j:\Hom_I(i,\pp(j))\to L_i
 $$
 be the coprojection. It is easy to check that the map 
 $$
-\Ob(J^i)\to L_i,\quad\Big(j,s:i\to\pp(j)\Big)\mt p_j(s)
+\Ob(J^i)\to L_i,\quad(j,i\to\pp(j))\mt p_j(i\to\pp(j))
 $$
-factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}).
+factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}). %$$\Ob(J^i)\to L_i,\quad\Big(j,s:i\to\pp(j)\Big)\mt p_j(s)$$ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is inverse to (\ref{om}).
 \end{proof}
 \end{s}
 
@@ -2636,7 +2633,7 @@ Note that \qr{263a} can be stated as follows: If $h:\C\to\C^\wg$ is the Yoneda e
 
 We shall spell out Isomorphisms \qr{263a} and \qr{263b} (resp. Isomorphism \qr{263c}) in terms of Diagram \qr{cue} p.~\pr{cue} (resp. Diagram \qr{yfy} p.~\pr{yfy}). 
 
-Warning: From here to the end of this section the symbols $X$ and $Y$ will designate either two objects of $\C$ or the image of these objects in $\C^\wg$. The context only will tell which interpretation is the good one. (It seems to me the choice of the correct interpretation will always be obvious.)
+Warning: From here to the end of this section the symbols $X$ and $Y$ will designate either two objects of $\C$ or the image of these objects in $\C^\wg$. The context only will tell which interpretation is the good one. (It seems to me the choice of the correct interpretation will always be obvious.) 
 
 \nn$\bu$ Isomorphism \qr{263a} can be decoded as follows: Consider the functor 
 $$
@@ -2650,10 +2647,19 @@ for all $X\to A$ in $\C_A$. Let $B$ be in $\C^\wg$ and $\theta:\al\to\DT B$. Dia
 $$
 \begin{tikzcd}
 \al\ar[r,"p"]\ar[dr,"\theta"']&\DT A\ar[d,"\DT f"]&A\ar[d,dashed,"f"]\\ 
-&\DT B&B,
+&\DT B&B.
 \end{tikzcd}
-$$ 
-and we can define $f$ by $f_X(X\to A):=\theta_{X\to A}$. 
+$$  
+The uniqueness of $f$ follows from the fact that the equality 
+\begin{equation}\lb{fx1}
+\DT f\ci p=\theta
+\end{equation} 
+implies 
+\begin{equation}\lb{fx2} 
+(X\to A\xr fB)=\theta_{X\to A}\quad\forall\quad X\to A,
+%f\ci(X\to A)=\theta_{X\to A}\quad\forall\quad X\to A, 
+\end{equation} 
+and the existence of $f$ follows from the fact that \qr{fx2} implies \qr{fx1}. %we can define $f$ by \qr{fx2}. %and we can define $f$ by $f_X(X\to A):=\theta_{X\to A}$.£
 
 \nn$\bu$ Isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
 $$
@@ -2667,10 +2673,19 @@ for all $X\to A$ in $\C_A$. Let $S$ be in $\Set$ and $Y$ in $\C$. Diagram \qr{cu
 $$
 \begin{tikzcd}
 \bt\ar[r,"q"]\ar[dr,"\theta"']&\DT A(Y)\ar[d,"\DT f"]&A(Y)\ar[d,dashed,"f"]\\ 
-&\DT S&S,
+&\DT S&S.
 \end{tikzcd}
 $$ 
-and we can define $f$ by $f(Y\to A):=\theta_{Y\to A}(\id_Y)$. 
+The equality $\DT f\ci q=\theta$ is equivalent to the condition 
+\begin{equation}\lb{fy1}
+f(Y\to X\to A)=\theta_{X\to A}(Y\to X)\quad\forall\quad Y\to X\to A. 
+\end{equation}
+%and we can define $f$ by $f(Y\to A):=\theta_{Y\to A}(\id_Y)$. 
+Consider the condition 
+\begin{equation}\lb{fy2}
+f(Y\to A)=\theta_{Y\to A}(\id_Y)\quad\forall\quad Y\to A. 
+\end{equation} 
+The uniqueness of $f$ follows from the fact that \qr{fy1} implies \qr{fy2}, and the existence of $f$ follows from the fact that \qr{fy2} implies \qr{fy1}. 
 
 \nn$\bu$ Isomorphism \qr{263c} can be decoded as follows: Let $B$ be in $\C^\wg$, consider the functor 
 $$
@@ -2684,11 +2699,19 @@ for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$, and let $S$ be in $\Set$.
 $$
 \begin{tikzcd}
 S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[r,"\theta"]&\gamma\\ 
-B(A)&\DT B(A),\ar[ru,"r"']
+B(A)&\DT B(A).\ar[ru,"r"']
 \end{tikzcd}
 $$ 
-and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
-
+The uniqueness of $f$ follows from the fact that the equality 
+\begin{equation}\lb{fr1}
+r\ci\DT f=\theta
+\end{equation} 
+implies 
+\begin{equation}\lb{fr2}
+(X\to A\xr{f(s)}B)=\theta_{X\to A}(s)\quad\text{for all $s$ and all $X\to A$}, 
+\end{equation} 
+and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}.
+%and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
 %Isomorphisms \qr{263a}, \qr{263b} and \qr{263c} are functorial. This fact is probably best expressed in terms of the (co)projections. Let us state explicitly the functoriality of \qr{263a}. 
 
 %Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $*$ denotes horizontal composition. Then the diagram $$\begin{tikzcd}\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ \al_A\ar{rrr}[swap]{p_B*((A\to B)\ci)}&&&\DT B\end{tikzcd}$$ commutes.
@@ -2749,9 +2772,9 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k_i:=g_i$ 
 % the \S with the label \lb{b} was here
 
 \begin{s} 
-Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 (i) p.~52 of the book. Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
+Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
 
-\begin{thm}[Theorem 2.3.3 (i) p. 52]\lb{233}
+\begin{thm}\lb{233}%[Theorem 2.3.3 (i) p. 52]
 If 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i))\in J_i}\bt(j)
@@ -5725,7 +5748,7 @@ We leave the verification of these claims to the reader.
 \sbs{Brief comments}
 
 \begin{s}
-P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. it seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
+P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. It seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
 
 \begin{lem}
 If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\col\iota\ci\al\iso\iota(X)$ for some $X$ in $\C$, then we have $\col\al\iso X$. 
