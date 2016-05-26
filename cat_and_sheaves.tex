@@ -718,6 +718,133 @@ Also note that, if $\Cat$ is the category of small categories, then the formula 
 
 %%
 
+\sbs{Horizontal\index{horizontal composition} and vertical compositions\index{vertical composition} (p. 19)}%\lb{hove1}
+
+For each object $X$ of $\C_3$ the diagram 
+
+$$
+\begin{tikzcd}
+\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}\\ 
+\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}\\ 
+\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start]{F_{32}}
+\end{tikzcd}
+$$ 
+
+\nn of categories, functors, and morphisms of functors yields the commutative diagram 
+
+$$
+\begin{tikzcd}
+F_{11}F_{12}X&&F_{21}F_{12}X\ar{ll}[swap]{\theta_{11}F_{12}X}&&F_{31}F_{12}X\ar{ll}[swap]{\theta_{21}F_{12}X}\\ 
+F_{11}F_{22}X\ar{u}{F_{11}\theta_{12}X}&&F_{21}F_{22}X\ar{ll}[swap]{\theta_{11}F_{22}X}\ar{u}{F_{21}\theta_{12}X}&&F_{31}F_{22}X\ar{ll}[swap]{\theta_{21}F_{22}X}\ar{u}[swap]{F_{31}\theta_{12}X}\\ 
+F_{11}F_{32}X\ar{u}{F_{11}\theta_{22}X}&&F_{21}F_{32}X\ar{ll}{\theta_{11}F_{32}X}\ar{u}{F_{21}\theta_{22}X}&&F_{31}F_{32}X\ar{ll}{\theta_{21}F_{32}X}\ar{u}[swap]{F_{31}\theta_{22}X}
+\end{tikzcd}
+$$ 
+
+\nn in $\C_1$. So, we get a well-defined morphism in $\C_1$ from $F_{31}F_{32}X$ to $F_{11}F_{12}X$, which is easily seen to define a morphism of functors from $F_{31}F_{32}$ to $F_{11}F_{12}$. 
+
+\begin{nota}\lb{nhove}
+We denote this morphism of functors by
+$$
+\begin{pmatrix}
+\theta_{11}&\theta_{12}\\ 
+\theta_{21}&\theta_{22}
+\end{pmatrix}:F_{31}F_{32}\to F_{11}F_{12}.
+$$ 
+If $\theta_{21}$ and $\theta_{22}$ are identity morphisms, we put 
+$$
+\theta_{11}*\theta_{12}:=
+\begin{pmatrix}
+\theta_{11}&\theta_{12}\\ 
+\theta_{21}&\theta_{22}
+\end{pmatrix}.
+$$ 
+If $\theta_{12}$ and $\theta_{22}$ are identity morphisms, we put 
+$$
+\theta_{11}\ci\theta_{21}:=
+\begin{pmatrix}
+\theta_{11}&\theta_{12}\\ 
+\theta_{21}&\theta_{22}
+\end{pmatrix}.
+$$ 
+\end{nota}
+
+Let $m,n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
+$$
+F_{i,j}:\C_{j+1}\to\C_j,\quad1\le i\le m+1,\ 1\le j\le n
+$$
+be functors, let 
+$$
+\theta_{i,j}:F_{i+1,j}\to F_{i,j},\quad1\le i\le m,\ 1\le j\le n
+$$
+be morphisms of functors. For instance, if $m=2,n=4$, then we have 
+$$
+\begin{tikzcd}
+\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}&{}&\C_4\ar{ll}{}[near start,swap]{F_{13}}&{}&\C_5\ar{ll}{}[near start,swap]{F_{14}}\\ 
+\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}&\ar{u}{\theta_{13}}&\C_4\ar{ll}{}[near start,swap]{F_{23}}&\ar{u}{\theta_{14}}&\C_5\ar{ll}{}[near start,swap]{F_{24}}\\ 
+\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start,swap]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start,swap]{F_{32}}&\ar{u}{\theta_{23}}&\C_4\ar{ll}{}[near start,swap]{F_{33}}&\ar{u}{\theta_{24}}&\C_5\ar{ll}{}[near start,swap]{F_{34}}.
+\end{tikzcd}
+$$ 
+
+The following proposition is clear 
+
+\begin{prop}
+The operations $*$ and $\ci$ are associative, and, in the above setting, we have the equality 
+
+$$
+(\theta_{1,1}*\cdots*\theta_{1,n})\ci\cdots\ci(\theta_{m,1}*\cdots*\theta_{m,n})
+$$ 
+
+$$
+=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})*\cdots*(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
+$$
+
+\nn between functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
+\end{prop}
+
+\begin{nota}\lb{nmat} 
+We denote this morphism of functors by
+$$
+\begin{pmatrix}
+\theta_{1,1}&\cdots&\theta_{1,n}\\
+\vdots&&\vdots\\ 
+\theta_{m,1}&\cdots&\theta_{m,n}
+\end{pmatrix}:F_{m+1,1}\cdots F_{m+1,n}\to F_{1,1}\cdots F_{1,n}.
+$$ 
+\end{nota}
+
+\begin{prop}\lb{pil1}
+We have, in the above setting,
+
+$$
+(\theta_{1,1}*\cdots*\theta_{1,n})\ci\cdots\ci(\theta_{m,1}*\cdots*\theta_{m,n})
+=\begin{pmatrix}
+\theta_{1,1}*\cdots*\theta_{1,n}\\
+\vdots\\ 
+\theta_{m,1}*\cdots*\theta_{m,n}
+\end{pmatrix}
+$$ 
+
+$$
+=\begin{pmatrix}
+\theta_{1,1}&\cdots&\theta_{1,n}\\
+\vdots&&\vdots\\ 
+\theta_{m,1}&\cdots&\theta_{m,n}
+\end{pmatrix}
+$$
+
+$$
+=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}*\cdots*
+\begin{pmatrix}\theta_{1,n}\\ \vdots\\ \theta_{m,n}\end{pmatrix}
+=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})*\cdots*(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
+$$
+\end{prop}
+
+\begin{df}[horizontal and vertical composition, Interchange Law]\lb{dil1} 
+We call $*$ the {\em horizontal composition}.\index{horizontal composition} We call $\ci$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
+\end{df}
+
+%%
+
 \sbs{The Yoneda Lemma (p. 24)\index{Yoneda Lemma}}
 
 % previous version
@@ -797,7 +924,68 @@ $$
 \end{tikzcd}
 $$ 
 
-The proof of (b) is similar. The proof of (c) is left to the reader.
+\nn(b) The proof of (b) is similar. %The proof of (c) is left to the reader.
+
+\nn(c) Let $h:\C\to\C^\wg$ be the Yoneda embedding, and, for $X$ in $\C$ and $A$ in $\C^\wg$ let 
+$$
+\Phi_{X,A}:\Hom_{\C^\wg}(h(X),A)\to A(X),\quad\theta\mt\theta_X(\id_X)
+$$ 
+be the Yoneda bijection. We shall prove that $\Phi_{X,A}$ is functorial in $X$ and $A$. 
+
+Functoriality in $A$: Let $h(X)\xr\ld A\xr\theta B$ be morphisms of functors. We must show $\ld_X(\Phi_{X,A}(\theta))=\Phi_{X,B}((\ld\ci)(\theta))$: 
+$$
+\begin{tikzcd}
+\Hom_{\C^\wg}(h(X),A)\ar[d,"\ld\ci"']\ar[r,"\Phi_{X,A}"]&A(X)\ar[d,"\ld_X"]\\ 
+\Hom_{\C^\wg}(h(X),B)\ar[r,"\Phi_{X,B}"']&B(X).
+\end{tikzcd}
+$$ 
+We have 
+$$
+\ld_X(\Phi_{X,A}(\theta))=\ld_X(\theta_X(\id_X)),
+$$ 
+$$
+\Phi_{X,B}((\ld\ci)(\theta))=\Phi_{X,B}(\ld\ci\theta)=(\ld\ci\theta)_X(\id_X)=(\ld_X\ci\theta_X)(\id_X)=\ld_X(\theta_X(\id_X)), 
+$$ 
+where the penultimate equality follows from the definition of vertical composition of morphisms of functors (Definition~\ref{dil1} p.~\pr{dil1}): 
+$$ 
+\Hom_\C(X,X)\xr{\theta_X}A(X)\xr{\ld_X}B(X).
+$$ 
+
+Functoriality in $A$: Let $f:X\to Y$ be a morphism in $\C$ and $\theta:h(Y)\to A$ be a morphism in $\C^\wg$. We must show 
+$$
+\Phi_{X,A}\Big(\big(\ci h(f)\big)(\theta)\Big)=A(f)\big(\Phi_{Y,A}(\theta)\big):
+$$ 
+$$
+\begin{tikzcd}
+\Hom_{\C^\wg}(h(X),A)\ar[r,"\Phi_{X,A}"]&A(X)\\ 
+\Hom_{\C^\wg}(h(Y),B)\ar[u,"\ci h(f)"]\ar[r,"\Phi_{X,B}"']&A(Y)\ar[u,"A(f)"'].
+\end{tikzcd}
+$$ 
+We have 
+$$
+\Phi_{X,A}\Big(\big(\ci h(f)\big)(\theta)\Big)=\Phi_{X,A}(\theta\ci h(f))=(\theta_X\ci h(f)_X)(\id_X)
+$$ 
+$$
+=(\theta_X\ci(f\ci))(\id_X)=\theta_X(f),
+$$ 
+where the second equality follows from the definition of vertical composition of morphisms of functors: 
+$$
+h(X)\xr{h(f)}h(Y)\xr\theta A,
+$$ 
+$$
+\Hom_\C(X,X)\xr{f\ci}\Hom_\C(X,Y)\xr{\theta_X}A(X)
+$$ 
+because $h(f)_X=f\ci$. We also have 
+$$
+A(f)\big(\Phi_{Y,A}(\theta)\big)=A(f)\big(\theta_Y(\id_Y)\big)=\theta_X(f),
+$$ 
+where the last equality follows from the naturality of $\theta$: 
+$$
+\begin{tikzcd}
+\Hom_\C(X,Y)\ar[r,"\theta_X"]&A(X)\\ 
+\Hom_\C(Y,Y)\ar[u,"\ci f"]\ar[r,"\theta_Y"']&A(Y)\ar[u,"A(f)"'].
+\end{tikzcd}
+$$ 
 \end{proof}
 
 \begin{conv}\lb{term}
@@ -825,9 +1013,9 @@ $$
 
 %%
 
-\sbs{Brief comments}
+\sbs{Brief comment}
 
-\begin{s} 
+%\begin{s} 
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
 
 \begin{prop}\lb{yp}
@@ -840,145 +1028,7 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 
 \begin{proof} By (i) there is a $g:B\to A$ satisfying $f\ci g=\id_B$, yielding $f\ci g\ci f=f$, and (ii) implies $g\ci f=\id_A$.
 \end{proof}
-\end{s}
-
-%%
-
-\sbs{Horizontal\index{horizontal composition} and vertical compositions\index{vertical composition} (p. 19)}\lb{hove1}
-
-For each object $X$ of $\C_3$ the diagram 
-
-$$
-\begin{tikzcd}
-%
-\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}\\ 
-%
-\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}\\ 
-%
-\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start]{F_{32}}
-%
-\end{tikzcd}
-$$ 
-
-\nn of categories, functors, and morphisms of functors yields the commutative diagram 
-
-$$
-\begin{tikzcd}
-%
-F_{11}F_{12}X&&F_{21}F_{12}X\ar{ll}[swap]{\theta_{11}F_{12}X}&&F_{31}F_{12}X\ar{ll}[swap]{\theta_{21}F_{12}X}\\ 
-%
-F_{11}F_{22}X\ar{u}{F_{11}\theta_{12}X}&&F_{21}F_{22}X\ar{ll}[swap]{\theta_{11}F_{22}X}\ar{u}{F_{21}\theta_{12}X}&&F_{31}F_{22}X\ar{ll}[swap]{\theta_{21}F_{22}X}\ar{u}[swap]{F_{31}\theta_{12}X}\\ 
-%
-F_{11}F_{32}X\ar{u}{F_{11}\theta_{22}X}&&F_{21}F_{32}X\ar{ll}{\theta_{11}F_{32}X}\ar{u}{F_{21}\theta_{22}X}&&F_{31}F_{32}X\ar{ll}{\theta_{21}F_{32}X}\ar{u}[swap]{F_{31}\theta_{22}X}
-%
-\end{tikzcd}
-$$ 
-
-\nn in $\C_1$. So, we get a well-defined morphism in $\C_1$ from $F_{31}F_{32}X$ to $F_{11}F_{12}X$, which is easily seen to define a morphism of functors from $F_{31}F_{32}$ to $F_{11}F_{12}$. 
-
-\begin{nota}\lb{nhove}
-We denote this morphism of functors by
-$$
-\begin{pmatrix}
-\theta_{11}&\theta_{12}\\ 
-\theta_{21}&\theta_{22}
-\end{pmatrix}:F_{31}F_{32}\to F_{11}F_{12}.
-$$ 
-If $\theta_{21}$ and $\theta_{22}$ are identity morphisms, we put 
-$$
-\theta_{11}*\theta_{12}:=
-\begin{pmatrix}
-\theta_{11}&\theta_{12}\\ 
-\theta_{21}&\theta_{22}
-\end{pmatrix}.
-$$ 
-If $\theta_{12}$ and $\theta_{22}$ are identity morphisms, we put 
-$$
-\theta_{11}\ci\theta_{21}:=
-\begin{pmatrix}
-\theta_{11}&\theta_{12}\\ 
-\theta_{21}&\theta_{22}
-\end{pmatrix}.
-$$ 
-\end{nota}
-
-Let $m,n\ge1$ be integers, let $\C_1,\dots,\C_{n+1}$ be categories, let 
-$$
-F_{i,j}:\C_{j+1}\to\C_j,\quad1\le i\le m+1,\ 1\le j\le n
-$$
-be functors, let 
-$$
-\theta_{i,j}:F_{i+1,j}\to F_{i,j},\quad1\le i\le m,\ 1\le j\le n
-$$
-be morphisms of functors. For instance, if $m=2,n=4$, then we have 
-$$
-\begin{tikzcd}
-%
-\C_1&{}&\C_2\ar{ll}{}[near start,swap]{F_{11}}&{}&\C_3\ar{ll}{}[near start,swap]{F_{12}}&{}&\C_4\ar{ll}{}[near start,swap]{F_{13}}&{}&\C_5\ar{ll}{}[near start,swap]{F_{14}}\\ 
-%
-\C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}&\ar{u}{\theta_{13}}&\C_4\ar{ll}{}[near start,swap]{F_{23}}&\ar{u}{\theta_{14}}&\C_5\ar{ll}{}[near start,swap]{F_{24}}\\ 
-%
-\C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start,swap]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start,swap]{F_{32}}&\ar{u}{\theta_{23}}&\C_4\ar{ll}{}[near start,swap]{F_{33}}&\ar{u}{\theta_{24}}&\C_5\ar{ll}{}[near start,swap]{F_{34}}.
-\end{tikzcd}
-$$ 
-
-The following proposition is clear 
-
-\begin{prop}
-The operations $*$ and $\ci$ are associative, and, in the above setting, we have the equality 
-
-$$
-(\theta_{1,1}*\cdots*\theta_{1,n})\ci\cdots\ci(\theta_{m,1}*\cdots*\theta_{m,n})
-$$ 
-
-$$
-=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})*\cdots*(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
-$$
-
-\nn between functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
-\end{prop}
-
-\begin{nota}\lb{nmat} 
-We denote this morphism of functors by
-$$
-\begin{pmatrix}
-\theta_{1,1}&\cdots&\theta_{1,n}\\
-\vdots&&\vdots\\ 
-\theta_{m,1}&\cdots&\theta_{m,n}
-\end{pmatrix}:F_{m+1,1}\cdots F_{m+1,n}\to F_{1,1}\cdots F_{1,n}.
-$$ 
-\end{nota}
-
-\begin{prop}\lb{pil1}
-We have, in the above setting,
-
-$$
-(\theta_{1,1}*\cdots*\theta_{1,n})\ci\cdots\ci(\theta_{m,1}*\cdots*\theta_{m,n})
-=\begin{pmatrix}
-\theta_{1,1}*\cdots*\theta_{1,n}\\
-\vdots\\ 
-\theta_{m,1}*\cdots*\theta_{m,n}
-\end{pmatrix}
-$$ 
-
-$$
-=\begin{pmatrix}
-\theta_{1,1}&\cdots&\theta_{1,n}\\
-\vdots&&\vdots\\ 
-\theta_{m,1}&\cdots&\theta_{m,n}
-\end{pmatrix}
-$$
-
-$$
-=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}*\cdots*
-\begin{pmatrix}\theta_{1,n}\\ \vdots\\ \theta_{m,n}\end{pmatrix}
-=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})*\cdots*(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
-$$
-\end{prop}
-
-\begin{df}[horizontal and vertical composition, Interchange Law]\lb{dil1} 
-We call $*$ the {\em horizontal composition}.\index{horizontal composition} We call $\ci$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
-\end{df}
+%\end{s}
 
 %%
 
@@ -2659,7 +2709,7 @@ implies
 (X\to A\xr fB)=\theta_{X\to A}\quad\forall\quad X\to A,
 %f\ci(X\to A)=\theta_{X\to A}\quad\forall\quad X\to A, 
 \end{equation} 
-and the existence of $f$ follows from the fact that \qr{fx2} implies \qr{fx1}. %we can define $f$ by \qr{fx2}. %and we can define $f$ by $f_X(X\to A):=\theta_{X\to A}$.£
+and the existence of $f$ follows from the fact that \qr{fx2} implies \qr{fx1}. %we can define $f$ by \qr{fx2}. %and we can define $f$ by $f_X(X\to A):=\theta_{X\to A}$.
 
 \nn$\bu$ Isomorphism \qr{263b} can be decoded as follows: Let $Y$ be in $\C$, consider the functor 
 $$
