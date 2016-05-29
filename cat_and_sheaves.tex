@@ -1497,7 +1497,7 @@ More precisely, assume we are given $\mu$ as above and $s$ in $S$. Then we set $
 \begin{s}\lb{216}
 P.~38, Proposition 2.1.6. We want to find a setting where the isomorphism 
 $$
-(\col\al)(j)\iso\col(\al(j))
+(\col\al)(j)\iso\col\al(j)
 $$ 
 makes sense and is true.% prove that it holds.%Here are more details. Recall the setting: 
 
@@ -1682,7 +1682,7 @@ In \S\ref{sv} p.~\pr{sv} we proved that (a) implies (d).
 % https://docs.google.com/document/d/1Hx-fRBi-yTwTyFKvGi-qFLmgNQwYl7YJvZMd_ngC6nw/edit
 
 \begin{s} 
-P.~40, Proposition 2.1.10 (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}). Here is a slightly more general statement. 
+P.~40, Proposition 2.1.10 (stated below as Corollary~\ref{2.1.10c}). Here is a slightly more general statement.%Proposition~\ref{2.1.10}
 
 \begin{prop}\lb{2.1.10b}
 Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
@@ -1692,7 +1692,7 @@ $$
 in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 
-An important particular case is when $\C$ is $\A$, $G$ is $\id_\A$ and $Z=R(Y)$, where $R:\B\to\A$ is right adjoint to $F$. 
+%An important particular case is when $\C$ is $\A$, $G$ is $\id_\A$ and $Z=R(Y)$, where $R:\B\to\A$ is right adjoint to $F$. 
 
 %We give two proofs. The first proof is short and written in a traditional way. The second proof is much longer. Is the first proof rigorous enough? It is interesting (I think) to meditate a little bit on this question.
 
@@ -1749,6 +1749,14 @@ $$
 by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\B(q,Y)$ %$\Hom_\C(G(p),Z)$ 
 is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
 \end{proof}
+
+\begin{cor}[Proposition 2.1.10 p.~40]\lb{2.1.10c}
+Let $F:\A\to\B$ be a functor and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$ and that $F$ admits a right adjoint. Then $F$ commutes with inductive limits indexed by $I$.
+\end{cor}
+
+\begin{proof} 
+Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $\C$ be $\A$, $G$ be $\id_\A$ and $Z$ be $R(Y)$. %An important particular case is when $\C$ is $\A$, $G$ is $\id_\A$ and $Z=R(Y)$, where $R:\B\to\A$ is right adjoint to $F$.
+\end{proof}
 \end{s}
 
 %%
@@ -1763,7 +1771,11 @@ If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of
 
 \nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection,
 
-\nn\emph{(b)} for all object $Y$ in $\C$ the obvious morphism $\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ is a coprojection,
+\nn\emph{(b)} for all object $Y$ in $\C$ the obvious morphism 
+$$
+\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)
+$$ 
+is a coprojection,
 
 \nn\emph{(c)} for any functor $F:\C\to\C'$ the obvious morphism $F(p):F\ci\al\to\DT F(X)$ is a coprojection,
 
@@ -1793,7 +1805,7 @@ There is of course an analogous notion of universal projective limit.
 
 Here is the classic example of a non-universal inductive limit. Letting $\al$ be the unique functor from the empty category to $\Set$, we get $\col\al=\vi$. Writing $h:\Set\to\Set^\wg$ for the Yoneda embedding yields $\col h\ci\al=\DT\vi$. But we have, on the one hand $(\DT\vi)(\vi)=\vi$, and on the other hand $(h(\vi))(\vi)\not\iso\vi$, implying 
 $$
-\col(h\ci\al)\not\iso h(\col\al).
+\col h\ci\al\not\iso h(\col\al).
 $$ 
 This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
 
@@ -2303,7 +2315,7 @@ such that $x_{i\to\pp(j)\to\pp(j')}=\bt(j\to j')(x_{i\to\pp(j)})$ for all morphi
 
 \sbs{Brief comments}
 
-\begin{s}\lb{scoco}
+\begin{s}%\lb{scoco}
 P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small and $\C$ admits small inductive limits, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
 \col\bt\iso\col_i\ \col_{(j,u)\in J_i}\bt(j),
@@ -2312,7 +2324,8 @@ where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$.
 
 %\paragraph{First proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{First proof of \qr{coco}}
 
-To prove \qr{coco} we define morphisms 
+\begin{proof}[Proof of \qr{coco}]
+We define morphisms 
 $$
 \begin{tikzcd} 
 \col\bt\ar[yshift=0.7ex]{r}{f}&\ds\col_i\ \col_{(j,u)\in J_i}\bt(j),\ar[yshift=-0.7ex]{l}{g}
@@ -2364,7 +2377,8 @@ $$
 $$ 
 where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  definition of $u_*$, and the bottom square commutes for obvious reasons. % old version: The top square commutes by  \qr{cts} p.~\pr{cts}
 
-We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. q.e.d.
+We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. 
+\end{proof}
 
 %In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
 % https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
@@ -2492,15 +2506,15 @@ Consider the diagram
 $$
 \begin{tikzcd}
 \ds\col_{(G(X)\to X'')\in\C_{X''}}\Hom_{\C'}(X',F(X))\ar[r,yshift=0.7ex,dashed,"f"]&\ds\col_{(X'\to F(X))\in(\C^{X'})^{\op}}\Hom_{\C''}(G(X),X'')\ar[l,yshift=-0.7ex,dashed,"g"]\\ 
-\Hom_{\C'}(X',F(X))\ar[u,"p(G(X)\to X'')"]&\Hom_{\C''}(G(X),X'')\ar[u,"q(X'\to F(X))"'],
+\Hom_{\C'}(X',F(X))\ar{u}{p[G(X)\to X'']}&\Hom_{\C''}(G(X),X'')\ar{u}[swap]{q[X'\to F(X)]},
 \end{tikzcd}
 $$ 
 where the vertical arrows are the coprojections. We leave it to the reader to check firstly that there are maps $f$ and $g$ as in the above diagram satisfying 
 $$
-f\Big(p\big(G(X)\to X''\big)\big(X'\to F(X)\big)\Big):=q\big(X'\to F(X)\big)\big(G(X)\to X''\big),
+f\Big(p\big[G(X)\to X''\big]\big(X'\to F(X)\big)\Big):=q\big[X'\to F(X)\big]\big(G(X)\to X''\big),
 $$ 
 $$
-g\Big(q\big(X'\to F(X)\big)\big(G(X)\to X''\big)\Big):=p\big(G(X)\to X''\big)\big(X'\to F(X)\big)
+g\Big(q\big[X'\to F(X)\big]\big(G(X)\to X''\big)\Big):=p\big[G(X)\to X''\big]\big(X'\to F(X)\big)
 $$ 
 for all morphism $G(X)\to X''$ in $\C''$ and all morphism $X'\to F(X)$ in $\C'$, and secondly that $f$ and $g$ are inverse bijections. 
 \end{proof}
@@ -2776,9 +2790,9 @@ where $I$ is a small category and $\widetilde F$ satisfies
 $$
 \widetilde F(A)\iso\col_{(X\to A)\in\C_A}F(X)
 $$ 
-for all $A$ in $\C^\wg$. Let us rewrite the proof of the fact that the natural morphism $\col\widetilde F(\al)\to\widetilde F\left(\col\al\right)$ is an isomorphism. 
+for all $A$ in $\C^\wg$. Let us rewrite the proof of the fact that the natural morphism $\col\widetilde F\ci\al\to\widetilde F\left(\col\al\right)$ is an isomorphism. 
 
-By Proposition 2.1.10 p. 40 of the book (stated on p.~\pr{2.1.10} below as Proposition~\ref{2.1.10}), it suffices to check that the functor $G:\A\to\C^\wg$ defined by 
+By Proposition 2.1.10 p. 40 of the book (stated on p.~\pr{2.1.10c} above as Corollary~\ref{2.1.10c}), it suffices to check that the functor $G:\A\to\C^\wg$ defined by 
 $$
 G(X')(X):=\Hom_{\A}(F(X),X').
 $$ 
@@ -3069,11 +3083,11 @@ quasi-commutes.
 %\end{prop}
 
 \begin{rk}\lb{cof}
-Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. By \qr{263a} p.~\pr{263a} the natural morphism $\col(\psi\ci\pp)\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
+Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. By \qr{263a} p.~\pr{263a} the natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
 $$
-\widehat F(A'\ci F)=\col(\psi\ci\pp)\to\col\psi\iso A',
+\widehat F(A'\ci F)=\col\psi\ci\pp\to\col\psi\iso A',
 $$ 
-the equality $F(A'\ci F)=\col(\psi\ci\pp)$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover $f$ is an isomorphism whenever $\pp$ is cofinal. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
+the equality $F(A'\ci F)=\col\psi\ci\pp$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover $f$ is an isomorphism whenever $\pp$ is cofinal. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
 $$
 \col_{(X\to A'\ci F)\in\C_{A'\ci F}}\Hom_{\C'}(X',F(X))\to A'(X')
 $$ 
@@ -3163,12 +3177,10 @@ For a justification, see \S\ref{bil} p.~\pr{bil}.
 
 \begin{s} 
 P.~64. It might be worth displaying the formula 
-%
 \begin{equation}\lb{275}
 \widehat F(A)(X')\iso\col_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\iso
 \col_{(X'\to F(X))\in\C^{X'}}A(X),
 \end{equation} 
-%
 which is contained in the proof of Proposition 2.7.5 p.~64 of the book, and which follows from Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pr{246}). Recall that $F:\C\to\C'$ is a functor of small categories, that $A$ is in $\C^\wg$, and that $X'$ is in $\C'$. 
 
 For the reader's convenience we reproduce the statement of Proposition 2.7.5: 
@@ -3268,7 +3280,7 @@ be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious 
 Pick a universe making $I,J,K$ and $L$ small, let $\al:I\to\Set$ be a functor, and consider the commutative diagrams 
 $$
 \begin{tikzcd}
-\al(\pp(j))\ar{dd}\ar{r}{\id}&\al(\pp(j))\ar{d}\ar{r}{\id}&\al(\pp(j))\ar{d}\\ 
+\al(\pp(j))\ar{dd}[swap]{p_j}\ar{r}{\id}&\al(\pp(j))\ar{d}\ar{r}{\id}&\al(\pp(j))\ar{d}\\ 
 &\ds\col_{\theta(\pp(j))\to\ell}\al(\pp(j))\ar{d}\ar{r}&\ds\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{d}\\ 
 \col\al\ci\pp\ar{r}[swap]{a}&\ds\col_{\ell}\col_{\theta(\pp(j))\to\ell}\al(\pp(j))\ar{r}[swap]{b}&\ds\col_{k}\col_{\theta(\pp(j))\to\psi(k)}
 \end{tikzcd}
@@ -3277,19 +3289,22 @@ $$
 $$
 \begin{tikzcd}
 \al(\pp(j))\ar{d}\ar{r}{\id}\ar{d}&\al(\pp(j))\ar{d}\ar{r}{\id}&\al(\pp(j))\ar{d}\\ 
-\ds\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{d}\ar{r}&\ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}\ar{r}&\ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}\\ 
+\ds\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{d}\ar{r}&\ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}\ar{r}{\id}&\ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}\\ 
 \ds\col_{k}\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{r}[swap]{c}&\ds\col_{k}\col_{\theta(i)\to\psi(k)}\al(i)\ar{r}[swap]{d}&\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)
 \end{tikzcd}
 $$ 
 
 $$
 \begin{tikzcd}
-\al(\pp(j))\ar{d}&\al(\pp(j))\ar{l}[swap]{\id}\ar{dd}\\ 
+\al(\pp(j))\ar{d}&\al(\pp(j))\ar{l}[swap]{\id}\ar{dd}{q_j}\\ 
 \ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}&\ar{d}\\ 
-\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)&\col\al\ar{l}{e}
+\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)&\col\al,\ar{l}{e}
 \end{tikzcd}
 $$ 
-where the vertical arrows are coprojections, the squares above $a$ and $e$ are obtained by \qr{coco} p.~\pr{coco}, the squares above $b$ and $d$ result from the cofinality of $\psi$, and the squares above $c$ result from the cofinality of $\pp_k$. Now the proposition follows from \qr{coco}. 
+where the vertical arrows are coprojections, the squares above $a$ and $e$ are obtained by the proof of \qr{coco} p.~\pr{coco}, the squares above $b$ and $d$ result from the cofinality of $\psi$, and the squares above $c$ result from the cofinality of $\pp_k$. %Now the proposition follows from \qr{coco}.
+In particular, the maps $a,b,c,d$ and $e$ are bijective. %, and $e^{-1}\ci d\ci c\ci b\ci a$ is the natural map from $\col\al\ci\pp$ to $\col\al$. 
+%Set $f:=e^{-1}\ci d\ci c\ci b\ci a$. 
+As the bijection $f:=e^{-1}\ci d\ci c\ci b\ci a$ satisfies $f\ci p_j=q_j$, it is the natural map from $\col\al\ci\pp$ to $\col\al$.
 \end{proof}
 \end{s}
 
@@ -3448,38 +3463,31 @@ Let $F:\C\to\C'$ be a functor.
 \nn\emph{(iii)} We say that $F$ is \emph{exact}\index{exact functor} if it is both right and left exact.
 \end{df}
 
-\begin{s} 
+\begin{s}% 4:35 PM Saturday, May 28, 2016
+% https://docs.google.com/document/d/1cvapjvUY-qwpIWY90ncOCdZt_1pYSS07lZrnvBDp5rM/edit
 P.~81, proof of Proposition 3.3.2 (minor variant). Recall the statement:
 
 \begin{prop}[Proposition 3.3.2 p.~81]\lb{p332} 
-Consider functors $I\xr\al\C\xr F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\col\al$ exists in $\C$. Then $\col(F\ci\al)$ exists in $\C'$, and the natural morphism $\col(F\ci\al)\to F(\col\al)$ is an isomorphism. 
+Consider functors $I\xr\al\C\xr F\C'$, and assume that $I$ is finite, that $F$ is right exact, and that $\col\al$ exists in $\C$. Then $\col F\ci\al$ exists in $\C'$, and the natural morphism $\col F\ci\al\to F(\col\al)$ is an isomorphism. 
 \end{prop} 
 
 \begin{proof}
 Let $X'$ be in $\C'$. It suffices to show that the natural map 
 $$
-\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F(\al),X')
+\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F\ci\al,X')
 $$ 
 is bijective. We claim 
-%\begin{equation}
-%\left.
-%\begin{aligned}
-%\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)&\iso\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X')\quad\\ % [use \quad as spacer between equation and right brace]
-%&\iso\Hom_{\C'}(F(X),X')
-%\end{aligned}
-%\right\}
-%\end{equation}
-\begin{subequations}\lb{fyx'}
+\begin{subequations}\lb{fyx'}% other version https://docs.google.com/document/d/1cvapjvUY-qwpIWY90ncOCdZt_1pYSS07lZrnvBDp5rM/edit
 \begin{align}
-\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)&\iso\col_{(X\to Y)\in\C^X}\Hom_{\C'}(F(Y),X')\lb{fyx'1}\\
+\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)&\iso\col_{(X\to Y)\in(\C^X)^{\op}}\Hom_{\C'}(F(Y),X')\lb{fyx'1}\\
 &\iso\Hom_{\C'}(F(X),X').\lb{fyx'2}
 \end{align}
 \end{subequations}
-Indeed, we obtain \qr{fyx'1} by replacing the setting (\ref{241s}) p.~\pr{241s} with 
+Indeed, we obtain \qr{fyx'1} by replacing the setting \qr{241s} p.~\pr{241s} with 
 $$
 X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X' 
 $$ 
-in the isomorphism (\ref{241}) p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have bijections 
+in the isomorphism \qr{241} p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have five sets and four bijections 
 $$ 
 \Hom_{\C'}(F(\col\al),X')\iso\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y)
 $$
@@ -3487,10 +3495,45 @@ $$
 \xr\sim\col_{(F(Y)\to X')\in\C_{X'}}\lim\Hom_\C(\al,Y)\xr\sim\lim\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\al,Y)
 $$
 $$
-\iso\lim\Hom_{\C'}(F(\al),X'). 
+\iso\lim\Hom_{\C'}(F\ci\al,X'). 
 $$ 
-The first and last bijections follow from \qr{fyx'}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$.
-\end{proof}
+The first and last bijections follow from \qr{fyx'}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$. 
+
+Let us denote these five sets and four bijections by 
+$$
+S_1\xr{f_1}S_2\xr{f_2}S_3\xr{f_3}S_4\xr{f_4}S_5.
+$$ 
+
+It remains to show that $f_4\ci f_3\ci f_2\ci f_1$ is the natural map 
+$$
+\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F\ci\al,X').
+$$ 
+
+To prove this we shall use the following abuse of notation: For any functor $\bt:J\to\A$ admitting an inductive limit, and for any $j$ in $J$, we denote by 
+$$
+q[j]:\bt(j)\to\col\bt
+$$ 
+the coprojection. 
+
+We shall also use implicitly, not only the statements of the bijections \qr{fyx'1} and \qr{fyx'2}, but also their proofs. 
+
+For $F(\col\al)\to X'$ in $\Hom_{\C'}(F(\col\al),X')$, we have (omitting most of the parenthesis) 
+$$
+f_4f_3f_2f_1(F(\col\al)\to X')
+$$ 
+$$
+=f_4f_3f_2\left(q[F(\col\al)\to X']\left(\col\al\xr{\id}\col\al\right)\right)
+$$ 
+$$
+=f_4f_3\bigg(q[F(\col\al)\to X']\Big(\big(\al(i)\to\col\al\big)_i\Big)\bigg)
+$$ 
+$$
+=f_4\bigg(\Big(q[F(\col\al)\to X']\big(\al(i)\to\col\al\big)\Big)_i\bigg)
+$$ 
+$$
+=\Big(\big(F(\al(i))\to F(\col\al)\to X'\big)_i\Big).
+$$ 
+\end{proof}  
 \end{s}
 
 %
@@ -3680,10 +3723,10 @@ For the reader's convenience we collect six statements closely related to Exerci
 \subsubsection{Proposition 2.1.10 p.~40}
 
 \begin{prop}[Proposition 2.1.10 p.~40]\lb{2.1.10}
-If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a small category, and if $\C$ admits projective limits indexed by $I$, then $F$ commutes with such limits.
+If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a category, and if $\C$ admits projective limits indexed by $I$, then $F$ commutes with such limits.
 \end{prop}
 
-(See also Proposition~\ref{2.1.10b} p.~\pr{2.1.10b}.)
+(This fact has already been stated as Corollary~\ref{2.1.10c} p.~\pr{2.1.10c}.)
 
 \subsubsection{Definition 2.2.6 p.~47}
 
@@ -4649,7 +4692,7 @@ IF\ci\iota_\C\iso\iota_{\C'}\ci F,
 \end{equation} 
 and note that we have, in the setting of Corollary 6.3.2 p.~140, 
 \begin{equation}\lb{140}
-\col(F\ci\al)\xr\sim(JF)(\ic\al).
+\col F\ci\al\xr\sim(JF)(\ic\al).
 \end{equation} 
 Let us also record Part (ii) of the proposition as 
 \begin{equation}\lb{133ii}
@@ -4914,7 +4957,7 @@ I\ar{r}{\xi}&\C^{\text fp}\ar{d}[swap]{\iota_\C}\ar{r}{\rho}&\C\ar[yshift=-.9ex]
 $$ 
 $\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book), $\kappa$ is defined by $\kappa:=I\rho\ci\kappa'$, and $X\iso\col\rho\ci\xi$. We have 
 $$
-\kappa(X)=I\rho(\kappa'(\col(\rho\ci\xi)))\iso I\rho(\ic\xi)
+\kappa(X)=I\rho(\kappa'(\col \rho\ci\xi))\iso I\rho(\ic\xi)
 $$
 
 $$
@@ -5782,9 +5825,9 @@ In the above setting we denote $\A$ by $\C^\wg$ and $h$ by $\hy_\C$. (This abuse
 \end{conv} 
 
 \begin{lem}\lb{payl}
-Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\al:I\to\A$ be a functor such that $\col(\al(X))$ exists in $\C'$ for all $X$ in $\C$. Then $\col\al$ exists in $\A$ and satisfies 
+Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\al:I\to\A$ be a functor such that $\col\al(X)$ exists in $\C'$ for all $X$ in $\C$. Then $\col\al$ exists in $\A$ and satisfies 
 $$
-(\col\al)(X)\iso\col(\al(X))
+(\col\al)(X)\iso\col\al(X)
 $$ 
 for all $X$ in $\C$. (There is a similar statement for projective limits.)
 \end{lem}
@@ -8384,7 +8427,7 @@ $$
 As $\theta$ is a monomorphism, Proposition~\ref{34i} p.~\pr{34i} implies that $\col\theta$ is also a monomorphism. Then the conclusion follows from the commutativity of the diagram 
 $$
 \begin{tikzcd}
-\col\DT\al(i)\ar{d}[swap]{\sim}\ar[tail]{rr}{\col\theta}&&\col(\al\ci\pp)\ar{d}{\sim}\\ 
+\col\DT\al(i)\ar{d}[swap]{\sim}\ar[tail]{rr}{\col\theta}&&\col\al\ci\pp\ar{d}{\sim}\\ 
 \al(i)\ar{rr}[swap]{p_i}&&\col\al.
 \end{tikzcd}
 $$
