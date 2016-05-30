@@ -275,6 +275,8 @@ P.~65, Exercise 2.7 (i): ``$\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\tm
 
 \nn$*$ P.~74, last four lines: $\al$ should be replaced with $\pp$.
 
+\nn$*$ P.~79, proof of Proposition 3.2.5: the word ``filtrant'' should be replaced with the word ``connected''.
+
 \nn$*$ P.~80, last display: a $\ds\ilim$ is missing.
 
 \nn$*$ P.~83, Statement of Proposition 3.3.7 (iv) and (v): $k$ might be replaced with $R$. 
@@ -3487,7 +3489,7 @@ Indeed, we obtain \qr{fyx'1} by replacing the setting \qr{241s} p.~\pr{241s} wit
 $$
 X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X' 
 $$ 
-in the isomorphism \qr{241} p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have five sets and four bijections 
+in the isomorphism \qr{241} p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have five sets and four bijections: 
 $$ 
 \Hom_{\C'}(F(\col\al),X')\iso\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y)
 $$
@@ -3501,19 +3503,30 @@ The first and last bijections follow from \qr{fyx'}, the second one is clear, an
 
 Let us denote these five sets and four bijections by 
 $$
-S_1\xr{f_1}S_2\xr{f_2}S_3\xr{f_3}S_4\xr{f_4}S_5.
+S_1\xr{f_1}S_2\xr{f_2}S_3\xr{f_3}S_4\xr{f_4}S_5,
 $$ 
-
-It remains to show that $f_4\ci f_3\ci f_2\ci f_1$ is the natural map 
+and let 
 $$
-\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F\ci\al,X').
+f:\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F\ci\al,X').
 $$ 
+be the natural map. It remains to show 
+\begin{equation}\lb{4321}
+f_4\ci f_3\ci f_2\ci f_1=f
+\end{equation} 
 
-To prove this we shall use the following abuse of notation: For any functor $\bt:J\to\A$ admitting an inductive limit, and for any $j$ in $J$, we denote by 
+%To prove this we shall use the following abuse of notation: For any functor $\bt:J\to\A$ admitting an inductive limit, and for any $j$ in $J$, we denote by $$q[j]:\bt(j)\to\col\bt$$ the coprojection. 
+
+Let $Y$ be in $\C$, let $F(Y)\to X'$ be a morphism in $\C'$, and let 
 $$
-q[j]:\bt(j)\to\col\bt
+p[F(Y)\to X']:\Hom_\C(\col\al,Y)\to\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y),
 $$ 
-the coprojection. 
+$$
+q[F(Y)\to X']:\lim\Hom_\C(\al,Y)\to\col_{(F(Y)\to X')\in\C_{X'}}\lim\Hom_\C(\al,Y),
+$$ 
+$$
+r[F(Y)\to X']:\Hom_\C(\al,Y)\to\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\al,Y)
+$$ 
+be the coprojections.
 
 We shall also use implicitly, not only the statements of the bijections \qr{fyx'1} and \qr{fyx'2}, but also their proofs. 
 
@@ -3522,17 +3535,18 @@ $$
 f_4f_3f_2f_1(F(\col\al)\to X')
 $$ 
 $$
-=f_4f_3f_2\left(q[F(\col\al)\to X']\left(\col\al\xr{\id}\col\al\right)\right)
+=f_4f_3f_2\left(p[F(\col\al)\to X']\left(\col\al\xr{\id}\col\al\right)\right)
 $$ 
 $$
 =f_4f_3\bigg(q[F(\col\al)\to X']\Big(\big(\al(i)\to\col\al\big)_i\Big)\bigg)
 $$ 
 $$
-=f_4\bigg(\Big(q[F(\col\al)\to X']\big(\al(i)\to\col\al\big)\Big)_i\bigg)
+=f_4\bigg(\Big(r[F(\col\al)\to X']\big(\al(i)\to\col\al\big)\Big)_i\bigg)
 $$ 
 $$
 =\Big(\big(F(\al(i))\to F(\col\al)\to X'\big)_i\Big).
 $$ 
+This proves \qr{4321}.
 \end{proof}  
 \end{s}
 
@@ -3583,6 +3597,26 @@ The maps $a,b,c$ and $d$ are bijective for the following reasons: obviously for 
 \begin{s}\lb{3315}
 P.~85, proof of Proposition 3.3.15. To prove that $\A\to\C$ is cofinal, one can apply Proposition~\ref{318i} p.~\pr{318i} with $J=\A,I=\C,L=\C',K=\SSS$. 
 \end{s}
+
+%
+
+\begin{s}
+P. 86, proof of Theorem 3.3.18 (b). The proof uses the following fact, whose proof is straightforward:
+
+Let $\al:I\tm J^{\op}\to\C$ be a functor. %and set $X_{ij}:=\al(i,j)$. 
+Assume that $\C$ admits inductive limits indexed by $I$ and projective limits indexed by $J^{\op}$. Then the morphism obtained by composing the canonical morphism 
+$$
+\col_{i\in I}\lim_{j\in J^{\op}}\al(i,j)\to\lim_{j\in J^{\op}}\col_{i\in I}\al(i,j)
+$$ 
+with the projection 
+$$
+\lim_{j\in J^{\op}}\col_{i\in I}\al(i,j)\to\col_{i\in I}\al(i,j)
+$$ 
+coincides with the morphism obtained by applying the functor $\col_{i\in I}$ to the projection 
+$$
+\lim_{j\in J^{\op}}\al(i,j)\to \al(i,j).
+$$ 
+\end{s} 
 
 %%%
 
