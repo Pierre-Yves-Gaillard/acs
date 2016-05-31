@@ -4322,6 +4322,40 @@ Corollary 5.2.10 p. 121 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9 
 P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\F$ is strictly generating,\index{strictly generating subcategory} then $\Ob(\F)$ is a system of generators''. See \S\ref{ffc} p.~\pr{ffc}.
 \end{s}
 
+%
+
+\begin{s}
+P. 123, proof of Theorem 5.3.4. The following fact is implicit in the proof: The map 
+$$
+f:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
+$$ 
+obtained by composing the chain of isomorphisms in the proof, coincides with $\ci\ee_G$. 
+
+To prove this, we shall define a map 
+$$
+g:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
+$$ 
+claim that $f=g=\ci\ee_G$, and leave it to the reader to prove the claim. 
+
+We define $g$ as follows: Taking into account the definitions of $\pp$ and $\psi$, we must define 
+$$
+g:\Hom_{\F^\wg}\left(\Hom_\C\left(\ \ ,\col_{X\to G}X\right),F\right)\to\Hom_{\F^\wg}(G,F),
+$$ 
+where $X\to G$ stands for $(X\to G)\in\F_G$. Let 
+$$
+\ld:\Hom_\C\left(\ \ ,\col_{X\to G}X\right)\to F
+$$ 
+be given. We must define $\mu:G\to F$. Letting $Y$ be in $\C$, we must define 
+$$
+\mu_Y:G(Y)\to F(Y).
+$$ 
+Letting $Y\to G$ be given, we must define $\mu_Y(Y\to G):Y\to F$. We do that by applying 
+$$
+\ld_Y:\Hom_\C\left(Y\ ,\ \col_{X\to G}X\right)\to F(Y)
+$$ 
+to the coprojection $Y\to\col_{X\to G}X$ attached to $Y\to G$. We leave it to the reader to check that this construction does define a morphism of functors from $G$ to $F$. 
+\end{s} 
+
 %%
 
 \sbs{Lemma 5.3.2 p.~122} 
