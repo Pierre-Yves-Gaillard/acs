@@ -2000,6 +2000,14 @@ P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is
 
 %
 
+\begin{s}\lb{sbbc}
+P. 47, Definition 2.2.6 (stated below as Definition~\ref{dsbc} p.~\pr{dsbc}), notion of stability by base change. We make an easy but useful observation. Let $I,J$ and $\C$ be three categories. 
+
+If $\C$ admits fiber products, and if inductive limits indexed by $I$ exist in $\C$ and are stable by base change, then $\C^J$ admits fiber products, and inductive limits indexed by $I$ exist in $\C^J$ and are stable by base change.
+\end{s} 
+
+%
+
 \begin{s}\lb{fpl}
 P.~50, Corollary 2.2.11. We also have:
 
@@ -4458,7 +4466,8 @@ the last isomorphism following from \qr{263c} p.~\pr{263c}.
 
 \sbs{Theorem 5.3.6 p.~124} 
 
-As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem. (Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.)
+%As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem. (
+Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.
 
 \begin{thm}[Theorem 5.3.6 p.~124]\lb{536} 
 Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
@@ -4514,24 +4523,28 @@ $$
 $$
 
 These steps imply the theorem: Indeed, we have, in the above setting, 
-%
 \begin{align*} 
-%
 \Hom_\C(X,Y)&\iso\Hom_\C\left(\col_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
-%
 &\iso\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
-%
 &\iso\lim_{A\in I}\Hom_{\F^\wg}\Big(\Coim\pp\xi(A),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
-%
 &\iso\Hom_{\F^\wg}\left(\col_{A\in I}\Coim\pp\xi(A),\pp(Y)\right)\\ \\ 
-%
 &\iso\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3'}\\ \\ 
-%
 &\iso\Hom_{\F^\wg}(\pp(X),\pp(Y))&\text{by Step 5.}
-%
 \end{align*} 
 
-It remains to prove Steps 3, 3', 4, 5 and 6. We refer to the book for Step 3. The proof of Step 3' is the same. (It is easy to see that small inductive limits in $\F^\wg$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}.) 
+It remains to prove Steps 3, 3', 4, 5 and 6. %We refer to the book for Step 3. The proof of Step 3' is the same.  
+
+\begin{proof}[Proof of Step 3]
+In Step (iii) of the proof of Theorem 5.3.6 p. 124 in the book, an isomorphism 
+$$
+\col_i\Coim z_i\xr\sim\Coim\left(\col_i\zeta(z_i)\to X\right)
+$$ 
+is constructed. It is easy but tedious to check that this isomorphism coincides with the natural morphism. 
+\end{proof} 
+
+\begin{proof}[Proof of Step 3'] 
+The statement of Step 3' is a generalization of the statement of Step 3, and it is not hard to generalize the proof of Step 3 to Step 3'. (By \S\ref{sbbc} p.~\pr{sbbc} small inductive limits in $\F^\wg$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}.) 
+\end{proof} 
 
 \begin{proof}[Proof of Step 4] 
 We have 
