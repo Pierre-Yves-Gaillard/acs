@@ -172,7 +172,7 @@ An important reference is
 
 Here are two useful links:
 
-\nn Schapira's Errata: \href{http://people.math.jussieu.fr/~schapira/books/Errata.pdf}{http://people.math.jussieu.fr/$\sim$schapira/books/Errata.pdf},
+\nn Schapira's Errata:\\ \href{https://webusers.imj-prg.fr/~pierre.schapira/books/Errata.pdf}{https://webusers.imj-prg.fr/$\sim$pierre.schapira/books/Errata.pdf}, 
 
 \nn nLab entry: \href{http://ncatlab.org/nlab/show/Categories+and+Sheaves}{http://ncatlab.org/nlab/show/Categories+and+Sheaves}. 
 
@@ -4253,7 +4253,7 @@ and the conclusion follows from the fact that $u$ is an epimorphism.
 \begin{s}
 P.~117, Definition 5.2.1 (definition of a system of generators). There is a comment about this in Pierre Schapira's Errata 
 
-\href{http://people.math.jussieu.fr/~schapira/books/Errata.pdf}{http://people.math.jussieu.fr/$\sim$schapira/books/Errata.pdf}.
+\href{https://webusers.imj-prg.fr/~pierre.schapira/books/Errata.pdf}{https://webusers.imj-prg.fr/$\sim$pierre.schapira/books/Errata.pdf}.
 
 As observed at the bottom of p.~121 of the book, the definition can be stated as follows:
 
@@ -4487,26 +4487,21 @@ Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 \nn Then $\F$ is strictly generating.
 \end{thm}
 
-\begin{proof} We may assume from the beginning that $\F$ is small.
+\begin{proof} % previous version
+% https://docs.google.com/document/d/1w-6neN0st96QuZpMjrMb-wHMEcPjQdrHK5MsjeXpSxc/edit
+We may assume from the beginning that $\F$ is small.
 
 \nn Step 1. By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
 
 \nn Step 2. By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
-\nn Step 3. Let us fix $X$ in $\C$, and let $\zeta:\C_X\to\C$ be the forgetful functor, so that an object of $\C_X$ consists of a morphism $z:\zeta(z)\to X$ in $\C$. Let $(z_i)_{i\in I}$ be a small filtrant inductive system in $\C_X$. We claim that the natural morphism
-$$
-\col_i\Coim z_i\to\Coim\left(\col_i\zeta(z_i)\to X\right)
-$$
+\nn Step 3. Let $A$ be in $\F^\wg$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wg)_A$. We claim that the natural morphism
+\begin{equation}\lb{colcoim}
+\col_i\Coim(B_i\to A)\to\Coim\left(\col_iB_i\to A\right)
+\end{equation}
 is an isomorphism.
-% old version: 
-% https://docs.google.com/document/d/1-bgnW0CaMksEslkcQPfmcPCVRyQHWSC4JscWC9YaZzA/edit
 
-\nn Step 3'. Let $A$ be in $\F^\wg$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wg)_A$. We claim 
-$$
-\col_i\Coim(B_i\to A)\xr{\sim}
-\Coim\left(\col_iB_i\to A\right).
-$$
-Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism 
+\nn Step 4. We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism 
 $$
 \Hom_\C(\Coim z,Y)\iso\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).
 $$ 
@@ -4528,22 +4523,66 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 &\iso\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
 &\iso\lim_{A\in I}\Hom_{\F^\wg}\Big(\Coim\pp\xi(A),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
 &\iso\Hom_{\F^\wg}\left(\col_{A\in I}\Coim\pp\xi(A),\pp(Y)\right)\\ \\ 
-&\iso\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3'}\\ \\ 
+&\iso\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3}\\ \\ 
 &\iso\Hom_{\F^\wg}(\pp(X),\pp(Y))&\text{by Step 5.}
 \end{align*} 
 
-It remains to prove Steps 3, 3', 4, 5 and 6. %We refer to the book for Step 3. The proof of Step 3' is the same.  
+It remains to prove Steps 3, 4, 5 and 6. %We refer to the book for Step 3. The proof of Step 3' is the same. 
 
-\begin{proof}[Proof of Step 3]
-In Step (iii) of the proof of Theorem 5.3.6 p. 124 in the book, an isomorphism 
+\begin{proof}[Proof of Step 3] 
+Set $B:=\col_iB_i$. 
+
+\begin{lem}\lb{bibj}
+The natural morphism $\col_iB_i\tm_AB_i\to B\tm_AB$ is an isomorphism. 
+\end{lem}
+
+In the diagrams used to prove Step~3, the undefined arrows are the obvious ones.
+
+\begin{proof}[Proof of Lemma \ref{bibj}]
+Consider the commutative diagrams 
+
+$$\begin{tikzcd}
+\ds\col_iB_i\tm_AB_i\ar[r,"a"]&\ds\col_{i,j}B_i\tm_AB_j\\ 
+B_i\tm_AB_i\ar[u]\ar[r,"\id"']&B_i\tm_AB_i,\ar[u]
+\end{tikzcd}$$ 
+
+$$\begin{tikzcd}
+\ds\col_{i,j}B_i\tm_AB_j\ar[r,"b"]&\ds\col_i\col_jB_i\tm_AB_j\ar[r,"c"]&\ds\col_iB_i\tm_AB\\ 
+&\ds\col_jB_i\tm_AB_j\ar[u]\ar[ur]\\ 
+B_i\tm_AB_j\ar[uu]\ar[r,"\id"']&B_i\tm_AB_j\ar[u]\ar[r]&B_i\tm_AB,\ar[uu]
+\end{tikzcd}$$ 
+
+$$\begin{tikzcd}
+\ds\col_iB_i\tm_AB\ar[r,"d"]&B\tm_AB\\ 
+B_i\tm_AB.\ar[u]\ar[ur]
+\end{tikzcd}$$ 
+
+\nn(Note that the last row of the first diagram coincides with the first row of the second diagram, and the last row of the second diagram coincides with the first row of the third diagram.) The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see \S\ref{sbbc} p.~\pr{sbbc}). This proves Lemma~\ref{bibj}.
+\end{proof}
+
+Taking the definition of $\Coim$ into account, we have 
 $$
-\col_i\Coim z_i\xr\sim\Coim\left(\col_i\zeta(z_i)\to X\right)
+\Coim(B_i\to A)=\Coker(B_i\tm_AB_i\parar B_i),
 $$ 
-is constructed. It is easy but tedious to check that this isomorphism coincides with the natural morphism. 
-\end{proof} 
-
-\begin{proof}[Proof of Step 3'] 
-The statement of Step 3' is a generalization of the statement of Step 3, and it is not hard to generalize the proof of Step 3 to Step 3'. (By \S\ref{sbbc} p.~\pr{sbbc} small inductive limits in $\F^\wg$ are stable by base change --- Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}.) 
+$$
+\Coker(B\tm_AB\parar B)=\Coim(B\to A).
+$$ 
+%Consider the diagrams 
+Moreover, there is an obvious commutative diagram
+$$
+\begin{tikzcd}
+\ds\col_i\Coker(B_i\tm_AB_i\parar B_i)\ar[r,"e"]&\ds\Coker(\col_i(B_i\tm_AB_i)\parar B)\\ 
+\Coker(B_i\tm_AB_i\parar B_i),\ar[u]\ar[r,"\id"']&\Coker(B_i\tm_AB_i\parar B_i),\ar[u]
+\end{tikzcd}
+$$ 
+where $e$ is an isomorphism, and Lemma \ref{bibj} yields a commutative diagram 
+$$
+\begin{tikzcd}
+\ds\Coker(\col_i(B_i\tm_AB_i)\parar B)\ar[r,"f"]&\ds\Coker(B\tm_AB\parar B)\\ 
+\Coker(B_i\tm_AB_i\parar B_i)\ar[u]\ar[r,"\id"']&\Coker(B_i\tm_AB_i\parar B_i),\ar[u]
+\end{tikzcd}
+$$ 
+where $f$ is an isomorphism. This implies that \qr{colcoim} is an isomorphism, completing the proof of Step~3. %(Note that the last row of the first diagram coincides with the first row of the second diagram.) 
 \end{proof} 
 
 \begin{proof}[Proof of Step 4] 
