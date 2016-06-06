@@ -4491,41 +4491,77 @@ Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 % https://docs.google.com/document/d/1w-6neN0st96QuZpMjrMb-wHMEcPjQdrHK5MsjeXpSxc/edit
 We may assume from the beginning that $\F$ is small.
 
-\nn \textbf{Step 1.} By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
+\nn\textbf{Step 1.} By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
 
-\nn \textbf{Step 2.} By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
+\nn\textbf{Step 2.} By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
-\nn \textbf{Step 3.} Let $A$ be in $\F^\wg$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wg)_A$. We claim that the natural morphism
+\nn\textbf{Step 3.} Let $A$ be in $\F^\wg$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wg)_A$. We claim that the natural morphism
 \begin{equation}\lb{colcoim}
 \col_i\Coim(B_i\to A)\to\Coim\left(\col_iB_i\to A\right)
 \end{equation}
 is an isomorphism.
 
-\nn \textbf{Step 4.} We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism 
-$$
-\Hom_\C(\Coim z,Y)\iso\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).
-$$ 
+Let $X$ and $Y$ be in $\C$.
 
-\nn \textbf{Step 5.} Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
+\nn\textbf{Step 4.} Let $z:Z\to X$ be in $\F_X$. Then the natural map 
+\begin{equation}\lb{czy}
+\Hom_\C(Z,Y)\to\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big),
+\end{equation} 
+which is bijective by the Yoneda Lemma, induces a bijection 
+\begin{equation}\lb{cczy}
+\Hom_\C(\Coim z,Y)\xr\sim\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y))
+\end{equation} 
+in the following sense:
+
+There are natural isomorphisms 
+$$%\begin{equation}\lb{czy}
+\Hom_\C(\Coim z,Y)\iso\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big),
+$$%\end{equation} 
+%$$\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y))$$ 
+%\begin{equation}\lb{fczy}
+%%\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y))
+%\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big).
+%\end{equation}
+%\begin{equation}\lb{fczy}\Hom_{\F^\wg}(\Coim z',Y')\iso\Ker\Big(\Hom_{\F^\wg}\big(Z',Y'\big)\rightrightarrows\Hom_{\F^\wg}\big(Z'\tm_{X'}Z',Y'\big)\Big).\end{equation} 
+$$
+\Hom_{\F^\wg}(\Coim\pp z,\pp Y)\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp Z,\pp Y\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp Z\tm_{\pp X}\pp Z,\pp Y\big)\Big).
+$$ 
+(We have omitted some parenthesis to save space.) Moreover, for any $Z\to Y$ in $\Hom_\C(Z,Y)$, the morphism $Z\to Y$ is in 
+$$
+\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big)
+$$ 
+if and only if its image $\pp(Z)\to\pp(Y)$ is in 
+$$
+\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big).
+$$ 
+%where we have written $z',Z',X',Y'$ for $\pp(z),\pp(Z),\pp(X),\pp(Y)$ to save space.
+%We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism $$\Hom_\C(\Coim z,Y)\iso\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).$$ 
+
+[To make our argument work, it is not enough that the natural bijection \qr{cczy} exists; the fact that it is induced by \qr{czy} will be crucial.]
+
+\nn\textbf{Step 5.} Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
 $$
 \col_{A\in I}\pp\zeta\xi(A)\to\pp(X) 
 $$ 
 is an epimorphism.
 
-\nn \textbf{Step 6.} We claim that there is a natural isomorphism 
+\nn\textbf{Step 6.} We claim that the natural morphism %re is a natural isomorphism 
 $$
-\col_{A\in I}\Coim\xi(A)\iso X. 
-$$
+\col_{A\in I}\Coim\xi(A)\to X
+$$ 
+is an isomorphism.
 
 These steps imply the theorem: Indeed, we have, in the above setting, 
 \begin{align*} 
-\Hom_\C(X,Y)&\iso\Hom_\C\left(\col_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
-&\iso\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
-&\iso\lim_{A\in I}\Hom_{\F^\wg}\Big(\Coim\pp\xi(A),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
-&\iso\Hom_{\F^\wg}\left(\col_{A\in I}\Coim\pp\xi(A),\pp(Y)\right)\\ \\ 
-&\iso\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3}\\ \\ 
-&\iso\Hom_{\F^\wg}(\pp(X),\pp(Y))&\text{by Step 5.}
+\Hom_\C(X,Y)&\xr\sim\Hom_\C\left(\col_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
+&\xr\sim\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
+&\xr\sim\lim_{A\in I}\Hom_{\F^\wg}\Big(\Coim\pp\xi(A),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
+&\xr\sim\Hom_{\F^\wg}\left(\col_{A\in I}\Coim\pp\xi(A),\pp(Y)\right)\\ \\ 
+&\xr\sim\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3}\\ \\ 
+&\xr\sim\Hom_{\F^\wg}(\pp(X),\pp(Y))&\text{by Step 5,}
 \end{align*} 
+and it is not hard to verify that the composition of these six bijections %coincides with the natural map $\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y))$. 
+and the natural map $\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y))$ are isomorphic in $\Mor(\Set)$. 
 
 It remains to prove Steps 3, 4, 5 and 6. %We refer to the book for Step 3. The proof of Step 3' is the same. 
 
@@ -4588,35 +4624,27 @@ where $f$ is an isomorphism. This implies that \qr{colcoim} is an isomorphism, c
 \begin{proof}[Proof of Step 4] 
 We have 
 $$
-\Hom_\C(\Coim z,Y)\iso\Hom_\C\big(\Coker(Z\tm_XZ\rightrightarrows Z),Y\big)
+\Hom_\C(\Coim z,Y)=\Hom_\C\big(\Coker(Z\tm_XZ\rightrightarrows Z),Y\big)
 $$
 $$
 \iso\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big),
 $$ 
-and also 
+and similarly 
+$$
+\Hom_{\F^\wg}(\Coim\pp z,\pp Y)\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp Z,\pp Y\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp Z\tm_{\pp X}\pp Z,\pp Y\big)\Big).
+$$ 
+The natural map 
 $$
 \Hom_\C(Z,Y)\iso\Hom_{\F^\wg}(\pp(Z),\pp(Y))
 $$ 
-by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
+is bijective by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
 $$
 \Hom_\C(Z\tm_XZ,Y)\to\Hom_{\F^\wg}\big(\pp(Z\tm_XZ),\pp(Y)\big)
 $$
 $$
 \iso\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big).
 $$ 
-is injective. This yields 
-$$
-\Hom_\C(\Coim z,Y)
-$$
-$$
-\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big)
-$$
-$$
-\iso\Hom_{\F^\wg}\Big(\Coker\big(\pp(Z)\tm_{\pp(X)}\pp(Z)\rightrightarrows\pp(Z)\big),\pp(Y)\Big)
-$$
-$$
-\iso\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).
-$$ 
+is injective. This implies our claims. % yields $$\Hom_\C(\Coim z,Y)$$ $$\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big)$$ $$\iso\Hom_{\F^\wg}\Big(\Coker\big(\pp(Z)\tm_{\pp(X)}\pp(Z)\rightrightarrows\pp(Z)\big),\pp(Y)\Big)$$ $$=\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).$$ 
 \end{proof}
 
 \begin{proof}[Proof of Step 5]
