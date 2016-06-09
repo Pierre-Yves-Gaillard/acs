@@ -2922,29 +2922,17 @@ $$X:=h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\Big(\ld(B\to A)\Big),$$
 \nn we get %the following chain of isomorphisms, where the isomorphism marked with the symbol $(\star)$ results from \qr{leq} and Proposition~\ref{271}:
 
 \begin{align*}
-%
-X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\
-%
-&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h(\C)(U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\
-%
-&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)(U)\to A\Big)\bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\
-%
-&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)_A(U\to A)\Big)\bigg)\\
-%
-&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)&\text{by \qr{lcom}}\\
-%
-&\iso\col_{(U\to B)\in\C_B}\big(F\ci j(\C_A)\big)(U\to A)&\text{by Prop.~\ref{271}}\\
-%
-&\iso\col_{(U\to B)\in\C_B}F(U)\\
-%
+X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\ 
+&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h(\C)(U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\ 
+&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)(U)\to A\Big)\bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\ 
+&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)_A(U\to A)\Big)\bigg)\\ 
+&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)&\text{by \qr{lcom}}\\ 
+&\iso\col_{(U\to B)\in\C_B}\big(F\ci j(\C_A)\big)(U\to A)&\text{by Prop.~\ref{271}}\\ 
+&\iso\col_{(U\to B)\in\C_B}F(U)\\ 
 %&\iso\col_{(U\to B)\in\C_B}h(\C)^\dg(F)\Big(h(\C)(U)\Big)&\text{by Prop.~\ref{271}}\\
-%
-%&\iso h(\C)^\dg(F)\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)&\text{by Prop.~\ref{271}}\\
-%
-%&\iso\Bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\\
-%
-&\iso\bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\bigg)\left(B\to A\right)&\text{by \qr{hfa}.}
-%
+%&\iso h(\C)^\dg(F)\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)&\text{by Prop.~\ref{271}}\\ 
+%&\iso\Bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\\ 
+&\iso\bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\bigg)\left(B\to A\right)&\text{by \qr{hfa}.} 
 \end{align*}
 \end{proof}
 
@@ -4466,7 +4454,9 @@ the last isomorphism following from \qr{263c} p.~\pr{263c}.
 
 \sbs{Theorem 5.3.6 p.~124} 
 
-%As an exercise, I rewrite parts of the proof. The difference between the rewriting and the original proof is very slight. Here is the statement of the theorem. (
+% previous version
+% https://docs.google.com/document/d/1PDpFEz1ajTYw07OCkt00ZlY8ZX3xSNHy8nCedJpGQT4/edit
+
 Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.
 
 \begin{thm}[Theorem 5.3.6 p.~124]\lb{536} 
@@ -4495,15 +4485,15 @@ We may assume from the beginning that $\F$ is small.
 
 \nn\textbf{Step 2.} By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
-\nn\textbf{Step 3.} Let $A$ be in $\F^\wg$, and let $(B_i\to A)_{i\in I}$ be a small filtrant inductive system in $(\F^\wg)_A$. We claim that the natural morphism
+\nn\textbf{Step 3.} Let $C$ be in $\F^\wg$, and let $(B_i\to C)_{i\in I}$ be a small filtrant inductive system in $(\F^\wg)_C$. We claim that the natural morphism
 \begin{equation}\lb{colcoim}
-\col_i\Coim(B_i\to A)\to\Coim\left(\col_iB_i\to A\right)
+\col_i\Coim(B_i\to C)\to\Coim\left(\col_iB_i\to C\right)
 \end{equation}
 is an isomorphism.
 
 Let $X$ and $Y$ be in $\C$.
 
-\nn\textbf{Step 4.} If $z:Z\to X$ be in $\F_X$, then the natural map 
+\nn\textbf{Step 4.} If $z:Z\to X$ is in $\F_X$, then the natural map 
 \begin{equation}\lb{czy}
 \Hom_\C(Z,Y)\to\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big),
 \end{equation} 
@@ -4514,15 +4504,9 @@ which is bijective by the Yoneda Lemma, induces a bijection
 in the following sense:
 
 There are natural isomorphisms 
-$$%\begin{equation}\lb{czy}
+$$
 \Hom_\C(\Coim z,Y)\iso\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big),
-$$%\end{equation} 
-%$$\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y))$$ 
-%\begin{equation}\lb{fczy}
-%%\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y))
-%\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big).
-%\end{equation}
-%\begin{equation}\lb{fczy}\Hom_{\F^\wg}(\Coim z',Y')\iso\Ker\Big(\Hom_{\F^\wg}\big(Z',Y'\big)\rightrightarrows\Hom_{\F^\wg}\big(Z'\tm_{X'}Z',Y'\big)\Big).\end{equation} 
+$$
 $$
 \Hom_{\F^\wg}(\Coim\pp z,\pp Y)\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp Z,\pp Y\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp Z\tm_{\pp X}\pp Z,\pp Y\big)\Big).
 $$ 
@@ -4534,42 +4518,81 @@ if and only if its image $\pp(Z)\to\pp(Y)$ is in
 $$
 \Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big).
 $$ 
-%where we have written $z',Z',X',Y'$ for $\pp(z),\pp(Z),\pp(X),\pp(Y)$ to save space.
-%We claim that there is, for all $z:Z\to X$ in $\F_X$ and all $Y$ in $\C$, a natural isomorphism $$\Hom_\C(\Coim z,Y)\iso\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).$$ 
 
-[To make our argument work, it is not enough that the natural bijection \qr{cczy} exists; the fact that it is induced by \qr{czy} will be crucial.]
+[To make our argument work, it is not enough that the natural bijection \qr{cczy} exists; the fact that it is induced by \qr{czy} will be crucial.] 
 
-\nn\textbf{Step 5.} Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. Let $\xi:I\to\F_X$ be the functor defined by letting $\xi(A)$ be the natural morphism $\bigsqcup_{z\in A}\zeta(z)\to X$. We claim that the natural morphism 
+Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. For any $A$ in $I$ set $Z_A:=\bigsqcup_{a\in A}\zeta(a)$, where $\zeta:\C_X\to\C$ is the forgetful functor.
+
+\nn\textbf{Step 5.} We claim that the natural morphism 
 $$
-\col_{A\in I}\pp\zeta\xi(A)\to\pp(X) 
+\col_{A\in I}\pp(Z_A)\to\pp(X) 
 $$ 
 is an epimorphism.
 
-\nn\textbf{Step 6.} We claim that the natural morphism %re is a natural isomorphism 
+\nn\textbf{Step 6.} We claim that the natural morphism 
 $$
-\col_{A\in I}\Coim\xi(A)\to X
+\col_{A\in I}\Coim(Z_A\to X)\to X
 $$ 
 is an isomorphism.
 
 These steps imply the theorem: Indeed, we have, in the above setting, 
 \begin{align*} 
-\Hom_\C(X,Y)&\xr\sim\Hom_\C\left(\col_{A\in I}\Coim\xi(A),Y\right)&\text{by Step 6}\\ \\ 
-&\xr\sim\lim_{A\in I}\Hom_\C(\Coim\xi(A),Y)\\ \\ 
-&\xr\sim\lim_{A\in I}\Hom_{\F^\wg}\Big(\Coim\pp\xi(A),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
-&\xr\sim\Hom_{\F^\wg}\left(\col_{A\in I}\Coim\pp\xi(A),\pp(Y)\right)\\ \\ 
-&\xr\sim\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp\zeta\xi(A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3}\\ \\ 
-&\xr\sim\Hom_{\F^\wg}(\pp(X),\pp(Y))&\text{by Step 5,}
+\Hom_\C(X,Y)&\xr\sim\Hom_\C\left(\col_{A\in I}\Coim(Z_A\to X),Y\right)&\text{by Step 6}\\ \\ 
+&\xr\sim\lim_{A\in I}\Hom_\C(\Coim(Z_A\to X),Y)\\ \\ 
+&\xr\sim\lim_{A\in I}\Hom_{\F^\wg}\Big(\Coim(\pp(Z_A)\to\pp(X)),\pp(Y)\Big)&\text{by Step 4}\\ \\ 
+&\xr\sim\Hom_{\F^\wg}\left(\col_{A\in I}\Coim(\pp(Z_A)\to\pp(X)),\pp(Y)\right)\\ \\ 
+&\xr\sim\Hom_{\F^\wg}\left(\Coim\left(\col_{A\in I}\pp(Z_A)\to\pp(X)\right),\pp(Y)\right)&\text{by Step 3}\\ \\ 
+&\xr\sim\Hom_{\F^\wg}(\pp(X),\pp(Y))&\text{by Step 5.}
 \end{align*} 
-and it is not hard to verify that the composition of these six bijections %coincides with the natural map $\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y))$. 
-and the natural map $\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y))$ are isomorphic in $\Mor(\Set)$. 
 
-It remains to prove Steps 3, 4, 5 and 6. %We refer to the book for Step 3. The proof of Step 3' is the same. 
+\begin{lem}\lb{sixbij} 
+Taking Steps 1 to 6 for granted, the composition of the six above bijections %is isomorphic in $\Mor(\Set)$ to
+coincides with the natural map 
+$$
+\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y)).
+$$ 
+\end{lem}
+
+\begin{proof}
+Let us denote these six bijections by $f_1,\dots,f_6$; let $u:X\to Y$ be in $\Hom_\C(X,Y)$; and let us compute successively $f_1u,f_2f_1u,\dots,f_6\dots f_1u$. We have 
+$$
+f_1u=\left(\col_{A\in I}\Coim(Z_A\to X)\xr\sim X\xr uY\right)\in\Hom_\C\left(\col_{A\in I}\Coim(Z_A\to X),Y\right).
+$$ 
+Then $f_2f_1u$ is the obvious family 
+\begin{equation}\lb{za1}
+(\Coim(Z_A\to X)\to X\xr uY)_A\in\lim_{A\in I}\Hom_\C(\Coim(Z_A\to X),Y).
+\end{equation}
+
+Let us compute $f_3f_2f_1u$ thanks to Step~4. Firstly, to the family \qr{za1} we attach a certain family $(Z_A\to Y)_A$, each of whose member $Z_A\to Y$ is in 
+$$
+\Ker\big(\Hom_\C(Z_A,Y)\rightrightarrows\Hom_\C(Z_A\tm_XZ_A,Y)\big).
+$$ 
+Secondly, applying the functor $\pp$ to the family $(Z_A\to Y)_A$ we get a certain family $(\pp(Z_A)\to\pp(Y))_A$, each of whose member $\pp(Z_A)\to\pp(Y)$ is in 
+$$
+\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z_A),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z_A)\tm_{\pp(X)}\pp(Z_A),\pp(Y)\big)\Big).
+$$ 
+Thirdly, to the family $(\pp(Z_A)\to\pp(Y))_A$ we attach a family of morphisms 
+\begin{equation}\lb{za2}
+\Coim(\pp(Z_A)\to\pp(X))\to\pp(X)\xr{\pp(u)}\pp(Y),
+\end{equation} 
+family which makes up the sought-for morphism $f_3f_2f_1u$. The morphisms \qr{za2} give rise to a morphism 
+\begin{equation}\lb{za3}
+\col_{A\in I}\Coim(\pp(Z_A)\to\pp(X))\to\pp(X)\xr{\pp(u)}\pp(Y),
+\end{equation} 
+morphism equals to $f_4f_3f_2f_1u$. The morphism \qr{za3} induces a morphism 
+$$
+\Coim\left(\col_{A\in I}\pp(Z_A)\to\pp(X)\right)\to\pp(X)\xr{\pp(u)}\pp(Y),
+$$ 
+morphism equals to $f_5f_4f_3f_2f_1u$. This shows that $f_6f_5f_4f_3f_2f_1u$ is indeed equal to $\pp(X)\xr{\pp(u)}\pp(Y)$. 
+\end{proof}
+
+It remains to prove Steps 3, 4, 5 and 6. 
 
 \begin{proof}[Proof of Step 3] 
 Set $B:=\col_iB_i$. 
 
 \begin{lem}\lb{bibj}
-The natural morphism $\col_iB_i\tm_AB_i\to B\tm_AB$ is an isomorphism. 
+The natural morphism $\col_iB_i\tm_CB_i\to B\tm_CB$ is an isomorphism. 
 \end{lem}
 
 In the diagrams used to prove Step~3, the undefined arrows are the obvious ones.
@@ -4578,19 +4601,19 @@ In the diagrams used to prove Step~3, the undefined arrows are the obvious ones.
 Consider the commutative diagrams 
 
 $$\begin{tikzcd}
-\ds\col_iB_i\tm_AB_i\ar[r,"a"]&\ds\col_{i,j}B_i\tm_AB_j\\ 
-B_i\tm_AB_i\ar[u]\ar[r,"\id"']&B_i\tm_AB_i,\ar[u]
+\ds\col_iB_i\tm_CB_i\ar[r,"a"]&\ds\col_{i,j}B_i\tm_CB_j\\ 
+B_i\tm_CB_i\ar[u]\ar[r,"\id"']&B_i\tm_CB_i,\ar[u]
 \end{tikzcd}$$ 
 
 $$\begin{tikzcd}
-\ds\col_{i,j}B_i\tm_AB_j\ar[r,"b"]&\ds\col_i\col_jB_i\tm_AB_j\ar[r,"c"]&\ds\col_iB_i\tm_AB\\ 
-&\ds\col_jB_i\tm_AB_j\ar[u]\ar[ur]\\ 
-B_i\tm_AB_j\ar[uu]\ar[r,"\id"']&B_i\tm_AB_j\ar[u]\ar[r]&B_i\tm_AB,\ar[uu]
+\ds\col_{i,j}B_i\tm_CB_j\ar[r,"b"]&\ds\col_i\col_jB_i\tm_CB_j\ar[r,"c"]&\ds\col_iB_i\tm_CB\\ 
+&\ds\col_jB_i\tm_CB_j\ar[u]\ar[ur]\\ 
+B_i\tm_CB_j\ar[uu]\ar[r,"\id"']&B_i\tm_CB_j\ar[u]\ar[r]&B_i\tm_CB,\ar[uu]
 \end{tikzcd}$$ 
 
 $$\begin{tikzcd}
-\ds\col_iB_i\tm_AB\ar[r,"d"]&B\tm_AB\\ 
-B_i\tm_AB.\ar[u]\ar[ur]
+\ds\col_iB_i\tm_CB\ar[r,"d"]&B\tm_CB\\ 
+B_i\tm_CB.\ar[u]\ar[ur]
 \end{tikzcd}$$ 
 
 \nn(Note that the last row of the first diagram coincides with the first row of the second diagram, and the last row of the second diagram coincides with the first row of the third diagram.) The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see \S\ref{sbbc} p.~\pr{sbbc}). This proves Lemma~\ref{bibj}.
@@ -4598,27 +4621,26 @@ B_i\tm_AB.\ar[u]\ar[ur]
 
 Taking the definition of $\Coim$ into account, we have 
 $$
-\Coim(B_i\to A)=\Coker(B_i\tm_AB_i\parar B_i),
+\Coim(B_i\to C)=\Coker(B_i\tm_CB_i\parar B_i),
 $$ 
 $$
-\Coker(B\tm_AB\parar B)=\Coim(B\to A).
+\Coker(B\tm_CB\parar B)=\Coim(B\to C).
 $$ 
-%Consider the diagrams 
 Moreover, there is an obvious commutative diagram
 $$
 \begin{tikzcd}
-\ds\col_i\Coker(B_i\tm_AB_i\parar B_i)\ar[r,"e"]&\ds\Coker(\col_i(B_i\tm_AB_i)\parar B)\\ 
-\Coker(B_i\tm_AB_i\parar B_i),\ar[u]\ar[r,"\id"']&\Coker(B_i\tm_AB_i\parar B_i),\ar[u]
+\ds\col_i\Coker(B_i\tm_CB_i\parar B_i)\ar[r,"e"]&\ds\Coker(\col_i(B_i\tm_CB_i)\parar B)\\ 
+\Coker(B_i\tm_CB_i\parar B_i),\ar[u]\ar[r,"\id"']&\Coker(B_i\tm_CB_i\parar B_i),\ar[u]
 \end{tikzcd}
 $$ 
 where $e$ is an isomorphism, and Lemma \ref{bibj} yields a commutative diagram 
 $$
 \begin{tikzcd}
-\ds\Coker(\col_i(B_i\tm_AB_i)\parar B)\ar[r,"f"]&\ds\Coker(B\tm_AB\parar B)\\ 
-\Coker(B_i\tm_AB_i\parar B_i)\ar[u]\ar[r,"\id"']&\Coker(B_i\tm_AB_i\parar B_i),\ar[u]
+\ds\Coker(\col_i(B_i\tm_CB_i)\parar B)\ar[r,"f"]&\ds\Coker(B\tm_CB\parar B)\\ 
+\Coker(B_i\tm_CB_i\parar B_i)\ar[u]\ar[r,"\id"']&\Coker(B_i\tm_CB_i\parar B_i),\ar[u]
 \end{tikzcd}
 $$ 
-where $f$ is an isomorphism. This implies that \qr{colcoim} is an isomorphism, completing the proof of Step~3. %(Note that the last row of the first diagram coincides with the first row of the second diagram.) 
+where $f$ is an isomorphism. This implies that \qr{colcoim} is an isomorphism, completing the proof of Step~3. 
 \end{proof} 
 
 \begin{proof}[Proof of Step 4] 
@@ -4644,17 +4666,17 @@ $$
 $$
 \iso\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big).
 $$ 
-is injective. This implies our claims. % yields $$\Hom_\C(\Coim z,Y)$$ $$\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big)$$ $$\iso\Hom_{\F^\wg}\Big(\Coker\big(\pp(Z)\tm_{\pp(X)}\pp(Z)\rightrightarrows\pp(Z)\big),\pp(Y)\Big)$$ $$=\Hom_{\F^\wg}(\Coim\pp(z),\pp(Y)).$$ 
+is injective. This implies our claims. 
 \end{proof}
 
 \begin{proof}[Proof of Step 5]
 Let $Z$ be in $\F$. We must show that the natural map 
 $$
-\col_{A\in I}\ (\pp\zeta\xi(A))(Z)\to\pp(X)(Z):=\Hom_\C(Z,X) 
+\col_{A\in I}\ \pp(Z_A)(Z)\to\pp(X)(Z):=\Hom_\C(Z,X) 
 $$
 is surjective. Let $z$ be in $\Hom_\C(Z,X)$. It suffices to check that $z$ is in the image of the natural map 
 $$
-(\pp\zeta\xi(\{z\}))(Z)=\Hom_\C(Z,Z)\xr{z\ci}\Hom_\C(Z,X),
+\pp(Z_{\{z\}})(Z)=\Hom_\C(Z,Z)\xr{z\ci}\Hom_\C(Z,X),
 $$
 which is obvious. 
 \end{proof}
@@ -4662,23 +4684,19 @@ which is obvious.
 \begin{proof}[Proof of Step 6] 
 As Step 3 implies 
 $$
-\col_{A\in I}\Coim\xi(A)\iso\Coim\left(\col_{A\in I}\zeta\xi(A)\to X\right),
+\col_{A\in I}\Coim(Z_A\to X)\iso\Coim\left(\col_{A\in I}Z_A\to X\right),
 $$ 
 it suffices to prove 
-%
 \begin{equation}\lb{step6a}
-\Coim\left(\col_{A\in I}\zeta\xi(A)\to X\right)\iso X.
-\end{equation}
-% 
+\Coim\left(\col_{A\in I}Z_A\to X\right)\iso X.
+\end{equation} 
 Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\then$(b), p.~115 of the book to check that 
-%
 \begin{equation}\lb{step6b}
-\col_{A\in I}\zeta\xi(A)\to X
-\end{equation}
-% 
+\col_{A\in I}Z_A\to X
+\end{equation} 
 is an epimorphism. Let 
 $$
-\col_{A\in I}\pp\zeta\xi(A)\xr{b}\pp\left(\col_{A\in I}\zeta\xi(A)\right)\xr{a}\pp(X)
+\col_{A\in I}\pp(Z_A)\xr{b}\pp\left(\col_{A\in I}Z_A\right)\xr{a}\pp(X)
 $$
 be the natural morphisms. As $a\ci b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \qr{step6b} is also an epimorphism. 
 \end{proof}
