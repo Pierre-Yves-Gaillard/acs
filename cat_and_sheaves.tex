@@ -1458,14 +1458,19 @@ Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe 
 \sbs{Brief comments}
 
 \begin{s}\lb{sv} 
-We shall spell out two versions of a certain statement about the following setting: $\al:I\to\C$ is a functor and $Z$ is an object of $\C$. The first version will be short, but somewhat incomplete, whereas the second version will be much longer, but more precise.
+We shall spell out two wordings of a certain statement about the following setting: $\al:I\to\C$ is a functor and $Z$ is an object of $\C$. %The first wording will be short, but somewhat incomplete, whereas the second wording will be much longer, but more precise.
 
-\nn Short version: If $\col$ exists in $\C$, then we have 
+\nn First wording: Assume that $\col$ exists in $\C$ and, for each $i$ in $I$, let $p_i:\al(i)\to\col\al$ be the corresponding coprojection. Then the map 
+$$
+\Hom_\C(\col\al,Z)\to\prod_{i\in I}\Hom_\C(\al(i),Z),\quad f\mt(f\ci p_i)_{i\in I}
+$$ 
+induces a bijection
 $$
 \Hom_\C(\col\al,Z)\xr\sim\lim\Hom_\C(\al,Z).
-$$
+$$ 
+The proof is left to the reader.
 
-\nn Long version: Let $X$ be an object of $\C$ and $p:\al\to\DT X$ a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
+\nn Second wording: Let $X$ be an object of $\C$ and $p:\al\to\DT X$ a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
 \begin{equation}\lb{xp}
 \begin{tikzcd}
 \al\ar[r,"p"]\ar[dr,"\ld"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
@@ -4546,11 +4551,7 @@ These steps imply the theorem: Indeed, we have, in the above setting,
 \end{align*} 
 
 \begin{lem}\lb{sixbij} 
-Taking Steps 1 to 6 for granted, the composition of the six above bijections %is isomorphic in $\Mor(\Set)$ to
-coincides with the natural map 
-$$
-\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y)).
-$$ 
+Taking Steps 1 to 6 for granted, the composition of the six above bijections coincides with the natural map $\Hom_\C(X,Y)\to\Hom_{\F^\wg}(\pp(X),\pp(Y))$.  
 \end{lem}
 
 \begin{proof}
