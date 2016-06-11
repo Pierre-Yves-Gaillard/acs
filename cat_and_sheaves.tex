@@ -1584,7 +1584,7 @@ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coproject
 \begin{s} 
 P.~39, Proposition 2.1.7. We want to find a setting where the isomorphism 
 $$
-\col_{i,j}\al(i,j)\iso\col_j\col_i\al(i,j)
+\col_{i,j}\al(i,j)\iso\col_i\col_j\al(i,j)
 $$ 
 makes sense and is true.
 
@@ -1699,15 +1699,8 @@ $$
 in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 
-%An important particular case is when $\C$ is $\A$, $G$ is $\id_\A$ and $Z=R(Y)$, where $R:\B\to\A$ is right adjoint to $F$. 
-
-%We give two proofs. The first proof is short and written in a traditional way. The second proof is much longer. Is the first proof rigorous enough? It is interesting (I think) to meditate a little bit on this question.
-
-%\begin{proof}[First proof] 
-%We have for any functor $\al:I\to\A$ and any object $Y$ in $\B$ $$ \Hom_\B\left(F\left(\col\al\right),Y\right)\iso\Hom_\C\left(G\left(\col\al\right),Z\right)\xr\sim\Hom_\C\left(\col G\ci\al,Z\right)$$ $$\xr\sim\lim\ \Hom_\C(G(\al),Z)\iso\lim\ \Hom_\B(F(\al),Y)\xleftarrow\sim\Hom_\B(\col F\ci\al,Y),$$ and the conclusion follows from Proposition~\ref{yp} p.~\pr{yp}.\end{proof}
-
-\begin{proof}%[Second proof] 
-Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$, let $p:\al\to\DT\col\al$ be the coprojection, and let $Y$ be in $\B$. Consider the self-explanatory 
+\begin{proof} 
+Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$ and let $p:\al\to\DT\col\al$ be the coprojection. Consider the self-explanatory 
 commutative diagrams 
 \begin{equation}\lb{faq}
 \begin{tikzcd}
@@ -1722,7 +1715,7 @@ G\ci\al\ar[r,"r"]\ar[dr,"G(p)"']&\DT\col G\ci\al\ar[d,"\DT g"]&\col G\ci\al\ar[d
 &\DT G(\col\al)&G(\col\al),
 \end{tikzcd}
 $$ 
-where $q$ and $r$ are the coprojections. Note that $g$ is an isomorphism by assumption. Our goal is to prove that $f$ is an isomorphism too. It suffices to show that 
+where $q$ and $r$ are the coprojections. Note that $g$ is an isomorphism by assumption. Our goal is to prove that $f$ is an isomorphism too. Let $Y$ be in $\B$. It suffices to show that 
 $$
 \Hom_\B(f,Y):\Hom_\B(F(\col\al),Y)\to\Hom_\B(\col F\ci\al,Y)
 $$ 
@@ -1746,15 +1739,14 @@ making the diagram
 \DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(F(p),Y)}\ar[d,"\sim","\DT\theta_{\col\al}"']&&&\Hom_\B(F\ci\al,Y)\ar[d,"\theta_\al","\sim"']\\ 
 \DT\Hom_\C(G(\col\al),Z)\ar{rrr}{\Hom_\C(r,Z)}\ar{d}{\sim}[swap]{\DT\Hom_\C(g,Z)}&&&\Hom_\C(G\ci\al,Z)\ar[d,equal]\\ 
 \DT\Hom_\C(\col G\ci\al,Y)\ar{rrr}{\Hom_\C(G(p),Z)}\ar[d,"\DT h"']&&&\Hom_\C(G\ci\al,Z)\\ 
-\DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
+\DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y)\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 \end{equation} 
 commute. Moreover $h$ is an isomorphism because $\Hom_\C(G(p),Z)$ is a projection. Define the isomorphism 
 $$
 k:\Hom_\B(F(\col\al),Y)\to\Hom_\B(\col F\ci\al,Y)
 $$ 
-by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\B(q,Y)$ %$\Hom_\C(G(p),Z)$ 
-is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
+by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\B(q,Y)$ is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
 \end{proof}
 
 \begin{cor}[Proposition 2.1.10 p.~40]\lb{2.1.10c}
