@@ -3042,8 +3042,8 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 
 \nn where 
 (a) follows from \qr{prepa4}; 
-(b) follows from Proposition~\ref{271} and \qr{leq};  
-(c) follows from Lemma~\ref{cc}; 
+(b) follows from Proposition~\ref{271} p.~\pr{271} and \qr{leq} p.~\pr{leq};  
+(c) follows from Lemma~\ref{cc} p.~\pr{cc}; 
 (d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pr{dsbc}); and 
 (e) follows from \qr{263a} p.~\pr{263a}.
 \end{proof}
@@ -3073,16 +3073,13 @@ $$
 $$ 
 quasi-commutes. 
 
-%\begin{prop}\lb{yf} 
-%Let $\U\in\V$ be universes, let $\A$ be the category of $\U$-small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}), let $\B$ be the category whose objects are the $\V$-small $\U$-categories (see Definition~\ref{myucat} p.~\pr{myucat}) and whose morphisms are the isomorphism classes of functors. Then there is a functor $\Phi:\A\to\B$ satisfying $\Phi(\C)=\C^\wg_\U$ and $\Phi(F)=\widehat F$, and there is a morphism of functors $\theta$ from the ``inclusion'' $\A\to\B$ to $\Phi$ satisfying $\theta_\C=\hy_\C$ for all $\C$ in $\A$. 
-%\end{prop}
-
 \begin{rk}\lb{cof}
-Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. By \qr{263a} p.~\pr{263a} the natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
+Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. %By \qr{263a} p.~\pr{263a} 
+The natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
 $$
 \widehat F(A'\ci F)=\col\psi\ci\pp\to\col\psi\iso A',
 $$ 
-the equality $F(A'\ci F)=\col\psi\ci\pp$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a}. Moreover $f$ is an isomorphism whenever $\pp$ is cofinal. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
+the equality $F(A'\ci F)=\col\psi\ci\pp$ and the isomorphism $\col\psi\iso A'$ following respectively from \qr{c} and \qr{263a} p.~\pr{263a}. Moreover $f$ is an isomorphism whenever $\pp$ is cofinal. Note that the condition that $f$ is an isomorphism means that, for each $X'$ in $\C'$, the natural map 
 $$
 \col_{(X\to A'\ci F)\in\C_{A'\ci F}}\Hom_{\C'}(X',F(X))\to A'(X')
 $$ 
@@ -3138,7 +3135,7 @@ P.~63, Corollary 2.7.4. Here is a variant:
 Let $\C$ be a category and $\A$ a category admitting small projective limits, let $h:\C\to\C^\wg$ the Yoneda embedding, and let $\Fct^{p\ell}((\C^\wg)^{\op},\A)$ be the category of functors from $(\C^\wg)^{\op}$ to $\A$ commuting with small projective limits. Then the functors 
 $$
 \begin{tikzcd}
-\Fct^{pl}((\C^\wg)^{\op},\A)\ar[yshift=0.7ex]{r}{(h^{\op})_*}&\Fct(\C^{\op},\A)\ar[yshift=-0.7ex]{l}{(h^{\op})^\ddg}
+\Fct^{p\ell}((\C^\wg)^{\op},\A)\ar[yshift=0.7ex]{r}{(h^{\op})_*}&\Fct(\C^{\op},\A)\ar[yshift=-0.7ex]{l}{(h^{\op})^\ddg}
 \end{tikzcd}
 $$
 are mutually quasi-inverse equivalences. 
@@ -3163,12 +3160,10 @@ $$
 \A^{\C^{\op}}\to\A,\quad F\mt(h^{\op})^\ddg(F)(A)\quad\text{and}\quad
 \C^\wg\to\A,\quad A\mt(h^{\op})^\ddg(F)(A)
 $$ 
-commute with small projective limits. 
-
-For a justification, see \S\ref{bil} p.~\pr{bil}.
+commute with small projective limits. (For a justification, see \S\ref{bil} p.~\pr{bil}.)
 \end{s}
 
-%%
+%
 
 \begin{s} 
 P.~64. It might be worth displaying the formula 
@@ -3180,7 +3175,7 @@ which is contained in the proof of Proposition 2.7.5 p.~64 of the book, and whic
 
 For the reader's convenience we reproduce the statement of Proposition 2.7.5: 
 
-\begin{prop}[Proposition 2.7.5] 
+\begin{prop}[Proposition 2.7.5 p.~64] 
 If $F:\C\to\C'$ is a functor of small categories, then the functors $\widehat F$ and $(F^{\op})^\dg$ from $\C^\wg$ to $\C'^\wg$ are isomorphic. 
 \end{prop} 
 
@@ -3192,7 +3187,7 @@ This follows from \qr{275}.
 \begin{s}
 P.~64, end of Chapter 2. One could add the following observation: 
 
-If $\C$ is a small category, if $A$ is in $\C^\wg$, if $B$ is a terminal object of $(\C_A)^\wg$, and if $F:\C_A\to\C$ is the forgetful functor, then we have 
+\emph{If $\C$ is a small category, if $A$ is in $\C^\wg$, if $B$ is a terminal object of $(\C_A)^\wg$, and if $F:\C_A\to\C$ is the forgetful functor, then we have} 
 $$
 \widehat F(B)\iso A.
 $$ 
