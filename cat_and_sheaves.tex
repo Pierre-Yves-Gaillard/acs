@@ -3205,15 +3205,24 @@ the last isomorphism following from \qr{263b} p.~\pr{263b}.
 %
 
 \begin{s}
-P.~64, Exercise 2.4. Set $P:=X\tm_YX$.
+P.~64, Exercise 2.4. Here is (with some minor changes) the statement of Exercise~2.4. 
 
-\nn(i) We have $p_1\ci\delta=\id_X=p_2\ci\delta$.
+Let $f:X\to Y$ be a morphism in a category admitting fiber products. Set $P:=X\tm_YX$; let $p_1,p_2:P\to X$ be the projections; and let $\delta:X\to P$ be the diagonal morphism.
 
-\nn(ii) $f$ monomorphism $\then$ $p_1=p_2$: we have $f\ci p_1=f\ci p_2$;
+\nn(i) We have $p_1\ci\delta=\id_X=p_2\ci\delta$. In particular $p_1$ and $p_2$ are epimorphisms and $\delta$ is a monomorphism.
+
+\nn(ii) We have: $f$ monomorphism $\ssi p_1=p_2\ssi\delta$ isomorphism $\ssi\delta$ epimorphism. %\nn $f$ monomorphism $\ssi p_1=p_2\ssi\delta$ isomorphism $\ssi\delta$ epimorphism.
+
+Solution: Claim (i) is obvious. Let us prove (ii):
+
+\nn $f$ monomorphism $\then$ $p_1=p_2$: we have $f\ci p_1=f\ci p_2$;
 
 \nn$p_1=p_2\ \then$ $\delta$ isomorphism: $p_i\ci\delta\ci p_j=p_i\ci\id_P$ for all $i,j$, and thus $\delta\ci p_j=\id_P$ for all $j$;
 
-\nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$, and note that (i) implies $p_1=p_2$, and thus $g=h$.
+\nn$\delta$ isomorphism $\then\delta$ epimorphism: obvious;
+
+\nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; % and note that (i) implies $p_1=p_2$, and thus $g=h$. 
+then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ proved in (i) imply $p_1=p_2$, and thus $g=h$.
 \end{s}
 
 %%
@@ -3272,7 +3281,7 @@ $$
 \begin{tikzcd}
 \al(\pp(j))\ar{dd}[swap]{p_j}\ar{r}{\id}&\al(\pp(j))\ar{d}\ar{r}{\id}&\al(\pp(j))\ar{d}\\ 
 &\ds\col_{\theta(\pp(j))\to\ell}\al(\pp(j))\ar{d}\ar{r}&\ds\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{d}\\ 
-\col\al\ci\pp\ar{r}[swap]{a}&\ds\col_{\ell}\col_{\theta(\pp(j))\to\ell}\al(\pp(j))\ar{r}[swap]{b}&\ds\col_{k}\col_{\theta(\pp(j))\to\psi(k)}
+\col\al\ci\pp\ar{r}[swap]{a}&\ds\col_{\ell}\col_{\theta(\pp(j))\to\ell}\al(\pp(j))\ar{r}[swap]{b}&\ds\col_{k}\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j)),
 \end{tikzcd}
 $$ 
 
@@ -3280,7 +3289,7 @@ $$
 \begin{tikzcd}
 \al(\pp(j))\ar{d}\ar{r}{\id}\ar{d}&\al(\pp(j))\ar{d}\ar{r}{\id}&\al(\pp(j))\ar{d}\\ 
 \ds\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{d}\ar{r}&\ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}\ar{r}{\id}&\ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}\\ 
-\ds\col_{k}\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{r}[swap]{c}&\ds\col_{k}\col_{\theta(i)\to\psi(k)}\al(i)\ar{r}[swap]{d}&\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)
+\ds\col_{k}\col_{\theta(\pp(j))\to\psi(k)}\al(\pp(j))\ar{r}[swap]{c}&\ds\col_{k}\col_{\theta(i)\to\psi(k)}\al(i)\ar{r}[swap]{d}&\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i),
 \end{tikzcd}
 $$ 
 
@@ -3291,10 +3300,7 @@ $$
 \ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)&\col\al,\ar{l}{e}
 \end{tikzcd}
 $$ 
-where the vertical arrows are coprojections, the squares above $a$ and $e$ are obtained by the proof of \qr{coco} p.~\pr{coco}, the squares above $b$ and $d$ result from the cofinality of $\psi$, and the squares above $c$ result from the cofinality of $\pp_k$. %Now the proposition follows from \qr{coco}.
-In particular, the maps $a,b,c,d$ and $e$ are bijective. %, and $e^{-1}\ci d\ci c\ci b\ci a$ is the natural map from $\col\al\ci\pp$ to $\col\al$. 
-%Set $f:=e^{-1}\ci d\ci c\ci b\ci a$. 
-As the bijection $f:=e^{-1}\ci d\ci c\ci b\ci a$ satisfies $f\ci p_j=q_j$, it is the natural map from $\col\al\ci\pp$ to $\col\al$.
+where the vertical arrows are coprojections, the squares above $a$ and $e$ result from the proof of \qr{coco} p.~\pr{coco}, the squares above $b$ and $d$ result from the cofinality of $\psi$, and the squares above $c$ result from the cofinality of $\pp_k$. In particular, the maps $a,b,c,d$ and $e$ are bijective. As the bijection $f:=e^{-1}\ci d\ci c\ci b\ci a$ satisfies $f\ci p_j=q_j$, it is the natural map from $\col\al\ci\pp$ to $\col\al$.
 \end{proof}
 \end{s}
 
