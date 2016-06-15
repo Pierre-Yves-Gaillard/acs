@@ -6,18 +6,18 @@
 % pdflatex makeindex pdflatex pdflatex
 \documentclass[12pt]{article}
 \newcommand{\nc}{\newcommand}
-\nc{\up}{\usepackage}
-\up[T1]{fontenc}
-\up[utf8]{inputenc}
-\up{amssymb,amsmath,amsthm}
-\up[a4paper,headheight=14.5pt]{geometry}
-\up{makeidx}
-\up{datetime}
-\up{tikz-cd}
-\up[pdfusetitle]{hyperref}
-%\up{comment}
-\up{fancyhdr}
-%\up{showkeys}%%\up{showlabels}
+%\nc{\up}{\usepackage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[a4paper,headheight=14.5pt]{geometry}
+\usepackage{makeidx}
+\usepackage{datetime}
+\usepackage{tikz-cd}
+\usepackage[pdfusetitle]{hyperref}
+\usepackage{comment}
+\usepackage{fancyhdr}
+%\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
 %\pagestyle{empty}
 \pagestyle{fancy}
@@ -38,6 +38,7 @@
 \nt{cond}[thm]{Condition}
 \nt{conv}[thm]{Convention}
 \nt{rk}[thm]{Remark}
+\nt{up}[thm]{Unsolved Problem}
 
 \theoremstyle{definition}
 \nt{s}[thm]{\S}
@@ -2297,7 +2298,7 @@ where $p_j$ is the $j$-coprojection.
 \end{cor}
 
 \begin{proof}
-Recall that Theorem~\ref{233i} states the existence of an isomorphism 
+Recall that Theorem~\ref{233i} p.~\pr{233i} states the existence of an isomorphism 
 $$
 \pp^\dg(\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}\bt(j).
 $$
@@ -3354,6 +3355,8 @@ in $I_s$ and an element $w_s$ in $\al_s(\ell_s)$ such that $\al_s(u_s)(y_s)=w_s=
 
 %
 
+\begin{comment}
+
 \begin{s}\lb{poc}
 P.~77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pr{1744i}):
 
@@ -3364,15 +3367,15 @@ $$
 is cofinal. 
 \end{s}
 
+\end{comment}
+
 %
 
 \begin{s} 
 P.~78, Proposition 3.2.2. It is easy to see that Condition (iii) is equivalent to
-%
 \begin{equation}\lb{78} 
 \col\ \Hom_I(i,\pp)\iso\pt\quad\text{for all }i\in I, 
 \end{equation} 
-%
 which is Condition (vi) in Proposition 2.5.2 p.~57 of the book. (Proposition 2.5.2 states, among other things, that \qr{78} is equivalent to the cofinality of $\pp$.)
 \end{s}
 
@@ -3485,13 +3488,13 @@ X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X'
 $$ 
 in the isomorphism \qr{241} p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have five sets and four bijections: 
 $$ 
-\Hom_{\C'}(F(\col\al),X')\iso\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y)
+\Hom_{\C'}(F(\col\al),X')\xr\sim\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\col\al,Y)
 $$
 $$
 \xr\sim\col_{(F(Y)\to X')\in\C_{X'}}\lim\Hom_\C(\al,Y)\xr\sim\lim\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\al,Y)
 $$
 $$
-\iso\lim\Hom_{\C'}(F\ci\al,X'). 
+\xr\sim\lim\Hom_{\C'}(F\ci\al,X'). 
 $$ 
 The first and last bijections follow from \qr{fyx'}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$. 
 
@@ -3505,7 +3508,7 @@ f:\Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F\ci\al,X').
 $$ 
 be the natural map. It remains to show 
 \begin{equation}\lb{4321}
-f_4\ci f_3\ci f_2\ci f_1=f
+f_4\ci f_3\ci f_2\ci f_1=f.
 \end{equation} 
 
 %To prove this we shall use the following abuse of notation: For any functor $\bt:J\to\A$ admitting an inductive limit, and for any $j$ in $J$, we denote by $$q[j]:\bt(j)\to\col\bt$$ the coprojection. 
@@ -3522,7 +3525,7 @@ r[F(Y)\to X']:\Hom_\C(\al,Y)\to\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\al,Y)
 $$ 
 be the coprojections.
 
-We shall also use implicitly, not only the statements of the bijections \qr{fyx'1} and \qr{fyx'2}, but also their proofs. 
+We shall use implicitly, not only the statements of the bijections \qr{fyx'1} and \qr{fyx'2}, but also their proofs. 
 
 For $F(\col\al)\to X'$ in $\Hom_{\C'}(F(\col\al),X')$, we have (omitting most of the parenthesis) 
 $$
@@ -10060,11 +10063,14 @@ We must show that $g\ci f$ is an isomorphism. The equality $h\ci g\ci f=\id_{\co
 \begin{s}\lb{1744i}
 P.~419, proof of Proposition 17.4.4: 
 
-First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
+\nn First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
 
-Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
+\begin{up}
+Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
+%Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
+\end{up} 
 
-Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419 of the book: The chain reads 
+\nn Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419 of the book: The chain reads 
 $$
 \prod_i\ F^b(A_i)
 \os{(\text a)}{\iso}\prod_i\ \col_{(B_i\to A_i)\in\mc{LI}_{A_i}}F(B_i)
