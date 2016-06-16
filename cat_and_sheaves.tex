@@ -38,7 +38,8 @@
 \nt{cond}[thm]{Condition}
 \nt{conv}[thm]{Convention}
 \nt{rk}[thm]{Remark}
-\nt{up}[thm]{Unsolved Problem}
+\nt{UnsolvedProblem}[thm]{Unsolved Problem}
+\nt{warning}[thm]{Warning}
 
 \theoremstyle{definition}
 \nt{s}[thm]{\S}
@@ -2323,14 +2324,12 @@ such that $x_{i\to\pp(j)\to\pp(j')}=\bt(j\to j')(x_{i\to\pp(j)})$ for all morphi
 
 \sbs{Brief comments}
 
-\begin{s}%\lb{scoco}
+\begin{s}
 P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small and $\C$ admits small inductive limits, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
 \col\bt\iso\col_i\ \col_{(j,u)\in J_i}\bt(j),
 \end{equation} 
 where $(j,u)$ runs over $J_i$, with $u:\pp(j)\to i$. 
-
-%\paragraph{First proof of \qr{coco} p.~\pr{coco}}%\nn\textbf{First proof of \qr{coco}}
 
 \begin{proof}[Proof of \qr{coco}]
 We define morphisms 
@@ -2383,13 +2382,18 @@ $$
 \ds\col_{i'}\col_{(j',u')\in J_i}\bt(j')\ar{r}[swap]{\id}&\ds\col_{i'}\col_{(j',u')\in J_i}\bt(j'),
 \end{tikzcd}
 $$ 
-where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  definition of $u_*$, and the bottom square commutes for obvious reasons. % old version: The top square commutes by  \qr{cts} p.~\pr{cts}
+where $u_*$ denotes the morphism induced by $u$, commutes. The top square commutes by  definition of $u_*$, and the bottom square commutes for obvious reasons. 
 
 We leave the proof of the fact that $g\ci f$ is the identity of $\col\bt$ to the reader. 
 \end{proof}
-
-%In Section~\ref{2111} p.~\pr{2111} we shall give two other proofs of \qr{coco}.
 % https://docs.google.com/document/d/1DP4eUKYtcotlHxMne2kaU4Y6in0XlU0P8xHnB303rZU/edit
+
+Display \qr{coco} p.~\pr{coco} above just says that there exists an isomorphism between two given objects of $\C$. But the proof proves much more than that! The proof indeed exhibits a morphism from the first object to the second, a morphism from the second to the first, and a proof that these two morphisms are inverse isomorphisms. When we invoke \qr{coco} in a subsequent argument, we shall often tacitly refer not only to the mere display \qr{coco}, but also to the two morphisms involved in its proof. In many cases it will be clear that the mere existential statement \qr{coco} wouldn't suffice to make the argument in question work, and that the invocation of the \emph{proof} of \qr{coco} is crucial. Such a situation will happen so often that we think it advisable to issue a general warning:
+
+\begin{warning}\lb{warning1}
+When we invoke a previously proved statement, we tacitly understand once and for all that the \emph{proof} of the statement in question is also implicitly invoked.
+%The proof of a statement often proves much more 
+\end{warning}
 \end{s} 
 
 % 
@@ -2498,7 +2502,7 @@ $$
 
 Recall the statement: 
 
-\begin{prop}[Corollary 2.4.6]\lb{246}
+\begin{prop}[Corollary 2.4.6 p. 56]\lb{246}
 If $X'$ and $X''$ are objects, if $\C$ and $\C'$ are categories, and if $F$ and $G$ are functors satisfying 
 \begin{equation}\lb{241s}
 X'\in\C'\xl{F}\C\xr{G}\C''\ni X'', 
@@ -2625,16 +2629,17 @@ Let $\C$ be a category and let $A$ be in $\C^\wg$. Consider the statements
 \Hom_{\C^\wg}(A,B)\xr\sim\lim_{(X\to A)\in\C_A}B(X)\text{ for all }B\in\C^\wg. 
 \end{equation}
 
-Clearly, \qr{263b} implies \qr{263a} and \qr{263c} (see \S\ref{216} p.~\pr{216}), and the proof of \qr{263b} is straightforward. (See \S\ref{c38} p.~\pr{c38} for the relationship between \qr{263a}, \qr{263b} and \qr{263c}.) 
+We prove \qr{263a}, \qr{263b} and \qr{263c} in \S\ref{263p} p.~\pr{263p} below. [Note that Warning~\ref{warning1} p.~\pr{warning1} applies particularly well to \qr{263a}, \qr{263b} and \qr{263c}.] %[Clearly, \qr{263b} implies \qr{263a} and \qr{263c} --- see \S\ref{216} p.~\pr{216}. See \S\ref{c38} p.~\pr{c38} for the relationship between \qr{263a}, \qr{263b} and \qr{263c}.] %, and the proof of \qr{263b} is straightforward.
 
 Note that \qr{263a} can be stated as follows: If $h:\C\to\C^\wg$ is the Yoneda embedding, then the natural morphism $h^\dg(h)\to\id_{\C^\wg}$ is an isomorphism. This implies in particular that \qr{263a} is functorial in $A$.
 
 % previous version
 %https://docs.google.com/document/d/1WNqMtfDDCRbs9WqNffO6yj37ck60FBy6xxHGA8Cf764/edit
 
-We shall spell out Isomorphisms \qr{263a} and \qr{263b} (resp. Isomorphism \qr{263c}) in terms of Diagram \qr{cue} p.~\pr{cue} (resp. Diagram \qr{yfy} p.~\pr{yfy}). 
+\begin{s}\lb{263p}
+We shall prove \qr{263a}, \qr{263b} and \qr{263c}. More precisely, we shall spell out these three isomorphisms in terms of Diagram~\qr{cue} p.~\pr{cue} and Diagram~\qr{yfy} p.~\pr{yfy}). 
 
-Warning: From here to the end of this section the symbols $X$ and $Y$ will designate either two objects of $\C$ or the image of these objects in $\C^\wg$. The context only will tell which interpretation is the good one. (It seems to me the choice of the correct interpretation will always be obvious.) 
+Warning: In this proof the symbols $X$ and $Y$ will designate either two objects of $\C$ or the image of these objects in $\C^\wg$. The context only will tell which interpretation is the good one. (It seems to me the choice of the correct interpretation will always be obvious.)
 
 \nn$\bu$ Isomorphism \qr{263a} can be decoded as follows: Consider the functor 
 $$
@@ -2711,11 +2716,12 @@ implies
 \begin{equation}\lb{fr2}
 (X\to A\xr{f(s)}B)=\theta_{X\to A}(s)\quad\text{for all $s$ and all $X\to A$}, 
 \end{equation} 
-and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}.
+and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}. q.e.d.
 %and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
 %Isomorphisms \qr{263a}, \qr{263b} and \qr{263c} are functorial. This fact is probably best expressed in terms of the (co)projections. Let us state explicitly the functoriality of \qr{263a}. 
 
 %Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $*$ denotes horizontal composition. Then the diagram $$\begin{tikzcd}\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ \al_A\ar{rrr}[swap]{p_B*((A\to B)\ci)}&&&\DT B\end{tikzcd}$$ commutes.
+\end{s}
 
 %%
 
@@ -3075,8 +3081,7 @@ $$
 quasi-commutes. 
 
 \begin{rk}\lb{cof}
-Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. %By \qr{263a} p.~\pr{263a} 
-The natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
+Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. The natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
 $$
 \widehat F(A'\ci F)=\col\psi\ci\pp\to\col\psi\iso A',
 $$ 
@@ -3223,7 +3228,7 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 \nn$\delta$ isomorphism $\then\delta$ epimorphism: obvious;
 
 \nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; % and note that (i) implies $p_1=p_2$, and thus $g=h$. 
-then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ proved in (i) imply $p_1=p_2$, and thus $g=h$.
+then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 \end{s}
 
 %%
@@ -3476,7 +3481,8 @@ $$
 \Hom_{\C'}(F(\col\al),X')\to\lim\Hom_{\C'}(F\ci\al,X')
 $$ 
 is bijective. We claim 
-\begin{subequations}\lb{fyx'}% other version https://docs.google.com/document/d/1cvapjvUY-qwpIWY90ncOCdZt_1pYSS07lZrnvBDp5rM/edit
+\begin{subequations}\lb{fyx'}% other version: 
+% https://docs.google.com/document/d/1cvapjvUY-qwpIWY90ncOCdZt_1pYSS07lZrnvBDp5rM/edit
 \begin{align}
 \col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(X,Y)&\iso\col_{(X\to Y)\in(\C^X)^{\op}}\Hom_{\C'}(F(Y),X')\lb{fyx'1}\\
 &\iso\Hom_{\C'}(F(X),X').\lb{fyx'2}
@@ -3525,7 +3531,7 @@ r[F(Y)\to X']:\Hom_\C(\al,Y)\to\col_{(F(Y)\to X')\in\C_{X'}}\Hom_\C(\al,Y)
 $$ 
 be the coprojections.
 
-We shall use implicitly, not only the statements of the bijections \qr{fyx'1} and \qr{fyx'2}, but also their proofs. 
+We shall use implicitly, not only the statements of the bijections \qr{fyx'1} and \qr{fyx'2}, but also their proofs (see Warning~\ref{warning1} p.~\pr{warning1}). 
 
 For $F(\col\al)\to X'$ in $\Hom_{\C'}(F(\col\al),X')$, we have (omitting most of the parenthesis) 
 $$
@@ -3617,25 +3623,18 @@ $$
 
 %%%
 
-\sbs{Proposition 3.4.3 (i) p.~88}
-
-%This section is divided into two parts. In Part~1 we give a proof of Proposition 3.4.3 (i) which is slightly different from the one in the book. In Part~2 we give two proofs of \qr{coco} p.~\pr{coco} slightly different from the one in \S\ref{scoco} p.~\pr{scoco}. 
-
-%\subsubsection{Part 1} 
+\sbs{Proposition 3.4.3 (i) p.~88} 
 
 % old version:
 %https://docs.google.com/document/d/1ODl6Kwqz4LekRjoydQLeDXX23NiBk034UbtlK4fLzrI/edit
 
 \begin{lem}
-%Recall the notation. We have functors $I\xr\pp K\xl\psi J$ between small categories, and
 If $I\xr\pp K\xl\psi J$ are functors between small categories, if 
 $$
 M:=M[I\xr\pp K\xl\psi J] 
 $$ 
 is the category defined in Definition 3.4.1 p.~87 of the book, if $\al:M\to\C$ is a functor, and if $\C$ admits small inductive limits, then there is a natural functor (described in the proof) from $J$ to $\C$ mapping $j\in J$ to 
-%We also have a functor $\al:M\to\C$. Claim:
 $$
-%j\mt
 \col_{(i,u)\in I_{\psi(j)}}\al(i,j,u) 
 $$ 
 ($u$ being a morphism in $K$ from $\pp(i)$ to $\psi(j)$).%is a functor from $J$ to $\C$.
@@ -10065,10 +10064,10 @@ P.~419, proof of Proposition 17.4.4:
 
 \nn First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
 
-\begin{up}
+\begin{UnsolvedProblem}
 Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
 %Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
-\end{up} 
+\end{UnsolvedProblem} 
 
 \nn Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419 of the book: The chain reads 
 $$
