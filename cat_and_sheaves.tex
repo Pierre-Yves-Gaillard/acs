@@ -275,7 +275,9 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 P.~65, Exercise 2.7 (i): ``$\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\tm_ZY:\Set_Z\to\Set_Y$''.
 \end{s}
 
-\nn$*$ P.~74, last four lines: $\al$ should be replaced with $\pp$.
+\nn$*$ P.~74, first line of the proof of Theorem 3.1.6: $\ds\ilim$ should be $\ds\ilim_i$. 
+
+\nn$*$ P.~74, last four lines: $\al$ should be $\pp$.
 
 \nn$*$ P.~79, proof of Proposition 3.2.5: the word ``filtrant'' should be replaced with the word ``connected''.
 
@@ -290,7 +292,7 @@ $$
 \C\text{ small and }\C_A\text{ filtrant }\then A\text{ left exact }\then\C_A\text{ filtrant}.
 $$
 
-\nn$*$ P.~85, proof of Proposition 3.3.13, proof of implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Corollary~\ref{316} p.~\pr{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
+%\nn$*$ P.~85, proof of Proposition 3.3.13, proof of implication ``$\C_A$ filtrant $\then$ $A$ commutes with finite projective limits''. One can either use Proposition~\ref{316} p.~\pr{316}, or notice that $\C$ can be assumed to be small. (The argument is the same in both cases.)
 
 \nn$*$ P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
 
@@ -3253,18 +3255,16 @@ by induction on the cardinal of $S$, and to see that this implies the claim. q.e
 % https://docs.google.com/document/d/1BYGPoHg2m2Y7p9DfLzJ6Qraz0PfXqpy-r8PiNdfH2XQ/edit
 
 \begin{s} 
-P.~74, Theorem 3.1.6. Here is an immediate corollary: 
-%
-\begin{cor}\lb{316}
+P.~74, Theorem 3.1.6. The proof of Theorem 3.1.6 implies: 
+\begin{prop}\lb{316}
 Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\al:I\tm J^{\op}\to\Set$ a functor such that $\col_i\al(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\al(i,j)$ exists in $\Set$, and the natural map 
 $$
 \col_i\lim_j\al(i,j)\to
 \lim_j\col_i\al(i,j)
 $$ 
 is bijective. 
-\end{cor}
-%
-This corollary is implicitly used in the proof of Proposition 3.3.13 p.~84.
+\end{prop} 
+This corollary is implicitly used in the proof of Proposition 3.3.13 p.~84 (see Proposition~\ref{3313} p.~\pr{3313} below).
 \end{s}
 
 %
@@ -3570,7 +3570,7 @@ Since $G$ is right exact, $\C'_{X''}$ is filtrant for any $X''$ in $\C''$. The o
 \begin{s}
 P.~84, Proposition 3.3.13. Recall the statement:
 
-\begin{prop}[Proposition 3.3.13 p. 84]
+\begin{prop}[Proposition 3.3.13 p. 84]\lb{3313} 
 Let $\C$ be a category admitting finite inductive limits, and let $A$ be in $\C^\wg$. Then $A$ is left exact if and only if $\C_A$ is filtrant.
 \end{prop}
 
@@ -3578,21 +3578,20 @@ We spell out the details of the proof of the implication $\C_A$ is filtrant $\th
 
 By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\pr{333} below, it suffices to show that $A$ commutes with finite projective limits. Let $(X_i)$ be a finite inductive system in $\C$. We must check that the natural map 
 $$
-A\left(\col_i X_i\right)\to\lim_iA(X_i)
+e:A\left(\col_i X_i\right)\to\lim_iA(X_i)
 $$ 
-is bijective. Consider the commutative diagram below, in which we abbreviate 
-$$
-(Y\to A)\in\C_A
-$$ 
-by $Y$: 
+is bijective. Let us abbreviate $(Y\to A)\in\C_A$ by $Y$, and consider the diagram 
 $$
 \begin{tikzcd}
 \col_Y\Hom_\C(\col_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\col_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
 {}&\lim_i\col_Y\Hom_\C(X_i,Y)\ar{d}{c}\\ 
-A(\col_iX_i)\ar{r}[swap]{e}&\lim_iA(X_i).
+A(\col_iX_i)\ar{r}[swap]{e}&\lim_iA(X_i),
 \end{tikzcd}
 $$ 
-The maps $a,b,c$ and $d$ are bijective for the following reasons: obviously for $a$, because of \qr{263b} p.~\pr{263b} for $c$ and $d$, and by Theorem 3.1.6 p.~74 of the book for $b$. Thus $e$ is also bijective.
+where $a$ is defined by \S\ref{sv} p.~\pr{sv}, $c$ and $d$ are defined by \qr{263b} p.~\pr{263b} and $b$ is defined by %Theorem 3.1.6 p.~74 of the book
+Proposition~\ref{316} p.~\pr{316} (see Warning~\ref{warning1} p.~\pr{warning1}). %It follows from their definitions that t
+These four maps are clearly bijective. We leave it to the reader to check that this diagram commutes. %The maps $a,b,c$ and $d$ are bijective for the following reasons: clearly for $a$, because of \qr{263b} p.~\pr{263b} for $c$ and $d$, and by Theorem 3.1.6 p.~74 of the book for $b$. Thus 
+This implies that $e$ is bijective. 
 \end{s}
 
 %
@@ -3695,7 +3694,8 @@ We construct the diagram
 as follows: We fix $j$ and define $g_j$ by the condition that the top square of \qr{iju} commutes for all $(i,u)$. Then we define $g$ by the condition that the bottom square of \qr{iju} commutes for all $j$. We leave it to the reader to check that $f$ and $g$ are inverse isomorphisms. 
 \end{proof}
 
-In view of Theorem 3.1.6 p.~74 of the book, Proposition~\ref{coco2} implies 
+In view of Proposition~\ref{316} p.~\pr{316}, %Theorem 3.1.6 p.~74 of the book, 
+Proposition~\ref{coco2} implies 
 \begin{prop}\lb{cocop} 
 If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 \end{prop}
@@ -3712,7 +3712,7 @@ If $J$ and $I_{\psi(j)}$ are filtrant for all $j$ in $J$, then $M$ is filtrant.
 \begin{s} 
 We prove Proposition 3.4.3 (ii) p.~88. Recall the statement:
 
-If $\psi$ is cofinal, then $M[I\to K\leftarrow J]\to I$ is cofinal. 
+\emph{If $\psi$ is cofinal, then $M[I\to K\leftarrow J]\to I$ is cofinal.} 
 
 To prove this, we let $\al:I\to\Set$ be a functor, we denote by $\bt$ the composition $M[I\to K\leftarrow J]\to I\to\Set$, and we verify that the natural map $\col\bt\to\col\al$ is bijective as follows. 
 
