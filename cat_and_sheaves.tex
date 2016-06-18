@@ -3850,6 +3850,14 @@ $$
 As $f$ is an epimorphism, the equality $g_1\ci f=g_2\ci f$ implies $g_1=g_2=:g$, and thus $f'_1=g'\ci F(g)=f'_2$.
 \end{proof}
 
+\begin{cor}\lb{ccprime}
+Let $\C$ be a category, let $\C'$ be a category admitting finite inductive limits, and let $\theta:F\to G$ be a morphism in $\C'^\C$. Then $\theta$ is an epimorphism if and only if $\theta_X:F(X)\to G(X)$ is an epimorphism for all $X$ in $\C$. 
+\end{cor} 
+
+\begin{proof}
+This follows from Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} just above.
+\end{proof}
+
 %%%
 
 \section{About Chapter 4}
@@ -4006,7 +4014,14 @@ Let $\C$ be a $\U$-small category, and let us denote by $\hy:\C\to\C^\wg$ and $\
 $$
 (\IM\hy(f))(Z):=\IM\,\hy(f)_Z,\quad(\IM\ky(f))(Z):=\IM\,\ky(f)_Z 
 $$
-for any $Z$ in $\C$. Lemma \ref{imset} implies
+for any $Z$ in $\C$. Note the equalities 
+$$
+\IM\,\hy(f)_Z=f\ci\Hom_\C(Z,X)=\{f\ci x\ |\ x\in\Hom_\C(Z,X)\},
+$$ 
+$$
+\IM\,\ky(f)_Z=\Hom_\C(Y,Z)\ci f=\{y\ci f\ |\ y\in\Hom_\C(Y,Z)\}.
+$$ 
+Lemma \ref{imset} implies
 
 \begin{equation}\lb{IM2}
 \begin{split}
@@ -4032,17 +4047,17 @@ We may regard $(\Coim f)(Z)$ as a subset of $\Hom_\C(X,Z)$, and $(\Ima f)(Z)$ as
 \end{prop}
 
 \begin{proof}
-We prove that $(\Coim f)(Z)$ is naturally embedded into $\Hom_\C(X,Z)$. The morphisms 
+We prove that $(\Coim f)(Z)$ is naturally embedded in $\Hom_\C(X,Z)$. The morphisms 
 $$
 \hy(X)\to\IM \hy(f)\to\hy(Y)
 $$ 
 are given by the maps 
 $$
-\Hom_\C(Z,X)\iso\hy(X)(Z)\to\IM\hy(f)_Z\to\hy(Y)(Z)\iso\Hom_\C(Z,Y).
+\Hom_\C(Z,X)=\hy(X)(Z)\to\IM\hy(f)_Z\to\hy(Y)(Z)=\Hom_\C(Z,Y).
 $$ 
-In view of the definition of $\Coim(f)$, it suffices to check that $\hy(X)\to\IM\hy(f)$ is an epimorphism in $\C^\wg$, that is, it suffices to check that the map $\hy(X)(Z)\to\IM\hy(f)_Z$ is surjective for all $Z$ in $\C$. But this is clear. 
+In view of the definition of $\Coim(f)$, it suffices to check that $\hy(X)\to\IM\hy(f)$ is an epimorphism in $\C^\wg$, that is, it suffices, by Corollary~\ref{ccprime} p.~\pr{ccprime}, to check that the map $\hy(X)(Z)\to\IM\hy(f)_Z$ is surjective for all $Z$ in $\C$. But this is clear. 
 
-We prove that $(\Ima f)(Z)$ is naturally embedded into $\Hom_\C(Z,Y)$. The morphisms 
+We prove that $(\Ima f)(Z)$ is naturally embedded in $\Hom_\C(Z,Y)$. The morphisms 
 $$
 \ky(X)\to\IM\ky(f)\to\ky(Y)
 $$ 
@@ -4054,7 +4069,7 @@ in $\Set^\C$, which are, in turn, given by the maps
 $$
 \Hom_\C(Y,Z)=\ky(Y)(Z)\to\IM\ky(f)_Z\to\ky(X)(Z)=\Hom_\C(X,Z).
 $$ 
-In view of the definition of $\Ima(f)$, it suffices to check that $\ky(Y)\to\IM\ky(f)$ is an epimorphism in $\Set^\C$, that is, it suffices to check that the map $\ky(Y)(Z)\to\IM\ky(f)_Z$ is surjective for all $Z$ in $\C$. But this is clear. 
+In view of the definition of $\Ima(f)$, it suffices to check that $\ky(Y)\to\IM\ky(f)$ is an epimorphism in $\Set^\C$, that is, it suffices, by Corollary~\ref{ccprime} p.~\pr{ccprime}, to check that the map $\ky(Y)(Z)\to\IM\ky(f)_Z$ is surjective for all $Z$ in $\C$. But this is clear. 
 \end{proof} 
 
 According to Proposition \ref{reg} we regard from now on $(\Coim f)(Z)$ as a subset of $\Hom_\C(X,Z)$ and $(\Ima f)(Z)$ as a subset of $\Hom_\C(Z,Y)$.\bigskip
@@ -4084,23 +4099,23 @@ $$
 $$ 
 
 \begin{proof}
-Let $x:X\to Z$ and assume 
-\begin{equation}\lb{lw}
-\left[W\parar X\xr fY\right]\then\left[W\parar X\xr xZ\right]\ \forall\ W\in\C.
-\end{equation} 
-Let us prove that $x$ is in $\Coim f$, that is, let us prove that there is a morphism $\IM\hy(f)\to\hy(Z)$ in $\C^\wg$ such that the composition 
+%Let $x:X\to Z$ and assume \begin{equation}\lb{lw}\left[W\parar X\xr fY\right]\then\left[W\parar X\xr xZ\right]\ \forall\ W\in\C.\end{equation} Let us prove that $x$ is in $\Coim f$, that is, let us prove that there is a morphism $\IM\hy(f)\to\hy(Z)$ in $\C^\wg$ such that the composition $$\hy(X)\to\IM\hy(f)\to\hy(Z)$$ is $\hy(x)$. Let $W$ be in $\C$. Recalling that $(\IM\hy(f))(W):=\IM\hy(f)_W$, we see that it suffices to show that there is a map $$\IM\hy(f)_W\to\Hom_\C(W,Z)$$ such that the composition $$\Hom_\C(W,X)\to\IM\hy(f)_W\to\Hom_\C(W,Z)$$ is $\hy(f)_W:\hy(X)(W)\to\hy(Z)(W)$. But this follows from \qr{lw}. 
+To prove the first equality, let $x:W\to X$ be a morphism in $\C$ and consider the condition
+
+\nn(a) there is a map $u:f\ci\Hom_\C(W,X)\to\Hom_\C(W,Z)$ such that $u(g)=x\ci g$ for all $g$ in $\Hom_\C(W,X)$: 
 $$
-\hy(X)\to\IM\hy(f)\to\hy(Z)
+\begin{tikzcd}
+\Hom_\C(W,X)\ar[rd]\ar[rr,"x\ci"]&&\Hom_\C(W,Z)\\ 
+&f\ci\Hom_\C(W,X).\ar[ru,dashed,"u"']
+\end{tikzcd} 
 $$ 
-is $\hy(x)$. Let $W$ be in $\C$. Recalling that $(\IM\hy(f))(W):=\IM\hy(f)_W$, we see that it suffices to show that there is a map 
-$$
-\IM\hy(f)_W\to\Hom_\C(W,Z)
-$$ 
-such that the composition 
-$$
-\Hom_\C(W,X)\to\IM\hy(f)_W\to\Hom_\C(W,Y)
-$$ 
-is $\hy(f)_W:\hy(X)(W)\to\hy(Y)(W)$. But this follows from \qr{lw}. 
+It suffices to show that (a) is equivalent to 
+
+\nn(b) $\ds\left[W\parar X\xr fY\right]\then\left[W\parar X\xr xZ\right]$.
+
+To show (a)$\then$(b), let $g_1$ and $g_2$ in $\Hom_\C(W,X)$ satisfy $f\ci g_1=f\ci g_2$. This yields $x\ci g_1=u(f\ci g_1)=u(f\ci g_2)=x\ci g_2$. 
+
+To show (b)$\then$(a), given $g$ in $\Hom_\C(W,X)$ we must prove that the morphism $x\ci g$ does depends only on $f\ci g$, and not on $g$ itself. But this is precisely what (b) says. This proves the first equality in the statement of the proposition.
 
 Let us show that the natural morphism $\ky(X)\to\Coim f$ is an epimorphism. As $\ky(X)\to\Coim f$ is a morphism in $\C^\vee$, it is given by a morphism $\Coim f\to\ky(X)$ in $\Set^\C$, and we must check that $\Coim f\to\ky(X)$ is a monomorphism in $\Set^\C$. But in Proposition~\ref{reg}, we noticed that $(\Coim f)(Z)$ could be viewed as a subset of $\Hom_\C(X,Z)=\ky(X)(Z)$ for any $Z$ in $\C$. 
 
@@ -4155,10 +4170,10 @@ By Proposition~\ref{epimono} p.~\pr{epimono}, this condition does not depend on 
 
 \sbs{Brief comments}
 
-\begin{s}\lb{515i}
+\begin{s}%\lb{515i}
 P.~115, Proposition 5.1.5 (i). For the sake of completeness we spell out some details, and, for the reader's convenience we reproduce Proposition 5.1.5 (i) p.~115 of the book. 
 
-\begin{prop}[Proposition 5.1.5 (i) p.~115] 
+\begin{prop}[Proposition 5.1.5 (i) p.~115]\lb{515i} 
 If $\C$ is a category admitting finite inductive and projective limits, then the following five conditions on a morphism $f:X\to Y$ are equivalent:
 
 \nn\emph{(a)} $f$ is an epimorphism and $\Coim f\to\Ima f$ is an isomorphism,
@@ -4224,7 +4239,7 @@ X\ar[two heads]{d}[swap]{b}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v
 I'_{a\ci u}\ar{ur}{d}\ar[two heads]{r}[swap]{c}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
-(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pr{fun}.) By (the dual of) Proposition 5.1.2 (iv) p.~114 of the book, it suffices to show that $a$ is an isomorphism. As $a\ci u$ is a strict epimorphism, Proposition 5.1.5 (i), (a)$\then$(b), p.~115 of the book, implies that $c$ is an isomorphism. We claim that $d\ci c^{-1}$ is inverse to $a$. We have 
+(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pr{fun}.) By (the dual of) Proposition 5.1.2 (iv) p.~114 of the book, it suffices to show that $a$ is an isomorphism. As $a\ci u$ is a strict epimorphism, Proposition~\ref{515i}, (a)$\then$(b), p.~\pr{515i}, implies that $c$ is an isomorphism. We claim that $d\ci c^{-1}$ is inverse to $a$. We have 
 $$
 a\ci d\ci c^{-1}=c\ci c^{-1}=\id_{I'_v}
 $$ 
@@ -4239,7 +4254,7 @@ and the conclusion follows from the fact that $u$ is an epimorphism.
 %
 
 \begin{s}
-P.~117, Definition 5.2.1 (definition of a system of generators). There is a comment about this in Pierre Schapira's Errata 
+P.~117, Definition 5.2.1 (definition of a system of generators). There is an important comment about this in Pierre Schapira's Errata 
 
 \href{https://webusers.imj-prg.fr/~pierre.schapira/books/Errata.pdf}{https://webusers.imj-prg.fr/$\sim$pierre.schapira/books/Errata.pdf}.
 
@@ -4268,14 +4283,15 @@ $$
 \begin{s}
 P.~118, proof of Proposition 5.2.3: the proof of (ii) uses Proposition~\ref{34i} p.~\pr{34i} and Proposition 3.3.7 (i) p.~83 of the book. 
 
+\begin{comment}
+
 Proof of (v): We add a few details. Recall the setting: the category $\C$ admits finite projective limits, small coproducts, and a generator $G$. We already know that $\pp_G:=\Hom_\C(G,\ )$ is conservative, left exact, and that it preserves monomorphisms. 
 
 Put $\pp:=\pp_G:=\Hom_\C(G,\ )$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $f_1$ and $f_2$ have same image. We want to prove:
 
 Claim 1: $\pp(f_1)$ and $\pp(f_2)$ define the same subobject of $X$.
 
-Form the cartesian square
-%
+Form the cartesian square 
 \begin{equation}\lb{523v1}
 \begin{tikzcd}
 Y_1\tm_XY_2\ar{r}{p_1}\ar{d}[swap]{p_2}&Y_1\ar[tail]{d}{f_1}\\ 
@@ -4285,7 +4301,7 @@ Y_2\ar[tail]{r}[swap]{f_2}&X.
 
 Claim 2: $p_1$ and $p_2$ are isomorphisms. 
 
-Clearly, Claim 2 implies Claim 1. Applying $\pp$ to \qr{523v1}, we get the commutative diagram 
+Clearly, Claim 2 implies Claim 1. Let us prove Claim~2. Applying $\pp$ to \qr{523v1}, we get the commutative diagram 
 $$
 \begin{tikzcd}
 \pp(Y_1\tm_XY_2)\ar{rd}{\sim}\ar[bend left]{rrd}{\pp(p_1)}\ar[bend right]{rdd}[swap]{\pp(p_2)}\\ 
@@ -4298,6 +4314,9 @@ $$
 \pp(Y_1\tm_XY_2)\to\pp(Y_1)\tm_{\pp(X)}\pp(Y_2)
 $$ 
 being an isomorphism by left-exactness of $\pp$. As $\pp(f_1)$ and $\pp(f_2)$ are injective and have same image, $q_1$ and $q_2$ are bijective, and thus $\pp(p_1)$ and $\pp(p_2)$ are also bijective. As $\pp$ is conservative,  this implies Claim~2, and we saw that Claim~2 implies Claim~1.
+
+\end{comment}
+
 \end{s}
 
 %
@@ -4686,7 +4705,7 @@ it suffices to prove
 \begin{equation}\lb{step6a}
 \Coim\left(\col_{A\in I}Z_A\to X\right)\iso X.
 \end{equation} 
-Epimorphisms being strict, it is enough, in view of Proposition 5.1.5 (i), (a)$\then$(b), p.~115 of the book to check that 
+Epimorphisms being strict, it is enough, in view of Proposition~\ref{515i}, (a)$\then$(b), p.~\pr{515i} to check that 
 \begin{equation}\lb{step6b}
 \col_{A\in I}Z_A\to X
 \end{equation} 
