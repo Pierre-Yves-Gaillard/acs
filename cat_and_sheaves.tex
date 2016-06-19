@@ -2738,11 +2738,11 @@ P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of P
 % https://docs.google.com/document/d/167Wrv21BZvIOaVYRo1BDkEFQyjZ8mSHUJaWcHo_zWDU/edit
 
 \begin{lem}\lb{cc}
-If $\al:I\to\C$ is a functor admitting an inductive limit and if $f:\col\al\to Y$ is a morphism in $\C$, then we have 
+If $\al:I\to\C$ is a functor admitting an inductive limit and if $\col\al\to Y$ is a morphism in $\C$, then we have 
 $$
 \col_{i\in I}\ (\al(i)\to\col\al\to Y)\iso(\col\al\to Y).
 $$
-More precisely, let $X$ be in $\C$, let $p:\al\to\DT X$ be a coprojection, define $\bt:I\to\C_Y$ by $\bt(i):=(\al(i)\xr{p_i}X\xr fY)$ and $q:\bt\to\DT(X\xr fY)$ by $q_i:=p_i$: 
+More precisely, let $X$ be an object of $\C$, let $p:\al\to\DT X$ be a coprojection, let $f:X\to Y$ be a morphism in $\C$, and define $\bt:I\to\C_Y$ by $\bt(i):=(\al(i)\xr{p_i}X\xr fY)$ and $q:\bt\to\DT(X\xr fY)$ by $q_i:=p_i$: 
 $$
 \begin{tikzcd}
 \al(i)\ar[rd,"f\ci p_i"']\ar[rr,"p_i"]&&X\ar[dl,"f"]\\ 
@@ -3303,10 +3303,10 @@ $$
 \begin{tikzcd}
 \al(\pp(j))\ar{d}&\al(\pp(j))\ar{l}[swap]{\id}\ar{dd}{q_j}\\ 
 \ds\col_{\theta(i)\to\psi(k)}\al(i)\ar{d}&\ar{d}\\ 
-\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)&\col\al,\ar{l}{e}
+\ds\col_{\ell}\col_{\theta(i)\to\ell}\al(i)&\col\al.\ar{l}{e}
 \end{tikzcd}
 $$ 
-where the vertical arrows are coprojections, the squares above $a$ and $e$ result from the proof of \qr{coco} p.~\pr{coco}, the squares above $b$ and $d$ result from the cofinality of $\psi$, and the squares above $c$ result from the cofinality of $\pp_k$. In particular, the maps $a,b,c,d$ and $e$ are bijective. As the bijection $f:=e^{-1}\ci d\ci c\ci b\ci a$ satisfies $f\ci p_j=q_j$, it is the natural map from $\col\al\ci\pp$ to $\col\al$.
+Note that the last row of the first (resp. second) diagram coincides with the first row of the second (resp. third) diagram. Moreover the vertical arrows are coprojections, the squares above $a$ and $e$ result from the proof of \qr{coco} p.~\pr{coco}, the squares above $b$ and $d$ result from the cofinality of $\psi$, and the squares above $c$ result from the cofinality of $\pp_k$. In particular, the maps $a,b,c,d$ and $e$ are bijective. As the bijection $f:=e^{-1}\ci d\ci c\ci b\ci a$ satisfies $f\ci p_j=q_j$, it is the natural map from $\col\al\ci\pp$ to $\col\al$.
 \end{proof}
 \end{s}
 
@@ -4328,48 +4328,14 @@ P.~119, Theorem 5.2.5: see Corollary~\ref{c2111} p.~\pr{c2111}.
 %
 
 \begin{s}
-Corollary 5.2.10 p. 121 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9 p.~121 of the book.
+P.~121. Corollary 5.2.10 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9 p.~121 of the book.
 \end{s}
 
 %
 
 \begin{s}
 P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\F$ is strictly generating,\index{strictly generating subcategory} then $\Ob(\F)$ is a system of generators''. See \S\ref{ffc} p.~\pr{ffc}.
-\end{s}
-
-%
-
-\begin{s}
-P. 123, proof of Theorem 5.3.4. The following fact is implicit in the proof: The map 
-$$
-f:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
-$$ 
-obtained by composing the chain of isomorphisms in the proof, coincides with $\ci\ee_G$. 
-
-To prove this, we shall define a map 
-$$
-g:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
-$$ 
-claim that $f=g=\ci\ee_G$, and leave it to the reader to prove the claim. 
-
-We define $g$ as follows: Taking into account the definitions of $\pp$ and $\psi$, we must define 
-$$
-g:\Hom_{\F^\wg}\left(\Hom_\C\left(\ \ ,\col_{X\to G}X\right),F\right)\to\Hom_{\F^\wg}(G,F),
-$$ 
-where $X\to G$ stands for $(X\to G)\in\F_G$. Let 
-$$
-\ld:\Hom_\C\left(\ \ ,\col_{X\to G}X\right)\to F
-$$ 
-be given. We must define $\mu:G\to F$. Letting $Y$ be in $\C$, we must define 
-$$
-\mu_Y:G(Y)\to F(Y).
-$$ 
-Letting $Y\to G$ be given, we must define $\mu_Y(Y\to G):Y\to F$. We do that by applying 
-$$
-\ld_Y:\Hom_\C\left(Y\ ,\ \col_{X\to G}X\right)\to F(Y)
-$$ 
-to the coprojection $Y\to\col_{X\to G}X$ attached to $Y\to G$. We leave it to the reader to check that this construction does define a morphism of functors from $G$ to $F$. 
-\end{s} 
+\end{s}  
 
 %%
 
@@ -4445,28 +4411,75 @@ $$
 
 %%
 
-\sbs{Brief comments} 
+\sbs{Brief comments}
 
-\begin{s} 
-P.~122, proof of Lemma 5.3.3 (minor variant). Recall the statement: 
-
-\begin{lem}[Lemma 5.3.3 p.~122] 
-If $\C$ is a category admitting small inductive limits and $\F$ is a small full subcategory of $\C$, then the functor $\pp:\C\to\F^\wg$ admits a left adjoint $\psi:\F^\wg\to\C$, and for $A$ in $\F^\wg$ we have 
+\begin{s}
+P.~122. The proof of Lemma 5.3.3 proves a statement that is much stronger than Lemma 5.3.3. This stronger statement can be phrased as follows:
+\begin{lem}\lb{533}
+Let $\C$ be a category which admits small inductive limits, let $\F$ be a small full subcategory of $\C$, let $F$ be in $\F^\wg$, set 
 $$
-\psi(A)\iso\col_{(Y\to A)\in\F_A}Y. 
+\psi(F):=\col_{(Y\to F)\in\F_F}Y,
 $$ 
+let $X$ be in $\C$, let $f:\psi(F)\to X$ be a morphism in $\C$ and, for each $(Y\to F)\in\F_F$, let $f_{Y\to F}:Y\to X$ be the composition of $f$ with the coprojection $Y\to\psi(F)$. Then there is a unique morphism $\theta:F\to\pp(X)$ in $\F^\wg$ such that 
+$$
+\theta_Y(Y\to F)=f_{Y\to F}
+$$ 
+for all $Y$ in $\F$. Moreover, the map 
+$$
+\Hom_\C(\psi(F),X)\to\Hom_{\F^\wg}(F,\pp(X)),\quad f\mt\theta
+$$ 
+is bijective and functorial in $F$ and $X$. In particular $\psi:\F^\wg\to\C$ is left adjoint to $\pp:\C\to\F^\wg$. 
 \end{lem} 
 
 \begin{proof}
 We have, for $X$ in $\C$ and $A$ in $\F^\wg$, 
 $$
-\Hom_\C\left(\col_{(Y\to A)\in\F_A}Y,X\right)\iso\lim_{(Y\to A)\in\F_A}\Hom_\C(Y,X)
+\Hom_\C\left(\col_{(Y\to A)\in\F_A}Y,X\right)\xr\sim\lim_{(Y\to A)\in\F_A}\Hom_\C(Y,X)
 $$ 
 $$
-\iso\lim_{(Y\to A)\in\F_A}\pp(X)(Y)\iso\Hom_{\F^\wg}(A,\pp(X)),
+\xr\sim\lim_{(Y\to A)\in\F_A}\pp(X)(Y)\xr\sim\Hom_{\F^\wg}(A,\pp(X)),
 $$  
-the last isomorphism following from \qr{263c} p.~\pr{263c}.
+the last isomorphism following from \qr{263c} p.~\pr{263c}, and it is straightforward to check that the composition of these bijections coincides with the map $f\mt\theta$ in the statement of our lemma. 
 \end{proof}
+\end{s} 
+
+%
+
+\begin{s}
+P. 123, proof of Theorem 5.3.4. The following fact is implicit in the proof: The map 
+$$
+f:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
+$$ 
+obtained by composing the chain of isomorphisms in the proof, is equal to $\ci\ee_G$. This equality is easily checked using Lemma~\ref{533}.
+
+\begin{comment}
+
+To prove this, we shall define a map 
+$$
+g:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
+$$ 
+claim that $f=g=\ci\ee_G$, and leave it to the reader to prove the claim. 
+
+We define $g$ as follows: Taking into account the definitions of $\pp$ and $\psi$, we must define 
+$$
+g:\Hom_{\F^\wg}\left(\Hom_\C\left(\ \ ,\col_{X\to G}X\right),F\right)\to\Hom_{\F^\wg}(G,F),
+$$ 
+where $X\to G$ stands for $(X\to G)\in\F_G$. Let 
+$$
+\ld:\Hom_\C\left(\ \ ,\col_{X\to G}X\right)\to F
+$$ 
+be given. We must define $\mu:G\to F$. Letting $Y$ be in $\C$, we must define 
+$$
+\mu_Y:G(Y)\to F(Y).
+$$ 
+Letting $Y\to G$ be given, we must define $\mu_Y(Y\to G):Y\to F$. We do that by applying 
+$$
+\ld_Y:\Hom_\C\left(Y\ ,\ \col_{X\to G}X\right)\to F(Y)
+$$ 
+to the coprojection $Y\to\col_{X\to G}X$ attached to $Y\to G$. We leave it to the reader to check that this construction does define a morphism of functors from $G$ to $F$. 
+
+\end{comment}
+
 \end{s}
 
 %%
@@ -4631,7 +4644,8 @@ $$\begin{tikzcd}
 B_i\tm_CB.\ar[u]\ar[ur]
 \end{tikzcd}$$ 
 
-\nn(Note that the last row of the first diagram coincides with the first row of the second diagram, and the last row of the second diagram coincides with the first row of the third diagram.) The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see \S\ref{sbbc} p.~\pr{sbbc}). This proves Lemma~\ref{bibj}.
+%(Note that the last row of the first diagram coincides with the first row of the second diagram, and the last row of the second diagram coincides with the first row of the third diagram.) 
+\nn The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see \S\ref{sbbc} p.~\pr{sbbc}). This proves Lemma~\ref{bibj}.
 \end{proof}
 
 Taking the definition of $\Coim$ into account, we have 
