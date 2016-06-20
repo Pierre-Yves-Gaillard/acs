@@ -1999,15 +1999,83 @@ as desired.
 P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is exact if and only if its image in $\C^\wg$ is exact.
 \end{s}
 
-%
+%%
 
-\begin{s}\lb{sbbc}
-P. 47, Definition 2.2.6 (stated below as Definition~\ref{dsbc} p.~\pr{dsbc}), notion of stability by base change. We make an easy but useful observation. Let $I,J$ and $\C$ be three categories. 
+\sbs{Stability by base change}\lb{sbsarsbc}
+
+\begin{s}\lb{parsbc}
+Recall the following definition:
+
+\begin{df}[Definition 2.2.6 p.~47, stability by base change]%\lb{dsbc}
+Let $\C$ be a category which admits fiber products and inductive limits indexed by a category $I$.
+
+\nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change}\index{stable by base change} if for any morphism $Y\to Z$ in $\C$, the base change functor $\C_Z\to\C_Y$ given by 
+$$
+\C_Z\ni(X\to Z)\mt(X\tm_ZY\to Y)\in\C_Y
+$$ 
+commutes with inductive limits indexed by $I$. 
+
+This is equivalent to saying that for any inductive system $(X_i)_{i\in I}$ in $\C$ and any pair of morphisms $Y\to Z$ and $\col_iX_i\to Z$ in $\C$, we have the isomorphism 
+$$
+\col_i(X_i\tm_ZY)\xr\sim\left(\col_iX_i\right)\tm_ZY.
+$$
+
+\nn\emph{(ii)} If $\C$ admits small inductive limits and \emph{(i)} holds for any small category $I$, we say that \emph{small inductive limits in $\C$ are stable by base change}.
+\end{df} 
+
+The following lemma is implicit:
+
+\begin{lem}%\lb{bcl}
+Let $I$ and $\C$ be categories, let $Y$ be an object of $\C$, let $U:\C_Y\to\C$ be the forgetful functor, and let $\al:I\to\C_Y$ be a functor such that $\col U\ci\al$ exists in $\C$. Then $\col\al$ exists in $\C_Y$ and is given by the natural morphism $\col U\ci\al\to Y$. More precisely, let $X\to Y$ be a morphism in $\C$, let $p:\al\to\DT(X\to Y)$ be a morphism in $\Fct(I,\C_Y)$, and let $U*p:U\ci\al\to\DT X$ be the corresponding morphism in $\Fct(I,\C)$. [Recall that $*$ denotes the horizontal composition defined in Definition~\ref{dil1} p.~\pr{dil1}.] If $U*p$ is a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}), then so is $p$.
+\end{lem}
+
+\begin{proof}
+Let $Z\to Y$ be a morphism in $\C$ and $\ld:\al\to\DT(Z\to Y)$ be a morphism in $\Fct(I,\C_Y)$. We must show that there is a unique morphism $f:X\to Z$ in $\C_Y$ such that $\DT f\ci p=\ld$: 
+$$
+\begin{tikzcd}
+\al\ar[r,"p"]\ar[dr,"\ld"']&\DT(X\to Y)\ar[d,"\DT f"]&(X\to Y)\ar[d,dashed,"f"]\\ 
+&\DT(Z\to Y)&(Z\to Y).
+\end{tikzcd}
+$$ 
+Let $\mu:U\ci\al\to\DT Z$ be the morphism in $\Fct(I,\C)$ induced by $\ld$. Then there is a unique morphism $f:X\to Z$ such that $\DT f\ci(U*p)=\mu$: 
+$$%\begin{equation}\label{uap}
+\begin{tikzcd}
+U\ci\al\ar[r,"U*p"]\ar[dr,"\mu"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
+&\DT Z&Z.
+\end{tikzcd}
+$$%\end{equation} 
+It remains to check that $f$ is a morphism in $\C_Y$, that is, we must prove 
+$$
+(X\xr fZ\to Y)=(X\to Y).
+$$ 
+Let $i$ be in $I$. %By \qr{uap} it suffices to show 
+As $U*p$ is a coprojection, it suffices to show 
+$$%\begin{equation}\label{xfzy}
+\Big(U(\al(i))\to X\xr fZ\to Y\Big)=\Big(U(\al(i))\to X\to Y\Big).
+$$%\end{equation} 
+But we have 
+$$
+\begin{tikzcd}
+(U(\al(i))\ar[rr,"(U*p)_i"]&&X\ar[rr,"f"]&&Z\ar[rr]&&Y)&=\\ 
+(U(\al(i))\ar[rrrr,"\ld_i"]&&&&Z\ar[rr]&&Y)&=\\ 
+(U(\al(i))\ar[rrrrrr]&&&&&&Y)&=\\ 
+(U(\al(i))\ar[rr,"(U*p)_i"]&&X\ar[rrrr]&&&&Y).
+\end{tikzcd}
+$$ 
+Indeed, the first and third equalities follow from the fact that $U*p$ is a coprojection, and the second equality follows from the fact that $\ld_i$ is a morphism in $\C_Y$. 
+\end{proof} 
+\end{s}
+
+\begin{s}%\lb{sbbc}
+%P. 47, Definition 2.2.6 (stated below as Definition~\ref{dsbc} p.~\pr{dsbc}), notion of stability by base change. 
+We make an easy but useful observation. Let $I,J$ and $\C$ be three categories. 
 
 If $\C$ admits fiber products, and if inductive limits indexed by $I$ exist in $\C$ and are stable by base change, then $\C^J$ admits fiber products, and inductive limits indexed by $I$ exist in $\C^J$ and are stable by base change.
 \end{s} 
 
-%
+%%
+
+\sbs{Brief comments}
 
 \begin{s}\lb{fpl}
 P.~50, Corollary 2.2.11. We also have:
@@ -3053,7 +3121,7 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 (a) follows from \qr{prepa4}; 
 (b) follows from Proposition~\ref{271} p.~\pr{271} and \qr{leq} p.~\pr{leq};  
 (c) follows from Lemma~\ref{cc} p.~\pr{cc}; 
-(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book, stated below as Definition~\ref{dsbc} p.~\pr{dsbc}); and 
+(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}); and 
 (e) follows from \qr{263a} p.~\pr{263a}.
 \end{proof}
 
@@ -3746,9 +3814,9 @@ This results immediately from Corollary 2.5.6 p.~59 and Proposition 3.2.4 p.~79 
 
 %%
 
-\sbs{Six closely related statements}
+\sbs{Five closely related statements}
 
-For the reader's convenience we collect six statements closely related to Exercise 3.4 (i) p.~90 of the book. 
+For the reader's convenience we collect five statements closely related to Exercise 3.4 (i) p.~90 of the book. 
 
 \subsubsection{Proposition 2.1.10 p.~40}
 
@@ -3758,27 +3826,13 @@ If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a category, and
 
 (This fact has already been stated as Corollary~\ref{2.1.10c} p.~\pr{2.1.10c}.)
 
-\subsubsection{Definition 2.2.6 p.~47}
-
-\begin{df}[Definition 2.2.6 p.~47, stability by base change]\lb{dsbc}
-Let $\C$ be a category which admits fiber products and inductive limits indexed by a category $I$.
-
-\nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change}\index{stable by base change} if for any morphism $Y\to Z$ in $\C$, the base change functor $\C_Z\to\C_Y$ given by 
-$$
-\C_Z\ni(X\to Z)\mt(X\tm_ZY\to Y)\in\C_Y
-$$ 
-commutes with inductive limits indexed by $I$.
-
-\nn\emph{(ii)} If $\C$ admits small inductive limits and \emph{(i)} holds for any small category $I$, we say that \emph{small inductive limits in $\C$ are stable by base change}.
-\end{df}
-
 \subsubsection{Exercise 2.7 (ii) p.~65}
 
 \begin{prop}[Exercise 2.7 (ii) p.~65]\lb{sbcs}
-The base change functors in $\Set$ commute with small inductive and projective limits limits. In particular, small inductive limits in $\Set$ are stable by base change.
+The base change functors (see \S\ref{parsbc} p.~\pr{parsbc}) in $\Set$ commute with small inductive and projective limits limits. In particular, small inductive limits in $\Set$ are stable by base change.
 \end{prop}
 
-(See \S\ref{27i} p.~\pr{27i}.) Note that Proposition~\ref{sbcs} generalizes the distributivity of multiplication over addition in $\bb N$.
+(See \S\ref{27i} p.~\pr{27i}.) Note that Proposition~\ref{sbcs} generalizes the distributivity of multiplication over addition in $\bb N$. 
 
 \subsubsection{Proposition 3.3.3 p.~82}
 
@@ -4496,7 +4550,7 @@ Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 
 \nn\emph{(i)} $\C$ admits small inductive limits and finite projective limits, 
 
-\nn\emph{(ii)} small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}), 
+\nn\emph{(ii)} small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}), 
 
 \nn\emph{(iii)} any epimorphism is strict. 
 
@@ -4542,7 +4596,7 @@ $$
 $$
 \Hom_{\F^\wg}(\Coim\pp z,\pp Y)\iso\Ker\Big(\Hom_{\F^\wg}\big(\pp Z,\pp Y\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp Z\tm_{\pp X}\pp Z,\pp Y\big)\Big).
 $$ 
-(We have omitted some parenthesis to save space.) Moreover, for any $Z\to Y$ in $\Hom_\C(Z,Y)$, the morphism $Z\to Y$ is in 
+(We have omitted some parenthesis to save space.) Let $Z\to Y$ be a morphism in $\C$. Then $Z\to Y$ is in %$\Hom_\C(Z,Y)$, the morphism $Z\to Y$ is in 
 $$
 \Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big)
 $$ 
@@ -4645,7 +4699,7 @@ B_i\tm_CB.\ar[u]\ar[ur]
 \end{tikzcd}$$ 
 
 %(Note that the last row of the first diagram coincides with the first row of the second diagram, and the last row of the second diagram coincides with the first row of the third diagram.) 
-\nn The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see \S\ref{sbbc} p.~\pr{sbbc}). This proves Lemma~\ref{bibj}.
+\nn The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}). This proves Lemma~\ref{bibj}.
 \end{proof}
 
 Taking the definition of $\Coim$ into account, we have 
@@ -4686,7 +4740,7 @@ $$
 $$ 
 The natural map 
 $$
-\Hom_\C(Z,Y)\iso\Hom_{\F^\wg}(\pp(Z),\pp(Y))
+\Hom_\C(Z,Y)\to\Hom_{\F^\wg}(\pp(Z),\pp(Y))
 $$ 
 is bijective by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
 $$
@@ -6673,7 +6727,7 @@ The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\d
 
 \subsubsection{Proposition 8.3.27 (i) p.~186}\lb{gcsbc}
 
-By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book, stated above as Definition~\ref{dsbc} p.~\pr{dsbc}).
+By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}).
 
 %% 
 
