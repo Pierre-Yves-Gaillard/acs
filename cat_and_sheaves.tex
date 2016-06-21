@@ -1585,7 +1585,7 @@ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coproject
 
 %
 
-\begin{s} 
+\begin{s}\lb{217}
 P.~39, Proposition 2.1.7. We want to find a setting where the isomorphism 
 $$
 \col_{i,j}\al(i,j)\iso\col_i\col_j\al(i,j)
@@ -4699,7 +4699,8 @@ B_i\tm_CB.\ar[u]\ar[ur]
 \end{tikzcd}$$ 
 
 %(Note that the last row of the first diagram coincides with the first row of the second diagram, and the last row of the second diagram coincides with the first row of the third diagram.) 
-\nn The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism for obvious reasons, $c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}). This proves Lemma~\ref{bibj}.
+\nn The composition $d\ci c\ci b\ci a$ equals \qr{colcoim}, and $a$ is an isomorphism by Corollary 3.2.3 (ii) p.~79 of the book, $b$ is an isomorphism by \S\ref{217} p.~\pr{217}, % for obvious reasons, 
+$c$ and $d$ are isomorphisms because inductive limits in $\F^\wg$ indexed by $I$ are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}). This proves Lemma~\ref{bibj}.
 \end{proof}
 
 Taking the definition of $\Coim$ into account, we have 
@@ -4794,7 +4795,7 @@ P.~127, proof of Theorem 5.3.8.
 
 The sentence ``Since $\pp$ is conservative by (a), it remains to show that $\pp(u)$ is a monomorphism'' is justified by Proposition 5.1.5 (ii) p.~115 of the book and Corollary~\ref{fg} p.~\pr{fg} above.
 
-The phrase ``the two arrows $\pp(X_{i_1}\tm_XX_{i_1})\parar\lim_i\pp(X_i)$ coincide'' can be justified as follows: The two compositions  
+The phrase ``the two arrows $\pp(X_{i_1}\tm_XX_{i_1})\parar\col_i\pp(X_i)$ coincide'' can be justified as follows: The two compositions  
 $$
 \begin{tikzcd}
 X_{i_1}\tm_XX_{i_1}\ar[yshift=0.7ex]{r}{\xi_1}\ar[yshift=-0.7ex]{r}[swap]{\xi_2}&X_0\ar{r}{u}&X
@@ -4806,9 +4807,9 @@ $$
 $$ 
 which can be written as 
 $$
-\pp(X_{i_1}\tm_XX_{i_1})\parar\lim_i\pp(X_i)\to\pp(X_0)\to\pp(X),
+\pp(X_{i_1}\tm_XX_{i_1})\parar\col_i\pp(X_i)\to\pp(X_0)\to\pp(X),
 $$
-coincide. The composition $\lim_i\pp(X_i)\to\pp(X_0)\to\pp(X)$ being an isomorphism, the two morphisms $\pp(X_{i_1}\tm_XX_{i_1})\parar\lim_i\pp(X_i)$ coincide.
+coincide. The composition $\col_i\pp(X_i)\to\pp(X_0)\to\pp(X)$ being an isomorphism, the two morphisms $\pp(X_{i_1}\tm_XX_{i_1})\parar\col_i\pp(X_i)$ coincide.
 \end{s}
 
 %
@@ -4911,25 +4912,18 @@ I\ar{r}{\al}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
 $$
 (where $I$ is a small filtrant category), it suffices to check that there is an isomorphism 
 $$
-\Hom_\A\left(\widetilde F(\ ),Y\right)\iso
-\Hom_{\C^\wg}(\ \ ,B)
+\Hom_\A\left(\widetilde F(\ ),Y\right)\iso\Hom_{\C^\wg}(\ \ ,B)
 $$ 
 in $\Ind(\C)^\wg_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wg$ is a $\V$-category. We have 
 $$
 \widetilde F(A):=\col_{(X\to A)\in\C_A}F(X),
 $$ 
-as well as the following isomorphisms functorial in $A\in\Ind(\C)$:
+as well as the following bijections functorial in $A\in\Ind(\C)$:
 $$
-\Hom_\A\left(\widetilde F(A),Y\right)=
-\Hom_\A\left(\col_{(X\to A)\in\C_A}F(X),Y\right)\iso
-\lim_{(X\to A)\in\C_A}B(X)
+\Hom_\A\left(\widetilde F(A),Y\right)=\Hom_\A\left(\col_{(X\to A)\in\C_A}F(X),Y\right)\iso\lim_{(X\to A)\in\C_A}B(X)
 $$
 $$
-\iso
-\lim_{(X\to A)\in\C_A}\Hom_{\C^\wg}((j\ci i)(X),B)
-\iso
-\Hom_{\C^\wg}\left(\icolim_{(X\to A)\in\C_A}X,B\right)\iso
-\Hom_{\C^\wg}(j(A),B).
+\iso\lim_{(X\to A)\in\C_A}\Hom_{\C^\wg}((j\ci i)(X),B)\iso\Hom_{\C^\wg}\left(\icolim_{(X\to A)\in\C_A}X,B\right)\iso\Hom_{\C^\wg}(j(A),B).
 $$
 \end{proof}
 
