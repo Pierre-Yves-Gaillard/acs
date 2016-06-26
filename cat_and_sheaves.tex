@@ -13,6 +13,7 @@
 \usepackage[a4paper,headheight=14.5pt]{geometry}
 \usepackage{makeidx}
 \usepackage{datetime}
+\usepackage{wasysym}
 \usepackage{tikz-cd}
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{comment}
@@ -1888,54 +1889,7 @@ To prove (c) we can assume that there is a morphism $i\to j$, in which case the 
 %
 
 \begin{s}
-Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}.  
-
-\begin{thm}\lb{fgd}
-Let $I$ be a small category with disjoint hom-sets; let $\al,\bt:I\to\C$ be two functors; and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. Then the natural map 
-\begin{equation}\lb{hficab}
-\Hom_{\Fct(I,\C)}(\al,\bt)\to\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
-\end{equation} 
-is bijective.
-\end{thm}
-
-\begin{proof}
-By Convention~\ref{thep} p.~\pr{thep}  
-$$
-\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
-$$ 
-is a subset $S$ of 
-$$
-P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\al(j),\bt(j)).
-$$ 
-Let $x=(x_{i,i\to j})$ be in $P$. This just means that each $x_{i,i\to j}$ is a morphism $\al(j)\to\bt(j)$. Then $x$ belongs to $S$ if and only if the following two conditions hold:
-
-\nn(a) For all $i$ in $I$ the family $(x_{i,i\to j})_{i\to j}$ is in 
-$$
-\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i),
-$$ 
-that is, for all diagram $i\to j\to k$ in $I$, the square 
-$$
-\begin{tikzcd}
-\al(j)\ar{rr}{x_{i,i\to j}}\ar{d}[swap]{\al(j\to k)}&&\bt(j)\ar{d}{\bt(j\to k)}\\ 
-\al(k)\ar{rr}[swap]{x_{i,i\to j\to k}}&&\bt(k)
-\end{tikzcd}
-$$
-commutes.
-
-\nn(b) We have $x_{i,i\to j\to k}=x_{j,j\to k}$ for all diagram $i\to j\to k$ in $I$. 
-
-\nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\al$ to $\bt$. We get a map 
-\begin{equation}\lb{liifii}
-\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)\to\Hom_{\Fct(I,\C)}(\al,\bt),
-\end{equation} 
-and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inverse bijections.
-\end{proof}
-\end{s}
-
-%
-
-\begin{s}
-P.~42. Here are some additional details about the last diagram on p.~42:
+P.~42, proof of Lemma 2.1.15. Here are some additional details about the last diagram on p.~42:
 
 To the commutative diagram 
 $$
@@ -1983,7 +1937,7 @@ $$
 Reversing the identity arrows, we get 
 $$
 \begin{tikzcd}
-\al(i)\ar[d,"\id"']\ar[r,"\pp(\id)"]&\bt(i)\ar[d,"\bt(f)"]\\ 
+\al(i)\ar[d,"\id"']\ar[r,"\pp(\id_i)"]&\bt(i)\ar[d,"\bt(f)"]\\ 
 \al(i)\ar[d,"\al(f)"']\ar[r,"\pp(f)"]&\bt(j)\ar[d,"\id"]\\ 
 \al(j)\ar[r,"\pp(\id_j)"']&\bt(j),
 \end{tikzcd}
@@ -1992,7 +1946,56 @@ as desired.
 %The last diagram can also be drawn as follows: $$\begin{tikzcd}\al(i)\ar[dd,"\pp(i\xr\id i)"']\ar[rr,"\al(i\xr\id i)"]&&\al(i)\ar[dd,"\pp(i\to j)"]\ar[rr,"\al(i\to j)"]&&\al(j)\ar[dd,"\pp(j\xr\id j)"]\\ \\ \bt(i)\ar[rr,"\bt(i\to j)"']&&\bt(j)\ar[rr,"\bt(i\xr\id i)"']&&\bt(j).\end{tikzcd}$$
 \end{s}
 
-% removed
+%
+
+\begin{s}
+$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
+
+\begin{thm}\lb{fgd}
+Let $I$ be a small category with disjoint hom-sets; let $\al,\bt:I\to\C$ be two functors; and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. Then the natural map 
+\begin{equation}\lb{hficab}
+\Hom_{\Fct(I,\C)}(\al,\bt)\to\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
+\end{equation} 
+is bijective.
+\end{thm}
+
+\begin{proof}
+By Convention~\ref{thep} p.~\pr{thep}  
+$$
+\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
+$$ 
+is a subset $S$ of 
+$$
+P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\al(j),\bt(j)).
+$$ 
+Let $x=(x_{i,i\to j})$ be in $P$. This just means that each $x_{i,i\to j}$ is a morphism $\al(j)\to\bt(j)$. Then $x$ belongs to $S$ if and only if the following two conditions hold:
+
+\nn(a) For all $i$ in $I$ the family $(x_{i,i\to j})_{i\to j}$ is in 
+$$
+\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i),
+$$ 
+that is, for all diagram $i\to j\to k$ in $I$, the square 
+$$
+\begin{tikzcd}
+\al(j)\ar{rr}{x_{i,i\to j}}\ar{d}[swap]{\al(j\to k)}&&\bt(j)\ar{d}{\bt(j\to k)}\\ 
+\al(k)\ar{rr}[swap]{x_{i,i\to j\to k}}&&\bt(k)
+\end{tikzcd}
+$$
+commutes.
+
+\nn(b) We have $x_{i,i\to j\to k}=x_{j,j\to k}$ for all diagram $i\to j\to k$ in $I$. 
+
+\nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\al$ to $\bt$. We get a map 
+\begin{equation}\lb{liifii}
+\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)\to\Hom_{\Fct(I,\C)}(\al,\bt),
+\end{equation} 
+and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inverse bijections.
+\end{proof}
+\end{s}
+
+%
+
+% removed 
 % https://docs.google.com/document/d/1ydcLZ0o0IQjew7DRTL5J8BFQ_9V9fc56CfpscjLnrUE/edit
 
 \begin{s}\lb{ex}
@@ -10039,7 +10042,7 @@ P.~409, Proposition 17.1.9 follows immediately from \qr{prepa1} p.~\pr{prepa1}, 
 %
 
 \begin{s}\lb{17115ps}
-P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (17.1.15) p.~410 should read 
+$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (17.1.15) p.~410 should read 
 $$
 \Hom_{\PSh(X,\A)}(F,G)\iso\lim_{U\in\C_X}\HOM_{\PSh(X,\A)}(F,G)(U).
 $$
@@ -10173,7 +10176,7 @@ P.~419, proof of Proposition 17.4.4:
 \nn First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
 
 \begin{UnsolvedProblem}
-Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
+$\frownie$ (``frowny''). Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
 %Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
 \end{UnsolvedProblem} 
 
