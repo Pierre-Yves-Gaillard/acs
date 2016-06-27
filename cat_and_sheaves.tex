@@ -13,7 +13,7 @@
 \usepackage[a4paper,headheight=14.5pt]{geometry}
 \usepackage{makeidx}
 \usepackage{datetime}
-\usepackage{wasysym}
+%\usepackage{wasysym}
 \usepackage{tikz-cd}
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{comment}
@@ -39,7 +39,7 @@
 \nt{cond}[thm]{Condition}
 \nt{conv}[thm]{Convention}
 \nt{rk}[thm]{Remark}
-\nt{UnsolvedProblem}[thm]{Unsolved Problem}
+\nt{uspb}[thm]{Unsolved Problem}
 \nt{warning}[thm]{Warning}
 
 \theoremstyle{definition}
@@ -514,16 +514,17 @@ P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 \nn$*$ P.~409, line 2: $\ld\ci(\oo h_X^t)_A\iso\oo h_A$ should be $\ld\ci(\oo h_X^t)_A\iso\oo h_A^t$. 
 
 \begin{s}\lb{17115typo}
-P.~410, Display (17.1.15):instead of 
+P.~410, Display (17.1.15): instead of 
 $$
 \Hom_{\PSh(X,\A)}(F,G)\iso\lim_{U\in\C_X}\HOM_{\PSh(U,\A)}(F,G)(U).
 $$
 we should have
 $$
 \Hom_{\PSh(X,\A)}(F,G)\iso\lim_{U\in\C_X}\HOM_{\PSh(X,\A)}(F,G)(U).
-$$
+$$ 
+See \S\ref{17115ps} p.~\pr{17115ps}. 
 \end{s}
-
+See \S
 %
 
 \begin{s}\lb{1722}
@@ -1948,6 +1949,8 @@ as desired.
 
 %
 
+\begin{comment}
+
 \begin{s}
 $\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
 
@@ -1992,6 +1995,8 @@ commutes.
 and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inverse bijections.
 \end{proof}
 \end{s}
+
+\end{comment}
 
 %
 
@@ -10042,11 +10047,15 @@ P.~409, Proposition 17.1.9 follows immediately from \qr{prepa1} p.~\pr{prepa1}, 
 %
 
 \begin{s}\lb{17115ps}
-$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (17.1.15) p.~410 should read 
+%$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} 
+P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (17.1.15) p.~410 should read 
 $$
 \Hom_{\PSh(X,\A)}(F,G)\iso\lim_{U\in\C_X}\HOM_{\PSh(X,\A)}(F,G)(U).
-$$
-This follows from Theorem~\ref{fgd} p.~\pr{fgd}. %\qr{17115mod} p.~\pr{17115mod}. 
+$$ 
+\begin{uspb}
+I don't understand why $\HOM_{\PSh(X,\A)}(F,G)(U)$ depends functorially on $U\in\C_X$.
+\end{uspb}
+%This follows from Theorem~\ref{fgd} p.~\pr{fgd}. %\qr{17115mod} p.~\pr{17115mod}. 
 \end{s} 
 
 %
@@ -10175,10 +10184,11 @@ P.~419, proof of Proposition 17.4.4:
 
 \nn First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
 
-\begin{UnsolvedProblem}
-$\frownie$ (``frowny''). Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
+\begin{uspb}
+%$\frownie$ (``frowny''). 
+Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
 %Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
-\end{UnsolvedProblem} 
+\end{uspb} 
 
 \nn Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419 of the book: The chain reads 
 $$
