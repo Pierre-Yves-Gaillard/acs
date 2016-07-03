@@ -329,7 +329,7 @@ $$
 
 \nn$*$ P.~132, Corollary 6.1.6: The following fact is implicit. Let $\C\xr{F}\C'\xr{G}\C''$ be functors, let $X'$ be in $\C'$, and assume that $G$ is fully faithful. Then the functor $\C_{X'}\to\C_{G(X')}$ induced by $G$ is an isomorphism.
 
-\nn$*$ P.~133, proof of Proposition 6.1.8, Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xr{\al}\C\xr{F}\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\iso\col F(\al)$. Then $X\iso\col\al$. The proof is obvious.
+%\nn$*$ P.~133, proof of Theorem 6.1.8 (sated below on p.~\pr{618} as Theorem~\ref{618}), Line 2: ``It is enough to show that $A$ belongs to $\Ind(\C)$''. More generally: Let $I\xr\al\C\xr F\C'$ be functors. Assume that $F$ is fully faithful, and that there is an $X$ in $\C$ such that $F(X)\iso\col F(\al)$. Then $X\iso\col\al$. The proof is obvious.
 
 \nn$*$ P.~133, Proposition 6.1.9. ``There exists a unique functor ...'' should be ``There exists a functor ... Moreover, this functor is unique up to unique isomorphism.''
 
@@ -5068,7 +5068,7 @@ If $I$ and $J$ are categories and if $J$ is connected, then the projection $I\tm
 \end{lem}
 
 \begin{proof}
-Let $i_0$ be in $I$. We must check that $(I\tm J)^{i_0}$ is connected. We have $(I\tm J)^{i_0}\iso I^{i_0}\tm J$, and it is easy to see that a product of connected categories is connected. 
+Let $i_0$ be in $I$. We must check that $(I\tm J)^{i_0}$ is connected. We have $(I\tm J)^{i_0}\iso I^{i_0}\tm J$, and it is easy to see that a product of two connected categories is connected. 
 \end{proof}
 
 This ends the proof of \qr{6112a}.
@@ -5112,11 +5112,11 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 \begin{s} 
 P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
 
-Assume that for any pair of parallel arrows in $\C$, its kernel in $\C^\wg$ belongs to $\Ind(\C)$. Then, for any pair of parallel arrows in $\Ind(\C)$, its kernel in $\C^\wg$ is its kernel in $\Ind(\C)$.
+\emph{Assume that for any pair of parallel arrows in $\C$, its kernel in $\C^\wg$ belongs to $\Ind(\C)$. Then, for any pair of parallel arrows in $\Ind(\C)$, its kernel in $\C^\wg$ is its kernel in $\Ind(\C)$.}
 
 Here is a slightly more detailed rewriting of the proof:
 
-Let $f,g:A\parar B$ be a pair of parallel arrows in $\Ind(\C)$. With the notation of Corollary 6.1.14, we may assume that there exist a small filtrant category $I$ and parallel arrows $\pp,\psi:\al\parar\bt$ in $\C^I$ such that $A=\ic\al$, $B=\ic\bt$, $f=\ic\pp$ and $g=\ic\psi$. For each $i$ in $I$ set $\gamma(i):=\Ker(\pp_i,\psi_i)\in\C^\wg$. By assumption we get $\gamma(i)\in\Ind(\C)$. Then $\ic\gamma$ is a kernel of $(f,g)$ in $\C^\wg$, and it belongs to $\Ind(\C)$ by Theorem 6.1.8 p.~132 of the book.
+Let $f,g:A\parar B$ be a pair of parallel arrows in $\Ind(\C)$. With the notation of Corollary 6.1.14, we may assume that there exist a small filtrant category $I$ and parallel arrows $\pp,\psi:\al\parar\bt$ in $\C^I$ such that $A=\ic\al$, $B=\ic\bt$, $f=\ic\pp$ and $g=\ic\psi$. For each $i$ in $I$ set $\gamma(i):=\Ker(\pp_i,\psi_i)\in\C^\wg$. By assumption we get $\gamma(i)\in\Ind(\C)$. Then $\ic\gamma$ is a kernel of $(f,g)$ in $\C^\wg$, and it belongs to $\Ind(\C)$ by Theorem~\ref{618} p.~\pr{618}.
 \end{s}
 
 %
@@ -7052,7 +7052,7 @@ and easily check that $A\oplus B$ is additive and left exact, and thus belongs t
 
 $\Ind(\C)$ admits kernels and cokernels: $\Ind(\C)$ admits finite inductive and projective limits by Corollary 6.1.17 (i) and Proposition 6.1.18 (iii) p.~136.
 
-\nn(ii) $\Ind(\C)$ admits small filtrant inductive limits by Theorem 6.1.8 p.~132.
+\nn(ii) $\Ind(\C)$ admits small filtrant inductive limits by Theorem~\ref{618} p.~\pr{618}.
 
 \nn(iii) The natural embedding $\Ind(\C)\to\C^{\wg,add}$ commutes with kernels: this follows from Proposition 6.1.16 (i) p.~136.
 \end{s}
