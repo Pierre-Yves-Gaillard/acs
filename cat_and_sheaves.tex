@@ -5230,14 +5230,21 @@ $$
 $$ 
 In particular, for each $A$ in $\Ind(\C)$ we have a morphism $\ee_A:A\to\iota(\sigma(A))$. Recall also that $\C$ is a category admitting small filtrant limits. Consider the following conditions on an object $X$ in $\C$:
 
-\nn(a) The natural morphism $\col\Hom_\C(X,\al)\to\Hom_\C(X,\col\al)$ is an isomorphism for all functor $\al:I\to\C$ with $I$ small and filtrant.
+\nn(a) The natural map $\col\Hom_\C(X,\al)\to\Hom_\C(X,\col\al)$ is bijective for all functor $\al:I\to\C$ with $I$ small and filtrant.
 
-\nn(b) The morphism $\ee_A\ci:\Hom_{\Ind(\C)}(\iota(X),A)\to\Hom_{\Ind(\C)}(\iota(X),\iota(\sigma(A)))$ is an isomorphism for all $A$ in $\Ind(\C)$.
+\nn(b) The map $\ee_A\ci:\Hom_{\Ind(\C)}(\iota(X),A)\to\Hom_{\Ind(\C)}(\iota(X),\iota(\sigma(A)))$ is bijective for all $A$ in $\Ind(\C)$.
 \begin{lem}
 The above conditions are equivalent.
 \end{lem}
 \begin{proof}
-Left to the reader.
+If $\al:I\to\C$ is a functor with $I$ small and filtrant, then the obvious square 
+$$
+\begin{tikzcd}
+\col\Hom_\C(X,\al)\ar[d,"\sim"']\ar[rr]&&\Hom_\C(X,\col\al)\ar[d,"\sim"]\\ 
+\Hom_{\Ind(\C)}(X,\ic\al)\ar[rr,"\ee_{\ic\al}"']&&\Hom_{\Ind(\C)}(X,\col\al)
+\end{tikzcd}
+$$ 
+commutes.
 \end{proof} 
 \begin{df}
 We say that $X$ is of \emph{finite presentation} if the above conditions are satisfied.
@@ -5259,13 +5266,13 @@ $\ds\Hom_{\Ind(\J)}(\ic_j\bt(j),\ic_i\al(i))$
 
 \hfill$\ds\to\Hom_\C(JF(\ic_j\bt(j)),JF(\ic_i\al(i)))$. 
 
-Here is a consequence of Proposition 6.3.4:
+%Here is a consequence of Proposition 6.3.4:
 
-\nn\emph{Let $\C$ be a category admitting small filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.}
+%\nn\emph{Let $\C$ be a category admitting small filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.}
 
-\begin{proof} 
-Let $\iota:\C^{fp}\to\C$ be the inclusion functor. By Proposition 6.3.2 and Corollary 6.3.4 p.~140 of the book, the functor $J\iota:\Ind(\C^{fp})\to\C$ is fully faithful and commutes with small filtrant inductive limits, and $\iota$ factors through $J\iota$. By Lemma 1.3.11 p.~21 of the book, $J\iota$ induces an equivalence $\Ind(\C^{fp})\xr\sim\C'$. The claims above follow easily from these observations. 
-\end{proof}
+%\begin{proof} 
+%Let $\iota:\C^{fp}\to\C$ be the inclusion functor. By Corollary 6.3.2 and Proposition 6.3.4 p.~140 of the book, the functor $J\iota:\Ind(\C^{fp})\to\C$ is fully faithful and commutes with small filtrant inductive limits, and $\iota$ factors through $J\iota$. By Lemma 1.3.11 p.~21 of the book, $J\iota$ induces an equivalence $\Ind(\C^{fp})\xr\sim\C'$. The claims above follow easily from these observations. 
+%\end{proof}
 \end{s}
 
 %
@@ -5297,14 +5304,14 @@ I\ar{r}{\xi}&\C^{\text fp}\ar{d}[swap]{\iota_\C}\ar{r}{\rho}&\C\ar[yshift=-.9ex]
 $$ 
 $\kappa'$ being quasi-inverse to $J\rho$ (for more details, see p.~141 of the book), $\kappa$ is defined by $\kappa:=I\rho\ci\kappa'$, and $X\iso\col\rho\ci\xi$. We have 
 $$
-\kappa(X)=I\rho(\kappa'(\col \rho\ci\xi))\iso I\rho(\ic\xi)
+\kappa(X)\iso I\rho(\kappa'(\col\rho\ci\xi))\iso I\rho(\ic\xi)
 $$
 
 $$
 \iso\ic(I\rho\ci\iota_\C\ci\xi)\iso\ic(\rho\ci\xi), 
 $$ 
 
-\nn the three isomorphisms being respectively justified by \qr{140} p.~\pr{140}, \qr{133ii} p.~\pr{133ii} and \qr{133i} p.~\pr{133i}. This proves \qr{k}. 
+\nn the second, third and fourth isomorphisms being respectively justified by \qr{140} p.~\pr{140}, \qr{133ii} p.~\pr{133ii} and \qr{133i} p.~\pr{133i}. This proves \qr{k}. 
 
 Parts (ii) and (iii) of Corollary 6.3.7 are equivalent by Proposition 1.5.6 (ii) p.~29 of the book. To prove (ii) note that we have 
 $$
@@ -5318,14 +5325,12 @@ by Corollary 6.3.7 (i) p.~141 and Proposition 6.3.1 (i) p.~139 of the book.
 \sbs{Theorem 6.4.3 p.~144}
 
 Notational convention for this section, {\em and for this section only!} Superscripts will {\em never} be used to designate a category of the form $\C^{X'}$ attached to a functor $\C\to\C'$ and to an object $X'$ of $\C'$. Only two categories of the form $\C_{X'}$ (again attached to a functor $\C\to\C'$ and to an object $X'$ of $\C'$) will be considered in this section. As a lot of subscripts will be used, we shall denote these categories by 
-%
 \begin{equation}\lb{slice}
 \C/G(a)\text{ and }L/a
-\end{equation}
-%
+\end{equation} 
 instead of $\C_{G(a)}$ and $L_a$, to avoid confusion. Superscripts will {\em always} be used to designate categories of functors, like the category $\B^\A$ of functors from $\A$ to $\B$. 
 
-Let $\C$ be a category and $K$ is a small category. Recall that, by Corollary 6.3.2 p.~140 of the book (see \qr{140} p.~\pr{140} above), there is a functor $\Phi:\Ind(\C^K)\to\Ind(\C)^K$ such that, if $F:N\to\C^K$ is a functor defined on a small filtrant category and if $k$ is in $K$, then we have 
+Let $\C$ be a category and $K$ a small category. Recall that, by Corollary 6.3.2 p.~140 of the book (see \qr{140} p.~\pr{140} above), there is a functor $\Phi:\Ind(\C^K)\to\Ind(\C)^K$ such that, if $F:N\to\C^K$ is a functor defined on a small filtrant category and if $k$ is in $K$, then we have 
 $$
 \Phi(\ic F)(k)\iso\ic_{n\in N}(F(n)(k))=\ic(F(\ )(k)).
 $$
@@ -5436,7 +5441,9 @@ $$
 $$ 
 (see \qr{slice} p.~\pr{slice} for the definition of $\C/G(a)$) be the functor defined by 
 $$
-\widetilde{\al_a}(i_a):=\Big(u(i_a):\al_a(i_a)\to G(a)\Big);
+\widetilde{\al_a}(i_a):=\Big(u'(a):\al_a(i_a)\to G(a)\Big);
+%
+%\widetilde{\al_a}(i_a):=\Big(u(i_a):\al_a(i_a)\to G(a)\Big);
 $$
 and put 
 $$
@@ -5473,7 +5480,7 @@ Concretely, an object of $M$ is a triple
 where $((i_\ell),Q)$ is an object of $N'$, where $i_a$ is an object of $I_a$, where $f$ runs over the morphisms from $\ell$ to $a$ in $K$, and where $\xi_f$ is a morphism from $Q(\ell)$ to $\al_a(i_a)$ which makes the square  
 $$
 \begin{tikzcd}
-Q(\ell)\ar{r}{\xi_f}\ar{d}[swap]{u'(\ell)}&\al_a(i_a)\ar{d}{u(i_a)}\\ 
+Q(\ell)\ar{r}{\xi_f}\ar{d}[swap]{u'(\ell)}&\al_a(i_a)\ar{d}{u'(a)}\\ %{u(i_a)}\\ 
 G(\ell)\ar{r}[swap]{G(f)}&G(a) 
 \end{tikzcd}
 $$ 
