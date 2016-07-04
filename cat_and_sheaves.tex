@@ -5131,6 +5131,16 @@ This follows from Proposition~\ref{p332} p.~\pr{p332} above and Corollary 6.1.6 
 \end{s}
 
 \begin{s} 
+P.~137, proof of Proposition 6.1.19. We just add a few references in the proof. Recall the statement:
+\begin{prop}
+If a category $\C$ admits finite inductive limits and finite projective limits, then small filtrant inductive limits are exact in $\Ind(\C)$.
+\end{prop}
+\begin{proof}
+By Proposition~\ref{333} p.~\pr{333} it suffices to check that small filtrant inductive limits commute with finite projective limits in $\Ind(\C)$. Since the embedding $\Ind(\C)\to\C^\wg$ commutes with small filtrant inductive limits by Theorem 6.1.8 p.~132, and with finite projective limits by Corollary 6.1.17 (i) p.~136, this follows from the fact that small filtrant inductive limits are exact in $\C^\wg$ (see Exercise 3.2 p.~90).
+\end{proof}
+\end{s}
+
+\begin{s} 
 P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the table:\bigskip 
 
 \begin{center}
@@ -5151,7 +5161,7 @@ P.~137, table. In view of Corollary 6.1.17 p.~136, one can add two lines to the 
 %
 
 \begin{s} 
-P.~138, Corollary 6.1.17. If $\C$ admits finite projective limits, then $\C$ is exact in $\Ind(\C)$. This follows from Corollary 6.1.17, Corollary 6.1.6 p.~132 and Proposition 3.3.3 p.~82 of the book.
+P.~138, Corollary 6.1.17. If $\C$ admits finite projective limits, then $\C$ is exact in $\Ind(\C)$. This follows from Corollary 6.1.17, Corollary 6.1.6 p.~132 and Proposition~\ref{333} p.~\pr{333}.%Proposition 3.3.3 p.~82 of the book.
 \end{s}
 
 %
@@ -5186,7 +5196,13 @@ defined by the equalities $\psi(p_i(\tau))=\rho_i\ci\tau$ for all $i$ in $I$ and
 %
 
 \begin{s} 
-P.~138, proof of Proposition 6.2.1, sentence ``Let $w\in\Hom_\C(X,\al(i))$ and let $s:i_0\to i$.'' This sentence is on the fourth line of the proof when the lines of the proof are counted backward from the last to the first. Here is a more detailed phrasing: Let $y$ be in $\col\Hom_\C(X,\al)$. Then $y$ is of the form $p_i(w)$ where 
+P.~138, proof of Proposition 6.2.1, sentence 
+
+``Let $w\in\Hom_\C(X,\al(i))$ and let $s:i_0\to i$.'' 
+
+This sentence is on the fourth line of the proof when the lines of the proof are counted backward from the last to the first. Here is a more detailed phrasing: 
+
+Let $y$ be in $\col\Hom_\C(X,\al)$. Then $y$ is of the form $p_i(w)$ where 
 $$
 p_i:\Hom_\C(X,\al(i))\to\col\Hom_\C(X,\al)
 $$ 
@@ -9659,7 +9675,8 @@ As proved in the book,
 
 For the reader's convenience we paste the proof of \qr{ecae} (see p.~391 in the book):
 
-Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ by Proposition 3.3.3 p.~82 of the book, stated above as Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, stated above as Proposition~\ref{34i} p.~\pr{34i}. Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
+Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ by %Proposition 3.3.3 p.~82 of the book, stated above as 
+Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, stated above as Proposition~\ref{34i} p.~\pr{34i}. Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
