@@ -3717,7 +3717,7 @@ $$
 \end{lem}
 
 \begin{proof}
-Let $j\to j'$ be a morphism in $J$. It is easily checked that there is a unique dashed arrow which make all the diagrams 
+Let $j\to j'$ be a morphism in $J$. It is easily checked that there is a unique dashed arrow which make all diagrams 
 $$
 \begin{tikzcd}
 \ds\col_{(i,u)\in I_{\psi(j)}}\al(i,j,u)\ar[rr,dashed]&&\ds\col_{(i,u)\in I_{\psi(j')}}\al(i,j',u)\\ 
@@ -5167,7 +5167,7 @@ P.~138, Corollary 6.1.17. If $\C$ admits finite projective limits, then $\C$ is 
 %
 
 \begin{s} 
-P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ admits finite projective limits. By Remark 2.6.5 p.~62 and Corollary 6.1.17 p.~136, all the inclusions represented in the diagram 
+P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ admits finite projective limits. By Remark 2.6.5 p.~62 and Corollary 6.1.17 p.~136, all inclusions represented in the diagram 
 \[
 \begin{tikzcd}
 {}&\C^\wg_\V\ar[-]{ld}\ar[-]{rd}\\
@@ -5221,7 +5221,21 @@ $$
 %
 
 \begin{s} 
-P.~140, Definition 6.3.3. We spell out some details. Recall that the embedding functor $\iota:\C\to\Ind(\C)$ has a left adjoint functor $\sigma$:
+P.~140, Definition 6.3.3. Recall this definition:
+
+\begin{df}[Definition 6.3.3. p.~140]\lb{633}
+Assume that $\C$ admits small filtrant inductive limits. We say that an object $X$ of $\C$ is \emph{of finite presentation} if for any $\al:I\to\C$ with $I$ small and filtrant, the natural morphism 
+$$
+\col\Hom_\C(X,\al)\to\Hom_\C(X,\col\al)
+$$ 
+is an isomorphism, that is, if 
+$$
+\Hom_{\Ind(\C)}(X,A)\to\Hom_\C(X,\sigma_\C(A))
+$$ 
+is an isomorphism for any $A\in\Ind(\C)$.
+\end{df}
+
+We spell out some details. Recall that the embedding functor $\iota:\C\to\Ind(\C)$ has a left adjoint functor $\sigma$:
 $$
 \begin{tikzcd}
 \C\ar[xshift=.7ex]{d}{\iota}\\ 
@@ -5266,13 +5280,13 @@ $\ds\Hom_{\Ind(\J)}(\ic_j\bt(j),\ic_i\al(i))$
 
 \hfill$\ds\to\Hom_\C(JF(\ic_j\bt(j)),JF(\ic_i\al(i)))$. 
 
-%Here is a consequence of Proposition 6.3.4:
+Here is a consequence of Proposition 6.3.4 (see Corollary 6.3.5 p.~141 in the book):
 
-%\nn\emph{Let $\C$ be a category admitting small filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.}
+\nn\emph{Let $\C$ be a category admitting small filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.}
 
-%\begin{proof} 
-%Let $\iota:\C^{fp}\to\C$ be the inclusion functor. By Corollary 6.3.2 and Proposition 6.3.4 p.~140 of the book, the functor $J\iota:\Ind(\C^{fp})\to\C$ is fully faithful and commutes with small filtrant inductive limits, and $\iota$ factors through $J\iota$. By Lemma 1.3.11 p.~21 of the book, $J\iota$ induces an equivalence $\Ind(\C^{fp})\xr\sim\C'$. The claims above follow easily from these observations. 
-%\end{proof}
+\begin{proof} 
+Let $\iota:\C^{fp}\to\C$ be the inclusion functor. By Corollary 6.3.2 and Proposition 6.3.4 p.~140 of the book, the functor $J\iota:\Ind(\C^{fp})\to\C$ is fully faithful and commutes with small filtrant inductive limits, and $\iota$ factors through $J\iota$. By Lemma 1.3.11 p.~21 of the book, $J\iota$ induces an equivalence $\Ind(\C^{fp})\xr\sim\C'$. The claims above follow easily from these observations. 
+\end{proof}
 \end{s}
 
 %
@@ -5572,7 +5586,7 @@ Recall the statement:
 
 Let $R$ be a ring.
 
-\nn(i) Prove that $M\in\Mod(R)$ is of finite presentation in the sense of Definition 6.3.3 if and only if it is of finite presentation in the classical sense (see Examples 1.2.4 (iv)), that is, if there exists an exact sequence $R^m\to R^n\to M\to0$.
+\nn(i) Prove that $M\in\Mod(R)$ is of finite presentation in the sense of Definition~\ref{633} p.~\pr{633} if and only if it is of finite presentation in the classical sense (see Examples 1.2.4 (iv)), that is, if there exists an exact sequence $R^m\to R^n\to M\to0$.
 
 \nn(ii) Prove that any $R$-module $M$ is a small filtrant inductive limit of modules of finite presentation. (Hint: consider the full subcategory of $(\Mod(R))_M$ consisting of modules of finite presentation and prove it is essentially small and filtrant.)
 
@@ -5580,9 +5594,9 @@ Let $R$ be a ring.
 
 \nn\textbf{Solution.} We shall freely use Proposition 3.1.3 p.~73 of the book, which describes the inductive limit of a set-valued functor defined on a small filtrant category, as well as Corollary 3.1.5 (same page), which says that the forgetful functor $\Mod(R)\to\Set$ commutes with small filtrant inductive limits.
 
-\nn(i) (a) Let $R^m\to R^n\to M\to0$ be exact, and let us show that $M\in\Mod(R)$ is of finite presentation in the sense of Definition 6.3.3. 
+\nn(i) (a) Let $R^m\to R^n\to M\to0$ be exact, and let us show that $M\in\Mod(R)$ is of finite presentation in the sense of Definition~\ref{633} p.~\pr{633}. 
 
-Let $(N_i)_{i\in I}$ be an inductive system in $\Mod(R)$ indexed by a small filtrant category $I$, let $N$ be its inductive limit, and, for each $i$, let $p_i:N_i\to N$ 
+Let $(N_i)_{i\in I}$ be an inductive system in $\Mod(R)$ indexed by a small filtrant category $I$, let $N$ be its inductive limit, and, for each $i$, let %$p_i:N_i\to N$ 
 $$
 p_i:N_i\to N\quad\text{and}\quad q_i:\Hom_R(M,N_i)\to\col_i\Hom_R(M,N_i)
 $$ 
@@ -5604,23 +5618,23 @@ There is an $i'$ in $I$ and there are $b_1,\dots,b_n$ in $N_{i'}$ such that $p_{
 $$
 p_{i'}\left(\sum_{j=1}^n\ \ld_{jk}\,b_j\right)=0\quad\text{for}\quad k=1,\dots,m.
 $$ 
-As a result, there is a $i$ in $I$ and there are $c_1,\dots,c_n$ in $N_i$ such that $p_{i'}(c_j)=f(a_j)$ for all $j$ and 
+As a result, there is a $i$ in $I$ and there are $c_1,\dots,c_n$ in $N_i$ such that $p_i(c_j)=f(a_j)$ for all $j$ and 
 $$
 \sum_{j=1}^n\ \ld_{jk}\,c_j=0\quad\text{for}\quad k=1,\dots,m.
 $$ 
-Hence there is an $R$-linear map $g:M\to N_i$ such that $g(a_j)=c_j$ for all $j$, and thus $p_i\ci g=f$. This ends the proof of the surjectivity of \qr{pc}, and also the proof of the fact that any $R$-module which is of finite presentation in the classical sense is of finite presentation in the sense of Definition 6.3.3. 
+Hence there is an $R$-linear map $g:M\to N_i$ such that $g(a_j)=c_j$ for all $j$, and thus $p_i\ci g=f$. This ends the proof of the surjectivity of \qr{pc}, and also the proof of the fact that any $R$-module which is of finite presentation in the classical sense is of finite presentation in the sense of Definition~\ref{633} p.~\pr{633}. 
 
-\nn(i) (b) We assume now that $M\in\Mod(R)$ is of finite presentation in the sense of Definition 6.3.3, and we prove that $M$ is of finite presentation in the classical sense.
+\nn(i) (b) We assume now that $M\in\Mod(R)$ is of finite presentation in the sense of Definition~\ref{633} p.~\pr{633}, and we prove that $M$ is of finite presentation in the classical sense.
 
-\nn(i) (b1) The $R$-module $M$ is finitely generated. Let $I$ be the set of all the finitely generated submodules of $M$. Then $I$ is a small filtrant ordered set. For each $N$ in $I$ let $q_N:\Hom_R(M,N)\to\col_N\Hom_R(M,N)$ be the coprojection. Then the identity of $M$ is the image of $q_N(f)$ for some $N$ in $I$ and some $R$-linear $f:M\to N$. This implies $N=M$. 
+\nn(i) (b1) The $R$-module $M$ is finitely generated. Let $I$ be the set of all finitely generated submodules of $M$. Then $I$ is a small filtrant ordered set. For each $N$ in $I$ let $q_N:\Hom_R(M,N)\to\col_N\Hom_R(M,N)$ be the coprojection. Then the identity of $M$ is the image of $q_N(f)$ for some $N$ in $I$ and some $R$-linear $f:M\to N$. This implies $N=M$. 
 
-\nn(i) (b2) The $R$-module $M$ is finitely presented in the classical sense. The argument is similar to the one in (i) (b1) above. There is a small set $K$, a positive integer $n$ and an exact sequence $R^{\oplus K}\xr f R^n\to M\to0$. Let $I$ be the set of the finite subsets of $K$. Then $I$ is a small filtrant ordered set. For each $F$ in $I$ set $M_F:=R^n/f(R^{\oplus F})$. Then $(M_F)_{F\in I}$ has a natural structure of an inductive system whose colimit is $M$, the coprojections being the obvious maps $p_F:M_F\to M$. Let $q_F:\Hom_R(M,M_F)\to\Hom_R(M,M)$ be the coprojections. The identity of $M$ factors through $p_F:M_F\to M$ for some $F$ in $I$. This implies $M\iso M_F$, ending the proof that $M$ is finitely presented in the classical sense, and thus the proof of (i).
+\nn(i) (b2) The $R$-module $M$ is finitely presented in the classical sense. The argument is similar to the one in (i) (b1) above. There is a small set $K$, a positive integer $n$ and an exact sequence $R^{\oplus K}\xr f R^n\to M\to0$. Let $I$ be the set of the finite subsets of $K$. Then $I$ is a small filtrant ordered set. For each $F$ in $I$ set $M_F:=R^n/f(R^{\oplus F})$. Then $(M_F)_{F\in I}$ is, in a natural way, an inductive system whose colimit is $M$, the coprojections being the obvious maps $p_F:M_F\to M$. Let $q_F:\Hom_R(M,M_F)\to\Hom_R(M,M)$ be the coprojections. The identity of $M$ factors through $p_F:M_F\to M$ for some $F$ in $I$. This implies $M\iso M_F$, ending the proof that $M$ is finitely presented in the classical sense, and thus the proof of (i).
 
 \nn(ii) (I don't understand the hint.) Clearly any $R$-module is a small filtrant inductive limit of finitely generated $R$-modules. Hence, in view of \S\ref{634} p.~\pr{634}, it suffices to show that any finitely generated $R$-module is a small filtrant inductive limit of finitely presented $R$-modules. But this follows from (i) (b2) above.
 
 There is also a more direct way to prove that any $R$-module $M$ is a small filtrant inductive limit of finitely presented $R$-modules: Let $F$ be a finite subset of $M$, let $K_F$ be the kernel the natural map $R^{\oplus F}\to M$, let $G$ be a finite subset of $K_F$, and let $M_{F,G}$ be the cokernel of the obvious map $R^{\oplus G}\to R^{\oplus F}$. Then the $M_{F,G}$ form a small filtrant inductive system of $R$-modules whose colimit is $M$.
 
-\nn(iii) Claim (iii) follows from Corollary 6.3.5 p.~141 of the book.
+\nn(iii) Claim (iii) follows from \S\ref{634} p.~\pr{634}. %Corollary 6.3.5 p.~141 of the book.
 
 %%
 
@@ -8248,7 +8262,7 @@ Then we see that $G^{\sqcup X(G)}\to X$ is an epimorphism by Proposition 5.2.3 (
 
 To verify this inequality, we argue as in the proof of Lemma 9.3.3 p.~226 of the book (stated on p.~\pr{933} above as Lemma~\ref{933}). (Conditions (b), (c) and (e) referred to below are stated in Section~\ref{tirg} p.~\pr{tirg}.)
 
-Let $I$ be the ordered set of all the subsets of $X(G)$ whose cardinal is $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
+Let $I$ be the ordered set of all subsets of $X(G)$ of cardinal $<\pi_0$. Then $I$ is $\pi_0$-filtrant by Example 9.2.4 p.~218 of the book, and we have 
 $$
 G^{\sqcup X(G)}\iso\col_{B\in I}G^{\sqcup B}.
 $$ 
@@ -9633,7 +9647,7 @@ By (1.5.7) p. 29 of the book, Composition~\qr{f2} coincides with Composition~\qr
 
 \sbs{Sieves and local epimorphisms}\index{sieve}\index{local epimorphism}
 
-This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all the morphisms of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
+This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all morphism of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
 $$
 S\tm_UV:=\{W\to V\ |\ (W\to V\to U)\in S\}.
 $$
@@ -10197,7 +10211,7 @@ P.~414, Definition 17.2.8 (minor variant):
 Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ are disjoint. A {\em Grothendieck topology}\index{Grothendieck topology} on $X$ is a set $\T$ of morphisms of $\C_X$ which satisfies Axioms LE1-LE4 p.~390. Let $\T'$ and $\T$ be Grothendieck topologies. We say that $\T$ is {\em stronger than} $\T'$, or that $\T'$ is {\em weaker than} $\T$, if $\T'\subset\T$. 
 \end{df}
 
-Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_i$ is a Grothendieck topology, and we denote by $\bigvee\T_i$ the intersection of all the Grothendieck topologies containing $\bigcup\T_i$.
+Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_i$ is a Grothendieck topology, and we denote by $\bigvee\T_i$ the intersection of all Grothendieck topologies containing $\bigcup\T_i$.
 \end{s}
 
 %
