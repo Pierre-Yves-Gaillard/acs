@@ -39,7 +39,7 @@
 \nt{cond}[thm]{Condition}
 \nt{conv}[thm]{Convention}
 \nt{rk}[thm]{Remark}
-\nt{uspb}[thm]{Unsolved Problem}
+%\nt{uspb}[thm]{Unsolved Problem}
 \nt{warning}[thm]{Warning}
 
 \theoremstyle{definition}
@@ -1950,10 +1950,11 @@ as desired.
 
 %
 
-\begin{comment}
+%\begin{comment}
 
 \begin{s}
-$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
+%$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} 
+Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
 
 \begin{thm}\lb{fgd}
 Let $I$ be a small category with disjoint hom-sets; let $\al,\bt:I\to\C$ be two functors; and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. Then the natural map 
@@ -1997,7 +1998,7 @@ and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inve
 \end{proof}
 \end{s}
 
-\end{comment}
+%\end{comment}
 
 %
 
@@ -5683,10 +5684,16 @@ $\ic\pp\iso f$.
 
 %\begin{s}P.~150, Lemma 7.1.3. Proposition 1.5.6 (ii) is implicitly used the statement of the lemma.\end{s}
 
+\begin{s} 
+P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, for all functor $G:\C_\SSS\to\A$ the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$. (Recall that $v*Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
+\end{s}
+
+%
+
 \begin{s}\lb{713} 
-P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C_\SSS\to\A$, the map 
+P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C'\to\A$, the map 
 $$
-\Hom_{\A^{\C_\SSS}}(F,G)\to\Hom_{\C^J}(F\ci Q,G\ci Q),\quad v\mt v*Q
+\Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v*Q
 $$ 
 is bijective. (Recall that $v*Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
 \end{s}
@@ -10136,9 +10143,7 @@ P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (1
 $$
 \Hom_{\PSh(X,\A)}(F,G)\iso\lim_{U\in\C_X}\HOM_{\PSh(X,\A)}(F,G)(U).
 $$ 
-\begin{uspb}
-I don't understand why $\HOM_{\PSh(X,\A)}(F,G)(U)$ depends functorially on $U\in\C_X$.
-\end{uspb}
+%\begin{uspb}I don't understand why $\HOM_{\PSh(X,\A)}(F,G)(U)$ depends functorially on $U\in\C_X$.\index{unsolved problem}\end{uspb}
 %This follows from Theorem~\ref{fgd} p.~\pr{fgd}. %\qr{17115mod} p.~\pr{17115mod}. 
 \end{s} 
 
@@ -10268,11 +10273,17 @@ P.~419, proof of Proposition 17.4.4:
 
 \nn First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
 
-\begin{uspb}
-%$\frownie$ (``frowny''). 
-Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small. 
-%Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
-\end{uspb} 
+%\begin{uspb}
+%%$\frownie$ (``frowny'').
+%Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small.\index{unsolved problem}
+%%Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
+%\end{uspb} 
+
+\nn Step~(i), Line~4: The fact that $K^{\op}$ is %cofinally small and 
+filtrant results from %\S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, 
+Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
+
+The key ingredient to prove that $K^{\op}$ is cofinally small is Lemma~16.2.8 p.~398 which says that $K^{\op}$ is a product of cofinally small categories. To prove that $K^{\op}$ is cofinally small one must prove that a certain product $\prod P_i$ of connected categories is connected, but, as a product of connected categories is \emph{not} connected in general, some caution is needed. Going through the proof of Lemma~16.2.8, we see that each $P_i$ is \emph{filtrant}. This implies that $\prod P_i$ is filtrant, and thus that it is connected.
 
 \nn Step~(i), additional details about the chain of isomorphisms at the bottom of p.~419 of the book: The chain reads 
 $$
