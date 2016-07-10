@@ -762,7 +762,7 @@ $$
 $$ 
 If $\theta_{21}$ and $\theta_{22}$ are identity morphisms, we put 
 $$
-\theta_{11}*\theta_{12}:=
+\theta_{11}\star\theta_{12}:=
 \begin{pmatrix}
 \theta_{11}&\theta_{12}\\ 
 \theta_{21}&\theta_{22}
@@ -798,14 +798,14 @@ $$
 The following proposition is clear 
 
 \begin{prop}
-The operations $*$ and $\ci$ are associative, and, in the above setting, we have the equality 
+The operations $\star$ and $\ci$ are associative, and, in the above setting, we have the equality 
 
 $$
-(\theta_{1,1}*\cdots*\theta_{1,n})\ci\cdots\ci(\theta_{m,1}*\cdots*\theta_{m,n})
+(\theta_{1,1}\star\cdots\star\theta_{1,n})\ci\cdots\ci(\theta_{m,1}\star\cdots\star\theta_{m,n})
 $$ 
 
 $$
-=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})*\cdots*(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
+=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})\star\cdots\star(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
 $$
 
 \nn between functors from $F_{m+1,1}\cdots F_{m+1,n}$ to $F_{1,1}\cdots F_{1,n}$.
@@ -826,11 +826,11 @@ $$
 We have, in the above setting,
 
 $$
-(\theta_{1,1}*\cdots*\theta_{1,n})\ci\cdots\ci(\theta_{m,1}*\cdots*\theta_{m,n})
+(\theta_{1,1}\star\cdots\star\theta_{1,n})\ci\cdots\ci(\theta_{m,1}\star\cdots\star\theta_{m,n})
 =\begin{pmatrix}
-\theta_{1,1}*\cdots*\theta_{1,n}\\
+\theta_{1,1}\star\cdots\star\theta_{1,n}\\
 \vdots\\ 
-\theta_{m,1}*\cdots*\theta_{m,n}
+\theta_{m,1}\star\cdots\star\theta_{m,n}
 \end{pmatrix}
 $$ 
 
@@ -843,14 +843,14 @@ $$
 $$
 
 $$
-=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}*\cdots*
+=\begin{pmatrix}\theta_{1,1}\\ \vdots\\ \theta_{m,1}\end{pmatrix}\star\cdots\star
 \begin{pmatrix}\theta_{1,n}\\ \vdots\\ \theta_{m,n}\end{pmatrix}
-=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})*\cdots*(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
+=(\theta_{1,1}\ci\cdots\ci\theta_{m,1})\star\cdots\star(\theta_{1,n}\ci\cdots\ci\theta_{m,n}).
 $$
 \end{prop}
 
 \begin{df}[horizontal and vertical composition, Interchange Law]\lb{dil1} 
-We call $*$ the {\em horizontal composition}.\index{horizontal composition} We call $\ci$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
+We call $\star$ the {\em horizontal composition}.\index{horizontal composition} We call $\ci$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
 \end{df}
 
 %%
@@ -1214,20 +1214,20 @@ $$
 Using Notation~\ref{nhove} p.~\pr{nhove}, Equalities (1.5.8) and (1.5.9) become respectively 
 
 \begin{equation}\lb{158}
-(\eta*L)\ci(L*\ee)=L
+(\eta\star L)\ci(L\star\ee)=L
 \end{equation}
 
 \nn and 
 
 \begin{equation}\lb{159}
-(R*\eta)\ci(\ee*R)=R.
+(R\star\eta)\ci(\ee\star R)=R.
 \end{equation}
 
 \subsubsection{Pictures}
 
 Let us try to illustrate these two equalities by diagrams:
 
-Picture of $L\xl{\eta*L}LRL$:
+Picture of $L\xl{\eta\star L}LRL$:
  
 $$
 \begin{tikzcd}
@@ -1240,12 +1240,12 @@ $$
 %
 \C'&&&{}&&&\C\ar{llllll}[swap]{L}\\
 %
-\C'&&&\ar{u}{\eta*L}&&&\C\ar{llllll}{LRL}.
+\C'&&&\ar{u}{\eta\star L}&&&\C\ar{llllll}{LRL}.
 %
 \end{tikzcd}
 $$ 
 
-Picture of $LRL\xl{L*\ee}L$:
+Picture of $LRL\xl{L\star\ee}L$:
  
 $$
 \begin{tikzcd}
@@ -1258,21 +1258,21 @@ $$
 %
 \C'&&&{}&&&\C\ar{llllll}[swap]{LRL}\\
 %
-\C'&&&\ar{u}{L*\ee}&&&\C\ar{llllll}{L}.
+\C'&&&\ar{u}{L\star\ee}&&&\C\ar{llllll}{L}.
 %
 \end{tikzcd}
 $$ 
 
-Picture of \qr{158}, that is, $(\eta*L)\ci(L*\ee)=L$:
+Picture of \qr{158}, that is, $(\eta\star L)\ci(L\star\ee)=L$:
 
 $$
 \begin{tikzcd}
 %
 \C'&&&{}&&&\C\ar{llllll}[near start,swap]{L}\\
 %
-\C'&&&\ar{u}{\eta*L}&&&\C\ar{llllll}[near start,swap]{LRL}\\
+\C'&&&\ar{u}{\eta\star L}&&&\C\ar{llllll}[near start,swap]{LRL}\\
 %
-\C'&&&\ar{u}{L*\ee}&&&\C\ar{llllll}[near start]{L}\\ 
+\C'&&&\ar{u}{L\star\ee}&&&\C\ar{llllll}[near start]{L}\\ 
 %
 &&&=\\ 
 %
@@ -1283,7 +1283,7 @@ $$
 \end{tikzcd}
 $$ 
 
-Picture of $R\xl{R*\eta}RLR$:
+Picture of $R\xl{R\star\eta}RLR$:
  
 $$
 \begin{tikzcd}
@@ -1296,12 +1296,12 @@ $$
 %
 \C&&&{}&&&\C'\ar{llllll}[swap]{R}\\
 %
-\C&&&\ar{u}{R*\eta}&&&\C'\ar{llllll}{RLR}.
+\C&&&\ar{u}{R\star\eta}&&&\C'\ar{llllll}{RLR}.
 %
 \end{tikzcd}
 $$ 
 
-Picture of $RLR\xl{\ee*R}R$:
+Picture of $RLR\xl{\ee\star R}R$:
 $$
 \begin{tikzcd}
 %
@@ -1313,21 +1313,21 @@ $$
 %
 \C&&&{}&&&\C'\ar{llllll}[swap]{RLR}\\
 %
-\C&&&\ar{u}{\ee*R}&&&\C'\ar{llllll}{R}.
+\C&&&\ar{u}{\ee\star R}&&&\C'\ar{llllll}{R}.
 %
 \end{tikzcd}
 $$ 
 
-Picture of \qr{159}, that is, $(R*\eta)\ci(\ee*R)=R$:
+Picture of \qr{159}, that is, $(R\star\eta)\ci(\ee\star R)=R$:
 
 $$
 \begin{tikzcd}
 %
 \C&&&{}&&&\C'\ar{llllll}[near start,swap]{R}\\
 %
-\C&&&\ar{u}{R*\eta}&&&\C'\ar{llllll}[near start,swap]{RLR}\\
+\C&&&\ar{u}{R\star\eta}&&&\C'\ar{llllll}[near start,swap]{RLR}\\
 %
-\C&&&\ar{u}{\ee*R}&&&\C'\ar{llllll}[near start]{R}\\ 
+\C&&&\ar{u}{\ee\star R}&&&\C'\ar{llllll}[near start]{R}\\ 
 %
 &&&=\\ 
 %
@@ -1342,7 +1342,7 @@ $$
 
 For the reader's convenience we prove \qr{158} p.~\pr{158} and \qr{159} p.~\pr{159}. It clearly suffices to prove \qr{158}. Recall that \qr{158} claims 
 $$
-(\eta*L)\ci(L*\ee)=L.
+(\eta\star L)\ci(L\star\ee)=L.
 $$ 
 Let us denote the functorial mutually inverse bijections defining the adjunction by 
 %
@@ -2053,7 +2053,7 @@ $$
 The following lemma is implicit:
 
 \begin{lem}%\lb{bcl}
-Let $I$ and $\C$ be categories, let $Y$ be an object of $\C$, let $U:\C_Y\to\C$ be the forgetful functor, and let $\al:I\to\C_Y$ be a functor such that $\col U\ci\al$ exists in $\C$. Then $\col\al$ exists in $\C_Y$ and is given by the natural morphism $\col U\ci\al\to Y$. More precisely, let $X\to Y$ be a morphism in $\C$, let $p:\al\to\DT(X\to Y)$ be a morphism in $\Fct(I,\C_Y)$, and let $U*p:U\ci\al\to\DT X$ be the corresponding morphism in $\Fct(I,\C)$. [Recall that $*$ denotes the horizontal composition defined in Definition~\ref{dil1} p.~\pr{dil1}.] If $U*p$ is a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}), then so is $p$.
+Let $I$ and $\C$ be categories, let $Y$ be an object of $\C$, let $U:\C_Y\to\C$ be the forgetful functor, and let $\al:I\to\C_Y$ be a functor such that $\col U\ci\al$ exists in $\C$. Then $\col\al$ exists in $\C_Y$ and is given by the natural morphism $\col U\ci\al\to Y$. More precisely, let $X\to Y$ be a morphism in $\C$, let $p:\al\to\DT(X\to Y)$ be a morphism in $\Fct(I,\C_Y)$, and let $U\star p:U\ci\al\to\DT X$ be the corresponding morphism in $\Fct(I,\C)$. [Recall that $\star$ denotes the horizontal composition defined in Definition~\ref{dil1} p.~\pr{dil1}.] If $U\star p$ is a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}), then so is $p$.
 \end{lem}
 
 \begin{proof}
@@ -2064,10 +2064,10 @@ $$
 &\DT(Z\to Y)&(Z\to Y).
 \end{tikzcd}
 $$ 
-Let $\mu:U\ci\al\to\DT Z$ be the morphism in $\Fct(I,\C)$ induced by $\ld$. Then there is a unique morphism $f:X\to Z$ such that $\DT f\ci(U*p)=\mu$: 
+Let $\mu:U\ci\al\to\DT Z$ be the morphism in $\Fct(I,\C)$ induced by $\ld$. Then there is a unique morphism $f:X\to Z$ such that $\DT f\ci(U\star p)=\mu$: 
 $$%\begin{equation}\label{uap}
 \begin{tikzcd}
-U\ci\al\ar[r,"U*p"]\ar[dr,"\mu"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
+U\ci\al\ar[r,"U\star p"]\ar[dr,"\mu"']&\DT X\ar[d,"\DT f"]&X\ar[d,dashed,"f"]\\ 
 &\DT Z&Z.
 \end{tikzcd}
 $$%\end{equation} 
@@ -2076,20 +2076,20 @@ $$
 (X\xr fZ\to Y)=(X\to Y).
 $$ 
 Let $i$ be in $I$. %By \qr{uap} it suffices to show 
-As $U*p$ is a coprojection, it suffices to show 
+As $U\star p$ is a coprojection, it suffices to show 
 $$%\begin{equation}\label{xfzy}
 \Big(U(\al(i))\to X\xr fZ\to Y\Big)=\Big(U(\al(i))\to X\to Y\Big).
 $$%\end{equation} 
 But we have 
 $$
 \begin{tikzcd}
-(U(\al(i))\ar[rr,"(U*p)_i"]&&X\ar[rr,"f"]&&Z\ar[rr]&&Y)&=\\ 
+(U(\al(i))\ar[rr,"(U\star p)_i"]&&X\ar[rr,"f"]&&Z\ar[rr]&&Y)&=\\ 
 (U(\al(i))\ar[rrrr,"\ld_i"]&&&&Z\ar[rr]&&Y)&=\\ 
 (U(\al(i))\ar[rrrrrr]&&&&&&Y)&=\\ 
-(U(\al(i))\ar[rr,"(U*p)_i"]&&X\ar[rrrr]&&&&Y).
+(U(\al(i))\ar[rr,"(U\star p)_i"]&&X\ar[rrrr]&&&&Y).
 \end{tikzcd}
 $$ 
-Indeed, the first and third equalities follow from the fact that $U*p$ is a coprojection, and the second equality follows from the fact that $\ld_i$ is a morphism in $\C_Y$. 
+Indeed, the first and third equalities follow from the fact that $U\star p$ is a coprojection, and the second equality follows from the fact that $\ld_i$ is a morphism in $\C_Y$. 
 \end{proof} 
 \end{s}
 
@@ -2136,42 +2136,43 @@ The following fact results from Proposition 2.1.6 p.~38 of the book (see \S\ref{
 
 \emph{If $\C$ admits small inductive (resp. projective) limits, then so do $\C^I$ and $\C^J$, and $\pp_*$ commutes with such limits.} 
 
-Recall that we denote horizontal composition of morphisms of functors by $*$ (see Definition~\ref{dil1} p.~\pr{dil1}).
+Recall that we denote horizontal composition of morphisms of functors by $\star$ (see Definition~\ref{dil1} p.~\pr{dil1}).
 
-The effect of the functor \qr{pcp} on morphisms can be described as follows: If $\theta:\al\to\bt$ is a morphism in $\C^I$, then the morphism $\pp_*\theta:\pp_*\al\to\pp_*\bt$ in $\C^J$ is defined by $\pp_*\theta:=\theta*\pp$, which is in turn defined by $(\theta*\pp)_j:=\theta_{\pp(j)}$. 
+The effect of the functor \qr{pcp} on morphisms can be described as follows: If $\theta:\al\to\bt$ is a morphism in $\C^I$, then the morphism $\pp_*\theta:\pp_*\al\to\pp_*\bt$ in $\C^J$ is defined by $\pp_*\theta:=\theta\star\pp$, which is in turn defined by $(\theta\star\pp)_j:=\theta_{\pp(j)}$. 
 \end{s} 
 
 %
 
 \begin{s}\lb{s232} 
-P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 using the terminology of Section~\ref{defat} p.~\pr{defat}. Let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. 
+P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 using the terminology of Section~\ref{defat} p.~\pr{defat}. %Let $\bt$ be in $\C^J$, and 
+Let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. 
 
-\nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, that is, for all $\al:I\to\C$ and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v*\pp)\ci \ee_\bt=w$: 
+\nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, that is, for all $\al:I\to\C$ and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v\star\pp)\ci \ee_\bt=w$: 
 $$
 \begin{tikzcd}
-\bt\ar[r,"\ee_\bt"]\ar[dr,"w"']&\pp_*\pp^\dg\bt\ar[d,"v*\pp"]&\pp^\dg\bt\ar[d,dashed,"v"]\\ 
+\bt\ar[r,"\ee_\bt"]\ar[dr,"w"']&\pp_*\pp^\dg\bt\ar[d,"v\star\pp"]&\pp^\dg\bt\ar[d,dashed,"v"]\\ 
 &\pp_*\al&\al.
 \end{tikzcd}
 $$
 
-\nn(b) We say that ``$\pp^\ddg\bt$ exists'' if there is a unit $\eta_\bt:\pp_*\pp^\ddg\bt\to\bt$, that is, for all $\al:I\to\C$ and all $w:\pp_*\al\to\bt$ there is a unique $v:\al\to\pp^\ddg\bt$ such that $\eta_\bt\ci(v*\pp)=w$: 
+\nn(b) We say that ``$\pp^\ddg\bt$ exists'' if there is a unit $\eta_\bt:\pp_*\pp^\ddg\bt\to\bt$, that is, for all $\al:I\to\C$ and all $w:\pp_*\al\to\bt$ there is a unique $v:\al\to\pp^\ddg\bt$ such that $\eta_\bt\ci(v\star\pp)=w$: 
 $$
 \begin{tikzcd}
-\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v*\pp"']\ar[r,"w"]&\bt\\ 
+\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v\star\pp"']\ar[r,"w"]&\bt\\ 
 \pp^\ddg\bt&\pp_*\pp^\ddg\bt.\ar[ru,"\eta_\bt"']
 \end{tikzcd}
 $$
 
-\nn(c) Let $\gamma:I\to\C$ and let $u$ be an endomorphism of the functor $\pp_*\gamma:J\to\C$. The phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via $u$'' shall mean that for all $\al:I\to\C$ and all $w:\pp_*\al\to\pp_*\gamma$ there is a unique $v:\al\to\gamma$ such that $u\ci(v*\pp)=w$: 
+\nn(c) Let $\gamma:I\to\C$ and let $u$ be an endomorphism of the functor $\pp_*\gamma:J\to\C$. The phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via $u$'' shall mean that for all $\al:I\to\C$ and all $w:\pp_*\al\to\pp_*\gamma$ there is a unique $v:\al\to\gamma$ such that $u\ci(v\star\pp)=w$: 
 $$
 \begin{tikzcd}
-\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v*\pp"']\ar[r,"w"]&\pp_*\gamma\\ 
+\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v\star\pp"']\ar[r,"w"]&\pp_*\gamma\\ 
 \gamma&\pp_*\gamma.\ar[ru,"u"']
 \end{tikzcd}
 $$ 
 In particular, the phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via the identity of $\pp_*\gamma:J\to\C$'' shall mean that, for all $\al:I\to\C$, the map 
 $$
-\Hom_{\C^I}(\al,\gamma)\to\Hom_{\C^J}(\pp_*\al,\pp_*\gamma),\quad v\mt v*\pp
+\Hom_{\C^I}(\al,\gamma)\to\Hom_{\C^J}(\pp_*\al,\pp_*\gamma),\quad v\mt v\star\pp
 $$ 
 is bijective. (See \S\ref{713} p.~\pr{713} below.)
 \end{s}
@@ -2196,7 +2197,7 @@ F\ci\bt\ar[r,"\ee_{F\ci\bt}"]\ar[dr]&\pp_*\pp^\dg(F\ci\bt)\ar[d]&\pp^\dg(F\ci\bt
 &\pp_*(F\ci\pp^\dg(\bt))&F\ci\pp^\dg(\bt).
 \end{tikzcd}
 $$ 
-As we have $\ee_\bt:\bt\to\pp^\dg(\bt)\ci\pp$, we can take $F*\ee_\bt:F\ci\bt\to F\ci\pp^\dg(\bt)\ci\pp$. 
+As we have $\ee_\bt:\bt\to\pp^\dg(\bt)\ci\pp$, we can take $F\star\ee_\bt:F\ci\bt\to F\ci\pp^\dg(\bt)\ci\pp$. 
 
 \begin{df}\lb{kcw}
 If the above morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism, we say that $F$ commutes with $\pp^\dg$ at $\bt$.
@@ -2549,11 +2550,9 @@ $$
 and let $p_f:R^{\op}\to M'$ be the coprojections. As Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}) implies $M'\iso\pp^\dg(\bt)(M)$, it suffices to prove $M'\iso M^*$. We define a family of linear maps $\Phi_f:R^{\op}\to M^*$, indexed by $f:M\to R$, by setting $\Phi_f(1):=f$, and leave it to the reader to check that the $\Phi_f$ induce a linear map $\Phi:M'\to M^*$. We define the set theoretic map $\Psi:M^*\to M'$ by putting $\Psi(f):=p_f(1)$, and leave it to the reader to verify that $\Phi$ and $\Psi$ are mutually inverse bijections. This proves \qr{pdb2}. 
 
 We claim that the functor $\pp^\ddg(\bt):I\to\C$ satisfies 
-%
 \begin{equation}\lb{pddb2}
 \pp^\ddg(\bt)(M)\iso M^*, 
 \end{equation} 
-%
 where $M^*$ is the dual of $M$. 
 
 To prove \qr{pddb2}, set 
@@ -2817,7 +2816,7 @@ and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}. q
 %and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
 %Isomorphisms \qr{263a}, \qr{263b} and \qr{263c} are functorial. This fact is probably best expressed in terms of the (co)projections. Let us state explicitly the functoriality of \qr{263a}. 
 
-%Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $*$ denotes horizontal composition. Then the diagram $$\begin{tikzcd}\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ \al_A\ar{rrr}[swap]{p_B*((A\to B)\ci)}&&&\DT B\end{tikzcd}$$ commutes.
+%Let $\al_A$ and $p_A$ be the morphisms denoted above by $\al$ and $p$, let $B$ be in $\C^\wg$, let $\al_B$ and $p_B$ be the obvious morphisms, let $A\to B$ be a morphism from $A$ to $B$, let $(A\to B)\ci:\C_A\to\C_B$ be the obvious morphisms induced by $A\to B$, and recall that $\star$ denotes horizontal composition. Then the diagram $$\begin{tikzcd}\al_A\ar[d,equal]\ar[rrr,"p_A"]&&&\DT A\ar[d,"\DT(A\to B)"]\\ \al_A\ar{rrr}[swap]{p_B\star((A\to B)\ci)}&&&\DT B\end{tikzcd}$$ commutes.
 \end{s}
 
 %%
@@ -4053,23 +4052,23 @@ $$
 \nn are equal to $\id_P$''. If we translate this statement into the language of Notation~\ref{nhove} p.~\pr{nhove} and Notation~\ref{nmat} p.~\pr{nmat}, we get 
 
 \begin{equation}\lb{tra}
-\begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
-=RL=\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix}.
+\begin{pmatrix}R\star\eta\star L\\ \ee\star R\star L\end{pmatrix}
+=RL=\begin{pmatrix}R\star\eta\star L\\ R\star L\star\ee\end{pmatrix}.
 \end{equation}
 
 \nn To prove \qr{tra}, write 
 
 $$
-\begin{pmatrix}R*\eta*L\\ \ee*R*L\end{pmatrix}
-=\begin{pmatrix}R*\eta&L\\ \ee*R&L\end{pmatrix}
-=\begin{pmatrix}R*\eta\\ \ee*R\end{pmatrix}*\begin{pmatrix}L\\ L\end{pmatrix}
+\begin{pmatrix}R\star\eta\star L\\ \ee\star R\star L\end{pmatrix}
+=\begin{pmatrix}R\star\eta&L\\ \ee\star R&L\end{pmatrix}
+=\begin{pmatrix}R\star\eta\\ \ee\star R\end{pmatrix}\star\begin{pmatrix}L\\ L\end{pmatrix}
 \os{\text{(a)}}{=}RL
 $$
 
 $$
-\os{\text{(b)}}{=}\begin{pmatrix}R\\ R\end{pmatrix}*\begin{pmatrix}\eta*L\\ L*\ee\end{pmatrix}
-=\begin{pmatrix}R&\eta*L\\ R&L*\ee\end{pmatrix}
-=\begin{pmatrix}R*\eta*L\\ R*L*\ee\end{pmatrix},
+\os{\text{(b)}}{=}\begin{pmatrix}R\\ R\end{pmatrix}\star\begin{pmatrix}\eta\star L\\ L\star\ee\end{pmatrix}
+=\begin{pmatrix}R&\eta\star L\\ R&L\star\ee\end{pmatrix}
+=\begin{pmatrix}R\star\eta\star L\\ R\star L\star\ee\end{pmatrix},
 $$ 
 
 \nn Equalities (a) and (b) resulting respectively from \qr{159} p.~\pr{159} and \qr{158} p.~\pr{158}, and the other equalities following from Proposition~\ref{pil1} p.~\pr{pil1}. 
@@ -5702,7 +5701,7 @@ $\ic\pp\iso f$.
 %\begin{s}P.~150, Lemma 7.1.3. Proposition 1.5.6 (ii) is implicitly used the statement of the lemma.\end{s}
 
 \begin{s} 
-P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, for all functor $G:\C_\SSS\to\A$ the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$. (Recall that $v*Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
+P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, for all functor $G:\C_\SSS\to\A$ the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
 \end{s}
 
 %
@@ -5710,9 +5709,9 @@ P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) 
 \begin{s}\lb{713} 
 P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C'\to\A$, the map 
 $$
-\Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v*Q
+\Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v\star Q
 $$ 
-is bijective. (Recall that $v*Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
+is bijective. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
 \end{s}
 
 %
@@ -8180,13 +8179,11 @@ P\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}&C\ar{d}[swap]{x}\ar[two heads]{rr}{a}
 \end{tikzcd}
 $$ 
 We have 
-%
 \begin{align*}
 f\ci a&=p_{i_0}\ci x&\text{by \qr{fa} p.~\pr{fa}}\\ 
 &=p_i\ci X_s\ci x\\ 
 &=p_i\ci g\ci a&\text{by \qr{ga} p.~\pr{ga}}.
-\end{align*}
-%
+\end{align*} 
 As $a$ is an epimorphism, this forces $f=p_i\ci g$, and the proof of Claim~\ref{pig=f} is complete. 
 \end{proof} 
 
