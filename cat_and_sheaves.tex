@@ -1771,7 +1771,7 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % previous version:
 % https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
-\begin{prop}\lb{b}
+\begin{prop}\lb{copr}
 If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection,
@@ -1803,7 +1803,7 @@ where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizo
 \end{proof}
 
 \begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{copr} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 There is of course an analogous notion of universal projective limit. 
@@ -2874,7 +2874,7 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do t
 % the \S with the label \lb{b} was here
 
 \begin{s} 
-Proposition~\ref{b} yields the following minor variant of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
+Proposition~\ref{copr} yields the following minor variant of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
 
 \begin{thm}\lb{233}%[Theorem 2.3.3 (i) p. 52]
 If 
@@ -5862,7 +5862,15 @@ P. 159, Definition 7.3.1 (ii). It is written:
 This suggests that there is a natural morphism of functors from $R_\SSS(K\ci F)$ to $K\ci R_\SSS F$, and that the condition is that this morphism is an isomorphism. Unfortunately I don't see this morphism. As a result I prefer to be more prudent and set 
 
 \begin{df}%\lb{o1}
-In the above situation $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.
+In the above situation, $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $\rho:R_\SSS(K\ci F)\xr\sim K\ci R_\SSS F$ such that the diagram 
+$$
+\begin{tikzcd}
+K\ci F\ar[rd,"K\star\tau"']\ar[r,"\sigma"]&R_\SSS(K\ci F)\ci Q\ar[d,"\rho\star Q"]\\ 
+&K\ci R_\SSS F\ci Q
+\end{tikzcd}
+$$
+commutes, where $\tau:F\to R_\SSS F\ci Q$ and $\sigma:K\ci F\to R_\SSS(K\ci F)\ci Q$ are the structural morphisms. (Recall that $\star$ denotes horizontal composition; see Definition~\ref{dil1} p.~\pr{dil1}.)
+%In the above situation, $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.
 \end{df}
 
 %``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.'' 
@@ -5870,7 +5878,7 @@ In the above situation $F$ is universally right localizable if for any functor $
 Another option would be to set 
 
 \begin{df}%\lb{o2}
-In the above situation $F$ is universally right localizable if 
+In the above situation, $F$ is universally right localizable if 
 $$
 \col_{(X\to X')\in\SSS^X}F(X')
 $$ 
@@ -5975,7 +5983,7 @@ $$
 $$ 
 such that we have for all $(Y\to Y'')\in\SSS$ and all $X''\to Y''$ 
 $$
-\al(X'\to X'')\big(a[X'',Y\to Y''\,](X''\to Y'')\big):=a[X',Y\to Y''\,](X'\to X''\to Y'').
+\al(X'\to X'')\big(a[X'',Y\to Y''\,](X''\to Y'')\big)=a[X',Y\to Y''\,](X'\to X''\to Y'').
 $$ 
 
 Going back to \qr{clc}, we shall define maps 
