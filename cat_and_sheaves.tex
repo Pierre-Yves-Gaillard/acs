@@ -39,7 +39,7 @@
 \nt{cond}[thm]{Condition}
 \nt{conv}[thm]{Convention}
 \nt{rk}[thm]{Remark}
-%\nt{uspb}[thm]{Unsolved Problem}
+\nt{uspb}[thm]{Unsolved Problem}
 \nt{warning}[thm]{Warning}
 
 \theoremstyle{definition}
@@ -798,7 +798,7 @@ $$
 The following proposition is clear 
 
 \begin{prop}
-The operations $\star$ and $\ci$ are associative, and, in the above setting, we have the equality 
+The operations $\star$\index{$\star$} and $\ci$ are associative, and, in the above setting, we have the equality 
 
 $$
 (\theta_{1,1}\star\cdots\star\theta_{1,n})\ci\cdots\ci(\theta_{m,1}\star\cdots\star\theta_{m,n})
@@ -850,7 +850,7 @@ $$
 \end{prop}
 
 \begin{df}[horizontal and vertical composition, Interchange Law]\lb{dil1} 
-We call $\star$ the {\em horizontal composition}.\index{horizontal composition} We call $\ci$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
+We call $\star$\index{$\star$} the {\em horizontal composition}.\index{horizontal composition} We call $\ci$ the {\em vertical composition}.\index{vertical composition} We call the equalities in Proposition~\ref{pil1} the {\em Interchange Law}.\index{Interchange Law}
 \end{df}
 
 %%
@@ -1735,8 +1735,7 @@ $$
 \DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 $$ 
-The last three horizontal arrows are projections. %in the sense of Definition~\ref{plim} p.~\pr{plim}. 
-The bottom horizontal arrow being a projection, there is a unique morphism 
+The last three horizontal arrows are projections. The bottom horizontal arrow being a projection, there is a unique morphism 
 $$
 h:\Hom_\C(\col G\ci\al,Y)\to\Hom_\B(\col F\ci\al,Y)
 $$ 
@@ -1801,8 +1800,8 @@ $$
 \end{tikzcd}
 $$ 
 where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
-%To prove (a) $\then$ (d), observe the isomorphisms $$\Hom_{\C'}(F(X),X')\iso\Hom_{\C^\wg}\big(h(X),\Hom_{\C'}(F(\ ),X')\big)$$ $$\iso\lim\Hom_{\C^\wg}\big(h\ci\al,\Hom_{\C'}(F(\ ),X')\big)\iso\lim\Hom_{\C'}(F\ci\al,X').$$ Here $\lim\Hom_{\C'}(F\ci\al,X')$ is \emph{the} projective limit of $\Hom_{\C'}(F\ci\al,X')$ in the sense of Convention~\ref{thep} p.~\pr{thep}. In particular we have natural projections $$\lim\Hom_{\C'}(F\ci\al,X')\to\Hom_{\C'}(F(\al(i)),X').$$ To complete the proof, it suffices to note that the morphism $$\Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F(\al(i)),X')$$ obtained by composing the above isomorphisms with the above projection coincides with the natural one.
 \end{proof}
+
 \begin{df}[universal inductive limit]\lb{uil} 
 Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{b} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
@@ -2147,7 +2146,7 @@ The effect of the functor \qr{pcp} on morphisms can be described as follows: If 
 P.~51, Definition 2.3.2. Recall that we have functors $I\xl\pp J\xr\bt\C$. We spell out Definition 2.3.2 using the terminology of Section~\ref{defat} p.~\pr{defat}. %Let $\bt$ be in $\C^J$, and 
 Let $\pp^\dg\bt$ and $\pp^\ddg\bt$ be in $\C^I$. 
 
-\nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, that is, for all $\al:I\to\C$ and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v\star\pp)\ci \ee_\bt=w$: 
+\nn(a) We say that ``$\pp^\dg\bt$ exists'' if there is a co-unit $\ee_\bt:\bt\to\pp_*\pp^\dg\bt$, that is, for all $\al:I\to\C$ and all $w:\bt\to\pp_*\al$ there is a unique $v:\pp^\dg\bt\to\al$ such that $(v\star\pp)\ci\ee_\bt=w$: 
 $$
 \begin{tikzcd}
 \bt\ar[r,"\ee_\bt"]\ar[dr,"w"']&\pp_*\pp^\dg\bt\ar[d,"v\star\pp"]&\pp^\dg\bt\ar[d,dashed,"v"]\\ 
@@ -5793,7 +5792,7 @@ by $\mu_X:=\ld_X$ for all $X$ in $\C$. To do this, we must check that the $\ld_X
 \begin{s}\lb{778}% old version
 % https://docs.google.com/document/d/1v9ahntIb_GRudtAonRtBkkQeCONr4j5W4CrT5YxZJA8/edit
 %
-About the proof of Remark 7.1.18 (ii) p.~156. The following is almost a copy and paste of the display in the proof of Remark 7.1.18 (ii) p.~156: 
+About the proof of Remark 7.1.18 (ii) p.~156. The following is almost a copy and paste of the display in the proof of Remark 7.1.18 (ii): 
 $$
 \Hom_{\C_\SSS^\ell}(X,Y)\iso\col_{(X'\to X)\in\SSS_X}\Hom_\C(X',Y)
 $$ 
@@ -5819,6 +5818,19 @@ can be completed to a commutative square as indicated, with $v$ in $\SSS$, and i
 
 %
 
+\begin{s}  
+\begin{uspb} 
+P. 157, proof of Proposition 7.1.20. In the sentence\index{unsolved problem} 
+
+\nn``Since $t\ci s\in\SSS$, we have thus proved that, for $f:X\to Y$ in $\C$, if $Q(f)$
+is an isomorphism, then there exists $g:Y\to Z$ such that $g\ci f\in\SSS$'',
+
+\nn I don't understand why $g\ci f\in\SSS$. (Proposition 7.1.20 doesn't seem to be used elsewhere in the book.)
+\end{uspb}
+\end{s}
+
+%
+
 \begin{s}\lb{durl} 
 P.~159, Definition 7.3.1 (i). Recall the definition: 
 
@@ -5826,13 +5838,18 @@ Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, 
 
 % It might be worth displaying the formula $$(R_\SSS F)(Q(X))\iso\col_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).$$ 
 %
-% The comment below was here
+% The comment below was here 
 % https://docs.google.com/document/d/1WwEuQko13SpCaJ53JDskmaGyiC3F0HQuxLvMMLLubJI/edit
 
-In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor 
+In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some morphism of functors $\tau:F\to R_\SSS F\ci Q$ such that for all $G:\C_\SSS\to\A$ and all $w:F\to G\ci Q$ there is a unique $v:R_\SSS F\to G$ such that $(v\star Q)\ci\tau=w$: 
 $$
-\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.
+\begin{tikzcd}
+F\ar[r,"\tau"]\ar[dr,"w"']&R_\SSS F\ci Q\ar[d,"v\star Q"]&R_\SSS F\ar[d,dashed,"v"]\\ 
+&G\ci Q&G.
+\end{tikzcd}
 $$ 
+(Recall that $\star$ denotes the horizontal composition of morphisms of functors; see Definition~\ref{dil1} p.~\pr{dil1}.)
+%In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor $$\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.$$ 
 \end{s}
 
 %\begin{s}\lb{731} P. 159, Definition 7.3.1 (i). The condition is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor $$\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.$$ \end{s}
