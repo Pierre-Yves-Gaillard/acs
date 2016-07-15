@@ -5977,7 +5977,7 @@ for all $X'$ in $\C$. For each $X'$ in $\C$ and each $Y\to Y'$ in $\SSS$ let
 $$
 a[X',Y\to Y'\,]:\Hom_\C(X',Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
 $$ 
-be the coprojection. To prove the existence of $\al$ as above, we let $X'\to X''$ and we leave it to the reader to check that there is a unique map 
+be the coprojection. To prove the existence of $\al$ as above, we let $X'\to X''$ be a morphism on $\C$ and leave it to the reader to check that there is a unique map 
 $$
 \al(X'\to X''):\al(X'')\to\al(X')
 $$ 
@@ -6020,11 +6020,11 @@ then we define \qr{lm} by
 $$
 (X\to Y')\mt a[X',Y\to Y'\to Y''](X'\to Y''),
 $$ 
-and we leave it to the reader to check that there is a (unique) map $f$ as in \qr{cfg} such that 
+and we leave it to the reader to check that there is a (unique) map $f$ as in \qr{cfg} such that we have, for all $X\to X'$ in $\Mor(\C)$ and all $Y\to Y'$ in $\SSS$,
 $$
-p[X\to X']\ci f\ci b[Y\to Y']
+(p[X\to X']\ci f\ci b[Y\to Y'])(X\to Y')=a[X',Y\to Y'\to Y''](X'\to Y'')
 $$ 
-is given by \qr{lm} for all $X\to X'$ and $Y\to Y'$ in $\SSS$. 
+with $X'\to Y''\leftarrow Y'$ as above. 
 
 Let us define $g$ in \qr{cfg}. 
 
@@ -6036,7 +6036,7 @@ We get in particular
 $$
 p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to Y'),
 $$ 
-where $(Y\to Y')\in\SSS$ and $X\to Y'$ are attached to the identity of $X$. We leave it to the reader to check that there is a (unique) map $g$ as \qr{cfg} such that 
+where $(Y\to Y')\in\SSS$ and $X\to Y'$ are attached to the identity of $X$. We leave it to the reader to check that there is a (unique) map $g$ as in \qr{cfg} such that 
 $$
 g(r)=b[Y\to Y'](X\to Y')
 $$ 
@@ -6050,13 +6050,12 @@ we first note that we have
 $$
 p[X\xr{\id}X](f(b[Y\to Y'](X\to Y')))=a[X,Y\to Y'](X\to Y')
 $$ 
-because we can take $Y''$ as $Y'$ in \qr{y''}, yielding 
+because we can set $Y'':=Y'$ %take $Y''$ as $Y'$ 
+in \qr{y''}, yielding 
 $$
 g(f(b[Y\to Y'](X\to Y')))=b[Y\to Y'](X\to Y'),
 $$ 
 as desired.
-
-%
 
 We prove that $f\ci g$ is the identity of the right-hand side of \qr{cfg}.
 
@@ -6072,7 +6071,7 @@ It suffices to show
 $$
 \al(X\to X')\big(a[X',Y\to Y'\,](X'\to Y')\big)=a[X,Y\to Y'\,](X\to X'\to Y'),
 $$
-where $\al$ is the functor defined in \qr{al}. But the above equality holds by the definition of $\al(X\to X')$. We get
+where $\al$ is the functor defined in \qr{al}. But the above equality holds by the definition of $\al(X\to X')$. This proves the claim. We get
 $$
 p[X\to X'](f(g(r)))=p[X\to X'](f(b[Y\to Y'\,](X\to X'\to Y')))
 $$ 
