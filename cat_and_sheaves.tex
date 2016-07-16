@@ -5930,12 +5930,10 @@ the last isomorphism following from \qr{ft}.
 %
 
 \begin{s}\lb{737}
-P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) p.~161 of the book:
-%
+P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) p.~161 of the book: 
 \begin{equation}\lb{(7.3.7)}
 (R_\SSS F)(Q(X))\iso\col_{(X\to Y)\in\SSS^X}F(Y).
-\end{equation}
-%
+\end{equation} 
 Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), and let $\V$ be a universe such that $\U\in\V$ and $\C$ is a $\V$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}). Writing $\A$ for the category of $\V$-sets, Proposition 7.3.3 (iii) of the book implies the following:
 
 Let $X$ and $Y$ be two objects of $\C$. 
@@ -5950,11 +5948,57 @@ Similarly, if $\SSS$ is a left multiplicative system in $\C$, then the functor
 $$
 R_{\SSS^{\op}}\Hom_\C(\ \ ,Y)
 $$ 
-exists and is isomorphic to $\Hom_{\C_\SSS^\ell}(\ \ ,Y)$.
-% 
+exists and is isomorphic to $\Hom_{\C_\SSS^\ell}(\ \ ,Y)$. 
 \end{s}
 
 %%
+
+\begin{s}
+P. 161. We prove the isomorphism at the bottom of p.~161.  
+
+Recall the setting: $\SSS$ is a right multiplicative system in a category $\C$ such that $\SSS^X$ is cofinally small for all $X$ in $\C$. Let $X$ and $Y$ be in $\C$. It is claimed in the book that there is a natural isomorphism 
+\begin{equation}\lb{clc}
+\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\xr\sim\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y').
+\end{equation} 
+We can rewrite \qr{clc} as 
+\begin{equation}\lb{clc2}
+\Hom_{\C_\SSS}(Q(X),Q(Y))\xr\sim\lim_{(X\to X')\in\SSS^X}\Hom_{\C_\SSS}(Q(X'),Q(Y)).
+\end{equation} 
+
+For $X\to X'$ in $\SSS$ let 
+$$
+p[X\to X']:\lim_{(X\to X')\in\SSS^X}\Hom_{\C_\SSS}(Q(X'),Q(Y))\to\Hom_{\C_\SSS}(Q(X'),Q(Y))
+$$ 
+be the projection, and define the maps 
+$$
+\begin{tikzcd} 
+\ds\Hom_{\C_\SSS}(Q(X),Q(Y))\ar[yshift=0.7ex]{r}{f}&\ds\lim_{(X\to X')\in\SSS^X}\Hom_{\C_\SSS}(Q(X'),Q(Y))\ar[yshift=-0.7ex]{l}{g}
+\end{tikzcd}
+$$ 
+as follows: We define $f$ by
+$$
+p[X\to X']\Big(f\big(Q(X)\to Q(Y)\big)\Big):=\big(Q(X')\to Q(X)\to Q(Y)\big)
+$$ 
+for $X\to X'$ in $\SSS$, where $Q(X')\to Q(X)$ is the inverse of $Q(X\to X')$, and we define $g$ by
+$$
+g:=p[X\xr{\id}X].
+$$ 
+To show that $f\ci g$ is the identity of the right-hand side of \qr{clc2}, note that we have in the above notation 
+$$
+p[X\to X']\Bigg(f\bigg(g\Big(\big(Q(X')\to Q(Y)\big)_{X\to X'}\Big)\bigg)\Bigg)
+$$ 
+$$
+=p[X\to X']\Big(f\big(Q(X)\to Q(Y)\big)\Big)
+$$ 
+$$
+=\big(Q(X')\to Q(X)\to Q(Y)\big)=p[X\to X']\Big(\big(Q(X')\to Q(Y)\big)_{X\to X'}\Big).
+$$ 
+The proof that $g\ci f$ is the identity of the left-hand side of \qr{clc2} is similar and easier.
+\end{s}
+
+\begin{comment}
+
+% Warning: the following is very bad!!!
 
 \sbs{Isomorphism at the bottom of p. 161}
 
@@ -5970,9 +6014,9 @@ $$
 $$ 
 
 Let us start by verifying that the right-hand side is well defined. It suffices to show that there is a functor $\al:\C^{\op}\to\Set$ such that 
-\begin{equation}\lb{al}
+$$%\begin{equation}\lb{al}
 \al(X')=\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
-\end{equation} 
+$$%\end{equation} 
 for all $X'$ in $\C$. For each $X'$ in $\C$ and each $Y\to Y'$ in $\SSS$ let 
 $$
 a[X',Y\to Y'\,]:\Hom_\C(X',Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
@@ -6028,15 +6072,13 @@ with $X'\to Y''\leftarrow Y'$ as above.
 
 Let us define $g$ in \qr{cfg}. 
 
-Let $r$ be in the right-hand side of \qr{cfg}. To any $X\to X'$ in $\SSS$ is attached some $(Y\to Y')\in\SSS$ and some $X'\to Y'$ such that 
-$$
-p[X\to X'](r)=a[X',Y\to Y'](X'\to Y').
-$$ 
-We get in particular 
-$$
-p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to Y'),
-$$ 
-where $(Y\to Y')\in\SSS$ and $X\to Y'$ are attached to the identity of $X$. We leave it to the reader to check that there is a (unique) map $g$ as in \qr{cfg} such that 
+Let $r$ be in the right-hand side of \qr{cfg}. There is %To any $X\to X'$ in $\SSS$ is attached 
+some $(Y\to Y')\in\SSS$ and some $X'\to Y'$ in $\Mor(\C)$ such that %$$p[X\to X'](r)=a[X',Y\to Y'](X'\to Y').$$ We get in particular 
+\begin{equation}\lb{pxid}
+p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to Y').
+\end{equation}
+%where $(Y\to Y')\in\SSS$ and $X\to Y'$ are attached to the identity of $X$. 
+We leave it to the reader to check that there is a (unique) map $g$ as in \qr{cfg} such that 
 $$
 g(r)=b[Y\to Y'](X\to Y')
 $$ 
@@ -6059,26 +6101,22 @@ as desired.
 
 We prove that $f\ci g$ is the identity of the right-hand side of \qr{cfg}.
 
-Let $r$ be in the right-hand side of \qr{cfg}, let $X\to X'$ be in $\SSS$, and write 
+Let $r$ be in the right-hand side of \qr{cfg}, and let $(Y\to Y')$ and $X'\to Y'$ be as in \qr{pxid}. We get $g(r)=b[Y\to Y'](X\to Y')$ and 
 $$
-p[X\to X'](r)=a[X',Y\to Y'\,](X'\to Y').
-$$ 
-We claim 
-$$
-p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to X'\to Y').
-$$  
-It suffices to show 
-$$
-\al(X\to X')\big(a[X',Y\to Y'\,](X'\to Y')\big)=a[X,Y\to Y'\,](X\to X'\to Y'),
-$$
-where $\al$ is the functor defined in \qr{al}. But the above equality holds by the definition of $\al(X\to X')$. This proves the claim. We get
-$$
-p[X\to X'](f(g(r)))=p[X\to X'](f(b[Y\to Y'\,](X\to X'\to Y')))
+p[X\to X'](f(g(r)))=p[X\to X'](f(b[Y\to Y'](X\to Y')))
 $$ 
 $$
-=a[X',Y\to Y'\,](X'\to Y'),
+=a[X',Y\to Y'\to Y''](X'\to Y'')
 $$ 
-as required, the second equality being justified by the fact that we can set $Y'':=Y'$ in \qr{y''}.
+with $Y'\to Y''$ and $X'\to Y''$ is in \qr{y''}. We also get 
+$$
+\al(X\to X')(a[X',Y\to Y'\to Y''](X'\to Y''))
+$$ 
+$$
+=a[X,Y\to Y'\to Y''](X\to X'\to Y'')=a[X,Y\to Y'](X\to X').
+$$ 
+
+\end{comment}
 
 %%
 
