@@ -6137,15 +6137,15 @@ in $\Ind(\C)$. Recall the following facts:
 
 \nn$\bu$ Proposition 7.4.1 p.~162 of the book implies
 $$
-A:=\al_\SSS(Q(X))=\col_{(X',x')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
+A:=\al_\SSS(Q(X))=\col_{(X\to X')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
 $$ 
 $\bu$ Display~\qr{(7.3.7)} p.~\pr{(7.3.7)} implies
 $$
-B:=R_\SSS(\iota_\A\ci F)(Q(X))=\col_{(X',x')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
+B:=R_\SSS(\iota_\A\ci F)(Q(X))=\col_{(X\to X')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
 $$
 $\bu$ The definition of $IF$ p.~133 of the book implies
 $$
-C:=IF(A)=\col_{(U,u)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
+C:=IF(A)=\col_{(U\to A)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
 $$
 
 We want to prove $B\iso C$.
@@ -6154,38 +6154,47 @@ We want to prove $B\iso C$.
 
 In the rest of this section we use the following convention: 
 
-\nn If $\al:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write 
+\nn If $\al:I\to\B$ is a functor whose inductive limit is $Y\in\B$, then we write 
 $$
-p(X,i):\al(i)\to X
+p[Y,i]:\al(i)\to Y
 $$ 
 for the corresponding coprojection. 
 
 As the inductive systems we shall consider have different colimits, this convention should create no confusion.
 
-We shall define morphisms 
+We leave the proof of the following claims to the reader:
+
+Claim 1: There is a unique morphism $f:B\to C$ such that the diagram 
 $$
 \begin{tikzcd}
-B\ar[yshift=.7ex]{r}{f}&C\ar[yshift=-.7ex]{l}{g}.
+B\ar[r,"f"]&C\\ 
+\iota_\A(F(X'))\ar{u}{p[B,X\to X']}\ar{ur}[swap]{p[C,p[A(X'),X\to X'](\id_{X'})]}
 \end{tikzcd}
-$$
-
-For $(X',x')$ in $\SSS^X$ we define $f(X',x'):\iota_\A(F(X'))\to C$ by 
-$$
-f(X',x'):=p(C,X',p(A,X',x')),
 $$ 
-and we claim that the morphisms $f(X',x')$ induce a morphism $f:B\to C$. 
+commutes for all $X\to X'$ in $\SSS^X$.
 
-Let $(U,u)$ be in $\C_A$, that is
+Claim 2: There is a unique morphism $g:C\to B$ such that the diagram 
 $$
-u\in A(U)=\col_{(X',x')\in\SSS^X}\Hom_\C(U,X').
+\begin{tikzcd}
+C\ar[rrr,"g"]&&&B\\ 
+\iota_\A(F(U))\ar{u}{p[C,p[A(U),X\to X'](U\to X')]}\ar[rrr,"\iota_\A(F(U\to X'))"']&&&\iota_\A(F(X'))\ar{u}[swap]{p[B,X\to X']}
+\end{tikzcd}
 $$ 
-Choose $(X',x')$ in $\SSS^X$ and $f:U\to X'$ such that $u=p(A(U),X',x')(f)$, and put 
-$$
-g(U,u):=p(B,X',x')\ci\iota_\A(F(f)):\iota_\A(F(U))\to B.
-$$ 
-We claim that $g(U,u)$ does not depend on the choice of $X',x'$ and $f$; that the morphisms $g(U,u)$ induce a morphism $g:C\to B$; that $f$ and $g$ are mutually inverse; and that $f$ and $g$ depend functorially on $X\in\C$. 
+commutes for all $X\to X'$ in $\SSS^X$ and all $U\to X'$ in $\C_{X'}$. 
 
-We leave the verification of these claims to the reader. 
+Claim 3: The morphisms $f$ and $g$ are mutually inverse.
+
+%
+
+\begin{s}
+P. 162, proof of Lemma 7.4.3. Recall the statement
+\begin{lem}[Lemma 7.4.3 p. 162]
+If $G:\A\to\A'$ is a functor and $F$ is right localizable at $X$, then $G\ci F$ is right localizable at $X$.
+\end{lem}
+\begin{proof}
+By (7.4.3) p. 162 the assumption that $F$ is right localizable at $X$ is equivalent to the existence of an object $Y$ of $\A$ satisfying $$IF(\al_\SSS(X))\iso\iota_\A(Y).$$ Applying $IG$ we get $$IG(IF(\al_\SSS(X)))\iso IG(\iota_\A(Y)),$$ and thus $$I(G\ci F)(\al_\SSS(X))\iso\iota_{\A'}(G(Y)).$$ This shows that $G\ci F$ is right localizable at $X$. 
+\end{proof}
+\end{s}
 
 %%
 
