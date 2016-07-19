@@ -5836,8 +5836,6 @@ P.~159, Definition 7.3.1 (i). Recall the definition:
 
 Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, and let $Q:\C\to\C_\SSS$ be the right the localization of $\C$ by $\SSS$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dg F$ exists, in which case we say that $Q^\dg F$ a {\em right localization} of $F$, and denote this functor by $R_\SSS F$. 
 
-% It might be worth displaying the formula $$(R_\SSS F)(Q(X))\iso\col_{(Q(Y)\to Q(X))\in\C_{Q(X)}}F(Y).$$ 
-%
 % The comment below was here 
 % https://docs.google.com/document/d/1WwEuQko13SpCaJ53JDskmaGyiC3F0HQuxLvMMLLubJI/edit
 
@@ -5849,10 +5847,9 @@ F\ar[r,"\tau"]\ar[dr,"w"']&R_\SSS F\ci Q\ar[d,"v\star Q"]&R_\SSS F\ar[d,dashed,"
 \end{tikzcd}
 $$ 
 (Recall that $\star$ denotes the horizontal composition of morphisms of functors; see Definition~\ref{dil1} p.~\pr{dil1}.)
-%In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor $$\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.$$ 
 \end{s}
 
-%\begin{s}\lb{731} P. 159, Definition 7.3.1 (i). The condition is that, in terms of \S\ref{s232} (a) p.~\pr{s232}, there is some $\tau:F\to R_\SSS F\ci Q$ such that the pair $(Q^\dg F,\tau)$ co-represents the functor $$\Hom_{\A^\C}(F,(\ )\ci Q):\A^\C\to\Set.$$ \end{s}
+%
 
 \begin{s}\lb{731b} 
 P. 159, Definition 7.3.1 (ii). It is written: 
@@ -6200,12 +6197,18 @@ By (7.4.3) p. 162 the assumption that $F$ is right localizable at $X$ is equival
 
 \sbs{Brief comments}
 
-\begin{s}
-P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. It seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
+%\begin{s}P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. It seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
 
-\begin{lem}
-If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\col\iota\ci\al\iso\iota(X)$ for some $X$ in $\C$, then we have $\col\al\iso X$. 
-\end{lem}
+%\begin{lem}If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\col\iota\ci\al\iso\iota(X)$ for some $X$ in $\C$, then we have $\col\al\iso X$. \end{lem}\end{s}
+
+\begin{s}
+P. 163, proof of Proposition 7.4.34, implication (i)$\then$(ii). Here are some of the tasks implicitly left to the reader: 
+
+\nn$\bu$ Define a morphism of functors $\tau$ from $F$ to $H\ci Q$.
+
+\nn$\bu$ Define the three bijections in the display.
+
+\nn$\bu$ Check that the composition of these three bijections coincides with the map $v\mt(v\star Q)\ci\tau$. (See \S\ref{durl} p.~\pr{durl}.)
 \end{s}
 
 %
@@ -6252,7 +6255,7 @@ p_i\ci v=p_j
 $$ 
 for all $i,j$ such that $\{i,j\}=\{1,2\}$. 
 
-A structure of \emph{commutative group object} on $X$ of $\C$ is a triple $(\al,e,a)$ satisfying the following conditions:
+A structure of \emph{commutative group object} on an object $X$ of $\C$ is a triple $(\al,e,a)$ satisfying the following conditions:
 
 We have 
 $$
@@ -6349,7 +6352,11 @@ i_1\ci p_1+i_2\ci p_2=\id_{X_1\tm X_2}.
 $$
 \end{cor}
 
-Let us denote the object $X$ above by $X_1\oplus X_2$. The following lemma is implicit in the book. 
+Let us denote the object $X$ above by $X_1\oplus X_2$. %For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
+
+\begin{comment}
+
+The following lemma is implicit in the book. 
 
 \begin{lem}
 For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have 
@@ -6368,6 +6375,8 @@ X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
 $$ 
 for the projections and coprojections. We have $q_a\ci(f_1\tm f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\tm f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
 \end{proof}
+
+\end{comment}
 
 For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
 
@@ -6401,6 +6410,37 @@ Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$
 
 \subsubsection{Brief comments}
 
+\begin{s}
+P.~171, Corollary 8.2.6. Recall the statement: 
+
+\begin{cor}[Corollary 8.2.6 p.~171] 
+Let $\C$ be a pre-additive category, $X,Y\in\C$ and $f_1,f_2\in\Hom_\C(X,Y)$. Assume that the direct sums $X\oplus X$ and $Y\oplus Y$ exist. Then $f_1+f_2\in\Hom_\C(X,Y)$ coincides with the composition 
+$$
+X\xr{\delta_X}X\oplus X\xr{f_1\oplus f_2}Y\oplus Y\xr{\sigma_Y}Y.
+$$ 
+Here $\delta_X:X\to X\tm X\iso X\oplus X$ is the diagonal morphism and $\sigma_Y:Y \oplus Y\iso Y\sqcup Y\to Y$ is the codiagonal morphism.
+\end{cor}
+
+\begin{proof} 
+For $a=1,2$ let 
+$$
+\begin{tikzcd}
+X\oplus X\ar[r,yshift=4pt,"p_a"]&X\ar[l,yshift=-4pt,"i_a"]&Y\oplus Y\ar[r,yshift=4pt,"q_a"]&Y\ar[l,yshift=-4pt,"j_a"]
+\end{tikzcd}
+$$ 
+be the projections and coprojections. Writing $xy$ for $x\ci y$ we have 
+$$
+\sigma_Y\ (f_1\oplus f_2)\ \delta_X=\sum_{a,b}\ \sigma_Y\ j_a\ q_a\ (f_1\oplus f_2)\ i_b\ p_b\ \delta_X
+$$ 
+$$ 
+=\sum_{a,b}\ q_a\ (f_1\oplus f_2)\ i_b=\sum_a\ q_a\ (f_1\oplus f_2)\ i_a=f_1+f_2,
+$$ 
+the second equality following from the definitions of $\sigma_Y$ and $\delta_X$, and the third and fourth equalities following from the definitions of $f_1\oplus f_2$. (The justification of the first equality is left to the reader.)
+\end{proof}
+\end{s}
+
+%
+
 \begin{s} 
 P.~172, Lemma 8.2.9. Recall the statement:
 
@@ -6419,11 +6459,11 @@ Also note that Corollary 8.2.4 p.~170 of the book is useful to prove Lemma 8.2.9
 
 \begin{s} 
 P.~172, Lemma 8.2.10. Let me state the result in a more explicit way: 
-\begin{lem}[Lemma 8.2.10]
+\begin{lem}[Lemma 8.2.10 p.~172]
 If $X$ is an object of an additive category $\C$, then the composition 
 $$
 \begin{tikzcd}
-X\tm X&X\tm X\ar[l,"r","\sim"']\ar[r,"\sigma_X"]&X.
+X\tm X&X\sqcup X\ar[l,"r","\sim"']\ar[r,"\sigma_X"]&X.
 \end{tikzcd}
 $$ 
 defines a structure of a commutative group object on $X$.
