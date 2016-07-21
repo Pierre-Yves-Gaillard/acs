@@ -6352,31 +6352,7 @@ i_1\ci p_1+i_2\ci p_2=\id_{X_1\tm X_2}.
 $$
 \end{cor}
 
-Let us denote the object $X$ above by $X_1\oplus X_2$. %For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
-
-\begin{comment}
-
-The following lemma is implicit in the book. 
-
-\begin{lem}
-For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$. Then we have 
-$$
-f_1\tm f_2=f_1\sqcup f_2
-$$ 
-(equality in $\Hom_\C(X_1\oplus X_2,Y_1\oplus Y_2)$). 
-\end{lem} 
-
-We denote this morphism by $f_1\oplus f_2$.\medskip 
-
-\begin{proof}
-Put $X:=X_1\oplus X_2,\ Y:=Y_1\oplus Y_2$ and write 
-$$
-X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
-$$ 
-for the projections and coprojections. We have $q_a\ci(f_1\tm f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\tm f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
-\end{proof}
-
-\end{comment}
+%Let us denote the object $X$ above by $X_1\oplus X_2$. 
 
 For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
 
@@ -6411,10 +6387,50 @@ Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$
 \subsubsection{Brief comments}
 
 \begin{s}
+P.~170, Corollary 8.2.4. Recall the statement: 
+
+\begin{cor}[Corollary 8.2.4 p.~170] 
+Let $\C$ be a pre-additive category and let $X_1,X_2\in\C$. If $X_1\tm X_2$ exists in $\C$, then $X_1\sqcup X_2$ also exists. Moreover denoting by $i_j:X_j\to X_1\sqcup X_2$ and $p_j:X_1 \tm X_2\to X_j$ the $j$-th co-projection and projection, the morphism $r:X_1\sqcup X_2\to X_1\tm X_2$ given by 
+$$
+p_j\ci r\ci i_k=\begin{cases}\id_{X_k}&\text{if }j=k\\0&\text{if }j\not=k.\end{cases}
+$$ 
+is an isomorphism. 
+\end{cor} 
+
+\begin{conv}\lb{oplus}
+In the above situation, we set $X_1\oplus X_2:=X_1\sqcup X_2$, we define $p'_j:X_1\oplus X_2\to X_j$ by $p'_j:=p_j\ci r$, and we observe that $X_1\oplus X_2$ is a product of $X_1$ and $X_2$ by $p'_1$ and $p'_2$. 
+\end{conv}
+\end{s}
+
+%
+
+The following lemma is implicit in the book. 
+
+\begin{lem}
+For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$ (see Convention~\ref{oplus} above). Then we have 
+$$
+f_1\tm f_2=f_1\sqcup f_2
+$$ 
+(equality in $\Hom_\C(X_1\oplus X_2,Y_1\oplus Y_2)$). 
+\end{lem} 
+
+We denote this morphism by $f_1\oplus f_2$.\medskip 
+
+\begin{proof}
+Put $X:=X_1\oplus X_2,\ Y:=Y_1\oplus Y_2$ and write 
+$$
+X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
+$$ 
+for the projections and coprojections. We have $q_a\ci(f_1\tm f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\tm f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
+\end{proof}
+
+%
+
+\begin{s}
 P.~171, Corollary 8.2.6. Recall the statement: 
 
 \begin{cor}[Corollary 8.2.6 p.~171] 
-Let $\C$ be a pre-additive category, $X,Y\in\C$ and $f_1,f_2\in\Hom_\C(X,Y)$. Assume that the direct sums $X\oplus X$ and $Y\oplus Y$ exist. Then $f_1+f_2\in\Hom_\C(X,Y)$ coincides with the composition 
+Let $\C$ be a pre-additive category, $X,Y\in\C$ and $f_1,f_2\in\Hom_\C(X,Y)$. Assume that the direct sums $X\oplus X$ and $Y\oplus Y$ exist (see Convention~\ref{oplus} p.~\pr{oplus}). Then $f_1+f_2\in\Hom_\C(X,Y)$ coincides with the composition 
 $$
 X\xr{\delta_X}X\oplus X\xr{f_1\oplus f_2}Y\oplus Y\xr{\sigma_Y}Y.
 $$ 
@@ -6459,6 +6475,7 @@ Also note that Corollary 8.2.4 p.~170 of the book is useful to prove Lemma 8.2.9
 
 \begin{s} 
 P.~172, Lemma 8.2.10. Let me state the result in a more explicit way: 
+
 \begin{lem}[Lemma 8.2.10 p.~172]
 If $X$ is an object of an additive category $\C$, then the composition 
 $$
@@ -6539,7 +6556,7 @@ are mutually inverse isomorphisms by Corollary~\ref{823b} p.~\pr{823b} above. q.
 
 \subsubsection{Proposition 8.3.4 p. 176}
 
-Here are a few more details about the proof of Proposition 8.3.4. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\tm_YX$, let $p_a:P\to X$ be the projection, let $p$ be the morphism $p_1-p_2$ from $P$ to $X$, and consider the diagram 
+Here are a few more details about the proof of Proposition 8.3.4. Recall the setting: We have a morphism $f:X\to Y$ in an abelian category $\C$. Let $P$ be the fiber product $X\tm_YX$; let $p_1,p_2:P\parar X$ be the projections; let $p$ be the morphism $p_1-p_2$ from $P$ to $X$; and consider the diagram 
 $$
 \begin{tikzcd}
 \Ker f\ar{r}{h} &X\ar[equal]{d}\ar{r}{a}&\Coker h\\ 
