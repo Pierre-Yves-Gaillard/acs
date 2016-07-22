@@ -6592,18 +6592,15 @@ $$
 commute. 
 
 It is easy to see that $d$ and $e$ are mutually inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\iso\Coim f$ which makes the diagram
-%
 \begin{equation}\lb{834a}
 \begin{tikzcd}
 \Ker f\ar{r}{h}&X\ar[equal]{d}\ar{r}{a}&\Coker h\ar[leftrightarrow]{d}{\sim}\\ 
 P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 commute. 
 
 Dually, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to S$ be the coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
-%
 $$
 \begin{tikzcd}
 \Ima f\ar{r}{a}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
@@ -6611,14 +6608,12 @@ $$
 \end{tikzcd}
 $$ 
 where $a,b,$ and $k$ are the natural morphisms. Then there is a natural isomorphism $\Ima f\iso\Ker k$ which makes the diagram 
-%
 \begin{equation}\lb{834b}
 \begin{tikzcd}
 \Ima f\ar[leftrightarrow]{d}[swap]{\sim}\ar{r}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
 \Ker k\ar{r}&Y\ar{r}[swap]{k}&\Coker f
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 commute. Let us record these observations:
 \begin{prop}\lb{p834}
 In the above setting there are natural isomorphisms 
@@ -6642,13 +6637,13 @@ $$
 
 \subsubsection{Definition 8.3.5 p.~177}
 
-The following definitions and observations are implicit in the book. Let $\A$ be a subcategory of a pre-additive category $\B$, and let $\iota:\A\to\B$ be the inclusion. If $\A$ is pre-additive and $\iota$ is additive, we say that $\A$ is a {\em pre-additive subcategory} of $\B$. If in addition $\A$ and $\B$ are additive (resp. abelian), we say that $\A$ is {\em an additive (resp. abelian) subcategory} of $\B$. Now let $\A$ and $\B$ be categories. If $\B$ is pre-additive (resp. additive, abelian), then so is the category $\C:=\B^\A$ of functors from $\A$ to $\B$. Assume in addition that $\A$ is pre-additive. If $\B$ is pre-additive (resp. additive, abelian), then the full subcategory $\DD:=\Ad(\A,\B)$ of $\C$ whose objects are the additive functors from $\A$ to $\B$ is a pre-additive (resp. additive, abelian) subcategory of $\C$.
+The following definitions and observations are implicit in the book. Let $\A$ be a subcategory of a pre-additive category $\B$, and let $\iota:\A\to\B$ be the inclusion. If $\A$ is pre-additive and $\iota$ is additive, we say that $\A$ is a {\em pre-additive subcategory} of $\B$. If, moreover, $\A$ and $\B$ are additive (resp. abelian), we say that $\A$ is {\em an additive (resp. abelian) subcategory} of $\B$. Now let $\A$ and $\B$ be categories. If $\B$ is pre-additive (resp. additive, abelian), then so is the category $\C:=\B^\A$ of functors from $\A$ to $\B$. Assume furthermore that $\A$ is pre-additive. If $\B$ is pre-additive (resp. additive, abelian), then the full subcategory $\DD:=\Ad(\A,\B)$ of $\C$ whose objects are the additive functors from $\A$ to $\B$ is a pre-additive (resp. additive, abelian) subcategory of $\C$.
 
 %%
 
 \subsubsection{The Complex (8.3.3) p.~178}
 
-Let us just add a few more details about the proof of the isomorphisms
+Let us just add a few details about the proof of the isomorphisms
 \begin{equation}\lb{834}
 \begin{split}
 \Ima u\iso\Coker(\pp:\Ima f\to\Ker g)\iso\Coker(X'\to\Ker g)\\ 
@@ -6917,9 +6912,51 @@ $$
 
 \subsubsection{Proof of Lemma 8.3.23 p. 184}
 
-The proof of the following statement is left to the reader:
+In the book, the proofs of the two lemmas below are left to the reader. 
 
+\begin{lem}\lb{184a}
 If 
+$$
+\begin{tikzcd}
+&&Y\ar[d,"c"']\ar[r,"u"]&Y''\ar[d,"\id"]\ar[r]&0\\ 
+0\ar[r]&Y'\ar[r,"a"']&X\ar[r,"b"']&Y''\ar[r]&0
+\end{tikzcd}
+$$ 
+is an exact commutative diagram in an category, then $Y\oplus Y'\xr{(c,a)}X$ is an epimorphism. 
+\end{lem}
+
+\begin{proof}
+In this proof below we write $\psi\pp$ for $\psi\ci\pp$, and we tacitly use Lemma~\ref{8312} p.~\pr{8312}. 
+
+Let $x:Z\to X$ and let us show that the solid diagram 
+$$
+\begin{tikzcd}
+W\ar[d,"e"',dashed]\ar[r,"d",dashed,two heads]&Z\ar[d,"x"]\\ 
+Y\oplus Y'\ar{r}[swap]{(c,a)}&X
+\end{tikzcd}
+$$ 
+may be completed as indicated. We get a commutative square 
+$$
+\begin{tikzcd}
+V\ar[d,"y"']\ar[r,"f",two heads]&Z\ar[d,"bx"]\\ 
+Y\ar[r,"bc"',two heads]&Y''
+\end{tikzcd}
+$$ 
+and then a commutative diagram 
+$$
+\begin{tikzcd}
+W\ar[d,"y'"']\ar[r,"g",two heads]&V\ar[d,"xf-cy"]\\ 
+Y'\ar[r,"a"',rightarrowtail]&X\ar[r,"b"',two heads]&Y''.
+\end{tikzcd}
+$$ 
+Setting $d:=fg,e:=(yg,y')$ yields %$xd=xfg$ and 
+$$
+(c,a)e=(c,a)(yg,y')=cyg+ay'=cyg+xfg-cyg=xfg=xd.
+$$ 
+\end{proof}
+
+\begin{lem}\lb{184b}
+If
 $$
 \begin{tikzcd}
 &&0\ar[d]&0\ar[d]\\ 
@@ -6929,12 +6966,11 @@ $$
 &&0&0
 \end{tikzcd}
 $$ 
-is an exact commutative diagram in some abelian category, then 
-\begin{equation}\lb{8323}
-a\text{ is an isomorphism}.
-\end{equation} 
+is an exact commutative diagram in an abelian category, then $a$ is an isomorphism. 
+\end{lem}
 
-In the proof of \qr{8323} below we write $\psi\pp$ for $\psi\ci\pp$, and we tacitly, use Lemma 8.3.12 p.~180 of the book, stated above as Lemma~\ref{8312} p.~\pr{8312}. 
+\begin{proof}
+In this proof below we write $\psi\pp$ for $\psi\ci\pp$, and we tacitly use Lemma~\ref{8312} p.~\pr{8312}. 
 
 We claim
 \begin{equation}\lb{8323m}
@@ -6981,7 +7017,8 @@ R\ar[d,"z"']\ar[r,"m",two heads]&P\ar[d,"w\ell-dx"]\\
 Z\ar[r,"b"']&W\ar[r,"f"']&U;
 \end{tikzcd}
 $$ 
-equalities $caz=ebz=ew\ell m-edxm=ew\ell m=cyk\ell m$, $az=yk\ell m$; and it suffices to set $j:=k\ell m$. This proves \qr{8323e}, and thus \qr{8323}.
+equalities $caz=ebz=ew\ell m-edxm=ew\ell m=cyk\ell m$, $az=yk\ell m$; and it suffices to set $j:=k\ell m$. This proves \qr{8323e}, and thus our lemma. %\qr{8323}.
+\end{proof}
 
 %%
 
