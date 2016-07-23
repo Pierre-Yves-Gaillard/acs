@@ -274,7 +274,8 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 \nn$*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
 \begin{s}\lb{27i}
-P.~65, Exercise 2.7 (i): ``$\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``$\cdot\tm_ZY:\Set_Z\to\Set_Y$''.
+P.~65, Exercise 2.7, Line 3: %on Line 1 ``Let $Z\in\Set$'' should be ``Let $Y\to Z$ be a morphism in $\Set$'', and on Line 3 
+``that the functor $\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$''. (See also \S\ref{s3cat} p.~\pr{s3cat} below.)
 \end{s}
 
 \nn$*$ P.~74, first line of the proof of Theorem 3.1.6: $\ds\ilim$ should be $\ds\ilim_i$. 
@@ -2021,7 +2022,7 @@ and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inve
 % removed 
 % https://docs.google.com/document/d/1ydcLZ0o0IQjew7DRTL5J8BFQ_9V9fc56CfpscjLnrUE/edit
 
-\begin{s}\lb{ex}
+\begin{s}%\lb{ex}
 P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is exact if and only if its image in $\C^\wg$ is exact.
 \end{s}
 
@@ -3326,6 +3327,18 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 \end{s}
 
+%
+
+\begin{s}\lb{s3cat}
+P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7. 
+\begin{prop}\lb{p3cat} 
+Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of object is $Z$. Then there are canonical isomorphisms  
+$$
+\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).
+$$ 
+\end{prop}
+\end{s}
+
 %%
 
 \section{About Chapter 3}
@@ -3449,6 +3462,11 @@ j_s\xr{u_s}\ell_s\xl{v_s}k_s
 $$ 
 in $I_s$ and an element $w_s$ in $\al_s(\ell_s)$ such that $\al_s(u_s)(y_s)=w_s=\al_s(v_s)(z_s)$. This implies $p_j(y)=p_\ell(w)=p_k(z)$, and thus $p_j(y)=p_k(z)$ as requested.
 \end{proof}
+
+In view of Proposition~\ref{p3cat} p.~\pr{p3cat} the above proposition implies 
+\begin{prop}  
+If $Z\in\Set$, then $\Set_Z$ has the IPC property.
+\end{prop} 
 \end{s}
 
 %
@@ -5572,11 +5590,9 @@ N'\text{ is small and filtrant}
 \end{equation} 
 %
 and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\al_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below will imply that $\DT$ is cofinal. Thus, 
-%
 \begin{equation}\lb{daa}
 \DT\ci\widetilde{\al_a}\text{ is cofinal.}
 \end{equation} 
-% 
 Taking Lemma~\ref{delta} below for granted, Lemma~\ref{npk} p.~\pr{npk} now follows from \qr{n'saf}, \qr{daa} and Proposition 3.4.5 p.~89 of the book. 
 \end{proof} 
 
@@ -7145,10 +7161,10 @@ q.e.d.
 
 \subsubsection{Brief comments}
 
-\begin{s} P.~190, Proposition 8.5.5. It might be worth writing explicitly the formulas (for $X\in\Mod(R,\C)$):
-\begin{equation}\lb{rop}
+\begin{s} P.~190, Proposition 8.5.5. It might be worth writing explicitly the formulas (for $X,Y\in\Mod(R,\C)$):
+$$%\begin{equation}\lb{rop}
 \Hom_{R^{\op}}(N,\Hom_\C(X,Y))\iso\Hom_\C\left(N\otimes_RX,Y\right),
-\end{equation} 
+$$%\end{equation} 
 $$
 \Hom_R(M,\Hom_\C(Y,X))\iso\Hom_\C\left(Y,\Hom_R(M,X)\right),
 $$
@@ -7168,20 +7184,16 @@ $$
 $$
 where, we hope, the notation is self-explanatory.
 
-The fact that the functor 
-$$
--\otimes_R-:\Mod(R^{\op})\tm\Mod(R,\C)\to\C
-$$ 
-is right exact in each variable follows from \qr{rop} and \S\ref{ex} p.~\pr{ex}.
+%The fact that the functor $$-\otimes_R-:\Mod(R^{\op})\tm\Mod(R,\C)\to\C$$ is right exact in each variable follows from \qr{rop} and \S\ref{ex} p.~\pr{ex}.
 \end{s}
 
 %
 
 \begin{s} P.~191, proof of Theorem 8.5.8 (iii) (minor variant). Recall the statement: 
 
-\begin{lem}\lb{858iii}
+\begin{prop}[Theorem 8.5.8 (iii) p.~191]\lb{858iii}
 Let $\C$ be a Grothendieck category, let $G$ be a generator, let $R$ be the ring $\oo{End}_\C(G)^{\op}$, put $\M:=\Mod(R)$, let $\pp:\C\to\M$ be the functor defined by $\pp(X):=\Hom_\C(G,X)$. Then $\pp$ is fully faithful. 
-\end{lem}
+\end{prop}
 
 \begin{proof}
 Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$, let $\C_0$ be the full subcategory of $\C$ whose objects are 
@@ -7205,7 +7217,8 @@ $$
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem~\ref{536} p.~\pr{536} above. %Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). 
+As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -7216,7 +7229,7 @@ quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref
 Here is a minor variant of Step~(a) of the proof of Theorem 8.5.8 (iv). Recall the statement: 
 
 \begin{lem}
-In the setting of Lemma~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\rightarrowtail R^{\oplus S}$. Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
+In the setting of Proposition~\ref{858iii}, assume that there is a finite set $F$, an epimorphism $R^F\epi M$ in $\M$, a small set $S$, and a monomorphism $M\rightarrowtail R^{\oplus S}$. Let $\psi:\M\to\C$ be the functor defined by $\psi(M):=G\otimes_RM$. Then $\psi(M)\to\psi(R^{\oplus S})$ is a monomorphism. 
 \end{lem}
 
 \begin{proof}
@@ -7251,10 +7264,10 @@ $$
 \begin{tikzcd}
 \pp(K)\ar[equal]{d}\ar{rrr}{0}&&&R^{F'}\ar[equal]{d}\\
 \pp(K)\ar{r}{\pp(i)}&R^F\ar[equal]{d}\ar{r}{\pp(p)}&\pp(\psi(M))\ar{r}{\pp(f)}&R^{F'}\ar[equal]{d}\\
-&R^F\ar{r}[swap]{a}&M\ar[tail]{r}[swap]{b}\ar{u}&R^{F'}.
+&R^F\ar{r}[swap]{a}&M\ar[tail]{r}[swap]{b}\ar{u}&R^{F'}
 \end{tikzcd}
 $$ 
-yields $b\ci a\ci\pp(i)=0$. As $b$ is a monomorphism, we get $a\ci\pp(i)=0$, and thus $\pp(p)\ci\pp(i)=0$. Since $\pp$ is faithful by Lemma~\ref{858iii} p.~\pr{858iii}, this implies 
+yields $b\ci a\ci\pp(i)=0$. As $b$ is a monomorphism, we get $a\ci\pp(i)=0$, and thus $\pp(p)\ci\pp(i)=0$. Since $\pp$ is faithful by Proposition~\ref{858iii} p.~\pr{858iii}, this implies 
 %
 \begin{equation}\lb{pi=0}
 p\ci i=0.
