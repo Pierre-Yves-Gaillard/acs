@@ -3424,7 +3424,7 @@ P.~75. Throughout the section about the IPC Property, one can assume that $\A$ i
 
 %
 
-\begin{s}
+\begin{s}\lb{77}
 P.~77, Proposition 3.1.11 (ii). This proposition says that $\Set$ has the IPC property. Recall the setting:
 
 Let $S$ be a small set, for each $s$ in $S$ let $I_s$ be a small set and $\al_s:I_s\to\Set$ a functor, put $I:=\prod_{s\in S}I_s$, let 
@@ -5142,6 +5142,31 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 %%
 
 \sbs{Brief comments}
+
+\begin{s} 
+P. 135, Corollary 6.1.12. As indicated in the book, the proof of Corollary 6.1.12 uses Proposition~\ref{p6112} p.~\pr{p6112}. It also uses implicitly the following lemma:
+\begin{lem}
+Let $\al_1:I\to\C_1$ and $\al_2:I\to\C_2$ be functors defined on a small filtrant category $I$. Define $\al:I\to\C_1\tm\C_2$ by $\al(i):=(\al_1(i),\al_2(i))$ and let $X_k$ be in $\C_k\ (k=1,2)$. Then the natural map 
+\begin{equation}\lb{135}
+(\ic\al)(X_1,X_2)\to(\ic\al_1)(X_1)\tm(\ic\al_2)(X_2)
+\end{equation}
+is bijective.
+\end{lem}
+\begin{proof}
+This follows from Corollary 3.2.3 (ii) p.~79 and Proposition 3.1.11 (ii) of the book. Let us just add that \qr{135} is the natural composition 
+$$
+\col_{i\in I}\Big(\Hom_{\C_1}(X_1,\al_1(i))\tm\Hom_{\C_2}(X_2,\al_2(i))\Big)\to
+$$ 
+$$
+\col_{(i,j)\in I\tm I}\Big(\Hom_{\C_1}(X_1,\al_1(i))\tm\Hom_{\C_2}(X_2,\al_2(j))\Big)\to
+$$
+$$
+\Big(\col_{i\in I}\Hom_{\C_1}(X_1,\al_1(i))\Big)\tm\Big(\col_{j\in I}\Hom_{\C_2}(X_2,\al_2(j))\Big).
+$$ 
+\end{proof}
+\end{s}
+
+%
 
 \begin{s} 
 P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
