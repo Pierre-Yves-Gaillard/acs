@@ -347,6 +347,12 @@ $$
 
 \nn$*$ P.~134, proof of Proposition 6.1.12: ``$\C_A\tm\C_{A'}$'' should be ``$\C_A\tm\C'_{A'}$'' (twice).
 
+\nn$*$ P.~135, Corollary 6.1.14: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$. (This is an isomorphism in $\Mor(\Ind(\C))$.)
+
+\begin{s}\lb{s135a}
+$*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $g=``\ilim"\psi$ should be $g\iso``\ilim"\psi$. (See \S\ref{s135b} p.~\pr{s135b} below.)
+\end{s}
+
 \nn$*$ P.~136, proof of Proposition 6.1.16: see \S\ref{cipc} p.~\pr{cipc}.
 
 \nn$*$ P.~136, proof of Proposition 6.1.18. Second line of the proof: ``Corollary 6.1.14'' should be ``Corollary 6.1.15''. 
@@ -5143,17 +5149,23 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 
 \sbs{Brief comments}
 
-\begin{s} 
-P. 135, Corollary 6.1.12. As indicated in the book, the proof of Corollary 6.1.12 uses Proposition~\ref{p6112} p.~\pr{p6112}. It also uses implicitly the following lemma:
-\begin{lem}
+\begin{s}\lb{s135b}
+P.~135, Corollary 6.1.15. Recall the statement (see \S\ref{s135a} p.~\pr{s135a} above):
+
+\begin{cor}[Corollary 6.1.15 p.~135]\lb{c135}
+Let $f,g:A\parar B$ be two morphisms in $\Ind(\C)$. Then there exist a small and filtrant category $I$ and morphisms $\pp,\psi:\al\parar\bt$ of functors from $I$ to $\C$ such that $A\iso\ic\al$, $B\iso\ic\bt$, $f\iso\ic\pp$, $g\iso\ic\psi$. (The last two isomorphisms take place in $\Mor(\Ind(\C))$.)
+\end{cor}
+
+\begin{lem}\lb{l135}
 Let $\al_1:I\to\C_1$ and $\al_2:I\to\C_2$ be functors defined on a small filtrant category $I$. Define $\al:I\to\C_1\tm\C_2$ by $\al(i):=(\al_1(i),\al_2(i))$ and let $X_k$ be in $\C_k\ (k=1,2)$. Then the natural map 
-\begin{equation}\lb{135}
+\begin{equation}\lb{e135}
 (\ic\al)(X_1,X_2)\to(\ic\al_1)(X_1)\tm(\ic\al_2)(X_2)
 \end{equation}
 is bijective.
 \end{lem}
-\begin{proof}
-This follows from Corollary 3.2.3 (ii) p.~79 and Proposition 3.1.11 (ii) of the book. Let us just add that \qr{135} is the natural composition 
+
+\begin{proof}[Proof of Lemma \ref{l135}] 
+This follows from Corollary 3.2.3 (ii) p.~79 and Proposition 3.1.11 (ii) of the book. Let us just add that \qr{e135} is the natural composition 
 $$
 \col_{i\in I}\Big(\Hom_{\C_1}(X_1,\al_1(i))\tm\Hom_{\C_2}(X_2,\al_2(i))\Big)\to
 $$ 
@@ -5163,6 +5175,24 @@ $$
 $$
 \Big(\col_{i\in I}\Hom_{\C_1}(X_1,\al_1(i))\Big)\tm\Big(\col_{j\in I}\Hom_{\C_2}(X_2,\al_2(j))\Big).
 $$ 
+\end{proof}
+
+\begin{proof}[Proof of Corollary \ref{c135}] 
+Let $I$ and $J$ be small filtrant categories and let $\al:I\to\C$ and $\bt:J\to\C$ be two functors such that $A\iso\ic\al$ and $B\iso\ic\bt$. Denote by $\widetilde\al:I\to\C\tm\C$ the functor $i\mt(\al(i),\al(i))$, and similarly with $\bt$. 
+
+Recall that there are quasi-inverse equivalences
+$$
+\begin{tikzcd}
+\Ind(\C\tm\C)\ar[yshift=0.7ex]{r}{\theta}&\Ind(\C)\tm\Ind(\C),\ar[yshift=-0.7ex]{l}{\mu}
+\end{tikzcd}
+$$ 
+that we sometimes write $A_1\tm A_2$ for $\mu(A_1,A_2)$, and that we have  
+$$
+(A_1\tm A_2)(X_1,X_2):=A_1(X_1)\tm A_2(X_2)
+$$ 
+for all $X_i$ in $\C$ ($i=1,2$). (See Section~\ref{6112} p.~\pr{6112}.)
+
+Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\ref{l135} and the above reminder, the morphism $(f,g):(A,A)\to(B,B)$ in $\Ind(\C)\tm\Ind(\C)$ defines a morphism $f\tm g:A\tm A\to B\tm B$ in $\Ind(\C\tm\C)$. Applying Proposition 6.1.13 p.~134 in the book, we find a small and filtrant category $K$, functors $p_I:K\to I,p_J:K\to J$ and a morphism of functors $(\pp,\psi)$ from $\al\ci p_I$ to $\bt\ci p_J$ such that $f\tm g\iso\ic(\pp,\psi)$. It follows that $f\iso\ic\pp$ and $g\iso\ic\psi$.
 \end{proof}
 \end{s}
 
