@@ -361,6 +361,8 @@ $*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $
 
 \nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\al$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
+\nn$*$ P.~138, Proposition 6.2.1. The assumption that $I$ is small is not really necessary. 
+
 \nn$*$ P.~141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
 
 \nn$*$ P.~143, third line of the proof of Proposition 6.4.2: $\{Y_i\}_{I\in I}$ should be $\{Y_i\}_{i\in I}$.
@@ -5268,7 +5270,71 @@ P.~138, proof of Proposition 6.1.21. One can also argue as follows. Assume $\C$ 
 except perhaps inclusion $i$, commute with finite projective limits. Thus inclusion $i$ commutes with finite projective limits. The argument for $\U$-small projective limits is the same. q.e.d.
 \end{s}
 
+%%
+
+\sbs{Proposition 6.2.1 p.~138}
+
+We add a few details to the proof. Recall the statement: 
+\begin{prop}[Proposition 6.2.1 p.~138] 
+Let $\al:I\to \C$ be a functor with $I$ filtrant and let $Z\in\C$. The conditions below are equivalent:
+
+\nn\emph{(i)} $\ic\al$ is representable by $Z$,
+
+\nn\emph{(ii)} there exist an object $i_0\in I$ and a morphism $\tau:Z\to\al(i_0)$ satisfying the property:
+
+\nn for any morphism $s:i_0\to i$, there exist a morphism $q_i:\al(i)\to Z$ and a morphism $t:i\to j$ satisfying 
+
+\nn\emph{(a)} $q_i\ci\al(s)\ci\tau=\id_Z$,
+
+\nn\emph{(b)} $\al(t)\ci\al(s)\ci\tau\ci q_i=\al(t)$.
+\end{prop}
+
+\begin{proof}
+Set $A:=\ic\al$ and let $p_i:\al(i)\to A$ be the coprojections. 
+
+\nn$\bu$ (i) implies (ii). Let $\pp:Z\to A$ be an isomorphism. By definition of $A$ the isomorphism $\pp$ factors as $Z\xr\tau\al(i_0)\xr{p_{i_0}}A$. Let $s:i_0\to i$. We define $q_i:\al(i)\to Z$ as being the composition $\al(i)\xr{p_i}A\begin{smallmatrix}\pp\\ \longleftarrow\\ \sim\end{smallmatrix}Z$. As the three small triangles in the diagram 
+$$
+\begin{tikzcd}
+\al(i)\ar[rr,"q_i"]\ar[rd,"p_i"]&&Z\ar[ld,"\pp","\sim"']\ar[ldd,bend left,"\tau"]\\ 
+&C\\ 
+&D\ar[uul,bend left,"\al(s)"]\ar[u,"p_{i_0}"']
+\end{tikzcd}
+$$ 
+commute, we get 
+$$
+\pp\ci q_i\ci\al(s)\ci\tau=p_i\ci\al(s)\ci\tau=\pp,
+$$ 
+which implies (a). Let us prove (b). The coprojection 
+$$
+\Hom_\C(\al(i),\al(i))\to\col\Hom_\C(\al(i),\al)=\Hom_\C(\al(i),A)
+$$ 
+being the map $p_i\ci$, and $I$ being filtrant, the equalities 
+$$
+p_i\ci\al(s)\ci\tau\ci q_i=p_{i_0}\ci\tau\ci q_i=\pp\ci q_i=p_i=p_i\ci\id_{\al(i)}
+$$ 
+imply the existence of a morphism $t:i\to j$ satisfying (b). 
+
+\nn$\bu$ (ii) implies (i). Let $\pp:Z\to A$ be the composition $Z\xr\tau\al(i_0)\xr{p_{i_0}}A$. It suffices to show that $\pp$ is an isomorphism. Let $X$ be an object of $\C$. It suffices to show that the map 
+$$ 
+\pp_X:\Hom_\C(X,Z)\to\Hom_\C(X,A)=\col\Hom_\C(X,\al),\quad u\mt\pp\ci u
+$$ 
+is bijective. 
+
+\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is $$p_{i_0}\ci\tau\ci u=p_{i_0}\ci\tau\ci v.$$ As $I$ is filtrant and as $\Hom_\C(X,A)=\col\Hom_\C(X,\al)$, there is a morphism $s:i_0\to i$ such that $\al(s)\ci\tau\ci u=\al(s)\ci\tau\ci v$. We have $p_i\ci\al(s)\ci\tau\ci u=p_{i_0}\ci\tau\ci u=\pp\ci u$, and, similarly, $p_i\ci\al(s)\ci\tau\ci v=\pp\ci v$, yielding 
+$$
+\pp\ci u=p_i\ci\al(s)\ci\tau\ci u=p_i\ci\al(s)\ci\tau\ci v=\pp\ci v,
+$$ 
+and thus $u=v$. 
+
+\nn$\star\ \pp_X$ is surjective. Let $w:X\to\al(i)$ be a morphism. It suffices to show that there is a morphism $u:X\to Z$ such that $\pp\ci u=w$. We may assume that there is a morphism $i_0\to i$. If $q_i:\al(i)\to Z$ and $t:i\to j$ are as in (ii), we get
+$$
+p_i\ci w=p_j\ci\al(t)\ci w=p_j\ci\al(t)\ci\al(s)\ci\tau\ci q_i\ci w=p_{i_0}\ci\tau\ci q_i\ci w=\pp\ci q_i\ci w.
+$$ 
+\end{proof}
+
 %
+
+\begin{comment}
 
 \begin{s} 
 P.~138, proof of Proposition 6.2.1. The second sentence of the proof can be justified as follows: Let 
@@ -5298,7 +5364,11 @@ $$
 is the coprojection and $w$ is in $\Hom_\C(X,\al(i))$. Furthermore we can choose $i$ and $w$ in such a way that there exists a morphism $s:i_0\to i$.
 \end{s}
 
-%
+\end{comment}
+
+%% 
+
+\sbs{Brief comments}
 
 \begin{s} 
 P.~140, proof of Corollary 6.3.2. For $X$ in $\J$ we have 
