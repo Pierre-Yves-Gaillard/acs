@@ -361,7 +361,7 @@ $*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $
 
 \nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\al$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
-\nn$*$ P.~138, Proposition 6.2.1. The assumption that $I$ is small is not really necessary. 
+\nn$*$ P.~138, Proposition 6.2.1. The assumption that $I$ is small is not really necessary. (See Section~\ref{138} p.~\pr{138} below.)
 
 \nn$*$ P.~141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
 
@@ -1423,8 +1423,8 @@ in $\C^\wg$ (see Convention~\ref{yoc} p.~\pr{yoc}) is an isomorphism.
 The characteristic property of the pair $(\lim\al,p)$ can be described as follows: For each $Y$ in $\C$ and each morphism of functors $\theta:\DT Y\to\al$ there is a unique morphism $f:Y\to\lim\al$ satisfying $p\ci\DT f=\theta$: 
 \begin{equation}\lb{yfy}
 \begin{tikzcd}
-Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[r,"\theta"]&\al\\ 
-\lim\al&\DT \lim\al.\ar[ru,"p"']
+Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[rd,"\theta"]\\ 
+\lim\al&\DT\lim\al\ar[r,"p"']&\al.
 \end{tikzcd}
 \end{equation} 
 
@@ -1500,8 +1500,8 @@ $$
 is a projection in the sense of Definition~\ref{plim} p.~\pr{plim}:
 \begin{equation}\lb{zc}
 \begin{tikzcd}
-S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(\al,Z)\\ 
-\Hom_\C(X,Z)&\DT\Hom_\C(X,Z).\ar[ru,"\ci p"']
+S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[rd,"\mu"]\\ 
+\Hom_\C(X,Z)&\DT\Hom_\C(X,Z)\ar[r,"\ci p"']&\Hom_\C(\al,Z).
 \end{tikzcd}
 \end{equation} 
 More precisely, assume we are given $\mu$ as above and $s$ in $S$. Then we set $Y:=Z$ and $\ld_i:=\mu_i(s)$ in \qr{xp}. We get an $f:X\to Z$, and we set $g(s):=f$. We leave it to the reader to check that this process yields a solution to \qr{zc}, and that this solution is unique.
@@ -1662,15 +1662,15 @@ $$
 Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We sketch the proof that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
 \begin{equation}\lb{zfz}
 \begin{tikzcd}
-Z\ar[d,dashed,"f"']&\DT Z\ar[d,"\DT f"']\ar[r,"\ld"]&\al\\ 
-X&\DT X,\ar[ru,"p"']
+Z\ar[d,dashed,"f"']&\DT Z\ar[d,"\DT f"']\ar[rd,"\ld"]\\ 
+X&\DT X,\ar[r,"p"']&\al
 \end{tikzcd}
 \end{equation} 
 
 \begin{equation}\lb{sgs}
 \begin{tikzcd}
-S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[r,"\mu"]&\Hom_\C(Y,\al)\\ 
-\Hom_\C(Y,X)&\DT\Hom_\C(Y,X).\ar{ru}[swap]{\Hom_\C(Y,p)}
+S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[rrd,"\mu"]\\ 
+\Hom_\C(Y,X)&\DT\Hom_\C(Y,X)\ar{rr}[swap]{\Hom_\C(Y,p)}&&\Hom_\C(Y,\al).
 \end{tikzcd}
 \end{equation} 
 
@@ -1805,7 +1805,7 @@ Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d) and (
 $$
 \begin{tikzcd}
 \DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
-\DT\Hom_{\C^\wg}(h(p),A)\ar{rrr}[swap]{\Hom_{\C^\wg}(h(p),A)}&&&\Hom_{\C^\wg}(h(p),A),
+\DT\Hom_{\C^\wg}(X,A)\ar{rrr}[swap]{\Hom_{\C^\wg}(h(p),A)}&&&\Hom_{\C^\wg}(\al,A),
 \end{tikzcd}
 $$ 
 where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
@@ -2166,16 +2166,16 @@ $$
 \nn(b) We say that ``$\pp^\ddg\bt$ exists'' if there is a unit $\eta_\bt:\pp_*\pp^\ddg\bt\to\bt$, that is, for all $\al:I\to\C$ and all $w:\pp_*\al\to\bt$ there is a unique $v:\al\to\pp^\ddg\bt$ such that $\eta_\bt\ci(v\star\pp)=w$: 
 $$
 \begin{tikzcd}
-\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v\star\pp"']\ar[r,"w"]&\bt\\ 
-\pp^\ddg\bt&\pp_*\pp^\ddg\bt.\ar[ru,"\eta_\bt"']
+\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v\star\pp"']\ar[rd,"w"]\\ 
+\pp^\ddg\bt&\pp_*\pp^\ddg\bt\ar[r,"\eta_\bt"']&\bt
 \end{tikzcd}
 $$
 
 \nn(c) Let $\gamma:I\to\C$ and let $u$ be an endomorphism of the functor $\pp_*\gamma:J\to\C$. The phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via $u$'' shall mean that for all $\al:I\to\C$ and all $w:\pp_*\al\to\pp_*\gamma$ there is a unique $v:\al\to\gamma$ such that $u\ci(v\star\pp)=w$: 
 $$
 \begin{tikzcd}
-\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v\star\pp"']\ar[r,"w"]&\pp_*\gamma\\ 
-\gamma&\pp_*\gamma.\ar[ru,"u"']
+\al\ar[d,dashed,"v"']&\pp_*\al\ar[d,"v\star\pp"']\ar[rd,"w"]\\ 
+\gamma&\pp_*\gamma\ar[r,"u"']&\pp_*\gamma.
 \end{tikzcd}
 $$ 
 In particular, the phrase ``$\pp^\ddg\pp_*\gamma$ exists and is isomorphic to $\gamma$ via the identity of $\pp_*\gamma:J\to\C$'' shall mean that, for all $\al:I\to\C$, the map 
@@ -2808,8 +2808,8 @@ $$
 for all $X\to A$ in $\C_A$ and all $A\to B$ in $B(A)$, and let $S$ be in $\Set$. Diagram \qr{yfy} p.~\pr{yfy} becomes 
 $$
 \begin{tikzcd}
-S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[r,"\theta"]&\gamma\\ 
-B(A)&\DT B(A).\ar[ru,"r"']
+S\ar[d,dashed,"f"']&\DT S\ar[d,"\DT f"']\ar[rd,"\theta"]\\ 
+B(A)&\DT B(A)\ar[r,"r"']&\gamma.
 \end{tikzcd}
 $$ 
 The uniqueness of $f$ follows from the fact that the equality 
@@ -5272,65 +5272,69 @@ except perhaps inclusion $i$, commute with finite projective limits. Thus inclus
 
 %%
 
-\sbs{Proposition 6.2.1 p.~138}
+\sbs{Proposition 6.2.1 p.~138}\lb{138}
 
 We add a few details to the proof. Recall the statement: 
 \begin{prop}[Proposition 6.2.1 p.~138] 
 Let $\al:I\to \C$ be a functor with $I$ filtrant and let $Z\in\C$. The conditions below are equivalent:
 
-\nn\emph{(i)} $\ic\al$ is representable by $Z$,
+\nn\emph{(i)} $Z$ is a universal inductive limit of $\al$ in the sense of Definition~\ref{uil} p.~\pr{uil}. % $\ic\al$ is representable by $Z$,
 
 \nn\emph{(ii)} there exist an object $i_0\in I$ and a morphism $\tau:Z\to\al(i_0)$ satisfying the property:
 
-\nn for any morphism $s:i_0\to i$, there exist a morphism $q_i:\al(i)\to Z$ and a morphism $t:i\to j$ satisfying 
+\nn for any morphism $s:i_0\to i$, there exist a morphism $p_i:\al(i)\to Z$ and a morphism $t:i\to j$ satisfying 
 
-\nn\emph{(a)} $q_i\ci\al(s)\ci\tau=\id_Z$,
+\nn\emph{(a)} $p_i\ci\al(s)\ci\tau=\id_Z$,
 
-\nn\emph{(b)} $\al(t)\ci\al(s)\ci\tau\ci q_i=\al(t)$.
+\nn\emph{(b)} $\al(t)\ci\al(s)\ci\tau\ci p_i=\al(t)$.
 \end{prop}
 
-\begin{proof}
-Set $A:=\ic\al$ and let $p_i:\al(i)\to A$ be the coprojections. 
+\begin{proof} 
+Choose a universe making $I$ and $\C$ small, set $A:=\ic\al$ and let $q_i:\al(i)\to A$ be the coprojections. 
 
-\nn$\bu$ (i) implies (ii). Let $\pp:Z\to A$ be an isomorphism. By definition of $A$ the isomorphism $\pp$ factors as $Z\xr\tau\al(i_0)\xr{p_{i_0}}A$. Let $s:i_0\to i$. We define $q_i:\al(i)\to Z$ as being the composition $\al(i)\xr{p_i}A\begin{smallmatrix}\pp\\ \longleftarrow\\ \sim\end{smallmatrix}Z$. As the three small triangles in the diagram 
+\nn$\bu$ (i) implies (ii). Let $\pp:Z\to A$ be an isomorphism. By definition of $A$ the isomorphism $\pp$ factors as $Z\xr\tau\al(i_0)\xr{q_{i_0}}A$. Let $s:i_0\to i$. We define $p_i:\al(i)\to Z$ as being the composition $\al(i)\xr{q_i}A\begin{smallmatrix}\pp\\ \longleftarrow\\ \sim\end{smallmatrix}Z$. As the three small triangles in the diagram 
 $$
 \begin{tikzcd}
-\al(i)\ar[rr,"q_i"]\ar[rd,"p_i"]&&Z\ar[ld,"\pp","\sim"']\ar[ldd,bend left,"\tau"]\\ 
+\al(i)\ar[rr,"p_i"]\ar[rd,"q_i"]&&Z\ar[ld,"\pp","\sim"']\ar[ldd,bend left,"\tau"]\\ 
 &C\\ 
-&D\ar[uul,bend left,"\al(s)"]\ar[u,"p_{i_0}"']
+&D\ar[uul,bend left,"\al(s)"]\ar[u,"q_{i_0}"']
 \end{tikzcd}
 $$ 
 commute, we get 
 $$
-\pp\ci q_i\ci\al(s)\ci\tau=p_i\ci\al(s)\ci\tau=\pp,
+\pp\ci p_i\ci\al(s)\ci\tau=q_i\ci\al(s)\ci\tau=\pp,
 $$ 
 which implies (a). Let us prove (b). The coprojection 
 $$
 \Hom_\C(\al(i),\al(i))\to\col\Hom_\C(\al(i),\al)=\Hom_\C(\al(i),A)
 $$ 
-being the map $p_i\ci$, and $I$ being filtrant, the equalities 
+being the map $q_i\ci$, and $I$ being filtrant, the equalities 
 $$
-p_i\ci\al(s)\ci\tau\ci q_i=p_{i_0}\ci\tau\ci q_i=\pp\ci q_i=p_i=p_i\ci\id_{\al(i)}
+q_i\ci\al(s)\ci\tau\ci p_i=q_{i_0}\ci\tau\ci p_i=\pp\ci p_i=q_i=q_i\ci\id_{\al(i)}
 $$ 
 imply the existence of a morphism $t:i\to j$ satisfying (b). 
 
-\nn$\bu$ (ii) implies (i). Let $\pp:Z\to A$ be the composition $Z\xr\tau\al(i_0)\xr{p_{i_0}}A$. It suffices to show that $\pp$ is an isomorphism. Let $X$ be an object of $\C$. It suffices to show that the map 
+\nn$\bu$ (ii) implies (i). Let $\pp:Z\to A$ be the composition $Z\xr\tau\al(i_0)\xr{q_{i_0}}A$. It suffices to show that $\pp$ is an isomorphism. Let $X$ be an object of $\C$. It suffices to show that the map 
 $$ 
 \pp_X:\Hom_\C(X,Z)\to\Hom_\C(X,A)=\col\Hom_\C(X,\al),\quad u\mt\pp\ci u
 $$ 
 is bijective. 
 
-\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is $$p_{i_0}\ci\tau\ci u=p_{i_0}\ci\tau\ci v.$$ As $I$ is filtrant and as $\Hom_\C(X,A)=\col\Hom_\C(X,\al)$, there is a morphism $s:i_0\to i$ such that $\al(s)\ci\tau\ci u=\al(s)\ci\tau\ci v$. We have $p_i\ci\al(s)\ci\tau\ci u=p_{i_0}\ci\tau\ci u=\pp\ci u$, and, similarly, $p_i\ci\al(s)\ci\tau\ci v=\pp\ci v$, yielding 
+\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is $$q_{i_0}\ci\tau\ci u=q_{i_0}\ci\tau\ci v.$$ As $I$ is filtrant and as $\Hom_\C(X,A)=\col\Hom_\C(X,\al)$, there is a morphism $s:i_0\to i$ such that $\al(s)\ci\tau\ci u=\al(s)\ci\tau\ci v$. We have $q_i\ci\al(s)\ci\tau\ci u=q_{i_0}\ci\tau\ci u=\pp\ci u$, and, similarly, $q_i\ci\al(s)\ci\tau\ci v=\pp\ci v$, yielding 
 $$
-\pp\ci u=p_i\ci\al(s)\ci\tau\ci u=p_i\ci\al(s)\ci\tau\ci v=\pp\ci v,
+\pp\ci u=q_i\ci\al(s)\ci\tau\ci u=q_i\ci\al(s)\ci\tau\ci v=\pp\ci v,
 $$ 
 and thus $u=v$. 
 
-\nn$\star\ \pp_X$ is surjective. Let $w:X\to\al(i)$ be a morphism. It suffices to show that there is a morphism $u:X\to Z$ such that $\pp\ci u=w$. We may assume that there is a morphism $i_0\to i$. If $q_i:\al(i)\to Z$ and $t:i\to j$ are as in (ii), we get
+\nn$\star\ \pp_X$ is surjective. Let $w:X\to\al(i)$ be a morphism. It suffices to show that there is a morphism $u:X\to Z$ such that $\pp\ci u=w$. We may assume that there is a morphism $i_0\to i$. If $p_i:\al(i)\to Z$ and $t:i\to j$ are as in (ii), we get
 $$
-p_i\ci w=p_j\ci\al(t)\ci w=p_j\ci\al(t)\ci\al(s)\ci\tau\ci q_i\ci w=p_{i_0}\ci\tau\ci q_i\ci w=\pp\ci q_i\ci w.
+q_i\ci w=q_j\ci\al(t)\ci w=q_j\ci\al(t)\ci\al(s)\ci\tau\ci p_i\ci w=q_{i_0}\ci\tau\ci p_i\ci w=\pp\ci p_i\ci w.
 $$ 
-\end{proof}
+\end{proof} 
+
+\begin{cor}
+Let $\al:I\to X$ be a functor from a filtrant category $I$ to an ordered set $X$, let $f:\Ob(I)\to X$ be the obvious map, and let $x_0$ be in $X$. Then $x_0=\col\al$ if and only if $x_0=\sup\ \Ima f$. Moreover this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pr{uil} if and only the supremum $x_0$ is reached by $f$.
+\end{cor}
 
 %
 
