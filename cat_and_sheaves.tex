@@ -4886,6 +4886,7 @@ Since there are only countably many finite categories up to isomorphism, (b) is 
 \section{About Chapter 6}
 
 \sbs{Definition 6.1.1 p. 131}
+
 Here is an example of an object of $\Ind(\Set)$ which is isomorphic (in $\Ind(\Set)$) to no object of $\Set$. 
 
 For each $n$ in $\bb N$ set 
@@ -4894,8 +4895,12 @@ $$
 $$ 
 let $\bb N\to\Set,n\mt\mbf n$ be the obvious functor, and set 
 $$
-\bb N':=\ic_n\mbf n.
+\bb N':=\ic_n\mbf n. 
 $$ 
+We clearly have $\bb N'\in\Ind(\Set)$. Let $X$ be in $\Set$ and let $f:X\bb N'$ be an epimorphism. To prove that $\bb N'$ is isomorphic to no object of $\Set$, it suffices to show that $f$ is \emph{not} an epimorphism. As $f$ factors through some coprojection $p_n:\mbf n\to\bb N'$, if $f$ were an epimorphism, so would be $p_n$. But it is easy to see that $p_n$ is \emph{not} an epimorphism. 
+
+\begin{comment}
+
 We clearly have $\bb N'\in\Ind(\Set)$. We want to show\bigskip
 
 \centerline{(a) $\bb N'$ is isomorphic (in $\Ind(\Set)$) to no object of $\Set$.}
@@ -4917,7 +4922,7 @@ $$
 A(X)\ar[r,yshift=0.7ex,"f_X"]\ar[r,yshift=-0.7ex,"g_X"']&\mbf n^X\ar[r,"p_n\ci"]&\ds\col_m\mbf m^X
 \end{tikzcd}
 $$ 
-satify $p_n\ci f_X=p_n\ci g_X$, there is an $m>n$ such that the diagram 
+satisfy $p_n\ci f_X=p_n\ci g_X$, there is an $m>n$ such that the diagram 
 $$
 \begin{tikzcd}
 A(X)\ar[r,yshift=0.7ex,"f_X"]\ar[r,yshift=-0.7ex,"g_X"']&\mbf n^X\ar[r,"p_{m,n}"]&\mbf m^X
@@ -4927,8 +4932,12 @@ commutes, where $p_{m,n}$ is the obvious injection. This implies $f_X=g_X$. As $
 \end{proof}
 
 \begin{proof}[Proof of (a)] 
-Let $f:A\epi\bb N'$ be an epimorphism (in $\Ind(\Set)$) from some object $A$ of $\Set$ onto $\bb N'$, and let us derive a contradiction. By definition of $\bb N'$, our epimorphism $f$ factors through $p_n:\mbf n\to\bb N'$ for some $n$. This implies that $p_n$ is an epimorphism. As it is also a monomorphism by (b), we see that $p_n$ is an isomorphism. Using (a) again, we get an injection of $\mbf{n+1}$ into $\mbf n$, a contradiction. 
+Let $f:A\epi\bb N'$ be an epimorphism (in $\Ind(\Set)$) from some object $A$ of $\Set$ onto $\bb N'$, and let us derive a contradiction. By definition of $\bb N'$, our epimorphism $f$ factors through $p_n:\mbf n\to\bb N'$ for some $n$. This implies that $p_n$ is an epimorphism. As it is also a monomorphism by (b), we see that $p_n$ is an isomorphism. Using (b) again, we get an injection of $\mbf{n+1}$ into $\mbf n$, a contradiction. 
 \end{proof} 
+
+\end{comment}
+
+%%
 
 \sbs{Theorem 6.1.8 p. 132} 
 
