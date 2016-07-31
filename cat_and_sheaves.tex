@@ -4897,7 +4897,15 @@ let $\bb N\to\Set,n\mt\mbf n$ be the obvious functor, and set
 $$
 \bb N':=\ic_n\mbf n. 
 $$ 
-We clearly have $\bb N'\in\Ind(\Set)$. Let $X$ be in $\Set$ and let $f:X\bb N'$ be an epimorphism. To prove that $\bb N'$ is isomorphic to no object of $\Set$, it suffices to show that $f$ is \emph{not} an epimorphism. As $f$ factors through some coprojection $p_n:\mbf n\to\bb N'$, if $f$ were an epimorphism, so would be $p_n$. But it is easy to see that $p_n$ is \emph{not} an epimorphism. 
+We clearly have $\bb N'\in\Ind(\Set)$. Let $X$ be in $\Set$ and let $f:X\to\bb N'$ be a morphism. To prove that $\bb N'$ is isomorphic to no object of $\Set$, it suffices to show that $f$ is \emph{not} an epimorphism. As $f$ factors through some coprojection $p_n:\mbf n\to\bb N'$, if $f$ were an epimorphism, so would be $p_n$.  
+
+Claim: $p_n$ is \emph{not} an epimorphism. 
+
+Proof: Let $f:\bb N'\to\bb N$ be the natural morphism. There is a morphism $g:\bb N'\to\bb N$ such that 
+$$
+g(p_i(j))=\begin{cases}j&\text{ if }j\le n\\ n&\text{ if }j\ge n\end{cases}
+$$ 
+whenever $0\le j<i$, and we have $g\ci p_n=f\ci p_n$ but $g\neq f$.  
 
 \begin{comment}
 
