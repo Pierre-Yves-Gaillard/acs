@@ -361,9 +361,11 @@ $*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $
 
 \nn$*$ P.~138, second line of Section 6.2: ``the functor $``\ds\lim_{\longrightarrow}"$ is representable in $\C$'' should be ``the functor $``\ds\lim_{\longrightarrow}"\al$ is representable in $\C$''. Next line: ``natural functor'' should be ``natural morphism''.
 
-\nn$*$ P.~138, Proposition 6.2.1. The assumption that $I$ is small is not really necessary. (See Section~\ref{138} p.~\pr{138} below.)
+\nn$*$ P.~138, Proposition 6.2.1. The assumption that $I$ is small is not really necessary. (See Section~\ref{138} p.~\pr{138} below.) 
 
-\nn$*$ P.~141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$.
+\nn$*$ P.~141, Display (6.3.2): $\neq$ should be $\not\iso$ (see Section \ref{131} p.~\pr{131} below). 
+
+\nn$*$ P.~141, Corollary 6.3.7 (ii): $\id$ should be $\id_\C$. 
 
 \nn$*$ P.~143, third line of the proof of Proposition 6.4.2: $\{Y_i\}_{I\in I}$ should be $\{Y_i\}_{i\in I}$.
 
@@ -4885,7 +4887,7 @@ Since there are only countably many finite categories up to isomorphism, (b) is 
 
 \section{About Chapter 6}
 
-\sbs{Definition 6.1.1 p. 131}
+\sbs{Definition 6.1.1 p. 131}\lb{131}
 
 Here is an example of an object of $\Ind(\Set)$ which is isomorphic (in $\Ind(\Set)$) to no object of $\Set$. 
 
@@ -4897,7 +4899,7 @@ let $\bb N\to\Set,n\mt\mbf n$ be the obvious functor, and set
 $$
 \bb N':=\ic_n\mbf n. 
 $$ 
-We clearly have $\bb N'\in\Ind(\Set)$. Let $X$ be in $\Set$ and let $f:X\to\bb N'$ be a morphism. To prove that $\bb N'$ is isomorphic to no object of $\Set$, it suffices to show that $f$ is \emph{not} an epimorphism. As $f$ factors through some coprojection $p_n:\mbf n\to\bb N'$, if $f$ were an epimorphism, so would be $p_n$.  
+(Note that $A(X)$ can be identified to the set of bounded maps from $X$ to $\mathbb N$.) We clearly have $\bb N'\in\Ind(\Set)$. Let $X$ be in $\Set$ and let $u:X\to\bb N'$ be a morphism. To prove that $\bb N'$ is isomorphic to no object of $\Set$, it suffices to show that $u$ is \emph{not} an epimorphism. As $u$ factors through some coprojection $p_n:\mbf n\to\bb N'$, if $u$ were an epimorphism, so would be $p_n$.  
 
 Claim: $p_n$ is \emph{not} an epimorphism. 
 
@@ -4905,7 +4907,36 @@ Proof: Let $f:\bb N'\to\bb N$ be the natural morphism. There is a morphism $g:\b
 $$
 g(p_i(j))=\begin{cases}j&\text{ if }j\le n\\ n&\text{ if }j\ge n\end{cases}
 $$ 
-whenever $0\le j<i$, and we have $g\ci p_n=f\ci p_n$ but $g\neq f$.  
+whenever $0\le j<i$, and we have $g\ci p_n=f\ci p_n$ but $g\neq f$. This proves the claim, and, thus, the fact that $\bb N'$ is isomorphic to no object of $\Set$. 
+
+We have just seen that the natural morphism $f:\bb N'\to\bb N$ is \emph{not} an isomorphism. 
+
+Let us show that $f$ is a monomorphism. 
+
+Let 
+$$
+\begin{tikzcd}
+A\ar[r,yshift=4pt,"g"]\ar[r,yshift=-4pt,"h"']&\bb N'\ar[r,"f"]&\bb N
+\end{tikzcd}
+$$ 
+be a diagram in $\Ind(\Set)$ with $g\neq h$. It suffices to prove $f\ci g\neq f\ci h$. We can assume that $A$ is in $\Set$. There is an $a$ in $A$ satisfying $g(a)\neq h(a)$. Recall that $p_n:\mbf n\to\bb N'$ is the $n$-th coprojection. There is an $n$ in $\bb N$ and there are $g_n,h_n:A\parar\mbf n$ such that $g=p_n\ci g_n,\ h=p_n\ci h_n$: 
+$$
+\begin{tikzcd}
+A\ar[d,xshift=4pt,"h_n"]\ar[d,xshift=-4pt,"g_n"']\ar[r,yshift=4pt,"g"]\ar[r,yshift=-4pt,"h"']&\bb N'\ar[r,"f"]&\bb N\\ 
+\mbf{n}.\ar[ru,bend right,"p_n"']
+\end{tikzcd}
+$$ 
+The map $f\ci p_n$ being injective, this yields
+$$
+(f\ci g)(a)=(f\ci p_n)(g_n(a))\neq(f\ci p_n)(h_n(a))=(f\ci h)(a),
+$$ 
+and thus $f\ci g\neq f\ci h$. Hence, $f$ is a monomorphism.
+
+\begin{uspb}\index{unsolved problem}
+I don't know if the natural morphism $f:\bb N'\to\bb N$ is an epimorphism.
+\end{uspb}
+
+%
 
 \begin{comment}
 
