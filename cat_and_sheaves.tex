@@ -5251,7 +5251,32 @@ Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\re
 
 %% 
 
-\sbs{Brief comments}
+\sbs{Brief comments} 
+
+\begin{s} 
+The proofs of Propositions 6.1.16 and 6.1.18 p.~136 in the book use the following lemma
+
+\begin{lem}\lb{ci}
+If $\C$ is a category admitting finite inductive and projective limits, and if $I$ is a small filtrant category, then the functor $ \ic:\C^I\to\Ind(\C)$ is exact. 
+\end{lem} 
+
+\begin{proof} 
+Note that $\C^I$ admits finite inductive and projective limits. Let $h:\C\to\C^\wg$ be the Yoneda embedding and $\iota:\C\to\Ind(\C)$ the natural embedding. If $\al$ is in $\C^I$, then $\ic\al$ can be defined as $\col h\ci\al$ or as $\col\iota\ci\al$ (Theorem 6.1.8 p.~132 in the book). Let $J$ be a finite category. Let $\al:I\tm J^{\op}\to\C$ be a functor. We claim 
+$$
+\ic_i\lim_j\al(i,j)\xr\sim\col_i h\left(\lim_j\al(i,j)\right). 
+$$ 
+Clearly $\lim_j$ commutes with $h$. As $\lim_j$ commutes also with $\col_i$ as far as $\C^\wg$-valued functors are concerned, $\ic_i$ commutes with $\lim_j$, and the claim is proved. Let $\al:I\tm J\to\C$ be a functor. We claim 
+$$
+\ic_i\col_j\al(i,j)\xr\sim\col_i\iota\left(\col_j\al(i,j)\right). 
+$$ 
+The functor $\iota$, being right exact (Corollary 6.1.6 p.~132 in the book), commutes with $\col_j$. As $\col_j$ commutes with $\col_i$ for obvious reasons, it commutes with $\ic_i$, and the claim is proved.
+\end{proof}
+
+\end{s}
+
+% 
+
+\begin{comment}
 
 \begin{s} 
 P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
@@ -5318,6 +5343,30 @@ $$
 A=\ic\al,\quad B=\ic\bt,\quad f=\ic\pp.
 $$ 
 The above two lemmas imply $[\ic\pp]\iso\ds\ic_i[\pp_i]$. As $[\pp_i]$ is an isomorphism for all $i$, we see that $[f]=[\ic\pp]$ is an isomorphism.
+\end{proof}
+
+\end{s}
+
+\end{comment}
+
+%
+
+\begin{s}
+
+\begin{thm}\lb{si}
+If $\C$ is a category admitting finite inductive and projective limits, and if $\C$ is strict, then $\Ind(\C)$ is strict. 
+\end{thm} 
+
+\begin{lem} 
+If $F:\C\to\C'$ is an exact functor between categories admitting finite inductive and projective limits, and if $f$ is a strict morphism in $\C$, then $F(f)$ is a strict morphism in $\C'$. 
+\end{lem}
+
+\begin{proof} 
+This is obvious. 
+\end{proof} 
+
+\begin{proof}[Proof of Theorem~\ref{si}] 
+Let $f:A\to B$ be a morphism in $\Ind(\C)$. By Corollary 6.1.14 p.~135 in the book, there is a small filtrant category $I$ and a morphism $\pp$ in $\C^I$ such that $\ic\pp\iso f$. Clearly $\C^I$ is strict, and the theorem follows now from the above lemma. 
 \end{proof}
 
 \end{s}
