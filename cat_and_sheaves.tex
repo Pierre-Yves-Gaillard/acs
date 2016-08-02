@@ -350,7 +350,7 @@ $$
 \nn$*$ P.~135, Corollary 6.1.14: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$. (This is an isomorphism in $\Mor(\Ind(\C))$.)
 
 \begin{s}\lb{s135a}
-$*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $g=``\ilim"\psi$ should be $g\iso``\ilim"\psi$. (See \S\ref{s135b} p.~\pr{s135b} below.)
+$*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $g=``\ilim"\psi$ should be $g\iso``\ilim"\psi$. (See Section~\ref{s135b} p.~\pr{s135b} below.)
 \end{s}
 
 \nn$*$ P.~136, proof of Proposition 6.1.16: see \S\ref{cipc} p.~\pr{cipc}.
@@ -4909,11 +4909,11 @@ g(p_i(j))=\begin{cases}j&\text{ if }j\le n\\ n&\text{ if }j\ge n\end{cases}
 $$ 
 whenever $0\le j<i$, and we have $g\ci p_n=f\ci p_n$ but $g\neq f$. This proves the claim, and, thus, the fact that $\bb N'$ is isomorphic to no object of $\Set$. 
 
-We have just seen that the natural morphism $f:\bb N'\to\bb N$ is \emph{not} an isomorphism. 
+%We have just seen that the natural morphism $f:\bb N'\to\bb N$ is \emph{not} an isomorphism. 
 
-Let us show that $f$ is a monomorphism. 
+Claim: The natural morphism $f:\bb N'\to\bb N$ is a monomorphism. 
 
-Let 
+Proof: Let 
 $$
 \begin{tikzcd}
 A\ar[r,yshift=4pt,"g"]\ar[r,yshift=-4pt,"h"']&\bb N'\ar[r,"f"]&\bb N
@@ -4930,11 +4930,17 @@ The map $f\ci p_n$ being injective, this yields
 $$
 (f\ci g)(a)=(f\ci p_n)(g_n(a))\neq(f\ci p_n)(h_n(a))=(f\ci h)(a),
 $$ 
-and thus $f\ci g\neq f\ci h$. Hence, $f$ is a monomorphism.
+and thus $f\ci g\neq f\ci h$. Hence, $f$ is a monomorphism. %\begin{uspb}\index{unsolved problem}I don't know if the natural morphism $f:\bb N'\to\bb N$ is an epimorphism.\end{uspb} 
 
-\begin{uspb}\index{unsolved problem}
-I don't know if the natural morphism $f:\bb N'\to\bb N$ is an epimorphism.
-\end{uspb}
+Claim: $f$ is \emph{not} an epimorphism. 
+
+Proof 1: Use Theorem~\ref{si} p.~\pr{si} below. 
+
+Proof 2: (Proof 2 is more direct.) Define $u:\bb N\to\bb N$ by 
+$$
+u(i):=\begin{cases}i-1&\text{if }i\neq0\\ 0&\text{if }i=0,\end{cases}
+$$ 
+and define the functor $\al:\bb N\to\Set$ as follows. To the object $i$ of $\bb N$ we attach the object $\bb N$ of $\Set$, and to the inequality $i\le j$ in $\bb N$ we attach the endomap $u^{j-i}$ of $\bb N$. Set $A:=\ic\al$, let $q_i:\bb N\to A$ be the $i$-th coprojection and define $g:\bb N\to\bb N$ by $g(i)=0$ for all $i\in\bb N$. It is easy to check that we have $q_0\neq q_0\ci g$ and $q_0\ci f=q_0\ci g\ci f$. This proves the claim. 
 
 %
 
@@ -5123,7 +5129,6 @@ Let us define $\theta$ and $\mu$: We define $\theta$ by setting $\theta(A)=(A_1,
 \begin{equation}\lb{ai}
 A_i:=\ic_x\ X_i, 
 \end{equation} 
-%we let \begin{equation}\lb{dot}a_i(x):X_i\to A_i,\quad a_i(x,Y_i):\Hom_{\C_i}(Y_i,X_i)\to A_i(Y_i)\end{equation} be the coprojections, 
 and we define $\mu$ by putting $\mu(A_1,A_2):=A_1\tm A_2$ with 
 $$
 (A_1\tm A_2)(X_1,X_2):=A_1(X_1)\tm A_2(X_2)
@@ -5172,10 +5177,9 @@ Let $A$ be in $\Ind(\C_1\tm\C_2)$ and set $(A_1,A_2):=\theta(A)$. We shall defin
 
 \nn$\bu$ Definition of the morphism $A\to A_1\tm A_2$: Let $X_i$ be in $\C_i$ ($i=1,2$). We must define a map $A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$. We shall define firstly a map 
 \begin{equation}\lb{ax1}
-A(X_1,X_2)\to A_1(X_1).%A_1(X_1)\tm A_2(X_2)
-\end{equation}%A(X_1,X_2)\to A_2(X_2)$ $A(X_1,X_2)\to A_1(X_1)$. 
-This will enable us to define a map $A(X_1,X_2)\to A_2(X_2)$ %\begin{equation}\lb{?}A(X_1,X_2)\to A_1(X_1)%A_1(X_1)\tm A_2(X_2)\end{equation}A(X_1,X_2)\to A_2(X_2)$ 
-similarly, yielding our map $A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$. As we have an isomorphism 
+A(X_1,X_2)\to A_1(X_1). 
+\end{equation}  
+This will enable us to define a map $A(X_1,X_2)\to A_2(X_2)$ similarly, yielding our map $A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$. As we have an isomorphism 
 $$
 A_1(X_1)\iso\col_y\Hom_{\C_1}(X_1,Y_1)
 $$ 
@@ -5183,8 +5187,7 @@ and coprojections
 $$
 p_{1y}:\Hom_{\C_1}(X_1,Y_1)\to A_1(X_1),
 $$ 
-we can define \qr{ax1} %$A(X_1,X_2)\to A_1(X_1)\tm A_2(X_2)$ 
-by $x\mt p_{1x}(\id_{X_1})$. We leave it to the reader to check that this does define a morphism $A\to A_1\tm A_2$.
+we can define \qr{ax1} by $x\mt p_{1x}(\id_{X_1})$. We leave it to the reader to check that this does define a morphism $A\to A_1\tm A_2$.
 
 \nn$\bu$ Definition of the morphism $A_1\tm A_2\to A$. Letting $X_i$ be in $\C_i$ as above, we must define a map $A_1(X_1)\tm A_2(X_2)\to A(X_1,X_2)$. Letting $x_i$ be in $A_i(X_i)$, we must define an element $x$ in $A(X_1,X_2)$. We have $x_1=p_{1y}(f_1)$ and $x_2=p_{2z}(f_2)$ for some $y$ and $z$ in $(\C_1\tm\C_2)_A$, some $f_1$ in $\Hom_{\C_1}(X_1,Y_1)$ and some $f_2$ in $\Hom_{\C_2}(X_2,Z_2)$. The category $(\C_1\tm\C_2)_A$ being filtrant, we can assume $z=y$. We have an isomorphism 
 $$
@@ -5197,10 +5200,10 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 
 %%
 
-\sbs{Brief comments}
+\sbs{Corollary 6.1.15 p.~135}\lb{s135b} 
 
-\begin{s}\lb{s135b}
-P.~135, Corollary 6.1.15. Recall the statement (see \S\ref{s135a} p.~\pr{s135a} above):
+%\begin{s}\lb{s135b} P.~135, Corollary 6.1.15. 
+Recall the statement (see \S\ref{s135a} p.~\pr{s135a} above):
 
 \begin{cor}[Corollary 6.1.15 p.~135]\lb{c135}
 Let $f,g:A\parar B$ be two morphisms in $\Ind(\C)$. Then there exist a small and filtrant category $I$ and morphisms $\pp,\psi:\al\parar\bt$ of functors from $I$ to $\C$ such that $A\iso\ic\al$, $B\iso\ic\bt$, $f\iso\ic\pp$, $g\iso\ic\psi$. (The last two isomorphisms take place in $\Mor(\Ind(\C))$.)
@@ -5244,14 +5247,18 @@ for all $X_i$ in $\C$ ($i=1,2$). (See Section~\ref{6112} p.~\pr{6112}.)
 
 Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\ref{l135} and the above reminder, the morphism $(f,g):(A,A)\to(B,B)$ in $\Ind(\C)\tm\Ind(\C)$ defines a morphism $f\tm g:A\tm A\to B\tm B$ in $\Ind(\C\tm\C)$. Applying Proposition 6.1.13 p.~134 in the book, we find a small and filtrant category $K$, functors $p_I:K\to I,p_J:K\to J$ and a morphism of functors $(\pp,\psi)$ from $\al\ci p_I$ to $\bt\ci p_J$ such that $f\tm g\iso\ic(\pp,\psi)$. It follows that $f\iso\ic\pp$ and $g\iso\ic\psi$.
 \end{proof}
-\end{s}
+%\end{s}
 
-%
+%% 
+
+\sbs{Brief comments}
 
 \begin{s} 
 P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
 
-\emph{Assume that for any pair of parallel arrows in $\C$, its kernel in $\C^\wg$ belongs to $\Ind(\C)$. Then, for any pair of parallel arrows in $\Ind(\C)$, its kernel in $\C^\wg$ is its kernel in $\Ind(\C)$.}
+\begin{prop}[Proposition 6.1.16 (i) p.~136] 
+Assume that for any pair of parallel arrows in $\C$, its kernel in $\C^\wg$ belongs to $\Ind(\C)$. Then, for any pair of parallel arrows in $\Ind(\C)$, its kernel in $\C^\wg$ is its kernel in $\Ind(\C)$.
+\end{prop}
 
 Here is a slightly more detailed rewriting of the proof:
 
@@ -5267,7 +5274,55 @@ If a category $\C$ admits cokernels, so does $\Ind(\C)$.
 This follows from Proposition~\ref{p332} p.~\pr{p332} above and Corollary 6.1.6 p.~132 in the book. 
 % old version 
 % https://docs.google.com/document/d/1bt5g2ANcF0Fnngn7mMdYA8qgN-K0iVKjWbtTEG7PPZU/edit
+\end{s} 
+
+% 
+
+\begin{s}
+
+\begin{thm}\lb{si}
+If $\C$ is a category admitting finite inductive and projective limits, and if $\C$ is strict, then $\Ind(\C)$ is strict. 
+\end{thm} 
+
+Let $I,J$ and $\C$ be categories. Assume that $I$ is small and filtrant, and that $J$ is finite. 
+
+\begin{lem}%1
+If $\C$ admitting finite projective limits, and if $\al:I\tm J^{\op}\to\C$ is a functor, then we have a natural isomorphism 
+$$
+\lim_j\ic_i\al(i,j)\iso\ic_i\lim_j\al(i,j)
+$$ 
+in $\Ind(\C)$. 
+\end{lem}
+
+\begin{proof} 
+This follows from Corollary 6.1.17 (i) p.~136 in the book. 
+\end{proof}
+
+\begin{lem}%2
+If $\C$ admitting finite inductive limits, and if $\al:I\tm J\to\C$ is a functor, then we have a natural isomorphism 
+$$
+\col_j{}^{\Ind(\C)}\ic_i\al(i,j)\iso\ic_i\col_j\al(i,j) 
+$$ 
+in $\Ind(\C)$, where the notation $\ds\col_j{}^{\Ind(\C)}$ indicates that the colimit is taken in $\Ind(\C)$ (not in $\C ^\wg$).
+\end{lem} 
+
+\begin{proof} 
+This follows from the proof of Proposition 6.1.18 p.~136 in the book. 
+\end{proof} 
+
+For any morphism $f$ in any category admitting finite inductive and projective limits, we write $[f]$ for the induced morphism $\Coim f\to\Ima f$. 
+
+\begin{proof}[Proof of Theorem~\ref{si}] 
+Let $f:A\to B$ be a morphism in $\Ind(\C)$. It suffices to show that $[f]$ is an isomorphism. In view of Corollary 6.1.15 p.~135 in the book, we can assume that there is a small filtrant category $I$, a pair of functors $\al,\bt:I\parar\C$ and a morphism of functors $\pp:\al\to\bt$ such that 
+$$
+A=\ic\al,\quad B=\ic\bt,\quad f=\ic\pp.
+$$ 
+The above two lemmas imply $[\ic\pp]\iso\ds\ic_i[\pp_i]$. As $[\pp_i]$ is an isomorphism for all $i$, we see that $[f]=[\ic\pp]$ is an isomorphism.
+\end{proof}
+
 \end{s}
+
+% 
 
 \begin{s} 
 P.~137, proof of Proposition 6.1.19. We just add a few references in the proof. Recall the statement:
