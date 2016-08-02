@@ -16,7 +16,7 @@
 %\usepackage{wasysym}
 \usepackage{tikz-cd}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -1975,64 +1975,12 @@ Then there is a unique map $f:T\to S$ satisfying $f(t)_i=t_{\id_i}$ for all $t$ 
 \begin{proof}
 Left to the reader.
 \end{proof}
-\end{s}
-
-\begin{comment}
-
-\begin{s}
-%$\frownie$\footnote{The symbol $\frownie$ (``frowny'') means that I'm not satisfied with this \S, and that I'm planning to rewrite it.} 
-Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
-
-\begin{thm}\lb{fgd}
-Let $I$ be a small category with disjoint hom-sets; let $\al,\bt:I\to\C$ be two functors; and, for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor. Then the natural map 
-\begin{equation}\lb{hficab}
-\Hom_{\Fct(I,\C)}(\al,\bt)\to\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
-\end{equation} 
-is bijective.
-\end{thm}
-
-\begin{proof}
-By Convention~\ref{thep} p.~\pr{thep}  
-$$
-\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)
-$$ 
-is a subset $S$ of 
-$$
-P:=\prod_{i\in I}\prod_{(i\to j)\in I^i}\Hom_\C(\al(j),\bt(j)).
-$$ 
-Let $x=(x_{i,i\to j})$ be in $P$. This just means that each $x_{i,i\to j}$ is a morphism $\al(j)\to\bt(j)$. Then $x$ belongs to $S$ if and only if the following two conditions hold:
-
-\nn(a) For all $i$ in $I$ the family $(x_{i,i\to j})_{i\to j}$ is in 
-$$
-\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i),
-$$ 
-that is, for all diagram $i\to j\to k$ in $I$, the square 
-$$
-\begin{tikzcd}
-\al(j)\ar{rr}{x_{i,i\to j}}\ar{d}[swap]{\al(j\to k)}&&\bt(j)\ar{d}{\bt(j\to k)}\\ 
-\al(k)\ar{rr}[swap]{x_{i,i\to j\to k}}&&\bt(k)
-\end{tikzcd}
-$$
-commutes.
-
-\nn(b) We have $x_{i,i\to j\to k}=x_{j,j\to k}$ for all diagram $i\to j\to k$ in $I$. 
-
-\nn This implies that we have $x_{i,i\to j}=x_{j,\id_j:j\to j}$ for all $i\to j$, and that the $x_{j,\id_j:j\to j}$ define a morphism from $\al$ to $\bt$. We get a map 
-\begin{equation}\lb{liifii}
-\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i)\to\Hom_{\Fct(I,\C)}(\al,\bt),
-\end{equation} 
-and we leave it to the reader to check that \qr{hficab} and \qr{liifii} are inverse bijections.
-\end{proof}
-\end{s}
-
-\end{comment}
-
-%
+\end{s} 
 
 % removed 
 % https://docs.google.com/document/d/1ydcLZ0o0IQjew7DRTL5J8BFQ_9V9fc56CfpscjLnrUE/edit
 
-\begin{s}%\lb{ex}
+\begin{s} 
 P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is exact if and only if its image in $\C^\wg$ is exact.
 \end{s}
 
@@ -3477,23 +3425,7 @@ In view of Proposition~\ref{p3cat} p.~\pr{p3cat} the above proposition implies
 \begin{prop}  
 If $Z\in\Set$, then $\Set_Z$ has the IPC property.
 \end{prop} 
-\end{s}
-
-%
-
-\begin{comment}
-
-\begin{s}\lb{poc}
-P.~77, bottom. The following fact, which results from Propositions 3.1.11 (ii) p.~77 and 2.5.2 (iv) p.~57 of the book, will be used on p.~419 of the book (see \S\ref{1744i} p.~\pr{1744i}):
-
-If $(I_\gamma\to J_\gamma)_{\gamma\in\Gamma}$ is a family of cofinal functors, then the natural functor 
-$$
-\prod I_\gamma\to\prod J_\gamma
-$$ 
-is cofinal. 
-\end{s}
-
-\end{comment}
+\end{s} 
 
 %
 
@@ -4389,42 +4321,7 @@ $$
 
 \begin{s}
 P.~118, proof of Proposition 5.2.3: the proof of (ii) uses Proposition~\ref{34i} p.~\pr{34i} and Proposition 3.3.7 (i) p.~83 of the book. 
-
-\begin{comment}
-
-Proof of (v): We add a few details. Recall the setting: the category $\C$ admits finite projective limits, small coproducts, and a generator $G$. We already know that $\pp_G:=\Hom_\C(G,\ )$ is conservative, left exact, and that it preserves monomorphisms. 
-
-Put $\pp:=\pp_G:=\Hom_\C(G,\ )$. Let $f_i:Y_i\mono X$ $(i=1,2)$ be two monomorphisms such that $f_1$ and $f_2$ have same image. We want to prove:
-
-Claim 1: $\pp(f_1)$ and $\pp(f_2)$ define the same subobject of $X$.
-
-Form the cartesian square 
-\begin{equation}\lb{523v1}
-\begin{tikzcd}
-Y_1\tm_XY_2\ar{r}{p_1}\ar{d}[swap]{p_2}&Y_1\ar[tail]{d}{f_1}\\ 
-Y_2\ar[tail]{r}[swap]{f_2}&X.
-\end{tikzcd}
-\end{equation}
-
-Claim 2: $p_1$ and $p_2$ are isomorphisms. 
-
-Clearly, Claim 2 implies Claim 1. Let us prove Claim~2. Applying $\pp$ to \qr{523v1}, we get the commutative diagram 
-$$
-\begin{tikzcd}
-\pp(Y_1\tm_XY_2)\ar{rd}{\sim}\ar[bend left]{rrd}{\pp(p_1)}\ar[bend right]{rdd}[swap]{\pp(p_2)}\\ 
-{}&\pp(Y_1)\tm_{\pp(X)}\pp(Y_2)\ar{r}{q_1}\ar{d}[swap]{q_2}&\pp(Y_1)\ar[tail]{d}{\pp(f_1)}\\ 
-{}&\pp(Y_2)\ar[tail]{r}[swap]{\pp(f_2)}&\pp(X),
-\end{tikzcd}
-$$ 
-the morphism 
-$$
-\pp(Y_1\tm_XY_2)\to\pp(Y_1)\tm_{\pp(X)}\pp(Y_2)
-$$ 
-being an isomorphism by left-exactness of $\pp$. As $\pp(f_1)$ and $\pp(f_2)$ are injective and have same image, $q_1$ and $q_2$ are bijective, and thus $\pp(p_1)$ and $\pp(p_2)$ are also bijective. As $\pp$ is conservative,  this implies Claim~2, and we saw that Claim~2 implies Claim~1.
-
-\end{comment}
-
-\end{s}
+\end{s} 
 
 %
 
@@ -4557,37 +4454,8 @@ P. 123, proof of Theorem 5.3.4. The following fact is implicit in the proof: The
 $$
 f:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
 $$ 
-obtained by composing the chain of isomorphisms in the proof, is equal to $\ci\ee_G$. This equality is easily checked using Lemma~\ref{533}.
-
-\begin{comment}
-
-To prove this, we shall define a map 
-$$
-g:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
-$$ 
-claim that $f=g=\ci\ee_G$, and leave it to the reader to prove the claim. 
-
-We define $g$ as follows: Taking into account the definitions of $\pp$ and $\psi$, we must define 
-$$
-g:\Hom_{\F^\wg}\left(\Hom_\C\left(\ \ ,\col_{X\to G}X\right),F\right)\to\Hom_{\F^\wg}(G,F),
-$$ 
-where $X\to G$ stands for $(X\to G)\in\F_G$. Let 
-$$
-\ld:\Hom_\C\left(\ \ ,\col_{X\to G}X\right)\to F
-$$ 
-be given. We must define $\mu:G\to F$. Letting $Y$ be in $\C$, we must define 
-$$
-\mu_Y:G(Y)\to F(Y).
-$$ 
-Letting $Y\to G$ be given, we must define $\mu_Y(Y\to G):Y\to F$. We do that by applying 
-$$
-\ld_Y:\Hom_\C\left(Y\ ,\ \col_{X\to G}X\right)\to F(Y)
-$$ 
-to the coprojection $Y\to\col_{X\to G}X$ attached to $Y\to G$. We leave it to the reader to check that this construction does define a morphism of functors from $G$ to $F$. 
-
-\end{comment}
-
-\end{s}
+obtained by composing the chain of isomorphisms in the proof, is equal to $\ci\ee_G$. This equality is easily checked using Lemma~\ref{533}. 
+\end{s} 
 
 %%
 
@@ -4942,46 +4810,6 @@ u(i):=\begin{cases}i-1&\text{if }i\neq0\\ 0&\text{if }i=0,\end{cases}
 $$ 
 and define the functor $\al:\bb N\to\Set$ as follows. To the object $i$ of $\bb N$ we attach the object $\bb N$ of $\Set$, and to the inequality $i\le j$ in $\bb N$ we attach the endomap $u^{j-i}$ of $\bb N$. Set $A:=\ic\al$, let $q_i:\bb N\to A$ be the $i$-th coprojection and define $g:\bb N\to\bb N$ by $g(i)=0$ for all $i\in\bb N$. It is easy to check that we have $q_0\neq q_0\ci g$ and $q_0\ci f=q_0\ci g\ci f$. This proves the claim. 
 
-%
-
-\begin{comment}
-
-We clearly have $\bb N'\in\Ind(\Set)$. We want to show\bigskip
-
-\centerline{(a) $\bb N'$ is isomorphic (in $\Ind(\Set)$) to no object of $\Set$.}
-
-\nn We claim\bigskip
-
-\centerline{(b) the coprojection $p_n:\mbf n\to\bb N'$ is a monomorphism.}
-
-\begin{proof}[Proof of (b)] 
-Let $f$ and $g$ be two morphisms from some object $A$ of $\Ind(\Set)$ to $\mbf n$ such that $p_n\ci f=p_n\ci g$: 
-$$
-\begin{tikzcd}
-A\ar[r,yshift=0.7ex,"f"]\ar[r,yshift=-0.7ex,"g"']&\mbf n\ar[r,"p_n"]&\bb N'.
-\end{tikzcd}
-$$ 
-It suffices to prove $f=g$. Let $X$ be in $\Set$. As the obvious maps $f_X$ and $g_X$ in the diagram
-$$
-\begin{tikzcd}
-A(X)\ar[r,yshift=0.7ex,"f_X"]\ar[r,yshift=-0.7ex,"g_X"']&\mbf n^X\ar[r,"p_n\ci"]&\ds\col_m\mbf m^X
-\end{tikzcd}
-$$ 
-satisfy $p_n\ci f_X=p_n\ci g_X$, there is an $m>n$ such that the diagram 
-$$
-\begin{tikzcd}
-A(X)\ar[r,yshift=0.7ex,"f_X"]\ar[r,yshift=-0.7ex,"g_X"']&\mbf n^X\ar[r,"p_{m,n}"]&\mbf m^X
-\end{tikzcd}
-$$ 
-commutes, where $p_{m,n}$ is the obvious injection. This implies $f_X=g_X$. As $X$ is arbitrary, we get $f=g$.
-\end{proof}
-
-\begin{proof}[Proof of (a)] 
-Let $f:A\epi\bb N'$ be an epimorphism (in $\Ind(\Set)$) from some object $A$ of $\Set$ onto $\bb N'$, and let us derive a contradiction. By definition of $\bb N'$, our epimorphism $f$ factors through $p_n:\mbf n\to\bb N'$ for some $n$. This implies that $p_n$ is an epimorphism. As it is also a monomorphism by (b), we see that $p_n$ is an isomorphism. Using (b) again, we get an injection of $\mbf{n+1}$ into $\mbf n$, a contradiction. 
-\end{proof} 
-
-\end{comment}
-
 %%
 
 \sbs{Theorem 6.1.8 p. 132} 
@@ -5272,82 +5100,7 @@ $$
 The functor $\iota$, being right exact (Corollary 6.1.6 p.~132 in the book), commutes with $\col_j$. As $\col_j$ commutes with $\col_i$ for obvious reasons, it commutes with $\ic_i$, and the claim is proved.
 \end{proof}
 
-\end{s}
-
-% 
-
-\begin{comment}
-
-\begin{s} 
-P. 136, proof of Proposition 6.1.16 (i). Recall the statement:
-
-\begin{prop}[Proposition 6.1.16 (i) p.~136] 
-Assume that for any pair of parallel arrows in $\C$, its kernel in $\C^\wg$ belongs to $\Ind(\C)$. Then, for any pair of parallel arrows in $\Ind(\C)$, its kernel in $\C^\wg$ is its kernel in $\Ind(\C)$.
-\end{prop}
-
-Here is a slightly more detailed rewriting of the proof:
-
-Let $f,g:A\parar B$ be a pair of parallel arrows in $\Ind(\C)$. With the notation of Corollary 6.1.14, we may assume that there exist a small filtrant category $I$ and parallel arrows $\pp,\psi:\al\parar\bt$ in $\C^I$ such that $A=\ic\al$, $B=\ic\bt$, $f=\ic\pp$ and $g=\ic\psi$. For each $i$ in $I$ set $\gamma(i):=\Ker(\pp_i,\psi_i)\in\C^\wg$. By assumption we get $\gamma(i)\in\Ind(\C)$. Then $\ic\gamma$ is a kernel of $(f,g)$ in $\C^\wg$, and it belongs to $\Ind(\C)$ by Theorem~\ref{618} p.~\pr{618}.
-\end{s}
-
-%
-
-\begin{s} 
-P.~136, proof of Proposition 6.1.18 (i) (minor variant). Recall the statement: \begin{prop}[Proposition 6.1.18 (i) p.~136] 
-If a category $\C$ admits cokernels, so does $\Ind(\C)$. 
-\end{prop} 
-This follows from Proposition~\ref{p332} p.~\pr{p332} above and Corollary 6.1.6 p.~132 in the book. 
-% old version 
-% https://docs.google.com/document/d/1bt5g2ANcF0Fnngn7mMdYA8qgN-K0iVKjWbtTEG7PPZU/edit
 \end{s} 
-
-% 
-
-\begin{s}
-
-\begin{thm}\lb{si}
-If $\C$ is a category admitting finite inductive and projective limits, and if $\C$ is strict, then $\Ind(\C)$ is strict. 
-\end{thm} 
-
-Let $I,J$ and $\C$ be categories. Assume that $I$ is small and filtrant, and that $J$ is finite. 
-
-\begin{lem}%1
-If $\C$ admitting finite projective limits, and if $\al:I\tm J^{\op}\to\C$ is a functor, then we have a natural isomorphism 
-$$
-\lim_j\ic_i\al(i,j)\iso\ic_i\lim_j\al(i,j)
-$$ 
-in $\Ind(\C)$. 
-\end{lem}
-
-\begin{proof} 
-This follows from Corollary 6.1.17 (i) p.~136 in the book. 
-\end{proof}
-
-\begin{lem}%2
-If $\C$ admitting finite inductive limits, and if $\al:I\tm J\to\C$ is a functor, then we have a natural isomorphism 
-$$
-\col_j{}^{\Ind(\C)}\ic_i\al(i,j)\iso\ic_i\col_j\al(i,j) 
-$$ 
-in $\Ind(\C)$, where the notation $\ds\col_j{}^{\Ind(\C)}$ indicates that the colimit is taken in $\Ind(\C)$ (not in $\C ^\wg$).
-\end{lem} 
-
-\begin{proof} 
-This follows from the proof of Proposition 6.1.18 p.~136 in the book. 
-\end{proof} 
-
-For any morphism $f$ in any category admitting finite inductive and projective limits, we write $[f]$ for the induced morphism $\Coim f\to\Ima f$. 
-
-\begin{proof}[Proof of Theorem~\ref{si}] 
-Let $f:A\to B$ be a morphism in $\Ind(\C)$. It suffices to show that $[f]$ is an isomorphism. In view of Corollary 6.1.15 p.~135 in the book, we can assume that there is a small filtrant category $I$, a pair of functors $\al,\bt:I\parar\C$ and a morphism of functors $\pp:\al\to\bt$ such that 
-$$
-A=\ic\al,\quad B=\ic\bt,\quad f=\ic\pp.
-$$ 
-The above two lemmas imply $[\ic\pp]\iso\ds\ic_i[\pp_i]$. As $[\pp_i]$ is an isomorphism for all $i$, we see that $[f]=[\ic\pp]$ is an isomorphism.
-\end{proof}
-
-\end{s}
-
-\end{comment}
 
 %
 
@@ -5486,41 +5239,7 @@ $$
 
 \begin{cor}
 Let $\al:I\to X$ be a functor from a filtrant category $I$ to an ordered set $X$, let $f:\Ob(I)\to X$ be the obvious map, and let $x_0$ be in $X$. Then $x_0=\col\al$ if and only if $x_0=\sup\ \Ima f$. Moreover this inductive limit is universal in the sense of Definition~\ref{uil} p.~\pr{uil} if and only the supremum $x_0$ is reached by $f$.
-\end{cor}
-
-%
-
-\begin{comment}
-
-\begin{s} 
-P.~138, proof of Proposition 6.2.1. The second sentence of the proof can be justified as follows: Let 
-$$
-p_i:\Hom_\C(Z,\al(i))\to\col\Hom_\C(Z,\al)
-$$ 
-be the coprojections. The map 
-$$
-\psi:\col\Hom_\C(Z,\al)\to\Hom_{\Ind(\C)}(Z,\ic\al)
-$$ 
-defined by the equalities $\psi(p_i(\tau))=\rho_i\ci\tau$ for all $i$ in $I$ and all $\tau$ in $\Hom_\C(Z,\al(i))$ is bijective (because $Z$ is in $\C$). If $\pp:Z\to\ic\al$ is a morphism in $\Ind(\C)$, then $\psi^{-1}(\pp)$ is of the form $p_{i_0}(\tau_0)$ for some $i_0$ in $I$ and some $\tau_0$ in $\Hom_\C(Z,\al(i_0))$, and we get $\pp=\rho_{i_0}\ci\tau_0$. 
-\end{s}
-
-%
-
-\begin{s} 
-P.~138, proof of Proposition 6.2.1, sentence 
-
-``Let $w\in\Hom_\C(X,\al(i))$ and let $s:i_0\to i$.'' 
-
-This sentence is on the fourth line of the proof when the lines of the proof are counted backward from the last to the first. Here is a more detailed phrasing: 
-
-Let $y$ be in $\col\Hom_\C(X,\al)$. Then $y$ is of the form $p_i(w)$ where 
-$$
-p_i:\Hom_\C(X,\al(i))\to\col\Hom_\C(X,\al)
-$$ 
-is the coprojection and $w$ is in $\Hom_\C(X,\al(i))$. Furthermore we can choose $i$ and $w$ in such a way that there exists a morphism $s:i_0\to i$.
-\end{s}
-
-\end{comment}
+\end{cor} 
 
 %% 
 
@@ -6288,129 +6007,7 @@ $$
 =\big(Q(X')\to Q(X)\to Q(Y)\big)=p[X\to X']\Big(\big(Q(X')\to Q(Y)\big)_{X\to X'}\Big).
 $$ 
 The proof that $g\ci f$ is the identity of the left-hand side of \qr{clc2} is similar and easier.
-\end{s}
-
-\begin{comment}
-
-% Warning: the following is very bad!!!
-
-\sbs{Isomorphism at the bottom of p. 161}
-
-We sketch the proof of the isomorphism at the bottom of p. 161. Our argument sadly involves an enormous number of verifications, almost all of which will be left to the reader. 
-
-Recall the setting: $\SSS$ is a right multiplicative system in a category $\C$ such that $\SSS^X$ is cofinally small for all $X$ in $\C$. Let $X$ and $Y$ be in $\C$. It is claimed in the book that there is a natural isomorphism 
-\begin{equation}\lb{clc}
-\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\xr\sim\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y').
-\end{equation} 
-We shall use systematically the following convention (used intensively in the book): given $U$ and $V$ in $\C$ we designate a generic morphism from $U$ to $V$ by $U\to V$: 
-$$
-(U\to V)\in\Hom_\C(U,V).
-$$ 
-
-Let us start by verifying that the right-hand side is well defined. It suffices to show that there is a functor $\al:\C^{\op}\to\Set$ such that 
-$$%\begin{equation}\lb{al}
-\al(X')=\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
-$$%\end{equation} 
-for all $X'$ in $\C$. For each $X'$ in $\C$ and each $Y\to Y'$ in $\SSS$ let 
-$$
-a[X',Y\to Y'\,]:\Hom_\C(X',Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
-$$ 
-be the coprojection. To prove the existence of $\al$ as above, we let $X'\to X''$ be a morphism on $\C$ and leave it to the reader to check that there is a unique map 
-$$
-\al(X'\to X''):\al(X'')\to\al(X')
-$$ 
-such that we have for all $(Y\to Y'')\in\SSS$ and all $X''\to Y''$ 
-$$
-\al(X'\to X'')\big(a[X'',Y\to Y''\,](X''\to Y'')\big)=a[X',Y\to Y''\,](X'\to X''\to Y'').
-$$ 
-
-Going back to \qr{clc}, we shall define maps 
-\begin{equation}\lb{cfg}
-\begin{tikzcd} 
-\ds\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\ar[yshift=0.7ex]{r}{f}&\ds\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y'),\ar[yshift=-0.7ex]{l}{g}
-\end{tikzcd}
-\end{equation} 
-and claim that they are inverse bijections. 
-
-For each $Y\to Y'$ in $\SSS$ we write 
-$$
-b[Y\to Y']:\Hom_\C(X,Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')
-$$ 
-for the corresponding coprojection. For each $X\to X'$ in $\SSS$ we write 
-$$
-p[X\to X']:\lim_{(X\to X')\in\SSS^X}\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')\to\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X',Y')
-$$ 
-for the corresponding projection. 
-
-Let us define $f$ in \qr{cfg}. 
-
-For each $X\to X'$ and $Y\to Y'$ in $\SSS$ we define 
-\begin{equation}\lb{lm}
-\Hom_\C(X,Y')\to\col_{(Y\to Y'')\in\SSS^Y}\Hom_\C(X',Y'')
-\end{equation} 
-as follows. We define $X'\to Y''$ and $(Y'\to Y'')\in\SSS$ using Axiom S3 of right multiplicative systems:
-\begin{equation}\lb{y''}
-\begin{tikzcd}
-X\ar{r}\ar{d}&Y'\ar[dashed]{d}\\ X'\ar[dashed]{r}&Y'',
-\end{tikzcd}
-\end{equation} 
-then we define \qr{lm} by 
-$$
-(X\to Y')\mt a[X',Y\to Y'\to Y''](X'\to Y''),
-$$ 
-and we leave it to the reader to check that there is a (unique) map $f$ as in \qr{cfg} such that we have, for all $X\to X'$ in $\Mor(\C)$ and all $Y\to Y'$ in $\SSS$,
-$$
-(p[X\to X']\ci f\ci b[Y\to Y'])(X\to Y')=a[X',Y\to Y'\to Y''](X'\to Y'')
-$$ 
-with $X'\to Y''\leftarrow Y'$ as above. 
-
-Let us define $g$ in \qr{cfg}. 
-
-Let $r$ be in the right-hand side of \qr{cfg}. There is %To any $X\to X'$ in $\SSS$ is attached 
-some $(Y\to Y')\in\SSS$ and some $X'\to Y'$ in $\Mor(\C)$ such that %$$p[X\to X'](r)=a[X',Y\to Y'](X'\to Y').$$ We get in particular 
-\begin{equation}\lb{pxid}
-p[X\xr{\id}X](r)=a[X,Y\to Y'](X\to Y').
-\end{equation}
-%where $(Y\to Y')\in\SSS$ and $X\to Y'$ are attached to the identity of $X$. 
-We leave it to the reader to check that there is a (unique) map $g$ as in \qr{cfg} such that 
-$$
-g(r)=b[Y\to Y'](X\to Y')
-$$ 
-for $Y\to Y'$ and $X\to Y'$ as above. 
-
-We prove that $g\ci f$ is the identity of the left-hand side of \qr{cfg}. To compute 
-$$
-g(f(b[Y\to Y'](X\to Y'))),
-$$ 
-we first note that we have 
-$$
-p[X\xr{\id}X](f(b[Y\to Y'](X\to Y')))=a[X,Y\to Y'](X\to Y')
-$$ 
-because we can set $Y'':=Y'$ %take $Y''$ as $Y'$ 
-in \qr{y''}, yielding 
-$$
-g(f(b[Y\to Y'](X\to Y')))=b[Y\to Y'](X\to Y'),
-$$ 
-as desired.
-
-We prove that $f\ci g$ is the identity of the right-hand side of \qr{cfg}.
-
-Let $r$ be in the right-hand side of \qr{cfg}, and let $(Y\to Y')$ and $X'\to Y'$ be as in \qr{pxid}. We get $g(r)=b[Y\to Y'](X\to Y')$ and 
-$$
-p[X\to X'](f(g(r)))=p[X\to X'](f(b[Y\to Y'](X\to Y')))
-$$ 
-$$
-=a[X',Y\to Y'\to Y''](X'\to Y'')
-$$ 
-with $Y'\to Y''$ and $X'\to Y''$ is in \qr{y''}. We also get 
-$$
-\al(X\to X')(a[X',Y\to Y'\to Y''](X'\to Y''))
-$$ 
-$$
-=a[X,Y\to Y'\to Y''](X\to X'\to Y'')=a[X,Y\to Y'](X\to X').
-$$ 
-
-\end{comment}
+\end{s} 
 
 %%
 
