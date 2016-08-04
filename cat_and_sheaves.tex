@@ -4798,11 +4798,11 @@ The map $f\ci p_n$ being injective, this yields
 $$
 (f\ci g)(a)=(f\ci p_n)(g_n(a))\neq(f\ci p_n)(h_n(a))=(f\ci h)(a),
 $$ 
-and thus $f\ci g\neq f\ci h$. Hence, $f$ is a monomorphism. %\begin{uspb}\index{unsolved problem}I don't know if the natural morphism $f:\bb N'\to\bb N$ is an epimorphism.\end{uspb} 
+and thus $f\ci g\neq f\ci h$. Hence, $f$ is a monomorphism. 
 
 Claim: $f$ is \emph{not} an epimorphism. 
 
-Proof 1: Use Theorem~\ref{si} p.~\pr{si} below. 
+Proof 1: Use Proposition~\ref{si} p.~\pr{si} below. 
 
 Proof 2: (Proof 2 is more direct.) Define $u:\bb N\to\bb N$ by 
 $$
@@ -5084,21 +5084,29 @@ Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\re
 \begin{s} 
 The proofs of Propositions 6.1.16 and 6.1.18 p.~136 in the book use the following lemma
 
-\begin{lem}\lb{ci}
-If $\C$ is a category admitting finite inductive and projective limits, and if $I$ is a small filtrant category, then the functor $ \ic:\C^I\to\Ind(\C)$ is exact. 
+\begin{lem}\lb{ci} 
+Let $I$ be a small filtrant category, let $\C$ be category, and let $F:\C^I\to\Ind(\C)$ be the functor $\al\mt\ic\al$. 
+
+\nn\emph{(a)} If $\C$ admits finite projective limits, $F$ is left exact.  
+
+\nn\emph{(b)} If $\C$ admits finite inductive limits, $F$ is right exact. 
 \end{lem} 
 
 \begin{proof} 
-Note that $\C^I$ admits finite inductive and projective limits. Let $h:\C\to\C^\wg$ be the Yoneda embedding and $\iota:\C\to\Ind(\C)$ the natural embedding. If $\al$ is in $\C^I$, then $\ic\al$ can be defined as $\col h\ci\al$ or as $\col\iota\ci\al$ (Theorem 6.1.8 p.~132 in the book). Let $J$ be a finite category. Let $\al:I\tm J^{\op}\to\C$ be a functor. We claim 
+Let $h:\C\to\C^\wg$ be the Yoneda embedding and $\iota:\C\to\Ind(\C)$ the natural embedding. If $\al$ is in $\C^I$, then $\ic\al$ can be defined as $\col h\ci\al$ or as $\col\iota\ci\al$ (Theorem 6.1.8 p.~132 in the book). Let $J$ be a finite category. 
+
+\nn(a) Let $\al:I\tm J^{\op}\to\C$ be a functor. We claim 
 $$
 \ic_i\lim_j\al(i,j)\xr\sim\col_i h\left(\lim_j\al(i,j)\right). 
 $$ 
-Clearly $\lim_j$ commutes with $h$. As $\lim_j$ commutes also with $\col_i$ as far as $\C^\wg$-valued functors are concerned, $\ic_i$ commutes with $\lim_j$, and the claim is proved. Let $\al:I\tm J\to\C$ be a functor. We claim 
+Clearly $\ds\lim_j$ commutes with $h$. As $\ds\lim_j$ commutes also with $\col_i$ as far as $\C^\wg$-valued functors are concerned, $\ds\ic_i$ commutes with $\ds\lim_j$, and the claim is proved. 
+
+\nn(b) Let $\al:I\tm J\to\C$ be a functor. We claim 
 $$
 \ic_i\col_j\al(i,j)\xr\sim\col_i\iota\left(\col_j\al(i,j)\right). 
 $$ 
-The functor $\iota$, being right exact (Corollary 6.1.6 p.~132 in the book), commutes with $\col_j$. As $\col_j$ commutes with $\col_i$ for obvious reasons, it commutes with $\ic_i$, and the claim is proved.
-\end{proof}
+The functor $\iota$, being right exact (Corollary 6.1.6 p.~132 in the book), commutes with $\ds\col_j$. As $\ds\col_j$ commutes with $\ds\col_i$ for obvious reasons, it commutes with $\ds\ic_i$, and the claim is proved.
+\end{proof} 
 
 \end{s} 
 
@@ -5106,11 +5114,11 @@ The functor $\iota$, being right exact (Corollary 6.1.6 p.~132 in the book), com
 
 \begin{s}
 
-\begin{thm}\lb{si}
+\begin{prop}\lb{si} 
 If $\C$ is a category admitting finite inductive and projective limits, and if $\C$ is strict, then $\Ind(\C)$ is strict. 
-\end{thm} 
+\end{prop} 
 
-\begin{lem} 
+\begin{lem}\lb{fcc'} 
 If $F:\C\to\C'$ is an exact functor between categories admitting finite inductive and projective limits, and if $f$ is a strict morphism in $\C$, then $F(f)$ is a strict morphism in $\C'$. 
 \end{lem}
 
@@ -5118,8 +5126,8 @@ If $F:\C\to\C'$ is an exact functor between categories admitting finite inductiv
 This is obvious. 
 \end{proof} 
 
-\begin{proof}[Proof of Theorem~\ref{si}] 
-Let $f:A\to B$ be a morphism in $\Ind(\C)$. By Corollary 6.1.14 p.~135 in the book, there is a small filtrant category $I$ and a morphism $\pp$ in $\C^I$ such that $\ic\pp\iso f$. Clearly $\C^I$ is strict, and the theorem follows now from the above lemma. 
+\begin{proof}[Proof of Proposition~\ref{si}] 
+Let $f:A\to B$ be a morphism in $\Ind(\C)$. By Corollary 6.1.14 p.~135 in the book, there is a small filtrant category $I$ and a morphism $\pp$ in $\C^I$ such that $\ic\pp\iso f$. Clearly $\C^I$ is strict, and the theorem follows now from Lemmas \ref{ci} and \ref{fcc'}. 
 \end{proof}
 
 \end{s}
@@ -5209,7 +5217,8 @@ commute, we get
 $$
 \pp\ci p_i\ci\al(s)\ci\tau=q_i\ci\al(s)\ci\tau=\pp,
 $$ 
-which implies (a). Let us prove (b). The coprojection 
+which implies (a). %Let us prove (b). 
+The coprojection 
 $$
 \Hom_\C(\al(i),\al(i))\to\col\Hom_\C(\al(i),\al)=\Hom_\C(\al(i),A)
 $$ 
@@ -5221,11 +5230,15 @@ imply the existence of a morphism $t:i\to j$ satisfying (b).
 
 \nn$\bu$ (ii) implies (i). Let $\pp:Z\to A$ be the composition $Z\xr\tau\al(i_0)\xr{q_{i_0}}A$. It suffices to show that $\pp$ is an isomorphism. Let $X$ be an object of $\C$. It suffices to show that the map 
 $$ 
-\pp_X:\Hom_\C(X,Z)\to\Hom_\C(X,A)=\col\Hom_\C(X,\al),\quad u\mt\pp\ci u
+\pp_X:\Hom_\C(X,Z)\to\Hom_\C(X,A)\iso\col\Hom_\C(X,\al),\quad u\mt\pp\ci u
 $$ 
 is bijective. 
 
-\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is $$q_{i_0}\ci\tau\ci u=q_{i_0}\ci\tau\ci v.$$ As $I$ is filtrant and as $\Hom_\C(X,A)=\col\Hom_\C(X,\al)$, there is a morphism $s:i_0\to i$ such that $\al(s)\ci\tau\ci u=\al(s)\ci\tau\ci v$. We have $q_i\ci\al(s)\ci\tau\ci u=q_{i_0}\ci\tau\ci u=\pp\ci u$, and, similarly, $q_i\ci\al(s)\ci\tau\ci v=\pp\ci v$, yielding 
+\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is 
+$$
+q_{i_0}\ci\tau\ci u=q_{i_0}\ci\tau\ci v.
+$$ 
+As $I$ is filtrant and as $\Hom_\C(X,A)\iso\col\Hom_\C(X,\al)$, there is a morphism $s:i_0\to i$ such that $\al(s)\ci\tau\ci u=\al(s)\ci\tau\ci v$. We have $q_i\ci\al(s)\ci\tau\ci u=q_{i_0}\ci\tau\ci u=\pp\ci u$, and, similarly, $q_i\ci\al(s)\ci\tau\ci v=\pp\ci v$, yielding 
 $$
 \pp\ci u=q_i\ci\al(s)\ci\tau\ci u=q_i\ci\al(s)\ci\tau\ci v=\pp\ci v,
 $$ 
@@ -5980,7 +5993,7 @@ We can rewrite \qr{clc} as
 
 For $X\to X'$ in $\SSS$ let 
 $$
-p[X\to X']:\lim_{(X\to X')\in\SSS^X}\Hom_{\C_\SSS}(Q(X'),Q(Y))\to\Hom_{\C_\SSS}(Q(X'),Q(Y))
+p[X\to X']:\lim_{(X\to X'')\in\SSS^X}\Hom_{\C_\SSS}(Q(X''),Q(Y))\to\Hom_{\C_\SSS}(Q(X'),Q(Y))
 $$ 
 be the projection, and define the maps 
 $$
@@ -5998,13 +6011,13 @@ g:=p[X\xr{\id}X].
 $$ 
 To show that $f\ci g$ is the identity of the right-hand side of \qr{clc2}, note that we have in the above notation 
 $$
-p[X\to X']\Bigg(f\bigg(g\Big(\big(Q(X')\to Q(Y)\big)_{X\to X'}\Big)\bigg)\Bigg)
+p[X\to X']\Bigg(f\bigg(g\Big(\big(Q(X'')\to Q(Y)\big)_{X\to X''}\Big)\bigg)\Bigg)
 $$ 
 $$
 =p[X\to X']\Big(f\big(Q(X)\to Q(Y)\big)\Big)
 $$ 
 $$
-=\big(Q(X')\to Q(X)\to Q(Y)\big)=p[X\to X']\Big(\big(Q(X')\to Q(Y)\big)_{X\to X'}\Big).
+=\big(Q(X')\to Q(X)\to Q(Y)\big)=p[X\to X']\Big(\big(Q(X'')\to Q(Y)\big)_{X\to X''}\Big).
 $$ 
 The proof that $g\ci f$ is the identity of the left-hand side of \qr{clc2} is similar and easier.
 \end{s} 
@@ -11055,15 +11068,13 @@ $$
 (a_i)_{i=n+1}^\ell,\quad(\ld_{ij})_{1\le i\le\ell,1\le j\le m},\quad(b'_j)_{j=1}^m
 $$ 
 of elements belonging respectively to $A$, $R$ and $B$, such that, if we set $b_i=0$ for $n<i\le\ell$, we get \qr{lij1} and \qr{lij2} p.~\pr{lij1}. We have a commutative diagram of right $R$-modules 
-%
 \begin{equation}\lb{d447}
 \begin{tikzcd}
 {}&R^m\ar{d}{f}\\ 
 R^n\ar[hook]{r}{\psi}\ar{d}[swap]{g}&R^\ell\ar{d}{h}\\ 
 A'\ar{r}[swap]{\pp}&A
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 with 
 $$
 f(x)_i=\sum_{j=1}^m\ld_{ij}\,x_j,\quad g(x)=\sum_{i=1}^na'_i\,x_i,\quad h(x)=\sum_{i=1}^\ell a_i\,x_i.
@@ -11124,7 +11135,6 @@ $$
 of right $\R(U)$-modules such that $F,F'$ and $F''$ are free right $\R$-modules of finite rank,  
 
 \nn$\bu$ elements $t\in F'(U)\otimes_{\R(U)}P(U)$, $u\in F''(U)\otimes_{\R(U)}P(U)$ such that the commutative diagram 
-%
 \begin{equation}\lb{ff'f''}
 \begin{tikzcd}
 {}&F'(U)\otimes_{\R(U)}P(U)\ni t\ar{d}{f_1}\\ 
@@ -11132,7 +11142,6 @@ u\in F''(U)\otimes_{\R(U)}P(U)\ar{r}{\psi_1}\ar{d}[swap]{g_1}&F(U)\otimes_{\R(U)
 s\in M'(U)\otimes_{\R(U)}P(U)\ar{r}[swap]{\pp_1}&M(U)\otimes_{\R(U)}P(U)
 \end{tikzcd}
 \end{equation} 
-% 
 satisfies $g_1(u)=s$ and $\psi_1(u)=f_1(t)$. 
 
 By Lemma~\ref{rff'} p.~\pr{rff'}, the commutative diagram \qr{d447} also induces the commutative diagram 
@@ -11157,24 +11166,18 @@ u\in(F''\otimes_\R P)(U)\ar{r}{\psi_1}\ar{d}[swap]{g_3}&(F\otimes_\R P)(U)\ar{d}
 \overline s\in\left(M'\otimes_\R P\right)(U)\ar{r}[swap]{\pp_1}&\left(M\otimes_\R P\right)(U) 
 \end{tikzcd}
 $$ 
-(see \qr{ff'f''}), has also a cartesian top square, and satisfies $g_3(u)=\overline s$ and 
-%
+(see \qr{ff'f''}) has also a cartesian top square, and satisfies $g_3(u)=\overline s$ and 
 \begin{equation}\lb{p1uf1t}
 \psi_1(u)=f_1(t).
-\end{equation}
-%
+\end{equation} 
 We have used the isomorphisms 
-%
 \begin{equation}\lb{mupu}
 \Gamma\left(U;M|_U\otimes_{\R|_U}P|_U\right)\iso\Gamma\big(U;\left(M\otimes_\R P\right)|_U\big)\iso\left(M\otimes_\R P\right)(U),
-\end{equation}
-% 
+\end{equation} 
 and similarly with $M'$ instead of $M$. Indeed, the first isomorphism in \qr{mupu} is a particular case of (18.2.5) p.~441 of the book, and the second isomorphism in \qr{mupu} results from the last two displays on p.~428 of the book. In other words, we have 
-%
 \begin{equation}\lb{nrpu}
 (N\otimes_{\R|_U}P|_U)(U)\iso(F'\otimes_\R P)(U)\tm_{(F\otimes_\R P)(U)}(F''\otimes_\R P)(U).
-\end{equation}
-% 
+\end{equation} 
 Note that \qr{p1uf1t} implies 
 $$
 x:=(t,u)\in(F'\otimes_\R P)(U)\tm_{(F\otimes_\R P)(U)}(F''\otimes_\R P)(U).
