@@ -1009,9 +1009,9 @@ $$
 $$ 
 \end{proof}
 
-\begin{conv}\lb{term}
+\begin{conv}\lb{term} 
 An object $Y$ in a category $\A$ is \emph{terminal} if all $X$ in $\A$ admits a unique morphism $X\to Y$. Let $T_\A$ be the set of terminal objects of $\A$. If $Y,Z\in T_\A$, then there is a unique morphism $Y\to Z$, and this morphism is an isomorphism. For all category $\A$ such that $T_\A\neq\vi$ we choose an element in $T_\A$ and call it \textbf{the} terminal object of $\A$. Let us insist: we make a distinction between ``\emph{a} terminal object of $\A$'' and ``\emph{the} terminal object of $\A$'' (when they exist). Unless otherwise indicated, the choice of \emph{the} terminal object of $\A$ is random (but there will be two exceptions to this rule: see Convention~\ref{thep} p.~\pr{thep} and Convention~\ref{thei} p.~\pr{thei}).
-\end{conv}
+\end{conv} 
 
 \begin{conv}\lb{yoc}
 We often identify the source and the target of $\pp$ in \qr{axp1} and \qr{axp2}, and we also often consider $\C$ as a full subcategory of $\C^\wg$ and $\C^\vee$ thanks to the Yoneda embeddings. Let $A$ be in $\C^\wg$ and $(X,x)$, with $X$ in $\C$ and $x:X\to A$ a morphism in $\C^\wg$, an object in the category $\C_A$ (see Definition 1.2.16 p.~18 of the book). Then the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies that $(X,x)$ is terminal if and only if $x$ is an isomorphism. If the category $\C_A$ admits a terminal object, we say that $A$ is \emph{representable}\index{representable}. Let $(X,x)$ be a (resp. the) terminal object of $\C_A$. We say that the couple $(X,x)$, or sometimes just the morphism $x$, is a (resp. the) \emph{representation}\index{representation} of $A$, and that $X$ is a (resp. the) \emph{representative}\index{representative} of $A$. We use a similar terminology if $A$ in is in $\C^\vee$ instead of $\C^\wg$, replacing the words \emph{representable}, \emph{representative}, \emph{representation} with \emph{co-representable}, \emph{co-representative}, \emph{co-representation}. 
@@ -1432,7 +1432,7 @@ Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[rd,"\theta"]\\
 
 In Convention~\ref{term} p.~\pr{term} we stated a rule and indicated that we would make some exceptions to it. Here is the first such exception:
 
-\begin{conv}\lb{thep}
+\begin{conv}\lb{thep} 
 If $\al:I^{\op}\to\Set$ is a functor defined on a small category, then we define its projective limit $\lim\al$ by 
 $$ 
 \lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
@@ -1447,8 +1447,7 @@ Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ 
 $$
 \Hom_{\C^I}(\al,\DT(\ ))\to X
 $$ 
-in $\C^\vee$ %(see the Yoneda Lemma, stated on p.~\pr{yol} as Theorem~\ref{yol}) 
-is an isomorphism.
+in $\C^\vee$ is an isomorphism.
 \end{df}
 
 The characteristic property of the pair $(\col\al,p)$ can be described as follows: For each $Y$ in $\C$ and each morphism of functors $\theta:\al\to\DT Y$ there is a unique morphism $f:X\to Y$ satisfying $\DT f\ci p=\theta$: 
@@ -1467,7 +1466,7 @@ $$
 U:=\{(i,x)\in\U\ |\ i\in I,x\in\al(i)\},
 $$ 
 and let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,\al(f)(x))$ for all morphisms $f:i\to j$. Then we define the inductive limit $\col\al$ as the quotient $U/\!\!\sim$. Let $\pi:U\to\col\al$ be the canonical projection, and, for all $i$ in $I$, define $p_i:\al(i)\to\col\al$ by $p_i(x):=\pi(i,x)$. We call the resulting morphism $p:\al\to\col\al$ the coprojection. Then $p$ is \emph{a} coprojection in the sense of Definition~\ref{plim}. [Indeed, given $\theta$ in \qr{cue} let us prove the uniqueness of $f$. Any $x$ in $X$ is of the form $p_i(t)$ for some $i$ in $I$ and $t$ in $\al(i)$, and we must have $f(x)=\theta_i(t)$. This proves the uniqueness. To verify the existence, we must assume $p_i(t)=p_j(u)$ (obvious notation), and derive $\theta_i(t)=\theta_j(u)$. We may assume that there is a morphism $s:i\to j$, and the verification is straightforward.]
-\end{conv}
+\end{conv} 
 
 Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category.
 
@@ -6213,8 +6212,8 @@ $$
 \subsubsection{Definition 8.2.1 p. 169}
 
 The proposition and lemma below are obvious. 
-%
-\begin{prop}\lb{payp}
+
+\begin{prop}\lb{payp} 
 Let $\C$ be a pre-additive category, let $\A$ be the category of additive functors from $\C^{\op}$ to $\Mod(\bb Z)$, let $h:\C\to\A$ be the obvious functor satisfying $h(X)(Y)=\Hom_\C(Y,X)$ for all $X$ and $Y$ in $\C$, let $X$ be in $\C$ and $A$ in $\A$, and let 
 $$
 \begin{tikzcd}
@@ -6226,29 +6225,29 @@ $$
 \Phi(\theta)=\theta_X(\id_X),\quad\Psi(x)(f)=A(f)(x).
 $$
 Then $\Phi$ and $\Psi$ are mutually inverse abelian group isomorphisms.
-\end{prop}
-%
+\end{prop} 
+
 \nn(See Theorem \ref{yol} p.~\pr{yol}.)
 
 \begin{conv}\lb{payc}
-In the above setting we denote $\A$ by $\C^\wg$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) %We also use Definitions~\ref{ue} and \ref{ue2} p.~\pr{ue} in this context. 
+In the above setting we denote $\A$ by $\C^\wg$ and $h$ by $\hy_\C$. (This abuse is justified by Proposition~\ref{payp}.) 
 \end{conv} 
 
-\begin{lem}\lb{payl}
+\begin{lem}\lb{payl} 
 Let $\C$ and $\C'$ be pre-additive categories, let $\A$ be the category of additive functors from $\C$ to $\C'$, and let $\al:I\to\A$ be a functor such that $\col\al(X)$ exists in $\C'$ for all $X$ in $\C$. Then $\col\al$ exists in $\A$ and satisfies 
 $$
 (\col\al)(X)\iso\col\al(X)
 $$ 
 for all $X$ in $\C$. (There is a similar statement for projective limits.)
-\end{lem}
+\end{lem} 
 
 %%
 
-\subsubsection{Lemma 8.2.3 p. 169}
+\subsubsection{Lemma 8.2.3 p. 169} 
 
-Here is a statement contained in Lemma 8.2.3:
+Here is a statement contained in Lemma 8.2.3: 
 
-\begin{cor}\lb{823}
+\begin{cor}\lb{823} 
 Let $\C$ be a pre-additive category, let $X_1$ and $X_2$ be two objects of $\C$ such that the product $X=X_1\tm X_2$ exists in $\C$, let $p_a:X\to X_a$ be the projection, and define $i_a:X_a\to X$ by 
 $$
 p_a\ci i_b=\begin{cases}\id_{X_a}&\text{if }a=b\\0&\text{if }a\not=b.\end{cases}
@@ -6259,9 +6258,7 @@ i_1\ci p_1+i_2\ci p_2=\id_{X_1\tm X_2}.
 $$
 \end{cor}
 
-%Let us denote the object $X$ above by $X_1\oplus X_2$. 
-
-For the reader's convenience we state and prove Lemma 8.2.3 (ii) p.~169 of the book:
+For the reader's convenience we reproduce the statement and the proof of Lemma 8.2.3 (ii) p.~169 of the book:
 
 \begin{lem}[Lemma 8.2.3 (ii) p. 169]\lb{823ii}
 Let $\C$ be a pre-additive category; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms satisfying 
@@ -6286,7 +6283,7 @@ $$
 Note also the following corollary to Lemma 8.2.3 (ii) (stated above as Lemma \ref{823ii}). 
 
 \begin{cor}\lb{823b}
-Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1,$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
+Let $F:\C\to\C'$ be an additive functor of pre-additive categories; let $X,X_1$ and $X_2$ be objects of $\C$; and, for $a=1,2$, let $X_a\xr{i_a}X\xr{p_a}X_a$ be morphisms such that $X$ is a product of $X_1$ and $X_2$ by $p_1,p_2$ and a coproduct of $X_1$ and $X_2$ by $i_1,i_2$. Then $F(X)$ is a product of $F(X_1)$ and $F(X_2)$ by $F(p_1),F(p_2)$ and a coproduct of $F(X_1)$ and $F(X_2)$ by $F(i_1),F(i_2)$. 
 \end{cor}
 
 %%
@@ -6304,14 +6301,20 @@ $$
 is an isomorphism. 
 \end{cor} 
 
-\begin{conv}\lb{oplus}
-In the above situation, we set $X_1\oplus X_2:=X_1\sqcup X_2$, we define $p'_j:X_1\oplus X_2\to X_j$ by $p'_j:=p_j\ci r$, and we observe that $X_1\oplus X_2$ is a product of $X_1$ and $X_2$ by $p'_1$ and $p'_2$. 
-\end{conv}
-\end{s}
+\begin{conv}\lb{oplus} 
+Let $X_1$ and $X_2$ be two objects of a category $\C$. Assume that the product $X_1\tm X_2$ and the coproduct $X_1\sqcup X_2$ exist in $\C$ and are isomorphic. %, and that there is an isomorphism $r$ from $X_1\sqcup X_2$ to $X_1\tm X_2$ is an isomorphism. 
+In such a situation, we make a new exception to Convention~\ref{term} p.~\pr{term}: we set $X_1\oplus X_2:=X_1\tm X_2$, we transport the coprojections of $X_1\sqcup X_2$ to $X_1\oplus X_2$ and redefine $X_1\sqcup X_2$ by setting 
+$$
+X_1\sqcup X_2:=X_1\oplus X_2:=X_1\tm X_2,
+$$ 
+so that $X_1\oplus X_2$ is at the same time a product and a coproduct of $X_1$ and $X_2$.
+%In the above situation, we make a new exception to Convention~\ref{term} p.~\pr{term}: we set $X_1\oplus X_2:=X_1\tm X_2$, we define $i'_j:X_j\to X_1\oplus X_2$ by $i'_j:=r\ci i_j$, and we observe that $X_1\oplus X_2$ is a coproduct of $X_1$ and $X_2$ by $i'_1$ and $i'_2$. 
+\end{conv} 
+\end{s} 
 
-%
+% 
 
-The following lemma is implicit in the book. 
+The following lemma, whose proof is left to the reader, is implicit in the book. 
 
 \begin{lem}
 For $a=1,2$ let $f_a:X_a\to Y_a$ be a morphism in a pre-additive category $\C$. Assume that $X_1\oplus X_2$ and $Y_1\oplus Y_2$ exist in $\C$ (see Convention~\ref{oplus} above). Then we have 
@@ -6321,15 +6324,9 @@ $$
 (equality in $\Hom_\C(X_1\oplus X_2,Y_1\oplus Y_2)$). 
 \end{lem} 
 
-We denote this morphism by $f_1\oplus f_2$.\medskip 
+We denote this morphism by $f_1\oplus f_2$.%\medskip 
 
-\begin{proof}
-Put $X:=X_1\oplus X_2,\ Y:=Y_1\oplus Y_2$ and write 
-$$
-X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a
-$$ 
-for the projections and coprojections. We have $q_a\ci(f_1\tm f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\tm f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.
-\end{proof}
+%\begin{proof} Put $X:=X_1\oplus X_2,\ Y:=Y_1\oplus Y_2$ and write $$X_a\xr{i_a}X\xr{p_a}X_a,\quad Y_a\xr{j_a}Y\xr{q_a}Y_a$$ for the projections and coprojections. We have $q_a\ci(f_1\tm f_2)=f_a\ci p_a$ for all $a$, and we must show $q_b\ci (f_1\tm f_2)\ci i_a=q_b\ci j_a\ci f_a$ for all $a,b$. This follows immediately from Corollary~\ref{823}.\end{proof}
 
 %
 
@@ -6341,7 +6338,7 @@ Let $\C$ be a pre-additive category, $X,Y\in\C$ and $f_1,f_2\in\Hom_\C(X,Y)$. As
 $$
 X\xr{\delta_X}X\oplus X\xr{f_1\oplus f_2}Y\oplus Y\xr{\sigma_Y}Y.
 $$ 
-Here $\delta_X:X\to X\tm X\iso X\oplus X$ is the diagonal morphism and $\sigma_Y:Y \oplus Y\iso Y\sqcup Y\to Y$ is the codiagonal morphism.
+Here $\delta_X:X\to X\tm X=X\oplus X$ is the diagonal morphism and $\sigma_Y:Y\oplus Y=Y\sqcup Y\to Y$ is the codiagonal morphism.
 \end{cor}
 
 \begin{proof} 
@@ -6373,7 +6370,11 @@ Let $\C$ be a pre-additive category which admits finite products. Then $\C$ is a
 
 Let us check that $\C$ has a zero object. (This part of the proof is left to the reader by the authors.) 
 
-Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\tm Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ be a terminal object of $\C$. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\iso X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr0T\xl0T$. This implies $\Hom_\C(T,X)\iso0$ for any $X$, and $T$ is a zero object. q.e.d.
+Let $X$ and $Y$ be in $\C$. By Lemma 8.2.3 p.~169 of the book, the product $X\tm Y$ is also a coproduct of $X$ and $Y$. Let us denote this object by $X\oplus Y$. Let $T$ be a terminal object of $\C$. For any $X$ in $\C$ we have a natural isomorphism $X\oplus T\iso X$. In particular $T$ can be viewed as $T\sqcup T$ via the morphisms $T\xr{\id}T\xl{\id}T$. This implies successively that, for $X$ in $\C$, the diagonal map 
+$$
+\Hom_\C(T,X)\to\Hom_\C(T,X)\tm\Hom_\C(T,X)
+$$ 
+is bijective, that the set $\Hom_\C(T,X)$ has at most one element, and that it has exactly one element. As $X$ is arbitrary, this entails that $T$ is a zero object. q.e.d.
 
 Also note that Corollary 8.2.4 p.~170 of the book is useful to prove Lemma 8.2.9.
 \end{s}
@@ -6384,14 +6385,13 @@ Also note that Corollary 8.2.4 p.~170 of the book is useful to prove Lemma 8.2.9
 P.~172, Lemma 8.2.10. Let me state the result in a more explicit way: 
 
 \begin{lem}[Lemma 8.2.10 p.~172]
-If $X$ is an object of an additive category $\C$, then the composition 
+If $X$ is an object of an additive category $\C$, then the morphism %composition 
 $$
-\begin{tikzcd}
-X\tm X&X\sqcup X\ar[l,"r","\sim"']\ar[r,"\sigma_X"]&X.
-\end{tikzcd}
+X\tm X=X\sqcup X\xr{\ \sigma_X\ }X
 $$ 
+%$$\begin{tikzcd}X\tm X&X\sqcup X\ar[l,"r","\sim"']\ar[r,"\sigma_X"]&X\end{tikzcd}$$ 
 defines a structure of a commutative group object on $X$.
-\end{lem}
+\end{lem} 
 
 The associativity of the addition can also be proved as follows:
 
