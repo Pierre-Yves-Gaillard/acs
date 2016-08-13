@@ -6441,7 +6441,7 @@ by $+_X$. Then we have
 % https://docs.google.com/document/d/19UsvOfHLs3aEap6kzitWQo-ciyyiBHJgVxqyMVZfTbI/edit
 % was removed from here
 P.~173, Theorem 8.2.14. Let me state the result in a more explicit way: 
-\begin{thm}[Theorem 8.2.14]
+\begin{thm}[Theorem 8.2.14]\lb{8214}
 If $\C$ is an additive category, then $\C$ has a unique structure of a pre-additive category. More precisely, for $f$ and $g$ in $\Hom_\C(X,Y)$, the morphism $f+g\in\Hom_\C(X,Y)$ is given by the composition 
 $$
 \begin{tikzcd}
@@ -6454,7 +6454,19 @@ Let me also try to rewrite the beginning of the proof:
 
 Let $X\in\C$. By applying Proposition 8.2.13 p.~173 of the book to the functor $F:=\Hom_\C(X,\ )$, we obtain that $\Hom_\C(X,Y)$ has a structure of an additive group for all $Y$ in $\C$. Then Lemma 8.2.11 p.~172 of the book implies that the addition on $\Hom_\C(X,Y)$ is given by the above commutative diagram. 
 
-We complete the proof by showing as in the book that this addition does define a pre-additive structure on $\C$ 
+We complete the proof by showing as in the book that this addition does define a pre-additive structure on $\C$. 
+\end{s}
+
+%
+
+\begin{s}
+P.~173, Theorem 8.2.14 (stated above as Theorem~\ref{8214}). Consider the following claims:
+
+\nn(a) the fields $\bb Q$ and $\bb F_3(X)$ have isomorphic multiplicative groups,
+
+\nn(b) there is a category $\C$ admitting two pre-additive structures $p$ and $q$ such that there is no additive equivalence from $(\C,p)$ to $(\C,q)$. 
+
+We leave it to the reader to prove (a) and to show that (a) implies (b).
 \end{s}
 
 %
@@ -6822,7 +6834,7 @@ and thus
 \begin{equation}\lb{kh} 
 k\ci h=0, 
 \end{equation} 
-and (iv) follows from \qr{fk+hg},\qr{gh,kf} and \qr{kh}. q.e.d.
+and (iv) follows from \qr{fk+hg}, \qr{gh,kf} and \qr{kh}. q.e.d.
 \end{s}
 
 %
@@ -6848,7 +6860,7 @@ $$
 0\ar[r]&Y'\ar[r,"a"']&X\ar[r,"b"']&Y''\ar[r]&0
 \end{tikzcd}
 $$ 
-is an exact commutative diagram in an category, then $Y\oplus Y'\xr{(c,a)}X$ is an epimorphism. 
+is an exact commutative diagram in an abelian category, then $Y\oplus Y'\xr{(c,a)}X$ is an epimorphism. 
 \end{lem}
 
 \begin{proof}
@@ -6929,7 +6941,7 @@ Q\ar[d,"w"']\ar[r,"k",two heads]&S\ar[d,"cy"]\\
 W\ar[r,"e"',two heads]&V;
 \end{tikzcd}
 $$ 
-equalities $ifw=gew=gcy=0$; an exact commutative diagram 
+equalities $ifw=gew=gcyk=0$; an exact commutative diagram 
 $$
 \begin{tikzcd}
 P\ar[d,"x"']\ar[r,"\ell",two heads]&Q\ar[d,"fw"]\\ 
