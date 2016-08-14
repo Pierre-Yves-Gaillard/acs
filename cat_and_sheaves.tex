@@ -6419,21 +6419,12 @@ P.~173, proof of Proposition 8.2.13. The fact that any $X$ in $\C$ has a structu
 %
 
 \begin{s} 
-Proposition 8.2.13 p.~173. Here is a slightly different wording: 
-\begin{prop}
-Let $\C$ be an additive category, let $F:\C\to\Set$ be a functor commuting with finite products, and for each $X$ in $\C$ denote the composition 
-$$
-F(X)\tm F(X)\xleftarrow\sim F(X\oplus X)\xr{F(\sigma_X)}F(X)
-$$ 
-by $+_X$. Then we have 
-
-\nn\emph{(a)} The pair $(F(X),+_X)$ is an abelian group. 
-
-\nn\emph{(b)} There is a unique functor $G:\C\to\Mod(\bb Z)$ such that $G(X)=(F(X),+_X)$ for all $X$ in $\C$. 
-
-\nn\emph{(c)} If $H:\C\to\Mod(\bb Z)$ is a functor such that $U\ci H=F$, where $U:\Mod(\bb Z)\to\Set$ is the forgetful functor, then there is a unique morphism $\theta:G\to H$ such that $U\star\theta=F$ (recall that $\star$ denotes the horizontal composition defined in Definition~\ref{dil1} p.~\pr{dil1}). Moreover this morphism $\theta$ is an isomorphism. 
+Proposition 8.2.13 p.~173. It seems to me the proposition can be stated as follows: %Here is a slightly different wording: 
+\begin{prop}[Proposition 8.2.13 p.~173]
+If $\C$ is an additive category, if $\C'$ is the category of finite product preserving functors from $\C$ to $\Mod(\bb Z)$, if $\C''$ is the category of finite product preserving functors from $\C$ to $\Set$, and if $U$ is the forgetful functor from $\Mod(\bb Z)$ to $\Set$, then the functor $U\ci:\C'\to\C''$ is an \emph{isomorphism} (not just an equivalence!). 
+%let $F:\C\to\Set$ be a functor commuting with finite products, and for each $X$ in $\C$ denote the composition $$F(X)\tm F(X)\xleftarrow\sim F(X\oplus X)\xr{F(\sigma_X)}F(X)$$ by $+_X$. Then we have \nn\emph{(a)} The pair $(F(X),+_X)$ is an abelian group. \nn\emph{(b)} There is a unique functor $G:\C\to\Mod(\bb Z)$ such that $G(X)=(F(X),+_X)$ for all $X$ in $\C$. \nn\emph{(c)} If $H:\C\to\Mod(\bb Z)$ is a functor such that $U\ci H=F$, where $U:\Mod(\bb Z)\to\Set$ is the forgetful functor, then there is a unique morphism $\theta:G\to H$ such that $U\star\theta=F$ (recall that $\star$ denotes the horizontal composition defined in Definition~\ref{dil1} p.~\pr{dil1}). Moreover this morphism $\theta$ is an isomorphism. 
 \end{prop} 
-\end{s} 
+\end{s}  
 
 % 
 
