@@ -3916,11 +3916,9 @@ Let $\C$ be a category, let $P:\C\to\C$ be a functor, let $\ee:\id_\C\to P$ be a
 \begin{proof} It is enough to prove (a)$\then$(c)$\Leftarrow$(b). 
 
 \nn(a)$\then$(c): Put $u:=(\ee_{P(X)})^{-1}\ci P(\ee_X)$. It suffices to show 
-%
 \begin{equation}\lb{uidpx}
 u=\id_{P(X)}.
-\end{equation}
-%
+\end{equation} 
 We have 
 $$
 u\ci\ee_X=(\ee_{P(X)})^{-1}\ci P(\ee_X)\ci\ee_X=(\ee_{P(X)})^{-1}\ci\ee_{P(X)}\ci\ee_X=\ee_X,
@@ -4299,7 +4297,7 @@ P.~117, Definition 5.2.1 (definition of a system of generators). There is an imp
 As observed at the bottom of p.~121 of the book, the definition can be stated as follows:
 
 \begin{df}[generator, system of generators] 
-Let $S$ be a set of objects of a category $\C$ and $\SSS$ the corresponding subcategory. We say that $S$ is a {\em system of generators}\index{generator}\index{system of generators} if the functor $\pp:\C\to\SSS^\wg$, $X\mt\Hom_\C(\ ,X)$ is conservative.
+Let $S$ be a set of objects of a category $\C$ and $\SSS$ the corresponding full subcategory. We say that $S$ is a {\em system of generators}\index{generator}\index{system of generators} if the functor $\pp:\C\to\SSS^\wg$, $X\mt\Hom_\C(\ ,X)$ is conservative.
 \end{df}
 \end{s}
 
@@ -7130,8 +7128,7 @@ $$
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem~\ref{536} p.~\pr{536} above. %Theorem 5.3.6 p.~124 (stated above as Theorem~\ref{536} p.~\pr{536}). 
-As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem~\ref{536} p.~\pr{536} above. As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
 \end{proof}
 \end{s}
 
@@ -7151,7 +7148,6 @@ $$
 M\rightarrowtail R^{F'}\rightarrowtail R^{\oplus S}.
 $$ 
 As $R^{F'}$ is a direct summand of $R^{\oplus S}$, the morphism $\psi(R^{F'})\to\psi(R^{\oplus S})$ is a monomorphism. In other words, we may assume $S=F'$, and it suffices to check that $\psi(M)\to\psi(R^{F'})$ is a monomorphism, or, more explicitly, that 
-%
 \begin{equation}\lb{fpsi}
 f:\psi(M)\to G^{F'}\text{ is a monomorphism.}
 \end{equation}
@@ -7181,17 +7177,14 @@ $$
 \end{tikzcd}
 $$ 
 yields $b\ci a\ci\pp(i)=0$. As $b$ is a monomorphism, we get $a\ci\pp(i)=0$, and thus $\pp(p)\ci\pp(i)=0$. Since $\pp$ is faithful by Proposition~\ref{858iii} p.~\pr{858iii}, this implies 
-%
 \begin{equation}\lb{pi=0}
 p\ci i=0.
 \end{equation} 
 
 Let us prove \qr{fpsi}. Let $x:X\to\psi(M)$ be a morphism in $\C$ satisfying $f\ci x=0$. It suffices to prove 
-%
 \begin{equation}\lb{x=0}
 x=0.
-\end{equation}
-% 
+\end{equation} 
 As $p$ is an epimorphism, the diagram of solid arrows 
 $$
 \begin{tikzcd}
@@ -8229,14 +8222,12 @@ X_{i_0}\ar{r}[swap]{p_{i_0}}&X,
 \end{equation}
 % 
 and we put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 this implies $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
-%
 \begin{equation}\lb{s5b}
 \begin{tikzcd}
 G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
 B\ar[two heads]{rr}&&A
 \end{tikzcd}
 \end{equation} 
-%
 being epimorphisms by Proposition 5.2.3 (iv) p.~118 of the book, so is $C\to A$. From the commutative diagram 
 $$
 \begin{tikzcd}
@@ -8245,14 +8236,12 @@ S\ar{r}&B(G)\ar{r}&S,
 \end{tikzcd}
 $$ 
 we get, by Step 1, the commutative diagram 
-%
 \begin{equation}\lb{s5c}
 \begin{tikzcd}
 C\ar[equal]{rr}\ar[equal]{d}&&C\ar[equal]{d}\\ 
 C\ar{r}&G^{\sqcup B(G)}\ar{r}&C.
 \end{tikzcd}
 \end{equation} 
-%
 Splicing \qr{s5a}, \qr{s5b} and \qr{s5c} gives 
 $$
 \begin{tikzcd}
