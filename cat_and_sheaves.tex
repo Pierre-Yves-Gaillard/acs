@@ -7220,36 +7220,41 @@ holds. This inclusion follows from Propositions 6.1.7 p.~132 and 8.2.15 p.~173 i
 
 %
 
-\begin{s}
-P. 194, proof of Theorem 8.6.5. 
-
-\nn(ii) The exactness of $\C\to\Ind(\C)$ follows from Corollaries 6.1.6 and 6.1.17 (i). The left exactness of $\Ind(\C)\to\C^{\wg,add}$ follows from \S\ref{869} above and Proposition 6.1.16 (i) p.~136 in the book. 
-
-\nn(iii) $\Ind(\C)$ admits small inductive limits by Proposition 6.1.18 (iii) p.~136 in the book.
-\end{s}
-
-%
-
-\begin{s}\lb{869} 
-P. 195, proof of Proposition 8.6.9. We give additional details:
-
-\nn(i) $\Ind(\C)$ is additive: For $A,B$ in $\Ind(\C)$ we define $A\oplus B\in\C^\wg$ by the formula 
-$$
-(A\oplus B)(X):=A(X)\oplus B(X),
-$$ 
-and easily check that $A\oplus B$ is additive and left exact, and thus belongs to $\Ind(\C)$. It is then obvious that $A\oplus B$ is a product and a coproduct in $\Ind(\C)$. 
-
-$\Ind(\C)$ admits kernels and cokernels: $\Ind(\C)$ admits finite inductive and projective limits by Corollary 6.1.17 (i) and Proposition 6.1.18 (iii) p.~136.
-
-\nn(ii) $\Ind(\C)$ admits small filtrant inductive limits by Theorem~\ref{618} p.~\pr{618}.
-
-\nn(iii) The natural embedding $\Ind(\C)\to\C^{\wg,add}$ commutes with kernels: this follows from Proposition 6.1.16 (i) p.~136.
-\end{s}
+%\begin{s} P. 194, proof of Theorem 8.6.5. \nn(ii) The exactness of $\C\to\Ind(\C)$ follows from Corollaries 6.1.6 and 6.1.17 (i). The left exactness of $\Ind(\C)\to\C^{\wg,add}$ follows from \S\ref{869} above and Proposition 6.1.16 (i) p.~136 in the book. \nn(iii) $\Ind(\C)$ admits small inductive limits by Proposition 6.1.18 (iii) p.~136 in the book.\end{s} \begin{s}\lb{869} P. 195, proof of Proposition 8.6.9. We give additional details: \nn(i) $\Ind(\C)$ is additive: For $A,B$ in $\Ind(\C)$ we define $A\oplus B\in\C^\wg$ by the formula $$(A\oplus B)(X):=A(X)\oplus B(X),$$ and easily check that $A\oplus B$ is additive and left exact, and thus belongs to $\Ind(\C)$. It is then obvious that $A\oplus B$ is a product and a coproduct in $\Ind(\C)$. $\Ind(\C)$ admits kernels and cokernels: $\Ind(\C)$ admits finite inductive and projective limits by Corollary 6.1.17 (i) and Proposition 6.1.18 (iii) p.~136.\nn(ii) $\Ind(\C)$ admits small filtrant inductive limits by Theorem~\ref{618} p.~\pr{618}. \nn(iii) The natural embedding $\Ind(\C)\to\C^{\wg,add}$ commutes with kernels: this follows from Proposition 6.1.16 (i) p.~136. \end{s} 
 
 %
 
 \begin{s} 
-P. 197, proof of Proposition 8.6.12. The statement ``Since the top square on the left is co-Cartesian, the middle row is exact'' follows from the lemma below.
+Proof of Lemma 8.6.7 p.~195. The proof uses the following lemma: 
+
+\begin{lem} 
+Let $f:X\to Y$ be a morphism in an abelian category, define $f':X\to X\oplus Y$ and $f'':X\oplus Y\to Y$ by $f':=\bigl[\begin{smallmatrix}1\\ f\end{smallmatrix}\bigr],\ f'':=[f\ -1]$ (obvious notation). Then the sequence $X\xr{f'}X\oplus Y\xr{f''}Y$ is exact. 
+\end{lem} 
+
+\begin{proof} 
+It suffices to show that an arbitrary solid commutative diagram 
+$$
+\begin{tikzcd}
+W\ar[dashed]{d}[swap]{i}\ar[dashed, two heads]{r}{h}&Z\ar{dr}{0}\ar{d}{g}\\ 
+X\ar{r}[swap]{f'}&X\oplus Y\ar{r}[swap]{f''}&Y
+\end{tikzcd}
+$$ 
+may be completed as indicated. Let the above square be cartesian. Note that $g$ is of the form $\bigl[\begin{smallmatrix}g_1\\ f\ci g_1\end{smallmatrix}\bigr]$ with $g_1:Z\to X$. It suffices to show that $h$ is an epimorphism. Let $j:Z\to V$ be a morphism such that $j\ci h=0$. It suffices to prove $j=0$. The solid commutative diagram 
+$$
+\begin{tikzcd}
+&X\ar[rd,"f'"]\\ 
+Z\ar[r,dashed,"k"]\ar[ru,"g_1"]\ar[rd,"\id"']&W\ar[u,"i"']\ar[d,"h"]&X\oplus Y\\ 
+&Z\ar[ru,"g"']
+\end{tikzcd}
+$$ 
+may be completed as indicated, yielding $0=j\ci h\ci k=j$. 
+\end{proof} 
+\end{s} 
+
+%
+
+\begin{s} 
+P. 197, proof of Proposition 8.6.12. The existence of the epimorphism $X_1\to Y''$ follows from Proposition 8.6.9 in the book, and the statement ``Since the top square on the left is co-Cartesian, the middle row is exact'' follows from the lemma below.
 
 \begin{lem}
 If, in the commutative diagram 
@@ -7259,10 +7264,10 @@ $$
 0\ar[r]&D\ar[r]&E\ar[r]&C\ar[r]&0,
 \end{tikzcd}
 $$ 
-the left square is co-cartesian and the top row is exact, then the bottom top row is exact.
+the left square is co-cartesian and the top row is exact, then the bottom row is exact.
 \end{lem} 
 \begin{proof}
-In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom top row is exact at $E$. By Lemma \ref{8312} p.~\ref{8312}, (c)$\then$(a), it suffices to check that the solid diagram 
+In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom row is exact at $E$. By Lemma \ref{8312} p.~\ref{8312}, (c)$\then$(a), it suffices to check that the solid diagram 
 $$
 \begin{tikzcd}
 0\ar[r]&A\ar[d]\ar[r]&B\ar[d,"v"]\ar[r,"t"]&C\ar[d,equal]\ar[r]&0\\ 
