@@ -235,7 +235,6 @@ The category $\C$ is $\U$-{\em small}\index{$\U$-small category} if in addition 
 \end{df} 
 
 Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{myucat} which is isomorphic to $\C$, and similarly for $\U$-small categories. 
-%
 \begin{center}\fbox{In this text we shall always use Definitions \ref{myucat} and \ref{myuscat}.}
 \end{center}
 
@@ -400,7 +399,11 @@ should be ``a sequence
 
 \nn$*$ P.~180, Lemma 8.3.11 (b) (i): $\Coker f\xr\sim\Coker f'$ should be $\Coker f'\xr\sim\Coker f$. Proof of Lemma 8.3.11: The notation $\Hom$ for $\Hom_\C$ occurs eight times. Lemma 8.3.11 is stated below as Lemma~\ref{8311} p.~\pr{8311}. 
 
-\nn$*$ P.~181, Lemma 8.3.13, second line of the proof: $h\ci f^2$ should be $f^2\ci h$.
+\nn$*$ P.~181, Lemma 8.3.13, second line of the proof: $h\ci f^2$ should be $f^2\ci h$. 
+
+\begin{s}\lb{dg2} 
+P. 184, Definitions 8.3.21 (v) and (vi). Definition 8.3.21 (vi) says that a full subcategory $\SSS$ of a category $\C$ is \emph{generating} if any object of $\C$ is the target of some epimorphism whose source is in $\SSS$. It seems to me this definition might create confusion with Definition~\ref{dg1} p.~\pr{dg1}. For want of a better idea, I suggest to say that $\C$ is \emph{a-generating}\index{a-generating} if its satisfies the above condition. (The letter a stands for the word ``abelian'', the reason being that this notion seems to be only used for abelian categories.) The notion of co-a-generating is defined in the obvious way.
+\end{s} 
 
 \nn$*$ P.~186, Corollary 8.3.26. The proof reads: ``Apply Proposition 5.2.9''. One could add: ``and Proposition 5.2.3 (v)''.
 
@@ -1122,7 +1125,7 @@ The equalities
 $$%\begin{equation}\lb{ef}
 (\eta_{X'}\ci f)_X(\id_X)=\eta_{X',X}(f)=\eta_{X',R(X')}(\id_{R(X')})\ci L(f)
 $$%\end{equation} 
-are respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. As the Yoneda Lemma (Theorem~\ref{yol} p.~\ref{yol}) implies 
+are respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. As the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies 
 $$
 \eta_{X'}\ci f=\theta\iff(\eta_{X'}\ci f)_X(\id_X)=\theta_X(\id_X),
 $$ 
@@ -2976,7 +2979,7 @@ For $B$ in $\C^\wg$ and $B\to A$ in $(\C^\wg)_A$, setting
 
 $$X:=h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\Big(\ld(B\to A)\Big),$$
 
-\nn we get %the following chain of isomorphisms, where the isomorphism marked with the symbol $(\star)$ results from \qr{leq} and Proposition~\ref{271}:
+\nn we get 
 
 \begin{align*}
 X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\ 
@@ -2986,9 +2989,6 @@ X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)
 &\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)&\text{by \qr{lcom}}\\ 
 &\iso\col_{(U\to B)\in\C_B}\big(F\ci j(\C_A)\big)(U\to A)&\text{by Prop.~\ref{271}}\\ 
 &\iso\col_{(U\to B)\in\C_B}F(U)\\ 
-%&\iso\col_{(U\to B)\in\C_B}h(\C)^\dg(F)\Big(h(\C)(U)\Big)&\text{by Prop.~\ref{271}}\\
-%&\iso h(\C)^\dg(F)\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)&\text{by Prop.~\ref{271}}\\ 
-%&\iso\Bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\Bigg)\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\\ 
 &\iso\bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\bigg)\left(B\to A\right)&\text{by \qr{hfa}.} 
 \end{align*}
 \end{proof}
@@ -4296,11 +4296,11 @@ P.~117, Definition 5.2.1 (definition of a system of generators). There is an imp
 
 As observed at the bottom of p.~121 of the book, the definition can be stated as follows:
 
-\begin{df}[generator, system of generators] 
-Let $S$ be a set of objects of a category $\C$ and $\SSS$ the corresponding full subcategory. We say that $S$ is a {\em system of generators}\index{generator}\index{system of generators} if the functor $\pp:\C\to\SSS^\wg$, $X\mt\Hom_\C(\ ,X)$ is conservative.
+\begin{df}[generator, system of generators]\lb{dg1} 
+Let $S$ be a set of objects of a category $\C$ and $\SSS$ the corresponding full subcategory. We say that $S$ is a {\em system of generators}\index{generator}\index{system of generators} if the functor $\pp:\C\to\SSS^\wg$, $X\mt\Hom_\C(\ ,X)$ is conservative. The notions of co-generator and system of co-generators are defined in the obvious way. 
 \end{df}
 \end{s}
-
+	
 %
 
 \begin{s}
@@ -4335,7 +4335,7 @@ P.~121. Corollary 5.2.10 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9
 %
 
 \begin{s}
-P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\F$ is strictly generating,\index{strictly generating subcategory} then $\Ob(\F)$ is a system of generators''. See \S\ref{ffc} p.~\pr{ffc}.
+P.~122, sentence following Definition 5.3.1. This sentence is ``Note that if $\F$ is strictly generating,\index{strictly generating subcategory} then $\Ob(\F)$ is a system of generators''. See \S\ref{ffc} p.~\pr{ffc}. 
 \end{s}  
 
 %%
@@ -4370,25 +4370,25 @@ We want to prove that $\gamma'$ is bijective. As $\pp'$ is bijective, it suffice
 and it suffices to prove $\xi=\gamma(f)$. Let $Z$ be in $\G$ and $z$ be in $\Hom_\C(Z,X)$. It suffices to show that the morphisms 
 $$
 \begin{tikzcd}
-Z\arrow[yshift=0.7ex]{r}{\xi_Z(z)}\arrow[yshift=-0.7ex]{r}[swap]{f\ci z}&Y
+Z\ar[yshift=0.7ex]{r}{\xi_Z(z)}\ar[yshift=-0.7ex]{r}[swap]{f\ci z}&Y
 \end{tikzcd}
 $$ 
 coincide. As $\F$ is strictly generating, it suffices to show that the morphisms 
 $$
 \begin{tikzcd}
-\pp(Z)\arrow[yshift=0.7ex]{rr}{\pp(\xi_Z(z))}\arrow[yshift=-0.7ex]{rr}[swap]{\pp(f\ci z)}&&\pp(Y)
+\pp(Z)\ar[yshift=0.7ex]{rr}{\pp(\xi_Z(z))}\ar[yshift=-0.7ex]{rr}[swap]{\pp(f\ci z)}&&\pp(Y)
 \end{tikzcd}
 $$ 
 coincide. Let $W$ be in $\F$. It suffices to show that the maps 
 $$
 \begin{tikzcd}
-\pp(Z)(W)\arrow[yshift=0.7ex]{rr}{\pp(\xi_Z(z))_W}\arrow[yshift=-0.7ex]{rr}[swap]{\pp(f\ci z)_W}&&\pp(Y)(W)
+\pp(Z)(W)\ar[yshift=0.7ex]{rr}{\pp(\xi_Z(z))_W}\ar[yshift=-0.7ex]{rr}[swap]{\pp(f\ci z)_W}&&\pp(Y)(W)
 \end{tikzcd}
 $$ 
 coincide, that is, it suffices to show that the maps 
 $$
 \begin{tikzcd}
-\Hom_\C(W,Z)\arrow[yshift=0.7ex]{rr}{\xi_Z(z)\ci}\arrow[yshift=-0.7ex]{rr}[swap]{f\ci z\ci}&&\Hom_\C(W,Y)
+\Hom_\C(W,Z)\ar[yshift=0.7ex]{rr}{\xi_Z(z)\ci}\ar[yshift=-0.7ex]{rr}[swap]{f\ci z\ci}&&\Hom_\C(W,Y)
 \end{tikzcd}
 $$ 
 coincide. We have, for $w$ in $\Hom_\C(W,Z)$,
@@ -5911,7 +5911,7 @@ exists universally in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}.
 The following proposition is obvious:
 
 \begin{prop}\lb{rsf}
-In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al_X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al_X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al_X$ in $\A$ in the sense of Definition~\ref{uil} p.~\ref{uil}. In particular $F$ is universally right localizable in the sense of the two above definitions, $R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al_X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al_X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al_X$ in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}. In particular $F$ is universally right localizable in the sense of the two above definitions, $R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
@@ -6723,13 +6723,13 @@ Page 181, the Five Lemma (minor variant of the proof).
 Consider the commutative diagram of complexes 
 $$
 \begin{tikzcd}
-X^0\arrow[two heads]{d}[swap]{f^0}\arrow{r}{a^0}&
-X^1\arrow[tail]{d}[swap]{f^1}\arrow{r}{a^1}&
-X^2\arrow{d}{f^2}\arrow{r}{a^2}&
-X^3\arrow[tail]{d}{f^3}\\ 
-Y^0\arrow{r}[swap]{b^0}&
-Y^1\arrow{r}[swap]{b^1}&
-Y^2\arrow{r}[swap]{b^2}&
+X^0\ar[two heads]{d}[swap]{f^0}\ar{r}{a^0}&
+X^1\ar[tail]{d}[swap]{f^1}\ar{r}{a^1}&
+X^2\ar{d}{f^2}\ar{r}{a^2}&
+X^3\ar[tail]{d}{f^3}\\ 
+Y^0\ar{r}[swap]{b^0}&
+Y^1\ar{r}[swap]{b^1}&
+Y^2\ar{r}[swap]{b^2}&
 Y^3,
 \end{tikzcd}
 $$
@@ -6770,13 +6770,13 @@ P.~181, Lemma 8.3.13 (Five Lemma). We spell out the dual of Theorem~\ref{5l} abo
 Consider the commutative diagram of complexes 
 $$
 \begin{tikzcd}
-X^0\arrow[two heads]{d}[swap]{f^0}\arrow{r}{a^0}&
-X^1\arrow{d}[swap]{f^1}\arrow{r}{a^1}&
-X^2\arrow[two heads]{d}{f^2}\arrow{r}{a^2}&
-X^3\arrow[tail]{d}{f^3}\\ 
-Y^0\arrow{r}[swap]{b^0}&
-Y^1\arrow{r}[swap]{b^1}&
-Y^2\arrow{r}[swap]{b^2}&
+X^0\ar[two heads]{d}[swap]{f^0}\ar{r}{a^0}&
+X^1\ar{d}[swap]{f^1}\ar{r}{a^1}&
+X^2\ar[two heads]{d}{f^2}\ar{r}{a^2}&
+X^3\ar[tail]{d}{f^3}\\ 
+Y^0\ar{r}[swap]{b^0}&
+Y^1\ar{r}[swap]{b^1}&
+Y^2\ar{r}[swap]{b^2}&
 Y^3,
 \end{tikzcd}
 $$
@@ -6833,7 +6833,13 @@ P.~183. Here is an example showing that filtrant and cofiltrant small projective
 $$
 \lim_{n\in\bb N}\big(\bb Z\to\bb Z/2^n\bb Z\to0\big)=\big(\bb Z\to\bb Z_2\to0\big).
 $$
-\end{s}
+\end{s} 
+
+% 
+
+\begin{s} 
+P. 184, Definitions 8.3.21 (v) and (vi). See \S~\ref{dg2} p.~\pr{dg2}.
+\end{s} 
 
 %%
 
@@ -6957,7 +6963,7 @@ On p. 185 we read:
 ``Recall (see Proposition 5.2.4) that in an abelian category, the conditions
 below are equivalent:
 
-(i) $G$ is a generator, that is, the functor $\pp_G=\Hom_\C(G,\cdot)$ is conservative,
+(i) $G$ is a generator, that is, the functor $\pp_G=\Hom_\C(G,\ )$ is conservative,
 
 (ii) The functor $\pp_G$ is faithful.
 
@@ -7267,7 +7273,7 @@ $$
 the left square is co-cartesian and the top row is exact, then the bottom row is exact.
 \end{lem} 
 \begin{proof}
-In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom row is exact at $E$. By Lemma \ref{8312} p.~\ref{8312}, (c)$\then$(a), it suffices to check that the solid diagram 
+In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom row is exact at $E$. By Lemma \ref{8312} p.~\pr{8312}, (c)$\then$(a), it suffices to check that the solid diagram 
 $$
 \begin{tikzcd}
 0\ar[r]&A\ar[d]\ar[r]&B\ar[d,"v"]\ar[r,"t"]&C\ar[d,equal]\ar[r]&0\\ 
@@ -7282,7 +7288,7 @@ $$
 &&F\ar[r,"z"',dashed,rightarrowtail]&G
 \end{tikzcd}
 $$ 
-can be completed as indicated. It suffices to prove $zy=xw$. The left square is co-cartesian, it suffices to prove $zyv=xwv$ and $zyu=xwu$, which is easy. Thus shows that $0\to D\to E\to C$ is exact at $E$. Using Lemma~\ref{8311} p.~\ref{8311} it is straightforward to prove the exactness at $D$ and $C$.
+can be completed as indicated. It suffices to prove $zy=xw$. The square $ABDE$ being co-cartesian, it suffices to prove $zyu=xwu$ and $zyv=xwv$, which is easy. Thus shows that $0\to D\to E\to C$ is exact at $E$. Using Lemma~\ref{8311} p.~\pr{8311} it is straightforward to prove the exactness at $D$ and $C$.
 \end{proof}
 \end{s}
 
@@ -7296,9 +7302,9 @@ Let us spell out the proof of the fact that $K(\al)$ is a monomorphism. Consider
 $$
 \begin{tikzcd} 
 Z\ar[ddd,"f"']\ar[r,"a"]&Y\ar[d,"c"']\ar[rr,"b"]&&X\ar[d,"d"]\\ 
-&W\ar[dd,"g"']\ar[rd,twoheadrightarrow,"h"]\ar[rr,"e"]&&V\ar[dd,twoheadrightarrow,"i"]\\ 
+&W\ar[dd,"g"']\ar[rd,two heads,"h"]\ar[rr,"e"]&&V\ar[dd,two heads,"i"]\\ 
 &&U\ar[d,"j"]\\ 
-T\ar[r,"k"']&S\ar[r,twoheadrightarrow,"\ell"']&R\ar[r,"m"']&Q,
+T\ar[r,"k"']&S\ar[r,two heads,"\ell"']&R\ar[r,"m"']&Q,
 \end{tikzcd}
 $$ 
 where the five rectangles are cartesian, and the three sequences 
@@ -7309,28 +7315,28 @@ are exact.
 
 We must check the $j$ is a monomorphism. 
 
-(In the proof below we omit the composition symbols $\ci$ and most of the parenthesis. We shall freely use the equivalence (a)$\ssi$(b) in Lemma \ref{8312} p.~\ref{8312}.)
+(In the proof below we omit the composition symbols $\ci$ and most of the parenthesis. We shall freely use the equivalence (a)$\ssi$(b) in Lemma \ref{8312} p.~\pr{8312}.)
 
 Let $u:P\to U$ satisfy $ju=0$, and let us show $u=0$. 
 
 There is a commutative square 
 $$
 \begin{tikzcd} 
-N\ar[d,"w"']\ar[r,twoheadrightarrow,"n"]&P\ar[d,"u"]\\ 
-W\ar[r,twoheadrightarrow,"h"']&U.
+N\ar[d,"w"']\ar[r,two heads,"n"]&P\ar[d,"u"]\\ 
+W\ar[r,two heads,"h"']&U.
 \end{tikzcd}
 $$ 
 As $\ell gw=jhw=jun=0$, there is a commutative diagram 
 $$
 \begin{tikzcd} 
-M\ar[d,"t"']\ar[r,twoheadrightarrow,"p"]&N\ar[d,"gw"']\ar[rd,"0"]\\ 
+M\ar[d,"t"']\ar[r,two heads,"p"]&N\ar[d,"gw"']\ar[rd,"0"]\\ 
 T\ar[r,"k"']&S\ar[r,"\ell"']&R.
 \end{tikzcd}
 $$ 
 As $iewp=m\ell gwp=m\ell kt=0$, there is a commutative diagram 
 $$
 \begin{tikzcd} 
-L\ar[d,"x"']\ar[r,twoheadrightarrow,"q"]&M\ar[d,"ewp"']\ar[rd,"0"]\\ 
+L\ar[d,"x"']\ar[r,two heads,"q"]&M\ar[d,"ewp"']\ar[rd,"0"]\\ 
 X\ar[r,"d"']&V\ar[r,"i"']&Q.
 \end{tikzcd}
 $$
@@ -7339,9 +7345,9 @@ As $Z\iso T\oplus X$, we can introduce the coprojections $a'$ and $f'$ indicated
 $$
 \begin{tikzcd} 
 Z\ar[ddd,xshift=0.7ex,"f"]\ar[r,"a"]&Y\ar[d,"c"']\ar[rr,"b"]&&X\ar[d,"d"]\ar[lll,bend right,"a'"']\\ 
-&W\ar[dd,"g"']\ar[rd,twoheadrightarrow,"h"]\ar[rr,"e"]&&V\ar[dd,twoheadrightarrow,"i"]\\ 
+&W\ar[dd,"g"']\ar[rd,two heads,"h"]\ar[rr,"e"]&&V\ar[dd,two heads,"i"]\\ 
 &&U\ar[d,"j"]\\ 
-T\ar[uuu,xshift=-0.7ex,"f'"]\ar[r,"k"']&S\ar[r,twoheadrightarrow,"\ell"']&R\ar[r,"m"']&Q.
+T\ar[uuu,xshift=-0.7ex,"f'"]\ar[r,"k"']&S\ar[r,two heads,"\ell"']&R\ar[r,"m"']&Q.
 \end{tikzcd}
 $$ 
 
@@ -7442,10 +7448,10 @@ Let us spell out the proof of the fact that $\Coker(u)\to\Coker(v)$ is a monomor
 In the commutative diagram 
 $$
 \begin{tikzcd} 
-Y'\ar[d,twoheadrightarrow,"a"']\\ 
+Y'\ar[d,two heads,"a"']\\ 
 Z\ar[d,"p"']\ar[r,"q"]&Y\ar[d,"u"]\\ 
-X'\ar[d,twoheadrightarrow,"c"']\ar[r,"b"]&X\ar[d,twoheadrightarrow,"d"]\\ 
-W'\ar[r,"e"']&W
+X'\ar[d,two heads,"c"']\ar[r,two heads,"b"]&X\ar[d,two heads,"d"]\\ 
+W'\ar[r,"e"']&W,
 \end{tikzcd}
 $$ 
 the square $ZYXX'$ is cartesian and the sequences 
@@ -7454,33 +7460,74 @@ Y\to X\to W\to0,\quad Y'\to X'\to W'\to0
 $$ 
 are exact. 
 
-We claim that $e$ is a monomorphism.
-
-Let $w':V\to W'$. It suffices to prove $ew'=0$. 
+We must show that $e$ is an isomorphism. Clearly $e$ is an epimorphism. It suffices to prove that $e$ is a monomorphism. Let $w':V\to W'$ satisfy $ew'=0$. It suffices to prove $w'=0$. 
 
 Form the commutative square
 $$
 \begin{tikzcd} 
-U\ar[d,"x'"']\ar[r,twoheadrightarrow,"f"]&V\ar[d,"w'"]\\ 
-X'\ar[r,twoheadrightarrow,"c"']&W'.
+U\ar[d,"x'"']\ar[r,two heads,"f"]&V\ar[d,"w'"]\\ 
+X'\ar[r,two heads,"c"']&W'.
 \end{tikzcd}
 $$ 
 As we have $dbx'=ecx'=ew'f=0$, we can form the commutative diagram
 $$
 \begin{tikzcd} 
-T\ar[d,"y"']\ar[r,twoheadrightarrow,"g"]&U\ar[d,"bx'"']\ar[rd,"0"]\\ 
+T\ar[d,"y"']\ar[r,two heads,"g"]&U\ar[d,"bx'"']\ar[rd,"0"]\\ 
 Y\ar[r,"u"']&X\ar[r,"d"']&W.
 \end{tikzcd}
 $$ 
 As we have $bx'g=uy$, we get a morphism $z:T\to Z$ such that $pz=x'g$ and $qz=y$, and we can form the commutative square
 $$
 \begin{tikzcd} 
-S\ar[d,"y'"']\ar[r,twoheadrightarrow,"h"]&T\ar[d,"z"]\\ 
-Y'\ar[r,twoheadrightarrow,"a"']&Z.
+S\ar[d,"y'"']\ar[r,two heads,"h"]&T\ar[d,"z"]\\ 
+Y'\ar[r,two heads,"a"']&Z.
 \end{tikzcd}
 $$ 
 
-This yields $w'fgh=cx'gh=cpzh=cpay'=0$.
+This yields $w'fgh=cx'gh=cpzh=cpay'=0$. As $f,g$ and $h$ are epimorphisms, this implies $w'=0$, as desired. q.e.d. 
+
+Here is a second version: 
+
+% this second version is available at
+% https://docs.google.com/document/d/1DTe3T39VIZf1zVzdAXUHG_K5euJ1EYuQzpil6QEtZjM/edit
+
+P. 199, proof of Lemma 8.7.5 (i). As we have 
+$$
+\Coker(Y\tm_XX'\to X')\xr\sim\Coker(u)
+$$ 
+by Lemma~\ref{837} p.~\pr{837}, we can assume $X\in\J$. Let $b:Y'\epi Y$ be an epimorphism with $Y'\in\J$, and set $v:=ub,\ W:=\Coker(v),\ Z:=\Coker(u)$: 
+$$
+\begin{tikzcd}
+Y'\ar[d,two heads,"b"']\ar[r,"v"]&X\ar[d,equal]\ar[r,"a"]&W\ar[d,"c"]\ar[r]&0\\ 
+Y\ar[r,"u"']&X\ar[r,"d"']&Z\ar[r]&0.
+\end{tikzcd}
+$$ 
+(The above diagram commutes and the rows are exact.) We shall use Lemma~\ref{8312} p.~\pr{8312}. We must show that $c$ is an isomorphism. Clearly $c$ is an epimorphism. It suffices to prove that $c$ is a monomorphism. Let $w:T\to W$ satisfy $cw=0$. It suffices to show $w=0$. There are commutative diagrams with exact rows and equalities 
+$$
+\begin{tikzcd}
+R\ar[d,"x"']\ar[r,two heads,"t"]&T\ar[d,"w"]\\ 
+X\ar[r,"a"']&W\ar[r]&0,
+\end{tikzcd}
+$$ 
+$$
+0=cwt=cax=dx,
+$$ 
+$$
+\begin{tikzcd}
+Q\ar[d,"y"']\ar[r,two heads,"r"]&R\ar[d,"x"]\\ 
+Y\ar[r,"u"']&X\ar[r,two heads,"d"']&Z,
+\end{tikzcd}
+$$ 
+$$
+\begin{tikzcd}
+P\ar[d,"y'"']\ar[r,two heads,"q"]&Q\ar[d,"y"]\\ 
+Y'\ar[r,"b"']&Y\ar[r]&0,
+\end{tikzcd}
+$$ 
+$$
+wtrq=axrq=auyq=auby'=avy'=0.
+$$ 
+As $t,r$ and $q$ are epimorphisms, this implies $w=0$, as desired. q.e.d. 
 
 %
 
