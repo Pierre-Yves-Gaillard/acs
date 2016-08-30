@@ -2399,7 +2399,7 @@ $$
 \end{tikzcd}
 $$
 
-To define $g$, we form the diagram
+To define $g$, we form the commutative diagram
 \begin{equation}\lb{biju}
 \begin{tikzcd}
 \bt(j)\ar{d}[swap]{q_{i,j,u}}\ar{r}{\id}&\bt(j)\ar{d}{p_j}\\ 
@@ -2834,7 +2834,7 @@ exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i
 %
 
 \begin{s}\lb{c271b}
-P.~62, Proposition 2.7.1. Consider the diagram 
+P.~62, Proposition 2.7.1. Consider the commutative diagram 
 $$
 \begin{tikzcd}
 \C\ar{r}{\hy_\C}\ar{dr}[swap]{F}&\C^\wg\ar{d}{\widetilde F}&I\ar{l}[swap]{\al}\\
@@ -2948,10 +2948,10 @@ We claim
 h(\C_A)^\dg(F\ci j(\C_A))\ci\ld\iso h(\C)^\dg(F)\ci j((\C^\wg)_A)
 \end{equation}
 
-\nn(see the diagram \qr{qcd} below).
+\nn(see the commutative diagram \qr{qcd} below).
 
 \begin{proof} 
-Consider the diagram 
+Consider the commutative diagram 
 \begin{equation}\lb{qcd}
 \begin{tikzcd}
 \C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\ci j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
@@ -3617,7 +3617,7 @@ By Proposition 3.3.3 of the book, stated as Proposition~\ref{333} p.~\pr{333} be
 $$
 e:A\left(\col_i X_i\right)\to\lim_iA(X_i)
 $$ 
-is bijective. Let us abbreviate $(Y\to A)\in\C_A$ by $Y$, and consider the diagram 
+is bijective. Let us abbreviate $(Y\to A)\in\C_A$ by $Y$, and consider the commutative diagram 
 $$
 \begin{tikzcd}
 \col_Y\Hom_\C(\col_iX_i,Y)\ar{r}{a}\ar{dd}[swap]{d}&\col_Y\lim_i\Hom_\C(X_i,Y)\ar{d}{b}\\ 
@@ -3720,7 +3720,7 @@ $$
 \col\al\ar{r}[swap]{f}&\ds\col_j\col_{i,u}\al(i,j,u).
 \end{tikzcd}
 $$
-We construct the diagram 
+We construct the commutative diagram 
 \begin{equation}\lb{iju}
 \begin{tikzcd}
 \al(i,j,u)\ar{d}[swap]{q_{iju}}\ar{r}{\id}&\al(i,j,u)\ar{d}{p_{iju}}\\ 
@@ -4387,7 +4387,7 @@ $$
 Equality~(a) following from the functoriality of $\xi$ (see diagram below), Equality~(b) following from the definition of $\rho$, Equality~(c) following from \qr{rhoxi}, and Equality~(d) following from the definition of $\pp$.
 \end{proof}
 
-For the reader's convenience, we add the diagram 
+For the reader's convenience, we add the commutative diagram 
 $$
 \begin{tikzcd}
 Z&z\in\Hom_\C(Z,X)\ar{r}{\xi_Z}\ar{d}[swap]{\ci w}&\Hom_\C(Z,Y)\ar{d}{\ci w}\\ 
@@ -6119,14 +6119,12 @@ $$
 $$
 
 \nn More precisely, if, in the diagram 
-%
 \begin{equation}\lb{rccs}
 \begin{tikzcd}
 R_\SSS\oo H_\C(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{\SSS\tm\SSS^{\op}}\oo H_\C(X,Y)\ar[leftrightarrow]{d}&R_{\SSS^{\op}}\oo H_\C(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{dl}\\ 
 &\oo H_{\C_\SSS}(X,Y),
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 where we have written $\oo H$ for $\Hom$ to save space, the horizontal arrows are the natural maps, and the other arrows are the above bijections, then \qr{rccs} commutes and all its arrows are bijective.
 \end{s}
 
@@ -8211,13 +8209,33 @@ Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\al:I\to\C$ 
 This follows immediately from Exercise 1.7 p. 31 of the book.
 \end{proof}
 
-We give a slightly more detailed writing of the second sentence in Step~(a) of the proof of Lemma 9.3.1 p.~224 of the book. This second sentence is 
+%We give a slightly more detailed writing of the second sentence in Step~(a) of the proof of Lemma 9.3.1 p.~224 of the book. This second sentence is 
 
-``Set $S:=\col_iY_i(G)\subset Y(G)$.'' 
+%``Set $S:=\col_iY_i(G)\subset Y(G)$.'' 
 
-Here is the rewriting: 
+%Here is the rewriting: 
 
-The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism.
+%The coprojection $Y_i\to Y$ being a monomorphism, so is $Y_i(G)\to Y(G)$. As small filtrant inductive limits are exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism.
+
+We add a few details to the beginning of the proof of Lemma 9.3.1. 
+
+Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In particular the natural morphism $Y_i\to Y$ is a monomorphism. Since small
+filtrant inductive limits are exact, 
+$$
+\col_iY_i\iso\Ker(Y\parar Y\sqcup_{\col_iX_i}Y)\iso\Ima(\col_iX_i\to Y)\iso Y,
+$$ 
+where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the above observations %chain of isomorphism implies
+imply that the natural morphism $\col_iY_i\to Y$ is an isomorphism, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular, the $Y_i(G)$, which can be viewed as subsets of $Y(G)$, satisfy 
+$$
+\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).
+$$ 
+
+\nn(a) Assume that $\card(Y(G))<\pi$. %Set $S=\col_iY_i(G)\subset Y(G)$. Then $\card(S)\le \card(Y(G))<\pi$. 
+Then $\card(Y(G))<\pi$. By Corollary 9.2.12, $Y(G)\in\Set_\pi$ and this implies 
+$$
+\col_{i\in I}\Hom_\Set(Y(G),Y_i(G))\xr\sim\Hom_\Set(Y(G),Y(G)).
+$$ 
+Hence, there exist $i_0$ and a map $Y(G)\to Y_{i_0}(G)$ such that the composition $Y(G)\to Y_{i_0}(G)\hookrightarrow Y(G)$ is the identity. Therefore $Y_{i_0}(G)=Y(G)$ and hence, $Y_{i_0}(G)\to Y_i (G)$ is bijective for any $i_0\to i$. Hence $Y_{i_0}\to Y_i$ is an isomorphism, which implies that $Y_{i_0}\to Y$ is an isomorphism. Applying Proposition 5.1.2 (iv), we find that $X_{i_0}\to Y$ is an epimorphism. 
 
 %
 
@@ -8272,7 +8290,7 @@ that is, we must show that there is a morphism $s_1:i_0\to i_1$ in $I$ such that
 $$
 N_s:=\Ker(A\parar X_i).
 $$ 
-By Corollary 3.2.3 (i) p.~79 of the book, $I^{i_0}$ is filtrant and the forgetful functor $I^{i_0}\to I$ is cofinal. One of our assumption, namely Condition (9.3.1) (iii) in Section~\ref{931} p.~\pr{931}, says that small filtrant inductive limits are exact in $\C$. In particular, $\col_{s\in I^{i_0}}$ is exact in $\C$, and we get  
+By Corollary 3.2.3 (i) p.~79 of the book, $I^{i_0}$ is filtrant and the forgetful functor $I^{i_0}\to I$ is cofinal. One of our assumptions, namely Condition (9.3.1) (iii) in Section~\ref{931} p.~\pr{931}, says that small filtrant inductive limits are exact in $\C$. In particular, $\col_{s\in I^{i_0}}$ is exact in $\C$, and we get  
 $$
 \col_{s\in I^{i_0}}N_s\iso\Ker\left(A\parar\col_{s\in I^{i_0}}X_i\right)\iso\Ker(A\parar X)\iso A. 
 $$ 
@@ -8297,17 +8315,15 @@ $$
 can be completed to a commutative diagram as indicated (the morphism $B\to A$ being an epimorphism),
 
 \nn(b) the diagram of solid arrows 
-%
 \begin{equation}\lb{fa}
 \begin{tikzcd}
 C\ar[dashed,two heads]{r}{a}\ar[dashed]{d}[swap]{x}&A\ar{d}{f}\\ 
 X_{i_0}\ar{r}[swap]{p_{i_0}}&X
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 can be completed to a commutative diagram as indicated, with $\card(C(G))<\pi$ (the morphism $C\to A$ being an epimorphism).
 
-We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f}, and thus Proposition~\ref{932} p.~\pr{932}. 
+We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \ref{pig=f}, and thus Proposition~\ref{932} p.~\pr{932}.% Claim~\ref{pig=f} creates an overful
 
 \nn$\bu$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\tm_XX_i$. As $\col_i$ is exact in $\C$, we have $\col_iY_i\iso A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pr{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
@@ -8434,7 +8450,7 @@ Conditions (i)--(v) of Section~\ref{931} p.~\pr{931} hold; $\pi_0$ and $\pi_1$ a
 
 (e) if $A$ is a set with $\card(A)<\pi_0$, then $\card\big(G^{\sqcup A}(G)\big)<\pi$.
 
-\nn Condition~(a) holds because $\pi_0$ is infinite regular by assumption, and $\pi_0$ is infinite regular by Statement~(iv) p.~217 of the book. Condition~(b) holds by Proposition \ref{932} p.~\pr{932}. Condition~(c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and 
+\nn Condition~(a) holds because $\pi_0$ is infinite regular by assumption, and $\pi$ is infinite regular by Statement~(iv) p.~217 of the book. Condition~(b) holds by Proposition \ref{932} p.~\pr{932}. Condition~(c) is proved as follows: if $\pi'<\pi$, then $\pi'\le2^{\pi_1}$ and 
 $$
 \pi'^{\pi_0}\le(2^{\pi_1})^{\pi_0}=2^{\pi_0\pi_1}=2^{\pi_1}<\pi.
 $$ 
@@ -8448,15 +8464,15 @@ We state Lemma 9.3.3 for the reader's convenience:
 If Condition \ref{ass} holds, if $A$ is a set of cardinal $<\pi$, and if $X$ is a quotient of $G^{\sqcup A}$, then $\card(X(G))<\pi$.
 \end{lem}
 
-The beginning of the proof of Lemma 9.3.3 in the book uses implicitly the following two lemmas, which we prove for the sake of completeness.
-
-\begin{lem}\lb{cardipi}
-If $A$ and $\pi$ are as above, and if $I:=\{B\subset A\,|\,\card(B)<\pi\}$, then we have $\card(I)<\pi$. 
-\end{lem}
+The beginning of the proof of Lemma 9.3.3 in the book uses implicitly the following two lemmas, which we prove for the sake of completeness. 
 
 \begin{lem}\lb{ord}
 If $\al$ is a cardinal, then the cardinal of the set of those cardinals $\bt$ such that $\bt<\al$ does not exceed $\al$.
-\end{lem}
+\end{lem} 
+
+\begin{lem}\lb{cardipi}
+If $\pi_0,\pi$ and $A$ are as above, and if $I:=\{B\subset A\,|\,\card(B)<\pi_0\}$, then we have $\card(I)<\pi$. 
+\end{lem} 
 
 \begin{proof}[Proof of Lemma~\ref{ord}]
 Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ with $x\in X$ implies $x\in S$. In particular $X_{<x}$ (obvious notation) is a segment of $X$ for any $x$ in $X$. We take for granted the following well-known facts:
@@ -8468,7 +8484,7 @@ Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ 
 \nn$\bu$ if $W$ is a well-ordered set, then the assignment $w\mt W_{<w}$ is an isomorphism of well-ordered sets from $W$ onto the set of proper segments of $W$.
 
 Let $A$ be a well-ordered set of cardinal $\al$, and, for each cardinal $\bt$ with $\bt<\al$, let $B$ be a well-ordered set of cardinal $\bt$. Then $B$ is isomorphic to $A_{<a}$ for a unique $a$ in $A$, and the map $\bt\mt a$ is injective.
-\end{proof}
+\end{proof} 
 
 \begin{proof}[Proof of Lemma~\ref{cardipi}] 
 Putting $\al:=\card(A)$ we have
@@ -8476,7 +8492,7 @@ $$
 \card(I)=\sum_{\pi'<\pi_0}\ \binom{\al}{\pi'}\le\sum_{\pi'<\pi_0}\ \al^{\pi_0}<\pi,
 $$ 
 the last inequality following from Lemma~\ref{ord}, (c) and (a). 
-\end{proof}
+\end{proof} 
 
 \subsubsection{Theorem 9.3.4 p. 227}
 
@@ -9401,7 +9417,7 @@ W'\ar{r}&V'\ar{r}&U'\ar{r}&TW'.
 \end{tikzcd}
 $$ 
 
-Going back to the proof of TR5 on p.~275, we consider the diagram
+Going back to the proof of TR5 on p.~275, we consider the commutative diagram
 $$
 \begin{tikzcd}
 X\ar[equal]{dd}\ar{r}{f}&Y\ar[equal]{d}\ar{r}{\al(f)}&TX\oplus Y\ar{r}{\bt(f)}&TX\\
@@ -9592,10 +9608,9 @@ $$
 \Hom_{\oo K(\C)}:\oo K(\C)\tm\oo K(\C)^{\op}\to\Mod(\mathbb Z)
 $$ 
 
-\nn give rise to the diagram 
-%
-\begin{equation}\lb{r0hom}
-\begin{tikzcd}
+\nn give rise to the commutative diagram 
+\begin{equation}\lb{r0hom} 
+\begin{tikzcd} 
 R^0\oo H_\C^\bu(X,\ \ )(Y)\ar[leftrightarrow]{d}\ar{r}&
 R^0\oo H_\C^\bu(X,Y)\ar[leftrightarrow]{d}&
 R^0\oo H_\C^\bu(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{d}\\ 
@@ -9606,8 +9621,7 @@ R\oo H_{\oo K(\C)}(\ \ ,Y)(X)\ar{l}\ar[leftrightarrow]{dl}\\
 %
 &\oo H_{\oo D(\C)}(X,Y),
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 where we have written $\oo H$ for $\Hom$ to save space, and where the horizontal arrows are the natural maps and the other arrows are the natural bijections, and where 
 $$
 R(\Hom_{\oo K(\C)}(X,\ \ ))(Y),\quad R\Hom_{\oo K(\C)}(X,Y),\quad R(\Hom_{\oo K(\C)}(\ \ ,Y))(X)
@@ -10265,7 +10279,7 @@ J\ar{dr}\ar{rr}{\pp}&&I\ar{dl}\\
 {}&\C,
 \end{tikzcd}
 $$ 
-representing the general setting of Section 2.3 p.~50 of the book, is now replaced by the diagram 
+representing the general setting of Section 2.3 p.~50 of the book, is now replaced by the commutative diagram 
 $$
 \begin{tikzcd}
 (\C_Y)^{\op}\ar{dr}\ar{rr}{f^\tau}&&(\C_X)^{\op}\ar{dl}\\ 
