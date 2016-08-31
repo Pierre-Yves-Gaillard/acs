@@ -8613,11 +8613,11 @@ The category $\C^X$ is again nonempty, small, and admits small well-ordered uppe
 We recall the notion of {\em construction by transfinite induction\index{transfinite induction}}. 
 
 \begin{thm}[Construction by Transfinite Induction]\lb{meta} 
-Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a set, $f:I\to S$ is a surjection, and we have 
+Let $\U$ be a universe, let $F:\U\to\U$ be a map, and let $I$ be a well-ordered $\U$-set. Then there is a unique pair $(S,f)$ such that $S$ is a $\U$-set, $f:I\to S$ is a surjection, and we have 
 $$
 f(i)=F(f(j)_{j<i})
 $$ 
-for all $i$ in $I$, where $f(j)_{j<i}$ is viewed as a family of elements of $\{f(j)\,|\,j\in I,j<i\}$ indexed by $\{j\in I\,|\,j<i\}$. (In particular, $S$ is a $\U$-set.)
+for all $i$ in $I$, where $f(j)_{j<i}$ is viewed as a family of elements of $\{f(j)\,|\,j\in I,j<i\}$ indexed by $\{j\in I\,|\,j<i\}$. %(In particular, $S$ is a $\U$-set.)
 \end{thm}
 
 \begin{proof}
@@ -8763,30 +8763,28 @@ Let $\C$ be a $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
 
-\nn(9.5.2) (ii) Any diagram of solid arrows
-%
+\nn(9.5.2) (ii) Any diagram of solid arrows 
 \begin{equation}\lb{952ii}
 \begin{tikzcd}
 X\ar{d}[swap]{f}\ar{r}{u}&Y\ar[dashed]{d}{g}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y',
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 with $u$ in $\Mor(\C_0)$ and $f$ in $\Mor(\C)$, can be completed to a commutative diagram with dashed arrows $u'$ in $\Mor(\C_0)$ and $g$ in $\Mor(\C)$.
 
-\begin{lem}[Lemma 9.5.3 p. 231]
+\begin{lem}[Lemma 9.5.3 p. 231] 
 If $X'$ is in $\C_0$, if $I$ is a small set, and if  
 $$
 (u_i:X_i\to Y_i)_{i\in I},\quad(f_i:X_i\to X')_{i\in I}
 $$ 
-are families of morphisms in $\C_0$ and $\C$ respectively, then there is a morphism $u'$ in $\C_0$ and a family $(g_i)_{i\in I}$ of morphisms in $\C$ such that $g_i\ci u_i=u'\ci f_i$ for all $i$:
+are families of morphisms in $\C_0$ and $\C$ respectively, then there is an object $Y'$ of $\C_0$, a morphism $u':X'\to Y'$ in $\C_0$, and a family $(g_i:Y_i\to Y')_{i\in I}$ of morphisms in $\C$ such that $g_i\ci u_i=u'\ci f_i$ for all $i$:
 $$
 \begin{tikzcd}
 X_i\ar{d}[swap]{f_i}\ar{r}{u_i}&Y_i\ar[dashed]{d}{g_i}\\ 
 X'\ar[dashed]{r}[swap]{u'}&Y'.
 \end{tikzcd}
 $$ 
-\end{lem}
+\end{lem} 
 
 \begin{proof}
 We assume, as we may, that $I$ is nonempty, well-ordered, and admits a maximum $m$. Let $0$ be the least element of $I$. We shall complete the following Task $(T_i)$ by transfinite induction on $i\in I$ (see Theorem~\ref{meta} p.~\pr{meta}): 
