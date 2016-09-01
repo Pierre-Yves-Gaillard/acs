@@ -3812,8 +3812,7 @@ Let $F:\C\to\C'$ be a functor and assume that $\C$ admits finite projective limi
 \begin{cor}\lb{bre}
 In the setting of Proposition 2.7.1 p.~62 of the book, the functors
 $$
-\A^\C\to\A,\quad F\mt(\oo h_\C^\dg F)(A)\quad\text{and}\quad
-\C^\wg\to\A,\quad A\mt(\oo h_\C^\dg F)(A)
+\A^\C\to\A,\quad F\mt(\oo h_\C^\dg F)(A)\quad\text{and}\quad\C^\wg\to\A,\quad A\mt(\oo h_\C^\dg F)(A)
 $$ 
 are right exact. 
 \end{cor}
@@ -3825,8 +3824,7 @@ This follows from Proposition~\ref{333} and \S\ref{bil} p.~\pr{bil}.
 \begin{cor}\lb{bre2}
 In the setting of \S\ref{opddagg} p.~\pr{opddagg}, the functors
 $$
-\A^{\C^{\op}}\to\A,\quad F\mt(h^{\op})^\ddg(F)(A)\quad\text{and}\quad
-\C^\wg\to\A,\quad A\mt(h^{\op})^\ddg(F)(A)
+\A^{\C^{\op}}\to\A,\quad F\mt(h^{\op})^\ddg(F)(A)\quad\text{and}\quad\C^\wg\to\A,\quad A\mt(h^{\op})^\ddg(F)(A)
 $$ 
 are left exact. 
 \end{cor} 
@@ -8189,7 +8187,7 @@ For the reader's convenience we state the lemma:
 Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pr{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category, let $\al:I\to\C$ be a functor, and let $\col\al\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\al(i_0)\to Y$ is an epimorphism.
 \end{lem}
 
-The proof of Lemma~\ref{l331} uses twice the following lemma:
+The proof of Lemma~\ref{l331} in the book uses twice the following lemma:
 
 \begin{lem}\lb{ppi} 
 Let $\C$ be a category, let $\pi$ be an infinite cardinal, and let $\al:I\to\C$ be a functor admitting an inductive limit $X$ in $\C$. Assume that the coprojections $p_i:\al(i)\to X$ are monomorphisms, and consider the conditions below:
@@ -8219,23 +8217,22 @@ This follows immediately from Exercise 1.7 p. 31 of the book.
 
 We add a few details to the beginning of the proof of Lemma 9.3.1. 
 
-Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In particular the natural morphism $Y_i\to Y$ is a monomorphism. Since small
-filtrant inductive limits are exact, 
-$$
-\col_iY_i\iso\Ker(Y\parar Y\sqcup_{\col_iX_i}Y)\iso\Ima(\col_iX_i\to Y)\iso Y,
-$$ 
-where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the above observations %chain of isomorphism implies
-imply that the natural morphism $\col_iY_i\to Y$ is an isomorphism, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular, the $Y_i(G)$, which can be viewed as subsets of $Y(G)$, satisfy 
-$$
-\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).
-$$ 
+Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In particular the natural morphism $Y_i\to Y$ is a monomorphism. Since small filtrant inductive limits are exact, 
+\begin{equation}\lb{col_iY_i}
+\col_iY_i\xr\sim\Ker(Y\parar Y\sqcup_{\col_iX_i}Y)\xr\sim\Ima(\col_iX_i\to Y)\xr\sim Y,
+\end{equation} 
+where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the $Y_i(G)\to Y(G)$ are monomorphisms too by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. 
+\begin{uspb}
+The book claims that $\col_iY_i(G)\to Y(G)$ is also a monomorphism, but I'm unable to prove it.\index{unsolved problem}
+\end{uspb}
+%Small filtrant inductive limits being exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism. %the $Y_i(G)$, which can be viewed as subsets of $Y(G)$ by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}, satisfy $$\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).$$ £
 
 \nn(a) Assume that $\card(Y(G))<\pi$. %Set $S=\col_iY_i(G)\subset Y(G)$. Then $\card(S)\le \card(Y(G))<\pi$. 
 Then $\card(Y(G))<\pi$. By Corollary 9.2.12, $Y(G)\in\Set_\pi$ and this implies 
 $$
 \col_{i\in I}\Hom_\Set(Y(G),Y_i(G))\xr\sim\Hom_\Set(Y(G),Y(G)).
 $$ 
-Hence, there exist $i_0$ and a map $Y(G)\to Y_{i_0}(G)$ such that the composition $Y(G)\to Y_{i_0}(G)\hookrightarrow Y(G)$ is the identity. Therefore $Y_{i_0}(G)=Y(G)$ and hence, $Y_{i_0}(G)\to Y_i (G)$ is bijective for any $i_0\to i$. Hence $Y_{i_0}\to Y_i$ is an isomorphism, which implies that $Y_{i_0}\to Y$ is an isomorphism. Applying Proposition 5.1.2 (iv), we find that $X_{i_0}\to Y$ is an epimorphism. 
+Hence, there exist $i_0$ and a map $Y(G)\to Y_{i_0}(G)$ such that the composition $Y(G)\to Y_{i_0}(G)\mono Y(G)$ is the identity. Therefore $Y_{i_0}(G)=Y(G)$ and hence, $Y_{i_0}(G)\to Y_i (G)$ is bijective for any $i_0\to i$ by Lemma~\ref{ppi}. Hence $Y_{i_0}\to Y_i$ is an isomorphism, which implies, again by Lemma~\ref{ppi}, that $Y_{i_0}\to Y$ is an isomorphism. Applying Proposition 5.1.2 (iv), we find that $X_{i_0}\to Y$ is an epimorphism. 
 
 %
 
