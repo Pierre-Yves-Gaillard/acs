@@ -446,7 +446,10 @@ P.~228: It might be better to state Part~(iv) of Corollary 9.3.8 as ``$G$ is in 
 
 \nn$*$ P.~229, proof of 9.4.3 (i): it might be better to write ``containing $\SSS$ strictly'' (or ``properly''), instead of just ``containing $\SSS$''. 
 
-\nn$*$ P.~229, proof of 9.4.4: ``The category $\C^X$ is nonempty, essentially small ...'': the adverb ``essentially'' is not necessary since $\C$ is supposed to be small.
+\nn$*$ P.~229, proof of 9.4.4: ``The category $\C^X$ is nonempty, essentially small ...'': the adverb ``essentially'' is not necessary since $\C$ is supposed to be small. 
+
+%\begin{s}\lb{964i} P.~237: Corollary 9.6.4 (i): $F:\C\to\Set$ should be $F:\C^{\op}\to\Set$.\end{s}
+%\nn$*$ P.~237: Corollary 9.6.4 (i): $F:\C\to\Set$ should be $F:\C^{\op}\to\Set$.
 
 \nn$*$ P.~237: ``Proposition 9.6.3'' should be ``Theorem 9.6.3'' (twice). 
 
@@ -8221,10 +8224,8 @@ Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In parti
 \begin{equation}\lb{col_iY_i}
 \col_iY_i\xr\sim\Ker(Y\parar Y\sqcup_{\col_iX_i}Y)\xr\sim\Ima(\col_iX_i\to Y)\xr\sim Y,
 \end{equation} 
-where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the $Y_i(G)\to Y(G)$ are monomorphisms too by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. 
-\begin{uspb}
-The book claims that $\col_iY_i(G)\to Y(G)$ is also a monomorphism, but I'm unable to prove it.\index{unsolved problem}
-\end{uspb}
+where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the maps $Y_i(G)\to Y(G)$ are injective by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. This is easily seen to imply that $\col_iY_i(G)\to Y(G)$ is also injective. 
+%\begin{uspb}The book claims that $\col_iY_i(G)\to Y(G)$ is an injection, but I'm unable to prove it.\index{unsolved problem}\end{uspb}
 %Small filtrant inductive limits being exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism. %the $Y_i(G)$, which can be viewed as subsets of $Y(G)$ by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}, satisfy $$\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).$$ £
 
 \nn(a) Assume that $\card(Y(G))<\pi$. %Set $S=\col_iY_i(G)\subset Y(G)$. Then $\card(S)\le \card(Y(G))<\pi$. 
@@ -8843,24 +8844,18 @@ We assume (as we may) that Task $(T_j)$ has already been achieved for $j<i$, {\e
 
 It suffices to define $Y'_{<i},Y'_i,h_i,v_i,w_i,$ and $p_{ij}$ for $j<i$, in such a way that the required conditions are still satisfied. 
 
-For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by
-%
+For $k<j<i$ we define $u_{jk}:Y'_k\to Y'_j$ by 
 \begin{equation}\lb{ujk}
 u_{jk}:=w_j\ci p_{jk}.
-\end{equation}
-%
+\end{equation} 
 By \qr{pijk} we have $u_{jk}\ci u_{k\ell}=u_{j\ell}$ for all $\ell<k<j<i$. In particular, 
-%
 \begin{equation}\lb{y'j}
 (Y'_j)_{j<i}\text{ is an inductive system in }\C_0.
-\end{equation}
-%
-We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<i}$. We also put
-%
+\end{equation} 
+We denote its limit (which exists in $\C_0$ thanks to (9.5.2) (i)) by $Y'_{<i}$, and we write $p_{ij}$ for the coprojection $Y'_j\to Y'_{<i}$. We also set 
 \begin{equation}\lb{vi}
 v_i:=p_{i0}\ci v_0,
-\end{equation}
-%
+\end{equation} 
 and we define
 $$
 Y'_{<i}\xr{w_i}Y'_i\xl{h_i}Y_i
@@ -8906,37 +8901,29 @@ This proves \qr{pijwj}.
 Task $(T_i)$ has been performed for the specific $i$ we have been considering, and thus Task $(T_i)$ has been completed for all $i$ in $I$. [End of the accomplishment of Task $(T_i)$ for all $i$.]
 
 In particular Task $(T_m)$, where, remember, $m$ is the maximum of $I$, has also been achieved. Putting $Y':=Y'_m$ and 
-%
 \begin{equation}\lb{gi}
 g_i:=u_{mi}\ci h_i\ \forall\ i<m,
-\end{equation}
-%
+\end{equation} 
 \begin{equation}\lb{gm}
 g_m:=h_m,
-\end{equation}
-%
+\end{equation} 
 \begin{equation}\lb{u'}
 u':=w_m\ci v_m,
-\end{equation}
-%
-we get
-% 
+\end{equation} 
+we get 
 \begin{align*}
 g_i\ci u_i&=u_{mi}\ci h_i\ci u_i&\text{by \qr{gi}}\\ 
 &=u_{mi}\ci w_i\ci v_i\ci f_i&\text{by \qr{hiui2}}\\ 
 &=w_m\ci p_{mi}\ci w_i\ci v_i\ci f_i&\text{by \qr{ujk}}\\ 
 &=w_m\ci v_m\ci f_i&\text{by \qr{pikwk}}\\ 
 &=u'\ci f_i&\text{by \qr{u'}}
-\end{align*}
-%
+\end{align*} 
 for $i<m$, and 
-% 
 \begin{align*}
 g_m\ci u_m&=h_m\ci u_m&\text{by \qr{gm}}\\ 
 &=w_m\ci v_m\ci f_m&\text{by \qr{hiui2}}\\ 
 &=u'\ci f_m&\text{by \qr{u'}}.
 \end{align*}
-%
 \end{proof}
 
 %%
@@ -9026,12 +9013,10 @@ P.~236, proof of Theorem 9.6.2.
 
 Line 3: One could change ``Let $\F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
 
-Line 6: Condition (9.5.2) (i) (see Section~\ref{954955} p.~\pr{954955}) follows from 
-%
+Line 6: Condition (9.5.2) (i) (see Section~\ref{954955} p.~\pr{954955} above) follows from 
 \begin{lem}\lb{952i}
 Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C$ and are exact. Let $\al:I\to\C$ be a functor such that $I$ is small and filtrant, and $\al(s):\al(i)\to\al(j)$ is a monomorphism for all morphism $s:i\to j$ in $I$. Then the coprojection $p_i:\al(i)\to\col\al$ is a monomorphism.
-\end{lem}
-%
+\end{lem} 
 \begin{proof}
 By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the forgetful functor $\pp:I^i\to I$ is cofinal. Define the morphism of functors 
 $$
@@ -9052,6 +9037,10 @@ $$
 \end{s}
 
 %%
+
+%\begin{s}%£ Corollary 9.6.4 (i) p.~237 has already been stated as Proposition 8.3.27 (ii) p.~186. (See \S\ref{964i} p.~\pr{964i}.) \end{s}
+
+%
 
 \begin{s}
 Pp 237-239. For the reader's convenience we first reproduce (with minor changes) two corollaries with their proof. 
