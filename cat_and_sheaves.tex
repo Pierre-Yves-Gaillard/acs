@@ -8226,7 +8226,7 @@ Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In parti
 \end{equation} 
 where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the maps $Y_i(G)\to Y(G)$ are injective by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. This is easily seen to imply that $\col_iY_i(G)\to Y(G)$ is also injective. 
 %\begin{uspb}The book claims that $\col_iY_i(G)\to Y(G)$ is an injection, but I'm unable to prove it.\index{unsolved problem}\end{uspb}
-%Small filtrant inductive limits being exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism. %the $Y_i(G)$, which can be viewed as subsets of $Y(G)$ by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}, satisfy $$\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).$$ £
+%Small filtrant inductive limits being exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism. %the $Y_i(G)$, which can be viewed as subsets of $Y(G)$ by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}, satisfy $$\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).$$
 
 \nn(a) Assume that $\card(Y(G))<\pi$. %Set $S=\col_iY_i(G)\subset Y(G)$. Then $\card(S)\le \card(Y(G))<\pi$. 
 Then $\card(Y(G))<\pi$. By Corollary 9.2.12, $Y(G)\in\Set_\pi$ and this implies 
@@ -9038,7 +9038,7 @@ $$
 
 %%
 
-%\begin{s}%£ Corollary 9.6.4 (i) p.~237 has already been stated as Proposition 8.3.27 (ii) p.~186. (See \S\ref{964i} p.~\pr{964i}.) \end{s}
+%\begin{s}% Corollary 9.6.4 (i) p.~237 has already been stated as Proposition 8.3.27 (ii) p.~186. (See \S\ref{964i} p.~\pr{964i}.) \end{s}
 
 %
 
@@ -9069,11 +9069,40 @@ $$
 defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a monomorphism by Proposition 5.2.3 (iv) p.~118 of the book. 
 \end{proof}
 
-We now add three parenthetical points: 
+%We now add three parenthetical points: 
 
 The first sentence of the proof of Lemma 9.6.8 p.~238 of the book follows from Proposition 5.2.3 (iv) p.~118 of the book. 
 
-The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book. 
+The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book. The end of the proof of Lemma 9.6.9 uses the following lemma:
+
+\begin{lem} 
+If 
+$$
+\begin{tikzcd}
+0\ar[d]\ar[r]&Z\ar[d,"c"]\ar[r,"a"]&Y\ar[d,"d","\sim"']\ar[r,"b"]&X\ar[d,rightarrowtail,"e"]\\ 
+0\ar[r,]&W\ar[r,"f"']&V\ar[r,"g"']&U
+\end{tikzcd}
+$$ 
+is an exact commutative diagram in an abelian category, and if $d$ is an isomorphism and $e$ a monomorphism, then $c$ is an isomorphism.
+\end{lem} 
+
+\begin{proof}
+(In this proof we omit the composition symbols $\ci$ and most of the parenthesis, and we freely use Lemma~\ref{8311} p.~\pr{8311} and Lemma~\ref{8312} p.~\pr{8312}.) As $c$ is clearly a monomorphism, it suffices to show that $c$ is an epimorphism. Let $w:T\to W$ be a morphism. It suffices to prove that the solid diagram 
+$$
+\begin{tikzcd} 
+S\ar[d,dashed,"z"']\ar[r,dashed,two heads,"h"]&T\ar[d,"w"]\\ 
+Z\ar[r,"c"']&W
+\end{tikzcd}
+$$ 
+can be completed as indicated. We have $ebd^{-1}fw=gfw=0$, and thus $bd^{-1}fw=0$. This implies the existence of a commutative diagram 
+$$
+\begin{tikzcd} 
+S\ar[d,"z"']\ar[r,two heads,"h"]&T\ar[d,"d^{-1}fw"]\\ 
+Z\ar[r,"a"']&Y\ar[r,"b"']&X,
+\end{tikzcd}
+$$ 
+yielding $fwh=dd^{-1}fwh=daz=fcz$, and thus $wh=cz$. 
+\end{proof} 
 
 In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book.
 \end{s}
