@@ -6127,7 +6127,40 @@ R_\SSS\oo H_\C(X,\ \ )(Y)\ar[leftrightarrow]{dr}\ar{r}&R_{\SSS\tm\SSS^{\op}}\oo 
 \end{tikzcd}
 \end{equation} 
 where we have written $\oo H$ for $\Hom$ to save space, the horizontal arrows are the natural maps, and the other arrows are the above bijections, then \qr{rccs} commutes and all its arrows are bijective.
-\end{s}
+\end{s} 
+
+%
+
+\begin{s} 
+Exercise 7.4 p.~164. 
+
+Statement: In a category endowed with a right multiplicative system $\SSS$, if there is a diagram 
+$$
+\begin{tikzcd}
+Z\ar[d,"c"']\ar[r,"a"]&Y&X\ar[l,"s"']\ar[d,"d"]\\ 
+W\ar[r,"b"']&V&U\ar[l,"t"]
+\end{tikzcd}
+$$ 
+with $s,t\in\SSS$ and $Q(d)\ci Q(s)^{-1}\ci Q(a)=Q(t)^{-1}\ci Q(b\ci c)$, then there is a commutative diagram 
+$$
+\begin{tikzcd}
+Z\ar[d,"c"']\ar[r,"a"]&Y\ar[d,"e"]&X\ar[l,"s"']\ar[d,"d"]\\ 
+W\ar[r,"f"']&T&U\ar[l,"u"]
+\end{tikzcd}
+$$ 
+with $u\in\SSS$ and $Q(u)^{-1}\ci Q(f)=Q(t)^{-1}\ci Q(b)$. [This statement solves clearly the exercise.]
+
+Proof: We build a commutative diagram 
+$$
+\begin{tikzcd}
+Z\ar[ddd,"c"']\ar[r,"a"]&Y\ar[d,"g"']&X\ar[l,"s"']\ar[ddd,"d"]\\ 
+&S\ar[d,"w"']\\ 
+&T\\ 
+W\ar[ur,"f"]\ar[r,"b"']&V\ar[u,"h"]&U\ar[l,"t"]\ar[ul,"u"]\ar[uul,"v"']
+\end{tikzcd}
+$$ 
+with $u,v,w\in\SSS$ by forming firstly $g$ and $v$, secondly $h$ and $w$, and thirdly $f$ and $u$. 
+\end{s} 
 
 %%%%
 
@@ -9113,11 +9146,9 @@ In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pr
 
 \sbs{Definition of a triangulated category\index{triangulated category}\index{May (Peter May)}}
 
-The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May:  
-%
+The purpose of this Section is to spell out the observation made by J. P. May that, in the definition of a triangulated category, Axiom TR4 of the book (p.~243) follows from the other axioms. See Section~1 of {\em The axioms for triangulated categories} by J. P. May: 
 \begin{center}\href{http://www.math.uchicago.edu/~may/MISC/Triangulate.pdf}{http://www.math.uchicago.edu/$\sim$may/MISC/Triangulate.pdf} 
-\end{center}
-%
+\end{center} 
 Various related links are given in the document \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}. 
 
 To make things as clear as possible, we remove TR4 from the definition of a triangulated category and prove that any triangulated category satisfies TR4:
@@ -9138,7 +9169,7 @@ Z^0\ar[dashed]{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar[dashed]{r}&Z^2\ar[dashed]{d}\ar[da
 TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0 
 \end{tikzcd}
 $$ 
-be a diagram of solid arrows in $\DD$. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that the bottom right small square anti-commutes, the eight other small squares commute, and all rows and columns are distinguished triangles. 
+be a diagram of solid arrows in $\DD$. Assume that the first two rows and columns are distinguished triangles, and the top left square commutes\footnote{I think the assumption that the top left square commutes is implicit in the book.}. Then the dotted arrows may be completed in order that the bottom right square anti-commutes, the eight other squares commute, and all rows and columns are distinguished triangles. 
 \end{thm}
 
 \begin{cor}\lb{may}
@@ -9224,10 +9255,10 @@ Y^2\ar{r}[swap]{j}&Z^2\ar{r}[swap]{k}&TX^2\ar{r}[swap]{-Ti}&TY^2,
 \end{tikzcd}
 \end{equation}
 where 
-\begin{equation}\lb{c3}
+\begin{equation}\lb{c3} 
 X^2\xr iY^2\xr jZ^2\xr kTX^2\text{ is a distinguished triangle.} 
 \end{equation} 
-We want to prove that the bottom right small square of 
+We want to prove that the bottom right square of 
 \begin{equation}\lb{v4}
 \begin{tikzcd}
 X^0\ar{r}{u}\ar{d}[swap]{f}&X^1\ar{d}\ar{r}{v}&X^2\ar{d}{i}\ar{r}{w}&TX^0\ar{d}{Tf}\\ 
@@ -9236,14 +9267,14 @@ Z^0\ar{r}\ar{d}[swap]{h}&Z^1\ar{d}\ar{r}&Z^2\ar{d}{k}\ar{r}{\ell}&TZ^0\ar{d}{-Th
 TX^0\ar{r}[swap]{Tu}&TX^1\ar{r}[swap]{Tv}&TX^2\ar{r}[swap]{-Tw}&T^2X^0
 \end{tikzcd}
 \end{equation} 
-anti-commutes, that the eight other small squares commute, and that all rows and columns are distinguished triangles.
+anti-commutes, that the eight other squares commute, and that all rows and columns are distinguished triangles.
 
-We list the nine small squares of each of the diagrams (\ref{v1}), (\ref{v2}), (\ref{v3}), (\ref{v4}) as follows:
+We list the nine squares of each of the diagrams (\ref{v1}), (\ref{v2}), (\ref{v3}), (\ref{v4}) as follows:
 $$
 \begin{matrix}1&2&3\\ 4&5&6\\ 7&8&9
 \end{matrix}
 $$ 
-and we denote the $j$-th small square of Diagram $(i)$ by $(i)j$. 
+and we denote the $j$-th square of Diagram $(i)$ by $(i)j$. 
 
 The commutativity of (\ref{v1})2 and (\ref{v2})5 implies that of (\ref{v4})2. 
 
@@ -9259,7 +9290,7 @@ The commutativity of (\ref{v2})3 and (\ref{v1})6 implies that of (\ref{v4})7.
 
 The commutativity of (\ref{v1})9 and (\ref{v3})8 implies that of (\ref{v4})8. 
 
-To prove the anti-commutativity of the bottom right small square of \qr{v4}, note 
+To prove the anti-commutativity of the bottom right square of \qr{v4}, note 
 %
 \begin{align*}
 Th\ci\ell&=Td\ci Te\ci\ell&\text{by \qr{v2}}\\ 
