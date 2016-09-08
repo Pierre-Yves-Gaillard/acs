@@ -1092,7 +1092,7 @@ Even if it is straightforward, we state and prove formally the fact that the con
 \begin{equation}\lb{xfl1b}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"\theta_X(\id_X)"]&X'\\ 
-R(X')&L(R(X')).\ar[ru,"\eta_{X',R(X')(\id_{R(X')})}"']
+R(X')&L(R(X')).\ar[ru,"\eta_{X',R(X')}(\id_{R(X')})"']
 \end{tikzcd}
 \end{equation} 
 
@@ -1103,7 +1103,7 @@ $$
 $$ 
 are morphisms of functors, then we have 
 $$
-\eta_{X'}\ci f=\theta\iff\eta_{X',R(X')(\id_{R(X')})}\ci L(f)=\theta_X(\id_X)
+\eta_{X'}\ci f=\theta\iff\eta_{X',R(X')}(\id_{R(X')})\ci L(f)=\theta_X(\id_X)
 $$ 
 (see \qr{xfl2} and \qr{xfl1b}).
 \end{lem} 
@@ -1113,7 +1113,7 @@ The equalities
 $$
 (\eta_{X'}\ci f)_X(\id_X)=\eta_{X',X}(f)=\eta_{X',R(X')}(\id_{R(X')})\ci L(f)
 $$ 
-are respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta$. As the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies 
+are respectively justified by the definition of the vertical composition of morphisms of functors and by the naturality of $\eta_{X'}$. As the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies 
 $$
 \eta_{X'}\ci f=\theta\iff(\eta_{X'}\ci f)_X(\id_X)=\theta_X(\id_X),
 $$ 
