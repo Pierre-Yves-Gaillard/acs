@@ -16,7 +16,7 @@
 %\usepackage{wasysym}
 \usepackage{tikz-cd}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -5863,8 +5863,10 @@ $$
 
 %
 
-\begin{s}\lb{731b} 
-P. 159, Definition 7.3.1 (ii). It is written: 
+\begin{s}%\lb{731b} 
+%P. 159, Definition 7.3.1 (ii). It is written: 
+
+\begin{comment}
 
 ``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is localizable and $R_\SSS(K\ci F)\xr\sim K\ci R_\SSS F$.'' 
 
@@ -5894,7 +5896,9 @@ $$
 exists universally in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}.
 \end{df}
 
-The following proposition is obvious:
+\end{comment}
+
+P. 159, Definition 7.3.1 (ii). The following proposition is obvious:
 
 \begin{prop}\lb{rsf}
 In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al_X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al_X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al_X$ in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}. In particular $F$ is universally right localizable in the sense of the two above definitions, $R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
@@ -5907,7 +5911,7 @@ $$
 \end{prop}
 \end{s}
 
-%\begin{s} P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}. \end{s}
+%\begin{s} P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}.\end{s}
 
 \begin{s}\lb{732} 
 P.~160, Proposition 7.3.2. 
@@ -5920,7 +5924,28 @@ See Proposition~\ref{rsf}. By condition (b) in Definition 7.1.1 we have
 F_\T\ci Q_\T\iso F\ci\iota.
 \end{equation}
 
-\nn(c) The last claim in Proposition 7.3.2 is the existence of an isomorphism 
+\nn(c) The book attaches, to each functor $G:\C_\SSS\to\A$, a bijection 
+$$
+f_G:\Hom_{\A^{\C_\SSS}}(RF,G)\to\Hom_{\A^\C}(F,G\ci Q_\SSS).
+$$ 
+We must verify that we have 
+\begin{equation}\lb{fgm}
+f_G(\mu)=(\mu\star Q_\SSS)\ci f_{RF}(\id_{RF})
+\end{equation} 
+for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). We can assume that we have the following equalities (not only isomorphisms, see \S\ref{l711} p.~\pr{l711}) between functors: 
+$$
+RF=F_\T\ci\iota_Q^{-1},\quad\iota_Q^{-1}\ci\iota_Q=\id_{\I_\T},\quad F\ci\iota=F_\T\ci Q_\T,\quad Q_\SSS\ci\iota=\iota_Q\ci Q_\T. 
+$$ 
+Recall that, by assumption, all $X$ in $\C$ comes with a morphism $s:X\to\iota(Y)$ in $\SSS$ with $Y$ in $\I$. It is easy to see that \qr{fgm} follows then from the commutativity of 
+$$
+\begin{tikzcd}
+F_\T\iota_Q^{-1}Q_\SSS X\ar[d,"\mu(Q_\SSS X)"']\ar[rr,"F_\T\iota_Q^{-1}(s)"]&&F_\T\iota_Q^{-1}Q_\SSS\iota Y\ar[r,equal]&F\iota Y\ar[d,"\mu(\iota_Q Q_\T Y)"]\\ 
+GQ_\SSS X\ar[rrr,"FQ_\SSS (s)"']&&&GQ_\SSS\iota Y.
+\end{tikzcd} 
+$$ 
+(We have omitted many parenthesis.) 
+
+\nn(d) The last claim in Proposition 7.3.2 is the existence of an isomorphism 
 $$
 RF\ci Q_\SSS\ci\iota\iso F\ci\iota.
 $$ 
