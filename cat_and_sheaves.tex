@@ -1065,22 +1065,25 @@ is representable, we denote its representative by $R(X')$ and its representation
 
 \nn or, abusing the terminology, that 
 
-\nn``$R(X')$ exists''.  
+\nn``$R(X')$ exists''. 
 
-Concretely this means that, for all $X$ in $\C$ and all $g:L(X)\to X'$ there is a unique $f:X\to R(X')$ such that $\eta_{X'}\ci L(f)=g$: 
+The following lemma will result from Lemma~\ref{pda2} below. 
+
+\begin{lem}\lb{pda1}
+In the above setting, a morphism $\eta_{X'}:L(R(X'))\to X'$ in $\C'$ is a representation of $\Hom_{\C'}(L(\ ),X')$ if and only if for all $X$ in $\C$ and all $g:L(X)\to X'$ there is a unique $f:X\to R(X')$ such that $\eta_{X'}\ci L(f)=g$: 
 \begin{equation}\lb{xfl1}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"g"]&X'\\ 
 R(X')&L(R(X')).\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 \end{equation} 
-We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.
-\end{s}
+\end{lem}
 
-%
+%Concretely this means that, 
+We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.%\end{s}
 
-\begin{s} 
-In the above setting consider the commutative diagram 
+%\begin{s} In the above setting c
+By definition, $\eta_{X'}:L(R(X'))\to X'$ in $\C'$ is a representation of $\Hom_{\C'}(L(\ ),X')$ if and only if, for all morphism $\theta:X\to\Hom_{\C'}(L(\ ),X')$ in $\C^\wg$, there is a unique morphism $f:X\to R(X')$ in $\C$ such that $\eta_{X'}\ci f=\theta$: %Consider the commutative diagram 
 \begin{equation}\lb{xfl2}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']\ar[r,"\theta"]&\Hom_{\C'}(L(\ ),X')\\ 
@@ -1088,7 +1091,8 @@ R(X').\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 \end{equation}
 
-Even if it is straightforward, we state and prove formally the fact that the conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. We prefer to rewrite \qr{xfl1} as 
+Even if it is straightforward, we state and prove formally the fact that the above condition is equivalent to the condition in Lemma~\ref{pda1}. %conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. 
+For the purpose of this proof, we prefer to rewrite \qr{xfl1} as 
 \begin{equation}\lb{xfl1b}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"\theta_X(\id_X)"]&X'\\ 
@@ -1096,7 +1100,7 @@ R(X')&L(R(X')).\ar[ru,"\eta_{X',R(X')}(\id_{R(X')})"']
 \end{tikzcd}
 \end{equation} 
 
-\begin{lem}
+\begin{lem}\lb{pda2}
 If $L:\C\to\C'$ is a functor, if $X$ and $R(X')$ are objects of $\C$, if $f:X\to R(X')$ is a morphism in $\C$, and if 
 $$
 \eta_{X'}:R(X')\to\Hom_{\C'}(L(\ ),X')\quad\text{and}\quad\theta:X\to\Hom_{\C'}(L(\ ),X')
