@@ -10,7 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath,amsthm}
-\usepackage[a4paper,headheight=14.5pt]{geometry}
+\usepackage[headheight=14.5pt]{geometry}%\usepackage[a4paper,headheight=14.5pt]{geometry}
 \usepackage{makeidx}
 \usepackage{datetime}
 %\usepackage{wasysym}
@@ -4548,7 +4548,8 @@ Taking Steps 1 to 6 for granted, the composition of the six above bijections coi
 \end{lem}
 
 \begin{proof}
-Let us denote these six bijections by $f_1,\dots,f_6$; let $u:X\to Y$ be in $\Hom_\C(X,Y)$; and let us compute successively $f_1u,f_2f_1u,\dots,f_6\dots f_1u$. We have 
+Let us denote these six bijections by $f_1,\dots,f_6$; let $u:X\to Y$ be a morphism in $\C$; % in $\Hom_\C(X,Y)$; 
+and let us compute successively $f_1u,f_2f_1u,\dots,f_6\dots f_1u$. We have 
 $$
 f_1u=\left(\col_{A\in I}\Coim(Z_A\to X)\xr\sim X\xr uY\right)\in\Hom_\C\left(\col_{A\in I}\Coim(Z_A\to X),Y\right).
 $$ 
@@ -9362,13 +9363,15 @@ P.~253, Definition 10.3.1. One of the key ingredients justifying the second sent
 
 %
 
-\begin{s}%\begin{uspb} 
-P.~253, Proposition 10.3.3. %\index{unsolved problem} It is claimed that the localization of $F$ is triangulated, but I'm unable to prove this.
-The fact that the localization of $F$ is triangulated follows from Tag~0A8D in the Stacks Project:\smallskip
+%\begin{s}%
+\begin{uspb} 
+P.~253, Proposition 10.3.3. \index{unsolved problem} It is claimed that the localization of $F$ is triangulated, but I'm unable to prove this.
+%The fact that the localization of $F$ is triangulated follows from Tag~0A8D in the Stacks Project:\smallskip
 
-\centerline{\href{http://stacks.math.columbia.edu/tag/0A8D}{http://stacks.math.columbia.edu/tag/0A8D}}
+%\centerline{\href{http://stacks.math.columbia.edu/tag/0A8D}{http://stacks.math.columbia.edu/tag/0A8D}}
 
-\end{s}%\end{uspb}
+%\end{s}
+\end{uspb}
 
 %
 
@@ -9680,16 +9683,14 @@ in $\A_c$. As $H(\Mc(\id_X))\iso0$, $\pp$ is a qis by Lemma~\ref{sl2}.
 P.~337. Theorem 13.4.1 suggests the following question: 
 
 Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
-%
 \begin{equation}\lb{spalt}
 \col_{(X'\to X),(Y\to Y')\in\oo{Qis}}\Hom_{\oo K(\C)}(X',Y')\to\Hom_{\oo D(\C)}(X,Y)
-\end{equation}
-%
+\end{equation} 
 an isomorphism?
 
 Theorem 13.4.1 and Corollary~\ref{1432} p.~\pr{1432} imply that the answer is yes if $\C$ is a Grothendieck category. 
 
-(Observe that the Axiom of Universes is not necessary to define the morphism~\qr{spalt}.)
+(Observe that the Axiom of Universes is not necessary to define the morphism \qr{spalt}.)
 \end{s}
 
 %
