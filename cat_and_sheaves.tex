@@ -5941,7 +5941,8 @@ We must verify that we have
 \begin{equation}\lb{fgm}
 f_G(\mu)=(\mu\star Q_\SSS)\ci f_{RF}(\id_{RF})
 \end{equation} 
-for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). We can assume that we have the following equalities (not only isomorphisms, see \S\ref{l711} p.~\pr{l711}) between functors: 
+for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). We can assume that we have the following equalities (it is on purpose that I write ``equalities'' instead of ``isomorphisms'', %don't write ``isomorphisms'', but ``equalities''  I really mean ``equalities'', not ``isomorphisms'', 
+see \S\ref{l711} p.~\pr{l711}) between functors: 
 $$
 RF=F_\T\ci\iota_Q^{-1},\quad\iota_Q^{-1}\ci\iota_Q=\id_{\I_\T},\quad F\ci\iota=F_\T\ci Q_\T,\quad Q_\SSS\ci\iota=\iota_Q\ci Q_\T. 
 $$ 
@@ -5963,6 +5964,15 @@ $$
 RF\ci Q_\SSS\ci\iota\iso RF\ci\iota_Q\ci Q_\T\iso F_\T\ci\iota_Q^{-1}\ci\iota_Q\ci Q_\T\iso F_\T\ci Q_\T\iso F\ci\iota,
 $$ 
 the last isomorphism following from \qr{ft}.
+
+\nn(e) For each $X$ in $\C$ let us denote by $s_X:X\to\iota(W_X)$ the morphism in $\SSS$ with $W_X$ in $\I$ which exists by assumption. Then we can define $RF$ by 
+$$
+RF(Q_\SSS(X)):=F(\iota(W_X)).
+$$ 
+Moreover, the structural morphism $F\to RF\ci Q_\SSS$ is given by 
+$$
+F(X)\xr{F(s_X)}F(\iota(W_X))=RF(Q_\SSS(X)).
+$$ 
 
 %\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
 
@@ -9339,6 +9349,12 @@ The third row and column are distinguished triangles by \qr{r3} and \qr{c3} resp
 
 \sbs{Brief comments}
 
+\begin{s}\lb{dtdn} 
+P.~248, Lemma 10.2.1. The proof shows also the following: If $\DD$ is a triangulated category and $\N$ is a full saturated triangulated subcategory of $\DD$, then a triangle in $\N$ is a d.t. in $\DD$ if and only if it is a d.t. in $\N$.
+\end{s}
+
+%
+
 \begin{s} 
 P.~249, Theorem 10.2.3 (v). After ``Then $F$ factors uniquely through $Q$'' one could add ``and the induced functor $\DD/\N\to\DD'$ is triangulated''.
 \end{s}
@@ -9351,8 +9367,12 @@ P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pr{may
 
 %
 
-\begin{s} 
-P.~251, Proposition 10.2.6. I don't know if the functor $\I/(\N\cap\I)\to\DD/\N$ is necessarily triangulated.
+\begin{s}\lb{1026} 
+P.~251, Proposition 10.2.6. Being unable to prove that the localization of $F$ is triangulated in Proposition 10.3.3 p.~253 of the book, %For reasons which will be explained in \S\ref{1033} below, 
+I make the extra assumption that $\I$ is \emph{saturated}. %full triangulated subcategory of $\DD$. 
+By \S\ref{dtdn}, it is then clear that %I don't know if 
+the obvious functor $\I/(\N\cap\I)\to\DD/\N$ is %necessarily 
+triangulated, and that any quasi-inverse (if it exists) is also triangulated. 
 \end{s}
 
 %
@@ -9363,15 +9383,21 @@ P.~253, Definition 10.3.1. One of the key ingredients justifying the second sent
 
 %
 
-%\begin{s}%
-\begin{uspb} 
-P.~253, Proposition 10.3.3. \index{unsolved problem} It is claimed that the localization of $F$ is triangulated, but I'm unable to prove this.
-%The fact that the localization of $F$ is triangulated follows from Tag~0A8D in the Stacks Project:\smallskip
+\begin{s}\lb{1033}%\begin{uspb} 
+P.~253, Proposition 10.3.3. %\index{unsolved problem} It is claimed that the localization of $F$ is triangulated, but I'm unable to prove this.
+%The fact that the localization of $F$ is triangulated follows from Tag~0A8D in the Stacks Project:\smallskip\\ \centerline{\href{http://stacks.math.columbia.edu/tag/0A8D}{http://stacks.math.columbia.edu/tag/0A8D}} 
+The fact that the localization of $F$ is triangulated follows from \S\ref{1026} above (see also the diagram on p.~254 of the book). (Recall that I have made the extra assumption that $\I$ is saturated.)
+\end{s}%\end{uspb}
 
-%\centerline{\href{http://stacks.math.columbia.edu/tag/0A8D}{http://stacks.math.columbia.edu/tag/0A8D}}
+%
 
-%\end{s}
-\end{uspb}
+\begin{s}
+P. 254, Display (10.3.1). Write $s_X:X\to Y_X$ for the morphism in $\N Q$ with $Y_X$ in $\I$ which exists by assumption. Then Display (10.3.1) can be written as 
+$$
+R_\N^{\N'}F(Q(X)):=Q'(F(Y_X)).
+$$ 
+Moreover, the structural morphism $Q'\ci F\to RF\ci Q$ is given by $Q'(F(X))\xr{F(s_X)}Q'(F(Y_X))=RF(Q(X))$. (See \S\ref{732}(e).) 
+\end{s}
 
 %
 
