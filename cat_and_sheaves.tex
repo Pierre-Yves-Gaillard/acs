@@ -483,6 +483,8 @@ $\bu$ $Q(u)$ should be $Q(u')$.
 
 \nn$*$ P.~254. The functor $RF$ of Notation 10.3.4 coincides with the functor $R_{\N Q}F$ of Definition 7.3.1 p.~159 of the book.
 
+\nn$*$ P.~257, first display: the expression $\T_{X_1}\oplus\T_{X_2}$, which occurs twice, should be replaced with $\T_{X_1}\tm\T_{X_2}$.
+
 \nn$*$ P.~266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes.
 
 \nn$*$ P.~278: The first display should start with $T''(s'')$ instead of $T''(s)$.
@@ -9391,12 +9393,31 @@ The fact that the localization of $F$ is triangulated follows from \S\ref{1026} 
 
 %
 
-\begin{s}
+\begin{s}\lb{1031} 
 P. 254, Display (10.3.1). Write $s_X:X\to Y_X$ for the morphism in $\N Q$ with $Y_X$ in $\I$ which exists by assumption. Then Display (10.3.1) can be written as 
 $$
 R_\N^{\N'}F(Q(X)):=Q'(F(Y_X)).
 $$ 
 Moreover, the structural morphism $Q'\ci F\to RF\ci Q$ is given by $Q'(F(X))\xr{F(s_X)}Q'(F(Y_X))=RF(Q(X))$. (See \S\ref{732}(e).) 
+\end{s}
+
+%
+
+\begin{s}
+P. 254, Proposition 10.3.5 (ii). Write $R$ for $R_\N^{\N'},R_\N^{\N''}$ and $R_{\N'}^{\N''}$; write $s_X:X\to Y_X$ for the morphism in $\N Q$ with $Y_X$ in $\I$ which exists by assumption; write $t_{X'}:X'\to Y'_{X'}$ for the morphism in $\N'Q'$ with $Y_X$ in $\I$ which exists by assumption; and define $RF,RF'$ and $R(F'\ci F)$ is in \S\ref{1031} above. We may suppose that $t_{X'}=\id_{X'}$ whenever $X'$ is already in $\I'$. Then we have 
+$$
+R(F'\ci F)(Q(X))=Q''(F'(F(Y_X))),
+$$ 
+$$
+RF'(RF(Q(X)))=RF'(Q'(F(Y_X)))=Q''(F'(Y'_{F(Y_X)}))=Q''(F'(F(Y_X))).
+$$ 
+(It is crucial that the above displays are chains of equalities, as opposed to chains of isomorphisms.)
+\end{s}
+
+%
+
+\begin{s}
+P. 257, proof of Theorem 10.4.1. The fact that ``the canonical functor $\T_{X_1}\tm \T_{X_2}\to\T_{X_i}$ (i=1,2) is cofinal'' follows from Lemma~\ref{proj} p.~\ref{proj}.
 \end{s}
 
 %
