@@ -9416,8 +9416,59 @@ $$
 
 %
 
-\begin{s}
-P. 257, proof of Theorem 10.4.1. The fact that ``the canonical functor $\T_{X_1}\tm \T_{X_2}\to\T_{X_i}$ (i=1,2) is cofinal'' follows from Lemma~\ref{proj} p.~\ref{proj}.
+\begin{s} 
+Proof of Theorem 10.4.1 p.~257. The fact that ``the canonical functor $\T_{X_1}\tm \T_{X_2}\to\T_{X_i}$ (i=1,2) is cofinal'' follows from Lemma~\ref{proj} p.~\ref{proj}.
+
+We rewrite the first display on page 257 of the book as 
+$$
+(\pp^\dg F)(X_1\oplus X_2)=\col_{Y\in\T_{X_1}\oplus\T_{X_2}}F(Y)\xl[\text{(a)}]{\sim}\ \col_{(Y_1,Y_2)\in\T_{X_1}\tm\T_{X_2}}F(Y_1\oplus Y_2)
+$$ 
+$$
+\underset{\text{(b)}}{\iso}\col_{(Y_1,Y_2)\in\T_{X_1}\tm\T_{X_2}}F(Y_1)\oplus F(Y_2)
+$$ 
+$$
+\underset{\text{(c)}}{\iso}\left(\col_{(Y_1,Y_2)\in\T_{X_1}\tm\T_{X_2}}F(Y_1)\right)\oplus\left(\col_{(Y_1,Y_2)\in\T_{X_1}\tm\T_{X_2}}F(Y_2)\right)
+$$
+$$
+\xr[\text{(d)}]{\sim}\left(\col_{Y_1\in\T_{X_1}}F(Y_1)\right)\oplus\left(\col_{Y_2\in\T_{X_2}}F(Y_2)\right)=(\pp^\dg F)(X_1)\oplus(\pp^\dg F)(X_2).
+$$ 
+Isomorphism (a) follows from the cofinality of $\xi$, Isomorphism (b) follows from the additivity of $F$, Isomorphism (c) is straightforward, Isomorphism (d) follows from the cofinality of $\T_{X_1}\tm\T_{X_2}\to\T_{X_i}$ for $i=1,2$. 
+
+For $i=1,2$ let 
+$$
+f:\col_{\pp(Y)\to X_1\oplus X_2}F(Y)\to\col_{\pp(Y_i)\to X_i}F(Y_i)
+$$ 
+be the morphism defined by the above display.
+
+For $i=1,2$ define 
+$$
+g:\col_{\pp(Y)\to X_1\oplus X_2}F(Y)\to\col_{\pp(Y_i)\to X_i}F(Y_i)
+$$ 
+as follows: If 
+$$
+p[\pp(Y)\to X_1\oplus X_2]:F(Y)\to\col_{\pp(Y)\to X_1\oplus X_2}F(Y)
+$$ 
+is the coprojection corresponding to $\pp(Y)\to X_1\oplus X_2$, and 
+$$
+p[\pp(Y)\to X_1\oplus X_2]:F(Y)\to\col_{\pp(Y)\to X_1\oplus X_2}F(Y)
+$$ 
+is the coprojection corresponding to $\pp(Y_i)\to X_i$, then $g$ is defined by the commutative diagrams 
+$$
+\begin{tikzcd}
+\ds\col_{\pp(Y)\to X_1\oplus X_2}F(Y)\ar[r,"g"]&\ds\col_{\pp(Y_i)\to X_i}F(Y_i)\\ 
+F(Y)\ar{u}{p[\pp(Y)\to X_1\oplus X_2]}\ar[r,equal]&F(Y).\ar{u}[swap]{q[\pp(Y)\to X_1\oplus X_2\to X_i]}
+\end{tikzcd}
+$$ 
+We must show $f=g$. It suffices to check that the diagrams 
+$$
+\begin{tikzcd}
+\ds\col_{\pp(Y)\to X_1\oplus X_2}F(Y)\ar[r,"f"]&\ds\col_{\pp(Y_i)\to X_i}F(Y_i)\\ 
+F(Y)\ar{u}{p[\pp(Y)\to X_1\oplus X_2]}\ar[r,equal]&F(Y).\ar{u}[swap]{q[\pp(Y)\to X_1\oplus X_2\to X_i]}
+\end{tikzcd}
+$$ 
+commute. This verification is left to the reader.
+
+The fact that $\T_X$ is cofinally small follows from Proposition 3.4.5 (iii) p.~89 of the book.
 \end{s}
 
 %
@@ -9435,7 +9486,7 @@ $$
 $$
 \end{s}
 
-%%
+%
 
 \begin{s} P.~263, proof of Lemma 10.5.9. Before the sentence ``Since $Z_n$ and $X_n$ belong to $\K$, $X_{n+1}$ also belongs to $\K$'', one could add ``We may, and do, assume that $\K$ is saturated''.
 
