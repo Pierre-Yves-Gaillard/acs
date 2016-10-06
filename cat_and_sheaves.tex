@@ -15,6 +15,7 @@
 \usepackage{datetime}
 %\usepackage{wasysym}
 \usepackage{tikz-cd}
+\usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{comment}
 \usepackage{fancyhdr}
@@ -9498,6 +9499,50 @@ for $X$ in $\SSS$.
 
 Note that Convention~\ref{payc} p.~\pr{payc} can be applied.
 \end{s}
+
+%%
+
+\sbs{Exercise 10.3 p.~265}
+
+It suffices to prove:
+
+\nn\emph{If $L:\DD\to\DD'$ is a triangulated functor of triangulated categories and $R:\DD'\to\DD$ is right adjoint to $L$, then $R$ is triangulated.} 
+
+The following argument is taken from Tag~0A8D in the Stacks Project:\bigskip
+
+\centerline{\href{http://stacks.math.columbia.edu/tag/0A8D}{http://stacks.math.columbia.edu/tag/0A8D}}
+
+\begin{proof}
+Let $X$ be an object of $\DD$ and $X'$ an object of $\DD'$. Since $L$ is triangulated we have isomorphisms functorial in $X$ and $X'$
+\begin{align*}
+\Hom_\DD(X,R(T(X'))
+&\iso\Hom_{\DD'}(L(X),T(X'))\\
+&\iso\Hom_{\DD'}(T^{-1}(L(X)),X')\\
+&\iso\Hom_{\DD'}(T^{-1}(L(X)),X')\\
+&\iso\Hom_\DD(T^{-1}(X),R(X'))\\
+&\iso\Hom_\DD(X,T(R(X'))).
+\end{align*}
+By Yoneda's lemma we obtain an isomorphism $T(R(X'))\iso T(R(X'))$ functorial in $X'$. Let $$X'\to Y'\to Z'\to T(X')$$ be a distinguished triangle in $\DD'$. Choose a distinguished triangle $$R(X')\to R(Y')\to Z\to T(R(X'))$$ in $\DD$. Then $$L(R(X'))\to L(R(Y'))\to L(Z)\to T(L(R(X')))$$ is a distinguished triangle in $\DD'$. By TR4 we can choose a morphism of distinguished triangles
+$$
+\xymatrix{
+L(R(X'))\ar[r]\ar[d]&L(R(Y'))\ar[r]\ar[d]&L(Z)\ar[r]\ar[d]&T(L(R(X')))\ar[d]\\
+X'\ar[r]&Y'\ar[r]&Z'\ar[r]&X'[1]}
+$$
+Since $R$ is right adjoint to $L$ the morphism $L(Z)\to Z'$ determines a morphism $Z \to R(Z')$ such that the diagram
+$$
+\xymatrix{
+R(X')\ar[r]\ar[d]_{\id}&R(Y')\ar[r]\ar[d]_{\id}&Z\ar[r]\ar[d]&T(R(X'))\ar[d]_{\id}\\
+R(X')\ar[r]&R(Y')\ar[r]&R(Z')\ar[r]&T(R(X'))}
+$$
+commutes. Applying the cohomological functor $\Hom_\DD(W,\ )$ for an object $W$ of $\DD$, we get a commutative diagram of abelian groups of the form 
+$$
+\begin{tikzcd}
+\cdots\ar[r]&U_0\ar[d]\ar[r]&U_1\ar[d]\ar[r]&U_2\ar[d]\ar[r]&U_3\ar[d]\ar[r]&\cdots\\ 
+\cdots\ar[r]&V_0\ar[r]&V_1\ar[r]&V_2\ar[r]&V_3\ar[r]&\cdots
+\end{tikzcd}
+$$ 
+The top row is an exact complex for obvious reasons, whereas the bottom row is an exact complex because of the isomorphism $\Hom_\DD(W,R(\ ))\iso\Hom_{\DD'}(L(W),\ \ )$. We deduce from the 5 lemma that $\Hom_\DD(W,Z)\to\Hom_\DD(W,R(Z'))$ is bijective, and using the Yoneda lemma once more we conclude that $Z\to R(Z')$ is an isomorphism. Hence we conclude that $R(X')\to R(Y')\to R(Z')\to T(R(X'))$ is a distinguished triangle, which is what we wanted to show.
+\end{proof}
 
 %%
 
