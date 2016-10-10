@@ -9494,7 +9494,9 @@ The rows are exact complexes and $G$ is in $\SSS^{\wg,prod}$, and it is easy to 
 
 %
 
-\begin{s} P.~263, last sentence of the proof of Lemma 10.5.8. Consider the commutative diagram  
+\begin{s} P.~263, last sentence of the proof of Lemma 10.5.8.
+
+Variant 1: Consider the commutative diagram  
 $$
 \begin{tikzcd}
 \oplus_i\,\pp(Z_i)\ar[equal]{d}\ar{r}&\oplus_i\,\pp(Y_i)\ar[equal]{d}\ar{r}&\oplus_i\,\widetilde\pp(X_i)\ar{d}\ar{r}&0\\ 
@@ -9504,7 +9506,15 @@ $$
 whose rows are complexes. We already know that the bottom row is exact. The exactness of the top row follows (as in the proof of Lemma 10.5.7 (ii) p.~261 of the book) from the isomorphisms 
 $$
 \Coker(\oplus_i\,\pp(Z_i)\to\oplus_i\,\pp(Y_i))\iso\oplus_i\,\Coker(\pp(Z_i)\to\pp(Y_i))\iso\oplus_i\,\widetilde\pp(X_i).
+$$ 
+
+Variant 2: Apply the Five Lemma to the commutative diagram 
 $$
+\begin{tikzcd}
+\bigoplus\pp(Z_i)\ar[d,"\sim"]\ar[r]&\bigoplus\pp(Y_i)\ar[d,"\sim"]\ar[r]&\bigoplus \widetilde\pp(X_i)\ar[d]\ar[r]&0\\ 
+\pp(\bigoplus Z_i)\ar[r]&\pp(\bigoplus Y_i)\ar[r]&\widetilde\pp(\bigoplus X_i)\ar[r]&0.
+\end{tikzcd}
+$$ 
 \end{s}
 
 %
