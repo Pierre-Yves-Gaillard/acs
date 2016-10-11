@@ -9480,6 +9480,16 @@ Proof of Lemma 10.5.5 p. 261. We adhere to the notation of the lemma. Let $F$ be
 
 %
 
+\begin{s}\lb{1056}
+P. 261, proof of Lemma 10.5.6. In the notation of the proof of Lemma 10.5.6, set 
+$$
+X:=\bigoplus_{C\in\SSS_0}\ \bigoplus_{f\in F(C)}C,
+$$ 
+and write $p_{Cf}:C\to X$ for the coprojections. In particular there is a unique morphism $g:X\to F$ in $\SSS^{\wg,prod}$ such that $g\ci p_{Cf}=f$ for all $C$ in $\SSS_0$ and all $f$ in $F(C)$. For $C$ in $\SSS_0$ the map $g_C:\Hom_\SSS(C,X)\to F(C)$ is surjective because it sends $p_{Cf}$ to $f$ for any $f$ in $F(C)$. This implies that $g$ is an epimorphism.
+\end{s}
+
+%
+
 \begin{s}
 Proof of Lemma 10.5.7 (ii) p. 262. We adhere to the notation of the lemma. %Consider the commutative diagram 
 We have a commutative diagram 
@@ -9519,7 +9529,17 @@ $$
 
 %
 
-\begin{s} P.~263, proof of Lemma 10.5.9. Before the sentence ``Since $Z_n$ and $X_n$ belong to $\K$, $X_{n+1}$ also belongs to $\K$'', one could add ``We may, and do, assume that $\K$ is saturated''.
+%\begin{s}\begin{uspb} P. 263. I don't understand the proof of Lemma 10.5.9\index{unsolved problem}. I don't even understand how the morphism $X_0\to H$ in $\DD^\wg$ is constructed.\end{uspb}\end{s}
+
+%
+
+%\begin{comment}
+
+\begin{s} P.~263, proof of Lemma 10.5.9. 
+
+The proof of Lemma 10.5.6 (see \S\ref{1056} p.~\pr{1056}) shows that the morphism $X_0\to H_0$ in $\SSS^{\wg,prod}$ can be assumed to extend to a morphism $X_0\to H$ in $\DD^\wg$.
+
+Before the sentence ``Since $Z_n$ and $X_n$ belong to $\K$, $X_{n+1}$ also belongs to $\K$'', one could add ``We may, and do, assume that $\K$ is saturated''.
 
 Recall the Yoneda isomorphisms 
 $$
@@ -9529,6 +9549,8 @@ for $X$ in $\SSS$.
 
 Note that Convention~\ref{payc} p.~\pr{payc} can be applied.
 \end{s}
+
+%\end{comment}
 
 %%
 
