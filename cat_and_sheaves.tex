@@ -8004,6 +8004,44 @@ T\ar[r,"h"']&W\ar[d]\ar[r,"c"']&Z\ar[d]\ar[r]&0\\
 $$ 
 be a commutative diagram in an abelian category. If the last two columns and the first two rows are exact, then the last row is exact. %the column containing $f$, the column containing $a$, and the row containing $d$ are exact, then the row containing $c$ is exact. 
 
+\subsubsection{Exercise 8.37 p.~211}
+
+It will be convenient to denote the identity morphisms by 1 and the shift morphisms by $s$. We shall often write $fg$ for $f\ci g$.
+
+\nn(i) We follow the hint and make the 
+
+\nn\textbf{Claim.} There is a split exact sequence 
+$$
+\begin{tikzcd}
+0\ar[r]&\ds\bigoplus_{n=0}^mX_n\ar[r,"1-s"]&\ds\bigoplus_{n=0}^{m+1}X_n\ar[r]&X_{m+1}\ar[r]&0,
+\end{tikzcd}
+$$ 
+that is, there is a diagram 
+$$
+\begin{tikzcd}
+0\ar[r]&\ds\bigoplus_{n=0}^mX_n\ar[r,yshift=4pt,"1-s"]&\ds\bigoplus_{n=0}^{m+1}X_n\ar[l,yshift=-4pt,"b"]\ar[r,yshift=4pt,"a"]&X_{m+1}\ar[l,yshift=-4pt,"c"]\ar[r]&0
+\end{tikzcd}
+$$ 
+such that 
+$$
+a\,(1-s)=0,\quad b\,(1-s)=1,\quad a\,c=1,\quad (1-s)\,b+c\,a=1.
+$$ 
+
+We shall only define $a,b,c$ for $m=2$, leaving the rest of the proof of the claim to the reader. So we assume $m=2$. The morphism $1-s$ is given by the matrix
+$$
+1-s=\begin{pmatrix}1&0&0\\ -s&1&0\\ 0&-s&1\\ 0&0&-s\end{pmatrix},
+$$
+and we define $a,b,c$ by the matrices
+$$
+a:=\begin{pmatrix}s^3&s^2&s&1\end{pmatrix},\quad b:=\begin{pmatrix}1&0&0&0\\ s&1&0&0\\ s^2&s&1&0\end{pmatrix},\quad c:=\begin{pmatrix}0\\ 0\\ 0\\ 1\end{pmatrix}.
+$$ 
+
+Part (i) of the exercise follows clearly from the claim.
+
+\nn(ii) This part follows from the previous one together with Theorem 6.1.8 p.~132 and Proposition 6.1.19 p.~137 in the book.
+
+\nn(iii) I haven't been able to solve this part of the exercise.
+
 %%%%
 
 \section{About Chapter 9}
@@ -10151,6 +10189,8 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\iso\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo D(
 
 %
 
+\begin{comment}
+
 \begin{s}%\lb{s144}
 P.~357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
 
@@ -10162,6 +10202,8 @@ P.~357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.
 
 There are analog observations for the other statements of Section 14.4.
 \end{s}
+
+\end{comment}
 
 %
 
