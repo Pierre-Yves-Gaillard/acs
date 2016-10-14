@@ -6480,7 +6480,7 @@ P.~173, proof of Proposition 8.2.13. The fact that any $X$ in $\C$ has a structu
 
 %
 
-\begin{s} 
+\begin{s}\lb{8213}
 Proposition 8.2.13 p.~173. It seems to me the proposition can be stated as follows: %Here is a slightly different wording: 
 \begin{prop}[Proposition 8.2.13 p.~173]
 If $\C$ is an additive category, if $\C'$ is the category of finite product preserving functors from $\C$ to $\Mod(\bb Z)$, if $\C''$ is the category of finite product preserving functors from $\C$ to $\Set$, and if $U$ is the forgetful functor from $\Mod(\bb Z)$ to $\Set$, then the functor $U\ci:\C'\to\C''$ is an \emph{isomorphism} (not just an equivalence!). 
@@ -6505,7 +6505,7 @@ $$
 \end{thm} 
 Let me also try to rewrite the beginning of the proof: 
 
-Let $X\in\C$. By applying Proposition 8.2.13 p.~173 of the book to the functor $F:=\Hom_\C(X,\ )$, we obtain that $\Hom_\C(X,Y)$ has a structure of an additive group for all $Y$ in $\C$. Then Lemma 8.2.11 p.~172 of the book implies that the addition on $\Hom_\C(X,Y)$ is given by the above commutative diagram. 
+Let $X\in\C$. By applying Proposition 8.2.13 p.~173 of the book (see \S\ref{8213} p.~\pr{8213}) to the functor $F:=\Hom_\C(X,\ )$, we obtain that $\Hom_\C(X,Y)$ has a structure of an additive group for all $Y$ in $\C$. Then Lemma 8.2.11 p.~172 of the book implies that the addition on $\Hom_\C(X,Y)$ is given by the above commutative diagram. 
 
 We complete the proof by showing as in the book that this addition does define a pre-additive structure on $\C$. 
 \end{s}
@@ -7280,12 +7280,20 @@ by \qr{pi=0}. As $c$ is an epimorphism, this implies successively \qr{x=0}, \qr{
 
 \sbs{About Section 8.6} 
 
+\begin{s}\lb{ccaf} 
+P.~193, second sentence of Section~8.6. The proof of the following statement is straightforward. 
+
+\nn\emph{Let $\C$ be a small pre-additive category and $\C'$ an abelian category. Then the category $\A$ of additive functors from $\C$ to $\C'$ is a fully abelian subcategory of the category $\F$ of all functors from $\C$ to $\C'$. If $\C'$ admits inductive or projective limits indexed by a small category $I$, then so do $\A$ and $\F$, and the inclusion functor $\A\to\F$ commutes with such limits; if in addition these limits are exact on $\F$, they are exact on $\A$.}
+\end{s}
+
+%
+
 \begin{s}
 P.~193. Just before the statement of Proposition 8.6.2 it is claimed that the inclusion 
 $$
 \Ind(\C)\subset\C^{\wg,add}
 $$ 
-holds. This inclusion follows from Propositions 6.1.7 p.~132 and 8.2.15 p.~173 in the book.
+holds. This inclusion follows from Propositions 3.3.3 p.~82 (see Proposition~\ref{333} p.~\pr{333}), 6.1.7 p.~132, 8.2.13 p.~173 (see \S\ref{8213} p.~\pr{8213}) 8.2.15 p.~173 in the book.
 \end{s}
 
 %
@@ -9542,6 +9550,12 @@ The rows are exact complexes and $G$ is in $\SSS^{\wg,prod}$, and it is easy to 
 
 %
 
+\begin{s}\lb{1057ii} 
+P.~261, Lemma 10.5.7 (ii). The proof (see above) shows that the product in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. In view of Lemma 10.5.5 p.~260 of the book, this implies that the limit of a small inductive system in $\SSS^{\wg,prod}$ exists in $\SSS^{\wg,add}$ and lies in $\SSS^{\wg,prod}$. Moreover, \S\ref{ccaf} p.~\pr{ccaf} entails that small filtrant inductive limits are exact on $\SSS^{\wg,add}$ and $\SSS^{\wg,prod}$. The exactness of small filtrant inductive limits are exact on $\SSS^{\wg,prod}$ will be used in \S\ref{brown} p.~\pr{brown}.
+\end{s}
+
+%
+
 \begin{s} P.~263, last sentence of the proof of Lemma 10.5.8.
 
 Variant 1: Consider the commutative diagram  
@@ -9595,6 +9609,12 @@ Note that Convention~\ref{payc} p.~\pr{payc} can be applied.
 \end{s}
 
 %\end{comment}
+
+%
+
+\begin{s}\lb{brown}
+P.~264, proof of Lemma 10.5.11. It is not hard to prove (using \S\ref{ccaf} p.~\pr{ccaf} and \S\ref{1057ii} p.~\pr{1057ii} in particular) that small filtrant inductive limits are exact on $\SSS^{\wg,prod}$. %the functor $\left(\SSS^{\wg,prod}\right)^{\bb N}\to\SSS^{\wg,prod}$ mapping $\al$ to $\col\al$ is exact. (Here $\bb N$ stands abusively for the category attached to the set $\bb N$ equipped with its natural order.)
+\end{s}
 
 %%
 
