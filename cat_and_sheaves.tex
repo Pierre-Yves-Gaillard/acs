@@ -9796,11 +9796,26 @@ TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Z\ar{r}[swap]{w}&T^
 \end{tikzcd}
 $$ 
 
-%%
+%% 
 
-\sbs{Example 11.6.2 (i) p.~290} 
+\sbs{Brief comments}
 
-(As already stated, there is a typo; see \S\ref{290} p.~\pr{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\tm\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
+\begin{s}
+P. 280, Example 11.3.5 (i). It is written ``Let $f:X\to Y$ be a morphism in $\C$. We identify $f$ with a morphism in $\text C(\C)$. Then $\Mc(f)$ is the complex 
+$$
+\cdots\to0\to X\xr fY\to0\to\cdots
+$$ 
+where $Y$ stands in degree 0.'' 
+
+I would have said something slightly different, namely:
+
+Let $U^\bullet$ (resp. $V^\bullet$) be the complex having $X$ (resp. $Y$) in degree 0 and 0 in the other degrees, let $g:U^\bullet\to V^\bullet$ the morphism whose zeroth component is $f$, and let $W^\bullet$ be the complex $\Mc(g)$. Then we have $W^\bullet=U^{1+\bullet}\oplus V^\bullet$, that is, $W^\bullet$ has $X$ in degree -1, $Y$ in degree 0, and 0 elsewhere, and the differentials of $W^\bullet$ are all equal to 0. The shifted object $W^{1+\bullet}$ has $X$ in degree -2, $Y$ in degree -1, and 0 elsewhere, and the differentials of $W^{1+\bullet}$ are all equal to 0. The -1 component of $d_{W^\bullet}:W^\bullet\to W^{1+\bullet}$ is $f$.
+\end{s}
+
+%
+
+\begin{s}%\sbs{Example 11.6.2 (i) p.~290} 
+P.~290, Example 11.6.2 (i). (As already stated, there is a typo; see \S\ref{290} p.~\pr{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\tm\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
 $$
 F_\oplus:\oo{C}(\C)\tm\oo{C}(\C')\to\oo{C}(\C'').
 $$ 
@@ -9841,6 +9856,7 @@ $$
 {\theta'}_{Y,X}^{i,j}:F_\pi(Y^i,(T^{-1}X)^{-j})=F(Y^i,X^{-j-1})\to F_\pi(Y,X)^{i+j+1}=(TF_\pi(Y,X))^{i+j},
 $$
 the morphism ${\theta'}_{Y,X}^{i,j}$ being $(-1)^i$ times the canonical embedding. 
+\end{s}
 
 %%%
 
