@@ -488,9 +488,20 @@ $\bu$ $Q(u)$ should be $Q(u')$.
 
 \nn$*$ P.~266, Exercise 10.6. I think the authors forgot to assume that the top left square commutes.
 
-\nn$*$ P.~278: The first display should start with $T''(s'')$ instead of $T''(s)$.
+\nn$*$ P.~278: The first display should start with $T''(s'')$ instead of $T''(s)$, and the second $F(X,d_Y)$ on the third line of the display should be $F(X',d_Y)$.
 
 \nn$*$ P.~287, first display after Proposition~11.5.4: $v(X^{n,m})$ should be $v(X)^{n,m}$.
+
+\begin{s}\lb{11312}
+P. 282, Definition 11.3.12. As indicated in Pierre Schapira's Errata, 
+$$
+d^n_{\oo C(F)(X)}=(-1)^n\,F(d_X^{-n-1})
+$$ 
+should be replaced with 
+$$
+d^n_{\oo C(F)(X)}=(-1)^{n+1}\,F(d_X^{-n-1}).
+$$ 
+\end{s}
 
 \begin{s}\lb{290}
 \nn$*$ P.~290, Line 17: as indicated in Pierre Schapira's Errata, one should read 
@@ -5592,11 +5603,9 @@ N\iso M\left[N'\xr{\pp}(\C/G(a))^{L/a}\xl{\ \DT\ci\widetilde{\al_a}}I_a\right].
 $$
 
 By induction hypothesis, 
-%
 \begin{equation}\lb{n'saf}
 N'\text{ is small and filtrant}
 \end{equation} 
-%
 and the projection $N'\to I_\ell$ is cofinal for all $\ell$ in $L$. It follows from Proposition 2.6.3 (ii) p.~61 of the book that $\widetilde{\al_a}$ is cofinal. By assumption $\C/G(a)$ is filtrant, and Lemma~\ref{delta} below will imply that $\DT$ is cofinal. Thus, 
 \begin{equation}\lb{daa}
 \DT\ci\widetilde{\al_a}\text{ is cofinal.}
@@ -7283,7 +7292,7 @@ by \qr{pi=0}. As $c$ is an epimorphism, this implies successively \qr{x=0}, \qr{
 \begin{s}\lb{ccaf} 
 P.~193, second sentence of Section~8.6. The proof of the following statement is straightforward. 
 
-\nn\emph{Let $\C$ be a small pre-additive category and $\C'$ an abelian category. Then the category $\A$ of additive functors from $\C$ to $\C'$ is a fully abelian subcategory of the category $\F$ of all functors from $\C$ to $\C'$. If $\C'$ admits inductive or projective limits indexed by a small category $I$, then so do $\A$ and $\F$, and the inclusion functor $\A\to\F$ commutes with such limits; if in addition these limits are exact on $\F$, they are exact on $\A$.}
+\nn\emph{Let $\C$ be a small pre-additive category and $\C'$ an abelian category. Then the category $\A$ of additive functors from $\C$ to $\C'$ is a fully abelian subcategory of the category $\F$ of all functors from $\C$ to $\C'$. If $\C'$ admits inductive or projective limits indexed by a small category $I$, then so do $\A$ and $\F$, and the inclusion functor $\A\to\F$ commutes with such limits; if in addition these limits are exact in $\F$, they are exact sn $\A$.}
 \end{s}
 
 %
@@ -7782,9 +7791,7 @@ $$
 0\ar{r}&\Ima g\ar{r}&Z\ar{r}[swap]{c}&Z\oplus_YZ,
 \end{tikzcd}
 $$ 
-whose rows are exact sequences, can be completed as indicated. Indeed, the existence of $b$ follows from the equality %ies 
-$g\ci f\ci a=%g\ci0=
-0$. To prove the lemma, it is enough to check that $b$ factors through $\Ima g$, or, equivalently, that $c\ci b=0$. As $d$ is an epimorphism, the vanishing of $c\ci b$ is equivalent to the vanishing of $c\ci b\ci d$. But we have $c\ci b\ci d=c\ci g\ci f=0\ci f=0$. 
+whose rows are exact sequences, can be completed as indicated. Indeed, the existence of $b$ follows from the equality $g\ci f\ci a=0$. To prove the lemma, it is enough to check that $b$ factors through $\Ima g$, or, equivalently, that $c\ci b=0$. As $d$ is an epimorphism, the vanishing of $c\ci b$ is equivalent to the vanishing of $c\ci b\ci d$. But we have $c\ci b\ci d=c\ci g\ci f=0\ci f=0$. 
 \end{proof}
 
 \begin{lem}\lb{817b1} 
@@ -7962,7 +7969,7 @@ $$
 &T\ar[r,"j"']&S
 \end{tikzcd}
 $$ 
-be a commutative diagram in an abelian category. If the first two rows and the last two columns are exact, then the first column is exact.  %the row containing $a$, the row containing $f$, and the column containing $d$ are exact, then the column containing $c$ is exact. 
+be a commutative diagram in an abelian category. If the first two rows and the last two columns are exact, then the first column is exact. 
 
 \begin{proof}
 (In this proof we omit the composition symbols $\ci$ and most of the parenthesis, and we freely use Lemma~\ref{8311} p.~\pr{8311} and Lemma~\ref{8312} p.~\pr{8312}.)
@@ -8010,7 +8017,7 @@ T\ar[r,"h"']&W\ar[d]\ar[r,"c"']&Z\ar[d]\ar[r]&0\\
 &0&0
 \end{tikzcd}
 $$ 
-be a commutative diagram in an abelian category. If the last two columns and the first two rows are exact, then the last row is exact. %the column containing $f$, the column containing $a$, and the row containing $d$ are exact, then the row containing $c$ is exact. 
+be a commutative diagram in an abelian category. If the last two columns and the first two rows are exact, then the last row is exact. 
 
 \subsubsection{Exercise 8.37 p.~211}
 
@@ -9537,8 +9544,7 @@ and write $p_{Cf}:C\to X$ for the coprojections. In particular there is a unique
 %
 
 \begin{s}
-Proof of Lemma 10.5.7 (ii) p. 262. We adhere to the notation of the lemma. %Consider the commutative diagram 
-We have a commutative diagram 
+Proof of Lemma 10.5.7 (ii) p. 262. We adhere to the notation of the lemma. We have a commutative diagram 
 $$
 \begin{tikzcd}
 \pp(X_i)\ar[d]\ar[r,"\pp(u_i)"]&\pp(Y_i)\ar[d]\ar[r]&F_i\ar[d]\ar[r]&0\\ 
@@ -9551,7 +9557,7 @@ The rows are exact complexes and $G$ is in $\SSS^{\wg,prod}$, and it is easy to 
 %
 
 \begin{s}\lb{1057ii} 
-P.~261, Lemma 10.5.7 (ii). The proof (see above) shows that the product in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. In view of Lemma 10.5.5 p.~260 of the book, this implies that the limit of a small inductive system in $\SSS^{\wg,prod}$ exists in $\SSS^{\wg,add}$ and lies in $\SSS^{\wg,prod}$. Moreover, \S\ref{ccaf} p.~\pr{ccaf} entails that small filtrant inductive limits are exact on $\SSS^{\wg,add}$ and $\SSS^{\wg,prod}$. The exactness of small filtrant inductive limits are exact on $\SSS^{\wg,prod}$ will be used in \S\ref{brown} p.~\pr{brown}.
+P.~261, Lemma 10.5.7 (ii). The proof (see above) shows that the product in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. In view of Lemma 10.5.5 p.~260 of the book, this implies that the limit of a small inductive system in $\SSS^{\wg,prod}$ exists in $\SSS^{\wg,add}$ and lies in $\SSS^{\wg,prod}$. Moreover, \S\ref{ccaf} p.~\pr{ccaf} entails that small filtrant inductive limits exist and are exact in $\SSS^{\wg,add}$ and $\SSS^{\wg,prod}$. The exactness of small filtrant inductive limits in $\SSS^{\wg,prod}$ will be used in \S\ref{brown} p.~\pr{brown}.
 \end{s}
 
 %
@@ -9613,7 +9619,7 @@ Note that Convention~\ref{payc} p.~\pr{payc} can be applied.
 %
 
 \begin{s}\lb{brown}
-P.~264, proof of Lemma 10.5.11. It is not hard to prove (using \S\ref{ccaf} p.~\pr{ccaf} and \S\ref{1057ii} p.~\pr{1057ii} in particular) that small filtrant inductive limits are exact on $\SSS^{\wg,prod}$. %the functor $\left(\SSS^{\wg,prod}\right)^{\bb N}\to\SSS^{\wg,prod}$ mapping $\al$ to $\col\al$ is exact. (Here $\bb N$ stands abusively for the category attached to the set $\bb N$ equipped with its natural order.)
+P.~264, proof of Lemma 10.5.11. It is not hard to prove (using \S\ref{ccaf} p.~\pr{ccaf} and \S\ref{1057ii} p.~\pr{1057ii} in particular) that small filtrant inductive limits exist and are exact in $\SSS^{\wg,prod}$. 
 \end{s}
 
 %%
@@ -9796,12 +9802,12 @@ TX\oplus Y\ar{r}[swap]{u}&TX\oplus Z\ar{r}[swap]{v}&TY\oplus Z\ar{r}[swap]{w}&T^
 \end{tikzcd}
 $$ 
 
-%% 
+%%
 
 \sbs{Brief comments}
 
 \begin{s}
-P. 280, Example 11.3.5 (i). It is written ``Let $f:X\to Y$ be a morphism in $\C$. We identify $f$ with a morphism in $\text C(\C)$. Then $\Mc(f)$ is the complex 
+P. 280, Example 11.3.5 (i). It is written ``Let $f:X\to Y$ be a morphism in $\C$. We identify $f$ with a morphism in $\oo C(\C)$. Then $\Mc(f)$ is the complex 
 $$
 \cdots\to0\to X\xr fY\to0\to\cdots
 $$ 
@@ -9809,8 +9815,12 @@ where $Y$ stands in degree 0.''
 
 I would have said something slightly different, namely:
 
-Let $U^\bullet$ (resp. $V^\bullet$) be the complex having $X$ (resp. $Y$) in degree 0 and 0 in the other degrees, let $g:U^\bullet\to V^\bullet$ the morphism whose zeroth component is $f$, and let $W^\bullet$ be the complex $\Mc(g)$. Then we have $W^\bullet=U^{1+\bullet}\oplus V^\bullet$, that is, $W^\bullet$ has $X$ in degree -1, $Y$ in degree 0, and 0 elsewhere, and the differentials of $W^\bullet$ are all equal to 0. The shifted object $W^{1+\bullet}$ has $X$ in degree -2, $Y$ in degree -1, and 0 elsewhere, and the differentials of $W^{1+\bullet}$ are all equal to 0. The -1 component of $d_{W^\bullet}:W^\bullet\to W^{1+\bullet}$ is $f$.
+Let $U^\bullet$ (resp. $V^\bullet$) be the complex having $X$ (resp. $Y$) in degree 0 and 0 in the other degrees, let $g:U^\bullet\to V^\bullet$ the morphism whose zeroth component is $f$, and let $W^\bullet$ be the complex $\Mc(g)$. Then we have $W^\bullet=U^{1+\bullet}\oplus V^\bullet$, that is, $W^\bullet$ has $X$ in degree $-1$, $Y$ in degree 0, and 0 elsewhere, and the differentials of $W^\bullet$ are all equal to 0. The shifted object $W^{1+\bullet}$ has $X$ in degree $-2$, $Y$ in degree $-1$, and 0 elsewhere, and the differentials of $W^{1+\bullet}$ are all equal to 0. The $-1$ component of $d_{W^\bullet}:W^\bullet\to W^{1+\bullet}$ is $f$.
 \end{s}
+
+%
+
+\nn$*$ P. 282, Definition 11.3.12: see \S\ref{11312} p.~\pr{11312}.
 
 %
 
@@ -9904,7 +9914,7 @@ $$
 \begin{prop}[Corollary 12.2.5 p.~301]\lb{sl3}
 The functor 
 $$
-H:\text K_c(\A)\to\A
+H:\oo K_c(\A)\to\A
 $$ 
 is cohomological.  
 \end{prop}
@@ -10340,11 +10350,9 @@ Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, state
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
 Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let 
-%
 \begin{equation}\lb{cce}
 \E=\E(\Gamma,\U)
-\end{equation}
-%
+\end{equation} 
 be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\tm_BU\to U}$ is in $\Gamma_U$. 
 
 \begin{lem}\lb{1613i}
