@@ -10171,6 +10171,140 @@ attached to a d.t. $X\to Y\to Z\to TX$ in $\oo D(\C)$. The fact that $H$ commute
 %
 
 \begin{s}
+P. 325, exactness of 
+$$
+0\to H^p(X)\to\Coker d_X^{p-1}\to\Ker d_X^{p+1}\to H^{p+1}(X)\to0:
+$$ 
+$\bu$ Exactness at $H^p(X)$: apply the Five Lemma to 
+$$
+\begin{tikzcd}
+X^{p-1}\ar[d,equal]\ar[r,"d_X^{p-1}"]&\Ker d_X^p\ar[d]\ar[r]&H^p(X)\ar[d]\ar[r]&0\ar[d]\\ 
+X^{p-1}\ar[r,"d_X^{p-1}"']&X^p\ar[r]&\Coker d_X^{p-1}\ar[r]&0.
+\end{tikzcd}
+$$ 
+$\bu$ Exactness at $\Coker d_X^{p-1}$: It suffices to complete the commutative diagram 
+$$
+\begin{tikzcd}
+W\ar[d,dashed,"i"']\ar[r,dashed,two heads,"h"]&Z\ar[d,"g"]\ar[dr,"0"]\\ 
+H^p(X)\ar[r,"a"']&\Coker d_X^{p-1}\ar[r,"b"']&\Ker d^{p+1}.
+\end{tikzcd}
+$$ 
+Consider the commutative diagrams 
+$$
+\begin{tikzcd}
+X^{p-1}\ar[d,equal]\ar[r,"d_X^{p-1}"]&\Ker d_X^p\ar[d,"e"]\ar[r,"c"]&H^p(X)\ar[d,"a"]\\ 
+X^{p-1}\ar[r,"d_X^{p-1}"]&X^p\ar[dr,"d_X^p"']\ar[r,"f"]&\Coker d_X^{p-1}\ar[d,"b"]\\ 
+&&\Ker d_X^{p+1}
+\end{tikzcd}
+$$ 
+and 
+$$
+\begin{tikzcd}
+W\ar[d,"j"']\ar[r,two heads,"e"]&Z\ar[d,"c"]\\ 
+X^{p-1}\ar[r,"i"']&\Coker d_X^{p-1}.
+\end{tikzcd}
+$$ 
+The equalities $d_X^pj=bij=bce=0$ yield commutative diagram 
+$$
+\begin{tikzcd}
+&W\ar[dl,"k"']\ar[d,"j"]\\ 
+\Ker d_X^p\ar[r,"h"']&X^p.
+\end{tikzcd}
+$$ 
+Setting $f:=gk$ we get $af=agk=ihk=ij=ce$. 
+
+\nn$\bu$ Exactness at $\Ker d_X^{p+1}$: It suffices to complete the commutative diagram 
+$$
+\begin{tikzcd}
+W\ar[d,dashed,"f"']\ar[r,dashed,two heads,"e"]&Z\ar[d,"c"]\ar[dr,"0"]\\ 
+\Coker d_X^{p-1}\ar[r,"a"']&\Ker d^{p+1}\ar[r,"b"']&H^{p+1}(X).
+\end{tikzcd}
+$$ 
+Forming the commutative diagram 
+$$
+\begin{tikzcd}
+W\ar[d,"g"']\ar[r,two heads,"e"]&Z\ar[d,"c"]\ar[dr,"0"]\\ 
+X^p\ar[r,"d_X^p"']&\Ker d^{p+1}\ar[r,"b"']&H^{p+1}(X)
+\end{tikzcd}
+$$ 
+and setting $f:=hg$ yields $af=ahg=d_X^pg=ce$.
+
+\nn$\bu$ Exactness at $H^{p+1}(X)$: Obvious.
+\end{s}
+
+%
+
+\begin{s}
+P. 325, exactness of 
+$$
+0\to H^p(X)\to\Coker d_Y^{p-1}\to Z^p\to H^{p+1}(X)\to0:
+$$ 
+$\bu$ Exactness at $H^p(X)$: As mentioned in the book, the exactness at $H^p(X)$ holds by assumption.
+
+\nn$\bu$ Exactness at $\Coker d_Y^{p-1}$: This is an immediate consequence of the following lemma:
+\begin{lem}
+If 
+$$
+\begin{tikzcd}
+Z\ar[d,equal]\ar[r,"a"]&Y\ar[d,"c"]\ar[r,"b"]&X\ar[d,"d"]\\ 
+Z\ar[r,"e"]&W\ar[r,"f"]&V
+\end{tikzcd}
+$$ 
+is a commutative diagram in $\C$, if the top row is exact and the right square cocartesian, then the bottom row is exact.
+\end{lem} 
+\begin{proof}
+It suffices to complete the commutative diagram 
+$$
+\begin{tikzcd}
+Z\ar[dr,"0"']\ar[r,"e"]&W\ar[d,"c"]\ar[r,"g"]&V\ar[d,dashed,"h"]\\ 
+&U\ar[r,dashed,rightarrowtail,"i"']&T.
+\end{tikzcd}
+$$ 
+We have the commutative diagram 
+$$
+\begin{tikzcd}
+Z\ar[dr,"0"']\ar[r,"a"]&Y\ar[d,"gc"]\ar[r,"b"]&X\ar[d,"j"]\\ 
+&U\ar[r,rightarrowtail,"i"']&T.
+\end{tikzcd}
+$$ 
+The right square being cocartesian, there is a unique morphism $h:V\to T$ such that $hd=j$ and $hf=ig$. 
+\end{proof}
+
+\nn$\bu$ Exactness at $Z^p$: This is an immediate consequence of the following lemma:
+\begin{lem}
+If 
+$$
+\begin{tikzcd}
+Z\ar[d,"c"']\ar[r,"a"]&Y\ar[d,"d"']\ar[r,"b"]&X\ar[d,equal]\\ 
+W\ar[r,"e"]&V\ar[r,"f"]&X
+\end{tikzcd}
+$$ 
+is a commutative diagram in $\C$, if the top row is exact and the left square cocartesian, then the bottom row is exact.
+\end{lem} 
+\begin{proof}
+It suffices to complete the commutative diagram 
+$$
+\begin{tikzcd}
+W\ar[dr,"0"']\ar[r,"e"]&V\ar[d,"g"]\ar[r,"f"]&V\ar[d,dashed,"h"]\\ 
+&U\ar[r,dashed,rightarrowtail,"i"']&T.
+\end{tikzcd}
+$$ 
+We have the commutative diagram 
+$$
+\begin{tikzcd}
+Z\ar[dr,"0"']\ar[r,"a"]&Y\ar[d,"gd"]\ar[r,"b"]&X\ar[d,"h"]\\ 
+&U\ar[r,rightarrowtail,"i"']&T.
+\end{tikzcd}
+$$ 
+It suffices to prove $hf=ig$. The left square being cocartesian, the equality $hf=ig$ is equivalent to the conjonction of the equalities $hfd=igd$ and $hfe=ige$, which are straightforward.  
+\end{proof}
+
+\nn$\bu$ Exactness at $H^{p+1}(X)$: The morphism $Z^p\to H^{p+1}(X)$ is an epimorphism because the composition $\Ker d_X^{p+1}\to Z^p\to H^{p+1}(X)$ is an epimorphism.
+\end{s}
+
+%
+
+\begin{s}
 P.~337. Theorem 13.4.1 suggests the following question: 
 
 Let $\C$ be an abelian category and let $X$ and $Y$ be in $\oo K(\C)$. Is the natural morphism 
