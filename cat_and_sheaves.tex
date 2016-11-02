@@ -4311,6 +4311,12 @@ and the conclusion follows from the fact that $u$ is an epimorphism.
 
 %
 
+\begin{s}\lb{517ii}
+P. 116, Proposition 5.1.7 (ii). The proof shows that the natural morphism $I\to\Coim f$ is an isomorphism.
+\end{s}
+
+%
+
 \begin{s}
 P.~117, Definition 5.2.1 (definition of a system of generators). There is an important comment about this in Pierre Schapira's Errata 
 
@@ -4576,8 +4582,7 @@ Taking Steps 1 to 6 for granted, the composition of the six above bijections coi
 \end{lem}
 
 \begin{proof}
-Let us denote these six bijections by $f_1,\dots,f_6$; let $u:X\to Y$ be a morphism in $\C$; % in $\Hom_\C(X,Y)$; 
-and let us compute successively $f_1u,f_2f_1u,\dots,f_6\dots f_1u$. We have 
+Let us denote these six bijections by $f_1,\dots,f_6$; let $u:X\to Y$ be a morphism in $\C$; and let us compute successively $f_1u,f_2f_1u,\dots,f_6\dots f_1u$. We have 
 $$
 f_1u=\left(\col_{A\in I}\Coim(Z_A\to X)\xr\sim X\xr uY\right)\in\Hom_\C\left(\col_{A\in I}\Coim(Z_A\to X),Y\right).
 $$ 
@@ -10171,6 +10176,21 @@ attached to a d.t. $X\to Y\to Z\to TX$ in $\oo D(\C)$. The fact that $H$ commute
 %
 
 \begin{s}
+P. 325. Just before the last display it is written ``There is a monomorphism $Z^p\mono W^p$.'' This results from the following fact, whose proof is left to the reader:
+
+\nn\emph{Let}  
+$$
+\begin{tikzcd}
+Z\ar[d]\ar[r]&Y\ar[d]\ar[r]&X\ar[d]\\ 
+W\ar[r]&V\ar[r]&U
+\end{tikzcd}
+$$ 
+\emph{be a commutative diagram in $\C$. If the left small square and the big square (or ``rectangle'') are cocartesian, then the right small square is cocartesian too.}
+\end{s}
+
+%
+
+\begin{s}
 P. 325, exactness of 
 $$
 0\to H^p(X)\to\Coker d_X^{p-1}\to\Ker d_X^{p+1}\to H^{p+1}(X)\to0:
@@ -10300,6 +10320,42 @@ It suffices to prove $hf=ig$. The left square being cocartesian, the equality $h
 \end{proof}
 
 \nn$\bu$ Exactness at $H^{p+1}(X)$: The morphism $Z^p\to H^{p+1}(X)$ is an epimorphism because the composition $\Ker d_X^{p+1}\to Z^p\to H^{p+1}(X)$ is an epimorphism.
+\end{s}
+
+%
+
+\begin{s}
+P. 326, first display. Consider the commutative diagram 
+$$
+\begin{tikzcd}
+&&\Ker ba\ar[d,equal]\\ 
+&&\Ker a\ar[d]\\ 
+Y^{p-1}\ar[r,"d_Y^{p-1}"]&Y^p\ar[ddr,"d_Y^p"']\ar[r]&\Coker d_Y^{p-1}\ar[d,"a"']&H^p(X)\ar[lu,"c"']\ar[l]\ar[ld,"0"]\\
+&&Z^p\ar[d,"b"]\\ 
+&&Y^{p+1}.
+\end{tikzcd}
+$$ 
+The precise claim is that the morphism $c$ is an isomorphism. 
+\end{s}
+
+%
+
+\begin{s}
+P. 326, second display. The morphism $H^{p+1}(X)\to H^{p+1}(Y_{\le p+1})$ in the commutative diagram 
+$$
+\begin{tikzcd}
+\Coker d_X^{p-1}\ar[d]\ar[r]&\Ker d_X^{p+1}\ar[d]\ar[r]&H^{p+1}(X)\ar[d,equal]\ar[r]&0\\ 
+\Coker d_Y^{p-1}\ar[d,equal]\ar[r]&Z^p\ar[d,rightarrowtail]\ar[r]&H^{p+1}(X)\ar[d]\ar[r]&0\\ 
+\Coker d_Y^{p-1}\ar[r]&Y^{p+1}\ar[r]&H^{p+1}(Y_{\le p+1})\ar[r]&0
+\end{tikzcd}
+$$ 
+is a monomorphism by the Five Lemma.
+\end{s}
+
+%
+
+\begin{s}
+P. 326. The first isomorphism in the third display follows from the fact that $d_Y^p:Y^p\to Y^{p+1}$ factorizes as $Y^{p-1}\epi\Coker d_Y^{p-1}\to Z^p\mono Y^{p+1}$. (See Proposition 5.1.7 (ii) p.~116 of the book and \S\ref{517ii} p.~\pr{517ii}.)
 \end{s}
 
 %
