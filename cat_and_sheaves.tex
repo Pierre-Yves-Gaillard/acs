@@ -1614,15 +1614,29 @@ $$
 1\ar{r}{f}&2\ar[yshift=.7ex]{r}{g}\ar[yshift=-.7ex]{r}[swap]{h}&3.
 \end{tikzcd}
 $$ 
-Then $\C^J$ is the category of morphisms in $\C$. It is easy to see that the morphism 
-\begin{equation}\lb{38}
-f\xr{(f,h)}g 
-\end{equation}
-in $\C^J$ is an epimorphism, and that this implies that the coproduct 
+Then $\C^J$ is the category of morphisms in $\C$. It is easy to see that the morphism $(f,h):f\to g$, %\begin{equation}\lb{38}f\xr{(f,h)}g,\end{equation}in $\C^J$, 
+that is 
 $$
-g\sqcup_fg,
+\begin{tikzcd}
+1\ar[d,"f"']\ar[r,"f"]&2\ar[d,"g"]\\ 
+2\ar[r,"h"']&3,
+\end{tikzcd}
+$$
+in $\C^J$ is an epimorphism, and that this implies that the commutative square 
+$$
+\begin{tikzcd}
+f\ar{d}[swap]{(f,h)}\ar{r}{(f,h)}&g\ar[d,"\id_g"]\\ 
+g\ar[r,"\id_g"']&g
+\end{tikzcd}
 $$ 
-taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
+in $\C^J$ is cocartesian. But it is also easy to see that the morphism $f$ in $\C$ is \emph{not} an epimorphism, and that this implies that the commutative square 
+$$
+\begin{tikzcd}
+1\ar{d}[swap]{f}\ar{r}{f}&2\ar[d,"\id_2"]\\ 
+2\ar[r,"\id_2"']&2
+\end{tikzcd}
+$$ 
+in $\C$ is \emph{not} cocartesian. %coproduct $$g\sqcup_fg,$$ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
 \end{s}
 
 %
