@@ -9908,6 +9908,30 @@ $$
 the morphism ${\theta'}_{Y,X}^{i,j}$ being $(-1)^i$ times the canonical embedding. 
 \end{s}
 
+%
+
+\begin{s}
+P.~296, Exercise 11.12, partial solution. Let $f:X\to Y$ be a morphism in $\oo C(\C)$, where $\C$ is an additive category. One of the sub-exercises asks for a proof of the existence of a distinguished triangle 
+$$
+\Mc(\sigma^{>a}f)\to\Mc(f)\to\Mc(\sigma^{\le a}f)\to\Mc(\sigma^{>a}f)[1]
+$$ 
+in $\oo K(\C)$, which is equivalent to the existence of a distinguished triangle 
+\begin{equation}\lb{st}
+\Mc(\sigma^{\le a}f)[-1]\to\Mc(\sigma^{>a}f)\to\Mc(f)\to\Mc(\sigma^{\le a}f)
+\end{equation}
+in $\oo K(\C)$. We claim that there is a morphism $g:\Mc(\sigma^{\le a}f)[-1]\to\Mc(\sigma^{>a}f)$ in $\oo C(\C)$ and an isomorphism $\Mc(g)\iso\Mc(f)$ in $\oo C(\C)$. Clearly, the claim implies the existence of a distinguished triangle \qr{st}. We shall define the morphism $g$ and leave the verification of the claim to the reader. 
+
+We define $g:\Mc(\sigma^{\le a}f)[-1]\to\Mc(\sigma^{>a}f)$ as follows:
+
+Firstly we define $g_a:\Mc(\sigma^{\le a}f)[-1]^a\to\Mc(\sigma^{>a}f)^a$ as follows: We identify $\Mc(\sigma^{\le a}f)[-1]^a$ to $X^a\oplus Y^{a-1}$ and $\Mc(\sigma^{>a}f)^a$ to $X^{a+1}$, and decree that $g_a:X^a\oplus Y^{a-1}\to X^{a+1}$ is the obvious morphism induced by $d_X^a$. 
+
+Secondly we define $g_{a+1}:\Mc(\sigma^{\le a}f)[-1]^{a+1}\to\Mc(\sigma^{>a}f)^{a+1}$ as follows: We identify $\Mc(\sigma^{\le a}f)[-1]^{a+1}$ to $Y^a$ and $\Mc(\sigma^{>a}f)^a$ to $X^{a+2}\oplus Y^{a+1}$, and decree that $g_{a+1}:Y^a\to X^{a+2}\oplus Y^{a+1}$ is the obvious morphism induced by $d_Y^a$.
+
+Thirdly we set $g_n:=0$ for $n\neq a,a+1$.
+
+We leave it to the reader to check $g$ is indeed a morphism of complexes, and that we have $\Mc(g)\iso\Mc(f)$ in $\oo C(\C)$.
+\end{s}
+
 %%%
 
 \section{About Chapter 12}
