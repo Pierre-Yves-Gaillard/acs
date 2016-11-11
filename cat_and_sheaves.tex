@@ -9133,11 +9133,9 @@ X\ar{r}[swap]{f}&Y
 \end{tikzcd}
 $$ 
 can be completed as indicated to a commutative diagram in $\C$ with the dashed arrow $\xi$, then $f$ is an isomorphism. 
-%
 \begin{thm} 
 If the above conditions hold, then, for any $X$ in $\C_0$, there is a $\Mor(\C_0)$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$. If (9.5.2) holds, but (9.5.6), (9.5.7) and (9.5.8) do not necessarily hold, then there is an $\F$-injective object $Y$ of $\C$, and a morphism $f:X\to Y$ in $\C_0$.
 \end{thm}
-%
 \begin{rk}\lb{954}
 In the book $\F$ is supposed to be small, but the proof clearly works if $\F$ is essentially small. (See \S\ref{962} below.)
 \end{rk}
@@ -9341,8 +9339,7 @@ X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}{b}\ar{r}{d}&TX^0\ar{d}\\
 X^1\ar{d}\ar{r}&Y^1\ar{d}\ar{r}&Z^1\ar{r}\ar[equal]{d}&TX^1\ar{d}\\
 X^2\ar{r}[swap]{a}&W\ar{r}[swap]{b}&Z^1\ar{r}[swap]{c}&TX^2.
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 From 
 $$
 \begin{tikzcd}
@@ -9359,8 +9356,7 @@ X^0\ar{d}\ar{r}&Y^1\ar{r}\ar[equal]{d}&W\ar{d}\ar{r}{d}&TX^0\ar{d}\\
 Y^0\ar{d}\ar{r}&Y^1\ar{d}\ar{r}&Y^2\ar{r}\ar[equal]{d}&TY^0\ar{d}\\
 Z^0\ar{r}[swap]{e}&W\ar{r}&Y^2\ar{r}&TZ^0.
 \end{tikzcd}
-\end{equation}
-%
+\end{equation} 
 %We define $Z^0\to Z^1$ as the composition of $Z^0\xr eW$ in \qr{v2} with $W\xr bZ^1$ in \qr{v1}. 
 From 
 $$
@@ -9419,7 +9415,6 @@ The commutativity of (\ref{v2})3 and (\ref{v1})6 implies that of (\ref{v4})7.
 The commutativity of (\ref{v1})9 and (\ref{v3})8 implies that of (\ref{v4})8. 
 
 To prove the anti-commutativity of the bottom right square of \qr{v4}, note 
-%
 \begin{align*}
 Th\ci\ell&=Td\ci Te\ci\ell&\text{by \qr{v2}}\\ 
 &=-Td\ci Ta\ci k&\text{by \qr{v3}}\\  
@@ -9457,13 +9452,27 @@ P.~251, Proposition 10.2.6. Being unable to prove that the localization of $F$ i
 
 %
 
-\begin{s} 
-P.~253, Definition 10.3.1. One of the key ingredients justifying the second sentence is Display~\qr{(7.3.7)} p.~\pr{(7.3.7)}.
+%\begin{s} P.~253, Definition 10.3.1. One of the key ingredients justifying the second sentence is Display~\qr{(7.3.7)} p.~\pr{(7.3.7)}.\end{s}
+
+\begin{s}\lb{253}
+P.~253, Definition 10.3.1. The definition is stated as follows: 
+
+We say that a triangulated functor $F:\DD\to\DD'$ is right (resp. left) localizable with respect to $(\N,\N')$ if $Q'\ci F:\DD\to\DD'/\N'$ is universally right (resp. left) localizable with respect to the multiplicative system $\N Q$ (see Definition 7.3.1). Recall that it means that, for any $X\in\DD$, 
+$$
+\ic_{(X\to Y)\in\N Q^X}Q'F(Y),
+$$ 
+respectively 
+$$
+\oo*{``\!\lim\!"}_{(Y\to X)\in\N Q_X}Q'F(Y),
+$$ 
+is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
+
+In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary.
 \end{s}
 
 %
 
-\begin{s}\lb{1033} 
+\begin{s}%\lb{1033} 
 P.~253, Proposition 10.3.3. The fact that the localization of $F$ is triangulated follows from Exercise 8.4 p.~202 (see Section~\ref{84} p.~\pr{84}) and \S\ref{1026} above (see also the diagram on p.~254 of the book). (Recall that I have made the extra assumption that $\I$ is saturated.)
 \end{s}
 
@@ -10396,8 +10405,32 @@ P. 326. The first isomorphism in the third display follows from the fact that $d
 
 %
 
+%\begin{s}\lb{1335i}P. 330, Proposition 13.3.5 (i). Note that the functor $R^+F$ is triangulated, and thus additive.\end{s}
+
+%
+
+\begin{s}\lb{330}
+P.~330. Right after Definition 13.3.1 it is written: 
+
+By the definition, the functor $F$ admits a right derived functor on $\oo K^*(\C)$ if 
+$$
+\ic_{(X\to X')\in\Qis,X\in\oo K^*(C)}Q'\ci\oo K(F)(X')
+$$ 
+exists in $D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
+
+In fact, the existence of the indicated limit is a sufficient condition for the existence of the right derived functor, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. (See \S\ref{253} p.~\pr{253}.)
+\end{s}
+
+%
+
 \begin{s}
-P. 330, proof of proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the proof, the exactness of $F(X)\to F(Z^0)\to F(Z^1)$ can be verified as follows: If $W$ is an exact complex in $\oo K^+(\J)$, then we have $0\iso R^+F(0)\iso F(W)$, the first isomorphism resulting from the additivity of $R^+F$ and the second isomorphism resulting from (13.3.1) p.~330 of the book. Now Proposition 13.1.5 (ii) p.~320 of the book implies that $F(W)$ is exact.
+P. 330, proof Corollary 13.3.3. In view of \S\ref{330} above, it is not clear to me that the argument given in the book is complete.
+\end{s}
+
+%
+
+\begin{s}
+P. 331, proof of Proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the proof, the exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.%can be verified as follows: If $W$ is an exact complex in $\oo K^+(\J)$, then we have $0\iso R^+F(0)\iso F(W)$, the first isomorphism resulting from the additivity of $R^+F$ (see \ref{1335i} p.~\pr{1335i}) and the second isomorphism resulting from (13.3.1) p.~330 of the book. Now Proposition 13.1.5 (ii) p.~320 of the book implies that $F(W)$ is exact.
 \end{s}
 
 %
