@@ -536,6 +536,8 @@ $$
 
 \nn$*$ P.~328. After the second display the phrase ``the natural isomorphism $\Coker d_M^{i-2}\to\Ker d_M^i$ is an isomorphism'' should be ``the natural morphism $\Coker d_M^{i-2}\to\Ker d_M^i$ is an isomorphism''.
 
+\nn$*$ P.~331, Remark 13.3.6 (iii): $\oo C^+(\I)$ should be $\oo C^+(\I_\C)$.
+
 \begin{s}\lb{1341}
 P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
 \end{s}
@@ -9422,6 +9424,29 @@ The third row and column are distinguished triangles by \qr{r3} and \qr{c3} resp
 
 \sbs{Brief comments}
 
+\begin{s}
+Definition 10.1.9 (i) p.~244. It is written:
+
+``A triangulated functor of triangulated categories $F:(\DD,T)\to(\DD',T')$ is a functor of additive categories with translation sending distinguished triangles to distinguished triangles. If moreover $F$ is an equivalence of categories, $F$ is called an equivalence of triangulated categories.''
+
+This terminology is justified by the fact that, in the above setting, any quasi-inverse to $F$ is triangulated. This point is implicit in the proof of Proposition 10.3.3 p.~253 of the book. Here are more details:
+
+\begin{lem}\lb{acwt}
+If $(\DD,T)$ is an additive category with translation, if $\Delta$ and $\Delta'$ are two sets of triangles in $(\DD,T)$ such that $(\DD,T,\Delta)$ and $(\DD,T,\Delta')$ are triangulated categories, and if $\Delta\subset\Delta'$, then $\Delta=\Delta'$. 
+\end{lem}
+\begin{proof}
+Left to the reader. 
+\end{proof}
+\begin{lem}\lb{idt}
+If $(\DD,T)$ $(\DD,T,\Delta)$ and $(\DD',T',\Delta')$ are two triangulated categories, if $F:\DD\to\DD'$ and $G:\DD'\to\DD$ are two quasi-inverse equivalences, and if $F$ is triangulated, then so is $G$.
+\end{lem}
+\begin{proof}
+It is easy to see that the functor $G$ is additive and commutes with the translations (up to isomorphism). Let $G\Delta'$ be the set of those triangles in $\DD$ which are isomorphic to the image under $G$ of some d.t. in $\DD'$. It is straightforward to check that $(\DD,T,G\Delta')$ is triangulated, that $\Delta\subset G\Delta'$, and that Lemma~\ref{acwt} implies $G\Delta'=\Delta$, that is, $G$ is triangulated.
+\end{proof}
+\end{s}
+
+%
+
 \begin{s}\lb{dtdn} 
 P.~248, Lemma 10.2.1. The proof shows also the following: If $\DD$ is a triangulated category and $\N$ is a full saturated triangulated subcategory of $\DD$, then a triangle in $\N$ is a d.t. in $\DD$ if and only if it is a d.t. in $\N$.
 \end{s}
@@ -9459,14 +9484,19 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary.
+In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
 
 %
 
-\begin{s}%\lb{1033} 
-P.~253, Proposition 10.3.3. The fact that the localization of $F$ is triangulated follows from Exercise 8.4 p.~202 (see Section~\ref{84} p.~\pr{84}) and %\S\ref{1026}, and 
-the diagram on p.~254 of the book). %(Recall that I have made the extra assumption that $\I$ is saturated.)
+%\begin{s} 
+%P.~253, Proposition 10.3.3. The fact that the localization of $F$ is triangulated follows from Exercise 8.4 p.~202 (see Section~\ref{84} p.~\pr{84}) and %%\S\ref{1026}, and 
+%the diagram on p.~254 of the book). %%(Recall that I have made the extra assumption that $\I$ is saturated.)\end{s}
+
+%
+
+\begin{s}
+P.~254. The fact that the morphism $R^{\N'}_\N F$ in the commutative diagram is triangulated follows from Lemma~\ref{idt} p.~\pr{idt}.
 \end{s}
 
 %
@@ -10069,7 +10099,7 @@ is exact.
 \end{proof}
 %
 \begin{prop}[Corollary 12.2.6 p.~302]\lb{sl4}
-Let $0\to X\xr f Y\xr g Z\to0$ be an exact sequence in $\A_c$ and define $\pp:\Mc(f)\to Z$ by $\pp:=(0,g)$. Then $\pp$ is a morphism in $\A_c$, this morphism is a qis, and it satisfies $\pp\ci\al(f)=g$. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
+To each short an exact sequence $0\to X\xr f Y\xr g Z\to0$ in $\A_c$ is attached in a natural way a d.t. $X\xr fY\xr gZ\to TX$ in $\oo K_c(\A)$. More precisely, let $0\to X\xr fY\xr gZ\to0$ be an exact sequence in $\A_c$ and define $\pp:\Mc(f)\to Z$ by $\pp:=(0,g)$. Then $\pp$ is a morphism in $\A_c$, this morphism is a qis, and it satisfies $\pp\ci\al(f)=g$. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$
@@ -10416,9 +10446,13 @@ In fact, the existence of the indicated limit is a sufficient condition for the 
 
 %
 
-\begin{uspb}\lb{rf}
+\begin{s}\lb{rf}
+\begin{uspb}
 The\index{unsolved problem} sentence just before Notation 13.3.2 p.~330 starts with the claim that $R^*F$ is triangulated. I don't understand why.
 \end{uspb}
+
+\nn\textbf{Warning.} In this text, we adopt the following terminology: If $F$ is universally right localizable in the sense of Definition 7.3.1 p.~159 of the book, \emph{and if its right localization is triangulated}, we denote it by $R^*F$, and we say that ``$R^*F$ exists''.
+\end{s}
 
 %
 
@@ -10436,13 +10470,24 @@ P. 331, proof of Proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the
 %
 
 \begin{s}
+P.~331, Remark 13.3.6 (i). It is written: 
+
+``Note that for $X\in\C$, $R^kF(X)\iso0$ for $k<0$ and assuming that $F$ is left exact, $R^0F(X)\iso F(X)$.''
+
+I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$. It seems clear to me that, if $F$ is left exact, we have $R^kF(X)\iso0$ for $k<0$ and $R^0F(X)\iso F(X)$, but I'm unable to show that, as seems to be asserted, if $F$ is only assumed to be additive, we still have $R^kF(X)\iso0$ for $k<0$.
+\end{s}
+
+%
+
+\begin{s}
 P.~332, proof of Lemma 13.3.10. See Lemma~\ref{738b} p.~\pr{738b} below.
 \end{s}
 
 %
 
 \begin{s}
-P.~334, proof of Lemma 13.3.12. Assuming $RF$ is triangulated (see Comment~\ref{rf} p.~\pr{rf}), the existence of an exact sequence $R^jF(X)\to R^jF(X'')\to R^{j+1}F(X')$ attached to a given exact sequence $0\to X'\to X\to X''\to0$ in $\C$ follows from Proposition~\ref{sl4} p.~\pr{sl4}.
+P.~334, proof of Lemma 13.3.12. %Assuming $RF$ is triangulated (see \S\ref{rf} p.~\pr{rf}), t
+The existence of an exact sequence $R^jF(X)$ $\to R^jF(X'')\to R^{j+1}F(X')$ attached to a given exact sequence $0\to X'\to X\to X''\to0$ in $\C$ follows from Proposition~\ref{sl4} p.~\pr{sl4}.
 \end{s}
 
 %
