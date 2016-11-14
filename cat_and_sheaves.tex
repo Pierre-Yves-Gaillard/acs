@@ -10439,7 +10439,7 @@ By the definition, the functor $F$ admits a right derived functor on $\oo K^*(\C
 $$
 \ic_{(X\to X')\in\Qis,X\in\oo K^*(C)}Q'\ci\oo K(F)(X')
 $$ 
-exists in $D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
+exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
 In fact, the existence of the indicated limit is a sufficient condition for the existence of the right derived functor, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. (See \S\ref{253} p.~\pr{253}.)
 \end{s}
@@ -10461,20 +10461,52 @@ P. 330, proof Corollary 13.3.3. In view of \S\ref{330} above, it seems %is not c
 to me that the proof should be phrased slightly differently.% the argument given in the book is complete.
 \end{s}
 
-%
+%\begin{s}P. 331, proof of Proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the proof, the exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.%%can be verified as follows: If $W$ is an exact complex in $\oo K^+(\J)$, then we have $0\iso R^+F(0)\iso F(W)$, the first isomorphism resulting from the additivity of $R^+F$ (see \ref{1335i} p.~\pr{1335i}) and the second isomorphism resulting from (13.3.1) p.~330 of the book. Now Proposition 13.1.5 (ii) p.~320 of the book implies that $F(W)$ is exact.\end{s}
 
-\begin{s}
-P. 331, proof of Proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the proof, the exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.%can be verified as follows: If $W$ is an exact complex in $\oo K^+(\J)$, then we have $0\iso R^+F(0)\iso F(W)$, the first isomorphism resulting from the additivity of $R^+F$ (see \ref{1335i} p.~\pr{1335i}) and the second isomorphism resulting from (13.3.1) p.~330 of the book. Now Proposition 13.1.5 (ii) p.~320 of the book implies that $F(W)$ is exact.
+\begin{s}\lb{AB}
+P.~330. It is observed in the book just before the statement of Proposition 13.3.5:
+
+A full additive subcategory $\J$ of $\C$ is $F$-injective if and only if 
+
+\nn(A) For all $X$ in $\oo K^+(\C)$ there is a qis $X\to Y$ with $Y$ in $\oo K^+(\J)$,
+
+\nn(B) $F(Y)$ is exact whenever $Y$ is an exact complex in $\oo K^+(\J)$.
+
+Part ``(a) $\then$ (b) (2)'' of the proof of Proposition 13.3.5 p.~331 shows that (A) above implies that $\J$ is cogenerating in $\C$.
 \end{s}
 
 %
 
 \begin{s}
-P.~331, Remark 13.3.6 (i). It is written: 
+P.~331, Part ``(a) $\then$ (b) (2)'' of the proof of Proposition 13.3.5. %The exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.
+We have 
+$$
+\Ima(F(X)\to F(X''))\xr\sim\Ima(F(X)\to F(Z^0))
+$$
+$$
+\xr\sim\Ker(F(Z^0)\to F(Z^1))\xl\sim F(X''),
+$$ 
+the first isomorphism following from the fact that $F(X'')\to F(Z^0)$ is a monomorphism.
+\end{s}
 
-``Note that for $X\in\C$, $R^kF(X)\iso0$ for $k<0$ and assuming that $F$ is left exact, $R^0F(X)\iso F(X)$.''
+%
 
-I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$. It seems clear to me that, if $F$ is left exact, we have $R^kF(X)\iso0$ for $k<0$ and $R^0F(X)\iso F(X)$, but I'm unable to show that, as seems to be asserted, if $F$ is only assumed to be additive, we still have $R^kF(X)\iso0$ for $k<0$.
+\begin{s}
+P.~331, Remark 13.3.6 (i). See \S\ref{AB} p.~\pr{AB}. (I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$.) %It is written: 
+
+%``Note that for $X\in\C$, $R^kF(X)\iso0$ for $k<0$ and assuming that $F$ is left exact, $R^0F(X)\iso F(X)$.''
+
+%I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$. It seems clear to me that, if $F$ is left exact, we have $R^kF(X)\iso0$ for $k<0$ and $R^0F(X)\iso F(X)$, but I'm unable to show that, as seems to be asserted, if $F$ is only assumed to be additive, we still have $R^kF(X)\iso0$ for $k<0$.
+\end{s}
+
+%
+
+\begin{s}
+P.~332. One can derive Corollary 13.3.8 from Theorem 13.8.7 as follows. Let $\J$ be a full additive cogenerating subcategory of $\C$, and consider the condition
+
+\nn(C) If $0\to X'\to X\to X''\to0$ is exact in $\C$, and if $X',X\in\J$, then $X''\in\J$ and $0\to F(X')\to F(X)\to F(X'')\to0$ is exact.
+
+We assume that (C) holds, and we must show that $\J$ is $F$-injective. Let $Y'\mono X$ be a monomorphism in $\C$ with $Y'$ in $\J$, let $X\mono Y$ be a monomorphism in $\C$ with $Y$ in $\J$, and let $0\to Y'\to Y\to Y''\to0$ be an exact sequence in $\C$. The (C) implies that $Y''$ is in $\J$ and that $0\to F(X')\to F(X)\to F(X'')\to0$ is exact. Now Theorem 13.8.7 entails that $\J$ is $F$-injective.
 \end{s}
 
 %
