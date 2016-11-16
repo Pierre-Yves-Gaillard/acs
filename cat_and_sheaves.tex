@@ -1174,7 +1174,7 @@ $$
 \end{s}
 
 \begin{s}\lb{ldefat}
-Let us spell out the statement dual to \S\ref{rdefat}:
+Let us spell out the statement  to \S\ref{rdefat}:
 
 Let $R:\C'\to\C$ be a functor and $X$ an object of $\C$. If the functor 
 $$
@@ -2527,7 +2527,7 @@ We claim that the functor $\pp^\ddg(\bt):I\to\C$ satisfies
 \begin{equation}\lb{pddb1}
 \pp^\ddg(\bt)(M)\iso M^{**}, 
 \end{equation} 
-where $M^{**}$ is the double dual of $M$. 
+where $M^{**}$ is the double  of $M$. 
 
 To prove \qr{pddb1}, set 
 $$
@@ -2545,7 +2545,7 @@ We claim that the functor $\pp^\dg(\bt):I\to\C$ satisfies
 \begin{equation}\lb{pdb2}
 \pp^\dg(\bt)(M)\iso M^*,
 \end{equation} 
-where $M^*$ is the dual of $M$. 
+where $M^*$ is the  of $M$. 
 
 To prove \qr{pdb2}, set 
 $$
@@ -2557,7 +2557,7 @@ We claim that the functor $\pp^\ddg(\bt):I\to\C$ satisfies
 \begin{equation}\lb{pddb2}
 \pp^\ddg(\bt)(M)\iso M^*, 
 \end{equation} 
-where $M^*$ is the dual of $M$. 
+where $M^*$ is the  of $M$. 
 
 To prove \qr{pddb2}, set 
 $$
@@ -4317,7 +4317,7 @@ X\ar[two heads]{d}[swap]{b}\ar[two heads]{r}{u}&I'_f\ar[two heads]{d}{a}\ar{r}{v
 I'_{a\ci u}\ar{ur}{d}\ar[two heads]{r}[swap]{c}&I'_v.\ar{ru}
 \end{tikzcd}
 $$ 
-(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pr{fun}.) By (the dual of) Proposition 5.1.2 (iv) p.~114 of the book, it suffices to show that $a$ is an isomorphism. As $a\ci u$ is a strict epimorphism, Proposition~\ref{515i}, (a)$\then$(b), p.~\pr{515i}, implies that $c$ is an isomorphism. We claim that $d\ci c^{-1}$ is inverse to $a$. We have 
+(We first form $a$, then $b$ and $c$, and finally $d$; the existence of $d$ is a very particular case of Proposition~\ref{fun} p.~\pr{fun}.) By (the  of) Proposition 5.1.2 (iv) p.~114 of the book, it suffices to show that $a$ is an isomorphism. As $a\ci u$ is a strict epimorphism, Proposition~\ref{515i}, (a)$\then$(b), p.~\pr{515i}, implies that $c$ is an isomorphism. We claim that $d\ci c^{-1}$ is inverse to $a$. We have 
 $$
 a\ci d\ci c^{-1}=c\ci c^{-1}=\id_{I'_v}
 $$ 
@@ -6636,7 +6636,7 @@ P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar[equal]{r}&\Coker p
 \end{equation} 
 commute. 
 
-Dually, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to S$ be the coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
+ly, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to S$ be the coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
 $$
 \begin{tikzcd}
 \Ima f\ar{r}{a}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
@@ -6819,7 +6819,79 @@ can be completed as indicated ($W\to V$ being a monomorphism).
 \end{lem}
 
 \begin{proof}
-Equivalence (a)$\ssi$(b) is proved in the book, and Equivalence (a)$\ssi$(c) follows by reversing arrows.
+Equivalence (a) $\ssi$ (b) is proved in the book, and Equivalence (a) $\ssi$ (c) follows by reversing arrows.
+\end{proof}
+\end{s}
+
+%£
+
+\begin{s}
+Here are two lemmas which be used in the sequel:
+
+\begin{lem}\lb{cart1}
+Let
+$$
+\begin{tikzcd}
+Z\ar[equal]{d}\ar{r}{a}&Y\ar{d}{c}\ar{r}{b}&X\ar{d}{d}\\ 
+Z\ar{r}[swap]{e}&W\ar{r}[swap]{f}&V
+\end{tikzcd}
+$$ 
+be a commutative diagram of complexes in an abelian category, and assume that the right square is cartesian. 
+
+\nn\emph{(a)} If $e$ is a monomorphism, so is $a$.
+
+\nn\emph{(b)} If $f$ is an epimorphism, so is $b$.
+
+\nn\emph{(c)} If the bottom row is exact, so is the top row.
+\end{lem}
+\begin{proof} Part (a) is obvious, and (b) follows from Lemma~\ref{8311} (a) (ii) p.~\pr{8311}. To prove (c), let $g:U\to Y$ be a morphism satisfying $bg=0$ (in this proof we write $uv$ for $u\ci v$). By Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, it suffices to complete the commutative diagram
+$$
+\begin{tikzcd}
+V\ar[dashed]{d}[swap]{i}\ar[dashed,two heads]{r}{h}&U\ar{dr}{0}\ar{d}[swap]{g}\\ 
+Z\ar{r}[swap]{a}&Y\ar{r}[swap]{b}&X
+\end{tikzcd}
+$$ 
+as indicated. Consider the larger commutative diagram 
+$$
+\begin{tikzcd}
+V\ar[dashed]{d}[swap]{i}\ar[dashed,two heads]{r}{h}&U\ar{dr}{0}\ar{d}[swap]{g}\\ 
+Z\ar[equal]{d}\ar{r}{a}&Y\ar{d}{c}\ar{r}{b}&X\ar{d}{d}\\ 
+Z\ar{r}[swap]{e}&W\ar{r}[swap]{f}&V.
+\end{tikzcd}
+$$ 
+Invoking again Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, we find an epimorphism $h:V\epi U$ and a morphism $i:V\to Z$ such that $cgh=ei$, and it suffices to prove $gh=ai$. But the equality $gh=ai$ is equivalent to the conjonction of the equalities $cgh=cai$ and $bgh=bai$, equalities whose proof is straightforward.
+\end{proof}\newpage
+
+\begin{lem}\lb{cart2}
+Let 
+$$
+\begin{tikzcd}
+Z\ar[d,"c"']\ar[r,"a"]&Y\ar[d,"d"']\ar[r,"b"]&X\ar[d,equal]\\ 
+W\ar[r,"e"']&V\ar[r,"f"']&X
+\end{tikzcd}
+$$ 
+be a commutative diagram of complexes in an abelian category, and assume that the left square is cartesian. 
+
+\nn\emph{(a)} If $e$ is a monomorphism, so is $a$.
+
+\nn\emph{(b)} If the bottom row is exact, so is the top row.
+\end{lem} 
+\begin{proof}
+Part (a) follows from Lemma~\ref{8311} (a) (i) p.~\pr{8311}. Let us prove (b). By Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, it suffices, given a morphism $g:U\to Y$ such that $bg=0$, to complete the commutative diagram 
+$$
+\begin{tikzcd}
+T\ar[dashed]{d}[swap]{i}\ar[dashed,two heads]{r}{h}&U\ar{dr}{0}\ar{d}[swap]{g}\\ 
+Z\ar{r}[swap]{a}&Y\ar{r}[swap]{b}&X
+\end{tikzcd}
+$$ 
+as indicated. (In this proof we write $uv$ for $u\ci v$.) Invoking again Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, we find $h:T\epi U$ and $j:T\to W$ such that $ej=dgh$:
+$$
+\begin{tikzcd}
+T\ar{d}[swap]{j}\ar[two heads]{r}{h}&U\ar{dr}{0}\ar{d}[swap]{dg}\\ 
+W\ar{r}[swap]{e}&V\ar{r}[swap]{f}&X.
+\end{tikzcd}
+$$ 
+As $ej=dgh$, there is a unique morphism $i:T\to Z$ such that $ci=j$ and $ai=gh$. 
 \end{proof}
 \end{s}
 
@@ -6874,7 +6946,7 @@ $$
 %
 
 \begin{s} 
-P.~181, Lemma 8.3.13 (Five Lemma). We spell out the dual of Theorem~\ref{5l} above.
+P.~181, Lemma 8.3.13 (Five Lemma). We spell out the  of Theorem~\ref{5l} above.
 \begin{thm}\lb{5ld} 
 Consider the commutative diagram of complexes 
 $$
@@ -7377,7 +7449,9 @@ may be completed as indicated, yielding $0=j\ci h\ci k=j$.
 %
 
 \begin{s} 
-P. 197, proof of Proposition 8.6.12. The existence of the epimorphism $X_1\to Y''$ follows from Proposition 8.6.9 in the book, and the statement ``Since the top square on the left is co-Cartesian, the middle row is exact'' follows from the lemma below.
+P. 197, proof of Proposition 8.6.12. The existence of the epimorphism $X_1\to Y''$ follows from Proposition 8.6.9 in the book, and the statement ``Since the top square on the left is co-Cartesian, the middle row is exact'' follows from the Lemma~\ref{cart1} p.~\pr{cart1}.
+
+\begin{comment}
 
 \begin{lem}
 If, in the commutative diagram 
@@ -7407,6 +7481,7 @@ $$
 $$ 
 can be completed as indicated. It suffices to prove $zy=xw$. The square $ABDE$ being co-cartesian, it suffices to prove $zyu=xwu$ and $zyv=xwv$, which is easy. Thus shows that $0\to D\to E\to C$ is exact at $E$. Using Lemma~\ref{8311} p.~\pr{8311} it is straightforward to prove the exactness at $D$ and $C$.
 \end{proof}
+\end{comment}
 \end{s}
 
 %% 
@@ -8042,7 +8117,7 @@ Z\ar[r,"c"']&W\ar[r,"h"']&T.
 $$ 
 \end{proof} 
 
-For the reader's convenience we spell out the dual statement: 
+For the reader's convenience we spell out the  statement: 
 
 Let 
 $$
@@ -9990,7 +10065,7 @@ is exact at $\Ker u_2$ and $\Coker u_2$. If in addition $u_3$ is a monomorphism 
 \end{lem}
 The proof of the above lemma is slightly easier than that of the Snake Lemma. Of course one can argue that the Snake Lemma has an intrinsic interest, and, as it can be proved with only a modest additional effort, it is worth proving it. The limited purpose of this section is to describe an alternative, not to claim that this alternative is better.
 \begin{proof}
-The exactness at $\Ker u_2$ and $\Coker u_2$ is straightforward. Assume $u_1$ is an epimorphism (the case when $u_3$ is a monomorphism being dual). It suffices to show that the morphism $g_0$ defined by the commutative square 
+The exactness at $\Ker u_2$ and $\Coker u_2$ is straightforward. Assume $u_1$ is an epimorphism (the case when $u_3$ is a monomorphism being ). It suffices to show that the morphism $g_0$ defined by the commutative square 
 $$
 \begin{tikzcd}
 \Ker u_2\ar[d,rightarrowtail,"a_2"']\ar[r,"g_0"]&\Ker u_3\ar[d,rightarrowtail,"a_3"]\\ 
@@ -10329,7 +10404,9 @@ $$
 $$ 
 $\bu$ Exactness at $H^p(X)$: As mentioned in the book, the exactness at $H^p(X)$ holds by assumption.
 
-\nn$\bu$ Exactness at $\Coker d_Y^{p-1}$: This is an immediate consequence of the following lemma:
+\nn$\bu$ Exactness at $\Coker d_Y^{p-1}$: This is an immediate consequence of Lemma~\ref{cart2} (b) p.~\pr{cart2}. 
+
+\begin{comment}
 \begin{lem}
 If 
 $$
@@ -10357,8 +10434,11 @@ Z\ar[dr,"0"']\ar[r,"a"]&Y\ar[d,"gc"]\ar[r,"b"]&X\ar[d,"j"]\\
 $$ 
 The right square being cocartesian, there is a unique morphism $h:V\to T$ such that $hd=j$ and $hf=ig$. 
 \end{proof}
+\end{comment}
 
-\nn$\bu$ Exactness at $Z^p$: This is an immediate consequence of the following lemma:
+\nn$\bu$ Exactness at $Z^p$: This is an immediate consequence of Lemma~\ref{cart1} p.~\pr{cart1} (c).
+
+\begin{comment}
 \begin{lem}
 If 
 $$
@@ -10386,6 +10466,7 @@ Z\ar[dr,"0"']\ar[r,"a"]&Y\ar[d,"gd"]\ar[r,"b"]&X\ar[d,"h"]\\
 $$ 
 It suffices to prove $hf=ig$. The left square being cocartesian, the equality $hf=ig$ is equivalent to the conjonction of the equalities $hfd=igd$ and $hfe=ige$, which are straightforward.  
 \end{proof}
+\end{comment}
 
 \nn$\bu$ Exactness at $H^{p+1}(X)$: The morphism $Z^p\to H^{p+1}(X)$ is an epimorphism because the composition $\Ker d_X^{p+1}\to Z^p\to H^{p+1}(X)$ is an epimorphism.
 \end{s}
@@ -10512,7 +10593,7 @@ We assume that (C) holds, and we must show that $\J$ is $F$-injective. Let $Y'\m
 %
 
 \begin{s}
-P.~332, proof of Lemma 13.3.10. See Lemma~\ref{738b} p.~\pr{738b} below.
+P.~332, proof of Lemma 13.3.10. See Lemma~\ref{cart1} p.~\pr{cart1}. %below.
 \end{s}
 
 %
@@ -10585,7 +10666,10 @@ $$
 % previous version 
 % https://docs.google.com/document/d/1T7iB-oRKHDMGITjRk9TSH7GGNmZzNZnkh4f4Og--zVs/edit
 
-Here is a partial solution. Let $\C$ be an abelian category. We shall need the following statement:
+%Here is a partial solution. Let $\C$ be an abelian category. 
+
+\begin{comment}
+Let $\C$ be an abelian category. We shall need the following statement:
 
 \begin{lem}\lb{738a}
 Let
@@ -10598,7 +10682,7 @@ $$
 be a commutative diagram in $\C$. If the square $(Z,Y,V,W)$ is cocartesian and the top row is an exact complex, then the bottom row is an exact complex.
 \end{lem}
 
-We prefer to prove the dual statement:
+We prefer to prove the  statement:
 
 \begin{lem}\lb{738b}
 Let
@@ -10634,8 +10718,9 @@ We can find $h$ and $i$ such that $eh=cgh$, and we must prove $gi=ah$. But the e
 
 \nn Exactness at $X$: It follows from Lemma~\ref{8311} (a) (ii) p.~\pr{8311}.
 \end{proof}
+\end{comment}
 
-Let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences 
+Here is a partial solution. Let $\C$ be an abelian category, let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences 
 $$
 0\to Y\to Z\to X\to0,
 $$ 
@@ -10692,7 +10777,8 @@ $$
 0\ar{r}&Y\ar{r}&Z\ar{r}&X\ar{r}&0,
 \end{tikzcd}
 $$ 
-where the top row is an exact complex, where $g'$ is induced by $g$ and where the square $(\Ker f,W^0,Y,Z)$ is cocartesian. Then Lemma~\ref{738a} p.~\pr{738a} implies that the bottom row is an exact complex. It is easy to see that this process defines a map from $\Ext^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
+where the top row is an exact complex, where $g'$ is induced by $g$ and where the square $(\Ker f,W^0,Y,Z)$ is cocartesian. Then Lemma~\ref{cart1} p.~\pr{cart1} %Lemma~\ref{738a} p.~\pr{738a} 
+implies that the bottom row is an exact complex. It is easy to see that this process defines a map from $\Ext^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
 
 %%%
 
@@ -11027,13 +11113,10 @@ Condition GT4 holds.
 
 \begin{proof} 
 Let us assume 
-%
 \begin{equation}\lb{sgu}
 S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\tm_UV\in\Gamma_V\ \forall\ (V\to U)\in S.
 \end{equation}
-%
 It suffices to check $S'\in\Gamma_U$, or, equivalently, 
-%
 \begin{equation}\lb{as'}
 (A_{S'}\to U)\in\E.
 \end{equation}
