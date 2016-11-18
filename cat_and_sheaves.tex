@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -5920,37 +5920,8 @@ $$
 \begin{s}%\lb{731b} 
 %P. 159, Definition 7.3.1 (ii). It is written: 
 
-\begin{comment}
-
-``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is localizable and $R_\SSS(K\ci F)\xr\sim K\ci R_\SSS F$.'' 
-
-This suggests that there is a natural morphism of functors from $R_\SSS(K\ci F)$ to $K\ci R_\SSS F$, and that the condition is that this morphism is an isomorphism. Unfortunately I don't see this morphism. As a result I prefer to be more prudent and set 
-
-\begin{df}%\lb{o1}
-In the above situation, $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $\rho:R_\SSS(K\ci F)\xr\sim K\ci R_\SSS F$ such that the diagram 
-$$
-\begin{tikzcd}
-K\ci F\ar[rd,"K\star\tau"']\ar[r,"\sigma"]&R_\SSS(K\ci F)\ci Q\ar[d,"\rho\star Q"]\\ 
-&K\ci R_\SSS F\ci Q
-\end{tikzcd}
-$$
-commutes, where $\tau:F\to R_\SSS F\ci Q$ and $\sigma:K\ci F\to R_\SSS(K\ci F)\ci Q$ are the structural morphisms. (Recall that $\star$ denotes horizontal composition; see Definition~\ref{dil1} p.~\pr{dil1}.)
-%In the above situation, $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.
-\end{df}
-
-%``We say that $F$ is universally right localizable if for any functor $K:\A\to\A'$, the functor $K\ci F$ is right localizable and there is an isomorphism $R_\SSS(K\ci F)\iso K\ci R_\SSS F$.'' 
-
-Another option would be to set 
-
-\begin{df}%\lb{o2}
-In the above situation, $F$ is universally right localizable if 
-$$
-\col_{(X\to X')\in\SSS^X}F(X')
-$$ 
-exists universally in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}.
-\end{df}
-
-\end{comment}
+% old comment
+% https://docs.google.com/document/d/1Rv2a1H0lugF9wmrCtr37Tgf1X2CHEzKyeIC1TUC2LKI/edit
 
 P. 159, Definition 7.3.1 (ii). The following proposition is obvious:
 
@@ -6823,11 +6794,10 @@ Equivalence (a) $\ssi$ (b) is proved in the book, and Equivalence (a) $\ssi$ (c)
 \end{proof}
 \end{s}
 
-%£
+%
 
 \begin{s}
 Here are two lemmas which be used in the sequel:
-
 \begin{lem}\lb{cart1}
 Let
 $$
@@ -6844,7 +6814,8 @@ be a commutative diagram of complexes in an abelian category, and assume that th
 
 \nn\emph{(c)} If the bottom row is exact, so is the top row.
 \end{lem}
-\begin{proof} Part (a) is obvious, and (b) follows from Lemma~\ref{8311} (a) (ii) p.~\pr{8311}. To prove (c), let $g:U\to Y$ be a morphism satisfying $bg=0$ (in this proof we write $uv$ for $u\ci v$). By Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, it suffices to complete the commutative diagram
+\begin{proof} 
+Part (a) is obvious, and (b) follows from Lemma~\ref{8311} (a) (ii) p.~\pr{8311}. To prove (c), let $g:U\to Y$ be a morphism satisfying $bg=0$ (in this proof we write $uv$ for $u\ci v$). By Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, it suffices to complete the commutative diagram
 $$
 \begin{tikzcd}
 V\ar[dashed]{d}[swap]{i}\ar[dashed,two heads]{r}{h}&U\ar{dr}{0}\ar{d}[swap]{g}\\ 
@@ -6859,8 +6830,8 @@ Z\ar[equal]{d}\ar{r}{a}&Y\ar{d}{c}\ar{r}{b}&X\ar{d}{d}\\
 Z\ar{r}[swap]{e}&W\ar{r}[swap]{f}&V.
 \end{tikzcd}
 $$ 
-Invoking again Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, we find an epimorphism $h:V\epi U$ and a morphism $i:V\to Z$ such that $cgh=ei$, and it suffices to prove $gh=ai$. But the equality $gh=ai$ is equivalent to the conjonction of the equalities $cgh=cai$ and $bgh=bai$, equalities whose proof is straightforward.
-\end{proof}\newpage
+Invoking again Lemma~\ref{8312}, (a) $\ssi$ (b), p.~\pr{8312}, we find an epimorphism $h:V\epi U$ and a morphism $i:V\to Z$ such that $cgh=ei$, and it suffices to prove $gh=ai$. But the equality $gh=ai$ is equivalent to the conjunction of the equalities $cgh=cai$ and $bgh=bai$, equalities whose proof is straightforward.
+\end{proof}
 
 \begin{lem}\lb{cart2}
 Let 
@@ -7450,38 +7421,8 @@ may be completed as indicated, yielding $0=j\ci h\ci k=j$.
 
 \begin{s} 
 P. 197, proof of Proposition 8.6.12. The existence of the epimorphism $X_1\to Y''$ follows from Proposition 8.6.9 in the book, and the statement ``Since the top square on the left is co-Cartesian, the middle row is exact'' follows from the Lemma~\ref{cart1} p.~\pr{cart1}.
-
-\begin{comment}
-
-\begin{lem}
-If, in the commutative diagram 
-$$
-\begin{tikzcd}
-0\ar[r]&A\ar[d]\ar[r]&B\ar[d]\ar[r]&C\ar[d,equal]\ar[r]&0\\ 
-0\ar[r]&D\ar[r]&E\ar[r]&C\ar[r]&0,
-\end{tikzcd}
-$$ 
-the left square is co-cartesian and the top row is exact, then the bottom row is exact.
-\end{lem} 
-\begin{proof}
-In this proof we write $gf$ for $g\ci f$. Let us verify that the bottom row is exact at $E$. By Lemma \ref{8312} p.~\pr{8312}, (c)$\then$(a), it suffices to check that the solid diagram 
-$$
-\begin{tikzcd}
-0\ar[r]&A\ar[d]\ar[r]&B\ar[d,"v"]\ar[r,"t"]&C\ar[d,equal]\ar[r]&0\\ 
-0\ar[r]&D\ar[rd,"0"']\ar[r,"u"]&E\ar[d,"y"]\ar[r,"w"]&C\ar[d,"x",dashed]\ar[r]&0\\ 
-&&F\ar[r,"z"',dashed,rightarrowtail]&G
-\end{tikzcd}
-$$ 
-can be completed as indicated. The top row being exact, 
-$$
-\begin{tikzcd}
-0\ar[r]&A\ar[rd,"0"']\ar[r]&B\ar[d,"yv"]\ar[r,"t"]&C\ar[d,"x",dashed]\ar[r]&0\\ 
-&&F\ar[r,"z"',dashed,rightarrowtail]&G
-\end{tikzcd}
-$$ 
-can be completed as indicated. It suffices to prove $zy=xw$. The square $ABDE$ being co-cartesian, it suffices to prove $zyu=xwu$ and $zyv=xwv$, which is easy. Thus shows that $0\to D\to E\to C$ is exact at $E$. Using Lemma~\ref{8311} p.~\pr{8311} it is straightforward to prove the exactness at $D$ and $C$.
-\end{proof}
-\end{comment}
+% old comment
+% https://docs.google.com/document/d/1lOS_I-oju3d5RIIYiwCqBdV4LXpFczRiaIlLpNNrRMo/edit
 \end{s}
 
 %% 
@@ -9714,13 +9655,7 @@ $$
 $$ 
 \end{s}
 
-%
-
 %\begin{s}\begin{uspb} P. 263. I don't understand the proof of Lemma 10.5.9\index{unsolved problem}. I don't even understand how the morphism $X_0\to H$ in $\DD^\wg$ is constructed.\end{uspb}\end{s}
-
-%
-
-%\begin{comment}
 
 \begin{s} P.~263, proof of Lemma 10.5.9. 
 
@@ -9742,8 +9677,6 @@ for $X$ in $\SSS$.
 
 Note that Convention~\ref{payc} p.~\pr{payc} can be applied.
 \end{s}
-
-%\end{comment}
 
 %
 
@@ -10286,17 +10219,7 @@ Beginning of Section 13.1 p.~319. Recall that $\N Q$ is defined in (10.2.1) p.~2
 P. 319, Display (13.1.1). This display reads: $H:\oo K_c(\A)\to\A$. As observed in \S\ref{300301} p.~\pr{300301} we have in fact $H:(\oo K_c(\A),T)\to(\A,T)$. (See also \S\ref{300301b}.)
 \end{s}
 
-%
-
-\begin{comment}
-
-\begin{s}
-P. 319, Definition 13.1.1. In view of (10.2.1) p.~249 of the book, it is easy to see that the derived category $\oo D(\A_c)$ attached to an abelian category with translation $(\A,T)$ is obtained by localizing $\oo K(\A_c)$ with respect to the (left and right) multiplicative system formed by the quasi-isomorphisms.
-\end{s}
-
-\end{comment}
-
-%
+%\begin{s}P. 319, Definition 13.1.1. In view of (10.2.1) p.~249 of the book, it is easy to see that the derived category $\oo D(\A_c)$ attached to an abelian category with translation $(\A,T)$ is obtained by localizing $\oo K(\A_c)$ with respect to the (left and right) multiplicative system formed by the quasi-isomorphisms.\end{s}
 
 \begin{s}
 P. 320, Display (13.1.2). It might be worth stating explicitly the equality 
@@ -10406,67 +10329,8 @@ $\bu$ Exactness at $H^p(X)$: As mentioned in the book, the exactness at $H^p(X)$
 
 \nn$\bu$ Exactness at $\Coker d_Y^{p-1}$: This is an immediate consequence of Lemma~\ref{cart2} (b) p.~\pr{cart2}. 
 
-\begin{comment}
-\begin{lem}
-If 
-$$
-\begin{tikzcd}
-Z\ar[d,equal]\ar[r,"a"]&Y\ar[d,"c"]\ar[r,"b"]&X\ar[d,"d"]\\ 
-Z\ar[r,"e"]&W\ar[r,"f"]&V
-\end{tikzcd}
-$$ 
-is a commutative diagram in $\C$, if the top row is exact and the right square cocartesian, then the bottom row is exact.
-\end{lem} 
-\begin{proof}
-It suffices to complete the commutative diagram 
-$$
-\begin{tikzcd}
-Z\ar[dr,"0"']\ar[r,"e"]&W\ar[d,"c"]\ar[r,"g"]&V\ar[d,dashed,"h"]\\ 
-&U\ar[r,dashed,rightarrowtail,"i"']&T.
-\end{tikzcd}
-$$ 
-We have the commutative diagram 
-$$
-\begin{tikzcd}
-Z\ar[dr,"0"']\ar[r,"a"]&Y\ar[d,"gc"]\ar[r,"b"]&X\ar[d,"j"]\\ 
-&U\ar[r,rightarrowtail,"i"']&T.
-\end{tikzcd}
-$$ 
-The right square being cocartesian, there is a unique morphism $h:V\to T$ such that $hd=j$ and $hf=ig$. 
-\end{proof}
-\end{comment}
-
-\nn$\bu$ Exactness at $Z^p$: This is an immediate consequence of Lemma~\ref{cart1} p.~\pr{cart1} (c).
-
-\begin{comment}
-\begin{lem}
-If 
-$$
-\begin{tikzcd}
-Z\ar[d,"c"']\ar[r,"a"]&Y\ar[d,"d"']\ar[r,"b"]&X\ar[d,equal]\\ 
-W\ar[r,"e"]&V\ar[r,"f"]&X
-\end{tikzcd}
-$$ 
-is a commutative diagram in $\C$, if the top row is exact and the left square cocartesian, then the bottom row is exact.
-\end{lem} 
-\begin{proof}
-It suffices to complete the commutative diagram 
-$$
-\begin{tikzcd}
-W\ar[dr,"0"']\ar[r,"e"]&V\ar[d,"g"]\ar[r,"f"]&V\ar[d,dashed,"h"]\\ 
-&U\ar[r,dashed,rightarrowtail,"i"']&T.
-\end{tikzcd}
-$$ 
-We have the commutative diagram 
-$$
-\begin{tikzcd}
-Z\ar[dr,"0"']\ar[r,"a"]&Y\ar[d,"gd"]\ar[r,"b"]&X\ar[d,"h"]\\ 
-&U\ar[r,rightarrowtail,"i"']&T.
-\end{tikzcd}
-$$ 
-It suffices to prove $hf=ig$. The left square being cocartesian, the equality $hf=ig$ is equivalent to the conjonction of the equalities $hfd=igd$ and $hfe=ige$, which are straightforward.  
-\end{proof}
-\end{comment}
+% old comment
+% https://docs.google.com/document/d/15SCs5Hb987AifYKjinx2D-UqtOLkkYe3wvvIgEWLCLI/edit
 
 \nn$\bu$ Exactness at $H^{p+1}(X)$: The morphism $Z^p\to H^{p+1}(X)$ is an epimorphism because the composition $\Ker d_X^{p+1}\to Z^p\to H^{p+1}(X)$ is an epimorphism.
 \end{s}
@@ -10593,7 +10457,16 @@ We assume that (C) holds, and we must show that $\J$ is $F$-injective. Let $Y'\m
 %
 
 \begin{s}
-P.~332, proof of Lemma 13.3.10. See Lemma~\ref{cart1} p.~\pr{cart1}. %below.
+%P.~332, proof of Lemma 13.3.10. See Lemma~\ref{cart1} p.~\pr{cart1}. %below.
+P. 332, first two sentences of the proof of Lemma 13.3.10. We get the commutative diagram of complexes 
+$$
+\begin{tikzcd}
+0\ar[r]&Y'\ar[d,equal]\ar[r]&X\ar[d]\ar[r]&X''\ar[d,equal]\ar[r]&0\\ 
+0\ar[r]&Y'\ar[d,equal]\ar[r]&Z\ar[d]\ar[r]&X''\ar[d]      \ar[r]&0\\ 
+0\ar[r]&Y'            \ar[r]&Y      \ar[r]&Y''            \ar[r]&0.
+\end{tikzcd} 
+$$ 
+The square $(Z,X'',Y,Y')$ is cartesian, and the top and bottom rows are exact. The middle row is exact by Lemma~\ref{cart1} p.~\pr{cart1}, and $X\to Z$ is an isomorphism by the Five Lemma.
 \end{s}
 
 %
@@ -10668,57 +10541,8 @@ $$
 
 %Here is a partial solution. Let $\C$ be an abelian category. 
 
-\begin{comment}
-Let $\C$ be an abelian category. We shall need the following statement:
-
-\begin{lem}\lb{738a}
-Let
-$$
-\begin{tikzcd}
-0\ar{r}&Z\ar{d}{c}\ar{r}{a}&Y\ar{d}{d}\ar{r}{b}&X\ar[equal]{d}\ar{r}&0\\ 
-0\ar{r}&W\ar{r}[swap]{e}&V\ar{r}[swap]{f}&X\ar{r}&0
-\end{tikzcd}
-$$ 
-be a commutative diagram in $\C$. If the square $(Z,Y,V,W)$ is cocartesian and the top row is an exact complex, then the bottom row is an exact complex.
-\end{lem}
-
-We prefer to prove the  statement:
-
-\begin{lem}\lb{738b}
-Let
-$$
-\begin{tikzcd}
-0\ar{r}&Z\ar[equal]{d}\ar{r}{a}&Y\ar{d}{d}\ar{r}{b}&X\ar[equal]{d}\ar{r}&0\\ 
-0\ar{r}&Z\ar{r}[swap]{e}&W\ar{r}[swap]{f}&V\ar{r}&0
-\end{tikzcd}
-$$ 
-be a commutative diagram in $\C$. If the square $(Y,X,V,W)$ is cartesian and the bottom row is an exact complex, then the top row is an exact complex.
-\end{lem}
-
-\begin{proof} The fact that the top row is a complex is clear.
-
-\nn Exactness at $Z$: Let $g:U\to Z$ be a morphism satisfying $ag=0$ (in this proof we write $uv$ for $u\ci v$). We get $eg=cag=0$ and thus $g=0$.
-
-\nn Exactness at $Y$: Let $g:U\to Y$ be a morphism satisfying $bg=0$. By Lemma~\ref{738a} p.~\pr{738a} it suffices to complete the commutative diagram
-$$
-\begin{tikzcd}
-V\ar[dashed]{d}[swap]{h}\ar[dashed,two heads]{r}{i}&U\ar{dr}{0}\ar{d}[swap]{g}\\ 
-Z\ar{r}[swap]{a}&Y\ar{r}[swap]{b}&X.
-\end{tikzcd}
-$$ 
-Consider the larger commutative diagram 
-$$
-\begin{tikzcd}
-V\ar[dashed]{d}[swap]{h}\ar[dashed,two heads]{r}{i}&U\ar{dr}{0}\ar{d}[swap]{g}\\ 
-Z\ar[equal]{d}\ar{r}{a}&Y\ar{d}{c}\ar{r}{b}&X\ar{d}{d}\\ 
-Z\ar{r}[swap]{e}&W\ar{r}[swap]{f}&V.
-\end{tikzcd}
-$$ 
-We can find $h$ and $i$ such that $eh=cgh$, and we must prove $gi=ah$. But the equality $gi=ah$ is equivalent to the conjonction of the equalities $cgi=cah$ and $bgi=bah$, equalities whose proof is straightforward.
-
-\nn Exactness at $X$: It follows from Lemma~\ref{8311} (a) (ii) p.~\pr{8311}.
-\end{proof}
-\end{comment}
+% old comment
+% https://docs.google.com/document/d/1q-clQAuqHNwXM20tJXERPsLcnh8lgYaaJ9hahtv2mdA/edit
 
 Here is a partial solution. Let $\C$ be an abelian category, let $X$ and $Y$ be in $\C$, let $E$ be the set of short exact sequences 
 $$
@@ -10888,25 +10712,8 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\iso\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo D(
 \end{cor}
 \end{s}
 
-%
-
-\begin{comment}
-
-\begin{s}%\lb{s144}
-P.~357, Section 14.4. Having been unable to solve Part (iii) of Exercise 8.37 p.~211, I suggest the following changes to Section 14.4. (I might be missing something. If so, thank you for letting me know.)
-
-\nn(a) Replace Assumption (14.4.1) p.~358 with: ``$\C$ admits inductive limits indexed by the ordered set $\bb N$, and such limits are exact''.
-
-\nn(b) Say (only for the duration of this comment) that a full saturated subcategory $\A$ of a category $\B$ is {\em closed by coproducts} if the coproduct of any family of objects of $\A$ which exists in $\B$ belongs to $\A$.
-
-\nn(c) In Lemma 14.4.2 p. 359, replace ``full triangulated'' with ``full saturated triangulated'', and ``closed by small direct sums'' with ``closed by direct sums (in the sense of the above definition)''. 
-
-There are analog observations for the other statements of Section 14.4.
-\end{s}
-
-\end{comment}
-
-%
+% old comment
+% https://docs.google.com/document/d/1EAlaHrIJobqQXp768tioLyGGsW5Nd757wVIdqB2xNiY/edit
 
 \begin{s}%\lb{s1448}
 Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
