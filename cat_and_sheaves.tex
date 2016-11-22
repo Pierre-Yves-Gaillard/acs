@@ -5995,7 +5995,7 @@ $$
 $$ 
 is represented by $RF(X)$.
 
-%\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.£
+%\nn(d) If, in the setting of Proposition 7.3.2, any $t$ in $\T$ is an isomorphism, then the right localization $(\C_\SSS,Q)$ of $\C$ is universal in the sense of Definition~\ref{url2}.
 
 % removed:
 % https://docs.google.com/document/d/18qXG0GqcLJD33QRv2VQFE2Yn41AbyXqzHMTKzuDZsR4/edit
@@ -6070,101 +6070,73 @@ $$
 The proof that $g\ci f$ is the identity of the left-hand side of \qr{clc2} is similar and easier.
 \end{s} 
 
-%%
+% old version of the proof of (7.4.3) p. 162:
+% https://docs.google.com/document/d/1kc7naRZtFyxDMn0-u2ndab1cfpi8dpFqiYyfRJEsVEg/edit
 
-\sbs{Proof of (7.4.3) p.~162}
-
-Recall that $\SSS$ is a right multiplicative system in $\C$ such that $\SSS^X$ is cofinally small for all $X$ in $\C$. We have the (non-commutative) diagram
+\begin{s}
+P. 162, Display (7.4.3). We must prove $R_\SSS(\iota_\A\ci F)\iso IF\ci\al_\SSS$. Let $X$ be in $\C$. It suffices to show $R_\SSS(\iota_\A\ci F)(Q(X))\iso IF(\al_\SSS(Q(X)))$. We have 
 $$
-\begin{tikzcd}
-\C\ar{rr}{F}\ar{d}[swap]{Q}\ar{dr}{\iota_\C}&&\A\ar{d}{\iota_\A}\\ 
-\C_\SSS\ar{r}[swap]{\al_\SSS}&\Ind(\C)\ar{r}[swap]{IF}&\Ind(\A).
-\end{tikzcd}
-$$
-Let $X$ be in $\C$. We must prove that there is an isomorphism 
-$$
-R_\SSS(\iota_\A\ci F)(Q(X))\iso IF(\al_\SSS(Q(X)))
+R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X'))
 $$ 
-in $\Ind(\C)$. Recall the following facts: 
-
-\nn$\bu$ Proposition 7.4.1 p.~162 of the book implies
 $$
-A:=\al_\SSS(Q(X))=\col_{(X\to X')\in\SSS^X}\iota_\C(X')\in\Ind(\C).
+\iso IF\left(\col_{(X\to X')\in\SSS^X}\iota_\C(X')\right)\iso IF(\al_\SSS(Q(X))),
 $$ 
-$\bu$ Display~\qr{(7.3.7)} p.~\pr{(7.3.7)} implies
-$$
-B:=R_\SSS(\iota_\A\ci F)(Q(X))=\col_{(X\to X')\in\SSS^X}\iota_\A(F(X'))\in\Ind(\A).
-$$
-$\bu$ The definition of $IF$ p.~133 of the book implies
-$$
-C:=IF(A)=\col_{(U\to A)\in\C_A}\iota_\A(F(U))\in\Ind(\A).
-$$
+the isomorphisms following respectively from (7.3.7) p.~161 of the book, Proposition 6.1.9 p.~133 of the book and Proposition 7.4.1 p.~162 of the book.
+\end{s}
 
-We want to prove $B\iso C$.
+%
 
-%\nn{\em Notation.} If $\al:I\to\B$ is a functor whose inductive limit is $X\in\B$, then we write $p(X,i):\al(i)\to X$ for the coprojection. (Of course this morphism depends on $\al$.) 
-
-In the rest of this section we use the following convention: 
-
-\nn If $\al:I\to\B$ is a functor whose inductive limit is $Y\in\B$, then we write 
-$$
-p[Y,i]:\al(i)\to Y
-$$ 
-for the corresponding coprojection. 
-
-As the inductive systems we shall consider have different colimits, this convention should create no confusion.
-
-We leave the proof of the following claims to the reader:
-
-Claim 1: There is a unique morphism $f:B\to C$ such that the diagram 
-$$
-\begin{tikzcd}
-B\ar[r,"f"]&C\\ 
-\iota_\A(F(X'))\ar{u}{p[B,X\to X']}\ar{ur}[swap]{p[C,p[A(X'),X\to X'](\id_{X'})]}
-\end{tikzcd}
-$$ 
-commutes for all $X\to X'$ in $\SSS^X$.
-
-Claim 2: There is a unique morphism $g:C\to B$ such that the diagram 
-$$
-\begin{tikzcd}
-C\ar[rrr,"g"]&&&B\\ 
-\iota_\A(F(U))\ar{u}{p[C,p[A(U),X\to X'](U\to X')]}\ar[rrr,"\iota_\A(F(U\to X'))"']&&&\iota_\A(F(X'))\ar{u}[swap]{p[B,X\to X']}
-\end{tikzcd}
-$$ 
-commutes for all $X\to X'$ in $\SSS^X$ and all $U\to X'$ in $\C_{X'}$. 
-
-Claim 3: The morphisms $f$ and $g$ are mutually inverse.
+\begin{s}\lb{742}
+P. 162, Definition 7.4.2. If $F:\C\to\A$ is a functor and $X$ an object of $\C$, then the condition that $F$ is right localizable at $X$ does not depend on the choice of a universe $\U$ such that $\C$ and $\A$ are $\U$-categories.
+\end{s}
 
 %
 
 \begin{s}
-P. 162, proof of Lemma 7.4.3. Recall the statement
+P. 162, proof of Lemma 7.4.3. Recall the statement:
 \begin{lem}[Lemma 7.4.3 p. 162]
 If $G:\A\to\A'$ is a functor and $F$ is right localizable at $X$, then $G\ci F$ is right localizable at $X$.
 \end{lem}
 \begin{proof}
-By (7.4.3) p. 162 the assumption that $F$ is right localizable at $X$ is equivalent to the existence of an object $Y$ of $\A$ satisfying $$IF(\al_\SSS(X))\iso\iota_\A(Y).$$ Applying $IG$ we get $$IG(IF(\al_\SSS(X)))\iso IG(\iota_\A(Y)),$$ and thus $$I(G\ci F)(\al_\SSS(X))\iso\iota_{\A'}(G(Y)).$$ This shows that $G\ci F$ is right localizable at $X$. 
+This follows from Proposition~\ref{copr} p.~\pr{copr}.
+%By (7.4.3) p. 162 the assumption that $F$ is right localizable at $X$ is equivalent to the existence of an object $Y$ of $\A$ satisfying $$IF(\al_\SSS(X))\iso\iota_\A(Y).$$ Applying $IG$ we get $$IG(IF(\al_\SSS(X)))\iso IG(\iota_\A(Y)),$$ and thus $$I(G\ci F)(\al_\SSS(X))\iso\iota_{\A'}(G(Y)).$$ This shows that $G\ci F$ is right localizable at $X$. 
 \end{proof}
 \end{s}
 
-%%
+%
 
-\sbs{Brief comments}
+\begin{s}
+P. 163, Proposition 7.4.4. The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have 
+$$
+\iota_\A(RF(Q(X)))\iso R(\iota_\A\ci F)(Q(X))\iso IF(\al_\SSS(Q(X)))
+$$
+$$
+\iso IF\left(\col_{(X\to X')\in\SSS^X}\iota_\C(X')\right)\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')), 
+$$
+the isomorphisms following respectively from the assumption that $F$ is universally right localizable, (7.4.3) p.~162 of the book, Proposition 7.4.1 p.~162 of the book and Proposition 6.1.9 p.~133 of the book.
+\end{s}
+
+%
+
+\begin{s}\lb{744}
+P. 163, Proposition 7.4.4. In view of \S\ref{742} p.~\pr{742}, the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$ is not necessary.
+\end{s}
+
+%\sbs{Brief comments}
 
 %\begin{s}P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. It seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
 
 %\begin{lem}If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\col\iota\ci\al\iso\iota(X)$ for some $X$ in $\C$, then we have $\col\al\iso X$. \end{lem}\end{s}
 
-\begin{s}
-P. 163, proof of Proposition 7.4.34, implication (i)$\then$(ii). Here are some of the tasks implicitly left to the reader: 
+%\begin{s}
+%P. 163, proof of Proposition 7.4.4, implication (i)$\then$(ii). Here are some of the tasks implicitly left to the reader: 
 
-\nn$\bu$ Define a morphism of functors $\tau$ from $F$ to $H\ci Q$.
+%\nn$\bu$ Define a morphism of functors $\tau$ from $F$ to $H\ci Q$.
 
-\nn$\bu$ Define the three bijections in the display.
+%\nn$\bu$ Define the three bijections in the display.
 
-\nn$\bu$ Check that the composition of these three bijections coincides with the map $v\mt(v\star Q)\ci\tau$. (See \S\ref{durl} p.~\pr{durl}.)
-\end{s}
+%\nn$\bu$ Check that the composition of these three bijections coincides with the map $v\mt(v\star Q)\ci\tau$. (See \S\ref{durl} p.~\pr{durl}.)
+%\end{s}
 
 %
 
@@ -9505,7 +9477,9 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
+The second sentence in the above quote is justified by \S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
+
+%In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
 
 %
@@ -10382,7 +10356,7 @@ P. 326. The first isomorphism in the third display follows from the fact that $d
 
 %
 
-\begin{s}\lb{330}
+\begin{s}% The second sentence in the above quote is justified by Proposition 7.4.4 p.~163 of the book.
 P.~330. Right after Definition 13.3.1 it is written: 
 
 By the definition, the functor $F$ admits a right derived functor on $\oo K^*(\C)$ if 
@@ -10391,7 +10365,8 @@ $$
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-In fact, the existence of the indicated limit is a sufficient condition for the existence of the right derived functor, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. (See \S\ref{253} p.~\pr{253}.)
+This is justified by \S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book %In fact, the existence of the indicated limit is a sufficient condition for the existence of the right derived functor, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. 
+(see \S\ref{253} p.~\pr{253}). 
 \end{s}
 
 %
@@ -10404,12 +10379,7 @@ The\index{unsolved problem} sentence just before Notation 13.3.2 p.~330 starts w
 \nn\textbf{Warning.} In this text, we adopt the following terminology: If $F$ is universally right localizable in the sense of Definition 7.3.1 p.~159 of the book, \emph{and if its right localization is triangulated}, we denote it by $R^*F$, and we say that ``$R^*F$ exists''.
 \end{s}
 
-%
-
-\begin{s}
-P. 330, proof Corollary 13.3.3. In view of \S\ref{330} above, it seems %is not clear 
-to me that the proof should be phrased slightly differently.% the argument given in the book is complete.
-\end{s}
+%\begin{s}P. 330, proof Corollary 13.3.3. In view of \S\ref{330} above, it seems to me that the proof should be phrased slightly differently.\end{s}
 
 %\begin{s}P. 331, proof of Proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the proof, the exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.%%can be verified as follows: If $W$ is an exact complex in $\oo K^+(\J)$, then we have $0\iso R^+F(0)\iso F(W)$, the first isomorphism resulting from the additivity of $R^+F$ (see \ref{1335i} p.~\pr{1335i}) and the second isomorphism resulting from (13.3.1) p.~330 of the book. Now Proposition 13.1.5 (ii) p.~320 of the book implies that $F(W)$ is exact.\end{s}
 
