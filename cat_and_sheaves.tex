@@ -1639,6 +1639,8 @@ $$
 \end{tikzcd}
 $$ 
 in $\C$ is \emph{not} cocartesian. %coproduct $$g\sqcup_fg,$$ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
+
+In \S\ref{patho} p.~\ref{patho} we shall see a way to prevent the kind of pathology displayed by the above example.
 \end{s}
 
 %
@@ -1872,6 +1874,19 @@ This shows that the inductive limit of $\al$ does not exist universally in $\Set
 %%
 
 \sbs{Brief comments}
+
+\begin{s}\lb{patho}
+Claim: If $\al:I\tm J\to\C$ is a functor defined on a product of small categories and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$.
+
+In \S\ref{c38} p.~\pr{c38} we saw that, without the adverb ``universally'', the claim is false.
+
+To prove the claim, let $h:\C\to\C^\wg$ be the Yoneda embedding and note the isomorphisms 
+$$
+\left(\col_ih(\al(i,\ ))\right)(j)\xr\sim\bigg(h\Big(\col_i\al(i,\ )\Big)\bigg)(j)\iso h\left(\col_i\al(i,j)\right).\square
+$$ 
+\end{s}
+
+%
 
 \begin{s} 
 P.~40, proof of Lemma 2.1.11 (minor variant).
@@ -2240,7 +2255,7 @@ exists in $\C$ for all $i$ in $I$. Then $\pp^\dg(\bt)$ exists and we have
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and the co-unit $\ee_\bt:\id_{\C^J}\to\pp_*\ci\pp^\dg$ (see \S\ref{ldefat} p.~\pr{ldefat}) is an isomorphism.%$\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
 \end{thm}
 
-Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true.
+Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. In \S\ref{patho} p.~\ref{patho} we shall see a way to prevent theis kind of pathology.
 
 The proof in the book is divided into three steps, called (a), (b) and (c). 
 
@@ -2830,7 +2845,7 @@ and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}. q
 \begin{s} 
 % old version: 
 % https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
-P.~61, Proposition 2.6.3 (ii). Here is a Lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
+P.~61, Proposition 2.6.3 (ii). Here is a lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
 
 % old version (160509): 
 % https://docs.google.com/document/d/167Wrv21BZvIOaVYRo1BDkEFQyjZ8mSHUJaWcHo_zWDU/edit
@@ -2878,16 +2893,29 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do t
 
 % the \S with the label \lb{b} was here
 
-\begin{s} 
-Proposition~\ref{copr} yields the following minor variant of Theorem 2.3.3 (i) p.~52 of the book (stated above as Theorem~\ref{233i} p.~\pr{233i}). Let $I\xl\pp J\xr\bt\C$ be functors and let $\bt$ be in $\C^J$. 
-
-\begin{thm}\lb{233}%[Theorem 2.3.3 (i) p. 52]
-If 
+\begin{s}
+\begin{thm}\lb{233}
+Let $I$ and $J$ be small categories and let $I\xl\pp J\xr\bt\C$ be functors. If 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i))\in J_i}\bt(j)
 \end{equation}
-exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. If, in addition, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
+exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 \end{thm}
+
+\begin{proof}
+The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, consider the diagram 
+$$
+\begin{tikzcd}
+J\ar[dd,"\pp"']\ar[rr,"\bt"]&&\C\ar[dd,"h"]\\ \\ 
+I\ar[rr,"\pp^\dg(h\ci\bt)"']\ar[rruu,"\pp^\dg\bt"]&&\C^\wg,
+\end{tikzcd}
+$$ 
+where $h$ is the Yoneda embedding. We have 
+$$
+h(\pp^\dg(\bt)(i))\iso\pp^\dg(h\ci\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}h(\bt(j)),
+$$ 
+the isomorphisms following respectively from the assumption that $\pp^\dg\bt$ exists universally and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in \S\ref{patho} p.~\pr{patho}.)
+\end{proof}
 \end{s}
 
 %
@@ -5578,11 +5606,9 @@ $$
 M:=M\left[N'\xr{\pp}\big(\C/G(a)\big)^{L/a}\xl{\ \DT\ci\widetilde{\al_a}}I_a\right].
 $$ 
 Concretely, an object of $M$ is a triple 
-%
 \begin{equation}\lb{il}
 \Big(\big((i_\ell),Q\big),i_a,\big(\xi_f:Q(\ell)\to\al_a(i_a)\big)_{f:\ell\to a}\Big),
-\end{equation}
-%  
+\end{equation} 
 where $((i_\ell),Q)$ is an object of $N'$, where $i_a$ is an object of $I_a$, where $f$ runs over the morphisms from $\ell$ to $a$ in $K$, and where $\xi_f$ is a morphism from $Q(\ell)$ to $\al_a(i_a)$ which makes the square  
 $$
 \begin{tikzcd}
@@ -6108,12 +6134,9 @@ This follows from Proposition~\ref{copr} p.~\pr{copr}.
 \begin{s}
 P. 163, Proposition 7.4.4. The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have 
 $$
-\iota_\A(RF(Q(X)))\iso R(\iota_\A\ci F)(Q(X))\iso IF(\al_\SSS(Q(X)))
+\iota_\A(R_\SSS F(Q(X)))\iso R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')), 
 $$
-$$
-\iso IF\left(\col_{(X\to X')\in\SSS^X}\iota_\C(X')\right)\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')), 
-$$
-the isomorphisms following respectively from the assumption that $F$ is universally right localizable, (7.4.3) p.~162 of the book, Proposition 7.4.1 p.~162 of the book and Proposition 6.1.9 p.~133 of the book.
+the isomorphisms following respectively from the assumption that $F$ is universally right localizable and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in the proof of Theorem~\ref{233} p.~\pr{233}.)
 \end{s}
 
 %
@@ -10369,15 +10392,11 @@ This is justified by \S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the 
 (see \S\ref{253} p.~\pr{253}). 
 \end{s}
 
-%
+%\begin{s}
+%\begin{uspb}The\index{unsolved problem} sentence just before Notation 13.3.2 p.~330 starts with the claim that $R^*F$ is triangulated. I don't understand why.\end{uspb}
 
-\begin{s}\lb{rf}
-\begin{uspb}
-The\index{unsolved problem} sentence just before Notation 13.3.2 p.~330 starts with the claim that $R^*F$ is triangulated. I don't understand why.
-\end{uspb}
-
-\nn\textbf{Warning.} In this text, we adopt the following terminology: If $F$ is universally right localizable in the sense of Definition 7.3.1 p.~159 of the book, \emph{and if its right localization is triangulated}, we denote it by $R^*F$, and we say that ``$R^*F$ exists''.
-\end{s}
+%\nn\textbf{Warning.} In this text, we adopt the following terminology: If $F$ is universally right localizable in the sense of Definition 7.3.1 p.~159 of the book, \emph{and if its right localization is triangulated}, we denote it by $R^*F$, and we say that ``$R^*F$ exists''.
+%\end{s}
 
 %\begin{s}P. 330, proof Corollary 13.3.3. In view of \S\ref{330} above, it seems to me that the proof should be phrased slightly differently.\end{s}
 
