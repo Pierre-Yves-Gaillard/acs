@@ -1876,11 +1876,11 @@ This shows that the inductive limit of $\al$ does not exist universally in $\Set
 \sbs{Brief comments}
 
 \begin{s}\lb{patho}
-Claim: If $\al:I\tm J\to\C$ is a functor defined on a product of small categories and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$.
+Claim: If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $\al:I\tm J\to\C$ is a functor and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$.
 
 In \S\ref{c38} p.~\pr{c38} we saw that, without the adverb ``universally'', the claim is false.
 
-To prove the claim, let $h:\C\to\C^\wg$ be the Yoneda embedding and note the isomorphisms 
+To prove the claim, we may assume that $I$ is small. Let $h:\C\to\C^\wg$ be the Yoneda embedding and note the isomorphisms 
 $$
 \left(\col_ih(\al(i,\ ))\right)(j)\xr\sim\bigg(h\Big(\col_i\al(i,\ )\Big)\bigg)(j)\iso h\left(\col_i\al(i,j)\right).\square
 $$ 
@@ -2895,7 +2895,7 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do t
 
 \begin{s}
 \begin{thm}\lb{233}
-Let $I$ and $J$ be small categories and let $I\xl\pp J\xr\bt\C$ be functors. If 
+If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ is a functor, and if 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i))\in J_i}\bt(j)
 \end{equation}
@@ -2903,7 +2903,7 @@ exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i
 \end{thm}
 
 \begin{proof}
-The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, consider the diagram 
+The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small. Consider the diagram 
 $$
 \begin{tikzcd}
 J\ar[dd,"\pp"']\ar[rr,"\bt"]&&\C\ar[dd,"h"]\\ \\ 
