@@ -296,7 +296,7 @@ $$
 
 \nn$*$ P.~88, Proposition 3.4.3 (i). It would be better to assume that $\C$ admits small inductive limits.
 
-\nn$*$ P.~89, last sentence of the proof of Proposition 3.4.4. The argument is slightly easier to follow if $\psi'$ is factorized as 
+\nn$*$ P.~89, last sentence of the proof of Proposition 3.4.4. The argument is slightly easier to follow if $\psi'$ is factored as 
 $$
 (J_1)^{j_2}\xr a(J_1)^{\psi_2(j_2)}\xr b(K_1)^{\psi_2(j_2)}\xr c(K_1)^{\pp_2(i_2)}.
 $$ 
@@ -5761,7 +5761,7 @@ Let $F:\C\to\C'$ be a fully faithful functor, let $A'$ be in $\Ind(\C')$, and le
 
 \nn{\em(a)} $S\neq\vi$, 
 
-\nn{\em(b)} all morphism $X'\to A'$ in $\Ind(\C')$ with $X'$ in $\C'$ factorizes through $F(X)$ for some $X$ in $\C$, 
+\nn{\em(b)} all morphism $X'\to A'$ in $\Ind(\C')$ with $X'$ in $\C'$ factors through $F(X)$ for some $X$ in $\C$, 
 
 \nn{\em(c)} the natural functor $\C_{A'\ci F}\to\C'_{A'}$ is cofinal, 
 
@@ -5778,7 +5778,7 @@ $\ic(F\ci\bt)\iso IF(A)$,
 
 $\ic\pp\iso f$. 
 
-\nn Then $f$ factorizes as $X'\xr{\pp_j}F(\bt(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
+\nn Then $f$ factors as $X'\xr{\pp_j}F(\bt(j))\xr{p_j}IF(A)$, where $p_j$ is the coprojection.
 
 \nn(b)$\then$(c). This follows from Proposition~\ref{comb} p.~\pr{comb}. 
 
@@ -5796,10 +5796,12 @@ $\ic\pp\iso f$.
 \begin{s}
 P. 149, Definition 7.1.1. 
 \begin{prop}\lb{p711}
-If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists.
+If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists and is unique us to unique isomorphism.
+%If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists.
 \end{prop}
 \begin{lem}\lb{l711}
-If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. %functor $G:\C'\to\A$ such that $G\ci Q=F$.
+If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. Moreover this category is unique us to unique isomorphism.
+%If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. %%functor $G:\C'\to\A$ such that $G\ci Q=F$.
 \end{lem} 
 \begin{proof}[Proof of Lemma \ref{l711}] 
 We define the objects of $\C'$ as being the objects of $\C$, and we construct the morphisms of $\C'$ by inverting formally the elements of $\SSS$. The details are left to the reader.
@@ -5826,6 +5828,8 @@ $$
 \Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v\star Q
 $$ 
 is bijective. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
+
+Lemma 7.1.3 is used on p.~160 of the book to prove Theorem 7.1.16 (see \S\ref{7116} p.~\pr{7116}).
 \end{s}
 
 %
@@ -10370,7 +10374,7 @@ is a monomorphism by the Five Lemma.
 %
 
 \begin{s}
-P. 326. The first isomorphism in the third display follows from the fact that $d_Y^p:Y^p\to Y^{p+1}$ factorizes as $Y^{p-1}\epi\Coker d_Y^{p-1}\to Z^p\mono Y^{p+1}$. (See Proposition 5.1.7 (ii) p.~116 of the book and \S\ref{517ii} p.~\pr{517ii}.)
+P. 326. The first isomorphism in the third display follows from the fact that $d_Y^p:Y^p\to Y^{p+1}$ factors as $Y^{p-1}\epi\Coker d_Y^{p-1}\to Z^p\mono Y^{p+1}$. (See Proposition 5.1.7 (ii) p.~116 of the book and \S\ref{517ii} p.~\pr{517ii}.)
 \end{s}
 
 %
