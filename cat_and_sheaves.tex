@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -40,11 +40,13 @@
 \nt{cond}[thm]{Condition}
 \nt{conv}[thm]{Convention}
 \nt{rk}[thm]{Remark}
-\nt{uspb}[thm]{Unsolved Problem}
-\nt{warning}[thm]{Warning}
+%\nt{uspb}[thm]{Unsolved Problem}
+%\nt{warning}[thm]{Warning}
 
 \theoremstyle{definition}
 \nt{s}[thm]{\S}
+\nt{uspb}[thm]{Unsolved Problem}
+\nt{warning}[thm]{Warning}
 
 \hyphenation{Grothen-dieck mono-mor-phism mono-mor-phisms car-di-nal car-di-nals rep-re-sen-ta-tion}
 
@@ -2893,7 +2895,7 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do t
 
 % the \S with the label \lb{b} was here
 
-\begin{s}
+%\begin{s}
 \begin{thm}\lb{233}
 If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ is a functor, and if 
 \begin{equation}\lb{e233}
@@ -2916,7 +2918,7 @@ h(\pp^\dg(\bt)(i))\iso\pp^\dg(h\ci\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}h(\bt(j)
 $$ 
 the isomorphisms following respectively from the assumption that $\pp^\dg\bt$ exists universally and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in \S\ref{patho} p.~\pr{patho}.)
 \end{proof}
-\end{s}
+%\end{s}
 
 %
 
@@ -5791,7 +5793,7 @@ $\ic\pp\iso f$.
 
 \section{About Chapter 7}
 
-\sbs{Brief comments}
+%\sbs{Brief comments}
 
 \begin{s}
 P. 149, Definition 7.1.1. 
@@ -5800,14 +5802,30 @@ If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then the localiz
 %If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists.
 \end{prop}
 \begin{lem}\lb{l711}
-If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. Moreover this category is unique us to unique isomorphism.
+If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. Moreover this category is unique up to unique isomorphism.
 %If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. %%functor $G:\C'\to\A$ such that $G\ci Q=F$.
 \end{lem} 
 \begin{proof}[Proof of Lemma \ref{l711}] 
 We define the objects of $\C'$ as being the objects of $\C$, and we construct the morphisms of $\C'$ by inverting formally the elements of $\SSS$. The details are left to the reader.
 \end{proof}
-\begin{proof}[Proof of Proposition \ref{p711}] 
-It is straightforward to check that the functor $Q:\C\to\C'$ in Lemma~\ref{l711} defines a localization $\C_\SSS$ of $\C$ at $\SSS$ in the sense of Definition 7.1.1. (The key point is to verify Condition~(c) of Definition 7.1.1 p.~149; see \S\ref{7116} p.~\pr{7116} below.)
+\begin{proof}[Proof of Proposition \ref{p711} (sketch)] 
+We claim that the functor $Q:\C\to\C'$ in Lemma \ref{l711} defines a localization $\C_\SSS$ of $\C$ at $\SSS$ in the sense of Definition 7.1.1. %(The key point is to verify Condition~(c) of Definition 7.1.1 p.~149; see \S\ref{7116} p.~\pr{7116} below.) 
+We sketch the proof that $Q$ satisfies Condition~(c) of Definition 7.1.1 p.~149 of the book and leave the rest of the proof to the reader. Let $F,G$ be in $\A^{\C'}$ and consider the map 
+$$
+\star Q:\Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),
+$$ 
+where $\star$ denotes the horizontal composition (see Definition~\ref{dil1} p.~\pr{dil1}). We shall define a putative inverse 
+$$
+\Phi:\Hom_{\A^\C}(F\ci Q,G\ci Q)\to\Hom_{\A^{\C'}}(F,G)
+$$ 
+to $\star Q$. For $\ld$ in $\A^\C(F\ci Q,G\ci Q)$ and $X$ in $\C$ we define set $\Phi(\ld)_X:=\ld_X:F(X)\to G(X)$. We must show that the square 
+$$
+\begin{tikzcd}
+F(X)\ar[d,"F(f)"']\ar[r,"\ld_X"]&G(X)\ar[d,"G(f)"]\\ 
+F(Y)\ar[r,"\ld_Y"']&G(Y)
+\end{tikzcd} 
+$$ 
+commutes for all $f\in\Hom_{\C'}(X,Y)$. It suffices to check that this square commutes when $f=Q(s)^{-1}$ for $s$ in $\SSS\cap\Hom_\C(Y,X)$. 
 \end{proof}
 %\begin{uspb}P. 149, Definition 7.1.1, condition (b). Is it important that one requires an isomorphism, as opposed to an equality, between $F$ and $F_\SSS\ci Q$? \end{uspb}
 \end{s}
@@ -5816,9 +5834,7 @@ It is straightforward to check that the functor $Q:\C\to\C'$ in Lemma~\ref{l711}
 
 %\begin{s}P.~150, Lemma 7.1.3. Proposition 1.5.6 (ii) is implicitly used the statement of the lemma.\end{s}
 
-\begin{s} 
-P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, for all functor $G:\C_\SSS\to\A$ the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
-\end{s}
+%\begin{s} P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, for all functor $G:\C_\SSS\to\A$ the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)\end{s}
 
 %
 
@@ -5829,10 +5845,12 @@ $$
 $$ 
 is bijective. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
 
-Lemma 7.1.3 is used on p.~160 of the book to prove Theorem 7.1.16 (see \S\ref{7116} p.~\pr{7116}).
+%Lemma 7.1.3 is used on p.~160 of the book to prove Theorem 7.1.16 (see \S\ref{7116} p.~\pr{7116}).
 \end{s}
 
 %
+
+\begin{comment}
 
 \begin{s}
 P. 151, last sentence of the proof of Lemma 7.1.3. Omitting most of the parenthesis, we have 
@@ -5873,9 +5891,9 @@ $$
 %If $\SSS$ is a right multiplicative system in a category $\C$, if $\C\xr F\A\xr G\B$ are functors, and if $F(s)$ is an isomorphism for all $s$ in $\SSS$, then $F_\SSS$ and $(G\ci F)_\SSS$ exist. Moreover $G\ci F_\SSS$ and $(G\ci F)_\SSS$ are isomorphic. 
 %\end{s}
 
-%
+%\begin{comment}
 
-\begin{s}\lb{7116}
+\begin{s}%\lb{7116}
 P. 156, proof of Theorem 7.1.16, part (c). I think one can avoid Lemma 7.1.3 by arguing as follows:
 
 Recall that $\C_\SSS$ has the same object as $\C$ and that $Q(X)=X$ for all $X$ in $\C$. Let $F,G:\C_\SSS\parar\A$. We have a natural map 
@@ -5887,6 +5905,18 @@ We wish to define
 \Hom_{\A^\C}(F\ci Q,G\ci Q)\to\Hom_{\A^{\C_\SSS}}(F,G),\quad\ld\mt\mu
 \end{equation} 
 by $\mu_X:=\ld_X$ for all $X$ in $\C$. To do this, we must check that the $\ld_X$ commute (in the obvious sense of the term) with all morphisms of $\C_\SSS$, even if \emph{a priori} they only commute with the morphism of $\C$ (or, more precisely, with the images in $\C_\SSS$ of the morphism of $\C$). Any morphism of $\C_\SSS$ being of the form $Q(s)^{-1}\ci Q(f)$ with $s$ in $\SSS$ and $f$ a morphism in $\C$, it suffices to check that the $\ld_X$ commute with the $Q(s)^{-1}$, which is easy. This shows that the map \qr{7116c2} is well-defined, and it is straightforward to check that it is inverse to \qr{7116c1}. (This argument was implicit in the proof of Proposition~\ref{p711} p.~\pr{p711}.)
+\end{s}
+
+\end{comment}
+
+%
+
+\begin{s}
+P. 155, Theorem 7.1.16. If we define $\C_\SSS$ by Lemma~\ref{l711} p.~\pr{l711}, it is easy to check that, for $X$ and $Y$ in $\C$, the natural map 
+$$
+\col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\to\Hom_{\C_\SSS}(X,Y)
+$$ 
+is bijective.
 \end{s}
 
 %
@@ -5920,7 +5950,7 @@ can be completed to a commutative square as indicated, with $v$ in $\SSS$, and i
 
 %
 
-%\begin{s}  
+%\begin{s}
 \begin{uspb} 
 P.\index{unsolved problem} 157, proof of Proposition 7.1.20. In the sentence ``Since $t\ci s\in\SSS$, we have thus proved that, for $f:X\to Y$ in $\C$, if $Q(f)$ is an isomorphism, then there exists $g:Y\to Z$ such that $g\ci f\in\SSS$'', I don't understand why $g\ci f\in\SSS$. (Proposition 7.1.20 doesn't seem to be used elsewhere in the book.)
 \end{uspb}%\end{s}
@@ -5935,7 +5965,7 @@ Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, 
 % The comment below was here 
 % https://docs.google.com/document/d/1WwEuQko13SpCaJ53JDskmaGyiC3F0HQuxLvMMLLubJI/edit
 
-In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is some morphism of functors $\tau:F\to R_\SSS F\ci Q$ such that for all $G:\C_\SSS\to\A$ and all $w:F\to G\ci Q$ there is a unique $v:R_\SSS F\to G$ such that $(v\star Q)\ci\tau=w$: 
+In terms of \S\ref{s232} (a) p.~\pr{s232}, the condition is that there is a morphism of functors $\tau:F\to R_\SSS F\ci Q$ such that for all $G:\C_\SSS\to\A$ and all $w:F\to G\ci Q$ there is a unique $v:R_\SSS F\to G$ such that $(v\star Q)\ci\tau=w$: 
 $$
 \begin{tikzcd}
 F\ar[r,"\tau"]\ar[dr,"w"']&R_\SSS F\ci Q\ar[d,"v\star Q"]&R_\SSS F\ar[d,dashed,"v"]\\ 
@@ -5956,7 +5986,8 @@ $$
 P. 159, Definition 7.3.1 (ii). The following proposition is obvious:
 
 \begin{prop}\lb{rsf}
-In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al_X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al_X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al_X$ in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}. In particular $F$ is universally right localizable in the sense of the two above definitions, $R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
+In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al^X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al^X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al^X$ in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}. In particular $F$ is universally right localizable, %in the sense of the two above definitions, 
+$R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (b) in Definition 7.1.1 p.~149 in the book), and for any functor $K:\A\to\A'$ the diagram below commutes up to isomorphism
 $$
 \begin{tikzcd}
 \C\ar{rr}{F}\ar{d}[swap]{Q}&&\A\ar{d}{K}\\
@@ -5974,9 +6005,9 @@ P.~160, Proposition 7.3.2.
 \nn(a) The second sentence of the proof reads: ``By hypothesis (i) and Corollary 7.2.2, $\iota_Q:\I_\T\to\C_\SSS$ is an equivalence''. It is also worth noting that $\T$ is a right multiplicative system in $\I$.
 
 \nn(b) The third sentence of the proof reads: ``By hypothesis (ii) the localization $F_\T$ of $F\ci\iota$ exists''. %The functor of $F_\SSS$ is defined in Definition 7.1.1 p.~149, but it is not called a localization. 
-See Proposition~\ref{rsf}. By condition (b) in Definition 7.1.1 we have
+See Proposition~\ref{rsf}. By Lemma~\ref{l711} p.~\pr{l711} there is a unique functor $F_\T:I_\T\to\A$ such that % condition (b) in Definition 7.1.1 we have
 \begin{equation}\lb{ft}
-F_\T\ci Q_\T\iso F\ci\iota.
+F_\T\ci Q_\T=F\ci\iota.
 \end{equation}
 
 \nn(c) The book attaches, to each functor $G:\C_\SSS\to\A$, a bijection 
@@ -5987,8 +6018,9 @@ We must verify that we have
 \begin{equation}\lb{fgm}
 f_G(\mu)=(\mu\star Q_\SSS)\ci f_{RF}(\id_{RF})
 \end{equation} 
-for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). We can assume that we have the following equalities (it is on purpose that I write ``equalities'' instead of ``isomorphisms'', %don't write ``isomorphisms'', but ``equalities''  I really mean ``equalities'', not ``isomorphisms'', 
-see \S\ref{l711} p.~\pr{l711}) between functors: 
+for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). We %can assume that we 
+have the following equalities %(it is on purpose that I write ``equalities'' instead of ``isomorphisms'', %don't write ``isomorphisms'', but ``equalities''  I really mean ``equalities'', not ``isomorphisms'', see \S\ref{l711} p.~\pr{l711}) 
+between functors: 
 $$
 RF=F_\T\ci\iota_Q^{-1},\quad\iota_Q^{-1}\ci\iota_Q=\id_{\I_\T},\quad F\ci\iota=F_\T\ci Q_\T,\quad Q_\SSS\ci\iota=\iota_Q\ci Q_\T. 
 $$ 
