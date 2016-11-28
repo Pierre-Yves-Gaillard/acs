@@ -205,7 +205,7 @@ More links are available at \href{http://goo.gl/df2Xw}{http://goo.gl/df2Xw}.
 
 I have rewritten some of the proofs in the book. Of course, I'm not suggesting that my wording is better than that of Kashiwara and Schapira! I just tried to make explicit a few points which are implicit in the book. 
 
-I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Théorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de résultats'' in the above book because I don't understand it.) 
+%I adhere to Bourbaki's\index{Bourbaki} set theory as expounded in the book \textbf{Théorie des ensembles}, N. Bourbaki, Hermann, Paris, 1970. (I'm ignoring the ``Fascicule de résultats'' in the above book because I don't understand it.) 
 
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\al_i$ for $\al(i)$, $fg$ for $f\ci g$, and some parenthesis might be omitted. We write $\bigsqcup$\index{$\bigsqcup$} instead of $\coprod$\index{$\coprod$} for the coproduct\index{coproduct}. 
 
@@ -378,7 +378,21 @@ $*$ P.~135, Corollary 6.1.15: $f=``\ilim"\pp$ should be $f\iso``\ilim"\pp$ and $
 
 \nn$*$ P.~156, first line of the first display and first line after the first display: $\C_\SSS$ should be $\C_\SSS^r$.
 
-\nn$*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_\SSS(s)$.
+\nn$*$ P.~160, second line after the diagram: ``commutative'' should be ``commutative up to isomorphism''. %Line 7 when counting from the bottom to the top: $F(s)$ should be $Q_\SSS(s)$.
+
+%
+
+\begin{s}\lb{160}
+P. 160, proof of Proposition 7.3.2. ``$F(s)$ is an isomorphism'' should be ``$Q_\SSS(s)$ is an isomorphism'' or ``$G(Q_\SSS(s))$ is an isomorphism''. In fact I would replace 
+
+\nn``Let us check that Lemma 7.1.3 applies to $\I\xr\iota\C\xr{Q_\SSS}\C_\SSS$ and hence to $\I\xr\iota\C\xr{G\ci Q_\SSS}\A$. Let $X\in\C$. By the hypothesis, there exist $Y\in\I$ and $s:X\to\iota(Y)$ with $s\in\SSS$. Therefore, $F(s)$ is an isomorphism\dots''
+
+\nn with
+
+\nn``Let us check that Lemma 7.1.3 applies to $\I\xr\iota\C\xr{G\ci Q_\SSS}\A$. Let $X\in\C$. By the hypothesis, there exist $Y\in\I$ and $s:X\to\iota(Y)$ with $s\in\SSS$. Therefore, $G(Q_\SSS(s))$ is an isomorphism\dots''
+\end{s}
+
+%
 
 \nn$*$ P.~163, last sentence of Remark 7.4.5: ``right localizable'' should be ``universally right localizable''.
 
@@ -2899,7 +2913,7 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do t
 \begin{thm}\lb{233}
 If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ is a functor, and if 
 \begin{equation}\lb{e233}
-\col_{(\pp(j)\to i))\in J_i}\bt(j)
+\col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation}
 exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 \end{thm}
@@ -5845,12 +5859,10 @@ $$
 $$ 
 is bijective. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
 
-%Lemma 7.1.3 is used on p.~160 of the book to prove Theorem 7.1.16 (see \S\ref{7116} p.~\pr{7116}).
+Lemma 7.1.3 is used on p.~160 of the book to prove Theorem 7.1.16. %(see \S\ref{7116} p.~\pr{7116}).
 \end{s}
 
 %
-
-\begin{comment}
 
 \begin{s}
 P. 151, last sentence of the proof of Lemma 7.1.3. Omitting most of the parenthesis, we have 
@@ -5863,6 +5875,8 @@ Gf\ci\widetilde\theta X_1&=(Gs_2)^{-1}\ci(GQt_2)^{-1}\ci GQt_1\ci Gs_1\ci\wideti
 \end{s}
 
 %
+
+\begin{comment}
 
 \begin{s} 
 P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader. // Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_\SSS$, and to check the equalities $f\ci\id_X=f$, $\id_X\ci g=g$ for $f$ in $\Hom_{\C^r_\SSS}(X,Y)$ and $g$ in $\Hom_{\C^r_\SSS}(Y,X)$.
@@ -6000,7 +6014,7 @@ $$
 %\begin{s} P.~159, Definition of universally right localizable functor (Definition 7.3.1 (ii)): see \S\ref{durl} p.~\pr{durl}.\end{s}
 
 \begin{s}\lb{732} 
-P.~160, Proposition 7.3.2. 
+P.~160, Proposition 7.3.2. (See also \S\ref{160} p.~\pr{160}.)
 
 \nn(a) The second sentence of the proof reads: ``By hypothesis (i) and Corollary 7.2.2, $\iota_Q:\I_\T\to\C_\SSS$ is an equivalence''. It is also worth noting that $\T$ is a right multiplicative system in $\I$.
 
@@ -6010,7 +6024,15 @@ See Proposition~\ref{rsf}. By Lemma~\ref{l711} p.~\pr{l711} there is a unique fu
 F_\T\ci Q_\T=F\ci\iota.
 \end{equation}
 
-\nn(c) The book attaches, to each functor $G:\C_\SSS\to\A$, a bijection 
+\nn(c) Recall the diagram 
+$$
+\begin{tikzcd}
+&\C\ar[rd,"Q_\SSS"']\ar[rrd,bend left,"F"]\\ 
+\I\ar[ru,"\iota"]\ar[rd,"Q_\T"]&&\C_\SSS\ar[r,"RF"]&\A.\\ 
+&\I_\T\ar[ru,"\iota_Q"]\ar[rru,bend right,"F_\T"']
+\end{tikzcd}
+$$ 
+The book attaches, to each functor $G:\C_\SSS\to\A$, a bijection 
 $$
 f_G:\Hom_{\A^{\C_\SSS}}(RF,G)\to\Hom_{\A^\C}(F,G\ci Q_\SSS).
 $$ 
@@ -6018,20 +6040,31 @@ We must verify that we have
 \begin{equation}\lb{fgm}
 f_G(\mu)=(\mu\star Q_\SSS)\ci f_{RF}(\id_{RF})
 \end{equation} 
-for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). We %can assume that we 
+for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). 
+
+We %can assume that we 
 have the following equalities %(it is on purpose that I write ``equalities'' instead of ``isomorphisms'', %don't write ``isomorphisms'', but ``equalities''  I really mean ``equalities'', not ``isomorphisms'', see \S\ref{l711} p.~\pr{l711}) 
 between functors: 
 $$
 RF=F_\T\ci\iota_Q^{-1},\quad\iota_Q^{-1}\ci\iota_Q=\id_{\I_\T},\quad F\ci\iota=F_\T\ci Q_\T,\quad Q_\SSS\ci\iota=\iota_Q\ci Q_\T. 
 $$ 
-Recall that, by assumption, all $X$ in $\C$ comes with a morphism $s:X\to\iota(Y)$ in $\SSS$ with $Y$ in $\I$. It is easy to see that \qr{fgm} follows then from the commutativity of 
+This gives in particular:
 $$
-\begin{tikzcd}
-F_\T\iota_Q^{-1}Q_\SSS X\ar[d,"\mu(Q_\SSS X)"']\ar[rr,"F_\T\iota_Q^{-1}(s)"]&&F_\T\iota_Q^{-1}Q_\SSS\iota Y\ar[r,equal]&F\iota Y\ar[d,"\mu(\iota_Q Q_\T Y)"]\\ 
-GQ_\SSS X\ar[rrr,"FQ_\SSS (s)"']&&&GQ_\SSS\iota Y.
-\end{tikzcd} 
+RF\ci Q_\SSS\ci\iota=F_\T\ci\iota_Q^{-1}\ci Q_\SSS\ci\iota=F_\T\ci\iota_Q^{-1}\ci \iota_Q\ci Q_\T=F_\T\ci Q_\T=F\ci\iota.
 $$ 
-(We have omitted many parenthesis.) 
+Note that $f_G$ is characterized by the equality 
+$$
+(\star\,\iota)\ci f_G=\star\,(\iota_Q\ci Q_\T).
+$$ 
+Setting $\ee:=f_{RF}(\id_{RF})$, we get 
+$$
+\ee\star\iota=\id_{F\ci\iota}.
+$$ 
+For $\mu$ in $\Hom_{\A^{\C_\SSS}}(RF,G)$, Equality~\eqref{fgm} is then equivalent to the equality 
+$$
+\mu\star(\iota_Q\ci Q_\T)=\mu\star\iota_Q\star Q_\T,
+$$ 
+which is straightforward. %Recall that, by assumption, all $X$ in $\C$ comes with a morphism $s:X\to\iota(Y)$ in $\SSS$ with $Y$ in $\I$. It is easy to see that \qr{fgm} follows then from the commutativity of $$\begin{tikzcd}F_\T\iota_Q^{-1}Q_\SSS X\ar[d,"\mu(Q_\SSS X)"']\ar[rr,"F_\T\iota_Q^{-1}(s)"]&&F_\T\iota_Q^{-1}Q_\SSS\iota Y\ar[r,equal]&F\iota Y\ar[d,"\mu(\iota_Q Q_\T Y)"]\\ GQ_\SSS X\ar[rrr,"FQ_\SSS (s)"']&&&GQ_\SSS\iota Y.\end{tikzcd}$$ (We have omitted many parenthesis.) 
 
 \nn(d) The last claim in Proposition 7.3.2 is the existence of an isomorphism 
 $$
