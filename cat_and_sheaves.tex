@@ -1004,7 +1004,7 @@ $$
 $$ 
 be the Yoneda bijection. We shall prove that $\Phi_{X,A}$ is functorial in $X$ and $A$. 
 
-Functoriality in $A$: Let $h(X)\xr\ld A\xr\theta B$ be morphisms of functors. We must show $\ld_X(\Phi_{X,A}(\theta))=\Phi_{X,B}((\ld\ci)(\theta))$: 
+Functoriality in $A$: Let $B$ be in $\C^\wg$ and let $h(X)\xr\theta A\xr\ld B$ be morphisms of functors. We must show $\ld_X(\Phi_{X,A}(\theta))=\Phi_{X,B}((\ld\ci)(\theta))$: 
 $$
 \begin{tikzcd}
 \Hom_{\C^\wg}(h(X),A)\ar[d,"\ld\ci"']\ar[r,"\Phi_{X,A}"]&A(X)\ar[d,"\ld_X"]\\ 
@@ -1018,7 +1018,7 @@ $$
 $$
 \Phi_{X,B}((\ld\ci)(\theta))=\Phi_{X,B}(\ld\ci\theta)=(\ld\ci\theta)_X(\id_X)=(\ld_X\ci\theta_X)(\id_X)=\ld_X(\theta_X(\id_X)), 
 $$ 
-where the penultimate equality follows from the definition of vertical composition of morphisms of functors (Definition~\ref{dil1} p.~\pr{dil1}): 
+where the penultimate equality follows from the definition of the vertical composition of morphisms of functors (Definition~\ref{dil1} p.~\pr{dil1}): 
 $$ 
 \Hom_\C(X,X)\xr{\theta_X}A(X)\xr{\ld_X}B(X).
 $$ 
@@ -1030,7 +1030,7 @@ $$
 $$
 \begin{tikzcd}
 \Hom_{\C^\wg}(h(X),A)\ar[r,"\Phi_{X,A}"]&A(X)\\ 
-\Hom_{\C^\wg}(h(Y),B)\ar[u,"\ci h(f)"]\ar[r,"\Phi_{X,B}"']&A(Y)\ar[u,"A(f)"'].
+\Hom_{\C^\wg}(h(Y),B)\ar[u,"\ci h(f)"]\ar[r,"\Phi_{Y,A}"']&A(Y)\ar[u,"A(f)"'].
 \end{tikzcd}
 $$ 
 We have 
@@ -1040,7 +1040,7 @@ $$
 $$
 =(\theta_X\ci(f\ci))(\id_X)=\theta_X(f),
 $$ 
-where the second equality follows from the definition of vertical composition of morphisms of functors: 
+where the second equality follows from the definition of the vertical composition of morphisms of functors: 
 $$
 h(X)\xr{h(f)}h(Y)\xr\theta A,
 $$ 
@@ -1190,7 +1190,7 @@ $$
 \end{s}
 
 \begin{s}\lb{ldefat}
-Let us spell out the statement  to \S\ref{rdefat}:
+Let us spell out the statement dual to \S\ref{rdefat}:
 
 Let $R:\C'\to\C$ be a functor and $X$ an object of $\C$. If the functor 
 $$
@@ -1308,7 +1308,7 @@ Picture of $LRL\xl{L\star\ee}L$:
 $$
 \begin{tikzcd}
 %
-\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}&{}&\C\C\ar{ll}{}[swap]{RL}\\ 
+\C'&{}&\C'\ar{ll}{}[swap]{1}&{}&\C\ar{ll}{}[swap]{L}&{}&\C\ar{ll}{}[swap]{RL}\\ 
 %
 \C'&\ar{u}{1}&\C'\ar{ll}{}{1}&\ar{u}{L}&\C\ar{ll}{}{L}&\ar{u}{\ee}&\C\ar{ll}{}{1}\\ 
 %
@@ -6032,7 +6032,7 @@ $$
 &\I_\T\ar[ru,"\iota_Q"]\ar[rru,bend right,"F_\T"']
 \end{tikzcd}
 $$ 
-The book attaches, to each functor $G:\C_\SSS\to\A$, a bijection 
+To each functor $G:\C_\SSS\to\A$ the book attaches a bijection 
 $$
 f_G:\Hom_{\A^{\C_\SSS}}(RF,G)\to\Hom_{\A^\C}(F,G\ci Q_\SSS).
 $$ 
@@ -6042,9 +6042,7 @@ f_G(\mu)=(\mu\star Q_\SSS)\ci f_{RF}(\id_{RF})
 \end{equation} 
 for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). 
 
-We %can assume that we 
-have the following equalities %(it is on purpose that I write ``equalities'' instead of ``isomorphisms'', %don't write ``isomorphisms'', but ``equalities''  I really mean ``equalities'', not ``isomorphisms'', see \S\ref{l711} p.~\pr{l711}) 
-between functors: 
+We can assume that we have the following equalities between functors: 
 $$
 RF=F_\T\ci\iota_Q^{-1},\quad\iota_Q^{-1}\ci\iota_Q=\id_{\I_\T},\quad F\ci\iota=F_\T\ci Q_\T,\quad Q_\SSS\ci\iota=\iota_Q\ci Q_\T. 
 $$ 
