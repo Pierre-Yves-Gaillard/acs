@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -1304,7 +1304,7 @@ $$
 $$ 
 
 Picture of $LRL\xl{L\star\ee}L$:
- 
+
 $$
 \begin{tikzcd}
 %
@@ -1524,7 +1524,7 @@ Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe 
 \begin{s}\lb{sv} 
 We shall spell out two wordings of a certain statement about the following setting: $\al:I\to\C$ is a functor and $Z$ is an object of $\C$. %The first wording will be short, but somewhat incomplete, whereas the second wording will be much longer, but more precise.
 
-\nn First wording: Assume that $\col$ exists in $\C$ and, for each $i$ in $I$, let $p_i:\al(i)\to\col\al$ be the corresponding coprojection. Then the map 
+\nn First wording: Assume that $\col\al$ exists in $\C$ and, for each $i$ in $I$, let $p_i:\al(i)\to\col\al$ be the corresponding coprojection. Then the map 
 $$
 \Hom_\C(\col\al,Z)\to\prod_{i\in I}\Hom_\C(\al(i),Z),\quad f\mt(f\ci p_i)_{i\in I}
 $$ 
@@ -1656,7 +1656,7 @@ $$
 $$ 
 in $\C$ is \emph{not} cocartesian. %coproduct $$g\sqcup_fg,$$ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
 
-In \S\ref{patho} p.~\ref{patho} we shall see a way to prevent the kind of pathology displayed by the above example.
+In Proposition~\ref{patho} p.~\ref{patho} we shall see a way to prevent the kind of pathology displayed by the above example.
 \end{s}
 
 %
@@ -1727,7 +1727,7 @@ Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We
 \begin{equation}\lb{zfz}
 \begin{tikzcd}
 Z\ar[d,dashed,"f"']&\DT Z\ar[d,"\DT f"']\ar[rd,"\ld"]\\ 
-X&\DT X,\ar[r,"p"']&\al
+X&\DT X\ar[r,"p"']&\al,
 \end{tikzcd}
 \end{equation} 
 
@@ -1768,8 +1768,9 @@ In \S\ref{sv} p.~\pr{sv} we proved that (a) implies (d).
 % paragraph removed:
 % https://docs.google.com/document/d/1Hx-fRBi-yTwTyFKvGi-qFLmgNQwYl7YJvZMd_ngC6nw/edit
 
-\begin{s} 
-P.~40, Proposition 2.1.10 (stated below as Corollary~\ref{2.1.10c}). Here is a slightly more general statement.%Proposition~\ref{2.1.10}
+\sbs{Proposition 2.1.10}
+
+Here is a mild generalization of Proposition 2.1.10 p.~40 of the book (stated below as Corollary~\ref{2.1.10c}): 
 
 \begin{prop}\lb{2.1.10b}
 Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
@@ -1780,8 +1781,7 @@ in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 
 \begin{proof} 
-Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$ and let $p:\al\to\DT\col\al$ be the coprojection. Consider the self-explanatory 
-commutative diagrams 
+Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$, let $\al:I\to\A$ be a functor and let $p:\al\to\DT\col\al$ be the coprojection. Note that $\col F\ci\al$ exists in $\B^\vee$. Consider the self-explanatory commutative diagrams 
 \begin{equation}\lb{faq}
 \begin{tikzcd}
 F\ci\al\ar[r,"q"]\ar[dr,"F(p)"']&\DT\col F\ci\al\ar[d,"\DT f"]&\col F\ci\al\ar[d,dashed,"f"]\\ 
@@ -1795,22 +1795,22 @@ G\ci\al\ar[r,"r"]\ar[dr,"G(p)"']&\DT\col G\ci\al\ar[d,"\DT g"]&\col G\ci\al\ar[d
 &\DT G(\col\al)&G(\col\al),
 \end{tikzcd}
 $$ 
-where $q$ and $r$ are the coprojections. Note that $g$ is an isomorphism by assumption. Our goal is to prove that $f$ is an isomorphism too. Let $Y$ be in $\B$. It suffices to show that 
+where $q$ and $r$ are the coprojections. Note that $g$ is an isomorphism by assumption. Our goal is to prove that $f$ is an isomorphism too. Let $Y$ be in $\B$. It suffices to show that the map 
 $$
-\Hom_\B(f,Y):\Hom_\B(F(\col\al),Y)\to\Hom_\B(\col F\ci\al,Y)
+\Hom_{\B^\vee}(f,Y):\Hom_\B(F(\col\al),Y)\to\Hom_{\B^\vee}(\col F\ci\al,Y)
 $$ 
-is an isomorphism. Form the commutative diagram 
+is bijective. Form the commutative diagram 
 $$
 \begin{tikzcd}
 \DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(F(p),Y)}\ar[d,"\sim","\DT\theta_{\col\al}"']&&&\Hom_\B(F\ci\al,Y)\ar[d,"\theta_\al","\sim"']\\ 
 \DT\Hom_\C(G(\col\al),Z)\ar{rrr}{\Hom_\C(r,Z)}\ar{d}{\sim}[swap]{\DT\Hom_\C(g,Z)}&&&\Hom_\C(G\ci\al,Z)\ar[d,equal]\\ 
 \DT\Hom_\C(\col G\ci\al,Y)\ar{rrr}{\Hom_\C(G(p),Z)}&&&\Hom_\C(G\ci\al,Z)\\ 
-\DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
+\DT\Hom_{\B^\vee}(\col F\ci\al,Y)\ar{rrr}{\Hom_{\B^\vee}(q,Y)}&&&\Hom_\B(F\ci\al,Y).\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 $$ 
-The last three horizontal arrows are projections. The bottom horizontal arrow being a projection, there is a unique morphism 
+The last three horizontal arrows are projections. The bottom horizontal arrow being a projection, there is a unique map  
 $$
-h:\Hom_\C(\col G\ci\al,Y)\to\Hom_\B(\col F\ci\al,Y)
+h:\Hom_\C(\col G\ci\al,Y)\to\Hom_{\B^\vee}(\col F\ci\al,Y)
 $$ 
 making the diagram 
 \begin{equation}\lb{dbf}
@@ -1818,15 +1818,15 @@ making the diagram
 \DT\Hom_\B(F(\col\al),Y)\ar{rrr}{\Hom_\B(F(p),Y)}\ar[d,"\sim","\DT\theta_{\col\al}"']&&&\Hom_\B(F\ci\al,Y)\ar[d,"\theta_\al","\sim"']\\ 
 \DT\Hom_\C(G(\col\al),Z)\ar{rrr}{\Hom_\C(r,Z)}\ar{d}{\sim}[swap]{\DT\Hom_\C(g,Z)}&&&\Hom_\C(G\ci\al,Z)\ar[d,equal]\\ 
 \DT\Hom_\C(\col G\ci\al,Y)\ar{rrr}{\Hom_\C(G(p),Z)}\ar[d,"\DT h"']&&&\Hom_\C(G\ci\al,Z)\\ 
-\DT\Hom_\B(\col F\ci\al,Y)\ar{rrr}{\Hom_\B(q,Y)}&&&\Hom_\B(F\ci\al,Y)\ar[u,"\sim","\theta_\al"']
+\DT\Hom_{\B^\vee}(\col F\ci\al,Y)\ar{rrr}{\Hom_{\B^\vee}(q,Y)}&&&\Hom_\B(F\ci\al,Y)\ar[u,"\sim","\theta_\al"']
 \end{tikzcd}
 \end{equation} 
-commute. Moreover $h$ is an isomorphism because $\Hom_\C(G(p),Z)$ is a projection. Define the isomorphism 
+commute. Moreover $h$ is bijective because $\Hom_\C(G(p),Z)$ is a projection. Define the bijection 
 $$
-k:\Hom_\B(F(\col\al),Y)\to\Hom_\B(\col F\ci\al,Y)
+k:\Hom_\B(F(\col\al),Y)\to\Hom_{\B^\vee}(\col F\ci\al,Y)
 $$ 
-by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_\B(f,Y)=k$. As $\Hom_\B(q,Y)$ is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
-\end{proof}
+by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_{\B^\vee}(f,Y)=k$. As $\Hom_{\B^\vee}(q,Y)$ is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
+\end{proof} 
 
 \begin{cor}[Proposition 2.1.10 p.~40]\lb{2.1.10c}
 Let $F:\A\to\B$ be a functor and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$ and that $F$ admits a right adjoint. Then $F$ commutes with inductive limits indexed by $I$.
@@ -1835,7 +1835,6 @@ Let $F:\A\to\B$ be a functor and $I$ a category. Assume that $\A$ admits inducti
 \begin{proof} 
 Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $\C$ be $\A$, $G$ be $\id_\A$ and $Z$ be $R(Y)$. %An important particular case is when $\C$ is $\A$, $G$ is $\id_\A$ and $Z=R(Y)$, where $R:\B\to\A$ is right adjoint to $F$.
 \end{proof}
-\end{s}
 
 %%
 
@@ -1865,7 +1864,7 @@ is a projection.
 \end{prop}
 
 \begin{proof}
-Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d) and (c) $\then$ (a). To prove (a) $\then$ (d), let $X'$ be in $\C'$ and set $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
+Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d). Moreover (c) implies trivally (a). To prove (a) $\then$ (d), let $X'$ be in $\C'$ and set $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
 $$
 \begin{tikzcd}
 \DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
@@ -1887,19 +1886,29 @@ $$
 $$ 
 This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
 
+\begin{prop}\lb{stupid}
+If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding, if $\col h\ci\al$ exists in $\C^\wg$, if $X$ is in $\C$, if $f:X\to\col h\ci\al$ is an isomorphism in $\C^\wg$, if $q_i:\al(i)\to\col h\ci\al$ are the coprojections, then $X$ is a universal limit of $\al$, the coprojections $p_i:\al(i)\to\col\al$ being given by the formula $p_i:=f^{-1}\ci q_i$.
+\end{prop}
+\begin{proof}
+It suffices to prove that $X$ is a universal limit of $\al$, the coprojections $p_i:\al(i)\to\col\al$ being given by the indicated formula. Let $Y$ be in $\C$ and $u_i:\al(i)\to Y$ a functorial family of morphisms indexed by $i\in I$. It suffices to show that there is a unique morphism $u:X\to Y$ in $\C$ such that $u\ci p_i=u_i$, that is $u\ci f^{-1}\ci q_i=u_i$, for all $i$. But by assumption there is a unique morphism $v:X\to Y$ in $\C^\wg$ such that $v\ci f^{-1}\ci q_i=u_i$ for all $i$, so that it suffices to take for $u$ the morphism $v$ viewed as a morphism in $\C$. %set $u:=v$. 
+\end{proof}
+
 %%
 
 \sbs{Brief comments}
 
-\begin{s}\lb{patho}
-Claim: If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $\al:I\tm J\to\C$ is a functor and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$.
-
+\begin{s}
+\begin{prop}\lb{patho}
+If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $\al:I\tm J\to\C$ is a functor and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$. 
+\end{prop}
 In \S\ref{c38} p.~\pr{c38} we saw that, without the adverb ``universally'', the claim is false.
-
-To prove the claim, we may assume that $I$ is small. Let $h:\C\to\C^\wg$ be the Yoneda embedding and note the isomorphisms 
-$$
-\left(\col_ih(\al(i,\ ))\right)(j)\xr\sim\bigg(h\Big(\col_i\al(i,\ )\Big)\bigg)(j)\iso h\left(\col_i\al(i,j)\right).\square
-$$ 
+\begin{proof}
+To prove the proposition, we may assume that $I$ is small. Let $h:\C\to\C^\wg$ be the Yoneda embedding and $j$ a fixed object of $J$. Then the proposition follows immediately from Proposition~\ref{stupid} p.~\pr{stupid}. % previous version:
+% https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
+\end{proof}
+%
+%\begin{comment}
+% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 \end{s}
 
 %
@@ -2271,7 +2280,7 @@ exists in $\C$ for all $i$ in $I$. Then $\pp^\dg(\bt)$ exists and we have
 for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and the co-unit $\ee_\bt:\id_{\C^J}\to\pp_*\ci\pp^\dg$ (see \S\ref{ldefat} p.~\pr{ldefat}) is an isomorphism.%$\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
 \end{thm}
 
-Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. In \S\ref{patho} p.~\ref{patho} we shall see a way to prevent theis kind of pathology.
+Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. In Proposition~\ref{patho} p.~\ref{patho} we shall see a way to prevent theis kind of pathology.
 
 The proof in the book is divided into three steps, called (a), (b) and (c). 
 
@@ -2909,32 +2918,23 @@ It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do t
 
 % the \S with the label \lb{b} was here
 
-%\begin{s}
+%\begin{s} 
 \begin{thm}\lb{233}
 If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ is a functor, and if 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation}
-exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
+exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally; in the sense of Definition~\ref{232} p.~\pr{232}. 
 \end{thm}
 
 \begin{proof}
-The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small. Consider the diagram 
-$$
-\begin{tikzcd}
-J\ar[dd,"\pp"']\ar[rr,"\bt"]&&\C\ar[dd,"h"]\\ \\ 
-I\ar[rr,"\pp^\dg(h\ci\bt)"']\ar[rruu,"\pp^\dg\bt"]&&\C^\wg,
-\end{tikzcd}
-$$ 
-where $h$ is the Yoneda embedding. We have 
-$$
-h(\pp^\dg(\bt)(i))\iso\pp^\dg(h\ci\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}h(\bt(j)),
-$$ 
-the isomorphisms following respectively from the assumption that $\pp^\dg\bt$ exists universally and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in \S\ref{patho} p.~\pr{patho}.)
+The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small, and the proposition follows immediately from Proposition~\ref{stupid} p.~\pr{stupid}. 
+% previous version:
+% https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof}
-%\end{s}
-
 %
+%\begin{comment}
+% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
 \begin{s}\lb{c271b}
 P.~62, Proposition 2.7.1. Consider the commutative diagram 
@@ -5874,9 +5874,8 @@ Gf\ci\widetilde\theta X_1&=(Gs_2)^{-1}\ci(GQt_2)^{-1}\ci GQt_1\ci Gs_1\ci\wideti
 \end{align*}
 \end{s}
 
-%
-
-\begin{comment}
+%\begin{comment}
+% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
 \begin{s} 
 P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader. // Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_\SSS$, and to check the equalities $f\ci\id_X=f$, $\id_X\ci g=g$ for $f$ in $\Hom_{\C^r_\SSS}(X,Y)$ and $g$ in $\Hom_{\C^r_\SSS}(Y,X)$.
@@ -5906,24 +5905,7 @@ $$
 %\end{s}
 
 %\begin{comment}
-
-\begin{s}%\lb{7116}
-P. 156, proof of Theorem 7.1.16, part (c). I think one can avoid Lemma 7.1.3 by arguing as follows:
-
-Recall that $\C_\SSS$ has the same object as $\C$ and that $Q(X)=X$ for all $X$ in $\C$. Let $F,G:\C_\SSS\parar\A$. We have a natural map 
-\begin{equation}\lb{7116c1}
-\Hom_{\A^{\C_\SSS}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q).
-\end{equation} 
-We wish to define 
-\begin{equation}\lb{7116c2}
-\Hom_{\A^\C}(F\ci Q,G\ci Q)\to\Hom_{\A^{\C_\SSS}}(F,G),\quad\ld\mt\mu
-\end{equation} 
-by $\mu_X:=\ld_X$ for all $X$ in $\C$. To do this, we must check that the $\ld_X$ commute (in the obvious sense of the term) with all morphisms of $\C_\SSS$, even if \emph{a priori} they only commute with the morphism of $\C$ (or, more precisely, with the images in $\C_\SSS$ of the morphism of $\C$). Any morphism of $\C_\SSS$ being of the form $Q(s)^{-1}\ci Q(f)$ with $s$ in $\SSS$ and $f$ a morphism in $\C$, it suffices to check that the $\ld_X$ commute with the $Q(s)^{-1}$, which is easy. This shows that the map \qr{7116c2} is well-defined, and it is straightforward to check that it is inverse to \qr{7116c1}. (This argument was implicit in the proof of Proposition~\ref{p711} p.~\pr{p711}.)
-\end{s}
-
-\end{comment}
-
-%
+% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
 \begin{s}
 P. 155, Theorem 7.1.16. If we define $\C_\SSS$ by Lemma~\ref{l711} p.~\pr{l711}, it is easy to check that, for $X$ and $Y$ in $\C$, the natural map 
