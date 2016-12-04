@@ -2354,10 +2354,10 @@ Let $i\to i'$ be a morphism in $I$. It is easily checked that there is a unique 
 $$
 \begin{tikzcd}
 \pp^\dg(\bt)(i)=\ds\col_{(\pp(j)\to i)\in J_i}\bt(j)\ar[rr]&&\ds\col_{(\pp(j)\to i')\in J_{i'}\bt(j)}=\pp^\dg(\bt)(i')\\ 
-&\bt(j)\ar[lu,"p(\pp(j)\to i)"]\ar[ru,"q(\pp(j)\to i\to i')"']
+&\bt(j)\ar{lu}{p[\pp(j)\to i]}\ar{ru}[swap]{q[\pp(j)\to i\to i']}
 \end{tikzcd}
 $$ 
-commute, where $p(\pp(j)\to i)$ and $q(\pp(j)\to i\to i')$ are the coprojections, and that the assignment $$(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)$$ is functorial.
+commute, where $p[\pp(j)\to i]$ and $q[\pp(j)\to i\to i']$ are the coprojections, and that the assignment $$(i\to i')\mt\Big(\pp^\dg(\bt)(i)\to\pp^\dg(\bt)(i')\Big)$$ is functorial.
 
 %
 
@@ -2456,7 +2456,7 @@ $$
 $$ 
 and let 
 $$
-p(\pp(j)\to i):\bt(j)\to\pp^\dg(\bt)(i)
+p[\pp(j)\to i]:\bt(j)\to\pp^\dg(\bt)(i)
 $$ 
 be the coprojections. By the proof of Step~(b) in the book, the co-unit 
 $$
@@ -5846,29 +5846,46 @@ $\ic\pp\iso f$.
 %\sbs{Brief comments}
 
 \begin{s}
-P. 149, Definition 7.1.1. 
-\begin{prop}\lb{p711}
-If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists and is unique us to unique isomorphism.
-%If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists.
-\end{prop}
-\begin{lem}\lb{l711}
-If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. Moreover this category is unique up to unique isomorphism.
-%If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. %%functor $G:\C'\to\A$ such that $G\ci Q=F$.
-\end{lem} 
-\begin{proof}[Proof of Lemma \ref{l711}] 
-We define the objects of $\C'$ as being the objects of $\C$, and we construct the morphisms of $\C'$ by inverting formally the elements of $\SSS$. The details are left to the reader.
-\end{proof}
-\begin{proof}[Proof of Proposition \ref{p711} (sketch)] 
-We claim that the functor $Q:\C\to\C'$ in Lemma \ref{l711} defines a localization $\C_\SSS$ of $\C$ at $\SSS$ in the sense of Definition 7.1.1. %(The key point is to verify Condition~(c) of Definition 7.1.1 p.~149; see \S\ref{7116} p.~\pr{7116} below.) 
-We sketch the proof that $Q$ satisfies Condition~(c) of Definition 7.1.1 p.~149 of the book and leave the rest of the proof to the reader. Let $F,G$ be in $\A^{\C'}$ and consider the map 
+P. 149, Definition 7.1.1. We define the localization of a category $\C$ with respect to a set $\SSS$ of morphisms in a way that is slightly different from the one used in the book. It is obvious that a localization as defined here is also a localization as defined in the book.
+\begin{df}\lb{qccs}
+A localization of a category $\C$ with respect to a set $\SSS$ of morphisms is a category $\C_\SSS$ equipped with a functor $Q:\C\to\C_\SSS$ such that 
+
+\nn\emph{(a)} $\C_\SSS$ has the same objects as $\C$,
+
+\nn\emph{(b)} we have $Q(X)=X$ for all object $X$ in $\C$,
+
+\nn\emph{(c)} if $F:\C\to\A$ is a functor turning the elements of $\SSS$ into isomorphisms, the there is a unique functor $G:\C_\SSS\to\A$ such that $G\ci Q=F$,
+
+\nn\emph{(d)} if $G_1$ and $G_2$ are two functors from $\C_\SSS$ to $\A$, then the natural map 
 $$
-\star Q:\Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),
+Hom_{\Fct(\C_\SSS,\A)}(G1,G2)\to\Hom_{\Fct(\C,\A)}(G_1\ci Q,G_2\ci Q)
+$$
+is bijective.
+\end{df}
+\begin{prop}\lb{p711}
+Let $\C$ be a category and $\SSS$ a set of morphisms in $\C$.
+
+\nn\emph{(a)} There is a category $\C_\SSS$ equipped with a functor $Q:\C\to\C_\SSS$ satisfying conditions (a), (b) and (c) of Definition~\ref{qccs}. Moreover, the pair $(\C_\SSS,Q)$ is unique up to unique isomorphism. 
+
+\nn\emph{(b)} The category $\C_\SSS$ satisfies also condition (d) of Definition~\ref{qccs}, and is thus a localization of $\C$ with respect to $\SSS$.
+%localization $\C_\SSS$ of $\C$ at $\SSS$ exists and is unique up to unique isomorphism. %If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists.
+\end{prop}
+%\begin{lem}\lb{p711}If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. Moreover this category is unique up to unique isomorphism.
+%If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. %%functor $G:\C'\to\A$ such that $G\ci Q=F$.\end{lem} \begin{proof}[Proof of Lemma \ref{p711}] 
+\begin{proof}
+(a) We define the objects of $\C_\SSS$ as being the objects of $\C$, and we construct the morphisms of $\C_\SSS$ by inverting formally the elements of $\SSS$. The details are left to the reader.
+
+\nn(b) %We claim that the functor $Q:\C\to\C'$ in Lemma \ref{p711} defines a localization $\C_\SSS$ of $\C$ at $\SSS$ in the sense of Definition 7.1.1. %(The key point is to verify Condition~(c) of Definition 7.1.1 p.~149; see \S\ref{7116} p.~\pr{7116} below.) 
+%We sketch the proof that $Q$ satisfies Condition~(c) of Definition 7.1.1 p.~149 of the book and leave the rest of the proof to the reader. 
+Let $F,G$ be in $\Fct(\C_\SSS,\A)$ and consider the map 
+$$
+\star\,Q:\Hom_{\Fct(\C_\SSS,\A)}(F,G)\to\Hom_{\Fct(\C,\A)}(F\ci Q,G\ci Q),
 $$ 
 where $\star$ denotes the horizontal composition (see Definition~\ref{dil1} p.~\pr{dil1}). We shall define a putative inverse 
 $$
-\Phi:\Hom_{\A^\C}(F\ci Q,G\ci Q)\to\Hom_{\A^{\C'}}(F,G)
+\Phi:\Hom_{\Fct(\C,\A)}(F\ci Q,G\ci Q)\to\Hom_{\Fct(\C_\SSS,\A)}(F,G)
 $$ 
-to $\star Q$. For $\ld$ in $\A^\C(F\ci Q,G\ci Q)$ and $X$ in $\C$ we define set $\Phi(\ld)_X:=\ld_X:F(X)\to G(X)$. We must show that the square 
+to $\star\,Q$. For $\ld$ in $\Fct(\C,\A)(F\ci Q,G\ci Q)$ and $X$ in $\C$ we define set $\Phi(\ld)_X:=\ld_X:F(X)\to G(X)$. We must show that the square 
 $$
 \begin{tikzcd}
 F(X)\ar[d,"F(f)"']\ar[r,"\ld_X"]&G(X)\ar[d,"G(f)"]\\ 
@@ -5888,7 +5905,7 @@ commutes for all $f\in\Hom_{\C'}(X,Y)$. It suffices to check that this square co
 
 %
 
-\begin{s}\lb{713} 
+\begin{s}\lb{713}
 P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C'\to\A$, the map 
 $$
 \Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v\star Q
@@ -5913,24 +5930,11 @@ Gf\ci\widetilde\theta X_1&=(Gs_2)^{-1}\ci(GQt_2)^{-1}\ci GQt_1\ci Gs_1\ci\wideti
 %\begin{comment}
 % https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
-\begin{s} 
-P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader. // Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_\SSS$, and to check the equalities $f\ci\id_X=f$, $\id_X\ci g=g$ for $f$ in $\Hom_{\C^r_\SSS}(X,Y)$ and $g$ in $\Hom_{\C^r_\SSS}(Y,X)$.
-\end{s}
+%\begin{s} P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader. // Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_\SSS$, and to check the equalities $f\ci\id_X=f$, $\id_X\ci g=g$ for $f$ in $\Hom_{\C^r_\SSS}(X,Y)$ and $g$ in $\Hom_{\C^r_\SSS}(Y,X)$.\end{s}
 
 %
 
-\begin{s} 
-P.~155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\SSS$ is given by 
-$$
-X'\xr gY'\os{t}{\leftarrow}X,
-$$
-where $g$ and $t$ are obtained by applying S3 with $f=\id_X$:
-$$
-\begin{tikzcd}
-X\ar{r}{\id_X}\ar{d}[swap]{s}&X\ar[dashed]{d}{t}\\ X'\ar[dashed]{r}[swap]{g}&Y'.
-\end{tikzcd}
-$$
-\end{s}
+%\begin{s}P.~155. In the text between Lemma 7.1.15 and Theorem 7.1.16, one might add the following observation. The inverse of $(s:X\to X')\in\SSS$ is given by $$X'\xr gY'\os{t}{\leftarrow}X,$$ where $g$ and $t$ are obtained by applying S3 with $f=\id_X$:$$\begin{tikzcd}X\ar{r}{\id_X}\ar{d}[swap]{s}&X\ar[dashed]{d}{t}\\ X'\ar[dashed]{r}[swap]{g}&Y'.\end{tikzcd}$$\end{s}
 
 %
 
@@ -5944,7 +5948,7 @@ $$
 % https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
 \begin{s}
-P. 155, Theorem 7.1.16. If we define $\C_\SSS$ by Lemma~\ref{l711} p.~\pr{l711}, it is easy to check that, for $X$ and $Y$ in $\C$, the natural map 
+P. 155, Theorem 7.1.16. If we define $\C_\SSS$ as in the proof of Proposition~\ref{p711} p.~\pr{p711}, it is easy to check that, for $X$ and $Y$ in $\C$, the natural map 
 $$
 \col_{(Y\to Y')\in\SSS^Y}\Hom_\C(X,Y')\to\Hom_{\C_\SSS}(X,Y)
 $$ 
@@ -6037,7 +6041,7 @@ P.~160, Proposition 7.3.2. (See also \S\ref{160} p.~\pr{160}.)
 \nn(a) The second sentence of the proof reads: ``By hypothesis (i) and Corollary 7.2.2, $\iota_Q:\I_\T\to\C_\SSS$ is an equivalence''. It is also worth noting that $\T$ is a right multiplicative system in $\I$.
 
 \nn(b) The third sentence of the proof reads: ``By hypothesis (ii) the localization $F_\T$ of $F\ci\iota$ exists''. %The functor of $F_\SSS$ is defined in Definition 7.1.1 p.~149, but it is not called a localization. 
-See Proposition~\ref{rsf}. By Lemma~\ref{l711} p.~\pr{l711} there is a unique functor $F_\T:I_\T\to\A$ such that % condition (b) in Definition 7.1.1 we have
+See Proposition~\ref{rsf}. By Proposition~\ref{p711} p.~\pr{p711} there is a unique functor $F_\T:I_\T\to\A$ such that % condition (b) in Definition 7.1.1 we have
 \begin{equation}\lb{ft}
 F_\T\ci Q_\T=F\ci\iota.
 \end{equation}
