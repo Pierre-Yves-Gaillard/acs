@@ -2303,12 +2303,12 @@ for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$
 Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. We have however %In Proposition~\ref{patho} p.~\ref{patho} we shall see a way to prevent this kind of pathology.
 
 %\begin{s} 
-\begin{thm}\lb{233}
+\begin{thm}\lb{stupidkan}
 If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ is a functor, and if 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation}
-exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
+exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally for all $i$ in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 \end{thm}
 \begin{proof}
 The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small. Let $i$ be in $I$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
@@ -6219,19 +6219,11 @@ This follows from Proposition~\ref{copr} p.~\pr{copr}.
 
 %
 
-\begin{s}
-P. 163, Proposition 7.4.4. The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have 
-$$
-\iota_\A(R_\SSS F(Q(X)))\iso R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')), 
-$$
-the isomorphisms following respectively from the assumption that $F$ is universally right localizable and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in the proof of Theorem~\ref{233} p.~\pr{233}.)
-\end{s}
-
-%
-
 \begin{s}\lb{744}
-P. 163, Proposition 7.4.4. In view of \S\ref{742} p.~\pr{742}, the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$ is not necessary.
+P. 163. Proposition 7.4.4 holds even without the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$. This follows from Theorem~\ref{stupidkan} p.~\pr{stupidkan} (see also \S\ref{742} p.~\pr{742}). %The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have $$\iota_\A(R_\SSS F(Q(X)))\iso R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')),$$ the isomorphisms following respectively from the assumption that $F$ is universally right localizable and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in the proof of Theorem~\ref{stupidkan} p.~\pr{stupidkan}.)
 \end{s}
+
+%\begin{s}P. 163, Proposition 7.4.4. In view of \S\ref{742} p.~\pr{742}, the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$ is not necessary.\end{s}
 
 %\sbs{Brief comments}
 
@@ -9588,7 +9580,7 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-The second sentence in the above quote is justified by \S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
+The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
 
 %In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
@@ -10322,7 +10314,7 @@ N^{ub}(\C)Q=\oo{Qis}
 %
 
 \begin{s}
-P. 320, Parts (i) and (ii) of Proposition 13.1.5. Part (i): the argument showing that the cohomology functor $H:\oo K(\C)\to\oo C(\C)$ factors through $Q:K(\C)\to\oo D(\C)$ are implicit in \S\ref{300301}, \S\ref{300301b} and \qr{300301c}. Part (ii): the statement that, in the notation of the proposition, $f$ is an isomorphism if $H(f)$ is, also follows from the argument implicit in \S\ref{300301}, \S\ref{300301b} and \qr{300301c}. To be slightly more explicit, one considers the long exact sequence 
+P. 320, Parts (i) and (ii) of Proposition 13.1.5. Part (i): the argument showing that the cohomology functor $H:\oo K(\C)\to\oo C(\C)$ factors through $Q:\oo K(\C)\to\oo D(\C)$ is implicit in \S\ref{300301}, \S\ref{300301b} and \qr{300301c}. Part (ii): the statement that, in the notation of the proposition, $f$ is an isomorphism if $H(f)$ is, also follows from the argument implicit in \S\ref{300301}, \S\ref{300301b} and \qr{300301c}. To be slightly more explicit, one considers the long exact sequence 
 $$
 \cdots\to H(X)\to H(Y)\to H(Z)\to H(TX)\to\cdots
 $$ 
@@ -10476,19 +10468,10 @@ $$
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-This is justified by \S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book %In fact, the existence of the indicated limit is a sufficient condition for the existence of the right derived functor, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. 
-(see \S\ref{253} p.~\pr{253}). 
+This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. 
 \end{s}
 
-%\begin{s}
-%\begin{uspb}The\index{unsolved problem} sentence just before Notation 13.3.2 p.~330 starts with the claim that $R^*F$ is triangulated. I don't understand why.\end{uspb}
-
-%\nn\textbf{Warning.} In this text, we adopt the following terminology: If $F$ is universally right localizable in the sense of Definition 7.3.1 p.~159 of the book, \emph{and if its right localization is triangulated}, we denote it by $R^*F$, and we say that ``$R^*F$ exists''.
-%\end{s}
-
-%\begin{s}P. 330, proof Corollary 13.3.3. In view of \S\ref{330} above, it seems to me that the proof should be phrased slightly differently.\end{s}
-
-%\begin{s}P. 331, proof of Proposition 13.3.5 (ii). In part ``(a) $\then$ (b) (2)'' of the proof, the exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.%%can be verified as follows: If $W$ is an exact complex in $\oo K^+(\J)$, then we have $0\iso R^+F(0)\iso F(W)$, the first isomorphism resulting from the additivity of $R^+F$ (see \ref{1335i} p.~\pr{1335i}) and the second isomorphism resulting from (13.3.1) p.~330 of the book. Now Proposition 13.1.5 (ii) p.~320 of the book implies that $F(W)$ is exact.\end{s}
+%
 
 \begin{s}\lb{AB}
 P.~330. It is observed in the book just before the statement of Proposition 13.3.5:
