@@ -1065,7 +1065,8 @@ An object $Y$ in a category $\A$ is \emph{terminal} if all $X$ in $\A$ admits a 
 \end{conv} 
 
 \begin{conv}\lb{yoc}
-We often identify the source and the target of $\pp$ in \qr{axp1} and \qr{axp2}, and we also often consider $\C$ as a full subcategory of $\C^\wg$ and $\C^\vee$ thanks to the Yoneda embeddings. Let $A$ be in $\C^\wg$ and $(X,x)$, with $X$ in $\C$ and $x:X\to A$ a morphism in $\C^\wg$, an object in the category $\C_A$ (see Definition 1.2.16 p.~18 of the book). Then the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies that $(X,x)$ is terminal if and only if $x$ is an isomorphism. If the category $\C_A$ admits a terminal object, we say that $A$ is \emph{representable}\index{representable}. Let $(X,x)$ be a (resp. the) terminal object of $\C_A$. We say that the couple $(X,x)$, or sometimes just the morphism $x$, is a (resp. the) \emph{representation}\index{representation} of $A$, and that $X$ is a (resp. the) \emph{representative}\index{representative} of $A$. We use a similar terminology if $A$ in is in $\C^\vee$ instead of $\C^\wg$, replacing the words \emph{representable}, \emph{representative}, \emph{representation} with \emph{co-representable}, \emph{co-representative}, \emph{co-representation}. 
+We often identify the source and the target of $\pp$ in \qr{axp1} and \qr{axp2}, and we also often consider $\C$ as a full subcategory of $\C^\wg$ and $\C^\vee$ thanks to the Yoneda embeddings. Let $A$ be in $\C^\wg$ and $(X,x)$, with $X$ in $\C$ and $x:X\to A$ a morphism in $\C^\wg$, an object in the category $\C_A$ (see Definition 1.2.16 p.~18 of the book). Then %the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies that 
+$(X,x)$ is terminal if and only if $x$ is an isomorphism. If the category $\C_A$ admits a terminal object, we say that $A$ is \emph{representable}\index{representable}. Let $(X,x)$ be a (resp. the) terminal object of $\C_A$. We say that the couple $(X,x)$, or sometimes just the morphism $x$, is a (resp. the) \emph{representation}\index{representation} of $A$, and that $X$ is a (resp. the) \emph{representative}\index{representative} of $A$. We use a similar terminology if $A$ in is in $\C^\vee$ instead of $\C^\wg$, replacing the words \emph{representable}, \emph{representative}, \emph{representation} with \emph{co-representable}, \emph{co-representative}, \emph{co-representation}. 
 \end{conv}
 
 A morphism $x:X\to A$ in $\C^\wg$ with $X$ in $\C$ is a representation of $A$ if and only if any morphism $Y\to A$ with $Y$ in $\C$ factors uniquely through $x$:
@@ -3025,9 +3026,9 @@ and, for the second functor it follows from Proposition 2.7.1 p.~62 of the book.
 
 Here is a complement to Section 2.3 pp~52-54 of the book, complement which will be used in \S\ref{prepa5} p.~\pr{prepa5} to prove Proposition 17.1.9 p.~409 of the book. 
 
-In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wg$ will be denoted by $h(\C)$, and the forgetful functor $\C_A\to\C$ by $j(\C_A)$: 
+In this section we shall use the following notation: The Yoneda embedding $\C\to\C^\wg$ will be denoted by $h[\C]$, and the forgetful functor $\C_A\to\C$ by $j[\C_A]$: 
 $$
-h(\C):\C\to\C^\wg,\qquad j(\C_A):\C_A\to\C.
+h[\C]:\C\to\C^\wg,\qquad j[\C_A]:\C_A\to\C.
 $$
 
 \subsubsection{Preliminaries}
@@ -3046,12 +3047,12 @@ for all $(B\to A)$ in $(\C^\wg)_A$ and all $(U\to A)$ in $\C_A$. Moreover
 \end{equation} 
 and we have 
 \begin{equation}\lb{lcom}
-\ld\ci h(\C)_A\iso h(\C_A),
+\ld\ci h[\C]_A\iso h[\C_A],
 \end{equation}
 that is, the diagram
 $$
 \begin{tikzcd}
-\C_A\ar{r}{h(\C)_A}\ar{rd}[swap]{h(\C_A)}&(\C^\wg)_A\ar{d}{\ld}\\ 
+\C_A\ar{r}{h[\C]_A}\ar{rd}[swap]{h[\C_A]}&(\C^\wg)_A\ar{d}{\ld}\\ 
 &(\C_A)^\wg
 \end{tikzcd}
 $$ 
@@ -3060,13 +3061,13 @@ quasi-commutes. (See Lemma 1.4.12 p.~26 of the book.)
 The statement below follows from Proposition 2.7.1 p.~62 of the book:
 
 \begin{prop}\lb{271}
-Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits small inductive limits. Then the functor $h(\C)^\dg(F):\C^\wg\to\A$ exists, commutes with small inductive limits and satisfies $h(\C)^\dg(F)\ci h(\C)\iso F$.
+Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits small inductive limits. Then the functor $h[\C]^\dg(F):\C^\wg\to\A$ exists, commutes with small inductive limits and satisfies $h[\C]^\dg(F)\ci h[\C]\iso F$.
 \end{prop}
 
 %For the reader's convenience we paste Lemma 2.1.13 (i) p.~41 of the book:
 
 %\begin{lem}[Lemma 2.1.13 (i)]\lb{2113}
-%Let $I$ be a category. Assume that $\C$ admits inductive limits indexed by $I$, and that $A:\C^{\op}\to\Set$ commutes with projective limits indexed by $I$ (i.e. $A(\col_{i\in I}X_i)\iso\lim_{i\in I} A(X_i)$ for any inductive system $(X_i)_{i\in I}$ in $\C$). Then $\C_A$ admits inductive limits indexed by $I$ and $j(\C_A):\C_A\to\C$ commutes with such limits.
+%Let $I$ be a category. Assume that $\C$ admits inductive limits indexed by $I$, and that $A:\C^{\op}\to\Set$ commutes with projective limits indexed by $I$ (i.e. $A(\col_{i\in I}X_i)\iso\lim_{i\in I} A(X_i)$ for any inductive system $(X_i)_{i\in I}$ in $\C$). Then $\C_A$ admits inductive limits indexed by $I$ and $j[\C_A]:\C_A\to\C$ commutes with such limits.
 %\end{lem}
 
 %The following lemma will be useful:
@@ -3084,36 +3085,38 @@ Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$
 We claim 
 
 \begin{equation}\lb{prepa1}
-h(\C_A)^\dg(F\ci j(\C_A))\ci\ld\iso h(\C)^\dg(F)\ci j((\C^\wg)_A)
+h[\C_A]^\dg(F\ci j[\C_A])\ci\ld\iso h[\C]^\dg(F)\ci j[(\C^\wg)_A]
 \end{equation}
 
-\nn(see the commutative diagram \qr{qcd} below).
+\nn(see the %commutative 
+diagram \qr{qcd} below).
 
 \begin{proof} 
-Consider the commutative diagram 
+Consider the %commutative 
+diagram 
 \begin{equation}\lb{qcd}
 \begin{tikzcd}
-\C_A\ar[bend left]{rrrr}{j(\C_A)}\ar{rr}{F\ci j(\C_A)}\ar{dd}[swap]{h(\C_A)}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h(\C)}\\ 
+\C_A\ar[bend left]{rrrr}{j[\C_A]}\ar{rr}{F\ci j[\C_A]}\ar{dd}[swap]{h[\C_A]}&&\A&&\C\ar{ll}[swap]{F}\ar{dd}{h[\C]}\\ 
 {}\\ 
-(\C_A)^\wg\ar{uurr}[swap]{h(\C_A)^\dg(F\ci j(\C_A))}&&(\C^\wg)_A\ar{ll}{\ld}\ar{rr}[swap]{j((\C^\wg)_A)}&&\C^\wg.\ar{uull}[swap]{h(\C)^\dg(F)}
+(\C_A)^\wg\ar{uurr}[swap]{h[\C_A]^\dg(F\ci j[\C_A])}&&(\C^\wg)_A\ar{ll}{\ld}\ar{rr}[swap]{j[(\C^\wg)_A]}&&\C^\wg.\ar{uull}[swap]{h[\C]^\dg(F)}
 \end{tikzcd}
 \end{equation} 
 
 For $B$ in $\C^\wg$ and $B\to A$ in $(\C^\wg)_A$, setting 
 
-$$X:=h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\Big(\ld(B\to A)\Big),$$
+$$X:=h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\Big(\ld(B\to A)\Big),$$
 
 \nn we get 
 
 \begin{align*}
-X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)(U)\right)\to A\right)\right)&\text{by \qr{263a}}\\ 
-&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h(\C)(U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\ 
-&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)(U)\to A\Big)\bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\ 
-&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(\ld\Big(h(\C)_A(U\to A)\Big)\bigg)\\ 
-&\iso\col_{(U\to B)\in\C_B}h(\C_A)^\dg\Big(F\ci j(\C_A)\Big)\bigg(h(\C_A)(U\to A)\bigg)&\text{by \qr{lcom}}\\ 
-&\iso\col_{(U\to B)\in\C_B}\big(F\ci j(\C_A)\big)(U\to A)&\text{by Prop.~\ref{271}}\\ 
+X&\iso h[\C_A]^\dg(F\ci j[\C_A])\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h[\C](U)\right)\to A\right)\right)&\text{by \qr{263a}}\\ 
+&\iso h[\C_A]^\dg(F\ci j[\C_A])\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h[\C](U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\ 
+&\iso\col_{(U\to B)\in\C_B}h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\bigg(\ld\Big(h[\C](U)\to A\Big)\bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\ 
+&\iso\col_{(U\to B)\in\C_B}h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\bigg(\ld\Big(h[\C]_A(U\to A)\Big)\bigg)\\ 
+&\iso\col_{(U\to B)\in\C_B}h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\bigg(h[\C_A](U\to A)\bigg)&\text{by \qr{lcom}}\\ 
+&\iso\col_{(U\to B)\in\C_B}\big(F\ci j[\C_A]\big)(U\to A)&\text{by Prop.~\ref{271}}\\ 
 &\iso\col_{(U\to B)\in\C_B}F(U)\\ 
-&\iso\bigg(h(\C)^\dg(F)\ci j\Big((\C^\wg)_A\Big)\bigg)\left(B\to A\right)&\text{by \qr{hfa}.} 
+&\iso\bigg(h[\C]^\dg(F)\ci j\Big((\C^\wg)_A\Big)\bigg)\left(B\to A\right)&\text{by \qr{hfa}.} 
 \end{align*}
 \end{proof}
 
@@ -3125,13 +3128,13 @@ X&\iso h(\C_A)^\dg(F\ci j(\C_A))\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h(\C)
 Consider the quasi-commutative diagram 
 $$
 \begin{tikzcd}
-\C_A\ar{rr}{j(\C_A)}\ar{dr}[swap]{G}&&\C\ar{dl}{j(\C_A)^\ddg(G)}\\ 
+\C_A\ar{rr}{j[\C_A]}\ar{dr}[swap]{G}&&\C\ar{dl}{j[\C_A]^\ddg(G)}\\ 
 {}&\A,
 \end{tikzcd}
 $$ 
 and let $U$ be in $\C$. Then we have 
 \begin{equation}\lb{prepa2}
-j(\C_A)^\ddg(G)(U)\iso\prod_{U\to A}G(U\to A).
+j[\C_A]^\ddg(G)(U)\iso\prod_{U\to A}G(U\to A).
 \end{equation} 
 \end{prop}
 
@@ -3174,7 +3177,7 @@ commute. This implies the lemma.
 \begin{proof}[Proof of Proposition \ref{prepa2a}]
 We have 
 $$
-j(\C_A)^\ddg(G)(U)\iso\lim_{(U\to j(\C_A)(V\to A))\in(\C_A)^U}G(V\to A)
+j[\C_A]^\ddg(G)(U)\iso\lim_{(U\to j[\C_A](V\to A))\in(\C_A)^U}G(V\to A)
 $$
 $$
 \iso\lim_{U\to A}G(U\to A)\iso\prod_{U\to A}G(U\to A),
@@ -3186,7 +3189,8 @@ the penultimate isomorphism following from Lemma~\ref{cicau}.
 
 \subsubsection{Third Formula}
 
-Put $j:=j(\C_A),\ h:=h(\C),\ h_A:=h(\C_A)$, and consider the quasi-commutative diagram 
+Put $j:=j[\C_A],\ h:=h[\C],\ h_A:=h[\C_A]$, and consider the %quasi-commutative 
+diagram 
 $$
 \begin{tikzcd}
 \C^\wg\ar{d}[swap]{h^\dg(j^\dg(G))}&
@@ -10333,7 +10337,8 @@ Z\ar[d]\ar[r]&Y\ar[d]\ar[r]&X\ar[d]\\
 W\ar[r]&V\ar[r]&U
 \end{tikzcd}
 $$ 
-\emph{be a commutative diagram in $\C$. If the left small square and the big square (or ``rectangle'') are cocartesian, then the right small square is cocartesian too.}
+\emph{be a commutative diagram in $\C$. If the big square (or ``rectangle'') is cocartesian, then the right small square is cocartesian too.}
+%\emph{be a commutative diagram in $\C$. If the left small square and the big square (or ``rectangle'') is are cocartesian, then the right small square is cocartesian too.}
 \end{s}
 
 %
