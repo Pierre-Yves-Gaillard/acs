@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -1769,7 +1769,7 @@ In \S\ref{sv} p.~\pr{sv} we proved that (a) implies (d).
 % paragraph removed:
 % https://docs.google.com/document/d/1Hx-fRBi-yTwTyFKvGi-qFLmgNQwYl7YJvZMd_ngC6nw/edit
 
-\sbs{Proposition 2.1.10}
+\sbs{Proposition 2.1.10 p. 40}
 
 Here is a mild generalization of Proposition 2.1.10 p.~40 of the book (stated below as Corollary~\ref{2.1.10c}): 
 
@@ -2909,7 +2909,7 @@ r\ci\DT f=\theta
 \end{equation} 
 implies 
 \begin{equation}\lb{fr2}
-(X\to A\xr{f(s)}B)=\theta_{X\to A}(s)\quad\text{for all $s$ and all $X\to A$}, 
+(X\to A\xr{f(s)}B)=\theta_{X\to A}(s)\quad\text{for all $s\in S$ and all $X\to A$}, 
 \end{equation} 
 and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}. q.e.d.
 %and we can define $f$ by $f(s)_X(X\to A):=\theta_{X\to A}(s)$.
@@ -2922,7 +2922,9 @@ and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}. q
 
 \sbs{Brief comments}
 
-\begin{s} 
+\begin{comment}
+
+\begin{s}
 % old version: 
 % https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
 P.~61, Proposition 2.6.3 (ii). Here is a lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
@@ -2930,7 +2932,7 @@ P.~61, Proposition 2.6.3 (ii). Here is a lemma implicitly used in the proof of P
 % old version (160509): 
 % https://docs.google.com/document/d/167Wrv21BZvIOaVYRo1BDkEFQyjZ8mSHUJaWcHo_zWDU/edit
 
-\begin{lem}\lb{cc}
+\begin{lem}\lb{cc} 
 If $\al:I\to\C$ is a functor admitting an inductive limit and if $\col\al\to Y$ is a morphism in $\C$, then we have 
 $$
 \col_{i\in I}\ (\al(i)\to\col\al\to Y)\iso(\col\al\to Y).
@@ -2970,6 +2972,8 @@ $$
 It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do the job. 
 \end{proof}
 \end{s}
+
+\end{comment}
 
 % the \S with the label \lb{b} was here
 
@@ -3110,7 +3114,7 @@ $$X:=h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\Big(\ld(B\to A)\Big),$$
 
 \begin{align*}
 X&\iso h[\C_A]^\dg(F\ci j[\C_A])\left(\ld\left(\left(\col_{(U\to B)\in\C_B}h[\C](U)\right)\to A\right)\right)&\text{by \qr{263a}}\\ 
-&\iso h[\C_A]^\dg(F\ci j[\C_A])\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h[\C](U)\to A\Big)\right)\right)&\text{by Lemma~\ref{cc}}\\ 
+&\iso h[\C_A]^\dg(F\ci j[\C_A])\left(\ld\left(\col_{(U\to B)\in\C_B}\Big(h[\C](U)\to A\Big)\right)\right)&\text{by Lemma~\ref{bcl}}\\ 
 &\iso\col_{(U\to B)\in\C_B}h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\bigg(\ld\Big(h[\C](U)\to A\Big)\bigg)&\text{by \qr{leq} \& Prop.~\ref{271}}\\ 
 &\iso\col_{(U\to B)\in\C_B}h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\bigg(\ld\Big(h[\C]_A(U\to A)\Big)\bigg)\\ 
 &\iso\col_{(U\to B)\in\C_B}h[\C_A]^\dg\Big(F\ci j[\C_A]\Big)\bigg(h[\C_A](U\to A)\bigg)&\text{by \qr{lcom}}\\ 
@@ -3231,7 +3235,7 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 \nn where 
 (a) follows from \qr{prepa4}; 
 (b) follows from Proposition~\ref{271} p.~\pr{271} and \qr{leq} p.~\pr{leq};  
-(c) follows from Lemma~\ref{cc} p.~\pr{cc}; 
+(c) follows from Lemma~\ref{bcl} p.~\pr{bcl}; 
 (d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}); and 
 (e) follows from \qr{263a} p.~\pr{263a}.
 \end{proof}
