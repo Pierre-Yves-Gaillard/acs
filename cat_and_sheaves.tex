@@ -276,7 +276,18 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 \nn$*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
 \begin{s}\lb{27i}
-P.~65, Exercise 2.7, Line 3: ``that the functor $\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$''. (See also \S\ref{s3cat} p.~\pr{s3cat} below.)
+P.~65, Exercise 2.7, Line 3: ``that the functor $\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$''. %(See also \S\ref{s3cat} p.~\pr{s3cat} below.) 
+For the reader's convenience we paste the exercise below:
+
+\nn\textbf{Exercise 2.7.} Let $Z\in\Set$.
+
+\nn(i) Prove that the category $\Set_Z$ admits products (denoted here by $X\tm_Z Y$) and that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$ is left adjoint to the functor $\HOM_Z(Y,\ \cdot\ )$ given by 
+$$
+\HOM_Z(Y, X)=\bigsqcup_{z\in Z}\ \Hom_{\Set}(Y_z,X_z),
+$$ 
+where $X_z$ is the fiber of $X\to Z$ over $z\in Z$.
+
+\nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6).
 \end{s}
 
 \nn$*$ P.~74, first line of the proof of Theorem 3.1.6: $\ds\ilim$ should be $\ds\ilim_i$. 
@@ -3416,17 +3427,7 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 \end{s}
 
-%
-
-\begin{s}\lb{s3cat}
-P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7. 
-\begin{prop}\lb{p3cat} 
-Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of object is $Z$. Then there are canonical isomorphisms  
-$$
-\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).
-$$ 
-\end{prop}
-\end{s}
+%\begin{s}\lb{s3cat}P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7.\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of object is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}\end{s}
 
 %%
 
@@ -3541,7 +3542,7 @@ for all $j$ in $I$ and all $y$ in $\prod_{s\in S}\ \al_s(j_s)$.
 
 Clearly the proposition below implies Proposition 3.1.11 (ii) in the book.
 
-\begin{prop}  
+\begin{prop}\lb{3111}
 If $g$ satisfies Condition~\ref{cg}, then $f$ and $g$ are inverse bijections. If $I_s$ is filtrant for all $s$ in $S$, then there is a $g$ as in \qr{eg} satisfying Condition~\ref{cg}.
 \end{prop} 
 \begin{proof}
@@ -3552,7 +3553,9 @@ $$
 in $I_s$ and an element $w_s$ in $\al_s(\ell_s)$ such that $\al_s(u_s)(y_s)=w_s=\al_s(v_s)(z_s)$. This implies $p_j(y)=p_\ell(w)=p_k(z)$, and thus $p_j(y)=p_k(z)$ as requested.
 \end{proof}
 
-In view of Proposition~\ref{p3cat} p.~\pr{p3cat} the above proposition implies 
+\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of object is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}
+
+Propositions \ref{3111} and \ref{p3cat} imply
 \begin{prop}  
 If $Z\in\Set$, then $\Set_Z$ has the IPC property.
 \end{prop} 
