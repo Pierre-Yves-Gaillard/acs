@@ -287,7 +287,9 @@ $$
 $$ 
 where $X_z$ is the fiber of $X\to Z$ over $z\in Z$.
 
-\nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition 2.2.6).
+\nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition~\ref{dsbc} p.~\pr{dsbc}).\index{base change}\index{stable by base change}
+
+(See also Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}.)
 \end{s}
 
 \nn$*$ P.~74, first line of the proof of Theorem 3.1.6: $\ds\ilim$ should be $\ds\ilim_i$. 
@@ -1856,6 +1858,40 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
 \begin{prop}\lb{copr}
+Let $I$ and $\C$ be arbitrary categories, let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$ and let $p:\al\to\DT X$ be a morphism in $\C^I$. For any universe $\U$ such that $\C$ is a $\U$-category, let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding, and, for any category $\C'$ and any functor $F:\C\to\C'$, define the morphism 
+$$
+F(p):F\ci\al\to\DT F(X)
+$$
+in $\C'^I$ by $F(p)_i:=F(p_i)$ for all $i$ in $I$. Write $(1F)$ for the condition ``$F(p)$ is a coprojection'' (see Definition~\ref{ilim} p.~\pr{ilim}), and write $(2F)$ for the condition ``the morphism 
+$$
+\Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
+$$
+in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus for any) universe $\U$ such that $\C'$ is a $\U$-category''. Note that $(1F)$ and $(2F)$ are equivalent by Propositions~\ref{aioc} and \ref{aic}. Then the conditions \emph{(a)} and \emph{(b)} below are equivalent:
+
+\nn\emph{(a)} The equivalent conditions %We have 
+$(1h_\U)$ and $(2h_\U)$ hold for %all 
+some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. %and $I$ is $\U$-small.
+
+\nn\emph{(b)} The equivalent conditions $(1F)$ and $(2F)$ hold for all for all category $\C'$ and all functor $F:\C\to\C'$.
+\end{prop}
+
+\begin{proof}
+Condition (b) implies trivially Condition (a). Let us prove that (a) implies (b). Let $F:\C\to\C'$ be as in (b) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. %$I,\C$ and $\C'$ are %$\U$-categories. %and $I$ is %$\U$-small. 
+It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
+$$
+\begin{tikzcd}
+\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
+\DT\Hom_{\C^\wg_\U}(X,A)\ar{rrr}[swap]{\Hom_{\C^\wg_\U}(h_\U(p),A)}&&&\Hom_{\C^\wg_\U}(\al,A)
+\end{tikzcd}
+$$ 
+in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection. This proves $(2F)$, and thus the proposition.
+\end{proof}
+
+\begin{comment}
+
+% previous version:
+
+\begin{prop}\lb{copr}
 If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection,
@@ -1885,6 +1921,8 @@ $$
 $$ 
 where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
 \end{proof}
+
+\end{comment}
 
 \begin{df}[universal inductive limit]\lb{uil} 
 Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{copr} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
@@ -2105,9 +2143,9 @@ P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is
 \sbs{Stability by base change}\lb{sbsarsbc}
 
 \begin{s}\lb{parsbc}
-Recall the following definition:
+(See also \S\ref{27i} p.~\pr{27i}.) Recall the following definition:
 
-\begin{df}[Definition 2.2.6 p.~47, stability by base change]%\lb{dsbc}
+\begin{df}[Definition 2.2.6 p.~47, stability by base change]\lb{dsbc}
 Let $\C$ be a category which admits fiber products and inductive limits indexed by a category $I$.
 
 \nn\emph{(i)} We say that inductive limits in $\C$ indexed by $I$ are \emph{stable by base change}\index{base change}\index{stable by base change} if for any morphism $Y\to Z$ in $\C$, the base change functor $\C_Z\to\C_Y$ given by 
@@ -2288,8 +2326,8 @@ P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe h
 \nn(b) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
 \begin{df}[Definition 2.3.2 p. 51]\lb{232} 
-If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If $\pp^\dg(F\ci\bt)$ exists and $F$ commutes with $\pp^\dg$ (Definition~\ref{kcw}) at $\bt$ for all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
-\end{df} 
+If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If, in addition, $\pp^\dg(F\ci\bt)$ exists and the natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism for all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
+\end{df}  
 \end{s}
 
 %%
@@ -2316,7 +2354,7 @@ Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\
 
 %\begin{s} 
 \begin{thm}\lb{stupidkan}
-If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ is a functor, and if 
+If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ are functors, and if 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation}
@@ -2343,6 +2381,13 @@ the isomorphisms following respectively from Theorem~\ref{233i} p.~\pr{233i} and
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof} 
+\begin{cor}
+Let $I,J$ and $\C$ be arbitrary categories; let $I\xl\pp J\xr\bt\C$ be functors; for all universe $\U$ such that $\C$ is a $\U$-category let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding; assume that, for all such $\U$ the functor $\pp^\dg(h_\U\ci\bt)$ exists and the natural morphism $\pp^\dg(h_\U\ci\bt)\to h_\U\ci\pp^\dg(\bt)$ is an isomorphism. Then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
+%If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ are functors, if $h:\C\to\C^\wg$ is the Yoneda embedding, if $\pp^\dg(h\ci\bt)$ exists and if the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism, then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}.
+\end{cor}
+\begin{proof}
+This follows from Proposition~\ref{copr} p.~\pr{copr} and Theorem~\ref{stupidkan}.
+\end{proof}
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 %\begin{comment}
@@ -2474,7 +2519,7 @@ be the coprojections. By the proof of Step~(b) in the book, the co-unit
 $$
 \ee_{\bt,j}:\bt(j)\to\pp^\dg(\bt)(\pp(j))
 $$ 
-coincides with the coprojection $p(\pp(j)\xr\id\pp(j))$. We shall define a morphism $$\pp^\dg(\bt)(\pp(j))\to\bt(j)$$ and leave it to the reader to check that it is inverse to $\ee_{\bt,j}$. It suffices to define a functorial family of morphisms 
+coincides with the coprojection $p[\pp(j)\xr\id\pp(j)]$. We shall define a morphism $$\pp^\dg(\bt)(\pp(j))\to\bt(j)$$ and leave it to the reader to check that it is inverse to $\ee_{\bt,j}$. It suffices to define a functorial family of morphisms 
 $$
 %f(\pp(j')\to\pp(j)):\bt(\pp(j'))\to\bt(\pp(j))
 f(\pp(j')\to\pp(j)):\bt(j')\to\bt(j)
@@ -3247,7 +3292,7 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 (a) follows from \qr{prepa4}; 
 (b) follows from Proposition~\ref{271} p.~\pr{271} and \qr{leq} p.~\pr{leq};  
 (c) follows from Lemma~\ref{bcl} p.~\pr{bcl}; 
-(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}); and 
+(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}); 
 (e) follows from \qr{263a} p.~\pr{263a}.
 \end{proof}
 
@@ -3948,10 +3993,10 @@ If $F:\C\to\C'$ is a functor admitting a left adjoint, if $I$ is a category, and
 \subsubsection{Exercise 2.7 (ii) p.~65}
 
 \begin{prop}[Exercise 2.7 (ii) p.~65]\lb{sbcs}
-The base change functors (see \S\ref{parsbc} p.~\pr{parsbc}) in $\Set$ commute with small inductive and projective limits limits. In particular, small inductive limits in $\Set$ are stable by base change.
+The base change functors (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}) in $\Set$ commute with small inductive and projective limits limits. In particular, small inductive limits in $\Set$ are stable by base change.
 \end{prop}
 
-(See \S\ref{27i} p.~\pr{27i}.) Note that Proposition~\ref{sbcs} generalizes the distributivity of multiplication over addition in $\bb N$. 
+Note that Proposition~\ref{sbcs} generalizes the distributivity of multiplication over addition in $\bb N$. 
 
 \subsubsection{Proposition 3.3.3 p.~82}
 
@@ -4607,7 +4652,7 @@ Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 
 \nn\emph{(i)} $\C$ admits small inductive limits and finite projective limits, 
 
-\nn\emph{(ii)} small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}), 
+\nn\emph{(ii)} small filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}), 
 
 \nn\emph{(iii)} any epimorphism is strict. 
 
@@ -7248,7 +7293,7 @@ The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\d
 
 \subsubsection{Proposition 8.3.27 (i) p.~186}\lb{gcsbc}
 
-By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (Definition 2.2.6 p.~47 of the book; see \S\ref{parsbc} p.~\pr{parsbc}).
+By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}).
 
 %% 
 
