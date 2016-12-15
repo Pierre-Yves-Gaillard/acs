@@ -1866,18 +1866,15 @@ in $\C'^I$ by $F(p)_i:=F(p_i)$ for all $i$ in $I$. Write $(1F)$ for the conditio
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$
-in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus for any) universe $\U$ such that $\C'$ is a $\U$-category''. Note that $(1F)$ and $(2F)$ are equivalent by Propositions~\ref{aioc} and \ref{aic}. Then the conditions \emph{(a)} and \emph{(b)} below are equivalent:
+in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C'$ is a $\U$-category''. Note that $(1F)$ and $(2F)$ are equivalent by Propositions~\ref{aioc} and \ref{aic}. Then the conditions \emph{(a)} and \emph{(b)} below are equivalent:
 
-\nn\emph{(a)} The equivalent conditions %We have 
-$(1h_\U)$ and $(2h_\U)$ hold for %all 
-some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. %and $I$ is $\U$-small.
+\nn\emph{(a)} The equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. 
 
 \nn\emph{(b)} The equivalent conditions $(1F)$ and $(2F)$ hold for all for all category $\C'$ and all functor $F:\C\to\C'$.
 \end{prop}
 
 \begin{proof}
-Condition (b) implies trivially Condition (a). Let us prove that (a) implies (b). Let $F:\C\to\C'$ be as in (b) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. %$I,\C$ and $\C'$ are %$\U$-categories. %and $I$ is %$\U$-small. 
-It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
+Condition (b) implies trivially Condition (a). Let us prove that (a) implies (b). Let $F:\C\to\C'$ be as in (b) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
 $$
 \begin{tikzcd}
 \DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
@@ -1885,6 +1882,8 @@ $$
 \end{tikzcd}
 $$ 
 in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection. This proves $(2F)$, and thus the proposition.
+
+[To show that $(1h_\U)$ implies $(1h_\V)$ if $\C$ is both a $\U$-category and a $\V$-category, let $Y$ be in $\C$ and let $p_\U:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ and $p_\V:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ be the obvious morphisms in $\Fct(I,\Set_\U)$ and $\Fct(I,\Set_\V)$. It suffices to show that $p_\V$ is a coprojection, and this follows immediately from the assumption that $p_\U$ is a coprojection.]
 \end{proof}
 
 \begin{comment}
