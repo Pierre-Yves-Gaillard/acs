@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -798,7 +798,7 @@ P.~18, Definition 1.2.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C
 \begin{equation}\lb{opslice}
 (\C_{X'})^{\op}\iso(\C^{\op})^{X'},\quad(\C^{X'})^{\op}\iso(\C^{\op})_{X'}.
 \end{equation} 
-Also note that, if $\Cat$ is the category of small categories, then the formula $X'\mt\C_{X'}$ defines a functor $\C'\to\Cat$, and the formula $X'\mt\C^{X'}$ defines a functor $\C'^{\op}\to\Cat$.
+Also note that, if $\Cat$ is the category of small categories (Definition~\ref{myuscat} p.~\pr{myuscat}), then the formula $X'\mt\C_{X'}$ defines a functor $\C'\to\Cat$, and the formula $X'\mt\C^{X'}$ defines a functor $\C'^{\op}\to\Cat$.
 \end{s}
 
 %%
@@ -1494,14 +1494,14 @@ Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[rd,"\theta"]\\
 In Convention~\ref{term} p.~\pr{term} we stated a rule and indicated that we would make some exceptions to it. Here is the first such exception:
 
 \begin{conv}\lb{thep} 
-If $\al:I^{\op}\to\Set$ is a functor defined on a small category, then we define its projective limit $\lim\al$ by 
+If $\al:I^{\op}\to\Set$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), then we define its projective limit $\lim\al$ by 
 $$ 
 \lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
 $$ 
 and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. As often it is better to start by verifying the \emph{uniqueness} of $f$. We must have $p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$. It is straightforward to check that the map $f$ defined by the above equality does the job.]
 \end{conv}
 
-Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category.
+Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
 \begin{df}[inductive limit]\lb{ilim} 
 Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ to $\DT:\C\to\C^I$ exists, we denote it by $\col\al$ and call it {\em the inductive limit}\index{inductive limit} of the $\al$ (see \S\ref{ldefat} p.~\pr{ldefat}). Moreover, we say that the co-unit $p:\al\to\DT\col\al$ of the adjunction is \textbf{the} \emph{coprojection}\index{coprojection}. More generally we say that $q:\al\to\DT X$ (with $X$ in $\C$) is \textbf{a} \emph{coprojection} if the corresponding morphism 
@@ -1522,14 +1522,14 @@ The characteristic property of the pair $(\col\al,p)$ can be described as follow
 In Convention~\ref{term} p.~\pr{term} we stated a rule and indicated that we would make some exceptions to it. Here is the second such exception:
 
 \begin{conv}\lb{thei}
-Let $\al:I\to\Set$ be a functor defined on a small category, set 
+Let $\al:I\to\Set$ be a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), set 
 $$ 
 U:=\{(i,x)\in\U\ |\ i\in I,x\in\al(i)\},
 $$ 
 and let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,\al(f)(x))$ for all morphisms $f:i\to j$. Then we define the inductive limit $\col\al$ as the quotient $U/\!\!\sim$. Let $\pi:U\to\col\al$ be the canonical projection, and, for all $i$ in $I$, define $p_i:\al(i)\to\col\al$ by $p_i(x):=\pi(i,x)$. We call the resulting morphism $p:\al\to\col\al$ the coprojection. Then $p$ is \emph{a} coprojection in the sense of Definition~\ref{plim}. [Indeed, given $\theta$ in \qr{cue} let us prove the uniqueness of $f$. Any $x$ in $X$ is of the form $p_i(t)$ for some $i$ in $I$ and $t$ in $\al(i)$, and we must have $f(x)=\theta_i(t)$. This proves the uniqueness. To verify the existence, we must assume $p_i(t)=p_j(u)$ (obvious notation), and derive $\theta_i(t)=\theta_j(u)$. We may assume that there is a morphism $s:i\to j$, and the verification is straightforward.]
 \end{conv} 
 
-Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category.
+Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
 %%
 
@@ -1722,7 +1722,7 @@ secondly a morphism of functors $\bt\to\DT Y$, and thirdly a morphism $X\to Y$ b
 The two propositions below are basic.
 
 \begin{prop}\lb{aioc}
-If $\al:I^{\op}\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\C^{I^{\op}}$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
+If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\C^{I^{\op}}$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
@@ -1760,7 +1760,7 @@ To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let
 The proof of the following proposition is similar to the previous one and is left to the reader as an easy exercise.
 
 \begin{prop}\lb{aic}
-If $\al:I\to\C$ is a functor defined on a small category, if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
+If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $p$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim},
 
@@ -1857,8 +1857,25 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % previous version:
 % https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
+\begin{lem}\lb{u1}
+Let $\U$ and $\V$ be universes, let $\al_\U:I\to\Set_\U$ be a functor such that $\al_\U(i)\in\V$ for all $i$ in $I$, let $\al_\V$ be the functor $I\to\Set_\V$ induced by $\al_\U$, let $X$ be in $\U\cap\V$, let $p_\U:\al_\U\to\DT X$ be a morphism in $(\Set_\U)^I$ and $p_\V:\al_\V\to\DT X$ the induced morphism in $(\Set_\V)^I$. If $p_\U$ is a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}), so is $p_\V$.
+\end{lem}
+\begin{proof}
+We can assume that %$\U\subset\V$ and that 
+$I$ is $\V$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). Define $Y\in\V$ as being $\col\al_\V$ in the notation of Convention~\ref{thei} p.~\pr{thei}. Using the conservative functor from $(\Set_\V)^{\op}$ to $\Set_\V$ which sends $Z$ to $\{0,1\}^Z$, we see that the natural map $Y\to X$ is bijective.
+\end{proof}
+
+\begin{lem}\lb{u2}
+Let $\U$ and $\V$ be universes, let $\al_\U:I^{\op}\to\Set_\U$ be a functor such that $\al_\U(i)\in\V$ for all $i$ in $I$, let $\al_\V$ be the functor $I^{\op}\to\Set_\V$ induced by $\al_\U$, let $X$ be in $\U\cap\V$, let $p_\U:\DT X\to\al_\U$ be a morphism in $\Fct(I^{\op},\Set_\U)$ and $p_\V:\DT X\to\al_\V$ the induced morphism in $\Fct(I^{\op},\Set_\V)$. If $p_\U$ is a projection (see Definition~\ref{plim} p.~\pr{plim}), so is $p_\V$.
+\end{lem}
+\begin{proof}
+The proof is similar to (and slightly easier than) that of Lemma~\ref{u1} p.~\pr{u1}, and is left to the reader.
+\end{proof}
+
+%
+
 \begin{prop}\lb{copr}
-Let $I$ and $\C$ be arbitrary categories, let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$ and let $p:\al\to\DT X$ be a morphism in $\C^I$. For any universe $\U$ such that $\C$ is a $\U$-category, let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding, and, for any category $\C'$ and any functor $F:\C\to\C'$, define the morphism 
+Let $I$ and $\C$ be arbitrary categories, let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$ and let $p:\al\to\DT X$ be a morphism in $\C^I$. For any universe $\U$ such that $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding, and, for any category $\C'$ and any functor $F:\C\to\C'$, define the morphism 
 $$
 F(p):F\ci\al\to\DT F(X)
 $$
@@ -1866,9 +1883,11 @@ in $\C'^I$ by $F(p)_i:=F(p_i)$ for all $i$ in $I$. Write $(1F)$ for the conditio
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$
-in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C'$ is a $\U$-category''. Note that $(1F)$ and $(2F)$ are equivalent by Propositions~\ref{aioc} and \ref{aic}. Then the conditions \emph{(a)} and \emph{(b)} below are equivalent:
+in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus for any)\footnote{See Lemma~\ref{u2}.} universe $\U$ such that %$I$ is $\U$-small and 
+$\C'$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat})''. Note that $(1F)$ and $(2F)$ are equivalent by Propositions~\ref{aioc} and \ref{aic}. Then the conditions \emph{(a)} and \emph{(b)} below are equivalent:
 
-\nn\emph{(a)} The equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. 
+\nn\emph{(a)} The equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some (and thus for any) %\footnote{See Lemma~\ref{u1}.} 
+universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. %and $\col\Hom_\C(Y,\al)\in\U$ for all $Y\in\C$. 
 
 \nn\emph{(b)} The equivalent conditions $(1F)$ and $(2F)$ hold for all for all category $\C'$ and all functor $F:\C\to\C'$.
 \end{prop}
@@ -1883,48 +1902,13 @@ $$
 $$ 
 in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection. This proves $(2F)$, and thus the proposition.
 
-[To show that $(1h_\U)$ implies $(1h_\V)$ if $\C$ is both a $\U$-category and a $\V$-category, let $Y$ be in $\C$ and let $p_\U:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ and $p_\V:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ be the obvious morphisms in $\Fct(I,\Set_\U)$ and $\Fct(I,\Set_\V)$. It suffices to show that $p_\V$ is a coprojection, and this follows immediately from the assumption that $p_\U$ is a coprojection.]
+%[To show that $(1h_\U)$ implies $(1h_\V)$ if $\C$ is both a $\U$-category and a $\V$-category, let $Y$ be in $\C$ and let $p_\U:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ and $p_\V:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ be the obvious morphisms in $\Fct(I,\Set_\U)$ and $\Fct(I,\Set_\V)$. It suffices to show that $p_\V$ is a coprojection, and this follows immediately from the assumption that $p_\U$ is a coprojection.]
 \end{proof}
-
-\begin{comment}
-
 % previous version:
-
-\begin{prop}\lb{copr}
-If $\al:I\to\C$ is a functor defined on a small category, if $X$ is an object of $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$ and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
-
-\nn\emph{(a)} the obvious morphism $h(p):h\ci\al\to\DT h(X)$ is a coprojection,
-
-\nn\emph{(b)} for all object $Y$ in $\C$ the obvious morphism 
-$$
-\Hom_\C(Y,p):\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)
-$$ 
-is a coprojection,
-
-\nn\emph{(c)} for any functor $F:\C\to\C'$ the obvious morphism $F(p):F\ci\al\to\DT F(X)$ is a coprojection,
-
-\nn\emph{(d)} for any functor $F:\C\to\C'$ and any object $X'$ in $\C'$ the obvious morphism 
-$$
-\Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
-$$ 
-is a projection. 
-\end{prop}
-
-\begin{proof}
-Propositions~\ref{aioc} and \ref{aic} imply (a) $\ssi$ (b), (c) $\ssi$ (d). Moreover (c) implies trivally (a). To prove (a) $\then$ (d), let $X'$ be in $\C'$ and set $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
-$$
-\begin{tikzcd}
-\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
-\DT\Hom_{\C^\wg}(X,A)\ar{rrr}[swap]{\Hom_{\C^\wg}(h(p),A)}&&&\Hom_{\C^\wg}(\al,A),
-\end{tikzcd}
-$$ 
-where the vertical isomorphisms are given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
-\end{proof}
-
-\end{comment}
+% https://docs.google.com/document/d/1AITzGqzUAvv50lju_VrBMrKTTlpm0dwypIunBQYn6jA/edit
 
 \begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be a functor defined on a small category, let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{copr} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+Let $\al:I\to\C$ be a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{copr} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 There is of course an analogous notion of universal projective limit. 
@@ -1935,7 +1919,7 @@ $$
 $$ 
 This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
 
-If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X$ is in $\C$, we denote by $$H[I,\al,\C,X]$$ the condition 
+If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X$ is in $\C$, we denote by $$H[I,\al,\C,X]$$ the condition 
 
 \centerline{$X$ is an inductive limit of $h\ci\al$,}
 
@@ -1943,7 +1927,7 @@ If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding and if 
 
 \centerline{$X$ is an inductive limit of $\al$.}%$C[I,\al,\C,X]$ the condition ``$X$ is an inductive limit of $\al$''. 
 
-\nn Note that the conjunction of $H[I,\al,\C,X]$ and $C[I,\al,\C,X]$ implies that $X$ is a \emph{universal} inductive limit of $\al$. The proof of the following proposition is obvious.
+\nn By Proposition~\ref{copr} p.~\pr{copr} the conjunction of $H[I,\al,\C,X]$ and $C[I,\al,\C,X]$ implies that $X$ is a \emph{universal} inductive limit of $\al$. The proof of the following proposition is obvious.
 
 \begin{prop}\lb{stupid}
 We have $H[I,\al,\C,X]\then C[I,\al,\C,X]$.
@@ -1954,17 +1938,25 @@ We have $H[I,\al,\C,X]\then C[I,\al,\C,X]$.
 %\begin{prop}If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X\in\C$ is an inductive limit of $h\ci\al$, then $X$ is an inductive limit of $\al$, and thus a universal inductive limit of $\al$.\end{prop}
 % previous version:\begin{prop}If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding, if $\col h\ci\al$ exists in $\C^\wg$, if $X$ is in $\C$, if $f:X\to\col h\ci\al$ is an isomorphism in $\C^\wg$, if $q_i:\al(i)\to\col h\ci\al$ are the coprojections, then $X$ is a universal limit of $\al$, the coprojections $p_i:\al(i)\to\col\al$ being given by the formula $p_i:=f^{-1}\ci q_i$.\end{prop}\begin{proof}It suffices to prove that $X$ is an inductive limit of $\al$, the coprojections $p_i:\al(i)\to\col\al$ being given by the indicated formula. Let $Y$ be in $\C$ and $u_i:\al(i)\to Y$ a functorial family of morphisms indexed by $i\in I$. It suffices to show that there is a unique morphism $u:X\to Y$ in $\C$ such that $u\ci p_i=u_i$, that is $u\ci f^{-1}\ci q_i=u_i$, for all $i$. But by assumption there is a unique morphism $v:X\to Y$ in $\C^\wg$ such that $v\ci f^{-1}\ci q_i=u_i$ for all $i$, so that it suffices to take for $u$ the morphism $v$ viewed as a morphism in $\C$.\end{proof}
 
+Let us insist on the following point:
+\begin{prop}\lb{insist1}
+If $\al:I\to\C$ is an arbitrary functor and if there is a universe $\U$ such that $I$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}) and $\col h_\U\ci\al$ exists in $\C^\wg_\U$ and is representable (here $h_\U:\C\to\C^\wg_\U$ is the Yoneda embedding), then $\col\al$ exists universally (Definition~\ref{uil} p.~\pr{uil}).
+\end{prop}
+\begin{proof}
+This follows from Propositions \ref{copr} and \ref{stupid}.
+\end{proof}
+
 %%
 
 \sbs{Brief comments}
 
 \begin{s}
 \begin{prop}\lb{patho}
-If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $\al:I\tm J\to\C$ is a functor and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$. 
+If $I$ and $J$ are big categories, if $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), if $\al:I\tm J\to\C$ is a functor and if $\col_i\al(i,\ )$ exists universally in the sense of Definition~\ref{uil} p.~\pr{uil}, then $\col_i\al(i,j)$ exists universally for all $j$. 
 \end{prop}
 In \S\ref{c38} p.~\pr{c38} we saw that, without the adverb ``universally'', the claim is false.
 \begin{proof}
-To prove the proposition, we may assume that $I$ is small. Let $h:\C\to\C^\wg$ be the Yoneda embedding and $j$ a fixed object of $J$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
+To prove the proposition, we may assume that $I$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}). Let $h:\C\to\C^\wg$ be the Yoneda embedding and $j$ a fixed object of $J$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
 $$
 C\left[I,\al(\ ,j),\C,\left(\col_i\al(i,\ )\right)(j)\right],
 $$ 
@@ -1975,7 +1967,7 @@ $$
 but this holds by Proposition~\ref{216p} p.~\pr{216p}.
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof}
-%\begin{comment}
+% comment removed:
 % https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 \end{s}
 
@@ -2117,7 +2109,7 @@ as desired.
 Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
 
 \begin{thm}\lb{fgd}
-Let $I$ be a small category; %with disjoint hom-sets; 
+Let $I$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) category; %with disjoint hom-sets; 
 let $\al,\bt:I\to\C$ be two functors; for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor; and set 
 $$
 S:=\Hom_{\Fct(I,\C)}(\al,\bt),\quad T:=\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i).
@@ -2158,7 +2150,7 @@ $$
 \col_i(X_i\tm_ZY)\xr\sim\left(\col_iX_i\right)\tm_ZY.
 $$
 
-\nn\emph{(ii)} If $\C$ admits small inductive limits and \emph{(i)} holds for any small category $I$, we say that \emph{small inductive limits in $\C$ are stable by base change}.
+\nn\emph{(ii)} If $\C$ admits small inductive limits and \emph{(i)} holds for any small category $I$ (Definition~\ref{myuscat} p.~\pr{myuscat}), we say that \emph{small inductive limits in $\C$ are stable by base change}.
 \end{df} 
 
 The following lemma is implicit:
@@ -2239,7 +2231,7 @@ P.~50, Definition 2.3.1. The three pieces of notation $\pp_*,\pp^\dg$ and $\pp^\
 % 
 
 \begin{s}\lb{phistar}
-P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories, let $\C$ be a category, and consider the functor 
+P.~50, Definition 2.3.1. Let $\pp:J\to I$ be a functor of small categories (Definition~\ref{myuscat} p.~\pr{myuscat}), let $\C$ be a category, and consider the functor 
 \begin{equation}\lb{pcp}
 \pp_*:=\ci\pp:\C^I\to\C^J.
 \end{equation}
@@ -2320,7 +2312,7 @@ If the above morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism, 
 \begin{s} 
 P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe has been given. Let $I\xl\pp J\xr\bt\C$ be functors, let $\bt$ be in $\C^J$, and let $\pp^\dg\bt$ be in $\C^I$. The following conditions are equivalent:
 
-\nn(a) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{some} universe $\U$ such that $\C^J$ is a $\U$-category,
+\nn(a) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{some} universe $\U$ such that $\C^J$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}),
 
 \nn(b) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
@@ -2353,14 +2345,14 @@ Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\
 
 %\begin{s} 
 \begin{thm}\lb{stupidkan}
-If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ are functors, and if 
+If $I$ and $J$ are big categories, if $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), if $I\xl\pp J\xr\bt\C$ are functors, and if 
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation}
 exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally for all $i$ in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 \end{thm}
 \begin{proof}
-The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small. Let $i$ be in $I$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
+The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}). Let $i$ be in $I$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
 $$
 C\left[J_i,\ (\pp(j)\to i)\mt\bt(j),\ \C,\ \pp^\dg(\bt)(i)\right],
 $$ 
@@ -2381,16 +2373,30 @@ the isomorphisms following respectively from Theorem~\ref{233i} p.~\pr{233i} and
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof} 
 \begin{cor}
-Let $I,J$ and $\C$ be arbitrary categories; let $I\xl\pp J\xr\bt\C$ be functors; for all universe $\U$ such that $\C$ is a $\U$-category let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding; assume that, for all such $\U$ the functor $\pp^\dg(h_\U\ci\bt)$ exists and the natural morphism $\pp^\dg(h_\U\ci\bt)\to h_\U\ci\pp^\dg(\bt)$ is an isomorphism. Then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
+Let $I,J$ and $\C$ be arbitrary categories; let $I\xl\pp J\xr\bt\C$ be functors; let $\U$ be a universe such that $J$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), the functor $\pp^\dg(h\ci\bt)$ (where $h:\C\to\C^\wg$ is the Yoneda embedding) exists and the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism. Then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}.
+%Let $I,J$ and $\C$ be arbitrary categories; let $I\xl\pp J\xr\bt\C$ be functors; for all universe $\U$ such that $\C$ is a $\U$-category let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding; assume that, for all such $\U$ the functor $\pp^\dg(h_\U\ci\bt)$ exists and the natural morphism $\pp^\dg(h_\U\ci\bt)\to h_\U\ci\pp^\dg(\bt)$ is an isomorphism. Then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
 %If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ are functors, if $h:\C\to\C^\wg$ is the Yoneda embedding, if $\pp^\dg(h\ci\bt)$ exists and if the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism, then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}.
 \end{cor}
 \begin{proof}
-This follows from Proposition~\ref{copr} p.~\pr{copr} and Theorem~\ref{stupidkan}.
+This follows from Proposition~\ref{insist1} p.~\pr{insist1} and Theorem~\ref{stupidkan}.
 \end{proof}
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
-%\begin{comment}
-% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit\end{s}
+% comment removed:
+% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit\end{s}£
+
+Let us insist on the following point:
+\begin{prop}\lb{insist2}
+Let $I,J$ and $\C$ be arbitrary categories, and let $I\xl\pp J\xr\bt\C$ be functors. If there is a universe $\U$ such that $J$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) and, for all $i$ in $I$, the colimit 
+$$
+\col_{(\pp(j)\to i)\in J_i}h_\U(\bt(j))
+$$ 
+%exists in $\C^\wg_\U$ and 
+is representable (here $h_\U:\C\to\C^\wg_\U$ is the Yoneda embedding), then $\pp^\dg\bt$ exists universally (Definition~\ref{232} p.~\pr{232}).
+\end{prop}
+\begin{proof}
+This follows from Propositions~\ref{insist1} and Theorem~\ref{stupidkan}.
+\end{proof}
 
 In the book the proof of Theorem 2.3.3 (i) is divided into three steps, called (a), (b) and (c). We shall follow this subdivision.
 
@@ -2539,7 +2545,7 @@ It is straightforward to verify that the family of morphisms defined this way is
 Here is a corollary to Theorem~\ref{233i} p.~\pr{233i} (which is Theorem 2.3.3 (i) p.~52 of the book):
 
 \begin{cor}\lb{c233i}
-If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ and $J$ is small, then $\pp^\dg(\bt)(i)$ is (in natural bijection with) the quotient of 
+If, in the setting of Theorem \ref{233i}, we have $\C=\Set$ and $J$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}), then $\pp^\dg(\bt)(i)$ is (in natural bijection with) the quotient of 
 $$
 \bigsqcup_{j\in J}\ \bt(j)\tm\Hom_I(\pp(j),i) 
 $$ 
@@ -2577,7 +2583,7 @@ such that $x_{i\to\pp(j)\to\pp(j')}=\bt(j\to j')(x_{i\to\pp(j)})$ for all morphi
 \sbs{Brief comments}
 
 \begin{s}
-P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small and $\C$ admits small inductive limits, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
+P.~53, Corollary 2.3.4. Recall that we have functors $\C\xl\bt J\xr\pp I$, where $I$ and $J$ are small (Definition~\ref{myuscat} p.~\pr{myuscat}) and $\C$ admits small inductive limits, and that Corollary 2.3.4 says that we have a natural isomorphism $\col\bt\iso\col\pp^\dg\bt$, that is 
 \begin{equation}\lb{coco}
 \col\bt\iso\col_i\ \col_{(j,u)\in J_i}\bt(j),
 \end{equation} 
@@ -2723,7 +2729,7 @@ and let $p_x:M'\to R^{\op}$ be the projections. As Theorem 2.3.3 (ii) p.~52 of t
 P.~55, proof of Corollary 2.4.4 (iii) (minor variant).
 
 \begin{prop}
-If $I$ is a small category, if $S$ is in $\Set$ and $\DT S:I\to\Set$ is the corresponding constant functor, then there is a canonical bijection
+If $I$ is a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $S$ is in $\Set$ and $\DT S:I\to\Set$ is the corresponding constant functor, then there is a canonical bijection
 $$
 \col\DT S\iso\pi_0(I)\tm S.
 $$ 
@@ -2792,7 +2798,7 @@ for all morphism $G(X)\to X''$ in $\C''$ and all morphism $X'\to F(X)$ in $\C'$,
 P.~56, proof of Lemma 2.4.7 (minor variant).
 
 \begin{lem} 
-If $I$ is a small category, $i_0$ is in $I$, and $\al:I\to\Set$ is the functor $\Hom_I(i_0,\ )$, then $\col\al$ is a terminal object of $\Set$. 
+If $I$ is a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), $i_0$ is in $I$, and $\al:I\to\Set$ is the functor $\Hom_I(i_0,\ )$, then $\col\al$ is a terminal object of $\Set$. 
 \end{lem}
 
 \begin{proof}
@@ -2820,7 +2826,7 @@ $i_0\to i$. In particular $i_0\to i$ represents the same element as $\id_{i_0}$.
 P. 57, proof of Proposition 2.5.2 (minor variant). Instead of proving (i)$\then$(v), we prove (i)$\then$(ii), that is, we prove the following statement:
 
 \begin{lem}
-If $\pp:J\to I$ and $\bt:I^{\op}\to\Set$ are functors defined on small categories and if the category $J^i$ is connected for all $i$ in $I$, then the natural map 
+If $\pp:J\to I$ and $\bt:I^{\op}\to\Set$ are functors defined on small categories (Definition~\ref{myuscat} p.~\pr{myuscat}) and if the category $J^i$ is connected for all $i$ in $I$, then the natural map 
 $$
 f:\lim\bt\to\lim\bt\ci\pp^{\op}
 $$ 
@@ -2977,58 +2983,8 @@ and the existence of $f$ follows from the fact that \qr{fr2} implies \qr{fr1}. q
 
 \sbs{Brief comments}
 
-\begin{comment}
-
-\begin{s}
-% old version: 
-% https://docs.google.com/document/d/1RrIqcflYiAihX62SEwaNTTYvF-Pv_LN-U-hB5LWQCOI/edit
-P.~61, Proposition 2.6.3 (ii). Here is a lemma implicitly used in the proof of Proposition 2.6.3 (ii): 
-
-% old version (160509): 
-% https://docs.google.com/document/d/167Wrv21BZvIOaVYRo1BDkEFQyjZ8mSHUJaWcHo_zWDU/edit
-
-\begin{lem}\lb{cc} 
-If $\al:I\to\C$ is a functor admitting an inductive limit and if $\col\al\to Y$ is a morphism in $\C$, then we have 
-$$
-\col_{i\in I}\ (\al(i)\to\col\al\to Y)\iso(\col\al\to Y).
-$$
-More precisely, let $X$ be an object of $\C$, let $p:\al\to\DT X$ be a coprojection, let $f:X\to Y$ be a morphism in $\C$, and define $\bt:I\to\C_Y$ by $\bt(i):=(\al(i)\xr{p_i}X\xr fY)$ and $q:\bt\to\DT(X\xr fY)$ by $q_i:=p_i$: 
-$$
-\begin{tikzcd}
-\al(i)\ar[rd,"f\ci p_i"']\ar[rr,"p_i"]&&X\ar[dl,"f"]\\ 
-&Y.
-\end{tikzcd}
-$$ 
-Then $q$ is a coprojection. 
-\end{lem}
-
-\begin{proof}
-For all $Z$ in $\C$ and all morphism $\pp:\al\to\DT Z$ in $\C^I$ there is a unique morphism $g:X\to Z$ in $\C$ such that $\DT g\ci p=\pp$: 
-$$
-\begin{tikzcd}
-\al\ar[r,"p"]\ar[dr,"\pp"']&\DT X\ar[d,"\DT g"]&X\ar[d,dashed,"g"]\\ 
-&\DT Z&Z.
-\end{tikzcd}
-$$ 
-Let $(Z\xr hY)$ be an object of $\C_Y$ and $\psi:\bt\to\DT(Z\xr hY)$ a morphism in $(\C_Y)^I$. We must show that there is a unique morphism $k:(X\xr fY)\to(Z\xr hY)$, which it is more suggestive to display as 
-$$
-\begin{tikzcd}
-X\ar[rd,"f"']\ar[rr,"k"]&&Z\ar[dl,"h"]\\ 
-&Y,
-\end{tikzcd}
-$$ 
-such that $\DT k\ci q=\psi$: 
-$$
-\begin{tikzcd}
-\bt\ar[r,"q"]\ar[dr,"\psi"']&\DT(X\xr fY)\ar[d,"\DT k"]&(X\xr fY)\ar[d,dashed,"k"]\\ 
-&\DT(Z\xr hY)&(Z\xr hY).
-\end{tikzcd}
-$$ 
-It is straightforward to check that the formulas $\pp_i:=\psi_i$ and $k:=g$ do the job. 
-\end{proof}
-\end{s}
-
-\end{comment}
+% comment removed:
+% https://docs.google.com/document/d/1UClrA_pAlhk0zgsrBYiyjSSf1aKtoYPOJrNd-M4jSqs/edit
 
 % the \S with the label \lb{b} was here
 
@@ -3040,7 +2996,7 @@ $$
 &\A,
 \end{tikzcd}
 $$
-where $I$ is a small category and $\widetilde F$ satisfies 
+where $I$ is a small category (Definition~\ref{myuscat} p.~\pr{myuscat}) and $\widetilde F$ satisfies 
 $$
 \widetilde F(A)\iso\col_{(X\to A)\in\C_A}F(X)
 $$ 
@@ -3120,7 +3076,7 @@ quasi-commutes. (See Lemma 1.4.12 p.~26 of the book.)
 The statement below follows from Proposition 2.7.1 p.~62 of the book:
 
 \begin{prop}\lb{271}
-Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits small inductive limits. Then the functor $h[\C]^\dg(F):\C^\wg\to\A$ exists, commutes with small inductive limits and satisfies $h[\C]^\dg(F)\ci h[\C]\iso F$.
+Let $F:\C\to\A$ be a functor, assume that $\C$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and that $\A$ admits small inductive limits. Then the functor $h[\C]^\dg(F):\C^\wg\to\A$ exists, commutes with small inductive limits and satisfies $h[\C]^\dg(F)\ci h[\C]\iso F$.
 \end{prop}
 
 %For the reader's convenience we paste Lemma 2.1.13 (i) p.~41 of the book:
@@ -3134,7 +3090,7 @@ Let $F:\C\to\A$ be a functor, assume that $\C$ is small and that $\A$ admits sma
 % previous version
 % https://docs.google.com/document/d/1h1cHxZ_Bdwh5o2DuO1et13-OkpRBe2bhjqtLgkhMbQY/edit
 
-Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$ is small and that $\A$ admits small inductive and projective limits.
+Let $F:\C\to\A$ be a functor and $A$ an object of $\C^\wg$, and assume that $\C$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and that $\A$ admits small inductive and projective limits.
 
 \subsubsection{First Formula}
 
@@ -3299,7 +3255,7 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 
 \sbs{Notation 2.7.2 p. 63}
 
-Recall that $F:\C\to\C'$ is a functor of small categories. The formula 
+Recall that $F:\C\to\C'$ is a functor of small categories (Definition~\ref{myuscat} p.~\pr{myuscat}). The formula 
 $$
 \widehat F(A)(X')=\col_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))
 $$ 
@@ -3321,7 +3277,7 @@ $$
 quasi-commutes. 
 
 \begin{rk}\lb{cof}
-Recall that $F:\C\to\C'$ is a functor of small categories. Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. The natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
+Recall that $F:\C\to\C'$ is a functor of small categories (Definition~\ref{myuscat} p.~\pr{myuscat}). Let $A'$ be in $\C'^\wg$, and let $\C_{A'\ci F}\xr\pp\C'_{A'}\xr\psi\C'^\wg$ be the natural functors. The natural morphism $\col\psi\ci\pp\to\col\psi$ induces a morphism $f:\widehat F(A'\ci F)\to A'$ functorial in $A'$: 
 $$
 \widehat F(A'\ci F)=\col\psi\ci\pp\to\col\psi\iso A',
 $$ 
@@ -3417,7 +3373,7 @@ P.~64. It might be worth displaying the formula
 \widehat F(A)(X')\iso\col_{(X\to A)\in\C_A}\Hom_{\C'}(X',F(X))\iso
 \col_{(X'\to F(X))\in\C^{X'}}A(X),
 \end{equation} 
-which is contained in the proof of Proposition 2.7.5 p.~64 of the book, and which follows from Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pr{246}). Recall that $F:\C\to\C'$ is a functor of small categories, that $A$ is in $\C^\wg$, and that $X'$ is in $\C'$. 
+which is contained in the proof of Proposition 2.7.5 p.~64 of the book, and which follows from Corollary 2.4.6 p.~56 of the book (see Proposition~\ref{246} p.~\pr{246}). Recall that $F:\C\to\C'$ is a functor of small categories (Definition~\ref{myuscat} p.~\pr{myuscat}), that $A$ is in $\C^\wg$, and that $X'$ is in $\C'$. 
 
 For the reader's convenience we reproduce the statement of Proposition 2.7.5: 
 
@@ -3433,7 +3389,7 @@ This follows from \qr{275}.
 \begin{s}
 P.~64, end of Chapter 2. One could add the following observation: 
 
-\emph{If $\C$ is a small category, if $A$ is in $\C^\wg$, if $B$ is a terminal object of $(\C_A)^\wg$, and if $F:\C_A\to\C$ is the forgetful functor, then we have} 
+\emph{If $\C$ is a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $A$ is in $\C^\wg$, if $B$ is a terminal object of $(\C_A)^\wg$, and if $F:\C_A\to\C$ is the forgetful functor, then we have} 
 $$
 \widehat F(B)\iso A.
 $$ 
@@ -3497,7 +3453,7 @@ by induction on the cardinal of $S$, and to see that this implies the claim. q.e
 \begin{s} 
 P.~74, Theorem 3.1.6. The proof of Theorem 3.1.6 implies: 
 \begin{prop}\lb{316}
-Let $I$ be a (not necessarily small) filtrant $\U$-category, $J$ a finite category, and $\al:I\tm J^{\op}\to\Set$ a functor such that $\col_i\al(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\al(i,j)$ exists in $\Set$, and the natural map 
+Let $I$ be a (not necessarily small) filtrant $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), $J$ a finite category, and $\al:I\tm J^{\op}\to\Set$ a functor such that $\col_i\al(i,j)$ exists in $\Set$ for all $j$. Then $\col_i\lim_j\al(i,j)$ exists in $\Set$, and the natural map 
 $$
 \col_i\lim_j\al(i,j)\to
 \lim_j\col_i\al(i,j)
@@ -3522,7 +3478,7 @@ be a diagram of categories. Assume that $\psi$ is cofinal, and that the obvious 
 \end{prop} 
 %
 \begin{proof}
-Pick a universe making $I,J,K$ and $L$ small, let $\al:I\to\Set$ be a functor, and consider the commutative diagrams 
+Pick a universe making $I,J,K$ and $L$ small (Definition~\ref{myuscat} p.~\pr{myuscat}), let $\al:I\to\Set$ be a functor, and consider the commutative diagrams 
 $$
 \begin{tikzcd}
 \al(\pp(j))\ar{dd}[swap]{p_j}\ar{r}{\id}&\al(\pp(j))\ar{d}\ar{r}{\id}&\al(\pp(j))\ar{d}\\ 
@@ -3644,7 +3600,7 @@ Let $\pp:J\to I$ be fully faithful. Assume that $I$ is filtrant and cofinally sm
 \end{prop} 
 
 \begin{proof}
-In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By Proposition 3.2.6, there is a small full subcategory $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\pp(j_s)$ with $j_s$ in $J$. Then, for each $j$ in $J$ there are morphisms $\pp(j)\to s\to\pp(j_s)$ with $s$ in $S$. As $\pp$ is full there is a morphism $j\to j_s$, and we conclude by using again Proposition 3.2.6.
+In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By Proposition 3.2.6, there is a small full subcategory (Definition~\ref{myuscat} p.~\pr{myuscat}) $S\subset I$ cofinal to $I$. For each $s$ in $S$ pick a morphism $s\to\pp(j_s)$ with $j_s$ in $J$. Then, for each $j$ in $J$ there are morphisms $\pp(j)\to s\to\pp(j_s)$ with $s$ in $S$. As $\pp$ is full there is a morphism $j\to j_s$, and we conclude by using again Proposition 3.2.6.
 \end{proof}
 \end{s}
 
@@ -3653,7 +3609,7 @@ In view of Proposition 3.2.4 it suffices to show that $J$ is cofinally small. By
 \begin{s} 
 P.~80, proof of Lemma 3.2.8 (minor variant). As already pointed out, a $\ds\ilim$ is missing in the last display. Recall the statement:
 \begin{lem}
-Let $I$ be a small ordered set, let $\al:I\to\C$ be a functor, let $\J$ be the set of finite subsets of $I$ ordered by inclusion, and for each $J$ in $\J$ let $\al_J:\J\to\C$ be the restriction of $\al$ to $\J$. Then $\J$ is small and filtrant, and we have
+Let $I$ be a small ordered set, let $\al:I\to\C$ be a functor, let $\J$ be the set of finite subsets of $I$ ordered by inclusion, and for each $J$ in $\J$ let $\al_J:\J\to\C$ be the restriction of $\al$ to $\J$. Then $\J$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant, and we have
 $$
 \col\al\iso\col_{J\in\J}\col\al_J.
 $$ 
@@ -3859,7 +3815,7 @@ $$
 %https://docs.google.com/document/d/1ODl6Kwqz4LekRjoydQLeDXX23NiBk034UbtlK4fLzrI/edit
 
 \begin{lem}
-If $I\xr\pp K\xl\psi J$ are functors between small categories, if 
+If $I\xr\pp K\xl\psi J$ are functors between small categories (Definition~\ref{myuscat} p.~\pr{myuscat}), if 
 $$
 M:=M[I\xr\pp K\xl\psi J] 
 $$ 
@@ -4223,7 +4179,7 @@ $$
 where $\IM g$ denotes the image of $g$. 
 \end{lem} 
 
-Let $\C$ be a $\U$-small category, and let us denote by $\hy:\C\to\C^\wg$ and $\ky:\C\to\C^\vee$ the Yoneda embeddings. For any morphism $f:X\to Y$ in $\C$ define $\IM\hy(f)$ in $\C^\wg$ and $\IM\ky(f)$ in $\C^\vee$ by
+Let $\C$ be a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}), and let us denote by $\hy:\C\to\C^\wg$ and $\ky:\C\to\C^\vee$ the Yoneda embeddings. For any morphism $f:X\to Y$ in $\C$ define $\IM\hy(f)$ in $\C^\wg$ and $\IM\ky(f)$ in $\C^\vee$ by
 $$
 (\IM\hy(f))(Z):=\IM\,\hy(f)_Z,\quad(\IM\ky(f))(Z):=\IM\,\ky(f)_Z 
 $$
@@ -4299,7 +4255,7 @@ $$
 $$
 (\Ima f)(Z)=\left\{y:Z\to Y\ \bigg|\ \left[X\xr fY\parar W\right]\then\left[Z\xr yY\parar W\right]\ \forall\ W\in\C\right\}.
 $$ 
-In particular, these two sets do not depend on the universe $\U$ making $\C$ a $\U$\--category. There are natural morphisms 
+In particular, these two sets do not depend on the universe $\U$ making $\C$ a $\U$\--category (Definition~\ref{myucat} p.~\pr{myucat}). There are natural morphisms 
 $$
 \ky(X)\to\Coim f\to\ky(Y),\quad\hy(X)\to\Ima f\to\hy(Y)
 $$ 
@@ -4376,7 +4332,7 @@ induces a bijection
 $$
 \Hom_\C(Y,Z)\xr\sim(\Coim f)(Z).
 $$ 
-By Proposition~\ref{epimono} p.~\pr{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category. Moreover, a strict epimorphism is an epimorphism. 
+By Proposition~\ref{epimono} p.~\pr{epimono}, this condition does not depend on the universe $\U$ making $\C$ a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}). Moreover, a strict epimorphism is an epimorphism. 
 \end{prop}
 
 %%
@@ -4600,7 +4556,7 @@ $$
 \begin{s}
 P.~122. The proof of Lemma 5.3.3 proves a statement that is much stronger than Lemma 5.3.3. This stronger statement can be phrased as follows:
 \begin{lem}\lb{533}
-Let $\C$ be a category which admits small inductive limits, let $\F$ be a small full subcategory of $\C$, let $F$ be in $\F^\wg$, set 
+Let $\C$ be a category which admits small inductive limits, let $\F$ be a small full subcategory (Definition~\ref{myuscat} p.~\pr{myuscat}) of $\C$, let $F$ be in $\F^\wg$, set 
 $$
 \psi(F):=\col_{(Y\to F)\in\F_F}Y,
 $$ 
@@ -4644,7 +4600,7 @@ obtained by composing the chain of isomorphisms in the proof, is equal to $\ci\e
 % previous version
 % https://docs.google.com/document/d/1PDpFEz1ajTYw07OCkt00ZlY8ZX3xSNHy8nCedJpGQT4/edit
 
-Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.
+Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory (Definition~\ref{myuscat} p.~\pr{myuscat}) of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.
 
 \begin{thm}[Theorem 5.3.6 p.~124]\lb{536} 
 Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
@@ -4655,7 +4611,7 @@ Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 
 \nn\emph{(iii)} any epimorphism is strict. 
 
-\nn Let $\F$ be an essentially small full subcategory of $\C$ such that 
+\nn Let $\F$ be an essentially small full subcategory of $\C$ (Definition~\ref{myuscat} p.~\pr{myuscat}) such that 
 
 \nn\emph{(a)} $\Ob(\F)$ is a system of generators,
 
@@ -4666,7 +4622,7 @@ Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
 
 \begin{proof} % previous version
 % https://docs.google.com/document/d/1w-6neN0st96QuZpMjrMb-wHMEcPjQdrHK5MsjeXpSxc/edit
-We may assume from the beginning that $\F$ is small.
+We may assume from the beginning that $\F$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
 \nn\textbf{Step 1.} By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
 
@@ -4708,7 +4664,7 @@ $$
 
 [To make our argument work, it is not enough that the natural bijection \qr{cczy} exists; the fact that it is induced by \qr{czy} will be crucial.] 
 
-Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small and filtrant. For any $A$ in $I$ set $Z_A:=\bigsqcup_{a\in A}\zeta(a)$, where $\zeta:\C_X\to\C$ is the forgetful functor.
+Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant. For any $A$ in $I$ set $Z_A:=\bigsqcup_{a\in A}\zeta(a)$, where $\zeta:\C_X\to\C$ is the forgetful functor.
 
 \nn\textbf{Step 5.} We claim that the natural morphism 
 $$
@@ -4919,7 +4875,7 @@ coincide. The composition $\col_i\pp(X_i)\to\pp(X_0)\to\pp(X)$ being an isomorph
 P.~128, Theorem 5.3.9. To prove the existence of $\F$, one can also argue as follows. 
 
 \begin{lem} 
-Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small full subcategory of $\C$. Then:
+Let $\C$ be a category admitting finite inductive limits, and let $\A$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) full subcategory of $\C$. Then:
 
 \nn{\em(a)} There is a small full subcategory $\B$ of $\C$ such that $\A\subset\B\subset \C$ and that $\B$ is closed by finite inductive limits in the following sense: if $(X_i)$ is a finite inductive system in $\B$ and $X$ is an inductive limit of $(X_i)$ in $\C$, then $X$ is isomorphic to some object of $\B$.
 
@@ -5007,7 +4963,7 @@ If $\C$ is a category, then the category $\Ind(\C)$ admits small filtrant induct
 Here is a minor variant of Step~(i) of the proof of Theorem 6.1.8. We must show:  
 
 \begin{lem} 
-If $\al:I\to\Ind(\C)$ is a functor, if $I$ is small and filtrant, and if we define $A\in\C^\wg$ by $A=\ic\al$, then $\C_A$ is filtrant. 
+If $\al:I\to\Ind(\C)$ is a functor, if $I$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant, and if we define $A\in\C^\wg$ by $A=\ic\al$, then $\C_A$ is filtrant. 
 \end{lem} 
 
 \begin{proof}
@@ -5068,11 +5024,11 @@ I\ar{r}{\al}&\Ind(\C)\ar{d}[swap]{j}\ar{r}{\widetilde F}&\A\\
 &\C^\wg
 \end{tikzcd}
 $$
-(where $I$ is a small filtrant category), it suffices to check that there is an isomorphism 
+(where $I$ is a small filtrant category --- Definition~\ref{myuscat} p.~\pr{myuscat}), it suffices to check that there is an isomorphism 
 $$
 \Hom_\A\left(\widetilde F(\ ),Y\right)\iso\Hom_{\C^\wg}(\ \ ,B)
 $$ 
-in $\Ind(\C)^\wg_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wg$ is a $\V$-category. We have 
+in $\Ind(\C)^\wg_\V$, where $\V$ is a universe containing $\U$ such that $\C^\wg$ is a $\V$-category (Definition~\ref{myucat} p.~\pr{myucat}). We have 
 $$
 \widetilde F(A):=\col_{(X\to A)\in\C_A}F(X),
 $$ 
@@ -5104,7 +5060,7 @@ Let us also record Part (ii) of the proposition as
 Also note that the proof of Proposition 6.1.9 shows
 
 \begin{prop}\lb{f}
-If $F:\C\to\C'$ is a functor of small categories, then the functor $\widehat F:\C^\wg\to\C'^\wg$ defined in Notation 2.7.2 p.~63 of the book induces the functor $IF:\Ind(\C)\to\Ind(\C')$.
+If $F:\C\to\C'$ is a functor of small categories (Definition~\ref{myuscat} p.~\pr{myuscat}), then the functor $\widehat F:\C^\wg\to\C'^\wg$ defined in Notation 2.7.2 p.~63 of the book induces the functor $IF:\Ind(\C)\to\Ind(\C')$.
 \end{prop}
 
 %%
@@ -5214,7 +5170,7 @@ This ends the proofs of Isomorphism~\qr{6112b} p.~\pr{6112b} and Proposition~\re
 Recall the statement (see \S\ref{s135a} p.~\pr{s135a} above):
 
 \begin{cor}[Corollary 6.1.15 p.~135]\lb{c135}
-Let $f,g:A\parar B$ be two morphisms in $\Ind(\C)$. Then there exist a small and filtrant category $I$ and morphisms $\pp,\psi:\al\parar\bt$ of functors from $I$ to $\C$ such that $A\iso\ic\al$, $B\iso\ic\bt$, $f\iso\ic\pp$, $g\iso\ic\psi$. (The last two isomorphisms take place in $\Mor(\Ind(\C))$.)
+Let $f,g:A\parar B$ be two morphisms in $\Ind(\C)$. Then there exist a small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant category $I$ and morphisms $\pp,\psi:\al\parar\bt$ of functors from $I$ to $\C$ such that $A\iso\ic\al$, $B\iso\ic\bt$, $f\iso\ic\pp$, $g\iso\ic\psi$. (The last two isomorphisms take place in $\Mor(\Ind(\C))$.)
 \end{cor}
 
 \begin{lem}\lb{l135}
@@ -5253,7 +5209,7 @@ $$
 $$ 
 for all $X_i$ in $\C$ ($i=1,2$). (See Section~\ref{6112} p.~\pr{6112}.)
 
-Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\ref{l135} and the above reminder, the morphism $(f,g):(A,A)\to(B,B)$ in $\Ind(\C)\tm\Ind(\C)$ defines a morphism $f\tm g:A\tm A\to B\tm B$ in $\Ind(\C\tm\C)$. Applying Proposition 6.1.13 p.~134 in the book, we find a small and filtrant category $K$, functors $p_I:K\to I,p_J:K\to J$ and a morphism of functors $(\pp,\psi)$ from $\al\ci p_I$ to $\bt\ci p_J$ such that $f\tm g\iso\ic(\pp,\psi)$. It follows that $f\iso\ic\pp$ and $g\iso\ic\psi$.
+Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\ref{l135} and the above reminder, the morphism $(f,g):(A,A)\to(B,B)$ in $\Ind(\C)\tm\Ind(\C)$ defines a morphism $f\tm g:A\tm A\to B\tm B$ in $\Ind(\C\tm\C)$. Applying Proposition 6.1.13 p.~134 in the book, we find a small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant category $K$, functors $p_I:K\to I,p_J:K\to J$ and a morphism of functors $(\pp,\psi)$ from $\al\ci p_I$ to $\bt\ci p_J$ such that $f\tm g\iso\ic(\pp,\psi)$. It follows that $f\iso\ic\pp$ and $g\iso\ic\psi$.
 \end{proof}
 %\end{s}
 
@@ -5265,7 +5221,7 @@ Then $A\tm A\iso\ic\widetilde\al$ and $B\tm B\iso\ic\widetilde\bt$. By Lemma~\re
 The proofs of Propositions 6.1.16 and 6.1.18 p.~136 in the book use the following lemma
 
 \begin{lem}\lb{ci} 
-Let $I$ be a small filtrant category, let $\C$ be category, and let $F:\C^I\to\Ind(\C)$ be the functor $\al\mt\ic\al$. 
+Let $I$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant category, let $\C$ be category, and let $F:\C^I\to\Ind(\C)$ be the functor $\al\mt\ic\al$. 
 
 \nn\emph{(a)} If $\C$ admits finite projective limits, $F$ is left exact.  
 
@@ -5383,7 +5339,7 @@ Let $\al:I\to \C$ be a functor with $I$ filtrant and let $Z\in\C$. The condition
 \end{prop}
 
 \begin{proof} 
-Choose a universe making $I$ and $\C$ small, set $A:=\ic\al$ and let $q_i:\al(i)\to A$ be the coprojections. 
+Choose a universe making $I$ and $\C$ small (Definition~\ref{myuscat} p.~\pr{myuscat}), set $A:=\ic\al$ and let $q_i:\al(i)\to A$ be the coprojections. 
 
 \nn$\bu$ (i) implies (ii). Let $\pp:Z\to A$ be an isomorphism. By definition of $A$ the isomorphism $\pp$ factors as $Z\xr\tau\al(i_0)\xr{q_{i_0}}A$. Let $s:i_0\to i$. We define $p_i:\al(i)\to Z$ as being the composition $\al(i)\xr{q_i}A\begin{smallmatrix}\pp\\ \longleftarrow\\ \sim\end{smallmatrix}Z$. As the three small triangles in the diagram 
 $$
@@ -5471,7 +5427,7 @@ $$
 $$ 
 In particular, for each $A$ in $\Ind(\C)$ we have a morphism $\ee_A:A\to\iota(\sigma(A))$. Recall also that $\C$ is a category admitting small filtrant limits. Consider the following conditions on an object $X$ in $\C$:
 
-\nn(a) The natural map $\col\Hom_\C(X,\al)\to\Hom_\C(X,\col\al)$ is bijective for all functor $\al:I\to\C$ with $I$ small and filtrant.
+\nn(a) The natural map $\col\Hom_\C(X,\al)\to\Hom_\C(X,\col\al)$ is bijective for all functor $\al:I\to\C$ with $I$ small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant.
 
 \nn(b) The map $\ee_A\ci:\Hom_{\Ind(\C)}(\iota(X),A)\to\Hom_{\Ind(\C)}(\iota(X),\iota(\sigma(A)))$ is bijective for all $A$ in $\Ind(\C)$.
 \begin{lem}
@@ -5509,7 +5465,7 @@ $\ds\Hom_{\Ind(\J)}(\ic_j\bt(j),\ic_i\al(i))$
 
 Here is a consequence of Proposition 6.3.4 (see Corollary 6.3.5 p.~141 in the book):
 
-\nn\emph{Let $\C$ be a category admitting small filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.}
+\nn\emph{Let $\C$ be a category admitting small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant inductive limits, and let $\C'$ be the full subcategory of $\C$ whose objects are isomorphic to small filtrant inductive limits of objects of $\C^{fp}$. Then $\C'$ is equivalent to $\Ind(\C^{fp})$. In particular $\C'$ admits small filtrant inductive limits. Moreover the inclusion $\C'\to\C$ commutes with such limits.}
 
 \begin{proof} 
 Let $\iota:\C^{fp}\to\C$ be the inclusion functor. By Corollary 6.3.2 and Proposition 6.3.4 p.~140 of the book, the functor $J\iota:\Ind(\C^{fp})\to\C$ is fully faithful and commutes with small filtrant inductive limits, and $\iota$ factors through $J\iota$. By Lemma 1.3.11 p.~21 of the book, $J\iota$ induces an equivalence $\Ind(\C^{fp})\xr\sim\C'$. The claims above follow easily from these observations. 
@@ -5571,7 +5527,7 @@ Notational convention for this section, {\em and for this section only!} Supersc
 \end{equation} 
 instead of $\C_{G(a)}$ and $L_a$, to avoid confusion. Superscripts will {\em always} be used to designate categories of functors, like the category $\B^\A$ of functors from $\A$ to $\B$. 
 
-Let $\C$ be a category and $K$ a small category. Recall that, by Corollary 6.3.2 p.~140 of the book (see \qr{140} p.~\pr{140} above), there is a functor $\Phi:\Ind(\C^K)\to\Ind(\C)^K$ such that, if $F:N\to\C^K$ is a functor defined on a small filtrant category and if $k$ is in $K$, then we have 
+Let $\C$ be a category and $K$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}). Recall that, by Corollary 6.3.2 p.~140 of the book (see \qr{140} p.~\pr{140} above), there is a functor $\Phi:\Ind(\C^K)\to\Ind(\C)^K$ such that, if $F:N\to\C^K$ is a functor defined on a small filtrant category and if $k$ is in $K$, then we have 
 $$
 \Phi(\ic F)(k)\iso\ic_{n\in N}(F(n)(k))=\ic(F(\ )(k)).
 $$
@@ -5590,7 +5546,7 @@ The key point is to check that
 \end{equation} 
 (The fact that $\Phi$ is fully faithful is proved as Proposition 6.4.1 p.~142 of the book.) 
 
-In the book \qr{es} is proved by an inductive argument. The limited purpose of this section is to attach, in an ``explicit'' way (in the spirit of the proof of Proposition 6.1.13 p.~134 of the book), to an object $G$ of $\Ind(\C)^K$ a small filtrant category $N$ and a functor $F:N\to\C^K$ such that 
+In the book \qr{es} is proved by an inductive argument. The limited purpose of this section is to attach, in an ``explicit'' way (in the spirit of the proof of Proposition 6.1.13 p.~134 of the book), to an object $G$ of $\Ind(\C)^K$ a small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant category $N$ and a functor $F:N\to\C^K$ such that 
 $$ 
 \Phi(\ic F)\iso G,
 $$ 
@@ -5602,7 +5558,7 @@ functorial in $k\in K$.
 
 As in the book we assume, as we may, that any two isomorphic objects of $K$ are equal. 
 
-Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small filtrant category and let 
+Let $\C,K$ and $G$ be as above. We consider $\C$ as being given once and for all, so that, in the notation below, the dependence on $\C$ will be implicit. For each $k$ in $K$, let $I_k$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant category and let 
 $$
 \al_k:I_k\to\C
 $$ 
@@ -5660,7 +5616,7 @@ F\big((i_k),P\big)(k_0):=\al_{k_0}(i_{k_0}).
 $$ 
 
 \begin{lem}\lb{npk}
-The category $N$ is small and filtrant, and the functor $p_k$ is cofinal.
+The category $N$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant, and the functor $p_k$ is cofinal.
 \end{lem} 
 
 Clearly, Lemma~\ref{npk} implies Theorem~\ref{643}.  
@@ -5813,11 +5769,11 @@ Let $R$ be a ring.
 
 \nn(iii) Deduce that the functor $J\rho$ defined in Diagram (6.3.1) induces an equivalence $J\rho:\Ind(\Mod^{fp}(R))\to\Mod(R)$.
 
-\nn\textbf{Solution.} We shall freely use Proposition 3.1.3 p.~73 of the book, which describes the inductive limit of a set-valued functor defined on a small filtrant category, as well as Corollary 3.1.5 (same page), which says that the forgetful functor $\Mod(R)\to\Set$ commutes with small filtrant inductive limits.
+\nn\textbf{Solution.} We shall freely use Proposition 3.1.3 p.~73 of the book, which describes the inductive limit of a set-valued functor defined on a small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant category, as well as Corollary 3.1.5 (same page), which says that the forgetful functor $\Mod(R)\to\Set$ commutes with small filtrant inductive limits.
 
 \nn(i) (a) Let $R^m\to R^n\to M\to0$ be exact, and let us show that $M\in\Mod(R)$ is of finite presentation in the sense of Definition~\ref{633} p.~\pr{633}. 
 
-Let $(N_i)_{i\in I}$ be an inductive system in $\Mod(R)$ indexed by a small filtrant category $I$, let $N$ be its inductive limit, and, for each $i$, let %$p_i:N_i\to N$ 
+Let $(N_i)_{i\in I}$ be an inductive system in $\Mod(R)$ indexed by a small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant category $I$, let $N$ be its inductive limit, and, for each $i$, let %$p_i:N_i\to N$ 
 $$
 p_i:N_i\to N\quad\text{and}\quad q_i:\Hom_R(M,N_i)\to\col_i\Hom_R(M,N_i)
 $$ 
@@ -5877,7 +5833,7 @@ Let $F:\C\to\C'$ be a fully faithful functor, let $A'$ be in $\Ind(\C')$, and le
 
 \begin{proof}\ 
 
-\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\C')$ with $X'$ in $\C'$ and $A$ in $\Ind(\C)$, let $\bt_0:I\to\C$ be a functor with $I$ small and filtrant and $\ic\bt_0\iso A$; in particular $\ic(F\ci\bt_0)\iso IF(A)$. By Proposition 6.1.13 p.~134 of the book there is a functor $\bt:J\to\C$ and a morphism of functors $\pp:\DT X'\to F\ci\bt$, where $\DT X':J\to\C'$ is the constant functor equal to $X'$, such that 
+\nn(a)$\then$(b). Let $f:X'\to IF(A)$ be a morphism in $\Ind(\C')$ with $X'$ in $\C'$ and $A$ in $\Ind(\C)$, let $\bt_0:I\to\C$ be a functor with $I$ small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant and $\ic\bt_0\iso A$; in particular $\ic(F\ci\bt_0)\iso IF(A)$. By Proposition 6.1.13 p.~134 of the book there is a functor $\bt:J\to\C$ and a morphism of functors $\pp:\DT X'\to F\ci\bt$, where $\DT X':J\to\C'$ is the constant functor equal to $X'$, such that 
 
 $J$ is small and filtrant, 
 
@@ -5980,7 +5936,7 @@ Gf\ci\widetilde\theta X_1&=(Gs_2)^{-1}\ci(GQt_2)^{-1}\ci GQt_1\ci Gs_1\ci\wideti
 \end{align*}
 \end{s}
 
-%\begin{comment}
+% comment removed:
 % https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
 %\begin{s} P.~154. Below the statement of Lemma 7.1.13 it is written: ``The verification is left to the reader. // Hence, we get a big category ...''. One might add between the two sentences something like: We also leave it to the reader to define the identity $\id_X$ of $X$ viewed as an object of $\C^r_\SSS$, and to check the equalities $f\ci\id_X=f$, $\id_X\ci g=g$ for $f$ in $\Hom_{\C^r_\SSS}(X,Y)$ and $g$ in $\Hom_{\C^r_\SSS}(Y,X)$.\end{s}
@@ -5997,7 +5953,7 @@ Gf\ci\widetilde\theta X_1&=(Gs_2)^{-1}\ci(GQt_2)^{-1}\ci GQt_1\ci Gs_1\ci\wideti
 %If $\SSS$ is a right multiplicative system in a category $\C$, if $\C\xr F\A\xr G\B$ are functors, and if $F(s)$ is an isomorphism for all $s$ in $\SSS$, then $F_\SSS$ and $(G\ci F)_\SSS$ exist. Moreover $G\ci F_\SSS$ and $(G\ci F)_\SSS$ are isomorphic. 
 %\end{s}
 
-%\begin{comment}
+% comment removed:
 % https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit
 
 \begin{s}
@@ -6049,7 +6005,7 @@ P.\index{unsolved problem} 157, proof of Proposition 7.1.20. In the sentence ``S
 \begin{s}\lb{durl} 
 P.~159, Definition 7.3.1 (i). Recall the definition: 
 
-Let $\C$ be a $\U$-small category, let $\SSS$ be a right multiplicative system, and let $Q:\C\to\C_\SSS$ be the right the localization of $\C$ by $\SSS$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dg F$ exists, in which case we say that $Q^\dg F$ a {\em right localization} of $F$, and denote this functor by $R_\SSS F$. 
+Let $\C$ be a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}), let $\SSS$ be a right multiplicative system, and let $Q:\C\to\C_\SSS$ be the right the localization of $\C$ by $\SSS$. A functor $F:\C\to\A$ is said to be {\em right localizable} if $Q^\dg F$ exists, in which case we say that $Q^\dg F$ a {\em right localization} of $F$, and denote this functor by $R_\SSS F$. 
 
 % The comment below was here 
 % https://docs.google.com/document/d/1WwEuQko13SpCaJ53JDskmaGyiC3F0HQuxLvMMLLubJI/edit
@@ -6256,7 +6212,7 @@ the isomorphisms following respectively from (7.3.7) p.~161 of the book, Proposi
 %
 
 \begin{s}\lb{742}
-P. 162, Definition 7.4.2. If $F:\C\to\A$ is a functor and $X$ an object of $\C$, then the condition that $F$ is right localizable at $X$ does not depend on the choice of a universe $\U$ such that $\C$ and $\A$ are $\U$-categories.
+P. 162, Definition 7.4.2. If $F:\C\to\A$ is a functor and $X$ an object of $\C$, then the condition that $F$ is right localizable at $X$ does not depend on the choice of a universe $\U$ such that $\C$ and $\A$ are $\U$-categories (Definition~\ref{myucat} p.~\pr{myucat}).
 \end{s}
 
 %
@@ -6274,9 +6230,7 @@ This follows from Proposition~\ref{copr} p.~\pr{copr}.
 
 %
 
-\begin{s}\lb{744}
-P. 163. Proposition 7.4.4 holds even without the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$. This follows from Theorem~\ref{stupidkan} p.~\pr{stupidkan} (see also \S\ref{742} p.~\pr{742}). %The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have $$\iota_\A(R_\SSS F(Q(X)))\iso R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')),$$ the isomorphisms following respectively from the assumption that $F$ is universally right localizable and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in the proof of Theorem~\ref{stupidkan} p.~\pr{stupidkan}.)
-\end{s}
+%\begin{s}\lb{744}P. 163. Proposition 7.4.4 holds even without the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$. This follows from Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan} (see also \S\ref{742} p.~\pr{742}). %The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have $$\iota_\A(R_\SSS F(Q(X)))\iso R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')),$$ the isomorphisms following respectively from the assumption that $F$ is universally right localizable and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in the proof of Theorem~\ref{stupidkan} p.~\pr{stupidkan}.)\end{s}
 
 %\begin{s}P. 163, Proposition 7.4.4. In view of \S\ref{742} p.~\pr{742}, the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$ is not necessary.\end{s}
 
@@ -7256,7 +7210,7 @@ below are equivalent:
 
 \nn\dots
 
-Moreover, if C admits small inductive limits, the conditions above are
+Moreover, if $\C$ admits small inductive limits, the conditions above are
 equivalent to:
 
 (iii) for any $X\in\C$, there exist a small set $I$ and an epimorphism $G^{\sqcup I}\epi X$.''
@@ -7292,7 +7246,7 @@ The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\d
 
 \subsubsection{Proposition 8.3.27 (i) p.~186}\lb{gcsbc}
 
-By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}).
+By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}).
 
 %% 
 
@@ -7414,7 +7368,7 @@ $$
 \C_0\ar[yshift=.7ex]{r}{\pp_{{}_0}}&\M_0.\ar[yshift=-.7ex]{l}{\psi_{{}_0}}
 \end{tikzcd}
 $$ 
-We can assume that $\C_0$ and $\M_0$ are small. If $\ld:\C\to(\C_0)^\wg$ and $\ld':\M\to(\M_0)^\wg$ are the obvious functors, then the diagram 
+We can assume that $\C_0$ and $\M_0$ are small (Definition~\ref{myuscat} p.~\pr{myuscat}). If $\ld:\C\to(\C_0)^\wg$ and $\ld':\M\to(\M_0)^\wg$ are the obvious functors, then the diagram 
 $$
 \begin{tikzcd}
 \C\ar{r}{\pp}\ar{d}[swap]{\ld}&\M\ar{d}{\ld'}\\
@@ -7506,7 +7460,7 @@ by \qr{pi=0}. As $c$ is an epimorphism, this implies successively \qr{x=0}, \qr{
 \begin{s}\lb{ccaf} 
 P.~193, second sentence of Section~8.6. The proof of the following statement is straightforward. 
 
-\nn\emph{Let $\C$ be a small pre-additive category and $\C'$ an abelian category. Then the category $\A$ of additive functors from $\C$ to $\C'$ is a fully abelian subcategory of the category $\F$ of all functors from $\C$ to $\C'$. If $\C'$ admits inductive or projective limits indexed by a small category $I$, then so do $\A$ and $\F$, and the inclusion functor $\A\to\F$ commutes with such limits; if in addition these limits are exact in $\F$, they are exact sn $\A$.}
+\nn\emph{Let $\C$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) pre-additive category and $\C'$ an abelian category. Then the category $\A$ of additive functors from $\C$ to $\C'$ is a fully abelian subcategory of the category $\F$ of all functors from $\C$ to $\C'$. If $\C'$ admits inductive or projective limits indexed by a small category $I$, then so do $\A$ and $\F$, and the inclusion functor $\A\to\F$ commutes with such limits; if in addition these limits are exact in $\F$, they are exact sn $\A$.}
 \end{s}
 
 %
@@ -8256,7 +8210,7 @@ I find Chapter 9 especially beautiful!
 P.~217, beginning of Section 9.2. 
 
 \begin{prop}\lb{ppifil}
-Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ are equivalent:
+Let $\pi$ be an infinite cardinal. The following conditions on a small category $I$ (Definition~\ref{myuscat} p.~\pr{myuscat}) are equivalent:
 
 \nn{\em(a)} For any category $J$ with $\card(\Mor(J))<\pi$ and any functor 
 $$
@@ -8340,7 +8294,7 @@ P.~219, proof of Remark 9.2.6. To prove that $I'$ is $\pi$-filtrant it is straig
 \begin{s}
 P.~220, proof of Proposition 9.2.9. We add a few details to the argument in the book. Recall the statement: 
 \begin{prop}
-Let $\pi$ be an infinite cardinal. Let $J$ be a category such that $\card(\Mor(J))<\pi$ and let $I$ be a small $\pi$-filtrant category. Consider a functor $\al:I\tm J^{\op}\to\Set$, $(i,j)\mt\al_{ij}$. Then the natural map $\ld$ below is bijective: 
+Let $\pi$ be an infinite cardinal. Let $J$ be a category such that $\card(\Mor(J))<\pi$ and let $I$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) $\pi$-filtrant category. Consider a functor $\al:I\tm J^{\op}\to\Set$, $(i,j)\mt\al_{ij}$. Then the natural map $\ld$ below is bijective: 
 $$
 \ld:\col_i\lim_j\al_{ij}\to\lim_j\col_i\al_{ij}. 
 $$ 
@@ -8385,7 +8339,7 @@ If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satis
 \end{prop}
 
 \begin{proof}
-Let $\al:I\to\C$ be a functor with $I$ small and $\pi$-filtrant, and consider the commutative diagram
+Let $\al:I\to\C$ be a functor with $I$ small (Definition~\ref{myuscat} p.~\pr{myuscat}) and $\pi$-filtrant, and consider the commutative diagram
 $$
 \begin{tikzcd}
 \col_i\Hom_\C(\col_j\bt(j),\al(i))\ar{r}{a}\ar{d}{b}[swap]{\sim}&\Hom_\C(\col_j\bt(j),\col\al)\ar{dd}{e}[swap]{\sim}\\ 
@@ -8507,7 +8461,7 @@ See also Theorem \ref{961} p. \pr{961} below.
 For the reader's convenience we state the lemma:
 
 \begin{lem}[Lemma 9.3.1 p. 224]\lb{l331}
-Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pr{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category, let $\al:I\to\C$ be a functor, and let $\col\al\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\al(i_0)\to Y$ is an epimorphism.
+Assume that Conditions (9.3.1) p.~223 of the book (see \S\ref{931} p.~\pr{931}) hold, let $\pi$ be an infinite regular cardinal, let $I$ be a $\pi$-filtrant small category (Definition~\ref{myuscat} p.~\pr{myuscat}), let $\al:I\to\C$ be a functor, and let $\col\al\to Y$ be an epimorphism in $\C$. Assume either $\card(Y(G))<\pi$ or $Y\in\C_\pi$. Then there is an $i_0$ in $I$ such that the obvious morphism $\al(i_0)\to Y$ is an epimorphism.
 \end{lem}
 
 The proof of Lemma~\ref{l331} in the book uses twice the following lemma:
@@ -8581,7 +8535,7 @@ G^{\sqcup S}(G)\to G^{\sqcup A(G)}(G)\to G^{\sqcup S}(G)
 $$ 
 is the identity.
 
-\nn$\bu$ Step 2. Let $I$ be a small $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. Claim~\ref{lbij} below will imply Proposition~\ref{932}. 
+\nn$\bu$ Step 2. Let $I$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) $\pi$-filtrant category, let $(X_i)_{i\in I}$ be an inductive system in $\C$, and let $X$ be its inductive limit. Claim~\ref{lbij} below will imply Proposition~\ref{932}. 
 
 \begin{claim}\lb{lbij} 
 The map 
@@ -8891,7 +8845,7 @@ Let $\C$ be a category. A nonempty well-ordered small set $I$ is $\C$-{\em speci
 Our goal is to prove:
 
 \begin{thm}[Quasi-Terminal Object Theorem]\lb{qtot}
-If $\C$ is a nonempty essentially small category $\C$ admitting small well-ordered upper bounds and a $\C$-special well-ordered set, then $\C$ has a quasi-terminal object.
+If $\C$ is a nonempty essentially small category (Definition~\ref{myuscat} p.~\pr{myuscat}) $\C$ admitting small well-ordered upper bounds and a $\C$-special well-ordered set, then $\C$ has a quasi-terminal object.
 \end{thm}
 
 Theorem~\ref{qtot} clearly implies Zorn's Lemma (Theorem~\ref{zorn}). Lemma~\ref{945} below will show that Theorem~\ref{942} follows also from Theorem~\ref{qtot}. Theorem~\ref{942} will be used in the book to prove Theorem 9.5.5 p.~233.
@@ -8899,7 +8853,7 @@ Theorem~\ref{qtot} clearly implies Zorn's Lemma (Theorem~\ref{zorn}). Lemma~\ref
 The proof of Theorem~\ref{qtot} is essentially the same as the proof of Theorem~\ref{942} given in the book. For the reader's convenience, we spell out the details. 
 
 \begin{lem}\lb{943}
-If $\C$ is a nonempty small category admitting small well-ordered upper bounds, then there is an $X$ in $\C$ such that, for all morphism $X\to Y$, there is a morphism $Y\to X$.
+If $\C$ is a nonempty small category (Definition~\ref{myuscat} p.~\pr{myuscat}) admitting small well-ordered upper bounds, then there is an $X$ in $\C$ such that, for all morphism $X\to Y$, there is a morphism $Y\to X$.
 \end{lem}
 
 \begin{proof}
@@ -8917,11 +8871,11 @@ We say that a morphism $a:A\to B$ in a given category has \emph{Property}~$(P)$ 
 \end{df}  
 
 \begin{lem}[Sublemma 9.4.4 p. 229]\lb{944} 
-If $\C$ is a small nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ having Property~$(P)$.
+If $\C$ is a small (Definition~\ref{myuscat} p.~\pr{myuscat}) nonempty category admitting small well-ordered upper bounds, and if $X$ is an object of $\C$, then there is a morphism $f:X\to Y$ having Property~$(P)$.
 \end{lem}
 
 \begin{proof}
-The category $\C^X$ is again nonempty, small, and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property~$(P)$. 
+The category $\C^X$ is again nonempty, small (Definition~\ref{myuscat} p.~\pr{myuscat}), and admits small well-ordered upper bounds, so that Lemma~\ref{943} applies to it. Let $f:X\to Y$ be to $\C^X$ what $X$ is to $\C$ in Lemma~\ref{943}. Then it is easy to see that $f$ has Property~$(P)$. 
 \end{proof}
 
 We recall the notion of {\em construction by transfinite induction\index{transfinite induction}}. 
@@ -8956,7 +8910,7 @@ Then $(K,S_K,f_K)$ contradicts the maximality if $(J,S_J,f_J)$.
 \end{proof}
 
 \begin{proof}[Proof of the Quasi-Terminal Object Theorem (Theorem \ref{qtot} p.~\pr{qtot})] 
-Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small. Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
+Let $\C$ be as in the statement. We assume (as we may) that $\C$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}). Let us choose a $\C$-special well-ordered set $I$, and let us define an inductive system $(X_i)_{i\in I}$ by transfinite induction as follows: For the least element $0$ of $I$ we choose an arbitrary object $X_0$ of $\C$. Let $i>0$ and assume that $X_j$ and $u_{jk}:X_k\to X_j$ have been constructed for $k\le j<i$. 
 
 \nn(a) If $i=j+1$ for some $j$, take $u_{ij}:X_j\to X_i$ with Property~$(P)$, and put $u_{ik}:=u_{ij}\ci u_{jk}$ for any $k\le j$. 
 
@@ -9009,7 +8963,7 @@ $$
 For the reader's convenience we state and prove Sublemma 9.4.5 p.~229 of the book.
 
 \begin{lem}[Sublemma 9.4.5 p.~229]\lb{945}
-If $\C$ is a small nonempty category admitting small filtrant inductive limits, if $\pi$ is an infinite regular cardinal such that $\card(\Mor(\C))<\pi$, if $I$ is a $\pi$-filtrant small category, and if $(X_i)_{i\in I}$ is an inductive system in $\C$ indexed by $I$, then there is an $i_0$ in $I$ such that the coprojection $X_{i_0}\to\col_iX_i$ is an epimorphism. 
+If $\C$ is a small (Definition~\ref{myuscat} p.~\pr{myuscat}) nonempty category admitting small filtrant inductive limits, if $\pi$ is an infinite regular cardinal such that $\card(\Mor(\C))<\pi$, if $I$ is a $\pi$-filtrant small category, and if $(X_i)_{i\in I}$ is an inductive system in $\C$ indexed by $I$, then there is an $i_0$ in $I$ such that the coprojection $X_{i_0}\to\col_iX_i$ is an epimorphism. 
 \end{lem}
 
 \begin{proof}
@@ -9066,7 +9020,7 @@ $$
 
 We give more details about the proof, but first let us recall the setting:
 
-Let $\C$ be a $\U$-category, let $\C_0$ be a subcategory of $\C$, and assume 
+Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $\C_0$ be a subcategory of $\C$, and assume 
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them.
 
@@ -9241,7 +9195,7 @@ g_m\ci u_m&=h_m\ci u_m&\text{by \qr{gm}}\\
 
 The purpose of this section is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
 
-Let $\C$ be a $\U$-category, let $\F\subset\C_0$ be subcategories of $\C$ such that $\F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\F$, and assume 
+Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $\F\subset\C_0$ be subcategories of $\C$ such that $\F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\F$, and assume 
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them;
 
@@ -9353,7 +9307,7 @@ $$
 Pp 237-239. For the reader's convenience we first reproduce (with minor changes) two corollaries with their proof. 
 
 \begin{cor}[Corollary 9.6.5 p. 237]
-If $\C$ is a small abelian category, then $\Ind(\C)$ admits an injective cogenerator.
+If $\C$ is a small (Definition~\ref{myuscat} p.~\pr{myuscat}) abelian category, then $\Ind(\C)$ admits an injective cogenerator.
 \end{cor}
 
 \begin{proof}
@@ -9635,7 +9589,7 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
+The second sentence in the above quote is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
 
 %In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
@@ -10524,7 +10478,7 @@ $$
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. 
+This is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. 
 \end{s}
 
 %
@@ -10932,7 +10886,7 @@ Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, state
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small, and let 
+Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}), and let 
 \begin{equation}\lb{cce}
 \E=\E(\Gamma,\U)
 \end{equation} 
@@ -11091,7 +11045,7 @@ We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
 It is now easy to prove 
 
 \begin{thm}
-If $\C$ is a $\U$-small category, if $\Gamma$ is a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and if $\E$ is a set of morphisms in $\C^\wg_\U$ satisfying LE1-LE4, then the equalities $\E=\E(\Gamma,\U)$ and $\Gamma=\Gamma(\E)$ are equivalent.
+If $\C$ is a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $\Gamma$ is a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and if $\E$ is a set of morphisms in $\C^\wg_\U$ satisfying LE1-LE4, then the equalities $\E=\E(\Gamma,\U)$ and $\Gamma=\Gamma(\E)$ are equivalent.
 \end{thm}
 
 \begin{cor}\lb{leu}
@@ -11117,7 +11071,7 @@ Moreover, a morphism $u:A\to U$ in $(\oo{Op}_X)^\wg$ with $U$ in $\oo{Op}_X$ is 
 % https://docs.google.com/document/d/1vpjtCfl-qZCuuI-wkR5rbsav31DfDsZx1mQteXzu-UM/edit
 
 \begin{s}
-For any universe $\U$, any $\U$-small category $\C$ and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pr{gt}), let $\M(\Gamma,\U)$ and $\I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\E(\Gamma,\U)$ (see \qr{cce} p.~\pr{cce}). Corollary \ref{leu} p. \pr{leu} implies:
+For any universe $\U$, any $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}) $\C$ and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pr{gt}), let $\M(\Gamma,\U)$ and $\I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\E(\Gamma,\U)$ (see \qr{cce} p.~\pr{cce}). Corollary \ref{leu} p. \pr{leu} implies:
 
 Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $u:A\to B$ be a morphism in $\C^\wg_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wg_{\U'}$. Then $u$ is in $\M(\Gamma,\U)$ (resp. in $\I(\Gamma,\U)$) if and only if $u'$ is in $\M(\Gamma,\U')$ (resp. in $\I(\Gamma,\U')$).
 \end{s}
@@ -11409,7 +11363,7 @@ P.~413, Definition 17.2.4 (ii): see  Remark~\ref{272b} p.~\pr{272b}.
 %
 
 \begin{s}
-P.~413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wg\to\C_X^\wg$ commutes with projective limits indexed by small connected categories.
+P.~413. Lemma 17.2.5 (ii) and Exercise 2.12 (ii) p.~66 of the book imply: If $f:X\to Y$ is weakly left exact, then $\fthat:\C_Y^\wg\to\C_X^\wg$ commutes with projective limits indexed by small connected categories (Definition~\ref{myuscat} p.~\pr{myuscat}).
 \end{s} 
 
 %
@@ -11615,7 +11569,7 @@ P.~421, first display:
 $$
 F^a(U)\iso\col_{(U\to A)\in\mc{LI}_U}F(A).
 $$ 
-Lemma 16.2.8 p.~398 of the book and its proof, show that $F^a$ does {\em not} depend on the universe such that $\C$ is a small category and $\A$ satisfies (17.4.1) p.~417 of the book.
+Lemma 16.2.8 p.~398 of the book and its proof, show that $F^a$ does {\em not} depend on the universe such that $\C$ is a small category (Definition~\ref{myuscat} p.~\pr{myuscat}) and $\A$ satisfies (17.4.1) p.~417 of the book.
 \end{s}
 
 %
