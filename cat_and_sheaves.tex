@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -1531,6 +1531,8 @@ and let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,
 
 Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
+We sometimes use the words \emph{limit}\index{limit} and \emph{colimit}\index{colimit} instead of the phrases \emph{projective limit} and \emph{inductive limit}. %call projective limits just \emph{limits}\index{limit} and inductive limits \emph{colimits}\index{colimit}
+
 %%
 
 \sbs{Brief comments}
@@ -1722,13 +1724,13 @@ secondly a morphism of functors $\bt\to\DT Y$, and thirdly a morphism $X\to Y$ b
 The two propositions below are basic.
 
 \begin{prop}\lb{aioc}
-If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\C^{I^{\op}}$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
+If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\Fct(I^{\op},\C)$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
-\nn\emph{(b)} the morphism $h(p):\DT h(X)\to h\ci\al$ in $(\C^\wg)^{I^{\op}}$ induced by $p$ is a projection,
+\nn\emph{(b)} the morphism $h(p):\DT h(X)\to h\ci\al$ in $\Fct(I^{\op},\C^\wg)$ induced by $p$ is a projection,
 
-\nn\emph{(c)} for all $Y$ in $\C$ the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Set^{I^{\op}}$ induced by $p$ is a projection.
+\nn\emph{(c)} for all $Y$ in $\C$ the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Fct(I^{\op},\Set)$ induced by $p$ is a projection.
 \end{prop}
 
 Condition (c) is often abridged by 
@@ -1764,11 +1766,11 @@ If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myusca
 
 \nn\emph{(a)} $p$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim},
 
-\nn\emph{(b)} the morphism $k(p):k\ci\al\to\DT k(X)$ in $(\C^\vee)^I$ induced by $p$ is a coprojection,
+\nn\emph{(b)} the morphism $k(p):k\ci\al\to\DT k(X)$ in $\Fct(I,\C^\vee)$ induced by $p$ is a coprojection,
 
-\nn\emph{(c)} the morphism $k(p):\DT k(X)\to k\ci\al^{\op}$ in $(\Set^\C)^{I^{\op}}$ induced by $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
+\nn\emph{(c)} the morphism $k(p):\DT k(X)\to k\ci\al^{\op}$ in $\Fct(I^{\op},\Set^\C)$ induced by $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
-\nn\emph{(d)} for all $Y$ in $\C$  the morphism $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ in $\Set^{I^{\op}}$ is a projection.
+\nn\emph{(d)} for all $Y$ in $\C$ the morphism $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ in $\Fct(I^{\op},\Set)$ is a projection.
 \end{prop}
 
 Condition (d) is often abridged by 
@@ -1857,6 +1859,8 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % previous version:
 % https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
+\begin{comment}
+
 \begin{lem}\lb{u1}
 Let $\U$ and $\V$ be universes, let $\al_\U:I\to\Set_\U$ be a functor such that $\al_\U(i)\in\V$ for all $i$ in $I$, let $\al_\V$ be the functor $I\to\Set_\V$ induced by $\al_\U$, let $X$ be in $\U\cap\V$, let $p_\U:\al_\U\to\DT X$ be a morphism in $(\Set_\U)^I$ and $p_\V:\al_\V\to\DT X$ the induced morphism in $(\Set_\V)^I$. If $p_\U$ is a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}), so is $p_\V$.
 \end{lem}
@@ -1872,6 +1876,8 @@ Let $\U$ and $\V$ be universes, let $\al_\U:I^{\op}\to\Set_\U$ be a functor such
 The proof is similar to (and slightly easier than) that of Lemma~\ref{u1} p.~\pr{u1}, and is left to the reader.
 \end{proof}
 
+\end{comment}
+
 %
 
 \begin{prop}\lb{copr}
@@ -1883,17 +1889,42 @@ in $\C'^I$ by $F(p)_i:=F(p_i)$ for all $i$ in $I$. Write $(1F)$ for the conditio
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$
-in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus for any)\footnote{See Lemma~\ref{u2}.} universe $\U$ such that %$I$ is $\U$-small and 
-$\C'$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat})''. Note that $(1F)$ and $(2F)$ are equivalent by Propositions~\ref{aioc} and \ref{aic}. Then the conditions \emph{(a)} and \emph{(b)} below are equivalent:
+in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus, by Proposition~\ref{aic} p.~\pr{aic}, for any) %\footnote{See Lemma~\ref{u2}.} 
+universe $\U$ such that $I$ is $\U$-small and $\C'$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat})''. Note that $(1F)$ and $(2F)$ are equivalent by Proposition~\ref{aic} p.~\pr{aic}. Then we have
 
-\nn\emph{(a)} The equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some (and thus for any) %\footnote{See Lemma~\ref{u1}.} 
-universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. %and $\col\Hom_\C(Y,\al)\in\U$ for all $Y\in\C$. 
+\nn\emph{(a)} If the equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, they hold for any such universe.
 
-\nn\emph{(b)} The equivalent conditions $(1F)$ and $(2F)$ hold for all for all category $\C'$ and all functor $F:\C\to\C'$.
+\nn\emph{(b)} The conditions \emph{(b1)} and \emph{(b2)} below are equivalent:
+
+\nn\emph{(b1)} The equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. 
+
+\nn\emph{(b2)} The equivalent conditions $(1F)$ and $(2F)$ hold for all for all category $\C'$ and all functor $F:\C\to\C'$.
 \end{prop}
 
 \begin{proof}
-Condition (b) implies trivially Condition (a). Let us prove that (a) implies (b). Let $F:\C\to\C'$ be as in (b) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
+%(a) Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ is a $\U$-category. For any $Y$ in $\C$ define $\col\Hom_\C(Y,\al)$ as in Convention~\ref{thei} p.~\pr{thei}, and note that the condition that the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective doesn't depend on the choice of $\U$ submitted to the indicated requirements.
+
+%(a) Let $\U$ and $\V$ be universes such that $I$ is $\U$-small and $\V$-small, and $\C$ is a $\U$-category and a $\V$-category. For any $Y$ in $\C$ define $\col\Hom_\C(Y,\al)$ as in Convention~\ref{thei} p.~\pr{thei}. Then the following conditions are equivalent:
+
+(a) Let $\U$ and $\V$ be universes such that $I$ is $\U$-small and $\V$-small, and $\C$ is a $\U$-category and a $\V$-category. For any $Y$ in $\C$ define $\col\Hom_\C(Y,\al)$ as in Convention~\ref{thei} p.~\pr{thei}. Then $\col\Hom_\C(Y,\al)$ is a colimit of 
+$$
+\Hom_\C(Y,\al):I\to\Set_\U
+$$ 
+and of 
+$$
+\Hom_\C(Y,\al):I\to\Set_\V,
+$$ 
+and the following conditions are equivalent:
+
+\nn$\bu\ (1h_\U)$,
+
+\nn$\bu$ the natural morphism $\col h_\U\ci\al\to h_\U(X)$ in $\C^\wg_\U$ is an isomorphism,
+
+\nn$\bu$ the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective for any $Y$ in $\C$,
+
+\nn$\bu$ $(1h_\V)$.
+
+\nn(b) Condition (b2) implies trivially Condition (b1). Let us prove that (b1) implies (b2). Let $F:\C\to\C'$ be as in (b2) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
 $$
 \begin{tikzcd}
 \DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
@@ -1901,8 +1932,6 @@ $$
 \end{tikzcd}
 $$ 
 in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection. This proves $(2F)$, and thus the proposition.
-
-%[To show that $(1h_\U)$ implies $(1h_\V)$ if $\C$ is both a $\U$-category and a $\V$-category, let $Y$ be in $\C$ and let $p_\U:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ and $p_\V:\Hom_\C(Y,\al)\to\DT\Hom_\C(Y,X)$ be the obvious morphisms in $\Fct(I,\Set_\U)$ and $\Fct(I,\Set_\V)$. It suffices to show that $p_\V$ is a coprojection, and this follows immediately from the assumption that $p_\U$ is a coprojection.]
 \end{proof}
 % previous version:
 % https://docs.google.com/document/d/1AITzGqzUAvv50lju_VrBMrKTTlpm0dwypIunBQYn6jA/edit
@@ -2383,7 +2412,7 @@ This follows from Proposition~\ref{insist1} p.~\pr{insist1} and Theorem~\ref{stu
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 % comment removed:
-% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit\end{s}£
+% https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit\end{s}
 
 Let us insist on the following point:
 \begin{prop}\lb{insist2}
@@ -9589,7 +9618,7 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-The second sentence in the above quote is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
 
 %In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
@@ -10478,7 +10507,7 @@ $$
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-This is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. 
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
 \end{s}
 
 %
