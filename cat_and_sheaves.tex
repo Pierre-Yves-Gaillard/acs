@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -209,7 +209,7 @@ I have rewritten some of the proofs in the book. Of course, I'm not suggesting t
 
 The notation of the book will be freely used. We will sometimes write $\B^\A$ for $\Fct(\A,\B)$, $\al_i$ for $\al(i)$, $fg$ for $f\ci g$, and some parenthesis might be omitted. We write $\bigsqcup$\index{$\bigsqcup$} instead of $\coprod$\index{$\coprod$} for the coproduct\index{coproduct}. 
 
-Following a suggestion of Pierre Schapira's, we shall denote projective limits\index{projective limit} by $\lim$\index{$\lim$} instead of $\plim$\index{$\plim$}, and inductive limits\index{inductive limit} by $\col$\index{$\col$} instead of $\ilim$\index{$\ilim$}. 
+Following a suggestion of Pierre Schapira's, we shall denote projective limits\index{projective limit} by $\lim$\index{$\lim$} instead of $\plim$\index{$\plim$}, and inductive limits\index{inductive limit} by $\col$\index{$\col$} instead of $\ilim$\index{$\ilim$}. We sometimes use the words \emph{limit}\index{limit} and \emph{colimit}\index{colimit} instead of the phrases \emph{projective limit} and \emph{inductive limit}.
 
 Thank you to Pierre Schapira for his interest!
 
@@ -1096,6 +1096,9 @@ A\ar[rr]\ar[dr,"x"']&&Y\\
 &X.\ar[ru,dashed]
 \end{tikzcd}
 $$ 
+\begin{rk}\lb{ufreerepr}
+Let $\U$ and $\V$ be universes, let $\C$ be a $\U$-category and a $\V$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $A$ be in $\C^\wg_\U$, assume $A(X)\in\V$ for all $X$ in $\C$, define $A_\V\in\C^\wg_\V$ by $A_\V(X):=A(X)$ for all $X$ and $A_\V(f):=A(f)$ for all morphism $f$ in $\C$, let $X$ be in $\C$, let $x$ be in $A(X)$, let $x_\U:X\to A$ be the morphism in $\C^\wg_\U$ attached to $x$ and $x_\V:X\to A_\V$ the morphism in $\C^\wg_\V$ attached to $x$. Then $x_\V$ is an isomorphism if and only if $x_\U$ is.
+\end{rk}
 
 %%
 
@@ -1136,19 +1139,31 @@ is representable, we denote its representative by $R(X')$ and its representation
 The following lemma will result from Lemma~\ref{pda2} below. 
 
 \begin{lem}\lb{pda1}
-In the above setting, a morphism $\eta_{X'}:L(R(X'))\to X'$ in $\C'$ is a representation of $\Hom_{\C'}(L(\ ),X')$ if and only if for all $X$ in $\C$ and all $g:L(X)\to X'$ there is a unique $f:X\to R(X')$ such that $\eta_{X'}\ci L(f)=g$: 
+In the above setting, if $\eta_{X'}:L(R(X'))\to X'$ is a morphism in $\C'$, then the following two conditions are equivalent:
+
+\nn\emph{(a)} $\eta_{X'}$ is a representation of $\Hom_{\C'}(L(\ ),X')$,
+
+\nn\emph{(b)} for all $X$ in $\C$ and all $g:L(X)\to X'$ there is a unique $f:X\to R(X')$ such that $\eta_{X'}\ci L(f)=g$: 
 \begin{equation}\lb{xfl1}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"g"]&X'\\ 
 R(X')&L(R(X')).\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 \end{equation} 
-\end{lem}
+\end{lem} 
 
-%Concretely this means that, 
-We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.%\end{s}
+We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.
+\end{s}
 
-%\begin{s} In the above setting c
+%
+
+\begin{s}\lb{ufreepdra}
+Note that Condition (b) in Lemma~\ref{pda1} involves no universe. In the statement of Condition (a) it is implicitly assumed that a universe $\U$ such that $\C$ and $\C'$ are $\U$-categories (Definition~\ref{myucat} p.~\pr{myucat}) has been chosen. In particular, if $\V$ is another such universe, then (a) holds for $\V$ if and only if it holds for $\U$. (See also Remark~\ref{ufreerepr} p.~\pr{ufreerepr}.
+\end{s}
+
+%
+
+\begin{s}
 By definition, $\eta_{X'}:L(R(X'))\to X'$ in $\C'$ is a representation of $\Hom_{\C'}(L(\ ),X')$ if and only if, for all morphism $\theta:X\to\Hom_{\C'}(L(\ ),X')$ in $\C^\wg$, there is a unique morphism $f:X\to R(X')$ in $\C$ such that $\eta_{X'}\ci f=\theta$: %Consider the commutative diagram 
 \begin{equation}\lb{xfl2}
 \begin{tikzcd}
@@ -1476,7 +1491,7 @@ If $I$ and $\C$ are categories, we denote by $\DT$\index{$\DT$} the diagonal fun
 \end{nota}
 
 \begin{df}[projective limit]\lb{plim} 
-Let $\al:I^{\op}\to\C$ be a functor. If the value at $\al$ of the right adjoint $\lim$ to $\DT:\C\to\C^{I^{\op}}$ exists (see \S\ref{rdefat} p.~\pr{rdefat}), we denote it by $\lim\al$ and call it {\em the projective limit}\index{projective limit} of $\al$. Moreover, we say that the unit $p:\DT\lim\al\to\al$ of the adjunction is \textbf{the} \emph{projection}\index{projection}. More generally we say that $q:\DT X\to\al$ (with $X$ in $\C$) is \textbf{a} \emph{projection} if the corresponding morphism 
+Let $\al:I^{\op}\to\C$ be a functor. If the value at $\al$ of the right adjoint $\lim$ to $\DT:\C\to\Fct(I^{\op},\C)$ exists (see \S\ref{rdefat} p.~\pr{rdefat}), we denote it by $\lim\al$ and call it {\em the projective limit},\index{projective limit} or just {\em the limit}\index{limit}, of $\al$. Moreover, we say that the unit $p:\DT\lim\al\to\al$ of the adjunction is \textbf{the} \emph{projection}\index{projection}. More generally we say that $q:\DT X\to\al$ (with $X$ in $\C$) is \textbf{a} \emph{projection} if the corresponding morphism 
 $$
 X\to\Hom_{\Fct(I^{\op},\C)}(\DT(\ ),\al)
 $$ 
@@ -1491,6 +1506,14 @@ Y\ar[d,dashed,"f"']&\DT Y\ar[d,"\DT f"']\ar[rd,"\theta"]\\
 \end{tikzcd}
 \end{equation} 
 
+%
+
+\begin{rk}\lb{ufreepdra2}
+Note that this definition of limit involves no universe. This will be also the case for the notion of colimit that will be introduced shortly. This observation has already been made in \S\ref{ufreepdra} p.~\pr{ufreepdra}.
+\end{rk}
+
+%
+
 In Convention~\ref{term} p.~\pr{term} we stated a rule and indicated that we would make some exceptions to it. Here is the first such exception:
 
 \begin{conv}\lb{thep} 
@@ -1504,7 +1527,7 @@ and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then 
 Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
 \begin{df}[inductive limit]\lb{ilim} 
-Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ to $\DT:\C\to\C^I$ exists, we denote it by $\col\al$ and call it {\em the inductive limit}\index{inductive limit} of the $\al$ (see \S\ref{ldefat} p.~\pr{ldefat}). Moreover, we say that the co-unit $p:\al\to\DT\col\al$ of the adjunction is \textbf{the} \emph{coprojection}\index{coprojection}. More generally we say that $q:\al\to\DT X$ (with $X$ in $\C$) is \textbf{a} \emph{coprojection} if the corresponding morphism 
+Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ to $\DT:\C\to\C^I$ exists, we denote it by $\col\al$ and call it {\em the inductive limit},\index{inductive limit} or {\em the colimit}\index{colimit}, of $\al$ (see \S\ref{ldefat} p.~\pr{ldefat}). Moreover, we say that the co-unit $p:\al\to\DT\col\al$ of the adjunction is \textbf{the} \emph{coprojection}\index{coprojection}. More generally we say that $q:\al\to\DT X$ (with $X$ in $\C$) is \textbf{a} \emph{coprojection} if the corresponding morphism 
 $$
 \Hom_{\C^I}(\al,\DT(\ ))\to X
 $$ 
@@ -1531,7 +1554,7 @@ and let $\sim$ be the least equivalence relation on $U$ satisfying $(i,x)\sim(j,
 
 Note that the inductive limit of $\al:I\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
-We sometimes use the words \emph{limit}\index{limit} and \emph{colimit}\index{colimit} instead of the phrases \emph{projective limit} and \emph{inductive limit}. %call projective limits just \emph{limits}\index{limit} and inductive limits \emph{colimits}\index{colimit}
+%We sometimes use the words \emph{limit}\index{limit} and \emph{colimit}\index{colimit} instead of the phrases \emph{projective limit} and \emph{inductive limit}. %call projective limits just \emph{limits}\index{limit} and inductive limits \emph{colimits}\index{colimit}
 
 %%
 
@@ -1576,17 +1599,15 @@ More precisely, assume we are given $\mu$ as above and $s$ in $S$. Then we set $
 % removed:
 % https://docs.google.com/document/d/1w4pNu9aysXFDFK3VXsAeiKrAm826_hq8rA21PsqNHH0/edit
 
-%
-
 % previous version:
 % https://docs.google.com/document/d/1OdYPoUxq-6Hu8lFAKK4yazvZ15DINxnYgdzoVUVTtPc/edit
 
 \begin{s}\lb{216}
 P.~38, Proposition 2.1.6. We want to find a setting where the isomorphism 
 $$
-(\col\al)(j)\iso\col\al(j)
+\col\al(j)\xr\sim(\col\al)(j)
 $$ 
-makes sense and is true.% prove that it holds.%Here are more details. Recall the setting: 
+makes sense and is true. 
 
 Let $\al:I\to\C^J$ be a functor, and let us assume that for each $j$ in $J$ the functor $\al(\ )(j):I\to\C$ admits a coprojection $p_j:\al(\ )(j)\to\DT X_j$ in the sense of Definition~\ref{ilim} p.~\pr{ilim}: 
 \begin{equation}\lb{ajpj}
@@ -1605,9 +1626,9 @@ $$
 $$ 
 We leave it to the reader to verify that this construction does define our functor $\bt$.
 
-We want to define a morphism $q:\al\to\DT\bt$. Let $i$ be in $I$. We must define $q_i:\al(i)\to\bt$, that is, given $j$ in $J$ we must define $q_{ij}:\al(i)(j)\to\bt(j)$. It suffices to set $q_{ij}:=p_{ji}$. 
+We want to define a morphism $q:\al\to\DT\bt$. Let $i$ be in $I$. We must define $q_i:\al(i)\to\bt$, that is, given $j$ in $J$ we must define $q_{ij}:\al(i)(j)\to\bt(j)$. It suffices to set $q_{ij}:=p_{ji}$.
 
-\begin{prop}\lb{216p}
+\begin{prop}\lb{evcol=colev}
 In the above setting the morphism $q$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim}. 
 \end{prop}
 
@@ -1630,7 +1651,7 @@ $$
 \end{tikzcd}
 $$ 
 
-It is straightforward to check that the functors $\mu_j:\bt(j)\to\gamma(j)$ give rise to a functor $\mu:\bt\to\gamma$, and that this functor satisfies $\DT\mu\ci q=\ld$, as required. 
+It is straightforward to check that the morphisms $\mu_j:\bt(j)\to\gamma(j)$ give rise to a morphism $\mu:\bt\to\gamma$, and that this morphism satisfies $\DT\mu\ci q=\ld$, as required. 
 \end{proof}
 \end{s}
 
@@ -1723,14 +1744,16 @@ secondly a morphism of functors $\bt\to\DT Y$, and thirdly a morphism $X\to Y$ b
 \begin{s} 
 The two propositions below are basic.
 
-\begin{prop}\lb{aioc}
+\begin{prop}%\lb{basic}
 If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\Fct(I^{\op},\C)$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
 \nn\emph{(b)} the morphism $h(p):\DT h(X)\to h\ci\al$ in $\Fct(I^{\op},\C^\wg)$ induced by $p$ is a projection,
 
-\nn\emph{(c)} for all $Y$ in $\C$ the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Fct(I^{\op},\Set)$ induced by $p$ is a projection.
+\nn\emph{(c)} for all $Y$ in $\C$ the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Fct(I^{\op},\Set)$ induced by $p$ is a projection,
+
+\nn\emph{(d)} if \emph{(b)} holds for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), then it holds for any such universe; the same applies to \emph{(c)}.
 \end{prop}
 
 Condition (c) is often abridged by 
@@ -1739,7 +1762,7 @@ $$
 $$
 
 \begin{proof}
-Conditions (b) and (c) are equivalent by Proposition~\ref{216p} p.~\pr{216p}. We sketch the proof that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
+Conditions (b) and (c) are equivalent by Proposition~\ref{evcol=colev} p.~\pr{evcol=colev}. We sketch the proof that (a) and (c) are equivalent. Let us summarize (a) and (c) by the following self-explanatory commutative diagrams:
 \begin{equation}\lb{zfz}
 \begin{tikzcd}
 Z\ar[d,dashed,"f"']&\DT Z\ar[d,"\DT f"']\ar[rd,"\ld"]\\ 
@@ -1757,11 +1780,13 @@ S\ar[d,dashed,"g"']&\DT S\ar[d,"\DT g"']\ar[rrd,"\mu"]\\
 To prove (c)$\then$(a), we suppose $Z$ and $\ld$ given in \qr{zfz}, and in \qr{sgs} we let $S$ be a singleton, we set $Y:=Z$, we define $\mu$ by the formula $\mu_i(s):=\ld_i$, we get a $g$ as above, we set $f:=g(s)$, and we check that this works. 
 
 To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let $s$ be in $S$. We must define $g(s):Y\to X$. We set $Z:=Y$ in \qr{zfz}. We must define $\ld:\DT Y\to\al$. Letting $i$ be in $I$, it suffices to define $\ld_i:Y\to\al(i)$. To do this we set $\ld_i:=\mu_i(s)$, we get an $f$ (depending on $s$) as above, we set $g(s):=f$, and we check that this works.
+
+Statement (d) is obvious (see Remark~\ref{ufreepdra2} p.~\pr{ufreepdra2}).
 \end{proof}
 
 The proof of the following proposition is similar to the previous one and is left to the reader as an easy exercise.
 
-\begin{prop}\lb{aic}
+\begin{prop}\lb{basic*}
 If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
 
 \nn\emph{(a)} $p$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim},
@@ -1771,6 +1796,8 @@ If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myusca
 \nn\emph{(c)} the morphism $k(p):\DT k(X)\to k\ci\al^{\op}$ in $\Fct(I^{\op},\Set^\C)$ induced by $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
 \nn\emph{(d)} for all $Y$ in $\C$ the morphism $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ in $\Fct(I^{\op},\Set)$ is a projection.
+
+\nn\emph{(e)} if \emph{(b)} holds for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), then it holds for any such universe; the same applies to \emph{(c)} and \emph{(d)}.
 \end{prop}
 
 Condition (d) is often abridged by 
@@ -1859,26 +1886,8 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % previous version:
 % https://docs.google.com/document/d/1dGilBEaYjcIyx7OvpkC3GqboftMYYM7EyqaVY_5vZkM/edit
 
-\begin{comment}
-
-\begin{lem}\lb{u1}
-Let $\U$ and $\V$ be universes, let $\al_\U:I\to\Set_\U$ be a functor such that $\al_\U(i)\in\V$ for all $i$ in $I$, let $\al_\V$ be the functor $I\to\Set_\V$ induced by $\al_\U$, let $X$ be in $\U\cap\V$, let $p_\U:\al_\U\to\DT X$ be a morphism in $(\Set_\U)^I$ and $p_\V:\al_\V\to\DT X$ the induced morphism in $(\Set_\V)^I$. If $p_\U$ is a coprojection (see Definition~\ref{ilim} p.~\pr{ilim}), so is $p_\V$.
-\end{lem}
-\begin{proof}
-We can assume that %$\U\subset\V$ and that 
-$I$ is $\V$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). Define $Y\in\V$ as being $\col\al_\V$ in the notation of Convention~\ref{thei} p.~\pr{thei}. Using the conservative functor from $(\Set_\V)^{\op}$ to $\Set_\V$ which sends $Z$ to $\{0,1\}^Z$, we see that the natural map $Y\to X$ is bijective.
-\end{proof}
-
-\begin{lem}\lb{u2}
-Let $\U$ and $\V$ be universes, let $\al_\U:I^{\op}\to\Set_\U$ be a functor such that $\al_\U(i)\in\V$ for all $i$ in $I$, let $\al_\V$ be the functor $I^{\op}\to\Set_\V$ induced by $\al_\U$, let $X$ be in $\U\cap\V$, let $p_\U:\DT X\to\al_\U$ be a morphism in $\Fct(I^{\op},\Set_\U)$ and $p_\V:\DT X\to\al_\V$ the induced morphism in $\Fct(I^{\op},\Set_\V)$. If $p_\U$ is a projection (see Definition~\ref{plim} p.~\pr{plim}), so is $p_\V$.
-\end{lem}
-\begin{proof}
-The proof is similar to (and slightly easier than) that of Lemma~\ref{u1} p.~\pr{u1}, and is left to the reader.
-\end{proof}
-
-\end{comment}
-
-%
+% removed comment:
+% https://docs.google.com/document/d/1pZulldz45nEGDBor42Yss95rpDqbJE4SHxWr6OtWrTg/edit
 
 \begin{prop}\lb{copr}
 Let $I$ and $\C$ be arbitrary categories, let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$ and let $p:\al\to\DT X$ be a morphism in $\C^I$. For any universe $\U$ such that $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding, and, for any category $\C'$ and any functor $F:\C\to\C'$, define the morphism 
@@ -1889,8 +1898,8 @@ in $\C'^I$ by $F(p)_i:=F(p_i)$ for all $i$ in $I$. Write $(1F)$ for the conditio
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$
-in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus, by Proposition~\ref{aic} p.~\pr{aic}, for any) %\footnote{See Lemma~\ref{u2}.} 
-universe $\U$ such that $I$ is $\U$-small and $\C'$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat})''. Note that $(1F)$ and $(2F)$ are equivalent by Proposition~\ref{aic} p.~\pr{aic}. Then we have
+in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus, by Proposition~\ref{basic*} p.~\pr{basic*}, for any) %\footnote{See Lemma~\ref{u2}.} 
+universe $\U$ such that $I$ is $\U$-small and $\C'$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat})''. Note that $(1F)$ and $(2F)$ are equivalent by Proposition~\ref{basic*} p.~\pr{basic*}. Then we have
 
 \nn\emph{(a)} If the equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, they hold for any such universe.
 
@@ -1914,7 +1923,7 @@ and of
 $$
 \Hom_\C(Y,\al):I\to\Set_\V,
 $$ 
-and the following conditions are equivalent:
+and, by Proposition~\ref{evcol=colev} p.~\pr{evcol=colev} and Proposition~\ref{basic*} p.~\pr{basic*} the following conditions are equivalent:
 
 \nn$\bu\ (1h_\U)$,
 
@@ -1923,6 +1932,8 @@ and the following conditions are equivalent:
 \nn$\bu$ the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective for any $Y$ in $\C$,
 
 \nn$\bu$ $(1h_\V)$.
+
+The point is that neither the set $\col\Hom_\C(Y,\al)$ not the above map $$\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$$ (which can be regarded as a morphism in $\Set_\U$ or in $\Set_\V$) depend on $\U$ or $\V$.
 
 \nn(b) Condition (b2) implies trivially Condition (b1). Let us prove that (b1) implies (b2). Let $F:\C\to\C'$ be as in (b2) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
 $$
@@ -1993,7 +2004,7 @@ so that it suffices to prove
 $$
 H\left[I,\al(\ ,j),\C,\left(\col_i\al(i,\ )\right)(j)\right],
 $$ 
-but this holds by Proposition~\ref{216p} p.~\pr{216p}.
+but this holds by Proposition~\ref{evcol=colev} p.~\pr{evcol=colev}.
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof}
 % comment removed:
