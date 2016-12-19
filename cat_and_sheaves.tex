@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -1073,7 +1073,7 @@ $$
 $$ 
 \end{proof}
 
-\begin{conv}\lb{term} 
+\begin{conv}\lb{term}
 An object $Y$ in a category $\A$ is \emph{terminal} if all $X$ in $\A$ admits a unique morphism $X\to Y$. Let $T_\A$ be the set of terminal objects of $\A$. If $Y,Z\in T_\A$, then there is a unique morphism $Y\to Z$, and this morphism is an isomorphism. For all category $\A$ such that $T_\A\neq\vi$ we choose an element in $T_\A$ and call it \textbf{the} terminal object of $\A$. Let us insist: we make a distinction between ``\emph{a} terminal object of $\A$'' and ``\emph{the} terminal object of $\A$'' (when they exist). Unless otherwise indicated, the choice of \emph{the} terminal object of $\A$ is random (but there will be two exceptions to this rule: see Convention~\ref{thep} p.~\pr{thep} and Convention~\ref{thei} p.~\pr{thei}).
 \end{conv} 
 
@@ -1097,7 +1097,11 @@ A\ar[rr]\ar[dr,"x"']&&Y\\
 \end{tikzcd}
 $$ 
 \begin{rk}\lb{ufreerepr}
-Let $\U$ and $\V$ be universes, let $\C$ be a $\U$-category and a $\V$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $A$ be in $\C^\wg_\U$, assume $A(X)\in\V$ for all $X$ in $\C$, define $A_\V\in\C^\wg_\V$ by $A_\V(X):=A(X)$ for all $X$ and $A_\V(f):=A(f)$ for all morphism $f$ in $\C$, let $X$ be in $\C$, let $x$ be in $A(X)$, let $x_\U:X\to A$ be the morphism in $\C^\wg_\U$ attached to $x$ and $x_\V:X\to A_\V$ the morphism in $\C^\wg_\V$ attached to $x$. Then $x_\V$ is an isomorphism if and only if $x_\U$ is.
+In view of Definition~\ref{myucat} p.~\pr{myucat}, the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) and Convention~\ref{term} p.~\pr{term} we have:
+
+Let $\U$ and $\V$ be universes, let $\C$ be a $\U$-category and a $\V$-category, let $A$ be in $\C^\wg_\U$ and $B$ in $\C^\wg_\V$ and assume $A(X)=B(X)$ for all object $X$ in $\C$, and $A(f)=B(f)$ for all $f\in\Hom_\C(X,Y)$ for all $X,Y\in\C$. Then $A$ is representable if and only if $B$ is. Let $X$ be in $\C$. Then $X$ is a representative of $A$ if and only if $X$ is a representative of $B$. Let $x$ be in $A(X)=B(X)$. Then $x$ is a representation of $A$ if and only if $x$ is a representation of $B$. %Let $\U$ and $\V$ be universes, let $\C$ be a $\U$-category and a $\V$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $A$ be in $\C^\wg_\U$, assume $A(X)\in\V$ for all $X$ in $\C$, define $A_\V\in\C^\wg_\V$ by $A_\V(X):=A(X)$ for all $X$ and $A_\V(f):=A(f)$ for all morphism $f$ in $\C$, let $X$ be in $\C$, let $x$ be in $A(X)$, let $x_\U:X\to A$ be the morphism in $\C^\wg_\U$ attached to $x$ and $x_\V:X\to A_\V$ the morphism in $\C^\wg_\V$ attached to $x$. Then $x_\V$ is an isomorphism if and only if $x_\U$ is.
+
+%This follows from the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}).
 \end{rk}
 
 %%
@@ -1158,7 +1162,7 @@ We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.
 %
 
 \begin{s}\lb{ufreepdra}
-Note that Condition (b) in Lemma~\ref{pda1} involves no universe. In the statement of Condition (a) it is implicitly assumed that a universe $\U$ such that $\C$ and $\C'$ are $\U$-categories (Definition~\ref{myucat} p.~\pr{myucat}) has been chosen. In particular, if $\V$ is another such universe, then (a) holds for $\V$ if and only if it holds for $\U$. (See also Remark~\ref{ufreerepr} p.~\pr{ufreerepr}.
+Note that Condition (b) in Lemma~\ref{pda1} involves no universe. In the statement of Condition (a) it is implicitly assumed that a universe $\U$ such that $\C$ and $\C'$ are $\U$-categories (Definition~\ref{myucat} p.~\pr{myucat}) has been chosen. In particular, if $\V$ is another such universe, then (a) holds for $\V$ if and only if it holds for $\U$. (See also Remark~\ref{ufreerepr} p.~\pr{ufreerepr}.)
 \end{s}
 
 %
@@ -1490,7 +1494,7 @@ $$
 If $I$ and $\C$ are categories, we denote by $\DT$\index{$\DT$} the diagonal functor\index{diagonal functor} from $\C$ to $\C^I$. The categories $I$ and $\C$ shall be explicitly indicated only when they are not clear from the context. Furthermore, we shall often write $\DT X$ for $\DT(X)$. To be more precise, $\DT X$ is the constant functor from $I$ to $\C$ with value $X$.
 \end{nota}
 
-\begin{df}[projective limit]\lb{plim} 
+\begin{df}[``projective limit'' or ``limit'']\lb{plim} 
 Let $\al:I^{\op}\to\C$ be a functor. If the value at $\al$ of the right adjoint $\lim$ to $\DT:\C\to\Fct(I^{\op},\C)$ exists (see \S\ref{rdefat} p.~\pr{rdefat}), we denote it by $\lim\al$ and call it {\em the projective limit},\index{projective limit} or just {\em the limit}\index{limit}, of $\al$. Moreover, we say that the unit $p:\DT\lim\al\to\al$ of the adjunction is \textbf{the} \emph{projection}\index{projection}. More generally we say that $q:\DT X\to\al$ (with $X$ in $\C$) is \textbf{a} \emph{projection} if the corresponding morphism 
 $$
 X\to\Hom_{\Fct(I^{\op},\C)}(\DT(\ ),\al)
@@ -1526,7 +1530,7 @@ and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then 
 
 Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
-\begin{df}[inductive limit]\lb{ilim} 
+\begin{df}[``inductive limit'' or ``colimit'']\lb{ilim} 
 Let $\al:I\to\C$ be a functor. If the value at $\al$ of the left adjoint $\col$ to $\DT:\C\to\C^I$ exists, we denote it by $\col\al$ and call it {\em the inductive limit},\index{inductive limit} or {\em the colimit}\index{colimit}, of $\al$ (see \S\ref{ldefat} p.~\pr{ldefat}). Moreover, we say that the co-unit $p:\al\to\DT\col\al$ of the adjunction is \textbf{the} \emph{coprojection}\index{coprojection}. More generally we say that $q:\al\to\DT X$ (with $X$ in $\C$) is \textbf{a} \emph{coprojection} if the corresponding morphism 
 $$
 \Hom_{\C^I}(\al,\DT(\ ))\to X
@@ -1890,6 +1894,27 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % https://docs.google.com/document/d/1pZulldz45nEGDBor42Yss95rpDqbJE4SHxWr6OtWrTg/edit
 
 \begin{prop}\lb{copr}
+Let $\al:I\to\C$ be an arbitrary functor. For any universe $\U$ such that $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding. Let $\U$ be a universe such that $I$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) and $\C$ is a $\U$-category and define $A_\U\in\C^\wg_\U$ by $A_\U(X):=\col\Hom_\C(X,\al)$, where $\col\Hom_\C(X,\al)$ is defined as in Convention~\ref{thei} p.~\pr{thei}, so that we have $\col h_\U\ci\al\iso X$ in $\C^\wg_\U$. Let $\V$ be a universe satisfying the same conditions as $\U$. Then $A_\U$ is representable if and only if $A_\V$ is. Let $X$ be in $\C$. Then $X$ represents $A_\U$ if and only if $X$ represents $A_\V$. Assume that such is the case. Then $\col\al$ exists in $\C$ and is isomorphic to $X$, and, for any functor $F:\C\to\C'$ the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism.
+\end{prop}
+\begin{proof}
+Let us show that the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism, the other claims following from Remark~\ref{ufreerepr} p.~\pr{ufreerepr}. Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories, let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. By Proposition~\ref{basic*} p.~\pr{basic*}, it suffices to show that the morphism 
+$$
+\Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
+$$
+in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}). Consider the commutative diagram 
+$$
+\begin{tikzcd}
+\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
+\DT\Hom_{\C^\wg_\U}(X,A)\ar{rrr}[swap]{\Hom_{\C^\wg_\U}(h_\U(p),A)}&&&\Hom_{\C^\wg_\U}(\al,A)
+\end{tikzcd}
+$$ 
+in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
+\end{proof}
+
+\begin{comment}
+% Version before 161218
+
+\begin{prop}\lb{copr}
 Let $I$ and $\C$ be arbitrary categories, let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$ and let $p:\al\to\DT X$ be a morphism in $\C^I$. For any universe $\U$ such that $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding, and, for any category $\C'$ and any functor $F:\C\to\C'$, define the morphism 
 $$
 F(p):F\ci\al\to\DT F(X)
@@ -1944,11 +1969,12 @@ $$
 $$ 
 in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection. This proves $(2F)$, and thus the proposition.
 \end{proof}
+\end{comment}
 % previous version:
 % https://docs.google.com/document/d/1AITzGqzUAvv50lju_VrBMrKTTlpm0dwypIunBQYn6jA/edit
 
 \begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If the the equivalent condition in Proposition~\ref{copr} hold, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+Let $\al:I\to\C$ be a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If, in the notation of Proposition~\ref{copr}, the functor $A_\U$ is representable for some $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 There is of course an analogous notion of universal projective limit. 
@@ -1958,6 +1984,8 @@ $$
 \col h\ci\al\not\iso h(\col\al).
 $$ 
 This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
+
+\begin{comment}
 
 If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X$ is in $\C$, we denote by $$H[I,\al,\C,X]$$ the condition 
 
@@ -1983,8 +2011,10 @@ Let us insist on the following point:
 If $\al:I\to\C$ is an arbitrary functor and if there is a universe $\U$ such that $I$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}) and $\col h_\U\ci\al$ exists in $\C^\wg_\U$ and is representable (here $h_\U:\C\to\C^\wg_\U$ is the Yoneda embedding), then $\col\al$ exists universally (Definition~\ref{uil} p.~\pr{uil}).
 \end{prop}
 \begin{proof}
-This follows from Propositions \ref{copr} and \ref{stupid}.
+This follows from Proposition~\ref{copr}.
 \end{proof}
+
+\end{comment}
 
 %%
 
@@ -1996,15 +2026,8 @@ If $I$ and $J$ are big categories, if $\C$ is a $\U$-category (Definition~\ref{m
 \end{prop}
 In \S\ref{c38} p.~\pr{c38} we saw that, without the adverb ``universally'', the claim is false.
 \begin{proof}
-To prove the proposition, we may assume that $I$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}). Let $h:\C\to\C^\wg$ be the Yoneda embedding and $j$ a fixed object of $J$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
-$$
-C\left[I,\al(\ ,j),\C,\left(\col_i\al(i,\ )\right)(j)\right],
-$$ 
-so that it suffices to prove 
-$$
-H\left[I,\al(\ ,j),\C,\left(\col_i\al(i,\ )\right)(j)\right],
-$$ 
-but this holds by Proposition~\ref{evcol=colev} p.~\pr{evcol=colev}.
+To prove the proposition, we may assume that $I$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}). %Let $h:\C\to\C^\wg$ be the Yoneda embedding and $j$ a fixed object of $J$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove $$C\left[I,\al(\ ,j),\C,\left(\col_i\al(i,\ )\right)(j)\right],$$ so that it suffices to prove $$H\left[I,\al(\ ,j),\C,\left(\col_i\al(i,\ )\right)(j)\right],$$ but this holds by 
+Then the statement follows from Proposition~\ref{evcol=colev} p.~\pr{evcol=colev}.
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof}
 % comment removed:
@@ -2365,6 +2388,9 @@ If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (
 
 \sbs{Theorem 2.3.3 (i) p.~52}
 
+% Previous version of Subsection Theorem 2.3.3 (i) (161218)
+% https://docs.google.com/document/d/1lbEXmrcKKYSg4GxTyyXkCQ8HeP8m5llHe2h-34zahBo/edit
+
 Note that projective and inductive limits are particular cases of Kan extensions.
 
 Recall the statement: 
@@ -2378,65 +2404,33 @@ exists in $\C$ for all $i$ in $I$. Then $\pp^\dg(\bt)$ exists and we have
 \begin{equation}\lb{236}
 \pp^\dg(\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation} 
-for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and the co-unit $\ee_\bt:\id_{\C^J}\to\pp_*\ci\pp^\dg$ (see \S\ref{ldefat} p.~\pr{ldefat}) is an isomorphism.%$\id_{\C^J}\xr\sim\pp_*\ci\pp^\dg$. 
+for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$ is small, then $\pp^\dg$ exists. If moreover $\pp$ is fully faithful, then $\pp^\dg$ is fully faithful and the co-unit $\ee_\bt:\id_{\C^J}\to\pp_*\ci\pp^\dg$ (see \S\ref{ldefat} p.~\pr{ldefat}) is an isomorphism.
 \end{thm}
 
-Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. We have however %In Proposition~\ref{patho} p.~\ref{patho} we shall see a way to prevent this kind of pathology.
+Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. We have however 
 
-%\begin{s} 
 \begin{thm}\lb{stupidkan}
-If $I$ and $J$ are big categories, if $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), if $I\xl\pp J\xr\bt\C$ are functors, and if 
+If $I\xl\pp J\xr\bt\C$ are arbitrary functors and  
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
 \end{equation}
-exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, \qr{e233} exists universally for all $i$ in the sense of Definition~\ref{uil} p.~\pr{uil} if and only if $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
+exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i)$ is isomorphic to \qr{e233}. Moreover, the following conditions are equivalent
+
+\nn\emph{(a)} the colimit \qr{e233} exists universally for all $i$ in the sense of Definition~\ref{uil} p.~\pr{uil},
+
+\nn\emph{(b)} $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232},
+
+\nn\emph{(c)} $\pp^\dg\bt$ exists and there is a universe $\U$ such that $J$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), the functor $\pp^\dg(h\ci\bt)$ (where $h:\C\to\C^\wg$ is the Yoneda embedding) exists, and the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism.
 \end{thm}
 \begin{proof}
-The first sentence and the ``only if'' part of the second sentence follow from Theorem~\ref{233i} p.~\pr{233i}. To prove the ``if'' part of the second sentence, we may assume that $J$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}). Let $i$ be in $I$. In the notation of Proposition~\ref{stupid} p.~\pr{stupid}, we must prove 
-$$
-C\left[J_i,\ (\pp(j)\to i)\mt\bt(j),\ \C,\ \pp^\dg(\bt)(i)\right],
-$$ 
-so that it suffices to prove 
-$$
-H\left[J_i,\ (\pp(j)\to i)\mt\bt(j),\ \C,\ \pp^\dg(\bt)(i)\right],
-$$ 
-that is 
-$$
-\pp^\dg(\bt)(i)\iso\col_{(\pp(j)\to i)\in J_i}h(\bt(j)),
-$$ 
-but we have 
-$$
-\col_{(\pp(j)\to i)\in J_i}h(\bt(j))\iso\pp^\dg(h\ci\bt)(i)\iso\pp^\dg(\bt)(i),
-$$ 
-the isomorphisms following respectively from Theorem~\ref{233i} p.~\pr{233i} and from the  assumption that $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}.
+This follows from Theorem~\ref{233i} p.~\pr{233i} and Proposition~\ref{copr} p.~\pr{copr}.
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
-\end{proof} 
-\begin{cor}
-Let $I,J$ and $\C$ be arbitrary categories; let $I\xl\pp J\xr\bt\C$ be functors; let $\U$ be a universe such that $J$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), the functor $\pp^\dg(h\ci\bt)$ (where $h:\C\to\C^\wg$ is the Yoneda embedding) exists and the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism. Then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}.
-%Let $I,J$ and $\C$ be arbitrary categories; let $I\xl\pp J\xr\bt\C$ be functors; for all universe $\U$ such that $\C$ is a $\U$-category let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding; assume that, for all such $\U$ the functor $\pp^\dg(h_\U\ci\bt)$ exists and the natural morphism $\pp^\dg(h_\U\ci\bt)\to h_\U\ci\pp^\dg(\bt)$ is an isomorphism. Then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}. 
-%If $I$ and $J$ are big categories, if $\C$ is a $\U$-category, if $I\xl\pp J\xr\bt\C$ are functors, if $h:\C\to\C^\wg$ is the Yoneda embedding, if $\pp^\dg(h\ci\bt)$ exists and if the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism, then $\pp^\dg\bt$ exists universally in the sense of Definition~\ref{232} p.~\pr{232}.
-\end{cor}
-\begin{proof}
-This follows from Proposition~\ref{insist1} p.~\pr{insist1} and Theorem~\ref{stupidkan}.
 \end{proof}
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 % comment removed:
 % https://docs.google.com/document/d/1Ao6mRtWrezbUfHAkKcZpm9fv260E8nW_DEBM5kcLoH0/edit\end{s}
-
-Let us insist on the following point:
-\begin{prop}\lb{insist2}
-Let $I,J$ and $\C$ be arbitrary categories, and let $I\xl\pp J\xr\bt\C$ be functors. If there is a universe $\U$ such that $J$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) and, for all $i$ in $I$, the colimit 
-$$
-\col_{(\pp(j)\to i)\in J_i}h_\U(\bt(j))
-$$ 
-%exists in $\C^\wg_\U$ and 
-is representable (here $h_\U:\C\to\C^\wg_\U$ is the Yoneda embedding), then $\pp^\dg\bt$ exists universally (Definition~\ref{232} p.~\pr{232}).
-\end{prop}
-\begin{proof}
-This follows from Propositions~\ref{insist1} and Theorem~\ref{stupidkan}.
-\end{proof}
 
 In the book the proof of Theorem 2.3.3 (i) is divided into three steps, called (a), (b) and (c). We shall follow this subdivision.
 
@@ -9629,7 +9623,7 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
 
 %In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
@@ -10518,7 +10512,7 @@ $$
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
 \end{s}
 
 %
