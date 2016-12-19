@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -1079,7 +1079,7 @@ An object $Y$ in a category $\A$ is \emph{terminal} if all $X$ in $\A$ admits a 
 
 \begin{conv}\lb{yoc}
 We often identify the source and the target of $\pp$ in \qr{axp1} and \qr{axp2}, and we also often consider $\C$ as a full subcategory of $\C^\wg$ and $\C^\vee$ thanks to the Yoneda embeddings. Let $A$ be in $\C^\wg$ and $(X,x)$, with $X$ in $\C$ and $x:X\to A$ a morphism in $\C^\wg$, an object in the category $\C_A$ (see Definition 1.2.16 p.~18 of the book). Then %the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) implies that 
-$(X,x)$ is terminal if and only if $x$ is an isomorphism. If the category $\C_A$ admits a terminal object, we say that $A$ is \emph{representable}\index{representable}. Let $(X,x)$ be a (resp. the) terminal object of $\C_A$. We say that the couple $(X,x)$, or sometimes just the morphism $x$, is a (resp. the) \emph{representation}\index{representation} of $A$, and that $X$ is a (resp. the) \emph{representative}\index{representative} of $A$. We use a similar terminology if $A$ in is in $\C^\vee$ instead of $\C^\wg$, replacing the words \emph{representable}, \emph{representative}, \emph{representation} with \emph{co-representable}, \emph{co-representative}, \emph{co-representation}. 
+$(X,x)$ is terminal if and only if $x$ is an isomorphism. If the category $\C_A$ admits a terminal object, we say that $A$ is \emph{representable}\index{representable}. Let $(X,x)$ be a (resp. the) terminal object of $\C_A$. We say that the couple $(X,x)$, or sometimes just the morphism $x$, is a (resp. the) \emph{representation}\index{representation} of $A$, and that $X$ is a (resp. the) \emph{representative}\index{representative} of $A$ (or that $X$, or $x$, \emph{represents} $A$). We use a similar terminology if $A$ in is in $\C^\vee$ instead of $\C^\wg$, replacing the words \emph{representable}, \emph{representative}, \emph{representation} with \emph{co-representable}, \emph{co-representative}, \emph{co-representation}. 
 \end{conv}
 
 A morphism $x:X\to A$ in $\C^\wg$ with $X$ in $\C$ is a representation of $A$ if and only if any morphism $Y\to A$ with $Y$ in $\C$ factors uniquely through $x$:
@@ -1095,14 +1095,27 @@ $$
 A\ar[rr]\ar[dr,"x"']&&Y\\ 
 &X.\ar[ru,dashed]
 \end{tikzcd}
-$$ 
-\begin{rk}\lb{ufreerepr}
-In view of Definition~\ref{myucat} p.~\pr{myucat}, the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}) and Convention~\ref{term} p.~\pr{term} we have:
+$$
 
-Let $\U$ and $\V$ be universes, let $\C$ be a $\U$-category and a $\V$-category, let $A$ be in $\C^\wg_\U$ and $B$ in $\C^\wg_\V$ and assume $A(X)=B(X)$ for all object $X$ in $\C$, and $A(f)=B(f)$ for all $f\in\Hom_\C(X,Y)$ for all $X,Y\in\C$. Then $A$ is representable if and only if $B$ is. Let $X$ be in $\C$. Then $X$ is a representative of $A$ if and only if $X$ is a representative of $B$. Let $x$ be in $A(X)=B(X)$. Then $x$ is a representation of $A$ if and only if $x$ is a representation of $B$. %Let $\U$ and $\V$ be universes, let $\C$ be a $\U$-category and a $\V$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $A$ be in $\C^\wg_\U$, assume $A(X)\in\V$ for all $X$ in $\C$, define $A_\V\in\C^\wg_\V$ by $A_\V(X):=A(X)$ for all $X$ and $A_\V(f):=A(f)$ for all morphism $f$ in $\C$, let $X$ be in $\C$, let $x$ be in $A(X)$, let $x_\U:X\to A$ be the morphism in $\C^\wg_\U$ attached to $x$ and $x_\V:X\to A_\V$ the morphism in $\C^\wg_\V$ attached to $x$. Then $x_\V$ is an isomorphism if and only if $x_\U$ is.
+Here are two corollaries to the Yoneda Lemma:
+
+\begin{cor}\lb{ufreerepr1}
+In the setting of the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}), an element $x\in A(X)$ represents $A$ if and only if, for any $Y$ in $\C$, the map $\Hom_\C(Y,X)\to A(Y),\ f\mt A(f)(x)$ is bijective.
+\end{cor}
+\begin{cor}\lb{ufreerepr2}
+Let $\U$ and $\V$ be universes, let $\C$ be a $\U$- and $\V$-category, let $A$ be in $\C^\wg_\U$ and $B$ in $\C^\wg_\V$, and assume $A(X)=B(X)$ for all object $X$ in $\C$, and $A(f)=B(f)$ for all $f\in\Hom_\C(X,Y)$ and all $X,Y\in\C$. Then $A$ is representable if and only if $B$ is. Let $X$ be in $\C$. Then $X$ represents $A$ if and only if $X$ represents $B$. Let $x$ be in $A(X)=B(X)$. Then $x$ is a representation of $A$ if and only if $x$ is a representation of $B$. %Let $\U$ and $\V$ be universes, let $\C$ be a $\U$- and $\V$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $A$ be in $\C^\wg_\U$, assume $A(X)\in\V$ for all $X$ in $\C$, define $A_\V\in\C^\wg_\V$ by $A_\V(X):=A(X)$ for all $X$ and $A_\V(f):=A(f)$ for all morphism $f$ in $\C$, let $X$ be in $\C$, let $x$ be in $A(X)$, let $x_\U:X\to A$ be the morphism in $\C^\wg_\U$ attached to $x$ and $x_\V:X\to A_\V$ the morphism in $\C^\wg_\V$ attached to $x$. Then $x_\V$ is an isomorphism if and only if $x_\U$ is.
 
 %This follows from the Yoneda Lemma (Theorem~\ref{yol} p.~\pr{yol}).
-\end{rk}
+\end{cor}
+\begin{proof}
+This follows from Corollary~\ref{ufreerepr1}.
+\end{proof}
+
+Here is a typical situation where Corollary~\ref{ufreerepr2} applies: Let $L:\C\to\C'$ be an arbitrary functor, let $X'$ be an object of $\C'$, let $\U$ and $\V$ be universes such that $\C$ and $\C'$ are $\U$- and $\V$-categories, and define $A\in\C^\wg_\U$ and $B\in\C^\wg_\V$ by 
+$$
+A(X)=B(X)=\Hom_{\C'}(L(X),X').
+$$ 
+Then $A$ is representable if and only if $B$ is. More on this in \S\ref{rdefat} p.~\pr{rdefat}.
 
 %%
 
@@ -1162,7 +1175,7 @@ We call $\eta_{X'}$ the \emph{unit}\index{unit} of the adjunction.
 %
 
 \begin{s}\lb{ufreepdra}
-Note that Condition (b) in Lemma~\ref{pda1} involves no universe. In the statement of Condition (a) it is implicitly assumed that a universe $\U$ such that $\C$ and $\C'$ are $\U$-categories (Definition~\ref{myucat} p.~\pr{myucat}) has been chosen. In particular, if $\V$ is another such universe, then (a) holds for $\V$ if and only if it holds for $\U$. (See also Remark~\ref{ufreerepr} p.~\pr{ufreerepr}.)
+Note that Condition (b) in Lemma~\ref{pda1} involves no universe. In the statement of Condition (a) it is implicitly assumed that a universe $\U$ such that $\C$ and $\C'$ are $\U$-categories (Definition~\ref{myucat} p.~\pr{myucat}) has been chosen. In particular, if $\V$ is another such universe, then (a) holds for $\V$ if and only if it holds for $\U$. (See also Corollary~\ref{ufreerepr2} p.~\pr{ufreerepr2}.)
 \end{s}
 
 %
@@ -1749,7 +1762,7 @@ secondly a morphism of functors $\bt\to\DT Y$, and thirdly a morphism $X\to Y$ b
 The two propositions below are basic.
 
 \begin{prop}%\lb{basic}
-If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\Fct(I^{\op},\C)$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions are equivalent:
+If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\DT X\to\al$ is a morphism in $\Fct(I^{\op},\C)$, and if $h:\C\to\C^\wg$ is the Yoneda embedding, then the following conditions \emph{(a), (b), (c)} are equivalent:
 
 \nn\emph{(a)} $p$ is a projection in the sense of Definition~\ref{plim} p.~\pr{plim},
 
@@ -1757,7 +1770,7 @@ If $\al:I^{\op}\to\C$ is a functor defined on a small category (Definition~\ref{
 
 \nn\emph{(c)} for all $Y$ in $\C$ the morphism $\Hom_\C(Y,p):\DT\Hom_\C(Y,X)\to\Hom_\C(Y,\al)$ in $\Fct(I^{\op},\Set)$ induced by $p$ is a projection,
 
-\nn\emph{(d)} if \emph{(b)} holds for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), then it holds for any such universe; the same applies to \emph{(c)}.
+\nn Moreover, if \emph{(b)} holds for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), then it holds for any such universe; the same applies to \emph{(c)}.
 \end{prop}
 
 Condition (c) is often abridged by 
@@ -1785,13 +1798,13 @@ To prove (c)$\then$(a), we suppose $Z$ and $\ld$ given in \qr{zfz}, and in \qr{s
 
 To prove (a)$\then$(c), we suppose $S,Y$ and $\mu$ given in \qr{sgs}, and we let $s$ be in $S$. We must define $g(s):Y\to X$. We set $Z:=Y$ in \qr{zfz}. We must define $\ld:\DT Y\to\al$. Letting $i$ be in $I$, it suffices to define $\ld_i:Y\to\al(i)$. To do this we set $\ld_i:=\mu_i(s)$, we get an $f$ (depending on $s$) as above, we set $g(s):=f$, and we check that this works.
 
-Statement (d) is obvious (see Remark~\ref{ufreepdra2} p.~\pr{ufreepdra2}).
+The last sentence is obvious (see Remark~\ref{ufreepdra2} p.~\pr{ufreepdra2}).
 \end{proof}
 
 The proof of the following proposition is similar to the previous one and is left to the reader as an easy exercise.
 
 \begin{prop}\lb{basic*}
-If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions are equivalent:
+If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $X$ is in $\C$, if $p:\al\to\DT X$ is a morphism in $\C^I$, and if $k:\C\to\C^\vee$ is the Yoneda embedding, then the following conditions \emph{(a), (b), (c), (d)} are equivalent:
 
 \nn\emph{(a)} $p$ is a coprojection in the sense of Definition~\ref{ilim} p.~\pr{ilim},
 
@@ -1801,7 +1814,7 @@ If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myusca
 
 \nn\emph{(d)} for all $Y$ in $\C$ the morphism $\Hom_\C(p,Y):\DT\Hom_\C(X,Y)\to\Hom_\C(\al,Y)$ in $\Fct(I^{\op},\Set)$ is a projection.
 
-\nn\emph{(e)} if \emph{(b)} holds for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), then it holds for any such universe; the same applies to \emph{(c)} and \emph{(d)}.
+\nn Morevover, if \emph{(b)} holds for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), then it holds for any such universe; the same applies to \emph{(c)} and \emph{(d)}.
 \end{prop}
 
 Condition (d) is often abridged by 
@@ -1893,11 +1906,15 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % removed comment:
 % https://docs.google.com/document/d/1pZulldz45nEGDBor42Yss95rpDqbJE4SHxWr6OtWrTg/edit
 
-\begin{prop}\lb{copr}
-Let $\al:I\to\C$ be an arbitrary functor. For any universe $\U$ such that $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding. Let $\U$ be a universe such that $I$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) and $\C$ is a $\U$-category and define $A_\U\in\C^\wg_\U$ by $A_\U(X):=\col\Hom_\C(X,\al)$, where $\col\Hom_\C(X,\al)$ is defined as in Convention~\ref{thei} p.~\pr{thei}, so that we have $\col h_\U\ci\al\iso X$ in $\C^\wg_\U$. Let $\V$ be a universe satisfying the same conditions as $\U$. Then $A_\U$ is representable if and only if $A_\V$ is. Let $X$ be in $\C$. Then $X$ represents $A_\U$ if and only if $X$ represents $A_\V$. Assume that such is the case. Then $\col\al$ exists in $\C$ and is isomorphic to $X$, and, for any functor $F:\C\to\C'$ the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism.
+\begin{prop}\lb{propulim}
+Let $\al:I\to\C$ be an arbitrary functor. For each universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myuscat} p.~\pr{myuscat} and \ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding and define $A_\U\in\C^\wg_\U$ by $A_\U(X):=\col\Hom_\C(X,\al)$, where $\col\Hom_\C(X,\al)$ is defined as in Convention~\ref{thei} p.~\pr{thei}. %, so that we have $\col h_\U\ci\al\iso X$ in $\C^\wg_\U$. 
+Let $\U$ and $\V$ be two such universes. %satisfying the same conditions as $\U$. 
+Then $A_\U$ is representable if and only if $A_\V$ is. Let $X$ be in $\C$. Then $X$ represents $A_\U$ if and only if $X$ represents $A_\V$. Assume that such is the case. Then $X$ is a colimit of $\al$ in $\C$. %$\col\al$ exists in $\C$ and is isomorphic to $X$. 
+Moreover, for any functor $F:\C\to\C'$, the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism.
 \end{prop}
 \begin{proof}
-Let us show that the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism, the other claims following from Remark~\ref{ufreerepr} p.~\pr{ufreerepr}. Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories, let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. By Proposition~\ref{basic*} p.~\pr{basic*}, it suffices to show that the morphism 
+Let us prove the last sentence, %show that the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism, 
+the others following from Corollary~\ref{ufreerepr2} p.~\pr{ufreerepr2}. Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories, let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. Let $p:\al\to\DT X$ be the coprojection. By Proposition~\ref{basic*} p.~\pr{basic*}, it suffices to show that the morphism 
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$
@@ -1911,70 +1928,17 @@ $$
 in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection.
 \end{proof}
 
-\begin{comment}
-% Version before 161218
+% Comment removed 161219b
+% https://docs.google.com/document/d/1ofdZfg1_XTFac6syyMpqFrmnDE1FKjx4tLgpOr3KWxU/edit
 
-\begin{prop}\lb{copr}
-Let $I$ and $\C$ be arbitrary categories, let $\al:I\to\C$ be a functor, let $X$ be an object of $\C$ and let $p:\al\to\DT X$ be a morphism in $\C^I$. For any universe $\U$ such that $\C$ is a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding, and, for any category $\C'$ and any functor $F:\C\to\C'$, define the morphism 
-$$
-F(p):F\ci\al\to\DT F(X)
-$$
-in $\C'^I$ by $F(p)_i:=F(p_i)$ for all $i$ in $I$. Write $(1F)$ for the condition ``$F(p)$ is a coprojection'' (see Definition~\ref{ilim} p.~\pr{ilim}), and write $(2F)$ for the condition ``the morphism 
-$$
-\Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
-$$
-in $\Fct(I^{\op},\Set_\U)$ is a projection (see Definition~\ref{plim} p.~\pr{plim}) for any $X'$ in $\C'$ and for some (and thus, by Proposition~\ref{basic*} p.~\pr{basic*}, for any) %\footnote{See Lemma~\ref{u2}.} 
-universe $\U$ such that $I$ is $\U$-small and $\C'$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat})''. Note that $(1F)$ and $(2F)$ are equivalent by Proposition~\ref{basic*} p.~\pr{basic*}. Then we have
-
-\nn\emph{(a)} If the equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, they hold for any such universe.
-
-\nn\emph{(b)} The conditions \emph{(b1)} and \emph{(b2)} below are equivalent:
-
-\nn\emph{(b1)} The equivalent conditions $(1h_\U)$ and $(2h_\U)$ hold for some (and thus for any) universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category. 
-
-\nn\emph{(b2)} The equivalent conditions $(1F)$ and $(2F)$ hold for all for all category $\C'$ and all functor $F:\C\to\C'$.
-\end{prop}
-
-\begin{proof}
-%(a) Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ is a $\U$-category. For any $Y$ in $\C$ define $\col\Hom_\C(Y,\al)$ as in Convention~\ref{thei} p.~\pr{thei}, and note that the condition that the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective doesn't depend on the choice of $\U$ submitted to the indicated requirements.
-
-%(a) Let $\U$ and $\V$ be universes such that $I$ is $\U$-small and $\V$-small, and $\C$ is a $\U$-category and a $\V$-category. For any $Y$ in $\C$ define $\col\Hom_\C(Y,\al)$ as in Convention~\ref{thei} p.~\pr{thei}. Then the following conditions are equivalent:
-
-(a) Let $\U$ and $\V$ be universes such that $I$ is $\U$-small and $\V$-small, and $\C$ is a $\U$-category and a $\V$-category. For any $Y$ in $\C$ define $\col\Hom_\C(Y,\al)$ as in Convention~\ref{thei} p.~\pr{thei}. Then $\col\Hom_\C(Y,\al)$ is a colimit of 
-$$
-\Hom_\C(Y,\al):I\to\Set_\U
-$$ 
-and of 
-$$
-\Hom_\C(Y,\al):I\to\Set_\V,
-$$ 
-and, by Proposition~\ref{evcol=colev} p.~\pr{evcol=colev} and Proposition~\ref{basic*} p.~\pr{basic*} the following conditions are equivalent:
-
-\nn$\bu\ (1h_\U)$,
-
-\nn$\bu$ the natural morphism $\col h_\U\ci\al\to h_\U(X)$ in $\C^\wg_\U$ is an isomorphism,
-
-\nn$\bu$ the natural map $\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$ is bijective for any $Y$ in $\C$,
-
-\nn$\bu$ $(1h_\V)$.
-
-The point is that neither the set $\col\Hom_\C(Y,\al)$ not the above map $$\col\Hom_\C(Y,\al)\to\Hom_\C(Y,X)$$ (which can be regarded as a morphism in $\Set_\U$ or in $\Set_\V$) depend on $\U$ or $\V$.
-
-\nn(b) Condition (b2) implies trivially Condition (b1). Let us prove that (b1) implies (b2). Let $F:\C\to\C'$ be as in (b2) and let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories. It suffices to prove $(2F)$. Let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. We get the commutative diagram 
-$$
-\begin{tikzcd}
-\DT A(X)\ar[d,"\sim"']\ar[rrr,"A(p)"]&&&A\ci\al\ar[d,"\sim"]\\ 
-\DT\Hom_{\C^\wg_\U}(X,A)\ar{rrr}[swap]{\Hom_{\C^\wg_\U}(h_\U(p),A)}&&&\Hom_{\C^\wg_\U}(\al,A)
-\end{tikzcd}
-$$ 
-in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a $\V$-category, the vertical isomorphisms being given by the Yoneda Lemma. The bottom horizontal arrow being a projection by assumption, the top horizontal arrow is also a projection. This proves $(2F)$, and thus the proposition.
-\end{proof}
-\end{comment}
 % previous version:
 % https://docs.google.com/document/d/1AITzGqzUAvv50lju_VrBMrKTTlpm0dwypIunBQYn6jA/edit
 
 \begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), let $X$ be an object of $\C$, and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}). If, in the notation of Proposition~\ref{copr}, the functor $A_\U$ is representable for some $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category, we say that $(X,p)$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+Let $\al:I\to\C$ be an arbitray functor %defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}) 
+and let $X$ be an object of $\C$. %and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}).
+If, in the notation of Proposition~\ref{propulim}, the functor $A_\U$ is representable for some $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), we say that $X$ %$(X,p)$ 
+is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 There is of course an analogous notion of universal projective limit. 
@@ -1985,38 +1949,8 @@ $$
 $$ 
 This shows that the inductive limit of $\al$ does not exist universally in $\Set$.
 
-\begin{comment}
-
-If $\al:I\to\C$ is a functor defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X$ is in $\C$, we denote by $$H[I,\al,\C,X]$$ the condition 
-
-\centerline{$X$ is an inductive limit of $h\ci\al$,}
-
-\nn and by $$C[I,\al,\C,X]$$ the condition 
-
-\centerline{$X$ is an inductive limit of $\al$.}%$C[I,\al,\C,X]$ the condition ``$X$ is an inductive limit of $\al$''. 
-
-\nn By Proposition~\ref{copr} p.~\pr{copr} the conjunction of $H[I,\al,\C,X]$ and $C[I,\al,\C,X]$ implies that $X$ is a \emph{universal} inductive limit of $\al$. The proof of the following proposition is obvious.
-
-\begin{prop}\lb{stupid}
-We have $H[I,\al,\C,X]\then C[I,\al,\C,X]$.
-%If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X\in\C$ is an inductive limit of $h\ci\al$, then $X$ is an inductive limit of $\al$, and thus a universal inductive limit of $\al$.
-\end{prop}
-
-(The letters $H$ and $C$ stand for \emph{hypothesis} and \emph{conclusion}.)
-%\begin{prop}If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding and if $X\in\C$ is an inductive limit of $h\ci\al$, then $X$ is an inductive limit of $\al$, and thus a universal inductive limit of $\al$.\end{prop}
-% previous version:\begin{prop}If $\al:I\to\C$ is a functor, if $h:\C\to\C^\wg$ is the Yoneda embedding, if $\col h\ci\al$ exists in $\C^\wg$, if $X$ is in $\C$, if $f:X\to\col h\ci\al$ is an isomorphism in $\C^\wg$, if $q_i:\al(i)\to\col h\ci\al$ are the coprojections, then $X$ is a universal limit of $\al$, the coprojections $p_i:\al(i)\to\col\al$ being given by the formula $p_i:=f^{-1}\ci q_i$.\end{prop}\begin{proof}It suffices to prove that $X$ is an inductive limit of $\al$, the coprojections $p_i:\al(i)\to\col\al$ being given by the indicated formula. Let $Y$ be in $\C$ and $u_i:\al(i)\to Y$ a functorial family of morphisms indexed by $i\in I$. It suffices to show that there is a unique morphism $u:X\to Y$ in $\C$ such that $u\ci p_i=u_i$, that is $u\ci f^{-1}\ci q_i=u_i$, for all $i$. But by assumption there is a unique morphism $v:X\to Y$ in $\C^\wg$ such that $v\ci f^{-1}\ci q_i=u_i$ for all $i$, so that it suffices to take for $u$ the morphism $v$ viewed as a morphism in $\C$.\end{proof}
-
-Let us insist on the following point:
-\begin{prop}\lb{insist1}
-If $\al:I\to\C$ is an arbitrary functor and if there is a universe $\U$ such that $I$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}) and $\col h_\U\ci\al$ exists in $\C^\wg_\U$ and is representable (here $h_\U:\C\to\C^\wg_\U$ is the Yoneda embedding), then $\col\al$ exists universally (Definition~\ref{uil} p.~\pr{uil}).
-\end{prop}
-\begin{proof}
-This follows from Proposition~\ref{copr}.
-\end{proof}
-
-\end{comment}
-
-%%
+% comment removed 161219c
+% https://docs.google.com/document/d/1fVR5_jfbcoJaBfFaxGedv1spjRtAQnleJLW5nYJM6pA/edit
 
 \sbs{Brief comments}
 
@@ -2380,7 +2314,7 @@ P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe h
 \nn(b) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
 \begin{df}[Definition 2.3.2 p. 51]\lb{232} 
-If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If, in addition, $\pp^\dg(F\ci\bt)$ exists and the natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism for all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
+If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If, in addition, $\pp^\dg(F\ci\bt)$ exists and the natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism for all big category $\C'$ and all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
 \end{df}  
 \end{s}
 
@@ -2423,7 +2357,7 @@ exists in $\C$ for all $i$ in $I$, then $\pp^\dg\bt$ exists, and $(\pp^\dg\bt)(i
 \nn\emph{(c)} $\pp^\dg\bt$ exists and there is a universe $\U$ such that $J$ is $\U$-small, $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), the functor $\pp^\dg(h\ci\bt)$ (where $h:\C\to\C^\wg$ is the Yoneda embedding) exists, and the natural morphism $\pp^\dg(h\ci\bt)\to h\ci\pp^\dg(\bt)$ is an isomorphism.
 \end{thm}
 \begin{proof}
-This follows from Theorem~\ref{233i} p.~\pr{233i} and Proposition~\ref{copr} p.~\pr{copr}.
+This follows from Theorem~\ref{233i} p.~\pr{233i} and Proposition~\ref{propulim} p.~\pr{propulim}.
 % previous version:
 % https://docs.google.com/document/d/1K004uKK3ECssS-Y1etYqzLcEilskE8Hlb0wVrElSqM0/edit
 \end{proof}
@@ -6257,34 +6191,13 @@ P. 162, proof of Lemma 7.4.3. Recall the statement:
 If $G:\A\to\A'$ is a functor and $F$ is right localizable at $X$, then $G\ci F$ is right localizable at $X$.
 \end{lem}
 \begin{proof}
-This follows from Proposition~\ref{copr} p.~\pr{copr}.
+This follows from Proposition~\ref{propulim} p.~\pr{propulim}.
 %By (7.4.3) p. 162 the assumption that $F$ is right localizable at $X$ is equivalent to the existence of an object $Y$ of $\A$ satisfying $$IF(\al_\SSS(X))\iso\iota_\A(Y).$$ Applying $IG$ we get $$IG(IF(\al_\SSS(X)))\iso IG(\iota_\A(Y)),$$ and thus $$I(G\ci F)(\al_\SSS(X))\iso\iota_{\A'}(G(Y)).$$ This shows that $G\ci F$ is right localizable at $X$. 
 \end{proof}
 \end{s}
 
-%
-
-%\begin{s}\lb{744}P. 163. Proposition 7.4.4 holds even without the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$. This follows from Proposition~\ref{insist2} p.~\pr{insist2}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan} (see also \S\ref{742} p.~\pr{742}). %The fact that (i) implies (ii) follows from Theorem~\ref{233i} p.~\pr{233i}. To show that (ii) implies (i), note that, for all $X$ in $\C$, we have $$\iota_\A(R_\SSS F(Q(X)))\iso R_\SSS(\iota_\A\ci F)(Q(X))\iso\col_{(X\to X')\in\SSS^X}\iota_\A(F(X')),$$ the isomorphisms following respectively from the assumption that $F$ is universally right localizable and from Theorem~\ref{233i} p.~\pr{233i}. (The argument is essentially the same as the one used in the proof of Theorem~\ref{stupidkan} p.~\pr{stupidkan}.)\end{s}
-
-%\begin{s}P. 163, Proposition 7.4.4. In view of \S\ref{742} p.~\pr{742}, the assumption that $\SSS^X$ is cofinally small for any $X$ in $\C$ is not necessary.\end{s}
-
-%\sbs{Brief comments}
-
-%\begin{s}P. 163, proof of implication (i) $\then$ (ii) in Proposition 7.4.4. It seems to me the claim follows from the straightforward lemma below (coupled with Theorem 2.3.3 p.~52 in the book).
-
-%\begin{lem}If $\iota:\C\to\C'$ is fully faithful, if $\al:I\to\C$ is a functor, and if $\col\iota\ci\al\iso\iota(X)$ for some $X$ in $\C$, then we have $\col\al\iso X$. \end{lem}\end{s}
-
-%\begin{s}
-%P. 163, proof of Proposition 7.4.4, implication (i)$\then$(ii). Here are some of the tasks implicitly left to the reader: 
-
-%\nn$\bu$ Define a morphism of functors $\tau$ from $F$ to $H\ci Q$.
-
-%\nn$\bu$ Define the three bijections in the display.
-
-%\nn$\bu$ Check that the composition of these three bijections coincides with the map $v\mt(v\star Q)\ci\tau$. (See \S\ref{durl} p.~\pr{durl}.)
-%\end{s}
-
-%
+% Removed 161219a
+% https://docs.google.com/document/d/1NVJEQ8FMemTF5N9FIEUXbzgGo4OL8PaV2EqHd4pKVCw/edit
 
 \begin{s}\lb{745}
 P. 163, Remark 7.4.5. In this \S\ we adhere to Convention 11.7.1 of the book, according to which, paradoxically, in the expression $\Hom_\C(X,Y)$, the variable $Y$ is considered as the \emph{first} variable and $X$ as the \emph{second} variable.
