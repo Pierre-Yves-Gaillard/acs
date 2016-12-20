@@ -1935,7 +1935,7 @@ in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a 
 % https://docs.google.com/document/d/1AITzGqzUAvv50lju_VrBMrKTTlpm0dwypIunBQYn6jA/edit
 
 \begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be an arbitray functor %defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}) 
+Let $\al:I\to\C$ be an arbitrary functor %defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}) 
 and let $X$ be an object of $\C$. %and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}).
 If, in the notation of Proposition~\ref{propulim}, the functor $A_\U$ is representable for some $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), we say that $X$ %$(X,p)$ 
 is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
@@ -2313,8 +2313,8 @@ P.~51, Definition 2.3.2 (minor variant). We assume that no underlying universe h
 
 \nn(b) $\pp^\dg\bt$ represents $\Hom_{\C^J}(\bt,\pp_*(\ ))\in(\C^I)^\vee_\U$ for \emph{any} universe $\U$ such that $\C^J$ is a $\U$-category. 
 
-\begin{df}[Definition 2.3.2 p. 51]\lb{232} 
-If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If, in addition, $\pp^\dg(F\ci\bt)$ exists and the natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism for all big category $\C'$ and all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.
+\begin{df}[Universal Kan extension\index{universal Kan extension}]\lb{232} 
+If the above equivalent conditions hold, we say that $\pp^\dg\bt$ {\em exists} (this is compatible with \S\ref{s232} (a) p.~\pr{s232}). If, in addition, $\pp^\dg(F\ci\bt)$ exists and the natural morphism $\pp^\dg(F\ci\bt)\to F\ci\pp^\dg(\bt)$ is an isomorphism for all big category $\C'$ and all functor $F:\C\to\C'$, we say that $\pp^\dg\bt$ exists {\em universally}.	
 \end{df}  
 \end{s}
 
@@ -2343,7 +2343,7 @@ for all $i$ in $I$. In particular, if $\C$ admits small inductive limits and $J$
 
 Note that, as observed by Kelly (see Section~4.2 of the book quoted above in \S\ref{c38} p.~\pr{c38}), the above sufficient condition for $\pp^\dg(\bt)$ to exist is not necessary. This non-necessity results from \S\ref{c38} and the following remark. If $\pi:I\times J\to I$ is the projection, and $\al:I\times J\to \C$ is a functor, then $\pi^\dg(\al)\iso\col_{j\in J}\al(\ ,j)$ (in the strong sense that one exists if and only if the other exists); in contrast we have $\col_{(\pp(i',j)\to i)\in(I\times J)_i}\al(j)\iso\col_{j\in J}\al(i,j)$ (in the same strong sense); and we saw that the existence of $\col_{j\in J}\al(i,j)$ for all $i$ implies that of $\col_{j\in J}\al(\ ,j)$, but the converse is not true. We have however 
 
-\begin{thm}\lb{stupidkan}
+\begin{thm}[Universal Kan Extension Theorem\index{Universal Kan Extension Theorem}]\lb{stupidkan}
 If $I\xl\pp J\xr\bt\C$ are arbitrary functors and  
 \begin{equation}\lb{e233}
 \col_{(\pp(j)\to i)\in J_i}\bt(j)
@@ -5999,7 +5999,7 @@ $$
 P. 159, Definition 7.3.1 (ii). The following proposition is obvious:
 
 \begin{prop}\lb{rsf}
-In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al^X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al^X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $(F(X),p)$ is a universal inductive limit of $F\ci\al^X$ in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}. In particular $F$ is universally right localizable, %in the sense of the two above definitions, 
+In the setting of \S\ref{durl}, assume that $F(s)$ is an isomorphism for all $s$ in $\SSS$. Recall that $\al^X:\SSS^X\to\C$ is the forgetful functor $(X',s)\mt X'$ (see Definition 7.1.9 p.~153 in the book). Define $p:F\ci\al^X\to\DT F(X)$ by $p_{X',s}:=F(s)^{-1}$. Then $F(X)$ is a universal inductive limit of $F\ci\al^X$ in $\A$ in the sense of Definition~\ref{uil} p.~\pr{uil}. In particular $F$ is universally right localizable, %in the sense of the two above definitions, 
 $R_\SSS F\iso F_\SSS$ (for the definition of $F_\SSS$, see condition (c) in Definition~\ref{qccs} p.~\pr{qccs}), %7.1.1 p.~149 in the book), 
 and for any functor $K:\A\to\A'$ the diagram below commutes %up to isomorphism
 $$
@@ -9536,7 +9536,7 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
 
 %In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
 \end{s}
@@ -10425,7 +10425,7 @@ $$
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
 \end{s}
 
 %
