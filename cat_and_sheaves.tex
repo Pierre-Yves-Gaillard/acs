@@ -5963,10 +5963,9 @@ can be completed to a commutative square as indicated, with $v$ in $\SSS$, and i
 
 %
 
-%\begin{s}
 \begin{uspb} 
 P.\index{unsolved problem} 157, proof of Proposition 7.1.20. In the sentence ``Since $t\ci s\in\SSS$, we have thus proved that, for $f:X\to Y$ in $\C$, if $Q(f)$ is an isomorphism, then there exists $g:Y\to Z$ such that $g\ci f\in\SSS$'', I don't understand why $g\ci f\in\SSS$. (Proposition 7.1.20 doesn't seem to be used elsewhere in the book.)
-\end{uspb}%\end{s}
+\end{uspb}
 
 %
 
@@ -8446,11 +8445,8 @@ Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In parti
 \col_iY_i\xr\sim\Ker(Y\parar Y\sqcup_{\col_iX_i}Y)\xr\sim\Ima(\col_iX_i\to Y)\xr\sim Y,
 \end{equation} 
 where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the maps $Y_i(G)\to Y(G)$ are injective by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. This is easily seen to imply that $\col_iY_i(G)\to Y(G)$ is also injective. 
-%\begin{uspb}The book claims that $\col_iY_i(G)\to Y(G)$ is an injection, but I'm unable to prove it.\index{unsolved problem}\end{uspb}
-%Small filtrant inductive limits being exact in $\Set$ (Proposition 3.3.7 (iv) p. 83 of the book), $S:=\col_iY_i(G)\to Y(G)$ is also a monomorphism. %the $Y_i(G)$, which can be viewed as subsets of $Y(G)$ by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}, satisfy $$\bigcup_i\ Y_i(G)=\col_iY_i(G)\xr\sim Y(G),\quad Y(G)=\bigcup_i\ Y_i(G).$$
 
-\nn(a) Assume that $\card(Y(G))<\pi$. %Set $S=\col_iY_i(G)\subset Y(G)$. Then $\card(S)\le \card(Y(G))<\pi$. 
-Then $\card(Y(G))<\pi$. By Corollary 9.2.12, $Y(G)\in\Set_\pi$ and this implies 
+\nn(a) Assume that $\card(Y(G))<\pi$. Then $\card(Y(G))<\pi$. By Corollary 9.2.12, $Y(G)\in\Set_\pi$ and this implies 
 $$
 \col_{i\in I}\Hom_\Set(Y(G),Y_i(G))\xr\sim\Hom_\Set(Y(G),Y(G)).
 $$ 
@@ -9490,7 +9486,7 @@ If $(\DD,T)$ is an additive category with translation, if $\Delta$ and $\Delta'$
 Left to the reader. 
 \end{proof}
 \begin{lem}\lb{idt}
-If $(\DD,T)$ $(\DD,T,\Delta)$ and $(\DD',T',\Delta')$ are two triangulated categories, if $F:\DD\to\DD'$ and $G:\DD'\to\DD$ are two quasi-inverse equivalences, and if $F$ is triangulated, then so is $G$.
+If $(\DD,T,\Delta)$ and $(\DD',T',\Delta')$ are two triangulated categories, if $F:\DD\to\DD'$ and $G:\DD'\to\DD$ are two quasi-inverse equivalences, and if $F$ is triangulated, then so is $G$.
 \end{lem}
 \begin{proof}
 It is easy to see that the functor $G$ is additive and commutes with the translations (up to isomorphism). Let $G\Delta'$ be the set of those triangles in $\DD$ which are isomorphic to the image under $G$ of some d.t. in $\DD'$. It is straightforward to check that $(\DD,T,G\Delta')$ is triangulated, that $\Delta\subset G\Delta'$, and that Lemma~\ref{acwt} implies $G\Delta'=\Delta$, that is, $G$ is triangulated.
@@ -9509,19 +9505,21 @@ P.~248, Lemma 10.2.1. The proof shows also the following: If $\DD$ is a triangul
 P.~249, Theorem 10.2.3 (v). After ``Then $F$ factors uniquely through $Q$'' one could add ``and the induced functor $\DD/\N\to\DD'$ is triangulated''.
 \end{s}
 
-%
+%\begin{uspb}
+%P.\index{unsolved problem} 250, proof of Theorem 10.2.3 (iii). I don't understand why Axioms TR2 is ``obviously satisfied''.
+%\end{uspb}
 
 \begin{s} 
 P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pr{may}, it is not necessary to prove TR4.
 \end{s}
 
-%
+%\begin{uspb}
+%P.\index{unsolved problem} 251, second paragraph. I don't understand why the sentence 
 
-%\begin{s}\lb{1026} P.~251, Proposition 10.2.6. Being unable to prove that the localization of $F$ is triangulated in Proposition 10.3.3 p.~253 of the book, I make the extra assumption that $\I$ is \emph{saturated}. By \S\ref{dtdn}, it is then clear that the obvious functor $\I/(\N\cap\I)\to\DD/\N$ is triangulated, and that any quasi-inverse (if it exists) is also triangulated. \end{s}
+%``We may represent them by morphisms in $\DD:\tilde f:\tilde X\to\tilde Y,\ \tilde g:\tilde Y\to\tilde Z$''
 
-%
-
-%\begin{s} P.~253, Definition 10.3.1. One of the key ingredients justifying the second sentence is Display~\qr{(7.3.7)} p.~\pr{(7.3.7)}.\end{s}
+%\nn is true.
+%\end{uspb}
 
 \begin{s}\lb{253}
 P.~253, Definition 10.3.1. The definition is stated as follows: 
@@ -9693,7 +9691,7 @@ $$
 $$ 
 \end{s}
 
-%\begin{s}\begin{uspb} P. 263. I don't understand the proof of Lemma 10.5.9\index{unsolved problem}. I don't even understand how the morphism $X_0\to H$ in $\DD^\wg$ is constructed.\end{uspb}\end{s}
+%
 
 \begin{s} P.~263, proof of Lemma 10.5.9. 
 
@@ -11263,17 +11261,7 @@ P.~410, Display (17.1.15): As already indicated in \S\ref{17115typo}, Display (1
 $$
 \Hom_{\PSh(X,\A)}(F,G)\iso\lim_{U\in\C_X}\HOM_{\PSh(X,\A)}(F,G)(U).
 $$ 
-%\begin{uspb}I don't understand why $\HOM_{\PSh(X,\A)}(F,G)(U)$ depends functorially on $U\in\C_X$.\index{unsolved problem}\end{uspb}
-%This follows from Theorem~\ref{fgd} p.~\pr{fgd}. %\qr{17115mod} p.~\pr{17115mod}. 
-\end{s} 
-
-%
-
-%\begin{s}
-%P.~411, Definition 17.2.1 of the notions of sites and of morphism of site. Proposition~\ref{yf} p.~\pr{yf} implies:
-
-%If $\U$ is a universe, then there is a $\U$-category $\A$ (see Definition~\ref{myucat} p.~\pr{myucat}) whose objects are the $\U$-small categories (see Definition~\ref{myuscat} p.~\pr{myuscat}) and whose morphisms are are morphisms of sites.
-%\end{s}
+\end{s}
 
 %
 
@@ -11393,15 +11381,9 @@ P.~419, proof of Proposition 17.4.4:
 
 \nn First sentence of the proof: see \S\ref{fpl} p.~\pr{fpl}. 
 
-%\begin{uspb}
-%%$\frownie$ (``frowny'').
-%Step~(i), Line~4: I don't know why $K^{\op}$ is cofinally small.\index{unsolved problem}
-%%Step~(i), Line~4: The fact that $K^{\op}$ is cofinally small and filtrant results from \S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
-%\end{uspb} 
+%$\frownie$ (``frowny''). 
 
-\nn Step~(i), Line~4: The fact that $K^{\op}$ is %cofinally small and 
-filtrant results from %\S\ref{poc} p.~\pr{poc} together with Lemma 16.2.8 p.~398, 
-Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
+\nn Step~(i), Line~4: The fact that $K^{\op}$ is filtrant results from Lemma 16.2.7 p.~398 and Proposition 3.2.1 (iii) p.~78 of the book. 
 
 The key ingredient to prove that $K^{\op}$ is cofinally small is Lemma~16.2.8 p.~398 which says that $K^{\op}$ is a product of cofinally small categories. To prove that $K^{\op}$ is cofinally small one must prove that a certain product $\prod P_i$ of connected categories is connected, but, as a product of connected categories is \emph{not} connected in general, some caution is needed. Going through the proof of Lemma~16.2.8, we see that each $P_i$ is \emph{filtrant}. This implies that $\prod P_i$ is filtrant, and thus that it is connected.
 
