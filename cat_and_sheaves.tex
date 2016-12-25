@@ -10422,6 +10422,48 @@ P. 326, proof of Proposition 13.2.2 (ii). See \S\ref{1233} p.~\pr{1233}.
 
 %
 
+\begin{s}
+P. 328, proof of Proposition 13.2.6, Step (a). We write $fg$ for $f\ci g$.
+
+\nn$\bu\ H^{n-1}(X)\xr\sim H^{n-1}(Z)$. It suffices to show $$\Ker d_X^{n-1}\xr\sim\Ker f^nd_X^{n-1}.$$ Let 
+$$
+a:\Ker f^nd_X^{n-1}\mono X^{n-1},\quad b:\Ker d_X^n\mono X^n,\quad c:X^{n-1}\to\Ker d_X^n
+$$ 
+be the natural morphisms. It suffices to show that the composition 
+$$
+\begin{tikzcd}
+\Ker f^nd_X^{n-1}\ar[r,rightarrowtail,"a"]&X^{n-1}\ar[r,"d_X^{n-1}"]&X^n
+\end{tikzcd}
+$$ 
+vanishes. By assumption the composition 
+$$
+\begin{tikzcd}
+\Ker d_X^n\ar[r,rightarrowtail,"b"]&X^n\ar[r,"f^n"]&Y^n
+\end{tikzcd}
+$$ 
+is a monomorphism. Consider the commutative diagram 
+$$
+\begin{tikzcd}
+\Ker f^nd_X^{n-1}\ar[d,rightarrowtail,"a"']\\ 
+X^{n-1}\ar[d,"c"']\ar[r,"d_X^{n-1}"]&X^n\ar[d,"f^n"]\\ 
+\Ker d_X^n\ar[ru,rightarrowtail,"b"]\ar[r,rightarrowtail]&Y^n.
+\end{tikzcd}
+$$ 
+The equalities $f^nbca=f^nd_X^{n-1}a=0$ imply $ca=0$ and thus $0=bca=d_X^{n-1}a$.
+
+\nn$\bu\ H^n(X)\mono H^n(Z)$. Let 
+$$
+\begin{tikzcd}
+V\ar[d,"c"']\ar[rr,"b"]&&W\ar[d,"a"]\\ 
+X^{n-1}\ar[d,equal]\ar[rr,"(d_X^{n-1})'"]&&\Ker d_X^n\ar[d,"(f^n)'",rightarrowtail]\\ 
+X^{n-1}\ar[rr,"(f^nd_X^{n-1})'"']&&\Ker d_Y^n
+\end{tikzcd}
+$$ 
+be a diagram, where $(g)'$ denotes the morphism induced by $g$. The bottom square commutes, and it suffices to show that the commutativity of the big rectangle implies that if the top square, which is clear.
+
+\nn$\bu\ H^n(X)\epi H^n(Z)$. Even if this is unsatisfactory, let us use the Freyd-Mitchell Theorem (Theorem 9.6.10. p.~238 of the book). In other words we may assume that our abelian category $\C$ is $\Mod(R)$ for some ring $R$. We omit the $\ci$ symbol and most of the parenthesis. Let $y^n\in\Ker d_Y^n$. It suffices to show that there is an $x^n$ in $\Ker d_X^n$ and an $x^{n-1}$ in $X^{n-1}$ such that $y^n=f^nx^n+f^nd_X^{n-1}x^{n-1}$. By assumption there is an $x^n$ in $\Ker d_X^n$ and a $y^{n-1}$ in $Y^{n-1}$ such that $y^n=f^nx^n+d_Y^{n-1}y^{n-1}$. We can replace $y^n$ with $y^n-d_Y^{n-1}y^{n-1}$ and take $x^{n-1}:=0$. 
+\end{s}
+
 %\begin{s}\lb{1335i}P. 330, Proposition 13.3.5 (i). Note that the functor $R^+F$ is triangulated, and thus additive.\end{s}
 
 %
