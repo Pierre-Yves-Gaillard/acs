@@ -10464,6 +10464,48 @@ be a diagram, where $(g)'$ denotes the morphism induced by $g$. The bottom squar
 \nn$\bu\ H^n(X)\epi H^n(Z)$. Even if this is unsatisfactory, let us use the Freyd-Mitchell Theorem (Theorem 9.6.10. p.~238 of the book). In other words we may assume that our abelian category $\C$ is $\Mod(R)$ for some ring $R$. We omit the $\ci$ symbol and most of the parenthesis. Let $y^n\in\Ker d_Y^n$. It suffices to show that there is an $x^n$ in $\Ker d_X^n$ and an $x^{n-1}$ in $X^{n-1}$ such that $y^n=f^nx^n+f^nd_X^{n-1}x^{n-1}$. By assumption there is an $x^n$ in $\Ker d_X^n$ and a $y^{n-1}$ in $Y^{n-1}$ such that $y^n=f^nx^n+d_Y^{n-1}y^{n-1}$. We can replace $y^n$ with $y^n-d_Y^{n-1}y^{n-1}$ and take $x^{n-1}:=0$. 
 \end{s}
 
+%
+
+\begin{s}
+P. 328, Isomorphism $\Coker d_M^{i-2}\iso X^i\oplus_{X^{i-1}}\Coker d_Y^{i-2}$. Let 
+$$
+a:Y^{i-1}\to\Coker d_Y^{i-2},\quad b:X^i\oplus Y^{i-1}\to\Coker d_M^{i-2},
+$$
+$$
+c:X^i\oplus\Coker d_Y^{i-2}\to X^i\oplus_{X^{i-1}}\Coker d_Y^{i-2}
+$$
+be the canonical morphisms. One checks that there is a unique morphism 
+$$
+f:\Coker d_M^{i-2}\to X^i\oplus_{X^{i-1}}\Coker d_Y^{i-2}
+$$
+such that $f\ci b=c\ci(\id\oplus a)$, and a unique morphism 
+$$
+g:X^i\oplus_{X^{i-1}}\Coker d_Y^{i-2}\to\Coker d_M^{i-2}
+$$
+such that $g\ci c\ci(\id\oplus a)=b$, and that $f$ and $g$ are mutual inverses.
+\end{s}
+
+%
+
+\begin{s}
+P. 328, Isomorphism $\Ker d_M^i\iso\Ker d_X^{i+1}\tm_{Y^{i+1}}Y^i$. Let 
+$$
+a:\Ker d_X^{i+1}\to X^{i+1},\quad b:\Ker d_M^i\to X^{i+1}\tm Y^i,
+$$
+$$
+c:\Ker d_X^{i+1}\tm_{Y^{i+1}}Y^i\to\Ker d_X^{i+1}\tm Y^i
+$$
+be the canonical morphisms. One checks that there is a unique morphism 
+$$
+f:\Ker d_M^i\to\Ker d_X^{i+1}\tm_{Y^{i+1}}Y^i
+$$
+such that $(\id\tm a)\ci c\ci f=b$, and a unique morphism 
+$$
+g:\Ker d_X^{i+1}\tm_{Y^{i+1}}Y^i\to\Ker d_M^i
+$$
+such that $b\ci g=(\id\tm a)\ci c$, and that $f$ and $g$ are mutual inverses.
+\end{s}
+
 %\begin{s}\lb{1335i}P. 330, Proposition 13.3.5 (i). Note that the functor $R^+F$ is triangulated, and thus additive.\end{s}
 
 %
