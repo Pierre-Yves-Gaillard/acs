@@ -10467,7 +10467,7 @@ be a diagram, where $(g)'$ denotes the morphism induced by $g$. The bottom squar
 %
 
 \begin{s}
-P. 328, Isomorphism $\Coker d_M^{i-2}\iso X^i\oplus_{X^{i-1}}\Coker d_Y^{i-2}$. Let 
+P. 328, proof of Proposition 13.2.6, Step (b), Isomorphism $\Coker d_M^{i-2}\iso X^i\oplus_{X^{i-1}}\Coker d_Y^{i-2}$. Let 
 $$
 a:Y^{i-1}\to\Coker d_Y^{i-2},\quad b:X^i\oplus Y^{i-1}\to\Coker d_M^{i-2},
 $$
@@ -10488,7 +10488,7 @@ such that $g\ci c\ci(\id\oplus a)=b$, and that $f$ and $g$ are mutual inverses.
 %
 
 \begin{s}
-P. 328, Isomorphism $\Ker d_M^i\iso\Ker d_X^{i+1}\tm_{Y^{i+1}}Y^i$. Let 
+P. 328, proof of Proposition 13.2.6, Step (b), Isomorphism $$\Ker d_M^i\iso\Ker d_X^{i+1}\tm_{Y^{i+1}}Y^i.$$ Let 
 $$
 a:\Ker d_X^{i+1}\to X^{i+1},\quad b:\Ker d_M^i\to X^{i+1}\tm Y^i,
 $$
@@ -10506,6 +10506,18 @@ $$
 such that $b\ci g=(\id\tm a)\ci c$, and that $f$ and $g$ are mutual inverses.
 \end{s}
 
+%
+
+\begin{s}
+P. 328, proof of Proposition 13.2.6, Step (c), proof of $H^i(X)\xr\sim H^i(Z)$ for $i=a+1,a,a-1$. 
+
+\nn$\bu\ i=a+1$: the isomorphism $\Ima d_Z^a\iso\Ima d_X^a$ is induced by $X\to Z$,
+
+\nn$\bu\ i=a$: the isomorphism $\Ker d_Z^a\iso\Ker d_Y^a$ is induced by $Z\to Y$,
+
+\nn$\bu\ i=a-1$: the isomorphism $\Ker d_Z^{a-1}\iso\Ker d_Y^{a-1}$ is induced by $X\to Z$.
+\end{s}
+
 %\begin{s}\lb{1335i}P. 330, Proposition 13.3.5 (i). Note that the functor $R^+F$ is triangulated, and thus additive.\end{s}
 
 %
@@ -10521,6 +10533,12 @@ exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object 
 
 It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
 \end{s}
+
+%
+
+\begin{uspb}
+P.\index{unsolved problem} 330, phrase ``$R^*F$ is a triangulated functor from $\D^*(\C)$ to $\D^*(\C')$ if it exists'' just before Notation 13.3.2. I'm unable to prove this.
+\end{uspb}
 
 %
 
@@ -10567,7 +10585,7 @@ P.~332. One can derive Corollary 13.3.8 from Theorem 13.8.7 as follows. Let $\J$
 
 \nn(C) If $0\to X'\to X\to X''\to0$ is exact in $\C$, and if $X',X\in\J$, then $X''\in\J$ and $0\to F(X')\to F(X)\to F(X'')\to0$ is exact.
 
-We assume that (C) holds, and we must show that $\J$ is $F$-injective. Let $Y'\mono X$ be a monomorphism in $\C$ with $Y'$ in $\J$, let $X\mono Y$ be a monomorphism in $\C$ with $Y$ in $\J$, and let $0\to Y'\to Y\to Y''\to0$ be an exact sequence in $\C$. The (C) implies that $Y''$ is in $\J$ and that $0\to F(X')\to F(X)\to F(X'')\to0$ is exact. Now Theorem 13.8.7 entails that $\J$ is $F$-injective.
+We assume that (C) holds, and we must show that $\J$ is $F$-injective. Let $Y'\mono X$ be a monomorphism in $\C$ with $Y'$ in $\J$, let $X\mono Y$ be a monomorphism in $\C$ with $Y$ in $\J$, and let $0\to Y'\to Y\to Y''\to0$ be an exact sequence in $\C$. Then (C) implies that $Y''$ is in $\J$ and that $0\to F(X')\to F(X)\to F(X'')\to0$ is exact. Now Theorem 13.8.7 entails that $\J$ is $F$-injective.
 \end{s}
 
 %
@@ -10582,7 +10600,7 @@ $$
 0\ar[r]&Y'            \ar[r]&Y      \ar[r]&Y''            \ar[r]&0.
 \end{tikzcd} 
 $$ 
-The square $(Z,X'',Y,Y')$ is cartesian, and the top and bottom rows are exact. The middle row is exact by Lemma~\ref{cart1} p.~\pr{cart1}, and $X\to Z$ is an isomorphism by the Five Lemma.
+The square $(Z,X'',Y,Y'')$ is cartesian, and the top and bottom rows are exact. The middle row is exact by Lemma~\ref{cart1} p.~\pr{cart1}, and $X\to Z$ is an isomorphism by the Five Lemma.
 \end{s}
 
 %
