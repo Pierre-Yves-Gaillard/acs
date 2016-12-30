@@ -1710,7 +1710,7 @@ $$
 $$ 
 in $\C$ is \emph{not} cocartesian. %coproduct $$g\sqcup_fg,$$ taken with respect to (\ref{38}), exists and is isomorphic to $g$ (the coprojections being given by the identity of $g$). It is also easy to see that the coproduct $2\sqcup_12$ does not exist in $\C$.
 
-In Proposition~\ref{patho} p.~\ref{patho} we shall see a way to prevent the kind of pathology displayed by the above example.
+In Proposition~\ref{patho} p.~\pr{patho} we shall see a way to prevent the kind of pathology displayed by the above example.
 \end{s}
 
 %
@@ -9534,16 +9534,8 @@ $$
 $$ 
 is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
 
-It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). %Theorem~\ref{stupidkan} p.~\pr{stupidkan}. %\S\ref{744} p.~\ref{744}. %Proposition 7.4.4 p.~163 of the book.
-
-%In fact, the existence of the indicated limit is a sufficient condition for the existence of the corresponding localization, but it is not obvious \emph{a priori} (at least to me) that this condition is necessary. In Definition 7.3.1 p.~159 of the book, the right localization $RF$ of $F$ is said to exist universally if $Q^\dg(Q'\ci F)$ exists universally in the sense of Definition~\ref{232} p.~\ref{232}, in which case we set $RF:=Q^\dg(Q'\ci F)$.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). 
 \end{s}
-
-%
-
-%\begin{s} 
-%P.~253, Proposition 10.3.3. The fact that the localization of $F$ is triangulated follows from Exercise 8.4 p.~202 (see Section~\ref{84} p.~\pr{84}) and %%\S\ref{1026}, and 
-%the diagram on p.~254 of the book). %%(Recall that I have made the extra assumption that $\I$ is saturated.)\end{s}
 
 %
 
@@ -9577,7 +9569,7 @@ $$
 %
 
 \begin{s} 
-Proof of Theorem 10.4.1 p.~257. The fact that ``the canonical functor $\T_{X_1}\tm \T_{X_2}\to\T_{X_i}$ (i=1,2) is cofinal'' follows from Lemma~\ref{proj} p.~\ref{proj}.
+Proof of Theorem 10.4.1 p.~257. The fact that ``the canonical functor $\T_{X_1}\tm \T_{X_2}\to\T_{X_i}$ (i=1,2) is cofinal'' follows from Lemma~\ref{proj} p.~\pr{proj}.
 
 We rewrite the first display on page 257 of the book as 
 $$
@@ -9629,6 +9621,34 @@ $$
 commute. This verification is left to the reader.
 
 The fact that $\T_X$ is cofinally small follows from Proposition 3.4.5 (iii) p.~89 of the book.
+\end{s}
+
+%
+
+\begin{s}
+P. 260, Remark 10.5.4, phrase ``it is easy to see that (iii) implies (ii)''. For the reader's convenience we spell out the argument. 
+
+Let us define $\SSS$ as in Remark 10.5.4. We have a family $(X_i\to Y_i)$ of morphisms in $\DD$ and a morphism $C\to\oplus X_i$ in $\DD$ with $C$ in $\F$, we assume that the obvious maps $\Hom_\DD(C,X_i)\to\Hom_\DD(C,Y_i)$ vanish, and we must show that the composition $C\to\oplus X_i\to\oplus Y_i$ vanishes. By hypothesis there is a morphism $C\to\oplus C_i$ with $C_i$ in $\SSS$ such that the composition $C\to\oplus C_i\to\oplus X_i$ coincides with the above morphism $C\to\oplus X_i$, so that it suffices to prove that the composition $\oplus C_i\to\oplus X_i\to\oplus Y_i$ vanishes, or even to prove that the composition $C_{i_0}\to\oplus X_i\to\oplus Y_i$ vanishes for all $i_0$ in $I$. But this follows from (ii) and the definition of $\F$.
+\end{s}
+
+%
+
+\begin{s}
+P. 260, Remark 10.5.4. We also spell out the proof of the implication (ii)$'\then$(iii). 
+
+Let $f:C\to\oplus X_i$ be given. We must find a family of morphisms $(u_i:C_i\to X_i)$ in $\DD$ with $C_i$ in $\SSS$ and a morphism $g:C\to\oplus C_i$ such that 
+$$
+f=(C\xr g\oplus C_i\to\oplus X_i).
+$$ 
+Set 
+$$
+C_i:=\bigoplus_{C\in\F}\ \bigoplus_{C\to X_i}\ C,
+$$ 
+let $p_i[C,C\to X_i]:C\to C_i$ be the coprojections and let $u_i$ be the unique morphism $C_i\to X_i$ such that $u_i\ci p_i[C,C\to X_i]=(C\to X_i)$ for all $C$ and all $C\to X_i$. Then (ii)$'$ implies that the obvious map 
+$$
+\Hom_\DD(C,\oplus C_i)\to\Hom_\DD(C,\oplus X_i)
+$$ 
+is surjective, and it suffices to let $g$ be a pre-image of $f$.
 \end{s}
 
 %
