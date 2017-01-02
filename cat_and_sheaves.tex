@@ -9665,6 +9665,20 @@ $$
 and write $p_{Cf}:C\to X$ for the coprojections. In particular there is a unique morphism $g:X\to F$ in $\SSS^{\wg,prod}$ such that $g\ci p_{Cf}=f$ for all $C$ in $\SSS_0$ and all $f$ in $F(C)$. For $C$ in $\SSS_0$ the map $g_C:\Hom_\SSS(C,X)\to F(C)$ is surjective because it sends $p_{Cf}$ to $f$ for any $f$ in $F(C)$. This implies that $g$ is an epimorphism.
 \end{s}
 
+%
+
+\begin{s}
+P. 262, proof of Lemma 10.5.7 (i). Here is the implicit commutative diagram:
+$$
+\begin{tikzcd} 
+F(\oplus_iX_i)\ar[dd]\ar[dr,"\sim"']\ar[rrr,"\sim"]&&&\prod_iH(\pp X_i,F)\ar[dd]\\ 
+&H(\pp\oplus_iX_i,F)\ar[r]\ar[dl]&H(\oplus_i\,\pp X_i,F)\ar[ru,"\sim"']\ar[dr]\\ 
+F(X_i)\ar[rrr]&&&H(\pp X_i,F),
+\end{tikzcd}
+$$ 
+where we have written $H$ for $\Hom_{\SSS^{\wg,prod}}$ to save space.
+\end{s}
+
 %\begin{s}
 %Proof of Lemma 10.5.7 (ii) p. 262. We adhere to the notation of the lemma. We have a commutative diagram 
 %$$
