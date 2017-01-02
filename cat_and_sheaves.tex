@@ -4923,7 +4923,7 @@ Recall the statement:
 
 \begin{thm}[Theorem 6.1.8 p.~132]\lb{618}
 If $\C$ is a category, then the category $\Ind(\C)$ admits small filtrant inductive limits and the natural functor $\Ind(\C)\to\C^\wg$ commutes with such limits.
-\end{thm} 
+\end{thm}
 
 %The proposition below follows from Theorem~\ref{618} above and Proposition~\ref{333} p.~\pr{333}. 
 
@@ -9678,8 +9678,16 @@ and write $p_{Cf}:C\to X$ for the coprojections. In particular there is a unique
 
 \begin{s}\lb{1057ii} 
 P.~261, Lemma 10.5.7 (ii). The proof %(see above) 
-shows that the direct sum in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. In view of Lemma 10.5.5 p.~260 of the book, this implies that the limit of a small inductive system in $\SSS^{\wg,prod}$ exists in $\SSS^{\wg,add}$ and lies in $\SSS^{\wg,prod}$. Moreover, \S\ref{ccaf} p.~\pr{ccaf} entails that small filtrant inductive limits exist and are exact in $\SSS^{\wg,add}$ and $\SSS^{\wg,prod}$. The exactness of small filtrant inductive limits in $\SSS^{\wg,prod}$ will be used in \S\ref{brown} p.~\pr{brown}.
+shows that the direct sum in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. 
+
+More precisely, if $\iota:\SSS^{\wg,prod}\to\SSS^\wg$ is the natural functor, then the proof of Lemma 10.5.7 (ii) in the book shows, in the notation used there, that $\oplus_i\,\iota F_i$ is isomorphic to $\iota\Coker(\pp(\oplus_iX_i)\to\pp(\oplus_iY_i))$. 
+
+In view of Lemma 10.5.5 p.~260 of the book, this implies that the limit of a small inductive system in $\SSS^{\wg,prod}$ exists in $\SSS^{\wg,add}$ and lies in $\SSS^{\wg,prod}$. Moreover, \S\ref{ccaf} p.~\pr{ccaf} entails that small filtrant inductive limits exist and are exact in $\SSS^{\wg,add}$ and $\SSS^{\wg,prod}$. The exactness of small filtrant inductive limits in $\SSS^{\wg,prod}$ will be used in \S\ref{brown} p.~\pr{brown}.
+
+Right after the proof of Lemma 10.5.7 it is written: ``Note that, for a small family $(F_i)_i$ of objects in $\SSS^{\wg,prod}$ and $X\in\SSS$, the map $\oplus_i(F_i(X))\to(\oplus_iF_i )(X)$ may be not bijective''. I think this is not true, that is, I think that the map $\oplus_i(Fi (X))\to(\oplus_iF_i )(X)$ is \emph{always} bijective. (If I'm wrong on this, then the present part of this text is incorrect.)
 \end{s}
+
+%
 
 \begin{s} P.~263, last sentence of the proof of Lemma 10.5.8.
 
