@@ -5339,7 +5339,7 @@ $$
 $$ 
 is bijective. 
 
-\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is 
+\nn$\star\ \pp_X$ is injective. Let $u,v\in\Hom_\C(X,Z)$ satisfy $\pp\ci u=\pp\ci v$, that is,
 $$
 q_{i_0}\ci\tau\ci u=q_{i_0}\ci\tau\ci v.
 $$ 
@@ -9658,14 +9658,34 @@ is surjective, and it suffices to let $g$ be a pre-image of $f$.
 %
 
 \begin{s}\lb{1056}
-P. 261, proof of Lemma 10.5.6. In the notation of the proof of Lemma 10.5.6, set 
+P. 261, proof of Lemma 10.5.6. Let us adhere to the notation of Lemma 10.5.6 and its proof.
+
+\nn(a) Let $F$ be in $\SSS^{\wg,prod}$, set 
 $$
-X:=\bigoplus_{C\in\SSS_0}\ \bigoplus_{f\in F(C)}C,
+V_F:=\bigoplus_{C\in\SSS_0}\ \bigoplus_{C\to F}C,
 $$ 
-and write $p_{Cf}:C\to X$ for the coprojections. In particular there is a unique morphism $g:X\to F$ in $\SSS^{\wg,prod}$ such that $g\ci p_{Cf}=f$ for all $C$ in $\SSS_0$ and all $f$ in $F(C)$. For $C$ in $\SSS_0$ the map $g_C:\Hom_\SSS(C,X)\to F(C)$ is surjective because it sends $p_{Cf}$ to $f$ for any $f$ in $F(C)$. This implies that $g$ is an epimorphism.
+where $C\to F$ runs over $\Hom_{\SSS^{\wg,prod}}(C,F)$, write $p[C,C\to F]:C\to X$ for the coprojections and let $e_F:V_F\to F$ be the unique morphism from $V_F$ to $F$ in $\SSS^{\wg,prod}$ which satisfies $e_F\ci p[C,C\to F]=(C\to F)$ for all $C\to F$ in $\Hom_{\SSS^{\wg,prod}}(C,F)$. 
+
+We claim that $e_F:V_F\to F$ is an epimorphism. 
+
+To prove the claim it suffices to let $C$ be in $\SSS_0$ and to verify that $e_F(C):V_F(C)\to F(C)$ is surjective. But this is clear because we have $e_F(C)(p[C,C\to F])=(C\to F)$.
+
+\nn(b) Define $\widetilde\pp:\DD\to\SSS^{\wg,prod}$ by $\widetilde\pp(X)(C):=\Hom_\DD(C,X)$ and let $X$ be in $\DD$. Then we have a canonical bijection $\Hom_{\SSS^{\wg,prod}}(C,\widetilde\pp(X))\iso\Hom_\DD(C,X)$. Abusing the notation we identify these two sets. Let $e_X:V_{\widetilde\pp(X)}\to X$ be the unique morphism from $V_{\widetilde\pp(X)}$ to $X$ in $\DD$ which satisfies $e_X\ci p[C,C\to X]=(C\to X)$ for all $C\to X$ in $\Hom_\DD(C,X)$.  Then we have 
+\begin{equation}\lb{e1056}
+\widetilde\pp(e_X)=e_{\widetilde\pp(X)}.
+\end{equation}
+
+\nn(c) Let $H$ be in $\DD^{\wg,prod}$ and let $H_0\in\SSS^{\wg,prod}$ be the restriction of $H$ to $\SSS$. Then $e_{H_0}\in H_0(V_{H_0})=H(V_{H_0})\iso\Hom_{\DD^{\wg,prod}}(\widetilde\pp(V_{H_0}),H)$, that is, $e_{H_0}$ can be viewed as a morphism $e_H:V_{H_0}\to H$ in $\DD^{\wg,prod}$.
 \end{s}
 
-%
+% old
+%\begin{s}\lb{1056}
+%P. 261, proof of Lemma 10.5.6. In the notation of the proof of Lemma 10.5.6, set 
+%$$
+%X:=\bigoplus_{C\in\SSS_0}\ \bigoplus_{f\in F(C)}C
+%$$ 
+%and write $p_{Cf}:C\to X$ for the coprojections. In particular there is a unique morphism $g:X\to F$ in $\SSS^{\wg,prod}$ such that $g\ci p_{Cf}=f$ for all $C$ in $\SSS_0$ and all $f$ in $F(C)$. For $C$ in $\SSS_0$ the map $g_C:\Hom_\SSS(C,X)\to F(C)$ is surjective because it sends $p_{Cf}$ to $f$ for any $f$ in $F(C)$. This implies that $g$ is an epimorphism.
+%\end{s}
 
 \begin{s}
 P. 262, proof of Lemma 10.5.7 (i). Here is the implicit commutative diagram:
@@ -9707,7 +9727,24 @@ Let us insist on the main point:
 
 %
 
-\begin{s} P.~263, last sentence of the proof of Lemma 10.5.8.
+\begin{s}
+P. 263, proof of Lemma 10.5.8 (ii). 
+
+\nn$\bu$ In the notation of \S\ref{1056}(b) p.~\pr{1056} we set $Y_i:=V_{\widetilde\pp(X_i)}$ and $(Y_i\to X_i):=e_{X_i}$ and we get $\widetilde\pp(e_{X_i})=e_{\widetilde\pp({X_i})}$ by \qr{e1056} p.~\pr{e1056}.
+% old
+%The morphism $Y_i\to X_i$ can be defined as follows. As in \S\ref{1056} p.~\pr{1056}, set
+%$$
+%Y_i:=\bigoplus_{C\in\SSS_0}\ \bigoplus_{C\to X_i}C\iso\bigoplus_{C\in\SSS_0}\ \bigoplus_{C\to\widetilde\pp(X_i)}C,
+%$$ 
+%write $p[C,C\to X_i]:C\to Y_i$ for the coprojections and let $Y_i\to X_i$ be the unique morphism from $Y_i$ to $X_i$ in $\SSS^{\wg,prod}$ such that 
+%$$
+%(Y_i\to X_i)\ci p[C,C\to X_i]=(C\to X_i)
+%$$ 
+%for all $C$ in $\SSS_0$ and all $C\to X_i$ in $\Hom_\DD(C,X_i)$. 
+
+\nn$\bu$ The fact that $\oplus_iWi\to\oplus_iY_i\to\oplus_iX_i\to T(\oplus_iW_i)$ is a d.t. follows from Proposition 10.1.19 p.~247 of the book.
+
+\nn$\bu$ Last sentence.
 
 Variant 1: Consider the commutative diagram  
 $$
@@ -9724,17 +9761,19 @@ $$
 Variant 2: Apply the Five Lemma to the commutative diagram 
 $$
 \begin{tikzcd}
-\bigoplus\pp(Z_i)\ar[d,"\sim"]\ar[r]&\bigoplus\pp(Y_i)\ar[d,"\sim"]\ar[r]&\bigoplus \widetilde\pp(X_i)\ar[d]\ar[r]&0\\ 
-\pp(\bigoplus Z_i)\ar[r]&\pp(\bigoplus Y_i)\ar[r]&\widetilde\pp(\bigoplus X_i)\ar[r]&0.
+\oplus_i\pp(Z_i)\ar[d,"\sim"]\ar[r]&\oplus_i\pp(Y_i)\ar[d,"\sim"]\ar[r]&\oplus_i \widetilde\pp(X_i)\ar[d]\ar[r]&0\\ 
+\pp(\oplus_i Z_i)\ar[r]&\pp(\oplus_i Y_i)\ar[r]&\widetilde\pp(\oplus_i X_i)\ar[r]&0.
 \end{tikzcd}
 $$ 
 \end{s}
 
 %
 
-\begin{s} P.~263, proof of Lemma 10.5.9. 
+\begin{s} P.~263, proof of Lemma 10.5.9.
 
-The proof of Lemma 10.5.6 (see \S\ref{1056} p.~\pr{1056}) shows that the morphism $X_0\to H_0$ in $\SSS^{\wg,prod}$ can be assumed to extend to a morphism $X_0\to H$ in $\DD^\wg$.
+By \S\ref{1056}(c) p.~\pr{1056}) the morphism $X_0\to H_0$ in $\SSS^{\wg,prod}$ extends to a morphism $X_0\to H$ in $\DD^{\wg,prod}$.
+% old
+%The proof of Lemma 10.5.6 (see \S\ref{1056} p.~\pr{1056}) shows that the morphism $X_0\to H_0$ in $\SSS^{\wg,prod}$ can be assumed to extend to a morphism $X_0\to H$ in $\DD^\wg$.
 
 Vanishing of $Z_n\to X_n\to H$: Let $0\to F\to X_n\to H$ be exact in $\DD^{\wg,add}$, set 
 $$
