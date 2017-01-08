@@ -239,7 +239,8 @@ The category $\C$ is $\U$-{\em small}\index{$\U$-small category} if in addition 
 \end{df} 
 
 Note that a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{myucat} which is isomorphic to $\C$, and similarly for $\U$-small categories. 
-\begin{center}\fbox{In this text we shall always use Definitions \ref{myucat} and \ref{myuscat}.}
+\begin{center}
+\fbox{In this text we shall always use Definitions \ref{myucat} and \ref{myuscat}.}
 \end{center}
 
 We often assume implicitly that a universe $\U$ has been chosen, and we say ``category'' and ``small category'' instead of ``$\U$-category'' and ``$\U$-small category''.
@@ -6535,7 +6536,7 @@ Proposition 8.2.13 p.~173. Let $\C$ be an additive category, let $\C'$ be the ca
 In the above setting, the functors $V$ and $U\ci:\C'\to\C''$ are mutually inverse isomorphisms (not just mutually quasi-inverse equivalences).
 \end{prop}
 \begin{proof}
-Let $F$ be in $\C''$ and $G$ in $\C'$, and consider the equalities 
+For $F$ in $\C''$, for $G$ in $\C'$ and for $X$ in $\C$ we have %, and consider the equalities 
 $$
 \Big(\big((U\ci)\ci V\big)(F)\Big)(X)=U\Big(\big(V(F)\big)(X)\Big)=F(X)
 $$ 
@@ -6543,7 +6544,7 @@ and
 $$
 \Big(\big(V\ci(U\ci)\big)(G)\Big)(X)=\big(V(U\ci G)\big)(X)=G(X).
 $$
-The last equality follows from Lemma 8.2.11 p.~172 of the book, and the others are straightforward.
+Indeed, the last equality follows from Lemma 8.2.11 p.~172 of the book, and the others are straightforward.
 \end{proof} 
 \end{s}
 
@@ -6565,7 +6566,7 @@ $$
 \end{thm} 
 Let me also try to rewrite the beginning of the proof: 
 
-Let $X\in\C$. By applying Proposition 8.2.13 p.~173 of the book (see \S\ref{8213} p.~\pr{8213}) to the functor $F:=\Hom_\C(X,\ )$, we obtain that $\Hom_\C(X,Y)$ has a structure of an additive group for all $Y$ in $\C$. Then Lemma 8.2.11 p.~172 of the book implies that the addition on $\Hom_\C(X,Y)$ is given by the above commutative diagram. 
+Let $X\in\C$. By applying Proposition 8.2.13 p.~173 of the book (see \S\ref{main} p.~\pr{main}) to the functor $F:=\Hom_\C(X,\ )$, we obtain that $\Hom_\C(X,Y)$ has a structure of an additive group for all $Y$ in $\C$. Then Lemma 8.2.11 p.~172 of the book implies that the addition on $\Hom_\C(X,Y)$ is given by the above commutative diagram. 
 
 We complete the proof by showing as in the book that this addition does define a pre-additive structure on $\C$. 
 \end{s}
@@ -6584,7 +6585,7 @@ We leave it to the reader to prove (a) and to show that (a) implies (b).
 
 %
 
-\begin{s} 
+\begin{s}\lb{8215}
 P.~173, Proposition 8.2.15. Recall the setting: $F:\C\to\C'$ is a functor between additive categories, and the claim is: 
 $$
 F\text{ is additive }\ssi\ F\text{ commutes with finite products}.
@@ -6599,6 +6600,24 @@ $$
 F(X_1\oplus X_2)\rightleftarrows F(X_1)\oplus F(X_2)
 $$ 
 are mutually inverse isomorphisms by Corollary~\ref{823b} p.~\pr{823b} above. q.e.d.
+\end{s}
+
+%
+
+\begin{s}\lb{main}
+Let us insist on the main point. 
+
+\nn\emph{If $\C$ is an additive category, then the following categories are canonically isomorphic:}
+
+\emph{the category $\C'$ of finite product preserving functors from $\C$ to $\Mod(\bb Z)$,}
+
+\emph{the category $\C''$ of finite product preserving functors from $\C$ to $\Set$,}
+
+\emph{the category $\C'''$ of additive functors from $\C$ to $\Mod(\bb Z)$.}
+
+\nn\emph{Moreover $\C'$ and $\C'''$ are equal.}
+
+\nn This follows from \S\ref{8213} p.~\pr{8213} and \S\ref{8215} p.~\pr{8215}.
 \end{s}
 
 %%
@@ -7425,7 +7444,7 @@ P.~193. Just before the statement of Proposition 8.6.2 it is claimed that the in
 $$
 \Ind(\C)\subset\C^{\wg,add}
 $$ 
-holds. This inclusion follows from Propositions 3.3.3 p.~82 (see Proposition~\ref{333} p.~\pr{333}), 6.1.7 p.~132, 8.2.13 p.~173 (see \S\ref{8213} p.~\pr{8213}) 8.2.15 p.~173 in the book.
+holds. This inclusion follows from Propositions 3.3.3 p.~82 (see Proposition~\ref{333} p.~\pr{333}), 6.1.7 p.~132, 8.2.13 p.~173 (see \S\ref{main} p.~\pr{main}) 8.2.15 p.~173 in the book.
 \end{s}
 
 %
@@ -9730,7 +9749,8 @@ Right after the proof of Lemma 10.5.7 it is written: ``Note that, for a small fa
 
 Let us insist on the main point:
 
-\begin{center}\fbox{Small filtrant colimits exist and in $\SSS^{\wg,prod}$ and are exact.}\end{center}\bigskip
+\begin{center}
+\fbox{Small filtrant colimits exist and in $\SSS^{\wg,prod}$ and are exact.}\end{center}\bigskip
 \end{s}
 
 %
