@@ -7434,7 +7434,7 @@ by \qr{pi=0}. As $c$ is an epimorphism, this implies successively \qr{x=0}, \qr{
 \begin{s}\lb{ccaf} 
 P.~193, second sentence of Section~8.6. The proof of the following statement is straightforward. 
 
-\nn\emph{Let $\C$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) pre-additive category and $\C'$ an abelian category. Then the category $\A$ of additive functors from $\C$ to $\C'$ is a fully abelian subcategory of the category $\F$ of all functors from $\C$ to $\C'$. If $\C'$ admits inductive or projective limits indexed by a small category $I$, then so do $\A$ and $\F$, and the inclusion functor $\A\to\F$ commutes with such limits; if in addition these limits are exact in $\F$, they are exact in $\A$.}
+\nn\emph{Let $\C$ and $\C'$ be pre-additive categories, let $\C'^\C$ be the category of functors from $\C$ to $\C'$ and let $\al:I\to\C'^\C$ be a functor such that $\al(i)$ is additive for all $i$ in $I$, and the colimit $\col\al$ exists in $\C'^\C$. Then $\col\al$ is additive. There is a similar statement for limits.}
 \end{s}
 
 %
@@ -9652,7 +9652,9 @@ commute. This verification is left to the reader.
 The fact that $\T_X$ is cofinally small follows from Proposition 3.4.5 (iii) p.~89 of the book.
 \end{s}
 
-%
+%%
+
+\sbs{Brown's Representability Theorem}
 
 \begin{s}
 P. 260, Remark 10.5.4, phrase ``it is easy to see that (iii) implies (ii)''. For the reader's convenience we spell out the argument. 
@@ -9738,25 +9740,25 @@ where we have written $H$ for $\Hom_{\SSS^{\wg,prod}}$ to save space.
 %\end{s}
 
 \begin{s}\lb{1057ii} 
-P.~261, Lemma 10.5.7 (ii). The proof %(see above) 
+[Tag 1]\index{Tag 1}\footnote{I use tags to refer to a part of this text in an other text (private or public). Tags will never be renumbered.}. P.~261, Lemma 10.5.7 (ii). The proof %(see above) 
 shows that the direct sum in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. 
 
 More precisely, if $\iota:\SSS^{\wg,prod}\to\SSS^{\wg,add}$ is the natural functor, then the proof of Lemma 10.5.7 (ii) in the book shows, in the notation used there, that $\oplus_i\,\iota F_i$ is isomorphic to $\iota\Coker(\pp(\oplus_iX_i)\to\pp(\oplus_iY_i))$. 
 
 In view of Lemma 10.5.5 p.~260 of the book, this implies that the limit of a small inductive system in $\SSS^{\wg,prod}$ exists in $\SSS^{\wg,add}$ and lies in $\SSS^{\wg,prod}$. Moreover, \S\ref{ccaf} p.~\pr{ccaf} entails that small filtrant inductive limits exist and are exact in $\SSS^{\wg,add}$ and $\SSS^{\wg,prod}$. The exactness of small filtrant inductive limits in $\SSS^{\wg,prod}$ will be used in \S\ref{brown} p.~\pr{brown}.
 
-Right after the proof of Lemma 10.5.7 it is written: ``Note that, for a small family $(F_i)_i$ of objects in $\SSS^{\wg,prod}$ and $X\in\SSS$, the map $\oplus_i(F_i(X))\to(\oplus_iF_i )(X)$ may be not bijective''. I think this is not true, that is, I think that the map $\oplus_i(Fi (X))\to(\oplus_iF_i )(X)$ is \emph{always} bijective. (If I'm wrong on this, then the present part of this text is incorrect.)
+Right after the proof of Lemma 10.5.7 it is written: ``Note that, for a small family $(F_i)_i$ of objects in $\SSS^{\wg,prod}$ and $X\in\SSS$, the map $\oplus_i(F_i(X))\to(\oplus_iF_i )(X)$ may be not bijective''. I think this is not true, that is, I think that the map $\oplus_i(F_i (X))\to(\oplus_iF_i )(X)$ is \emph{always} bijective. (If I'm wrong on this, then the present part of this text is incorrect.)
 
 Let us insist on the main point:
 
 \begin{center}
-\fbox{Small filtrant colimits exist and in $\SSS^{\wg,prod}$ and are exact.}\end{center}\bigskip
+\fbox{Small filtrant colimits exist in $\SSS^{\wg,prod}$ and are exact.}\end{center}\bigskip
 \end{s}
 
 %
 
 \begin{s}
-P. 263, proof of Lemma 10.5.8 (ii). 
+P. 263, proof of Lemma 10.5.8 (ii).
 
 \nn$\bu$ In the notation of \S\ref{1056}(b) p.~\pr{1056} we set $Y_i:=V_{\widetilde\pp(X_i)}$ and $(Y_i\to X_i):=e_{X_i}$ and we get $\widetilde\pp(e_{X_i})=e_{\widetilde\pp({X_i})}$ by \qr{e1056} p.~\pr{e1056}.
 % old
@@ -9770,7 +9772,7 @@ P. 263, proof of Lemma 10.5.8 (ii).
 %$$ 
 %for all $C$ in $\SSS_0$ and all $C\to X_i$ in $\Hom_\DD(C,X_i)$. 
 
-\nn$\bu$ The fact that $\oplus_iWi\to\oplus_iY_i\to\oplus_iX_i\to T(\oplus_iW_i)$ is a d.t. follows from Proposition 10.1.19 p.~247 of the book.
+\nn$\bu$ The fact that $\oplus_iW_i\to\oplus_iY_i\to\oplus_iX_i\to T(\oplus_iW_i)$ is a d.t. follows from Proposition 10.1.19 p.~247 of the book.
 
 \nn$\bu$ Last sentence.
 
