@@ -6265,7 +6265,8 @@ with $u,v,w\in\SSS$ by forming firstly $g$ and $v$, secondly $h$ and $w$, and th
 
 \sbs{About Section 8.1}
 
-The following definition of a commutative group object is much less general and much less elegant than the one in the book (p.~169), but it is slightly simpler and seems sufficient in this context. 
+%It seems to me that the definition of a group object given in the book (Definition 8.1.1 p.~168) has the consequence that a generic group does \emph{not} have a natural structure of a group object in the category of groups. I prefer to stick in this text to \emph{commutative} groups and \emph{commutative} group objects. For the reader's convenience, we paste here one of the equivalent definitions of a commutative group object given in the book.%It seems to me that the definition of a group object given in the book (Definition 8.1.1 p.~168) has the consequence that a generic group does \emph{not} have a natural structure of a group object in the category of groups. I prefer to abstain from defining a group object in general, and to define a \emph{commutative} group object as follows.%
+The following definition of a commutative group object is much less general and much less elegant than the one in the book (p.~168), but it is slightly simpler and seems sufficient in this context. 
 
 Let $\C$ be a category with finite products; let $0$ be the terminal object of $\C$; let $X$ be in $\C$; let $p_1,p_2:X\tm X\to X$ be the projections; and let $v:X\tm X\to X\tm X$ be defined by the equalities 
 $$
@@ -9740,7 +9741,8 @@ where we have written $H$ for $\Hom_{\SSS^{\wg,prod}}$ to save space.
 %\end{s}
 
 \begin{s}\lb{1057ii} 
-[Tag 1]\index{Tag 1}\footnote{I use tags to refer to a part of this text in an other text (private or public). Tags are not renumbered, and appear in the index.}. P.~261, Lemma 10.5.7 (ii). The proof shows that the direct sum in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. 
+%[Tag 1]\index{Tag 1}\footnote{I use tags to refer to a part of this text in an other text (private or public). Tags are not renumbered, and appear in the index.}. 
+P.~261, Lemma 10.5.7 (ii). The proof shows that the direct sum in $\SSS^{\wg,add}$ of a small family of objects of $\SSS^{\wg,prod}$ belongs to $\SSS^{\wg,prod}$. 
 
 More precisely, if $\iota:\SSS^{\wg,prod}\to\SSS^{\wg,add}$ is the natural functor, then the proof of Lemma 10.5.7 (ii) in the book shows, in the notation used there, that $\oplus_i\,\iota F_i$ is isomorphic to $\iota\Coker(\pp(\oplus_iX_i)\to\pp(\oplus_iY_i))$. 
 
@@ -10929,17 +10931,14 @@ P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p
 %
 
 \begin{s}\lb{14112}
-P.~352, Corollary 14.1.12. We also have the following corollary: 
+P.~352, Corollary 14.1.12. Part (i) implies:%. We also have the following corollary: 
 
-Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.
+Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.%This follows immediately from Corollary 14.1.12 (i). 
+%\end{s}
 
-This follows immediately from Corollary 14.1.12 (i). 
-\end{s}
-
-%
-
-\begin{s} 
-P.~352, Corollary 14.1.12 (iv). Here are slightly more precise statements:
+%\begin{s} 
+%P.~352, Corollary 14.1.12 (iv). 
+Here are a slightly more precise version of Parts (iii) and (iv):
 
 \nn(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\ci R_q\iso\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\ci\iota$,
 
