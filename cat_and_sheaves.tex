@@ -446,7 +446,9 @@ P. 184, Definitions 8.3.21 (v) and (vi). Definition 8.3.21 (vi) says that a full
 
 \nn$*$ P.~201, proof of Lemma 8.7.7, first line: ``we can construct a commutative diagram''. I think the authors meant ``we can construct an exact commutative diagram''.
 
-\nn$*$ P.~218, middle of the page: ``$b:=\inf(J\setminus A)$'' should be ``$b:=\inf(J\setminus A')$'' (the prime is missing). 
+\begin{s}\lb{218}
+P.~218, middle of the page: ``$b:=\inf(J\setminus A)$'' should be ``$b:=\inf(J\setminus A')$'' (the prime is missing).
+\end{s}
 
 \nn$*$ P.~218, proof of Lemma 9.2.5, first sentence: ``Proposition 3.2.4'' should be ``Proposition 3.2.2''. 
 
@@ -8210,7 +8212,7 @@ is surjective.
 
 \nn{\em(c)} The following conditions hold:
 
-{\em(c1)} for any $A\subset\Ob(I)$ such that $\card(A)<\pi$ there is a $j$ in $J$ such that for any $a$ in $A$ there is a morphism $a\to j$ in $I$,
+{\em(c1)} for any $A\subset\Ob(I)$ such that $\card(A)<\pi$ there is a $j$ in $I$ such that for any $a$ in $A$ there is a morphism $a\to j$ in $I$,
 
 {\em(c2)} for any $i$ and $j$ in $I$ and for any $B\subset\Hom_I(i,j)$ such that $\card(B)<\pi$ there is a morphism $j\to k$ in $I$ such that the composition $i\xr sj\to k$ does not depend on $s\in B$.
 
@@ -8244,7 +8246,7 @@ $$
 %
 
 \begin{s}
-P. 218, Example 9.2.3. In fact $b$ is the least element of $J\setminus A'$, which exists because $J$ is well-ordered and $J\setminus A'$ is nonempty. We get $A\subset J_b\cup\{b\}$; in particular $b$ is an upper bound for $A$. (The inclusion $A'\subset J_b$, and thus the equality $A'=J_b$, are true, but not needed.)
+P. 218, Example 9.2.3. See \S\ref{218} p.~\pr{218}.%In fact $b$ is the least element of $J\setminus A'$, which exists because $J$ is well-ordered and $J\setminus A'$ is nonempty. We get $A\subset J_b\cup\{b\}$; in particular $b$ is an upper bound for $A$. (The inclusion $A'\subset J_b$, and thus the equality $A'=J_b$, are true, but not needed.)
 \end{s}
 
 %
@@ -8295,7 +8297,9 @@ $$
 Since $\card(\Mor(J))<\pi$, there are morphisms $i(j\to j')\to i'$ in $I$ such that the composition $i\to i(j\to j')\to i'$ does not depend on $j\to j'$. For each $j$ set $x_j:=\al_{i\to i',j}\,z_j\in\al_{i'j}$. 
 
 We claim $x\in\lim_j\al_{ij}$. Indeed, for any morphism $j\to j'$ in $J^{\op}$ we have 
-$$\al_{i,j\to j'}\,x_j=\al_{i,j\to j'}\,\al_{i\to i',j}\,z_j=\al_{i(j\to j')\to i',j'}\,\al_{i\to i(j\to j')\to i',j'}\,\al_{i,j\to j'}\,z_j
+$$
+%\al_{i,j\to j'}\,x_j=\al_{i,j\to j'}\,\al_{i\to i',j}\,z_j=\al_{i(j\to j')\to i',j'}\,\al_{i\to i(j\to j')\to i',j'}\,\al_{i,j\to j'}\,z_j
+\al_{i,j\to j'}\,x_j=\al_{i,j\to j'}\,\al_{i\to i',j}\,z_j=\al_{i(j\to j')\to i',j'}\,\al_{i\to i(j\to j'),j'}\,\al_{i,j\to j'}\,z_j
 $$ 
 $$
 =\al_{i(j\to j')\to i',j'}\,\al_{i\to i(j\to j'),j'}\,z_{j'}=\al_{i\to i',j'}\,z_{j'}=\,x_{j'}.
@@ -8311,7 +8315,7 @@ We claim $\ld\,p_i\,x=y$. Let $j$ be in $J$. It suffices to show $q_{i'j}\,x_j=q
 For the reader's convenience we state and prove Proposition 9.2.10 p. 220. 
 
 \begin{prop}[Proposition 9.2.10 p. 220] 
-If $\C$ admits small $\pi$-filtrant inductive limits, if $J$ is a category satisfying $\card(\Mor(J))<\pi$, if $\bt:J\to\C_\pi$ is a functor, and if $\col\bt$ exists in $\C$, then it belongs to $\C_\pi$. 
+If $\C$ and $J$ are categories, if $\C$ admits small $\pi$-filtrant inductive limits, if $J$ satisfies $\card(\Mor(J))<\pi$, if $\bt:J\to\C_\pi$ is a functor and if $\col\bt$ exists in $\C$, then it belongs to $\C_\pi$. 
 \end{prop}
 
 \begin{proof}
@@ -8336,7 +8340,7 @@ P.~220, proof of Corollary 9.2.11.
 If $\C$ admits small inductive limits and if $X$ is an object of $\C$, then $\C_\pi$ and $(\C_\pi)_X$ are $\pi$-filtrant. 
 \end{cor}
 
-This follows from \S\ref{922}. Note that it suffices to assume that $\C$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$. (For the case of $(\C_\pi)_X$, see Lemma~\ref{bcl} p.~\pr{bcl} above.) %2.1.12 p.~41 in the book.)
+This follows from \S\ref{922} p.~\pr{922}. Note that it suffices to assume that $\C$ admits inductive limits indexed by categories $J$ such that $\card(\Mor(J))<\pi$. (For the case of $(\C_\pi)_X$, see Lemma~\ref{bcl} p.~\pr{bcl}.) %2.1.12 p.~41 in the book.)
 \end{s}
 
 %
@@ -10256,7 +10260,7 @@ H(V)\to H(\Mc(u))\to H(TU)
 $$ 
 is exact.
 \end{proof}
-%
+
 \begin{prop}[Corollary 12.2.6 p.~302]\lb{sl4}
 To each short an exact sequence $0\to X\xr f Y\xr g Z\to0$ in $\A_c$ is attached in a natural way a d.t. $X\xr fY\xr gZ\to TX$ in $\oo K_c(\A)$. More precisely, let $0\to X\xr fY\xr gZ\to0$ be an exact sequence in $\A_c$ and define $\pp:\Mc(f)\to Z$ by $\pp:=(0,g)$. Then $\pp$ is a morphism in $\A_c$, this morphism is a qis, and it satisfies $\pp\ci\al(f)=g$. In particular, there are natural morphisms $H(T^nZ)\to H(T^{n+1}X)$ such that the sequence 
 $$
@@ -10878,6 +10882,8 @@ by inverting the bijection $\Hom_{\oo K_c(\A)}(X,I)\to\Hom_{\oo K_c(\A)}(X',I)$ 
 \sbs{Proposition 14.1.6 p.~349}
 
 Here are some additional details about Step~(ii) of the proof of Proposition 14.1.6. 
+
+The fact that $Z$ is qis to 0 follows from Proposition~\ref{sl4} p.~\pr{sl4}.
 
 We refer the reader to the book for a precise description of the setting. The following facts can be easily verified: 
 
