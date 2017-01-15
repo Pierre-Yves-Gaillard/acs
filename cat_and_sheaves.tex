@@ -8265,7 +8265,24 @@ Clearly, $I$ satisfies conditions (a) and (b) in Proposition~\ref{ppifil} p.~\pr
 
 \begin{s}
 P.~219, proof of Remark 9.2.6. To prove that $I'$ is $\pi$-filtrant it is straightforward to check that $I'$ satisfies Conditions (c1) and (c2) in Proposition~\ref{ppifil} p.~\pr{ppifil}.
-\end{s} 
+\end{s}
+
+%
+
+\begin{s}
+Definition 9.2.7 p.~219. For the reader's convenience we paste the definition in question:
+\begin{df}
+Let $\pi$ be an infinite cardinal and let $\C$ be a category which admits $\pi$-filtrant small inductive limits.
+
+An object $X\in\C$ is $\pi$-accessible if for any $\pi$-filtrant small category $I$ and any functor $\al:I\to\C$ the natural map
+$$
+\col_{i\in I}\Hom_\C(X,\al(i))\to \Hom_\C\left(X\ ,\ \col_{i\in I}\al(i)\right)
+$$
+is bijective.
+
+We denote by $\C_\pi$ the full subcategory of $\C$ consisting of $\pi$-accessible objects.
+\end{df}
+\end{s}
 
 %
 
@@ -8350,7 +8367,9 @@ This follows from \S\ref{922} p.~\pr{922}. Note that it suffices to assume that 
 %
 
 \begin{s} 
-P.~222, Proposition 9.2.17, proof of implication (ii)$\then$(i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
+P.~222, Proposition 9.2.17.
+
+\nn$\bu$ Proof of implication (ii)$\then$(i). I suspect that the argument of the book is better than the one given here, but, unfortunately, I don't understand it. Here is a less concise wording:
 
 Recall the setting: $\C$ is a category admitting inductive limits indexed by any category $J$ such that $\card(\Mor(J))<\pi$, and $A$ is in $\Ind(\C)$. Conditions (i) and (ii) are as follows: 
 
@@ -8368,13 +8387,26 @@ $$
 $$ 
 (see Condition~(d) in Proposition~\ref{ppifil} p.~\pr{ppifil}). Let $\pp:J\to\C$ be the composition of $\psi$ with the forgetful functor $\C_A\to\C$, and write 
 $$
-\psi(j)=\left(\pp(j),\pp(j)\xr{y_j}A\right)\in\C_A.
+\psi(j)=\left(\pp(j)\ ,\ \pp(j)\xr{y_j}A\right)\in\C_A.
 $$ 
 In particular the family $(y_j)$ belongs to $\lim A(\pp)$. Our assumption about $\C$ implies that $\col\pp$ exists in $\C$. Let $p_j:\pp(j)\to\col\pp$ be the coprojection. By surjectivity of the map $A(\col\pp)\to\lim A(\pp)$ in (ii), there is an $x:\col\pp\to A$ such that $x\ci p_j=y_j$ for all $j$. Setting 
 $$
 \xi:=\left(\col\pp,\col\pp\xr x A\right)\in\C_A,
 $$ 
 and letting $f_j:\psi(j)\to\xi$ be the obvious morphism, we get $(f_j)\in\lim\Hom_{\C_A}(\psi,\xi)$. q.e.d. 
+
+\nn$\bu$ Proof of implication (i)$\then$(iii). The proof of the book exhibits a bijection 
+$$
+A\left(\col_{j\in J}\pp(j)\right)\to\lim_{j\in J}A(\pp(j)).
+$$ 
+To prove that it coincides with the natural morphism, it suffices to check that the obvious diagram
+$$
+\begin{tikzcd}
+A(\col_{j\in J}\pp(j))\ar[rd]\ar[rr]&&\lim_{j\in J}A(\pp(j))\ar[ld]\\ 
+&A(\pp(j))
+\end{tikzcd}
+$$ 
+commutes for all $j$ in $J$. The details are left to the reader.
 \end{s}
 
 %%
@@ -8474,17 +8506,18 @@ This follows immediately from Exercise 1.7 p. 31 of the book.
 
 We add a few details to the beginning of the proof of Lemma 9.3.1. 
 
-Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In particular the natural morphism $Y_i\to Y$ is a monomorphism. Since small filtrant inductive limits are exact, 
+Set $X_i=\al(i)$ and $Y_i=\Ima(X_i\to Y)=\Ker(Y\parar Y\sqcup_{X_i}Y)$. In particular the natural morphism $Y_i\to Y$ is a monomorphism. Since small $\pi$-filtrant inductive limits are exact, we have
 \begin{equation}\lb{col_iY_i}
 \col_iY_i\xr\sim\Ker(Y\parar Y\sqcup_{\col_iX_i}Y)\xr\sim\Ima(\col_iX_i\to Y)\xr\sim Y,
 \end{equation} 
-where the last isomorphism follows from the hypothesis that $\col_iX_i\to Y$ is an epimorphism together with Proposition 5.1.2 (iv). It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the maps $Y_i(G)\to Y(G)$ are injective by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. This is easily seen to imply that $\col_iY_i(G)\to Y(G)$ is also injective. 
+where, in view of the hypothesis that $\col_iX_i\to Y$ is an epimorphism, the last isomorphism %in \qr{col_iY_i} 
+follows from Proposition 5.1.2 (iv) p.~114 of the book. It is easy to see that the chain of isomorphisms \qr{col_iY_i} coincides with the natural morphism $\col_iY_i\to Y$, and that the coprojections $Y_i\to Y$ are monomorphisms. In particular the maps $Y_i(G)\to Y(G)$ are injective by Proposition~\ref{333} p.~\pr{333} and Proposition~\ref{34i} p.~\pr{34i}. This is easily seen to imply that $\col_iY_i(G)\to Y(G)$ is also injective. 
 
-\nn(a) Assume that $\card(Y(G))<\pi$. Then $\card(Y(G))<\pi$. By Corollary 9.2.12, $Y(G)\in\Set_\pi$ and this implies 
+\nn(a) Assume that $\card(Y(G))<\pi$. Then $\card(S)<\pi$, where $S:=\col_iY_i(G)$. By Corollary 9.2.12 p.~221, $S\in\Set_\pi$ and this implies 
 $$
-\col_{i\in I}\Hom_\Set(Y(G),Y_i(G))\xr\sim\Hom_\Set(Y(G),Y(G)).
+\col_{i\in I}\Hom_\Set(S,Y_i(G))\xr\sim\Hom_\Set(S,S).
 $$ 
-Hence, there exist $i_0$ and a map $Y(G)\to Y_{i_0}(G)$ such that the composition $Y(G)\to Y_{i_0}(G)\mono Y(G)$ is the identity. Therefore $Y_{i_0}(G)=Y(G)$ and hence, $Y_{i_0}(G)\to Y_i (G)$ is bijective for any $i_0\to i$ by Lemma~\ref{ppi}. Hence $Y_{i_0}\to Y_i$ is an isomorphism, which implies, again by Lemma~\ref{ppi}, that $Y_{i_0}\to Y$ is an isomorphism. Applying Proposition 5.1.2 (iv), we find that $X_{i_0}\to Y$ is an epimorphism. 
+Hence, there exist $i_0$ and a map $S\to Y_{i_0}(G)$ such that the composition $S\to Y_{i_0}(G)\mono S$ is the identity. Therefore $Y_{i_0}(G)\xr\sim S$ and hence, $Y_{i_0}(G)\to Y_i (G)$ is bijective for any $i_0\to i$ by Lemma~\ref{ppi}. Hence $Y_{i_0}\to Y_i$ is an isomorphism, which implies, again by Lemma~\ref{ppi}, that $Y_{i_0}\to Y$ is an isomorphism. Applying Proposition 5.1.2 (iv), we find that $X_{i_0}\to Y$ is an epimorphism.%Hence, there exist $i_0$ and a map $Y(G)\to Y_{i_0}(G)$ such that the composition $Y(G)\to Y_{i_0}(G)\mono Y(G)$ is the identity. Therefore $Y_{i_0}(G)=Y(G)$ and hence, $Y_{i_0}(G)\to Y_i (G)$ is bijective for any $i_0\to i$ by Lemma~\ref{ppi}. Hence $Y_{i_0}\to Y_i$ is an isomorphism, which implies, again by Lemma~\ref{ppi}, that $Y_{i_0}\to Y$ is an isomorphism. Applying Proposition 5.1.2 (iv), we find that $X_{i_0}\to Y$ is an epimorphism. 
 
 %
 
@@ -8543,18 +8576,18 @@ By Corollary 3.2.3 (i) p.~79 of the book, $I^{i_0}$ is filtrant and the forgetfu
 $$
 \col_{s\in I^{i_0}}N_s\iso\Ker\left(A\parar\col_{s\in I^{i_0}}X_i\right)\iso\Ker(A\parar X)\iso A. 
 $$ 
-As $\card(A(G))<\pi$ by assumption, Lemma~\ref{l331} p.~\pr{l331} implies that there is a morphism $s_1:i_0\to i_1$ in $I$ such that $N_s\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide, as was to be shown. This proves Claim~\ref{linj}. 
+As $\card(A(G))<\pi$ by assumption, Lemma~\ref{l331} p.~\pr{l331} implies that there is a morphism $s_1:i_0\to i_1$ in $I$ such that $N_{s_1}\to A$ is an epimorphism. Hence, the two compositions $A\parar X_{i_0}\to X_{i_1}$ coincide, as was to be shown. This proves Claim~\ref{linj}. 
 \end{proof} 
 
 It only remains, in order to prove Proposition~\ref{932}, to check that $\ld_A$ is surjective. Let $f:A\to X$ be a morphism. Claim~\ref{pig=f} below will imply the surjectivity of $\ld_A$, and thus the truth of Proposition~\ref{932}. 
 
 \begin{claim}\lb{pig=f} 
-There is a morphism $g:A\to X_i$ such that $p_i\ci g=f$, where $p_i:X_i\to X$ is the coprojection.
+There is an $i$ in $I$ and a morphism $g:A\to X_i$ such that $p_i\ci g=f$, where $p_i:X_i\to X$ is the coprojection.
 \end{claim} 
 
 \nn$\bu$ Step 3. Consider the following conditions: 
 
-\nn(a) the diagram of solid arrows 
+\nn(a) there is an $i_0$ in $I$ such that the diagram of solid arrows 
 $$
 \begin{tikzcd}
 B\ar[dashed,two heads]{r}\ar[dashed]{d}&A\ar{d}{f}\\ 
@@ -8563,7 +8596,7 @@ X_{i_0}\ar{r}[swap]{p_{i_0}}&X
 $$
 can be completed to a commutative diagram as indicated (the morphism $B\to A$ being an epimorphism),
 
-\nn(b) the diagram of solid arrows 
+\nn(b) there is an $i_0$ in $I$ such that the diagram of solid arrows 
 \begin{equation}\lb{fa}
 \begin{tikzcd}
 C\ar[dashed,two heads]{r}{a}\ar[dashed]{d}[swap]{x}&A\ar{d}{f}\\ 
@@ -8576,14 +8609,15 @@ We shall show that (a) holds, that (a) implies (b), and that (b) implies Claim \
 
 \nn$\bu$ Step 4: (a) holds. For each $i$ in $I$ define $Y_i:=A\tm_XX_i$. As $\col_i$ is exact in $\C$, we have $\col_iY_i\iso A$. As $\card(A(G))<\pi$, Lemma 9.3.1 p.~224 of the book (stated above as Lemma~\ref{l331} p.~\pr{l331}) implies that there is an $i_0$ in $I$ such that $B:=Y_{i_0}\to A$ is an epimorphism.
 
-\nn$\bu$ Step 5: (a) implies (b). Assuming (a), we build the commutative square 
+\nn$\bu$ Step 5: (a) implies (b). Assuming (a), we consider the commutative square 
 \begin{equation}\lb{s5a}
 \begin{tikzcd}
 B\ar[two heads]{r}\ar{d}&A\ar{d}{f}\\ 
 X_{i_0}\ar{r}[swap]{p_{i_0}}&X,
 \end{tikzcd}
 \end{equation} 
-and we put $S:=\Ima(B(G)\to A(G))\subset A(G)$ and $C:=G^{\sqcup S}$, so that we have maps $B(G)\to S\to A(G)$. By Step~1 this implies $\card(C(G))<\pi$. The vertical arrows of the commutative diagram 
+and we put $S:=\Ima(B(G)\to A(G))\subset A(G)$, so that $B(G)\epi S\mono A(G)$ is the ``epi-mono'' factorization of $B(G)\to A(G)$. Let $S\mono B(G)$ be a section of $B(G)\epi S$. By Step~1 we have $\card(C(G))<\pi$. We set $C:=G^{\sqcup S}$. %, so that $B(G)\to A(G)$ factors through the inclusion $S\to A(G)$. %we have maps $B(G)\to S\to A(G)$. 
+The vertical arrows of the commutative diagram 
 \begin{equation}\lb{s5b}
 \begin{tikzcd}
 G^{\sqcup B(G)}\ar{r}\ar{d}&C\ar{r}&G^{\sqcup A(G)}\ar{d}\\ 
@@ -8622,7 +8656,7 @@ P\ar{r}\ar{d}&C\ar[two heads]{d}{a}\\
 C\ar[two heads]{r}[swap]{a}&A.
 \end{tikzcd}
 $$
-Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact. As 
+Epimorphisms in $\C$ being strict, the sequence $P\parar C\xr aA$ is exact (see Proposition 5.1.5, (i), (a)$\then$(c), p.~115 of the book). As 
 $$
 P(G)\le\card(C(G))^2<\pi,
 $$ 
@@ -8720,7 +8754,11 @@ If $\pi_0,\pi$ and $A$ are as above, and if $I:=\{B\subset A\,|\,\card(B)<\pi_0\
 \end{lem} 
 
 \begin{proof}[Proof of Lemma~\ref{ord}]
-Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if $x<s\in S$ with $x\in X$ implies $x\in S$. In particular $X_{<x}$ (obvious notation) is a segment of $X$ for any $x$ in $X$. We take for granted the following well-known facts:
+Recall that a subset $S$ of an ordered set $X$ is a {\em segment} if 
+$$
+X\ni x<s\in S\quad\implies\quad x\in S.
+$$ 
+In particular $X_{<x}$ (obvious notation) is a segment of $X$ for any $x$ in $X$. We take for granted the following well-known facts:
 
 \nn$\bu$ every set can be well-ordered,
 
