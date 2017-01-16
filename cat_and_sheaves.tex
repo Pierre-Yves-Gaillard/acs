@@ -10992,15 +10992,24 @@ P.~352, Corollary 14.1.12. Part (i) implies:%. We also have the following coroll
 Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.%This follows immediately from Corollary 14.1.12 (i). 
 %\end{s}
 
+\nn Part (iii). I would change 
+
+\nn``the functor $Q:\oo K_c(A)\to\oo D_c(A)$ admits a right adjoint $R_q:\oo D_c(A)\to\oo K_c(A), Q\ci R_q\iso\id_{\oo D_c(A)}$, and $R_q$ is the composition of $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ and a quasi-inverse of $Q\ci\iota$''
+
+\nn to
+
+\nn``the functor $R_q:\oo D_c(A)\to\oo K_c(A)$ defined by $R_q:=\iota\ci(Q\ci\iota)^{-1}$, where $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ is the natural functor and $(Q\ci\iota)^{-1}$ is a quasi-inverse of $Q\ci\iota$, is a right localization of the identity functor $\oo K_c(A)\to\oo K_c(A)$ and satisfies $Q\ci R_q\iso\id_{\oo D_c(A)}$''.
+\end{s}
+
 %\begin{s} 
 %P.~352, Corollary 14.1.12 (iv). 
-Here are a slightly more precise version of Parts (iii) and (iv):
+%Here are a slightly more precise version of Parts (iii) and (iv):
 
-\nn(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\ci R_q\iso\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\ci\iota$,
+%\nn(iii) the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A)$, this right adjoint is triangulated, satisfies $Q\ci R_q\iso\id_{\oo D_c(\A)}$, and is isomorphic to the composition of $\iota:\oo K_{c,\oo{hi}}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\ci\iota$,
 
-\nn(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ exists. %is universal in the sense of Definition~\ref{url2} p.~\pr{url2}. 
-(See \S\ref{732} p.~\pr{732}.)
-\end{s}
+%\nn(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ exists. %is universal in the sense of Definition~\ref{url2} p.~\pr{url2}. 
+%(See \S\ref{732} p.~\pr{732}.)
+%\end{s}
 
 %
 
@@ -11015,7 +11024,7 @@ P. 355, Theorem 14.3.1:
 
 (iv) follows from Corollary 14.1.12 (ii) p.~352 of the book, 
 
-(v) follows from Corollary 14.1.12 (iii) p.~352 of the book, 
+(v) follows (with the change suggested in \S\ref{14112} p.~\pr{14112}) from Corollary 14.1.12 (iii) p.~352 of the book, 
 
 (vi) follows from Corollary 14.1.12 (vi) p.~352 of the book,  
 
