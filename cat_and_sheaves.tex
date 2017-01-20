@@ -5342,8 +5342,7 @@ commute, we get
 $$
 \pp\ci p_i\ci\al(s)\ci\tau=q_i\ci\al(s)\ci\tau=\pp,
 $$ 
-which implies (a). %Let us prove (b). 
-The coprojection 
+which implies (a). The coprojection 
 $$
 \Hom_\C(\al(i),\al(i))\to\col\Hom_\C(\al(i),\al)=\Hom_\C(\al(i),A)
 $$ 
@@ -7000,7 +6999,7 @@ $$
 %
 
 \begin{s} 
-P.~181, Lemma 8.3.13 (Five Lemma). We spell out the  of Theorem~\ref{5l} above.
+P.~181, Lemma 8.3.13 (Five Lemma). We spell out the dual of Theorem~\ref{5l} above.
 \begin{thm}\lb{5ld} 
 Consider the commutative diagram of complexes 
 $$
@@ -9225,9 +9224,13 @@ g_m\ci u_m&=h_m\ci u_m&\text{by \qr{gm}}\\
 
 \sbs{Theorems 9.5.4 and 9.5.5 pp 232-234}\lb{954955}
 
-The purpose of this section is to give a combined statement of Theorems 9.5.4 and 9.5.5. 
+The purpose of this section is to give a combined statement of Theorems 9.5.4 and 9.5.5.
 
-Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $\F\subset\C_0$ be subcategories of $\C$ such that $\F$ is essentially small (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\F$, and assume 
+\begin{rk}\lb{deF}
+In Definition 9.5.1 (i) p.~231 we read ``Let $\F\subset\Mor(\C)$ be a family of morphisms in $\C$''. To be completely clear we mentally replace the above quote with ``Let $\F$ be a full subcategory of $\Mor(\C)$''.
+\end{rk} 
+
+Let $\C$ be a $\U$-category (Definition~\ref{myucat} p.~\pr{myucat}), let $\C_0$ be a subcategory of $\C$, let $\F$ be an essentially small full subcategory of $\Mor(\C_0)$ (see Remark~\ref{954} below), let $\pi$ be an infinite cardinal such that $X$ is in $\C_\pi$ for any $X\to Z$ in $\F$, and assume 
 
 \nn(9.5.2) (i) $\C_0$ admits small filtrant inductive limits and $\C_0\to\C$ commutes with them;
 
@@ -9269,8 +9272,10 @@ can be completed as indicated to a commutative diagram in $\C$ with the dashed a
 \begin{thm} 
 If the above conditions hold, then, for any $X$ in $\C_0$, there is a $\Mor(\C_0)$-injective object $Y$ of $\C$, and morphism $f:X\to Y$ in $\C_0$. If (9.5.2) holds, but (9.5.6), (9.5.7) and (9.5.8) do not necessarily hold, then there is an $\F$-injective object $Y$ of $\C$, and a morphism $f:X\to Y$ in $\C_0$.
 \end{thm}
+
 \begin{rk}\lb{954}
-In the book $\F$ is supposed to be small, but the proof clearly works if $\F$ is essentially small. (See \S\ref{962} below.)
+In the book $\F$ is supposed to be small, but the proof clearly works if $\F$ is only essentially small. %the set of isomorphisms classes of elements of $\F$ has a small cardinal.
+(See Remark~\ref{deF} p.~\pr{deF} above and \S\ref{962} below.)
 \end{rk}
 
 %%
@@ -9304,7 +9309,9 @@ Let $\C$ be a Grothendieck category. Then, for any small subset $E$ of $\Ob(\C)$
 \begin{s}\lb{962}
 P.~236, proof of Theorem 9.6.2. 
 
-Line 3: One could change ``Let $\F$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\F$ be the set of monomorphisms $N\incl G$. This is an essentially small subcategory by Corollary 8.3.26''. In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
+Line 3: One could change ``Let $\F\subset\Mor(\C_0)$ be the set of monomorphisms $N\incl G$. This is a small set by Corollary 8.3.26'' to ``Let $\F$ be the full subcategory of $\Mor(\C_0)$ whose objects are the monomorphisms $N\mono G$. Then % set of isomorphisms classes of elements of 
+$\F$ is essentially small % has a small cardinal 
+by Corollary 8.3.26'' (see Remark~\ref{deF} p.~\pr{deF}). In view of Remark~\ref{954}, we can still apply Theorem 9.5.4.
 
 Line 6: Condition (9.5.2) (i) (see Section~\ref{954955} p.~\pr{954955} above) follows from 
 \begin{lem}\lb{952i}
@@ -9313,7 +9320,7 @@ Let $\C$ be a category. Assume that small filtrant inductive limits exist in $\C
 \begin{proof}
 By Corollary 3.2.3 p. 79 of the book, $I^i$ is filtrant and the forgetful functor $\pp:I^i\to I$ is cofinal. Define the morphism of functors 
 $$
-\theta\in\Hom_{\C^{I^i}}(\DT\al(i),\al\ci\pp)
+\theta\in\Hom_{\Fct(I^i,\C)}(\DT\al(i),\al\ci\pp)
 $$ 
 (see Notation~\ref{diag} p.~\pr{diag}) by 
 $$
@@ -10922,7 +10929,7 @@ implies that the bottom row is an exact complex. It is easy to see that this pro
 
 \section{About Chapter 14}
 
-\sbs{Brief comment}
+\sbs{Brief comments}
 
 \begin{s}
 P. 348, proof of Lemma 14.1.5. We define a map 
@@ -10930,6 +10937,12 @@ P. 348, proof of Lemma 14.1.5. We define a map
 \Hom_{\oo D_c(\A)}(X,I):=\col_{(X'\to X)\in\Qis}\Hom_{\oo K_c(\A)}(X',I)\to\Hom_{\oo K_c(\A)}(X,I)
 \end{equation}
 by inverting the bijection $\Hom_{\oo K_c(\A)}(X,I)\to\Hom_{\oo K_c(\A)}(X',I)$ described in the proof given in the book. It is easy to see that \qr{1415} is the inverse of the natural map $\Hom_{\oo K_c(\A)}(X,I)\to\Hom_{\oo D_c(\A)}(X,I)$.
+\end{s}
+
+%
+
+\begin{s}
+P. 349, Display (14.1.2), definition of QM. To be consistent with Remark~\ref{deF} p.~\pr{deF} we define QM as the full subcategory of $\Mor(\A_c)$ whose objects are the morphisms which are qis and monomorphisms.
 \end{s}
 
 %%
@@ -10999,6 +11012,12 @@ d_I\ci\widetilde\psi-T\widetilde\psi\ci d_Y&=d_I\ci\psi-d_I\ci\xi\ci g-T\psi\ci 
 
 \begin{s} 
 P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pr{938} and Theorem~\ref{961} p.~\pr{961}, one could replace ``there exists an essentially small full subcategory $\SSS$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\SSS$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
+\end{s}
+
+%
+
+\begin{s}
+P. 351, definition of $\F'$ and $\F$. To be consistent with Remark~\ref{deF} p.~\pr{deF} we define $\F'$ and $\F$ as follows: $\F'$ is the full subcategory of QM whose objects are are the objects $u:X\to Y$ of QM such that $X$ and $Y$ are in $\SSS$, and $\F$ is the full subcategory of $\F'$ obtained collecting a representative of each isomorphism class of objects of $\F'$.
 \end{s}
 
 %
