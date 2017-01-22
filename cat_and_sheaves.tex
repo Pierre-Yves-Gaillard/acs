@@ -9995,6 +9995,8 @@ with $\DT_3:=\DT_1\oplus\DT_2$ and $\DT_5:=\DT_3\oplus\DT_4$. It is easy to see 
 
 \section{About Chapter 11}
 
+\sbs{Brief comments}
+
 \begin{s}
 P.~270. Recall that $(\A,T)$ is an additive category with translation. Let 
 \begin{equation}\lb{iliad}
@@ -11025,8 +11027,7 @@ P. 351, definition of $\F'$ and $\F$. To be consistent with Remark~\ref{deF} p.~
 \begin{s}\lb{14112}
 P.~352, Corollary 14.1.12. Part (i) implies:%. We also have the following corollary: 
 
-Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.%This follows immediately from Corollary 14.1.12 (i). 
-%\end{s}
+Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.%This follows immediately from Corollary 14.1.12 (i).%\end{s}
 
 \nn Part (iii). I would change 
 
@@ -11048,8 +11049,6 @@ This follows from Proposition 7.3.2 p.~160 of the book, together with its proof.
 %\nn(iv) the right localization $(\oo D_c(\A),Q)$ of $\oo K_c(\A)$ exists. %is universal in the sense of Definition~\ref{url2} p.~\pr{url2}. 
 %(See \S\ref{732} p.~\pr{732}.)
 %\end{s}
-
-%
 
 \begin{s}
 P. 355, Theorem 14.3.1: 
@@ -11077,7 +11076,6 @@ P. 355, Theorem 14.3.1:
 
 \begin{s}
 Corollary 14.3.2 p.~356. Let us add one sentence to the statement:
-%
 \begin{cor}\lb{1432}
 Let $k$ be a commutative ring and let $\C$ be a Grothendieck $k$-abelian category. Then $(\oo K_{\oo{hi}}(\C),\oo K(\C)^{\op})$ is $\Hom_\C$-injective, and the functor $\Hom_\C$ admits a right derived functor 
 $$
@@ -11093,6 +11091,53 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\iso\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo D(
 
 % old comment
 % https://docs.google.com/document/d/1EAlaHrIJobqQXp768tioLyGGsW5Nd757wVIdqB2xNiY/edit
+
+\begin{s}
+P. 358, proof of Lemma 14.4.1. We have the following chain of isomorphisms in $\oo D(\C)$:
+$$
+Q_n\xr\sim\Mc(P_n\oplus P_{n+1}\to\tau^{\le n+1}X)[-1]\xr\sim\Mc(P_{n+1}\to P_n\oplus P_{n+1})
+$$
+$$
+\xr\sim\Mc(0\to P_n)\oplus\Mc(P_{n+1}\to P_{n+1})\xr\sim P_n\oplus0\to P_n.
+$$
+
+Here is a rewriting of the last three lines:
+
+Hence, $\pp_i$ and $\pp_{i+1}$ are monomorphisms by Exercise 8.37. Note that $\id-\text{sh}$ in Exercise 8.37 corresponds to $\pp_i$ and $X_0\to X_1\to\cdots$ corresponds to $H^i(X)\to H^i(X)\to\cdots$. Therefore we have the exact commutative diagram 
+$$
+\begin{tikzcd}
+0\ar[r]&H^i(P)\ar[d,"\sim"]\ar[r]&H^i(Q)\ar[d,"\sim"]\ar[r]&H^i(R)\ar[d]\ar[r]&0\\ 
+0\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&H^i(X)\ar[r]&0,
+\end{tikzcd}
+$$ 
+and $H^i(R)\to H^i(X)$ is an isomorphism.
+\end{s}
+
+%
+
+\begin{s}
+P. 359, Theorem 14.4.5. 
+
+By Theorem 14.3.1 (vi) p.~355 implies that $RF$ exists. This fact is implicit in the statement and the proof of Theorem 14.4.5.
+
+Let us denote by (b1) the statement ``the left derived functor $LG:\oo D(\C)\to\oo D(\C')$ exists'', and by (b2) the statement ``$(LG,RF)$ is a pair of adjoint functors''.
+
+The proof proves successively (a), (b1), (c), (b2). More precisely:
+
+\nn$\bu$ The second sentence of Step~(v) of the proof is ``Hence $P$ is $\oo K(G)$-projective and $LG$ exists''. Thus, (a) and (b1) have been proved at this point. 
+
+\nn$\bu$ The penultimate sentence of the proof is ``Hence we obtain (c)''. 
+
+\nn$\bu$ The last sentence of the proof is ``By taking the cohomologies, we obtain (b)'', but what is really meant is ``By taking the cohomologies, we obtain (b2)''.
+\end{s}
+
+%
+
+\begin{s}
+P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K^-(\PP)$ is co-cofinal to $\Qis_X$ follows from Proposition 3.2.4 p.~79 of the book.
+\end{s}
+
+%
 
 \begin{s}%\lb{s1448}
 Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
