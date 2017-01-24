@@ -11098,19 +11098,27 @@ $$
 Q_n\xr\sim\Mc(P_n\oplus P_{n+1}\to\tau^{\le n+1}X)[-1]\xr\sim\Mc(P_{n+1}\to P_n\oplus P_{n+1})
 $$
 $$
-\xr\sim\Mc(0\to P_n)\oplus\Mc(P_{n+1}\to P_{n+1})\xr\sim P_n\oplus0\to P_n.
+\xr\sim\Mc(0\to P_n)\oplus\Mc(P_{n+1}\to P_{n+1})\xr\sim P_n\oplus0\xr\sim P_n.
 $$
 
 Here is a rewriting of the last three lines:
 
-Hence, $\pp_i$ and $\pp_{i+1}$ are monomorphisms by Exercise 8.37. Note that $\id-\text{sh}$ in Exercise 8.37 corresponds to $\pp_i$ and $X_0\to X_1\to\cdots$ corresponds to $H^i(X)\to H^i(X)\to\cdots$. Therefore we have the exact commutative diagram 
+Hence, $\pp_i$ and $\pp_{i+1}$ are monomorphisms by Exercise 8.37. Note that $\id-\text{sh}$ in Exercise 8.37 corresponds to $\pp_i$ and $X_0\to X_1\to\cdots$ corresponds to $H^i(X)\xr\id H^i(X)\xr\id\cdots$. It is straightforward to check that the obvious diagram with exact rows
 $$
 \begin{tikzcd}
-0\ar[r]&H^i(P)\ar[d,"\sim"]\ar[r]&H^i(Q)\ar[d,"\sim"]\ar[r]&H^i(R)\ar[d]\ar[r]&0\\ 
-0\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&H^i(X)\ar[r]&0,
+0\ar[r]&H^i(Q)\ar[r,"\pp_i"]&H^i(P)\ar[r]&H^i(R)\ar[dd]\ar[r]&0\\ 
+0\ar[r]&\ds\bigoplus_{n\ge i}H^i(Q_n)\ar[u,"\sim"']\ar[d,"\sim"]\ar[r]&\ds\bigoplus_{n\ge i}H^i(P_n)\ar[u,"\sim"']\ar[d,"\sim"]\\ 
+0\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r,"\id-\text{sh}"]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&H^i(X)\ar[r]&0
 \end{tikzcd}
 $$ 
-and $H^i(R)\to H^i(X)$ is an isomorphism.
+commutes. This implies that $H^i(R)\to H^i(X)$ is an isomorphism.
+%Hence, $\pp_i$ and $\pp_{i+1}$ are monomorphisms by Exercise 8.37. Note that $\id-\text{sh}$ in Exercise 8.37 corresponds to $\pp_i$ and $X_0\to X_1\to\cdots$ corresponds to $H^i(X)\xr\id H^i(X)\xr\id\cdots$. Therefore we have the exact commutative diagram $$\begin{tikzcd}0\ar[r]&H^i(Q)\ar[d,"\sim"]\ar[r]&H^i(P)\ar[d,"\sim"]\ar[r]&H^i(R)\ar[d]\ar[r]&0\\ 0\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&\ds\bigoplus_{n\ge i}H^i(X)\ar[r]&H^i(X)\ar[r]&0,\end{tikzcd}$$ and $H^i(R)\to H^i(X)$ is an isomorphism.
+\end{s}
+
+%
+
+\begin{s}
+P.~359, proof of Lemma 14.4.2. The fact that the full subcategory $\oo K_{hp}(\C)$ of $\oo K(\C)$ consisting of homotopically projective objects contains $\oo K^-(\PP)$ follows from Lemma 13.2.4 p.~327 of the book. 
 \end{s}
 
 %
@@ -11135,6 +11143,15 @@ The proof proves successively (a), (b1), (c), (b2). More precisely:
 
 \begin{s}
 P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K^-(\PP)$ is co-cofinal to $\Qis_X$ follows from Proposition 3.2.4 p.~79 of the book.
+\end{s}
+
+%
+
+\begin{s}
+P. 361, proof of Corollary 14.4.6. The last display can be written
+$$
+\col H^n(LG(\al))=\col H^n(G(p_\bu))\xr\sim H^n(G(\col p_\bu))=H^n(LG(\col\al)).
+$$
 \end{s}
 
 %
