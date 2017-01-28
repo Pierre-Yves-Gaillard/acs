@@ -148,6 +148,7 @@
 \DMO{\Qis}{Qis}
 \DMO{\Sh}{Sh}
 %\textsf{happly}\ar[yshift=0.7ex]{r}\ar[yshift=-0.7ex]{r}
+%\overset{\text L}\otimes_R
 % END
 
 \title{About \em{Categories and Sheaves}}
@@ -2847,7 +2848,7 @@ factors through $\pi_0(J^i)$, and that the induced map $\pi_0(J^i)\to L_i$ is in
 Let $\C$ be a category and let $A$ be in $\C^\wg$. Consider the statements
 \begin{equation}\lb{263a}
 \ic_{(X\to A)\in\C_A}X\xr\sim A,
-\end{equation} 
+\end{equation}
 
 \begin{equation}\lb{263b}
 \col_{(X\to A)\in\C_A}\Hom_\C(Y,X)\xr\sim A(Y)\text{ for all }Y\in\C, 
@@ -4109,7 +4110,9 @@ is bijective for all $Y$ in $\C$.
 %%
 
 \begin{s} 
-P.~95, proof of Proposition 4.1.4 (i) (additional details). The authors write: ``The two compositions 
+P.~95, Proposition 4.1.4.
+
+\nn$\bu$ Proof of (i) (additional details). The authors write: ``The two compositions 
 $$
 \begin{tikzcd}
 P\ar[yshift=0.7ex]{r}{\ee\ci P}\ar[yshift=-0.7ex]{r}[swap]{P\ci\ee}&P^2\ar{r}{R\eta L}&P
@@ -4138,7 +4141,9 @@ $$
 =\begin{pmatrix}R\star\eta\star L\\ R\star L\star\ee\end{pmatrix},
 $$ 
 
-\nn Equalities (a) and (b) resulting respectively from \qr{159} p.~\pr{159} and \qr{158} p.~\pr{158}, and the other equalities following from Proposition~\ref{pil1} p.~\pr{pil1}. 
+\nn Equalities (a) and (b) resulting respectively from \qr{159} p.~\pr{159} and \qr{158} p.~\pr{158}, and the other equalities following from Proposition~\ref{pil1} p.~\pr{pil1}.
+
+\nn$\bu$ Statement of (iii): As explained in the proof, the phrase ``$\C'$ is equivalent to $\C_0$'' really means ``$R$ induces an equivalence from $\C'$ to $\C_0$''. 
 \end{s}
 
 %%
@@ -4545,7 +4550,7 @@ $$
 \begin{s}
 P.~122. The proof of Lemma 5.3.3 proves a statement that is much stronger than Lemma 5.3.3. This stronger statement can be phrased as follows:
 \begin{lem}\lb{533}
-Let $\C$ be a category which admits small inductive limits, let $\F$ be a small full subcategory (Definition~\ref{myuscat} p.~\pr{myuscat}) of $\C$, let $F$ be in $\F^\wg$, set 
+Let $\C$ be a category which admits small inductive limits, let $\F$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) full subcategory of $\C$, let $F$ be in $\F^\wg$, set 
 $$
 \psi(F):=\col_{(Y\to F)\in\F_F}Y,
 $$ 
@@ -4579,8 +4584,16 @@ P. 123, proof of Theorem 5.3.4. The following fact is implicit in the proof: The
 $$
 f:\Hom_{\F^\wg}(\pp\psi(G),F)\to\Hom_{\F^\wg}(G,F),
 $$ 
-obtained by composing the chain of isomorphisms in the proof, is equal to $\ci\ee_G$. This equality is easily checked using Lemma~\ref{533}. 
-\end{s} 
+obtained by composing the chain of isomorphisms in the proof, is equal to $\ci\ee_G$. This equality is easily checked using Lemma~\ref{533} and the %fact that %$\ee_G$ is characterized by the property that 
+commutativity of the obvious diagram %in $\F^\wg$ %below commutes 
+$$
+\begin{tikzcd}
+\pp(X)\ar[d]\ar[r]&\ds\col_{X\to G}\pp(X)\ar[d,"\sim"]\\ 
+\ds\pp\left(\col_{X\to G}X\right)&G.\ar[l,"\ee_G"]
+\end{tikzcd}
+$$ 
+in $\F^\wg$ (the isomorphism on the right following from \eqref{263a}).
+\end{s}
 
 %%
 
@@ -4651,7 +4664,7 @@ $$
 \Ker\Big(\Hom_{\F^\wg}\big(\pp(Z),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z)\tm_{\pp(X)}\pp(Z),\pp(Y)\big)\Big).
 $$ 
 
-[To make our argument work, it is not enough that the natural bijection \qr{cczy} exists; the fact that it is induced by \qr{czy} will be crucial.] 
+[To make our argument work, it is not enough that the natural bijection \qr{cczy} exist; the fact that it is induced by \qr{czy} will be crucial.] 
 
 Let us denote by $I$ the set of finite subsets of $\Ob(\F_X)$, ordered by inclusion. Regarding $I$ as a category, it is small (Definition~\ref{myuscat} p.~\pr{myuscat}) and filtrant. For any $A$ in $I$ set $Z_A:=\bigsqcup_{a\in A}\zeta(a)$, where $\zeta:\C_X\to\C$ is the forgetful functor.
 
@@ -10786,11 +10799,11 @@ $$
 The square $(Z,X'',Y,Y'')$ is cartesian, and the top and bottom rows are exact. The middle row is exact by Lemma~\ref{cart1} p.~\pr{cart1}, and $X\to Z$ is an isomorphism by the Five Lemma.
 \end{s}
 
-%
+%\begin{muspb}\lb{334}P. 334,\index{major unsolved problem}\index{unsolved problem} proof that $\J_F$ is cogenerating in the proof of Lemma 13.3.12. I don't understand the argument. (See also Major Unsolved Problem~\ref{361} p.~\pr{361} below. The notion of cogenerating full subcategory is defined on p.~184 of the book, and the notion of $F$-injective full subcategory is defined on pages 253 and 330 of the book.)\end{muspb}
 
-\begin{muspb}\lb{334}
-P. 334,\index{major unsolved problem}\index{unsolved problem} proof that $\J$ is cogenerating in the proof of Lemma 13.3.12. I don't understand the argument. (See also Major Unsolved Problem~\ref{361} p.~\pr{361} below. The notion of cogenerating full subcategory is defined on p.~184 of the book, and the notion of $F$-injective full subcategory is defined on pages 253 and 330 of the book.)
-\end{muspb}
+\begin{s}\lb{334}
+P. 334, Lemma 13.3.12. We add the assumption that $\J$ is cogenerating. (See also \S\ref{361} p.~\pr{361} below. The notion of cogenerating full subcategory is defined on p.~184 of the book, and the notion of $F$-injective full subcategory is defined on pages 253 and 330 of the book.)
+\end{s}
 
 %
 
@@ -11151,11 +11164,12 @@ The proof proves successively (a), (b1), (c), (b2). More precisely:
 P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K^-(\PP)$ is co-cofinal to $\Qis_X$ follows from Proposition 3.2.4 p.~79 of the book.
 \end{s}
 
-%
+%\begin{muspb}\lb{361}P. 361,\index{major unsolved problem}\index{unsolved problem} proof of Corollary 14.4.6. I don't see why the epimorphism $P_i\epi\al(i)$ used in the proof of Corollary 14.4.6 exists. (See also Major Unsolved Problem~\ref{334} p.~\pr{334} above. The notion of generating full subcategory is defined on p.~184 of the book, and the notion of $F$-projective full subcategory is defined on pages 253 and 330 of the book.)\end{muspb}
 
-\begin{muspb}\lb{361}
-P. 361,\index{major unsolved problem}\index{unsolved problem} proof of Corollary 14.4.6. I don't see why the epimorphism $P_i\epi\al(i)$ used in the proof of Corollary 14.4.6 exists. (See also Major Unsolved Problem~\ref{334} p.~\pr{334} above. The notion of generating full subcategory is defined on p.~184 of the book, and the notion of $F$-projective full subcategory is defined on pages 253 and 330 of the book.)
-\end{muspb}
+\begin{s}\lb{361}
+P. 361, Corollary 14.4.6. We add the assumption that $\PP$ is generating. In the proof of the Corollary, I don't see the point of introducing the category $\PP'$ and invoking Lemma 13.3.12. %it seems to me that the introduction of the category $\PP'$ and the invocation of Lemma 13.3.12 are not necessary. 
+(See also \S\ref{334} p.~\pr{334} above. The notion of generating full subcategory is defined on p.~184 of the book, and the notion of $F$-projective full subcategory is defined on pages 253 and 330 of the book.)
+\end{s}
 
 %
 
