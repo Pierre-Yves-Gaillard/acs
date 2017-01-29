@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -4597,36 +4597,25 @@ in $\F^\wg$ (the isomorphism on the right following from \eqref{263a}).
 
 %%
 
-\sbs{Theorem 5.3.6 p.~124} 
+\begin{comment}
 
-% previous version
+\sbs{Theorem 5.3.6 p.~124} 
+% version of Jan. 28, 2017:
+% https://docs.google.com/document/d/1SeAaWdkZNWzIIV1RW-nkrdOZHQxdO5ZiLiXV1U5wbrA/edit
+% previous version:
 % https://docs.google.com/document/d/1PDpFEz1ajTYw07OCkt00ZlY8ZX3xSNHy8nCedJpGQT4/edit
 
-Recall that $\C$ is a category, that $\F$ is an essentially small full subcategory (Definition~\ref{myuscat} p.~\pr{myuscat}) of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is strictly generating if and only if $\pp$ is fully faithful.
+%Recall that $\C$ is a category, that $\F$ is an essentially small (Definition~\ref{myuscat} p.~\pr{myuscat}) full subcategory of $\C$, that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$, and that, by definition, $\F$ is generating if and only if $\pp$ is conservative, and $\F$ is strictly generating if and only if $\pp$ is fully faithful.
 
 \begin{thm}[Theorem 5.3.6 p.~124]\lb{536} 
-Let $\C$ be a category satisfying the conditions \emph{(i)-(iii)} below:
-
-\nn\emph{(i)} $\C$ admits small inductive limits and finite projective limits, 
-
-\nn\emph{(ii)} small filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}), 
-
-\nn\emph{(iii)} any epimorphism is strict. 
-
-\nn Let $\F$ be an essentially small full subcategory of $\C$ (Definition~\ref{myuscat} p.~\pr{myuscat}) such that 
-
-\nn\emph{(a)} $\Ob(\F)$ is a system of generators,
-
-\nn\emph{(b)} $\F$ is closed by finite coproducts in $\C$. 
-
-\nn Then $\F$ is strictly generating.
+Let $\C$ be a category admitting small inductive limits and finite projective limits. Assume that epimorphisms in $\C$ are strict, and let $\F$ be an essentially small (Definition~\ref{myuscat} p.~\pr{myuscat}) full subcategory of $\C$ such that the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$ is faithful. Then $\pp$ is full, or, in other words, $\F$ is strictly generating.
 \end{thm}
 
 \begin{proof} % previous version
 % https://docs.google.com/document/d/1w-6neN0st96QuZpMjrMb-wHMEcPjQdrHK5MsjeXpSxc/edit
 We may assume from the beginning that $\F$ is small (Definition~\ref{myuscat} p.~\pr{myuscat}).
 
-\nn\textbf{Step 1.} By Proposition 5.2.3 (i) p.~118 of the book, the functor $\pp$ is conservative and faithful.
+\nn\textbf{Step 1.} We have slightly changed the statement of Theorem 5.3.6 p.~124 of the book, but we want to keep the division of the proof in six steps used in the book. In the book $\pp$ is supposed to be conservative, and Step~1 consists in invoking the proof of Proposition 5.2.3 (i) p.~118 of the book to conclude that $\pp$ is faithful. In the present setting, Step~1 can be ignored.
 
 \nn\textbf{Step 2.} By Proposition 1.2.12 p.~16 of the book, a morphism $f$ in $\C$ is an epimorphism as soon as $\pp(f)$ is an epimorphism.
 
@@ -4648,7 +4637,7 @@ which is bijective by the Yoneda Lemma, induces a bijection
 \end{equation} 
 in the following sense:
 
-There are natural isomorphisms 
+There are natural bijections 
 $$
 \Hom_\C(\Coim z,Y)\iso\Ker\big(\Hom_\C(Z,Y)\rightrightarrows\Hom_\C(Z\tm_XZ,Y)\big),
 $$
@@ -4680,7 +4669,7 @@ $$
 $$ 
 is an isomorphism.
 
-These steps imply the theorem: Indeed, we have, in the above setting, 
+Lemma \ref{sixbij} below will show that these steps imply the theorem. We have, in the above setting, 
 \begin{align*} 
 \Hom_\C(X,Y)&\xr\sim\Hom_\C\left(\col_{A\in I}\Coim(Z_A\to X),Y\right)&\text{by Step 6}\\ \\ 
 &\xr\sim\lim_{A\in I}\Hom_\C(\Coim(Z_A\to X),Y)\\ \\ 
@@ -4704,15 +4693,15 @@ Then $f_2f_1u$ is the obvious family
 (\Coim(Z_A\to X)\to X\xr uY)_A\in\lim_{A\in I}\Hom_\C(\Coim(Z_A\to X),Y).
 \end{equation}
 
-Let us compute $f_3f_2f_1u$ thanks to Step~4. Firstly, to the family \qr{za1} we attach a certain family $(Z_A\to Y)_A$, each of whose member $Z_A\to Y$ is in 
+Let us compute $f_3f_2f_1u$ thanks to Step~4. Firstly, to the family \qr{za1} we attach the obvious family $(Z_A\to Y)_A$, each of whose member $Z_A\to Y$ is in 
 $$
 \Ker\big(\Hom_\C(Z_A,Y)\rightrightarrows\Hom_\C(Z_A\tm_XZ_A,Y)\big).
 $$ 
-Secondly, applying the functor $\pp$ to the family $(Z_A\to Y)_A$ we get a certain family $(\pp(Z_A)\to\pp(Y))_A$, each of whose member $\pp(Z_A)\to\pp(Y)$ is in 
+Secondly, applying the functor $\pp$ to the family $(Z_A\to Y)_A$ we get the obvious family $(\pp(Z_A)\to\pp(Y))_A$, each of whose member $\pp(Z_A)\to\pp(Y)$ is in 
 $$
 \Ker\Big(\Hom_{\F^\wg}\big(\pp(Z_A),\pp(Y)\big)\rightrightarrows\Hom_{\F^\wg}\big(\pp(Z_A)\tm_{\pp(X)}\pp(Z_A),\pp(Y)\big)\Big).
 $$ 
-Thirdly, to the family $(\pp(Z_A)\to\pp(Y))_A$ we attach a family of morphisms 
+Thirdly, to the family $(\pp(Z_A)\to\pp(Y))_A$ we attach the family of morphisms 
 \begin{equation}\lb{za2}
 \Coim(\pp(Z_A)\to\pp(X))\to\pp(X)\xr{\pp(u)}\pp(Y),
 \end{equation} 
@@ -4802,7 +4791,7 @@ The natural map
 $$
 \Hom_\C(Z,Y)\to\Hom_{\F^\wg}(\pp(Z),\pp(Y))
 $$ 
-is bijective by the Yoneda Lemma. As $\pp$ is faithful, the natural map 
+is bijective by the Yoneda Lemma. As $\pp$ is faithful by assumption, the natural map 
 $$
 \Hom_\C(Z\tm_XZ,Y)\to\Hom_{\F^\wg}\big(\pp(Z\tm_XZ),\pp(Y)\big)
 $$
@@ -4844,6 +4833,8 @@ $$
 be the natural morphisms. As $a\ci b$ is an epimorphism by Step~5, $a$ is an epimorphism, and Step~2 implies that \qr{step6b} is also an epimorphism. 
 \end{proof}
 \end{proof}
+
+\end{comment}
 
 %%
 
@@ -7381,7 +7372,8 @@ $$
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem~\ref{536} p.~\pr{536} above. As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and Theorem 5.3.6 p.~124 of the book. %Theorem~\ref{536} p.~\pr{536} above. 
+As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
 \end{proof}
 \end{s}
 
