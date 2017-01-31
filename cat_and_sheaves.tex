@@ -4456,13 +4456,19 @@ P.~119, Theorem 5.2.5: see Corollary~\ref{c2111} p.~\pr{c2111}.
 %
 
 \begin{s}
+P.~119. Proposition 5.2.8 will be used to prove Proposition 8.3.27 p.~186 of the book.
+\end{s}
+
+%
+
+\begin{s}
 P. 121, proof of Proposition 5.2.9. The last words are ``by Proposition 5.2.3 (v)''. A more precise wording would be ``by the proof of Proposition 5.2.3 (v)''.
 \end{s}
 
 %
 
 \begin{s}
-P.~121. Corollary 5.2.10 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9 p.~121 of the book.
+P.~121. Corollary 5.2.10 follows from Theorem 5.2.6 p.~119 and Proposition 5.2.9 p.~121 of the book. Corollary 5.2.10 will be used to prove Proposition 8.3.27 p.~186 of the book.
 \end{s}
 
 %
@@ -7246,19 +7252,25 @@ q.e.d.
 
 %
 
-\subsubsection{Corollary 8.3.26 p.~186}
- 
-Recall the statement:
+\begin{s}%\subsubsection{Corollary 8.3.26 p.~186}
+Recall the statement of Corollary 8.3.26 p.~186 of the book:
 
 Let $\C$ be a Grothendieck category and let $X\in\C$. Then the set of quotients of $X$ and the the set of subobjects of $X$ are small. 
 
 The proof is phrased as follows: ``Apply Proposition 5.2.9''. One could add ``\dots and Proposition 5.2.3 (v)''.
+\end{s}
 
 %
 
-\subsubsection{Proposition 8.3.27 (i) p.~186}\lb{gcsbc}
+\begin{s}
+P.~186. Proposition 8.3.27 will be used to prove Corollary~\ref{966} p.~\pr{966} below (which is Corollary 9.6.6 p.~237 of the book), Corollary 14.4.6 (i) p.~361 and Corollary 14.4.9 p.~365 of the book. See also \S\ref{gcsbc} below.
+\end{s}
 
-By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}).
+%
+
+\begin{s}\lb{gcsbc}
+P.~186. By Proposition 8.3.27 (i) and Lemma 3.3.9 p.~83 of the book, in a Grothendieck $\U$-category\index{Grothendieck category} $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}) filtrant inductive limits are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}).
+\end{s}
 
 %% 
 
@@ -7387,7 +7399,7 @@ $$
 (\C_0)^\wg\ar{r}[swap]{\widehat\pp_{{}_0}}&(\M_0)^\wg
 \end{tikzcd}
 $$ 
-quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by Section~\ref{gcsbc} p.~\pr{gcsbc} and %Theorem 5.3.6 p.~124 of the book.
+quasi-commutes. The functors $\ld$ and $\ld'$ are fully faithful by \S\ref{gcsbc} p.~\pr{gcsbc} and %Theorem 5.3.6 p.~124 of the book.
 Theorem~\ref{536} p.~\pr{536} above. As $\widehat\pp_{{}_0}$ is an equivalence (a quasi-inverse being $\widehat\psi_{{}_0}$, see Proposition 2.7.1 p.~62 in the book), the proof is complete.
 \end{proof}
 \end{s}
@@ -9356,11 +9368,7 @@ $$
 \end{proof}
 \end{s}
 
-%%
-
-%\begin{s}% Corollary 9.6.4 (i) p.~237 has already been stated as Proposition 8.3.27 (ii) p.~186. (See \S\ref{964i} p.~\pr{964i}.) \end{s}
-
-%
+%%\begin{s}% Corollary 9.6.4 (i) p.~237 has already been stated as Proposition 8.3.27 (ii) p.~186. (See \S\ref{964i} p.~\pr{964i}.) \end{s}
 
 \begin{s}
 Pp 237-239. For the reader's convenience we first reproduce (with minor changes) two corollaries with their proof. 
@@ -9373,12 +9381,12 @@ If $\C$ is a small (Definition~\ref{myuscat} p.~\pr{myuscat}) abelian category, 
 Apply Theorem 8.6.5 (vi) p.~194 and Theorem 9.6.3 p.~236 of the book.
 \end{proof}
 
-\begin{cor}[Corollary 9.6.6 p. 237]
+\begin{cor}[Corollary 9.6.6 p. 237]\lb{966}
 Let $\C$ be a Grothendieck category. Denote by $\I$ the full additive subcategory of $\C$ consisting of injective objects, and by $\iota:\I\to\C$ the inclusion functor. Then there exist a (not necessarily additive) functor $\Psi:\C\to\I$ and a morphism of functors $\id_\C\to\iota\ci\Psi$ such that $X\to\Psi(X)$ is a monomorphism for any $X$ in $\C$.
 \end{cor}
 
 \begin{proof}
-The category $\C$ admits an injective cogenerator $K$ by Theorem 9.6.3 p.~236 of the book, and admits small products by Proposition 8.3.27 p.~186 of the book. Consider the (non additive) functor 
+The category $\C$ admits an injective cogenerator $K$ by Theorem 9.6.3 p.~236 of the book, and admits small products by Proposition 8.3.27 (i) p.~186 of the book. Consider the (non additive) functor 
 $$
 \Psi:\C\to\I,\quad X\mt K^{\Hom_\C(X,K)}.
 $$ 
@@ -10583,6 +10591,12 @@ $\bu$ Exactness at $H^p(X)$: As mentioned in the book, the exactness at $H^p(X)$
 
 %
 
+\begin{s} 
+P.~325. Lemma 13.2.1 will be used to prove Proposition~13.2.2 p.~326, Proposition~13.2.6 p.~327, Theorem 13.2.8 p.~329, Proposition 13.3.5 p.~330 and Lemma 14.4.1 p.~358 of the book. 
+\end{s}
+
+%
+
 \begin{s}
 P. 326, first display. Consider the commutative diagram 
 $$
@@ -11117,6 +11131,12 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\iso\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo D(
 
 % old comment
 % https://docs.google.com/document/d/1EAlaHrIJobqQXp768tioLyGGsW5Nd757wVIdqB2xNiY/edit
+
+\begin{s} 
+P.~358. Lemma 14.4.1 will be used to prove Theorem 14.4.3 p.~359 and Theorem 14.4.5 p.~359 of the book.
+\end{s}
+
+%
 
 \begin{s}
 P. 358, proof of Lemma 14.4.1. We have the following chain of isomorphisms in $\oo D(\C)$:
