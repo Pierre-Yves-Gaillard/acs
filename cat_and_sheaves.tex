@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -5282,6 +5282,12 @@ Let $f:A\to B$ be a morphism in $\Ind(\C)$. By Corollary 6.1.14 p.~135 in the bo
 
 \end{s}
 
+%
+
+\begin{s}
+P. 136, Corollary 6.1.17 (i). If $\C$ admits finite projective limits, then the natural functor $\C\to\Ind(\C)$ is exact. (Recall that it is right exact by Corollary 6.1.6 p.~132 of the book.)%$\Ind(\C)$ admits finite projective limits. Moreover, the natural functors $\C\to\Ind(\C)$ and Ind(C) −→ C∧ are left exact.
+\end{s}
+
 % 
 
 \begin{s} 
@@ -9401,7 +9407,11 @@ defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a
 
 The first sentence of the proof of Lemma 9.6.8 p.~238 of the book follows from Proposition 5.2.3 (iv) p.~118 of the book. 
 
-The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book. The end of the proof of Lemma 9.6.9 uses the following lemma:
+The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book (the assumption that $\C$ admits small coproducts is not used in the proof of Proposition 5.2.3 (i)). 
+
+\begin{comment}
+
+The end of the proof of Lemma 9.6.9 uses the following lemma:
 
 \begin{lem} 
 If 
@@ -9430,7 +9440,9 @@ Z\ar[r,"a"']&Y\ar[r,"b"']&X,
 \end{tikzcd}
 $$ 
 yielding $fwh=dd^{-1}fwh=daz=fcz$, and thus $wh=cz$. 
-\end{proof} 
+\end{proof}
+
+\end{comment} 
 
 In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book.
 \end{s}
@@ -11069,15 +11081,22 @@ P.~352, Corollary 14.1.12. Part (i) implies:%. We also have the following coroll
 
 Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.%This follows immediately from Corollary 14.1.12 (i).%\end{s}
 
-\nn Part (iii). I would change 
+\nn Part (iii). We have 
+$$
+\Hom_{\oo D(\C)}(Q(X),Y)\iso\Hom_{\oo K_{hi}(\C)}(R_q(Q(X)),R_q(Y))
+$$
+$$
+\iso\Hom_{\oo K(\C)}(R_q(Q(X)),R_q(Y))\iso\Hom_{\oo K(\C)}(X,R_q(Y)).
+$$
+%I would change 
 
-\nn``the functor $Q:\oo K_c(A)\to\oo D_c(A)$ admits a right adjoint $R_q:\oo D_c(A)\to\oo K_c(A), Q\ci R_q\iso\id_{\oo D_c(A)}$, and $R_q$ is the composition of $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ and a quasi-inverse of $Q\ci\iota$''
+%\nn``the functor $Q:\oo K_c(A)\to\oo D_c(A)$ admits a right adjoint $R_q:\oo D_c(A)\to\oo K_c(A), Q\ci R_q\iso\id_{\oo D_c(A)}$, and $R_q$ is the composition of $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ and a quasi-inverse of $Q\ci\iota$''
 
-\nn to
+%\nn to
 
-\nn``the functor $R_q:\oo D_c(A)\to\oo K_c(A)$ defined by $R_q:=\iota\ci(Q\ci\iota)^{-1}$, where $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ is the natural functor and $(Q\ci\iota)^{-1}$ is a quasi-inverse of $Q\ci\iota$, is a right localization of the identity functor $\oo K_c(A)\to\oo K_c(A)$ and satisfies $Q\ci R_q\iso\id_{\oo D_c(A)}$''.
+%\nn``the functor $R_q:\oo D_c(A)\to\oo K_c(A)$ defined by $R_q:=\iota\ci(Q\ci\iota)^{-1}$, where $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ is the natural functor and $(Q\ci\iota)^{-1}$ is a quasi-inverse of $Q\ci\iota$, is a right localization of the identity functor $\oo K_c(A)\to\oo K_c(A)$ and satisfies $Q\ci R_q\iso\id_{\oo D_c(A)}$''.
 
-This follows from Proposition 7.3.2 p.~160 of the book, together with its proof.
+%This follows from Proposition 7.3.2 p.~160 of the book, together with its proof.
 \end{s}
 
 %\begin{s} 
@@ -11101,7 +11120,8 @@ P. 355, Theorem 14.3.1:
 
 (iv) follows from Corollary 14.1.12 (ii) p.~352 of the book, 
 
-(v) follows (with the change suggested in \S\ref{14112} p.~\pr{14112}) from Corollary 14.1.12 (iii) p.~352 of the book, 
+(v) follows %(with the change suggested in \S\ref{14112} p.~\pr{14112}) 
+from Corollary 14.1.12 (iii) p.~352 of the book, 
 
 (vi) follows from Corollary 14.1.12 (vi) p.~352 of the book,  
 
