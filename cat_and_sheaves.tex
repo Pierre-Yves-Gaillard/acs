@@ -1543,7 +1543,9 @@ If $\al:I^{\op}\to\Set$ is a functor defined on a small category (Definition~\re
 $$ 
 \lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
 $$ 
-and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. As often it is better to start by verifying the \emph{uniqueness} of $f$. We must have $p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$. It is straightforward to check that the map $f$ defined by the above equality does the job.]
+and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. %As often it is better to start by verifying the \emph{uniqueness} of $f$. 
+If such an $f$ exists, it must satisfy %Let us verify the uniqueness of $f$. We must have 
+$p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$, and proves the uniqueness of $f$. It is straightforward to check that the map $f$ defined by the above equality does the job.]
 \end{conv}
 
 Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
@@ -2782,7 +2784,8 @@ $$
 &\DT Y&Y.
 \end{tikzcd}
 $$ 
-Unsurprisingly it is better to start with the uniqueness: any such $f$ must satisfy $f(x)=\theta_{i_0}(\id_{i_0})$. For the existence, it is easy to see that the map $f$ defined by the above equality does the job.
+%Unsurprisingly it is better to start with the uniqueness: 
+Any such $f$ must satisfy $f(x)=\theta_{i_0}(\id_{i_0})$. This proves the uniqueness. For the existence, it is easy to see that the map $f$ defined by the above equality does the job.
 \end{proof}
 
 Here is a second proof:
@@ -3400,7 +3403,7 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 \end{s}
 
-%\begin{s}\lb{s3cat}P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7.\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of object is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}\end{s}
+%\begin{s}\lb{s3cat}P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7.\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of objects is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}\end{s}
 
 %%
 
@@ -3526,12 +3529,12 @@ $$
 in $I_s$ and an element $w_s$ in $\al_s(\ell_s)$ such that $\al_s(u_s)(y_s)=w_s=\al_s(v_s)(z_s)$. This implies $p_j(y)=p_\ell(w)=p_k(z)$, and thus $p_j(y)=p_k(z)$ as requested.
 \end{proof}
 
-\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of object is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}
+\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of objects is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}
 
 Propositions \ref{3111} and \ref{p3cat} imply
 \begin{prop}  
 If $Z\in\Set$, then $\Set_Z$ has the IPC property.
-\end{prop} 
+\end{prop}
 \end{s} 
 
 %
@@ -3650,7 +3653,7 @@ is bijective. We claim
 \end{subequations}
 Indeed, we obtain \qr{fyx'1} by replacing the setting \qr{241s} p.~\pr{241s} with 
 $$
-X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X' 
+X\in\C\xl{\id_\C}\C\xr{F}\C'\ni X'
 $$ 
 in the isomorphism \qr{241} p.~\pr{241}, and we prove \qr{fyx'2} by noting that the identity of $X$ is an initial object of $\C^X$. We have five sets and four bijections: 
 $$ 
@@ -3662,7 +3665,7 @@ $$
 $$
 \xr\sim\lim\Hom_{\C'}(F\ci\al,X'). 
 $$ 
-The first and last bijections follow from \qr{fyx'}, the second one is clear, and the third one can be justified as follows: Inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with projective limits over the finite category $I$. 
+The first and last bijections follow from \qr{fyx'}, the second one is clear, and the third one can be justified as follows: Set-valued inductive limits over the category $\C_{X'}$, which is filtrant because $F$ is right exact, commute with set-valued projective limits over the finite category $I$ (Theorem 3.1.6 p.~74 of the book). 
 
 Let us denote these five sets and four bijections by 
 $$
@@ -3715,7 +3718,14 @@ This proves \qr{4321}.
 
 %
 
-\begin{s} Some more details in the proof of Proposition 3.3.12 p. 84:
+\begin{s}
+P. 83, proof of Proposition 3.3.7 (i). The proof uses Proposition 3.3.3.
+\end{s}
+
+%
+
+\begin{s} 
+Some more details in the proof of Proposition 3.3.12 p. 84:
 \begin{prop}[Proposition 3.3.12 p. 84] 
 Let $F:\C\to\C'$ and $G:\C'\to\C''$ be two functors. If $F$ and $G$ are right exact, then $G\ci F$ is right exact.
 \end{prop}
@@ -3723,12 +3733,6 @@ Let $F:\C\to\C'$ and $G:\C'\to\C''$ be two functors. If $F$ and $G$ are right ex
 Since $G$ is right exact, $\C'_{X''}$ is filtrant for any $X''$ in $\C''$. The obvious functor $\C_{X''}\to\C'_{X''}$ is again right exact. Indeed, for any $G(X')\to X''$ in $\C'_{X''}$, the category $(\C_{X''})_{G(X')\to X''}\iso\C_{X'}$ is filtrant because $F$ is right exact. Hence, Proposition 3.3.11 implies that $\C_{X''}$ is filtrant.
 %Indeed, for any $(X',u)$ in $\C'_{X''}$, with $X'$ in $\C'$ and $u:G(X')\to X''$, the category $(\C_{X''})_{(X',u)}\iso\C_{X'}$ is filtrant because $F$ is right exact. Hence, Proposition 3.3.11 implies that $\C_{X''}$ is filtrant.
 \end{proof}
-\end{s}
-
-%
-
-\begin{s}
-P. 83, proof of Proposition 3.3.7 (i). The proof uses Proposition 3.3.3.
 \end{s}
 
 %
@@ -5284,7 +5288,7 @@ Let $f:A\to B$ be a morphism in $\Ind(\C)$. By Corollary 6.1.14 p.~135 in the bo
 
 %
 
-\begin{s}
+\begin{s}\lb{136}
 P. 136, Corollary 6.1.17 (i). If $\C$ admits finite projective limits, then the natural functor $\C\to\Ind(\C)$ is exact. (Recall that it is right exact by Corollary 6.1.6 p.~132 of the book.)%$\Ind(\C)$ admits finite projective limits. Moreover, the natural functors $\C\to\Ind(\C)$ and Ind(C) −→ C∧ are left exact.
 \end{s}
 
@@ -6709,7 +6713,7 @@ $$
 P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar{u}[swap]{e}\ar[equal]{r}&\Coker p
 \end{tikzcd}
 $$ 
-commute. 
+commute.
 
 It is easy to see that $d$ and $e$ are mutually inverse isomorphisms. In short, there is a natural isomorphism $\Coker h\iso\Coim f$ which makes the diagram
 \begin{equation}\lb{834a}
@@ -6718,9 +6722,9 @@ It is easy to see that $d$ and $e$ are mutually inverse isomorphisms. In short, 
 P\ar{r}[swap]{p}&X\ar{r}[swap]{b}&\Coim f\ar[equal]{r}&\Coker p
 \end{tikzcd}
 \end{equation} 
-commute. 
+commute.
 
-ly, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to S$ be the coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
+Dually, let $S$ (for ``sum'') be the fiber coproduct $Y\oplus_XY$, let $i_a:Y\to S$ be the coprojection, let $i$ be the morphism $i_1-i_2$ from $Y$ to $S$, and consider the diagram 
 $$
 \begin{tikzcd}
 \Ima f\ar{r}{a}&Y\ar[equal]{d}\ar{r}{i}&S\\ 
@@ -7505,6 +7509,10 @@ holds. This inclusion follows from Propositions 3.3.3 p.~82 (see Proposition~\re
 \end{s}
 
 %
+
+\begin{s}
+P. 194, Theorem 8.6.5 (ii). See \S\ref{136} p.~\pr{136}.
+\end{s}
 
 %\begin{s} P. 194, proof of Theorem 8.6.5. \nn(ii) The exactness of $\C\to\Ind(\C)$ follows from Corollaries 6.1.6 and 6.1.17 (i). The left exactness of $\Ind(\C)\to\C^{\wg,add}$ follows from \S\ref{869} above and Proposition 6.1.16 (i) p.~136 in the book. \nn(iii) $\Ind(\C)$ admits small inductive limits by Proposition 6.1.18 (iii) p.~136 in the book.\end{s} \begin{s}\lb{869} P. 195, proof of Proposition 8.6.9. We give additional details: \nn(i) $\Ind(\C)$ is additive: For $A,B$ in $\Ind(\C)$ we define $A\oplus B\in\C^\wg$ by the formula $$(A\oplus B)(X):=A(X)\oplus B(X),$$ and easily check that $A\oplus B$ is additive and left exact, and thus belongs to $\Ind(\C)$. It is then obvious that $A\oplus B$ is a product and a coproduct in $\Ind(\C)$. $\Ind(\C)$ admits kernels and cokernels: $\Ind(\C)$ admits finite inductive and projective limits by Corollary 6.1.17 (i) and Proposition 6.1.18 (iii) p.~136.\nn(ii) $\Ind(\C)$ admits small filtrant inductive limits by Theorem~\ref{618} p.~\pr{618}. \nn(iii) The natural embedding $\Ind(\C)\to\C^{\wg,add}$ commutes with kernels: this follows from Proposition 6.1.16 (i) p.~136. \end{s} 
 
@@ -9444,7 +9452,7 @@ yielding $fwh=dd^{-1}fwh=daz=fcz$, and thus $wh=cz$.
 
 \end{comment} 
 
-In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book.
+In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book (see also \S\ref{136} p.~\pr{136}).
 \end{s}
 
 %%
@@ -11081,22 +11089,22 @@ P.~352, Corollary 14.1.12. Part (i) implies:%. We also have the following coroll
 
 Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category with translation, and let $\A_0\subset\A$ be a fully abelian subcategory with translation. Assume that $\A_0$ is a Grothendieck $\U_0$-category. Then the natural functor $\D_c(\A_0)\to\D_c(\A)$ is fully faithful.%This follows immediately from Corollary 14.1.12 (i).%\end{s}
 
-\nn Part (iii). We have 
-$$
-\Hom_{\oo D(\C)}(Q(X),Y)\iso\Hom_{\oo K_{hi}(\C)}(R_q(Q(X)),R_q(Y))
-$$
-$$
-\iso\Hom_{\oo K(\C)}(R_q(Q(X)),R_q(Y))\iso\Hom_{\oo K(\C)}(X,R_q(Y)).
-$$
-%I would change 
+\nn Part (iii). %We have 
+%$$
+%\Hom_{\oo D(\C)}(Q(X),Y)\iso\Hom_{\oo K_{hi}(\C)}(R_q(Q(X)),R_q(Y))
+%$$
+%$$
+%\iso\Hom_{\oo K(\C)}(R_q(Q(X)),R_q(Y))\iso\Hom_{\oo K(\C)}(X,R_q(Y)).
+%$$
+I would change 
 
-%\nn``the functor $Q:\oo K_c(A)\to\oo D_c(A)$ admits a right adjoint $R_q:\oo D_c(A)\to\oo K_c(A), Q\ci R_q\iso\id_{\oo D_c(A)}$, and $R_q$ is the composition of $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ and a quasi-inverse of $Q\ci\iota$''
+\nn``the functor $Q:\oo K_c(\A)\to\oo D_c(\A)$ admits a right adjoint $R_q:\oo D_c(\A)\to\oo K_c(\A), Q\ci R_q\iso\id_{\oo D_c(\A)}$, and $R_q$ is the composition of $\iota:\oo K_{c,hi}(\A)\to\oo K_c(\A)$ and a quasi-inverse of $Q\ci\iota$''
 
-%\nn to
+\nn to
 
-%\nn``the functor $R_q:\oo D_c(A)\to\oo K_c(A)$ defined by $R_q:=\iota\ci(Q\ci\iota)^{-1}$, where $\iota:\oo K_{c,hi}(A)\to\oo K_c(A)$ is the natural functor and $(Q\ci\iota)^{-1}$ is a quasi-inverse of $Q\ci\iota$, is a right localization of the identity functor $\oo K_c(A)\to\oo K_c(A)$ and satisfies $Q\ci R_q\iso\id_{\oo D_c(A)}$''.
+\nn``the functor $R_q:\oo D_c(\A)\to\oo K_c(\A)$ defined by $R_q:=\iota\ci(Q\ci\iota)^{-1}$, where $\iota:\oo K_{c,hi}(\A)\to\oo K_c(\A)$ is the natural functor and $(Q\ci\iota)^{-1}$ is a quasi-inverse of $Q\ci\iota$, is a right localization of the identity functor $\oo K_c(\A)\to\oo K_c(\A)$ and satisfies $Q\ci R_q\iso\id_{\oo D_c(\A)}$''.
 
-%This follows from Proposition 7.3.2 p.~160 of the book, together with its proof.
+This follows from Proposition 7.3.2 p.~160 of the book, together with its proof.
 \end{s}
 
 %\begin{s} 
@@ -11120,8 +11128,7 @@ P. 355, Theorem 14.3.1:
 
 (iv) follows from Corollary 14.1.12 (ii) p.~352 of the book, 
 
-(v) follows %(with the change suggested in \S\ref{14112} p.~\pr{14112}) 
-from Corollary 14.1.12 (iii) p.~352 of the book, 
+(v) follows (with the change suggested in \S\ref{14112} p.~\pr{14112}) from Corollary 14.1.12 (iii) p.~352 of the book, 
 
 (vi) follows from Corollary 14.1.12 (vi) p.~352 of the book,  
 
