@@ -3305,7 +3305,7 @@ The proof is obvious.
 
 %%
 
-\sbs{Brief comments} 
+\sbs{Brief comments}
 
 \begin{s}\lb{opddagg} 
 P.~63, Corollary 2.7.4. Here is a variant: 
@@ -3380,10 +3380,10 @@ $$
 the last isomorphism following from \qr{263b} p.~\pr{263b}. 
 \end{s}
 
-%
+%%
 
-\begin{s}
-P.~64, Exercise 2.4. Here is (with some minor changes) the statement of Exercise~2.4. 
+\sbs{Exercise 2.4}%\lb{24}
+P.~64, Exercise 2.4.\index{Exercise 2.4} Here is (with some minor changes) the statement of Exercise~2.4. 
 
 Let $f:X\to Y$ be a morphism in a category admitting fiber products. Set $P:=X\tm_YX$; let $p_1,p_2:P\to X$ be the projections; and let $\delta:X\to P$ be the diagonal morphism.
 
@@ -3401,7 +3401,6 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 
 \nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; % and note that (i) implies $p_1=p_2$, and thus $g=h$. 
 then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
-\end{s}
 
 %\begin{s}\lb{s3cat}P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7.\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of objects is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}\end{s}
 
@@ -11417,10 +11416,14 @@ For any sieve $S$ over $U$ we have
 $$
 S_{A_S\to U}=S.
 $$%Let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
+For any morphism $A\to U$ (obvious notation) there is a canonical isomorphism 
+$$
+A_{S_A\to U}\iso\Ima(A\to U).
+$$
 \end{lem}
 
 \begin{proof}
-Let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. It suffices to show that $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
+The proof of the second sentence is straightforward and left to the reader. To prove the first sentence let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. It suffices to show that $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
 
 By the Yoneda Lemma (Lemma~\ref{yol} p.~~\pr{yol}), there is a bijection 
 $$
@@ -11475,7 +11478,7 @@ be a cartesian square. By LE4 it is enough to verify
 \begin{equation}\lb{cv}
 (C\to V)\in\E.
 \end{equation} 
-The morphism $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, the sieve $S'\tm_UV$ is in $\Gamma_V$ by \qr{sgu}, and $A_{S'\tm_UV}\to V$ is in $\E$ by definition of $\Gamma_V$. We have 
+The morphism $V\to U$ being in $S$ by the first sentence of Lemma~\ref{prepagt4}, the sieve $S'\tm_UV$ is in $\Gamma_V$ by \qr{sgu}, and $A_{S'\tm_UV}\to V$ is in $\E$ by definition of $\Gamma_V$. We have 
 $$
 \E\ni(A_{S'\tm_UV}\to V)=(A_{S'}\tm_UV\to V)\iso(C\to V).
 $$ 
@@ -11492,7 +11495,7 @@ is cartesian. This proves successively \qr{cv}, \qr{bas}, \qr{as'} and the lemma
 
 We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
 
-It is now easy to prove 
+It is now easy, thanks to Lemma~\ref{prepagt4} p.~\pr{prepagt4}, to prove 
 
 \begin{thm}
 If $\C$ is a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $\Gamma$ is a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and if $\E$ is a set of morphisms in $\C^\wg_\U$ satisfying LE1-LE4, then the equalities $\E=\E(\Gamma,\U)$ and $\Gamma=\Gamma(\E)$ are equivalent.
