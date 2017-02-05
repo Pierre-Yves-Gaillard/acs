@@ -11278,7 +11278,7 @@ By (1.5.7) p. 29 of the book, Composition~\qr{f2} coincides with Composition~\qr
 
 \sbs{Sieves and local epimorphisms}\index{sieve}\index{local epimorphism}
 
-This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms of $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all morphism of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
+This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms in $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all morphism of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
 $$
 S\tm_UV:=\{W\to V\ |\ (W\to V\to U)\in S\}.
 $$
@@ -11327,8 +11327,7 @@ As proved in the book,
 
 For the reader's convenience we paste the proof of \qr{ecae} (see p.~391 in the book):
 
-Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ by %Proposition 3.3.3 p.~82 of the book, stated above as 
-Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, stated above as Proposition~\ref{34i} p.~\pr{34i}. Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is a local epimorphism by LE1 and LE3, and this implies that $A\to B$ is a local epimorphism by LE4. q.e.d.
+Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphism with $U$ in $\C$, there exists $v:U\to A$ such that $w=u\ci v$ by Proposition~\ref{333} p.~\pr{333}, and Exercise 3.4 (i) p.~90 of the book, stated above as Proposition~\ref{34i} p.~\pr{34i}. Hence, $\id_U:U\to U$ factors as $U\to A\tm_BU\to U$. Therefore $A\tm_BU\to U$ is in $\E$ by LE1 and LE3, and this implies that $A\to B$ is in $\E$ by LE4. q.e.d.
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
@@ -11383,16 +11382,17 @@ in $\C^\wg$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $\Gamma_U$ (beca
 
 \nn LE3 follows immediately from GT2.
 
-\nn LE4 follows immediately from Lemma~\ref{1613i}. %Let $A\to B$ be a morphism in $\C^\wg$. We must check: 
-%\begin{center}
-%$A\to B$ is in $\E$\\ $\iff$\\ for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the projection $A\tm_BU\to U$ is in $\E$.
-%\end{center}
-%Implication $\then$ is obvious, and Implication $\si$ follows from Lemma~\ref{1613i}. 
+\nn LE4 follows immediately from Lemma~\ref{1613i}. 
 
 Conversely, given an object $U$ of $\C$ and a set $\E$ of morphisms in $\C^\wg$ satisfying LE1-LE4, put
 $$
 \Gamma_U:=\{S\in\Sigma_U\ |\ (A_S\to U)\in\E\}.
+$$ 
+Recall that we have attached to a sieve $S$ over $U$ the subobject $A_S$ of $U$ in $\C^\wg$ defined by 
 $$
+A_S(V):=S\cap\Hom_\C(V,U).
+$$ 
+
 Let us check that $\Gamma(\E):=(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
 
 GT1 follows from LE1 and the equality $(A_{M_U}\to U)=\id_U$. 
@@ -11403,21 +11403,25 @@ $$
 $$ 
 the morphism $A_S\to U$ factors as $A_S\to A_{S'}\to U$. 
 
-To prove GT3, note that if $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have 
-%
+To prove GT3, note that if $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have the equality
 \begin{equation}\lb{asuv}
-A_{S\tm_UV}=A_S\tm_UV.
-\end{equation}
-%
-In view of LE4, this implies GT3.  
+(A_{S'\tm_UV}\to V)=(A_{S'}\tm_UV\to V),%A_{S\tm_UV}=A_S\tm_UV,
+\end{equation} 
+%where we interpret the above equality as an equality 
+in $(\C^\wg)_V$. In view of LE4, this implies GT3.
 
 The lemma below will helps us verify GT4. 
 
 \begin{lem}\lb{prepagt4}
-Let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
+For any sieve $S$ over $U$ we have
+$$
+S_{A_S\to U}=S.
+$$%Let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. Then $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
 \end{lem}
 
 \begin{proof}
+Let $s:V\to U$ be a morphism in $\C$ and $S$ a sieve over $U$. It suffices to show that $s$ is in $S$ if and only if $s$ factors through the natural morphism $i:A_S\to U$.
+
 By the Yoneda Lemma (Lemma~\ref{yol} p.~~\pr{yol}), there is a bijection 
 $$
 S\cap\Hom_\C(V,U)\xr\pp\Hom_{\C^\wg}(V,A_S)
@@ -11473,9 +11477,9 @@ be a cartesian square. By LE4 it is enough to verify
 \end{equation} 
 The morphism $V\to U$ being in $S$ by Lemma~\ref{prepagt4}, the sieve $S'\tm_UV$ is in $\Gamma_V$ by \qr{sgu}, and $A_{S'\tm_UV}\to V$ is in $\E$ by definition of $\Gamma_V$. We have 
 $$
-\E\ni(A_{S'\tm_UV}\to V)\iso(A_{S'}\tm_UV\to V)\iso(C\to V).
+\E\ni(A_{S'\tm_UV}\to V)=(A_{S'}\tm_UV\to V)\iso(C\to V).
 $$ 
-Indeed, the first isomorphism holds by \qr{asuv} p.~\pr{asuv}, and the second one holds because the rectangle 
+Indeed, the equality holds by \qr{asuv} p.~\pr{asuv}, and the isomorphism holds because the rectangle 
 $$
 \begin{tikzcd}
 C\ar{r}\ar{d}&V\ar{d}\\ 
