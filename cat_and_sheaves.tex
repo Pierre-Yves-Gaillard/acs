@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -9414,42 +9414,10 @@ defines a morphism $X\to\iota(\Psi(X))=K^{\Hom_\C(X,K)}$, and this morphism is a
 
 The first sentence of the proof of Lemma 9.6.8 p.~238 of the book follows from Proposition 5.2.3 (iv) p.~118 of the book. 
 
-The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book (the assumption that $\C$ admits small coproducts is not used in the proof of Proposition 5.2.3 (i)). 
+The third sentence of the proof of Lemma 9.6.9 p.~238 of the book follows from Proposition 5.2.3 (i) p.~118 of the book (the assumption that $\C$ admits small coproducts is not used in the proof of Proposition 5.2.3 (i)).
 
-\begin{comment}
-
-The end of the proof of Lemma 9.6.9 uses the following lemma:
-
-\begin{lem} 
-If 
-$$
-\begin{tikzcd}
-0\ar[d]\ar[r]&Z\ar[d,"c"]\ar[r,"a"]&Y\ar[d,"d","\sim"']\ar[r,"b"]&X\ar[d,rightarrowtail,"e"]\\ 
-0\ar[r,]&W\ar[r,"f"']&V\ar[r,"g"']&U
-\end{tikzcd}
-$$ 
-is an exact commutative diagram in an abelian category, and if $d$ is an isomorphism and $e$ a monomorphism, then $c$ is an isomorphism.
-\end{lem} 
-
-\begin{proof}
-(In this proof we omit the composition symbols $\ci$ and most of the parenthesis, and we freely use Lemma~\ref{8311} p.~\pr{8311} and Lemma~\ref{8312} p.~\pr{8312}.) As $c$ is clearly a monomorphism, it suffices to show that $c$ is an epimorphism. Let $w:T\to W$ be a morphism. It suffices to prove that the solid diagram 
-$$
-\begin{tikzcd} 
-S\ar[d,dashed,"z"']\ar[r,dashed,two heads,"h"]&T\ar[d,"w"]\\ 
-Z\ar[r,"c"']&W
-\end{tikzcd}
-$$ 
-can be completed as indicated. We have $ebd^{-1}fw=gfw=0$, and thus $bd^{-1}fw=0$. This implies the existence of a commutative diagram 
-$$
-\begin{tikzcd} 
-S\ar[d,"z"']\ar[r,two heads,"h"]&T\ar[d,"d^{-1}fw"]\\ 
-Z\ar[r,"a"']&Y\ar[r,"b"']&X,
-\end{tikzcd}
-$$ 
-yielding $fwh=dd^{-1}fwh=daz=fcz$, and thus $wh=cz$. 
-\end{proof}
-
-\end{comment} 
+% old comment
+% https://docs.google.com/document/d/1CHig_Fea3M8dBNYkJAI6P1qOsrjA9YfL7l5MVIZmqbk/edit 
 
 In the proof of Theorem 9.6.10 p.~238 of the book, the exactness of $\C\to\oo{Pro}(\C)$ follows from Theorem 8.6.5 (ii) p.~194 of the book (see also \S\ref{136} p.~\pr{136}).
 \end{s}
@@ -11543,13 +11511,62 @@ P.~395, Lemma 16.2.3 (iii). Consider the conditions
 \nn(e) for any diagram $C\parar A\to B$ such that $C$ is in $\C^\wg$ and the two compositions coincide, there exists a local isomorphism $D\to C$ such that the two compositions $D\to C\parar A$ coincide.
 
 Recall that (a) is the condition that $A\to B$ is a local monomorphism. Lemma 16.2.3 p.~395 of the book implies 
-%
 \begin{equation}\lb{e1623}
 \text{Conditions (a), (b), (c), (d), (e) are equivalent.}
-\end{equation}
-%
+\end{equation} 
 Indeed, Part (iii) of the lemma says that (a), (b) and (c) are equivalent. Clearly (e) implies (c) and (d), and (d) implies (b). It suffices to check that (c) implies (e). Let $C\parar A\to B$ be as in the assumption (c), let $D\to C$ be the local epimorphism furnished by (c), and let $I$ be its image. The two compositions $I\to C\parar A$ coincide because $D\to I$ is an epimorphism, and $I\to C$ is a local isomorphism by Part (ii) of the lemma. q.e.d.
 \end{s}
+
+%
+
+\begin{s}
+P. 396, Step (a) in the proof of Lemma 16.2.4 (i). Starting with the cartesian square
+$$
+\begin{tikzcd}
+D\ar[d]\ar[r]&C\ar[d]\\ 
+A\ar[r]&B,
+\end{tikzcd}
+$$ 
+we form the cartesian squares
+$$
+\begin{tikzcd}
+E\ar[d]\ar[r]&A\ar[d]&F\ar[d]\ar[r]&D\ar[d]&G\ar[d]\ar[r]&C\ar[d]\\ 
+A\ar[r]&B&D\ar[r]&C&E\ar[r]&B,
+\end{tikzcd}
+$$ 
+we define a morphism $F\to E$ as suggested by the commutative diagram
+$$
+\begin{tikzcd}
+F\ar[d]\ar[r]&D\ar[d]\ar[dr]\\ 
+D\ar[dr]\ar[r]&C\ar[dr]&A\ar[d]\\ 
+&A\ar[r]&B
+\end{tikzcd}
+$$ 
+and we check that there is an obvious morphism $F\to G$ suggested by the commutative diagram
+$$
+\begin{tikzcd}
+F\ar[rrd]\ar[rd,dashed]\ar[rdd]\\ 
+&G\ar[d]\ar[r]&C\ar[d]\\ 
+&E\ar[r]&B.
+\end{tikzcd}
+$$ 
+%\begin{muspb}The\index{major unsolved problem}\index{unsolved problem} book claims that $F\to G$ is an isomorphism, but I haven't been able to verify this.\end{muspb}
+
+We claim that $F\to G$ is an isomorphism. 
+
+To prove this, we can assume that the above commutative diagrams take place in $\Set$. We leave it to the reader to verify that the formula 
+$$
+((a_1,a_2),c)\mt((a_1,c),(a_2,c))
+$$ 
+defines a (unique) map $G\to F$, and that this map is inverse to $F\to G$.
+\end{s}
+
+%
+
+% should perhaps be reinserted:
+%\begin{s} 
+%P.~395, Lemma 16.2.4 (i). The statement says that local monomorphisms are stable by base change. The last sentence of Step (a) in the proof follows from the fact that local epimorphisms are stable by base change (Proposition 16.1.11 (i) p.~394 of the book). 
+%\end{s}
 
 %
 
@@ -11558,7 +11575,7 @@ P.~397, Notation 16.2.5 (ii). The fact that
 \begin{equation}\lb{1625}
 \text{such a $w$ is necessarily a local isomorphism}
 \end{equation}
-follows from Lemma 16.2.4 (vii) p. 396.
+follows from Lemma 16.2.4 (vii) p.~396.
 \end{s}
 
 %
