@@ -11499,6 +11499,37 @@ Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$
 
 %
 
+\begin{s}
+P. 395, proof of Lemma 16.2.3 (iii), sentence:
+
+\nn``Notice first that a morphism $U\to A\tm_BA$ is nothing but a diagram $U\parar A \to B$ such that the two compositions coincide, and then any diagram $S\to U\parar A$ such that the two compositions coincide factorizes as $S\to A\underset{A\tm_BA}{\tm}U\to U$.''
+
+Let us prove the factorization statement, even if it is straightforward. Consider the commutative diagram with cartesian squares
+$$
+\begin{tikzcd}
+&S\ar[dl,dashed]\ar[d,"z"]\\ 
+D\ar[d]\ar[r]&U\ar[d,"y"]\\
+A\ar[r,"x"']&C\ar[d,"w_2"']\ar[r,"w_1"]&A\ar[d]\\ 
+&A\ar[r]&B.
+\end{tikzcd}
+$$ 
+We have 
+\begin{equation}\lb{395a}
+w_1x=\id_A=w_2x
+\end{equation}
+and
+\begin{equation}\lb{395b}
+w_1yz=w_2yz
+\end{equation}
+by assumption (we omit the composition symbol $\ci$), and it suffices to show $xw_1yz=yz$, that is 
+\begin{equation}\lb{395c}
+w_ixw_1yz=w_iyz\qquad(i=1,2).
+\end{equation}
+But \qr{395c} follows immediately from \qr{395a} and \qr{395b}.
+\end{s}
+
+%
+
 \begin{s}\lb{s1623}
 P.~395, Lemma 16.2.3 (iii). Consider the conditions
 
@@ -11515,6 +11546,12 @@ Recall that (a) is the condition that $A\to B$ is a local monomorphism. Lemma 16
 \text{Conditions (a), (b), (c), (d), (e) are equivalent.}
 \end{equation} 
 Indeed, Part (iii) of the lemma says that (a), (b) and (c) are equivalent. Clearly (e) implies (c) and (d), and (d) implies (b). It suffices to check that (c) implies (e). Let $C\parar A\to B$ be as in the assumption (c), let $D\to C$ be the local epimorphism furnished by (c), and let $I$ be its image. The two compositions $I\to C\parar A$ coincide because $D\to I$ is an epimorphism, and $I\to C$ is a local isomorphism by Part (ii) of the lemma. q.e.d.
+\end{s}
+
+%
+
+\begin{s} 
+P.~395, Lemma 16.2.4 (i). The statement says that local monomorphisms are stable by base change. The last sentence of Step (a) in the proof follows from the fact that local epimorphisms are stable by base change (Proposition 16.1.11 (i) p.~394 of the book). 
 \end{s}
 
 %
@@ -11563,10 +11600,9 @@ defines a (unique) map $G\to F$, and that this map is inverse to $F\to G$.
 
 %
 
-% should perhaps be reinserted:
-%\begin{s} 
-%P.~395, Lemma 16.2.4 (i). The statement says that local monomorphisms are stable by base change. The last sentence of Step (a) in the proof follows from the fact that local epimorphisms are stable by base change (Proposition 16.1.11 (i) p.~394 of the book). 
-%\end{s}
+\begin{s}
+P. 396, proof of Lemma 16.2.4 (ii). The fact that $h$ is a local epimorphism follows from Proposition 16.1.11 (i) p.~394 of the book.
+\end{s}
 
 %
 
