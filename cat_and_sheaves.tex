@@ -278,22 +278,7 @@ $*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X
 
 \nn$*$ Pp.~63-64, statement and proof of Corollary 2.7.4: all the $h$ are slanted, but they should be straight.
 
-\begin{s}\lb{27i}
-P.~65, Exercise 2.7, Line 3: ``that the functor $\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$''. %(See also \S\ref{s3cat} p.~\pr{s3cat} below.) 
-For the reader's convenience we paste the exercise below:
-
-\nn\textbf{Exercise 2.7.} Let $Z\in\Set$.
-
-\nn(i) Prove that the category $\Set_Z$ admits products (denoted here by $X\tm_Z Y$) and that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$ is left adjoint to the functor $\HOM_Z(Y,\ \cdot\ )$ given by 
-$$
-\HOM_Z(Y, X)=\bigsqcup_{z\in Z}\ \Hom_{\Set}(Y_z,X_z),
-$$ 
-where $X_z$ is the fiber of $X\to Z$ over $z\in Z$.
-
-\nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition~\ref{dsbc} p.~\pr{dsbc}).\index{base change}\index{stable by base change}
-
-(See also Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}.)
-\end{s}
+\nn$*$ P.~65, Exercise 2.7: see Section~\ref{27i} p.~\pr{27i} below.
 
 \nn$*$ P.~74, first line of the proof of Theorem 3.1.6: $\ds\ilim$ should be $\ds\ilim_i$. 
 
@@ -1840,7 +1825,7 @@ In \S\ref{sv} p.~\pr{sv} we proved that (a) implies (d).
 Here is a mild generalization of Proposition 2.1.10 p.~40 of the book (stated below as Corollary~\ref{2.1.10c}): 
 
 \begin{prop}\lb{2.1.10b}
-Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
+Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors and $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}). Assume that $\A$ admits inductive limits indexed by $I$, that $G$ commutes with such limits, and that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
 $$
 \Hom_\B(F(\ ),Y)\iso\Hom_\C(G(\ ),Z)
 $$
@@ -1892,11 +1877,12 @@ commute. Moreover $h$ is bijective because $\Hom_\C(G(p),Z)$ is a projection. De
 $$
 k:\Hom_\B(F(\col\al),Y)\to\Hom_{\B^\vee}(\col F\ci\al,Y)
 $$ 
-by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_{\B^\vee}(f,Y)=k$. As $\Hom_{\B^\vee}(q,Y)$ is a projection, this equality follows from the commutativity of \qr{faq} and \qr{dbf}.
+by $k:=h\ci\Hom_\C(g,Z)\ci\theta_{\col\al}$. It is enough to check that we have $\Hom_{\B^\vee}(f,Y)=k$. As $\Hom_{\B^\vee}(q,Y)$ is a projection, this equality follows from the commutativity of %\qr{faq} and 
+\qr{dbf}.
 \end{proof} 
 
 \begin{cor}[Proposition 2.1.10 p.~40]\lb{2.1.10c}
-Let $F:\A\to\B$ be a functor and $I$ a category. Assume that $\A$ admits inductive limits indexed by $I$ and that $F$ admits a right adjoint. Then $F$ commutes with inductive limits indexed by $I$.
+Let $F:\A\to\B$ be a functor and $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}). Assume that $\A$ admits inductive limits indexed by $I$ and that $F$ admits a right adjoint. Then $F$ commutes with inductive limits indexed by $I$.
 \end{cor}
 
 \begin{proof} 
@@ -1942,10 +1928,7 @@ in $\Fct(I^{\op},\Set_\V)$, where $\V$ is a universe such that $\C^\wg_\U$ is a 
 % https://docs.google.com/document/d/1AITzGqzUAvv50lju_VrBMrKTTlpm0dwypIunBQYn6jA/edit
 
 \begin{df}[universal inductive limit]\lb{uil} 
-Let $\al:I\to\C$ be an arbitrary functor %defined on a small category (Definition~\ref{myuscat} p.~\pr{myuscat}) 
-and let $X$ be an object of $\C$. %and let $p:\al\to\DT X$ be a morphism in $\C^I$ (see Notation~\ref{diag} p.~\pr{diag}).
-If, in the notation of Proposition~\ref{propulim}, the functor $A_\U$ is representable for some $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), we say that $X$ %$(X,p)$ 
-is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
+Let $\al:I\to\C$ be an arbitrary functor and let $X$ be an object of $\C$. If, in the notation of Proposition~\ref{propulim}, the functor $A_\U$ is representable for some $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myucat} p.~\pr{myucat} and \ref{myuscat} p.~\pr{myuscat}), we say that $X$ is a {\em universal} inductive limit\index{universal inductive limit} of $\al$, and that $\col\al$ exists {\em universally}\index{universal existence of a limit} in $\C$.
 \end{df}
 
 There is of course an analogous notion of universal projective limit. 
@@ -2138,7 +2121,7 @@ P. 44, Definition 2.2.2 (iii). A sequence $X\to Y\parar Z$ in a category $\C$ is
 \sbs{Stability by base change}\lb{sbsarsbc}
 
 \begin{s}\lb{parsbc}
-(See also \S\ref{27i} p.~\pr{27i}.) Recall the following definition:
+(See also Section~\ref{27i} p.~\pr{27i}.) Recall the following definition:
 
 \begin{df}[Definition 2.2.6 p.~47, stability by base change]\lb{dsbc}
 Let $\C$ be a category which admits fiber products and inductive limits indexed by a category $I$.
@@ -3402,7 +3385,35 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 \nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; % and note that (i) implies $p_1=p_2$, and thus $g=h$. 
 then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 
-%\begin{s}\lb{s3cat}P.~65, Exercise 2.7. (See \S\ref{27i} p.~\pr{27i}.) Clearly, the following proposition holds and implies Exercise~2.7.\begin{prop}\lb{p3cat}Let $\U$ be a universe, let $\Set$ be the category of $\U$-sets, let $Z$ be in $\Set$, and let $Z'$ be the discrete category whose set of objects is $Z$. Then there are canonical isomorphisms$$\Set_Z\iso\prod_{z\in Z}\Set\iso\Fct(Z',\Set).$$\end{prop}\end{s}
+%%£
+
+\sbs{Exercise 2.7}\lb{27i}
+P.~65, Exercise 2.7, Line 3: ``that the functor $\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$''. For the reader's convenience we paste the exercise below:
+
+\nn\textbf{Exercise 2.7.} Let $Z\in\Set$.
+
+\nn(i) Prove that the category $\Set_Z$ admits products (denoted here by $X\tm_Z Y$) and that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$ is left adjoint to the functor $\HOM_Z(Y,\ \cdot\ )$ given by 
+$$
+\HOM_Z(Y, X)=\bigsqcup_{z\in Z}\ \Hom_{\Set}(Y_z,X_z),
+$$ 
+where $X_z$ is the fiber of $X\to Z$ over $z\in Z$.
+
+\nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition~\ref{dsbc} p.~\pr{dsbc}).\index{base change}\index{stable by base change}
+
+Here is the solution: The bijective correspondence between 
+$$
+f\in\Hom_{\Set_Y}\left(U\tm_ZY,X\right)
+$$ 
+and 
+$$
+g\in\Hom_{\Set_Z}\left(U,\bigsqcup_{z\in Z}\Hom_\Set\left(Y_z,X_z\right)\right)
+$$ 
+is given by 
+$$
+(\forall\ z\in Z)\ \left(\forall\ u\in U_z\right)\ \left(\forall\ y\in Y_z\right)\ (f(u,y)=g(u)(y)).
+$$
+
+(See also Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}.)
 
 %%
 
