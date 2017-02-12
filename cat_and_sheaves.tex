@@ -3385,7 +3385,7 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 \nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; % and note that (i) implies $p_1=p_2$, and thus $g=h$. 
 then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 
-%%£
+%%
 
 \sbs{Exercise 2.7}\lb{27i}
 P.~65, Exercise 2.7, Line 3: ``that the functor $\cdot\tm_ZY:\Set_Z\to\Set_Z$'' should be ``that, given $Y\in\Set_Z$, the functor $\cdot\tm_ZY:\Set_Z\to\Set_Y$''. For the reader's convenience we paste the exercise below:
@@ -3400,18 +3400,19 @@ where $X_z$ is the fiber of $X\to Z$ over $z\in Z$.
 
 \nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition~\ref{dsbc} p.~\pr{dsbc}).\index{base change}\index{stable by base change}
 
-Here is the solution: The bijective correspondence between 
+Here is the solution: (i) The bijective correspondence between 
 $$
 f\in\Hom_{\Set_Y}\left(U\tm_ZY,X\right)
 $$ 
 and 
 $$
-g\in\Hom_{\Set_Z}\left(U,\bigsqcup_{z\in Z}\Hom_\Set\left(Y_z,X_z\right)\right)
+g\in\Hom_{\Set_Z}\left(U\ ,\ \bigsqcup_{z\in Z}\Hom_\Set\left(Y_z,X_z\right)\right)
 $$ 
 is given by 
 $$
 (\forall\ z\in Z)\ \left(\forall\ u\in U_z\right)\ \left(\forall\ y\in Y_z\right)\ (f(u,y)=g(u)(y)).
-$$
+$$ 
+(ii) The statement follows from (i) and Proposition 2.1.10 p.~40 of the book.
 
 (See also Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}.)
 
@@ -10502,7 +10503,8 @@ Z\ar[d]\ar[r]&Y\ar[d]\ar[r]&X\ar[d]\\
 W\ar[r]&V\ar[r]&U
 \end{tikzcd}
 $$ 
-\emph{be a commutative diagram in $\C$. If the big square (or ``rectangle'') is cocartesian, then the right small square is cocartesian too.}
+\emph{be a commutative diagram in $\C$. If $ZXUW$ %the big square (or ``rectangle'') 
+is cocartesian, then so is $YXUV$.}%the right small square is cocartesian too.}
 %\emph{be a commutative diagram in $\C$. If the left small square and the big square (or ``rectangle'') is are cocartesian, then the right small square is cocartesian too.}
 \end{s}
 
