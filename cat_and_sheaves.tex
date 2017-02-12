@@ -1832,6 +1832,8 @@ $$
 in $\A^\wg$. Then $F$ commutes with inductive limits indexed by $I$.
 \end{prop}
 
+%Note that Propositions 3.3.3 and 3.3.6 in the book contain another generalization of Proposition 2.1.10.
+
 \begin{proof} 
 Let $\theta$ be the isomorphism $\Hom_\B(F(\ ),Y)\xr\sim\Hom_\C(G(\ ),Z)$, let $\al:I\to\A$ be a functor and let $p:\al\to\DT\col\al$ be the coprojection. Note that $\col F\ci\al$ exists in $\B^\vee$. Consider the self-explanatory commutative diagrams 
 \begin{equation}\lb{faq}
@@ -3382,8 +3384,7 @@ Solution: Claim (i) is obvious. Let us prove (ii):
 
 \nn$\delta$ isomorphism $\then\delta$ epimorphism: obvious;
 
-\nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; % and note that (i) implies $p_1=p_2$, and thus $g=h$. 
-then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
+\nn$\delta$ epimorphism $\then\ f$ monomorphism: let $g,h:Z\parar X$ satisfy $f\ci g=f\ci h$; let $k:Z\to P$ satisfy $p_1\ci k=g,\ p_2\ci k=h$; then the assumption that $\delta$ is an epimorphism and the equality $p_1\ci\delta=p_2\ci\delta$ observed in (i) imply $p_1=p_2$, and thus $g=h$.
 
 %%
 
@@ -3725,6 +3726,24 @@ $$
 $$ 
 This proves \qr{4321}.
 \end{proof}  
+\end{s}
+
+%
+
+\begin{s}
+P. 83, Proposition 3.3.6. Here is a mild generalization:
+
+\begin{prop}
+Let $\C\os G\longleftarrow\A\os F\longrightarrow\B$ be functors. Assume that for each $Y$ in $\B$ there is a $Z$ in $\C$ and an isomorphism 
+$$
+\Hom_\B(F(\ ),Y)\iso\Hom_\C(G(\ ),Z)
+$$
+in $\A^\wg$. If $G$ is right exact, then so if $F$.
+\end{prop}
+
+\begin{proof}
+The proof is similar to that of Proposition~3.3.6 in the book. The details are left to the reader.
+\end{proof}
 \end{s}
 
 %
@@ -6885,7 +6904,7 @@ We have:
 
 \emph{(ii)} If $f'$ is a monomorphism, then \qr{837} is cartesian and $f$ is a
 monomorphism.
-\end{lem} 
+\end{lem}
 \end{s} 
 
 %
@@ -10493,6 +10512,12 @@ attached to a d.t. $X\to Y\to Z\to TX$ in $\oo D(\C)$. The fact that $H$ commute
 
 %
 
+\begin{s} 
+P.~325. Lemma 13.2.1 will be used to prove Proposition~13.2.2 p.~326, Proposition~13.2.6 p.~327, Theorem 13.2.8 p.~329, Proposition 13.3.5 p.~330 and Lemma 14.4.1 p.~358 of the book. 
+\end{s}
+
+%
+
 \begin{s}
 P. 325. Just before the last display it is written ``There is a monomorphism $Z^p\mono W^p$.'' This results from the following fact, whose proof is left to the reader:
 
@@ -10503,9 +10528,16 @@ Z\ar[d]\ar[r]&Y\ar[d]\ar[r]&X\ar[d]\\
 W\ar[r]&V\ar[r]&U
 \end{tikzcd}
 $$ 
-\emph{be a commutative diagram in $\C$. If $ZXUW$ %the big square (or ``rectangle'') 
-is cocartesian, then so is $YXUV$.}%the right small square is cocartesian too.}
-%\emph{be a commutative diagram in $\C$. If the left small square and the big square (or ``rectangle'') is are cocartesian, then the right small square is cocartesian too.}
+\emph{be a commutative diagram in $\C$. If $ZXUW$ is cocartesian, then so is $YXUV$.}
+
+We apply this to the commutative diagram 
+$$
+\begin{tikzcd}
+\Coker d_X^{p-1}\ar[d]\ar[r]&\Ker d_X^{p+1}\ar[d]\ar[r]&X^{p+1}\ar[d]\\ 
+\Coker d_Y^{p-1}\ar[r]&Z^p\ar[r]&W^p
+\end{tikzcd}
+$$ 
+and we use Lemma~\ref{8311} (b) (ii) p.~\pr{8311}.
 \end{s}
 
 %
@@ -10515,7 +10547,7 @@ P. 325, exactness of
 $$
 0\to H^p(X)\to\Coker d_X^{p-1}\to\Ker d_X^{p+1}\to H^{p+1}(X)\to0:
 $$ 
-$\bu$ Exactness at $H^p(X)$: apply the Five Lemma to 
+$\bu$ Exactness at $H^p(X)$: apply the Five Lemma (Theorem~\ref{5l} p.~\pr{5l}) to 
 $$
 \begin{tikzcd}
 X^{p-1}\ar[d,equal]\ar[r,"d_X^{p-1}"]&\Ker d_X^p\ar[d]\ar[r]&H^p(X)\ar[d]\ar[r]&0\ar[d]\\ 
@@ -10540,18 +10572,18 @@ $$
 and 
 $$
 \begin{tikzcd}
-W\ar[d,"j"']\ar[r,two heads,"e"]&Z\ar[d,"c"]\\ 
-X^{p-1}\ar[r,"i"']&\Coker d_X^{p-1}.
+W\ar[d,"j"']\ar[r,two heads,"h"]&Z\ar[d,"g"]\\ 
+X^p\ar[r,"f"']&\Coker d_X^{p-1}.
 \end{tikzcd}
 $$ 
-The equalities $d_X^pj=bij=bce=0$ yield commutative diagram 
+The equalities $d_X^pj=bfj=bgh=0$ yield commutative diagram 
 $$
 \begin{tikzcd}
 &W\ar[dl,"k"']\ar[d,"j"]\\ 
-\Ker d_X^p\ar[r,"h"']&X^p.
+\Ker d_X^p\ar[r,"e"']&X^p.
 \end{tikzcd}
 $$ 
-Setting $f:=gk$ we get $af=agk=ihk=ij=ce$. 
+Setting $i:=ck$ we get $ai=ack=fek=fj=gh$. 
 
 \nn$\bu$ Exactness at $\Ker d_X^{p+1}$: It suffices to complete the commutative diagram 
 $$
@@ -10567,7 +10599,7 @@ W\ar[d,"g"']\ar[r,two heads,"e"]&Z\ar[d,"c"]\ar[dr,"0"]\\
 X^p\ar[r,"d_X^p"']&\Ker d^{p+1}\ar[r,"b"']&H^{p+1}(X)
 \end{tikzcd}
 $$ 
-and setting $f:=hg$ yields $af=ahg=d_X^pg=ce$.
+and setting $f:=hg$, where $h:X^p\to\Coker d_X^{p-1}$ is the natural morphism, yields $af=ahg=d_X^pg=ce$.
 
 \nn$\bu$ Exactness at $H^{p+1}(X)$: Obvious.
 \end{s}
@@ -10587,12 +10619,6 @@ $\bu$ Exactness at $H^p(X)$: As mentioned in the book, the exactness at $H^p(X)$
 % https://docs.google.com/document/d/15SCs5Hb987AifYKjinx2D-UqtOLkkYe3wvvIgEWLCLI/edit
 
 \nn$\bu$ Exactness at $H^{p+1}(X)$: The morphism $Z^p\to H^{p+1}(X)$ is an epimorphism because the composition $\Ker d_X^{p+1}\to Z^p\to H^{p+1}(X)$ is an epimorphism.
-\end{s}
-
-%
-
-\begin{s} 
-P.~325. Lemma 13.2.1 will be used to prove Proposition~13.2.2 p.~326, Proposition~13.2.6 p.~327, Theorem 13.2.8 p.~329, Proposition 13.3.5 p.~330 and Lemma 14.4.1 p.~358 of the book. 
 \end{s}
 
 %
