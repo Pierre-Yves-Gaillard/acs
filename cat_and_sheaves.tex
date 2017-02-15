@@ -561,6 +561,8 @@ $$
 P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$ be an abelian category admitting countable products'', and ``right localizable at $(Y,X)$'' should be ``universally right localizable at $(Y,X)$, and let $\oo{RHom}_\C$ denote its right localization''.
 \end{s}
 
+\nn$*$ P.~348, proof of Lemma 14.1.2: $d_{M(X)}$ should be $d_{M(Z)}$.
+
 \nn$*$ P.~359, Line 3: $\sigma$ should be sh.
 
 \nn$*$ P.~360, Line 5 of Step~(ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\PP)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\C)$''.
@@ -7018,7 +7020,7 @@ As $ej=dgh$, there is a unique morphism $i:T\to Z$ such that $ci=j$ and $ai=gh$.
 \begin{s} 
 Page 181, the Five Lemma (minor variant of the proof). 
 
-\begin{thm}[Lemma 8.3.13 p.~181, Five Lemma]\lb{5l} 
+\begin{thm}[Lemma 8.3.13 p.~181, Five Lemma]\lb{5l}
 Consider the commutative diagram of complexes 
 $$
 \begin{tikzcd}
@@ -9938,9 +9940,7 @@ for $X$ in $\SSS$.
 Note that Convention~\ref{payc} p.~\pr{payc} can be applied.
 \end{s}
 
-%\begin{muspb}
-%The\index{major unsolved problem}\index{unsolved problem} proof of Lemma 10.5.11 p.~264 invokes Exercise 8.37 p.~211. I failed to solve Exercise 8.37, and I don't understand the proof of Lemma 10.5.11, even taking Exercise 8.37 for granted.
-%\end{muspb}
+%
 
 \begin{s}\lb{brown}
 P.~264, proof of Lemma 10.5.11. As observed in \S\ref{1057ii} p.~\pr{1057ii}, small filtrant inductive limits exist and are exact in $\SSS^{\wg,prod}$.
@@ -10510,7 +10510,9 @@ $$
 attached to a d.t. $X\to Y\to Z\to TX$ in $\oo D(\C)$. The fact that $H$ commutes with $T$ implies $H(Z)\iso0$, Remark 13.1.4 (i) implies $Z\iso0$, and Exercise 10.1 p.~265 implies that $f$ is an isomorphism.
 \end{s}
 
-%
+%%
+
+\sbs{Lemma 13.2.1 p.~325}
 
 \begin{s} 
 P.~325. Lemma 13.2.1 will be used to prove Proposition~13.2.2 p.~326, Proposition~13.2.6 p.~327, Theorem 13.2.8 p.~329, Proposition 13.3.5 p.~330 and Lemma 14.4.1 p.~358 of the book. 
@@ -10624,6 +10626,27 @@ $\bu$ Exactness at $H^p(X)$: As mentioned in the book, the exactness at $H^p(X)$
 %
 
 \begin{s}
+P. 325, claim that $Z^p\in\J$. We have 
+$$
+\Ker(Z^p\to H^{p+1}(X))\iso\Coker(H^p(X)\to\Coker d_Y^{p-1}).
+$$
+\end{s}
+
+%
+
+\begin{s}
+P. 325, morphism $f^{p+1}:X^{p+1}\to Y^{p+1}$. This morphism is defined as the composition $X^{p+1}\to W^p\to Y^{p+1}$.
+\end{s}
+
+%
+
+\begin{s}
+P. 325, morphism $d_Y^p:Y^p\to Y^{p+1}$. This morphism is defined as the composition $Y^p\to \Coker d_Y^{p-1}\to Z^p\to Y^{p+1}$.
+\end{s}
+
+%
+
+\begin{s}
 P. 326, first display. Consider the commutative diagram 
 $$
 \begin{tikzcd}
@@ -10634,7 +10657,7 @@ Y^{p-1}\ar[r,"d_Y^{p-1}"]&Y^p\ar[ddr,"d_Y^p"']\ar[r]&\Coker d_Y^{p-1}\ar[d,"a"']
 &&Y^{p+1}.
 \end{tikzcd}
 $$ 
-The precise claim is that the morphism $c$ is an isomorphism. 
+The precise claim is that the morphism $c$ is an isomorphism. The key point is the fact that $b$ is a monomorphism.
 \end{s}
 
 %
@@ -10648,16 +10671,18 @@ $$
 \Coker d_Y^{p-1}\ar[r]&Y^{p+1}\ar[r]&H^{p+1}(Y_{\le p+1})\ar[r]&0
 \end{tikzcd}
 $$ 
-is a monomorphism by the Five Lemma.
+is a monomorphism by the Five Lemma (Theorem~\ref{5l} p.~\pr{5l}).
 \end{s}
 
 %
 
 \begin{s}
-P. 326. The first isomorphism in the third display follows from the fact that $d_Y^p:Y^p\to Y^{p+1}$ factors as $Y^p\epi\Coker d_Y^{p-1}\to Z^p\mono Y^{p+1}$, by definition of $d_Y^p$. (See Proposition 5.1.7 (ii) p.~116 of the book and \S\ref{517ii} p.~\pr{517ii}.)
+P. 326. The first isomorphism in the third display follows from the fact that $d_Y^p:Y^p\to Y^{p+1}$ factors as $Y^p\epi\Coker d_Y^{p-1}\to Z^p\mono Y^{p+1}$, by definition of $d_Y^p$. %(See Proposition 5.1.7 (ii) p.~116 of the book and \S\ref{517ii} p.~\pr{517ii}.)
 \end{s}
 
-%
+%%
+
+\sbs{Brief comments}
 
 \begin{s}
 P. 326, proof of Proposition 13.2.2 (ii). See \S\ref{1233} p.~\pr{1233}.
@@ -10846,7 +10871,7 @@ $$
 The square $(Z,X'',Y,Y'')$ is cartesian, and the top and bottom rows are exact. The middle row is exact by Lemma~\ref{cart1} p.~\pr{cart1}, and $X\to Z$ is an isomorphism by the Five Lemma.
 \end{s}
 
-%\begin{muspb}\lb{334}P. 334,\index{major unsolved problem}\index{unsolved problem} proof that $\J_F$ is cogenerating in the proof of Lemma 13.3.12. I don't understand the argument. (See also Major Unsolved Problem~\ref{361} p.~\pr{361} below. The notion of cogenerating full subcategory is defined on p.~184 of the book, and the notion of $F$-injective full subcategory is defined on pages 253 and 330 of the book.)\end{muspb}
+%
 
 \begin{s}\lb{334}
 P. 334, Lemma 13.3.12. We add the assumption that $\J$ is cogenerating. (See also \S\ref{361} p.~\pr{361} below. The notion of cogenerating full subcategory is defined on p.~184 of the book, and the notion of $F$-injective full subcategory is defined on pages 253 and 330 of the book.)
@@ -10990,14 +11015,23 @@ $$
 0\ar{r}&Y\ar{r}&Z\ar{r}&X\ar{r}&0,
 \end{tikzcd}
 $$ 
-where the top row is an exact complex, where $g'$ is induced by $g$ and where the square $(\Ker f,W^0,Y,Z)$ is cocartesian. Then Lemma~\ref{cart1} p.~\pr{cart1} %Lemma~\ref{738a} p.~\pr{738a} 
-implies that the bottom row is an exact complex. It is easy to see that this process defines a map from $\Ext^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
+where the top row is an exact complex, where $g'$ is induced by $g$ and where the square $(\Ker f,W^0,Y,Z)$ is cocartesian. Then Lemma~\ref{cart1} p.~\pr{cart1} implies that the bottom row is an exact complex. It is easy to see that this process defines a map from $\Ext^1_\C(X,Y)$ to $E/\!\!\sim$, and that this map is inverse to the map constructed before. q.e.d.
 
 %%%
 
 \section{About Chapter 14}
 
 \sbs{Brief comments}
+
+\begin{s}\lb{ho}
+P. 348, paragraph before Lemma 14.1.2. Define $u:M(X)\to T^{-1}M(X)$ by 
+$$
+u=\begin{pmatrix}0&\id_{T^{-1}X}\\ 0&0\end{pmatrix}:X\oplus T^{-1}X\to T^{-1}X\oplus T^{-2}X.
+$$ 
+Then $u$ is a homotopy between 0 and $\id_{M(X)}$. In particular any morphism $M(X)\to M(Y)$ is a qis.
+\end{s}
+
+%
 
 \begin{s}
 P. 348, proof of Lemma 14.1.5. We define a map 
@@ -11013,6 +11047,12 @@ by inverting the bijection $\Hom_{\oo K_c(\A)}(X,I)\to\Hom_{\oo K_c(\A)}(X',I)$ 
 P. 349, Display (14.1.2), definition of QM. To be consistent with Remark~\ref{deF} p.~\pr{deF} we define QM as the full subcategory of $\Mor(\A_c)$ whose objects are the morphisms which are qis and monomorphisms.
 \end{s}
 
+%
+
+\begin{s}
+P. 349, proof of Proposition 14.1.6, Step (i) (b), claim ``$M(v)$ belongs to QM'': see \S\ref{ho} p.~\pr{ho}.
+\end{s}
+
 %%
 
 \sbs{Proposition 14.1.6 p.~349}
@@ -11023,19 +11063,11 @@ The fact that $Z$ is qis to 0 follows from Proposition~\ref{sl4} p.~\pr{sl4}.
 
 We refer the reader to the book for a precise description of the setting. The following facts can be easily verified: 
 
-The morphisms 
+We have morphisms 
 $$
-f:X\to Y,\quad\pp:X\to I,\quad g:Y\to Z
+f:X\to Y,\quad\pp:X\to I,\quad\psi:Y\to I,\quad h:T^{-1}Y\to I%,\quad g:Y\to Z
 $$ 
-in $\A$ satisfy 
-\begin{equation}\lb{minac}
-f,\pp,g\text{ are in fact morphisms in }\A_c.
-\end{equation}
-We also have morphisms 
-$$
-\widetilde h:T^{-1}Z\to I,\quad\widetilde\psi:Y\to I,\quad\psi:Y\to I,\quad h:T^{-1}Y\to I,\quad\xi:Z\to I
-$$ 
-in $\A$, and we have the equalities 
+in $\A$ which satisfy 
 \begin{equation}\lb{ppf}
 \pp=\psi\ci f,
 \end{equation} 
@@ -11045,6 +11077,27 @@ h=T^{-1}d_I\ci T^{-1}\psi-\psi\ci T^{-1}d_Y,
 \begin{equation}\lb{hpm2}
 h=T^{-1}d_I\ci T^{-1}\psi+\psi\ci d_{T^{-1}Y},
 \end{equation} 
+\begin{equation}\lb{minac}
+f\text{ and }\pp%,g
+\text{ are in fact morphisms in }\A_c.
+\end{equation}
+It is straightforward to check that $h$ is also a morphism in $\A_c$. To prove $h\ci T^{-1}f=0$, we note: 
+\begin{align*}
+h\ci T^{-1}f&=T^{-1}d_I\ci T^{-1}\psi\ci T^{-1}f+\psi\ci d_{T^{-1}Y}\ci T^{-1}f&\text{by \qr{hpm2}}\\ 
+&=T^{-1}d_I\ci T^{-1}\pp+\psi\ci d_{T^{-1}Y}\ci T^{-1}f&\text{by \qr{ppf}}\\ 
+&=T^{-1}d_I\ci T^{-1}\pp+\psi\ci f\ci d_{T^{-1}X}&\text{by \qr{minac}}\\ 
+&=T^{-1}d_I\ci T^{-1}\pp+\pp\ci d_{T^{-1}X}&\text{by \qr{ppf}}\\ 
+&=0&\text{by \qr{minac}}. 
+\end{align*}
+We also have morphisms 
+$$
+g:Y\to Z,\quad\widetilde h:T^{-1}Z\to I,\quad\xi:Z\to I\quad\widetilde\psi:Y\to I
+$$ 
+in $\A$ with 
+\begin{equation}\lb{minac2}
+g\text{ is in fact a morphism in }\A_c,
+\end{equation} 
+%and we have the equalities  
 \begin{equation}\lb{hhg}
 h=\widetilde h\ci T^{-1}g,
 \end{equation} 
@@ -11055,21 +11108,12 @@ h=\widetilde h\ci T^{-1}g,
 \widetilde\psi=\psi-\xi\ci g. 
 \end{equation}
 
-To prove $h\ci T^{-1}f=0$, we note: 
-\begin{align*}
-h\ci T^{-1}f&=T^{-1}d_I\ci T^{-1}\psi\ci T^{-1}f+\psi\ci d_{T^{-1}Y}\ci T^{-1}f&\text{by \qr{hpm2}}\\ 
-&=T^{-1}d_I\ci T^{-1}\pp+\psi\ci d_{T^{-1}Y}\ci T^{-1}f&\text{by \qr{ppf}}\\ 
-&=T^{-1}d_I\ci T^{-1}\pp+\psi\ci f\ci d_{T^{-1}X}&\text{by \qr{minac}}\\ 
-&=T^{-1}d_I\ci T^{-1}\pp+\pp\ci d_{T^{-1}X}&\text{by \qr{ppf}}\\ 
-&=0&\text{by \qr{minac}}. 
-\end{align*}
-
 To prove that $\widetilde\psi$ is a morphism in $\A_c$, we note: 
 \begin{align*}
 d_I\ci\widetilde\psi-T\widetilde\psi\ci d_Y&=d_I\ci\psi-d_I\ci\xi\ci g-T\psi\ci d_Y+T\xi\ci Tg\ci d_Y&\text{by \qr{psitildef}}\\ 
 &=(d_I\ci\psi-T\psi\ci d_Y)-(d_I\ci\xi\ci g-T\xi\ci Tg\ci d_Y)\\ 
 &=Th-(d_I\ci\xi\ci g-T\xi\ci Tg\ci d_Y)&\text{by \qr{hpm1}}\\ 
-&=Th-(d_I\ci\xi\ci g-T\xi\ci d_Z\ci g)&\text{by \qr{minac}}\\ 
+&=Th-(d_I\ci\xi\ci g-T\xi\ci d_Z\ci g)&\text{by \qr{minac2}}\\ 
 &=Th-T\widetilde h\ci g&\text{by \qr{htilde}}\\ 
 &=0&\text{by \qr{hhg}}. 
 \end{align*}
@@ -11224,7 +11268,7 @@ The proof proves successively (a), (b1), (c), (b2). More precisely:
 P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K^-(\PP)$ is co-cofinal to $\Qis_X$ follows from Proposition 3.2.4 p.~79 of the book.
 \end{s}
 
-%\begin{muspb}\lb{361}P. 361,\index{major unsolved problem}\index{unsolved problem} proof of Corollary 14.4.6. I don't see why the epimorphism $P_i\epi\al(i)$ used in the proof of Corollary 14.4.6 exists. (See also Major Unsolved Problem~\ref{334} p.~\pr{334} above. The notion of generating full subcategory is defined on p.~184 of the book, and the notion of $F$-projective full subcategory is defined on pages 253 and 330 of the book.)\end{muspb}
+%
 
 \begin{s}\lb{361}
 P. 361, Corollary 14.4.6. We add the assumption that $\PP$ is generating. In the proof of the Corollary, I don't see the point of introducing the category $\PP'$ and invoking Lemma 13.3.12. %it seems to me that the introduction of the category $\PP'$ and the invocation of Lemma 13.3.12 are not necessary. 
@@ -11626,7 +11670,6 @@ F\ar[rrd]\ar[rd,dashed]\ar[rdd]\\
 &E\ar[r]&B.
 \end{tikzcd}
 $$ 
-%\begin{muspb}The\index{major unsolved problem}\index{unsolved problem} book claims that $F\to G$ is an isomorphism, but I haven't been able to verify this.\end{muspb}
 
 We claim that $F\to G$ is an isomorphism. 
 
