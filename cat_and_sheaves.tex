@@ -565,6 +565,8 @@ P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \nn$*$ P.~359, Line 3: $\sigma$ should be sh.
 
+%\nn$*$ P. 351, Condition (14.1.4) (iii). The phrase ``an epimorphism in $\A_c$ with $Y\in\SSS$'' should be ``an epimorphism in $\A_c$ with $X\in\SSS$''. The phrase ``and $g$ an epimorphism'' should perhaps be ``and $g$ an epimorphism with $Y\in\SSS$''.
+
 \nn$*$ P.~360, Line 5 of Step~(ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\PP)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\C)$''.
 
 \nn$*$ P.~364, Step~(g) of the proof of Theorem 14.4.8: $\PP_1=\oo K^-(\C_1)$ should be $\PP_1=\C_1$.
@@ -9352,8 +9354,7 @@ If the above conditions hold, then, for any $X$ in $\C_0$, there is a $\Mor(\C_0
 \end{thm}
 
 \begin{rk}\lb{954}
-In the book $\F$ is supposed to be small, but the proof clearly works if $\F$ is only essentially small. %the set of isomorphisms classes of elements of $\F$ has a small cardinal.
-(See Remark~\ref{deF} p.~\pr{deF} above and \S\ref{962} below.)
+In the book $\F$ is supposed to be small, but the proof clearly works if $\F$ is only essentially small. (See Remark~\ref{deF} p.~\pr{deF} above and \S\ref{962} below.)
 \end{rk}
 
 %%
@@ -11129,7 +11130,53 @@ P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p
 %
 
 \begin{s}
+P. 351, proof of Lemma (14.1.4) (iii). Given 
+$$
+\begin{tikzcd}
+&Y\ar[d]\\ 
+X'\ar[r,two heads]&X
+\end{tikzcd}
+$$ 
+with $Y$ in $\SSS$ we get 
+$$
+\begin{tikzcd}
+Z\ar[d]\ar[r,two heads]&Y\ar[d]\\ 
+X'\ar[r,two heads]&X
+\end{tikzcd}
+$$ 
+by Lemma \ref{8311} (a) (ii) p. \pr{8311}, and then 
+$$
+\begin{tikzcd}
+Y'\ar[d,rightarrowtail]\\ 
+Z\ar[d]\ar[r,two heads]&Y\ar[d]\\ 
+X'\ar[r,two heads]&X
+\end{tikzcd}
+$$ 
+with $Y'$ in $\SSS$ and $Y'\mono Z\epi Y$ an epimorphism by Theorem~\ref{961} (vi) p.~\pr{961}
+\end{s}
+
+%
+
+\begin{s}
 P. 351, definition of $\F'$ and $\F$. To be consistent with Remark~\ref{deF} p.~\pr{deF} we define $\F'$ and $\F$ as follows: $\F'$ is the full subcategory of QM whose objects are are the objects $u:X\to Y$ of QM such that $X$ and $Y$ are in $\SSS$, and $\F$ is the full subcategory of $\F'$ obtained collecting a representative of each isomorphism class of objects of $\F'$.
+\end{s}
+
+%
+
+\begin{s}
+P. 352, proof of Lemma 14.1.10. I think 
+$$
+\Ker(H(V_{n-1})\to H(X))\to\Ker(H(V_n)\to H(X))
+$$ 
+should be 
+$$
+\Ker(H(V_{n-1})\to H(X))\to H(V_n).
+$$ 
+By taking the colimit over $n$ we see that 
+$$
+\Ker(H(V')\to H(X))\to H(V')
+$$ 
+vanishes, which means that $H(V')\to H(X)$ is indeed a monomorphism.
 \end{s}
 
 %
@@ -11210,13 +11257,24 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\iso\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo D(
 % https://docs.google.com/document/d/1EAlaHrIJobqQXp768tioLyGGsW5Nd757wVIdqB2xNiY/edit
 
 \begin{s} 
-P.~358. Lemma 14.4.1 will be used to prove Theorem 14.4.3 p.~359 and Theorem 14.4.5 p.~359 of the book.
+P.~358. Lemma 14.4.1 will be used to prove Theorems 14.4.3 and 14.4.5 p.~359 of the book.
 \end{s}
 
 %
 
 \begin{s}
-P. 358, proof of Lemma 14.4.1. We have the following chain of isomorphisms in $\oo D(\C)$:
+P. 358, proof of Lemma 14.4.1. 
+
+\nn$\bu$ We have a commutative diagram  
+$$
+\begin{tikzcd}
+Q_n\ar[dr]\ar[r]&P_n\ar[r]&\tau^{\le n}X\ar[dr]\\ 
+&P_{n+1}\ar[r]&\tau^{\le n+1}X\ar[r]&X
+\end{tikzcd}
+$$ 
+in $\oo K(\C)$.
+
+\nn$\bu$ We have the following chain of isomorphisms in $\oo D(\C)$:
 $$
 Q_n\xr\sim\Mc(P_n\oplus P_{n+1}\to\tau^{\le n+1}X)[-1]\xr\sim\Mc(P_{n+1}\to P_n\oplus P_{n+1})
 $$
@@ -11224,7 +11282,7 @@ $$
 \xr\sim\Mc(0\to P_n)\oplus\Mc(P_{n+1}\to P_{n+1})\xr\sim P_n\oplus0\xr\sim P_n.
 $$
 
-Here is a rewriting of the last three lines:
+\nn$\bu$ Here is a rewriting of the last four lines:
 
 Hence, $\pp_i$ and $\pp_{i+1}$ are monomorphisms by Exercise 8.37. Note that $\id-\text{sh}$ in Exercise 8.37 corresponds to $\pp_i$ and $X_0\to X_1\to\cdots$ corresponds to $H^i(X)\xr\id H^i(X)\xr\id\cdots$. It is straightforward to check that the obvious diagram with exact rows
 $$
