@@ -569,6 +569,8 @@ P.~337, Theorem 13.4.1. ``Let $\C$ be an abelian category'' should be ``Let $\C$
 
 \nn$*$ P.~360, Line 5 of Step~(ii) of the proof of Theorem 14.4.5: ``Then $X''$ is an exact complex in $\oo K^-(\PP)$'' should be (I think) ``Then $X''$ is an exact complex in $\oo K^-(\C)$''.
 
+\nn$*$ P. 362, Line 8: $\oo K(G)$-projective should be $G$-projective (see Definition 13.4.2 p.~338 of the book).
+
 \nn$*$ P.~364, Step~(g) of the proof of Theorem 14.4.8: $\PP_1=\oo K^-(\C_1)$ should be $\PP_1=\C_1$.
 
 \nn$*$ P.~365, line between the last two displays: ``adjoint'' should be ``derived''.
@@ -11045,6 +11047,18 @@ by inverting the bijection $\Hom_{\oo K_c(\A)}(X,I)\to\Hom_{\oo K_c(\A)}(X',I)$ 
 %
 
 \begin{s}
+P. 348, Lemma 14.1.5. The following corollary to Lemma 14.1.5 is almost obvious, but its importance might warrant an explicit statement and an explicit proof. 
+\begin{cor}
+Let $(\A,T)$ be an abelian category with translation such that for all $X$ in $\A_c$ there is a qis $X\to I$ with $I$ in $\oo K_{c,hi}(\A)$, let $\DD$ be a triangulated category and $F:\oo K_c(\A)\to\DD$ a triangulated functor. Then $RF:\oo D_c(\A)\to\DD$ exists and satisfies $RF(X)\iso F(I)$ in the above notation.
+\end{cor} 
+\begin{proof}
+This follows from Lemma 14.1.5 and Proposition 7.3.2 p.~160 of the book. 
+\end{proof}
+\end{s}
+
+%
+
+\begin{s}
 P. 349, Display (14.1.2), definition of QM. To be consistent with Remark~\ref{deF} p.~\pr{deF} we define QM as the full subcategory of $\Mor(\A_c)$ whose objects are the morphisms which are qis and monomorphisms.
 \end{s}
 
@@ -11328,8 +11342,23 @@ P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K
 
 %
 
+\begin{s}
+\begin{muspb}
+P.\index{unsolved problem}\index{major unsolved problem} 360, Theorem 14.4.5 (c). The statement is 
+
+\nn\emph{We have an isomorphism in $\oo D(k)$, functorial with respect to $X\in\oo D(\C)$ and $Y\in\oo D(\C')$}:
+$$
+\RHom_\C(X,RF(Y))\iso\RHom_{\C'}(LG(X),Y).
+$$ 
+
+The proof in the book shows the existence of such an isomorphism, but, it seems to me, the functoriality statement is left unproved, and I'm unable to prove it.
+\end{muspb}
+\end{s}
+
+%
+
 \begin{s}\lb{361}
-P. 361, Corollary 14.4.6. We add the assumption that $\PP$ is generating. In the proof of the Corollary, I don't see the point of introducing the category $\PP'$ and invoking Lemma 13.3.12. %it seems to me that the introduction of the category $\PP'$ and the invocation of Lemma 13.3.12 are not necessary. 
+P. 361, Corollary 14.4.6. We add the assumption that $\PP$ is generating. %In the proof of the Corollary, I don't see the point of introducing the category $\PP'$ and invoking Lemma 13.3.12. %it seems to me that the introduction of the category $\PP'$ and the invocation of Lemma 13.3.12 are not necessary. 
 (See also \S\ref{334} p.~\pr{334} above. The notion of generating full subcategory is defined on p.~184 of the book, and the notion of $F$-projective full subcategory is defined on pages 253 and 330 of the book.)
 \end{s}
 
@@ -11356,6 +11385,12 @@ Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and 
 \end{split}
 \end{equation}
 where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
+\end{s}
+
+%
+
+\begin{s}\lb{L8}
+P. 362, Line 8: as already indicated $\oo K(G)$-projective should be $G$-projective (see Definition 13.4.2 p.~338 of the book).
 \end{s}
 
 %
