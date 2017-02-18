@@ -11208,7 +11208,7 @@ Let $\U_0\subset\U$ be universes, let $(\A,T)$ be a Grothendieck $\U$-category w
 
 \nn Part (iii). %We have 
 %$$
-%\Hom_{\oo D(\C)}(Q(X),Y)\iso\Hom_{\oo K_{hi}(\C)}(R_q(Q(X)),R_q(Y))
+%\Hom_{\oo D(\C)}(Q(X),Y)\iso\Hom_{\oo K_{\text{hi}}(\C)}(R_q(Q(X)),R_q(Y))
 %$$
 %$$
 %\iso\Hom_{\oo K(\C)}(R_q(Q(X)),R_q(Y))\iso\Hom_{\oo K(\C)}(X,R_q(Y)).
@@ -11368,17 +11368,21 @@ $$
 \RHom_\C(X,RF(Y))\iso\RHom_{\C'}(LG(X),Y).
 $$ 
 
-We add the assumption that $\PP$ is $\Hom_\C^\bu(\ \ ,F(Y))$-projective  for all $Y$ in $\oo K_{hi}(\C')$, and we prove the above statement as follows, using \S\ref{abar} p.~\pr{abar}:
+We add the assumption that $\PP^{\op}$ is\bigskip
 
-Let $\T$ be the set of qis in $\widetilde\PP$, let $A:\oo D(\C)\to\widetilde\PP_\T$ be a quasi-inverse to the obvious equivalence $\widetilde\PP_\T\to\oo D(\C)$, and let $\bar A:\Ob(\oo K(\C))\to\Ob(\widetilde\PP)$ be the map induced by $A$. Similarly, let $B:\oo D(\C')\to\oo K_{hi}(\C')$ be a quasi-inverse to the obvious equivalence $\oo K_{hi}(\C')\to\oo D(\C')$, and let $\bar B:\Ob(\oo K(\C'))\to\Ob(\oo K_{hi}(\C'))$ be the map induced by $B$. Let $X$ be in $\oo K(\C)$ and $Y$ be in $\oo K(\C')$. We have 
+\centerline{$\Hom_\C^\bu(\ \ ,F(Y))$-injective for all $Y$ in $\oo K_{\text{hi}}(\C')$,}\bigskip
+
+and we prove the above statement as follows, using \S\ref{abar} p.~\pr{abar}:
+
+Let $\T$ be the set of qis in $\widetilde\PP$, let $A:\oo D(\C)\to\widetilde\PP_\T$ be a quasi-inverse to the obvious equivalence $\widetilde\PP_\T\to\oo D(\C)$, and let $\bar A:\Ob(\oo K(\C))\to\Ob(\widetilde\PP)$ be the map induced by $A$. Similarly, let $B:\oo D(\C')\to\oo K_{\text{hi}}(\C')$ be a quasi-inverse to the obvious equivalence $\oo K_{\text{hi}}(\C')\to\oo D(\C')$, and let $\bar B:\Ob(\oo K(\C'))\to\Ob(\oo K_{\text{hi}}(\C'))$ be the map induced by $B$. Let $X$ be in $\oo K(\C)$ and $Y$ be in $\oo K(\C')$. We have 
 $$
 \RHom_\C(LG(X),Y)\iso\Hom_\C^\bu(G(\bar A(X)),\bar B(Y))
 $$ 
-because $\widetilde\PP$ is $G$-projective and $\oo K_{hi}(\C')$ is $\Hom_\C^\bu(G(\bar A(X)),\ \ )$-injective. Similarly we have 
+because $\widetilde\PP$ is $\oo K(G)$-projective and $\oo K_{\text{hi}}(\C')$ is $\Hom_\C^\bu(G(\bar A(X)),\ \ )$-injective. Similarly we have 
 $$
 \Hom_{\C'}^\bu(\bar A(X),F(\bar B(Y)))\iso\RHom_{\C'}(X,RF(Y))
 $$ 
-because $\widetilde\PP$ is $\Hom_\C^\bu(\ \ ,F(\bar B(Y)))$-projective and $\oo K_{hi}(\C')$ is $F$-injective. Finally we have the adjunction 
+because $\widetilde\PP^{op}$ is $\Hom_\C^\bu(\ \ ,F(\bar B(Y)))$-injective and $\oo K_{\text{hi}}(\C')$ is $F$-injective. Finally we have the adjunction 
 $$
 \Hom_\C^\bu(G(\bar A(X)),\bar B(Y))\iso\Hom_{\C'}^\bu(\bar A(X),F(\bar B(Y))),
 $$ 
