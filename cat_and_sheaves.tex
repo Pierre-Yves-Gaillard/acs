@@ -11363,7 +11363,28 @@ P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K
 %\end{s}
 
 \begin{s}
-P. 360, Theorem 14.4.5 (c). We add the assumption that $\RHom_\C$ exists.
+P. 360, Theorem 14.4.5 (c). We add the assumption that $\RHom_\C$ exists. Here is the implicit underlying lemma:
+\begin{lem}
+In the setting described by the diagram 
+$$
+\A\ \overset{E}{\longrightarrow}\ \B\ 
+\begin{matrix}\overset{F}{\longrightarrow}\\ \underset{G}{\longrightarrow}\end{matrix}
+\ \C,
+$$ 
+where $E$ is an equivalence, the map 
+$$
+\Hom_{\Fct(\B,\C)}(F,G)\to\Hom_{\Fct(\A,\C)}(F\ci E,G\ci E),\quad\theta\mt\theta\star E
+$$ 
+(see Definition~\ref{dil1} p.~\pr{dil1}) is bijective.
+\end{lem}
+
+The statement of Theorem 14.4.5 (c) is 
+
+\nn\emph{We have an isomorphism in $\oo D(k)$, functorial with respect to $X\in\oo D(\C)$ and $Y\in\oo D(\C')$}:
+$$
+\RHom_\C(X,RF(Y))\iso\RHom_{\C'}(LG(X),Y),
+$$ 
+and the above lemma enables us to assume that $X$ is in $\widetilde\PP$ and $Y$ in $\oo K_{\text{hi}}(\C')$. 
 \end{s}
 
 \begin{comment}
