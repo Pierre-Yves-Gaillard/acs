@@ -11329,6 +11329,8 @@ P.~359, proof of Lemma 14.4.2. The fact that the full subcategory $\oo K_{hp}(\C
 \begin{s}
 P. 359, Theorem 14.4.5. 
 
+We add the assumption that $\C$ is a Grothendieck category.
+
 Theorem 14.3.1 (vi) p.~355 implies that $RF$ exists. This fact is implicit in the statement and the proof of Theorem 14.4.5.
 
 Let us denote by (b1) the statement ``the left derived functor $LG:\oo D(\C)\to\oo D(\C')$ exists'', and by (b2) the statement ``$(LG,RF)$ is a pair of adjoint functors''.
@@ -11362,8 +11364,8 @@ P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K
 %\end{muspb}
 %\end{s}
 
-\begin{s}
-P. 360, Theorem 14.4.5 (c). We add the assumption that $\RHom_\C$ exists. Here is the implicit underlying lemma:
+\begin{s}\lb{360}
+P. 360, Theorem 14.4.5 (c). Here is the implicit underlying lemma:
 \begin{lem}
 In the setting described by the diagram 
 $$
@@ -11443,6 +11445,13 @@ $$
 
 %
 
+\begin{s}
+P. 361, Theorem 14.4.8. We add the assumption that $\C_1$ and $\C_2$ are Grothendieck categories. 
+\end{s}
+
+%
+
+\begin{comment}
 \begin{s}%\lb{s1448}
 Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
 
@@ -11456,6 +11465,7 @@ Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and 
 \end{equation}
 where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
 \end{s}
+\end{comment}
 
 %
 
@@ -11465,6 +11475,23 @@ P. 362, Line 8: as already indicated $\oo K(G)$-projective should be $G$-project
 
 %
 
+\begin{s}
+P. 364, proof of Theorem 14.4.8. I don't understand Step (f). Here is another argument. We must prove that there is a functorial isomorphism
+$$
+\RHom_{\C_3}(LG(X_1,X_2),X_3)\iso\RHom_{\C_1}(X_1,RF(X_2,X_3))
+$$ 
+for $X_1\in\oo K(\C_1),X_2\in\oo K(\C_2),X_3\in\oo K(\C_3)$. We can assume that $X_1\in\widetilde\PP_1,X_2\in\widetilde\PP_2,X_3\in\oo K_{\text{hi}}(\C_3)$ (see \S\ref{360} p.~\pr{360}). We have 
+$$
+\RHom_{\C_3}(LG(X_1,X_2),X_3)\iso\Hom^\bu_{\C_3}(\oo K(G)(X_1,X_2),X_3)
+$$ 
+$$
+\iso\Hom^\bu_{\C_1}(X_1,\oo K(F_1)(X_2,X_3))\iso\RHom_{\C_1}(X_1,RF(X_2,X_3)).
+$$
+\end{s}
+
+%
+
+\begin{comment}
 \begin{s}
 Step~(f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \qr{1448} are isomorphisms. As explained in the book, we have morphisms  
 \begin{equation}\lb{f1}
@@ -11484,6 +11511,7 @@ Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, morphisms
 \end{equation}
 By (1.5.7) p. 29 of the book, Composition~\qr{f2} coincides with Composition~\qr{1448}, and is, thus, an isomorphism. This implies that Composition~\qr{f1} is also an isomorphism.
 \end{s}
+\end{comment}
 
 %%%
 
