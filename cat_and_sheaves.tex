@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -596,7 +596,7 @@ $$
 $$ 
 See \S\ref{17115ps} p.~\pr{17115ps}. 
 \end{s}
-See \S
+
 %
 
 \begin{s}\lb{1722}
@@ -6184,15 +6184,9 @@ is represented by $RF(X)$.
 % https://docs.google.com/document/d/18qXG0GqcLJD33QRv2VQFE2Yn41AbyXqzHMTKzuDZsR4/edit
 \end{s}
 
-%
-
-\begin{comment}
-\begin{s}\lb{abar}
-P. 160, Proposition 7.3.2. Let $A:\C_\SSS\to\I_\T$ be a quasi-inverse to $\iota_Q$, and let $A_o:\Ob(\C)\to\Ob(\I)$ be the map induced by $A$. Note that the object $A_o(X)\in\I$ does \emph{not} depend functorially on $X\in\C$, but $F(A_o(X))\in\A$ does, and we may set $RF(X):=F(A_o(X))$.
-\end{s}
-\end{comment}
-
-%
+%\begin{s}\lb{abar}
+%P. 160, Proposition 7.3.2. Let $A:\C_\SSS\to\I_\T$ be a quasi-inverse to $\iota_Q$, and let $A_o:\Ob(\C)\to\Ob(\I)$ be the map induced by $A$. Note that the object $A_o(X)\in\I$ does \emph{not} depend functorially on $X\in\C$, but $F(A_o(X))\in\A$ does, and we may set $RF(X):=F(A_o(X))$.
+%\end{s}
 
 \begin{s}\lb{737}
 P.~161. We paste Display (7.3.7), which appears in Proposition 7.3.3 (iii) p.~161 of the book: 
@@ -10180,6 +10174,23 @@ $$
 
 %
 
+\begin{s}
+P. 290, Example 11.6.2 (i) (see \S\ref{290} p.~\pr{290}). Writing $F(U,V)$ for $\Hom_\C(U,V)$, the differential $d_{F(X,Y)}$ is given, in the notation right before Proposition 11.5.5 p.~287 of the book, by the diagram
+$$
+\begin{tikzcd}
+&&&F(X^{-m},Y^{n-1})\ar{d}{F(X^{-m},d_Y^{n-1})}\\ 
+F(X^{1-m},Y^n)\ar{rrr}[swap]{(-1)^{m+n}F(d_X^{-m},Y^n)}&&&F(X^{-m},Y^n).
+\end{tikzcd}
+$$
+
+Here is another way of writing the same formula:
+$$
+(d_{F(X,Y)}^{m+n-1}((f_{i,j})))_{n,-m}=d_Y^{n-1}\ci f_{n-1,-m}+(-1)^{m+n}f_{n,1-m}\ci d_X^{-m}.
+$$
+\end{s}
+
+%
+
 \begin{s}%\sbs{Example 11.6.2 (i) p.~290} 
 P.~290, Example 11.6.2 (i). (As already stated, there is a typo; see \S\ref{290} p.~\pr{290}.) Let $\C,\C'$ and $\C''$ be additive categories with translation. If $F:\C\tm\C'\to\C''$ is a bifunctor of additive categories with translation and if $\C''$ admits countable direct sums, then, as explained in the book, $F$ induces a bifunctor of additive categories with translation 
 $$
@@ -11278,6 +11289,9 @@ Moreover, $H^0(\oo{RHom}_\C(X,Y))\iso\Hom_{\oo D(\C)}(X,Y)$ for $X,Y$ in $\oo D(
 % old comment
 % https://docs.google.com/document/d/1EAlaHrIJobqQXp768tioLyGGsW5Nd757wVIdqB2xNiY/edit
 
+% Section 14.4, 170224
+% https://docs.google.com/document/d/1iWs4ITHDs_sDmqsYNUTICsnOJaScqlg1qouTsZYMVc4/edit
+
 \begin{s} 
 P.~358. Lemma 14.4.1 will be used to prove Theorems 14.4.3 and 14.4.5 p.~359 of the book.
 \end{s}
@@ -11389,44 +11403,6 @@ $$
 and the above lemma enables us to assume that $X$ is in $\widetilde\PP$ and $Y$ in $\oo K_{\text{hi}}(\C')$. 
 \end{s}
 
-\begin{comment}
-\begin{s}% February 18, 2017
-\begin{muspb}
-P.\index{unsolved problem}\index{major unsolved problem} 360, Theorem 14.4.5 (c). The statement is 
-
-\nn\emph{We have an isomorphism in $\oo D(k)$, functorial with respect to $X\in\oo D(\C)$ and $Y\in\oo D(\C')$}:
-$$
-\RHom_\C(X,RF(Y))\iso\RHom_{\C'}(LG(X),Y).
-$$ 
-
-I don't understand the argument used in the book to prove this statement. I think this is an important point because (I believe) a similar argument is used to prove Theorem 14.4.8 (iii) p.~362 and Theorem 18.6.4 (vii) p.~451.
-
-It seems to me the best way to explain to the reader what precisely I don't understand is to prove the above statement under the additional assumption
-\begin{equation}\lb{upb}
-(\oo K(\C),\widetilde\PP^{\op})\text{ is }\Hom_\C\text{-injective}.
-\end{equation} 
-My question will then be: how can one get rid of this extra assumption?
-
-To prove the statement assuming \qr{upb} we shall use \S\ref{abar} p.~\pr{abar}.
-
-Let $\T$ be the set of qis in $\widetilde\PP$, let $A:\oo D(\C)\to\widetilde\PP_\T$ be a quasi-inverse to the equivalence $\widetilde\PP_\T\to\oo D(\C)$, and let $A_o:\Ob(\oo K(\C))\to\Ob(\widetilde\PP)$ be the map induced by $A$. Similarly, let $B:\oo D(\C')\to\oo K_{\text{hi}}(\C')$ be a quasi-inverse to the equivalence $\oo K_{\text{hi}}(\C')\to\oo D(\C')$, and let $B_o:\Ob(\oo K(\C'))\to\Ob(\oo K_{\text{hi}}(\C'))$ be the map induced by $B$. Let $X$ be in $\oo K(\C)$ and $Y$ be in $\oo K(\C')$. We have 
-$$
-\RHom_{\C'}(LG(X),Y)=\Hom_{\C'}^\bu(G(A_o(X)),B_o(Y))
-$$ 
-because $\widetilde\PP$ is $\oo K(G)$-projective (as proved in the book) and $(\oo K_{\text{hi}}(\C'),\oo K(\C')^{\op})$ is $\Hom_{\C'}$-injective by Corollary 14.3.2 p.~356 of the book. Similarly we have 
-$$
-\Hom_\C^\bu(A_o(X),F(B_o(Y)))=\RHom_\C(X,RF(Y))
-$$ 
-because $\oo K_{\text{hi}}(\C')$ is $\oo K(F)$-injective and $(\oo K(\C),\widetilde\PP^{\op})$ is $\Hom_\C$-injective by Assumption~\qr{upb}, and we conclude by invoking the adjunction 
-$$
-\Hom_{\C'}^\bu(G(A_o(X)),B_o(Y))\iso\Hom_\C^\bu(A_o(X),F(B_o(Y))),
-$$ 
-which is functorial in $X$ and $Y$.
-%and it suffices to observe that the three above bijections are functorial in $X$ and $Y$.
-\end{muspb}
-\end{s}
-\end{comment}
-
 %
 
 \begin{s}\lb{361}
@@ -11451,24 +11427,6 @@ P. 361, Theorem 14.4.8. We add the assumption that $\C_1$ and $\C_2$ are Grothen
 
 %
 
-\begin{comment}
-\begin{s}%\lb{s1448}
-Statement of Theorem 14.4.8 p.~361. I know that the statement is already very long, but I shall consider here a minor variant which would make it even longer! More precisely, (14.4.5) could be stated as follows:
-
-Let $X_i$ be in $\oo K(\C_i)$ for $i=1,2,3$, and let $P_i\to X_i$ ($i=1,2$) and $X_3\to I$ be qis with $X_i$ in $\widetilde\PP_i$ and $I$ in $\oo K_{\oo{hi}}(\C_3)$ (such exist). Consider the functorial morphisms of abelian groups
-\begin{equation}\lb{1448}
-\begin{split}
-\Hom_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\xr a\Hom_{\oo D(\C_3)}(G(P_1,P_2),I)\xl b\\ 
-\Hom_{\oo K(\C_3)}(G(P_1,P_2),I)&\iso\Hom_{\oo K(\C_1)}(P_1,F_1(P_2,I))\xr c\\ 
-\Hom_{\oo D(\C_1)}(P_1,F_1(P_2,I))&\xl d\Hom_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)),
-\end{split}
-\end{equation}
-where the middle isomorphism is the obvious one. Then $a,b,c,d$ are isomorphisms. There is an analogous statement for $F_2$.
-\end{s}
-\end{comment}
-
-%
-
 \begin{s}\lb{L8}
 P. 362, Line 8: as already indicated $\oo K(G)$-projective should be $G$-projective (see Definition 13.4.2 p.~338 of the book).
 \end{s}
@@ -11488,30 +11446,6 @@ $$
 \iso\Hom^\bu_{\C_1}(X_1,\oo K(F_1)(X_2,X_3))\iso\RHom_{\C_1}(X_1,RF(X_2,X_3)).
 $$
 \end{s}
-
-%
-
-\begin{comment}
-\begin{s}
-Step~(f) of the proof of Theorem 14.4.8 p.~364. We already know that $a,b,c,d$ in \qr{1448} are isomorphisms. As explained in the book, we have morphisms  
-\begin{equation}\lb{f1}
-\begin{split}
-\oo{RHom}_{\C_3}(LG(X_1,X_2),X_3)&\to\\ 
-\oo{RHom}_{\C_1}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
-\oo{RHom}_{\C_1}(X_1,RF_1(X_2,X_3)).
-\end{split}
-\end{equation}
-Applying $H^0$ we get, in view of Theorem 13.4.1 p.~337 of the book, morphisms 
-\begin{equation}\lb{f2}
-\begin{split}
-\oo{Hom}_{\oo D(\C_3)}(LG(X_1,X_2),X_3)&\to\\ 
-\oo{Hom}_{\oo D(\C_1)}(RF_1(X_2,LG(X_1,X_2),RF_1(X_2,X_3))&\to\\ 
-\oo{Hom}_{\oo D(\C_1)}(X_1,RF_1(X_2,X_3)).
-\end{split}
-\end{equation}
-By (1.5.7) p. 29 of the book, Composition~\qr{f2} coincides with Composition~\qr{1448}, and is, thus, an isomorphism. This implies that Composition~\qr{f1} is also an isomorphism.
-\end{s}
-\end{comment}
 
 %%%
 
