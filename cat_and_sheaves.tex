@@ -809,7 +809,7 @@ $$
 \C_1&\ar{u}{\theta_{11}}&\C_2\ar{ll}{}[near start,swap]{F_{21}}&\ar{u}{\theta_{12}}&\C_3\ar{ll}{}[near start,swap]{F_{22}}\\ 
 \C_1&\ar{u}{\theta_{21}}&\C_2\ar{ll}{}[near start]{F_{31}}&\ar{u}{\theta_{22}}&\C_3\ar{ll}{}[near start]{F_{32}}
 \end{tikzcd}
-$$ 
+$$
 
 \nn of categories, functors and morphisms of functors yields the commutative diagram 
 
@@ -5974,9 +5974,9 @@ commutes for all $f\in\Hom_{\C_\SSS}(X,Y)$. It suffices to check that this squar
 %\begin{s} P. 150, Definition 7.1.1. Condition (c) says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, for all functor $G:\C_\SSS\to\A$ the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)\end{s}
 
 \begin{s}\lb{713}
-P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C_\SSS\to\A$, the map 
+P. 150, Lemma 7.1.3. The last sentence says that, in terms of \S\ref{s232} (c) p.~\pr{s232}, the functor $Q^\ddg Q_*G$ exists and is isomorphic to $G$ via the identity of $G\ci Q$, or, more explicitly, that for all $F:\C'\to\A$, the map 
 $$
-\Hom_{\A^{\C_\SSS}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v\star Q
+\Hom_{\A^{\C'}}(F,G)\to\Hom_{\A^\C}(F\ci Q,G\ci Q),\quad v\mt v\star Q
 $$ 
 is bijective. (Recall that $v\star Q$ denotes the horizontal composition of $v$ and $Q$; see Definition~\ref{dil1} p.~\pr{dil1}.)
 
@@ -6130,7 +6130,22 @@ We must verify that we have
 \begin{equation}\lb{fgm}
 f_G(\mu)=(\mu\star Q_\SSS)\ci f_{RF}(\id_{RF})
 \end{equation} 
-for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). 
+for all $G:\C_\SSS\to\A$ and all $\mu:RF\to G$ (see Definition~\ref{dil1} p.~\pr{dil1} and \S~\ref{durl} p.~\pr{durl}). Here is a picture:
+$$
+\begin{tikzcd}
+{}&{}&\ar{ll}{}[swap]{G}&{}\\ 
+\A&&\C_\SSS&&\C\ar{ll}{}[swap]{Q_\SSS}\\ 
+{}&\ar{uu}{\mu}&\ar{ll}{}{RF}
+\end{tikzcd}
+$$
+
+$$
+\begin{tikzcd}
+{}&{}&&{}&{}\ar{llll}{}[swap,near end]{G\ci Q_\SSS}\\ 
+\A&&&\ar{u}{\mu\star Q_\SSS}&\C\ar{llll}{}[swap,near end]{RF\ci Q_\SSS}\\ 
+{}&&&\ar{u}{f_{RF}(\id_{RF})}&\ar{llll}{}[near end]{F}
+\end{tikzcd}
+$$
 
 We can assume that we have the following equalities between functors: 
 $$
@@ -6140,19 +6155,56 @@ This gives in particular:
 $$
 RF\ci Q_\SSS\ci\iota=F_\T\ci\iota_Q^{-1}\ci Q_\SSS\ci\iota=F_\T\ci\iota_Q^{-1}\ci \iota_Q\ci Q_\T=F_\T\ci Q_\T=F\ci\iota.
 $$ 
+
 Note that $f_G$ is characterized by the equality 
 $$
 (\star\,\iota)\ci f_G=\star\,(\iota_Q\ci Q_\T).
 $$ 
+Here is a picture:
+$$
+\begin{tikzcd}
+{}&{}&\ar{ll}{}[swap]{G\ci Q_\SSS}&{}\\ 
+\A&&\C&&\I\ar{ll}{}[swap]{\iota}\\ 
+{}&\ar{uu}{f_G(\mu)}&\ar{ll}{}{F}
+\end{tikzcd}
+$$
+
+$$
+\begin{tikzcd}
+{}&{}&\ar{ll}{}[swap]{G}&{}\\ 
+\A&&\C_\SSS&&\I\ar{ll}{}[swap]{\iota_Q\ci Q_\T}\\ 
+{}&\ar{uu}{\mu}&\ar{ll}{}{RF}
+\end{tikzcd}
+$$
+
 Setting $\ee:=f_{RF}(\id_{RF})$, we get 
 $$
 \ee\star\iota=\id_{F\ci\iota}.
 $$ 
 For $\mu$ in $\Hom_{\A^{\C_\SSS}}(RF,G)$, Equality~\eqref{fgm} is then equivalent to the equality 
 $$
-\mu\star(\iota_Q\ci Q_\T)=\mu\star\iota_Q\star Q_\T,
+((\mu\star Q_\SSS)\ci\ee)\star\iota=\mu\star\iota_Q\star Q_\T,
 $$ 
-which is straightforward. %Recall that, by assumption, all $X$ in $\C$ comes with a morphism $s:X\to\iota(Y)$ in $\SSS$ with $Y$ in $\I$. It is easy to see that \qr{fgm} follows then from the commutativity of $$\begin{tikzcd}F_\T\iota_Q^{-1}Q_\SSS X\ar[d,"\mu(Q_\SSS X)"']\ar[rr,"F_\T\iota_Q^{-1}(s)"]&&F_\T\iota_Q^{-1}Q_\SSS\iota Y\ar[r,equal]&F\iota Y\ar[d,"\mu(\iota_Q Q_\T Y)"]\\ GQ_\SSS X\ar[rrr,"FQ_\SSS (s)"']&&&GQ_\SSS\iota Y.\end{tikzcd}$$ (We have omitted many parenthesis.) 
+which is straightforward:
+
+$$
+\begin{tikzcd}
+{}&{}&&{}&{}\ar{llll}{}[swap,near end]{G\ci Q_\SSS}\\ 
+\A&&&\ar{u}{\mu\star Q_\SSS}&\C\ar{llll}{}[swap,near end]{RF\ci Q_\SSS}&\I\ar{l}[swap]{\iota}\\ 
+{}&&&\ar{u}{\ee}&\ar{llll}{}[near end]{F}
+\end{tikzcd}
+$$
+
+\bigskip
+
+$$
+\begin{tikzcd}
+{}&{}&&{}&{}\ar{llll}{}[swap,near end]{G\ci Q_\SSS\ci\iota}\\ 
+\A&&&\ar{u}{\mu\star Q_\SSS\star\iota}&\I\ar{llll}{}[swap,near end]{F\ci\iota}\\ 
+{}&&&\ar{u}{\id_{F\ci\iota}}&\ar{llll}{}[near end]{F\ci\iota}
+\end{tikzcd}
+$$
+%Recall that, by assumption, all $X$ in $\C$ comes with a morphism $s:X\to\iota(Y)$ in $\SSS$ with $Y$ in $\I$. It is easy to see that \qr{fgm} follows then from the commutativity of $$\begin{tikzcd}F_\T\iota_Q^{-1}Q_\SSS X\ar[d,"\mu(Q_\SSS X)"']\ar[rr,"F_\T\iota_Q^{-1}(s)"]&&F_\T\iota_Q^{-1}Q_\SSS\iota Y\ar[r,equal]&F\iota Y\ar[d,"\mu(\iota_Q Q_\T Y)"]\\ GQ_\SSS X\ar[rrr,"FQ_\SSS (s)"']&&&GQ_\SSS\iota Y.\end{tikzcd}$$ (We have omitted many parenthesis.) 
 
 \nn(d) The last claim in Proposition 7.3.2 is the existence of an isomorphism 
 $$
