@@ -17,7 +17,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-\usepackage{comment}
+%\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -555,6 +555,8 @@ $$
 \nn$*$ P.~328, Line 8: I think the authors meant ``$X^i\to Z^i$ is an isomorphism for $i>n+d\,$'' instead of ``$i\ge n+d\,$''.
 
 \nn$*$ P.~328. After the second display the phrase ``the natural isomorphism $\Coker d_M^{i-2}\to\Ker d_M^i$ is an isomorphism'' should be ``the natural morphism $\Coker d_M^{i-2}\to\Ker d_M^i$ is an isomorphism''.
+
+\nn$*$ P.~330, right after Definition 13.3.1: ``$F$ admits a right derived functor on $\oo K^*(\C)$'' should be ``$F$ admits a right derived functor on $\oo D^*(\C)$''.
 
 \nn$*$ P.~331, Remark 13.3.6 (iii): $\oo C^+(\I)$ should be $\oo C^+(\I_\C)$.
 
@@ -1118,6 +1120,7 @@ Then $A$ is representable if and only if $B$ is. More on this in \S\ref{rdefat} 
 
 \sbs{Brief comment}
 
+\begin{s}
 P.~25, Corollary 1.4.7. A statement slightly stronger than Corollary 1.4.7 of the book can be proved more naively:
 
 \begin{prop}\lb{yp}
@@ -1130,6 +1133,27 @@ is (i) surjective for $X=B$ and (ii) injective for $X=A$.
 
 \begin{proof} By (i) there is a $g:B\to A$ satisfying $f\ci g=\id_B$, yielding $f\ci g\ci f=f$, and (ii) implies $g\ci f=\id_A$.
 \end{proof}
+\end{s}
+
+%
+
+\begin{s}
+P. 26, Lemma 1.4.12. We can define the functors
+$$
+\begin{tikzcd}
+(\C^\wg)_A\ar[r,yshift=4pt,"\lambda"]&(\C_A)^\wg\ar[l,yshift=-4pt,"\mu"]
+\end{tikzcd}
+$$ 
+as follows:
+$$
+\lambda(B\xr bA)(X\xr xA):=b_X^{-1}(x),
+$$ 
+
+$$
+\mu(C):=(\mu_0(C)\to A),\quad\mu_0(C)(X):=\bigsqcup_{x\in A(X)}C(X\xr xA),
+$$ 
+$\mu_0(C)(X)\to A(X)$ being the obvious map.
+\end{s}
 
 %%
 
@@ -1186,8 +1210,7 @@ R(X').\ar[ru,"\eta_{X'}"']
 \end{tikzcd}
 \end{equation}
 
-Even if it is straightforward, we state and prove formally the fact that the above condition is equivalent to the condition in Lemma~\ref{pda1}. %conditions summarized by \qr{xfl1} and \qr{xfl2} are equivalent. 
-For the purpose of this proof, we prefer to rewrite \qr{xfl1} as 
+Even if it is straightforward, we state and prove formally the fact that the above condition is equivalent to the condition in Lemma~\ref{pda1}. For the purpose of this proof, we prefer to rewrite \qr{xfl1} as 
 \begin{equation}\lb{xfl1b}
 \begin{tikzcd}
 X\ar[d,dashed,"f"']&L(X)\ar[d,"L(f)"']\ar[r,"\theta_X(\id_X)"]&X'\\ 
@@ -1535,9 +1558,7 @@ If $\al:I^{\op}\to\Set$ is a functor defined on a small category (Definition~\re
 $$ 
 \lim\al:=\left\{x\in\prod_{i\in I}\al(i)\ \bigg|\ x_i=\al(s)(x_j)\ \forall\ s:i\to j\right\}\in\Set,
 $$ 
-and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. %As often it is better to start by verifying the \emph{uniqueness} of $f$. 
-If such an $f$ exists, it must satisfy %Let us verify the uniqueness of $f$. We must have 
-$p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$, and proves the uniqueness of $f$. It is straightforward to check that the map $f$ defined by the above equality does the job.]
+and we define \emph{the} projection $p:\DT\lim\al\to\al$ by $p_i(x):=x_i$. Then $p$ is \emph{a} projection in the sense of Definition~\ref{plim}. [Indeed, let $\theta$ in \qr{yfy} be given. If such an $f$ exists, it must satisfy $p_i(f(y))=\theta_i(y)$ for all $i$ in $I$ and all $y$ in $Y$. This implies $f(y)=(\theta_i(y))_{i\in I}$, and proves the uniqueness of $f$. It is straightforward to check that the map $f$ defined by the above equality does the job.]
 \end{conv}
 
 Note that the projective limit of $\al:I^{\op}\to\Set$ does not depend on the universe which makes $I$ a small category (Definition~\ref{myuscat} p.~\pr{myuscat}).
@@ -1909,14 +1930,10 @@ Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $
 % https://docs.google.com/document/d/1pZulldz45nEGDBor42Yss95rpDqbJE4SHxWr6OtWrTg/edit
 
 \begin{prop}\lb{propulim}
-Let $\al:I\to\C$ be an arbitrary functor. For each universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myuscat} p.~\pr{myuscat} and \ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding and define $A_\U\in\C^\wg_\U$ by $A_\U(X):=\col\Hom_\C(X,\al)$, where $\col\Hom_\C(X,\al)$ is defined as in Convention~\ref{thei} p.~\pr{thei}. %, so that we have $\col h_\U\ci\al\iso X$ in $\C^\wg_\U$. 
-Let $\U$ and $\V$ be two such universes. %satisfying the same conditions as $\U$. 
-Then $A_\U$ is representable if and only if $A_\V$ is. Let $X$ be in $\C$. Then $X$ represents $A_\U$ if and only if $X$ represents $A_\V$. Assume that such is the case. Then $X$ is a colimit of $\al$ in $\C$. %$\col\al$ exists in $\C$ and is isomorphic to $X$. 
-Moreover, for any functor $F:\C\to\C'$, the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism.
+Let $\al:I\to\C$ be an arbitrary functor. For each universe $\U$ such that $I$ is $\U$-small and $\C$ is a $\U$-category (Definitions \ref{myuscat} p.~\pr{myuscat} and \ref{myucat} p.~\pr{myucat}), let $h_\U:\C\to\C^\wg_\U$ be the Yoneda embedding and define $A_\U\in\C^\wg_\U$ by $A_\U(X):=\col\Hom_\C(X,\al)$, where $\col\Hom_\C(X,\al)$ is defined as in Convention~\ref{thei} p.~\pr{thei}. Let $\U$ and $\V$ be two such universes. Then $A_\U$ is representable if and only if $A_\V$ is. Let $X$ be in $\C$. Then $X$ represents $A_\U$ if and only if $X$ represents $A_\V$. Assume that such is the case. Then $X$ is a colimit of $\al$ in $\C$. Moreover, for any functor $F:\C\to\C'$, the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism.
 \end{prop}
 \begin{proof}
-Let us prove the last sentence, %show that the natural morphism $\col F\ci\al\to F(X)$ is an isomorphism, 
-the others following from Corollary~\ref{ufreerepr2} p.~\pr{ufreerepr2}. Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories, let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. Let $p:\al\to\DT X$ be the coprojection. By Proposition~\ref{basic*} p.~\pr{basic*}, it suffices to show that the morphism 
+Let us prove the last sentence, the others following from Corollary~\ref{ufreerepr2} p.~\pr{ufreerepr2}. Let $\U$ be a universe such that $I$ is $\U$-small and $\C$ and $\C'$ are $\U$-categories, let $X'$ be in $\C'$ and define $A\in\C^\wg_\U$ by $A:=\Hom_{\C'}(F(\ ),X')$. Let $p:\al\to\DT X$ be the coprojection. By Proposition~\ref{basic*} p.~\pr{basic*}, it suffices to show that the morphism 
 $$
 \Hom_{\C'}(F(p),X'):\DT \Hom_{\C'}(F(X),X')\to\Hom_{\C'}(F\ci\al,X')
 $$
@@ -10565,6 +10582,17 @@ Beginning of Section 13.1 p.~319. Recall that $\N Q$ is defined in (10.2.1) p.~2
 P. 319, Display (13.1.1). This display reads: $H:\oo K_c(\A)\to\A$. As observed in \S\ref{300301} p.~\pr{300301} we have in fact $H:(\oo K_c(\A),T)\to(\A,T)$. (See also \S\ref{300301b}.)
 \end{s}
 
+%
+
+\begin{s}\lb{fuqu1}
+P. 319. Sentence ``One shall be aware that the category $\oo D_c(\A)$ may be a big category'' after Definition 13.1.1. Using Tag~07JS of the Stacks Project it is easy to get an example of an abelian category $\C$ such that $\oo D(\C)$ is a big category. (The example given in the Stacks Project is due to Peter Freyd.) Here is the link:
+
+\nn http://stacks.math.columbia.edu/tag/07JS 
+%an abelian $\U$-category A reference to a counterexample is given in \S\ref{fuqu2} p.~\pr{fuqu2}.
+\end{s}
+
+%
+
 %\begin{s}P. 319, Definition 13.1.1. In view of (10.2.1) p.~249 of the book, it is easy to see that the derived category $\oo D(\A_c)$ attached to an abelian category with translation $(\A,T)$ is obtained by localizing $\oo K(\A_c)$ with respect to the (left and right) multiplicative system formed by the quasi-isomorphisms.\end{s}
 
 \begin{s}
@@ -10866,16 +10894,12 @@ P. 328, proof of Proposition 13.2.6, Step (c), proof of $H^i(X)\xr\sim H^i(Z)$ f
 %
 
 \begin{s}
-P. 330, Definition 13.3.1. The purpose of this \S\ is to given an example of a pair $(F,X)$ where $F:\C\to\C'$ is an additive functor of abelian categories and $X$ is an object of $\oo K(\C)$ such that none of the objects $RF(X),R^+F(X),R^-F(X),R^{\text b}F(X)$ exists. In particular:
-
-\begin{center}
-\fbox{Not all additive functors of abelian categories are derivable.\index{non derivable}}
-\end{center}
-%\emph{Not all additive functors of abelian categories are derivable.}
-
+P. 330, Definition 13.3.1. The purpose of this \S\ is to given an example of a pair $(F,X)$ where $F:\C\to\C'$ is an additive functor of abelian categories and $X$ is an object of $\oo K(\C)$ such that none of the objects $RF(X),R^+F(X),R^-F(X),R^{\text b}F(X)$ exists. %In particular:\begin{center}\fbox{Not all additive functors of abelian categories are derivable.\index{non derivable}}\end{center}
 This example is essentially due to Yonatan Harpaz\index{Harpaz}: see 
 
 \nn http://mathoverflow.net/a/265142/461
+
+\nn For another example, see \S\ref{fuqu2} p.~\pr{fuqu2} below. 
 
 Let $k$ be a commutative ring, let $\wt\C$ be an abelian $k$-category, let $\C$ be a full abelian $k$-subcategory of $\wt\C$, let $\C'$ be a full abelian $k$-subcategory of $\Mod(k)$, let $U$ be in $\wt\C$, assume that $\Hom_{\wt\C}(U,\ ):\wt\C\to\Mod(k)$ induces a functor $F:\C\to\C'$, let $V$ be in $\wt\C$, let $V[n]\in\oo K(\C)$ be equal to $V$ in degree $n$ (with $n\in\bb Z$) and to 0 elsewhere, and let us assume that $RF(V[n])$ exists.
 
@@ -10896,24 +10920,23 @@ that is
 $$
 R^0F(V[n])\iso\oo{Ext}^n_\C(U,V).
 $$ 
-This implies that $\oo{Ext}^n_\C(U,V)$ is in $\C'$, as desired, %in particular $\dim\oo{Ext}^n_\C(M,N)<\infty$, 
-and the same holds if we replace $RF$ with $R^+F$, $R^-F$ or $R^{\text b}F$. 
+This implies that $\oo{Ext}^n_\C(U,V)$ is in $\C'$, as desired, and the same holds if we replace $RF$ with $R^+F$, $R^-F$ or $R^{\text b}F$. (See the proof of Theorem 13.4.1 p.~337 of the book.) 
 
 Now let $k$ be a field, set $A:=k[x_1,x_2,\dots]$, where $x_1,x_2,\dots$ are indeterminates, set $\wt\C:=\Mod(A)$, let $\C$ be the category of finite dimensional $A$-modules, let $\C'$ be the category of finite dimensional $k$-vector spaces, let $\mathfrak m$ be the ideal generated by the $x_i$, and set $U:=V:=A/\mathfrak m$ and $n:=1$. It is easy to see that we get a contradiction. We can thus set $X:=(A/\mathfrak m)[0]$ and conclude that the objects $RF(X),R^+F(X),R^-F(X)$ and $R^{\text b}F(X)$ do \emph{not} exist, as required.
 \end{s}
 
 %
 
-\begin{s}% The second sentence in the above quote is justified by Proposition 7.4.4 p.~163 of the book.
+\begin{s}
 P.~330. Right after Definition 13.3.1 it is written: 
 
-By the definition, the functor $F$ admits a right derived functor on $\oo K^*(\C)$ if 
+By the definition, the functor $F$ admits a right derived functor on $\oo K^*(\C)$ [by the way I think the authors meant $\oo D^*(\C)$] if 
 $$
 \ic_{(X\to X')\in\Qis,X\in\oo K^*(C)}Q'\ci\oo K(F)(X')
 $$ 
 exists in $\oo D^*(\C')$ for all $X\in\oo K^*(\C)$. In such a case, this object is isomorphic to $R^*F(X)$.
 
-It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). %Theorem~\ref{stupidkan} p.~\pr{stupidkan}.
+It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). This is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). 
 \end{s}
 
 %
@@ -10939,8 +10962,7 @@ Part ``(a) $\then$ (b) (2)'' of the proof of Proposition 13.3.5 p.~331 shows tha
 %
 
 \begin{s}
-P.~331, Part ``(a) $\then$ (b) (2)'' of the proof of Proposition 13.3.5. %The exactness of $F(X)\to F(Z^0)\to F(Z^1)$ follows from the comment made in the book just before the statement of Proposition 13.3.5.
-We have 
+P.~331, Part ``(a) $\then$ (b) (2)'' of the proof of Proposition 13.3.5. We have 
 $$
 \Ima(F(X)\to F(X''))\xr\sim\Ima(F(X)\to F(Z^0))
 $$
@@ -10953,11 +10975,7 @@ the first isomorphism following from the fact that $F(X'')\to F(Z^0)$ is a monom
 %
 
 \begin{s}
-P.~331, Remark 13.3.6 (i). See \S\ref{AB} p.~\pr{AB}. (I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$.) %It is written: 
-
-%``Note that for $X\in\C$, $R^kF(X)\iso0$ for $k<0$ and assuming that $F$ is left exact, $R^0F(X)\iso F(X)$.''
-
-%I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$. It seems clear to me that, if $F$ is left exact, we have $R^kF(X)\iso0$ for $k<0$ and $R^0F(X)\iso F(X)$, but I'm unable to show that, as seems to be asserted, if $F$ is only assumed to be additive, we still have $R^kF(X)\iso0$ for $k<0$.
+P.~331, Remark 13.3.6 (i). See \S\ref{AB} p.~\pr{AB}. (I think that, in view of the context, the implicit assumptions are that $F$ is an additive functor and that there is an $F$-injective subcategory $\J$ of $\C$.) 
 \end{s}
 
 %
@@ -10973,7 +10991,6 @@ We assume that (C) holds, and we must show that $\J$ is $F$-injective. Let $Y'\m
 %
 
 \begin{s}
-%P.~332, proof of Lemma 13.3.10. See Lemma~\ref{cart1} p.~\pr{cart1}. %below.
 P. 332, first two sentences of the proof of Lemma 13.3.10. We get the commutative diagram of complexes 
 $$
 \begin{tikzcd}
@@ -10994,8 +11011,7 @@ P. 334, Lemma 13.3.12. We add the assumption that $\J$ is cogenerating. (See als
 %
 
 \begin{s}
-P.~334, proof of Lemma 13.3.12. %Assuming $RF$ is triangulated (see \S\ref{rf} p.~\pr{rf}), t
-The existence of an exact sequence $R^jF(X)$ $\to R^jF(X'')\to R^{j+1}F(X')$ attached to a given exact sequence $0\to X'\to X\to X''\to0$ in $\C$ follows from Proposition~\ref{sl4} p.~\pr{sl4}.
+P.~334, proof of Lemma 13.3.12. The existence of an exact sequence $R^jF(X)$ $\to R^jF(X'')\to R^{j+1}F(X')$ attached to a given exact sequence $0\to X'\to X\to X''\to0$ in $\C$ follows from Proposition~\ref{sl4} p.~\pr{sl4}.
 \end{s}
 
 %
@@ -11006,14 +11022,18 @@ P. 335, Display (13.3.4). The existence of $\pi_\C$ follows from Proposition 6.3
 
 %
 
+\begin{s}\lb{fuqu2}
+P. 337, Theorem 13.4.1. Here is a corollary: In the setting of the theorem, $\Hom_{\oo D(\C)}(X,Y)$ is equipotent to a $\U$-set. We conclude firstly that, if $\RHom_\C$ exists, then $\oo D(\C)$ is equivalent to a $\U$-category, and, secondly, that $\RHom_\C$ does \emph{not} exist when $\C$ is the abelian category $\C$ mentioned in \S\ref{fuqu1} p.~\pr{fuqu1}. %(see \S\ref{fuqu1} p.~\pr{fuqu1}). Using Tag~07JS of the Stacks Project it is easy to get an example of an abelian $\U$-category
+\end{s}
+
+%
+
 \begin{s}
 P.~337, Theorem 13.4.1. The natural morphism 
 $$
 \col_{(X'\to X),(Y\to Y')\in\oo{Qis}}\Hom_{\oo K(\C)}(X',Y')\to\Hom_{\oo D(\C)}(X,Y)
 $$  
-an isomorphism by Remark 7.1.18 (ii) p.~156 of the book.%Theorem 13.4.1 and Corollary~\ref{1432} p.~\pr{1432} imply that the answer is yes if $\C$ is a Grothendieck category. 
-
-%(Observe that the Axiom of Universes is not necessary to define the morphism \qr{spalt}.)
+an isomorphism by Remark 7.1.18 (ii) p.~156 of the book. See also Theorem 10.2.3 (i) p.~249.
 \end{s}
 
 %
@@ -11055,25 +11075,6 @@ $$
 R\Hom_\C^\bu(X,Y)\iso R(\Hom_\C^\bu(X,\ \ ))(Y)\iso R(\Hom_\C^\bu(\ \ ,Y))(X).
 $$
 \end{s}
-
-%
-
-\begin{comment}
-\begin{s}
-P. 338, sentence
-
-\nn\emph{By Proposition 11.6.3, the triangulated functor: 
-$$
-\oo K^+F:\oo K^+(\C)\times\oo K^+(\C')\to\oo K^+(\C'')
-$$ 
-is naturally defined by setting:} 
-$$
-\oo K^+F(X,X')=\oo{tot}(F(X,X')).
-$$ 
-
-One should assume that $\C''$ admits countable direct sums, and write $\oo{tot}_\oplus$ instead of tot. 
-\end{s}
-\end{comment}
 
 %%
 
