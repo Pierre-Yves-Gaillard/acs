@@ -9743,7 +9743,7 @@ P.~250, proof of Theorem 10.2.3 (iii). In view of Corollary~\ref{may} p.~\pr{may
 \begin{s}\lb{253}
 P.~253, Definition 10.3.1. The definition is stated as follows: 
 
-We say that a triangulated functor $F:\DD\to\DD'$ is right (resp. left) localizable with respect to $(\N,\N')$ if $Q'\ci F:\DD\to\DD'/\N'$ is universally right (resp. left) localizable with respect to the multiplicative system $\N Q$ (see Definition 7.3.1). Recall that it means that, for any $X\in\DD$, 
+\emph{We say that a triangulated functor $F:\DD\to\DD'$ is right (resp. left) localizable with respect to $(\N,\N')$ if $Q'\ci F:\DD\to\DD'/\N'$ is universally right (resp. left) localizable with respect to the multiplicative system $\N Q$ (see Definition 7.3.1). Recall that it means that, for any $X\in\DD$, 
 $$
 \ic_{(X\to Y)\in\N Q^X}Q'F(Y),
 $$ 
@@ -9751,7 +9751,7 @@ respectively
 $$
 \oo*{``\!\lim\!"}_{(Y\to X)\in\N Q_X}Q'F(Y),
 $$ 
-is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.
+is representable in $\DD'/\N'$. If there is no risk of confusion, we simply say that $F$ is right (resp. left) localizable or that $RF$ exists.}
 
 It is implicitly assumed that the underlying universe $\U$ has been chosen so that $\DD$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}). The second sentence in the above quote is justified by Theorem~\ref{stupidkan} p.~\pr{stupidkan} (the ``Universal Kan Extension Theorem''). 
 \end{s}
@@ -10914,9 +10914,30 @@ It is implicitly assumed that the underlying universe $\U$ has been chosen so th
 
 %
 
-\begin{uspb}
-P.\index{unsolved problem} 330, phrase ``$R^*F$ is a triangulated functor from $\D^*(\C)$ to $\D^*(\C')$ if it exists'' just before Notation 13.3.2. I'm unable to prove this.
-\end{uspb}
+%\begin{uspb}P.\index{unsolved problem} 330, phrase ``$R^*F$ is a triangulated functor from $\D^*(\C)$ to $\D^*(\C')$ if it exists'' just before Notation 13.3.2. I'm unable to prove this.\end{uspb}
+
+\begin{s}
+P. 330, phrase ``$R^*F$ is a triangulated functor from $\D^*(\C)$ to $\D^*(\C')$ if it exists'' just before Notation 13.3.2. Here is a proof:
+
+Consider the (non-commutative) diagram
+%$$\begin{matrix}\text K(\mathcal C)&\overset{\text K(F)}{\to}&\text K(\mathcal C')\\ {\scriptstyle Q}\downarrow&&\downarrow\scriptstyle  Q'\\ \text D(\mathcal C)&\underset{RF}{\to}&\text D(\mathcal C').\end{matrix}$$ 
+$$
+\begin{tikzcd}
+\text K(\mathcal C)\ar[d,"Q"']\ar[r,"\text K(F)"]&\text K(\mathcal C')\ar[d,"Q'"]\\ 
+\text D(\mathcal C)\ar[r,"RF"']&\text D(\mathcal C').
+\end{tikzcd}
+$$
+
+We have 
+$$
+RF(X)\simeq\operatorname*{colim}_{Y\to X}\ \text K(F)(Y),
+$$ 
+where $Y\to X$ runs over the morphisms from $Y$ to $X$ in $\text D(\mathcal C)$. Using this expression for $RF(X)$ it is easy to see that $RF$ commutes with finite products. By Proposition 8.2.15 p.~173 of the book, this implies that $RF$ is additive. 
+
+As $RF$ commutes with finite products, it commutes with mapping cones, and is thus triangulated.
+
+(We have implicitly used the fact that $\text K(\mathcal C)$ and $\text D(\mathcal C)$ have the same set of objects, that $Q$ acts on this set as the identity, and that the same holds for $\mathcal C'$.)
+\end{s}
 
 %
 
