@@ -552,6 +552,10 @@ $$
 
 \nn$*$ P.~321, Line 8: $\widetilde\tau\,{}^{\ge n}(X)\to\widetilde\tau\,{}^{\ge n}(X)$ should be $\widetilde\tau\,{}^{\ge n}(X)\to\tau^{\ge n}(X)$.
 
+\nn$*$ P. 327, Lemma 13.2.4: $\C^+(\I_\C)$ should be $\oo C^+(\I_\C)$.
+
+\nn$*$ P. 327, Proposition 13.2.46: $\N$ should be $\oo N(\C)$.
+
 \nn$*$ P.~328, Line 8: I think the authors meant ``$X^i\to Z^i$ is an isomorphism for $i>n+d\,$'' instead of ``$i\ge n+d\,$''.
 
 \nn$*$ P.~328. After the second display the phrase ``the natural isomorphism $\Coker d_M^{i-2}\to\Ker d_M^i$ is an isomorphism'' should be ``the natural morphism $\Coker d_M^{i-2}\to\Ker d_M^i$ is an isomorphism''.
@@ -10839,6 +10843,25 @@ $$
 be a diagram, where $(g)'$ denotes the morphism induced by $g$. The bottom square commutes, and it suffices to show that the commutativity of the big rectangle implies that if the top square, which is clear.
 
 \nn$\bu\ H^n(X)\epi H^n(Z)$. Even if this is unsatisfactory, let us use the Freyd-Mitchell Theorem (Theorem 9.6.10. p.~238 of the book). In other words we may assume that our abelian category $\C$ is $\Mod(R)$ for some ring $R$. We omit the $\ci$ symbol and most of the parenthesis. Let $y^n\in\Ker d_Y^n$. It suffices to show that there is an $x^n$ in $\Ker d_X^n$ and an $x^{n-1}$ in $X^{n-1}$ such that $y^n=f^nx^n+f^nd_X^{n-1}x^{n-1}$. By assumption there is an $x^n$ in $\Ker d_X^n$ and a $y^{n-1}$ in $Y^{n-1}$ such that $y^n=f^nx^n+d_Y^{n-1}y^{n-1}$. We can replace $y^n$ with $y^n-d_Y^{n-1}y^{n-1}$ and take $x^{n-1}:=0$. 
+\end{s}
+
+%
+
+\begin{s}
+P. 327, Lemma 13.2.4. As noticed $\C^+(\I_\C)$ should be $\oo C^+(\I_\C)$. Using Definition 14.1.4 (i) p.~348 of the book, one can say that any $X$ in $\oo C^+(\I_\C)$ is homotopically injective.
+\end{s}
+
+%
+
+\begin{s}
+P. 327, Proposition 13.2.46. As noticed $\N$ should be $\oo N(\C)$. Here is a corollary: 
+
+\nn\emph{If $\C$ has enough injectives and $\J=\I_\C$ (and (13.1.2) holds), then $\oo K(\J)\xr\sim\oo D(\C)$.}
+
+\nn Proof. It suffices to show that any exact $X$ in $\oo K(\J)$ is homotopic to zero, that is, it suffices to show that $\Ker d_X^n$ is injective for all $n$. But this follows from the exact sequence
+$$
+X^{n-d}\to X^{n-d+1}\to\cdots\to X^{n-1}\to \Ker d_X^n\to0.
+$$
 \end{s}
 
 %
