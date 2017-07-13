@@ -220,7 +220,13 @@ Thank you to Pierre Schapira for his interest!
 
 \section{U-categories and U-small Categories\index{$\U$-category}\index{$\U$-small category}}\lb{ucat}
 
-Here are a few comments about the definition of a $\U$-category on page~11 of the book. Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set\index{$\U$-set}. The following definitions are used in the book: 
+Here are a few comments about the definition of a $\U$-category on page~11 of the book. 
+
+\begin{s}
+First of all let us insist on the fact that, in this text, the hom-sets of a category are \textbf{not} necessarily disjoint. For more on this disjointness issue, see \S\ref{dis} p.~\pageref{dis} and \S\ref{d125} p.~\pageref{d125} below.
+\end{s}
+
+Let $\U$ be a universe. Recall that an element of $\U$ is called a $\U$-set\index{$\U$-set}. The following definitions are used in the book: 
 
 \begin{df}[$\U$-category]\lb{ucatg} 
 A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the set $\Hom_\C(X,Y)$ of morphisms from $X$ to $Y$ is equipotent to some $\U$-set. 
@@ -251,9 +257,11 @@ We often assume implicitly that a universe $\U$ has been chosen, and we say ``ca
 
 \section{Typos and Details}
 
-$*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$. 
+$*$ P.~11, Definition 1.2.1, Condition (b): $\Hom(X,X)$ should be $\Hom_{\C}(X,X)$.
 
-\nn$*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pr{d125}. 
+\begin{s}\lb{dis} 
+Page~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pr{d125}. 
+\end{s}%\nn$*$ P.~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be disjoint, it seems better to define $\Mor(\C)$ as a category of functors. See \S\ref{d125} p.~\pr{d125}. 
 
 \nn$*$ P.~25, Corollary 1.4.6. Due to the definition of $\U$-small category used in this text (see Section~\ref{ucat} p.~\pr{ucat}), the category $\C_A$ of the corollary is no longer $\U$-small, but only canonically isomorphic to some $\U$-small category. 
 
@@ -745,7 +753,7 @@ $$
 \sbs{Brief comments}
 
 \begin{s}\lb{d125}
-P.~14, category of morphisms\index{category of morphisms}. Here are some comments about Definition 1.2.5 p.~14:
+Page~14, category of morphisms\index{category of morphisms}. Here are some comments about Definition 1.2.5 p.~14:
 
 \begin{nota}\lb{c*}
 For any category $\C$ define the category $\C^*$\index{$\C^*$} as follows. The objects of $\C^*$ are the objects of $\C$, the set $\Hom_{\C^*}(X,Y)$ is defined by 
@@ -761,7 +769,6 @@ $$
 Note that there are natural mutually inverse isomorphisms $\C\rightleftarrows\C^*$. 
 
 \begin{nota}\lb{mor}
-%
 Let $\C$ be a category. Define the category $\Mor(\C)$ \index{$\Mor$} by 
 $$
 \Ob(\Mor(\C)):=\bigcup_{X,Y\in\Ob(\C)}\Hom_{\C^*}(X,Y),
@@ -2127,8 +2134,7 @@ as desired.
 Lemma 2.1.15 p.~42. Here is a complement which will be used in \S\ref{17115ps} p.~\pr{17115ps}. 
 
 \begin{thm}\lb{fgd}
-Let $I$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) category; %with disjoint hom-sets; 
-let $\al,\bt:I\to\C$ be two functors; for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor; and set 
+Let $I$ be a small (Definition~\ref{myuscat} p.~\pr{myuscat}) category; let $\al,\bt:I\to\C$ be two functors; for each $i$ in $I$, let $U^i:I^i\to I$ be the forgetful functor; and set 
 $$
 S:=\Hom_{\Fct(I,\C)}(\al,\bt),\quad T:=\lim_{i\in I^{\op}}\Hom_{\Fct(I^i,\C)}(\al\ci U^i,\bt\ci U^i).
 $$ 
@@ -5961,16 +5967,12 @@ Let $\C$ be a category and $\SSS$ a set of morphisms in $\C$.
 \nn\emph{(a)} There is a category $\C_\SSS$ equipped with a functor $Q:\C\to\C_\SSS$ satisfying conditions (a), (b) and (c) of Definition~\ref{qccs}. Moreover, the pair $(\C_\SSS,Q)$ is unique up to unique isomorphism. 
 
 \nn\emph{(b)} The category $\C_\SSS$ satisfies also condition (d) of Definition~\ref{qccs}, and is thus a localization of $\C$ with respect to $\SSS$.
-%localization $\C_\SSS$ of $\C$ at $\SSS$ exists and is unique up to unique isomorphism. %If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then the localization $\C_\SSS$ of $\C$ at $\SSS$ exists.
 \end{prop}
-%\begin{lem}\lb{p711}If $\C$ is a category and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. Moreover this category is unique up to unique isomorphism.
-%If $\C$ is a category with disjoint hom-sets and $\SSS$ is a set of morphisms in $\C$, then there is a category $\C'$ and a functor $Q:\C\to\C'$ such that any functor $\C\to\A$ turning the morphisms of $\SSS$ into isomorphisms factors uniquely through $Q$. %%functor $G:\C'\to\A$ such that $G\ci Q=F$.\end{lem} \begin{proof}[Proof of Lemma \ref{p711}] 
+
 \begin{proof}
 (a) We define the objects of $\C_\SSS$ as being the objects of $\C$, and we construct the morphisms of $\C_\SSS$ by inverting formally the elements of $\SSS$. The details are left to the reader.
 
-\nn(b) %We claim that the functor $Q:\C\to\C'$ in Lemma \ref{p711} defines a localization $\C_\SSS$ of $\C$ at $\SSS$ in the sense of Definition 7.1.1. %(The key point is to verify Condition~(c) of Definition 7.1.1 p.~149; see \S\ref{7116} p.~\pr{7116} below.) 
-%We sketch the proof that $Q$ satisfies Condition~(c) of Definition 7.1.1 p.~149 of the book and leave the rest of the proof to the reader. 
-Let $F,G$ be in $\Fct(\C_\SSS,\A)$ and consider the map 
+\nn(b) Let $F,G$ be in $\Fct(\C_\SSS,\A)$ and consider the map 
 $$
 \star\,Q:\Hom_{\Fct(\C_\SSS,\A)}(F,G)\to\Hom_{\Fct(\C,\A)}(F\ci Q,G\ci Q),
 $$ 
