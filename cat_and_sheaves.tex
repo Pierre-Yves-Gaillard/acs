@@ -1,9 +1,11 @@
 % !TEX encoding = UTF-8 Unicode
 % about "categories and sheaves"
-% https://docs.google.com/document/d/1e9YIlccGCfw3mrfZ3M4b9qbkjqgVrSY2J0QUit5CEQs/edit 
-% https://goo.gl/ORIE5W
+% https://drive.google.com/drive/folders/0BzbJLwZkWgt8X2lMeEtUU3RFN0E 
 % https://github.com/Pierre-Yves-Gaillard/acs/edit/master/cat_and_sheaves.tex
 % pdflatex makeindex pdflatex pdflatex
+% old:
+% https://docs.google.com/document/d/1e9YIlccGCfw3mrfZ3M4b9qbkjqgVrSY2J0QUit5CEQs/edit
+% https://goo.gl/ORIE5W
 \documentclass[12pt]{article}
 \newcommand{\nc}{\newcommand}
 %\nc{\up}{\usepackage}
@@ -17,7 +19,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -214,7 +216,7 @@ The notation of the book will be freely used. We will sometimes write $\B^\A$ fo
 
 Following a suggestion of Pierre Schapira's, we shall denote projective limits\index{projective limit} by $\lim$\index{$\lim$} instead of $\plim$\index{$\plim$}, and inductive limits\index{inductive limit} by $\col$\index{$\col$} instead of $\ilim$\index{$\ilim$}. We sometimes use the words \emph{limit}\index{limit} and \emph{colimit}\index{colimit} instead of the phrases \emph{projective limit} and \emph{inductive limit}.
 
-Thank you to Pierre Schapira and to Olaf Schnürer for their interest!
+Thank you to Pierre Schapira and to Olaf Schnürer for their help and thei interest!
 
 %%%
 
@@ -244,6 +246,10 @@ A $\U$-{\em category} is a category $\C$ such that, for all objects $X,Y$, the s
 
 \begin{df}[$\U$-small category]\lb{myuscat}
 The category $\C$ is $\U$-{\em small}\index{$\U$-small category} if in addition the set of objects of $\C$ is a $\U$-set. 
+\end{df}
+
+\begin{df}[essentially $\U$-small category]\lb{ess}
+The category $\C$ is \emph{essentially $\U$-small}\index{essentially $\U$-small category} if it is equivalent to a $\U$-small category. 
 \end{df} 
 
 Note that: (a) a category $\C$ is a $\U$-category in the sense of Definition~\ref{ucatg} if and only if there is a $\U$-category in the sense of Definition~\ref{myucat} which is isomorphic to $\C$; (b) a similar statement holds for $\U$-small categories; (c) Statement~(a) would have to be modified if the hom-sets were required to be disjoint. 
@@ -4689,7 +4695,7 @@ Let $\C$ be a category such that% satisfying the conditions \emph{(i)-(iii)} bel
 
 \nn\emph{(c)} epimorphisms are strict. 
 
-\nn Let $\F$ be an essentially small (Definition~\ref{myuscat} p.~\pr{myuscat}) full subcategory of $\C$ such that 
+\nn Let $\F$ be an essentially small (Definition~\ref{ess} p.~\pr{ess}) full subcategory of $\C$ such that 
 
 \nn\emph{(d)} the functor $\pp:\C\to\F^\wg$ is defined by $\pp(X)(Y):=\Hom_\C(Y,X)$ is faithful,
 
@@ -8878,6 +8884,8 @@ As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932} p.~\pr{932
 
 \subsubsection{Definition of two infinite regular cardinals}\lb{tirg}
 
+\begin{comment}
+
 (See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\C$ be a category satisfying Conditions (9.3.1) in Section~\ref{931} p.~\pr{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
 $$
 \card\big(G(G)\big)<\pi_0,\quad\card\big(G^{\sqcup G(G)}(G)\big)<\pi_0.
@@ -8886,12 +8894,18 @@ Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\c
 
 $\card\big(G^{\sqcup A}(G)\big)<\pi_1$, 
 
-if $X$ is a quotient of $G^{\sqcup A}$, then $\card\big(X(G)\big)<\pi_1$. 
+if $X$ is a quotient of $G^{\sqcup A}$, then $\card\big(X(G)\big)<\pi_1$.
 
-\nn(Since the set of quotients of $G^{\sqcup A}$ is small by Proposition 5.2.9 p.~121 of the book, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
+\end{comment}
+
+(See (9.3.4) p. 226 of the book.) Let $\C$ be a category satisfying Conditions (9.3.1) in Section~\ref{931} p.~\pr{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
+$$
+\card\big(G(G)\big)<\pi_0,\quad\card\big(G^{\sqcup G(G)}(G)\big)<\pi_0.
+$$ 
+Now choose a cardinal $\pi_1\ge\pi_0$ such that we have $\card\big(X(G)\big)<\pi_1$ for all set $A$ with $\card(A)<\pi_0$ and all quotient $X$ of $G^{\sqcup A}$. (Since the set of quotients of $G^{\sqcup A}$ is small by Proposition 5.2.9 p.~121 of the book, such a cardinal $\pi_1$ exists.) In the sequel of Section~\ref{s934} we assume 
 
 \begin{cond}\lb{ass}
-Conditions (i)--(v) of Section~\ref{931} p.~\pr{931} hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
+Conditions (i)--(v) of Section~\ref{931} p.~\pr{931} of the book hold; $\pi_0$ and $\pi_1$ are as above; and $\pi$ is the successor of $2^{\pi_1}$.
 \end{cond}
 
 \nn The cardinals $\pi$ and $\pi_0$ satisfy 
@@ -11073,7 +11087,7 @@ P. 337, Theorem 13.4.1. (See \S\ref{1341} p. \pr{1341}.) Here is a corollary. Co
 
 Here is an abelian $\U$-category $\C$ satisfying (a). Let $\U$ be a universe, let $k$ be a field belonging to $\U$, let $V$ be a $k$-vector space whose dimension is larger than the cardinal of $\U$, let $A$ be the tensor algebra of $V$, let $\C$ be the category of $A$-modules belonging to $\U$, and denote again by $k$ the field $k$ regarded as an $A$-module on which the vectors of $V$ act by zero. Then we have $\oo{Ext}^1_\C(k,k)\iso V^*\notin\U$.
 %Here is an abelian $\U$-category $\C$ satisfying (a). Let $\U$ be a universe, let $k$ be a field belonging to $\U$, let $S$ be a set whose cardinal is larger than that of $\U$, let $A$ be the $k$-algebra $k[(s)_{s\in S}]$, let $\C$ be the category of $A$-modules belonging to $\U$, and denote again by $k$ the field $k$ regarded as an $A$-module on which the indeterminates $s\in S$ act by zero. Then we have $\oo{Ext}^1_\C(k,k)\iso k^S\notin\U$.
-%In the setting of the theorem, $\Hom_{\oo D(\C)}(X,Y)$ is equipotent to a $\U$-set. We conclude firstly that, if $\RHom_\C$ exists, then $\oo D(\C)$ is equivalent to a $\U$-category, and, secondly, that $\RHom_\C$ does \emph{not} exist when $\C$ is the abelian category mentioned in \S\ref{fuqu1} p.~\pr{fuqu1}. %(see \S\ref{fuqu1} p.~\pr{fuqu1}). Using Tag~07JS of the Stacks Project it is easy to get an example of an abelian $\U$-category£
+%In the setting of the theorem, $\Hom_{\oo D(\C)}(X,Y)$ is equipotent to a $\U$-set. We conclude firstly that, if $\RHom_\C$ exists, then $\oo D(\C)$ is equivalent to a $\U$-category, and, secondly, that $\RHom_\C$ does \emph{not} exist when $\C$ is the abelian category mentioned in \S\ref{fuqu1} p.~\pr{fuqu1}. %(see \S\ref{fuqu1} p.~\pr{fuqu1}). Using Tag~07JS of the Stacks Project it is easy to get an example of an abelian $\U$-category
 \end{s}
 
 %
@@ -11320,10 +11334,12 @@ d_I\ci\widetilde\psi-T\widetilde\psi\ci d_Y&=d_I\ci\psi-d_I\ci\xi\ci g-T\psi\ci 
 P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p.~\pr{938} and Theorem~\ref{961} p.~\pr{961}, one could replace ``there exists an essentially small full subcategory $\SSS$ of $\A_c$ such that \dots'' with ``there exists an infinite cardinal $\pi$ such that $(\A_c)_\pi$ is essentially small and satisfies \dots'', and replace $\SSS$ with $(\A_c)_\pi$ in (14.1.4) p.~351 of the book.
 \end{s}
 
-%
+\begin{s} 
+As pointed out to me by Olaf Schnürer, one should also assume in (14.1.4) that the category $\SSS$ is closed under translation. It is used in the proof of Lemma 14.1.9 p.~351. %So maybe you want to include this in your file if you agree. Olaf Schnürer £
+\end{s}
 
 \begin{s}
-P. 351, proof of Lemma (14.1.4) (iii). Given 
+P. 351, proof of (14.1.4) (iii). Given 
 $$
 \begin{tikzcd}
 &Y\ar[d]\\ 
