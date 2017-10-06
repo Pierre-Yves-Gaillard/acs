@@ -11335,7 +11335,7 @@ P.~350, last paragraph. In view of the comments made about Corollary~\ref{938} p
 \end{s}
 
 \begin{s} 
-As pointed out to me by Olaf Schnürer, one should also assume in (14.1.4) that the category $\SSS$ is closed under translation. It is used in the proof of Lemma 14.1.9 p.~351. %So maybe you want to include this in your file if you agree. Olaf Schnürer £
+As pointed out to me by Olaf Schnürer, one should also assume in (14.1.4) that the category $\SSS$ is closed under translation. It is used in the proof of Lemma 14.1.9 p.~351. %So maybe you want to include this in your file if you agree. Olaf Schnürer
 \end{s}
 
 \begin{s}
@@ -12277,27 +12277,38 @@ Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_
 
 %
 
-\begin{s}
+\begin{s}%£
 P. 414, Definition of a sheaf. 
 
 Here is Definition 17.3.1(ii) of the book: 
 
+\begin{df}\label{sheaf}
 A presheaf $F\in\PSh(X,A)$ is a sheaf if for any local isomorphism $A\to U$ with $U\in\C_X$ and $A\in(\C_X)^\wedge$, the morphism $F(U)\to F(A)$ is an isomorphism.
+\end{df}
 
 And here is Definition II.2.1 in SGA4:
 
+\begin{df}\label{faisceau}
 Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application:
 $$
 \Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)
 $$
-est une injection (resp. une bijection).
+est une injection (resp. une bijection). 
+\end{df} 
 
 It is not obvious to me that these definitions are equivalent, and that the first one is invariant under change of universes.
 \end{s}
 
-%\begin{muspb}
-%\footnote{Here is problem which, I hope, will turn out to be very easy, even if I'm unable to solve it. I'm using the overdramatic expression of ``major unsolved problem'' mainly as a note to myself, to make sure I don't forget it.}. About\index{Major Unsolved Problem} Definition 17.3.1(ii): Let $X$ be a site, let $\U\subset\V$ be universes, let $F\in\PSh(X,\U\textbf{-set})$ be a $\U\textbf{-set}$-valued presheaf and let $F'\in\PSh(X,\V\textbf{-set})$ be the corresponding $\V\textbf{-set}$-valued presheaf. Is the implication ``$F$ is a sheaf $\implies F'$ is a sheaf'' true?
-%\end{muspb}
+%
+
+\begin{muspb}
+%\footnote{Here is problem which, I hope, will turn out to be very easy, even if I'm unable to solve it. I'm using the overdramatic expression of ``major unsolved problem'' mainly as a note to myself, to make sure I don't forget it.}. 
+About\index{Major Unsolved Problem} Definition 17.3.1(ii) p.~414 of the book, stated as  Definition~\ref{sheaf} above: I'm unable to answer the following two closely related questions:
+
+(a) Let $X$ be a site, let $\U\subset\V$ be universes, let $F\in\PSh(X,\U\textbf{-set})$ be a $\U\textbf{-set}$-valued presheaf and let $F'\in\PSh(X,\V\textbf{-set})$ be the corresponding $\V\textbf{-set}$-valued presheaf. Is the implication ``$F$ is a sheaf $\implies F'$ is a sheaf'' true?
+
+(b) Are Definitions \ref{sheaf} and \ref{faisceau} above equivalent?
+\end{muspb}
 
 %
 
