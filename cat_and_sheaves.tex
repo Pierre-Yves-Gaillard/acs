@@ -8884,19 +8884,8 @@ As already indicated, Claim~\ref{pig=f} implies Proposition~\ref{932} p.~\pr{932
 
 \subsubsection{Definition of two infinite regular cardinals}\lb{tirg}
 
-\begin{comment}
-
-(See (9.3.4) p. 226 of the book. We shall modify slightly the definition of $\pi_1$.) Let $\C$ be a category satisfying Conditions (9.3.1) in Section~\ref{931} p.~\pr{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
-$$
-\card\big(G(G)\big)<\pi_0,\quad\card\big(G^{\sqcup G(G)}(G)\big)<\pi_0.
-$$ 
-Now choose a cardinal $\pi_1\ge\pi_0$ such that we have for all set $A$ with $\card(A)<\pi_0$: 
-
-$\card\big(G^{\sqcup A}(G)\big)<\pi_1$, 
-
-if $X$ is a quotient of $G^{\sqcup A}$, then $\card\big(X(G)\big)<\pi_1$.
-
-\end{comment}
+% (9.3.4)
+% https://docs.google.com/document/d/17Zg3TCs9-30i8dci1t4UlBYGo9SfLTaEHUP6XwOYgck/edit
 
 (See (9.3.4) p. 226 of the book.) Let $\C$ be a category satisfying Conditions (9.3.1) in Section~\ref{931} p.~\pr{931} above. Let $\pi_0$ be an infinite regular cardinal such that 
 $$
@@ -11102,7 +11091,6 @@ an isomorphism by Remark 7.1.18 (ii) p.~156 of the book. See also Theorem 10.2.3
 
 %
 
-%\begin{comment}
 \begin{s}
 P.~337. (See \S\ref{1341} p. \pr{1341}.) In view of \S\ref{745} p.~\pr{745} above and Theorem 13.4.1 p.~337 of the book, the functors 
 
@@ -11140,7 +11128,6 @@ $$
 R\Hom_\C^\bu(X,Y)\iso R(\Hom_\C^\bu(X,\ \ ))(Y)\iso R(\Hom_\C^\bu(\ \ ,Y))(X).
 $$
 \end{s}
-%\end{comment}
 
 %%
 
@@ -11546,17 +11533,8 @@ The proof proves successively (a), (b1), (c), (b2). More precisely:
 P. 360, Step (ii) of the proof of Theorem 14.4.5: the fact that $\Qis_X\cap\oo K^-(\PP)$ is co-cofinal to $\Qis_X$ follows from Proposition 3.2.4 p.~79 of the book.
 \end{s}
 
-%\begin{s}% Thursday, February 16, 2017
-%\begin{muspb}
-%P.\index{unsolved problem}\index{major unsolved problem} 360, Theorem 14.4.5 (c). The statement is 
-
-%\nn\emph{We have an isomorphism in $\oo D(k)$, functorial with respect to $X\in\oo D(\C)$ and $Y\in\oo D(\C')$}:
-%$$\RHom_\C(X,RF(Y))\iso\RHom_{\C'}(LG(X),Y).$$ 
-
-%The existence of the functor $\RHom_\C$ is not clear to me, but, even if I take this existence for granted, I'm unable to prove the functoriality in $X$.
-%The proof in the book shows the existence of such an isomorphism, but, it seems to me, the functoriality statement is left unproved, and I'm unable to prove the functoriality in $X$.
-%\end{muspb}
-%\end{s}
+% Thursday, February 16, 2017
+% https://docs.google.com/document/d/1YeNu6MH51nKk4R7cMjDRdxxbD43_kEZuf0QDIByZ_eE/edit
 
 \begin{s}\lb{360}
 P. 360, Theorem 14.4.5 (c). Here is the implicit underlying lemma:
@@ -12277,30 +12255,100 @@ Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_
 
 %
 
-\begin{s}%£
+\begin{s}
 P. 414, Definition of a sheaf. 
 
 Here is Definition 17.3.1(ii) of the book: 
 
 \begin{df}\label{sheaf}
-A presheaf $F\in\PSh(X,A)$ is a sheaf if for any local isomorphism $A\to U$ with $U\in\C_X$ and $A\in(\C_X)^\wedge$, the morphism $F(U)\to F(A)$ is an isomorphism.
+A presheaf $F\in\PSh(X,\A)$ is a sheaf\index{sheaf} if for any local isomorphism $A\to U$ such that $U\in\C_X$ and $A\in(\C_X)^\wedge$, the morphism $F(U)\to F(A)$ is an isomorphism.
 \end{df}
 
-And here is Definition II.2.1 in SGA4:
+(Here $\A$ is a category admitting small projective limits.)
+
+In SGA4.II.2.1\index{SGA4} Verdier\index{Verdier, Jean-Louis} defines a sheaf of sets by 
 
 \begin{df}\label{faisceau}
-Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application:
-$$
-\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)
-$$
-est une injection (resp. une bijection). 
+A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism.
+%Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application: $$\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)$$ est une injection (resp. une bijection). 
 \end{df} 
 
-It is not obvious to me that these definitions are equivalent, and that the first one is invariant under change of universes.
+See \href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}%It is not obvious to me that these definitions are equivalent, and that the first one is invariant under change of universes.
+
+Let us assume $\A=\Set$.
+
+In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} proved as follows that%\bigskip\centerline{\emph{a ``Verdier sheaf'' is a ``KS-sheaf''.}}
+%
+\begin{prop}
+A ``Verdier sheaf'' is a ``KS-sheaf''.
+\end{prop}
+%
+\begin{proof}
+For the duration of the proof, $\Sh(X)$ will denote the category of ``\emph{Verdier}-sheaves''. By Theorem 3.4 in SGA4.II, the inclusion $\Sh(X)\subset\PSh(X)$ admits an exact left adjoint $L$. 
+
+\nn Claim~1: If $A\to U$, with $U$ in $\C_X$, is a monomorphism and a local isomorphism, then $LA\to LU$ is an isomorphism.
+
+\nn Proof of Claim~1: Let $F$ be in $\Sh(X)$. We must show that 
+$$
+\Hom_{\Sh(X)}(LU,F)\to\Hom_{\Sh(X)}(LA,F)
+$$ 
+is bijective, that is, that 
+$$
+\Hom_{\PSh(X)}(U,F)\to\Hom_{\PSh(X)}(A,F)
+$$ 
+is bijective, which is clear.
+
+\nn Claim~2: If $A\to B$ is a monomorphism and a local isomorphism, then $LA\to LB$ is an isomorphism.
+
+\nn Proof of Claim~2: Let $f:A\to B$ be a monomorphism and a local isomorphism. It suffices to show that $Lf$ is an epimorphism. Let $x,y:B\rightrightarrows F$ be two morphisms in $\PSh(X)$ with $F$ in $\Sh(X)$ and $x\ne y$. It suffices to prove $x\ci f\ne y\ci f$. %[In this proof we write $\alpha\beta$ for $\alpha\circ\beta$.] 
+As we have 
+$$
+\colim_{U\to B}U\xr\sim B
+$$ 
+(the colimit being taken in $\PSh(X)$), there is a morphism $u:U\to B$ such that $x\ci u\ne y\ci u$. Consider the commutative diagram 
+$$
+\begin{tikzcd}
+A_U\ar[d]\ar[r,"f_U"]&U\ar[d,"u"]\\ 
+A\ar[r,"f"']&B\ar[r,yshift=4pt,"x"]\ar[r,yshift=-4pt,"y"']&F
+\end{tikzcd}
+$$ 
+in $\PSh(X)$, where the square is cartesian. As $f_U$ is a monomorphism by Lemma~\ref{8311} (a) (i) \pageref{8311} and a local isomorphism by Lemma 16.2.4 p.~395 of the book, we have $x\ci u\ci f_U\ne y\ci u\ci f_U$ by Claim~1. This implies $x\ci f\ne y\ci f$, as desired.
+
+\nn Claim~3: $L$ maps local epimorphisms to epimorphisms.
+
+\nn Proof of Claim~3: Let $A\to B$ be a local epimorphism. Then we see that 
+$$
+\Ima(A\to B)\to B
+$$ 
+is a local epimorphism and a monomorphism (Lemma 16.2.3 (ii) p.~395 of the book), that 
+$$
+L\Ima(A\to B)\to LB
+$$ 
+is an isomorphism by Claim~2, that 
+$$
+\Ima(LA\to LB)\to LB
+$$ 
+is an isomorphism by exactness of $L$, and that $LA\to LB$ is an epimorphism. This proves Claim~3. 
+
+\nn Claim~4: $L$ maps local isomorphisms to isomorphisms.
+
+\nn Proof of Claim~4: Claim~4 follows from Claim~3 and the exactness of $L$.
+
+Let us show that a ``Verdier sheaf'' is a ``KS-sheaf''. Let $F$ be a ``Verdier sheaf'' and let $A\to U$ be a local isomorphism in $(\C_X)^\wedge=\PSh(X)$ such that $U\in\C_X$. It suffices to prove that $FU\to FA$, that is 
+$$
+\Hom_{\PSh(X)}(U,F)\to\Hom_{\PSh(X)}(A,F),
+$$ 
+that is 
+$$
+\Hom_{\Sh(X)}(LU,F)\to\Hom_{\Sh(X)}(LA,F),
+$$ 
+is an isomorphism. But this follows from Claim~4.
+\end{proof}
 \end{s}
 
 %
 
+\begin{comment}
 \begin{muspb}
 %\footnote{Here is problem which, I hope, will turn out to be very easy, even if I'm unable to solve it. I'm using the overdramatic expression of ``major unsolved problem'' mainly as a note to myself, to make sure I don't forget it.}. 
 About\index{Major Unsolved Problem} Definition 17.3.1(ii) p.~414 of the book, stated as  Definition~\ref{sheaf} above: I'm unable to answer the following two closely related questions:
@@ -12309,6 +12357,7 @@ About\index{Major Unsolved Problem} Definition 17.3.1(ii) p.~414 of the book, st
 
 (b) Are Definitions \ref{sheaf} and \ref{faisceau} above equivalent?
 \end{muspb}
+\end{comment}
 
 %
 
