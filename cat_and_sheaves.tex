@@ -19,7 +19,7 @@
 \usepackage{tikz-cd}
 \usepackage[all]{xy}
 \usepackage[pdfusetitle]{hyperref}
-%\usepackage{comment}
+\usepackage{comment}
 \usepackage{fancyhdr}
 %\usepackage{showkeys}%%\usepackage{showlabels}
 \makeindex
@@ -12244,9 +12244,10 @@ Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ ar
 Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_i$ is a Grothendieck topology, and we denote by $\bigvee\T_i$ the intersection of all Grothendieck topologies containing $\bigcup\T_i$.
 \end{s}
 
-%
+%\sbs{Definition of a sheaf (page 414)}%\sbs{Brief comments}£
 
-\sbs{Definition of a sheaf (page 414)}%\sbs{Brief comments}
+\begin{s}
+Definition of a sheaf (page 414). 
 
 Here is Definition 17.3.1(ii) of the book: 
 
@@ -12256,23 +12257,26 @@ A presheaf $F\in\PSh(X,\A)$ is a sheaf\index{sheaf} if for any local isomorphism
 
 (Here $\A$ is a category admitting small projective limits.)
 
+To simplify we assume $\A=\Set$.
+
 In SGA4.II.2.1\index{SGA4} Verdier\index{Verdier, Jean-Louis} defines a sheaf of sets by 
 
 \begin{df}\label{faisceau}
-A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism.
-%Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application: $$\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)$$ est une injection (resp. une bijection). 
+A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism. %Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application: $$\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)$$ est une injection (resp. une bijection). \usepackage{comment}
 \end{df} 
 
 See \href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}%It is not obvious to me that these definitions are equivalent, and that the first one is invariant under change of universes.
 
-Let us assume $\A=\Set$.
+The equivalence of these two definitions follows from Proposition 5.3, implication ``(i) $\implies$ (ii bis)'' in Proposition 5.3 of Verdier's SGA4.II Exposé linked to above.
+\end{s}
 
-In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} proved as follows that%\bigskip\centerline{\emph{a ``Verdier sheaf'' is a ``KS-sheaf''.}}
 %
+
+\begin{comment}
+In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} proved as follows that%\bigskip\centerline{\emph{a ``Verdier sheaf'' is a ``KS-sheaf''.}}
 \begin{prop}
 A ``Verdier sheaf'' is a ``KS-sheaf''.
 \end{prop}
-%
 \begin{proof}
 For the duration of the proof, $\Sh(X)$ will denote the category of ``\emph{Verdier}-sheaves''. By Theorem 3.4 in SGA4.II, the inclusion $\Sh(X)\subset\PSh(X)$ admits an exact left adjoint $L$. We will also use tacitly the fact that $\Sh(X)$ admits finite limits and colimits (Theorem 4.1 in SGA4.II).
 
@@ -12334,11 +12338,11 @@ $$
 $$ 
 is bijective. But this follows from Claim~4.
 \end{proof}
+\end{comment}
 
 % Major Unsolved Problem (old comment)
 % https://docs.google.com/document/d/13YavpBGiNqCsWJrdBZ5HZx8sKOBn_XIrUguE20KgkDE/edit
-
-\sbs{Brief comments} 
+%\sbs{Brief comments} 
 
 \begin{s}
 P.~415, Isomorphism (17.3.1). Recall briefly the setting. We have 
