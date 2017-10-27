@@ -12244,8 +12244,10 @@ Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ ar
 Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_i$ is a Grothendieck topology, and we denote by $\bigvee\T_i$ the intersection of all Grothendieck topologies containing $\bigcup\T_i$.
 \end{s}
 
-%\sbs{Definition of a sheaf (page 414)}%\sbs{Brief comments}£
+%
 
+\begin{comment}
+%\sbs{Definition of a sheaf (page 414)}%\sbs{Brief comments}
 \begin{s}
 Definition of a sheaf (page 414). 
 
@@ -12262,29 +12264,56 @@ To simplify we assume $\A=\Set$.
 In SGA4.II.2.1\index{SGA4} Verdier\index{Verdier, Jean-Louis} defines a sheaf of sets by 
 
 \begin{df}\label{faisceau}
-A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism. %Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application: $$\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)$$ est une injection (resp. une bijection). \usepackage{comment}
+A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism. %Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application: $$\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)$$ est une injection (resp. une bijection). 
 \end{df} 
 
 See \href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}%It is not obvious to me that these definitions are equivalent, and that the first one is invariant under change of universes.
 
 The equivalence of these two definitions follows from Proposition 5.3, implication ``(i) $\implies$ (ii bis)'' in Proposition 5.3 of Verdier's SGA4.II Exposé linked to above.
 \end{s}
+\end{comment}
 
-%
+% Old comment about Dylan Wilson's proof:
+% https://docs.google.com/document/d/1fLNiapemuHfTTsDSY-Qsb1QVpJnC6FBUvPum4dfKl_A/edit
+% Major Unsolved Problem (old comment)
+% https://docs.google.com/document/d/13YavpBGiNqCsWJrdBZ5HZx8sKOBn_XIrUguE20KgkDE/edit 
 
-\begin{comment}
-In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} proved as follows that%\bigskip\centerline{\emph{a ``Verdier sheaf'' is a ``KS-sheaf''.}}
+\sbs{Definition of a sheaf (page 414)}
+
+Here is Definition 17.3.1(ii) of the book: 
+
+\begin{df}\label{sheaf}
+A presheaf $F\in\PSh(X,\A)$ is a sheaf\index{sheaf} if for any local isomorphism $A\to U$ such that $U\in\C_X$ and $A\in(\C_X)^\wedge$, the morphism $F(U)\to F(A)$ is an isomorphism.
+\end{df}
+
+(Here $\A$ is a category admitting small projective limits.)
+
+To simplify we assume $\A=\Set$.
+
+In SGA4.II.2.1\index{SGA4} Verdier\index{Verdier, Jean-Louis} defines a sheaf of sets by 
+
+\begin{df}\label{faisceau}
+A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism. 
+\end{df} 
+
+See \href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}
+
+The equivalence of these two definitions follows from Proposition 5.3, implication ``(i) $\implies$ (ii bis)'' in Proposition 5.3 of Verdier's SGA4.II Exposé linked to above.
+
+In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} %proved as follows that 
+proved this fact using only %the first three sections of Verdier's Exposé. 
+the beginning of Verdier's Exposé, up to Proposition~4.2. Here is a rewriting of Dylan Wilson's argument:
 \begin{prop}
 A ``Verdier sheaf'' is a ``KS-sheaf''.
 \end{prop}
 \begin{proof}
-For the duration of the proof, $\Sh(X)$ will denote the category of ``\emph{Verdier}-sheaves''. By Theorem 3.4 in SGA4.II, the inclusion $\Sh(X)\subset\PSh(X)$ admits an exact left adjoint $L$. We will also use tacitly the fact that $\Sh(X)$ admits finite limits and colimits (Theorem 4.1 in SGA4.II).
+For the duration of the proof, $\Sh(X)$ will denote the category of ``\emph{Verdier}-sheaves''. By Theorem 3.4 in SGA4.II, the inclusion $\Sh(X)\subset\PSh(X)$ admits an exact left adjoint $\mathbf a$. We will also use tacitly the fact that $\Sh(X)$ admits finite limits and colimits (Theorem 4.1 in SGA4.II).
 
-\nn Claim~1: If $A\to U$, with $U$ in $\C_X$, is a monomorphism and a local isomorphism in $\PSh(X)$, then $LA\to LU$ is an isomorphism in $\Sh(X)$.
+\nn Claim~1: If $A\to U$, with $U$ in $\C_X$, is a monomorphism and a local isomorphism in $\PSh(X)$, then $\mathbf aA\to\mathbf aU$ is an isomorphism in $\Sh(X)$.
 
 \nn Proof of Claim~1: Let $F$ be in $\Sh(X)$. We must show that the map
 $$
-\Hom_{\Sh(X)}(LU,F)\to\Hom_{\Sh(X)}(LA,F)
+\Hom_{\Sh(X)}(\mathbf aU,F)\to\Hom_{\Sh(X)}(\mathbf aA,F)
 $$ 
 is bijective, that is, that the map
 $$
@@ -12292,9 +12321,9 @@ $$
 $$ 
 is bijective, which is clear.
 
-\nn Claim~2: If $A\to B$ is a monomorphism and a local isomorphism in $\PSh(X)$, then $LA\to LB$ is an isomorphism in $\Sh(X)$.
+\nn Claim~2: If $A\to B$ is a monomorphism and a local isomorphism in $\PSh(X)$, then $\mathbf aA\to\mathbf aB$ is an isomorphism in $\Sh(X)$.
 
-\nn Proof of Claim~2: Let $f:A\to B$ be a monomorphism and a local isomorphism in $\PSh(X)$. By Proposition~4.2 in SGA4.II and Proposition~\ref{34i} p.~\pr{34i} above, it suffices to show that $Lf$ is an epimorphism in $\Sh(X)$. Let $x,y:B\rightrightarrows F$ be two morphisms in $\PSh(X)$ with $F$ in $\Sh(X)$ and $x\ne y$. It suffices to prove $x\ci f\ne y\ci f$. %[In this proof we write $\alpha\beta$ for $\alpha\circ\beta$.]
+\nn Proof of Claim~2: Let $f:A\to B$ be a monomorphism and a local isomorphism in $\PSh(X)$. By Proposition~4.2 in SGA4.II and (the dual of) Proposition~\ref{34i} p.~\pr{34i} above, it suffices to show that $\mathbf af$ is an epimorphism in $\Sh(X)$. Let $x,y:B\rightrightarrows F$ be two morphisms in $\PSh(X)$ with $F$ in $\Sh(X)$ and $x\ne y$. It suffices to prove $x\ci f\ne y\ci f$. 
 As we have 
 $$
 \colim_{U\to B}U\xr\sim B
@@ -12306,9 +12335,10 @@ A_U\ar[d]\ar[r,"f_U"]&U\ar[d,"u"]\\
 A\ar[r,"f"']&B\ar[r,yshift=4pt,"x"]\ar[r,yshift=-4pt,"y"']&F
 \end{tikzcd}
 $$ 
-in $\PSh(X)$, where the square is cartesian. As $f_U$ is a monomorphism by Lemma~\ref{8311} (a) (i) p.~\pageref{8311} and a local isomorphism by Lemma 16.2.4 p.~395 of the book, we have $x\ci u\ci f_U\ne y\ci u\ci f_U$ by Claim~1. This implies $x\ci f\ne y\ci f$, as desired.
+in $\PSh(X)$, where the square is cartesian. As $f_U$ is a monomorphism by Exercise 2.22 p.~68 of the book, % Lemma~\ref{8311} (a) (i) p.~\pageref{8311} 
+and a local isomorphism by Lemma 16.2.4 (i) p.~395 of the book, we have $x\ci u\ci f_U\ne y\ci u\ci f_U$ by Claim~1. This implies $x\ci f\ne y\ci f$, as desired.
 
-\nn Claim~3: $L$ maps local epimorphisms to epimorphisms.
+\nn Claim~3: $\mathbf a$ maps local epimorphisms to epimorphisms.
 
 \nn Proof of Claim~3: Let $A\to B$ be a local epimorphism in $\PSh(X)$. Then we see that 
 $$
@@ -12316,17 +12346,17 @@ $$
 $$ 
 is a local epimorphism and a monomorphism (Lemma 16.2.3 (ii) p.~395 of the book), that 
 $$
-L\Ima(A\to B)\to LB
+\mathbf a\Ima(A\to B)\to\mathbf aB
 $$ 
 is an isomorphism by Claim~2, that 
 $$
-\Ima(LA\to LB)\to LB
+\Ima(\mathbf aA\to\mathbf aB)\to\mathbf aB
 $$ 
-is an isomorphism by exactness of $L$, and that $LA\to LB$ is an epimorphism by Proposition 5.1.2 (iv) p.~114 of the book. This proves Claim~3. 
+is an isomorphism by exactness of $\mathbf a$, and that $\mathbf aA\to\mathbf aB$ is an epimorphism by Proposition 5.1.2 (iv) p.~114 of the book. This proves Claim~3. 
 
-\nn Claim~4: $L$ maps local isomorphisms to isomorphisms.
+\nn Claim~4: $\mathbf a$ maps local isomorphisms to isomorphisms.
 
-\nn Proof of Claim~4: Claim~4 follows from Claim~3 and the exactness of $L$.
+\nn Proof of Claim~4: Claim~4 follows from Claim~3 and the exactness of $\mathbf a$.
 
 Let us show that a ``Verdier sheaf'' is a ``KS-sheaf''. Let $F$ be a ``Verdier sheaf'' and let $A\to U$ be a local isomorphism in $\PSh(X)$ such that $U$ is in $\C_X$. It suffices to prove that the map $FU\to FA$ is bijective, that is, that the map 
 $$
@@ -12334,15 +12364,14 @@ $$
 $$ 
 is bijective, that is, that the map
 $$
-\Hom_{\Sh(X)}(LU,F)\to\Hom_{\Sh(X)}(LA,F)
+\Hom_{\Sh(X)}(\mathbf aU,F)\to\Hom_{\Sh(X)}(\mathbf aA,F)
 $$ 
 is bijective. But this follows from Claim~4.
 \end{proof}
-\end{comment}
 
-% Major Unsolved Problem (old comment)
-% https://docs.google.com/document/d/13YavpBGiNqCsWJrdBZ5HZx8sKOBn_XIrUguE20KgkDE/edit
-%\sbs{Brief comments} 
+%
+
+\sbs{Brief comments}
 
 \begin{s}
 P.~415, Isomorphism (17.3.1). Recall briefly the setting. We have 
