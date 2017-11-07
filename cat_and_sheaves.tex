@@ -756,6 +756,66 @@ $$
 
 %%
 
+\sbs{Definition of a category (p.~11)}
+
+We slightly modify Definition 1.2.1 p.~11 as follows:
+\begin{df}
+A category $\C$ consists of:
+
+\nn\emph{(i)} a set $\Ob(\C)$,
+
+\nn\emph{(ii)} for any $X,Y$ in $\Ob(\C)$, a set $\Hom_\C(X,Y)$,
+
+\nn\emph{(iii)} for any $X,Y,Z$ in $\Ob(\C)$, a map:
+$$
+\Hom_\C(X,Y)\times\Hom_\C(Y,Z)\to\Hom_\C(X, Z)
+$$ 
+called the composition and denoted by 
+$$
+(f,g)\mapsto g\circ_{ZYX} f,
+$$ 
+these data satisfying:
+
+\nn\emph{(a)} $\circ$ is associative, i.e., for $f\in\Hom_\C(X,Y),g\in\Hom_\C(Y,Z),h\in\Hom_\C(Z,W)$, we have 
+$$
+(h\ci_{WZY}g)\ci_{WYX}f=h\ci_{WZX}(g\ci_{ZYX}f),
+$$ 
+
+\nn\emph{(b)} for each $X$ in $\Ob(\C)$, there exists $\id_X$ in $\Hom_\C(X,X)$ such that 
+$$
+f\ci_{YXX}\id_X=f
+$$ 
+for all $f$ in $\Hom_\C(X,Y)$ and 
+$$
+\id_Y\ci_{YYX}\ g=g
+$$ 
+for all $g$ in $\Hom_\C(Y,X)$.
+\end{df}
+Let $\U$ be a universe such that $\Hom_\C(X,Y)\in\U$ for all $X,Y$; and let $F$ be a finite subset of $\Ob(\C)$. Then we can assume (in a sense that we leave it to the reader to make precise) that the union 
+$$
+\bigcup_{X,Y\in F}\Hom_\C(X,Y)
+$$ 
+is disjoint.
+
+This enable us (I think) to abbreviate $\ci_{ZYX}$ by $\ci$.
+
+If we abbreviated $\ci_{ZYX}$ by $\ci$ without the above precaution, we may end up with an inequality of the form $g\ci f\ne g\ci f$, as suggested by the diagram 
+$$
+\begin{tikzcd}
+&Y\ar[dr,"g"]\\
+Z\ar[ur,"f"]\ar[dr,"f"']&&W\\ 
+&X,\ar[ur,"g"']
+\end{tikzcd}
+$$ 
+where we assume $X\ne Y$ and 
+$$
+g\ci_{WYZ}f\ne g\ci_{WXZ}f.
+$$ 
+
+Another option (which would be simpler in my humble opinion) would be to impose, in the definition of a category, the condition that the Hom-sets are disjoint, and, for each category $\C$, to choose a universe $\U$ such that the (automatically disjoint) union of the Hom-sets is an element of $\U$.
+
+%%
+
 \sbs{Brief comments}
 
 \begin{s}\lb{d125}
