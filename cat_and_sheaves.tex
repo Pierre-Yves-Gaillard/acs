@@ -180,7 +180,7 @@ An important reference is
 
 \nn[GV] Grothendieck, A. and Verdier, J.-L. (1972). Préfaisceaux. In Artin, M., Grothendieck, A. and Verdier, J.-L., editors, Théorie des Topos et Cohomologie Étale des Schémas, volume 1 of Séminaire de géométrie algébrique\index{SGA4} du Bois-Marie, 4, pages 1-218. Springer. 
 
-\nn{\href{http://www.cmls.polytechnique.fr/perso/orgogozo/SGA4/01/01.pdf}{http://www.cmls.polytechnique.fr/perso/orgogozo/SGA4/01/01.pdf}}
+\nn\href{http://www.normalesup.org/~forgogozo/SGA4/01/01.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/01/01.pdf}%\nn{\href{http://www.cmls.polytechnique.fr/perso/orgogozo/SGA4/01/01.pdf}{http://www.cmls.polytechnique.fr/perso/orgogozo/SGA4/01/01.pdf}}
 
 Here are two useful links:
 
@@ -802,7 +802,9 @@ X\ar[ur,"f"]\ar[dr,"f"']&&Z\\
 \end{tikzcd}
 $$ 
 where we assume (as we may) $g\ci_{ZYX}f\ne g\ci_{ZY'X}f$. %where we assume that $X,Y,Y',Z$ are four distinct objects, and that $$g\ci_{ZYX}f\ne g\ci_{ZY'X}f.$$
-It is not clear to me which precautions one can take in order to avoid this problem. Another option (which would be simpler in my humble opinion) would be to impose, in the definition of a category, the condition that the Hom-sets are disjoint, and, for each category, to choose a universe $\U$ such that the (automatically disjoint) union of the Hom-sets is an element of $\U$.
+It is not clear to me which precautions one can take in order to avoid this problem. Also note that a phrase like ``the morphism $f$ is a monomorphism'' doesn't make sense, and one should say instead something like ``the morphism $f$ is a monomorphism with respect to the pair of objects $(X,Y)$''. 
+
+Another option (which would be simpler in my humble opinion) would be to impose, in the definition of a category, the condition that the Hom-sets are disjoint, and, for each category, to choose a universe $\U$ such that the (automatically disjoint) union of the Hom-sets is an element of $\U$. An argument in favor of this option would be to say that, as we want our statements to be compatible with universe enlargement, there is no harm in choosing a large enough universe at the outset.
 
 %%
 
@@ -12294,35 +12296,8 @@ Let $X$ be a small presite. We assume, as we may, that the hom-sets of $\C_X$ ar
 Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_i$ is a Grothendieck topology, and we denote by $\bigvee\T_i$ the intersection of all Grothendieck topologies containing $\bigcup\T_i$.
 \end{s}
 
-%
-
-\begin{comment}
-%\sbs{Definition of a sheaf (page 414)}%\sbs{Brief comments}
-\begin{s}
-Definition of a sheaf (page 414). 
-
-Here is Definition 17.3.1(ii) of the book: 
-
-\begin{df}\label{sheaf}
-A presheaf $F\in\PSh(X,\A)$ is a sheaf\index{sheaf} if for any local isomorphism $A\to U$ such that $U\in\C_X$ and $A\in(\C_X)^\wedge$, the morphism $F(U)\to F(A)$ is an isomorphism.
-\end{df}
-
-(Here $\A$ is a category admitting small projective limits.)
-
-To simplify we assume $\A=\Set$.
-
-In SGA4.II.2.1\index{SGA4} Verdier\index{Verdier, Jean-Louis} defines a sheaf of sets by 
-
-\begin{df}\label{faisceau}
-A presheaf of sets $F\in\PSh(X)$ is a sheaf if for any local isomorphism $A\to U$ in $\C_X$ such that $A\to U$ is a monomorphism and $U$ is in $\C_X$, the morphism $F(U)\to F(A)$ is an isomorphism. %Soit $C$ un site dont la catégorie sous-jacente est une $\U$-catégorie. Un préfaisceau $F$ à valeurs dans $\U$-Ens est dit séparé (resp. est un faisceau) si pour tout crible $R$ couvrant $X$, objet de $C$, l'application: $$\Hom_{C^\wedge}(X,F)\to\Hom_{C^\wedge}(R,F)$$ est une injection (resp. une bijection). 
-\end{df} 
-
-See \href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}%It is not obvious to me that these definitions are equivalent, and that the first one is invariant under change of universes.
-
-The equivalence of these two definitions follows from Proposition 5.3, implication ``(i) $\implies$ (ii bis)'' in Proposition 5.3 of Verdier's SGA4.II Exposé linked to above.
-\end{s}
-\end{comment}
-
+% old comment:
+% https://docs.google.com/document/d/1O8m5Zp2qEYGX2vZLm_IaKJey17sI-ieNszECRmE-6bI/edit
 % Old comment about Dylan Wilson's proof:
 % https://docs.google.com/document/d/1fLNiapemuHfTTsDSY-Qsb1QVpJnC6FBUvPum4dfKl_A/edit
 % Major Unsolved Problem (old comment)
