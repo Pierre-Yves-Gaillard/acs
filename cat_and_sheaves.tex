@@ -166,7 +166,7 @@
 
 \centerline{\href{http://www.iecl.univ-lorraine.fr/~Pierre-Yves.Gaillard/DIVERS/KS/}{http://www.iecl.univ-lorraine.fr/$\sim$Pierre-Yves.Gaillard/DIVERS/KS/}}
 
-My email is pierre.yves.gaillard at gmail.com.
+My email address is pierre.yves.gaillard at gmail.com.
 
 \tableofcontents\newpage
 
@@ -11672,9 +11672,9 @@ $$
 \sbs{Sieves and local epimorphisms}\index{sieve}\index{local epimorphism}
 
 This section is about the beginning of Section 16.1 p.~389 of the book. Let $\C$ be a category whose hom-sets are disjoint, let $M$ be the set of morphisms in $\C$, and for each $U$ in $\C$ let $M_U\subset M$ be the set of morphisms whose target is $U$. A subset $S$ of $M_U$ is a \textbf{sieve} \index{sieve} over $U$ if it is a right ideal of $M$, in the sense that $S$ contains all morphism of the form $s\ci f$ with $s$ in $S$. If $S$ is a sieve over $U$ and $f:V\to U$ is a morphism, we put
-$$
+\begin{equation}\label{suv}
 S\tm_UV:=\{W\to V\ |\ (W\to V\to U)\in S\}.
-$$
+\end{equation}
 One easily checks that this is a sieve over $V$. 
 
 To a sieve $S$ over $U$ we attach the subobject $A_S$ of $U$ in $\C^\wg$ by the formula
@@ -11685,23 +11685,34 @@ Conversely, to an object $A\to U$ of $(\C^\wg)_U$ we attach the sieve $S_{A\to U
 $$
 S_{A\to U}:=\{V\to A\to U\}.
 $$ 
+In particular we get a natural bijection between the sieves over $U$ and the subobjects of $U$ in $\C^\wedge$, and this bijection is compatible with \eqref{suv} p.~\pageref{suv}. We may sometimes tacitly identify these two sets, so that, given a sieve $S$ over $U$, the datum of a morphism $(V\to U)\in S$ is equivalent to that of a morphism $V\to S$ in $\C^\wedge$. (We say that $A\in\C^\wg$ is a subobject of $B\in\C^\wg$ if $A(U)\subset B(U)$ for all $U$.)
 
-Let $\Sigma_U$ be the set of sieves over $U$. Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ and consider the following conditions:
+Let $\Sigma_U$ be the set of sieves over $U$. Let $(J(U))_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ and consider the following conditions:\bigskip
 
 \begin{cond}\lb{gt}
 $\ $
 
-\nn GT1: for all $U$ in $\C$ we have: $M_U\in\Gamma_U$,
+\nn GT1: for all $U$ in $\C$ we have: $M_U\in J(U)$,
 
-\nn GT2: for all $U$ in $\C$ we have: $\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U$,
+\nn GT2: for all $U$ in $\C$ we have: $J(U)\ni S\subset S'\in\Sigma_U\implies S'\in J(U)$,
 
-\nn GT3: for all $U$ in $\C$ we have: $S\in\Gamma_U,\ (V\to U)\in M\implies S\tm_UV\in\Gamma_V$,
+\nn GT3: for all $U$ in $\C$ we have: $S\in J(U),\ (V\to U)\in M\implies S\tm_UV\in J(V)$,
 
 \nn GT4: for all $U$ in $\C$ we have: 
 $$
-S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\tm_UV\in\Gamma_V\ \forall\ (V\to U)\in S\implies S'\in\Gamma_U.
+S\in J(U),\ S'\in\Sigma_U,\ S'\tm_UV\in J(V)\ \forall\ (V\to U)\in S\implies S'\in J(U).
 $$
 \end{cond}
+
+The membres of $J(U)$ are called \textbf{covering sieves of} $U$.
+
+\begin{prop}\lb{42}
+Axiom GT2 follows from GT4.
+\end{prop}
+%
+\begin{proof}
+In the notation of GT2, if $(V\to U)$ be in $S$, then we have $S'\tm_UV=S\tm_UV$.
+\end{proof}
 
 Consider the following conditions on a set $\E$ of morphisms in $\C^\wg$:
 
@@ -11724,14 +11735,14 @@ Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphis
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
-Let $(\Gamma_U)_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}), and let 
+Let $(J(U))_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}), and let 
 \begin{equation}\lb{cce}
 \E=\E(\Gamma,\U)
 \end{equation} 
-be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\tm_BU\to U}$ is in $\Gamma_U$. 
+be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\tm_BU\to U}$ is in $J(U)$. 
 
 \begin{lem}\lb{1613i}
-A morphism $A\to U$ in $\C^\wg$ with $U$ in $\C$ is in $\E$ if and only if $S_{A\to U}$ is in $\Gamma_U$. 
+A morphism $A\to U$ in $\C^\wg$ with $U$ in $\C$ is in $\E$ if and only if $S_{A\to U}$ is in $J(U)$. 
 \end{lem}
 
 \begin{proof}
@@ -11748,13 +11759,13 @@ Let $A\to U$ be a morphism in $\C^\wg$ with $U$ in $\C$. Consider the conditions
 (A\to U)\in\E,
 \end{equation}
 \begin{equation}\lb{28c}
-S_{A\tm_UV\to V}\in\Gamma_V\quad\forall\quad V\to U,
+S_{A\tm_UV\to V}\in J(V)\quad\forall\quad V\to U,
 \end{equation}
 \begin{equation}\lb{28d}
-S_{A\to U}\tm_UV\in\Gamma_V\quad\forall\quad V\to U,
+S_{A\to U}\tm_UV\in J(V)V\quad\forall\quad V\to U,
 \end{equation}
 \begin{equation}\lb{28e}
-S_{A\to U}\in\Gamma_U.
+S_{A\to U}\in J(U).
 \end{equation} 
 We have \qr{28b} $\ssi$ \qr{28c} by definition of $\E$, and \qr{28c} $\ssi$ \qr{28d} by Lemma~\ref{1613i}, \qr{28d} $\then$ \qr{28e} by GT1 and GT4, and \qr{28e} $\then$ \qr{28d} by GT3.
 \end{proof}
@@ -11771,7 +11782,7 @@ D\ar{r}\ar{d}&E\ar{r}\ar{d}&U\ar{d}\\
 A\ar{r}&B\ar{r}&C
 \end{tikzcd}
 $$
-in $\C^\wg$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $\Gamma_U$ (because $B\to C$ is in $\E$) and we must prove that $S_{D\to U}$ is in $\Gamma_U$. Let $V\to U$ be in $S_{E\to U}$, and let us complete the diagram with cartesian squares as indicated. By GT4 it suffices to check that $S_{F\to V}$ is in $\Gamma_V$. But this follows from the assumption that $A\to B$ is in $\E$ (together with a transitivity property of cartesian squares which has already been tacitly used).
+in $\C^\wg$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $J(U)$ (because $B\to C$ is in $\E$) and we must prove that $S_{D\to U}$ is in $J(U)$. Let $V\to U$ be in $S_{E\to U}$, and let us complete the diagram with cartesian squares as indicated. By GT4 it suffices to check that $S_{F\to V}$ is in $J(V)$. But this follows from the assumption that $A\to B$ is in $\E$ (together with a transitivity property of cartesian squares which has already been tacitly used).
 
 \nn LE3 follows immediately from GT2.
 
@@ -11779,22 +11790,19 @@ in $\C^\wg$ (with $U$ in $\C$). We have that $S_{E\to U}$ is in $\Gamma_U$ (beca
 
 Conversely, given an object $U$ of $\C$ and a set $\E$ of morphisms in $\C^\wg$ satisfying LE1-LE4, put
 $$
-\Gamma_U:=\{S\in\Sigma_U\ |\ (A_S\to U)\in\E\}.
+J(U):=\{S\in\Sigma_U\ |\ (A_S\to U)\in\E\}.
 $$ 
 Recall that we have attached to a sieve $S$ over $U$ the subobject $A_S$ of $U$ in $\C^\wg$ defined by 
 $$
 A_S(V):=S\cap\Hom_\C(V,U).
 $$ 
 
-Let us check that $\Gamma(\E):=(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4.
+Let us check that $\Gamma(\E):=(J(U))_{U\in\C}$ satisfies GT1-GT4.
 
 GT1 follows from LE1 and the equality $(A_{M_U}\to U)=\id_U$. 
 
-GT2 follows from LE3 and the fact that, in the setting 
-$$
-\Gamma_U\ni S\subset S'\in\Sigma_U\implies S'\in\Gamma_U,
-$$ 
-the morphism $A_S\to U$ factors as $A_S\to A_{S'}\to U$. 
+GT2 follows from GT4 (Proposition~\ref{42} p.~\pageref{42}).
+%follows from LE3 and the fact that, in the setting $$J(U)\ni S\subset S'\in\Sigma_U\implies S'\in J(U),$$ the morphism $A_S\to U$ factors as $A_S\to A_{S'}\to U$. 
 
 To prove GT3, note that if $S$ is a sieve over $U$ and $V\to U$ is a morphism in $\C$, then we have the equality
 \begin{equation}\lb{asuv}
@@ -11843,9 +11851,9 @@ Condition GT4 holds.
 \begin{proof} 
 Let us assume 
 \begin{equation}\lb{sgu}
-S\in\Gamma_U,\ S'\in\Sigma_U,\ S'\tm_UV\in\Gamma_V\ \forall\ (V\to U)\in S.
+S\in J(U),\ S'\in\Sigma_U,\ S'\tm_UV\in J(V)\ \forall\ (V\to U)\in S.
 \end{equation}
-It suffices to check $S'\in\Gamma_U$, or, equivalently, 
+It suffices to check $S'\in J(U)$, or, equivalently, 
 \begin{equation}\lb{as'}
 (A_{S'}\to U)\in\E.
 \end{equation}
@@ -11872,7 +11880,7 @@ be a cartesian square. By LE4 it is enough to verify
 \begin{equation}\lb{cv}
 (C\to V)\in\E.
 \end{equation} 
-The morphism $V\to U$ being in $S$ by the first sentence of Lemma~\ref{prepagt4}, the sieve $S'\tm_UV$ is in $\Gamma_V$ by \qr{sgu}, and $A_{S'\tm_UV}\to V$ is in $\E$ by definition of $\Gamma_V$. We have 
+The morphism $V\to U$ being in $S$ by the first sentence of Lemma~\ref{prepagt4}, the sieve $S'\tm_UV$ is in $J(V)$ by \qr{sgu}, and $A_{S'\tm_UV}\to V$ is in $\E$ by definition of $J(V)$. We have 
 $$
 \E\ni(A_{S'\tm_UV}\to V)=(A_{S'}\tm_UV\to V)\iso(C\to V).
 $$ 
@@ -11887,7 +11895,7 @@ $$
 is cartesian. This proves successively \qr{cv}, \qr{bas}, \qr{as'} and the lemma.  
 \end{proof}
 
-We have proved that $(\Gamma_U)_{U\in\C}$ satisfies GT1-GT4. 
+We have proved that $(J(U))_{U\in\C}$ satisfies GT1-GT4. 
 
 It is now easy, thanks to Lemma~\ref{prepagt4} p.~\pr{prepagt4}, to prove 
 
@@ -12315,7 +12323,7 @@ Let $(\T_i)$ be a family of Grothendieck topologies. We observe that $\bigcap\T_
 % Major Unsolved Problem (old comment)
 % https://docs.google.com/document/d/13YavpBGiNqCsWJrdBZ5HZx8sKOBn_XIrUguE20KgkDE/edit 
 
-\sbs{Definition of a sheaf (page 414)}
+\sbs{Definition of a sheaf (page 414)}\lb{414}
 
 Here is Definition 17.3.1(ii) of the book: 
 
@@ -12339,12 +12347,13 @@ The equivalence of these two definitions follows from Proposition 5.3, implicati
 
 In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} %proved as follows that 
 proved this fact using only %the first three sections of Verdier's Exposé. 
-the beginning of Verdier's Exposé, up to Proposition~4.2. Here is a rewriting of Dylan Wilson's argument:
+the beginning of Verdier's Exposé, up to Proposition~4.2. In the next section (Section~\ref{verdier} p.~\pageref{verdier}) we prove these results. In the sequel of this section we describe Dylan Wilson's argument. Our purpose was that this text, together with \textbf{Categories and Sheaves}, offer a self-contained proof of the equivalence of the two definitions.
+
 \begin{prop}
 A ``Verdier sheaf'' is a ``KS-sheaf''.
 \end{prop}
 \begin{proof}
-For the duration of the proof, $\Sh(X)$ will denote the category of ``\emph{Verdier}-sheaves''. By Theorem 3.4 in SGA4.II, the inclusion $\Sh(X)\subset\PSh(X)$ admits an exact left adjoint $\mathbf a$. We will also use tacitly the fact that $\Sh(X)$ admits finite limits and colimits (Theorem 4.1 in SGA4.II).
+For the duration of the proof, $\Sh(X)$ will denote the category of ``\emph{Verdier}-sheaves''. By Theorem 3.4 in SGA4.II (Theorem~\ref{v34} p.~\pageref{v34}), the inclusion $\Sh(X)\subset\PSh(X)$ admits an exact left adjoint $\mathbf a$. We will also use tacitly the fact that $\Sh(X)$ admits finite limits and colimits (Theorem 4.1 in SGA4.II, Theorem~\ref{v41} p.~\pageref{v41}).
 
 \nn Claim~1: If $A\to U$, with $U$ in $\C_X$, is a monomorphism and a local isomorphism in $\PSh(X)$, then $\mathbf aA\to\mathbf aU$ is an isomorphism in $\Sh(X)$.
 
@@ -12360,7 +12369,7 @@ is bijective, which is clear.
 
 \nn Claim~2: If $A\to B$ is a monomorphism and a local isomorphism in $\PSh(X)$, then $\mathbf aA\to\mathbf aB$ is an isomorphism in $\Sh(X)$.
 
-\nn Proof of Claim~2: Let $f:A\to B$ be a monomorphism and a local isomorphism in $\PSh(X)$. By Proposition~4.2 in SGA4.II and (the dual of) Proposition~\ref{34i} p.~\pr{34i} above, it suffices to show that $\mathbf af$ is an epimorphism in $\Sh(X)$. Let $x,y:B\rightrightarrows F$ be two morphisms in $\PSh(X)$ with $F$ in $\Sh(X)$ and $x\ne y$. It suffices to prove $x\ci f\ne y\ci f$. 
+\nn Proof of Claim~2: Let $f:A\to B$ be a monomorphism and a local isomorphism in $\PSh(X)$. By Proposition~4.2 in SGA4.II (Proposition~\ref{v42} p.~\pageref{v42}) and (the dual of) Proposition~\ref{34i} p.~\pr{34i} above, it suffices to show that $\mathbf af$ is an epimorphism in $\Sh(X)$. Let $x,y:B\rightrightarrows F$ be two morphisms in $\PSh(X)$ with $F$ in $\Sh(X)$ and $x\ne y$. It suffices to prove $x\ci f\ne y\ci f$. 
 As we have 
 $$
 \colim_{U\to B}U\xr\sim B
@@ -12404,6 +12413,299 @@ $$
 \Hom_{\Sh(X)}(\mathbf aU,F)\to\Hom_{\Sh(X)}(\mathbf aA,F)
 $$ 
 is bijective. But this follows from Claim~4.
+\end{proof}
+
+%
+
+\sbs{Proof of some results of SGA4II}\lb{verdier}
+
+In this section we prove the results contained in the beginning of Verdier's Exposé\medskip 
+
+\centerline{\href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}}
+
+\noindent up to Proposition~4.2, results used in Section~\ref{414} p.~\pageref{414} above.
+
+Let $\C$ be a site and $\U$ a universe such that $\C\in\U$, and write $\C^\wedge$ for $\C^\wedge_\U$.
+
+\begin{lem}[1.1.1]\lb{vcofilt}
+Let $S$ and $S'$ be covering sieves of some object $U$ of $\C$. Then the intersection $S\cap S'$ is again a covering sieve of $U$. In particular, the ordered set $J(U)$ is cofiltrant.
+\end{lem}
+%
+\begin{proof}
+Let $V\to S'$ be a morphism in $\C^\wedge$. There is a commutative diagram 
+$$
+\begin{tikzcd}
+S\times_UV\ar[d]\ar[r,hookrightarrow]&V\ar[d]\ar[r,equal]&V\ar[d]\ar[dl]\\ 
+S\cap S'\ar[r,hookrightarrow]&S'\ar[r,hookrightarrow]&U
+\end{tikzcd}
+$$ 
+where the two small squares are cartesian.
+\end{proof}
+
+\subsubsection{Sheaf associated to a presheaf}
+
+%\noindent%[3.0.5]
+Recall that $\C$ is a site and $\U$ a universe such that $\C\in\U$, and that we write $\C^\wedge$ for $\C^\wedge_\U$. %[and let $\V$ be a universe such that $\C^\wedge\in\V$ and $\U\subset\V$]
+The set $J(U)$ of covering sieves of $U$, ordered by inclusion, is cofiltrant by Lemma~\ref{vcofilt}.
+ 
+For all $\U$-presheaf $F$, the ``canonical'' colimit 
+$$
+\colim_{S\in J(U)}\Hom_{\C^\wedge}(S,F)
+$$ 
+is a member $\U$. (By ``canonical'' colimit we mean the set given by Proposition 2.4.1 p.~54 of \textbf{Categories ans Sheaves}.) Let $g:V\rightarrow U$ be a morphism in $\C$. The base change functor $g^\ast:J(U)\to J(V)$ defines a map
+$$
+LF(g):LF(U)\to LF(V),
+$$
+making $U\mapsto LF(U)$ is a presheaf over $\C$.
+
+The morphism $\id_U:U\to U$ being a member of $J(U)$, we have, for all object $U$ of $\C$, a map
+$$
+\ell(F)(U):F(U)\to LF(U),
+$$
+defining a morphism of functors
+$$
+\ell(F):F\to LF.
+$$
+It is clear moreover that $F\mapsto LF$ is a functor in $F$, and that the morphisms $\ell(F)$ define a morphism
+$$
+\ell:\id\to L.
+$$
+Finally let $S\hookrightarrow U$ be a covering sieve of $U$, and let 
+$$
+Z_S:\Hom_{\C^\wedge}(S,F)\to\Hom_{\C^\wedge}(U,LF)
+$$ 
+be the coprojection. For all morphism $V\xrightarrow{g}U$ in $\C$, the definition of the functor $LF$ shows that the diagram 
+\[\vcenter{
+\xymatrix{
+\Hom_{\C^\wedge}(S,F)\ar[rr]^{Z_S}\ar[d]&&\Hom_{\C^\wedge}(U,LF)\ar[d]\\
+\Hom_{\C^\wedge}(S\times_UV,F)\ar[rr]_{Z_{S\times_UV}}&&\Hom_{\C^\wedge}(V,LF)\\
+}}\leqno{(*)}
+\]
+commutes. (The vertical arrows are the obvious ones.)
+
+\begin{lem}[Lemme 3.1]\lb{v31}
+\begin{enumerate}%\renewcommand{\labelenumi}{\theenumi)}
+
+\item For\lb{v311} all covering sieve $i_S:S\hookrightarrow U$ and all $a:S\to F$, the diagram
+\[
+\vcenter{
+\xymatrix@L=5pt@R=1.35cm@C=3.5cm@M=.2cm{
+F\ar[r]^{\ell(F)}&LF\\
+S\ar[u]^a\ar@{^{(}->}_{i_S}[r]&U\ar[u]_{Z_S(a)} }}\leqno{(**)}
+\]
+commutes.
+
+\item For\lb{v312} all morphism $b:U\to LF$, there is a covering sieve $S$ of $U$ and a morphism $a:S\to F$ such that $Z_S(a)=b$.
+
+\item Let\lb{v313} $U$ be an object of $\C$ and $a,b:V\rightrightarrows F$ two morphisms such that $\ell(F)\circ a=\ell(F)\circ b$. Then the kernel of the couple $(a,b)$ is a covering sieve of $U$.
+
+\item Let\lb{v314} $S$ and $S'$ be two covering sieves of $U$, and let $a:S\to F$ and $a':S'\to F$ be two morphisms. Then we have $Z_S(a)=Z_{S'}(a')$ if and only if $a$ and $a'$ coincide on a covering sieve $S''\hookrightarrow S\times_U S'$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+The only nontrivial assertion is Assertion~\ref{v311}. We must check that 
+$$
+Z_S(a)\circ i_S=\ell(F)\circ a.
+$$ 
+It suffices to show that the compositions of these morphisms with a morphism $g:V\to S$ ($V$ object of $\C$) are equal. Consider the morphism $f:=i_S\circ g$ and the fiber product $S\times_UV$:
+\[
+\vcenter{
+\xymatrix@L=5pt@R=1cm@C=3.5cm@M=.2cm{
+F\ar[r]^{\ell(F)}&LF\\
+S\ar[u]^a\ar@{^{(}->}^{i_S}[r]&U\ar[u]_{Z_S(a)}\\
+S\times_UV\ar[u]^{g'}\ar@{^{(}->}[r]_{i'}&V\ar[lu]_g\ar[u]_f.
+}
+}
+\]
+As the inclusion $i'$ is admits a section, we have $S\times_UV=V$ and $i'$ is the identity of $V$, so that we get the commutative diagram
+\[
+\vcenter{
+\xymatrix@L=5pt@R=1cm@C=3.5cm@M=.2cm{
+F\ar[r]^{\ell(F)}&LF\\
+S\ar[u]^a\ar@{^{(}->}_{i_S}[r]&U\ar[u]_{Z_S(a)}\\
+V\ar[u]^{g'}\ar@{=}[r]&V\ar[lu]^g\ar[u]_f
+}
+}
+\] 
+with $g'=g$. We have 
+$$
+\ell(F)\circ a\circ g=Z_V(a\circ g')=Z_S(a)\circ i_S\circ g,
+$$ 
+the equalities following respectively from the by definition of the $\ell(F)$ and the commutativity of the diagram (*). %On the one hand, by definition of the $\ell(F)$, the morphism $Z_V(u\circ g')$ is equal to $\ell(F)\circ u\circ g$. On the other hand, the commutativity of the diagram (*) furnishes the equality $Z_V(u\circ g')=Z_S(u)\circ f$. As a result, we get indeed $\ell(F)\circ u\circ g=Z_S(u)\circ i_S\circ g$.
+\end{proof}
+
+\begin{prop}[Proposition 3.2]\lb{v32}
+\begin{enumerate}%\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $L$ is left exact.
+
+\item For all presheaf $F$, $LF$ is a separated presheaf.
+
+\item The presheaf $F$ is separated if and only if the morphism $\ell(F):F\to LF$ is a monomorphism. The presheaf $LF$ is then a sheaf.
+
+\item The following properties are equivalent:
+\begin{enumerate}
+\item $\ell(F):F\to LF$ is an isomorphism.
+\item $F$ is a sheaf.
+\end{enumerate}
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\emph{Part 1}. It suffices to show (Proposition~\ref{333} p.~\pageref{333}) that for all object $U$ of $\C$, the functor $F\mapsto LF(U)$ commutes with finite limits. But, by definition of the limit, for $S\in J(U)$, the functor $F\mapsto\Hom_{\C^\wedge}(S,F)$ commutes with limits, and the colimit $\colim_{J(U)}$ commutes with finite limits because $J(U)$ is a cofiltrant ordered set (Proposition~\ref{316} p.~\pageref{316}).
+
+\noindent\emph{Part 2}. Let $U$ be an object of $\C$ and $f$, $g:U\rightrightarrows LF$ two morphisms which coincide on a covering sieve $S\hookrightarrow U$ of $U$. By Part~\ref{v312} of Lemma~\ref{v31}, there is a covering sieve $S'\hookrightarrow U$, which we can assume to be contained in $S$, and there are two morphisms $a,b:S'\rightrightarrows F$ such that $Z_{S'}(a)=f$ and $Z_{S'}(b)=g$. By Part~\ref{v311} of Lemma~\ref{v31} we then have $\ell(F)\circ a=\ell(F)\circ b$. Thus (Part~\ref{v314} of Lemma~\ref{v31}) $a$ and $b$ coincide on a covering sieve $S''\hookrightarrow S'$. Letting $w$ be the restriction of $a$ to $S''$ yields 
+$$
+f=Z_{S'}(a)=Z_{S''}(w)=Z_{S'}(b)=g,
+$$ 
+and thus $f=g$. Hence the presheaf $LF$ is separated.
+
+\noindent\emph{Part 3}. %If $F$ is separated, $\ell(F)$ is a monomorphism because a colimit filtrant of monomorphisms is a monomorphism.
+Assume that $F$ is separated and let us show that $\ell(F)$ is a monomorphism. Let $U$ be an object of $\C$ and let $a,b:U\rightrightarrows F$ satisfy $\ell(F)\circ a=\ell(F)\circ b$, that is $Z_U(a)=Z_U(b)$. It suffices to prove $a=b$. By Part~\ref{v314} of Lemma~\ref{v31} $a$ and $b$ coincide in some covering sieve of $U$. Since $F$ is separated, this implies $a=b$. 
+
+If $\ell(F)$ is a monomorphism, the presheaf $F$, being a sub-presheaf of a separated presheaf, is separated. 
+
+To show that $LF$ is then a sheaf, let $i:S\hookrightarrow U$ be a covering sieve of an object $U$ of $\C$, and $a:S\to LF$ a morphism. It suffices to show that $a$ factors through $U$:
+\begin{equation}\lb{veq1}
+\begin{tikzcd}
+LF\\ 
+S\ar[u,"a"]\ar[r,hookrightarrow,"i"']&U.\ar[lu,dashrightarrow,"b"']
+\end{tikzcd}
+\end{equation}
+We may, and will, view $F$ as a subobject of $LF$. Form the cartesian square 
+$$
+\begin{tikzcd}
+F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
+S_1\ar[u,"a'"]\ar[r,hookrightarrow]&S.\ar[u,"a"']
+\end{tikzcd}
+$$ 
+
+\noindent Claim 1: $F$ is a covering sieve of $LF$. 
+
+\noindent Proof of Claim 1: Let $V$ be an object of $\C$ and $V\to LF$ a morphism. By Part~\ref{v311} of Lemma~\ref{v31} there is a commutative diagram 
+$$
+\begin{tikzcd}
+&F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
+&S_2\ar[u]\ar[r,hookrightarrow]&V\ar[u]\\ 
+S_3\ar[ur,hookrightarrow]
+\end{tikzcd}
+$$ 
+where $S_3$ is a covering sieve of $V$. We conclude that $S_2$ is also a covering sieve of $V$. This proves the claim. 
+
+\noindent Claim 2: $S_1$ is a covering sieve of $U$.
+
+\noindent Proof of Claim 2: There is a commutative diagram 
+$$
+\begin{tikzcd}
+F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
+S_1\ar[u,"a'"]\ar[r,hookrightarrow]&S\ar[u,"a"']\ar[r,hookrightarrow]&U\\ 
+S_4\ar[u]\ar[r,hookrightarrow]&W\ar[u]
+\end{tikzcd}
+$$ 
+where the squares $(F,LF,S,S_1),(S_1,S,W,S_4)$ and $(S_1,U,W,S_4)$ are cartesian. This proves Claim~2.
+
+Defining $b$ in \eqref{veq1} by $b:=Z_{S_1}(a')$ we get 
+$$
+b\circ i\circ j=Z_{S_1}(a')\circ i\circ j=\ell(F)\circ a'=a\circ j:
+$$ 
+As $LF$ is separated, this implies $b=j\circ a$. %$$\begin{tikzcd}F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"']&S\ar[u,"a"]\ar[r,hookrightarrow,"i"']&U.\ar[lu,dashrightarrow,"b"']\end{tikzcd}$$ Set $S'=F\times_{LF}S$ and $b=Z_{S'}(q_1)$:\[\xymatrix@L=5pt@R=1cm@C=1.5cm{F\ar[rr]^{\ell(F)}          &&LF                 &\\ S'\ar[u]^{q_1}\ar@{^{(}->}[rr]^{q_2} &&S\ar@{^{(}->}[r]_i\ar[u]^a&U\ar[lu]_b\\ S''\ar[u]^{p_1}\ar@{^{(}->}[rr]_{p_2}&&V.\ar[u]_m}\] To show that $a=b\circ i$, it suffices to show that for all morphism $m:V\to S$ ($V$ object of $\C$), $b\circ i\circ m=a\circ m$. Set $S''=V\times_S S'$ and let $p_1$ and $p_2$ be the projections. The projection $p_2:S''\hookrightarrow V$ is %\xymatrix@M=5pt{S''\ar@{^{(}->}[r]^{p_2}&V}$ %is a monomorphism and turns $S''$ into a covering sieve of $V$ (Part~\ref{v312} of Lemma~\ref{v31}). We have $b\circ i\circ q_2=\ell(F)\circ q_1$ (Part~\ref{v311} of Lemma~\ref{v31}), and thus $b\circ i\circ q_2=a\circ m\circ p_2$. This implies $b\circ i\circ q_2\circ p_1=a\circ q_2\circ p_1$, that is $b\circ i\circ m\circ p_2=a\circ m\circ p_2$. As the presheaf $LF$ is separated, we get $b\circ i\circ m=a\circ m$.
+
+\noindent\emph{Part 4}. Clear.%\end{enumerate}
+\end{proof}
+
+%\begin{rk}[Remarque 3.3]If $J'(U)$ is a cofinal subset of $J(U)$, we have$$LF(U)=\colim_{J'(U)}\Hom_{\C^\wedge}(.,F).$$\end{rk}
+
+\begin{thm}[Théorème 3.4]\lb{v34}
+Let $\C\in\U$ be a site. The inclusion functor $i:\C^\sim\hookrightarrow\C^\wedge$ of the sheaves into the presheaves admits a left exact left adjoint functor $\mathbf a$ (Propositon~\ref{336} p.~\pageref{336}):
+\[
+\xymatrix@=3cm@M=.2cm{
+\C^\sim\ar@{^{(}->}@<-1ex>[r]_{i}&\C^\wedge \ar@<-1ex>[l]_{\mathbf a}\qquad.
+}
+\]
+The functor $i\circ \mathbf a$ is canonically isomorphic to the functor $L\circ L$. For all presheaf $F$ the adjonction morphism $F\to i\circ\mathbf a(F)$ is obtained, via the previous isomorphism, from the morphism $\ell(LF)\circ\ell(F):F\to L\circ L(F)$.
+\end{thm}
+
+\begin{df}[Définition 3.5]
+The sheaf $\mathbf aF$ is called the sheaf associated to the presheaf $F$.
+\end{df}
+
+Theorem~\ref{v34} results immediately from Proposition~\ref{v32}.
+
+\begin{prop}[Proposition 3.6]
+Let $\C\in\U$ be a site and $\V\supset\U$ a universe. Write $\C^\wedge_{\U}$ and $\C^\wedge_{\U}$ (resp. $\C^\wedge_{\V}$ and $\C^\wedge_{\V}$) for the categories of $\U$-presheaves and of $\U$-sheaves (resp. of $\V$-presheaves and of $\V$-sheaves) and $\mathbf a_{\U}:\C^\wedge_{\U}\to\C^\wedge_{\U}$ (resp. $\mathbf a_{\V}:\C^\wedge_{\V}\to
+\C^\wedge_{\V}$) for the corresponding ``associated sheaves'' functors. The diagram
+\[
+\xymatrix@C=3.5cm@R=1.25cm{
+\C^\wedge_{\U}\ar[r]^{\mathbf a_{\U}}\ar @{_{(}->}[d]&\C^\sim_{\U}\ar@{_{(}->}[d]\\
+\C^\wedge_{\V}\ar[r]^{\mathbf a_{\V}}&\C^\sim_{\V} , }
+\]
+where the vertical functors are the canonical inclusions, commutes up to canonical isomorphism.
+\end{prop}
+
+\begin{proof}
+This follows from the construction of the functors $\mathbf a_\U$ and $\mathbf a_\V$ (Theorem~\ref{v34}). 
+\end{proof}
+
+\subsubsection{Exactness properties of the category of sheaves}
+
+The exactness properties of the category of sheaves follow from the exactness properties of the category of presheaves via Theorem~\ref{v34}. The present section spells out this philosophy by giving some of the most useful standard statements.
+
+\begin{thm}[Théorème 4.1]\lb{v41}
+Let $\C\in\U$ be a site, $\C^\sim$ the category of sheaves, $\mathbf a:\C^\wedge\to
+\C^\sim$ the associated sheaf functor, $i:\C^\sim\to \C^\wedge$ the inclusion functor.
+\begin{enumerate}%\renewcommand{\labelenumi}{\theenumi)}
+
+\item The\lb{v411} functor $\mathbf a$ commutes with colimits and is exact.
+
+\item The $\U$-colimits in $\C^\sim$ are representable. For all category $I\in\U$ and for all functor $E:I\to\C^\sim$, the canonical morphism 
+$$
+\colim_I E\to\mathbf a\left(\colim_Ii\circ E\right)
+$$
+is an isomorphism.
+
+\item The $\U$-limits in $\C^\sim$ are representable. For all object $U$ of $\C$, the functor $\C^\sim\to\U$-$\Set$, $F\mapsto F(U)$ commutes with limits, \emph{i.e.} the inclusion functor $i:\C^\sim\to\C^\sim$ commutes with limits.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+These properties follow essentially from Theorem~\ref{v34} and from Corollary~\ref{2.1.10c} p.~\pageref{2.1.10c}.
+\end{proof}
+
+So, in the category of sheaves, the products indexed by a member of $\U$, the fibered products, the coproducts indexed by a member of $\U$, the fibered coproducts, the kernels,
+the cokernels, the images, and the coimages are representable.
+
+\begin{cor}[Corollaire 4.1.1]
+Let $\C\in\U$ be a site and $F$ a sheaf of $\U$-sets over $\C$. The canonical morphism
+$$
+\icolim_{(U\to F)\in\C_F}\mathbf a(U)\to F
+$$
+is an isomorphism.
+\end{cor}
+
+\begin{proof}%[Preuve]
+Results from \eqref{263a} p.~\pageref{263a} and from the fact that $\mathbf a$ commutes with colimits.
+\end{proof}
+
+\begin{prop}[Proposition 4.2]\lb{v42}
+A morphism in $\C^\sim$, which is both an epimorphism and a monomorphism, is an isomorphism.
+\end{prop}
+
+\begin{proof}%[Preuve]
+Let $f:G\to H$ be a morphism in $\C^\sim$ which is an epimorphism and a monomorphism. First note that the morphism $f$ is a presheaf monomorphism (Part~\ref{v411} of Theorem~\ref{v41} and Proposition~\ref{34i} p.~\pageref{34i}). Form the cocartesian square % fibered coproduct $H\amalg_GH=K$ and the two coprojections $i_1,i_2:H\rightrightarrows K$ in the category of presheaves. As $f$ is a presheaf monomorphism, one checks immediately that the square 
+\[
+\xymatrix@C=3cm@R=1.5cm{
+G\ar[r]^f\ar[d]_f&H\ar[d]^{i_2}\\
+H\ar[r]^{i_1}&K.
+}
+\] 
+in the category of presheaves. As $f$ is a presheaf monomorphism, the above square is cartesian (Lemma~\ref{8311} (b) p.~\pageref{8311}). Applying the ``associated sheaf'' functor, we hence get a cartesian and cocartesian square in the category of sheaves (Part~\ref{v411} of Theorem~\ref{v41}):
+\[\vcenter{
+\xymatrix@C=3cm@R=1.5cm{
+G\ar[r]^f\ar[d]_f&H\ar[d]^{\mathbf a(i_2)}\\
+H \ar[r]^{\mathbf a(i_1)}&\mathbf a(K).}
+}%\leqno{(*)}
+\]
+As $f$ is a sheaf epimorphism, $\mathbf a(i_1)$ is an isomorphism, and as the above square is cartesian, $f$ is an isomorphism.
 \end{proof}
 
 %
