@@ -12347,7 +12347,7 @@ The equivalence of these two definitions follows from Proposition 5.3, implicati
 
 In \href{https://mathoverflow.net/a/283271/461}{https://mathoverflow.net/a/283271/461} Dylan Wilson\index{Wilson, Dylan} %proved as follows that 
 proved this fact using only %the first three sections of Verdier's Exposé. 
-the beginning of Verdier's Exposé, up to Proposition~4.2. In the next section (Section~\ref{verdier} p.~\pageref{verdier}) we prove these results. In the sequel of this section we describe Dylan Wilson's argument. Our purpose was that this text, together with \textbf{Categories and Sheaves}, offer a self-contained proof of the equivalence of the two definitions.
+the beginning of Verdier's Exposé, up to Proposition~4.2. In the next section (Section~\ref{verdier} p.~\pageref{verdier}) we prove these results. In the sequel of this section we describe Dylan Wilson's argument. Our purpose was that this text, together with \emph{Categories and Sheaves}, offer a self-contained proof of the equivalence of the two definitions.
 
 \begin{prop}
 A ``Verdier sheaf'' is a ``KS-sheaf''.
@@ -12432,14 +12432,14 @@ Let $S$ and $S'$ be covering sieves of some object $U$ of $\C$. Then the interse
 \end{lem}
 %
 \begin{proof}
-Let $V\to S'$ be a morphism in $\C^\wedge$. There is a commutative diagram 
+Let $V\to S'$ be a morphism in $\C^\wedge$. It suffices to show that $S\times_UV$ is a covering sieve of $V$. There is a commutative diagram 
 $$
 \begin{tikzcd}
 S\times_UV\ar[d]\ar[r,hookrightarrow]&V\ar[d]\ar[r,equal]&V\ar[d]\ar[dl]\\ 
 S\cap S'\ar[r,hookrightarrow]&S'\ar[r,hookrightarrow]&U
 \end{tikzcd}
 $$ 
-where the two small squares are cartesian.
+where the two small squares are cartesian. This implies that $S\times_UV$ is a covering sieve of $V$, as desired.
 \end{proof}
 
 \subsubsection{Sheaf associated to a presheaf}
@@ -12452,7 +12452,7 @@ For all $\U$-presheaf $F$, the ``canonical'' colimit
 $$
 \colim_{S\in J(U)}\Hom_{\C^\wedge}(S,F)
 $$ 
-is a member $\U$. (By ``canonical'' colimit we mean the set given by Proposition 2.4.1 p.~54 of \textbf{Categories and Sheaves}.) Let $g:V\rightarrow U$ be a morphism in $\C$. The base change functor $g^\ast:J(U)\to J(V)$ defines a map
+is a member $\U$. (By ``canonical'' colimit we mean the set given by Proposition 2.4.1 p.~54 of \emph{Categories and Sheaves}.) Let $g:V\rightarrow U$ be a morphism in $\C$. The base change functor $g^\ast:J(U)\to J(V)$ defines a map
 $$
 LF(g):LF(U)\to LF(V),
 $$
@@ -12576,13 +12576,15 @@ We may, and will, view $F$ as a subobject of $LF$. Form the cartesian square
 $$
 \begin{tikzcd}
 F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
-S_1\ar[u,"a'"]\ar[r,hookrightarrow]&S.\ar[u,"a"']
+S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"]&S.\ar[u,"a"']
 \end{tikzcd}
 $$ 
 
-\noindent Claim 1: $F$ is a covering sieve of $LF$. 
+\noindent Claim 1: For all morphism $V\to LF$, where $V$ be an object of $\C$, the sieve $F\times_{LF}V$ is a covering sieve of $V$.
+%$F$ is a covering sieve of $LF$. 
 
-\noindent Proof of Claim 1: Let $V$ be an object of $\C$ and $V\to LF$ a morphism. By Part~\ref{v311} of Lemma~\ref{v31} there is a commutative diagram 
+\noindent Proof of Claim 1: %Let $V$ be an object of $\C$ and $V\to LF$ a morphism. 
+By Part~\ref{v311} of Lemma~\ref{v31} there is a commutative diagram 
 $$
 \begin{tikzcd}
 &F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
@@ -12590,25 +12592,25 @@ $$
 S_3\ar[ur,hookrightarrow]
 \end{tikzcd}
 $$ 
-where $S_3$ is a covering sieve of $V$. We conclude that $S_2$ is also a covering sieve of $V$. This proves the claim. 
+where the small square is cartesian and $S_3$ is a covering sieve of $V$. We conclude that $S_2$ is also a covering sieve of $V$. This proves Claim~1. 
 
 \noindent Claim 2: $S_1$ is a covering sieve of $U$.
 
-\noindent Proof of Claim 2: There is a commutative diagram 
+\noindent Proof of Claim 2: Let $W$ be an object of $\C$ and $W\to S$ a morphism. There is a commutative diagram 
 $$
 \begin{tikzcd}
 F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
-S_1\ar[u,"a'"]\ar[r,hookrightarrow]&S\ar[u,"a"']\ar[r,hookrightarrow]&U\\ 
+S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"]&S\ar[u,"a"']\ar[r,hookrightarrow,"i"]&U\\ 
 S_4\ar[u]\ar[r,hookrightarrow]&W\ar[u]
 \end{tikzcd}
 $$ 
-where the squares $(F,LF,S,S_1),(S_1,S,W,S_4)$ and $(S_1,U,W,S_4)$ are cartesian. This proves Claim~2.
+where the squares $(S_1,S,W,S_4)$ and $(S_1,U,W,S_4)$ are cartesian. It suffices to check that $S_4$ is a covering sieve of $W$. As $(F,LF,S,S_1)$ is cartesian too, so is $(F,LF,W,S_4)$, and $S_4$ is a covering sieve of $W$ by Claim~1. This proves Claim~2.
 
 Defining $b$ in \eqref{veq1} by $b:=Z_{S_1}(a')$ we get 
 $$
 b\circ i\circ j=Z_{S_1}(a')\circ i\circ j=\ell(F)\circ a'=a\circ j:
 $$ 
-As $LF$ is separated, this implies $b=j\circ a$. %$$\begin{tikzcd}F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"']&S\ar[u,"a"]\ar[r,hookrightarrow,"i"']&U.\ar[lu,dashrightarrow,"b"']\end{tikzcd}$$ Set $S'=F\times_{LF}S$ and $b=Z_{S'}(q_1)$:\[\xymatrix@L=5pt@R=1cm@C=1.5cm{F\ar[rr]^{\ell(F)}          &&LF                 &\\ S'\ar[u]^{q_1}\ar@{^{(}->}[rr]^{q_2} &&S\ar@{^{(}->}[r]_i\ar[u]^a&U\ar[lu]_b\\ S''\ar[u]^{p_1}\ar@{^{(}->}[rr]_{p_2}&&V.\ar[u]_m}\] To show that $a=b\circ i$, it suffices to show that for all morphism $m:V\to S$ ($V$ object of $\C$), $b\circ i\circ m=a\circ m$. Set $S''=V\times_S S'$ and let $p_1$ and $p_2$ be the projections. The projection $p_2:S''\hookrightarrow V$ is %\xymatrix@M=5pt{S''\ar@{^{(}->}[r]^{p_2}&V}$ %is a monomorphism and turns $S''$ into a covering sieve of $V$ (Part~\ref{v312} of Lemma~\ref{v31}). We have $b\circ i\circ q_2=\ell(F)\circ q_1$ (Part~\ref{v311} of Lemma~\ref{v31}), and thus $b\circ i\circ q_2=a\circ m\circ p_2$. This implies $b\circ i\circ q_2\circ p_1=a\circ q_2\circ p_1$, that is $b\circ i\circ m\circ p_2=a\circ m\circ p_2$. As the presheaf $LF$ is separated, we get $b\circ i\circ m=a\circ m$.
+As $LF$ is separated, Claim~2 implies $b\circ i=j$, as requested. %$$\begin{tikzcd}F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"']&S\ar[u,"a"]\ar[r,hookrightarrow,"i"']&U.\ar[lu,dashrightarrow,"b"']\end{tikzcd}$$ Set $S'=F\times_{LF}S$ and $b=Z_{S'}(q_1)$:\[\xymatrix@L=5pt@R=1cm@C=1.5cm{F\ar[rr]^{\ell(F)}          &&LF                 &\\ S'\ar[u]^{q_1}\ar@{^{(}->}[rr]^{q_2} &&S\ar@{^{(}->}[r]_i\ar[u]^a&U\ar[lu]_b\\ S''\ar[u]^{p_1}\ar@{^{(}->}[rr]_{p_2}&&V.\ar[u]_m}\] To show that $a=b\circ i$, it suffices to show that for all morphism $m:V\to S$ ($V$ object of $\C$), $b\circ i\circ m=a\circ m$. Set $S''=V\times_S S'$ and let $p_1$ and $p_2$ be the projections. The projection $p_2:S''\hookrightarrow V$ is %\xymatrix@M=5pt{S''\ar@{^{(}->}[r]^{p_2}&V}$ %is a monomorphism and turns $S''$ into a covering sieve of $V$ (Part~\ref{v312} of Lemma~\ref{v31}). We have $b\circ i\circ q_2=\ell(F)\circ q_1$ (Part~\ref{v311} of Lemma~\ref{v31}), and thus $b\circ i\circ q_2=a\circ m\circ p_2$. This implies $b\circ i\circ q_2\circ p_1=a\circ q_2\circ p_1$, that is $b\circ i\circ m\circ p_2=a\circ m\circ p_2$. As the presheaf $LF$ is separated, we get $b\circ i\circ m=a\circ m$.
 
 \noindent\emph{Part 4}. Clear.%\end{enumerate}
 \end{proof}
