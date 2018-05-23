@@ -11735,9 +11735,9 @@ Assume that $u:A\to B$ is an epimorphism in $\C^\wg$. If $w:U\to B$ is a morphis
 
 The elements of $\E$ are called \textbf{local epimorphisms}.
 
-Let $(J(U))_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}), and let 
+Let $J=(J(U))_{U\in\C}$ be a subfamily of the family $(\Sigma_U)_{U\in\C}$ satisfying GT1\--GT4, let $\U$ be a universe such that $\C$ is $\U$-small (Definition~\ref{myuscat} p.~\pr{myuscat}), and let 
 \begin{equation}\lb{cce}
-\E=\E(\Gamma,\U)
+\E=\E(J,\U)
 \end{equation} 
 be the set of those morphisms $A\to B$ in $\C^\wg$ such that, for any morphism $U\to B$ in $\C^\wg$ with $U$ in $\C$, the sieve $S_{A\tm_BU\to U}$ is in $J(U)$. 
 
@@ -11797,7 +11797,7 @@ $$
 A_S(V):=S\cap\Hom_\C(V,U).
 $$ 
 
-Let us check that $\Gamma(\E):=(J(U))_{U\in\C}$ satisfies GT1-GT4.
+Let us check that $J_\E:=(J(U))_{U\in\C}$ satisfies GT1-GT4.
 
 GT1 follows from LE1 and the equality $(A_{M_U}\to U)=\id_U$. 
 
@@ -11900,11 +11900,11 @@ We have proved that $(J(U))_{U\in\C}$ satisfies GT1-GT4.
 It is now easy, thanks to Lemma~\ref{prepagt4} p.~\pr{prepagt4}, to prove 
 
 \begin{thm}
-If $\C$ is a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $\Gamma$ is a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and if $\E$ is a set of morphisms in $\C^\wg_\U$ satisfying LE1-LE4, then the equalities $\E=\E(\Gamma,\U)$ and $\Gamma=\Gamma(\E)$ are equivalent.
+If $\C$ is a $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}), if $J$ is a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, and if $\E$ is a set of morphisms in $\C^\wg_\U$ satisfying LE1-LE4, then the equalities $\E=\E(J,\U)$ and $J=J_\E$ are equivalent.
 \end{thm}
 
 \begin{cor}\lb{leu}
-Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pr{gt}), let $u:A\to B$ be a morphism in $\C^\wg_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wg_{\U'}$. Then $u$ is in $\E(\Gamma,\U)$ (see \qr{cce} p.~\pr{cce}) if and only if $u'$ is in $\E(\Gamma,\U')$.
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $J$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pr{gt}), let $u:A\to B$ be a morphism in $\C^\wg_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wg_{\U'}$. Then $u$ is in $\E(J,\U)$ (see \qr{cce} p.~\pr{cce}) if and only if $u'$ is in $\E(J,\U')$.
 \end{cor}
 
 %%
@@ -11932,9 +11932,9 @@ Moreover, a morphism $u:A\to U$ in $(\oo{Op}_X)^\wg$ with $U$ in $\oo{Op}_X$ is 
 % https://docs.google.com/document/d/1vpjtCfl-qZCuuI-wkR5rbsav31DfDsZx1mQteXzu-UM/edit
 
 \begin{s}
-For any universe $\U$, any $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}) $\C$ and any subfamily $\Gamma$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pr{gt}), let $\M(\Gamma,\U)$ and $\I(\Gamma,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\E(\Gamma,\U)$ (see \qr{cce} p.~\pr{cce}). Corollary \ref{leu} p. \pr{leu} implies:
+For any universe $\U$, any $\U$-small category (Definition~\ref{myuscat} p.~\pr{myuscat}) $\C$ and any subfamily $J$ of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4 (see Conditions~\ref{gt} p.~\pr{gt}), let $\M(J,\U)$ and $\I(J,\U)$ denote respectively the set of local monomorphisms and local isomorphisms attached to $\E(J,\U)$ (see \qr{cce} p.~\pr{cce}). Corollary \ref{leu} p. \pr{leu} implies:
 
-Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $\Gamma$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $u:A\to B$ be a morphism in $\C^\wg_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wg_{\U'}$. Then $u$ is in $\M(\Gamma,\U)$ (resp. in $\I(\Gamma,\U)$) if and only if $u'$ is in $\M(\Gamma,\U')$ (resp. in $\I(\Gamma,\U')$).
+Let $\U\subset\U'$ be universes, let $\C$ be a $\U$-small category, let $J$ be a subfamily of $(\Sigma_U)_{U\in\C}$ satisfying GT1-GT4, let $u:A\to B$ be a morphism in $\C^\wg_\U$, and let $u':A'\to B'$ be the corresponding morphism in $\C^\wg_{\U'}$. Then $u$ is in $\M(J,\U)$ (resp. in $\I(J,\U)$) if and only if $u'$ is in $\M(J,\U')$ (resp. in $\I(J,\U')$).
 \end{s}
 
 %
