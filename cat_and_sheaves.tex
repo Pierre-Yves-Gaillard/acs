@@ -3500,7 +3500,7 @@ where $X_z$ is the fiber of $X\to Z$ over $z\in Z$.
 
 \nn(ii) Deduce that small inductive limits in $\Set$ are stable by base change (see Definition~\ref{dsbc} p.~\pr{dsbc}).\index{base change}\index{stable by base change}
 
-Here is a solution: (i) The bijective correspondence between 
+Here is a solution: (i) The fact that $\Set_Z$ admits products is clear. The bijective correspondence between 
 $$
 f\in\Hom_{\Set_Y}\left(U\tm_ZY,X\right)
 $$ 
@@ -3515,6 +3515,16 @@ $$
 (ii) The statement follows from (i) and Proposition 2.1.10 p.~40 of the book.
 
 (See also Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}.)
+
+Note that (ii) can also be proved directly by observing that the category $\Set_Z$ is canonically isomorphic to 
+$$
+\prod_{z\in Z}\ \Set,
+$$ 
+and that, given $f:Y\to Z$, if we identify $\Set_Z$ to $\prod_{z\in Z}\Set$ and $\Set_Y$ to $\prod_{y\in Y}\Set$, then the change of base functor, viewed as a functor 
+$$
+\prod_{z\in Z}\ \Set\to\prod_{y\in Y}\ \Set,
+$$ 
+maps $(X_z)_{z\in Z}$ to $(X_{f(y)})_{y\in Y}$.
 
 %%
 
