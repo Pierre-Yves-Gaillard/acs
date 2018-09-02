@@ -876,6 +876,45 @@ Also note that, if $\Cat$ is the category of small categories (Definition~\ref{m
 P.~18, Definition 1.2.18. We define a subobject as being an element of the indicated equivalence class. Unless otherwise stated, we choose this element ``at random''. (Note that there a many cases in which an explicit choice is possible.) See \S\ref{1611} p.~\pageref{1611}.
 \end{s}
 
+%
+
+\begin{s}
+P.~16. We compute the endomorphisms of the \emph{covariant} power set functor\index{covariant power set functor}\index{power set functor} $P:\Set\to\Set$. Let $\varepsilon:P\to P$ be defined by $\varepsilon_A(Z)=\varnothing$ for all set $A$ and all $Z\subset A$.
+
+\noindent We claim 
+$$
+\text{(a) }\ \boxed{\oo{End}(P)=\{\id_P,\varepsilon\}}
+$$ 
+
+\noindent Set $\mathbf 1:=\{0\},\mathbf 2:=\{0,1\}$ and let $\theta$ be an endomorphism of $P$.
+
+\noindent(b) We obviously have $\theta_\varnothing=\id_{P(\varnothing)}$.
+
+\noindent(c) Using (b) and applying $\theta$ to $\varnothing\to\mathbf 1$ we see that $\theta_{\mathbf 1}(\varnothing)=\varnothing$. 
+
+\noindent $\bullet$ Case 1: $\theta_{\mathbf 1}(\mathbf 1)=\varnothing$. 
+
+\noindent We claim $\theta=\varepsilon$ for all set $A$ and all $Z\subset A$, and prove the claim by applying $\theta$ to $A\to\mathbf 1$.
+
+\noindent $\bullet$ Case 2: $\theta_{\mathbf 1}(\mathbf 1)=\mathbf 1$. 
+
+\noindent We claim 
+
+\noindent(d) $\theta=\id_P$. 
+
+\noindent This will imply (a).
+
+\noindent(e) We have $\theta_{\mathbf 2}=\id_{P(\mathbf 2)}$. [Left to the reader.]
+
+\noindent(f) Let $A$ be a set with at least three elements. It suffices to show $\theta_A=\id_{P(A)}$.
+
+\noindent(g) If $Z$ and $Y$ are two distinct subsets of $A$, then there is an $f:A\to\mathbf 2$ such that $P(f)(Z)\ne P(f)(Y)$. 
+
+\noindent Proof: We can assume that there is a $y$ in $Y\setminus Z$. Letting $f$ be the characteristic function of $Y\setminus Z$, we get $1\in P(f)(Y)\setminus P(f)(Z)$.
+
+\noindent(h) Let $Z$ be a subset of $A$. Applying $\theta$ to all the maps from $A$ to $\mathbf 2$ and using (g), we see that $\theta_A(Z)=Z$. This proves (f), and thus (d), and thus (a).
+\end{s}
+
 %%
 
 \sbs{Horizontal\index{horizontal composition} and vertical compositions\index{vertical composition} (p. 19)}%\lb{hove1}
@@ -3307,7 +3346,7 @@ $$\os{(\text d)}\iso(h_A)^\dg(G)\left(\ld\left(\left(\icolim_{(U\to B)\in\C_B}U\
 (a) follows from \qr{prepa4}; 
 (b) follows from Proposition~\ref{271} p.~\pr{271} and \qr{leq} p.~\pr{leq};  
 (c) follows from Lemma~\ref{bcl} p.~\pr{bcl}; 
-(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc}); 
+(d) follows from the fact that small inductive limits in $\Set$ are stable by base change (see Section~\ref{sbsarsbc} p.~\pr{sbsarsbc} above and Section~\ref{27i} p.~\pr{27i}) below; 
 (e) follows from \qr{263a} p.~\pr{263a}.
 \end{proof}
 
@@ -12626,7 +12665,7 @@ be the commutative diagram obtained in the obvious way from the previous. Provin
 $$
 b\circ i\circ j=Z_{S_1}(a')\circ i\circ j=\ell(F)\circ a'=a\circ j
 $$ 
-by Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31}.%£
+by Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31}.
 %As $LF$ is separated, Claim~2 implies $b\circ i=j$, as requested.
 %$$\begin{tikzcd}F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"']&S\ar[u,"a"]\ar[r,hookrightarrow,"i"']&U.\ar[lu,dashrightarrow,"b"']\end{tikzcd}$$ Set $S'=F\times_{LF}S$ and $b=Z_{S'}(q_1)$:\[\xymatrix@L=5pt@R=1cm@C=1.5cm{F\ar[rr]^{\ell(F)}          &&LF                 &\\ S'\ar[u]^{q_1}\ar@{^{(}->}[rr]^{q_2} &&S\ar@{^{(}->}[r]_i\ar[u]^a&U\ar[lu]_b\\ S''\ar[u]^{p_1}\ar@{^{(}->}[rr]_{p_2}&&V.\ar[u]_m}\] To show that $a=b\circ i$, it suffices to show that for all morphism $m:V\to S$ ($V$ object of $\C$), $b\circ i\circ m=a\circ m$. Set $S''=V\times_S S'$ and let $p_1$ and $p_2$ be the projections. The projection $p_2:S''\hookrightarrow V$ is %\xymatrix@M=5pt{S''\ar@{^{(}->}[r]^{p_2}&V}$ %is a monomorphism and turns $S''$ into a covering sieve of $V$ (Part~\ref{v312} of Lemma~\ref{v31} p.~\pageref{v31}). We have $b\circ i\circ q_2=\ell(F)\circ q_1$ (Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31}), and thus $b\circ i\circ q_2=a\circ m\circ p_2$. This implies $b\circ i\circ q_2\circ p_1=a\circ q_2\circ p_1$, that is $b\circ i\circ m\circ p_2=a\circ m\circ p_2$. As the presheaf $LF$ is separated, we get $b\circ i\circ m=a\circ m$.
 
