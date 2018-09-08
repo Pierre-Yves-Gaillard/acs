@@ -915,6 +915,28 @@ $$
 \noindent(h) Let $Z$ be a subset of $A$. Applying $\theta$ to all the maps from $A$ to $\mathbf 2$ and using (g), we see that $\theta_A(Z)=Z$. This proves (f), and thus (d), and thus (a).
 \end{s}
 
+%
+
+\begin{s}
+P.~16. Here is a question. 
+
+Let $\U$ be a universe, let $\C$ be a category such that $\Hom_\C(X,Y)\in\U$ for all objects $X,Y$ of $\C$, and let $\Set$ be the category of $\U$-sets, let $F:\C^{\op}\to\Set$ be a \emph{representable} functor. 
+
+Is the set of subfunctors of $F$ equipotent to some $\U$-set? 
+
+Same question for the set of quotients of $F$. 
+\end{s}
+
+%
+
+\begin{s}%\label{subI}
+P.~16. Here are some exercises. 
+
+\nn(a) Let $\U$ be a universe and $\Set$ the category of $\U$-sets. Show that the only proper subfunctor of the identity functor $I:\Set\to\Set$ is the initial object of $\Set^{\Set}$.
+
+\nn(b) In the same setting, let $T:\Set\to\Set$ be a terminal object of $\Set^{\Set}$. Show that the only proper subfunctors of $T$ are the initial object of $\Set^{\Set}$ and the image of the unique morphism $I\to T$.%, where $I:\Set\to\Set$ is the the identity functor. %functor $S$ which maps the empty set to itself, and maps $X$ to $T(X)$ if $X$ is nonempty.
+\end{s}
+
 %%
 
 \sbs{Horizontal\index{horizontal composition} and vertical compositions\index{vertical composition} (p. 19)}%\lb{hove1}
@@ -1051,7 +1073,31 @@ P. 19, Definition 1.3.16, notion of essentially small category. Here is a simple
 
 \emph{The category of $\U$-sets is \emph{not} essentially small. More precisely, there is no $\U$-set which is equipotent to the set of cardinalities of $\U$-sets.}
 
-The proof is not hard, but not completely obvious, and is left to the reader.
+%The proof is not hard, but not completely obvious, and is left to the reader.
+
+Here is a sketch of a proof.
+
+Let $\kappa$ be the supremum of the cardinalities of the elements of $\U$. Then $\kappa$ is strongly inaccessible. See\medskip 
+
+\centerline{\href{http://www.normalesup.org/~forgogozo/SGA4/01/01.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/01/01.pdf}}
+
+\noindent Section 5 of the appendix. Then $\kappa=\aleph_\kappa$. See\medskip 
+
+\centerline{\href{https://mathoverflow.net/a/117809/461}{https://mathoverflow.net/a/117809/461}}
+
+\noindent Hence the set of cardinals less than $\kappa$ coincides with the set
+$$
+\{\aleph_\alpha\ |\ \alpha\text{ ordinal less than }\kappa\},
+$$ 
+whose cardinality is $\kappa$. $\square$
+
+For additional details, see also\medskip 
+
+\centerline{\href{https://en.wikipedia.org/wiki/Cofinality\#Regular_and_singular_ordinals}
+{https://en.wikipedia.org/wiki/Cofinality$\sharp$Regular\_and\_singular\_ordinals}}
+\medskip 
+
+\centerline{\href{https://mathoverflow.net/a/117809/461}{https://mathoverflow.net/a/117809/461}}
 %\end{s}
 
 %%
