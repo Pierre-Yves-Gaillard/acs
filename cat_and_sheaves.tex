@@ -862,6 +862,30 @@ P.~16, Definition 1.2.11 (iii). Note that fully faithful functors are conservati
 
 %
 
+\begin{comment}
+\begin{s}
+P.~16. Here is a question. 
+
+Let $\U$ be a universe, let $\C$ be a category such that $\Hom_\C(X,Y)\in\U$ for all objects $X,Y$ of $\C$, and let $\Set$ be the category of $\U$-sets, let $F:\C^{\op}\to\Set$ be a \emph{representable} functor. 
+
+Is the set of subfunctors of $F$ equipotent to some $\U$-set? 
+
+Same question for the set of quotients of $F$. 
+\end{s}
+\end{comment}
+
+%
+
+\begin{s}%\label{subI}
+P.~16. Here are some exercises. 
+
+\nn(a) Let $\U$ be a universe and $\Set$ the category of $\U$-sets. Show that the only proper subfunctor of the identity functor $I:\Set\to\Set$ is the initial object of $\Set^{\Set}$.
+
+\nn(b) In the same setting, let $T:\Set\to\Set$ be a terminal object of $\Set^{\Set}$. Show that the only proper subfunctors of $T$ are the initial object of $\Set^{\Set}$ and the image of the unique morphism $I\to T$.%, where $I:\Set\to\Set$ is the the identity functor. %functor $S$ which maps the empty set to itself, and maps $X$ to $T(X)$ if $X$ is nonempty.
+\end{s}
+
+%
+
 \begin{s}
 P.~18, Definition 1.2.16. If $F:\C\to\C'$ is a functor and $X'$ an object of $\C'$, then we have natural isomorphisms 
 \begin{equation}\lb{opslice}
@@ -879,62 +903,68 @@ P.~18, Definition 1.2.18. We define a subobject as being an element of the indic
 %
 
 \begin{s}
-P.~16. We compute the endomorphisms of the \emph{covariant} power set functor\index{covariant power set functor}\index{power set functor} $P:\Set\to\Set$. Let $\varepsilon:P\to P$ be defined by $\varepsilon_A(Z)=\varnothing$ for all set $A$ and all $Z\subset A$.
+P.~19. We compute the endomorphisms of the \emph{covariant} power set functor\index{covariant power set functor}\index{power set functor} $P:\Set\to\Set$. Let $\varepsilon:P\to P$ be defined by $\varepsilon_A(Z)=\varnothing$ for all set $A$ and all $Z\subset A$.
 
-\noindent We claim 
+\nn We claim 
 $$
 \text{(a) }\ \boxed{\oo{End}(P)=\{\id_P,\varepsilon\}}
 $$ 
 
-\noindent Set $\mathbf 1:=\{0\},\mathbf 2:=\{0,1\}$ and let $\theta$ be an endomorphism of $P$.
+\nn Set $\mathbf 1:=\{0\},\mathbf 2:=\{0,1\}$ and let $\theta$ be an endomorphism of $P$.
 
-\noindent(b) We obviously have $\theta_\varnothing=\id_{P(\varnothing)}$.
+\nn(b) We obviously have $\theta_\varnothing=\id_{P(\varnothing)}$.
 
-\noindent(c) Using (b) and applying $\theta$ to $\varnothing\to\mathbf 1$ we see that $\theta_{\mathbf 1}(\varnothing)=\varnothing$. 
+\nn(c) Using (b) and applying $\theta$ to $\varnothing\to\mathbf 1$ we see that $\theta_{\mathbf 1}(\varnothing)=\varnothing$. 
 
-\noindent $\bullet$ Case 1: $\theta_{\mathbf 1}(\mathbf 1)=\varnothing$. 
+\nn $\bullet$ Case 1: $\theta_{\mathbf 1}(\mathbf 1)=\varnothing$. 
 
-\noindent We claim $\theta=\varepsilon$ for all set $A$ and all $Z\subset A$, and prove the claim by applying $\theta$ to $A\to\mathbf 1$.
+\nn We claim $\theta=\varepsilon$ for all set $A$ and all $Z\subset A$, and prove the claim by applying $\theta$ to $A\to\mathbf 1$.
 
-\noindent $\bullet$ Case 2: $\theta_{\mathbf 1}(\mathbf 1)=\mathbf 1$. 
+\nn $\bullet$ Case 2: $\theta_{\mathbf 1}(\mathbf 1)=\mathbf 1$. 
 
-\noindent We claim 
+\nn We claim 
 
-\noindent(d) $\theta=\id_P$. 
+\nn(d) $\theta=\id_P$. 
 
-\noindent This will imply (a).
+\nn This will imply (a).
 
-\noindent(e) We have $\theta_{\mathbf 2}=\id_{P(\mathbf 2)}$. [Left to the reader.]
+\nn(e) We have $\theta_{\mathbf 2}=\id_{P(\mathbf 2)}$. [Left to the reader.]
 
-\noindent(f) Let $A$ be a set with at least three elements. It suffices to show $\theta_A=\id_{P(A)}$.
+\nn(f) Let $A$ be a set with at least three elements. It suffices to show $\theta_A=\id_{P(A)}$.
 
-\noindent(g) If $Z$ and $Y$ are two distinct subsets of $A$, then there is an $f:A\to\mathbf 2$ such that $P(f)(Z)\ne P(f)(Y)$. 
+\nn(g) If $Z$ and $Y$ are two distinct subsets of $A$, then there is an $f:A\to\mathbf 2$ such that $P(f)(Z)\ne P(f)(Y)$. 
 
-\noindent Proof: We can assume that there is a $y$ in $Y\setminus Z$. Letting $f$ be the characteristic function of $Y\setminus Z$, we get $1\in P(f)(Y)\setminus P(f)(Z)$.
+\nn Proof: We can assume that there is a $y$ in $Y\setminus Z$. Letting $f$ be the characteristic function of $Y\setminus Z$, we get $1\in P(f)(Y)\setminus P(f)(Z)$.
 
-\noindent(h) Let $Z$ be a subset of $A$. Applying $\theta$ to all the maps from $A$ to $\mathbf 2$ and using (g), we see that $\theta_A(Z)=Z$. This proves (f), and thus (d), and thus (a).
-\end{s}
-
-%
-
-\begin{s}
-P.~16. Here is a question. 
-
-Let $\U$ be a universe, let $\C$ be a category such that $\Hom_\C(X,Y)\in\U$ for all objects $X,Y$ of $\C$, and let $\Set$ be the category of $\U$-sets, let $F:\C^{\op}\to\Set$ be a \emph{representable} functor. 
-
-Is the set of subfunctors of $F$ equipotent to some $\U$-set? 
-
-Same question for the set of quotients of $F$. 
+\nn(h) Let $Z$ be a subset of $A$. Applying $\theta$ to all the maps from $A$ to $\mathbf 2$ and using (g), we see that $\theta_A(Z)=Z$. This proves (f), and thus (d), and thus (a).
 \end{s}
 
 %
 
 \begin{s}%\label{subI}
-P.~16. Here are some exercises. 
+P.~19. Let $A$ be a set and $F$ the functor $\text{Hom}(-,A)$. A \emph{maximal subfunctor of} $F$ shall mean a subfunctor of $F$ which is maximal among the proper subfunctors of $F$. A \emph{maximal quotient of} $F$ shall mean a quotient of $F$ which is maximal among the proper quotients of $F$. A \emph{congruence on} $F$ consists of an equivalence relation on each $F(X)$ such that each map $F(X)\to F(Y)$ induced by a morphism sends equivalent elements to equivalent elements. Such a congruence is called \emph{minimal} if it is minimal among the non-discrete congruences on $F$. Minimal congruences correspond of course to maximal quotients. There are analogous definitions for the functor $\text{Hom}(A,-)$; the details are left to the reader.
 
-\nn(a) Let $\U$ be a universe and $\Set$ the category of $\U$-sets. Show that the only proper subfunctor of the identity functor $I:\Set\to\Set$ is the initial object of $\Set^{\Set}$.
+Here we want to classify the maximal subfunctors and quotients of $\text{Hom}(-,A)$ and $\text{Hom}(A,-)$.
 
-\nn(b) In the same setting, let $T:\Set\to\Set$ be a terminal object of $\Set^{\Set}$. Show that the only proper subfunctors of $T$ are the initial object of $\Set^{\Set}$ and the image of the unique morphism $I\to T$.%, where $I:\Set\to\Set$ is the the identity functor. %functor $S$ which maps the empty set to itself, and maps $X$ to $T(X)$ if $X$ is nonempty.
+The classification being easy when $A$ has zero or one element, we assume that $A$ has at least two elements.
+
+There is only one maximal subfunctor of $\text{Hom}(A,-)$ and of $\text{Hom}(-,A)$. The maximal subfunctor of $\text{Hom}(A,-)$ consists of all the \emph{non-injective} maps $A\to X$, and the maximal subfunctor of $\text{Hom}(-,A)$ consists of all the \emph{non-surjective} maps $X\to A$. The maximal quotients of $\text{Hom}(-,A)$ are attached to subsets $\{a,b\}$ of cardinality two of $A$ by forming the least equivalence relation on $\text{Hom}(X,A)$ which identifies the constant map with value $a$ to the constant map with value $b$.
+
+We now describe the maximal quotients of $\text{Hom}(A,-)$, and we do this by describing the minimal congruences.
+
+Let $A,B,C,D,E$ and $X$ be sets. Assume that $A=B\sqcup C\sqcup D\sqcup E$, that $A$ has at least two elements, and that $B$ is nonempty. Suppose also that at least one of the three sets $C,D$ and $E$ is nonempty. For each $x_1,x_2,x_3,x_4\in X$ write $x_1x_2x_3x_4$ for the map from $A$ to $X$ which has the constant value $x_1$ on $B$, $x_2$ on $C$, $x_3$ on $D$, and $x_4$ on $E$. 
+
+Then there is a unique equivalence relation on $F(X):=\text{Hom}(A,X)$ such that the equivalence class of $f$ is $\{xyxy,yxxy\}$ if $f=xyxy$ for some distinct elements $x$ and $y$ of $X$, and is the singleton $\{f\}$ otherwise.
+
+If $C$ is nonempty, then the equivalence relation attached to $(C,B,E,D)$ coincides with that attached to $(B,C,D,E)$, and this is the only case in which there is a coincidence.
+
+Let $A,B,E$ and $X$ be sets, and let $y$ be in $X$. Assume that $A=B\sqcup E$, and that $B$ is nonempty. For each $u,v$ in $X$ write $uv$ for the map from $A$ to $X$ which has the constant value $u$ on $B$ and $v$ on $E$. 
+
+Then there is a unique equivalence relation on $F(X)$ such that the equivalence class of $f$ is $\{zy\ |\ z\in X\}$ if $f=xy$ for some $x$ in $X$, and is the singleton $\{f\}$ otherwise.
+
+We claim that, when $X$ varies, each of these equivalence relations on $F(X)$ defines a minimal congruence on $F$, and that there are no other minimal congruences on $F$.
+
+We sketch the proof of the last statement. Let $\sim$ be a minimal congruence of $F$, and let $f,g\in F(X)$ satisfy $f\ne g$ and $f\sim g$. Pick an $a$ in $A$ such that $f(a)\ne g(a)$. Let $h:X\to\{f(a),g(a)\}$ fix $f(a)$ and $g(a)$. Then $h\circ f\ne h\circ g$ and $h\circ f\sim h\circ g$. By minimality, the congruence $\sim$ is generated by $h\circ f\sim h\circ g$. In other words, we can assume that $f(A)\cup g(A)$ has exactly two elements. From this point the proof is somewhat tedious, but straightforward. The proofs of the other statements are also straightforward.
 \end{s}
 
 %%
@@ -1081,11 +1111,11 @@ Let $\kappa$ be the supremum of the cardinalities of the elements of $\U$. Then 
 
 \centerline{\href{http://www.normalesup.org/~forgogozo/SGA4/01/01.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/01/01.pdf}}
 
-\noindent Section 5 of the appendix. Then $\kappa=\aleph_\kappa$. See\medskip 
+\nn Section 5 of the appendix. Then $\kappa=\aleph_\kappa$. See\medskip 
 
 \centerline{\href{https://mathoverflow.net/a/117809/461}{https://mathoverflow.net/a/117809/461}}
 
-\noindent Hence the set of cardinals less than $\kappa$ coincides with the set
+\nn Hence the set of cardinals less than $\kappa$ coincides with the set
 $$
 \{\aleph_\alpha\ |\ \alpha\text{ ordinal less than }\kappa\},
 $$ 
@@ -12528,7 +12558,7 @@ In this section we prove the results contained in the beginning of Verdier's Exp
 
 \centerline{\href{http://www.normalesup.org/~forgogozo/SGA4/02/02.pdf}{http://www.normalesup.org/$\sim$forgogozo/SGA4/02/02.pdf}}
 
-\noindent up to Proposition~4.2, results used in Section~\ref{414} p.~\pageref{414} above.
+\nn up to Proposition~4.2, results used in Section~\ref{414} p.~\pageref{414} above.
 
 Let $\C$ be a site and $\U$ a universe such that $\C\in\U$, and write $\C^\wedge$ for $\C^\wedge_\U$.
 
@@ -12549,7 +12579,7 @@ where the two small squares are cartesian. This implies that $S\times_UV$ is a c
 
 \subsubsection{Sheaf associated to a presheaf}
 
-%\noindent%[3.0.5]
+%\nn%[3.0.5]
 Recall that $\C$ is a site and $\U$ a universe such that $\C\in\U$, and that we write $\C^\wedge$ for $\C^\wedge_\U$. %[and let $\V$ be a universe such that $\C^\wedge\in\V$ and $\U\subset\V$]
 The set $J(U)$ of covering sieves of $U$, ordered by inclusion, is cofiltrant by Lemma~\ref{vcofilt}.
  
@@ -12659,13 +12689,13 @@ the equalities following respectively from the by definition of the $\ell(F)$ an
 \begin{proof}
 \emph{Part 1}. It suffices to show (Proposition~\ref{333} p.~\pageref{333}) that for all object $U$ of $\C$, the functor $F\mapsto LF(U)$ commutes with finite limits. But, by definition of the limit, for $S\in J(U)$, the functor $F\mapsto\Hom_{\C^\wedge}(S,F)$ commutes with limits, and the colimit $\colim_{J(U)}$ commutes with finite limits because $J(U)$ is a cofiltrant ordered set (Proposition~\ref{316} p.~\pageref{316}).
 
-\noindent\emph{Part 2}. Let $U$ be an object of $\C$ and $f$, $g:U\rightrightarrows LF$ two morphisms which coincide on a covering sieve $S\hookrightarrow U$ of $U$. By Part~\ref{v312} of Lemma~\ref{v31} p.~\pageref{v31}, there is a covering sieve $S'\hookrightarrow U$, which we can assume to be contained in $S$, and there are two morphisms $a,b:S'\rightrightarrows F$ such that $Z_{S'}(a)=f$ and $Z_{S'}(b)=g$. By Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31} we then have $\ell(F)\circ a=\ell(F)\circ b$. Thus (Part~\ref{v314} of Lemma~\ref{v31} p.~\pageref{v31}) $a$ and $b$ coincide on a covering sieve $S''\hookrightarrow S'$. Letting $w$ be the restriction of $a$ to $S''$ yields 
+\nn\emph{Part 2}. Let $U$ be an object of $\C$ and $f$, $g:U\rightrightarrows LF$ two morphisms which coincide on a covering sieve $S\hookrightarrow U$ of $U$. By Part~\ref{v312} of Lemma~\ref{v31} p.~\pageref{v31}, there is a covering sieve $S'\hookrightarrow U$, which we can assume to be contained in $S$, and there are two morphisms $a,b:S'\rightrightarrows F$ such that $Z_{S'}(a)=f$ and $Z_{S'}(b)=g$. By Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31} we then have $\ell(F)\circ a=\ell(F)\circ b$. Thus (Part~\ref{v314} of Lemma~\ref{v31} p.~\pageref{v31}) $a$ and $b$ coincide on a covering sieve $S''\hookrightarrow S'$. Letting $w$ be the restriction of $a$ to $S''$ yields 
 $$
 f=Z_{S'}(a)=Z_{S''}(w)=Z_{S'}(b)=g,
 $$ 
 and thus $f=g$. Hence the presheaf $LF$ is separated.
 
-\noindent\emph{Part 3}. %If $F$ is separated, $\ell(F)$ is a monomorphism because a colimit filtrant of monomorphisms is a monomorphism.
+\nn\emph{Part 3}. %If $F$ is separated, $\ell(F)$ is a monomorphism because a colimit filtrant of monomorphisms is a monomorphism.
 Assume that $F$ is separated and let us show that $\ell(F)$ is a monomorphism. Let $U$ be an object of $\C$ and let $a,b:U\rightrightarrows F$ satisfy $\ell(F)\circ a=\ell(F)\circ b$, that is $Z_U(a)=Z_U(b)$. It suffices to prove $a=b$. By Part~\ref{v314} of Lemma~\ref{v31} p.~\pageref{v31} $a$ and $b$ coincide in some covering sieve of $U$. Since $F$ is separated, this implies $a=b$. 
 
 If $\ell(F)$ is a monomorphism, the presheaf $F$, being a sub-presheaf of a separated presheaf, is separated. 
@@ -12685,10 +12715,10 @@ S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"]&S.\ar[u,"a"']
 \end{tikzcd}
 $$ 
 
-\noindent Claim 1: For all morphism $V\to LF$, where $V$ be an object of $\C$, the sieve $F\times_{LF}V$ is a covering sieve of $V$.
+\nn Claim 1: For all morphism $V\to LF$, where $V$ be an object of $\C$, the sieve $F\times_{LF}V$ is a covering sieve of $V$.
 %$F$ is a covering sieve of $LF$. 
 
-\noindent Proof of Claim 1: %Let $V$ be an object of $\C$ and $V\to LF$ a morphism. 
+\nn Proof of Claim 1: %Let $V$ be an object of $\C$ and $V\to LF$ a morphism. 
 By Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31} there is a commutative diagram 
 $$
 \begin{tikzcd}
@@ -12699,9 +12729,9 @@ S_3\ar[ur,hookrightarrow]
 $$ 
 where the small square is cartesian and $S_3$ is a covering sieve of $V$. We conclude that $S_2$ is also a covering sieve of $V$. This proves Claim~1. 
 
-\noindent Claim 2: $S_1$ is a covering sieve of $U$.
+\nn Claim 2: $S_1$ is a covering sieve of $U$.
 
-\noindent Proof of Claim 2: Let $W$ be an object of $\C$ and $W\to S$ a morphism. There is a commutative diagram 
+\nn Proof of Claim 2: Let $W$ be an object of $\C$ and $W\to S$ a morphism. There is a commutative diagram 
 $$
 \begin{tikzcd}
 F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ 
@@ -12727,7 +12757,7 @@ by Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31}.
 %As $LF$ is separated, Claim~2 implies $b\circ i=j$, as requested.
 %$$\begin{tikzcd}F\ar[r,hookrightarrow,"\ell(F)"]&LF\\ S_1\ar[u,"a'"]\ar[r,hookrightarrow,"j"']&S\ar[u,"a"]\ar[r,hookrightarrow,"i"']&U.\ar[lu,dashrightarrow,"b"']\end{tikzcd}$$ Set $S'=F\times_{LF}S$ and $b=Z_{S'}(q_1)$:\[\xymatrix@L=5pt@R=1cm@C=1.5cm{F\ar[rr]^{\ell(F)}          &&LF                 &\\ S'\ar[u]^{q_1}\ar@{^{(}->}[rr]^{q_2} &&S\ar@{^{(}->}[r]_i\ar[u]^a&U\ar[lu]_b\\ S''\ar[u]^{p_1}\ar@{^{(}->}[rr]_{p_2}&&V.\ar[u]_m}\] To show that $a=b\circ i$, it suffices to show that for all morphism $m:V\to S$ ($V$ object of $\C$), $b\circ i\circ m=a\circ m$. Set $S''=V\times_S S'$ and let $p_1$ and $p_2$ be the projections. The projection $p_2:S''\hookrightarrow V$ is %\xymatrix@M=5pt{S''\ar@{^{(}->}[r]^{p_2}&V}$ %is a monomorphism and turns $S''$ into a covering sieve of $V$ (Part~\ref{v312} of Lemma~\ref{v31} p.~\pageref{v31}). We have $b\circ i\circ q_2=\ell(F)\circ q_1$ (Part~\ref{v311} of Lemma~\ref{v31} p.~\pageref{v31}), and thus $b\circ i\circ q_2=a\circ m\circ p_2$. This implies $b\circ i\circ q_2\circ p_1=a\circ q_2\circ p_1$, that is $b\circ i\circ m\circ p_2=a\circ m\circ p_2$. As the presheaf $LF$ is separated, we get $b\circ i\circ m=a\circ m$.
 
-\noindent\emph{Part 4}. Clear.%\end{enumerate}
+\nn\emph{Part 4}. Clear.%\end{enumerate}
 \end{proof}
 
 %\begin{rk}[Remarque 3.3]If $J'(U)$ is a cofinal subset of $J(U)$, we have$$LF(U)=\colim_{J'(U)}\Hom_{\C^\wedge}(.,F).$$\end{rk}
