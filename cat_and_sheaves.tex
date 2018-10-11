@@ -902,6 +902,28 @@ P.~18, Definition 1.2.18. We define a subobject as being an element of the indic
 
 %
 
+\begin{s}%\label{subI}
+P. 19. Let $M$ be a monoid. Define the category $\C$ by the conditions $\Ob\C=\{\star\}$ and $\oo{End}_\C(\star)=M$.
+
+We want to reconstruct the monoid $\C$ from the category $\C$.
+
+Define 
+
+\nn$\bullet$ the functor $A:\C\to\Set$ by $A(\star):=M$ and $A(m)(n):=mn$, 
+
+\nn$\bullet$ the forgetful functor $U:\Set^\C\to\Set$ by $U(X):=X(\star)$ and $U(\alpha):=\alpha_\star$ for any morphism $\alpha:X\to Y$ in $\Set^\C$,
+
+\nn$\bullet$ the map $f:M\to\oo{End}(U)$ by $f(m)_X(x):=X(m)(x)$ for any $X:\C\to\Set$, any $m$ in $M$ and any $x$ in $X(\star)$,
+
+\nn$\bullet$ the map $g:\oo{End}(U)\to M$ by $g(\theta):=\theta_A(1)$ for any endomorphism $\theta$ of $U$.
+
+Then $f$ and $g$ are inverse monoid morphisms.
+
+We leave the verification to the reader.
+\end{s}
+
+%
+
 \begin{s}
 P.~19. We compute the endomorphisms of the \emph{covariant} power set functor\index{covariant power set functor}\index{power set functor} $P:\Set\to\Set$. Let $\varepsilon:P\to P$ be defined by $\varepsilon_A(Z)=\varnothing$ for all set $A$ and all $Z\subset A$.
 
