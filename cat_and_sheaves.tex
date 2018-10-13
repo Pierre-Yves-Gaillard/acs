@@ -903,9 +903,9 @@ P.~18, Definition 1.2.18. We define a subobject as being an element of the indic
 %
 
 \begin{s}%\label{subI}
-P. 19. Let $M$ be a monoid. Define the category $\C$ by the conditions $\Ob\C=\{\star\}$ and $\oo{End}_\C(\star)=M$.
+P. 19. Let $M$ be a monoid. Define the category $\C$ by the conditions $\Ob(\C)=\{\star\}$ and $\oo{End}_\C(\star)=M$.
 
-We want to reconstruct the monoid $\C$ from the category $\C$.
+We want to reconstruct the monoid $M$ from the category $\C$.
 
 Define 
 
@@ -917,9 +917,22 @@ Define
 
 \nn$\bullet$ the map $g:\oo{End}(U)\to M$ by $g(\theta):=\theta_A(1)$ for any endomorphism $\theta$ of $U$.
 
-Then $f$ and $g$ are inverse monoid morphisms.
+\emph{Then $f$ and $g$ are inverse monoid morphisms.}
 
-We leave the verification to the reader.
+\begin{proof} For $m$ in $M$ we have 
+$$
+g(f(m))=f(m)_A(1)=A(m)(1)=m.
+$$
+
+Let $\theta$ be an endomorphism of $U$ and let's check $f(g(\theta))=\theta$. Let $X:\C\to\Set$ be a functor and $x$ an element of $X(\star)$. It suffices to prove 
+$$
+f(g(\theta))_X(x)=\theta_X(x).
+$$ 
+We leave it to the reader to verify that the formula $\alpha_\star(m):=X(m)(x)$ defines a morphism $\alpha:A\to X$. We get 
+$$
+f(g(\theta))_X(x)=X(g(\theta))(x)=X(\theta_A(1))(x)=\alpha_\star(\theta_A(1))=\theta_X(\alpha_\star(1))=\theta_X(x).
+$$ 
+\end{proof}
 \end{s}
 
 %
