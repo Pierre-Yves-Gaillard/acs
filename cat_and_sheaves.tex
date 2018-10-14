@@ -913,13 +913,17 @@ Define
 
 \nn$\bullet$ the forgetful functor $U:\Set^\C\to\Set$ by $U(X):=X(\star)$ and $U(\alpha):=\alpha_\star$ for any morphism $\alpha:X\to Y$ in $\Set^\C$,
 
-\nn$\bullet$ the map $f:M\to\oo{End}(U)$ by $f(m)_X(x):=X(m)(x)$ for any $X:\C\to\Set$, any $m$ in $M$ and any $x$ in $X(\star)$,
+\nn$\bullet$ the map $f:M\to\oo{End}(U)$ by $f(m)_X:=X(m)$ for any $X:\C\to\Set$ and any $m$ in $M$,%and any $x$ in $X(\star)$,
 
 \nn$\bullet$ the map $g:\oo{End}(U)\to M$ by $g(\theta):=\theta_A(1)$ for any endomorphism $\theta$ of $U$.
 
 \emph{Then $f$ and $g$ are inverse monoid morphisms.}
 
-\begin{proof} It is easy to verify that $f$ is a monoid morphism. Thus it suffices to prove that $f$ and $g$ are inverse bijections.
+\begin{proof} For $m,n$ in $M$ and $X:\C\to\Set$ we have 
+$$
+f(mn)_X=X(mn)=X(m)\circ X(n)=f(m)_X\circ f(n)_X=(f(m)\circ f(n))_X
+$$ 
+This shows that $f$ is a monoid morphism. Thus it suffices to prove that $f$ and $g$ are inverse bijections.
 
 For $m$ in $M$ we have 
 $$
