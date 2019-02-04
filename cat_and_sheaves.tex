@@ -279,6 +279,8 @@ Page~14, definition of $\Mor(\C)$. As the hom-sets of $\C$ are not assumed to be
 
 \nn$*$ P.~37, Remark 2.1.5: ``Let $I$ be a small set'' should be ``Let $I$ be a small category''.
 
+\nn$*$ P.~39, penultimate line ``exits'' should be ``exists''.
+
 \nn$*$ P.~47, Proposition 2.2.4 (ii): ``If $Y_0\times Y_1$ and $Y_0\times_XY_1$ exist in $\C$'' should be ``If $X_0\times X_1$ and $X_0\times_YX_1$ exist in $\C$''.
 
 \nn$*$ P.~41, sixth line: (i) should be (a). 
@@ -2096,6 +2098,8 @@ In \S\ref{sv} p.~\pr{sv} we proved that (a) implies (d).
 
 \sbs{Proposition 2.1.10 p. 40}
 
+\subsubsection{A first generalization}
+
 Here is a mild generalization of Proposition 2.1.10 p.~40 of the book (stated below as Corollary~\ref{2.1.10c}): 
 
 \begin{prop}\lb{2.1.10b}
@@ -2163,6 +2167,42 @@ Let $F:\A\to\B$ be a functor and $I$ a small category (Definition~\ref{myuscat} 
 
 \begin{proof} 
 Let $R:\B\to\A$ be right adjoint to $F$, and in Proposition~\ref{2.1.10b}, let $\C$ be $\A$, $G$ be $\id_\A$ and $Z$ be $R(Y)$. %An important particular case is when $\C$ is $\A$, $G$ is $\id_\A$ and $Z=R(Y)$, where $R:\B\to\A$ is right adjoint to $F$.
+\end{proof}
+
+\subsubsection{A second generalization}
+
+Here is another mild generalization of Proposition 2.1.10.
+
+\begin{prop}
+Let $F:\A\to\B$ be a functor admitting a left adjoint and $\alpha$ a functor from $I^{\op}$ to $\C$, where $I$ is a small category, such that $\lim\alpha$ exists in $\C$. Then $F(\lim\alpha)$ is a limit of $F\circ\alpha$. Moreover, if $p:\DT\lim\al\to\al$ is the old projection, then $F(p):\DT F(\lim\al)\to F\circ\al$ is the new projection.
+\end{prop}
+
+\begin{proof} 
+Let $\theta':\DT X'\to F\circ\al$ be a morphism. It suffices to solve the problem 
+$$ 
+\begin{tikzcd}
+X'\ar[d,dashed,"f'"']&\DT X'\ar[d,"\DT f'"']\ar[rd,"\theta'"]\\ 
+F(\lim\al)&\DT F(\lim\al)\ar[r,"F(p)"']&F\circ\al.
+\end{tikzcd}
+$$ 
+By adjunction we get a morphism $\theta:\DT G(X')\to\al$. Write $f:G(X')\to\lim\al$ for the solution to the new problem 
+$$
+\begin{tikzcd}
+G(X')\ar[d,dashed,"f"']&\DT G(X')\ar[d,"\DT f"']\ar[rd,"\theta"]\\ 
+\lim\al&\DT\lim\al\ar[r,"p"']&\al,
+\end{tikzcd}
+$$ 
+and define $f':X'\to F(\lim\al)$ as the morphism attached to $f:G(X')\to\lim\al$ by adjunction. Let $i$ be in $I$. We are left with checking that $F(p_i)\circ f'=\theta'_i$ knowing that $p_i\circ f=\theta_i$. Let 
+$$
+\lambda_{X',X}:\Hom_{\C'}(X',F(X))\to\Hom_\C(G(X'),X).
+$$ 
+be the bijection given by the adjunction. Set $X:=\lim\al$. The equality $F(p_i)\circ f'=\theta'_i$ follows from the commutativity of 
+$$
+\begin{tikzcd}
+\Hom_{\C'}(X',F(X))\ar[d,"F(p_i)\circ"']\ar[rr,"\lambda_{X',X}"]&&\Hom_\C(G(X'),X)\ar[d,"p_i\circ"]\\ 
+\Hom_{\C'}(X',F(\al(i)))\ar[rr,"\lambda_{X',\al(i)}"']&&\Hom_\C(G(X'),\al(i)).
+\end{tikzcd}
+$$ 
 \end{proof}
 
 %%
