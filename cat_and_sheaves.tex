@@ -4468,7 +4468,7 @@ $$
 is bijective for all $Y$ in $\C$. 
 \end{s}
 
-%%
+%
 
 \begin{s} 
 P.~95, Proposition 4.1.4.
@@ -4506,6 +4506,83 @@ $$
 
 \nn$\bu$ Statement of (iii): As explained in the proof, the phrase ``$\C'$ is equivalent to $\C_0$'' really means ``$R$ induces an equivalence from $\C'$ to $\C_0$''. 
 \end{s}
+
+%
+
+\begin{s}
+Definition 4.2.1 p.~96. It is important for aesthetic reasons to note that tensor products can be transported \index{transport} along equivalences. We sketch a proof of this fact. In this section we will use a notation which very different from the one used in the rest of this text (and in the book). 
+
+Let $f:A\to B$ and $g:B\to A$ be quasi-inverse equivalences. If $b$ is an object of $B$, we write $b^g$ for the image of $b$ under $g$, and $gf$ for the functor $b\mapsto b^{gf}$, etc. We also write $xy$ for $x\otimes y$. Let us assume that $A$ is a tensor category.  %$f:A\rightleftarrows B:g$ be functors. 
+
+We define $b_1b_2$ for $b_1,b_2$ in $B$ by 
+$$
+b_1b_2:=(b_1^gb_2^g)^f.
+$$ 
+Let $\alpha$ be the associator of $A$. We define %$\beta(b_1,b_2,b_3)$ by 
+$$
+\beta(b_1,b_2,b_3):(b_1b_2)b_3\to b_1(b_2b_3),
+$$ 
+that is 
+$$
+\beta(b_1,b_2,b_3):((b_1^gb_2^g)^{fg}b_3^g)^f\to(b_1^g(b_2^gb_3^g)^{fg})^f,
+$$ 
+as being the composite of the obvious isomorphisms 
+$$ 
+((b_1^gb_2^g)^{fg}b_3^g)^f\to((b_1^gb_2^g)b_3^g)^f\xr{\alpha(b_1,b_2,b_3)^f}(b_1^g(b_2^gb_3^g))^f\to(b_1^g(b_2^gb_3^g)^{fg})^f.
+$$ 
+Let $b_1,b_2,b_3,b_4$ be in $B$. We must check that the pentagone with build from $b_1$, $b_2$, $b_3$, $b_4$ commutes. 
+
+Pick one edge of this pentagone, say the edge 
+$$
+\beta(b_1b_2,b_3,b_4):\big((b_1b_2)b_3\big)b_4\to(b_1b_2)(b_3b_4), 
+$$ 
+that is 
+$$
+\beta(b_1b_2,b_3,b_4):\Big(\big((b_1^gb_2^g)^{fg}b_3^g\big)^{fg}b_4^g\Big)^f\to\Big((b_1^gb_2^g)^{fg}(b_3^gb_4^g)^{fg}\Big)^f.
+$$ 
+We complete this edge to the obvious square of isomorphisms 
+\begin{equation}\label{3b}
+\begin{tikzcd}
+\Big(\big((b_1^gb_2^g)^{fg}b_3^g\big)^{fg}b_4^g\Big)^f\ar[d]\ar{rr}{\beta(b_1b_2,b_3,b_4)}&&\Big((b_1^gb_2^g)^{fg}(b_3^gb_4^g)^{fg}\Big)^f\ar[d]\\
+\Big(\big((b_1^gb_2^g)b_3^g\big)b_4^g\Big)^f\ar{rr}[swap]{\alpha(b_1^gb_2^g,b_3^g,b_4^g)^f}&&\Big((b_1^gb_2^g)(b_3^gb_4^g)\Big)^f.
+\end{tikzcd}
+\end{equation} 
+We claim that \eqref{3b} commutes. Consider the diagram of isomorphisms 
+$$%\begin{equation}\label{4b}
+\begin{tikzcd}
+\Big(\big((b_1^gb_2^g)^{fg}b_3^g\big)^{fg}b_4^g\Big)^f\ar[d]\ar{rr}{\beta(b_1b_2,b_3,b_4)}&&\Big((b_1^gb_2^g)^{fg}(b_3^gb_4^g)^{fg}\Big)^f\ar[d]\\
+\Big(\big((b_1^gb_2^g)^{fg}b_3^g\big)b_4^g\Big)^f\ar{rr}{\alpha((b_1^gb_2^g)^{fg},b_3^g,b_4^g)^f}\ar[d]&&\Big((b_1^gb_2^g)^{fg}(b_3^gb_4^g)\Big)^f\ar[d]\\ 
+\Big(\big((b_1^gb_2^g)b_3^g\big)b_4^g\Big)^f\ar{rr}[swap]{\alpha(b_1^gb_2^g,b_3^g,b_4^g)^f}&&\Big((b_1^gb_2^g)(b_3^gb_4^g)\Big)^f.
+\end{tikzcd}
+$$%\end{equation} 
+The top square commutes by definition of $\beta$, whereas the bottom square commutes by functoriality of $\alpha$ in its first variable. This proves that \eqref{3b} commutes. 
+
+There is a commutative square of isomorphisms similar to \eqref{3b} for each edge of the pentagone build from $b_1,b_2,b_3,b_4$, so that we get two pentagones, one over the other, each vertex of the top pentagone being linked to the corresponding vertex of the bottom pentagone. The bottom pentagone commutes because $A$ is a tensor category. We've just verified that one of the vertical squares commutes. The other vertical squares commute for similar reasons (the details are left to the reader). So, the top pentagone commutes, as was to be shown.
+\end{s} 
+
+\begin{s}
+Definition 4.2.5 p.~98. Here is an example of a category $\C$ admitting no tensor product with unit. More precisely $\C$ is an ordered set $X$ which admits no ordered monoid structure. This example is taken from Comments 2 and 13 in
+
+\noindent Azimuth Forum,  Applied Category Theory Course, Lecture 21 - Chapter 2: Mon\-oid\-al Preorders, p.~1, \href{https://tinyurl.com/y4onm8kk}{https://tinyurl.com/y4onm8kk}
+
+Our ordered set $X$ is 
+$$
+\begin{tikzcd}
+a\ar[d,dash]\ar[dr,dash]&b\ar[d,dash]\ar[dl,dash]\\
+c&d
+\end{tikzcd}
+$$ 
+\end{s}
+
+Suppose $X$ has an ordered monoid structure with $d=1$.  Then 
+$$
+a\otimes b\ge a\otimes d=a\otimes1=a
+$$
+and 
+$$
+a\otimes b\ge d\otimes b=1\otimes b=b.
+$$
+This is a contradiction since $a$ and $b$ do not have a common upper bound. Similar arguments show the unit can't be $a$, $b$ or $c$ either, so there is no ordered monoid structure on $X$. 
 
 %%
 
