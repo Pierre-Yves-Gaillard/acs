@@ -4557,7 +4557,19 @@ $$%\begin{equation}\label{4b}
 $$%\end{equation} 
 The top square commutes by definition of $\beta$, whereas the bottom square commutes by functoriality of $\alpha$ in its first variable. This proves that \eqref{3b} commutes. 
 
-There is a commutative square of isomorphisms similar to \eqref{3b} for each edge of the pentagone build from $b_1,b_2,b_3,b_4$, so that we get two pentagones, one over the other, each vertex of the top pentagone being linked to the corresponding vertex of the bottom pentagone. The bottom pentagone commutes because $A$ is a tensor category. We've just verified that one of the vertical squares commutes. The other vertical squares commute for similar reasons (the details are left to the reader). So, the top pentagone commutes, as was to be shown.
+There is a commutative square of isomorphisms similar to \eqref{3b} for each edge of the pentagone build from $b_1,b_2,b_3,b_4$, so that we get two pentagones, one over the other, each vertex of the top pentagone being linked by an edge to the corresponding vertex of the bottom pentagone. The bottom pentagone commutes because $A$ is a tensor category. We've just verified that one of the vertical squares commutes. The other vertical squares commute for similar reasons (the details are left to the reader). So, the top pentagone commutes, as was to be shown.
+
+We can also reason on the planar figure
+$$
+\begin{tikzcd}
+\bu\ar[dddd,dash]\ar[rrrr,dash]\ar[rd,dash]&&&&\bu\ar[ld,dash]\ar[rdd,dash]\\ 
+&\bu\ar[rr,dash]\ar[dd,dash]&&\bu\ar[dr,dash]\\ 
+&&&&\bu\ar[ld,dash]\ar[r,dash]&\bu\ar[ddl,dash]\\ 
+&\bu\ar[dl,dash]\ar[rr,dash]&&\bu\ar[dr,dash]\\ 
+\bu\ar[rrrr,dash]&&&&\bu
+\end{tikzcd}
+$$ 
+(All the morphisms under consideration being isomorphisms, it is not necessary to orient the edges.) The argument is this: Assuming that all the quadrilaterals commute, if one of the pentagones commutes, so does the other.
 \end{s} 
 
 \begin{s}
